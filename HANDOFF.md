@@ -110,10 +110,14 @@
   - 移除錯誤的「額頭放水杯練習」（仰式 drill，在自由式換氣中不可行）
   - PMC4000476 作者更正為 Virag, Hibberd, Oyama, Padua & Myers（2014, Sports Health）；原誤植為 Brushøj
 
-- **仰式深度技術分析 錯誤修正**（本次 session）：
+- **仰式深度技術分析 錯誤修正**（前一次 session）：
   - 邏輯錯誤修正：「頻率是唯一主要變數」改為 SR/SL 雙主變數說明
   - McCullough 引用修正：年份 2010 → 2009，期刊號 23(9) → 23(7)，頁碼 2130–2136，補全作者名單
   - Gonjo 2016 會議論文補入文獻總表與參考文獻清單（原本缺漏）
+
+- **蛙式深度技術分析 錯誤修正**（本次 session）：
+  - 邏輯矛盾修正：表格 4.1「undulating 谷底最低」→ 改為「谷底反而較高但峰值略低」；原描述與 4.2 引用的 Colman 1998 數據（flat ±76%、undulating ±53%）直接矛盾
+  - Nicol et al. 2022 作者名單完全錯誤：Nicol A. / James R. / Price M. / Payton C. → 更正為 Nicol E. / Pearson S. / Saxby D. / Minahan C. / Tor E.（PMC9177912 查證）
 
 ---
 
