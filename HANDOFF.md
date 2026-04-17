@@ -66,7 +66,9 @@
 - [x] Research/感知科學/感知學習.md（2026-04-17 完成）
 - [ ] Research/感知科學/feedforward機制.md（見因果倒置假設.md 有初步框架）
 - [ ] Research/感知科學/感知學習.md（待建立）
-- [ ] Research/物理現象/ 四份（待建立，RESEARCH_PLAN.md 有規劃）
+- [x] Research/物理現象/渦流回收.md（2026-04-18 完成，Talos 輔助研究）— 6 篇文獻全查證；🟢 Hochstein 2011（UUS 再捕獲）/ Takagi 2014（划水 wake capture）/ Garayev 2021（螳螂蝦跨物種）；🔴×3 待補
+- [ ] Research/物理現象/自然頻率.md（待建立）
+- [ ] Research/物理現象/彈性蓄能.md（待建立）
 
 ### 長期（需累積素材）
 
@@ -96,8 +98,9 @@
 - `Research/感知科學/feedforward機制.md`：從因果倒置假設.md 初步框架擴充，結合感知學習的「快速 vs 慢速學習」與前向/逆向模型的更新機制
 - 感知科學層完成後，整個 Research/感知科學/ 層就構成一個完整的理論基礎
 
-**B. Research/物理現象/ 開始建立**
-- `渦流回收.md`、`自然頻率.md`、`彈性蓄能.md`（RESEARCH_PLAN.md 有規劃）
+**B. Research/物理現象/ 繼續建立**
+- `渦流回收.md` 已完成（2026-04-18）
+- 下一份：`自然頻率.md`、`彈性蓄能.md`（RESEARCH_PLAN.md 有規劃）
 - 偏向技術物理，與感知科學層性質不同
 
 **C. Instructional 層補完**
