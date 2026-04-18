@@ -109,8 +109,9 @@ Observations/    → 觀察層：教學案例
 每次對話結束前，若本次做了任何實質修改（新增文件、更新內容、格式整理等），**必須**：
 1. 更新 `HANDOFF.md` 的「當前狀態」與「下一步建議」兩個區塊
 2. 更新 `_INDEX.md` 的對應文件狀態（如有變動）
-3. `git add` + `git commit` + `git push` 到 GitHub
-4. **此 repo 無 CI workflow**，push 後跳過 `gh run list`，不需要檢查 CI
+3. 若 Research/ 層有新文件完成：同步 `RESEARCH_PLAN.md`（Layer 完成標記）+ `FUTURE_RESEARCH.md`（原題目畢業標記）
+4. `git add` + `git commit` + `git push` 到 GitHub
+5. **此 repo 無 CI workflow**，push 後跳過 `gh run list`，不需要檢查 CI
 
 不需要等使用者提醒。這是固定流程。
 
