@@ -64,7 +64,7 @@
 
 - [x] Research/感知科學/機械感受器.md（2026-04-17 完成）
 - [x] Research/感知科學/感知學習.md（2026-04-17 完成）
-- [ ] Research/感知科學/feedforward機制.md（見因果倒置假設.md 有初步框架）
+- [x] Research/感知科學/feedforward機制.md（2026-04-18，整合自 Talos feedforward_mechanism.md）
 - [ ] Research/感知科學/隱性_顯性學習.md（待建立，Masters 1992，見 RESEARCH_PLAN 1.4）
 - [x] Research/物理現象/渦流回收.md（2026-04-18 完成，Talos 輔助研究）— 6 篇文獻全查證；🟢 Hochstein 2011（UUS 再捕獲）/ Takagi 2014（划水 wake capture）/ Garayev 2021（螳螂蝦跨物種）；🔴×3 待補
 - [x] Research/物理現象/推進力理論演變.md（2026-04-18 完成，從 raw/notes 整合）— 阻力/升力/現代三階段；「找靜水」邏輯謬誤；🔵×2 🟡×4 🟢×1；連結 渦流回收.md / 機械感受器.md / 誤區深探
@@ -80,9 +80,8 @@
 
 ## 下一步建議
 
-**本次 session（2026-04-17）完成：**
-- UDK 🔴×2 確認為研究空白，不再追查
-- `Research/感知科學/感知學習.md` 建立完成
+**本次 session（2026-04-18）完成：**
+- `Research/感知科學/feedforward機制.md` 建立（整合自 Talos 提供的稿件）
 
 ### 感知學習——重點摘要
 
