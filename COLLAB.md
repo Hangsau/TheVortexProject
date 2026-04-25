@@ -22,7 +22,7 @@
 |---|------|------|------|------|
 | 1 | `Research/物理現象/彈性蓄能.md` | ✅ 完成 | Talos + Claude | v4：🔵 推導重寫、Richards 2012 整合、所有假文獻描述清除。2026-04-25 committed |
 | 2 | `Research/物理現象/自然頻率.md` | ✅ 完成 | Talos + Claude | v1：🔵 推導+水阻公式、Morris 2016 🟢、🔴 空缺確認。2026-04-25 committed |
-| 3 | `Research/感知科學/隱性_顯性學習.md` | ⏳ 待開始 | Talos | 最後做，理論成熟但框架應用需討論 |
+| 3 | `Research/感知科學/隱性_顯性學習.md` | ✅ 完成 | Talos + Claude | v1：Masters 1992 🟢、Liao/Maxwell/Beilock 🟡 PubMed 驗證、🔴 空缺確認。2026-04-25 committed |
 
 > 順序由 Talos 提議（2026-04-25），如有調整請更新此表。
 
