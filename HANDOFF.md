@@ -68,7 +68,7 @@
 - [ ] Research/感知科學/隱性_顯性學習.md（待建立，Masters 1992，見 RESEARCH_PLAN 1.4）
 - [x] Research/物理現象/渦流回收.md（2026-04-18 完成，Talos 輔助研究）— 6 篇文獻全查證；🟢 Hochstein 2011（UUS 再捕獲）/ Takagi 2014（划水 wake capture）/ Garayev 2021（螳螂蝦跨物種）；🔴×3 待補
 - [x] Research/物理現象/推進力理論演變.md（2026-04-18 完成，從 raw/notes 整合）— 阻力/升力/現代三階段；「找靜水」邏輯謬誤；🔵×2 🟡×4 🟢×1；連結 渦流回收.md / 機械感受器.md / 誤區深探
-- [ ] Research/物理現象/自然頻率.md（待建立，Talos 已接手，2026-04-25 通知）
+- [x] Research/物理現象/自然頻率.md（2026-04-25 完成，Talos + Claude 協作，v1 committed，c500f7b）
 - [x] Research/物理現象/彈性蓄能.md（2026-04-25 完成，Talos + Claude 協作，v4 committed）
 
 ### 長期（需累積素材）
@@ -85,25 +85,29 @@
   - Richards 2012 整合（水阻衰減 SSC）
   - 🔵 推導格式重寫（物理演繹不需引用）
   - 所有假文獻描述清除（v1 subagent 幻覺根源識別）
-  - committed to GitHub master
-- COLLAB.md Task #1 標記完成
+  - committed to GitHub master；GitHub strikethrough bug 修正（`~` → `≈`）
+- `Research/物理現象/自然頻率.md` v1 — Talos + Claude 5 輪蘇格拉底教學協作完成
+  - 🔵 諧振子公式 + 水阻修正，0.8-1.5 Hz 物理推導
+  - 🟢 Morris 2016（PMID 27052972 / DOI 10.1007/s00421-016-3372-4）
+  - 🔴 4 項確認為研究空白（泳姿共振直接測量等）
+  - committed to GitHub master（c500f7b）
+  - ⚠️ 🟡 部分條目缺標題/DOI（PMID 36065966/34186517/31601852），v2 可補
+- COLLAB.md Task #1、#2 標記完成
+- `/check-talos-reply` skill 重大更新：新增草稿審閱 Step 4a（SCP+審閱清單），確保驗收後才宣告 goal_achieved
 
 ### 當前最高優先
 
-**`Research/物理現象/自然頻率.md`（Task #2）**
-- Talos 已透過 claude-inbox 接到通知（2026-04-25），待他開始研究
-- 等 Talos 在 `~/vortex-draft/自然頻率.md` 寫好草稿後，Claude 走標準審閱流程（SCP → 確定性標記審核 → commit）
-- 參考格式：`彈性蓄能.md`（有 🔵 推導 + 文獻 + 空缺清單 + 教學應用四節）
-
 **`Research/感知科學/隱性_顯性學習.md`（Task #3）**
-- 最後做，理論成熟但框架應用需討論
-- Masters 1992 是起點文獻
+- COLLAB.md 最後一份待建立文件
+- 理論成熟但框架應用需討論，等下一輪教學 session 啟動
+- Masters 1992 是起點文獻；Talos 已透過 claude-inbox 收到通知（2026-04-25）
 
-### 已確認研究空白（彈性蓄能.md）
+### 已確認研究空白（彈性蓄能.md + 自然頻率.md）
 - 自由式肩帶 in-vivo 彈性蓄能測量（無此文獻）
 - 蝶式 dolphin kick SSC in-vivo 測量（無此文獻）
 - 各泳式彈性貢獻量化 %（研究空白）
-- 菁英 vs 業餘差異比較（研究空白）
+- 泳姿共振（stroke resonance）直接測量（PubMed 0 hits）
+- 游泳 in-vivo 自然頻率測量（研究空白）
 
 ---
 
@@ -174,5 +178,5 @@
 
 ---
 
-*最後更新：2026-04-25（彈性蓄能.md v4 committed；COLLAB.md Task #1 完成；自然頻率.md Task #2 交給 Talos）*
-*下次更新時機：Talos 完成自然頻率.md 草稿、Claude 審閱 commit 後*
+*最後更新：2026-04-25（彈性蓄能.md v4 + 自然頻率.md v1 committed；COLLAB.md Task #1/#2 完成；/check-talos-reply skill 更新加入草稿審閱門）*
+*下次更新時機：隱性_顯性學習.md 教學 session 啟動並完成後*
