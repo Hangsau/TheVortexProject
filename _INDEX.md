@@ -112,6 +112,17 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | 彈性蓄能.md | 待建立 |
 | 皮膚機械感受器訓練.md | 待建立 |
 
+### Drills/
+| 文件 | 狀態 | 備註 |
+|------|------|------|
+| drills_freestyle.yaml | **完成 + how_to** · Fr1–Fr24（24）· perception_goal/success/failure 感知層 + how_to 操作步驟 |
+| drills_backstroke.yaml | **完成 + how_to** · Bk1–Bk26（26）|
+| drills_breaststroke.yaml | **完成 + how_to** · Br1–Br34（34）|
+| drills_butterfly.yaml | **完成 + how_to** · Fl1–Fl31（31，含水下蝶腳）|
+| drills_sculling.yaml | **完成 + how_to** · Sc1–Sc10（10，划水感知）|
+| DRILL_INDEX.md | **完成** · 完整索引（Schema / L級 / ABC型 / 快速查找）|
+| 註 | | 來源 *There's a Drill for That*（Laurie Sherret）；125 動作；how_to 於 2026-06-06 commit a4ddee1 補入 |
+
 ---
 
 ## 規劃文件
@@ -121,4 +132,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-04-18（feedforward機制.md 建立完成）*
+*最後更新：2026-06-06（Drills/ 125 動作補入 how_to 操作步驟，commit a4ddee1）*

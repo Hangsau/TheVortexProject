@@ -4,6 +4,22 @@
 
 ---
 
+## 當前狀態（2026-06-06）
+
+### 已完成——Drills/ 補入 how_to 操作步驟（commit a4ddee1）
+
+- [x] 5 個 `Drills/drills_*.yaml` 全部 125 個動作補入 `how_to` 操作步驟（block list，插在 `purpose_zh` 之後）
+- [x] 來源：*There's a Drill for That*（Laurie Sherret），每條過三關校正（符合研究 + 反問 + 反推）
+- [x] commit `a4ddee1` 已 push 到 origin/master（524 insertions，純 how_to，0 deletions）
+
+### 同步下游
+
+- [x] **my-site 公開層**（commit ff69013，Hangsau/cortex）：`data/vortex/drills.yaml` 經 `sync_vortex.py` 的 `sync_drills` 合併重生；`vortex-drills.html` 渲染 how_to + 「要去感覺什麼」（`perception_goal` 改框）、移除 `failure_signal`（什麼是錯的）與成功/失敗對照、加 `#drill-<id>` 錨點；`vortex-explorer.js` drill chip 改為可點連結（對得上 `name_zh→id` 就連到 drill DB 卡片）。CI 綠、已部署
+- [x] **swim-coach 診斷層**（commit 9a1fed3）：`vendor/vortex` submodule bump 到 `a4ddee1`
+- 公開層原則重申：drill 內「要去感覺什麼」（perception_goal）屬可公開的感知目標；「感覺錯了是什麼樣」（failure_signal）只留在 canonical 診斷層，不上公開網站
+
+---
+
 ## 當前狀態（2026-06-05）
 
 ### 內容修正
