@@ -1,0 +1,468 @@
+# Butterfly Drills — There's a Drill for That
+# Perception layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+
+drills:
+  - id: Fl1
+    name_en: "Chest Press"
+    name_zh: "胸部下壓"
+    strokes: [butterfly]
+    category: kick
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: null
+    purpose_zh: "感覺胸部下壓水中帶來的波動感，這是蝶式波動的種子動作"
+    perception_goal: "胸骨往水裡壓時感覺波動傳往全身；不是上下蹦跳"
+    success_signal: "感覺到一股波動感從胸部往腿部傳遞"
+    failure_signal: "只感覺胸部在做一個獨立動作，沒有傳遞感"
+    deficiency_fixes: [8]
+    source: "There's a Drill for That"
+
+  - id: Fl2
+    name_en: "Hands Down Dolphin Kick"
+    name_zh: "手放兩側蝶式踢腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: [snorkel]
+    l_target: [L2]
+    abc_type: B
+    purpose_zh: "手放兩側踢蝶腿，感覺踢腿節律與胸部波動協同，髖部啟動"
+    perception_goal: "踢腿時感覺波動從核心延伸到腳；肩膀頭部保持水平"
+    success_signal: "踢腿節律穩定；感覺身體像海豚波動"
+    failure_signal: "頭部上下明顯；感覺腿在獨立踢不帶動身體"
+    deficiency_fixes: [8]
+    source: "There's a Drill for That"
+
+  - id: Fl3
+    name_en: "Chest Press Pinkies Up"
+    name_zh: "胸部下壓小指朝上"
+    strokes: [butterfly]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: null
+    purpose_zh: "雙臂前伸小指朝上的胸部下壓，增加肩膀柔韌性和波動感"
+    perception_goal: "胸部下壓時感覺肩膀有伸展感；波動比Fl1更強"
+    success_signal: "能維持雙臂小指朝上的位置；波動感清楚"
+    failure_signal: "肩膀太緊無法維持姿勢"
+    deficiency_fixes: [8]
+    source: "There's a Drill for That"
+
+  - id: Fl4
+    name_en: "Dolphin Kick On Back Arms Up"
+    name_zh: "仰面雙臂上舉蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "仰面雙臂指天踢蝶腿，感覺核心穩定和快速踢腿"
+    perception_goal: "肺部壓水；感覺腹部核心緊繃支撐整個踢腿動作"
+    success_signal: "能維持手臂向上的姿勢並繼續踢腿"
+    failure_signal: "無法維持姿勢；踢腿感覺從腰部發力不是核心"
+    deficiency_fixes: [9, 14]
+    source: "There's a Drill for That"
+
+  - id: Fl5
+    name_en: "Streamline Dolphin Kick On Back"
+    name_zh: "仰面流線蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "仰面流線踢蝶腿，感覺上下踢的對稱性，核心從中發動"
+    perception_goal: "感覺上踢（向天方向）和下踢同樣有力；節律從腹部發動"
+    success_signal: "踢腿對稱；節律穩定；感覺從核心驅動"
+    failure_signal: "只感覺到下踢有力；踢腿不對稱"
+    deficiency_fixes: [7, 9]
+    source: "There's a Drill for That"
+
+  - id: Fl6
+    name_en: "Sideways Dolphin Kick"
+    name_zh: "側面蝶腿踢水"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L3]
+    abc_type: B
+    purpose_zh: "側身踢蝶腿，感覺腳面上下兩側都在做功的對稱感"
+    perception_goal: "感覺腳面頂部和底部都有水壓；核心保持穩定"
+    success_signal: "側身踢腿能前進；感覺兩側腳面都在做功"
+    failure_signal: "只感覺一側腳面在做功"
+    deficiency_fixes: [9, 14]
+    source: "There's a Drill for That"
+
+  - id: Fl7
+    name_en: "Surf Kick Dolphin Kick"
+    name_zh: "衝浪蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "抬頭踢蝶腿，感覺快速緊實的踢腿才能維持下巴出水"
+    perception_goal: "感覺踢腿速度和下巴高度直接相關；踢腿緊實不大"
+    success_signal: "下巴能穩定維持在水面；踢腿快速"
+    failure_signal: "下巴不斷入水（踢腿太慢或太大）"
+    deficiency_fixes: [9]
+    source: "There's a Drill for That"
+
+  - id: Fl8
+    name_en: "Dolphin Kick Underwater"
+    name_zh: "水下蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: [fins]
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "水下流線踢蝶腿，強調上踢的感知，感覺肺部下壓"
+    perception_goal: "水下踢腿感覺緊實有力；特別注意上踢（往天花板方向）的力量"
+    success_signal: "水下踢腿能持續向前；上踢和下踢都有感知"
+    failure_signal: "只感覺下踢；上踢完全沒感覺"
+    deficiency_fixes: [7]
+    source: "There's a Drill for That"
+
+  - id: Fl9
+    name_en: "Whale Kick On Back"
+    name_zh: "鯨魚仰式蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: [fins]
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "仰面誇張踢蝶腿，感覺腳面兩側都在推水，重點在下踢（對仰面來說往池底方向）"
+    perception_goal: "感覺腳面頂部（往天方向）和底部（往池底方向）都在踢水"
+    success_signal: "感覺到下踢（對仰面來說）的明顯力量"
+    failure_signal: "只感覺一個方向的踢水"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Fl10
+    name_en: "Vertical Kicks"
+    name_zh: "垂直蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "垂直踢蝶腿（10秒25下），感覺快速緊實踢腿中核心的穩定"
+    perception_goal: "踢腿從腹部開始；感覺腳踝是鞭子末端；上身完全靜止"
+    success_signal: "10秒25下；水面有漩渦而非波浪"
+    failure_signal: "水面有大波浪（代表踢腿過大）；上身在晃動"
+    deficiency_fixes: [9, 14]
+    source: "There's a Drill for That"
+
+  - id: Fl11
+    name_en: "Kick 360"
+    name_zh: "蝶腿360度"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: [fins]
+    l_target: [L4]
+    abc_type: B
+    purpose_zh: "蝶腿360度旋轉，感覺旋轉不偏離就代表核心鎖定對稱"
+    perception_goal: "旋轉時踢腿節律不變；感覺核心是旋轉的軸心"
+    success_signal: "可以任意方向旋轉且保持直線"
+    failure_signal: "旋轉時漂離中線（代表踢腿不對稱）"
+    deficiency_fixes: [14]
+    source: "There's a Drill for That"
+
+  - id: Fl12
+    name_en: "Over the Barrel"
+    name_zh: "跨過木桶"
+    strokes: [butterfly]
+    category: kick
+    equipment: [snorkel]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "雙臂錨定前方20-30度角踢蝶腿，感覺捕水位置和快速踢腿節律"
+    perception_goal: "雙手感覺抓住水在一個向下的角度；像要拉住木桶的感覺"
+    success_signal: "雙手前臂有水壓感；踢腿節律穩定"
+    failure_signal: "雙手感覺不到水壓；只是讓腿在踢"
+    deficiency_fixes: [9]
+    source: "There's a Drill for That"
+
+  - id: Fl13
+    name_en: "Angel Wings"
+    name_zh: "天使翅膀"
+    strokes: [butterfly]
+    category: arm
+    equipment: [kickboard]
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "趴在浮板上慢動作蝶式手臂恢復，感覺小指朝天→拇指向下的旋轉路徑"
+    perception_goal: "出水時手心朝天；恢復時拇指向下；手臂完全放鬆輕掠水面"
+    success_signal: "趴在浮板上穩定；手臂恢復輕鬆不費力"
+    failure_signal: "浮板不穩定；手臂恢復費力或入水"
+    deficiency_fixes: [1, 3, 4, 5, 6, 10]
+    source: "There's a Drill for That"
+
+  - id: Fl14
+    name_en: "Angel Wings Transition to Full Fly"
+    name_zh: "天使翅膀接完整蝶式"
+    strokes: [butterfly]
+    category: arm
+    equipment: [kickboard]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "天使翅膀接水下恢復再接完整蝶式，感覺從慢到正常速度的過渡"
+    perception_goal: "感覺手臂在不同速度下的恢復感覺；入水點的位置感"
+    success_signal: "完整蝶式時保持天使翅膀訓練的手臂路徑"
+    failure_signal: "完整速度時手臂路徑完全改變"
+    deficiency_fixes: [1, 4, 6, 10]
+    source: "There's a Drill for That"
+
+  - id: Fl15
+    name_en: "Butterfly Stroke & Run"
+    name_zh: "蝶式划手跑直線"
+    strokes: [butterfly]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: null
+    purpose_zh: "無踢腿蝶式划手後滑行，感覺水平向前的節律而非上下的起伏"
+    perception_goal: "划手後感覺向前滑行；水線切耳朵一半；不往下鑽"
+    success_signal: "每一划後感覺水平向前延伸；身體像板子一樣平"
+    failure_signal: "每划後往下鑽或感覺波浪太大"
+    deficiency_fixes: [7, 11]
+    source: "There's a Drill for That"
+
+  - id: Fl16
+    name_en: "Scull to Combination"
+    name_zh: "外划到組合"
+    strokes: [butterfly]
+    category: arm
+    equipment: [snorkel]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "三部分：外划→加入波動→外划接完整蝶式，感覺前段捕水和波動的連結"
+    perception_goal: "外划後感覺手指往下抓水；波動從胸部下壓啟動不是膝蓋"
+    success_signal: "三個階段都感覺連貫；完整蝶式時保持前段的捕水感"
+    failure_signal: "各階段感覺完全割裂；完整蝶式時捕水感消失"
+    deficiency_fixes: [7]
+    source: "There's a Drill for That"
+
+  - id: Fl17
+    name_en: "Butterfly Recovery"
+    name_zh: "蝶式恢復臂（水下）"
+    strokes: [butterfly]
+    category: timing
+    equipment: [snorkel]
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "水下恢復臂蝶式（像蛙式恢復），感覺高肘捕水和手臂加速中段時機"
+    perception_goal: "高肘捕水後感覺加速；踢腿是捕水的觸發和加速的信號"
+    success_signal: "感覺到高肘捕水和踢腿的時機連動"
+    failure_signal: "踢腿和捕水完全脫節"
+    deficiency_fixes: [1, 2, 12]
+    source: "There's a Drill for That"
+
+  - id: Fl18
+    name_en: "Single Arm Swimming"
+    name_zh: "單臂蝶式"
+    strokes: [butterfly]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "單臂蝶式，感覺放鬆恢復和踢腿節律，換氣向划手側"
+    perception_goal: "恢復臂完全放鬆；踢腿節律不因換氣停頓；身體保持水平"
+    success_signal: "划手恢復自然放鬆；節律穩定"
+    failure_signal: "恢復臂緊張費力；換氣時身體大幅起伏"
+    deficiency_fixes: [1, 2, 11]
+    source: "There's a Drill for That"
+
+  - id: Fl19
+    name_en: "2-2-2 Drill"
+    name_zh: "二二二組合"
+    strokes: [butterfly]
+    category: arm
+    equipment: []
+    l_target: [L4]
+    abc_type: null
+    purpose_zh: "左二下右二下前二下的單臂組合，感覺節律和放鬆恢復"
+    perception_goal: "每次換方向都保持節律不停頓；胸部下壓感覺保持"
+    success_signal: "三個方向都流暢；節律連貫"
+    failure_signal: "換方向時明顯停頓；節律中斷"
+    deficiency_fixes: [11]
+    source: "There's a Drill for That"
+
+  - id: Fl20
+    name_en: "Low Baby Low!"
+    name_zh: "保持低位換氣"
+    strokes: [butterfly]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "從二二二接全臂蝶式，感覺下巴貼水換氣，保持低位入水"
+    perception_goal: "換氣時下巴滑過水面；頭入水先於手入水；整體高度很低"
+    success_signal: "手、肩、頭都在水面4英寸以內著陸"
+    failure_signal: "頭部高出水面很多；臀部下沉"
+    deficiency_fixes: [1, 2]
+    source: "There's a Drill for That"
+
+  - id: Fl21
+    name_en: "Deep Catch"
+    name_zh: "深度捕水"
+    strokes: [butterfly]
+    category: arm
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "抬頭蝶式配自由式踢腿，感覺手快速往深處挖的捕水感"
+    perception_goal: "手臂進入捕水位置時感覺快速下挖；恢復放鬆"
+    success_signal: "捕水動作快速有力；感覺到明確的水壓"
+    failure_signal: "捕水緩慢；感覺沒有真正抓住水"
+    deficiency_fixes: [7]
+    source: "There's a Drill for That"
+
+  - id: Fl22
+    name_en: "Thumb Drag Recovery"
+    name_zh: "拇指拖水恢復"
+    strokes: [butterfly]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "恢復臂拇指拖水感覺低位恢復，消除手臂太高的習慣"
+    perception_goal: "拇指在水面拖水時感覺恢復路徑很低；手心朝天出水"
+    success_signal: "拖水留下明顯痕跡；感覺恢復費力很少"
+    failure_signal: "無法穩定拖水（代表手臂太高）"
+    deficiency_fixes: [3, 5]
+    source: "There's a Drill for That"
+
+  - id: Fl23
+    name_en: "Ball Toss"
+    name_zh: "球拋練習"
+    strokes: [butterfly]
+    category: kick
+    equipment: [ball, partner]
+    l_target: [L4]
+    abc_type: B
+    purpose_zh: "踢蝶腿同時與搭檔拋接球，感覺用上身延伸投球時核心維持踢腿"
+    perception_goal: "投球時手臂完全延伸；踢腿節律不中斷；身體線條保持"
+    success_signal: "投球手臂完全伸展；踢腿不停頓"
+    failure_signal: "投球時踢腿停止；身體線條崩潰"
+    deficiency_fixes: [14]
+    source: "There's a Drill for That"
+
+  - id: Fl24
+    name_en: "Easy Recovery Fly"
+    name_zh: "輕鬆恢復蝶式"
+    strokes: [butterfly]
+    category: arm
+    equipment: []
+    l_target: [L3]
+    abc_type: null
+    purpose_zh: "做幾划高品質蝶式後換其他泳式，積累正確蝶式感知不建立錯誤肌肉記憶"
+    perception_goal: "每一划蝶式都是高品質的；感覺到節律和效率"
+    success_signal: "做幾划蝶式時感覺流暢有節律"
+    failure_signal: "第一划就感覺費力不協調"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Fl25
+    name_en: "Slow Recovery Drill to Front"
+    name_zh: "慢速前恢復"
+    strokes: [butterfly]
+    category: arm
+    equipment: [snorkel, fins]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "戴呼吸管緩慢恢復（4拍）感覺手掌壓力和錨定，訓練柔手入水"
+    perception_goal: "錨定時感覺手背有水壓；恢復時手心朝天然後拇指朝下；入水軟"
+    success_signal: "慢速恢復時感覺清楚的捕水壓力；手入水非常柔和"
+    failure_signal: "手背感覺不到水壓；入水猛烈"
+    deficiency_fixes: [4]
+    source: "There's a Drill for That"
+
+  - id: Fl26
+    name_en: "Triangle or Biondi Drill"
+    name_zh: "三角形（Biondi）鑽"
+    strokes: [butterfly]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "水下拉手推後方接水下恢復，感覺換氣時機（手向後推時）和臀部上浮"
+    perception_goal: "手向後推時感覺是換氣的時機；頭入水後感覺臀部上浮"
+    success_signal: "換氣和手後推時機吻合；流線時臀部自然上浮"
+    failure_signal: "換氣太早或太晚；臀部無法上浮"
+    deficiency_fixes: [2, 12]
+    source: "There's a Drill for That"
+
+  - id: Fl27
+    name_en: "Four Kicks Per Arm Cycle"
+    name_zh: "每划四踢"
+    strokes: [butterfly]
+    category: timing
+    equipment: [fins]
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "四踢蝶腿後一次完整蝶式划手，感覺踢腿整合進划手的時機"
+    perception_goal: "第三踢開始啟動手臂；第四踢時手臂在水下恢復；踢腿不停"
+    success_signal: "踢腿不因加入划手而停頓；感覺踢腿和划手有整合感"
+    failure_signal: "每次加入划手就停止踢腿"
+    deficiency_fixes: [12]
+    source: "There's a Drill for That"
+
+  - id: Fl28
+    name_en: "Vertical Strokes"
+    name_zh: "垂直蝶式"
+    strokes: [butterfly]
+    category: timing
+    equipment: []
+    l_target: [L5, L6]
+    abc_type: null
+    purpose_zh: "深水垂直蝶式，感覺手臂加速後身體火箭般竄出水面"
+    perception_goal: "手臂加速時感覺整個身體被推向上；加速是關鍵"
+    success_signal: "頭頸手臂竄出水面"
+    failure_signal: "無法竄出水面（代表加速不足）"
+    deficiency_fixes: [12]
+    source: "There's a Drill for That"
+
+  - id: Fl29
+    name_en: "High Catch with Foam Roller"
+    name_zh: "泡棉滾筒高肘捕水"
+    strokes: [butterfly]
+    category: arm
+    equipment: [foam_roller]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "雙手壓泡棉滾筒感覺高肘捕水的角度和壓力"
+    perception_goal: "手壓滾筒時感覺肘部高於手；感覺水壓在手背"
+    success_signal: "清楚感覺到捕水角度；手壓滾筒時滾筒向上滾"
+    failure_signal: "感覺不到水壓差異；肘部沒有高於手"
+    deficiency_fixes: [4]
+    source: "There's a Drill for That"
+
+  - id: Fl30
+    name_en: "Breakout Stroke"
+    name_zh: "破水動作"
+    strokes: [butterfly, starts_turns]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "出發或轉身後蝶腿接第一划，感覺第一划時頭部保持低位"
+    perception_goal: "開始划手前頭部保持在流線角度；不因為想換氣而提早抬頭"
+    success_signal: "第一划時頭抬起是由手臂帶動而非頭主動抬"
+    failure_signal: "手還沒動頭就先出水"
+    deficiency_fixes: [13]
+    source: "There's a Drill for That"
+
+  - id: Fl31
+    name_en: "Short Axis Combo"
+    name_zh: "短軸組合（蝶蛙）"
+    strokes: [butterfly, breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "蝶式和蛙式交替游，感覺兩式髖部動作和外划的共通性"
+    perception_goal: "感覺兩式換氣時嘴巴貼水的相似感；髖部動作連貫"
+    success_signal: "切換流暢；兩式在感知上有共通連結"
+    failure_signal: "兩式在感知上完全無關"
+    deficiency_fixes: []
+    source: "There's a Drill for That"

@@ -1,0 +1,513 @@
+# Breaststroke Drills — There's a Drill for That
+# Perception layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+
+drills:
+  - id: Br1
+    name_en: "Wall Kicks"
+    name_zh: "牆邊蛙式腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L2]
+    abc_type: B
+    purpose_zh: "貼牆練習收腿，感覺大腿後側和腹部發力而非膝蓋前推"
+    perception_goal: "腳跟往臀部方向拉；髖部不離牆；感覺腰背和腹肌在做功"
+    success_signal: "腳跟接近臀部時髖部仍貼牆"
+    failure_signal: "腳跟一拉臀部就離牆（代表從膝蓋前推）"
+    deficiency_fixes: [11, 12, 13]
+    source: "There's a Drill for That"
+
+  - id: Br2
+    name_en: "Egg Beater Kick"
+    name_zh: "打蛋器踢水"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L2]
+    abc_type: B
+    purpose_zh: "垂直打蛋器踢水感覺蛙式力量來自腿內側和腳掌"
+    perception_goal: "感覺壓力在腿內側和腳掌內側；不是腳底踢水"
+    success_signal: "能在水中垂直維持高度；感覺到腿內側的推力"
+    failure_signal: "感覺不到腿內側壓力；腳底在踢"
+    deficiency_fixes: [11]
+    source: "There's a Drill for That"
+
+  - id: Br3
+    name_en: "Vertical Breaststroke Kick"
+    name_zh: "垂直蛙式踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "垂直蛙式踢腿感覺正確的鞭式踢法，膝蓋不前推"
+    perception_goal: "感覺腳踝翻出後從內側踢水；踢完腳合攏"
+    success_signal: "踢水後身體上彈；感覺從內側有推力"
+    failure_signal: "膝蓋前推超過身體線；感覺上彈很弱"
+    deficiency_fixes: [11, 12, 13]
+    source: "There's a Drill for That"
+
+  - id: Br4
+    name_en: "Vertical Kick with Streamline Arms"
+    name_zh: "垂直踢腿流線臂"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L3]
+    abc_type: B
+    purpose_zh: "流線臂垂直踢腿增加難度，訓練快速鞭式踢腿"
+    perception_goal: "手臂重量迫使踢腿更快更緊實；感覺腳尖在踢後合攏"
+    success_signal: "流線臂下仍能保持頭部出水"
+    failure_signal: "無法在流線臂下維持垂直；膝蓋前推"
+    deficiency_fixes: [12, 13]
+    source: "There's a Drill for That"
+
+  - id: Br5
+    name_en: "Pull-Buoy Kick"
+    name_zh: "浮力棒踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: [pull_buoy]
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "夾浮力棒踢蛙式腿，浮力棒不掉代表膝蓋收窄且推進有效"
+    perception_goal: "感覺膝蓋夾緊；踢水後滑行有推力感"
+    success_signal: "浮力棒全程不掉；踢水後有明顯滑行感"
+    failure_signal: "浮力棒掉落（代表膝蓋太寬）"
+    deficiency_fixes: [11, 13]
+    source: "There's a Drill for That"
+
+  - id: Br6
+    name_en: "Hands Down Kick on Stomach"
+    name_zh: "手放臀部面朝下踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "最佳蛙式踢腿基礎練習，感覺腿後側肌肉主導收腿，每次踢完腳合攏"
+    perception_goal: "腳踝碰到手的感覺；踢完腳尖合攏；換氣時頭抬起髖下壓"
+    success_signal: "小腿內側能碰到手；踢後身體滑行明顯"
+    failure_signal: "無法用腳踝碰手（代表從膝蓋前推）；踢後沒有滑行感"
+    deficiency_fixes: [2, 10, 11]
+    source: "There's a Drill for That"
+
+  - id: Br7
+    name_en: "Hands Down Kick on Back"
+    name_zh: "手放臀部面朝上踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "仰面版的手放臀部踢腿，視覺確認膝蓋不出水"
+    perception_goal: "腳踝碰手；膝蓋不出水面；感覺腿後側啟動收腿"
+    success_signal: "膝蓋不破水面；踢完腳合攏有力"
+    failure_signal: "膝蓋出水（代表試圖前推膝蓋）"
+    deficiency_fixes: [11, 12, 13]
+    source: "There's a Drill for That"
+
+  - id: Br8
+    name_en: "Superman Kick on Stomach"
+    name_zh: "超人蛙式踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: [snorkel]
+    l_target: [L3]
+    abc_type: B
+    purpose_zh: "雙臂前伸蛙式踢腿，感覺踢後的輕微波動感，腳用力合攏帶動臀部上浮"
+    perception_goal: "踢後腳夾緊下壓帶動臀部上浮；感覺像輕輕翻越一根木頭"
+    success_signal: "踢完後有輕微波動感；臀部自然上浮"
+    failure_signal: "踢完後身體平直沒有波動；腳合攏無力"
+    deficiency_fixes: [16]
+    source: "There's a Drill for That"
+
+  - id: Br9
+    name_en: "Superman Kick on Back"
+    name_zh: "仰面超人蛙式踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "仰面雙臂後伸蛙式踢腿，強調腳跟下落而非膝蓋上拉"
+    perception_goal: "感覺是腳跟往臀部掉落；膝蓋不出水；胸部和臀部在水面"
+    success_signal: "膝蓋不出水；踢水後有前進感"
+    failure_signal: "膝蓋出水；臀部下沉"
+    deficiency_fixes: [12]
+    source: "There's a Drill for That"
+
+  - id: Br10
+    name_en: "Tombstone Kick"
+    name_zh: "墓碑浮板踢腿"
+    strokes: [breaststroke]
+    category: kick
+    equipment: [kickboard]
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "浮板直立入水增加阻力，感覺踢水力量和腳合攏的時機"
+    perception_goal: "感覺每次踢完腳尖合攏帶來的推進；阻力下踢腿仍然緊實"
+    success_signal: "浮板保持垂直；踢水後依然向前推進"
+    failure_signal: "浮板傾斜；踢水距離很短"
+    deficiency_fixes: [11, 14]
+    source: "There's a Drill for That"
+
+  - id: Br11
+    name_en: "Barrowman Kick"
+    name_zh: "Barrowman腿（交替踢）"
+    strokes: [breaststroke]
+    category: kick
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: B
+    purpose_zh: "左踢一次右踢一次再雙腳踢，訓練快速腳速，感覺每次踢後腳合攏"
+    perception_goal: "感覺每一踢都乾脆有結束感；不在收腿頂部停頓"
+    success_signal: "節奏加快後踢法不崩潰；每次踢後腳合攏"
+    failure_signal: "踢腿在頂部停頓（增加阻力）；節律感不足"
+    deficiency_fixes: [11]
+    source: "There's a Drill for That"
+
+  - id: Br12
+    name_en: "Breaststroke Arm Sweeps"
+    name_zh: "蛙式手臂外撇"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "淺水彎腰練習蛙式拉手，感覺手停在身前、下巴貼水的換氣動作"
+    perception_goal: "手停在臉前方；內划時感覺向前的動量；下巴貼水換氣不需要抬頭"
+    success_signal: "換氣時只需要微微抬頭；感覺到內划的推力"
+    failure_signal: "需要明顯抬頭才能換氣；感覺不到內划推力"
+    deficiency_fixes: [4]
+    source: "There's a Drill for That"
+
+  - id: Br13
+    name_en: "Breaststroke Arm Pull"
+    name_zh: "蛙式泡麵條輔助拉手"
+    strokes: [breaststroke]
+    category: arm
+    equipment: [noodle]
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "泡麵條輔助練蛙式拉手，感覺肘部在肩膀前方、手在下巴前方"
+    perception_goal: "手停在下巴前方；肘部一直在肩膀前面；內划比外划快速"
+    success_signal: "感覺到內划的加速感和向前推力"
+    failure_signal: "肘部拉到肩膀後面；內划和外划速度一樣慢"
+    deficiency_fixes: [4]
+    source: "There's a Drill for That"
+
+  - id: Br14
+    name_en: "High Elbow Pull"
+    name_zh: "高肘支撐練習"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L3]
+    abc_type: A
+    purpose_zh: "雙手撐在泳池邊寬於肩，讓身體下沉再浮起，感覺高肘捕水"
+    perception_goal: "手撐池邊時感覺肘部高於手；浮起瞬間感覺高肘帶動身體"
+    success_signal: "能感覺肘部高於手的位置；浮起時有強烈捕水感"
+    failure_signal: "完全無法浮起（代表手位置太窄或肘部沒有高起）"
+    deficiency_fixes: [3]
+    source: "There's a Drill for That"
+
+  - id: Br15
+    name_en: "Breast Pull with Flutter Kick"
+    name_zh: "蛙式拉手＋自由式踢水"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "蛙式拉手配自由式踢水，感覺從水面一個洞滑過去的緊湊感"
+    perception_goal: "拉手後感覺整個身體緊湊滑入一個洞；頭低在手臂之間"
+    success_signal: "流線時感覺靠近水面滑行；動作緊湊不浮誇"
+    failure_signal: "頭部太高；感覺不到滑行感"
+    deficiency_fixes: [6, 10]
+    source: "There's a Drill for That"
+
+  - id: Br16
+    name_en: "Breast Pull with Dolphin Kick"
+    name_zh: "蛙式拉手＋蝶式踢水"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: null
+    purpose_zh: "蛙式拉手配蝶式踢水，感覺髖部「裝填」和「推出」帶動換氣和動量"
+    perception_goal: "外划時肺部下壓感覺髖部裝填；內划時髖部向後推（臀部抬起）"
+    success_signal: "換氣時不需要額外抬頭，感覺髖部動作創造了氣口"
+    failure_signal: "換氣需要主動抬頭；感覺不到髖部的「裝填」感"
+    deficiency_fixes: [2, 6, 16]
+    source: "There's a Drill for That"
+
+  - id: Br17
+    name_en: "Cobra"
+    name_zh: "眼鏡蛇"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "靜止練習感覺髖部在內划時前推的幅度，是距划效的關鍵"
+    perception_goal: "內划後感覺髖部向前推的距離；肺部下壓創造浮力幫助換氣"
+    success_signal: "停止後再做每次都有明顯向前衝的感覺；落地時臉胸手同時"
+    failure_signal: "感覺不到髖部前推；落地時上下搖晃不是向前"
+    deficiency_fixes: [2, 6, 7, 8, 10]
+    source: "There's a Drill for That"
+
+  - id: Br18
+    name_en: "One-Arm Breaststroke"
+    name_zh: "單臂蛙式"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L3]
+    abc_type: A
+    purpose_zh: "單臂蛙式拉手，專注感覺單側手臂的外划-內划-延伸動作"
+    perception_goal: "感覺單臂的捕水、內划加速、手臂延伸前衝"
+    success_signal: "弱側（非慣用手）的感覺也能清楚描述"
+    failure_signal: "弱側感覺完全不同且很吃力"
+    deficiency_fixes: [3]
+    source: "There's a Drill for That"
+
+  - id: Br19
+    name_en: "Fist Pulling"
+    name_zh: "握拳蛙式"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "握拳划蛙式，感覺前臂和手腕的貢獻；開手後感覺力量差異"
+    perception_goal: "握拳時感覺前臂在划水；開手後感覺明顯的壓力增加"
+    success_signal: "握拳仍能前進；開手後推力明顯增加"
+    failure_signal: "握拳幾乎無法前進（代表只靠手掌）"
+    deficiency_fixes: [4]
+    source: "There's a Drill for That"
+
+  - id: Br20
+    name_en: "Miles Per Hour Pull"
+    name_zh: "時速拉手"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "25→60→100時速類比訓練三段拉手速度感，感覺擊線時的動量"
+    perception_goal: "外划慢且耐心；內划明顯加速；前推動作最快最有力"
+    success_signal: "三段速度差異明顯；換氣在內划時不需要抬頭"
+    failure_signal: "三段速度相同（全部慢）；換氣需要抬頭"
+    deficiency_fixes: [1, 2, 3, 6, 7, 8, 10]
+    source: "There's a Drill for That"
+
+  - id: Br21
+    name_en: "Dive Downs"
+    name_zh: "潛水下衝"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "蛙式拉手後下衝潛水進流線，水下踢腿，訓練完整的動作時序"
+    perception_goal: "潛水時身體像穿過水面的一個洞；水下流線踢腿有滑行感"
+    success_signal: "潛水流暢不停頓；水下踢腿有推進感"
+    failure_signal: "潛水時阻力大（流線不緊）；沒有滑行感"
+    deficiency_fixes: [8, 9]
+    source: "There's a Drill for That"
+
+  - id: Br22
+    name_en: "Flat Breaststroke Pull"
+    name_zh: "平面蛙式拉手"
+    strokes: [breaststroke]
+    category: arm
+    equipment: [snorkel, pull_buoy]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "戴蛙鏡和浮力棒，臉朝下，感覺低姿態拉手和頭部對齊"
+    perception_goal: "頭部完全不動；感覺拉手在臉的正下方進行；快速乾脆"
+    success_signal: "戴上呼吸管後可以完全專注拉手而非換氣"
+    failure_signal: "頭部跟著拉手移動；拉手動作緩慢"
+    deficiency_fixes: [1, 3]
+    source: "There's a Drill for That"
+
+  - id: Br23
+    name_en: "Underwater Undulation"
+    name_zh: "水下波動"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "水下微型蛙式拉手配微型波動，感覺輕微起伏而非大幅上下"
+    perception_goal: "感覺是前進方向的波動，不是上下方向；頭部靜止；肘部保持在前"
+    success_signal: "水下能持續前進；波動感覺在幫助推進"
+    failure_signal: "波動過大導致往下鑽；頭部移動"
+    deficiency_fixes: [1, 16]
+    source: "There's a Drill for That"
+
+  - id: Br24
+    name_en: "Kick-Dive Progression"
+    name_zh: "踢腿潛水遞進"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "3踢→2踢→1踢→正式游，四趟遞進訓練時序和屏氣能力"
+    perception_goal: "每次下衝都進入緊實流線；感覺踢腿在流線中有推進力"
+    success_signal: "每趟都能完成規定踢數後接正式動作"
+    failure_signal: "流線鬆弛或換氣需求導致提前起來"
+    deficiency_fixes: [9]
+    source: "There's a Drill for That"
+
+  - id: Br25
+    name_en: "Head-Up Breaststroke Shoots"
+    name_zh: "抬頭快速前推"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "抬頭游蛙式訓練手臂快速前推的速度感（非正確姿勢，純訓練用）"
+    perception_goal: "感覺手臂如射出般快速前推；感受內划加速和射手的動量"
+    success_signal: "手臂前推非常快速；感覺到「射出」的動量"
+    failure_signal: "手臂前推緩慢；沒有加速感"
+    deficiency_fixes: [5]
+    source: "There's a Drill for That"
+
+  - id: Br26
+    name_en: "Breaststroke with a Snorkel"
+    name_zh: "戴呼吸管游蛙式"
+    strokes: [breaststroke]
+    category: arm
+    equipment: [snorkel]
+    l_target: [L2, L3]
+    abc_type: null
+    purpose_zh: "戴呼吸管消除換氣動作，專注感覺蛙式手腳動作和頭部對齊"
+    perception_goal: "感覺沒有換氣干擾時的蛙式；頭部保持靜止在線條上"
+    success_signal: "手腳協調感比正常游蛙式更清楚"
+    failure_signal: "頭部仍然隨著動作移動"
+    deficiency_fixes: [1]
+    source: "There's a Drill for That"
+
+  - id: Br27
+    name_en: "Underwater Full Breaststroke"
+    name_zh: "水下完整蛙式"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4]
+    abc_type: null
+    purpose_zh: "水下完整蛙式動作，消除浮力影響，感覺純動作效率"
+    perception_goal: "水下蛙式時感覺阻力對稱；感覺每個動作的效率"
+    success_signal: "水下也能前進不只是維持深度"
+    failure_signal: "水下幾乎無法前進（代表動作效率低）"
+    deficiency_fixes: [1]
+    source: "There's a Drill for That"
+
+  - id: Br28
+    name_en: "Upside Down Underwater Breaststroke"
+    name_zh: "仰面水下蛙式"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4]
+    abc_type: null
+    purpose_zh: "仰面水下游蛙式，消除重力偏差，感覺蛙式動作的對稱性"
+    perception_goal: "感覺仰面時的動作是否與正面對稱；感覺手部入水點和頭部位置"
+    success_signal: "仰面蛙式與正面蛙式的感覺接近"
+    failure_signal: "完全感覺不同（代表動作有偏側）"
+    deficiency_fixes: [1, 3]
+    source: "There's a Drill for That"
+
+  - id: Br29
+    name_en: "Up-Down Combos"
+    name_zh: "正仰面組合"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4]
+    abc_type: null
+    purpose_zh: "連續正面和仰面水下蛙式切換，感覺頭部線條的穩定性"
+    perception_goal: "每次切換都能快速找回頭部靜止的位置"
+    success_signal: "切換流暢；頭部對齊感不變"
+    failure_signal: "切換後頭部位置改變；感覺混亂"
+    deficiency_fixes: [1]
+    source: "There's a Drill for That"
+
+  - id: Br30
+    name_en: "Pull Stop Kick Stop"
+    name_zh: "拉停踢停"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: null
+    purpose_zh: "拉手停＋踢腿停的分段練習，感覺每個動作的獨立完整感"
+    perception_goal: "每個動作有清楚的起點和終點；感覺停頓時身體仍在流線中"
+    success_signal: "停頓時感覺流線緊實；每個動作感覺獨立完整"
+    failure_signal: "停頓時姿勢立刻崩潰；動作之間不清楚"
+    deficiency_fixes: [9]
+    source: "There's a Drill for That"
+
+  - id: Br31
+    name_en: "Overlap Timing"
+    name_zh: "重疊時序"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L5]
+    abc_type: null
+    purpose_zh: "訓練蛙式競賽時序（手腳稍微重疊），感覺速度提升時的節律差異"
+    perception_goal: "感覺手腳有輕微重疊（不是完全分開）帶來的節律加快感"
+    success_signal: "比純分段時序更快；節律感覺更連貫"
+    failure_signal: "重疊導致動作衝突；感覺更慢"
+    deficiency_fixes: [9, 15]
+    source: "There's a Drill for That"
+
+  - id: Br32
+    name_en: "Stroke Count Speed Drill"
+    name_zh: "划次速度訓練"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L5]
+    abc_type: null
+    purpose_zh: "固定划次練習速度，找到最有效率的划次和速度組合"
+    perception_goal: "感覺哪個划次數下速度最快且最省力"
+    success_signal: "找到個人最佳划次和對應的最快速度"
+    failure_signal: "划次增加但速度沒有提升（代表效率低）"
+    deficiency_fixes: [15]
+    source: "There's a Drill for That"
+
+  - id: Br33
+    name_en: "Short Axis Combo"
+    name_zh: "短軸組合（蛙蝶）"
+    strokes: [breaststroke, butterfly]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "蛙式和蝶式交替游，感覺兩式外划和髖部旋轉的共通性"
+    perception_goal: "感覺蛙蝶在外划和髖部前後動作上的相似性；換氣同樣是嘴巴貼水"
+    success_signal: "切換流暢；兩式在感知上有共通感"
+    failure_signal: "完全感覺是兩個不同的動作；換氣方式截然不同"
+    deficiency_fixes: [2, 16]
+    source: "There's a Drill for That"
+
+  - id: Br34
+    name_en: "Frozen Head"
+    name_zh: "冰凍頭部"
+    strokes: [breaststroke]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: null
+    purpose_zh: "蛙式中頭部完全靜止練習，感覺蛙式動作完全不帶動頭部移動"
+    perception_goal: "頭部完全靜止；感覺動作從髖部以下發起，不帶動頭部"
+    success_signal: "一趟下來頭部零晃動；換氣完全靠身體動作創造空間"
+    failure_signal: "頭部跟著拉手上下移動"
+    deficiency_fixes: [1]
+    source: "There's a Drill for That"

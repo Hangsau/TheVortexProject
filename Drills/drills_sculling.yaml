@@ -1,0 +1,154 @@
+# Sculling Drills — There's a Drill for That
+# Percussion layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 划水感知的核心訓練組，適用所有泳式，特別對蛙式和蝶式有益
+
+drills:
+  - id: Sc1
+    name_en: "Wide Y Sculling"
+    name_zh: "寬Y型划水"
+    strokes: [freestyle, backstroke, breaststroke, butterfly]
+    category: sculling
+    equipment: [fins]
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "前方寬Y型划水感知，感覺前臂和手作為整體做細微水感動作"
+    perception_goal: "手在寬Y位置感覺水壓；前臂驅動動作不是整條手臂；動作小且精準"
+    success_signal: "能感覺到手和前臂在划水中有明確水壓感"
+    failure_signal: "感覺不到水壓；只是讓手在水中移動"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc2
+    name_en: "Head Down Scull with Buoy"
+    name_zh: "頭朝下划水（窄Y）"
+    strokes: [freestyle, breaststroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy]
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "浮力棒輔助頭朝下窄Y划水，感覺手腕和前臂的精細水感"
+    perception_goal: "手臂伸直，只有手腕和手在動；感覺水壓在手和前臂上"
+    success_signal: "身體向前移動；不是用整條手臂划水"
+    failure_signal: "手臂整體在做大動作；感覺不到精細水壓"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc3
+    name_en: "Head Up Scull with Buoy"
+    name_zh: "頭朝上划水"
+    strokes: [freestyle, breaststroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy]
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "頭抬出水面的划水，感覺手位置更深時的前臂水壓"
+    perception_goal: "視線看向池端；感覺前臂更用力做功"
+    success_signal: "抬頭時仍能前進；感覺前臂承受更多水壓"
+    failure_signal: "抬頭時幾乎無法前進"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc4
+    name_en: "Windshield Wipers Head Down"
+    name_zh: "雨刷划水（頭朝下）"
+    strokes: [breaststroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "肘部固定，只用前臂手腕做雨刷動作，感覺蛙蝶式外划到內划的轉換"
+    perception_goal: "肘部靜止；感覺前臂和手在做一個向內掃的動作；有方向感的水壓"
+    success_signal: "能感覺到外到內的水壓方向變化"
+    failure_signal: "肘部跟著動；感覺只是在隨便划水"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc5
+    name_en: "Windshield Wipers Chin Up"
+    name_zh: "雨刷划水（下巴朝上）"
+    strokes: [breaststroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "頭抬出水面的雨刷划水，模擬蛙式換氣時的手部位置和水壓"
+    perception_goal: "視線45度；感覺前臂更深的工作角度；接近蛙式換氣時的真實感"
+    success_signal: "比Sc4更費力但感覺更接近實際蛙式划手"
+    failure_signal: "感覺比Sc4容易（代表沒有在加大工作角度）"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc6
+    name_en: "Feet First Scull"
+    name_zh: "腳先行划水"
+    strokes: [freestyle, backstroke, breaststroke, butterfly]
+    category: sculling
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "仰面腳先行，手在髖部兩側小圓圈划水，感覺前臂抓水向後推的力量"
+    perception_goal: "小圓圈划水時感覺到手和前臂在抓水；不是整臂在動"
+    success_signal: "腳朝前能前進；感覺到推力"
+    failure_signal: "幾乎無法移動（代表沒有抓到水）"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc7
+    name_en: "Hip Scull"
+    name_zh: "髖部划水"
+    strokes: [freestyle, backstroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy, snorkel]
+    l_target: [L3]
+    abc_type: A
+    purpose_zh: "手在髖部兩側小幅划水，感覺拉水末段（出水前）的水感"
+    perception_goal: "手在髖部感覺細微的水壓；感覺出水前的最後推力"
+    success_signal: "小動作也能感覺到水壓差異"
+    failure_signal: "感覺不到任何水壓"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc8
+    name_en: "Seated Scull"
+    name_zh: "坐姿划水"
+    strokes: [breaststroke]
+    category: sculling
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "垂直坐姿（膝蓋前彎）做蛙式拉手，感覺高肘外划-內划-前推的完整感"
+    perception_goal: "肘部一直在肩膀前方；前推時速度最快；感覺像在推水走"
+    success_signal: "前推時明顯感覺到動量和速度"
+    failure_signal: "肘部拉到肩膀後面；前推無力"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc9
+    name_en: "Single Arm Scull"
+    name_zh: "單臂划水"
+    strokes: [breaststroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy, snorkel]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "單臂划水，感覺弱側的水感差異，訓練身體控制不依靠雙臂平衡"
+    perception_goal: "單臂划水時感覺身體保持平衡不歪斜；弱側感覺清楚"
+    success_signal: "單臂也能保持直線前進"
+    failure_signal: "單臂時身體明顯歪向划水側"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Sc10
+    name_en: "Behind the Head Scull"
+    name_zh: "頭後方划水"
+    strokes: [backstroke]
+    category: sculling
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "仰面手在頭後方做小划水，訓練背闊肌和前臂，模擬仰式入水捕水位置"
+    perception_goal: "頭後方的小划水動作感覺到背闊肌和前臂在做功"
+    success_signal: "身體能向前移動；感覺到背闊肌啟動"
+    failure_signal: "完全感覺不到用力點；頸部緊繃"
+    deficiency_fixes: []
+    source: "There's a Drill for That"

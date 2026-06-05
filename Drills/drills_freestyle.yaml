@@ -1,0 +1,371 @@
+# Freestyle Drills — There's a Drill for That
+# Source: There's a Drill for That (Laurie Sherret)
+# Perception layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# Fields:
+#   l_target: Vortex L level this drill primarily addresses
+#   abc_type: A=手感缺失 B=腳感缺失 C=全身張力問題 null=通用
+#   perception_goal: 泳者應該感覺到什麼
+#   success_signal: 感知成功的樣子
+#   failure_signal: 感知失敗的樣子
+#   deficiency_fixes: 對應書中 Common Stroke Deficiencies 編號
+
+drills:
+  - id: Fr1
+    name_en: "Standing Breathing"
+    name_zh: "站姿呼吸"
+    strokes: [freestyle]
+    category: breathing
+    equipment: []
+    l_target: [L0]
+    abc_type: null
+    purpose_zh: "建立正確呼吸時機與吐氣節律，消除憋氣習慣"
+    perception_goal: "吐氣連續均勻；轉頭換氣時下巴滑動而非抬頭；一個泳鏡在水面下"
+    success_signal: "轉頭幅度小，感覺是身體帶動頭轉；呼吸不緊張"
+    failure_signal: "需要抬頭才能呼吸；轉回水中時憋氣感"
+    deficiency_fixes: [1, 2]
+    source: "There's a Drill for That"
+
+  - id: Fr2
+    name_en: "Head Lead Balance – Face Down"
+    name_zh: "頭帶平衡 — 面朝下"
+    strokes: [freestyle]
+    category: balance
+    equipment: []
+    l_target: [L1]
+    abc_type: null
+    purpose_zh: "建立面朝下的身體線條與平衡，感覺肺部入水帶動臀部上浮"
+    perception_goal: "肺部往下壓水時臀部自然浮起；頸部長而放鬆；全身像一根漂浮的木材"
+    success_signal: "不需要用腿撐起臀部；視線自然朝向池底"
+    failure_signal: "臀部下沉；頸部緊繃；感覺在用力踢腿維持位置"
+    deficiency_fixes: [3]
+    source: "There's a Drill for That"
+
+  - id: Fr3
+    name_en: "Head Lead Balance – On Your Side"
+    name_zh: "頭帶平衡 — 側躺"
+    strokes: [freestyle]
+    category: balance
+    equipment: []
+    l_target: [L1]
+    abc_type: null
+    purpose_zh: "在45度側躺位置建立平衡感知，為旋轉打基礎"
+    perception_goal: "45度角側躺穩定不搖晃；肺部往水裡壓；視線朝向池底"
+    success_signal: "不需要調整姿勢就能維持45度；臀部靠近水面"
+    failure_signal: "過度旋轉到90度；感覺在上坡踢水"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Fr4
+    name_en: "Head Lead Balance with Rotation"
+    name_zh: "頭帶平衡 + 旋轉"
+    strokes: [freestyle]
+    category: balance
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: C
+    purpose_zh: "結合雙側平衡，加入換氣旋轉，感覺身體帶動頭轉而非頭帶動身體"
+    perception_goal: "旋轉從臀部啟動；頭轉量最小；回到水中立即找到平衡"
+    success_signal: "換氣後立刻回到另一側45度平衡；頭部像跟著身體走"
+    failure_signal: "抬頭換氣；旋轉後失去平衡需要調整"
+    deficiency_fixes: [1, 2, 4, 5]
+    source: "There's a Drill for That"
+
+  - id: Fr5
+    name_en: "Superman Kick"
+    name_zh: "超人踢水"
+    strokes: [freestyle]
+    category: kick
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: B
+    purpose_zh: "手臂伸前的流線姿勢踢水，感覺收腹讓背部平坦，肺部壓水"
+    perception_goal: "收腹後背部感覺平坦；肺部往水裡壓；頸部與脊椎對齊"
+    success_signal: "臀部靠近水面；踢水感覺從髖部啟動"
+    failure_signal: "背部拱起；踢水感覺只在膝蓋以下"
+    deficiency_fixes: []
+    source: "There's a Drill for That"
+
+  - id: Fr6
+    name_en: "Arm Lead Balance or 6-Count"
+    name_zh: "手臂主導平衡（六拍）"
+    strokes: [freestyle]
+    category: balance
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: null
+    purpose_zh: "單臂伸前的側身平衡，感覺錨定不移動，平衡來自核心"
+    perception_goal: "前臂穩定不搖晃，感覺是核心在穩定身體，不是手臂在平衡"
+    success_signal: "切換側邊時流暢；髖部帶動旋轉感明顯"
+    failure_signal: "需要揮動手臂才能保持平衡；踢腿不穩定"
+    deficiency_fixes: [4, 5, 10]
+    source: "There's a Drill for That"
+
+  - id: Fr7
+    name_en: "Streamline Kick"
+    name_zh: "流線踢水"
+    strokes: [freestyle]
+    category: kick
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: B
+    purpose_zh: "流線姿勢踢水（正面與背面），感覺踢水效率不依賴浮板"
+    perception_goal: "踢水讓水面沸騰而非大飛濺；腳不出水面；膝蓋微彎"
+    success_signal: "身體線條穩定向前；沒有浮板也能維持位置"
+    failure_signal: "膝蓋大幅彎曲；水面大飛濺；感覺在蹬自行車"
+    deficiency_fixes: [7]
+    source: "There's a Drill for That"
+
+  - id: Fr8
+    name_en: "Vertical Kick"
+    name_zh: "垂直踢水"
+    strokes: [freestyle]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "垂直踢水訓練從髖啟動的踢腿，消除自行車踢法"
+    perception_goal: "踢水從腹股溝和大腿啟動；腳踝放鬆；踢水緊實短促"
+    success_signal: "身體在水中保持垂直；踢水不需要膝蓋大幅彎曲"
+    failure_signal: "身體前傾或後傾；需要很大的踢幅才能維持高度"
+    deficiency_fixes: [7]
+    source: "There's a Drill for That"
+
+  - id: Fr9
+    name_en: "360 Roll"
+    name_zh: "360度滾轉"
+    strokes: [freestyle]
+    category: balance
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: C
+    purpose_zh: "緩慢旋轉360度訓練核心控制，感覺身體從髖部以下整體旋轉"
+    perception_goal: "旋轉從臀部下方啟動；肩膀到腳像一個整體轉動；不用頭帶動旋轉"
+    success_signal: "在泳道中線保持直線旋轉；每個姿勢都能找到平衡"
+    failure_signal: "頭部帶動旋轉；漂離中線；旋轉不均勻"
+    deficiency_fixes: [4, 5]
+    source: "There's a Drill for That"
+
+  - id: Fr10
+    name_en: "Sailboat"
+    name_zh: "帆船划手"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "單臂高肘划水感知，強調錨定後整體旋轉推進，像用身體跳過手臂"
+    perception_goal: "前臂垂直入水錨定後，感覺身體整個翻越過去；拉手配合髖旋轉"
+    success_signal: "每次划水都感覺到明確推力；換側流暢"
+    failure_signal: "拉水感覺在直臂往後推；旋轉和划手脫節"
+    deficiency_fixes: [6, 11]
+    source: "There's a Drill for That"
+
+  - id: Fr11
+    name_en: "One Arm Stroke"
+    name_zh: "單臂划手"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "單臂划手強調早期入水捕水，感覺核心同時帶動換氣與划手旋轉"
+    perception_goal: "捕水發生在水面附近而非深處；感覺肘部比手高"
+    success_signal: "換氣自然，不需要額外用力抬頭；每側都能流暢完成"
+    failure_signal: "捕水太深；換氣需要額外抬頭；一側比另一側困難很多"
+    deficiency_fixes: [1, 2, 5, 6, 7, 11]
+    source: "There's a Drill for That"
+
+  - id: Fr12
+    name_en: "Fingertip Dribble"
+    name_zh: "指尖拖水"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3]
+    abc_type: A
+    purpose_zh: "恢復臂高肘訓練，感覺手指輕掠水面，肘部始終高於手腕"
+    perception_goal: "手指輕輕刮過水面；手臂放鬆；肘部保持高位"
+    success_signal: "指尖留下清晰水跡；入水時指尖先入"
+    failure_signal: "手掌整個接觸水面；肘部比手低"
+    deficiency_fixes: [9, 12]
+    source: "There's a Drill for That"
+
+  - id: Fr13
+    name_en: "Trace The Line"
+    name_zh: "描黑線"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "視覺回饋修正手部入水過中線，感覺入水點在肩膀正前方偏外"
+    perception_goal: "入水點對準黑線外緣；不穿越身體中線；視線往下看線"
+    success_signal: "兩手分別對準黑線兩側外緣"
+    failure_signal: "手入水時穿越中線；感覺兩手快要碰到"
+    deficiency_fixes: [3, 8, 13]
+    source: "There's a Drill for That"
+
+  - id: Fr14
+    name_en: "Skating Underwater or Underwater Recovery"
+    name_zh: "水下溜冰（水下恢復臂）"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "水下恢復臂強調捕水發生在水面附近，感覺手在水下「溜冰」"
+    perception_goal: "恢復臂在水下移動時感覺水壓輕輕托著；捕水就在水面附近"
+    success_signal: "手部在水下移動流暢，沒有明顯阻力感"
+    failure_signal: "恢復臂造成很大阻力感；捕水點明顯太深"
+    deficiency_fixes: [13]
+    source: "There's a Drill for That"
+
+  - id: Fr15
+    name_en: "Superman Catch up"
+    name_zh: "超人趕上"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "前伸等待訓練捕水錨定與肩髖旋轉，感覺拉手時髖部同步旋轉"
+    perception_goal: "拉手起始於水面附近的錨定；感覺髖部在拉手時同步轉動"
+    success_signal: "兩手相遇時肩寬距離，不碰觸；每趟推進距離長"
+    failure_signal: "雙手觸碰或交叉；不感覺到髖旋轉；入水點太近"
+    deficiency_fixes: [6, 10, 11]
+    source: "There's a Drill for That"
+
+  - id: Fr16
+    name_en: "Fist Freestyle"
+    name_zh: "握拳划手"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "握拳划手強調前臂在拉水中的作用，感覺張開手後壓力明顯增加"
+    perception_goal: "握拳時感覺前臂在做工；張開手後感覺明顯的水壓增加"
+    success_signal: "握拳游也能前進；開手後推力明顯增強"
+    failure_signal: "握拳時幾乎無法前進（代表只靠手掌划水）"
+    deficiency_fixes: [13]
+    source: "There's a Drill for That"
+
+  - id: Fr17
+    name_en: "Triple Touch"
+    name_zh: "三點觸碰"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "訓練恢復臂軌跡，前觸-後觸-前入水，感覺恢復臂的完整弧線"
+    perception_goal: "肘部在整個恢復過程中保持高位；感覺手臂畫一個大弧線"
+    success_signal: "三個觸碰點清晰；肘部不下垂"
+    failure_signal: "無法完成後觸（代表肘部下沉）；動作卡頓"
+    deficiency_fixes: [12]
+    source: "There's a Drill for That"
+
+  - id: Fr18
+    name_en: "Suspended Hand"
+    name_zh: "懸空手"
+    strokes: [freestyle]
+    category: balance
+    equipment: [fins]
+    l_target: [L3, L4]
+    abc_type: C
+    purpose_zh: "恢復臂懸在水面10拍再入水，訓練核心與踢水在沒有手臂帶動時的穩定"
+    perception_goal: "核心緊繃讓臀部靠近水面；踢水穩定均勻；不依賴手臂入水恢復平衡"
+    success_signal: "懸空期間身體線條穩定；不感覺要下沉"
+    failure_signal: "腿部分開或停止踢水；臀部下沉；等不到10拍就需要入水"
+    deficiency_fixes: [4, 5]
+    source: "There's a Drill for That"
+
+  - id: Fr19
+    name_en: "Water Polo Free"
+    name_zh: "水球式自由式"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3]
+    abc_type: null
+    purpose_zh: "抬頭游訓練寬捕水與直線拉水，感覺頭部靜止不動"
+    perception_goal: "入水點在肩膀正外側；拉水對準髖部；頭部完全靜止"
+    success_signal: "頭部不左右晃動；推力感覺對準髖部而非肚臍"
+    failure_signal: "頭部跟著划手轉動；感覺拉向肚臍"
+    deficiency_fixes: [4, 6, 13]
+    source: "There's a Drill for That"
+
+  - id: Fr20
+    name_en: "Golf"
+    name_zh: "高爾夫計分"
+    strokes: [freestyle]
+    category: timing
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "以划水次數+時間的總分訓練每划距離，找到個人最佳節奏"
+    perception_goal: "感覺每一划都有明確推力；找到划頻與划距的平衡點"
+    success_signal: "每趟50的總分持續下降；時間和划次都有改善"
+    failure_signal: "總分無法下降；划次少了但時間差很多（過度滑行）"
+    deficiency_fixes: [15]
+    source: "There's a Drill for That"
+
+  - id: Fr21
+    name_en: "Quiet Hand Entry"
+    name_zh: "靜音入水"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "靜音入水訓練手部滑入水而非拍打水面，感覺手指穿過一個洞前臂跟進"
+    perception_goal: "入水幾乎無聲；感覺手先開一個洞，前臂和肩膀順著滑入；同側髖往下旋"
+    success_signal: "完全靜音入水；沒有水花"
+    failure_signal: "入水有聲音和水花；感覺在打水"
+    deficiency_fixes: [14]
+    source: "There's a Drill for That"
+
+  - id: Fr22
+    name_en: "No Bubbles"
+    name_zh: "無氣泡"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "觀察入水後氣泡量訓練延伸與阻力最小化，氣泡少代表手部前伸充分"
+    perception_goal: "入水後手部繼續延伸直到幾乎沒有氣泡；感覺髖旋轉帶動延伸"
+    success_signal: "抬頭查看時氣泡極少；兩側氣泡量接近"
+    failure_signal: "大量氣泡（代表延伸不足）；一側氣泡比另一側多很多"
+    deficiency_fixes: [14]
+    source: "There's a Drill for That"
+
+  - id: Fr23
+    name_en: "3 & Glide"
+    name_zh: "三划滑行"
+    strokes: [freestyle]
+    category: timing
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: C
+    purpose_zh: "三划後45度滑行10拍，感覺核心在沒有划水時維持身體線條"
+    perception_goal: "滑行時45度穩定；感覺核心在支撐姿勢；視線朝池底"
+    success_signal: "每次滑行都在不同側（對側交替）；姿勢穩定"
+    failure_signal: "滑行時過度旋轉到90度；核心放鬆後身體下沉"
+    deficiency_fixes: [1, 2, 4, 5]
+    source: "There's a Drill for That"
+
+  - id: Fr24
+    name_en: "Russian Rollover"
+    name_zh: "俄式滾轉"
+    strokes: [freestyle, backstroke]
+    category: timing
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "自由式和仰式交替游，感覺兩式捕水動作的相似性，用核心旋轉切換"
+    perception_goal: "翻轉時前臂錨定不動，感覺抓住水；自由式和仰式的捕水角度相似"
+    success_signal: "翻轉流暢；每次切換時感覺到明確的錨定"
+    failure_signal: "翻轉時失去平衡；看不出兩式捕水的共通感"
+    deficiency_fixes: [5, 11]
+    source: "There's a Drill for That"

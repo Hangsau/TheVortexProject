@@ -4,6 +4,28 @@
 
 ---
 
+## 當前狀態（2026-06-05）
+
+### 已完成——Drills/（新建）
+
+- [x] `Drills/drills_freestyle.yaml` — Fr1–Fr24（24 個動作，含 Vortex 感知層標注）
+- [x] `Drills/drills_backstroke.yaml` — Bk1–Bk26（26 個動作）
+- [x] `Drills/drills_breaststroke.yaml` — Br1–Br34（34 個動作）
+- [x] `Drills/drills_butterfly.yaml` — Fl1–Fl31（31 個動作，含水下蝶腳標注）
+- [x] `Drills/drills_sculling.yaml` — Sc1–Sc10（10 個划水感知動作）
+- [x] `Drills/DRILL_INDEX.md` — 完整索引（Schema / L級對應 / ABC型 / 快速查找）
+- 來源：*There's a Drill for That*（Laurie Sherret），每個動作均有 `perception_goal`、`success_signal`、`failure_signal` 感知層標注
+
+### 已完成——my-site 網頁（對應）
+
+- [x] `data/vortex/drills.yaml` — 125 個動作合併檔（供 Hugo 讀取）
+- [x] `layouts/vortex/vortex-drills.html` — 可篩選動作資料庫（泳式/L級/類別/ABC型四維篩選）
+- [x] `static/css/vortex.css` — 新增 vxd-* 樣式（卡片 / 篩選鈕 / 感知行 / 分類/ABC型徽章）
+- [x] `vortex-home.html` — 首頁加入動作練習資料庫入口
+- [x] commit + push 到 Hangsau/cortex，CI 已觸發
+
+---
+
 ## 當前狀態（2026-04-17）
 
 ### 已完成——Instructional/
@@ -80,7 +102,23 @@
 
 ## 下一步建議
 
-**本次 session（2026-04-25）完成：**
+**本次 session（2026-04-27）完成：**
+- Talos 主動透過 for-claude 管道提出 VortexProject 框架討論
+- 4 輪蘇格拉底教學：Talos 從誤解 Bridge/ 為泳式到正確識別為感知橋接文件層
+- 達成共識：**無儀器方案從蛙式感知橋接.md 開始**
+- Talos 提出三層補充計畫（無儀器驗證模組 L4-L6 + 教練提示欄 + 無儀器模式標頭）
+- 已指派任務：`~/vortex-draft/蛙式感知橋接_無儀器版.md`（Talos 撰寫中）
+
+### 當前最高優先
+
+**等待 Talos 草稿 → `/check-talos-reply` Step 4a 審閱**
+- Talos 完成草稿後會回覆 Claude，loop 自動觸發審閱流程
+- 審閱清單：無假文獻、🟢 有 DOI/PMID、🔴 明確標「研究空白」、無 ~ 配對問題
+- 審閱通過 → 重命名為正式 `Bridge/蛙式感知橋接.md`（覆蓋既有文件）→ git commit → 通知 Talos
+
+---
+
+**前次 session（2026-04-25）完成：**
 - `Research/物理現象/彈性蓄能.md` v4 — Talos + Claude 6 輪蘇格拉底教學協作完成
   - Richards 2012 整合（水阻衰減 SSC）
   - 🔵 推導格式重寫（物理演繹不需引用）
@@ -178,5 +216,14 @@
 
 ---
 
-*最後更新：2026-04-25（彈性蓄能.md v4 + 自然頻率.md v1 committed；COLLAB.md Task #1/#2 完成；/check-talos-reply skill 更新加入草稿審閱門）*
-*下次更新時機：隱性_顯性學習.md 教學 session 啟動並完成後*
+**2026-04-26**：
+- `Research/物理現象/教學競技框架_v1.md` 新建（本地）
+  - Talos swarm（talos-swarm-evolve）產出：PubMed 80+ 篇 gap 分析 + [[swimming-trends]] fuse
+  - 核心 gap：真人肩/踝自然頻率泳中數據缺、渦流肩實測缺、彈性蓄能長數據缺
+  - 教學 5 動作模板 + 競技 5 優化方向
+  - GitHub：branch `talos-teaching-v1` → merge 入 master（PR #1）
+  - 狀態：初稿 v1.0，待自測驗證 + 3 泳友小樣本
+  - 後續：文獻擴充方向考慮 Claude + Talos 協作，應用方向由 Hang 決定
+
+*最後更新：2026-06-05（動作練習資料庫 125 個動作建立完成，網頁已上線）*
+*下次更新時機：Talos 草稿審閱通過，或隱性_顯性學習.md 教學 session 啟動*
