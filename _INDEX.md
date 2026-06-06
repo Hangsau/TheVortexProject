@@ -118,6 +118,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | instructional/teaching-errors.yaml | **完成** · 6 式 76 條教學誤區；public{misconception/physical_reason/evidence/correct_concept/perception_impact} + diagnostic{type} |
 | instructional/technical-analysis.yaml | **完成** · 6 式 188 技術點；全 public（物理層），無 diagnostic |
 | technica/l-indicators.yaml | **完成** · L 指標矩陣 43 indicators（6 levels × 5 strokes，30 格）；public{indicator/framework_state/quant_ref/evidence} + diagnostic{failure_signal（6 common 格）/ type（3 格 A/B/C）} |
+| technica/water-sense-levels.yaml | **完成** · 水感層級 26 levels（free/back L0–L6，breast/fly pre+L2–L6）；public{description/methods/indicators/quant/stagnation/milestone + 各式特有欄位} + diagnostic{type_diagnosis/type_states/type_training/type_milestones/stagnation_by_type} + 頂層 three_types/appendices；公開層三型/A/B/C 0 leaks |
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
@@ -139,4 +140,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-06-06（canonical/ 結構化資料層記錄；L 指標矩陣 technica/l-indicators.yaml，commit 34090b6）*
+*最後更新：2026-06-06（canonical/ 結構化資料層記錄；新增水感層級 technica/water-sense-levels.yaml，26 levels）*

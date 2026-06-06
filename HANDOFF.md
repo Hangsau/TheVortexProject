@@ -14,6 +14,8 @@
 - [x] **技術分析**（commit 6ad36ea）：6 式 188 技術點 → `canonical/instructional/technical-analysis.yaml`；全 public（物理層）。my-site `vortex-tech.html` 探索器。
 - [x] **L 指標矩陣**（commit 34090b6）：`Technica/技術指標_L級對應框架.md` → `canonical/technica/l-indicators.yaml`；43 indicators（6 levels × 5 strokes，30 格全填）；public{indicator/framework_state/quant_ref/evidence} + diagnostic{failure_signal（6 common 格）/ type（3 格 A/B/C：free.L3.evf=A / back.L4.roll-stability=C / fly.L4.outsweep=A）}。my-site `vortex-matrix.html`（ADM matrix 範式：rows=levels × cols=strokes，aspect chip → 共用 detail panel，泳式 focus 篩選 + deep-link / hash-jump）。
 - 下游：my-site commit 3cf6069（Hangsau/cortex，CI green run 27053437843）；sync_vortex.py `sync_l_indicators()` 只帶 public，built HTML 診斷洩漏審查 = 0。swim-coach submodule 未 bump（l-indicators diagnostic 尚未被 vendor 消費，Phase G 再驗）。
+- [x] **水感層級**（Phase D）：4 式 `Technica/*水感框架.md` → `canonical/technica/water-sense-levels.yaml`；26 levels（free/back L0–L6，breast/fly pre+L2–L6）。public{description/methods/indicators/quant/stagnation/milestone + 各式特有 four_problems/state_description/fatigue_collapse_four_layers/kaizen/stress_test} + diagnostic{type_diagnosis/type_states/type_training/type_milestones/stagnation_by_type} + 頂層 three_types/appendices。公開層三型/A/B/C 全數淨化：per-stroke 字面替換（如「重新做三型診斷」→「重新確認感知缺陷的主要方向」、移除「（A型）」標記）+ 把 stagnation 內的 A/B/C 型專屬尾段抽出搬到 `diagnostic.stagnation_by_type`；審查 regex（三型|A型|B型|C型|哪型|不論主型|typical_speech|main_problem|chain_breakpoint|failure_trigger）over public = 0 leaks。my-site `vortex-levels.html`（vxl- 縱向序列卡：泳式 + L 級篩選、card expand、deep-link/hash-jump）。
+- 下游：my-site `sync_vortex.py` `sync_water_sense_levels()` 只帶 public（three_types/appendices/每 level diagnostic 整塊不取），built HTML 診斷洩漏審查 = 0。swim-coach submodule 未 bump（water-sense-levels diagnostic 尚未被 vendor 消費，Phase G 再驗）。
 
 ### 已完成——Drills/ 補入 how_to 操作步驟（commit a4ddee1）
 
@@ -135,19 +137,17 @@
 
 ## 下一步建議
 
-**本次 session（2026-04-27）完成：**
-- Talos 主動透過 for-claude 管道提出 VortexProject 框架討論
-- 4 輪蘇格拉底教學：Talos 從誤解 Bridge/ 為泳式到正確識別為感知橋接文件層
-- 達成共識：**無儀器方案從蛙式感知橋接.md 開始**
-- Talos 提出三層補充計畫（無儀器驗證模組 L4-L6 + 教練提示欄 + 無儀器模式標頭）
-- 已指派任務：`~/vortex-draft/蛙式感知橋接_無儀器版.md`（Talos 撰寫中）
+### 當前最高優先——Vortex 主題層模組化（散文→探索器）
 
-### 當前最高優先
+進度（canonical-first：結構先進 canonical/，再經 my-site `sync_vortex.py` 只帶 public）：
 
-**等待 Talos 草稿 → `/check-talos-reply` Step 4a 審閱**
-- Talos 完成草稿後會回覆 Claude，loop 自動觸發審閱流程
-- 審閱清單：無假文獻、🟢 有 DOI/PMID、🔴 明確標「研究空白」、無 ~ 配對問題
-- 審閱通過 → 重命名為正式 `Bridge/蛙式感知橋接.md`（覆蓋既有文件）→ git commit → 通知 Talos
+- [x] **Phase A/A'/B/C**：教學誤區 / 技術分析 / L 指標矩陣 / Drills how_to → 已上線（見「當前狀態」）
+- [x] **Phase D 水感層級**：4 式水感框架 → `canonical/technica/water-sense-levels.yaml`（26 levels，公開層三型 0 leaks）+ my-site `vortex-levels.html`。本 session 完成。
+- [ ] **Phase E 退役 Bridge/**：Bridge/ 散文已被 `canonical/perception/*.yaml`（public/diagnostic 兩層）+ stroke explorer 的 `data/vortex/{stroke}.yaml` 取代 → 冗餘。做法：① Bridge/*.md 加 deprecated 標頭（不刪）② my-site `sync_vortex.py` 移除 Bridge layer ③ 清空 `content/vortex/bridge/` ④ 首頁移除感知橋接卡。水感指南（基礎理論長文）保留為唯一散文（single.html）。
+- [ ] **Phase F 首頁重設計**：把首頁做成真正的「感知地圖」= 泳式×層 矩陣／控制台，單一視覺語言。⚠️ 用戶已兩次不滿目前排列 → **此階段必須先取得用戶明確方向確認，不可自走**。
+- [ ] **Phase G 收尾**：full sync + `--dry-run` 驗證、文件對齊（_INDEX / 兩邊 HANDOFF / vortex_sync_state.json）、swim-coach submodule 僅在 diagnostic 真被消費時才 bump。
+
+待用戶決定：① 輪替先前暴露的 TheVortexProject token；② 是否把本 repo 既有未提交 WIP（CLAUDE.md / 蝶式深度技術分析.md / canonical/perception/ / 教學競技框架_v1.md / 沒過清單）併入或另行處理（本 session 未動）。
 
 ---
 
