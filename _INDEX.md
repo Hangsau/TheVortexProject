@@ -112,6 +112,13 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | 彈性蓄能.md | 待建立 |
 | 皮膚機械感受器訓練.md | 待建立 |
 
+### canonical/（結構化資料層，public/diagnostic 兩層；下游經 sync_vortex.py / submodule 消費）
+| 文件 | 狀態 | 備註 |
+|------|------|------|
+| instructional/teaching-errors.yaml | **完成** · 6 式 76 條教學誤區；public{misconception/physical_reason/evidence/correct_concept/perception_impact} + diagnostic{type} |
+| instructional/technical-analysis.yaml | **完成** · 6 式 188 技術點；全 public（物理層），無 diagnostic |
+| technica/l-indicators.yaml | **完成** · L 指標矩陣 43 indicators（6 levels × 5 strokes，30 格）；public{indicator/framework_state/quant_ref/evidence} + diagnostic{failure_signal（6 common 格）/ type（3 格 A/B/C）} |
+
 ### Drills/
 | 文件 | 狀態 | 備註 |
 |------|------|------|
@@ -132,4 +139,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-06-06（Drills/ 125 動作補入 how_to 操作步驟，commit a4ddee1）*
+*最後更新：2026-06-06（canonical/ 結構化資料層記錄；L 指標矩陣 technica/l-indicators.yaml，commit 34090b6）*

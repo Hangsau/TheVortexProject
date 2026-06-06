@@ -6,6 +6,15 @@
 
 ## 當前狀態（2026-06-06）
 
+### 已完成——canonical/ 結構化資料層：散文→YAML 模組化（my-site 探索器來源）
+
+> 目標：把 Vortex 主題層散文模組化成 my-site 可掃描 / 可篩選 / 可展開的探索器。canonical-first：結構先進 canonical/（public/diagnostic 兩層），再經 sync_vortex.py 只帶 public 傳到 my-site，diagnostic 留給 swim-coach。
+
+- [x] **教學誤區**（commit 82f6fe0 + 9e68ffb）：6 式 76 條 → `canonical/instructional/teaching-errors.yaml`；public{misconception/physical_reason/evidence/correct_concept/perception_impact} + diagnostic{type}。my-site `vortex-errors.html` 探索器。
+- [x] **技術分析**（commit 6ad36ea）：6 式 188 技術點 → `canonical/instructional/technical-analysis.yaml`；全 public（物理層）。my-site `vortex-tech.html` 探索器。
+- [x] **L 指標矩陣**（commit 34090b6）：`Technica/技術指標_L級對應框架.md` → `canonical/technica/l-indicators.yaml`；43 indicators（6 levels × 5 strokes，30 格全填）；public{indicator/framework_state/quant_ref/evidence} + diagnostic{failure_signal（6 common 格）/ type（3 格 A/B/C：free.L3.evf=A / back.L4.roll-stability=C / fly.L4.outsweep=A）}。my-site `vortex-matrix.html`（ADM matrix 範式：rows=levels × cols=strokes，aspect chip → 共用 detail panel，泳式 focus 篩選 + deep-link / hash-jump）。
+- 下游：my-site commit 3cf6069（Hangsau/cortex，CI green run 27053437843）；sync_vortex.py `sync_l_indicators()` 只帶 public，built HTML 診斷洩漏審查 = 0。swim-coach submodule 未 bump（l-indicators diagnostic 尚未被 vendor 消費，Phase G 再驗）。
+
 ### 已完成——Drills/ 補入 how_to 操作步驟（commit a4ddee1）
 
 - [x] 5 個 `Drills/drills_*.yaml` 全部 125 個動作補入 `how_to` 操作步驟（block list，插在 `purpose_zh` 之後）
@@ -249,5 +258,5 @@
   - 狀態：初稿 v1.0，待自測驗證 + 3 泳友小樣本
   - 後續：文獻擴充方向考慮 Claude + Talos 協作，應用方向由 Hang 決定
 
-*最後更新：2026-06-05（物理數值/歸因三關校正回原始資料：v⁴→v³、9.5%降阻改教練觀測、PMID 24290609 歸因 Atkison、蛙式 29% 出水改待查）*
-*下次更新時機：Talos 草稿審閱通過，或隱性_顯性學習.md 教學 session 啟動*
+*最後更新：2026-06-06（canonical/ 結構化資料層：教學誤區 / 技術分析 / L 指標矩陣 三 YAML；L 指標矩陣 commit 34090b6 → my-site 探索器 3cf6069）*
+*下次更新時機：Phase D（各式 L0-L6 進展卡 → canonical/technica/water-sense-levels.yaml）完成，或 Talos 草稿審閱通過*
