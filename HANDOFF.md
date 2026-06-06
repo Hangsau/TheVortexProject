@@ -258,5 +258,5 @@
   - 狀態：初稿 v1.0，待自測驗證 + 3 泳友小樣本
   - 後續：文獻擴充方向考慮 Claude + Talos 協作，應用方向由 Hang 決定
 
-*最後更新：2026-06-06（canonical/ 結構化資料層：教學誤區 / 技術分析 / L 指標矩陣 三 YAML；L 指標矩陣 commit 34090b6 → my-site 探索器 3cf6069）*
-*下次更新時機：Phase D（各式 L0-L6 進展卡 → canonical/technica/water-sense-levels.yaml）完成，或 Talos 草稿審閱通過*
+*最後更新：2026-06-06（Phase D 水感層級完成：canonical/technica/water-sense-levels.yaml 26 levels，公開層三型 0 leaks，canonical commit 79ec0e6 → my-site 探索器 dac5e8f，CI green run 27062066148）*
+*下次更新時機：Phase E（退役 Bridge/）完成；Phase F（首頁重設計）須先取得用戶方向確認才動工*
