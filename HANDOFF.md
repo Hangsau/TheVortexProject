@@ -158,6 +158,13 @@
 
 ## 下一步建議
 
+### 週期化白話重寫 + 模組化（一源兩消費，plan-check 已備）
+
+**plan-check 已完成（2026-06-08，Opus）**：`plans/periodization_integration_plancheck.md`。用戶需求：把週期化資訊整合、用 Claude 白話重寫（不照搬 Bompa 抽象敘述）、可整合的全整合、模組化讓 AI/人都好查。
+- **核心架構決策**：在 `canonical/periodization/*.yaml` **各節點加 `plain_zh` 欄**（不另立白話模組）+ 新增 `canonical/periodization/_index.yaml` 概念目錄（source_id + 一行白話摘要 + cert）。本 repo 是「源」，主體工作在此。
+- 靠 my-site `sync_vortex.py` 的 verbatim pass-through → 白話欄與 _index 自動流到 my-site `data/periodization/` 與 swim-coach submodule 兩端。
+- **接手第一步**：讀該 plan-check 檔 → `/implement`（內含 8 步執行路徑、3 風險與預案、驗收、4 個待定案點、派工建議）。白話重寫不可外包（需 Claude 統一語感 + 反幻覺把關），列 manual。
+
 ### 當前最高優先——ADM 收編下游接通（Phase 2/3）
 
 canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
