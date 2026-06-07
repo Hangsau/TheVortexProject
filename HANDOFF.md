@@ -6,6 +6,18 @@
 
 ## 當前狀態（2026-06-07）
 
+### 已完成——canonical/periodization/ 新 domain：Bompa 週期化收編為唯一真相源（Phase 1）
+
+> 目標：把 Bompa《Periodization》(6th ed.) 週期化知識收進 canonical，成為唯一真相源，供兩個下游消費——my-site vortex 給 ADM 年度計畫補「週期化理論骨幹」、swim-coach 自動學課表能力的知識基礎。架構複製剛完成的 ADM 模式（一源兩消費）。**Phase 1（建 canonical）為本次範圍；Phase 2 vortex 呈現 / Phase 3 swim-coach 唯讀引用 / Phase 4 swim-coach rules schema 提案，後續進行。**
+
+- [x] **Phase 0 來源核對**：5 章正文全讀自正確 body 檔（`XX_Summary_of_Major_Concepts.md`，非僅含參考文獻的 `Chapter_X.md`）。檔對照：11_=Ch5 / 13_=Ch7 / 14_=Ch8 / 15_=Ch9 / 18_=Ch11。每個數字溯源至章節/表格 + 標確定性。修正 Haiku 草稿兩處：taper 改為 41–60%（重負荷 60–90%）/ 8–14 天；macrocycle 3:1 確認正確（Bompa "probably the most common"）。
+- [x] **structure.yaml**：年度計畫結構。3 階段（準備/競賽/過渡 + subphases）；4 計畫類型（mono/bi/tri/multipeak，Table 5.1 週數分配，dotted ID `periodization.structure.annual.*`）；macrocycle（2–6 週，3:1 預設負荷型態）；microcycle（4 分類）；detraining 安全表（🟢 Table 8.2 / Mujika & Padilla 2000，swim-coach 休賽/傷停課表關鍵安全參數）。
+- [x] **taper.yaml**：賽前減量與達峰（Ch9 / Mujika & Padilla 2003 🟢 / Bosquet 2007）。四變數（量 41–60%主旋鈕 / 強度維持 / 頻率≥80% / 時長 8–14 天）；曲線型態（快速指數 ≈4–5% 為首選 vs 階梯 ≈1.2–1.5%）；達峰窗 7–14 天；游泳應用（文獻 50–90% 量遞減、三週減量 +2.2%、雪梨2000 名次差 1.62%）。
+- [x] **zones.yaml**：能量系統強度分區。Table 7.1 六分區（賽配速=zone 2）；Table 11.2 HR/VO2/能量系統對照；Table 11.1 LIEE 六法；耐力週期化三階段；游泳配速分區（🔵 只映射 Bompa 框架不發明百分比）。
+- [x] **三項驗證（Python，跑完即棄）**：① 三檔 YAML parse OK；② 跨 domain link 完整——所有 `links.development_stages` 引用（l2t/t2t/t2c/t2w）皆命中 development/matrix.yaml stages[].key，BAD=NONE；③ 22 個 ID 全唯一、全 `periodization.` 前綴，DUPLICATES=NONE。
+- **整合點**：ADM matrix T2W 格已寫「48 週年度計畫；一年兩巔峰（春季選拔 + 夏季國際賽）」= bi-cycle，本 domain 提供其週期化理論背景，links 雙向可串。
+- **下游待接**：Phase 2 my-site `sync_vortex.py` 加 periodization sync + vortex 呈現層；Phase 3 swim-coach `build_knowledge_index` 收進 L1 FTS；Phase 4 交付 `rules/periodization.yaml` schema 提案（Hang 自填教練參數，A-zone 不外包）。
+
 ### 已完成——canonical/development/ 新 domain：ADM 知識收編為唯一真相源
 
 > 目標：把 ADM（Swimming Canada 運動員發展矩陣 / LTD）知識收進 TheVortexProject canonical，成為唯一真相源。my-site `data/adm/` 與 swim-coach `rules/ltad_stages.yaml` 退役成下游 sync 副本。**模組化為本次重點；橋接/呈現（Phase 4）不在此次範圍。**
