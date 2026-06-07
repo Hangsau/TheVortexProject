@@ -4,7 +4,16 @@
 
 ---
 
-## 當前狀態（2026-06-06）
+## 當前狀態（2026-06-07）
+
+### 已完成——canonical/development/ 新 domain：ADM 知識收編為唯一真相源
+
+> 目標：把 ADM（Swimming Canada 運動員發展矩陣 / LTD）知識收進 TheVortexProject canonical，成為唯一真相源。my-site `data/adm/` 與 swim-coach `rules/ltad_stages.yaml` 退役成下游 sync 副本。**模組化為本次重點；橋接/呈現（Phase 4）不在此次範圍。**
+
+- [x] **matrix.yaml**：`canonical/development/matrix.yaml`；4 支柱（physical/technical/mental/life）× 5 階段軸（fun/l2t/t2t/t2c/t2w；fun `has_cells:false`）+ 16 cells（`dev.{pillar}.{stage}`）。public.{summary,points} 逐字搬 my-site `data/adm/matrix.yaml`（週期化處方屬正當 prescriptive，全留 public）+ diagnostic null（ADM 無 A/B/C 感知判讀語）。technical 三格 links 串 22 std + 真實 drills/tech/l_indicators。修死連結 Fr28→Fr16。
+- [x] **technical-standards.yaml**：`canonical/development/technical-standards.yaml`；附錄 A 技術基準 22 筆（`std.{stroke}.{aspect}`）= 4 式划水（free/back/fly/breast）+ 起跳×2（dive/back）+ 轉身×6（free/back/breast/fly/im-breast/im-free）。public{title/framework/applies_from:t2t/phases.criteria} + diagnostic null。左右鏡像小節（free/back pull+push）合併為單筆（側中性 criteria + note）。links 串「形式↔感知」l_indicators，全用已驗證 ID。
+- [x] **驗證（throwaway script，跑完已刪）**：parse OK；cells=16 / stages=5（fun has_cells:false）/ standards=22；zero-drift（16 格 public.{summary,points} vs my-site 源檔逐格逐條零差異）；死連結=0（canonical ID universe 378，link refs 95，差集空）；appendix-a coverage 完整（22 未逐字命中者全為左右鏡像 bullet，已被 4 筆合併記錄語意涵蓋）。
+- **下游待接**：my-site `sync_vortex.py` 尚未加 `sync_adm_matrix` / `sync_adm_standards`（Step 6）；swim-coach `rules/ltad_stages.yaml` 退役有結構性衝突待用戶裁定（見下一步建議）。
 
 ### 已完成——canonical/ 結構化資料層：散文→YAML 模組化（my-site 探索器來源）
 
@@ -137,7 +146,16 @@
 
 ## 下一步建議
 
-### 當前最高優先——Vortex 主題層模組化（散文→探索器）
+### 當前最高優先——ADM 收編下游接通（Phase 2/3）
+
+canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
+
+- [ ] **Step 6 my-site sync**：`my-site/tools/sync_vortex.py` 加 `sync_adm_matrix` + `sync_adm_standards`（仿 `sync_l_indicators`：讀 canonical development 兩層→剝 diagnostic→還原成 `adm-matrix.html` 現讀格式 `matrix.pillars[].stages[].{summary,points}`；納入 sync_state 追蹤）。
+- [ ] **Step 7 my-site 驗證**：`--dry-run`→正式 sync→`hugo` build→ADM 頁面截圖比對渲染不變→commit+push（驗 CI 綠）。
+- [ ] **Step 8 swim-coach 退役（⚠️ 須用戶裁定）**：swim-coach CLAUDE.md 明文「規則表 `rules/*.yaml` 必須 Hang 親自寫」+「永久 out-of-scope：無人 review 的自動規則調整」。把 `ltad_stages.yaml` 改 canonical 自動 sync 牴觸此規則。三選項：① 不退役（保持手寫，canonical 與它平行）② sync 產生草稿 + Hang review 後手動採納 ③ 接受退役、放寬該規則。**不自行決定。**
+- [ ] **Step 9 code-audit**：Phase 1+2+3 程式與資料改動的品質審查（push 前必跑）。
+
+### Vortex 主題層模組化（散文→探索器）
 
 進度（canonical-first：結構先進 canonical/，再經 my-site `sync_vortex.py` 只帶 public）：
 
@@ -258,5 +276,5 @@
   - 狀態：初稿 v1.0，待自測驗證 + 3 泳友小樣本
   - 後續：文獻擴充方向考慮 Claude + Talos 協作，應用方向由 Hang 決定
 
-*最後更新：2026-06-06（Phase D 水感層級完成：canonical/technica/water-sense-levels.yaml 26 levels，公開層三型 0 leaks，canonical commit 79ec0e6 → my-site 探索器 dac5e8f，CI green run 27062066148）*
-*下次更新時機：Phase E（退役 Bridge/）完成；Phase F（首頁重設計）須先取得用戶方向確認才動工*
+*最後更新：2026-06-07（ADM 收編 canonical/development/：matrix.yaml 16 cells + technical-standards.yaml 22 筆，public/diagnostic 分層，全驗證通過。下游 my-site sync 待接 Step 6–7；swim-coach 退役 Step 8 須用戶裁定）*
+*下次更新時機：Step 6–7（my-site sync_adm）完成；Step 8（swim-coach 退役）取得用戶裁定後*

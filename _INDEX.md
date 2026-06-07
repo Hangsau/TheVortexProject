@@ -119,6 +119,8 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | instructional/technical-analysis.yaml | **完成** · 6 式 188 技術點；全 public（物理層），無 diagnostic |
 | technica/l-indicators.yaml | **完成** · L 指標矩陣 43 indicators（6 levels × 5 strokes，30 格）；public{indicator/framework_state/quant_ref/evidence} + diagnostic{failure_signal（6 common 格）/ type（3 格 A/B/C）} |
 | technica/water-sense-levels.yaml | **完成** · 水感層級 26 levels（free/back L0–L6，breast/fly pre+L2–L6）；public{description/methods/indicators/quant/stagnation/milestone + 各式特有欄位} + diagnostic{type_diagnosis/type_states/type_training/type_milestones/stagnation_by_type} + 頂層 three_types/appendices；公開層三型/A/B/C 0 leaks |
+| development/matrix.yaml | **完成** · 運動員發展矩陣（Swimming Canada ADM）；4 支柱 × 5 階段軸（FUN has_cells:false）+ 16 cells（dev.{pillar}.{stage}）；public{summary/points}（週期化處方屬正當 prescriptive）+ diagnostic null；links 互連 std/drills/technical_analysis/l_indicators。收編前散落於 my-site data/adm + swim-coach rules，現為唯一真相源 |
+| development/technical-standards.yaml | **完成** · ADM 附錄 A 技術基準 22 筆（std.{stroke}.{aspect}）；4 式划水 + 起跳×2 + 轉身×6；public{title/framework/applies_from:t2t/phases.criteria}（左右鏡像合併為單筆）+ diagnostic null；links 串「形式↔感知」l_indicators |
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
