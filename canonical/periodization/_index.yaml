@@ -26,6 +26,9 @@ schema_version: 1
 
 # ── 年度計畫結構（structure.yaml）──
 structure:
+  - {id: periodization.structure.schools_overview, file: structure.yaml, name_zh: 週期化多派概覽, gist_zh: "週期化不是定論而是幾派辯論：傳統/板塊/極化/Olbrecht/反向；含 Q1–Q11 導讀＋作者立場", stages: [l2t, t2t, t2c, t2w]}
+  - {id: periodization.structure.school_block, file: structure.yaml, name_zh: 板塊週期化（Issurin）, gist_zh: "菁英序列集中而非並行；殘留效應決定換塊（速度~5d/有氧~30d）；8–12 週一階段", stages: [t2c, t2w]}
+  - {id: periodization.structure.perception_periodization_bridge, file: structure.yaml, name_zh: 感知—週期化橋接, gist_zh: "🔴假設：感知穩定度本身該被週期化；老實標記與 Vortex 命題的脫節缺口", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.structure.annual.monocycle, file: structure.yaml, name_zh: 單週期, gist_zh: "一年衝一個高峰；適合新手/青少年/單一目標賽季", stages: [l2t, t2t]}
   - {id: periodization.structure.annual.bicycle, file: structure.yaml, name_zh: 雙週期, gist_zh: "一年衝兩個高峰；競技泳者原型，對應 ADM 一年兩巔峰", stages: [t2c, t2w]}
   - {id: periodization.structure.annual.tricycle, file: structure.yaml, name_zh: 三週期, gist_zh: "一年衝三個高峰；高水準多目標賽季", stages: [t2w]}
@@ -51,6 +54,8 @@ taper:
 
 # ── 能量系統強度分區（zones.yaml）──
 zones:
+  - {id: periodization.zones.school_polarized, file: zones.yaml, name_zh: 極化分布（Seiler/TID）, gist_zh: "問每區占幾成：80/20 極化、避中間 Z2；但游泳金字塔型更常見（Crowley 2021）", stages: [t2c, t2w]}
+  - {id: periodization.zones.olbrecht_model, file: zones.yaml, name_zh: Olbrecht 能量系統個體化, gist_zh: "最適非最大；閾值=魔法子彈謬誤；capacity/power 不能同時練；個體乳酸測試", stages: [t2c, t2w]}
   - {id: periodization.zones.table_7_1, file: zones.yaml, name_zh: Bompa 六分區, gist_zh: "用最大表現百分比分 6 區；賽配速=zone 2，每週≥50% 落賽配速", stages: [t2t, t2c, t2w]}
   - {id: periodization.zones.table_11_2, file: zones.yaml, name_zh: 心率/攝氧/能量系統對照, gist_zh: "把心率攝氧對應到主導能量系統；確認該組課練到哪套系統", stages: [t2t, t2c, t2w]}
   - {id: periodization.zones.table_11_1, file: zones.yaml, name_zh: 低強度耐力方法, gist_zh: "主動恢復/長慢游/節奏游等；低強度與高強度耐力不可亂混", stages: [t2t, t2c, t2w]}
