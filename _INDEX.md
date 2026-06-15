@@ -123,7 +123,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | 04_動機與自我決定.md | **完成（dossier）** · SDT/成就目標/動機氣候/TARGET；Pelletier 2001 + Minkels 2023 游泳第一手；感知目標語言=精熟氣候工具 |
 | 05_意象與心理演練.md | **完成（dossier）** · forward model/PETTLEP；Kilteni 2018 意象用前向模型；意象=feedforward 橋（接 EMG 悖論解釋 #2）|
 | 06_自我對話與心理技能訓練.md | **完成（dossier）** · IST/MST 配對假說 + 目標設定 + PST；Hatzigeorgiadis 游泳池系列；感知導向自我對話=第三類（🔴）|
-| 07_心流與最佳表現.md | **完成（dossier）** · Csikszentmihalyi 九維度 + flow vs clutch；de-reinvestment=L5→L6 機制；Liao & Masters 2001 游泳第一手 |
+| 07_心流與最佳表現.md | **完成（dossier）** · Csikszentmihalyi 九維度 + flow vs clutch；de-reinvestment=L5→L6 機制；Liao & Masters 2001 類比學習（桌球；游泳為外推） |
 | 08_心理感知生理交互.md | **完成（dossier）** · Marcora/Noakes/Craig/Porges；EMG 悖論評估（焦慮過度控制證據最強）；Baba 2021 水浸內感受 |
 | 註（心理） | | 8 份 dossier 由子代理蒐集（~250+ 文獻條目），00 總覽由 Opus 整合；第一手書源 Science of Swimming Faster Ch.16/Ch.11 + Endure |
 
