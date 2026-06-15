@@ -16,7 +16,8 @@ TheVortexProject/
 ├── Bridge/              橋接層：每個技術點的感知目標語言
 ├── Research/            研究層：文獻筆記與前沿假設
 │   ├── 感知科學/
-│   └── 物理現象/
+│   ├── 物理現象/
+│   └── 心理/
 └── Observations/        觀察層：教學案例記錄
 ```
 
@@ -112,6 +113,20 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | 彈性蓄能.md | 待建立 |
 | 皮膚機械感受器訓練.md | 待建立 |
 
+### Research/心理/
+| 文件 | 狀態 |
+|------|------|
+| 00_心理層總覽.md | **完成（Opus 整合骨架）** · 五主軸（感覺水第三類焦點/Flow↔Reinvestment 軸/EMG 悖論心理橋/動機氣候=感知土壤/恐懼=失控簽名）+ L0–L6 對照 + A/B/C（C 型機制）+ 5 項框架原創貢獻 + 6 條跨 cluster 🔴 |
+| 01_注意力焦點與動作學習.md | **完成（dossier）** · Wulf EF/IF + constrained action；2024 Bayesian meta（PMID 39480294）推翻 EF 全面優越；「感覺水」第三類焦點 |
+| 02_喚醒焦慮與壓力崩潰.md | **完成（dossier）** · 再投資理論（Masters 1992）+ IZOF + Beilock；EMG 悖論機制鏈；倒 U/ACTH 引用已查證修正 |
+| 03_水中恐懼與學習者心理.md | **完成（dossier）** · FWAQ「失去動作控制」最強恐懼預測因子（Misimi 2020）+ 凍結雙系統 + CO₂ 敏感 vs 潛水反射 |
+| 04_動機與自我決定.md | **完成（dossier）** · SDT/成就目標/動機氣候/TARGET；Pelletier 2001 + Minkels 2023 游泳第一手；感知目標語言=精熟氣候工具 |
+| 05_意象與心理演練.md | **完成（dossier）** · forward model/PETTLEP；Kilteni 2018 意象用前向模型；意象=feedforward 橋（接 EMG 悖論解釋 #2）|
+| 06_自我對話與心理技能訓練.md | **完成（dossier）** · IST/MST 配對假說 + 目標設定 + PST；Hatzigeorgiadis 游泳池系列；感知導向自我對話=第三類（🔴）|
+| 07_心流與最佳表現.md | **完成（dossier）** · Csikszentmihalyi 九維度 + flow vs clutch；de-reinvestment=L5→L6 機制；Liao & Masters 2001 游泳第一手 |
+| 08_心理感知生理交互.md | **完成（dossier）** · Marcora/Noakes/Craig/Porges；EMG 悖論評估（焦慮過度控制證據最強）；Baba 2021 水浸內感受 |
+| 註（心理） | | 8 份 dossier 由子代理蒐集（~250+ 文獻條目），00 總覽由 Opus 整合；第一手書源 Science of Swimming Faster Ch.16/Ch.11 + Endure |
+
 ### canonical/（結構化資料層，public/diagnostic 兩層；下游經 sync_vortex.py / submodule 消費）
 | 文件 | 狀態 | 備註 |
 |------|------|------|
@@ -147,4 +162,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-06-10（週期化外部文獻擴充 + plain_zh 白話層 + _index 概念目錄；一源兩消費全鏈打通：my-site 呈現 + swim-coach FTS）*
+*最後更新：2026-06-15（新增 Research/心理/ 層：8 份 dossier + Opus 整合總覽；補上感知優先重讀的運動心理學環節）*
