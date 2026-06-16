@@ -6,9 +6,17 @@
 
 ## 當前狀態（2026-06-16）
 
-### 已完成——Phase 2 啟動：心理層接入 Vortex 網站（水中恐懼 pilot 上線）（2026-06-16）
+### 已完成——Phase 2：心理層接入 Vortex 網站（水中恐懼 pilot 上線 + 八主題「心理地圖」著陸頁）（2026-06-16）
 
 > 觸發：研究層完整化（B1–B4）達成後，用戶指示「繼續」，進入 Phase 2 網站接入。先做 1 主題 pilot 打通全管線再量產。**用戶關鍵糾正：直達網址＝孤兒頁，不算接入 Vortex；接入必須有導覽入口。** Phase F 凍結的是「首頁重設計」，加一張現有樣式入口卡不在凍結範圍。
+> **後續用戶指示（「你必須自己研究現有資料、設計怎麼呈現讓我看、讓想看的人了解」）**：把著陸頁從「單主題清單」升級成「心理地圖」——8 主題沿 L0→L6／初學→競技脊椎排成三帶（初學端 L0–L2／貫穿全程 L0–L6／進階競技端 L3–L6），同時回答用戶的「有沒有分級」問題（分級＝這條脊椎）。已建主題可點入，待建主題顯示前提＋概念數＋「建置中」，不連入空面板。
+
+**心理地圖（八主題三帶）**：
+- canonical `psychology.yaml`：fear theme 加定位欄位（band/l_band/level_tag/concept_count），並 append 7 個 `status: planned` 主題 stub（只有 theme 層 premise，無 concept）：02 心理-感知-生理交互(7)、03 動機與動機氣候(9)、04 意象與心理演練(6)、05 注意力焦點(6)、06 自我對話與心理技能(8)、07 喚醒焦慮與壓力崩潰(8)、08 心流與去再投資(10)。premise 由 8 dossier 各派 haiku agent 盤點後起草。
+- `sync_vortex.py` `sync_psychology()` 加 pass-through theme 層 band/l_band/level_tag/concept_count。
+- `vortex-psychology.html` 概覽改成三帶地圖（`$bands` slice，按 band 分組 range themes，complete→可點 is-ready 卡、planned→is-planned 卡＋建置中 badge；左 rail 只列 complete 主題）。`vortex.css` 加 `.vx-band*` / `.vx-theme-*`。
+- 已驗：hugo build exit 0，3 帶、1 ready（fear）、7 planned、ready 卡 data-target 對到實存 panel、7 concept panel；headless Edge 截圖視覺確認。
+
 
 - **新 canonical domain `canonical/psychology/psychology.yaml`（commit 36d51f5，Vortex repo）**：theme→concept schema（跨泳式、跨族群，對應 perception `free.yaml` L16 預授權的 psychology domain）。pilot 主題「水中恐懼」7 概念，每概念 public/diagnostic 兩層。
   - 7 概念：失控不是怕水（control_loss）、恐懼關掉水感（perception_masking）、凍結是反射（freeze_reflex）、CO₂ 換氣過度恐慌（co2_breath_panic）、潛水反射冷靜（diving_reflex_calm）、安全前置（safety_precondition）、族群恐懼臉孔（population_faces）。
@@ -293,9 +301,10 @@
 2. ~~**各 dossier 殘餘 🔴 逐條查證**~~ **已系統性收束（2026-06-16，B1–B4 全 8 dossier 引用查證，見當前狀態）**：所有「待查引用」🔴 已全數查證或釐清（含攔截 4 處誤歸因/誇大結果）；殘餘 🔴 皆為真研究空白（已明確標界「目前文獻無此數據」），保留為未來實驗設計起點，非未完成查證債。
 3. ~~**Phase 2：心理層接入 Vortex 網站**~~ **已啟動，pilot 上線（2026-06-16，見當前狀態）**——水中恐懼 1 主題 7 概念打通全管線（canonical/psychology/ + public/diagnostic 分層 + sync + master-detail 頁 + 首頁入口 + 三關校正），CI success。**剩餘工作見下方「Phase 2 量產」。**
 
-### Phase 2 量產：心理層其餘主題接入（pilot 已驗，可量產）
+### Phase 2 量產：心理層其餘 7 主題 concept 內容（地圖已上線，stub 待填）
 
-pilot（水中恐懼）已打通管線。剩餘 dossier 01–08 主題待轉 canonical theme：意象/心像、自我對話、心流與最佳表現、動機與目標、注意力/注意焦點、喚醒/焦慮（倒 U）、隱性顯性學習、感知-生理交互（EMG 悖論）等。每主題：① 從對應 dossier 抽 concept → 寫 `canonical/psychology/psychology.yaml` theme（public/diagnostic 分層）② 每條過三關校正、剔除項列沒過清單 ③ re-run `sync_vortex.py` → hugo build → 視覺驗證 ④ 首頁入口卡主題數動態自增（無需改 home）。**族群全光譜紀律**：每主題的族群差異分列並列，不窄化單一群。
+pilot（水中恐懼）已打通管線，著陸頁已是八主題「心理地圖」三帶（其餘 7 主題現為 `status: planned` stub，只有 theme 層 premise、無 concept，著陸頁顯示「建置中」）。量產＝把 7 個 stub 逐一填成完整 concept（status 改 complete）：① 從對應 dossier 抽 concept → 寫 `canonical/psychology/psychology.yaml` 該 theme 的 `concepts:`（public/diagnostic 分層）② 每條過三關校正、剔除項列沒過清單 ③ re-run `sync_vortex.py` → hugo build → 視覺驗證（填好後地圖該卡自動從 is-planned 變 is-ready、左 rail 自動長出該主題導覽，無需改模板）④ 首頁入口卡主題數已動態。**族群全光譜紀律**：每主題的族群差異分列並列，不窄化單一群。
+> 三帶與每主題 concept_count（地圖已標）：初學端 02 心理-感知-生理交互(7)；貫穿全程 03 動機與動機氣候(9)、04 意象與心理演練(6)；進階競技端 05 注意力焦點(6)、06 自我對話與心理技能(8)、07 喚醒焦慮與壓力崩潰(8)、08 心流與去再投資(10)。concept_count 是盤點估值，量產時以實際過三關的條數為準（同步更新 stub 的 concept_count）。
 
 ### 週期化白話重寫 + 模組化（一源兩消費，plan-check 已備）
 
@@ -434,5 +443,5 @@ canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
   - 狀態：初稿 v1.0，待自測驗證 + 3 泳友小樣本
   - 後續：文獻擴充方向考慮 Claude + Talos 協作，應用方向由 Hang 決定
 
-*最後更新：2026-06-16（Phase 2 啟動：心理層接入 Vortex 網站——水中恐懼 pilot 7 概念上線，新 domain canonical/psychology/〔commit 36d51f5〕+ my-site sync/master-detail 頁/首頁入口〔commit 3df8b56, CI success〕，public/diagnostic 分層 0 洩漏，三關校正剔除 4 條；剩餘主題待量產）*
+*最後更新：2026-06-16（Phase 2：心理層接入 Vortex 網站——水中恐懼 pilot 7 概念上線 + 八主題「心理地圖」著陸頁〔沿 L0→L6／初學→競技 脊椎排三帶，complete 可點入、planned 顯示建置中〕。新 domain canonical/psychology/〔fear theme 加 band 定位欄位 + append 7 planned stub〕+ my-site sync 加 theme 層 pass-through/著陸頁三帶地圖/`.vx-band*`·`.vx-theme-*` CSS/首頁入口。public/diagnostic 分層 0 洩漏，三關校正剔除 4 條；7 主題 concept 內容待量產）*
 *下次更新時機：my-site 週期化知識整合（B）動工後*
