@@ -6,6 +6,20 @@
 
 ## 當前狀態（2026-06-16）
 
+### 已完成——Phase 2 啟動：心理層接入 Vortex 網站（水中恐懼 pilot 上線）（2026-06-16）
+
+> 觸發：研究層完整化（B1–B4）達成後，用戶指示「繼續」，進入 Phase 2 網站接入。先做 1 主題 pilot 打通全管線再量產。**用戶關鍵糾正：直達網址＝孤兒頁，不算接入 Vortex；接入必須有導覽入口。** Phase F 凍結的是「首頁重設計」，加一張現有樣式入口卡不在凍結範圍。
+
+- **新 canonical domain `canonical/psychology/psychology.yaml`（commit 36d51f5，Vortex repo）**：theme→concept schema（跨泳式、跨族群，對應 perception `free.yaml` L16 預授權的 psychology domain）。pilot 主題「水中恐懼」7 概念，每概念 public/diagnostic 兩層。
+  - 7 概念：失控不是怕水（control_loss）、恐懼關掉水感（perception_masking）、凍結是反射（freeze_reflex）、CO₂ 換氣過度恐慌（co2_breath_panic）、潛水反射冷靜（diving_reflex_calm）、安全前置（safety_precondition）、族群恐懼臉孔（population_faces）。
+  - **public/diagnostic 分層**：public = 現象機制／生理硬體邊界／L0–L6 映射／誤區校正／可做介入／族群差異；diagnostic（泳者說 X→判斷、A/B/C 診斷、感知探針）**不公開**，sync 時剝離。
+- **my-site 接入（commit 3df8b56，CI success，hugo-source）**：
+  - `tools/sync_vortex.py` 加 `sync_psychology()`：iterate themes→concepts，只輸出 public 欄位（drop diagnostic），寫 `data/vortex/psychology.yaml`。已驗 0 diagnostic 洩漏。
+  - `layouts/vortex/vortex-psychology.html` master-detail 頁（重用 vortex.css/vortex.js，左 rail 按 theme→concept、右 panel 渲染現象/邊界/誤區/介入/族群/來源/flow nav）。
+  - `content/vortex/psychology/_index.md`（layout: vortex-psychology）。
+  - **首頁入口卡**（`vortex-home.html`「更底層·感知的地基」section，現有 `.vx-toc-row` 樣式，主題數動態讀 data）——孤兒頁→真正接入導覽。
+- **三關校正沒過清單（剔除 4 條，不收）**：US poll 百分比🟠（二手委託民調）、FWAQ 98.2%/α=0.831（反問不過：量表內部信度非教學可用結論）、Wolpe 90%🟡（舊文獻過度精確）、US 4.3%/40%🔴（待查）。三處 🔵 反推防護：perception_masking 標🔵附研究空白註、diving_reflex 附安全前置、呼吸介入限低強度（淺水昏迷風險）。
+
 ### 已完成——心理層 8 dossier 系統性引用查證 B1–B4：4 處誤歸因/誇大結果攔截 + 全數文獻 🔴 收斂（2026-06-16）
 
 > 觸發：用戶指示「先做完整研究、把心理部分整理好，再看怎麼接入 vortex 網站」。先做研究層完整化（網站接入留待 Phase 2）。分 4 批逐檔查證每一條 🔴 待查引用，每個人名/DOI/PMID 都實際追到 Crossref / NCBI eutils 一手核對，不靠搜尋摘要。**過程攔到 4 處高風險幻覺/誤記，全部更正。**
@@ -277,7 +291,11 @@
 心理層的缺口補強任務完成（查證債 / 整合缺口 / 族群覆蓋 / 補厚單薄段）。跨檔工程剩一件：
 1. ~~**`隱性_顯性學習.md` 升 v2**~~ **已完成（2026-06-16，見當前狀態）**——並攔截更正一處 Liao & Masters 桌球/游泳誤歸因（連帶修 00/07/_INDEX/RESEARCH_PLAN）。
 2. ~~**各 dossier 殘餘 🔴 逐條查證**~~ **已系統性收束（2026-06-16，B1–B4 全 8 dossier 引用查證，見當前狀態）**：所有「待查引用」🔴 已全數查證或釐清（含攔截 4 處誤歸因/誇大結果）；殘餘 🔴 皆為真研究空白（已明確標界「目前文獻無此數據」），保留為未來實驗設計起點，非未完成查證債。
-3. **Phase 2：心理層接入 Vortex 網站**（待用戶確認後啟動）——研究層已完整化，下一步才評估 canonical/psychology/ + public/diagnostic 分層 + sync + 三關校正的網站呈現工程。**不可自走，須先取得用戶方向確認。**
+3. ~~**Phase 2：心理層接入 Vortex 網站**~~ **已啟動，pilot 上線（2026-06-16，見當前狀態）**——水中恐懼 1 主題 7 概念打通全管線（canonical/psychology/ + public/diagnostic 分層 + sync + master-detail 頁 + 首頁入口 + 三關校正），CI success。**剩餘工作見下方「Phase 2 量產」。**
+
+### Phase 2 量產：心理層其餘主題接入（pilot 已驗，可量產）
+
+pilot（水中恐懼）已打通管線。剩餘 dossier 01–08 主題待轉 canonical theme：意象/心像、自我對話、心流與最佳表現、動機與目標、注意力/注意焦點、喚醒/焦慮（倒 U）、隱性顯性學習、感知-生理交互（EMG 悖論）等。每主題：① 從對應 dossier 抽 concept → 寫 `canonical/psychology/psychology.yaml` theme（public/diagnostic 分層）② 每條過三關校正、剔除項列沒過清單 ③ re-run `sync_vortex.py` → hugo build → 視覺驗證 ④ 首頁入口卡主題數動態自增（無需改 home）。**族群全光譜紀律**：每主題的族群差異分列並列，不窄化單一群。
 
 ### 週期化白話重寫 + 模組化（一源兩消費，plan-check 已備）
 
@@ -416,5 +434,5 @@ canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
   - 狀態：初稿 v1.0，待自測驗證 + 3 泳友小樣本
   - 後續：文獻擴充方向考慮 Claude + Talos 協作，應用方向由 Hang 決定
 
-*最後更新：2026-06-16（心理層 8 dossier 系統性引用查證 B1–B4：攔截 4 處誤歸因/誇大結果〔Gould 2002→1999、Moraes→Richard + 誇大更正、Masters&Maxwell 書章→期刊、Easterbrook PMID〕，全數「待查引用」🔴 收斂為真研究空白；研究層完整化達成，下一步才是 Phase 2 網站接入評估）*
+*最後更新：2026-06-16（Phase 2 啟動：心理層接入 Vortex 網站——水中恐懼 pilot 7 概念上線，新 domain canonical/psychology/〔commit 36d51f5〕+ my-site sync/master-detail 頁/首頁入口〔commit 3df8b56, CI success〕，public/diagnostic 分層 0 洩漏，三關校正剔除 4 條；剩餘主題待量產）*
 *下次更新時機：my-site 週期化知識整合（B）動工後*

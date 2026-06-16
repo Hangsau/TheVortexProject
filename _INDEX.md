@@ -141,6 +141,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | periodization/zones.yaml | **完成 + 擴充（2026-06-10）** · 能量系統強度分區；Table 7.1 六分區 + Table 11.2 HR/VO2 + Table 11.1 LIEE + 耐力三階段 + 游泳配速；**外部文獻新增**：Maglischo 六分區（J Swimming Research 19:2）+ 三區乳酸 + 各距離供能（跨研究區間）+ TID（Papadimitriou 2025）|
 | periodization/_index.yaml | **完成（2026-06-10）** · 概念目錄；28 節點（structure9/taper10/zones9）gist_zh 一句白話 + stages；index↔real id 零死連結；my-site 導覽用、swim-coach FTS 不索引（_-prefix skip）|
 | 註（periodization） | | 來源 Bompa《Periodization》6th ed. + 游泳外部文獻（Mujika/Maglischo/Hellard/Papadimitriou 等）；canonical 三檔加 plain_zh 白話層；一源兩消費全鏈打通——my-site 呈現（hugo 綠）+ swim-coach FTS（31 列，73/73 pass）。commit 7d03619 |
+| psychology/psychology.yaml | **Phase 2 pilot（2026-06-16）** · theme→concept schema（跨泳式/跨族群）；主題「水中恐懼」7 概念（control_loss/perception_masking/freeze_reflex/co2_breath_panic/diving_reflex_calm/safety_precondition/population_faces）；public{phenomenon/hardware_boundary/l_levels/misconception/intervention/population_note/sources} + diagnostic{abc_link/perception_probe}（不公開）。三關校正剔除 4 條。my-site master-detail 頁 + 首頁入口上線（commit 36d51f5 / my-site 3df8b56）。剩餘 dossier 主題待量產 |
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
@@ -162,4 +163,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-06-16（心理層 8 dossier 系統性引用查證 B1–B4 完成：攔截 4 處誤歸因/誇大結果，全數「待查引用」🔴 收斂為真研究空白；2026-06-15 新增 Research/心理/ 層：8 份 dossier + Opus 整合總覽）*
+*最後更新：2026-06-16（Phase 2 啟動：canonical/psychology/ 新 domain 上線——水中恐懼 pilot 7 概念接入 Vortex 網站〔master-detail 頁 + 首頁入口，commit 36d51f5 / my-site 3df8b56〕；2026-06-16 早些完成心理層 8 dossier 引用查證 B1–B4）*
