@@ -34,6 +34,7 @@ themes:
 
 - id: psych.fear
   name_zh: 水中恐懼
+  nav_zh: 恐懼
   order: 1
   status: complete
   band: 初學端
@@ -53,6 +54,7 @@ themes:
       # ---------- 概念 1：失控感是最強恐懼因子 ----------
   - id: psych.fear.control_loss
     name_zh: 怕的是失控，不是水
+    nav_zh: 失控感
     order: 1
     status: complete
     public:
@@ -93,6 +95,7 @@ themes:
       # ---------- 概念 2：恐懼如何關閉水感（Vortex 核心連結） ----------
   - id: psych.fear.perception_masking
     name_zh: 恐懼會關掉水感
+    nav_zh: 恐懼遮蔽
     order: 2
     status: complete
     public:
@@ -126,6 +129,7 @@ themes:
       # ---------- 概念 3：凍結是神經反射，不是不配合 ----------
   - id: psych.fear.freeze_reflex
     name_zh: 凍結是反射，不是膽小
+    nav_zh: 凍結反射
     order: 3
     status: complete
     public:
@@ -159,6 +163,7 @@ themes:
       # ---------- 概念 4：CO₂ 與呼吸恐慌的矛盾 ----------
   - id: psych.fear.co2_breath_panic
     name_zh: 換氣過度反而會引爆憋氣恐慌
+    nav_zh: 換氣恐慌
     order: 4
     status: complete
     public:
@@ -193,6 +198,7 @@ themes:
       # ---------- 概念 5：潛水反射——水也能鎮靜 ----------
   - id: psych.fear.diving_reflex_calm
     name_zh: 同一片水，也能讓人冷靜
+    nav_zh: 潛水反射
     order: 5
     status: complete
     public:
@@ -220,6 +226,7 @@ themes:
       # ---------- 概念 6：安全感是學習的前提 ----------
   - id: psych.fear.safety_precondition
     name_zh: 沒有安全感就學不進去
+    nav_zh: 安全前提
     order: 6
     status: complete
     public:
@@ -250,6 +257,7 @@ themes:
       # ---------- 概念 7：恐懼的不同族群臉孔（全光譜紀律） ----------
   - id: psych.fear.population_faces
     name_zh: 恐懼的不同臉孔（依族群）
+    nav_zh: 族群差異
     order: 7
     status: complete
     public:
@@ -286,6 +294,7 @@ themes:
 
 - id: psych.interaction
   name_zh: 心理–感知–生理交互
+  nav_zh: 身心交互
   order: 2
   status: complete
   band: 初學端
@@ -305,6 +314,7 @@ themes:
   # ---------- 概念 1：前島放大讓焦慮者內感失真 ----------
   - id: psych.interaction.anterior_insula_gain
     name_zh: 焦慮者前島把身體訊號放大為威脅
+    nav_zh: 前島放大
     order: 1
     status: complete
     public:
@@ -363,6 +373,7 @@ themes:
   # ---------- 概念 2：焦慮性肌張力升高封閉感知通道 ----------
   - id: psych.interaction.stress_hypertonia
     name_zh: 張力升高是感知閘門，不只是阻力
+    nav_zh: 張力閘門
     order: 2
     status: complete
     public:
@@ -429,6 +440,7 @@ themes:
   # ---------- 概念 3：努力知覺升高讓學習者提前放棄 ----------
   - id: psych.interaction.rpe_psychobiological
     name_zh: 做不到是努力知覺超標，不是肌力不夠
+    nav_zh: 努力知覺
     order: 3
     status: complete
     public:
@@ -497,6 +509,7 @@ themes:
   # ---------- 概念 4：注意力窄化過濾掉水感訊號 ----------
   - id: psych.interaction.attentional_narrowing
     name_zh: 高喚醒時注意力過濾掉流場訊號
+    nav_zh: 注意窄化
     order: 4
     status: complete
     public:
@@ -549,6 +562,7 @@ themes:
   # ---------- 概念 5：迷走張力預測恐懼消弱速率 ----------
   - id: psych.interaction.vagal_tone_fear_extinction
     name_zh: 迷走張力決定脫敏快慢
+    nav_zh: 迷走脫敏
     order: 5
     status: complete
     public:
@@ -600,6 +614,7 @@ themes:
   # ---------- 概念 6：防衛凍結使指令接收能力暫時喪失 ----------
   - id: psych.interaction.freeze_prefrontal_shutdown
     name_zh: 凍結時前額葉下調，教得再好也聽不進
+    nav_zh: 凍結停聽
     order: 6
     status: complete
     public:
@@ -653,6 +668,7 @@ themes:
   # ---------- 概念 7：換氣是週期性感知閃斷源 ----------
   - id: psych.interaction.breathing_cognitive_load
     name_zh: 換氣未自動化時，每次呼吸都閃斷一次水感
+    nav_zh: 換氣負荷
     order: 7
     status: complete
     public:
@@ -713,6 +729,7 @@ themes:
   # ---------- 概念 8：水浸本身是內感訓練，不只是暴露 ----------
   - id: psych.interaction.water_immersion_interoception
     name_zh: 水浸不只脫敏，同時訓練內感覺知
+    nav_zh: 水浸內感
     order: 8
     status: complete
     public:
@@ -762,6 +779,7 @@ themes:
       - 每次課程前幾分鐘水感訊號明顯優於剛入水的第一趟 = 水浸熱機效應存在， 課程設計應安排低結構入水時間，不要一入水就要求技術執行
 - id: psych.motivation
   name_zh: 動機與動機氣候
+  nav_zh: 動機
   order: 3
   status: complete
   band: 貫穿全程
@@ -781,6 +799,7 @@ themes:
   # ---------- 概念 1：BPN 三需求 ----------
   - id: psych.motivation.bpn_triad
     name_zh: 感知土壤的三根支柱：自主、勝任、連結
+    nav_zh: 三大需求
     order: 1
     status: complete
     public:
@@ -815,6 +834,7 @@ themes:
   # ---------- 概念 2：動機連續體 ----------
   - id: psych.motivation.continuum
     name_zh: 從「被逼來」到「想來」：動機不是有無，是深淺
+    nav_zh: 動機光譜
     order: 2
     status: complete
     public:
@@ -854,6 +874,7 @@ themes:
   # ---------- 概念 3：教練自主支持行為 ----------
   - id: psych.motivation.autonomy_support
     name_zh: 教練語言是動機土壤的施肥或施毒
+    nav_zh: 自主支持
     order: 3
     status: complete
     public:
@@ -900,6 +921,7 @@ themes:
   # ---------- 概念 4：精熟氣候 vs 表現氣候 ----------
   - id: psych.motivation.mastery_vs_performance_climate
     name_zh: 精熟氣候讓感知生長，表現氣候讓感知收縮
+    nav_zh: 動機氣候
     order: 4
     status: complete
     public:
@@ -943,6 +965,7 @@ themes:
   # ---------- 概念 5：無動機是感知學習的底部陷阱 ----------
   - id: psych.motivation.amotivation_trap
     name_zh: 無動機時，感知學習事實上停擺
+    nav_zh: 無動機陷阱
     order: 5
     status: complete
     public:
@@ -980,6 +1003,7 @@ themes:
   # ---------- 概念 6：勝任感是氣候傷害的調節閥 ----------
   - id: psych.motivation.competence_moderator
     name_zh: 勝任感低的學員對表現氣候最脆弱
+    nav_zh: 勝任調節
     order: 6
     status: complete
     public:
@@ -1017,6 +1041,7 @@ themes:
   # ---------- 概念 7：氣候有生理傷害：表現氣候觸發發炎反應 ----------
   - id: psych.motivation.climate_biology
     name_zh: 表現氣候不只傷動機，也傷身體
+    nav_zh: 氣候傷身
     order: 7
     status: complete
     public:
@@ -1046,6 +1071,7 @@ themes:
   # ---------- 概念 8：HMIEM bottom-up 修復 ----------
   - id: psych.motivation.hmiem_bottomup
     name_zh: 一次感知成功可以由下而上修復對游泳的整體態度
+    nav_zh: 由下而上
     order: 8
     status: complete
     public:
@@ -1088,6 +1114,7 @@ themes:
   # ---------- 概念 9：族群特異動機引擎（全光譜） ----------
   - id: psych.motivation.population_engines
     name_zh: 不同族群的動機引擎和崩潰點完全不同
+    nav_zh: 族群引擎
     order: 9
     status: complete
     public:
@@ -1129,6 +1156,7 @@ themes:
       - 青少年說「練游泳沒意思 / 不如打球」= 運動貶值（devaluation）訊號，此族群退出懸崖期，需快速診斷享受/勝任/連結三需求哪個缺口最大
 - id: psych.imagery
   name_zh: 意象與心理演練
+  nav_zh: 意象
   order: 4
   status: complete
   band: 貫穿全程
@@ -1148,6 +1176,7 @@ themes:
   # ---------- 概念 1：意象激活相同神經通路 ----------
   - id: psych.imagery.functional_equivalence
     name_zh: 意象在神經層等同於真實動作
+    nav_zh: 功能等同
     order: 1
     status: complete
     public:
@@ -1179,6 +1208,7 @@ themes:
   # ---------- 概念 2：PETTLEP — 高保真意象的七原則 ----------
   - id: psych.imagery.pettlep
     name_zh: 意象越像真實情境，效果越強
+    nav_zh: PETTLEP
     order: 2
     status: complete
     public:
@@ -1227,6 +1257,7 @@ themes:
   # ---------- 概念 3：動覺意象是水感訓練的核心通路 ----------
   - id: psych.imagery.kinesthetic_priority
     name_zh: 想「感覺」比想「畫面」更能強化水感
+    nav_zh: 動覺優先
     order: 3
     status: complete
     public:
@@ -1277,6 +1308,7 @@ themes:
   # ---------- 概念 4：意象校準 Feedforward 感知地圖 ----------
   - id: psych.imagery.feedforward_calibration
     name_zh: 意象是乾地上校準水感地圖的工具
+    nav_zh: 前饋校準
     order: 4
     status: complete
     public:
@@ -1313,6 +1345,7 @@ themes:
   # ---------- 概念 5：依目的設計意象腳本（功能分類） ----------
   - id: psych.imagery.functional_types
     name_zh: 意象腳本有目的之分，不能只演練技術
+    nav_zh: 意象類型
     order: 5
     status: complete
     public:
@@ -1355,6 +1388,7 @@ themes:
   # ---------- 概念 6：停訓或傷後意象維持水感 ----------
   - id: psych.imagery.off_water_maintenance
     name_zh: 離水時，意象能減緩水感退化
+    nav_zh: 離水維持
     order: 6
     status: complete
     public:
@@ -1394,6 +1428,7 @@ themes:
       - 泳者說「停訓前我有每天想游泳，回來感覺還在」= 自然使用動覺意象維持，確認意象內容粒度再精煉
 - id: psych.attention
   name_zh: 注意力焦點
+  nav_zh: 注意力
   order: 5
   status: complete
   band: 進階競技端
@@ -1413,6 +1448,7 @@ themes:
   # ---------- 概念 1：外部 vs 內部焦點定義 ----------
   - id: psych.attention.ef_if_definition
     name_zh: 注意力方向決定動作是受控還是自動
+    nav_zh: 內外焦點
     order: 1
     status: complete
     public:
@@ -1456,6 +1492,7 @@ themes:
   # ---------- 概念 2：受限動作假說（CAH） ----------
   - id: psych.attention.cah
     name_zh: 內部焦點會綁架自動化，外部焦點讓動作自組
+    nav_zh: 約束行動
     order: 2
     status: complete
     public:
@@ -1515,6 +1552,7 @@ themes:
   # ---------- 概念 3：精英泳者的彈性維持 ----------
   - id: psych.attention.elite_resilience
     name_zh: 精英泳者自動化強，但內部焦點仍有打擾力
+    nav_zh: 精英韌性
     order: 3
     status: complete
     public:
@@ -1554,6 +1592,7 @@ themes:
   # ---------- 概念 4：距離效應 ----------
   - id: psych.attention.distance_effect
     name_zh: 焦點越遠離身體，動作越自由
+    nav_zh: 距離效應
     order: 4
     status: complete
     public:
@@ -1609,6 +1648,7 @@ themes:
   # ---------- 概念 5：「感覺水」是第三類焦點 ----------
   - id: psych.attention.water_sense_third_category
     name_zh: 「感覺水」不是 IF 也不是 EF——水感是感知耦合
+    nav_zh: 第三類焦點
     order: 5
     status: complete
     public:
@@ -1683,6 +1723,7 @@ themes:
   # ---------- 概念 6：聯結 vs 分離策略（耐力游泳） ----------
   - id: psych.attention.association_dissociation
     name_zh: 長距離游泳：監測身體 vs 轉移注意力，各有用途
+    nav_zh: 聯結與分離
     order: 6
     status: complete
     public:
@@ -1737,6 +1778,7 @@ themes:
           全程維持聯結且速度穩定 = 有餘力，可嘗試更高強度再測閾值。
 - id: psych.self_talk
   name_zh: 自我對話與心理技能
+  nav_zh: 自我對話
   order: 6
   status: complete
   band: 進階競技端
@@ -1756,6 +1798,7 @@ themes:
   # ---------- 概念 1：自我對話是可訓練的心理技能，不是性格 ----------
   - id: psych.self_talk.trainable_skill
     name_zh: 自我對話是技能，不是性格
+    nav_zh: 可練技能
     order: 1
     status: complete
     public:
@@ -1797,6 +1840,7 @@ themes:
   # ---------- 概念 2：指導型 vs 激勵型，配對任務才有最大效果 ----------
   - id: psych.self_talk.ist_mst_matching
     name_zh: 指導型配技術任務，激勵型配耐力任務
+    nav_zh: 指導配激勵
     order: 2
     status: complete
     public:
@@ -1848,6 +1892,7 @@ themes:
   # ---------- 概念 3：外焦點化 IST 比身體部位 IST 更利於熟練執行 ----------
   - id: psych.self_talk.external_focus_ist
     name_zh: 「把水推後」比「拉手」更有利熟練執行
+    nav_zh: 外部焦點語
     order: 3
     status: complete
     public:
@@ -1900,6 +1945,7 @@ themes:
   # ---------- 概念 4：干擾性思維佔用工作記憶，擠壓水感頻寬 ----------
   - id: psych.self_talk.interfering_thoughts_bandwidth
     name_zh: 負面自我對話佔工作記憶，水感信號進不來
+    nav_zh: 干擾佔頻
     order: 4
     status: complete
     public:
@@ -1946,6 +1992,7 @@ themes:
   # ---------- 概念 5：時態偏移是破壞性自我對話的結構特徵 ----------
   - id: psych.self_talk.tense_drift
     name_zh: 心思跑去過去或未來，水感就斷線
+    nav_zh: 時態漂移
     order: 5
     status: complete
     public:
@@ -1991,6 +2038,7 @@ themes:
   # ---------- 概念 6：MST 在耐力游泳中可不增加感知負擔地提升成績 ----------
   - id: psych.self_talk.mst_endurance_efficiency
     name_zh: 激勵型自我對話讓耐力游泳更快，但感覺不到更累
+    nav_zh: 激勵耐力
     order: 6
     status: complete
     public:
@@ -2024,6 +2072,7 @@ themes:
   # ---------- 概念 7：賽前例行程序是感知通道的開啟儀式 ----------
   - id: psych.self_talk.pre_performance_routine
     name_zh: 賽前例行程序讓每次起跑都從相同感知基準線出發
+    nav_zh: 賽前例行
     order: 7
     status: complete
     public:
@@ -2079,6 +2128,7 @@ themes:
   # ---------- 概念 8：系統性自我對話訓練優於即興自我對話 ----------
   - id: psych.self_talk.systematic_training
     name_zh: 練過的自我對話比臨時起意有效
+    nav_zh: 系統練習
     order: 8
     status: complete
     public:
@@ -2129,6 +2179,7 @@ themes:
           腳本建構未完成，從陸上引導開始。
 - id: psych.arousal
   name_zh: 喚醒、焦慮與壓力崩潰
+  nav_zh: 喚醒與崩潰
   order: 7
   status: complete
   band: 進階競技端
@@ -2148,6 +2199,7 @@ themes:
   # ---------- 概念 1：倒 U 假說的真相與限制 ----------
   - id: psych.arousal.inverted_u
     name_zh: 倒 U 曲線是粗糙的起點，不是定律
+    nav_zh: 倒U曲線
     order: 1
     status: complete
     public:
@@ -2189,6 +2241,7 @@ themes:
   # ---------- 概念 2：最佳情緒區是個人化的（IZOF） ----------
   - id: psych.arousal.izof
     name_zh: 最佳情緒區是個人化的，不是普適的
+    nav_zh: 最佳區
     order: 2
     status: complete
     public:
@@ -2233,6 +2286,7 @@ themes:
   # ---------- 概念 3：高認知焦慮下的崩潰是非線性跌落 ----------
   - id: psych.arousal.catastrophe
     name_zh: 高認知焦慮下，崩潰是跳崖，不是滑坡
+    nav_zh: 災變崩潰
     order: 3
     status: complete
     public:
@@ -2285,6 +2339,7 @@ themes:
   # ---------- 概念 4：再投資——壓力把自動化動作拉回意識控制 ----------
   - id: psych.arousal.reinvestment
     name_zh: 壓力下「想太多動作」會讓自動化崩潰
+    nav_zh: 再投資崩潰
     order: 4
     status: complete
     public:
@@ -2348,6 +2403,7 @@ themes:
   # ---------- 概念 5：外顯監控——越分析越崩潰（Beilock） ----------
   - id: psych.arousal.explicit_monitoring
     name_zh: 越分析動作細節，程序化技能越容易在壓力下崩潰
+    nav_zh: 外顯監控
     order: 5
     status: complete
     public:
@@ -2387,6 +2443,7 @@ themes:
   # ---------- 概念 6：游泳特有—焦慮→肌肉張力→流體動力學感知迴路 ----------
   - id: psych.arousal.muscle_tension_loop
     name_zh: 焦慮改變你在水裡的「形狀」，讓水感失真
+    nav_zh: 張力迴路
     order: 6
     status: complete
     public:
@@ -2438,6 +2495,7 @@ themes:
   # ---------- 概念 7：呼吸節拍是游泳的計時錨，焦慮打亂後觸發再投資 ----------
   - id: psych.arousal.breath_reinvestment
     name_zh: 焦慮先打亂呼吸節拍，節拍亂了再投資就跟著來
+    nav_zh: 呼吸再投資
     order: 7
     status: complete
     public:
@@ -2485,6 +2543,7 @@ themes:
   # ---------- 概念 8：內隱學習設計——最強的抗再投資方案 ----------
   - id: psych.arousal.implicit_learning
     name_zh: 讓技術「說不出口」，才能在壓力下不崩潰
+    nav_zh: 內隱學習
     order: 8
     status: complete
     public:
@@ -2539,6 +2598,7 @@ themes:
           感知描述貧乏但立即切換到技術步驟描述 = 外顯知識覆蓋了程序化感知，再投資風險高。
 - id: psych.flow
   name_zh: 心流與去再投資
+  nav_zh: 心流
   order: 8
   status: complete
   band: 進階競技端
@@ -2557,6 +2617,7 @@ themes:
   # ---------- 概念 1：心流的行動與覺察融合——游泳最核心的標誌 ----------
   - id: psych.flow.action_awareness_merging
     name_zh: 「不知道怎麼做到的」才是 L6 心流的語言
+    nav_zh: 覺察合一
     order: 1
     status: complete
     public:
@@ -2607,6 +2668,7 @@ themes:
   # ---------- 概念 2：挑戰-技能平衡——心流的可工程化觸發點 ----------
   - id: psych.flow.challenge_skill_balance
     name_zh: 太難焦慮、太易無聊、剛好才有心流
+    nav_zh: 挑戰平衡
     order: 2
     status: complete
     public:
@@ -2651,6 +2713,7 @@ themes:
   # ---------- 概念 3：心流只能間接製造，不能保證觸發 ----------
   - id: psych.flow.indirect_control
     name_zh: 心流不能直接命令自己進去
+    nav_zh: 間接控制
     order: 3
     status: complete
     public:
@@ -2678,6 +2741,7 @@ themes:
   # ---------- 概念 4：Flow vs Clutch——同場不同態，不要混淆 ----------
   - id: psych.flow.flow_vs_clutch
     name_zh: 心流是「讓它發生」；clutch 是「讓它成功」
+    nav_zh: 心流與關鍵
     order: 4
     status: complete
     public:
@@ -2716,6 +2780,7 @@ themes:
   # ---------- 概念 5：再投資——壓力下顯性監控打斷自動化 ----------
   - id: psych.flow.reinvestment
     name_zh: 壓力讓人重新「想」動作，反而搞砸
+    nav_zh: 壓力再投資
     order: 5
     status: complete
     public:
@@ -2762,6 +2827,7 @@ themes:
   # ---------- 概念 6：去再投資——L5→L6 的心理機制 ----------
   - id: psych.flow.de_reinvestment
     name_zh: 放掉顯性控制，信任習得的感知——L6 的心理開關
+    nav_zh: 去再投資
     order: 6
     status: complete
     public:
@@ -2811,6 +2877,7 @@ themes:
   # ---------- 概念 7：暫時性前額葉低激活——自我監控消退的神經底層 ----------
   - id: psych.flow.hypofrontality
     name_zh: 心流時大腦的「自我監控區」暫時退場
+    nav_zh: 額葉退場
     order: 7
     status: complete
     public:
@@ -2851,6 +2918,7 @@ themes:
   # ---------- 概念 8：心流不是 L6 專利——每個 L 級都有當層心流 ----------
   - id: psych.flow.flow_across_levels
     name_zh: 初學者也有心流——挑戰-技能匹配在每個 L 都有觸發點
+    nav_zh: 各層心流
     order: 8
     status: complete
     public:
@@ -2888,6 +2956,7 @@ themes:
   # ---------- 概念 9：水是天然的即時回饋載體——心流第三維度的環境嵌入 ----------
   - id: psych.flow.water_as_feedback
     name_zh: 水本身就是心流需要的即時回饋
+    nav_zh: 水即回饋
     order: 9
     status: complete
     public:
@@ -2929,6 +2998,7 @@ themes:
   # ---------- 概念 10：最佳喚醒因人而異——IZOF 框架在游泳的應用 ----------
   - id: psych.flow.izof_individual_zones
     name_zh: 最佳喚醒不是一個點，也不是人人相同
+    nav_zh: 個人喚醒區
     order: 10
     status: complete
     public:
