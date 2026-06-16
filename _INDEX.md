@@ -141,7 +141,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | periodization/zones.yaml | **完成 + 擴充（2026-06-10）** · 能量系統強度分區；Table 7.1 六分區 + Table 11.2 HR/VO2 + Table 11.1 LIEE + 耐力三階段 + 游泳配速；**外部文獻新增**：Maglischo 六分區（J Swimming Research 19:2）+ 三區乳酸 + 各距離供能（跨研究區間）+ TID（Papadimitriou 2025）|
 | periodization/_index.yaml | **完成（2026-06-10）** · 概念目錄；28 節點（structure9/taper10/zones9）gist_zh 一句白話 + stages；index↔real id 零死連結；my-site 導覽用、swim-coach FTS 不索引（_-prefix skip）|
 | 註（periodization） | | 來源 Bompa《Periodization》6th ed. + 游泳外部文獻（Mujika/Maglischo/Hellard/Papadimitriou 等）；canonical 三檔加 plain_zh 白話層；一源兩消費全鏈打通——my-site 呈現（hugo 綠）+ swim-coach FTS（31 列，73/73 pass）。commit 7d03619 |
-| psychology/psychology.yaml | **Phase 2（2026-06-16）** · theme→concept schema（跨泳式/跨族群）。**8 主題沿 L0→L6／初學→競技脊椎排三帶**（band/l_band/level_tag/concept_count 定位欄位）：① 水中恐懼 7 概念 complete（control_loss/perception_masking/freeze_reflex/co2_breath_panic/diving_reflex_calm/safety_precondition/population_faces）；②–⑧ status:planned stub（只有 theme premise，concept 待量產）：心理-感知-生理交互(7)/動機與動機氣候(9)/意象與心理演練(6)/注意力焦點(6)/自我對話與心理技能(8)/喚醒焦慮與壓力崩潰(8)/心流與去再投資(10)。public{phenomenon/hardware_boundary/l_levels/misconception/intervention/population_note/sources} + diagnostic{abc_link/perception_probe}（不公開）。三關校正剔除 4 條。my-site「心理地圖」三帶著陸頁 + 首頁入口上線（commit 36d51f5 / my-site 3df8b56）。7 stub concept 待量產 |
+| psychology/psychology.yaml | **Phase 2 完成（2026-06-16）** · theme→concept schema（跨泳式/跨族群）。**8 主題 62 概念全 complete，沿 L0→L6／初學→競技脊椎排三帶**（band/l_band/level_tag/concept_count）：初學端 ①水中恐懼(7) ②心理-感知-生理交互(8)；貫穿全程 ③動機與動機氣候(9) ④意象與心理演練(6)；進階競技端 ⑤注意力焦點(6) ⑥自我對話與心理技能(8) ⑦喚醒焦慮與壓力崩潰(8) ⑧心流與去再投資(10)。fear 手寫 pilot + 其餘 7 主題 7 並行 Sonnet agent 各讀 dossier 寫、ruamel round-trip merge（保留 fear 格式/註解）。每概念 public{phenomenon/hardware_boundary/l_levels/misconception/intervention/population_note/sources} + diagnostic{abc_link/reading_signals/probe}（不公開，sync 剝除，my-site 0 洩漏）。各 agent 三關校正沒過清單已記 HANDOFF。my-site「心理地圖」三帶著陸頁（8 ready 卡/62 panel）+ 首頁入口（commit 36d51f5 / my-site 3df8b56·a655926）|
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
@@ -163,4 +163,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-06-16（Phase 2 啟動：canonical/psychology/ 新 domain 上線——水中恐懼 pilot 7 概念接入 Vortex 網站〔master-detail 頁 + 首頁入口，commit 36d51f5 / my-site 3df8b56〕；2026-06-16 早些完成心理層 8 dossier 引用查證 B1–B4）*
+*最後更新：2026-06-16（Phase 2 完成：canonical/psychology/ 8 主題 62 概念全接入 Vortex 網站——三帶「心理地圖」著陸頁 + 首頁入口〔commit 36d51f5 起，my-site 至 a655926〕；7 主題由 7 並行 Sonnet agent 寫、三關校正、0 diagnostic 洩漏；2026-06-16 早些完成心理層 8 dossier 引用查證 B1–B4）*
