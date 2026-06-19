@@ -4,6 +4,15 @@
 
 ---
 
+## 當前狀態（2026-06-19）
+
+### 內容校正——A-1 自由式髖部驅動因果方向（2026-06-19）
+
+> 觸發：my-site Vortex 內容邏輯稽核（minimax 初版 + Claude 抽查）發現 `technical-analysis.yaml` 同檔自打嘴巴。`free.tech.4` 原寫「髖旋轉先行帶動肩膀（髖帶肩）」，與同檔 `free.tech.15` ／ Pink et al.(1991) EMG「肩胛肌群是旋轉的主動發動者、髖部被動跟隨」離群衝突。
+> 已改寫 `free.tech.4` mechanism：移除因果敘述，改述大幅髖旋轉(45–60°)為外顯特徵、肌肉啟動仍由肩胛肌群主導（對齊 free.tech.15）。已 resync 到 my-site。稽核全表見 my-site `research/vortex-content-logic-audit.md` §0。
+
+---
+
 ## 當前狀態（2026-06-16）
 
 ### 已完成——Phase 2：心理層完整接入 Vortex 網站（八主題「心理地圖」全部上線，62 概念）（2026-06-16）
