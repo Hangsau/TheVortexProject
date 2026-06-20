@@ -1,0 +1,85 @@
+id: breaststrokers-knee
+zh: 蛙泳膝
+en: Breaststroker's knee
+category: B-lower-spine-strokespecific
+environment: pool
+sport_variant: swim
+layer: [public, clinical]
+subtypes: [內側副韌帶應力症(MCL), 髕股疼痛症候群(PFPS), 鵝足滑囊炎(pes anserine), 內側皺襞症候群(medial plica)]   # v2 拆子型
+
+structures: [內側副韌帶(MCL), 髕股關節, 鵝足滑囊, 內側皺襞]
+mechanism:
+  summary: 蛙式踢腿(whip kick)外翻+外旋負荷重複施於膝內側→內側副韌帶反覆應力(最常見子型)；另有髕股關節壓力(PFPS)、鵝足滑囊炎、內側皺襞夾擠。是傘狀總稱，子型機制與處置不同，須先分型。
+  stroke_phase: 蛙式踢腿—收腿後外翻外旋蹬夾(propulsive phase)，膝在外翻位承受高扭轉負荷
+  driver: 踢腿外翻角過大、髖外旋不足以代償(代償落到膝)、訓練量驟增
+
+epidemiology:
+  prevalence: "競技蛙泳者膝痛報導比例高(範圍待 WebFetch 核實)；非蛙式主項者顯著較低"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 「蛙泳膝」常被當單一診斷統計，未分子型→盛行率混雜不同病理
+  sources:
+    - "Rovere & Nichols 等蛙泳膝經典文獻（作者/年份/期刊待查）"
+    - "游泳膝傷流病系統綜述（待 WebFetch 核實）"
+
+risk_factors:
+  - { text: "蛙式為主項 + 高週踢腿量", grade: B }
+  - { text: "踢腿外翻角過大(技術)", grade: B }
+  - { text: "髖外旋活動度不足(硬體邊界→代償落膝)", grade: C }
+  - { text: "訓練量/踢腿量急性跳升", grade: B }
+  - { text: "既往膝內側疼痛史", grade: C }
+
+prevention:
+  - { text: "技術矯正：縮小踢腿外翻角、改善髖外旋帶動(減膝扭轉)", grade: C }
+  - { text: "髖外旋活動度與臀肌力量訓練(把負荷從膝移回髖)", grade: C }
+  - { text: "踢腿量漸進管理，避免急性跳升", grade: B }
+  - { text: "賽季高蛙量期分散踢腿負荷、混入其他泳式", grade: C }
+
+management:
+  red_flags:
+    - "膝鎖死/卡住/打軟(giving way) → 排除半月板/游離體損傷"
+    - "明顯腫脹積液 + 不穩 → 排除韌帶斷裂，影像評估"
+    - "夜間痛/休息痛/發燒紅熱 → 排除感染性關節炎或其他病理"
+  acute: "相對休息(減踢腿、非全停)；急性期冰敷/相對卸載；分型後對因處理"
+  pain_rules: "復健期踢腿疼痛 ≤3/10、不改踢腿型態、24h 不惡化"
+  rehab: "依子型：MCL 應力→漸進負荷+技術；PFPS→髖膝控制與股四頭/臀肌；鵝足滑囊→離心+負荷管理"
+  functional_progression_criteria:
+    - "全活動度無痛"
+    - "髖外旋活動度與臀肌力對稱"
+    - "陸上單腿控制測試無代償性外翻"
+  swim_modifications_in_rehab:
+    - "暫以自由式/仰式踢腿替代蛙式蹬夾，卸載膝內側"
+    - "蛙式回歸初期用浮板控制踢腿量、縮小外翻角"
+    - "避免蛙泳大力蹬牆轉身的瞬間外翻負荷"
+  return_to_train: "踢腿無痛 + 髖外旋/臀肌對稱 + 技術外翻角矯正 → 漸進回蛙踢，技術優先於量"
+  return_to_compete: "全蛙量無痛訓練穩定 + 技術型態維持 → 復賽"
+  prognosis: "多數保守處理+技術矯正可改善；結構性損傷(半月板/韌帶斷裂)另評估"
+
+population_notes:
+  age:
+    youth: "青少年蛙泳專項化早+踢腿量高，外翻技術未定型易累積"
+    adult_beginner: "成人蛙式技術未熟、外翻角過大，常見膝內側痛"
+    masters: "既有膝退化(內側室骨關節炎)疊加蛙踢負荷"
+  sex: ~
+  ability: ~
+  lifecycle: ~
+
+links:
+  mechanism_link: "踢腿外翻負荷與髖外旋代償可接『硬體邊界 vs 感知缺陷』判斷(髖活動度=硬體)"
+  technical_link: "蛙式踢腿技術分析(外翻角/髖帶動)——待對應 canonical technical 條目"
+  perception_link: "L2–L4 腳感層(踢腿節律與蹬夾感知)"
+
+references:
+  - { citation: "蛙泳膝經典流病文獻（作者/年份/期刊全待 WebFetch 核實）", certainty: 🟡, verified: false }
+
+flags:
+  pending_verification:
+    - "所有盛行率數字待查；public 層不放數字"
+    - "Rovere & Nichols 引用為記憶，作者/年份/期刊須 WebFetch 確認，未證實前不寫入 public"
+  contested:
+    - claim: "蛙泳膝主要病理是 MCL 應力還是髕股/內側皺襞"
+      consensus_source: "多數文獻指向內側結構(MCL)應力為最常見，但子型分布隨研究而異"
+      dissent_source: "部分研究強調髕股疼痛症候群在蛙泳膝中比例被低估"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

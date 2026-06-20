@@ -1,0 +1,89 @@
+id: sipe
+zh: 游泳誘發肺水腫
+en: Swimming-Induced Pulmonary Edema (SIPE)
+category: D-systemic-acute
+environment: open_water     # 亦見泳池高強度，但開放水域+冷水為主場景
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+fatal_acute: true          # 可致命，layout 置頂；屬心肺急症
+
+structures: [肺(肺泡-微血管膜), 心血管系統, 肺循環]
+mechanism:
+  summary: 浸水(中心血液重新分布)+冷水(血管收縮)+劇烈運動(高心輸出)+負壓呼吸→肺微血管跨壁壓驟升→液體滲入肺泡(壓力性肺水腫)。非吸入溺水，是血流動力誘發的肺水腫，可在無嗆水下發生。
+  trigger_phase: 開放水域競賽/訓練起始高強度段、冷水浸泡、緊身防寒衣壓迫；常於游程中突發呼吸困難、咳嗽、咳粉紅泡沫痰
+  who: 鐵人三項/開放水域泳者尤高危；亦見軍事泳訓、SCUBA、健康年輕人
+
+epidemiology:
+  prevalence: "開放水域/鐵人族群報導發生率範圍待 WebFetch 核實；可能因誤診為溺水/氣喘而低估"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 常被誤判為近乎溺水或運動性氣喘；真實發生率不明
+  sources:
+    - "SIPE 病理生理與鐵人三項案例系列（作者/年份待查）"
+    - "軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）"
+
+risk_factors:
+  - { text: "冷水浸泡", grade: B }
+  - { text: "高強度起泳/比賽配速", grade: B }
+  - { text: "緊身防寒衣(wetsuit)胸廓壓迫", grade: C }
+  - { text: "高血壓/既往 SIPE 史(高復發)", grade: B }
+  - { text: "過量賽前補液(增加前負荷)", grade: C }
+  - { text: "女性、年齡較長為部分研究指出的相關因子(待核實)", grade: C }
+
+prevention:
+  - { text: "避免冷水中爆發式起泳，漸進加溫加速", grade: C }
+  - { text: "防寒衣合身不過緊，必要時剪鬆領口/胸口", grade: C }
+  - { text: "既往 SIPE 史者就醫評估血壓，討論用藥(如部分研究探討的西地那非，須醫囑)", grade: C }
+  - { text: "避免賽前過度補液", grade: C }
+  - { text: "認識早期症狀(呼吸困難/咳嗽/咳泡沫痰)即停止上岸", grade: B }
+
+management:
+  red_flags:
+    - "游泳中突發呼吸困難 + 咳嗽 + 咳粉紅/血色泡沫痰 → 立即停止、上岸、求救"
+    - "上岸後持續呼吸窘迫/血氧低/發紺 → 啟動 EMS，可能需氧療/醫院處置"
+    - "胸痛/意識改變 → 排除心因事件，立即就醫"
+  acute: "立即停止運動+離水+保暖+直立姿勢；給氧;多數離水後數小時內自行緩解，但須醫療評估排除嚴重者(可能需 CPAP/利尿/住院)"
+  pain_rules: ~
+  rehab: ~                  # 非肌骨復健模式
+  functional_progression_criteria:
+    - "症狀完全緩解 + 影像/血氧恢復"
+    - "心肺評估(含血壓/心臟結構)排除潛在誘因"
+  swim_modifications_in_rehab:
+    - "復發風險高→回水前心肺評估;避免冷水爆發式起泳"
+    - "調整防寒衣鬆緊、賽前補液量"
+  return_to_train: "症狀緩解 + 心肺評估綠燈 + 誘因矯正(配速/防寒衣/補液) → 漸進回水，避免冷水高強度起泳"
+  return_to_compete: "心肺專科評估通過 + 既往發作誘因已處理 → 復賽；高復發者需個別風險討論"
+  prognosis: "急性發作多在離水後數小時緩解；但復發率高(尤其誘因未矯正)，個別嚴重者需住院"
+
+population_notes:
+  age:
+    youth: ~
+    adult_beginner: "成人鐵人/開放水域初入者冷水+高強度起泳組合高危"
+    masters: "高齡+高血壓增風險"
+  sex:
+    female: "部分研究指女性風險較高(待核實)"
+    male: ~
+  ability: ~
+  lifecycle:
+    freediving: "SCUBA/自由潛水浸水亦可誘發(immersion pulmonary edema 同源機制)"
+
+links:
+  mechanism_link: ~        # 與水感技術軸無機制交會
+  technical_link: ~
+  perception_link: "可接 L0 呼吸感知/配速感知教育(辨識異常呼吸窘迫 vs 正常喘)"
+
+references:
+  - { citation: "SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）", certainty: 🟢, verified: false }
+  - { citation: "鐵人三項 SIPE 案例系列（具體出處待查）", certainty: 🟡, verified: false }
+
+flags:
+  pending_verification:
+    - "所有發生率/女性風險數字待查；public 層不放數字"
+    - "西地那非預防用藥證據等級待核實，public 層僅提『須醫囑』不給劑量"
+  contested:
+    - claim: "SIPE 與既往高血壓/心臟結構的因果強度"
+      consensus_source: "多數研究支持壓力性機制與高血壓相關"
+      dissent_source: "部分病例為健康年輕無心血管病史者，提示單純浸水+運動+冷水即足以誘發"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

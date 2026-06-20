@@ -1,0 +1,84 @@
+id: swimmers-shoulder
+zh: 游泳肩
+en: Swimmer's shoulder
+category: A-shoulder-upper
+environment: pool
+sport_variant: swim
+layer: [public, clinical]
+
+structures: [棘上肌腱, 肱二頭肌長頭腱, 肩峰下滑囊, 旋轉肌袖]
+mechanism:
+  summary: 高度重複過頭划水；前鋸肌疲勞→肩胛骨去穩定(winging)→旋轉肌過載→繼發夾擊/肌腱病。是傘狀總稱，涵蓋肩峰下夾擊、旋轉肌腱病、內夾擊等亞型。
+  stroke_phase: 自由式/蝶式抓水—早期推水（肱骨高度外展+內旋，通過喙肩弓下方）；恢復期高肘崩潰
+
+epidemiology:
+  prevalence: "菁英泳者肩痛 40–91%"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 盛行率不可橫向比較——定義差異極大（現症vs生涯、自陳vs影像、青少年/collegiate/Olympic/masters 族群不同）
+  sources:
+    - "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）"
+    - "StatPearls Swimmer's Shoulder, NCBI Bookshelf NBK470589"
+
+risk_factors:
+  - { text: "訓練量 >35 km/週", grade: B }
+  - { text: "肩關節鬆弛/多向不穩", grade: B }
+  - { text: "既往肩痛史", grade: B }
+  - { text: "內外旋活動度異常", grade: C }
+  - { text: "高肘技術崩潰（前鋸肌疲勞）", grade: C }
+
+prevention:
+  - { text: "旋轉肌+肩胛穩定肌耐力訓練（前鋸肌目標是耐力非力量）", grade: B }
+  - { text: "技術矯正：避免越中線入水、雙側換氣", grade: C }
+  - { text: "訓練量漸進管理、避免急性量跳升", grade: B }
+
+management:
+  red_flags:
+    - "夜間靜止痛 + 手臂主動上舉無力 → 排除旋轉肌全層撕裂"
+    - "頸部放射痛 + 上肢麻木/無力 → 排除頸神經根病變/TOS"
+  acute: "相對休息（非完全停練）+ 物理治療；急性期避免誘發角度的過頭動作"
+  pain_rules: "復健期疼痛 ≤3/10、動作型態不變形、24 小時內不惡化"
+  rehab: "旋轉肌與肩胛穩定肌漸進阻力訓練；離心負荷；恢復肩胛-肱骨節律"
+  functional_progression_criteria:
+    - "肩胛穩定測試左右對稱、無 winging"
+    - "全活動度無痛"
+    - "旋轉肌肌力對稱達健側 ~90%"
+  swim_modifications_in_rehab:
+    - "初期 pull buoy 減踢、限制過頭爆發負荷"
+    - "單臂划水分離患側、控制單側量"
+    - "暫避蝶式與大划距自由式"
+  return_to_train: "全活動度無痛 + 肩胛穩定測試過 → 漸進回水，技術重建優先於量"
+  return_to_compete: "全量無痛訓練 ≥2 週 + 技術穩定 → 復賽"
+  prognosis: "保守治療多數 6–12 週改善（依嚴重度）；結構性撕裂另評估"
+
+population_notes:
+  age:
+    youth: "早發肌腱病（早開始競技 + 長泳齡，棘上/肩胛下肌）"
+    adult_beginner: "既有肩部退化 + 技術未熟，負荷集中易夾擠"
+    masters: "二頭肌長頭腱病/鈣化偏多；超音波 LHB tendinosis 可達 48.8%"
+  sex: ~
+  ability:
+    para: "上肢推進依賴者（尤視障 S11–S13）肩負擔最高，為帕拉游泳首要傷害"
+  lifecycle: ~
+
+links:
+  mechanism_link: "前鋸肌耐力是 EVF（早期垂直前臂）的硬體前提，疲勞後肩胛失穩→捕水崩潰"
+  technical_link: "free.tech.10 前鋸肌硬體邊界 / free 疲勞崩潰順序第③步"
+  perception_link: "L4–L6 手感與全身張力"
+
+references:
+  - { citation: "Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. Br J Sports Med 2010;44(2):105-113", certainty: 🟢, verified: false }
+  - { citation: "McKenzie 系統綜述 2023, Scand J Med Sci Sports, DOI:10.1111/sms.14454", certainty: 🟢, verified: false }
+  - { citation: "Masters 泳者肩超音波研究, PMC7824457", certainty: 🟡, verified: false }
+
+flags:
+  pending_verification:
+    - "Olympic 96% / collegiate 44% supraspinatus tendinosis 為「來源轉述」，發布前須追原文核實，目前不進 public 層"
+    - "Sein 2010 引用（BJSM 44:105-113）待 WebFetch 確認——note: m3 審稿曾誤改為 JOSPT，已駁回，以 BJSM 為準再驗"
+  contested:
+    - claim: "機制為真正喙肩弓下夾擊 vs 不穩定繼發的肌腱病"
+      consensus_source: "近期學界偏向不穩定+疲勞繼發肌腱病（Sein 2010 指鬆弛與夾擊關聯極小）"
+      dissent_source: "早期 Neer 肩峰下夾擊模型"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

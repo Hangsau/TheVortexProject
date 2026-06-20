@@ -1,0 +1,84 @@
+id: shallow-water-blackout
+zh: 淺水昏迷
+en: Shallow water blackout (SWB)
+category: D-systemic-acute
+environment: pool          # 亦見 open_water 自由潛水
+sport_variant: [swim, freediving]
+layer: [public, clinical]
+fatal_acute: true          # layout 置頂旗標：致命急性風險
+
+structures: [中樞神經系統, 延髓呼吸中樞化學受器, 頸動脈體]
+mechanism:
+  summary: 潛前自主過度換氣→人為降低動脈 CO₂(低碳酸血症)→鈍化高碳酸驅動的「想呼吸」警訊→閉氣下潛時 O₂ 持續耗盡卻無換氣衝動→在水下無預警失去意識→若無人即時救援即溺水。並非肺或心臟疾病，是化學驅動被人為關閉。
+  trigger_phase: 閉氣前過度換氣 + 水下動態閉氣(DYN)或靜態閉氣(STA)；上升段壓力驟降使肺泡 O₂ 分壓再降，常在接近水面數公尺內昏迷
+  who: 體能良好、年輕、經驗豐富的泳者/自由潛水者/軍警泳訓者尤其高危——「我很會憋氣」是風險放大因子非保護因子
+
+epidemiology:
+  prevalence: "缺乏分母明確的發生率；多為個案系列與死亡驗屍報告"
+  certainty: 🟠
+  evidence_grade: C
+  caveat: 死亡常被歸類為一般溺水，SWB 機制未被記錄→系統性低估；無可靠盛行率數字
+  sources:
+    - "Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）"
+    - "美軍/海軍 breath-hold training 安全準則（具體文件待查）"
+
+risk_factors:
+  - { text: "潛前主動過度換氣（hyperventilation）", grade: B }
+  - { text: "閉氣競賽/比拼憋氣時間", grade: C }
+  - { text: "單獨閉氣訓練（無 1:1 直接看護）", grade: B }
+  - { text: "重複多次閉氣未充分間隔恢復", grade: C }
+  - { text: "「自認憋氣能力強」的過度自信", grade: Expert }
+
+prevention:
+  - { text: "絕對禁止潛前過度換氣（最核心單一訊息）", grade: B }
+  - { text: "絕不單獨閉氣訓練；採 1:1 直接看護(direct supervision)，看護者手臂可及", grade: B }
+  - { text: "閉氣後充分水面恢復間隔，禁連續多趟拼時間", grade: C }
+  - { text: "泳池禁止閉氣比拼遊戲，張貼 SWB 警示", grade: C }
+  - { text: "教育：『想呼吸的衝動是保命警訊，過度換氣會把它關掉』", grade: B }
+
+management:
+  red_flags:                # SWB 本身即急救事件——這欄是「目擊時怎麼辦」
+    - "水下泳者靜止不動/沉底/吐氣泡停止 → 立即視為昏迷，馬上下水拉出"
+    - "拉出後無反應/無正常呼吸 → 立即啟動 EMS + CPR(先給呼吸/通氣，溺水復甦以通氣優先)"
+    - "曾水下短暫失神但自行恢復 → 仍須就醫評估，勿當沒事繼續下水"
+  acute: "離水→評估反應與呼吸→無呼吸即 CPR（溺水演算法：先 5 次人工呼吸再胸外按壓）→呼叫 EMS；恢復後仍須送醫觀察續發性溺水/吸入"
+  pain_rules: ~             # 非疼痛性傷害，不適用
+  rehab: ~                 # 無復健軸；重點是行為與環境預防
+  functional_progression_criteria: ~
+  swim_modifications_in_rehab:
+    - "倖存者回水前須由醫療評估；移除所有過度換氣與閉氣比拼行為"
+    - "閉氣訓練(若必要)改為陸上或有 1:1 直接看護的結構化 protocol"
+  return_to_train: "經醫療評估無神經/心肺後遺 + 行為矯正(禁過度換氣、不單獨閉氣) → 漸進回水"
+  return_to_compete: ~     # 競技自由潛水另有專屬安全規範，超出本條範圍
+  prognosis: "及時救援+CPR 多可完全恢復；延遲救援則缺氧性腦損傷或死亡——預後高度取決於目擊與救援時效"
+
+population_notes:
+  age:
+    youth: "青少年泳池閉氣比拼/憋氣遊戲是常見情境"
+    adult_beginner: ~
+    masters: "自由潛水社群與軍警泳訓族群"
+  sex: ~
+  ability: ~
+  lifecycle:
+    freediving: "自由潛水是 SWB/BO 主場景；競技自由潛水有 surface protocol 與 buddy 規範"
+
+links:
+  mechanism_link: ~        # 與水感技術軸無機制交會
+  technical_link: ~
+  perception_link: "可接 L0 呼吸感知層：閉氣與換氣衝動的生理意義屬呼吸感知教育素材"
+
+references:
+  - { citation: "Shallow Water Blackout Prevention（組織衛教，待核實具體出處）", certainty: 🟠, verified: false }
+  - { citation: "ILCOR/AHA 溺水復甦演算法（通氣優先），具體版本待查", certainty: 🟢, verified: false }
+
+flags:
+  pending_verification:
+    - "無可靠發生率數字——public 層只放機制與預防，不放任何盛行率"
+    - "CPR 溺水演算法『先 5 次人工呼吸』細節待對 ILCOR/AHA 最新版核實"
+  contested:
+    - claim: "潛前過度換氣是否為唯一/主要機制"
+      consensus_source: "主流安全衛教共識：過度換氣去除 CO₂ 警訊是核心可預防因子"
+      dissent_source: "部分案例無明確過度換氣史，提示重複閉氣的累積缺氧亦可獨立致病"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,88 @@
+id: red-s
+zh: 相對能量不足（RED-S）
+en: Relative Energy Deficiency in Sport (RED-S)
+category: D-endocrine
+environment: pool          # 能量赤字與環境無關，但泳者陸訓/賽程加劇
+sport_variant: swim
+layer: [public, clinical]
+
+structures: [下視丘-腦下垂體-性腺軸, 骨骼(骨密度), 內分泌系統, 心血管/代謝/免疫多系統]
+mechanism:
+  summary: 能量攝取長期低於運動消耗(low energy availability, LEA)→身體下調非必要功能以保命→月經/睪固酮、骨代謝、代謝率、免疫、心血管、心理多系統受抑。不是單一疾病而是低能量可用性引發的多系統症候群。女性運動員三聯症(低能量可用性+月經失調+低骨密度)是 RED-S 的子集。
+  driver: "能量可用性 = (攝取 − 運動消耗) / 去脂體重；< 30 kcal/kg FFM/day 為臨床關切閾值（具體閾值待核實，個體差異大）"
+  swim_context: 泳者每日高熱量消耗 + 體型/外觀壓力 + 大量陸訓，能量赤字易被低估
+
+epidemiology:
+  prevalence: "女性運動員 LEA/三聯症盛行率報導範圍極廣；游泳專項數字待 WebFetch 核實"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 定義與篩檢工具(LEAF-Q/RED-S CAT2)差異大→盛行率不可橫向比較；男性 RED-S 長期被低估
+  sources:
+    - "IOC RED-S 共識聲明（2014 首版，2018/2023 更新；具體 DOI 待查）"
+    - "Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）"
+
+risk_factors:
+  - { text: "能量攝取不足以匹配訓練量（有意或無意）", grade: B }
+  - { text: "刻意限食/體重控制/外觀壓力", grade: B }
+  - { text: "訓練量驟增未相應增加攝取", grade: B }
+  - { text: "飲食失調/失調性飲食行為", grade: B }
+  - { text: "對能量需求的知識不足（青少年尤甚）", grade: C }
+
+prevention:
+  - { text: "能量攝取匹配訓練消耗，重訓練日加量(fuelling)", grade: B }
+  - { text: "定期監測月經狀態(女)/晨間勃起或性慾(男)作為能量可用性指標", grade: C }
+  - { text: "教練/家長/醫療三方對體重與飲食言語謹慎，避免觸發限食", grade: C }
+  - { text: "青少年成長期格外保障能量與鈣/維D，保護骨量累積窗口", grade: B }
+
+management:
+  red_flags:
+    - "停經 ≥3 個月(原發或續發) → 內分泌/婦科評估，勿視為『訓練正常現象』"
+    - "反覆疲勞性骨折 → 評估骨密度與能量可用性"
+    - "極端限食/暴食清除行為/體重驟降 → 飲食失調專業介入"
+    - "心搏過緩+姿態性低血壓+電解質異常 → 醫療評估(嚴重 LEA/飲食失調可致命)"
+  acute: "非急性外傷模式；核心是『提升能量可用性』——增加攝取、降低訓練消耗，多由運動醫學+營養+(必要時)心理團隊處理"
+  pain_rules: ~
+  rehab: "能量再平衡為主軸；疲勞性骨折依部位另循骨折復健；恢復月經/骨代謝指標為療效錨"
+  functional_progression_criteria:
+    - "能量可用性回升(攝取-消耗平衡)"
+    - "月經恢復(女)/賀爾蒙指標回升"
+    - "骨密度穩定或改善、無新發疲勞性骨折"
+  swim_modifications_in_rehab:
+    - "暫時下調訓練量/陸訓負荷以縮小能量赤字，非『加練消耗』"
+    - "疲勞性骨折期依部位調整踢腿/出發跳台負荷"
+  return_to_train: "能量可用性恢復 + 無活動性疲勞性骨折 + 團隊(醫療/營養/心理)綠燈 → 漸進加量"
+  return_to_compete: "賀爾蒙/骨骼/心理指標穩定 + 訓練耐受全量無症狀 → 復賽；RED-S CAT2 風險分層輔助決策"
+  prognosis: "能量再平衡後多數可逆；但青少年期累積的骨量損失可能不完全回復→長期骨折風險"
+
+population_notes:
+  age:
+    youth: "成長期骨量累積窗口受損影響終生峰值骨量；青少年競技泳者高風險"
+    adult_beginner: ~
+    masters: "成人/高齡能量赤字疊加既有骨流失，骨折風險升"
+  sex:
+    female: "三聯症(LEA+月經失調+低骨密度)為經典表現"
+    male: "RED-S 同樣發生但長期被低估；表現為睪固酮下降、骨密度低、表現停滯"
+  ability:
+    para: "殘疾運動員能量需求評估更複雜(體組成/截肢/痙攣消耗)，篩檢工具未充分驗證"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~        # 與水感技術軸無機制交會
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "IOC consensus statement on RED-S（2014 首版/後續更新，作者與 DOI 待 WebFetch 核實）", certainty: 🟢, verified: false }
+  - { citation: "女性運動員三聯症 ACSM position stand（年份/作者待查）", certainty: 🟢, verified: false }
+
+flags:
+  pending_verification:
+    - "能量可用性 30 kcal/kg FFM/day 閾值為常引數字，待原文核實後才入 public"
+    - "游泳專項盛行率數字全部待查，public 層不放數字"
+  contested:
+    - claim: "三聯症 vs RED-S 框架範圍"
+      consensus_source: "IOC 主張 RED-S 為更廣的多系統框架，涵蓋男性與非月經系統"
+      dissent_source: "部分學者(如 ACSM 傳統三聯症陣營)主張保留三聯症的明確臨床定義，質疑 RED-S 證據強度"
+  vintage_warning: false   # 概念 2014 正名，屬近期；但須註明版本(2014/2018/2023)
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
