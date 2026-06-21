@@ -72,8 +72,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "IOC consensus statement on RED-S（2014 首版/後續更新，作者與 DOI 待 WebFetch 核實）", certainty: 🟢, verified: false }
-  - { citation: "女性運動員三聯症 ACSM position stand（年份/作者待查）", certainty: 🟢, verified: false }
+  - { citation: "IOC consensus statement on RED-S（2014 首版/後續更新，作者與 DOI 待 WebFetch 核實）", certainty: 🔴, verified: false }
+  - { citation: "女性運動員三聯症 ACSM position stand（年份/作者待查）", certainty: 🔴, verified: false }
 
 flags:
   pending_verification:

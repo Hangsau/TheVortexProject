@@ -69,7 +69,7 @@ links:
 
 references:
   - { citation: "Shallow Water Blackout Prevention（組織衛教，待核實具體出處）", certainty: 🟠, verified: false }
-  - { citation: "ILCOR/AHA 溺水復甦演算法（通氣優先），具體版本待查", certainty: 🟢, verified: false }
+  - { citation: "ILCOR/AHA 溺水復甦演算法（通氣優先），具體版本待查", certainty: 🔴, verified: false }
 
 flags:
   pending_verification:

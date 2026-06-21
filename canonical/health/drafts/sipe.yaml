@@ -73,7 +73,7 @@ links:
   perception_link: "可接 L0 呼吸感知/配速感知教育(辨識異常呼吸窘迫 vs 正常喘)"
 
 references:
-  - { citation: "SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）", certainty: 🟢, verified: false }
+  - { citation: "SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）", certainty: 🔴, verified: false }
   - { citation: "鐵人三項 SIPE 案例系列（具體出處待查）", certainty: 🟡, verified: false }
 
 flags:

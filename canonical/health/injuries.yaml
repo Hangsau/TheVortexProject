@@ -700,10 +700,10 @@ injuries:
     perception_link: L4–L6 手感與全身張力
   references:
   - citation: Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. Br J Sports Med 2010;44(2):105-113
-    certainty: 🟢
+    certainty: 🔴
     verified: false
   - citation: McKenzie 系統綜述 2023, Scand J Med Sci Sports, DOI:10.1111/sms.14454
-    certainty: 🟢
+    certainty: 🔴
     verified: false
   - citation: Masters 泳者肩超音波研究, PMC7824457
     certainty: 🟡
@@ -3021,7 +3021,7 @@ injuries:
     certainty: 🟠
     verified: false
   - citation: ILCOR/AHA 溺水復甦演算法（通氣優先），具體版本待查
-    certainty: 🟢
+    certainty: 🔴
     verified: false
   flags:
     pending_verification:
@@ -3123,7 +3123,7 @@ injuries:
     perception_link: 可接 L0 呼吸感知/配速感知教育(辨識異常呼吸窘迫 vs 正常喘)
   references:
   - citation: SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）
-    certainty: 🟢
+    certainty: 🔴
     verified: false
   - citation: 鐵人三項 SIPE 案例系列（具體出處待查）
     certainty: 🟡
@@ -3161,7 +3161,7 @@ injuries:
     trigger_phase: 長期高訓練量、能量赤字、低體脂、心理壓力
     who: 長期高量訓練者、能量赤字者、低體脂者、可能既有高雄激素傾向者
   epidemiology:
-    prevalence: 游泳族群原發性無月經最高 19%、繼發性無月經 0–23.8%、稀發月經 9.5–38.9%；系統性回顧游泳員月經失調平均約 41%；游泳員停經後月經不規則率達 82%(對照 40%)、雌二醇維持正常伴輕度高雄激素症
+    prevalence: 游泳族群原發性無月經最高 19%、繼發性無月經 0–23.8%、稀發月經 9.5–38.9%；系統性回顧游泳員月經失調平均約 41%；部分小樣本研究指游泳員停經後月經不規則率偏高(一研究達 82%、對照 40%，樣本小且為橫斷面)、雌二醇維持正常伴輕度高雄激素症
     certainty: 🟡
     evidence_grade: B
     caveat: 多為橫斷面，樣本小；高雄激素型 vs 下視丘型非互斥；PCOS 先天 vs 訓練誘發因果方向無法確定；近年無大型前瞻性游泳員月經研究
@@ -3416,10 +3416,10 @@ injuries:
     perception_link: null
   references:
   - citation: IOC consensus statement on RED-S（2014 首版/後續更新，作者與 DOI 待 WebFetch 核實）
-    certainty: 🟢
+    certainty: 🔴
     verified: false
   - citation: 女性運動員三聯症 ACSM position stand（年份/作者待查）
-    certainty: 🟢
+    certainty: 🔴
     verified: false
   flags:
     pending_verification:

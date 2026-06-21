@@ -67,8 +67,8 @@ links:
   perception_link: "L4–L6 手感與全身張力"
 
 references:
-  - { citation: "Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. Br J Sports Med 2010;44(2):105-113", certainty: 🟢, verified: false }
-  - { citation: "McKenzie 系統綜述 2023, Scand J Med Sci Sports, DOI:10.1111/sms.14454", certainty: 🟢, verified: false }
+  - { citation: "Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. Br J Sports Med 2010;44(2):105-113", certainty: 🔴, verified: false }
+  - { citation: "McKenzie 系統綜述 2023, Scand J Med Sci Sports, DOI:10.1111/sms.14454", certainty: 🔴, verified: false }
   - { citation: "Masters 泳者肩超音波研究, PMC7824457", certainty: 🟡, verified: false }
 
 flags:
