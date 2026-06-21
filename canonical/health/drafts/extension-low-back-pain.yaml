@@ -1,0 +1,89 @@
+id: extension-low-back-pain
+zh: 伸展型下背痛（蝶泳）
+en: Extension-type low back pain (butterfly)
+category: B-lower-spine-strokespecific
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [腰椎關節突關節, 腰椎旁肌, 髂腰肌, 腰椎韌帶]
+mechanism:
+  summary: 機制導向的「伸展型」腰痛，主要由蝶/蛙反覆腰椎過伸引起，不一定有影像可見的椎弓解離或椎間盤病變(與椎弓解離條目重疊，此處聚焦關節突關節炎性/肌肉韌帶型負荷痛)。蝴蝶踢腰椎過伸+骨盆前傾壓迫關節突關節；核心不足或髖屈肌緊縮則波動幅度加大。俗稱「蝶泳下背症候群」。
+  trigger_phase: 蝴蝶踢下踢、蛙泳回腿、水中伸展姿勢、腳踢板
+  who: 蝶/蛙高量者、髂腰肌緊縮者、核心不足者
+
+epidemiology:
+  prevalence: "蝶式下背痛 33.3–50%、蛙泳 22.2–47%；有下背痛者蝴蝶踢時腰椎過伸角度顯著較大、髂腰肌彈性模量更高；精英泳者脊椎退化率 68% vs 休閒 29%"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 橫斷面為主，因果方向不明；機制研究(PMID 31141446)與 68% 退化率原始研究為摘要/二手
+  sources:
+    - "Swimming low back pain by stroke, PMC11531034 (已驗證)"
+    - "Competitive swimmers spine degeneration, PMC3435931 (已驗證)"
+
+risk_factors:
+  - { text: "髂腰肌緊縮", grade: B }
+  - { text: "腰椎過伸角度過大", grade: B }
+  - { text: "核心不足", grade: B }
+  - { text: "腳踢板過度使用", grade: Expert }
+  - { text: "高量蝶/蛙", grade: B }
+  - { text: "骨盆前傾", grade: Expert }
+  - { text: "蝴蝶踢偏全身性波浪(vs 膝為主)", grade: Expert }
+
+prevention:
+  - { text: "核心強化(抗伸展方向)", grade: B }
+  - { text: "髂腰肌拉伸", grade: B }
+  - { text: "技術:較小波動、膝為主蝴蝶踢", grade: Expert }
+  - { text: "減少腳踢板", grade: Expert }
+  - { text: "分散筆畫避免長時間單一蝶/蛙", grade: Expert }
+
+management:
+  red_flags:
+    - "下肢放射痛/神經症狀 → 就醫(排除椎間盤突出)"
+    - "伸展位劇痛 → 就醫(排除椎弓解離)"
+    - "夜間痛 → 就醫(排除腫瘤/感染)"
+  acute: "訓練調整(停蝶/蛙/腳踢板)、關節鬆動、軟組織治療、NSAIDs"
+  pain_rules: "輕度訓練後痠痛 24 小時消退 → 續但分散蝶式；過伸即痛 → 停蝶/蛙評估；有下肢症狀 → 立即評估(red flag)"
+  rehab: "核心抗伸展穩定(plank/dead bug/bird-dog)+髂腰肌拉伸+腰椎中立位動作控制；關節突關節痛者關節鬆動+短期貼紮"
+  functional_progression_criteria:
+    - "腰椎中立位全 ROM 無痛"
+    - "核心耐力測試通過"
+    - "漸進蝴蝶踢無症狀"
+  swim_modifications_in_rehab:
+    - "自由式/背泳替代(旋轉為主非過伸)"
+    - "水中核心練習、漸引窄幅蝴蝶踢"
+  return_to_train: "輕症 4–8 週；與椎弓解離共存按椎弓解離條目(更長)"
+  return_to_compete: "核心與蝴蝶踢無症狀達標後回賽"
+  prognosis: "多數保守反應良好；無構造病變者佳；高量蝶式者需長期核心維持"
+
+population_notes:
+  age:
+    youth: "核心族群"
+    adult_beginner: "核心控制不足風險不低"
+    masters: "退化性椎間盤+關節突關節炎共存，機制更複雜"
+  sex:
+    female: "蝶/蛙下背痛略高於男性(待查)"
+    male: ~
+  ability:
+    para: "脊椎損傷者特殊腰椎狀況，不可套用一般評估(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Low back pain in swimmers by stroke, PMC11531034", certainty: 🟢, verified: true }
+  - { citation: "Spine degeneration in competitive swimmers, PMC3435931", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "機制研究(PMID 31141446)、68% 退化率原始研究作者/DOI、女性差異數字為摘要/二手待 W3"
+  contested:
+    - claim: "伸展型下背痛 vs 椎弓解離鑑別"
+      consensus_source: "影像前難鑑別，處理相近"
+      dissent_source: "椎弓解離需更謹慎；抗伸展 vs 屈曲導向核心訓練相對效益缺高品質 RCT"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

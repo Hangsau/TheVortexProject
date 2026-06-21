@@ -1,0 +1,86 @@
+id: biceps-tendinopathy
+zh: 肱二頭肌長頭肌腱病
+en: Biceps (long head) tendinopathy
+category: A-shoulder-upper
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [肱二頭肌長頭腱, 結節間溝, 旋轉肌袖, 旋轉間隔]
+mechanism:
+  summary: 肱二頭肌長頭腱(LHB)於結節間溝承受摩擦，推進期(自由式/蝶式拉水)反覆張力與剪切。LHB 兼任肱骨頭前方穩定器，當棘上肌功能下降後 LHB 代償超載而腱病；穩定肌疲勞後肩胛前傾增加溝內壓迫。多與旋轉肌袖退化共存，常為旋轉肌袖完整性下降之繼發表現。
+  trigger_phase: 自由式拉水轉換、背泳恢復、蝶式入水
+  who: 較大年齡者(Masters 尤甚)、棘上肌腱病共存者、肩部疼痛史者
+
+epidemiology:
+  prevalence: "Masters 泳者超音波(n=80 泳者/40 對照)LHB 腱病 48.8% vs 對照 12.5%；棘上肌與 LHB 共存率 22–78.5%(n=200 約 49% 共存退化);年齡每增 1 歲 LHB 腱病風險 +5%、晚競技每增 1 年 +4%"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 主要為 Masters 影像數據，年輕競技者資料較少；多與旋轉肌袖損傷共病，獨立歸因困難
+  sources:
+    - "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
+    - "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)"
+
+risk_factors:
+  - { text: "棘上肌腱病共存", grade: B }
+  - { text: "年齡增長(Masters)", grade: B }
+  - { text: "肩部疼痛史(OR 3.95)", grade: B }
+  - { text: "過頭活動量大", grade: B }
+  - { text: "旋轉間隔病變", grade: C }
+
+prevention:
+  - { text: "旋轉肌袖整體強化(避免 LHB 代償)", grade: B }
+  - { text: "仰泳/蛙泳輪換", grade: Expert }
+  - { text: "每週 ≥2 天休息", grade: Expert }
+
+management:
+  red_flags:
+    - "Speed/Yergason 高度陽性+溝觸痛 → 就醫"
+    - "急性斷裂(Popeye 隆起) → 就醫"
+    - "與 SLAP 共存深部痛 → 骨科評估"
+    - "靜息/夜間痛 → 就醫"
+  acute: "休息、NSAIDs、必要時超音波導引注射(類固醇/PRP 短期止痛)"
+  pain_rules: "輕度前肩活動痛 → 調量避過度拉水；靜息/夜間痛 → 停水中訓練"
+  rehab: "減負荷→再負荷；以棘上肌+旋轉肌袖穩定為核心減少 LHB 代償；體外震波(ESWT)、PRP 為輔助選項"
+  functional_progression_criteria:
+    - "Speed/Yergason 無痛"
+    - "拉水無前肩痛"
+    - "肌力 ≥85% 對側"
+  swim_modifications_in_rehab:
+    - "減拉水頻率、停划手板"
+    - "改踢腿板/浮袋訓練"
+  return_to_train: "保守反應良好者漸進回水"
+  return_to_compete: "視旋轉肌袖整體恢復而定"
+  prognosis: "多數保守反應良好；手術(tenodesis/tenotomy)保留給失敗者，年輕/活動型偏 tenodesis、Masters 可接受 tenotomy"
+
+population_notes:
+  age:
+    youth: "資料較少"
+    adult_beginner: ~
+    masters: "主要風險群"
+  sex:
+    female: "女性特定數據缺失(DATA GAP)"
+    male: ~
+  ability:
+    para: "Para 數據缺失(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Shoulder pathology in masters swimmers, PMC7824457", certainty: 🟢, verified: true }
+  - { citation: "LHB tendon and rotator cuff coexistence, PMC4247626", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "tenodesis vs tenotomy 比較(PMC8600672)為摘要層級；作者全名/DOI 待 W3"
+  contested:
+    - claim: "LHB 腱病為獨立病變或旋轉肌袖損傷繼發"
+      consensus_source: "文獻傾向視為旋轉肌袖完整性下降之代償繼發"
+      dissent_source: "tenodesis vs tenotomy 在年輕運動員的選擇仍有爭論"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,88 @@
+id: femoroacetabular-impingement
+zh: 股骨髖臼撞擊（FAI）
+en: Femoroacetabular impingement in swimmers
+category: B-lower-spine-strokespecific
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [Cam 型, Pincer 型, 混合型]
+
+structures: [股骨頭頸交界, 髖臼緣, 髖盂唇, 髖關節軟骨]
+mechanism:
+  summary: 股骨頭(Cam)或髖臼(Pincer)骨性異常致髖屈曲/內旋時骨性接觸夾擊盂唇與軟骨。蛙泳踢腿需大幅外旋屈曲後內收內旋的組合反覆動作為主要誘發；蝴蝶踢反覆髖屈伸亦可。水上運動員在骨骼發育期反覆對股骨頭施加旋轉應力，可能促進 Cam 形態發育。
+  trigger_phase: 蛙泳踢腿加速相、蝴蝶踢下踢
+  who: 青少年期大量水上運動者、蛙泳專項、既有骨性異常者
+
+epidemiology:
+  prevalence: "水上項目(水球/同步游泳)Cam 形態 67.5%(27/40 髖)、與足球(64.2%)相當；Pincer 22.5%；蛙泳特定無獨立研究"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 流行率數據來自水球/同步游泳(蛋踢)，非蛙泳特定；alpha angle 與蛋踢時數無統計相關，習得 vs 先天未定
+  sources:
+    - "Cam morphology in aquatic athletes, PMC7605769 (已驗證)"
+    - "FAI rehabilitation & RTS, PMC11642080 (已驗證)"
+
+risk_factors:
+  - { text: "青少年期大量水上運動(骨骺敏感)", grade: B }
+  - { text: "先天/發育性股骨或髖臼異常", grade: B }
+  - { text: "蛙泳踢腿幅度/技術", grade: B }
+  - { text: "髖 ROM 不足(內旋 <40°)", grade: B }
+  - { text: "家族性 FAI 形態", grade: B }
+
+prevention:
+  - { text: "生長期避免過度專項化", grade: Expert }
+  - { text: "維持髖 ROM 與肌力", grade: B }
+  - { text: "蛙泳骨盆位置優化", grade: Expert }
+  - { text: "控制訓練量", grade: Expert }
+
+management:
+  red_flags:
+    - "靜息腹股溝/深髖痛 → 就醫"
+    - "夜間痛 → 就醫"
+    - "神經症狀 → 就醫(排除腰椎)"
+    - "急性髖鎖定(盂唇嵌頓) → 就醫"
+  acute: "停誘發活動(蛙泳)、NSAIDs、物理治療"
+  pain_rules: "輕度撞擊徵象 → 先練 ROM/肌力+調技術；蛙泳持續深痛 → 停蛙泳、影像(X-ray AP+側位)"
+  rehab: "術後 4 期:即刻負重 20 kg/ROM ≤90° → 2–8w 漸進全承重+水中走路 → 8–16w 弓步/單腳平衡 → 16w–8 月跳躍/專項"
+  functional_progression_criteria:
+    - "髖 ROM 與肌力恢復"
+    - "單腳平衡/功能測試通過"
+    - "蛙泳踢腿無撞擊痛"
+  swim_modifications_in_rehab:
+    - "術後 3–4 月開始水中走路"
+    - "蛙泳通常術後 ≥4 月恢復"
+  return_to_train: "保守首選；多數骨性異常可保守管理"
+  return_to_compete: "整體術後 RTS 90.3%；游泳者 100% 平均 3.4 月(各項目最佳之一)"
+  prognosis: "手術結果優良，游泳者為各項目最佳之一；盂唇撕裂+持續症狀手術效益清楚"
+
+population_notes:
+  age:
+    youth: "骨骺開放期最易形成 Cam，重視預防與避免過度專項化"
+    adult_beginner: ~
+    masters: "篩查髖 ROM；多數可保守"
+  sex:
+    female: "女性 Cam 較低、Pincer 較常見(一般人群外推)"
+    male: ~
+  ability:
+    para: "DATA GAP"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Cam morphology in aquatic (water polo/synchro) athletes, PMC7605769", certainty: 🟢, verified: true }
+  - { citation: "FAI surgical rehabilitation and return to sport, PMC11642080", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "青少年發育研究(PMC9452871)、Frank 2018 游泳者 100% RTS(PMID 29402586，一手來源但完整數據未擷取)待 W3"
+  contested:
+    - claim: "Cam 形態為運動習得或先天為主"
+      consensus_source: "Cam 多在骨骺開放期形成、與機械負荷相關"
+      dissent_source: "alpha angle 與蛋踢時數無統計相關，水中旋轉促進說未證實"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

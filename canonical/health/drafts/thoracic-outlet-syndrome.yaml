@@ -1,0 +1,85 @@
+id: thoracic-outlet-syndrome
+zh: 胸廓出口症候群（TOS）
+en: Thoracic outlet syndrome in swimmers
+category: A-shoulder-upper
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [神經性 nTOS, 靜脈性(Paget-Schroetter), 動脈性]
+
+structures: [臂神經叢, 鎖骨下動靜脈, 斜角肌三角, 肋鎖間隙, 胸小肌後間隙]
+mechanism:
+  summary: 鎖骨下動靜脈或臂神經叢在斜角肌三角、肋鎖間隙或胸小肌後方受壓。游泳主機制為反覆過頭划水(自由式/蝶式/背泳)引起斜角肌與胸小肌肥大壓迫神經血管束，同時肩胛下沉前傾縮小出口空間。神經性(nTOS)最常見；靜脈性(Paget-Schroetter，鎖骨下靜脈血栓)次常見且更緊急；動脈性最罕見但最危險。
+  trigger_phase: 入水相與過頭恢復相
+  who: 高量競技者、頸肋/纖維索帶者、肩胛控制不足者
+
+epidemiology:
+  prevalence: "游泳者 TOS 以個案與小系列為主：某 41 名運動員 TOS 手術系列含游泳者 11 名；另一 97 名 nTOS 系列含游泳者 2 名；無可靠流行病學分母"
+  certainty: 🔵
+  evidence_grade: C
+  caveat: TOS 診斷標準無完全共識(CORE-TOS 等)，盛行率差異大；易與 MDI/旋轉肌袖損傷混淆；游泳者文獻多為 1990s–2010s 小系列
+  sources:
+    - "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)"
+    - "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)"
+
+risk_factors:
+  - { text: "反覆過頭→斜角肌/胸小肌肥大", grade: B }
+  - { text: "先天頸肋/纖維索帶", grade: B }
+  - { text: "肩胛動作異常/下沉", grade: B }
+  - { text: "高訓練量", grade: Expert }
+  - { text: "斜角肌解剖變異", grade: C }
+
+prevention:
+  - { text: "肩胛提肌+中下斜方肌強化", grade: Expert }
+  - { text: "斜角肌/胸小肌伸展", grade: Expert }
+  - { text: "維持姿勢、避免過量", grade: Expert }
+
+management:
+  red_flags:
+    - "手臂腫脹/發紺(靜脈性) → 立即就醫"
+    - "手指缺血/蒼白冰冷(動脈性) → 急診"
+    - "進行性神經缺損(無力/萎縮) → 就醫"
+    - "持續手麻不因姿勢改變緩解 → 就醫"
+  acute: "神經性 nTOS：休息、斜角肌放鬆、NSAIDs、姿勢矯正；血管型需血管外科緊急處置"
+  pain_rules: "僅特定角度症狀 → 技術調整續輕量；靜息神經症狀(手麻持續) → 停誘發活動"
+  rehab: "6 期肩胛控制漸進(靜止位→<30°→45–90°→屈曲→>90° 仰舉→專項)+手法治療(第一肋/胸椎)+神經鬆動+呼吸訓練；避免血流限制訓練(靜脈性風險)"
+  functional_progression_criteria:
+    - "症狀消失"
+    - "患側等長肌力 ≥90% 對側"
+    - "閉鏈上肢測試/後肩耐力測試通過"
+  swim_modifications_in_rehab:
+    - "減過頭量、避誘發角度"
+    - "靜脈型禁血流限制式負荷"
+  return_to_train: "保守 60–70% nTOS 成功(4–6 月試驗)"
+  return_to_compete: "手術後 nTOS 約 9–12 月、靜脈性約 3.5 月返回"
+  prognosis: "保守對多數 nTOS 有效；血管型須及時介入；手術後約 70–81% 返回原水準(摘要層級待查)"
+
+population_notes:
+  age:
+    youth: "頸肋+高量更易誘發"
+    adult_beginner: "罕見(DATA GAP)"
+    masters: "罕見(DATA GAP)"
+  sex: ~
+  ability:
+    para: "罕見(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Thoracic outlet syndrome in athletes (systematic review), PMC7340704", certainty: 🟢, verified: true }
+  - { citation: "Conservative rehabilitation for neurogenic TOS, PMC11277273", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "70–81% 返回原水準、67% 最終手術率為摘要層級待查；游泳者 TOS 病案(PMID 7823983 1995、PMID 10230571 1999)為一手但年代久"
+  contested:
+    - claim: "診斷標準與保守試驗時間"
+      consensus_source: "保守復健為神經性 TOS 第一線"
+      dissent_source: "TOS 診斷標準不統一、保守試驗時長各中心不一；易誤診為 MDI/旋轉肌袖損傷"
+  vintage_warning: true
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

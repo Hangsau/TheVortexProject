@@ -1,0 +1,89 @@
+id: groin-adductor-strain
+zh: 腹股溝/內收肌損傷（蛙泳）
+en: Groin / adductor strain (breaststroke)
+category: B-lower-spine-strokespecific
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [內收肌群, 股薄肌, 恥骨聯合, 髖內收肌腱起點]
+mechanism:
+  summary: 蛙泳踢腿推進期需大力髖內收(內收肌群+股薄肌)，膝足外開幅度越大、內收肌牽張負荷越高。急性傷害見於負荷突增或疲勞後失衡；慢性來自反覆超載致腱病或恥骨聯合過載(運動性恥骨痛)。與一般定義「腹股溝痛」涵蓋 adductor strain / 運動性恥骨痛 / 疝氣多有重疊。
+  trigger_phase: 蛙泳鞭踢的外展→內收轉換相
+  who: 蛙泳專項、踢腿幅度大者、內收肌相對弱者
+
+epidemiology:
+  prevalence: "蛙泳者 42.7% 過去一年因腹股溝傷無法完成蛙泳訓練(vs 個人混合式 21.5%、非蛙泳 5.8%)；當前腹股溝痛蛙泳 6.92% vs 個人混合式 0%(p=0.015)"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 主要數字來自 2004 年單一研究(Grote 等，AJSM)，現代訓練模式不同；全文未開啟，數字屬待查
+  sources:
+    - "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)"
+    - "Adductor loading/return-to-sport practice (Coast Sport, 已驗證)"
+
+risk_factors:
+  - { text: "蛙泳踢腿幅度過大", grade: B }
+  - { text: "訓練量急增(急/慢性負荷比 >150%)", grade: B }
+  - { text: "熱身不足(<900 m)", grade: B }
+  - { text: "髖內旋 ROM 不足(<40°)", grade: B }
+  - { text: "核心/臀肌薄弱", grade: Expert }
+  - { text: "年齡 ≥16", grade: B }
+  - { text: "競技年資 ≥9 年", grade: B }
+
+prevention:
+  - { text: "技術:縮小踢腿幅度、窄鞭踢", grade: B }
+  - { text: "Copenhagen 內收肌離心訓練(顯著提升肌力)", grade: B }
+  - { text: "充足熱身 ≥900 m", grade: B }
+  - { text: "負荷漸進管理", grade: B }
+
+management:
+  red_flags:
+    - "恥骨結節嚴重觸痛 → 就醫(排除恥骨骨炎/應力骨折)"
+    - "腹股溝膨出/疝氣徵象 → 就醫"
+    - "神經症狀 → 就醫"
+    - "不明消瘦+持續痛 → 就醫(排除腫瘤)"
+  acute: "休息、冰敷、停蛙泳"
+  pain_rules: "等長收縮無痛 → 開始等長訓練；NRS ≤3 且消退 → 調整續練(非蛙泳)；蛙泳期間任何痛 → 停蛙泳改自由/背泳"
+  rehab: "①等長 ②同心/離心漸進(Copenhagen) ③功能性(模擬踢腿路徑) ④專項(窄幅蛙踢)"
+  functional_progression_criteria:
+    - "內收肌力 ≥90% 對側"
+    - "窄幅踢腿無痛"
+    - "蛙泳全速無痛再現"
+  swim_modifications_in_rehab:
+    - "停蛙泳；可自由式/背泳/蝴蝶腳(腹股溝負荷低)"
+    - "監督下漸引窄幅蛙踢"
+  return_to_train: "輕症 2–12 週；慢性腱病 3–6 月"
+  return_to_compete: "肌力與蛙泳全速無痛達標後回賽"
+  prognosis: "主動復健佳；慢性(含恥骨骨炎)延長；避免帶痛蛙泳為關鍵"
+
+population_notes:
+  age:
+    youth: "16 歲後顯著增加"
+    adult_beginner: ~
+    masters: "累積軟組織退化，數據缺"
+  sex:
+    female: "女性蛙泳者骨盆寬度生物力學差異(DATA GAP)"
+    male: ~
+  ability:
+    para: "蛙泳部分分級受限，文獻缺"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Breaststroke groin injury (Grote 2004), AJSM PMID 14754731", certainty: 🟡, verified: false }
+  - { citation: "Adductor strengthening / load management (Coast Sport)", certainty: 🟠, verified: true }
+
+flags:
+  pending_verification:
+    - "Grote 2004 全文未開啟(42.7%/6.92% 數字)；Copenhagen meta-analysis(PMC8486394/PMC12363431)為摘要層級；作者全名/DOI 待 W3"
+  contested:
+    - claim: "Copenhagen 是否足以預防蛙泳者傷害"
+      consensus_source: "Copenhagen 顯著提升內收肌力"
+      dissent_source: "季節性傷害預防統計不顯著，依從性為關鍵(PMC12363431 2025 摘要)"
+  vintage_warning: true
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

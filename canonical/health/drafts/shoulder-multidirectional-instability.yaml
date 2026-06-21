@@ -1,0 +1,88 @@
+id: shoulder-multidirectional-instability
+zh: 多向性肩關節不穩定（MDI）
+en: Multidirectional shoulder instability
+category: A-shoulder-upper
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [肩關節囊韌帶, 旋轉肌袖, 肩胛穩定肌, 盂肱關節]
+mechanism:
+  summary: 關節囊韌帶整體鬆弛使肱骨頭向 ≥2 個方向(前/後/下)過度移位。幼年反覆大幅外展外旋(蝶式、自由式恢復期)造成後天性關節囊拉伸；部分人有先天廣泛韌帶鬆弛(Ehlers-Danlos/Marfan 傾向)。當旋轉肌袖與肩胛肌無法動態補償時症狀顯現，表現為鬆動感、半脫位、dead arm。
+  trigger_phase: 需極端外展外旋角度的入水與過頭恢復相
+  who: 女性、雙側症狀者、結締組織鬆弛者、年輕游泳者
+
+epidemiology:
+  prevalence: "MDI 佔所有肩不穩定 <10%；女性佔 MDI 患者約 35.7%(整體肩不穩定男性為 2.7 倍但 MDI 性別趨近)；喙肱距每增 1 mm 風險上升約 20%；游泳者 MDI 盛行率高於其他運動但無精確數字"
+  certainty: 🟠
+  evidence_grade: C
+  caveat: TOS/旋轉肌袖損傷易混淆；游泳者 MDI 特定盛行率僅為摘要層級無前瞻數據；診斷標準不完全統一
+  sources:
+    - "Multidirectional instability of the shoulder, StatPearls NBK557726 (已驗證)"
+    - "MDI management review, Annals of Joint (已驗證)"
+
+risk_factors:
+  - { text: "廣泛韌帶鬆弛", grade: B }
+  - { text: "結締組織疾患(Ehlers-Danlos/Marfan)", grade: B }
+  - { text: "反覆過頭微創傷", grade: B }
+  - { text: "女性(雌激素/鬆弛素影響，結論不一)", grade: B }
+  - { text: "年輕(第二、三十歲高峰)", grade: B }
+  - { text: "喙肱距增加(每 mm 風險 +20%)", grade: B }
+
+prevention:
+  - { text: "肩胛穩定肌+旋轉肌袖強化(青少年主動預防)", grade: Expert }
+  - { text: "避免過度柔軟度訓練", grade: Expert }
+  - { text: "適度減少高角度訓練量", grade: Expert }
+
+management:
+  red_flags:
+    - "神經症狀(手麻/無力) → 就醫"
+    - "明顯 Sulcus sign + 功能受限 → 骨科"
+    - "反覆半脫位/dead arm → 停誘發動作就醫"
+    - "保守治療 6 月無效 → 手術評估"
+  acute: "限制誘發方向、肩胛穩定訓練、姿勢教育"
+  pain_rules: "日常輕度不適可續練但避誘發動作；dead arm / 反覆半脫位 → 立即停"
+  rehab: "非手術為第一線 ≥3–6 月：肩胛穩定(Blackburn Y、push-up plus)+旋轉肌+本體感覺+胸小肌柔軟度；保守 6–12 月 83–90% 改善"
+  functional_progression_criteria:
+    - "誘發方向無不穩感"
+    - "肩胛動態控制達標"
+    - "本體感覺/閉鏈測試通過"
+  swim_modifications_in_rehab:
+    - "減少高外展外旋角度訓練"
+    - "優先旋轉為主泳式、限制蝶式"
+  return_to_train: "保守復健達標後漸進回水"
+  return_to_compete: "術後 86–93% 恢復運動；8 年隨訪 82% 持續改善"
+  prognosis: "保守對多數有效；手術保留給保守失敗者(關節鏡全囊縫摺術復發率約 6%，熱收縮術已淘汰)"
+
+population_notes:
+  age:
+    youth: "最常診斷年齡層"
+    adult_beginner: ~
+    masters: "文獻少，推測後天鬆弛累積"
+  sex:
+    female: "風險因鬆弛度高而增，流行病學數據仍不足"
+    male: ~
+  ability:
+    para: "文獻極少(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Multidirectional instability of the shoulder, StatPearls NBK557726", certainty: 🟢, verified: true }
+  - { citation: "MDI management and surgical outcomes review, Annals of Joint", certainty: 🟢, verified: true }
+  - { citation: "Arthroscopic vs open MDI repair outcomes, PMC5611704", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "游泳者 MDI 特定盛行率僅摘要層級；作者全名/DOI 待 W3"
+  contested:
+    - claim: "先天 vs 後天鬆弛比例"
+      consensus_source: "MDI 涵蓋先天廣泛鬆弛與後天反覆微創傷兩型"
+      dissent_source: "兩型比例與手術 vs 保守門檻仍有爭論；關節鏡活動度較佳、開放長期穩定性差異縮小"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

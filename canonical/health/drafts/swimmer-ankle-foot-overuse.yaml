@@ -1,0 +1,88 @@
+id: swimmer-ankle-foot-overuse
+zh: 游泳者踝/足過度使用傷
+en: Swimmer's ankle & foot overuse
+category: B-lower-spine-strokespecific
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [趾伸肌腱病, 外/後側踝應力, 蹠骨應力/足底筋膜問題]
+
+structures: [趾伸肌腱, 尺側/外側踝韌帶, 蹠骨, 足底筋膜]
+mechanism:
+  summary: 三條路徑——①趾伸肌腱病:蛙/自由式踢腿反覆踝背屈、腳踢板及蛙鞋使用對前足踝背側趾伸肌腱牽拉(蛙鞋槓桿加大前掌受力為催化)；②外/後側踝應力:翻滾轉身腳板接觸不準致踝扭傷、蛙鞋過用致外側踝骨髓水腫；③蹠骨應力骨折/足底筋膜問題:罕見個案，與推蹬牆及高頻踢腿有關。游泳屬非承重運動，踝足傷害最不常見(約佔整體傷害 1%)。
+  trigger_phase: 蛙鞋訓練、腳踢板、蛙泳踢腿
+  who: 過用蛙鞋者、快速增量者、翻滾轉身技術不良者
+
+epidemiology:
+  prevalence: "踝部佔游泳整體傷害約 1%；蛙鞋使用者個案報告外側踝骨髓水腫(11 歲女精英)、趾伸支持帶水腫(14 歲女精英)；系統性流行率游泳特定幾乎缺失"
+  certainty: 🔵
+  evidence_grade: C
+  caveat: 幾乎全靠個案報告與推斷，無控制研究；公開呈現須明標證據等級低；蛙鞋安全劑量無 RCT
+  sources:
+    - "Swimming injury imaging review (踝部約 1%), radiologykey (已驗證)"
+    - "Stress fractures in swimmers systematic review, journals.aiac.org.au (已驗證)"
+
+risk_factors:
+  - { text: "蛙鞋過用/尺寸不合", grade: Expert }
+  - { text: "快速增加踢腿量", grade: Expert }
+  - { text: "腳踢板強迫踝背屈", grade: Expert }
+  - { text: "翻滾轉身技術不良", grade: Expert }
+  - { text: "踝背屈活動度不足", grade: C }
+
+prevention:
+  - { text: "限制蛙鞋持續使用量", grade: Expert }
+  - { text: "選擇合適蛙鞋尺寸", grade: Expert }
+  - { text: "逐步增加踢腿量", grade: Expert }
+  - { text: "改善翻滾轉身技術", grade: Expert }
+  - { text: "踝部伸展與強化", grade: Expert }
+
+management:
+  red_flags:
+    - "足部急性腫脹 → 就醫(排除應力骨折)"
+    - "趾伸肌腱異音/脫位感 → 就醫"
+    - "足底/踝神經症狀 → 就醫(排除跗骨管症候群)"
+  acute: "休息(停蛙鞋)、冰敷；輕微趾伸肌腱病夾板 1–2 週"
+  pain_rules: "蛙鞋訓練後前足背輕痛隔日消退 → 減蛙鞋量、評估合適度；持續痛或骨壓痛 → 停蛙鞋、影像排除應力骨折"
+  rehab: "趾伸肌腱病以踝趾屈/背屈漸進阻力；足底問題以足內在肌強化+小腿拉伸；翻滾轉身技術重建"
+  functional_progression_criteria:
+    - "前足背無痛"
+    - "踝背屈 ROM 正常"
+    - "無痛踢腿 100 m"
+  swim_modifications_in_rehab:
+    - "停蛙鞋改裸腳踢腿"
+    - "翻滾暫改開放式轉身"
+  return_to_train: "趾伸肌腱病 2–6 週保守有效；應力骨折按影像癒合 6–12 週"
+  return_to_compete: "無痛踢腿達標後回賽"
+  prognosis: "通常良好；因低衝擊運動，減蛙鞋/腳踢板即顯著改善"
+
+population_notes:
+  age:
+    youth: "高強度蛙鞋訓練的青少年精英最多個案報告"
+    adult_beginner: "翻滾轉身技術不良踝扭傷風險較高"
+    masters: "臨床觀察有趾伸肌腱病，大型數據缺"
+  sex:
+    female: "無特定數據"
+    male: ~
+  ability:
+    para: "截肢者殘肢/假肢力學完全不同，標準評估不適用(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Imaging of swimming injuries (ankle ~1%), radiologykey", certainty: 🟠, verified: true }
+  - { citation: "Stress fractures in swimmers (systematic review), journals.aiac.org.au", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "趾伸肌腱病 2–6 週恢復(NHS Lanarkshire)、個案影像數據為摘要/小樣本待 W3"
+  contested:
+    - claim: "游泳是否『保護』踝足"
+      consensus_source: "普遍認為低衝擊極少傷"
+      dissent_source: "蛙鞋個案報告挑戰此說，但無大規模研究翻轉；蛙鞋效益 vs 風險無安全劑量 RCT"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

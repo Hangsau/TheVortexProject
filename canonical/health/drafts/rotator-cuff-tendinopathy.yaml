@@ -1,0 +1,91 @@
+id: rotator-cuff-tendinopathy
+zh: 旋轉肌袖肌腱病（棘上肌）
+en: Rotator cuff (supraspinatus) tendinopathy
+category: A-shoulder-upper
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [棘上肌腱, 旋轉肌袖, 肩峰下空間, 肩胛穩定肌]
+mechanism:
+  summary: 棘上肌腱在划水推進期承受肩峰下壓縮與腱內張力、恢復期被過頭拉伸，反覆機械刺激活化基質金屬蛋白酶(MMP)並升高一氧化氮，造成膠原排列紊亂、細胞型態退化——是退化性腱病(tendinopathy)而非單純發炎。精英泳者每日肩部迴轉超過 2,500 次、年累積上百萬次為核心外在負荷。肩胛動態控制不足、內外旋肌力失衡會放大腱內應力。
+  trigger_phase: 自由式/蝶式拉水與過頭恢復相
+  who: 訓練量大者(≥15 h/週或 ≥35 km/週)、青少年急遽增量期、肩胛控制不足者、技術缺陷(手肘下垂/路徑偏移)者
+
+epidemiology:
+  prevalence: "Masters 泳者超音波研究棘上肌腱病 17.5%、合併部分撕裂達 35%；多站點青少年調查(n=671)49% 有肩部症狀、15–17 歲 55.5% 有疼痛史；棘上肌腱厚度每增 1 mm 腱病 OR 2.51"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 多為影像橫斷面；影像改變不等於臨床疾病(Masters 影像盛行率遠高於有症狀者)；訓練量倍率與部分 MRI 數字為二手綜述引用待追原始研究
+  sources:
+    - "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
+    - "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)"
+
+risk_factors:
+  - { text: "高訓練量/急遽增量(>15 h/週或 >35 km/週)", grade: B }
+  - { text: "肩胛動作異常(疲勞後出現)", grade: B }
+  - { text: "內/外旋肌力失衡", grade: B }
+  - { text: "多向性肩鬆弛", grade: B }
+  - { text: "棘上肌腱厚度增加(每 mm OR 2.51)", grade: B }
+  - { text: "肩部受傷史(解釋約 22% 疼痛變異)", grade: B }
+  - { text: "技術缺陷(手肘下垂/路徑偏移)", grade: Expert }
+
+prevention:
+  - { text: "旋轉肌袖+肩胛穩定肌訓練(12 週×2/週)", grade: B }
+  - { text: "每週訓練量增幅 ≤10%", grade: Expert }
+  - { text: "賽季前 dryland 陸上訓練", grade: B }
+  - { text: "技術修正(增加軀幹旋轉、高肘划水)", grade: Expert }
+
+management:
+  red_flags:
+    - "靜息/夜間痛 → 就醫評估"
+    - "神經放射痛/手麻 → 就醫(排除頸椎/TOS)"
+    - "急性撕裂感+無力 → 就醫"
+    - "保守治療 3–6 月無效 → 骨科評估"
+  acute: "減量、冰敷、短期 NSAIDs、停用划手板"
+  pain_rules: "NRS ≤3 且 24 小時內消退 → 減量續練；疼痛 >24 小時或 NRS ≥4 → 停划手練習、啟動物理治療"
+  rehab: "①肩胛穩定(前鋸肌、下斜方肌)+後囊拉伸 ②旋轉肌等長→向心→離心漸進 ③功能性重建模擬划手"
+  functional_progression_criteria:
+    - "外旋肌力 ≥85% 對側"
+    - "肩胛控制正常"
+    - "模擬划手動作無痛"
+  swim_modifications_in_rehab:
+    - "停蝶式、減自由式量、停划手板"
+    - "可從背泳低強度開始"
+  return_to_train: "輕症 4–8 週、中重症 8–16 週漸進回水"
+  return_to_compete: "肌力與技術指標達標後分階段回賽"
+  prognosis: "多數完全恢復；與 SLAP/MDI 共存較複雜；高量者易復發，需長期維持旋轉肌袖+肩胛肌力"
+
+population_notes:
+  age:
+    youth: "15–17 歲流行率最高；成長期肌腱更脆弱，是教練重點問診對象"
+    adult_beginner: "技術不穩，風險不低於競技者"
+    masters: "棘上肌腱病盛行率隨年齡顯著上升(影像 75% vs 對照 17.5%)"
+  sex:
+    female: "女性肩傷率較高但系統回顧結論不一致"
+    male: ~
+  ability:
+    para: "上肢截肢者健側過度使用風險高，缺量化數據(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Shoulder pathology in masters swimmers (ultrasound), PMC7824457", certainty: 🟢, verified: true }
+  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true }
+  - { citation: "Youth swimmer shoulder prevalence, PMC6961642", certainty: 🟢, verified: true }
+  - { citation: "Shoulder strengthening programme protective effect, PMC11899141", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "IntechOpen 章節(52 人 MRI 69% 棘上肌腱病、>15 h 風險 2 倍/>35 km 4 倍)為二手綜述，原始研究作者/DOI 待查；不進 public 數字"
+  contested:
+    - claim: "腱病 vs 夾擠(impingement)命名"
+      consensus_source: "現代共識傾向 tendinopathy 退化框架"
+      dissent_source: "傳統 impingement 模型仍見於部分臨床語境；影像改變≠臨床疾病"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

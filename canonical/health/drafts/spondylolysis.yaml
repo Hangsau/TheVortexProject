@@ -1,0 +1,89 @@
+id: spondylolysis
+zh: 椎弓解離/脊椎滑脫
+en: Spondylolysis / spondylolisthesis
+category: B-lower-spine-strokespecific
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [腰椎椎弓根峽部(pars interarticularis), 腰椎關節突關節, 椎間盤]
+mechanism:
+  summary: 腰椎椎弓根峽部(pars interarticularis)應力骨折，由反覆腰椎過伸+旋轉+剪切造成。蝶式/蛙泳波浪動作要求腰椎反覆過伸對抗水阻，每次訓練可重複 1,000 次以上。雙側峽部不癒合可進展為脊椎滑脫。是青少年運動員最常見的下背痛結構性病因之一。
+  trigger_phase: 蝴蝶踢下推、蛙泳回腿過伸、水中標準化伸展姿勢
+  who: 蝶/蛙專項青少年、髂腰肌緊縮/核心不足者、習慣性腰椎過伸者
+
+epidemiology:
+  prevalence: "蝶式下背痛 33.3–50%、蛙泳 22.2–47%；青少年運動員為最常見下背痛原因；運動員椎弓解離約一般人群(5–10%)的 2 倍，游泳特定比例屬二手"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 下背痛盛行率有游泳數據，但椎弓解離游泳特定比例為二手綜述；返回運動時間數字多為摘要層級
+  sources:
+    - "Swimming low back pain by stroke, PMC11531034 (已驗證)"
+    - "Competitive swimmers spine degeneration, PMC3435931 (已驗證)"
+
+risk_factors:
+  - { text: "蝶/蛙反覆腰椎過伸", grade: B }
+  - { text: "核心薄弱", grade: B }
+  - { text: "髂腰肌緊縮/骨盆前傾", grade: B }
+  - { text: "腳踢板過多(強迫過伸)", grade: Expert }
+  - { text: "青少年骨骼發育期", grade: B }
+  - { text: "蝶/蛙訓練量高", grade: Expert }
+
+prevention:
+  - { text: "dryland 核心強化", grade: B }
+  - { text: "技術:減少蝴蝶踢波動、改以膝為主踢腿", grade: Expert }
+  - { text: "減少腳踢板使用", grade: Expert }
+  - { text: "平衡過伸與屈曲訓練", grade: Expert }
+  - { text: "髂腰肌拉伸", grade: B }
+
+management:
+  red_flags:
+    - "急性嚴重下背痛 → 就醫"
+    - "下肢神經症狀(麻/無力) → 就醫(滑脫進展)"
+    - "大小便失禁 → 急診(罕見急症)"
+    - "伸展位劇痛+影像確認 → 骨科/脊椎評估"
+  acute: "停蝶/蛙；視情況硬式胸腰薦支架(TLSO/Boston)23 小時/天×3 月；電骨刺激(臨床常用但 RCT 證據不足)"
+  pain_rules: "有症狀+影像確認 → 停蝶/蛙改自由/背泳；無症狀偶然發現 → 仍考慮保護性調整"
+  rehab: "3 期:①ROM 恢復(髂腰肌拉伸、腰椎中立) ②穩定化(dead bug/bird-dog/腹部等長) ③功能性(區分髖屈 vs 腰椎屈)"
+  functional_progression_criteria:
+    - "靜息/活動無痛"
+    - "核心肌力測試通過"
+    - "影像穩定(症狀消失可接受，不一定要骨癒合)"
+  swim_modifications_in_rehab:
+    - "停蝶/蛙，初期自由/背泳"
+    - "監督下漸引蝴蝶腿(無症狀)，不帶痛蝶式或腳踢板"
+  return_to_train: "保守平均 3.7–4.6 月"
+  return_to_compete: "青少年保守約 95% 恢復傷前無需手術"
+  prognosis: "總體良好；滑脫 >50% 可能需椎弓融合；長期核心維持防復發"
+
+population_notes:
+  age:
+    youth: "核心風險群，峽部更脆弱"
+    adult_beginner: ~
+    masters: "退化性改變共存需鑑別"
+  sex:
+    female: "蝶/蛙下背痛略增；椎弓解離性別差異游泳特定數據缺"
+    male: ~
+  ability:
+    para: "脊椎損傷者腰椎風險不同，需個案評估(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Low back pain in swimmers by stroke, PMC11531034", certainty: 🟢, verified: true }
+  - { citation: "Spine degeneration in competitive swimmers, PMC3435931", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "返回運動時間(3.7–4.6 月)、95%/98.9% RTS(PMC9605750)、436 例青少年數字為摘要層級待 W3"
+  contested:
+    - claim: "骨癒合是否治療成功必要條件"
+      consensus_source: "近年趨向症狀消失+功能恢復即可 RTS"
+      dissent_source: "支架種類(硬式 TLSO vs 半硬式)比較證據不足"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

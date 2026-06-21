@@ -1,0 +1,86 @@
+id: swimmer-elbow-wrist-overuse
+zh: 游泳者肘/腕過度使用傷
+en: Swimmer's elbow & wrist overuse
+category: A-shoulder-upper
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [內上髁肌腱病(游泳者肘), 外上髁病, ECU 腱病/腱鞘半脫位]
+
+structures: [肱骨內上髁屈肌-旋前肌起點, 外上髁伸肌起點, 尺側伸腕肌(ECU)腱]
+mechanism:
+  summary: 最常見為「游泳者肘」(內上髁肌腱病)——拉水期反覆腕屈曲+前臂旋前，對肱骨內上髁屈肌-旋前肌起點累積負荷致腱病；蝶式/蛙泳「高肘划水」特別易誘發。外上髁病在背泳者偶見但較少。腕部以尺側伸腕肌(ECU)腱最常受累，入水角度不正或過度用划手板誘發；ECU 腱鞘半脫位可發生於強力旋後(背泳翻轉入水)。
+  trigger_phase: 蝶式/蛙泳拉水、背泳恢復入水
+  who: 過度用划手板者、蝶/蛙專項、技術不穩的成人初學者
+
+epidemiology:
+  prevalence: "肘部佔游泳整體傷害比例低(肩部佔絕大多數)，無前瞻大型數據；腕部游泳特定流行率幾乎缺失"
+  certainty: 🔵
+  evidence_grade: C
+  caveat: 證據幾乎全為教練觀察與臨床回報；無控制研究；常見引用的『精英泳者 58% 曾有肘不適』來自商業平台文章，不可作公開數字
+  sources:
+    - "臨床/教練回報(無系統性流行病學研究)"
+
+risk_factors:
+  - { text: "蝶/蛙拉水技術不正(手肘下垂、過中線)", grade: Expert }
+  - { text: "過度用划手板", grade: Expert }
+  - { text: "訓練量急增", grade: Expert }
+  - { text: "核心不足致肢末代償", grade: Expert }
+  - { text: "後肩肌群虛弱", grade: Expert }
+
+prevention:
+  - { text: "技術矯正(高肘、避過中線)", grade: Expert }
+  - { text: "限制划手板使用頻率", grade: Expert }
+  - { text: "前臂/腕肌腱離心訓練", grade: Expert }
+  - { text: "每週 10% 訓練量增幅上限", grade: Expert }
+
+management:
+  red_flags:
+    - "靜息痛 → 就醫"
+    - "手部麻木 → 就醫(排除 TOS/尺神經病變)"
+    - "骨性壓痛 → 就醫(排除應力骨折)"
+    - "腕部鎖定感/彈跳(ECU 腱鞘脫位) → 就醫"
+  acute: "休息、冰敷、NSAIDs；停划手板；急性 ECU 腕夾板固定"
+  pain_rules: "訓練後輕痠 24 小時消退 → 減量續練；划水時 NRS ≥4 → 停評估"
+  rehab: "內上髁離心腕屈曲(3 次/週)+後肩補強；ECU 腱鞘病以旋後位夾板固定 3–4 週；多數 4–8 週保守有效"
+  functional_progression_criteria:
+    - "全 ROM 無痛"
+    - "握力 ≥85% 對側"
+    - "模擬划水動作無痛"
+  swim_modifications_in_rehab:
+    - "停蝶/蛙，改自由式(減內上髁負荷)或背泳"
+    - "停划手板"
+  return_to_train: "輕症 4–8 週回水；難治者可考慮 PRP/ESWT"
+  return_to_compete: "技術矯正並達肌力指標後回賽"
+  prognosis: "通常良好；<5% 需手術；改善誘發技術為防復發關鍵"
+
+population_notes:
+  age:
+    youth: "特定數據缺失(DATA GAP)"
+    adult_beginner: "技術不穩風險高但數據缺失"
+    masters: "特定數據缺失(DATA GAP)"
+  sex:
+    female: "無游泳者特定數據"
+    male: ~
+  ability:
+    para: "特定數據缺失(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "臨床綜述/教練實務(游泳者肘/腕過用無大型流行病學研究)", certainty: 🟠, verified: false }
+
+flags:
+  pending_verification:
+    - "『精英泳者 58% 肘不適』『80–95% 保守成功率』為商業平台(USMS)摘要，不進 public 數字；原始來源待查"
+  contested:
+    - claim: "划手板的角色"
+      consensus_source: "划手板被視為加速因素"
+      dissent_source: "為主因或促因未定論；無安全劑量 RCT"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

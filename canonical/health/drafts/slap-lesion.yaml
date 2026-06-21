@@ -1,0 +1,87 @@
+id: slap-lesion
+zh: 上盂唇前後損傷（SLAP）
+en: Superior labrum anterior-posterior (SLAP) lesion
+category: A-shoulder-upper
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [上盂唇, 肱二頭肌長頭腱錨點, 盂肱關節囊, 後囊]
+mechanism:
+  summary: 上盂唇自肩盂緣撕脫，可延伸至前後及肱二頭長頭腱錨點。游泳主機制為 peel-back——外展 90°+最大外旋(自由式入水、蝶式拉水起點)時二頭腱錨點承受扭轉剪切；減速期二頭肌偏心收縮為另一路徑；急性牽引可單次造成。內旋缺損(GIRD)使後上盂唇張力集中。
+  trigger_phase: 入水至拉水早期(外展外旋極限)
+  who: GIRD(內旋缺損 >13–15°)者、優勢側高量者、急性牽引史者
+
+epidemiology:
+  prevalence: "一般肩關節鏡中 SLAP 佔 6–26%；過頭運動員關節鏡盂唇病變比例高(投擲者達 83%，屬選擇性手術族群)；游泳者保守無效後關節鏡盂唇病變達 61%(小樣本 n=14 中 SLAP 2 例)"
+  certainty: 🟠
+  evidence_grade: C
+  caveat: 游泳者 SLAP 無大型前瞻數據，現有比例全來自偏態手術樣本；跨研究手術結果變異極大(40–94%)
+  sources:
+    - "SLAP lesions overview & rehab, PMC3811737 (已驗證)"
+    - "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)"
+
+risk_factors:
+  - { text: "GIRD(內旋缺損 >13–15°)", grade: B }
+  - { text: "高量過頭+二頭腱反覆偏心", grade: B }
+  - { text: "後囊緊縮", grade: B }
+  - { text: "前方關節囊鬆弛/不穩定", grade: B }
+  - { text: "急性牽引史", grade: B }
+
+prevention:
+  - { text: "後囊牽拉(sleeper stretch)改善 GIRD", grade: B }
+  - { text: "二頭肌離心訓練", grade: Expert }
+  - { text: "避免突增入水/拉水量", grade: Expert }
+
+management:
+  red_flags:
+    - "深部肩痛+機械性卡頓/異音 → 就醫"
+    - "神經症狀 → 就醫"
+    - "與 Bankart/MDI 共存 → 骨科綜合評估"
+    - "保守 3–6 月無改善 → 關節鏡評估"
+  acute: "保守 3–6 月首選：訓練調整、物理治療、NSAIDs、必要時關節腔注射"
+  pain_rules: "深層痛可練但出現機械卡頓 → 立即停評估"
+  rehab: "Type II 修補術後 5 期：0–6w 懸臂固定禁主動二頭收縮 → 6–12w 漸進 ROM+Throwers Ten → 12–20w 全活動+二頭抗阻 → 20–26w 專項 → 6–9 月返回"
+  functional_progression_criteria:
+    - "全 ROM 無痛"
+    - "等速肌力 ≥75–80% 對側"
+    - "外旋峰力矩/體重 18–23%"
+  swim_modifications_in_rehab:
+    - "停高外展外旋負荷泳式"
+    - "保守期可低強度替代訓練"
+  return_to_train: "保守約 67% 過頭運動員無需手術即可回水"
+  return_to_compete: "手術整體約 55% 回傷前；游泳者術後平均 2.9 月返回(小樣本)"
+  prognosis: "游泳者預後優於投手；手術成功率 40–94%(隨族群/定義差異大)"
+
+population_notes:
+  age:
+    youth: "最常見；骨骺未閉合者偏好保守"
+    adult_beginner: ~
+    masters: "退化性 Type I 與手術相關性弱"
+  sex:
+    female: "游泳者 SLAP 女性數據缺(DATA GAP)"
+    male: ~
+  ability:
+    para: "Para 游泳者數據缺(DATA GAP)"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "SLAP lesions: diagnosis and rehabilitation, PMC3811737", certainty: 🟢, verified: true }
+  - { citation: "Arthroscopy in refractory swimmer's shoulder, PMC4528289", certainty: 🟢, verified: true }
+  - { citation: "NATA position on overhead athlete shoulder, PMC5894372", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "Type II 修補 vs 二頭腱固定(tenodesis)比較(PMC11546287)為摘要層級；作者全名/DOI 待 W3"
+  contested:
+    - claim: "保守 vs 手術"
+      consensus_source: "NATA 支持初期保守 3–6 月"
+      dissent_source: "35 歲以上/非投擲者 tenodesis 可能同等且復發更低；手術結果跨研究高變異"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
