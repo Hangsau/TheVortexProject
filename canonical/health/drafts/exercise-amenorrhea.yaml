@@ -1,0 +1,82 @@
+id: exercise-amenorrhea
+zh: 運動性月經功能障礙
+en: Exercise-associated menstrual dysfunction
+category: D-endocrine
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [下視丘-腦垂體-性腺軸, 卵巢, 腎上腺(雄激素)]
+mechanism:
+  summary: 運動誘發月經失調(無月經、稀發月經)主要由低能量可及性(LEA)抑制下視丘 GnRH 脈衝 → LH/FSH 下降 → 雌激素合成減少(功能性下視丘性無月經 FHA)。但游泳族群存在另一路徑——高雄激素症(類 PCOS)，不透過下視丘抑制:游泳員雌二醇可維持正常、伴 DHEA-S/雄烯二酮升高，與跑者的低雌激素型不同。臨床意義:高雄激素型骨骼影響可能較小，但 PCOS 相關代謝風險需另評。
+  trigger_phase: 長期高訓練量、能量赤字、低體脂、心理壓力
+  who: 長期高量訓練者、能量赤字者、低體脂者、可能既有高雄激素傾向者
+
+epidemiology:
+  prevalence: "游泳族群原發性無月經最高 19%、繼發性無月經 0–23.8%、稀發月經 9.5–38.9%；系統性回顧游泳員月經失調平均約 41%；游泳員停經後月經不規則率達 82%(對照 40%)、雌二醇維持正常伴輕度高雄激素症"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 多為橫斷面，樣本小；高雄激素型 vs 下視丘型非互斥；PCOS 先天 vs 訓練誘發因果方向無法確定；近年無大型前瞻性游泳員月經研究
+  sources:
+    - "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)"
+    - "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)"
+
+risk_factors:
+  - { text: "能量可及性 <30 kcal/kg FFM/天", grade: A }
+  - { text: "高訓練量", grade: B }
+  - { text: "低體脂率", grade: B }
+  - { text: "心理壓力/飲食失調", grade: B }
+  - { text: "早期專項化", grade: B }
+
+prevention:
+  - { text: "能量攝取監測", grade: B }
+  - { text: "月經週期紀錄", grade: C }
+  - { text: "教練知識教育", grade: Expert }
+
+management:
+  red_flags:
+    - "原發性無月經(15 歲未初潮) → 就醫"
+    - "繼發性無月經 >3 月 → 就醫"
+    - "骨折/飲食失調 → 多科介入"
+  acute: "排除妊娠及器質病因；評估能量狀態；多科介入"
+  pain_rules: ~
+  rehab: "增加能量 → 月經恢復(中位 3–6 月)；疑 PCOS 型轉內分泌科"
+  functional_progression_criteria:
+    - "月經改善"
+    - "能量狀態恢復"
+  swim_modifications_in_rehab: ~
+  return_to_train: "月經改善後漸進恢復"
+  return_to_compete: "重度 LEA+低 BMD 更謹慎"
+  prognosis: "下視丘型介入後多恢復；高雄激素/PCOS 型預後更複雜"
+
+population_notes:
+  age:
+    youth: "早期專項化+高訓練量主因"
+    adult_beginner: ~
+    masters: "停經後 RED-S 骨骼風險仍在，月經不再為指標"
+  sex:
+    female: "游泳員月經失調平均約 41%，部分屬高雄激素型"
+    male: ~
+  ability:
+    para: "資料極缺"
+  lifecycle: ~
+
+links:
+  mechanism_link: female-athlete-triad
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Menstrual dysfunction in competitive swimmers, PMC9658102", certainty: 🟢, verified: true }
+  - { citation: "Swimmers as a distinct menstrual entity (hyperandrogenism), PMID 7673417", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "一般競技 5–25%(PMID 10022424)、類 PCOS 早於訓練(PMID 21820653 全文 403)、COVID 月經恢復(PMC12892860)為摘要層級待 W3"
+  contested:
+    - claim: "游泳員月經失調是否為『不同實體』"
+      consensus_source: "下視丘抑制型為主流機制"
+      dissent_source: "游泳員可能伴高雄激素型(類 PCOS)，雌二醇正常；樣本均小，兩型非互斥，先天 vs 訓練誘發方向不明"
+  vintage_warning: true
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

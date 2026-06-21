@@ -1,0 +1,83 @@
+id: youth-swimmer-apophysitis
+zh: 年輕游泳員肩/肘骨骺與骨突損傷
+en: Youth swimmer shoulder/elbow physeal & apophyseal injury
+category: F-pediatric-growth
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [近端肱骨骨骺損傷, 肘內上髁骨突炎]
+
+structures: [近端肱骨骨骺, 肘內上髁骨突, 旋轉肌群]
+mechanism:
+  summary: 青少年游泳員肩部(近端肱骨骨骺)和肘部(內上髁骨突)受反復過頭動作旋轉應力。近端肱骨骨骺損傷(「小聯盟肩」類比):骨骺軟骨在高頻過頭划水中受旋轉剪力，引起骨骺微裂/增寬(X-ray 骨骺線增寬)。肘部內上髁骨突炎:反復外翻應力(蝶式/仰式轉身、拉力帶訓練)拉扯未骨化內上髁骨突，造成炎症甚至撕脫。
+  trigger_phase: 高頻過頭划水、蝶/仰式轉身、陸訓拉力帶
+  who: 開放骨骺期(11–16 歲)高過頭量者、快速增量者、技術缺陷者
+
+epidemiology:
+  prevalence: "近端肱骨骨骺損傷最常見於 11–16 歲投擲型運動員，游泳專屬盛行率缺乏(多由棒球研究外推)；游泳員整體肩痛:15–17 歲 55.5%、13–14 歲 47.4%、9–10 歲 11.1% 有干擾游泳的肩痛(含骨骺+軟組織)"
+  certainty: 🟠
+  evidence_grade: C
+  caveat: 幾乎無游泳員專屬骨骺研究，全外推自棒球文獻，適用性存疑；游泳外翻應力遠低於投擲者；休息時程外推自投擲運動
+  sources:
+    - "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)"
+    - "Proximal humeral epiphysiolysis (little league shoulder), PMID 30485006 (摘要層級)"
+
+risk_factors:
+  - { text: "開放骨骺期+高過頭訓練量", grade: B }
+  - { text: "快速訓練量增加", grade: B }
+  - { text: "旋轉肌群肌力不平衡", grade: B }
+  - { text: "技術缺陷(過度旋轉、入水角不良)", grade: C }
+  - { text: "陸訓拉力帶過度使用", grade: C }
+
+prevention:
+  - { text: "青少年定期肩部動態評估", grade: Expert }
+  - { text: "訓練量漸進管理", grade: C }
+  - { text: "旋轉肌群強化", grade: B }
+  - { text: "技術指導", grade: Expert }
+
+management:
+  red_flags:
+    - "肩部靜止痛/夜間痛 → 就醫"
+    - "骨骺點觸痛(骨骺線位置) → 就醫"
+    - "游泳後明顯腫脹 → 就醫"
+  acute: "完全停過頭划水(≥4–6 週，類比小聯盟肩標準)；冰敷；NSAIDs。診斷以 X-ray 雙側比對(骨骺線增寬陽性)、MRI(骨骺水腫)"
+  pain_rules: "骨骺點觸痛或靜止痛 → 停過頭划水評估"
+  rehab: "核心+肩胛穩定；旋轉肌群漸進強化；技術分析；陸訓量同步調整"
+  functional_progression_criteria:
+    - "症狀消失"
+    - "影像骨骺線恢復"
+    - "漸進負荷(從低強度自由式始)"
+  swim_modifications_in_rehab:
+    - "停過頭划水期可下肢/核心為主"
+  return_to_train: "症狀+影像恢復後漸進回水"
+  return_to_compete: ~
+  prognosis: "適當休息多痊癒；反復/延誤可能影響骨骺閉合後肩關節結構"
+
+population_notes:
+  age:
+    youth: "11–16 歲核心高風險；教練應定期問肩部靜止痛"
+    adult_beginner: ~
+    masters: "骨骺閉合後改為旋轉肌腱損傷，不適用"
+  sex: ~
+  ability:
+    para: "不適用/數據缺"
+  lifecycle: ~
+
+links:
+  mechanism_link: rotator-cuff-tendinopathy
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "近端肱骨骨骺損傷(PMID 30485006)、肘內上髁骨突炎(StatPearls NBK570592)游泳專屬數據缺；4–6 週休息外推自投擲運動，游泳員復出時程無證據待 W3"
+  contested:
+    - claim: "游泳員近端肱骨骨骺損傷發生率"
+      consensus_source: "開放骨骺+高過頭量為理論風險"
+      dissent_source: "幾乎無游泳員專屬研究，全外推自棒球文獻，適用性存疑"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

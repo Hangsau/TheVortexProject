@@ -1,0 +1,87 @@
+id: stress-fracture-swimmer
+zh: 游泳員疲勞性骨折（肋骨為主）
+en: Stress fracture in swimmers (rib-predominant)
+category: D-endocrine
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [肋骨, 恥骨枝, 股骨頸, 蹠骨, 骨重塑單位]
+mechanism:
+  summary: 疲勞性骨折係骨骼在反復次最大應力下微損傷積累超過重塑修復所致。游泳水中低衝擊本應保護骨骼，但以下使游泳員仍有風險:①陸訓(跑步/跳躍/核心)的重力負荷；②非重力負荷使 BMD 整體偏低、骨骼對同等壓力耐受度下降；③RED-S 骨骼代謝異常；④肋骨在划水(尤蝶式)時承受反復軀幹旋轉拉力。游泳員最常見為肋骨疲勞性骨折，機制是軀幹肌肉拉力而非體重衝擊——與跑步的下肢衝擊型骨折不同。
+  trigger_phase: 軀幹反復旋轉(尤蝶式)、陸訓負荷突增
+  who: RED-S/低 BMD 者、陸訓負荷突增者、蝶式為主泳式者、既往疲勞性骨折史者
+
+epidemiology:
+  prevalence: "2017 年前僅約 10 篇游泳員應力骨折研究，肋骨最常見(其他:第一肋、恥骨枝、股骨頸、蹠骨)；RED-S 相關:月經失調女性骨折風險 +4.5 倍、兩項以上三聯症成分 +4.7 倍、單項 LEA +1.1 倍"
+  certainty: 🟠
+  evidence_grade: B
+  caveat: 游泳員應力骨折研究量不足以定盛行率；肋骨骨折常誤診為肌肉拉傷延誤 4–6 週；某些倍率數字為二手綜述
+  sources:
+    - "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)"
+    - "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)"
+
+risk_factors:
+  - { text: "RED-S/低 BMD", grade: A }
+  - { text: "月經失調", grade: A }
+  - { text: "陸訓負荷突然增加", grade: B }
+  - { text: "蝶式為主要泳式(肋骨拉力)", grade: B }
+  - { text: "訓練量快速增加", grade: B }
+  - { text: "飲食失調", grade: B }
+  - { text: "疲勞性骨折既往史", grade: A }
+
+prevention:
+  - { text: "RED-S 預防(能量/月經/BMD 監測)", grade: A }
+  - { text: "漸進式陸訓量(10% 規則)", grade: C }
+  - { text: "軀幹穩定肌訓練", grade: C }
+  - { text: "技術糾正降低蝶式扭矩", grade: Expert }
+
+management:
+  red_flags:
+    - "局部點狀骨骼壓痛(尤肋骨) → 就醫"
+    - "活動劇痛 → 就醫"
+    - "已知低 BMD 新發疼痛 → 就醫"
+  acute: "影像確認(X-ray 常陰性，需 MRI/骨掃描)；停止負重/疼痛活動；骨科評估。注意肋骨骨折常誤診為肌肉拉傷"
+  pain_rules: ~
+  rehab: "4–12 週相對休息(依嚴重度/部位)；水中跑步等低衝擊交叉訓練；RED-S 同步治療"
+  functional_progression_criteria:
+    - "癒合+疼痛消失"
+    - "RED-S 根源同步處理"
+  swim_modifications_in_rehab:
+    - "游泳本身可較早恢復(低衝擊)"
+    - "陸訓最後恢復"
+  return_to_train: "以癒合+疼痛消失為準，游泳先於陸訓恢復"
+  return_to_compete: "RED-S 控制+無痛後回賽"
+  prognosis: "肋骨骨折 6–8 週多癒合，但不解決 RED-S 根源則反覆"
+
+population_notes:
+  age:
+    youth: "RED-S+肋骨骨折疊加，常被誤為胸肌拉傷"
+    adult_beginner: ~
+    masters: "骨量自然衰退使閾值降低，需更積極 BMD 篩查"
+  sex:
+    female: "月經失調為主要風險放大因子"
+    male: ~
+  ability:
+    para: "截肢/脊損骨骼負荷分佈異常，特定部位風險未系統研究"
+  lifecycle: ~
+
+links:
+  mechanism_link: swimmer-low-bone-density
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Stress fractures in swimmers (systematic review), IJKSS", certainty: 🟢, verified: true }
+  - { citation: "RED-S and bone stress injury, PMC9724109", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "『停經者骨折風險 +12.9 倍』(Annals of Joint 綜述，二手)不進 public 數字；肋骨骨折與低 BMD(PMID 15773863)為摘要層級待 W3"
+  contested:
+    - claim: "游泳員肋骨疲勞性骨折是否『常見』"
+      consensus_source: "肋骨為游泳員最常見應力骨折部位"
+      dissent_source: "僅約 10 篇研究，水中訓練直接致骨應力理論極低，但高強度划水軀幹扭矩不可忽略"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

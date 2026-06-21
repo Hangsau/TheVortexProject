@@ -1,0 +1,84 @@
+id: swimmer-low-bone-density
+zh: 游泳員低骨密度
+en: Low bone mineral density in swimmers
+category: D-endocrine
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [骨骼(皮質骨/小樑骨), 成骨細胞-蝕骨細胞重塑單位]
+mechanism:
+  summary: 游泳是典型非重力負荷運動——水中地面反作用力近零，骨骼缺乏機械負荷刺激，成骨細胞活性不足。游泳員 BMD 往往接近靜態對照組，顯著低於同齡重力負荷型運動員(跑步/籃球/體操)。青少年若僅游泳，正值骨量累積關鍵期(10–20 歲)，錯失峰值骨質，後果延伸至成年骨折及骨質疏鬆風險。此框架與跑步相反:跑步是高衝擊成骨運動，游泳無此效益。
+  trigger_phase: 純游泳專項、缺乏重力負荷交叉訓練、骨量累積期
+  who: 純游泳青少年、合併 LEA/月經失調者、鈣/維生素 D 攝取不足者
+
+epidemiology:
+  prevalence: "系統性回顧:游泳員 vs 靜態對照 BMD 無顯著差異，但顯著低於重力負荷運動員；小樣本研究近端脛骨皮質骨面積低 13.8%、皮質骨體積密度低 6.0%(橈骨/遠端脛骨無顯著差異，power 偏低)；阻力/跳躍訓練可改善青少年游泳員骨密度"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: meta-analysis 多引 2000–2015 研究；游泳員專屬 BMD 介入研究僅約 2 篇且樣本小；長期實際骨折增加缺大型前瞻性結果數據
+  sources:
+    - "Site-specific BMD in female swimmers, PMC7039474 (已驗證)"
+    - "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)"
+
+risk_factors:
+  - { text: "純游泳專項、缺乏重力負荷交叉訓練", grade: A }
+  - { text: "低能量可及性合併", grade: A }
+  - { text: "月經失調/低雌激素", grade: A }
+  - { text: "早期專項化", grade: B }
+  - { text: "鈣/維生素 D 攝取不足", grade: B }
+
+prevention:
+  - { text: "陸上負重/阻力訓練(每週 ≥2 次)", grade: B }
+  - { text: "跳繩/跳躍訓練補充", grade: B }
+  - { text: "鈣 1,000–1,300 mg/天(青少年)+維生素 D", grade: B }
+  - { text: "月經週期監測(間接指標)", grade: B }
+
+management:
+  red_flags:
+    - "低創傷骨折 → 就醫"
+    - "DXA Z-score <-2.0 → 就醫"
+    - "月經失調 >6 月 → 就醫"
+  acute: "多科評估(骨科/內分泌/營養)；排除繼發性骨質疏鬆"
+  pain_rules: ~
+  rehab: "增能量可及性、補鈣/維生素 D、加負重訓練；高風險者每 1–2 年 DXA"
+  functional_progression_criteria:
+    - "能量可及性改善"
+    - "月經恢復"
+    - "DXA 追蹤穩定/改善"
+  swim_modifications_in_rehab: ~
+  return_to_train: "持續游泳並加入陸上負重，不需停水"
+  return_to_compete: ~
+  prognosis: "能量改善+月經恢復後 BMD 可增，但恢復慢(1–2 年)，能否達年齡期望值不確定"
+
+population_notes:
+  age:
+    youth: "骨量累積關鍵期，早期介入效益最大；高風險者常規 DXA"
+    adult_beginner: ~
+    masters: "對老年骨量無明顯額外保護(相比散步/慢跑)，但維持肌肉間接減少跌倒骨折"
+  sex:
+    female: "研究較多，與 LEA/月經失調交互"
+    male: "男性游泳員低 BMD 亦有記錄，研究遠少於女性"
+  ability:
+    para: "輪椅運動員非重力負荷疊加更嚴重，低 BMD 高盛行率"
+  lifecycle: ~
+
+links:
+  mechanism_link: female-athlete-triad
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Site-specific bone density in female swimmers, PMC7039474", certainty: 🟢, verified: true }
+  - { citation: "Bone density intervention in low-impact athletes, PMC11744971", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "游泳員 vs 對照 meta-analysis 作者/DOI、長期骨折後果為二手待 W3；Para 低 BMD(PMC11061701)摘要層級"
+  contested:
+    - claim: "游泳員低 BMD 是否導致實際骨折增加"
+      consensus_source: "游泳員 BMD 低於重力負荷運動員為共識"
+      dissent_source: "缺大型前瞻性骨折結果；水中浮力負面效應能否完全被陸訓抵消不確定"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,83 @@
+id: sever-disease
+zh: Sever 病（跟骨骨突炎）
+en: Sever's disease (calcaneal apophysitis)
+category: F-pediatric-growth
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [跟骨次級骨化中心, 跟腱, 腓腸肌-比目魚肌]
+mechanism:
+  summary: 跟骨骨突炎。跟骨次級骨化中心在快速生長期受跟腱過度拉力而炎症。骨骼生長快於肌肉伸展，跟腱相對緊繃，在跑跳等高地面反作用力活動中過度牽拉跟骨(行走時足跟承壓可達正常 10 倍)。機制高度依賴跑跳衝擊，水中幾乎無觸發；游泳員兼高量陸訓(跑步)才有風險。活躍游泳通常是 Sever 病患者的低衝擊替代運動。
+  trigger_phase: 陸訓跑跳(非水中)；游泳本身幾乎不觸發
+  who: 8–15 歲生長高峰運動活躍兒童(男>女約 2–3:1)、高跑跳陸訓量者
+
+epidemiology:
+  prevalence: "佔兒童肌肉骨骼主訴 2–16%；高達 60% 雙側；男:女約 2–3:1；發病尖峰男 12 歲、女 11 歲；德國青少年足球學院 10 年年發病率 0.36/100 運動員(返回運動初次約 42 天、復發約 181 天)"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 數據來自跑跳運動(足球)族群，非游泳特定；游泳機制上幾乎不致病，主要意義為低衝擊替代運動
+  sources:
+    - "Sever's disease (calcaneal apophysitis), StatPearls NBK441928 (已驗證)"
+    - "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)"
+
+risk_factors:
+  - { text: "快速生長高峰", grade: B }
+  - { text: "高跑跳訓練量(陸訓)", grade: A }
+  - { text: "腓腸肌緊繃/柔軟度差", grade: B }
+  - { text: "BMI 偏高", grade: B }
+  - { text: "足部生物力學異常(扁平/高弓足)", grade: C }
+  - { text: "磨損/不合適鞋具", grade: C }
+
+prevention:
+  - { text: "腓腸肌-比目魚肌漸進拉伸", grade: B }
+  - { text: "適合鞋具+足跟墊", grade: C }
+  - { text: "訓練量漸進管理", grade: C }
+  - { text: "急速生長期監測", grade: Expert }
+
+management:
+  red_flags:
+    - "靜止痛/明顯腫脹 → 就醫(排除跟骨骨折)"
+    - "雙側受累恢復更長 → 評估"
+  acute: "活動調整(避跑跳)、冰敷、足跟墊、NSAIDs；持續 4–8 週可考慮 CAM boot 或短腿石膏"
+  pain_rules: "足跟痛在不痛範圍活動，跑跳後加重則減量"
+  rehab: "腓腸肌/比目魚肌漸進拉伸+離心強化；體重管理"
+  functional_progression_criteria:
+    - "足跟痛緩解"
+    - "拉伸/離心改善"
+  swim_modifications_in_rehab:
+    - "游泳通常是 Sever 病的友善低衝擊替代運動"
+  return_to_train: "症狀緩解後每週增量 <10%；雙側更保守"
+  return_to_compete: ~
+  prognosis: "自限性，骨骺閉合後完全緩解；可復發至骨骼成熟"
+
+population_notes:
+  age:
+    youth: "8–15 歲核心族群"
+    adult_beginner: ~
+    masters: "骨骺閉合後不再發生"
+  sex:
+    male: "男:女約 2–3:1"
+    female: ~
+  ability:
+    para: "兒童資料缺乏"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Sever's disease, StatPearls NBK441928", certainty: 🟢, verified: true }
+  - { citation: "Calcaneal apophysitis in youth football, PMC8827183", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification: []
+  contested:
+    - claim: "影像必要性 / 最佳保守方案"
+      consensus_source: "臨床診斷通常足夠"
+      dissent_source: "跟骨 X-ray 骨化碎裂為 non-specific；足跟墊/物理治療/觀察效益類似，無明確優勝"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

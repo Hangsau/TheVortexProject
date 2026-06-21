@@ -1,0 +1,73 @@
+id: _asian-epidemiology-supplement
+zh: 亞裔/華人族群流行病學補充（非單一傷害條目）
+en: Asian / Chinese-population epidemiology supplement (meta-reference, not an injury entry)
+category: _meta-reference
+environment: [pool, open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+note: "此為跨條目流行病學補充，供 Phase 2 整合時把對應數據併入各傷害 population_notes 與頂層 epidemiology；本身不是傷害條目，渲染時不單獨列為一種傷害。"
+
+mechanism:
+  summary: "彙整東亞(日本/中國/台灣)游泳傷害與溺水流行病學，揭示與西方文獻不同的模式(尤其腰椎傷害優先於肩部)，並標記資料缺口。鐵則:文獻偏壓某族群是素材缺口，不是受眾界定。"
+
+sections:
+  japan_competitive:
+    summary: "日本國家游泳隊 2002–2016(488 名奧運/亞運/世大運代表)各部位傷害盛行率"
+    data:
+      - "腰椎 18.6%(男 15.1%/女 22.9%) — 最高，超過肩部"
+      - "肩部 11.9%(男 10.2%/女 13.9%)"
+      - "膝關節 9.4%、踝關節 4.3%"
+      - "女性整體傷害率 52.0% 顯著高於男性 37.7%(p=0.002)"
+      - "仰式肩傷最高 23.1%、自由式最低 7.6%"
+      - "腰傷預防計畫(2008 起，深層核心+MRI 椎間盤評估)使腰傷 23.5%→14.8%(p<0.05)"
+    key_finding: "腰椎(18.6%) > 肩部(11.9%)，與西方『肩部第一』結論相反；日本女子大學游泳員研究(腰椎 27.6% > 肩部 16.0%)再現此東亞模式"
+    certainty: 🟢
+    evidence_grade: B
+    sources:
+      - "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)"
+      - "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)"
+  china_drowning:
+    summary: "中國未成年(<20 歲)溺水死亡 2013–2021"
+    data:
+      - "2021 死亡率(每 10 萬):1–4 歲 3.69、5–9 歲 2.21、10–14 歲 3.92、15–19 歲 3.95"
+      - "男(4.64)約為女(1.71)的 2.7 倍；農村(3.84)約為城市(2.01)的 1.9 倍"
+      - "2013–2021 總體下降 50.30%(年均 -9.06%)"
+      - "89.6% 溺水發生於無成人監督；中國每 43,000 人僅 1 座游泳池(2021)"
+    caveat: "未區分溺水地點(開放水域/泳池)，按城鄉分類"
+    certainty: 🟢
+    evidence_grade: B
+    sources:
+      - "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)"
+  taiwan_drowning:
+    summary: "台灣溺水數據(全部 pending_verification，原始來源待查)"
+    data:
+      - "海洋(近海 1km)佔近半、溪流 36.4%、7 月最高峰(政府數據 2014–2019，URL 301 待查)"
+      - "沿海涉水休閒溺水 2016–2021 共 192 件(ScienceDirect，全文 403 待查)"
+      - "台灣溺水年齡標準化發生率 1990–2021 下降約 67.1%、死亡率下降約 78.4%(二手待查)"
+    certainty: 🔴
+    evidence_grade: C
+    caveat: "全部為二手或無法開啟原始來源，不進 public 數字"
+  other_east_asia:
+    summary: "韓國/香港/東南亞游泳傷害學術資料缺乏；中國競技游泳傷害無系統性調查"
+    notes:
+      - "東亞游泳傷害學術研究幾乎全來自日本(國家隊品質高)"
+      - "中國大陸與台灣競技游泳傷害流行病學極度缺乏；溺水死亡數據相對充足(政府衛生資料)"
+  population_caveats:
+    - "東亞體脂分布與西方不同，BMI 截值與低 BMD 風險閾值多依西方白人女性基準，可能需調整"
+    - "亞洲飲食文化對能量可及性影響無直接研究"
+    - "日本資料顯示『帶傷訓練』文化明顯，是評估亞洲游泳員傷害盛行率的低估偏差來源"
+    - "腰椎優先+女性傷害率較高為東亞模式，需更多本地研究確認"
+
+references:
+  - { citation: "Japan national swim team injury survey, PMC6863674 (PMID 31798949)", certainty: 🟢, verified: true }
+  - { citation: "Japanese university female swimmers injury, PMC6464216 (PMID 30986226)", certainty: 🟢, verified: true }
+  - { citation: "China drowning deaths in minors, PMC10689961 (PMID 38047245)", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "台灣溺水所有數字(政府 2014–2019 URL 301、ScienceDirect 403、67.1%/78.4% 二手)原始來源待 W3"
+    - "韓國游泳傷害研究提及但未找到具體論文；天津菁英游泳員肘痛研究僅摘要"
+  contested: []
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

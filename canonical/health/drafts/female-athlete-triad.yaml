@@ -1,0 +1,84 @@
+id: female-athlete-triad
+zh: 女性運動員三聯症
+en: Female athlete triad
+category: D-endocrine
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [下視丘-腦垂體-性腺軸, 骨骼(骨密度), 月經生理]
+mechanism:
+  summary: 三聯症由三個相互關聯成分構成——低能量可及性(LEA)、月經功能障礙、低骨密度。LEA 是核心驅動子:飲食熱量扣除訓練消耗後可用能量不足，下視丘抑制 GnRH 脈衝，引發月經紊亂，長期低雌激素削弱骨形成。三者連鎖:LEA → 月經失調 → 骨流失，全具備時骨折風險大增。註:RED-S 為涵蓋更廣(含男性、代謝/免疫等)的後繼框架，見 red-s 條目。
+  trigger_phase: 能量赤字長期累積、菁英訓練量、青春期不穩定期
+  who: 偏瘦/耐力型女性、菁英訓練量者、青春期中後期者
+
+epidemiology:
+  prevalence: "女性運動員約 40% 至少有一項三聯症成分；游泳族群約 41% 有三聯症風險(系統性回顧 n=478，17 研究)；完整三聯症(三項全具備)盛行率約 1–4%"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 各研究診斷標準不一；游泳族群月經失調可能含高雄激素型(見 exercise-amenorrhea)，與低雌激素型骨骼影響不同
+  sources:
+    - "Female athlete triad in swimmers systematic review, JWSM (已驗證，無 PMID 記載)"
+    - "RED-S Clinical Assessment Tool framework (IOC)"
+
+risk_factors:
+  - { text: "低能量可及性(LEA <30 kcal/kg FFM/天)", grade: A }
+  - { text: "月經失調 >3 個月", grade: A }
+  - { text: "飲食失調/限制飲食", grade: B }
+  - { text: "高訓練量、低體重項目", grade: B }
+  - { text: "青春期中後期", grade: B }
+
+prevention:
+  - { text: "熱量攝取監測與教育", grade: B }
+  - { text: "教練+醫療整合篩查", grade: C }
+  - { text: "Triad Risk Assessment Tool 風險分級", grade: B }
+
+management:
+  red_flags:
+    - "低創傷骨折史 → 就醫"
+    - "BMI <17.5 → 就醫"
+    - "停經 >6 月 → 就醫"
+    - "嚴重飲食限制 → 多學科介入"
+  acute: "多學科介入(營養/心理/運動醫學)；優先恢復能量可及性"
+  pain_rules: ~
+  rehab: "LEA 糾正 → 月經恢復(6–12 月)→ DXA 監測 BMD"
+  functional_progression_criteria:
+    - "能量可及性恢復"
+    - "月經恢復"
+    - "依 RED-S Clinical Assessment Tool 分級放行"
+  swim_modifications_in_rehab: ~
+  return_to_train: "能量狀態改善後漸進恢復"
+  return_to_compete: "重度需月經恢復才全訓練"
+  prognosis: "及早介入大多恢復月經；BMD 恢復慢需 1–2 年，能否回到峰值不確定"
+
+population_notes:
+  age:
+    youth: "首次高風險期，延誤影響峰值骨量累積"
+    adult_beginner: ~
+    masters: "停經後以骨流失為表現，月經不再為指標"
+  sex:
+    female: "游泳女選手約 41% 風險"
+    male: "三聯症定義本不含男性(→ RED-S 框架擴展之爭核心)"
+  ability:
+    para: "資料極缺；脊損非重力負荷疊加 LEA 風險尤高"
+  lifecycle: ~
+
+links:
+  mechanism_link: red-s
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Female athlete triad prevalence in swimmers, JWSM systematic review", certainty: 🟢, verified: true }
+  - { citation: "De Souza et al, Misunderstanding the female athlete triad, PMID 25037200", certainty: 🟡, verified: false }
+
+flags:
+  pending_verification:
+    - "40% 至少一成分為系統性回顧之回顧(二手)；完整三聯症 1–4% 各研究標準不一；IOC RED-S 共識(Mountjoy 等)僅確認摘要"
+  contested:
+    - claim: "三聯症 vs RED-S 框架"
+      consensus_source: "2014 起 IOC 擴展為 RED-S(含男性與代謝/免疫)，2023 修訂為 REDs v3"
+      dissent_source: "De Souza 等 2014 發表反駁，主張保留三聯症框架；臨床界雙軌工具並用"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

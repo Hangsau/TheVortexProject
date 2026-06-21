@@ -1,0 +1,80 @@
+id: salter-harris-physeal-fracture
+zh: Salter-Harris 生長板骨折
+en: Salter-Harris physeal fracture
+category: F-pediatric-growth
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [生長板(骨骺板), 骨骺, 幹骺端, 遠端橈骨]
+mechanism:
+  summary: 生長板(骨骺板)是兒童骨骼最脆弱結構，強度低於韌帶，急性創傷時骨骺板先於韌帶斷裂。Salter-Harris 分型依骨折線穿過骨骺板位置與範圍分五型(I 型僅穿骨骺板，預後最佳；V 型壓縮型最差且常漏診)。游泳本身創傷風險低，但相關情境(跳水入池衝擊、陸訓跌倒、池邊滑倒 FOOSH)可引發上肢(遠端橈骨最常見)或下肢骨折。
+  trigger_phase: 跳水/跳台入池衝擊、池邊滑倒、陸訓跌倒
+  who: 開放骨骺兒童(女 11–12 歲、男 12–14 歲)、跳水/跳台高衝擊活動者
+
+epidemiology:
+  prevalence: "佔兒童所有骨折 15–30%；II 型最常見(約 75%)；男>女；上肢>下肢，遠端橈骨為最常見單一部位；競泳本身致 Salter-Harris 極少見(水中低衝擊)，多見於跳水/池邊情境"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 游泳特定的生長板骨折分母缺；V 型急性期 X-ray 常正常易低估
+  sources:
+    - "Salter-Harris fractures, StatPearls NBK430688 (已驗證)"
+
+risk_factors:
+  - { text: "開放骨骺年齡", grade: A }
+  - { text: "跳水/池邊高衝擊活動", grade: B }
+  - { text: "高速衝擊(競速跳台跳水)", grade: C }
+  - { text: "骨骼代謝問題(維生素 D 缺乏、RED-S)", grade: C }
+
+prevention:
+  - { text: "池邊防滑設計", grade: Expert }
+  - { text: "跳水技術指導", grade: Expert }
+  - { text: "強制跳水深度規定", grade: Expert }
+  - { text: "補鈣/維生素 D(輔助)", grade: B }
+
+management:
+  red_flags:
+    - "任何兒童急性肢端創傷伴疼痛 → 就醫排除生長板骨折"
+    - "關節面受累(III/IV 型)徵象 → 小兒骨科急會診"
+    - "生長停滯/肢體不等長後續徵象 → 追蹤"
+  acute: "X-ray 常低估需比對健側；SH I–II 閉合復位+固定(石膏/夾板)；SH III–IV 通常需切開復位內固定(ORIF)；SH V 急性期常漏診(X-ray 正常)"
+  pain_rules: ~
+  rehab: "初次 7–10 天複查；SH III–V 需 6–12 月影像追蹤確認生長板正常"
+  functional_progression_criteria:
+    - "癒合確認"
+    - "生長板追蹤正常"
+  swim_modifications_in_rehab:
+    - "依固定/部位調整水中活動"
+  return_to_train: "上肢 SH I–II 通常 6–8 週；依類型/固定/癒合"
+  return_to_compete: ~
+  prognosis: "SH I–II 良好；SH III–V 有肢體不等長、關節畸形風險"
+
+population_notes:
+  age:
+    youth: "唯一受影響族群(骨骺板閉合後不再發生)；跳水台/起跳台是游泳訓練中少數高衝擊情境"
+    adult_beginner: ~
+    masters: "不適用"
+  sex:
+    male: "男>女，男 12–14 歲對應生長高峰"
+    female: ~
+  ability:
+    para: "數據缺"
+  lifecycle: ~
+
+links:
+  mechanism_link: diving-cervical-injury
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Salter-Harris fractures, StatPearls NBK430688", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification: []
+  contested:
+    - claim: "SH V 型診斷率 / 是否常規 MRI"
+      consensus_source: "急性期 X-ray 常陰性"
+      dissent_source: "SH V 實際發生率可能被低估；是否常規 MRI 各中心做法不一"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,81 @@
+id: osgood-schlatter
+zh: Osgood-Schlatter 病
+en: Osgood-Schlatter disease
+category: F-pediatric-growth
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [脛骨粗隆骨突, 髕骨韌帶, 股四頭肌]
+mechanism:
+  summary: 脛骨粗隆的牽引性骨突炎。青春期骨骼快速生長，股四頭肌透過髕骨韌帶反復拉扯尚未完全骨化的脛骨粗隆骨突中心，造成微損傷與局部炎症，形成前膝隆起和疼痛。觸發機制(股四頭肌爆發拉力)在游泳中幾乎不存在——高風險運動為籃球/排球/田徑/體操，游泳員發生率極低。游泳員兼做陸訓(跑跳)時風險才重現。重要意義:游泳是 OSD 患者合理的低衝擊替代運動。
+  trigger_phase: 陸訓跑跳(非水中)；游泳本身極少觸發
+  who: 12–15 歲運動活躍男孩、8–12 歲女孩、急速生長期+高量跑跳陸訓者
+
+epidemiology:
+  prevalence: "12–15 歲運動活躍青少年盛行率男 11.4%、女 8.3%、整體約 9.8%(運動活躍族群高達 21%)；荷蘭一般科前瞻發病率整體 3.8/1,000 人年(男 4.9、女 2.7)，峰值男 12 歲、女 11 歲"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 數據來自一般青少年/跑跳運動族群，非游泳特定；游泳機制上幾乎不致病，此條目主要意義為『游泳是友善替代運動』
+  sources:
+    - "Osgood-Schlatter disease, StatPearls NBK441995 (已驗證)"
+    - "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)"
+
+risk_factors:
+  - { text: "快速身高增長", grade: B }
+  - { text: "高量跑跳運動(陸訓)", grade: A }
+  - { text: "男性", grade: B }
+  - { text: "雙側受累(預後較長)", grade: B }
+  - { text: "股四頭肌/腿筋柔軟度不足", grade: C }
+
+prevention:
+  - { text: "避免跑跳量過快增加", grade: C }
+  - { text: "股四頭肌/腿筋拉伸", grade: C }
+  - { text: "急速生長期監測", grade: Expert }
+
+management:
+  red_flags:
+    - "急速腫脹/急性撕脫骨折 → 就醫"
+    - "成年後持續症狀(約 10%) → 骨科評估"
+  acute: "相對休息(不強制全停)、冰敷、NSAIDs、活動調整；無手術或注射適應症"
+  pain_rules: "膝前痛在不痛範圍內可繼續活動；負荷後加重則減量"
+  rehab: "股四頭肌/腿筋漸進拉伸；不痛範圍漸進恢復"
+  functional_progression_criteria:
+    - "活動時膝前痛可控"
+    - "拉伸/肌力改善"
+  swim_modifications_in_rehab:
+    - "游泳是友善替代運動(膝屈伸受控、無陸上衝擊)"
+  return_to_train: "游泳通常無需中斷；陸訓跑跳調整"
+  return_to_compete: ~
+  prognosis: "自限性；約 90% 於骨骺融合後(約 2 年內)完全緩解；約 10% 延續成年(症狀性骨化結節)"
+
+population_notes:
+  age:
+    youth: "核心族群；游泳是 OSD 後低衝擊替代選項"
+    adult_beginner: ~
+    masters: "骨骺已閉合，幾乎不適用"
+  sex:
+    male: "男性較多(約 65%)"
+    female: ~
+  ability:
+    para: "骨骺閉合後不適用"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Osgood-Schlatter disease, StatPearls NBK441995", certainty: 🟢, verified: true }
+  - { citation: "OSD incidence in general practice, PMC8869186", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification: []
+  contested:
+    - claim: "是否需影像確認 / 運動限制程度"
+      consensus_source: "臨床診斷即可，現代指引傾向疼痛範圍內繼續活動"
+      dissent_source: "部分仍轉介影像(荷蘭研究 19.5%)；完全停訓 vs 疼痛範圍內繼續無一致"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

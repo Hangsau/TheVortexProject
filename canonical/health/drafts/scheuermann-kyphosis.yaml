@@ -1,0 +1,80 @@
+id: scheuermann-kyphosis
+zh: Scheuermann 病（青少年脊椎後凸）
+en: Scheuermann's kyphosis
+category: F-pediatric-growth
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [胸椎椎體, 椎體終板軟骨, 椎間盤]
+mechanism:
+  summary: 青少年特發性脊椎後凸，以胸椎(T7–T9 頂點)或胸腰椎三節以上椎體前緣楔形變(wedging ≥5°×≥3 個相鄰椎體)為診斷標準。病因未完全明確，推測與生長期椎體終板軟骨細胞功能障礙有關，椎體前緣承壓大於後緣抑制前緣生長。蝶式反復軀幹彎曲-伸展被懷疑可誘發或加重，屬「加重因子」而非原因。姿勢型「圓背」需與結構型 Scheuermann 鑑別。
+  trigger_phase: 蝶式反復軀幹屈伸(加重因子)；生長期椎體前緣壓力集中
+  who: 男性(男:女 ≥2:1)、青春期快速生長者、蝶式高量者
+
+epidemiology:
+  prevalence: "美國盛行率 1–8%；男:女 ≥2:1；診斷高峰 12–17 歲；胸椎型(I 型)最常見，胸腰椎型(II 型)罕見但症狀常較重；診斷標準 Cobb ≥40° 剛性後凸+3 個以上相鄰椎體楔形 ≥5°"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 游泳與後凸關聯之 OR 值來自摘要轉述未驗證原文；蝶式因果方向不明(加重後凸 vs 後凸者選游泳)
+  sources:
+    - "Scheuermann disease, StatPearls NBK499966 (已驗證)"
+
+risk_factors:
+  - { text: "男性", grade: B }
+  - { text: "青春期快速生長", grade: B }
+  - { text: "反復胸椎屈曲運動(蝶式為特定 risk)", grade: Expert }
+  - { text: "姿勢習慣", grade: C }
+
+prevention:
+  - { text: "胸椎伸展運動", grade: C }
+  - { text: "核心穩定訓練", grade: C }
+  - { text: "Scheuermann 患者限制蝶式", grade: Expert }
+
+management:
+  red_flags:
+    - "神經症狀(脊髓壓迫) → 就醫"
+    - "快速進展 → 脊椎評估"
+    - "後凸 >75° → 脊椎外科評估"
+  acute: "非手術(Cobb <60°):生活方式調整、NSAIDs、伸展復健；支架(60–80°)需 12–24 月；手術(>75° 合併疼痛/神經症狀):脊椎融合"
+  pain_rules: ~
+  rehab: "胸椎伸展+核心穩定；主動期減少蝶式訓練量"
+  functional_progression_criteria:
+    - "症狀控制"
+    - "後凸角度穩定(非進展)"
+  swim_modifications_in_rehab:
+    - "避免蝶式；仰式可能助胸椎伸展(理論性)"
+  return_to_train: "主動期減少蝶式訓練量"
+  return_to_compete: "術後患者有案例報告仍可游泳"
+  prognosis: "Cobb <60° 骨骼成熟後通常無長期後遺症；>60° 者成年慢性背痛風險增加"
+
+population_notes:
+  age:
+    youth: "診斷期；游泳教練需識別圓背且持續加重者，轉介脊椎評估"
+    adult_beginner: ~
+    masters: "已有結構後凸者蝶式訓練需個別評估"
+  sex:
+    male: "男:女 ≥2:1"
+    female: ~
+  ability:
+    para: "脊損患者坐姿加重前傾，但 Scheuermann 診斷不適用成年後脊損者"
+  lifecycle: ~
+
+links:
+  mechanism_link: extension-low-back-pain
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Scheuermann disease, StatPearls NBK499966", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "游泳 OR 後凸 2.26/前凸 2.24(ScienceDirect 2014，全文 403)不進 public 數字；三名蝶式選手停練改善案例原始出處待查；術後游泳(PMID 10407961)摘要層級待 W3"
+  contested:
+    - claim: "游泳(尤蝶式)與 Scheuermann 因果關係"
+      consensus_source: "椎體楔形為診斷核心；蝶式為加重因子"
+      dissent_source: "橫斷面 OR 顯示關聯但方向不明；游泳是保護或加重取決泳式，兩者可能同時為真"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
