@@ -1,0 +1,82 @@
+id: acanthamoeba-keratitis
+zh: 棘阿米巴角膜炎（隱形眼鏡泳者）
+en: Acanthamoeba keratitis in swimmers
+category: C-nonMSK-medical
+environment: [pool, open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+
+structures: [角膜上皮, 角膜基質, 角膜神經]
+mechanism:
+  summary: 棘阿米巴(Acanthamoeba)為環境中普遍存在的自由生活原蟲，以包囊(cyst)形態抗環境耐氯。戴隱形眼鏡時鏡片與角膜間形成微缺氧及微小上皮損傷，原蟲附著於鏡片並侵入角膜上皮、沿角膜神經擴散(致劇痛與環形浸潤)，包囊形態對藥物與消毒高度抵抗，治療困難且病程數月。游泳時戴隱形眼鏡(尤其軟式)被水中原蟲污染、或用自來水沖洗/保存鏡片為主要途徑。標準泳池游離氯無法殺滅包囊，防護依賴鏡片管理而非水質。
+  trigger_phase: 戴隱形眼鏡游泳/泡水、用自來水洗鏡片或鏡盒、戴鏡淋浴
+  who: 隱形眼鏡配戴者(約佔病例 9 成)、配戴軟式日拋未取下即下水者、開放水域/溫泉接觸者
+
+epidemiology:
+  prevalence: "全球年發生率估約 23,561 例(約 2.9/百萬，PMC11424229)；隱形眼鏡配戴為最大宗危險因子(約佔 85–90% 病例)；約 39% 患者最終視力結果不佳；確診前誤用類固醇為最強不良預後因子"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 屬罕見但破壞性極強之眼科急症；發生率受隱形眼鏡使用率與通報品質影響，地區差異大；游泳特異性歸因比例缺精確分母
+  sources:
+    - "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)"
+
+risk_factors:
+  - { text: "戴隱形眼鏡游泳/泡水", grade: B }
+  - { text: "用自來水沖洗或保存隱形眼鏡/鏡盒", grade: B }
+  - { text: "戴隱形眼鏡淋浴/泡溫泉", grade: B }
+  - { text: "鏡片衛生不良(過夜配戴、延長配戴)", grade: B }
+  - { text: "角膜既有微小外傷", grade: Expert }
+
+prevention:
+  - { text: "游泳/泡水/淋浴前取下隱形眼鏡(單一最重要措施)", grade: B }
+  - { text: "必須戴鏡下水則用密封泳鏡並改日拋、出水即丟", grade: Expert }
+  - { text: "絕不以自來水沖洗或保存鏡片/鏡盒", grade: B }
+  - { text: "鏡盒定期更換、用專用保存液", grade: Expert }
+  - { text: "出現紅眼/異物感/畏光持續勿自行點藥拖延，儘速眼科", grade: Expert }
+
+management:
+  red_flags:
+    - "與體徵不成比例的劇烈眼痛 → 緊急眼科"
+    - "戴隱形眼鏡者持續紅眼/畏光/視力模糊 → 緊急眼科(勿先點類固醇)"
+    - "角膜環形浸潤/上皮反覆缺損 → 角膜專科"
+    - "點抗生素/抗病毒無改善的角膜炎 → 重新評估阿米巴"
+  acute: "立即停戴隱形眼鏡並送角膜專科；確診靠共軛焦顯微鏡/角膜刮取培養/PCR。治療為長療程(數月)雙重抗阿米巴：雙胍類(PHMB/chlorhexidine)+二脒類(propamidine/hexamidine)；嚴重或藥物無效需角膜移植。確診前誤用類固醇會惡化預後，為關鍵禁忌"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "角膜炎完全治癒且眼科同意後方可恢復戴鏡/下水"
+    - "病史者強烈建議改採非鏡片視力矯正(眼鏡/雷射)後再下水"
+  swim_modifications_in_rehab: ~
+  return_to_train: "感染治癒、眼科放行後回水，並落實不戴鏡游泳"
+  return_to_compete: ~
+  prognosis: "早期確診且未誤用類固醇者預後較佳；延誤診斷或誤用類固醇者約四成視力結果不佳，重症可致角膜瘢痕、失明甚至需移植或摘除"
+
+population_notes:
+  age:
+    youth: "青少年隱形眼鏡使用上升(美觀/運動)，泳前取鏡衛教應提早納入"
+    adult_beginner: "成人初學戴鏡下水習慣最須提醒"
+    masters: ~
+  sex: ~
+  ability:
+    para: ~
+  lifecycle:
+    open_water: "開放水域/溫泉原蟲負荷高，戴鏡風險更甚泳池"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Global incidence and prevalence of Acanthamoeba keratitis, PMC11424229", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "游泳特異性歸因比例(游泳致病佔全部病例 %)缺精確分母；作者全名/DOI 待 W3"
+  contested:
+    - claim: "泳池水質能否防護"
+      consensus_source: "標準氯化無法殺滅棘阿米巴包囊，防護須靠鏡片管理"
+      dissent_source: "部分公衛建議仍強調水質維護，但對包囊實效有限，重點仍在不戴鏡下水"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

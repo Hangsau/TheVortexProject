@@ -1,0 +1,84 @@
+id: surfers-ear-exostosis
+zh: 外耳道骨瘤 / 骨疣（衝浪耳）
+en: Surfer's ear / external auditory exostosis
+category: C-nonMSK-medical
+environment: [open_water, surf, pool]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+
+structures: [外耳道骨性部, 骨膜, 外耳道上皮]
+mechanism:
+  summary: 長期冷水(臨界約 <19°C)與冷風刺激外耳道骨性部骨膜，引發慢性骨膜炎；成骨細胞活化致鼓環周圍骨性增生並向耳道腔延伸。過度增生後耳道阻塞，耳垢與水分積聚→反覆外耳道炎、傳導性聽損。外耳道上皮極薄(約 0.1mm)幾無緩衝。
+  trigger_phase: 冷水游泳/衝浪/划艇/潛水，頻率高、累積時數長；風冷加成
+  who: 衝浪者(研究最多)、冷水/冬泳者、划艇選手、潛水員；任何長期反覆冷水暴露者
+
+epidemiology:
+  prevalence: "一般人群約每千人 6.3 例；冷水衝浪者 70–80%，連暖水衝浪者小樣本(n=23)仍達 69.6%；已確診者約 80% 雙側"
+  certainty: 🟡
+  evidence_grade: C
+  caveat: 絕大多數研究針對衝浪者，競技(室內溫水)游泳者獨立盛行率幾乎不存在；女性樣本過少
+  sources:
+    - "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)"
+    - "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)"
+
+risk_factors:
+  - { text: "冷水(<19°C)暴露頻率與累積時數", grade: B }
+  - { text: "每年 >50 次水域活動且 >5 年年資", grade: B }
+  - { text: "無耳保護裝備", grade: B }
+  - { text: "冷風暴露", grade: Expert }
+  - { text: "男性(部分因活動參與率偏差)", grade: B }
+
+prevention:
+  - { text: "完整密封型矽膠耳塞", grade: B }
+  - { text: "氯丁橡膠帽(neoprene hood)保溫", grade: Expert }
+  - { text: "每次入水均用耳保護(實際依從率僅約 5%)", grade: Expert }
+  - { text: "術後持續耳保護防復發", grade: Expert }
+
+management:
+  red_flags:
+    - "耳道阻塞 >80% → 耳鼻喉科評估"
+    - "反覆外耳道炎(≥3 次/年)+傳導性聽損 → 轉介"
+    - "持續耳痛/耳鳴 → 轉介"
+  acute: "保守(Grade 1–2)：定期耳垢清潔、治療合併外耳道炎、監測進展。外科(canalplasty/exostectomy)：阻塞 >80%+持續症狀；術後約 68% 生活品質改善，約 14% 併發症(鼓膜穿孔/顏面神經麻痺/顳顎關節障礙)"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "術後雙側手術一般間隔約 6 週"
+    - "術後持續使用耳保護(繼續冷水暴露可再生長)"
+  swim_modifications_in_rehab: ~
+  return_to_train: "保守者持續監測下可游泳；術後依耳鼻喉科評估回水"
+  return_to_compete: ~
+  prognosis: "骨性增生本質不可逆；保守下持續進展，外科治療後多數改善但繼續冷水暴露有復發風險"
+
+population_notes:
+  age:
+    youth: "冷水訓練青少年為潛在高風險，但缺乏專項研究"
+    adult_beginner: ~
+    masters: "累積暴露年限長，篩查值得討論，無專項研究"
+  sex:
+    male: "多數研究男性佔比 >80%"
+    female: "文獻嚴重不足(DATA GAP)"
+  ability:
+    para: ~
+  lifecycle:
+    open_water: "冬泳/開放水域為新興風險族群，無獨立流病資料"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "External Auditory Exostoses, StatPearls, PMID 30521295", certainty: 🟡, verified: true }
+  - { citation: "Prevalence of exostoses in warm-water surfers, PMC7077213", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "『冷水罹病為暖水約 600 倍』(PMID 12075223 摘要層級)、『耳保護降 12 倍』為二手引用待查，不進 public 數字"
+  contested:
+    - claim: "是否僅冷水致病"
+      consensus_source: "冷水暴露為主要致病因子"
+      dissent_source: "暖水衝浪者小樣本(n=23)盛行率仍近 70%，暗示機械衝擊或其他因素，結論需審慎"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

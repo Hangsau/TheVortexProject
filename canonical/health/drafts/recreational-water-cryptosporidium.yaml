@@ -1,0 +1,84 @@
+id: recreational-water-cryptosporidium
+zh: 隱孢子蟲 / 泳池水傳染腸道病
+en: Cryptosporidium & recreational water illness
+category: C-nonMSK-medical
+environment: [pool, open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+
+structures: [腸道上皮(小腸刷狀緣), 體液-電解質平衡]
+mechanism:
+  summary: 隱孢子蟲(Cryptosporidium parvum/hominis)以卵囊(oocysts)在水中存活，感染者糞便含大量卵囊(單次腹瀉排 10⁷–10⁸ 個)，僅需 10–100 個即致病。卵囊在標準泳池 >1 ppm 自由氯下仍可存活 >7 天，化學消毒幾乎無效。吞入含卵囊水後卵囊在腸道釋放子孢子侵入小腸上皮刷狀緣，造成大量水樣腹瀉、腹痛、噁心，病程 2–3 週；免疫低下者可慢性致命。
+  trigger_phase: 公共泳池/水上遊樂設施(尤有腹瀉兒童入池)、循環式戲水池
+  who: 兒童(最高風險)、照護機構人員、免疫低下者(HIV/AIDS/移植)
+
+epidemiology:
+  prevalence: "美國 2009–2017 共 444 起隱孢子蟲暴露、7,465 例；泳池/水上設施為最大單一途徑(35.1% 暴發、56.7% 病例)；2015–2019 泳池水相關暴發中隱孢子蟲佔確認病因 49% 暴發、84% 病例；暴發報告件數每年約增 13%"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 受限於自願通報系統(36 州)，實際負擔可能遠高於報告；台灣/亞洲監測資料甚少
+  sources:
+    - "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)"
+    - "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)"
+
+risk_factors:
+  - { text: "吞入泳池水", grade: B }
+  - { text: "兒童(2–10 歲，穿尿布/意外排便)", grade: B }
+  - { text: "腹瀉期間或症狀消退 2 週內仍入池", grade: B }
+  - { text: "免疫低下", grade: B }
+  - { text: "泳池未用 UV/臭氧補充消毒", grade: Expert }
+
+prevention:
+  - { text: "腹瀉者禁入池(症狀消退後 2 週方可)", grade: Expert }
+  - { text: "泳池設 UV 光/臭氧補充消毒(殺氯抗性卵囊)", grade: Expert }
+  - { text: "兒童入池前沖洗/更換尿布、勿在池中排泄", grade: Expert }
+  - { text: "遊客入池前強制沖澡", grade: Expert }
+  - { text: "發現污染後超氯化+延長接觸時間", grade: Expert }
+
+management:
+  red_flags:
+    - "嚴重脫水(無尿/精神改變) → 就醫"
+    - "血便 → 就醫"
+    - "免疫低下者任何腹瀉 → 早期就醫"
+    - "腹瀉持續 >7 天 → 就醫"
+  acute: "免疫正常者：補液(口服電解質)；硝唑尼特(Nitazoxanide，唯一 FDA 核准)縮短病程 1–2 天，多 2–3 週自癒。免疫低下者：Nitazoxanide+抗病毒(若 HIV)，嚴重需住院靜脈補液。泳池暴發控制：關閉+超氯化(≥20 ppm 游離氯持續 8 小時)或 UV/臭氧"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "免疫正常者症狀完全消退+至少 2 週後再入池(防再傳播)"
+    - "免疫低下者由感染科評估"
+  swim_modifications_in_rehab: ~
+  return_to_train: "症狀消退並達防傳播間隔後回水"
+  return_to_compete: ~
+  prognosis: "免疫正常者預後極佳完全自癒；免疫低下者預後謹慎，有慢性化與致命風險"
+
+population_notes:
+  age:
+    youth: "最常見傳播來源(糞便污染)也是最主要受害者，應優先納入健康游泳教育"
+    adult_beginner: ~
+    masters: "若有潛在免疫抑制(癌症治療)需特別注意"
+  sex: ~
+  ability:
+    para: ~
+  lifecycle:
+    open_water: "開放水域感染存在但較難追蹤"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Cryptosporidiosis Outbreaks United States 2009–2017, PMC6597118", certainty: 🟢, verified: true }
+  - { citation: "Outbreaks Associated with Treated Recreational Water 2015–2019, PMC8136425", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "Atlanta 池水污染率(PMC2600305)為摘要層級；作者全名/DOI 待 W3"
+  contested:
+    - claim: "UV/臭氧標準化"
+      consensus_source: "標準氯化無法殺隱孢子蟲卵囊、CDC 建議補充 UV/臭氧"
+      dissent_source: "許多低資源地區尚未普及，標準執行差距大"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

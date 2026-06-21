@@ -1,0 +1,86 @@
+id: swimmer-dermatoses
+zh: 泳者皮膚問題群
+en: Swimmer dermatoses (folliculitis / swimmer's itch / green hair / chlorine dermatitis)
+category: C-nonMSK-medical
+environment: [pool, open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+subtypes: [熱浴缸毛囊炎(綠膿桿菌), 泳者癢(尾蚴性皮膚炎), 綠髮(銅沉積), 氯刺激性皮膚炎]
+
+structures: [毛囊, 表皮角質層, 真皮(過敏反應), 毛髮角蛋白]
+mechanism:
+  summary: 四亞型——A 熱浴缸毛囊炎：綠膿桿菌(Pseudomonas)在溫水/高 pH/低氯環境繁殖，經毛囊侵入致泳衣覆蓋區丘疹膿疱；B 泳者癢：淡水/海水中禽鳥血吸蟲尾蚴誤穿人皮膚後死亡引發遲發型過敏(再暴露反應加重)；C 綠髮：並非氯致綠，而是水中銅離子(銅管腐蝕/硫酸銅除藻劑)被氯氧化後與毛髮角蛋白螯合，漂染髮更明顯；D 氯刺激性皮膚炎：氯氧化作用去脂、破壞皮膚屏障致刺激性接觸性皮膚炎。
+  trigger_phase: 熱浴缸/SPA(毛囊炎)、淡水湖淺水順風區(泳者癢)、含銅泳池(綠髮)、高頻室內泳池(氯皮膚炎)
+  who: 競技泳者(氯皮膚炎/綠髮)、開放水域/湖泳者(泳者癢)、免疫低下/糖尿病(毛囊炎重症)、兒童(皮膚屏障薄)
+
+epidemiology:
+  prevalence: "泳者癢(Michigan Douglas Lake 2000)每 100 水中暴露日 6.8 例、301 名湖泊使用者中 17.3% 有症狀；熱浴缸毛囊炎估計 67% 熱浴缸/63% 泳池有綠膿桿菌污染(污染率為二手引用)；氯皮膚炎/綠髮無系統盛行率"
+  certainty: 🟡
+  evidence_grade: C
+  caveat: 各亞型多為案例報告或單地調查；台灣本島泳者癢資料幾乎缺如；發生率因地理/季節差異極大
+  sources:
+    - "Aquatic dermatoses 回顧, PMC5286756 (已驗證)"
+    - "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)"
+    - "Hot tub folliculitis 回顧, PMC7584313 (已驗證)"
+
+risk_factors:
+  - { text: "熱浴缸長時間浸泡(>30 分)+消毒不良(毛囊炎)", grade: B }
+  - { text: "免疫低下/糖尿病(毛囊炎重症化)", grade: Expert }
+  - { text: "淡水淺水區/順風水域暴露(泳者癢)", grade: B }
+  - { text: "泳者癢再暴露(過敏強化)", grade: Expert }
+  - { text: "含銅泳池+漂染/淺色髮(綠髮)", grade: C }
+  - { text: "高頻訓練+皮膚屏障不全(氯皮膚炎)", grade: Expert }
+
+prevention:
+  - { text: "選擇有定期消毒紀錄設施、限制浸泡時間(毛囊炎)", grade: Expert }
+  - { text: "避免淺水/順風區、出水立即用力擦乾(泳者癢)", grade: B }
+  - { text: "游泳前清水濕髮+矽靈護髮、游後螯合(EDTA)洗髮(綠髮)", grade: Expert }
+  - { text: "游泳後立即沖淋+保濕(氯皮膚炎)", grade: Expert }
+
+management:
+  red_flags:
+    - "毛囊炎合併發燒/蜂窩組織炎/膿腫 → 就醫"
+    - "泳者癢廣泛性繼發細菌感染 → 就醫"
+    - "皮膚炎大面積/合併全身症狀 → 就醫"
+  acute: "毛囊炎：免疫正常多 1–2 週自癒，醋酸濕敷；嚴重用環丙沙星。泳者癢：抗組胺+局部類固醇+止癢，3–7 天自限。綠髮：螯合(EDTA/組胺酸)洗髮，無健康風險。氯皮膚炎：避免暴露+局部類固醇(輕中度)，停止暴露後數天消退"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "皮疹完全消退再返泳防感染"
+    - "泳者癢:繼續暴露同一水體風險持續"
+  swim_modifications_in_rehab: ~
+  return_to_train: "皮損癒合後回水；氯皮膚炎考慮改低氯泳池"
+  return_to_compete: ~
+  prognosis: "毛囊炎 2–10 天自行消退多不留疤；泳者癢自限數日；綠髮為美觀問題可洗除；氯皮膚炎避刺激源後預後良好"
+
+population_notes:
+  age:
+    youth: "皮膚屏障薄對刺激更敏感；尾蚴性皮膚炎在淡水嬉水兒童常見"
+    adult_beginner: ~
+    masters: "開放水域泳者癢風險最高"
+  sex: ~
+  ability:
+    para: "皮膚病流病幾乎缺如(DATA GAP)"
+  lifecycle:
+    open_water: "尾蚴性皮膚炎為開放水域(尤淡水湖)特有"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Aquatic dermatoses, PMC5286756", certainty: 🟢, verified: true }
+  - { citation: "Cercarial dermatitis epidemiology (Douglas Lake), PMC1448328", certainty: 🟢, verified: true }
+  - { citation: "Hot tub (Pseudomonas) folliculitis, PMC7584313", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "67%/63% 綠膿桿菌污染率為二手引用，原始研究待查；綠髮機制案例報告(PMID 3202580 摘要層級)"
+  contested:
+    - claim: "氯刺激性皮膚炎發生閾值"
+      consensus_source: "高氯暴露破壞皮膚屏障為共識"
+      dissent_source: "致病氯濃度閾值不明；干預措施無 RCT"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

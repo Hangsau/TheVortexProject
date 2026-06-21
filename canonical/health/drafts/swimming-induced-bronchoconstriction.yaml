@@ -1,0 +1,85 @@
+id: swimming-induced-bronchoconstriction
+zh: 運動誘發支氣管收縮 / 游泳氣喘
+en: Exercise-induced bronchoconstriction in swimmers
+category: C-nonMSK-medical
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [氣道上皮, 支氣管平滑肌, 黏液纖毛清除系統]
+mechanism:
+  summary: 游泳 EIB 有兩條並行途徑——A 滲透壓途徑：劇烈換氣致氣道水分丟失、滲透壓升高，肥大細胞脫顆粒釋放組胺/白三烯致平滑肌收縮；B 化學上皮損傷途徑(游泳特有)：吸入空氣中三氯胺(NCl₃)及含氯氣溶膠直接損傷氣道上皮、破壞黏液纖毛清除、增加上皮通透性而易致敏。競技泳者換氣量遠超一般人，吸入三氯胺有效劑量更高，較低濃度即顯著效應；長期可從暫時性 EIB 進展為持久性氣道高反應性乃至臨床氣喘。
+  trigger_phase: 室內泳池長時間高強度訓練、高換氣量長距離游泳
+  who: 競技泳者(尤長期室內訓練)、個人/家族過敏史者、兒童早期大量泳池暴露者
+
+epidemiology:
+  prevalence: "競技游泳者 EIB 盛行率接近 50%(定義/診斷法差異下文獻 11–29% 亦見)；Brussels 兒童研究(n=341，10–13 歲)11.7% 醫師確診氣喘，每多 100 小時泳池暴露氣喘 OR 增 1.79(限 IgE>100)；泳池空氣 NCl₃ 中位數約 0.18 mg/m³"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: EIB 自我報告準確率低需客觀肺功能確診；多數研究偏競技泳者；因果方向(氣喘者選游泳 vs 游泳致氣喘)仍爭論
+  sources:
+    - "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)"
+    - "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)"
+    - "Trichloramine and lung function, PMC3488741 (已驗證)"
+
+risk_factors:
+  - { text: "室內泳池長期訓練(>100 小時)", grade: B }
+  - { text: "個人/家族過敏體質(atopy)", grade: B }
+  - { text: "血清 IgE 升高", grade: B }
+  - { text: "高三氯胺濃度泳池", grade: B }
+  - { text: "6 歲前大量泳池暴露(限兒童)", grade: B }
+
+prevention:
+  - { text: "改善室內泳池通風降低三氯胺", grade: Expert }
+  - { text: "游前充分熱身降低 EIB 反應", grade: B }
+  - { text: "入水前沐浴減少有機負荷(降三氯胺生成)", grade: Expert }
+  - { text: "有氣喘者游前 20–30 分預防性 SABA", grade: A }
+  - { text: "持續性氣喘者吸入型皮質類固醇", grade: A }
+
+management:
+  red_flags:
+    - "游泳中/後重度氣喘發作(SABA 無效) → 緊急就醫"
+    - "靜止時喘鳴/呼吸急促 → 就醫"
+    - "運動後 SpO₂ 下降 → 就醫"
+  acute: "停止訓練、離開高三氯胺密閉環境、吸入 SABA；嚴重者醫院全身性皮質類固醇。確診需客觀功能測試(FEV₁、eucapnic voluntary hyperpnea、高滲鹽水吸入)"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "輕度 EIB(藥物控制良好)可繼續游泳但預防性 SABA"
+    - "難控制者考慮更換訓練環境(戶外/低三氯胺)"
+  swim_modifications_in_rehab:
+    - "症狀難控時部分患者陸地訓練後再返泳"
+  return_to_train: "依肺功能與症狀個別評估，無統一返泳流程"
+  return_to_compete: ~
+  prognosis: "多數 EIB 可藥物良好控制；長期高暴露不改善環境者可能進展為持久性氣道高反應性；退役競技泳者肺功能可有部分恢復"
+
+population_notes:
+  age:
+    youth: "6 歲前大量(尤室內)泳池暴露為獨立危險因子，有明確劑量反應"
+    adult_beginner: "研究甚少，推測風險較低(訓練/換氣量低)，缺數據"
+    masters: "有 COPD/既有氣道疾病者可能更敏感(DATA GAP)"
+  sex: ~
+  ability:
+    para: ~
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Exercise-induced bronchoconstriction in swimmers, PMC6092370", certainty: 🟢, verified: true }
+  - { citation: "Childhood swimming pool attendance and asthma (Brussels), PMC1626429", certainty: 🟢, verified: true }
+  - { citation: "Nitrogen trichloride exposure and lung function, PMC3488741", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "作者全名/DOI 待 W3"
+  contested:
+    - claim: "游泳在氣喘管理中的地位 / 三氯胺因果"
+      consensus_source: "游泳傳統被推薦為氣喘者較安全運動"
+      dissent_source: "室內三氯胺暴露使建議複雜化；部分學者認為競技泳者氣喘高為選擇偏差非游泳致病；OR 部分研究未達顯著"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

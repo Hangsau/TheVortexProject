@@ -1,0 +1,79 @@
+id: chlorine-eye-irritation
+zh: 氯 / 化學性結膜炎與角膜刺激
+en: Chlorine / chemical conjunctivitis & corneal irritation
+category: C-nonMSK-medical
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [角膜上皮, 結膜, 淚膜]
+mechanism:
+  summary: 真正刺激源非氯本身而是氯胺(chloramines)，尤其三氯胺(NCl₃)——氯與游泳者帶入有機物(汗/尿素/皮脂)反應生成。三氯胺溶解淚膜脂質層、破壞淚膜穩定；池水相對淚液為低張，水分移入角膜上皮致暫時性角膜水腫。結果為化學性結膜炎(紅眼/灼熱/流淚)合併乾眼與暫時性視力模糊。
+  trigger_phase: 室內泳池(三氯胺封閉累積)、水質管理不佳、無泳鏡游泳
+  who: 所有不戴泳鏡游泳者；長時間/高頻訓練競技泳者；室內泳池工作人員
+
+epidemiology:
+  prevalence: "自由氯約 8 ppm 開始出現結膜刺激、20 ppm 明確反應；游泳者紅眼/刺激主觀症狀極常見但缺系統盛行率；室內泳池工作者三氯胺相關眼症狀約佔 1/3–2/5"
+  certainty: 🟡
+  evidence_grade: C
+  caveat: 缺游泳者眼症狀全球前瞻盛行率；『結膜炎』vs『刺激』判準不一；多數研究聚焦職業工作者非一般泳者
+  sources:
+    - "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)"
+
+risk_factors:
+  - { text: "不戴泳鏡游泳", grade: Expert }
+  - { text: "室內泳池(三氯胺不易散逸)", grade: Expert }
+  - { text: "長時間高頻游泳", grade: Expert }
+  - { text: "既有乾眼或配戴角膜接觸鏡", grade: Expert }
+  - { text: "泳池 pH 失衡/高有機負荷", grade: Expert }
+
+prevention:
+  - { text: "全程戴密封型泳鏡", grade: Expert }
+  - { text: "游泳後立即以清水/生理食鹽水沖洗眼部", grade: Expert }
+  - { text: "泳池維持 pH 7.2–7.8 與適當換水率", grade: Expert }
+  - { text: "室內泳池加強通風降低空氣三氯胺", grade: Expert }
+  - { text: "入池前淋浴減少有機負荷", grade: Expert }
+
+management:
+  red_flags:
+    - "游泳後 >48 小時刺激未緩解 → 就醫"
+    - "持續視力模糊(非瞬間) → 就醫"
+    - "膿性分泌物/劇痛/畏光/角膜混濁 → 懷疑細菌/阿米巴角膜炎(見 acanthamoeba-keratitis)"
+  acute: "立即以清水沖洗約 20 分鐘；無防腐劑人工淚液每日多次。化學性刺激通常 24–48 小時自癒，不需抗生素"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "刺激症狀完全緩解即可返泳(無細菌感染時不影響返泳時機)"
+  swim_modifications_in_rehab: ~
+  return_to_train: "症狀緩解後回水並改善護目防護"
+  return_to_compete: ~
+  prognosis: "化學性刺激預後極佳近乎完全自癒；角膜接觸鏡配戴者若無保護有較高進展為細菌/阿米巴角膜炎風險"
+
+population_notes:
+  age:
+    youth: "不習慣戴泳鏡或密封不佳，症狀最常見"
+    adult_beginner: ~
+    masters: "既有乾眼者症狀更明顯"
+  sex: ~
+  ability:
+    para: ~
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Chloramines and ocular irritation in swimming pools, PMC6137694", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "職業暴露 1/3–2/5 眼症狀比率為文獻引述，原始來源待查；游泳者眼症狀盛行率無前瞻數據"
+  contested:
+    - claim: "主要刺激源"
+      consensus_source: "傾向三氯胺為主要致病物質"
+      dissent_source: "低張水質滲透壓效應的相對貢獻比例未定論"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,86 @@
+id: swimmer-dental-erosion
+zh: 牙齒酸蝕（游泳者）
+en: Swimmer's dental erosion
+category: C-nonMSK-medical
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [牙釉質, 牙本質(象牙質)]
+mechanism:
+  summary: 泳池水若 pH 偏低(<4.5)、或即使近中性但對羥基磷灰石飽和度不足(飽和指數為負)，持續接觸即緩慢溶解釉質。競技泳者訓練時口腔反覆浸入水中大口吸吐，口腔接觸池水時數遠超休閒者；高強度後唾液分泌減少(保護下降)。嚴重欠飽和酸性池水(有記錄低達 pH 3.24)為最強致病因素。
+  trigger_phase: pH 維護不當泳池、每日 >2 小時水中訓練、主動吞嚥/浸潤池水
+  who: 競技泳者(訓練時數長)、青少年(釉質仍成熟中)、合併高酸飲食者
+
+epidemiology:
+  prevalence: "競技 vs 休閒對比研究：波蘭 26%(資深組 50%) vs 10%；埃及 60% vs 對照(划船)25.6%(p<0.001)；波蘭池水 pH 中位 7.2 但羥基磷灰石飽和指數 -3.33(中性 pH 仍有腐蝕風險)，埃及最低 pH 3.24"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 多為橫斷面無法確認時間序列；泳池水質差異大；現有研究多聚焦 14–25 歲競技者，老年/休閒數據缺如
+  sources:
+    - "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)"
+    - "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)"
+
+risk_factors:
+  - { text: "競技游泳(高訓練量)", grade: B }
+  - { text: "游泳年資(每多一年 AOR 約 1.24)", grade: B }
+  - { text: "酸性泳池水(pH <4.5)", grade: Expert }
+  - { text: "羥基磷灰石飽和度不足(即使 pH 中性)", grade: B }
+  - { text: "高酸飲食(含糖/酸性飲料)", grade: B }
+  - { text: "既有牙齒過敏", grade: B }
+
+prevention:
+  - { text: "訓練前含氟漱口水(臨床共識，無游泳者 RCT)", grade: Expert }
+  - { text: "緊貼式防護牙托(內面塗氟/CPP-ACP)", grade: B }
+  - { text: "游泳後等 30 分待再礦化後再刷牙", grade: Expert }
+  - { text: "塗布氟化物塗劑(fluoride varnish)", grade: Expert }
+  - { text: "泳池管理者控制 pH 7.2–7.8 並監測飽和指數", grade: Expert }
+
+management:
+  red_flags:
+    - "牙齒冷熱過敏 → 牙科"
+    - "牙齒外形明顯改變(磨短/邊緣薄化) → 牙科"
+    - "釉質損傷進入象牙質(更深層疼痛) → 牙科"
+  acute: "含鉀/精氨酸去敏牙膏；氟化物塗劑、CPP-ACP(酪蛋白磷酸鈣);嚴重酸蝕需牙科樹脂修復。未改善池水水質則修復無意義"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "無需停止游泳；以預防措施為主"
+    - "確診嚴重酸蝕須評估並改善泳池水質"
+  swim_modifications_in_rehab: ~
+  return_to_train: "持續游泳，加強口腔防護"
+  return_to_compete: ~
+  prognosis: "預防措施執行良好者預後佳；未干預競技泳者釉質損傷可持續累積(尤年資長者)"
+
+population_notes:
+  age:
+    youth: "14–18 歲競技者研究最多，釉質仍成熟中風險最高"
+    adult_beginner: ~
+    masters: "牙周退縮/象牙質暴露者池水更快進入敏感層(DATA GAP)"
+  sex:
+    male: "部分研究較高(技術動作較激烈、更多口腔接觸水)"
+    female: ~
+  ability:
+    para: ~
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Dental erosion among competitive swimmers (Poland), PMC3579418", certainty: 🟢, verified: true }
+  - { citation: "Dental erosion in competitive swimmers vs rowers (Egypt), PMC10713671", certainty: 🟢, verified: true }
+  - { citation: "Mouthguard fluoride/CPP-ACP in vitro protection, PMC11425598", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "泰國『盛行率 90–100%』為二手引用待查，不進 public 數字；作者全名/DOI 待 W3"
+  contested:
+    - claim: "pH 中性池水是否仍腐蝕"
+      consensus_source: "酸性池水致釉質溶解為共識"
+      dissent_source: "波蘭研究指 pH 7.2 但飽和指數負值仍腐蝕，需更多研究確認；飽和指數尚未納入全球泳池管理標準"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

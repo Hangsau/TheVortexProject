@@ -1,0 +1,84 @@
+id: swimmers-ear
+zh: 游泳耳 / 外耳道炎
+en: Swimmer's ear / otitis externa
+category: C-nonMSK-medical
+environment: [pool, open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+
+structures: [外耳道皮膚, 耳垢腺, 耳道上皮屏障]
+mechanism:
+  summary: 外耳道靠酸性環境(pH 4–5)、耳垢抗菌與完整上皮屏障防禦。反覆進水沖淡耳垢、升高 pH、破壞上皮，細菌(最常見綠膿桿菌 Pseudomonas aeruginosa，次為金黃色葡萄球菌)增殖定植→感染性外耳道炎。棉花棒/耳塞機械摩擦直接破壞皮膚屏障形成入口。
+  trigger_phase: 游泳(尤頻繁潛水/開放水域)、高溫潮濕、自行掏耳後
+  who: 5–14 歲兒童(發生率最高)、頻繁游泳者、糖尿病/免疫低下者(重症化)、濕疹/乾癬者
+
+epidemiology:
+  prevalence: "終身盛行率約 10%；美國 2003–2007 年外耳道炎年門診約 240 萬次(每千人 8.1)，5–9 歲最高(每千人 18.6)，逾半數就診者為 20 歲以上成人；游泳者罹患急性外耳道炎風險為非游泳者約 5 倍"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 美國 CDC 資料為 2003–2007，缺最新全球系統回顧；開放水域 vs 室內泳池分層數據不足
+  sources:
+    - "StatPearls Otitis Externa, PMID 32310515 (已驗證)"
+    - "CDC MMWR 急性外耳道炎門診資料 2003–2007 (已驗證)"
+
+risk_factors:
+  - { text: "游泳/頻繁潛水", grade: B }
+  - { text: "棉花棒/耳塞/助聽器機械創傷", grade: Expert }
+  - { text: "異位性皮膚炎/濕疹/乾癬", grade: B }
+  - { text: "糖尿病(惡性外耳道炎風險)", grade: B }
+  - { text: "免疫功能低下", grade: Expert }
+  - { text: "高溫潮濕氣候", grade: B }
+
+prevention:
+  - { text: "游泳後傾頭排水、耳道自然乾燥", grade: Expert }
+  - { text: "游泳後異丙醇+白醋耳滴劑(酸化乾燥，無 RCT)", grade: Expert }
+  - { text: "避免棉花棒掏耳", grade: Expert }
+  - { text: "矽膠耳塞(不當使用反致機械傷)", grade: Expert }
+  - { text: "糖尿病嚴格血糖控制", grade: Expert }
+
+management:
+  red_flags:
+    - "發燒 >38.3°C / 耳廓紅腫熱痛 / 耳周淋巴腫 → 感染超出外耳道，就醫"
+    - "糖尿病/免疫低下者耳痛未改善 → 懷疑惡性(壞死性)外耳道炎，緊急就醫"
+    - "耳道肉芽組織或顏面神經麻痺 → 緊急轉介"
+  acute: "第一線局部抗生素±類固醇耳滴劑(多黏菌素B/新黴素/氫化可體松、氧氟沙星或環丙沙星)，多在 7–10 天痊癒。口服抗生素非第一線，僅限糖尿病/免疫低下/惡性外耳道炎或合併中耳炎。疼痛用乙醯胺酚/NSAIDs。48–72 小時無改善再評估。惡性外耳道炎需靜脈/長療程抗假單胞菌抗生素±外科清創"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "症狀(疼痛/分泌物)完全消失再返泳"
+    - "惡性外耳道炎完成全療程+影像確認控制"
+  swim_modifications_in_rehab: ~
+  return_to_train: "急性期暫停游泳，症狀完全緩解後回水"
+  return_to_compete: ~
+  prognosis: "急性單純型預後極佳，5–7 天痊癒；慢性反覆者有耳道狹窄/聽損風險；惡性外耳道炎致死率高(顱內侵犯為主要死因)"
+
+population_notes:
+  age:
+    youth: "5–9 歲發生率最高，但少重症"
+    adult_beginner: ~
+    masters: "糖尿病者惡性外耳道炎風險，致死率顯著較高"
+  sex: ~
+  ability:
+    para: ~
+  lifecycle:
+    open_water: "開放水域暴露量大，預防依從性決定風險"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Otitis Externa, StatPearls (Medina-Blasini & Sharman), PMID 32310515", certainty: 🟢, verified: true }
+  - { citation: "CDC MMWR Estimated Burden of Acute Otitis Externa United States 2003–2007", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "美國門診數字為 2003–2007，最新全球盛行率待補；『5 倍風險』為 StatPearls 引述，原始研究待查"
+  contested:
+    - claim: "預防性酸化耳滴劑與耳塞效益"
+      consensus_source: "游泳後乾燥耳道為共識"
+      dissent_source: "酸化滴劑無 RCT；耳塞不當使用反增創傷"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
