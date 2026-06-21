@@ -1,0 +1,86 @@
+id: poolside-slip-fall
+zh: 池畔濕滑跌倒傷
+en: Poolside slip-and-fall injuries
+category: E-acute-trauma
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [跌倒頭部撞擊, 保護性跌倒骨折(腕/髖), 軟組織挫傷裂傷]
+
+structures: [頭/腦, 腕(橈骨遠端), 髖(股骨頸), 尾椎/骨盆, 肘, 皮膚軟組織]
+mechanism:
+  summary: 池畔濕磁磚/混凝土摩擦係數驟降——乾混凝土靜摩擦約 0.6（ASTM 建議濕地最低標）、泳池濕區常 <0.4（部分量測濕磁磚低至 0.3），赤足+水膜形成近似潤滑層。失去抓地→滑倒。跌倒生物力學分兩型：向後/側滑頭枕部直接撞硬面（腦震盪/顱內出血）；伸手保護性跌倒（FOOSH）力沿前臂傳致橈骨遠端骨折（Colles），或側髖著地致股骨頸骨折（高齡）。奔跑/嬉戲放大速度與衝量。
+  trigger_phase: 出入水梯、起跳台周邊、淋浴更衣濕區、嬉戲奔跑、提重物失衡
+  who: 兒童（奔跑嬉戲）、高齡泳者（平衡/骨密度↓）、視覺受限（泳鏡起霧/摘鏡）、地面排水不良場館
+
+epidemiology:
+  prevalence: "美國泳池相關急診估計每年數十萬件（含各機制），其中滑倒跌落佔相當比例——具體『約 35 萬件/60% 為滑倒』為二手引用、原始登記待查；高齡髖骨折後一年死亡率 20–30%（一般骨科數據，非游泳專屬）"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 池畔滑倒缺乏獨立流病登記，多併入一般跌倒或泳池傷害統計；摩擦係數數字依材質/清潔/量測法差異大
+  sources:
+    - "ASTM F2508 / 防滑摩擦係數標準（工程標準，非流病）"
+    - "Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）"
+
+risk_factors:
+  - { text: "濕滑硬質地面（摩擦係數 <0.5）", grade: A }
+  - { text: "赤足+水膜", grade: B }
+  - { text: "奔跑嬉戲（兒童）", grade: B }
+  - { text: "高齡（平衡退化+骨質疏鬆）", grade: B }
+  - { text: "視覺受限（泳鏡起霧/近視摘鏡）", grade: Expert }
+  - { text: "場館排水不良/無防滑處理", grade: B }
+
+prevention:
+  - { text: "池畔防滑表面（粗糙磁磚/防滑塗層，符合濕地摩擦係數標準）", grade: A }
+  - { text: "『池畔禁跑』規則與監督（尤兒童）", grade: B }
+  - { text: "良好排水避免積水", grade: B }
+  - { text: "高齡泳者防滑鞋/扶手輔助出入水", grade: Expert }
+  - { text: "充足照明與濕區警示標示", grade: Expert }
+
+management:
+  red_flags:
+    - "頭部著地後意識改變/持續嘔吐/抽搐/瞳孔不等 → 顱內出血疑慮，緊急就醫"
+    - "腕/髖跌倒後變形/無法承重/劇痛 → 骨折疑慮，固定就醫影像"
+    - "高齡跌倒後髖/鼠蹊痛無法站立 → 股骨頸骨折，勿勉強行走"
+  acute: "頭部撞擊依腦震盪流程評估，紅旗症狀緊急送醫。橈骨遠端骨折：固定+冰敷+抬高+影像（多需復位）。股骨頸骨折：勿移動患肢、保暖、EMS（高齡常需手術）。軟組織挫傷裂傷 RICE+傷口加壓清創。尾椎挫傷對症止痛+坐墊"
+  pain_rules: ~
+  rehab: "骨折後依固定/手術方式漸進負重與關節活動度；高齡須併跌倒預防與肌力平衡訓練"
+  functional_progression_criteria:
+    - "腦震盪：依分級協議無症狀回場"
+    - "橈骨遠端骨折：影像癒合（一般 6 週）+腕關節活動度恢復"
+    - "股骨頸骨折：骨科評估負重進展"
+  swim_modifications_in_rehab: ~
+  return_to_train: "依傷型癒合（腦震盪逐步/骨折影像確認）後回水"
+  return_to_compete: "完成回場標準且無症狀 → 復賽"
+  prognosis: "輕度挫傷數日恢復；橈骨遠端骨折多良好；高齡股骨頸骨折預後較差（一年死亡率 20–30%，併發症與失能風險高）；頭部撞擊視傷情而定"
+
+population_notes:
+  age:
+    youth: "奔跑嬉戲滑倒為兒童池畔主要傷因"
+    adult_beginner: ~
+    masters: "高齡跌倒骨折（髖/腕）後果最嚴重，預防最關鍵"
+  sex: ~
+  ability:
+    para: "行動輔具使用者出入水濕區風險高，需無障礙防滑設計"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "ASTM F2508 Standard Practice for Validation of Walkway Tribometers", certainty: 🟡, verified: false }
+  - { citation: "Hip fracture one-year mortality (general orthopedic literature, PMID 待補)", certainty: 🟡, verified: false }
+
+flags:
+  pending_verification:
+    - "『美國每年約 35 萬件泳池傷害、60% 為滑倒』為二手引用，原始登記（CPSC/NEISS?）作者/年份/DOI 待 W3；不進 public 數字"
+    - "濕磁磚摩擦係數 0.3 具體量測來源待查"
+  contested:
+    - claim: "髖骨折一年死亡率"
+      consensus_source: "高齡髖骨折後死亡率顯著升高為骨科共識"
+      dissent_source: "20–30% 數字依族群/合併症差異大，非游泳專屬"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

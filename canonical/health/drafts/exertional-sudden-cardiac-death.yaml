@@ -1,0 +1,96 @@
+id: exertional-sudden-cardiac-death
+zh: 運動性猝死（游泳 / 運動員）
+en: Exertional sudden cardiac death — swimming / athletes
+category: D-systemic-acute
+environment: [pool, open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+fatal_acute: true
+
+structures: [心臟(心肌/傳導系統/冠狀動脈), 自主神經系統]
+mechanism:
+  summary: 運動中或運動後 1 小時內突發心跳驟停(多為心室顫動)。病理基礎多元：肥厚性心肌病(HCM)使心肌增厚影響傳導；心肌炎使發炎心肌電不穩；長 QT 等離子通道病變於運動觸發惡性心律不整；冠狀動脈異常運動時受壓缺血；commotio cordis 為胸前鈍擊在 T 波升段觸發 VF。游泳特有：面浸冷水強烈副交感(潛水反射)與運動交感激活形成自主神經衝突，在潛在易感者可致命。
+  trigger_phase: 游泳中突然意識喪失/沉水；鐵人三項游泳段(冷水+面浸+起跳緊張過度換氣多重壓力疊加)為最高風險情境
+  who: 家族猝死史者、未診斷 HCM/LQTS/WPW、心肌炎後過早復訓者、男性(約女性 6 倍)、Masters(冠心病加入)
+
+epidemiology:
+  prevalence: "競技運動員(≤35 歲)SCA/SCD 男性約 1.46、女性約 0.30 /10 萬運動員年；≤35 歲青年運動員猝死中 HCM 約佔 36%"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 游泳池獨立 SCD 數字無可靠單一來源，多依運動員整體數據推算；鐵人三項游泳段每 10 萬數字研究間差異大
+  sources:
+    - "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)"
+    - "義大利 ECG 篩查自然實驗(SCD 3.6→0.4 /10 萬，降 89%) (已驗證 URL)"
+    - "Commotio Cordis in 2023, PMC10356869 (已驗證)"
+
+risk_factors:
+  - { text: "HCM(肥厚性心肌病，最常見單一原因)", grade: A }
+  - { text: "先天性冠狀動脈異常", grade: B }
+  - { text: "心肌炎(尤近期病毒性後過早復訓)", grade: B }
+  - { text: "長 QT 症候群(冷水浸入為特定觸發)", grade: B }
+  - { text: "Wolff-Parkinson-White(WPW)", grade: B }
+  - { text: "男性(約 6 倍風險)", grade: A }
+  - { text: "commotio cordis(胸前鈍擊 T 波敏感期)", grade: B }
+  - { text: "冷水+面浸+屏氣(自主神經衝突)", grade: B }
+  - { text: "家族 SCD 史(一等親 <50 歲猝死)", grade: Expert }
+  - { text: "賽前感冒/發燒(可能遮蔽心肌炎)", grade: Expert }
+
+prevention:
+  - { text: "運動前篩查(病史+理學檢查±ECG)", grade: A }
+  - { text: "ECG 篩查(ESC 推薦；義大利自然實驗 89% 減 SCD，美 ACC 立場有爭議)", grade: A }
+  - { text: "心肌炎後充分休息(≥6 個月，LVEF 恢復+無誘發心律不整後方回訓)", grade: Expert }
+  - { text: "賽場/泳池 AED 即時可取得 + 人員 CPR/AED 培訓", grade: A }
+  - { text: "不在感冒/發燒期訓練", grade: Expert }
+  - { text: "LQTS 已知者避免冷水/強度衝刺", grade: Expert }
+
+management:
+  red_flags:
+    - "游泳中意識喪失/突然沉水 → 立即救援+CPR"
+    - "運動中突發心悸/胸痛/暈厥任一 → 立即停止就醫"
+    - "不明原因劇烈呼吸困難(排除溺水) → 排查心因"
+  acute: "安全地點立即 CPR(有目擊且具技能可先水中救援呼吸再上岸)→上岸 5 次救援呼吸+按壓(30:2)→盡快 AED(SCD 多為 VF，除顫最有效)→持續 CPR 直至 AED/救援到場；懷疑心肌炎者入院延伸心臟評估，不可未評估復訓"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "HCM：2022 JACC 趨個別化風險分層，不再一律禁競技"
+    - "心肌炎：≥6 個月休息+LVEF 正常+運動誘發心律不整陰性"
+    - "LQTS：β 阻斷劑治療下部分可恢復游泳"
+  swim_modifications_in_rehab: ~
+  return_to_train: "依病因經心臟科風險分層評估綠燈 → 漸進回水"
+  return_to_compete: "心臟專科評估通過 + 個別化風險討論 → 復賽"
+  prognosis: "commotio cordis 即時 CPR+AED 存活可達 >50%(過去曾低至 15%)；一般運動驟停每延遲 1 分鐘存活率降 7–10%"
+
+population_notes:
+  age:
+    youth: "HCM/LQTS/commotio cordis 為主，需強制運動前篩查"
+    adult_beginner: "未診斷冠心病/HCM 風險，篩查應覆蓋成人"
+    masters: "冠心病為首要新增因子；ECG+超音波評估更重要"
+  sex:
+    male: "整體約 6 倍風險"
+    female: "整體風險低，但先天冠狀動脈異常在女性 SCD 佔比更高"
+  ability: ~
+  lifecycle:
+    open_water: "鐵人三項游泳段多重自主神經壓力疊加，為最高 SCD 風險情境之一"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Sex Differences in the Incidence of SCA/Death in Competitive Athletes: systematic review and meta-analysis, PMC11985649", certainty: 🟢, verified: true }
+  - { citation: "Athletic Activity for Patients with Hypertrophic Cardiomyopathy, JACC 2022", certainty: 🟢, verified: true }
+  - { citation: "Commotio Cordis in 2023, PMC10356869", certainty: 🟢, verified: true }
+  - { citation: "Meta-analysis on ECG Screening for SCD in Young Athletes, PMC10478328", certainty: 🟢, verified: true }
+  - { citation: "Lundström et al. diving reflex arrhythmia 2025, PMC12234767", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "作者全名/DOI 待 W3；commotio cordis 在游泳中具體發生率幾乎無文獻(推論自其他運動)"
+  contested:
+    - claim: "ECG 常規篩查"
+      consensus_source: "ESC 主張 ECG 篩查(義大利自然實驗為最強證據)"
+      dissent_source: "ACC/AHA 反對常規 ECG 篩查(混淆因素多)"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

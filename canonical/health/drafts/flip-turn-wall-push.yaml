@@ -1,0 +1,80 @@
+id: flip-turn-wall-push
+zh: 轉身 / 蹬牆相關急性傷
+en: Flip-turn and wall-push acute injuries
+category: E-acute-trauma
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+subtypes: [蹬牆踝/足扭傷, 蹬牆膝過伸, 轉身腕/手撞牆, 蹬牆下背急性痛]
+
+structures: [踝/足, 膝, 腕/手, 腰椎/下背]
+mechanism:
+  summary: 翻滾轉身在牆面瞬間產生高爆發離心-向心負荷。蹬牆相足踝若角度不正（足背屈/內翻）或牆面濕滑打滑→踝扭傷；膝在屈曲蹬伸瞬間若過度伸展或扭轉→髕股/半月板應力。轉身時手臂未及時收回或誤判牆距→腕/指撞牆。蹬牆爆發伴軀幹屈伸，核心控制不足者下背急性肌肉拉傷。多為技術或疲勞末端時序失準所致。
+  trigger_phase: 翻滾觸牆-蹬牆相、轉身入水手臂位置相、疲勞末段反覆轉身
+  who: 競技泳者（高頻轉身）、轉身技術未成熟青少年、疲勞訓練末段、誤判牆距者
+
+epidemiology:
+  prevalence: "無可靠獨立流病數字——轉身/蹬牆急性傷多併入一般游泳傷害統計，未單獨計列"
+  certainty: 🟡
+  evidence_grade: C
+  caveat: 缺乏針對轉身機制的前瞻傷害登記；多為個案或生物力學研究外推
+  sources:
+    - "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)"
+    - "Swimming injuries narrative review, PubMed 33010194 (已驗證)"
+
+risk_factors:
+  - { text: "轉身技術未成熟（足踝角度/牆距判斷）", grade: Expert }
+  - { text: "牆面濕滑/觸牆板老化打滑", grade: Expert }
+  - { text: "疲勞末段時序失準", grade: B }
+  - { text: "核心控制不足（蹬牆下背代償）", grade: Expert }
+  - { text: "既往踝/膝不穩定", grade: B }
+
+prevention:
+  - { text: "系統化轉身技術教學（觸牆時機/足位/牆距）", grade: Expert }
+  - { text: "防滑觸牆板與良好維護", grade: Expert }
+  - { text: "核心穩定訓練支撐蹬牆爆發", grade: B }
+  - { text: "疲勞時降低轉身強度避免時序失準", grade: Expert }
+
+management:
+  red_flags:
+    - "蹬牆後踝/膝即刻腫脹+無法承重 → 韌帶撕裂/骨折疑慮，影像評估"
+    - "撞牆後腕/指變形劇痛 → 骨折疑慮，固定影像"
+    - "下背急性劇痛伴下肢放射/麻木 → 排除椎間盤急性突出"
+  acute: "踝/膝扭傷 RICE+功能性評估韌帶完整性，中重度影像。腕/指撞傷固定+影像排除骨折。下背肌肉拉傷相對休息+止痛+早期活動，有神經症狀就醫"
+  pain_rules: ~
+  rehab: "踝/膝扭傷依分級漸進本體感覺與肌力；轉身技術再教育避免再傷"
+  functional_progression_criteria:
+    - "踝/膝扭傷：無痛全活動度+單腳穩定+無腫脹"
+    - "下背：核心控制恢復+無神經症狀"
+  swim_modifications_in_rehab:
+    - "急性期改用開放式觸牆/減少翻滾轉身"
+  return_to_train: "患部無痛全功能+轉身技術修正 → 漸進回轉身訓練"
+  return_to_compete: "全功能+無代償 → 復賽"
+  prognosis: "多數軟組織傷數週恢復；反覆踝扭傷未充分復健致慢性不穩定；技術矯正後復發率低"
+
+population_notes:
+  age:
+    youth: "轉身技術學習期急性傷較多"
+    adult_beginner: "初學翻滾轉身誤判牆距致撞擊"
+    masters: ~
+  sex: ~
+  ability:
+    para: "依肢體功能個別化轉身方式，風險情境不同"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: "翻滾轉身技術——時序與足位精準度直接影響受傷風險"
+  perception_link: ~
+
+references:
+  - { citation: "Biomechanics of swimming flip-turn (wall contact kinetics), PMC6409673", certainty: 🟢, verified: true }
+  - { citation: "Swimming injuries: a narrative review, PubMed 33010194", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "轉身/蹬牆急性傷無獨立發生率數字；作者全名/DOI 待 W3 補"
+  contested: []
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

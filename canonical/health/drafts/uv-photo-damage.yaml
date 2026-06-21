@@ -1,0 +1,87 @@
+id: uv-photo-damage
+zh: 曬傷 / 光化性傷害（皮膚 + 眼睛）
+en: UV / photo-damage — skin cancer & pterygium in outdoor swimmers
+category: C-nonMSK-medical    # 慢性環境/皮膚-眼科，歸 C 非肌骨醫學(計畫 §1 列於 D 環境，語意上 C 更貼切，Phase 2 一致性審再定)
+environment: [open_water, surf]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+
+structures: [皮膚(表皮 DNA), 眼球表面(結膜/角膜), 水晶體]
+mechanism:
+  summary: 戶外泳者雙重 UV 暴露：直接陽光+水面反射(10–20%)，加上水平泳姿使軀幹頸部暴露最大化，實際劑量高於陸上同等時間。UV-B 誘導 DNA 損傷(嘧啶二聚體)長期累積致鱗狀細胞癌/基底細胞癌/黑色素瘤；眼球累積 UV 致翼狀胬肉與白內障。游泳後防曬因沾水降效，需防水型並頻繁補擦。
+  trigger_phase: 長時間水面浮游(鐵人/馬拉松游泳)、高峰時段(10am–2pm)、未戴護目鏡/太陽眼鏡
+  who: 熱帶/赤道戶外開放水域泳者、淺膚色者、兒童期大量戶外游泳者(DNA 損傷長期累積)
+
+epidemiology:
+  prevalence: "澳洲衝浪/泳者黑色素瘤點盛行率為一般澳洲族群 76 倍(高 UV 地區，不可外推全球)；翼狀胬肉全球約 12%(20 歲以下 3%、80 歲以上 19.5%)"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 皮膚癌流病多為澳洲研究外推需謹慎；翼狀胬肉 12%/76 倍/15000 J·m⁻² 等數字來自二次來源，原始論文作者待查
+  sources:
+    - "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)"
+    - "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)"
+    - "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)"
+
+risk_factors:
+  - { text: "累積 UV 暴露(>5 小時/日戶外)", grade: A }
+  - { text: "戶外運動(游泳/衝浪/釣魚)", grade: B }
+  - { text: "低緯度地區(南北緯 30 度內，台灣在翼狀胬肉帶)", grade: B }
+  - { text: "淺膚色/易曬傷體質(對皮膚癌)", grade: B }
+  - { text: "不戴護目鏡(對翼狀胬肉/白內障)", grade: Expert }
+  - { text: "水面反射增加劑量", grade: B }
+  - { text: "兒童期 UV 暴露(長期累積)", grade: B }
+
+prevention:
+  - { text: "防水廣譜防曬乳(SPF 30+)每 2 小時補擦、出水後再補", grade: A }
+  - { text: "穿防曬泳裝(UPF 50+ 上衣/泳帽)", grade: B }
+  - { text: "UV 護目鏡/側翼遮蔽太陽眼鏡(護翼狀胬肉)", grade: B }
+  - { text: "高峰時段(10am–2pm)避開或縮短訓練", grade: Expert }
+  - { text: "戶外泳者年度全身皮膚科檢查", grade: Expert }
+
+management:
+  red_flags:
+    - "皮膚 ABCDE：不對稱/邊界不規則/多色/直徑 >6mm 病灶、不癒合潰瘍結痂、快速增大色素區 → 皮膚科"
+    - "眼睛：視力下降/模糊(翼狀胬肉侵入視軸)、眼表組織快速增大、持續眼紅刺激 → 眼科"
+  acute: "急性曬傷：移入陰涼+冷濕敷(非冰塊直接)+保濕+補水+非處方止痛(ibuprofen/acetaminophen)；大面積水泡/高燒就醫。翼狀胬肉輕度人工淚液+持續防護，侵犯視軸/快速增大則手術切除(mitomycin C 降復發)"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "曬傷待皮膚癒合(無水泡/剝落)再回水防感染"
+    - "翼狀胬肉術後通常 4–6 週避免氯水接觸"
+  swim_modifications_in_rehab: ~
+  return_to_train: "曬傷皮膚癒合後/翼狀胬肉術後復原後 → 回水並強化防護"
+  return_to_compete: ~
+  prognosis: "早期皮膚癌(尤黑色素瘤)5 年存活 >95%，轉移性預後差；翼狀胬肉手術成功率高但復發 10–40%(結膜移植術可降至 <5%)"
+
+population_notes:
+  age:
+    youth: "皮膚癌潛伏期數十年，但兒童期 UV 暴露是日後皮膚癌最強獨立預測因子"
+    adult_beginner: ~
+    masters: "累積 UV 最多，翼狀胬肉及皮膚癌盛行率最高，定期篩查尤重要"
+  sex:
+    male: "翼狀胬肉、SCC 風險較高"
+    female: ~
+  ability: ~
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Point prevalence non-melanoma/melanoma skin cancers Australian surfers and swimmers SE Queensland/N NSW, PMC9057286", certainty: 🟢, verified: true }
+  - { citation: "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes — Narrative Review, Cancers 2023, PMC10339925", certainty: 🟢, verified: true }
+  - { citation: "Occupational Solar Radiation at Different Latitudes and Pterygium systematic review, PMC5800136", certainty: 🟢, verified: true }
+  - { citation: "Ultraviolet Light and Skin Cancer in Athletes, PMC3445124", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "翼狀胬肉 12%、76 倍黑色素瘤、15000 J·m⁻² 等數字原始論文作者/DOI 待 W3 WebFetch；目前列 B 級，不進 public 數字"
+  contested:
+    - claim: "水面反射『增加劑量』對皮膚癌/翼狀胬肉的獨立貢獻"
+      consensus_source: "水面反射 10–20% 為物理測量共識"
+      dissent_source: "缺乏對比單純戶外時間的大型對照研究"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

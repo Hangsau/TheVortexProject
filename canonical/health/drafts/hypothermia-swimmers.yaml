@@ -1,0 +1,91 @@
+id: hypothermia-swimmers
+zh: 游泳者低體溫（開放水域）
+en: Hypothermia in swimmers / open-water hypothermia
+category: D-systemic-acute
+environment: [open_water]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+fatal_acute: true          # 重度(<28°C)可致命
+
+structures: [核心體溫調節系統, 心臟傳導系統, 中樞神經系統]
+mechanism:
+  summary: 水導熱率為空氣 25 倍，泳者持續對流/傳導散熱。散熱速率超過產熱→核心體溫下降。輕度(32–35°C)顫抖+協調下降；中度(28–32°C)意識模糊+心律不整危險升；重度(<28°C)心室顫動風險劇增。「後降(afterdrop)」是關鍵危機：離水後周邊冷血回流使核心溫續降，可能在救援後才誘發驟停。
+  trigger_phase: 長距離冷水(<18°C)游泳/超距賽末段；離水後不當處置(站立行走加速後降)
+  who: 低體脂瘦型泳者、低體重兒童、未穿防寒衣的 10km+ 開放水域選手；超距(海峽)泳者核心溫可降 3–4°C 持續數小時
+
+epidemiology:
+  prevalence: "無全球獨立盛行率(多以賽事為單位)；長距離開放水域賽事為顯著醫療風險"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 同一場賽事可同時出現低體溫與高體溫個案(核心溫變化 −3.1 至 +2.7°C)；多數研究為觀察性無對照
+  sources:
+    - "Brannigan et al., Hypothermia... Mass Participation Open Water Swimming, Wilderness Environ Med 2009 (已驗證)"
+    - "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
+    - "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)"
+
+risk_factors:
+  - { text: "水溫 <18°C(競賽分界)", grade: B }
+  - { text: "低體脂率/低體重", grade: B }
+  - { text: "長距離(10km+ / >1 小時)", grade: B }
+  - { text: "未穿防寒衣(規則允許時不穿)", grade: B }
+  - { text: "賽前訓練量不足", grade: Expert }
+  - { text: "脫水(降低循環效率)", grade: Expert }
+
+prevention:
+  - { text: "遵守 World Aquatics 水溫規範(下限近年趨提高)", grade: Expert }
+  - { text: "規則允許下穿防寒衣", grade: B }
+  - { text: "賽事設計合理中止時限(視水溫/預期時間)", grade: Expert }
+  - { text: "賽後即時隔熱(乾燥保暖衣物)", grade: Expert }
+  - { text: "辨識輕度低體溫症狀及早退出，不超時", grade: Expert }
+
+management:
+  red_flags:
+    - "顫抖停止(可能為中度加重、產熱失效) → 警訊"
+    - "意識混亂/言語不清/行為怪異(核心約 32°C) → 緊急處置"
+    - "無法協調動作/心律不整/意識喪失 → 緊急後送"
+    - "後降危機：上岸看似回暖仍可能數十分鐘內惡化；禁止讓傷者站立行走"
+  acute: "WMS 2019：輕柔移出冷水保持水平(直立致救援崩潰)→防風脫濕衣隔熱保暖(避免直接熱敷防燙傷+加劇後降)→暖化腋下/鼠蹊(熱水袋)+暖氧→禁劇烈活動。輕度被動復溫；中度主動外部複溫+嚴密監測心律；重度緊急後送 ECMO 體外加溫。無心跳則 CPR 直至醫院(『暖了才算死』原則)"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "輕度完全恢復後數天可回水"
+    - "中重度需醫師評估心臟功能、排除續發心律不整風險"
+  swim_modifications_in_rehab:
+    - "反覆低體溫事件須排查冷誘發心律不整易感體質"
+  return_to_train: "輕度恢復後數天；中重度待心臟評估綠燈"
+  return_to_compete: "核心溫調節與心臟評估正常 + 賽前準備(防寒/習化)到位 → 復賽"
+  prognosis: "輕中度多完全恢復；重度(<28°C)死亡率高但冷水低體溫即使外表『死亡』仍有復甦可能，應積極救治"
+
+population_notes:
+  age:
+    youth: "體表面積比大降溫更快，賽事應採更嚴格水溫門檻"
+    adult_beginner: ~
+    masters: "Doha 2024 顯示 Masters 核心溫下降更顯著；心臟儲備降使中度低體溫心律不整風險更高"
+  sex:
+    female: "傳統認為體脂保護，但競賽研究結論不一致(肌肉量影響可能更大)"
+    male: ~
+  ability: ~
+  lifecycle:
+    open_water: "超距(海峽)泳者核心溫可降 3–4°C 持續數小時"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Brannigan et al., Hypothermia is a Significant Medical Risk of Mass Participation Long-Distance Open Water Swimming, Wilderness Environ Med 2009", certainty: 🟢, verified: true }
+  - { citation: "Thermoregulatory responses open water and pool swimming, JSAMS 2025, PubMed 40783351", certainty: 🟢, verified: true }
+  - { citation: "Core-Temperature Responses 3-km World Aquatics Open-Water Masters Doha 2024, PubMed 39500300", certainty: 🟢, verified: true }
+  - { citation: "WMS CPG Accidental Hypothermia 2019 Update", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "作者全名/DOI 待 W3；World Aquatics 16°C 下限是否足夠保護仍有爭議"
+  contested:
+    - claim: "後降(afterdrop)臨床意義量值"
+      consensus_source: "臨床仍建議保守處置(禁站立行走)"
+      dissent_source: "部分研究認為其量值常被高估"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

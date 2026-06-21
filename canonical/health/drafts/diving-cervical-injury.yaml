@@ -1,0 +1,91 @@
+id: diving-cervical-injury
+zh: 跳水 / 入水頸椎與脊髓損傷
+en: Diving-related cervical spine and spinal cord injury
+category: E-acute-trauma
+environment: [pool, open_water, surf]
+sport_variant: [swim, diving_entry]
+layer: [public, clinical]
+fatal_acute: true          # 災難性，可致四肢癱/死亡，layout 置頂
+
+structures: [頸椎(C4–C6), 脊髓, 椎間盤/韌帶]
+mechanism:
+  summary: 入水頭頂先觸底，頸椎受軸向壓縮力(axial loading)致爆裂性骨折或骨折脫位；脊髓同時受壓/撕裂/缺血→四肢癱(tetraplegia)。關鍵物理條件：入水角度過陡+水深不足以吸收減速距離。
+  trigger_phase: 從池邊/跳水台/石礁/防波堤往不明深度水域頭朝下跳；競賽出發台起跳角度過陡；撞上隱藏障礙(礁石/沙洲)
+  who: 年輕男性(97.5–98.7%)；非正式場合、下午/傍晚、夏日水域；首次使用該場地者
+
+epidemiology:
+  prevalence: "美國每年約 800 起跳水致脊髓損傷(約 90% 永久癱)；90% 發生於水深 <6 英尺(1.83m)、57% <4 英尺(1.22m)；受傷節段 C5 最常見(60.9%)；入院 55% 為完全性四肢癱(AIS A)"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 「每年 800 起」為多個美國傷害登記的廣泛引用估計(非單一 peer-reviewed 計數)；跳水佔所有脊髓損傷 1.2–22%(族群/登記系統差異大)
+  sources:
+    - "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)"
+    - "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"
+    - "Quebec 44-year diving SCI study, ScienceDirect (已驗證)"
+
+risk_factors:
+  - { text: "水深不足(<1.5m)——最強可改變風險因子", grade: A }
+  - { text: "飲酒(41.7% 案例涉及)", grade: B }
+  - { text: "年輕男性(16–35 歲，社會風險行為)", grade: B }
+  - { text: "未知水域/首次使用場地(無法判斷深度/障礙)", grade: B }
+  - { text: "無救生員在場(延誤急救)", grade: B }
+  - { text: "缺乏正式出發台訓練(競賽情境入水角度過陡)", grade: Expert }
+
+prevention:
+  - { text: "禁止在水深 <1.35m(競賽出發)/<2.74m(一般跳水，美紅十字)水域頭朝下入水", grade: A }
+  - { text: "陌生水域一律腳先入水", grade: A }
+  - { text: "競賽出發台須接受正式指導(僅 21.7% 教練用機構制定的潛水進展協議)", grade: B }
+  - { text: "禁止在私人/旅館泳池跳水(普遍 <1.5m)", grade: B }
+  - { text: "清楚設置水深標示與『禁止跳水』標誌", grade: Expert }
+  - { text: "飲酒後禁止入水", grade: B }
+
+management:
+  red_flags:
+    - "入水後頸/背劇痛+四肢麻木/刺痛/無力 → 立刻啟動脊椎預防措施"
+    - "意識不清漂浮水面 → 假定存在脊椎傷害直至排除"
+    - "呼吸困難(頸脊髓損傷可影響膈神經致呼吸衰竭) → 緊急"
+  acute: "脊椎預防序列：水中面朝上 log roll 保持頭頸軀幹直線(不扭不彎)維持氣道→多人協助移至脊板頭頸軀幹同一直線→頸圈/側面穩定物固定→立刻 EMS(不可自行起身/步行)→呼吸停止則維持頭頸穩定下 CPR(jaw-thrust，避免頭後仰)。傷後 24 小時內手術減壓與不完全損傷的神經恢復相關"
+  pain_rules: ~
+  rehab: "水療(aquatic therapy)為脊髓損傷主要復健工具；頸椎固定後須影像確認骨癒合再規劃水中活動"
+  functional_progression_criteria:
+    - "完全性四肢癱(AIS A)：幾乎不可能回競技游泳，水療為主"
+    - "不完全損傷(AIS B–D)：神經外科/復健科評估後個別化，回水前功能性評估"
+  swim_modifications_in_rehab: ~
+  return_to_train: "依損傷完全性個別化；不完全損傷經神外/復健評估後漸進"
+  return_to_compete: ~
+  prognosis: "完全損傷神經改善率低；不完全損傷(AIS B–D)預後顯著較好；整體『outcomes still unsatisfactory』。早期(<24h)減壓與不完全損傷恢復相關"
+
+population_notes:
+  age:
+    youth: "成人監督缺失或允許跳水時暴露於風險"
+    adult_beginner: ~
+    masters: "跌入水中(非主動跳水)為不同機制(見 poolside-slip/drowning)"
+  sex:
+    male: "97–98% 案例(社會風險行為+飲酒)"
+    female: "明顯低風險(<3%)"
+  ability:
+    para: "潛在風險尚無充分文獻"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: "競賽出發台入水角度技術(racing start)——與出發台撞擊傷共享預防"
+  perception_link: ~
+
+references:
+  - { citation: "Prevention of spinal cord injuries in swimming pools, PubMed 9267915", certainty: 🟢, verified: true }
+  - { citation: "Cervical spine injuries 34 patients, PMC2899837", certainty: 🟢, verified: true }
+  - { citation: "Overview of Spinal Injuries Aegean Coast(24h decompression), PMC8192199", certainty: 🟢, verified: true }
+  - { citation: "Spinal Cord Injury With Tetraplegia, SAGE 2021, PubMed 32909818", certainty: 🟢, verified: true }
+  - { citation: "World Aquatics 1.35m diving depth rule(STA technical notice 2023)", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "『每年 800 起』『90%/57% 水深』為廣泛引用估計，原始登記作者/出處待 W3 核;作者全名/DOI 待補"
+  contested:
+    - claim: "各組織最低水深標準不一致"
+      consensus_source: "禁止淺水跳水、陌生水域腳先入水為強烈共識"
+      dissent_source: "FINA/World Aquatics 1.35m(競賽) vs 美紅十字 2.74m(一般跳水)——適用情境不同"
+  vintage_warning: true       # 大量流病數據 1990–2015，近年出發台設計改良但缺近期高品質登記
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,87 @@
+id: cold-water-shock
+zh: 冷水休克 / 冷水衝擊反應
+en: Cold water shock / Cold shock response
+category: D-systemic-acute
+environment: [open_water, surf]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+fatal_acute: true
+
+structures: [皮膚溫度感受器, 自主神經系統, 呼吸系統, 心臟傳導系統]
+mechanism:
+  summary: 皮膚急劇降溫(≤15–25°C 水)在 5–30 秒內反射觸發強制喘氣(gasp)→過度換氣→血壓心率急升+血管收縮，使深水中呼吸控制喪失易嗆水，連強壯泳者也可數秒內溺水。若同時面浸觸發潛水反射(迷走→心動過緩)與交感心搏過速形成「自主神經衝突」，可誘發室性心律不整甚至心室顫動。
+  trigger_phase: 突然跳入/意外落入冷水的最初數分鐘(此窗口溺水風險最高，冷休克反應隨後自行減退)
+  who: 突然入冷水的非習化者、意外落水者(落橋/翻船)、兒童(體表面積比大反應更劇)、有心律不整史者
+
+epidemiology:
+  prevalence: "無可靠獨立死亡數字——案例幾乎都歸類為『溺水』，與低體溫死亡混淆，現場目擊稀少"
+  certainty: 🟠
+  evidence_grade: B
+  caveat: 被認為是意外落水後最常見的『立即』死因(低體溫需 >30 分才危及生命)；機制證據多為生理實驗，缺大型流病
+  sources:
+    - "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003 (已驗證 URL)"
+    - "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)"
+
+risk_factors:
+  - { text: "水溫 <15°C(尤 <10°C)", grade: B }
+  - { text: "未預期/意外落水(vs 自願入水)", grade: Expert }
+  - { text: "未進行冷水習化", grade: A }
+  - { text: "屏氣/潛水動作(加劇自主神經衝突)", grade: B }
+  - { text: "既有心律不整/長 QT/心臟病", grade: Expert }
+  - { text: "兒童(體表面積比大反應更強)", grade: B }
+  - { text: "急速跳入(vs 緩慢下水)", grade: Expert }
+
+prevention:
+  - { text: "冷水習化(≥4 次逐漸暴露，間隔 ≤8 天；效果可維持 7–14 月。要求暴露 ≥50% 體表、避免臉部以防觸潛水反射、每次 ≥150 秒)", grade: A }
+  - { text: "緩慢涉水入水(淋水後再入)", grade: Expert }
+  - { text: "穿防寒衣減少皮膚暴露面積", grade: B }
+  - { text: "開放水域穿 PFD 降溺水機率", grade: B }
+  - { text: "有心臟病史者避免冷水開放水域", grade: Expert }
+
+management:
+  red_flags:
+    - "突然入水後控制不住的喘息/過度換氣、無法控制肢體沉入水中 → 立即救援出水"
+    - "意識改變、心悸/心跳停頓感、唇/指甲發紺 → 監測心律並就醫"
+  acute: "立即救援出水(冷休克數分鐘自退但此窗口溺水風險最高)→保持橫躺(避免直立致『救援崩潰』)→無反應即 CPR(參溺水演算法)→有意識則保暖(離冷水/脫濕衣/蓋毯)、監測心律→即使症狀已緩仍送醫觀察(心律不整可能延遲出現)"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "無記錄心律不整、無缺氧損傷 → 完全恢復"
+    - "有心律不整記錄 → 心臟科評估後方回水"
+  swim_modifications_in_rehab:
+    - "建議事後進行冷水習化訓練(尤開放水域泳者)"
+  return_to_train: "單純冷休克事件且無心臟異常 → 完全恢復後可回水；有心律不整則待心臟科綠燈"
+  return_to_compete: ~
+  prognosis: "及時救出且無缺氧損傷→完全恢復；若冷休克致溺水則預後同溺水(依缺氧時長)"
+
+population_notes:
+  age:
+    youth: "反應更強烈但習化速度相同，10–12 歲兒童可有效習化"
+    adult_beginner: ~
+    masters: "心臟儲備下降，心律不整風險更高"
+  sex: ~
+  ability:
+    para: "脊髓損傷者自主神經調節已異常，反應難預測"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: "可接 L0 呼吸感知(冷水喘氣反射的生理意義)"
+
+references:
+  - { citation: "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003", certainty: 🟢, verified: true }
+  - { citation: "Habituation of the cold shock response: systematic review and meta-analysis, 2024, PubMed 38211547", certainty: 🟢, verified: true }
+  - { citation: "Lundström et al., face immersion/body submersion ice-cold water adolescents, Physiol Rep 2025, PMC12234767", certainty: 🟢, verified: true }
+  - { citation: "Farstad & Dunn, Cold Water Immersion Syndrome, Wilderness Environ Med 2019", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "作者全名/DOI 待 W3 WebFetch；水溫門檻(15/21°C)來自不同研究設計，非單一界定值"
+  contested:
+    - claim: "『自主神經衝突』作為溺水死亡機制的比重"
+      consensus_source: "2015 後主流假說，生理實驗支持"
+      dissent_source: "缺大型流行病學驗證其實際佔比"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

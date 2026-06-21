@@ -1,0 +1,96 @@
+id: drowning
+zh: 溺水 / 近乎溺水
+en: Drowning / Near-drowning
+category: D-systemic-acute
+environment: [pool, open_water, surf]
+sport_variant: [swim, open_water_swim, freediving]
+layer: [public, clinical]
+fatal_acute: true          # 游泳最致命傷害，layout 絕對置頂
+
+structures: [呼吸系統(肺泡-表面活性劑), 中樞神經系統(腦缺氧), 心血管系統]
+mechanism:
+  summary: 液體進入氣道→氣體交換障礙→進行性低氧血症+高碳酸血症→若未中斷則心跳驟停(缺氧性，非心因性)。水入肺泡破壞表面活性劑致肺泡塌陷；約一成案例以喉痙攣為主(進水極少)。淡水/海水滲透壓機制有別但臨床處置相同。
+  trigger_phase: 任何涉水情境失去有效呼吸；幼兒於浴缸/充氣泳池、成人於開放水域離岸/水流低估、酒精影響下尤甚
+  who: 1–4 歲幼童最高危；男性各年齡死亡率均約女性 2 倍；無泳技或過度自信者；酒精/藥物影響者；獨游者
+
+epidemiology:
+  prevalence: "WHO 2024：2021 全球溺水死亡約 274,200 人(另估 ~30 萬，方法不同)；近半發生於 29 歲以下，五歲以下約佔四分之一"
+  certainty: 🟢
+  evidence_grade: A
+  caveat: 死亡常被泛歸「溺水」，特定機制(SWB/冷水休克/心因)難事後分辨；開放水域溺水人數多於泳池(紐西蘭 2020 達 87%)
+  sources:
+    - "WHO 2024-12-13 新聞稿『Drowning deaths decline globally』(已驗證 URL)"
+    - "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)"
+    - "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)"
+
+risk_factors:
+  - { text: "缺乏監督(幼童最關鍵，佔兒童溺水約 52%)", grade: A }
+  - { text: "無游泳技能或對泳技過度自信", grade: A }
+  - { text: "缺乏水邊障礙/圍欄", grade: A }
+  - { text: "男性", grade: B }
+  - { text: "幼兒年齡(1–4 歲為最高風險組)", grade: A }
+  - { text: "酒精攝取(青少年/成人開放水域)", grade: B }
+  - { text: "開放水域(波浪/水流/低能見度/低溫)", grade: B }
+  - { text: "獨游(無伴)", grade: Expert }
+
+prevention:
+  - { text: "6 歲以上兒童基礎游泳技能訓練(WHO 列 promising)", grade: A }
+  - { text: "泳池四面圍欄(可減約 75% 泳池溺水)", grade: A }
+  - { text: "水邊主動成人監督", grade: A }
+  - { text: "救生員在場", grade: B }
+  - { text: "開放水域穿戴個人浮力裝置(PFD)", grade: B }
+  - { text: "戒除水中/水邊飲酒、避免獨游", grade: Expert }
+
+management:
+  red_flags:
+    - "任何溺水事件無論意識狀態皆視為緊急；意識喪失或無法自行離水 → 立即救援"
+    - "離水後咳嗽/呼吸困難/喘鳴/發紺 → 立即就醫"
+    - "繼發性惡化警示：溺水後數小時內(最長 24–72h)咳嗽加重/呼吸急促/異常疲倦/混亂 → 即使當下『看似沒事』也須就醫"
+  acute: "2024 AHA/AAP 溺水復甦(已驗證 doi:10.1161/CIR.0000000000001274)：移出水→受訓者安全時可水中救援呼吸→無反應無呼吸即 CPR『通氣優先』先給 5 次救援呼吸再按壓(溺水驟停根因為缺氧)→盡早 AED 但不延誤 CPR→呼叫 EMS→勿試圖『倒水』。中度(有呼吸但吸入水)監測 4–6h 防遲發肺水腫"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "肺功能正常、無持續肺水腫/感染跡象"
+    - "若有缺氧後神經缺損 → 個人化評估"
+  swim_modifications_in_rehab:
+    - "輕度案例經急診評估穩定後數日至一週多可回水"
+    - "神經學後遺者由醫療團隊個別決定，可能長期禁水"
+  return_to_train: "肺功能與神經狀態經醫師評估綠燈 → 漸進回水；勿自行評估"
+  return_to_compete: ~
+  prognosis: "及時目擊+立即 CPR 預後佳；浸水 >6 分鐘顯著惡化；入院時意識水平(缺氧時長)是最強預後指標。冷水(尤兒童)潛水反射可能延長 CPR 有效窗口，復甦至復溫前不輕言放棄"
+
+population_notes:
+  age:
+    youth: "幼兒(0–4)家庭浴缸/充氣泳池最高危；學齡兒童游泳教育顯著降風險，開放水域危機來自水流低估"
+    adult_beginner: "成人初學低估開放水域波流"
+    masters: "心臟共病增加，開放水域突發驟停風險"
+  sex:
+    male: "各年齡死亡率約女性 2 倍(風險行為+酒精+離岸游泳)"
+    female: ~
+  ability:
+    para: "部分身障(截肢/肌無力)水中自救受限，需特別監督設計"
+  lifecycle: ~
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: "可接 L0 呼吸感知層作為水安全教育素材(非技術介入)"
+
+references:
+  - { citation: "WHO 2024-12-13『Drowning deaths decline globally but the most vulnerable remain at risk』新聞稿", certainty: 🟢, verified: true }
+  - { citation: "Global burden of drowning 204 countries 1990-2021, Sci Rep 2025, PMC11954903", certainty: 🟢, verified: true }
+  - { citation: "2024 AHA/AAP Focused Update: Resuscitation Following Drowning, Circulation, doi:10.1161/CIR.0000000000001274", certainty: 🟢, verified: true }
+  - { citation: "Wilderness Medical Society CPG for Drowning 2024 Update", certainty: 🟢, verified: true }
+  - { citation: "StatPearls: Drowning, NCBI NBK430833", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "各引用具體第一作者全名/完整 DOI 號未逐條核(高幻覺風險)，URL/PMC 可驗；W3 Sonnet WebFetch 補作者層"
+  contested:
+    - claim: "CPR 通氣優先 vs 壓縮優先"
+      consensus_source: "2024 AHA 更新允許兩序，但強調溺水通氣重要性遠高於一般心臟驟停"
+      dissent_source: "標準成人驟停 CAB(壓縮優先)演算法"
+  vintage_warning: false
+  terminology_note: "『乾溺水 dry drowning』『近乎溺水 near-drowning』為過時/不建議術語，ILCOR 統一用『溺水(存活/死亡)』描述"
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

@@ -1,0 +1,89 @@
+id: dehydration-hyponatremia
+zh: 運動性脫水 / 低鈉血症
+en: Exercise-associated dehydration / hyponatremia in swimmers
+category: D-systemic-acute
+environment: [open_water, pool]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+fatal_acute: true          # 重度低鈉腦病可致命
+
+structures: [體液-電解質平衡, 腎臟(AVP 調節), 中樞神經系統(腦水腫)]
+mechanism:
+  summary: 游泳者口渴感受被抑制，可能因怕掉速而過度補水。低鈉血症(EAH，血鈉 <135 mmol/L)在長距離開放水域的主因不是『太少喝』而是過度飲水+運動誘發非滲透性 AVP(精胺酸加壓素)分泌使腎保留水分，加劇稀釋。嚴重時誘發低鈉腦病：腦水腫+顱內壓升，意識改變/抽搐/死亡。另有少見的低血容型(汗失鈉補充不足)。
+  trigger_phase: 賽程 >4 小時的長距離馬拉松游泳/鐵人三項；賽事飲水站密集致過度補水
+  who: 10km+ 開放水域泳者、鐵人三項選手、體重輕/女性(部分研究)、賽前服 NSAIDs(增 AVP 作用)者
+
+epidemiology:
+  prevalence: "馬拉松跑者(可外推耐力運動)EAH 約 15–30%，血鈉 <120 嚴重者約 1%；開放水域游泳獨立盛行率無可靠數字"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 開放水域監測不一致、可水中補水量難追蹤、輕症常被誤診→無獨立盛行率
+  sources:
+    - "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)"
+    - "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)"
+    - "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)"
+
+risk_factors:
+  - { text: "過度飲水(超過口渴需求的『預防性』補水)", grade: A }
+  - { text: "賽程 >4 小時/長距離", grade: B }
+  - { text: "女性(部分研究較高，機制仍爭論)", grade: B }
+  - { text: "低體重", grade: B }
+  - { text: "賽前服 NSAIDs", grade: B }
+  - { text: "僅補純水、電解質不足", grade: B }
+
+prevention:
+  - { text: "『按口渴補水(drink to thirst)』，不預防性過量補水", grade: A }
+  - { text: "補含鈉電解質飲料取代純水", grade: B }
+  - { text: "賽中監測體重(減 >3% 補水、增加則停止補水)", grade: B }
+  - { text: "賽前避免 NSAIDs", grade: B }
+  - { text: "長賽前制定個人化補水計畫", grade: Expert }
+
+management:
+  red_flags:
+    - "輕症(血鈉 125–134)：噁心/嘔吐/頭痛/脹氣感/異常疲勞"
+    - "重症腦病(血鈉 <125)：意識混亂/言語不清/定向力喪失、抽搐、呼吸困難、昏迷 → 立即停止+EMS+勿再給任何飲水"
+  acute: "現場：立即停止+水平躺+停止一切液體補充(症狀性 EAH 禁給水)。輕症(意識清楚)若確認體重增加→限水+高鹽零食(可口服高張鹽)+觀察。重症(意識改變)緊急送醫。醫院：重度/腦病型用 3% 高張鹽水(目標升血鈉 1–2 mmol/L/小時緩解顱內壓)；禁低張液體(0.9% 都可能惡化)"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "EAH 完全糾正後通常無長期影響"
+    - "有抽搐/意識喪失者神經學評估確認無腦水腫殘餘"
+  swim_modifications_in_rehab:
+    - "重返長距離賽前須再評估並制定個人化補水策略"
+  return_to_train: "完全糾正+補水策略修正 → 漸進回水"
+  return_to_compete: "個人化補水計畫確立 + 無神經殘餘 → 復賽"
+  prognosis: "輕症及時停止補水完全恢復；重症腦病及時靜注高張鹽水可完全恢復(有插管次日出院案例)；誤給低張液體可致永久腦損傷/死亡"
+
+population_notes:
+  age:
+    youth: "短距離游泳幾乎無 EAH 風險；長距離活動確保按需補水但不鼓勵『多補』"
+    adult_beginner: "泳池短訓風險低；開放水域挑戰事件另計"
+    masters: "AVP 對滲透壓敏感性隨年齡改變+可能服利尿劑(HCTZ)改變鈉平衡，需個別化"
+  sex:
+    female: "多研究觀察 EAH 發生率略高，機制(雌激素/AVP/體液分布)仍爭論"
+    male: ~
+  ability: ~
+  lifecycle:
+    open_water: "10km+ 馬拉松游泳為最高風險場景"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060", certainty: 🟢, verified: true }
+  - { citation: "EAH encephalopathy in an endurance open water swimmer, PubMed 25443755", certainty: 🟢, verified: true }
+  - { citation: "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173", certainty: 🟢, verified: true }
+  - { citation: "Rehydration during Endurance Exercise (IMMDA drink-to-thirst), PMC8001428", certainty: 🟢, verified: true }
+
+flags:
+  pending_verification:
+    - "作者全名/DOI 待 W3；游泳者水中吞水對 EAH 的貢獻為推測機制，幾無量化研究"
+  contested:
+    - claim: "補水策略"
+      consensus_source: "『按口渴補水』為現行主流共識"
+      dissent_source: "部分早期耐力指引(pre-2010)推薦定時補水"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

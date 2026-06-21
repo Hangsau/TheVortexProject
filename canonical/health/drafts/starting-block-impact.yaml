@@ -1,0 +1,85 @@
+id: starting-block-impact
+zh: 出發台 / 牆面 / 水面撞擊傷
+en: Starting block, wall, and water-surface impact injuries
+category: E-acute-trauma
+environment: [pool]
+sport_variant: [swim, diving_entry]
+layer: [public, clinical]
+subtypes: [出發台入水撞擊, 游泳中撞牆, 水面拍水傷(bellyflop)]
+
+structures: [頭/臉/腦(腦震盪), 頸椎, 腕/手指, 肋骨/胸壁皮膚]
+mechanism:
+  summary: 三子機制——A 出發台起跳：頭/臉/肩撞池底(水深不足)或不正確角度入水(腹/胸拍水)，或踩台失足跌至硬面；B 游泳中撞牆：高速轉身/衝刺末端未及時減速，頭/臉/腕撞壁，或密集起跑肢體碰撞；C 水面拍水傷：腹/胸大面積撞水面致皮膚撕裂/肌肉挫傷，高台情境有肺挫傷風險。
+  trigger_phase: 出發起跳相(block phase)、轉身前減速相、密集起跑前數秒
+  who: 初學出發動作的青少年競技泳者、技術訓練不足者、泳道秩序混亂(公開水域起跑)
+
+epidemiology:
+  prevalence: "高中游泳與跳水：563 件傷害 / 2,171,260 次暴露(0.26/1000 AE)；跳水項目頭/臉傷 36.6%、接觸池面/地面傷 68.3%、腦震盪為最常見傷型(31.7%)。游泳/跳水是高中 20 項運動傷害率最低者之一"
+  certainty: 🟢
+  evidence_grade: B
+  caveat: 競賽出發台直接致脊髓損傷的獨立流病數據缺乏(多併入一般跳水傷統計)；『70% 泳池傷害為頭頸部』為二手引用、原始數據源待查
+  sources:
+    - "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)"
+    - "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024 (已驗證)"
+
+risk_factors:
+  - { text: "出發技術未成熟(入水角度過陡致頭部觸底)", grade: Expert }
+  - { text: "水深不足(出發台前區)", grade: A }
+  - { text: "教練缺乏出發技術指導協議(僅 21.7% 用系統化進展)", grade: B }
+  - { text: "高速衝刺末端視野受限(近終點看不清牆距)", grade: Expert }
+  - { text: "Para 視覺障礙(靠觸牆棒 tapper 延誤反應)", grade: Expert }
+
+prevention:
+  - { text: "出發台訓練遵循進階協議(水中出發→池邊→台上，技能未就緒不上台)", grade: Expert }
+  - { text: "水深符合 World Aquatics 競賽最低標準(1.35m)", grade: A }
+  - { text: "教練系統化出發技術教學(淺角度入水)", grade: B }
+  - { text: "提供視障選手觸牆訓練", grade: Expert }
+
+management:
+  red_flags:
+    - "頭部撞牆後意識改變/失憶/嘔吐/視力模糊 → 懷疑腦震盪，停止運動評估"
+    - "頸部疼痛+肢體症狀 → 脊椎預防措施(見 diving-cervical-injury)"
+    - "面部撞擊大量出血/眼眶骨折(浣熊眼) → 就醫"
+  acute: "腦震盪：當場撤離(remove from play)，不得同次訓練/比賽回場。裂傷直接加壓止血；顏面骨折疑似固定就醫。腕/手指骨折 RICE+固定+影像。肋骨/胸壁挫傷監測呼吸困難排除肺挫傷"
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "腦震盪：依運動腦震盪分級協議逐步回場(Swimming Canada 有專項指引)"
+    - "骨折：影像確認癒合(掌骨一般 4–6 週)"
+    - "裂傷：傷口癒合(防水敷料下可提前回水)"
+  swim_modifications_in_rehab: ~
+  return_to_train: "依傷型(腦震盪逐步回場/骨折癒合/裂傷癒合)分別評估"
+  return_to_compete: "完成回場分級且無症狀 → 復賽"
+  prognosis: "頭部撞擊多為輕度腦震盪完全恢復(數天至數週)；反覆腦震盪(Para 個案)有神經行為後遺風險；未診斷腦震盪帶傷續練有 second impact syndrome 風險(罕見但嚴重)"
+
+population_notes:
+  age:
+    youth: "競技青少年出發台受傷主要族群"
+    adult_beginner: "缺乏出發技術訓練時風險最高"
+    masters: ~
+  sex: ~
+  ability:
+    para: "視障 Para 選手腦震盪累積風險，需特別監測"
+  lifecycle:
+    open_water: "公開水域起跑碰撞為獨特場景"
+
+links:
+  mechanism_link: ~
+  technical_link: "出發台 racing start 技術——與跳水頸椎傷共享水深/角度預防"
+  perception_link: ~
+
+references:
+  - { citation: "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189", certainty: 🟢, verified: true }
+  - { citation: "Epidemiology NCAA Swimming and Diving, PubMed 34280272", certainty: 🟢, verified: true }
+  - { citation: "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024", certainty: 🟡, verified: true }
+
+flags:
+  pending_verification:
+    - "『70% 泳池傷害為頭頸部』為二手引用，原始數據源待查，不進 public 數字；作者/DOI 待 W3"
+  contested:
+    - claim: "腦震盪在游泳的發生率估計"
+      consensus_source: "高中數據腦震盪為最常見游泳/跳水傷型"
+      dissent_source: "『>50% 泳池傷害為頭部』來源不明，二手引用不應視為流病數據"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

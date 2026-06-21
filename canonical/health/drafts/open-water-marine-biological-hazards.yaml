@@ -1,0 +1,90 @@
+id: open-water-marine-biological-hazards
+zh: 開放水域海洋生物危害（螫刺 / 感染）
+en: Open-water marine biological hazards — stings, punctures, infections
+category: E-acute-trauma
+environment: [open_water, surf]
+sport_variant: [swim, open_water_swim]
+layer: [public, clinical]
+fatal_acute: true          # 含過敏性休克 / Irukandji / 創傷弧菌壞死性筋膜炎 / 鉤端螺旋體 Weil's
+subtypes: [水母螫傷, 海膽/魟魚刺傷, 創傷弧菌感染, 鉤端螺旋體病(Weil's)]
+
+structures: [皮膚/軟組織, 全身過敏反應(心肺), 肝腎(鉤端螺旋體), 神經(Irukandji 症候群)]
+mechanism:
+  summary: 開放水域接觸海洋生物四類危害——A 刺胞動物（水母/海葵）刺絲胞注入毒素致灼痛/皮疹，敏感者過敏性休克，箱型水母/Irukandji 致命；B 棘刺生物（海膽/魟魚/獅子魚）穿刺傷+毒素+異物殘留；C 創傷弧菌（Vibrio vulnificus）經傷口/海水接觸侵入，免疫低下/肝病者致壞死性筋膜炎與敗血症（高死亡率）；D 鉤端螺旋體經受污染淡水/河口經黏膜或傷口侵入，重症 Weil's 病致肝腎衰竭。皮膚原有傷口為感染入口。
+  trigger_phase: 水母季節/特定海域游泳、礁岩區踩踏、傷口接觸溫暖海水或淡水、暴雨後河口水域
+  who: 開放水域/三鐵選手、礁岩淺水區泳者、免疫低下/慢性肝病者（弧菌高危）、暴雨後淡水/河口活動者
+
+epidemiology:
+  prevalence: "水母螫傷為全球海域最常見海洋生物傷；創傷弧菌台灣為流行區（沿海溫暖海水），免疫低下者壞死性筋膜炎死亡率高（一般文獻 >20%）；鉤端螺旋體三鐵/開放水域賽事群聚案例見諸文獻；台灣為鉤端螺旋體中度流行區"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 各危害流病分散於熱帶醫學/急診/感染科文獻，無統一游泳專屬登記；台灣具體年發生率數字待查
+  sources:
+    - "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)"
+    - "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)"
+    - "Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）"
+
+risk_factors:
+  - { text: "免疫低下/慢性肝病（創傷弧菌壞死性筋膜炎）", grade: A }
+  - { text: "皮膚開放傷口接觸海水/淡水", grade: B }
+  - { text: "水母季節/特定海域游泳", grade: B }
+  - { text: "礁岩淺水區赤足踩踏（棘刺傷）", grade: B }
+  - { text: "暴雨後河口/淡水活動（鉤端螺旋體）", grade: B }
+  - { text: "低緯度熱帶海域（致命水母分布）", grade: B }
+
+prevention:
+  - { text: "已知水母季節避開或穿防螫泳衣（stinger suit）", grade: B }
+  - { text: "開放傷口未癒不下海（尤慢性肝病者）", grade: A }
+  - { text: "礁岩區穿防刺水鞋", grade: B }
+  - { text: "暴雨後避免河口/可能污染淡水域", grade: B }
+  - { text: "高危族群（肝病/免疫低下）避免生食海鮮+海水傷口暴露衛教", grade: Expert }
+  - { text: "海域危險生物警示與當地通報系統", grade: Expert }
+
+management:
+  red_flags:
+    - "螫傷後全身蕁麻疹/喉緊/呼吸困難/低血壓 → 過敏性休克，腎上腺素+EMS"
+    - "螫傷後劇烈全身痛/血壓飆高/瀕死感 → Irukandji 症候群疑慮，緊急就醫"
+    - "傷口接觸海水後快速紅腫劇痛+水泡+全身發燒 → 創傷弧菌壞死性筋膜炎，緊急外科+抗生素"
+    - "海水/淡水暴露後發燒+黃疸+肌痛+少尿 → 鉤端螺旋體 Weil's 病，就醫"
+  acute: "水母螫傷：離水、移除觸手（勿徒手）、依種屬處置（箱型水母用醋；多數溫帶種海水沖洗，急救法種屬特異有爭議）、熱水浸泡（43–45°C）緩解部分種屬疼痛；過敏反應腎上腺素。棘刺傷：熱水浸泡（去熱不穩定毒素）、移除可見棘刺、影像查殘留、傷口照護+破傷風。創傷弧菌疑慮：緊急就醫，早期廣效抗生素+外科清創（延誤致死）。鉤端螺旋體：就醫，doxycycline/penicillin"
+  pain_rules: ~
+  rehab: "壞死性筋膜炎術後傷口重建與復健；其餘多為傷口癒合導向"
+  functional_progression_criteria:
+    - "螫傷/刺傷：傷口癒合+無感染徵象"
+    - "全身感染（弧菌/鉤端螺旋體）：感染科確認痊癒"
+  swim_modifications_in_rehab: ~
+  return_to_train: "傷口完全癒合+無感染 → 回水（防水敷料）"
+  return_to_compete: ~
+  prognosis: "多數水母螫傷/棘刺傷局部處置後完全恢復；過敏性休克/Irukandji/創傷弧菌壞死性筋膜炎可致命，及時治療為關鍵；鉤端螺旋體早期抗生素預後良好，Weil's 病死亡率較高"
+
+population_notes:
+  age:
+    youth: "兒童體表面積比大，水母螫傷全身反應風險相對高"
+    adult_beginner: ~
+    masters: "慢性肝病/免疫低下盛行率高，創傷弧菌風險上升"
+  sex: ~
+  ability:
+    para: ~
+  lifecycle:
+    open_water: "所有海洋生物危害的唯一暴露場景；台灣沿海為創傷弧菌+鉤端螺旋體相關區域"
+
+links:
+  mechanism_link: ~
+  technical_link: ~
+  perception_link: ~
+
+references:
+  - { citation: "Vibrio vulnificus necrotizing fasciitis in Taiwan, PMC8147101", certainty: 🟢, verified: true }
+  - { citation: "Leptospirosis outbreak associated with triathlon/open water swimming, PMC2858141", certainty: 🟢, verified: true }
+  - { citation: "Jellyfish envenomation and first-aid (species-specific), 系統回顧 待補 DOI", certainty: 🟡, verified: false }
+
+flags:
+  pending_verification:
+    - "水母急救法、創傷弧菌/鉤端螺旋體台灣年發生率具體數字、作者全名/DOI 待 W3"
+  contested:
+    - claim: "水母螫傷急救沖洗液（醋 vs 海水 vs 淡水）"
+      consensus_source: "箱型水母用醋抑制刺絲胞為共識；勿用淡水（觸發放電）"
+      dissent_source: "醋對部分種屬反加重放電——急救法為種屬特異，無單一通則"
+  vintage_warning: false
+
+audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
