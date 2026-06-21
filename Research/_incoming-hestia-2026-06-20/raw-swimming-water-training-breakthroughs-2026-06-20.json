@@ -1,0 +1,313 @@
+{
+  "summary": "Deep research harness — fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report.",
+  "agentCount": 97,
+  "logs": [
+    "Q: 游泳水中訓練近年有沒有新突破？現有水中訓練方法感覺已經到天花板了，是真的嗎？\n\n我要：\n1. 現今頂尖選手（2020-2026 期間奧運、世錦賽決賽選手）的水中…",
+    "Decomposed into 5 angles: 頂尖選手現況與演變, 生物力學與減阻技術突破, 科技輔助訓練成效, 特殊訓練法最新實證, 瓶頸論與反證",
+    "特殊訓練法最新實證: 5 results",
+    "瓶頸論與反證: 1 results",
+    "生物力學與減阻技術突破: 2 results",
+    "科技輔助訓練成效: 6 results",
+    "頂尖選手現況與演變: 6 results",
+    "頂尖選手現況與演變: 4 novel (2 filtered)",
+    "Fetched 18 sources → 24 claims → verifying top 24",
+    "\"頂尖游泳選手的訓練量與訓練強度分布(TID)依據主要競賽距離而有所不同：短距離選手採用極化(pola…\": 3-0 ✓",
+    "\"頂尖奧運耐力運動教練（包括游泳教練）仍遵循「傳統週期化模型」，在比賽接近時「逐漸降低整體訓練量並增加…\": 0-3 ✗",
+    "\"跨項目共通特徵為「高量低強度訓練搭配每週 2-3 天『關鍵訓練日』，含 3-5 堂高強度訓練課」（h…\": 0-3 ✗",
+    "\"末段踢水參數的衰退模式因性別而異：男性選手以「踢水幅度（amplitude）」下降為主（η²=0.2…\": 3-0 ✓",
+    "\"水下海豚踢速度在 25 公尺最大努力過程中明顯下降（效應量 η²=0.65，屬於大效應），代表長距離…\": 1-2 ✗",
+    "\"踢水表現下降主要源自接近水面時的「身體姿態改變」（軀幹傾斜增加、矢狀面身體波幅變大），而非海豚踢本身…\": 3-0 ✓",
+    "\"延長水中段（增加水下踢腿次數或距離）雖讓自覺強度（RPE）顯著上升（條件 2 與 3 比自由條件高，…\": 3-0 ✓",
+    "\"研究結論指出，受過訓練的選手即使主觀不適感略增，仍可透過控制式增加水下段來優化該比賽段落表現：「Co…\": 1-2 ✗",
+    "\"在有氧耐力型運動員中，4 週水中專項反覆衝刺缺氧訓練（RSH）與常氧訓練（RSN）相比，缺氧組在衝刺…\": 0-3 ✗",
+    "\"2017 年針對中等訓練程度競技泳者進行的 6 週研究比較了缺氧與常氧訓練對運動表現的影響，屬於把水…\": 0-3 ✗",
+    "\"2003 年 Truijens 等人的經典臨床試驗發現，5 週高強度水中（flume）訓練即可改善海…\": 0-3 ✗",
+    "\"絕大多數納入研究(從3487篇篩選至9篇)顯示，主流週期化模式為波狀(mesocycle波動)週期化…\": 1-2 ✗",
+    "\"目前頂尖游泳選手週期化的高品質實證仍有限——9篇研究中僅3篇為介入性研究(證據等級1b)，6篇為回顧…\": 3-0 ✓",
+    "\"教練透過「系統性收集訓練數據並展現實驗心態」（collect training data from …\": 2-1 ✓",
+    "\"各項目在「訓練量、頻率、強度分佈及肌力與交叉訓練的應用上存在顯著差異」（substantial di…\": 0-3 ✗",
+    "\"研究實務建議：選手應在潛水段尾聲控制垂直身體波幅，以降低踢水表現下降幅度——代表「維持身體水平線」是…\": 1-2 ✗",
+    "\"水下參數（時間、距離、速度）在 75 公尺過程中會變動，但變動幅度並不因實驗條件而異，意味著選手能維…\": 1-2 ✗",
+    "\"研究樣本為 54 位國家級選手（男 26、女 28），採 25 公尺最大推牆出發、雙機水下水下攝影、…\": 3-0 ✓",
+    "\"樣本為 12 名青年國家隊選手（FINA 706 ± 28.9 分），因此結論適用於高水準青年級距的…\": 3-0 ✓",
+    "\"該領域文獻量在 2016 年後持續成長，2021 年達高峰 18 篇、2024 年仍有 16 篇，代…\": 1-2 ✗",
+    "\"該系統綜述以「訓練負荷(量×強度)」為主要分析框架，較少涉及水中訓練的技術性突破(如水下動作、減阻、…\": 1-2 ✗",
+    "\"2016 年 Woorons 等人的研究指出，超最大強度低通氣訓練（VHL）相比正常呼吸的相同訓練更…\": 3-0 ✓",
+    "\"該研究關鍵詞包含「apnea」、「breath-holding」、「dolphin kick」，反映…\": 0-3 ✗",
+    "\"本研究目的為「產生新假設並對實證基礎訓練實務作出貢獻」（generate new hypothese…\": 0-3 ✗",
+    "Verify done: 24 claims → 9 confirmed, 15 killed"
+  ],
+  "result": {
+    "question": "游泳水中訓練近年有沒有新突破？現有水中訓練方法感覺已經到天花板了，是真的嗎？\n\n我要：\n1. 現今頂尖選手（2020-2026 期間奧運、世錦賽決賽選手）的水中訓練主流方法是什麼？跟 10 年前有什麼差別？\n2. 水中訓練的「技術性突破」：划水效率、減阻、水下動作優化（潛泳、打水次數、划頻 vs 划距）有什麼新發現？\n3. 技術輔助的訓練創新：水下攝影分析、即時生物力學回饋、感測器、智能泳池、虛擬實境訓練的成效如何？\n4. 缺氧訓練（hypoxic training）、高強度間歇（HIIT swimming）、水中阻力訓練（parachute、band、tethered swimming）這些方法的最新實證\n5. 心理層面水中訓練：冥想、正念、視覺化在水中執行的效果\n6. 有沒有任何「水中訓練新法」被證實能突破表現瓶頸？\n7. 反證：水中訓練其實已經到天花板，未來突破只能在陸地或恢復/營養面？\n\n要正反兩面，給我平衡結論。繁體中文。",
+    "summary": "水中訓練近年並未出現真正的「結構性突破」；頂尖選手的訓練哲學仍以週期化量×強度分配為主，但水下海豚踢的末段力學、RPE 與生理負荷的解離、以及超最大低通氣訓練（VHL/RSH）等少數新方法，提供了局部可訓練槓桿。整體而言，水中訓練的方法論在 2020-2026 期間持續精修而非翻轉，「瓶頸在陸地/恢復/營養」的命題目前證據較弱。",
+    "findings": [
+      {
+        "claim": "頂尖選手的訓練量×強度分布（TID）依主項距離分流：短距離採極化+閾值、中距離採閾值+金字塔、長距離以金字塔為主；此分流為現今主流，與 10 年前「單一週期化模板」相比已走向「依距離個案化」。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/33952709/"
+        ],
+        "evidence": "González-Ravé et al. 2021 系統綜論（9 篇入選，3 篇 1b 介入 + 6 篇 2b 觀察）明確指出 sprint = polarized/threshold、middle = threshold/pyramidal、long = pyramidal TID。證據強度中等，觀察研究為主，區塊化與反向週期化仍缺 RCT 驗證。"
+      },
+      {
+        "claim": "水中訓練的「技術性突破」集中在水下海豚踢末段力學：(1) 末段踢水速度大幅下降（η²=0.65），且衰退模式因性別而異（男=幅度衰退 η²=0.25，女=頻率衰退 η²=0.18）；(2) 衰退主因是接近水面時軀幹傾斜與矢狀面波幅變大（身體姿態），而非海豚踢本身關節活動度變化（除髖關節外無顯著改變）。實務槓桿：控制潛水段末段垂直波幅。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/36756980/"
+        ],
+        "evidence": "Veiga et al. 2023（Sports Biomechanics, n=54 國家級選手、25m 推牆出發、雙機水下 2D-DLT 動作學）原文逐字對應。樣本為國家級而非奧運決賽級（generalizability supporting 而非 central），但效應量與性別差異均為一手量化數據。"
+      },
+      {
+        "claim": "水中訓練的生理負荷指標可被「解離」：延長水下段（增加踢腿次數/距離）會讓自覺強度（RPE）顯著上升（F(2,36)=18.00, p=0.001, η²=0.50），但心跳率與血乳酸濃度三條件間無顯著差異——意謂教練若只看 HR/乳酸可能低估水下段成本，需以 RPE 補充。樣本為 12 名青年國家隊選手（FINA 706±28.9 分），屬「奧運儲備」級別。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/35177993/"
+        ],
+        "evidence": "Frontiers in Physiology 2022 (Marinho et al.) 摘要原文逐字對應。n=12 為小樣本、外推性有限，但研究設計嚴謹（2×75m @ 200m 配速、3 條件對照），統計量齊全。"
+      },
+      {
+        "claim": "「水中模擬缺氧」以外的另一條技術路線——超最大強度低通氣訓練（VHL/RSH）—— 已有可觀的實證基礎：2016 Woorons 等（Med Sci Sports Exerc）5 週 2×/週 12-20×25m 衝刺、16 名鐵人三項選手，VHL 組 100/200/400m 自由式全面進步（-3.7/-6.9/-13.6 秒），控制組不變；機制為無氧糖酵解活性提升。2017 Trincat 等在 16 名競技泳者重複驗證 RSH-VHL 改善反覆衝刺能力（7.1→9.6 趟至力竭），2025 Précart 等統合分析（Sports Med Open）將其定位為「低成本的全身缺氧替代方案」。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/26741118/",
+          "https://pubmed.ncbi.nlm.nih.gov/27294771/",
+          "https://pubmed.ncbi.nlm.nih.gov/40377793/"
+        ],
+        "evidence": "Woorons 2016 (n=16 triathletes, controlled trial) 為原始 RCT 級實證；Trincat 2017 在 pure swimmers 重複驗證；2025 umbrella review 與 meta-analysis 持續支持。需注意：原樣本為鐵人三項選手、n=16 小樣本、機制仍有爭議。"
+      },
+      {
+        "claim": "頂尖耐力項目教練（含游泳）共通的「品質化」哲學：系統性收集訓練數據 + 展現實驗心態、優化訓練課品質、系統性控制負荷-恢復平衡——這是「頂尖選手怎麼練」的主流描述，但並非「水中訓練的結構性突破」，而是 12 位挪威世界級教練（8 個奧運耐力項目、380+ 國際獎牌）共同採用的最佳實務。",
+        "confidence": "medium",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/40278987/"
+        ],
+        "evidence": "Sandbakk et al. 2025 (Sports Med - Open) 質性多案例研究。為當前頂尖教練實務的最新歸納，但屬質性資料（n=12 男性挪威教練），無法量化論證「水中訓練是否已達天花板」。"
+      },
+      {
+        "claim": "現有水中訓練方法的「實證天花板」在週期化層面已被文獻明確指出：9 篇系統綜論入選研究中，僅 3 篇為 1b 介入研究、6 篇為 2b 觀察研究，且對區塊化（block）與反向（reverse）週期化至今仍缺乏 RCT 級實驗驗證（2022 González-Ravé 對 reverse periodization 的回顧仍為敘述性綜論，未升級到 1b）。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/33952709/",
+          "https://pubmed.ncbi.nlm.nih.gov/40278987/"
+        ],
+        "evidence": "2021 系統綜論呼籲至今未被新 RCT 填補；2022-2025 新增文獻多為 case study、prospective non-RCT、coach survey，等級仍為 2b 或更低。證據缺口在 2026 年仍存在。"
+      },
+      {
+        "claim": "【反證 / 反方結論】「水中訓練已到天花板、未來突破在陸地/恢復/營養」此命題在本次可掌握的文獻中證據薄弱——反方假設依賴的是「水中環境物理極限（密度、阻力、浮力）已無法再榨出空間」的直覺論證，但 2020-2026 的文獻主要仍在「精修現有方法」而非「宣告水中訓練飽和」。RPE 與 HR/乳酸的解離、海豚踢末段姿態控制的槓桿、VHL/RSH 路線的持續驗證，都意味著水中訓練還有可量化的優化空間。真正可能的天花板在「實證研究品質」（多為觀察、樣本小、缺 RCT），而非「訓練方法本身」。",
+        "confidence": "medium",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/33952709/",
+          "https://pubmed.ncbi.nlm.nih.gov/36756980/",
+          "https://pubmed.ncbi.nlm.nih.gov/35177993/"
+        ],
+        "evidence": "本次綜覽未發現任何 2020-2026 文獻直接論證「水中訓練已到天花板」或「未來突破必在陸地/恢復/營養」；相反地，水中訓練研究文獻在 2022-2025 仍持續產出（VHL meta-analysis 2025、海豚踢力學 2023-2025），且都還在「找新槓桿」。此反方假設目前只能視為「待證實的猜想」，不能視為「已被文獻支持」。"
+      }
+    ],
+    "caveats": "本次綜覽的證據基礎明顯偏向觀察/質性研究：(1) 週期化最高證據等級為 1b 但僅 3 篇，其餘 6 篇為 2b；(2) 海豚踢力學樣本 n=54 為國家級、非奧運決賽級，外推到「世界頂尖層級」需保守；(3) 水下段生理負荷解離樣本 n=12 為青年國家隊、屬「奧運儲備」而非奧運決賽；(4) VHL/RSH 原始樣本為鐵人三項選手（n=16），需 2017 泳者重複驗證支持；(5) 教練實務研究為 n=12 挪威男性教練的質性資料，無法量化論證「天花板」命題。時效性：主要一手文獻集中於 2021-2025，2026 年無重大新證據出現。WebSearch 工具在部分檢索中出現 API 錯誤，獨立反證搜尋不完整。",
+    "openQuestions": [
+      "區塊化（block）與反向（reverse）週期化在游泳項目是否仍從未出現 RCT 級驗證？若是，2026-2030 是否會有實驗填補此缺口？",
+      "頂尖選手（奧運/世錦賽決賽層級）的水下海豚踢力學是否與國家級樣本呈現相同衰退模式？樣本升級到世界頂級後，「控制末段垂直波幅」這個槓桿的效應量是否仍成立？",
+      "水下攝影、即時生物力學回饋、感測器、智能泳池、虛擬實境訓練的成效文獻本次未涵蓋——這些「技術輔助」是否已有 2024-2026 的 RCT 級實證？",
+      "水中阻力訓練（parachute、band、tethered swimming）與陸地阻力訓練的轉移效率（transfer efficiency）有沒有新的 2023-2026 比較研究？"
+    ],
+    "refuted": [
+      {
+        "claim": "頂尖奧運耐力運動教練（包括游泳教練）仍遵循「傳統週期化模型」，在比賽接近時「逐漸降低整體訓練量並增加更多比賽專項訓練」（gradual shift towards lower overall training volume and more competition-specific training），顯示主流訓練哲學並無結構性突破。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/40278987/"
+      },
+      {
+        "claim": "跨項目共通特徵為「高量低強度訓練搭配每週 2-3 天『關鍵訓練日』，含 3-5 堂高強度訓練課」（high volume of low-intensity training combined with 2-3 weekly 'key workout' days consisting of 3-5 intensive training sessions），游泳亦適用此模式。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/40278987/"
+      },
+      {
+        "claim": "水下海豚踢速度在 25 公尺最大努力過程中明顯下降（效應量 η²=0.65，屬於大效應），代表長距離潛泳末段踢水效率顯著衰退。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/36756980/"
+      },
+      {
+        "claim": "研究結論指出，受過訓練的選手即使主觀不適感略增，仍可透過控制式增加水下段來優化該比賽段落表現：「Controlled increases of underwater sections in trained swimmers can led to optimizing performance in these race segments despite small increases of perceived discomfort.」",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35177993/"
+      },
+      {
+        "claim": "在有氧耐力型運動員中，4 週水中專項反覆衝刺缺氧訓練（RSH）與常氧訓練（RSN）相比，缺氧組在衝刺表現與血紅素濃度上有顯著差異，顯示水中缺氧訓練具有實際可行性。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=hypoxic+swimming+training"
+      },
+      {
+        "claim": "2017 年針對中等訓練程度競技泳者進行的 6 週研究比較了缺氧與常氧訓練對運動表現的影響，屬於把水中缺氧訓練從陸地延伸到水中實證的重要文獻之一。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=hypoxic+swimming+training"
+      },
+      {
+        "claim": "2003 年 Truijens 等人的經典臨床試驗發現，5 週高強度水中（flume）訓練即可改善海平面游泳表現，為缺氧訓練在游泳項目中的應用奠定早期實證基礎。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=hypoxic+swimming+training"
+      },
+      {
+        "claim": "絕大多數納入研究(從3487篇篩選至9篇)顯示，主流週期化模式為波狀(mesocycle波動)週期化，用以驅動生理適應與技術習得。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/33952709/"
+      },
+      {
+        "claim": "各項目在「訓練量、頻率、強度分佈及肌力與交叉訓練的應用上存在顯著差異」（substantial differences in volume, frequency, intensity distribution, and application of strength and cross training），受「運動模式限制」（exercise mode constraints）與「比賽距離」（competition distance）驅動，意味游泳的水中介質特性決定其無法直接套用跑步或自行車的訓練結構。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/40278987/"
+      },
+      {
+        "claim": "研究實務建議：選手應在潛水段尾聲控制垂直身體波幅，以降低踢水表現下降幅度——代表「維持身體水平線」是當前潛泳末段優化的可訓練槓桿。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/36756980/"
+      },
+      {
+        "claim": "水下參數（時間、距離、速度）在 75 公尺過程中會變動，但變動幅度並不因實驗條件而異，意味著選手能維持一定的水下推進模式。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35177993/"
+      },
+      {
+        "claim": "該領域文獻量在 2016 年後持續成長，2021 年達高峰 18 篇、2024 年仍有 16 篇，代表水中缺氧訓練仍是活躍的研究方向，而非已被淘汰的舊方法。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/?term=hypoxic+swimming+training"
+      },
+      {
+        "claim": "該系統綜述以「訓練負荷(量×強度)」為主要分析框架，較少涉及水中訓練的技術性突破(如水下動作、減阻、划水效率)；暗示水中訓練在「量與強度分配」層面的知識已相對成熟，但在「技術優化」與「替代週期化模型」層面仍有研究空缺。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/33952709/"
+      },
+      {
+        "claim": "本研究目的為「產生新假設並對實證基礎訓練實務作出貢獻」（generate new hypotheses and contribute to evidence-based training practices），且僅基於 12 位挪威男性教練的質性資料，無法直接量化論證「水中訓練是否已達天花板」。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/40278987/"
+      },
+      {
+        "claim": "該研究關鍵詞包含「apnea」、「breath-holding」、「dolphin kick」，反映當代水中訓練創新集中在「閉氣下的海豚踢」與「起跳／轉身後的水下段」這條路線，而非其他阻力工具。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35177993/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33952709/",
+        "quality": "primary",
+        "angle": "頂尖選手現況與演變",
+        "claimCount": 4
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40278987/",
+        "quality": "primary",
+        "angle": "頂尖選手現況與演變",
+        "claimCount": 5
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36756980/",
+        "quality": "primary",
+        "angle": "頂尖選手現況與演變",
+        "claimCount": 5
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35177993/",
+        "quality": "primary",
+        "angle": "頂尖選手現況與演變",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.google.com/search?q=swimming+dolphin+kick+biomechanics+drag+reduction+2023",
+        "quality": "unreliable",
+        "angle": "生物力學與減阻技術突破",
+        "claimCount": 0
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/",
+        "quality": "unreliable",
+        "angle": "生物力學與減阻技術突破",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.sciencedirect.com/science/article/pii/S0021929024000387",
+        "quality": "unreliable",
+        "angle": "科技輔助訓練成效",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.mdpi.com/2076-3417/14/3/1234",
+        "quality": "unreliable",
+        "angle": "科技輔助訓練成效",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.frontiersin.org/journals/sports-and-active-living/articles/10.3389/fspor.2024.1234567/full",
+        "quality": "unreliable",
+        "angle": "科技輔助訓練成效",
+        "claimCount": 0
+      },
+      {
+        "url": "https://bjsm.bmj.com/content/58/12/678",
+        "quality": "unreliable",
+        "angle": "科技輔助訓練成效",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.sportsci.org/2024/SwimTech_smart_pool.htm",
+        "quality": "unreliable",
+        "angle": "科技輔助訓練成效",
+        "claimCount": 0
+      },
+      {
+        "url": "https://link.springer.com/article/10.1007/s40279-023-01945-0",
+        "quality": "unreliable",
+        "angle": "科技輔助訓練成效",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.websearch.unavailable/result-1",
+        "quality": "unreliable",
+        "angle": "特殊訓練法最新實證",
+        "claimCount": 0
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/?term=hypoxic+swimming+training",
+        "quality": "primary",
+        "angle": "特殊訓練法最新實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://scholar.google.com/scholar?q=hypoxic+swim+training+meta+analysis&as_ylo=2022",
+        "quality": "unreliable",
+        "angle": "特殊訓練法最新實證",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.cochranelibrary.com/cdsr/search?searchText=swimming+training",
+        "quality": "unreliable",
+        "angle": "特殊訓練法最新實證",
+        "claimCount": 0
+      },
+      {
+        "url": "https://journals.humankinetics.com/journal/jseajsp",
+        "quality": "unreliable",
+        "angle": "特殊訓練法最新實證",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.google.com",
+        "quality": "unreliable",
+        "angle": "瓶頸論與反證",
+        "claimCount": 0
+      }
+    ],
+    "stats": {
+      "angles": 5,
+      "sourcesFetched": 18,
+      "claimsExtracted": 24,
+      "claimsVerified": 24,
+      "confirmed": 9,
+      "killed": 15,
+      "afterSynthesis": 7,
+      "urlDupes": 0,
+      "budgetDropped": 2,
+      "agentCalls": 97
+    }
+  }
+}

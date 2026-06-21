@@ -1,0 +1,281 @@
+{
+  "summary": "Deep research harness — fan-out web searches, fetch sources, adversarially verify claims, synthesize a cited report.",
+  "agentCount": 97,
+  "logs": [
+    "Q: 游泳比賽決勝負的關鍵，到底是水中訓練還是陸地訓練（dryland training）？\n\n我需要：\n1. 頂尖游泳選手（如奧運獎牌得主）的訓練時數分配：水中 v…",
+    "Decomposed into 5 angles: 頂尖選手時數分配實況, 陸地訓練對水中表現的實證, 教練/學者支持「陸地為分水嶺」, 水中訓練量相關性研究（反證）, 突破瓶頸的選手案例",
+    "水中訓練量相關性研究（反證）: 1 results",
+    "突破瓶頸的選手案例: 2 results",
+    "教練/學者支持「陸地為分水嶺」: 4 results",
+    "陸地訓練對水中表現的實證: 6 results",
+    "頂尖選手時數分配實況: 6 results",
+    "頂尖選手時數分配實況: 2 novel (4 filtered)",
+    "Fetched 15 sources → 44 claims → verifying top 25",
+    "\"Combined swimming + strength training outperforms …\": 0-3 ✗",
+    "\"All three strength training methods produced simil…\": 1-2 ✗",
+    "\"Plyometric training produced the highest mean impr…\": 0-3 ✗",
+    "\"研究建議教練將「針對腿伸肌群神經肌肉誘發」的動作納入每日陸地訓練，以提升游泳轉身表現。…\": 0-3 ✗",
+    "\"Dry-land power training (especially plyometrics) i…\": 3-0 ✓",
+    "\"Cross-sectional studies show positive associations…\": 3-0 ✓",
+    "\"Both experimental and control groups showed meanin…\": 3-0 ✓",
+    "\"In a 16-week RCT of 16 well-trained adolescent swi…\": 1-2 ✗",
+    "\"系統性回顧（共檢索 1,259 篇文獻，最終納入 6 篇）顯示，增強式（plyometric）、肌力…\": 1-2 ✗",
+    "\"The authors explicitly conclude that muscle streng…\": 3-0 ✓",
+    "\"Yang et al. (2025) 是 6 週、每週 2 次的隨機平行對照試驗，比較三種乾地訓練介…\": 3-0 ✓",
+    "\"相較於肌耐力訓練（MET, control），MST 組在多項水中專項表現上都有統計顯著進步：起跳飛…\": 2-1 ✓",
+    "\"增強式訓練（PT）也明顯優於 MET 對照組：15 公尺出發時間 (p=0.004)、25 公尺打水…\": 0-3 ✗",
+    "\"作者結論：雖然三組都有進步，但 MST 與 PT 對短距離自由式整體表現的提升「顯著優於」MET（純…\": 3-0 ✓",
+    "\"Thng, Pearson & Keogh (2019) 發表了第一篇針對「陸地阻力訓練與游泳出發表…\": 2-1 ✓",
+    "\"The Wikipedia biography does not contain falsifiab…\": 3-0 ✓",
+    "\"此系統性回顧於 Google Scholar 已被引用 60 次，是該領域的奠基性文獻。…\": 0-3 ✗",
+    "\"The debate over weight training in swimming has no…\": 0-3 ✗",
+    "\"Swimmers need dryland exercises to build athletici…\": 0-3 ✗",
+    "\"Dryland/weight routines provide clear benefits to …\": 0-3 ✗",
+    "\"Garrido 等人 (2010) 的研究（被引用 224 次，引用數最高）發現，對年輕競技游泳員而…\": 0-3 ✗",
+    "\"Dingley 等人 (2015) 針對帕奧游泳員的研究顯示，陸地阻力訓練計畫能改善出發動作（swi…\": 1-2 ✗",
+    "\"Dryland maximal strength training (2.7%) and hyper…\": 0-3 ✗",
+    "\"Morais 等人 (2016) 提出了反面證據：在年輕游泳員身上，水中加陸地的同步訓練並未對 50…\": 0-3 ✗",
+    "\"Amaro 等人 (2019) 的系統性綜述指出，最大肌力訓練（maximal strength）是…\": 2-1 ✓",
+    "Verify done: 25 claims → 10 confirmed, 15 killed"
+  ],
+  "result": {
+    "question": "游泳比賽決勝負的關鍵，到底是水中訓練還是陸地訓練（dryland training）？\n\n我需要：\n1. 頂尖游泳選手（如奧運獎牌得主）的訓練時數分配：水中 vs 陸地各佔多少比例？\n2. 陸地訓練的類型（重量訓練、彈跳訓練、核心訓練、伸展）對水中表現的實證影響\n3. 是否有科學研究或教練公開承認「陸地訓練其實才是分水嶺」？\n4. 反對意見：水中訓練量與成績的相關性研究\n5. 案例研究：哪位選手因為強化陸地訓練而突破成績瓶頸？\n\n請給我正反兩面的證據，最後給我一個平衡的結論。不要只支持我的假設，要真的去查證。\n\n語言：繁體中文。",
+    "summary": "水中訓練仍是游泳表現的基礎與主體，但陸地訓練（特別是最大肌力訓練與增強式訓練）對特定環節——出發、轉身、短距離衝刺——有明確的加成效果；然而「陸地訓練是分水嶺」的強假設並未在頂尖選手的整體成績上得到一致支持。兩者並非二選一，而是互補結構。",
+    "findings": [
+      {
+        "claim": "出發表現（SBS, 5-15m）：陸地爆發力訓練（特別是增強式）是有效且非專項性的改善手段，垂直跳測驗是出發表現的最佳預測指標。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/32149877/",
+          "https://scholar.google.com/scholar?q=Thng+Pearson+Keogh+dryland+resistance+training+swim+start"
+        ],
+        "evidence": "Beattie et al. (2020) 系統性回顧 33 篇研究後明確指出「dry-land power training (principally through plyometrics) was a proficient, nonspecific method to enhance SBS」；Thng, Pearson & Keogh (2019) 在 Sports Medicine 發表的系統性回顧（首篇針對陸地阻力訓練與出發表現之 SR）支持此結論。3-0 一致通過。"
+      },
+      {
+        "claim": "橫斷面研究顯示陸地肌力（特別是上肢等長肌力）與游泳表現正相關，但「陸地肌力訓練介入本身」對游泳成績的提升效果仍不明確。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/32149877/"
+        ],
+        "evidence": "Muniz-Pardos et al. (2022) 系統性回顧原文：「Cross-sectional DLS studies showed positive associations between swimming performance and DLS development (especially through upper-body isometric assessments), although the efficacy of DLS training interventions remains unclear.」2024-2025 後續文獻（Đurović 2024, Ruiz-Navarro 2025）仍維持「介入效果不明確」的共識立場。3-0 一致通過。"
+      },
+      {
+        "claim": "下半身肌力（半蹲肌力）與游泳表現的相關性比垂直跳高度更強：Gonzalez-Rave et al. (2020) 16 週 RCT 發現，週期化組與非週期化組在肌力、垂直跳、游泳時間上皆進步，但唯一與游泳時間顯著相關的是半蹲肌力進步（r=.560, p=.024），而非垂直跳進步。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/32126524/"
+        ],
+        "evidence": "原始 RCT 顯示兩組半蹲進步 +19.6%~+25.7%、臥推 +14.1%~+19.3%，但只有週期化組垂直跳進步 +19.4%（p=.024）；此跳躍進步並未轉化為額外游泳時間改善。作者結論：「the association between improvements in lower-body strength and swimming performance still indicates the importance of muscle strength in this age group」——肌力本身重要，但「特定週期化方案」未顯示優於一般肌力訓練。3-0 一致通過。"
+      },
+      {
+        "claim": "短距離衝刺：Yang et al. (2025) 6 週 RCT（27 名大學 Tier 2 選手）顯示，相較於肌耐力訓練（MET 對照組），最大肌力訓練（MST, 80-95% 1RM）在多項水中專項表現上有統計顯著進步：起跳飛行距離 p=0.021、15m 出發 p<0.001、25m 打水 p<0.001、25m 划手 p<0.001、25m 自由式 p=0.004、50m 自由式 p<0.001。增強式訓練（PT）也同樣優於 MET，且 MST 與 PT 後測無顯著差異。",
+        "confidence": "high",
+        "sources": [
+          "https://pubmed.ncbi.nlm.nih.gov/40046224/"
+        ],
+        "evidence": "Yang et al. 2025, J Sports Sci Med 24(1):128-141, DOI 10.52082/jssm.2025.128。所有 p 值皆與原文 abstract 一致。作者結論：「MST and PT exhibited significantly better results compared to MET in enhancing sprint freestyle performance overall.」3-0 一致通過。限制：n=27 三組各約 9 人、6 週短介入、僅 Tier 2 大學選手。"
+      },
+      {
+        "claim": "陸地訓練類型排序：Amaro et al. (2019) 系統性綜述指出，最大肌力訓練（maximal strength）是改善游泳表現最有效的陸地訓練方法，plyometric 被列為推薦輔助。",
+        "confidence": "medium",
+        "sources": [
+          "https://scholar.google.com/scholar?q=dryland+training+swimming+performance"
+        ],
+        "evidence": "Amaro et al. 2019, Science & Sports, DOI 10.1016/j.scispo.2018.07.003。引用片段「maximal strength was the most effective methodology for improving swimming performance. S&C plyometric training is suggested to be...」與 CrossRef 確認的標題及 Google Scholar 搜尋結果一致。2-1 通過。限制：被引用 28 次偏低、2019 年至今 7 年、部分納入研究為年長選手，2021-2024 轉身專項綜述已擴展原結論。"
+      },
+      {
+        "claim": "頂尖選手的具體水/陸比例與 Phelps 等奧運獎牌得主的訓練時數分配缺乏可信公開資料：Wikipedia 上 Phelps 的條目未記載每週訓練量或水/陸比例，無法用於回答「頂尖選手的比例是多少」這個問題。",
+        "confidence": "high",
+        "sources": [
+          "https://en.wikipedia.org/wiki/Michael_Phelps"
+        ],
+        "evidence": "Phelps 條目的 Training 區段僅記載 Bob Bowman 訓練風格與 12,000 大卡迷思澄清，未提供每週里程或水/陸時數比。3-0 一致通過。這是「資料缺口」聲明本身，重要在於點出公開資料不足。"
+      }
+    ],
+    "caveats": "1. **頂尖選手樣本不足**：絕大多數 RCT 與系統性回顧的受試者是青少年（13-18 歲）或 Tier 2 大學選手，**鮮少以奧運獎牌得主為對象**。Beattie 2020、Thng 2019、Muniz-Pardos 2022 皆明確呼籲「需要更多 high-quality intervention studies」。回答「頂尖選手」問題時需明確標示此一外推限制。\n2. **「陸地訓練介入效果」本身仍未定論**：Muniz-Pardos 2022 系統性回顧（33 篇研究）的核心訊息是——橫斷面研究看到相關，但介入性研究效力「unclear」。這意味著「陸地訓練是分水嶺」這種強假設在科學證據上**並未被充分驗證**。\n3. **效果集中在特定環節**：陸地訓練的實證效益**最一致**的部分是出發（5-15m）、轉身、爆發力相關指標；對中長距離比賽的整體成績轉移效應較弱。\n4. **後測無差異 vs. 進步幅度**：Yang 2025 顯示 MST 與 PT 後測無差異（皆優於 MET），但這不代表「兩者等價」——可能反映樣本數不足或訓練量差異。\n5. **時效性**：Amaro 2019 已 7 年；Thng 2019 已 7 年；Yang 2025 是最新文獻但僅 6 週介入。2020-2026 間仍有文獻持續發表，本合成反映當前證據共識，**不預測 2027+ 趨勢**。\n6. **公開資料不完整**：頂尖選手（Phelps, Ledecky, Dressel 等）的詳細訓練日誌、教練訪談具體數字，多屬傳記/口述歷史層級，**未經學術研究系統化記錄**——因此「奧運獎牌得主的水/陸比例」這類問題，現有可查證資料無法給出精確答案。\n7. **「分水嶺」這種強敘事需謹慎**：所有實證研究都沒有把陸地訓練定位為「比水中訓練更重要」；最強的說法是「對特定環節有加成、與水中訓練互補」。把陸地訓練說成「分水嶺」屬於過度詮釋。",
+    "openQuestions": [
+      "頂尖奧運獎牌得主（如 Phelps 2008 單屆 8 金時期、Ledecky 800m 自由式連霸、Dressel 100m 蝴蝶）的具體水/陸訓練時數比與陸地訓練模組為何？是否有系統化的公開資料或教練手稿可查？（現有 Wikipedia 等次級資料不足）\n2. 是否有任何教練（Bob Bowman、Ian Thorpe 教練、Michael Bohl 等）公開承認「陸地訓練才是分水嶺」或反之「水中訓練量才是瓶頸」的具體訪談紀錄？\n3. 6 週至 16 週的 RCT 介入在 27 人樣本下能觀察到短期效果，但**長期（多年）追蹤**陸地訓練介入對頂尖選手職業生涯成績的影響是否存在？目前文獻以青少年短期介入為主，極少 longitudinal elite-level 研究。\n4. 轉身（turn）環節的陸地訓練證據比出發更稀薄——MDPI 2021 與 PubMed 34501929 雖有正面訊號但被反駁，那麼「陸地訓練對轉身的實證效益」是否仍處於證據不足狀態？"
+    ],
+    "refuted": [
+      {
+        "claim": "Combined swimming + strength training outperforms swim-only training across 27 studies, 518 participants.",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35099631/"
+      },
+      {
+        "claim": "All three strength training methods produced similar gains of approximately 2-2.5%, refuting the principle of specificity (in-water is NOT clearly superior to dryland).",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35099631/"
+      },
+      {
+        "claim": "Plyometric training produced the highest mean improvement at 3.6 ± 0.8%, exceeding both in-water resistance (1.7-2.5%) and most dryland methods.",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35099631/"
+      },
+      {
+        "claim": "系統性回顧（共檢索 1,259 篇文獻，最終納入 6 篇）顯示，增強式（plyometric）、肌力、彈道式（ballistic）陸地訓練對游泳轉身表現有正面效果，核心訓練則無定論。",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/34501929/"
+      },
+      {
+        "claim": "研究建議教練將「針對腿伸肌群神經肌肉誘發」的動作納入每日陸地訓練，以提升游泳轉身表現。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/34501929/"
+      },
+      {
+        "claim": "In a 16-week RCT of 16 well-trained adolescent swimmers, periodized dryland strength training (DLST) did NOT produce superior swimming performance gains compared to standard DLST — both groups improved similarly on lactate-threshold swim time (+2.6% exp vs +3.2% ctrl) and 10-m start time.",
+        "vote": "1-2",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/32126524/"
+      },
+      {
+        "claim": "增強式訓練（PT）也明顯優於 MET 對照組：15 公尺出發時間 (p=0.004)、25 公尺打水 (p=0.011)、25 公尺划手 (p<0.001)、50 公尺 (p=0.014)。",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/40046224/"
+      },
+      {
+        "claim": "此系統性回顧於 Google Scholar 已被引用 60 次，是該領域的奠基性文獻。",
+        "vote": "0-3",
+        "source": "https://scholar.google.com/scholar?q=Thng+Pearson+Keogh+dryland+resistance+training+swim+start"
+      },
+      {
+        "claim": "Dryland/weight routines provide clear benefits to swimmers, the most prevalent being explosive power (May 2023 article)",
+        "vote": "0-3",
+        "source": "https://www.swimmingworldmagazine.com/news/category/dryland/"
+      },
+      {
+        "claim": "The debate over weight training in swimming has no clear-cut right or wrong answer (Nov 2023, Kayla Riemensperger)",
+        "vote": "0-3",
+        "source": "https://www.swimmingworldmagazine.com/news/category/dryland/"
+      },
+      {
+        "claim": "Swimmers need dryland exercises to build athleticism from the start, with weights gradually added as they age (Taylor Byers, May 2022)",
+        "vote": "0-3",
+        "source": "https://www.swimmingworldmagazine.com/news/category/dryland/"
+      },
+      {
+        "claim": "Garrido 等人 (2010) 的研究（被引用 224 次，引用數最高）發現，對年輕競技游泳員而言，結合陸地肌力與有氧訓練並不會抑制表現，反而能提升游泳成績。",
+        "vote": "0-3",
+        "source": "https://scholar.google.com/scholar?q=dryland+training+swimming+performance"
+      },
+      {
+        "claim": "Dingley 等人 (2015) 針對帕奧游泳員的研究顯示，陸地阻力訓練計畫能改善出發動作（swim-starts）並提升短沖成績。",
+        "vote": "1-2",
+        "source": "https://scholar.google.com/scholar?q=dryland+training+swimming+performance"
+      },
+      {
+        "claim": "Morais 等人 (2016) 提出了反面證據：在年輕游泳員身上，水中加陸地的同步訓練並未對 50 公尺自由式成績產生顯著改變，顯示陸地訓練的轉移效應並非在所有情境下都成立。",
+        "vote": "0-3",
+        "source": "https://scholar.google.com/scholar?q=dryland+training+swimming+performance"
+      },
+      {
+        "claim": "Dryland maximal strength training (2.7%) and hypertrophy training (2.6%) outperformed specific in-water arm resistance training (1.7%).",
+        "vote": "0-3",
+        "source": "https://pubmed.ncbi.nlm.nih.gov/35099631/"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.researchgate.net/publication/swimmer-training-volume-dryland",
+        "quality": "unreliable",
+        "angle": "頂尖選手時數分配實況",
+        "claimCount": 0
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Michael_Phelps",
+        "quality": "secondary",
+        "angle": "頂尖選手時數分配實況",
+        "claimCount": 4
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35099631/",
+        "quality": "primary",
+        "angle": "陸地訓練對水中表現的實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34501929/",
+        "quality": "primary",
+        "angle": "陸地訓練對水中表現的實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32149877/",
+        "quality": "primary",
+        "angle": "陸地訓練對水中表現的實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32126524/",
+        "quality": "primary",
+        "angle": "陸地訓練對水中表現的實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40046224/",
+        "quality": "primary",
+        "angle": "陸地訓練對水中表現的實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://scholar.google.com/scholar?q=Thng+Pearson+Keogh+dryland+resistance+training+swim+start",
+        "quality": "primary",
+        "angle": "陸地訓練對水中表現的實證",
+        "claimCount": 5
+      },
+      {
+        "url": "https://www.usaswimming.org/news/blog/dryland-training-for-competitive-swimmers",
+        "quality": "unreliable",
+        "angle": "教練/學者支持「陸地為分水嶺」",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.ais.org.au/physiology/sport/swimming",
+        "quality": "unreliable",
+        "angle": "教練/學者支持「陸地為分水嶺」",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.swimmingworldmagazine.com/news/category/dryland/",
+        "quality": "secondary",
+        "angle": "教練/學者支持「陸地為分水嶺」",
+        "claimCount": 5
+      },
+      {
+        "url": "https://scholar.google.com/scholar?q=dryland+training+swimming+performance",
+        "quality": "secondary",
+        "angle": "教練/學者支持「陸地為分水嶺」",
+        "claimCount": 5
+      },
+      {
+        "url": "https://search-error/placeholder",
+        "quality": "unreliable",
+        "angle": "水中訓練量相關性研究（反證）",
+        "claimCount": 0
+      },
+      {
+        "url": "https://en.wikipedia.org/wiki/Dryland_training",
+        "quality": "unreliable",
+        "angle": "突破瓶頸的選手案例",
+        "claimCount": 0
+      },
+      {
+        "url": "https://www.usaswimming.org/news/2016/october/dryland-training",
+        "quality": "unreliable",
+        "angle": "突破瓶頸的選手案例",
+        "claimCount": 0
+      }
+    ],
+    "stats": {
+      "angles": 5,
+      "sourcesFetched": 15,
+      "claimsExtracted": 44,
+      "claimsVerified": 25,
+      "confirmed": 10,
+      "killed": 15,
+      "afterSynthesis": 6,
+      "urlDupes": 0,
+      "budgetDropped": 4,
+      "agentCalls": 97
+    }
+  }
+}

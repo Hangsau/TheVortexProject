@@ -4,6 +4,33 @@
 
 ---
 
+## 當前狀態（2026-06-22）
+
+### 已完成——整合 Hestia VM 兩份游泳研究報告進 research/instructional 散文層（2026-06-22）
+
+> 觸發：用戶指示「VM 內 /home/hangsau/.claude/research 有游泳報告，拉回看 TheVortexProject 有沒有用 → 研究怎麼擴充銜接進去 → 規劃好直接動手不用再問」。兩份報告經 SCP 拉回 `research/_incoming-hestia-2026-06-20/`：① water-training-breakthroughs（有用）② dryland-vs-water（邊際價值）。
+
+**整合原則**：全部進 research/ 與 instructional/ 的**散文底稿層**（下游 my-site 不讀此層），**未動 canonical**。每筆引用動筆前逐一 WebSearch 查證，校正報告多處歸因錯誤。
+
+**週期化 research 層（補 4 + 新建 2）**
+- `極化訓練_Seiler.md`：新增「TID 依主項距離分流」（González-Ravé 2021；短=極化+閾值/中=閾值+金字塔/長=金字塔，標證據等級限制）；**修正既有檔的 PMID 33952709 歸因錯誤**（原誤標 Crowley→實為 González-Ravé，WebSearch 確認）。
+- `板塊週期化_Issurin.md`：新增 6.5 游泳板塊/反向週期化仍缺 RCT 驗證（9 篇 SR 僅 3 篇 1b）。
+- `Sweetenham_游泳訓練實作.md`：新增反向週期化缺 RCT 註記；報告的「2022 reverse periodization review」聲稱**無法獨立查證 → 標 🔴 未寫成事實**。
+- `頂尖教練訓練哲學_Sandbakk.md`（新）：Sandbakk 2025（PMID 40278987，12 挪威世界級教練/380+ 獎牌/8 奧運耐力項目）。**校正報告蒸餾**：報告把「傳統週期化+taper」「高量低強度+2–3 關鍵日」投票駁回(0-3)，但 WebSearch 追原文(PMC12031707)確認這正是原文結論 → 以原文為準。
+- `低通氣訓練_VHL_RSH.md`（新）：Woorons 2016（PMID 26741118）+ Trincat 2017（PMID 27294771）+ Précart 2025 統合分析（Sports Med Open 11:55）；機制=無氧糖酵解；限制 n=16 小樣本；明標不涉感知層、對兒童/初學無外推。保留 2 🔴（Woorons 秒數待追原文、Précart PMID 待核）。
+
+**Instructional 層（補 2 檔）**
+- `水下蝶腳技術分析.md`：新增 3.6 末段速度衰退與垂直波幅控制（Veiga 2023 PMID 36756980；η²=0.65 速度受損，軀幹傾角為因，垂直波幅為控制槓桿）+ 4.4 新增即時生理指標盲區（Marinho 2022 PMID 35177993；HR/即時乳酸無差異、RPE 顯著升高）。**釐清 Marinho 與既有 Hvid 2024 為互補非矛盾**（即時小差距 vs 賽後累積，協議不同不可直接比）。
+- `出發與轉身技術分析.md`：新增 1.5 陸地肌力訓練對出發的加成（Thng/Pearson/Keogh 2019 SR + Yang 2025 RCT PMC11877300），框定「**增益器非分水嶺**」、效益集中出發/轉身/衝刺、介入效果仍未定論。**校正報告歸因錯誤**：報告把此 SR 誤標 Beattie 2020、且兩篇不同論文重複給同一 PMID 32149877 → 改用正確歸因 Thng et al.。新增 1 🔴（轉身陸地訓練證據稀薄），全檔 🔴×8。
+
+**三關校正結論**：所有新內容過「符合研究 / 反問 / 反推」三關；報告的二手再詮釋與原文落差均已標注並以查證後原文為準；無法獨立查證的聲稱一律標 🔴 不寫成事實。
+
+**my-site 同步**：本批**未觸發**——全部落在 research/instructional 散文層，canonical 未動，故 my-site sync 不需執行（待這些內容日後升格進 canonical 才觸發同步）。
+
+**待清理**：`research/_incoming-hestia-2026-06-20/`（兩份 raw json + md + INDEX）為暫存區，內容已整合，可保留作來源存證或清除。
+
+---
+
 ## 當前狀態（2026-06-21）
 
 ### 已完成——運動傷害層完整建立 + 接入 Vortex 網站（44 條傷害，獨立軸）（2026-06-21）
@@ -339,6 +366,14 @@
 ---
 
 ## 下一步建議
+
+### Hestia 報告整合後續（2026-06-22）
+
+研究/instructional 散文層整合已完成、查證已逐筆把關。剩餘為可選後續：
+
+- [ ] **殘餘 🔴 收束**：`低通氣訓練_VHL_RSH.md` 2 處（Woorons 2016 進步秒數 −3.7/−6.9/−13.6 待追原文摘要核對；Précart 2025 PMID 待從 PubMed eutils 核）；`出發與轉身技術分析.md` 1 處（轉身環節陸地訓練證據）；`Sweetenham` 1 處（報告「2022 reverse review」聲稱待獨立查證）。皆屬查證債，不阻塞。
+- [ ] **（評估）升格 canonical**：本批新內容若要上 Vortex 網站，需先進 `canonical/periodization/*.yaml`（TID 分流、缺 RCT 證據缺口）或對應 instructional canonical（Veiga/Marinho/陸地訓練），再經 `my-site/tools/sync_vortex.py` 同步 + push。**目前停在 research/ 散文層，未觸發同步**（符合分層紀律）。觸發條件＝用戶要這些上線。
+- [ ] **清理暫存區**：`research/_incoming-hestia-2026-06-20/`（raw json + md + INDEX）內容已整合，可清除或保留作來源存證。
 
 ### 運動傷害層：Phase 1 W3 引用查證（待派工）（2026-06-21）
 
