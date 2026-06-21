@@ -4,6 +4,29 @@
 
 ---
 
+## 當前狀態（2026-06-21）
+
+### 已完成——運動傷害層完整建立 + 接入 Vortex 網站（44 條傷害，獨立軸）（2026-06-21）
+
+> 觸發：用戶指示「從渦流計畫出發、最後寫進 vortex 網站，盡量找出所有常見游泳運動傷害，一條線做完整（文獻＋如何避免＋發生後如何解決），盡量派工，Opus 規劃 / minimax-m3 審稿」。**關鍵定位：傷害是與水感技術軸正交的獨立軸，不掛 L0–L6 水感脊椎**（核心命題「所有技術建立在水感知上」只管技術、不管傷害）。**全光譜紀律：族群差異一律並列，文獻偏壓某族群是素材缺口不是受眾界定。**
+
+**內容（canonical/health/injuries.yaml，44 條 + 1 meta）**
+- 七大分類：A 肩部與上肢(7) / B 腰椎與泳式特異(6) / C 非肌骨醫療(9) / D 全身急性(7) / D 內分泌與骨骼(5) / E 急性外傷(5) / F 兒童生長(5)。
+- v2 schema（每條）：mechanism{summary/trigger_phase/who} · epidemiology{prevalence/certainty/evidence_grade(A=RCT/SR,B=cohort,C=case,Expert=consensus)/caveat/sources} · risk_factors · prevention · management{red_flags/acute/pain_rules/rehab/RTC/prognosis} · population_notes（youth/adult/masters/sex/para 全光譜並列）· contested · references{citation/certainty/verified}。
+- 整合走 `tools/build_injuries.py`：載入 drafts/*.yaml → 正規化 schema drift（scalar→list、stroke_phase→trigger_phase、補 who）→ 一致性稽核 → 輸出單一 canonical 檔。重建結果：44 條、0 異常、14 處 drift 修正、49 處 pending_verification。
+
+**獨立審查（Phase 3）**
+- minimax-m3 撞月費上限（429 Token Plan limit），改派獨立 Sonnet subagent（fresh context = 真獨立、非 Opus 自審）。
+- 結論：**無 P0、無安全風險、無全光譜違規**；4 處 certainty 矛盾（references 標 🟢 高信度但 verified:false）→ 全降 🔴；exercise-amenorrhea 82% 數字加樣本警語。已修並重建。
+
+**網站接入（my-site，commit e8736fa，CI 建置中）**
+- `sync_vortex.py` 加 `sync_injuries`（剝 audit + flags.pending_verification，meta_references 不公開）→ `data/vortex/injuries.yaml`（44 條、0 洩漏）。
+- `layouts/vortex/vortex-injuries.html` + `vortex-injuries.css`：左欄按七分類折疊、緊急傷害置頂橫幅、「你怎麼了」四處境入口（受傷當下/慢慢開始痛/非外傷不舒服/長期系統）、每條 panel 渲染機制/流病/grade 徽章/危險因子/預防/處置(red_flags 優先)/族群並列/爭議/連結/引用。sidebar 加「運動傷害」導航。
+
+⚠️ 剩 49 處 pending_verification（含 6 個降 🔴 的引用：IOC RED-S / ACSM / ILCOR-AHA / SIPE pathophys / Sein 2010 / McKenzie 2023 DOI）待 W3 派工查證（見下一步建議）。
+
+---
+
 ## 當前狀態（2026-06-20）
 
 ### 文件校正——FUTURE_RESEARCH.md 過期狀態判斷修正（2026-06-20）
@@ -316,6 +339,15 @@
 ---
 
 ## 下一步建議
+
+### 運動傷害層：Phase 1 W3 引用查證（待派工）（2026-06-21）
+
+骨架 + 整合 + 獨立審查 + 網站接入已完成、已上線。剩餘為查證債，**不阻塞發布**（pending_verification 欄位已使未核數字不進公開層）：
+
+- [ ] **49 處 pending_verification 逐條查證**（人名/DOI/PMID/數字皆高幻覺區，須追到 PMC/PMID 一手核對，WebSearch 摘要數字不算）。優先含 6 個降 🔴 的引用：IOC RED-S consensus、ACSM position stand、ILCOR/AHA 溺水演算法、SIPE pathophysiology review、Sein 2010 (BMJ/BJSM)、McKenzie 2023 (DOI:10.1111/sms.14454)；另含台灣溺水數據、Scheuermann OR 值等。**派工 Sonnet**（並行 WebSearch + eutils），查完更新 drafts → 重跑 `build_injuries.py` → resync。
+- [ ] **（可選）minimax-m3 最終複審**：MiniMax 月費明早 reset 後，可把 injuries.yaml 給 m3 做第二輪獨立審（用戶提過此選項，省 Claude 配額）。
+- [ ] **（可選 Phase 2 精煉）**：把 `_asian-epidemiology-supplement`（現為獨立 meta_references）折進相關傷害的 population_notes/epidemiology。
+- [ ] **（可選）** 釐清 swimmers-shoulder（傘狀）vs rotator-cuff-tendinopathy（具體）重疊——現兩條並存、傘狀條已註明 subtypes。
 
 ### 心理層：A/B/C/D 四批次已收束（2026-06-15）
 

@@ -142,6 +142,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | periodization/_index.yaml | **完成（2026-06-10）** · 概念目錄；28 節點（structure9/taper10/zones9）gist_zh 一句白話 + stages；index↔real id 零死連結；my-site 導覽用、swim-coach FTS 不索引（_-prefix skip）|
 | 註（periodization） | | 來源 Bompa《Periodization》6th ed. + 游泳外部文獻（Mujika/Maglischo/Hellard/Papadimitriou 等）；canonical 三檔加 plain_zh 白話層；一源兩消費全鏈打通——my-site 呈現（hugo 綠）+ swim-coach FTS（31 列，73/73 pass）。commit 7d03619 |
 | psychology/psychology.yaml | **Phase 2 完成（2026-06-16）** · theme→concept schema（跨泳式/跨族群）。**8 主題 62 概念全 complete，沿 L0→L6／初學→競技脊椎排三帶**（band/l_band/level_tag/concept_count）：初學端 ①水中恐懼(7) ②心理-感知-生理交互(8)；貫穿全程 ③動機與動機氣候(9) ④意象與心理演練(6)；進階競技端 ⑤注意力焦點(6) ⑥自我對話與心理技能(8) ⑦喚醒焦慮與壓力崩潰(8) ⑧心流與去再投資(10)。fear 手寫 pilot + 其餘 7 主題 7 並行 Sonnet agent 各讀 dossier 寫、ruamel round-trip merge（保留 fear 格式/註解）。每概念 public{phenomenon/hardware_boundary/l_levels/misconception/intervention/population_note/sources} + diagnostic{abc_link/reading_signals/probe}（不公開，sync 剝除，my-site 0 洩漏）。各 agent 三關校正沒過清單已記 HANDOFF。my-site「心理地圖」三帶著陸頁（8 ready 卡/62 panel）+ 首頁入口（commit 36d51f5 / my-site 3df8b56·a655926）|
+| health/injuries.yaml | **完成（2026-06-21）** · 運動傷害層，**傷害為獨立軸（非掛 L0–L6 水感脊椎）**。44 條傷害 + 1 meta，七大分類（A 肩部上肢7 / B 腰椎泳式特異6 / C 非肌骨醫療9 / D 全身急性7 / D 內分泌骨骼5 / E 急性外傷5 / F 兒童生長5）。v2 schema：mechanism/epidemiology(certainty+evidence_grade A/B/C/Expert)/risk_factors/prevention/management(red_flags+acute+rehab+RTC)/population_notes(全光譜並列 youth/adult/masters/sex/para)/contested/references(verified flag)。drafts/ → `tools/build_injuries.py`（正規化 schema drift + 一致性稽核）→ injuries.yaml。Sonnet 獨立審查：無 P0、無安全風險，4 處 certainty 矛盾已修。49 處 pending_verification 待 W3 查證。my-site「運動傷害」頁（44 panel + 緊急置頂 + 七分類折疊 + 「你怎麼了」處境入口）|
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
@@ -163,4 +164,4 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 
 ---
 
-*最後更新：2026-06-16（Phase 2 完成：canonical/psychology/ 8 主題 62 概念全接入 Vortex 網站——三帶「心理地圖」著陸頁 + 首頁入口〔commit 36d51f5 起，my-site 至 a655926〕；7 主題由 7 並行 Sonnet agent 寫、三關校正、0 diagnostic 洩漏；2026-06-16 早些完成心理層 8 dossier 引用查證 B1–B4）*
+*最後更新：2026-06-21（運動傷害層完成：canonical/health/injuries.yaml 44 條傷害 + 七大分類接入 Vortex「運動傷害」頁；傷害為獨立軸；build_injuries.py 整合 + 一致性稽核；Sonnet 獨立審查無 P0/無安全風險、4 處 certainty 矛盾已修；49 處 pending_verification 待 W3 查證〔TheVortexProject commit 3b2183a / my-site e8736fa〕）*
