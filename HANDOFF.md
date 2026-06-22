@@ -18,7 +18,7 @@
 
 **③ 新建三大能量系統入門節點 `energy_systems_primer`（用戶明點的最高價值缺口）**
 - 補上 swim_energy_by_distance（供能比）與 table_11_2（HR 對照）之間缺的「系統本身怎麼運作」入門框架：磷酸原(ATP-PCr,0–10s 爆發,無乳酸)/糖酵解(10s–2min,乳酸限制)/有氧(2min+,持續+負責恢復)三系統 × 主導時長 × 燃料 × 限制因子 × 恢復 × 主導距離 × 訓練方向。系統運作標 🟡（教科書級公認生理），訓練方向標 🔵。caveat 明標三系統連續重疊非開關。已註冊進 _index.yaml。
-- 保留 1 🔴 `protocol_pending_zh`：各系統**精確可訓練協議數字**（衝刺距離/休息比/組數、乳酸生成 vs 耐受組配速、各 Maglischo 區量與配速）需 PMID 溯源後才寫，現僅給質性方向 → **派 m3 蒐集**（見下一步）。
+- **訓練協議已補入**（原規劃派 m3，技術判斷後改自做）：m3 走 MiniMax 後端無 WebSearch（Anthropic 伺服端工具），派它撈引用＝吐捏造 PMID 的最高幻覺風險，故撤回派工、改由 Claude 自己 WebSearch 查證。`training_protocols` 區塊（5 條）：磷酸原 6–15s/休90–120s/5–10reps 🟠；糖酵解-乳酸生成 25–50m 最大努力/長休/300–500m 🟠（British Swimming 指南）；乳酸耐受 35–100m/50m 常用/48h 恢復 🟠；SIT 實測 4×50–8×50 誘發 12–18mmol 🟢（PMC8607769）；有氧交叉引用 liee_methods+Maglischo 🔵。保留 1 🔴 `protocol_caveat_zh`：多為教練指南/共識層非 RCT 最適化，RCT 級協議比較仍是研究空白。
 
 **④ my-site 同步（已執行，與上批不同）**
 - `python tools/sync_vortex.py` 已跑：periodization 三檔 + 上批已提交的 instructional（水下蝶腳/出發轉身）+ drills/technical-analysis 全部propagate 到 my-site `data/`。canonical 三 YAML 經 `yaml.safe_load` 驗證 OK。
