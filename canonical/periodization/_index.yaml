@@ -66,3 +66,13 @@ zones:
   - {id: periodization.zones.swim_energy_by_distance, file: zones.yaml, name_zh: 各距離能量系統供能比, gist_zh: "50m 有氧5–20%、100m≈各半、400m 40–84%(跨研究區間)", stages: [t2c, t2w]}
   - {id: periodization.zones.swim_tid, file: zones.yaml, name_zh: 訓練強度分布 TID, gist_zh: "極化/金字塔/閾值三型；游泳金字塔最常見(162筆89);依距離分流短=極化長=金字塔;連衝刺者也87–90%量在Z1", stages: [t2c, t2w]}
   - {id: periodization.zones.swim, file: zones.yaml, name_zh: 游泳配速分區應用, gist_zh: "組課強度用比賽配速百分比表達；映射 Bompa 不發明數字", stages: [t2t, t2c, t2w]}
+
+# ── 陸上力量訓練（dryland.yaml）──
+dryland:
+  - {id: periodization.dryland.overview, file: dryland.yaml, name_zh: 陸訓總覽, gist_zh: "爭論不是能不能變強(能)而是三件事:轉移成不成立/並行排程/成熟度;有條件成立非鐵律", stages: [t2t, t2c, t2w]}
+  - {id: periodization.dryland.transfer, file: dryland.yaml, name_zh: 力量轉移效果, gist_zh: "16篇約7篇無效;最大力量最有效;轉移看技術成熟度+專項性;臥推未必預測衝刺速度", stages: [t2c, t2w]}
+  - {id: periodization.dryland.methods, file: dryland.yaml, name_zh: 陸訓模式比較, gist_zh: "最大力量轉移最強;增強式只助出發轉身非整體游速(618人SR無效);專項阻力(划手板/拖傘)轉移高", stages: [t2c, t2w]}
+  - {id: periodization.dryland.concurrent, file: dryland.yaml, name_zh: 並行排程殘留疲勞, gist_zh: "傍晚陸訓+12h睡眠→隔天100m無殘留疲勞(n=8);重陸訓排關鍵課前一天非當天", stages: [t2c, t2w]}
+  - {id: periodization.dryland.injury, file: dryland.yaml, name_zh: 游泳肩傷害預防, gist_zh: "划手讓內旋>外旋失衡=游泳肩源頭;彈力帶練外旋+肩胛8週有效;練整條動力鏈優於孤立肩肌", stages: [l2t, t2t, t2c, t2w]}
+  - {id: periodization.dryland.youth, file: dryland.yaml, name_zh: 青少年負重安全, gist_zh: "無最低年齡硬門檻(能守安全規則~7-8歲);成熟度>實齡;PHV前只徒手;成人初學/masters/para是缺口", stages: [l2t, t2t]}
+  - {id: periodization.dryland.caveats, file: dryland.yaml, name_zh: 陸訓誠實反例, gist_zh: "7/16無效+臥推未必預測衝刺+三組100m無差+增強式對游速無效;轉移有條件成立非普遍", stages: [t2c, t2w]}

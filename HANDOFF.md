@@ -4,6 +4,26 @@
 
 ---
 
+## 當前狀態（2026-06-22 · 傍晚）
+
+### 已完成——陸上力量訓練軸畢業進 canonical + 上站（2026-06-22）
+
+> 觸發：能量系統內容上站後，用戶問「接下來要做什麼」→ 我建議把陸訓建成獨立輔助軸（如同 injuries），用 WebSearch 查證非派 m3 → 授權「去做吧」（含最終 commit/push）。
+
+**① 全光譜證據蒐集（WebSearch + 三關校正，非派 m3）**
+- 6 輪 WebSearch 涵蓋四軸：B1 整體轉移效果、B2 游泳肩傷害預防、B3 青少年負重安全/PHV/年齡門檻、B4 null/反例。**理由同上批**：m3 走 MiniMax 後端無 WebSearch，撈引用＝吐捏造 PMID，故自做。
+- **關鍵反例（三關抓出）**：增強式「有效」多指出發/轉身，對 50/100m 整體游速證據不足（618 人 SR 對水中垂直跳/敏捷無效）；16 篇約 7 篇對游泳表現無顯著效果；臥推未必預測衝刺速度——誠實並列，不只報正向。
+
+**② 新建 canonical `periodization/dryland.yaml`（7 節點）**
+- overview（🔵 真正爭論=轉移/排程/成熟度非「能不能變強」）/ transfer_evidence（🟡 有條件成立）/ methods（🟢 最大力量 vs 增強式 vs 專項阻力）/ concurrent_scheduling（🟢 傍晚陸訓+12h 睡眠隔天 100m 無殘留疲勞，JFMK 2023 PMID 37489300 n=8）/ injury_prevention（🟢 內旋>外旋失衡=游泳肩；Kabat D2 彈力帶 RCT PMC10679734；動力鏈優於孤立肩肌）/ youth_safety（🟢 成熟度>實齡；PHV 前只徒手；AAP 2020 e20201011；**成人初學/masters/para 明標 🔴 素材缺口不外推**）/ null_caveats（🟡 誠實反例彙整）。
+- 註冊進 `_index.yaml`（新增 dryland 區塊 7 entry）。兩 YAML 經 yaml.safe_load 驗證 OK。
+
+**③ my-site 上站（完整鏈：canonical→sync→layout→build→push）**
+- `sync_vortex.py` 的 `PERIODIZATION_FILES` 加入 "dryland"；sync 已跑，`data/periodization/dryland.yaml` 到位。
+- **關鍵（rendering-gap 教訓）**：`vortex-periodization.html` hardcode 各節點渲染、不 iterate _index——故新增「主題 5 · 陸上力量訓練」section（7 個 `<details>`）+ 概覽 path-item + 左欄 rail link + zones flow nav 前進連結，全部手動接線；各 section 計數 /4→/5。`hugo` build 通過，grep `public/vortex/periodization/index.html` 確認 7 節點全渲染、3 條 dryland 導航連結到位。
+
+---
+
 ## 當前狀態（2026-06-22 · 下午）
 
 ### 已完成——週期化內容畢業進 canonical + 建三大能量系統入門 + sync my-site（2026-06-22）
