@@ -237,7 +237,7 @@ schools_overview:
   schools:
     - {key: traditional, name_zh: 傳統線性（Bompa/Matveyev）, core_q_zh: "一年怎麼分準備/競賽/過渡，讓表現在大賽達峰？", strength_zh: "結構清晰、教學完整、對新手與單一賽季最穩", weakness_zh: "對菁英多峰賽季僵硬；並行練多能力對高水準者效率下降", cert: 🟡}
     - {key: block, name_zh: 板塊集中（Issurin）, core_q_zh: "高水準者無法同時練好所有能力，那要按什麼順序集中練？", strength_zh: "用殘留效應科學決定換塊時機；適合菁英、多峰", weakness_zh: "殘留效應個體差異大；術語邊界模糊；初中級者不需要", cert: 🟡}
-    - {key: polarized, name_zh: 極化分布（Seiler/TID）, core_q_zh: "每個強度區各應占多少比例？", strength_zh: "從菁英真實行為歸納；80/20 有 RCT 支持（Stöggl 2014）", weakness_zh: "只有單一 RCT；游泳實證其實金字塔型更常見（Crowley 2021）", cert: 🟢}
+    - {key: polarized, name_zh: 極化分布（Seiler/TID）, core_q_zh: "每個強度區各應占多少比例？", strength_zh: "從菁英真實行為歸納；80/20 有 RCT 支持（Stöggl 2014）", weakness_zh: "只有單一 RCT；游泳實證其實金字塔型更常見（González-Ravé 2021）", cert: 🟢}
     - {key: swim_energy, name_zh: 能量系統個體化（Olbrecht）, core_q_zh: "有氧/無氧不是越大越好，怎麼找到最適組合？", strength_zh: "捨棄通用閾值、改個體乳酸測試；解釋『閾值進步但成績沒進步』", weakness_zh: "需實驗室乳酸測試支援；原書處方數字不可及", cert: 🟡}
     - {key: swim_reverse, name_zh: 反向週期化（Sweetenham）, core_q_zh: "速度該放賽季末，還是當全季的校準錨？", strength_zh: "速度先行、技術不被疲勞固化；現場可操作（BBM＋benchmark）", weakness_zh: "原書五法則/具體數字網路不可查；非 RCT，靠成績佐證", cert: 🟢}
   reader_questions_zh:

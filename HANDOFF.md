@@ -4,6 +4,27 @@
 
 ---
 
+## 當前狀態（2026-06-22 · 下午）
+
+### 已完成——週期化內容畢業進 canonical + 建三大能量系統入門 + sync my-site（2026-06-22）
+
+> 觸發：用戶質疑「既然有內容為什麼沒上 vortex；不夠就去捕足夠；m3 流量回來了有缺就補；這些章節有歸類成類型嗎；做陸上訓練 or 更詳細三大能量系統運作+可訓練方式？」→ 授權「好 去做吧」（含最終 commit/push）。修正：先前把已查證內容停在散文層而自滿於「分層紀律」是過度保守，有價值的查證內容該讓它上站。
+
+**① 修 canonical Crowley→González-Ravé 歸因（散文層上批已修、canonical 漏修導致線上版仍錯）**
+- `canonical/periodization/zones.yaml`（line 20 註解 / school_polarized source / swim_caveat_zh / plain_zh）、`structure.yaml`（schools_overview polarized weakness_zh）、`_index.yaml`（zones gist）四處全部 Crowley→González-Ravé et al. 2021（PMID 33952709, IJSPP 16(7):913–926）。grep 確認 canonical 已零 Crowley。
+
+**② TID 依距離分流正式補進 swim_tid 節點**
+- 新增 `pyramidal_majority_zh`（162 筆 TID：金字塔 89/極化 65/閾值 8）、`distance_split_zh`（短=極化+閾值/中=閾值+金字塔/長=金字塔）、`distance_split_caveat_zh`（觀察歸納非 RCT，9 篇僅 3 篇 1b）；source 加 González-Ravé 2021；plain_zh 與 _index gist 同步更新。
+
+**③ 新建三大能量系統入門節點 `energy_systems_primer`（用戶明點的最高價值缺口）**
+- 補上 swim_energy_by_distance（供能比）與 table_11_2（HR 對照）之間缺的「系統本身怎麼運作」入門框架：磷酸原(ATP-PCr,0–10s 爆發,無乳酸)/糖酵解(10s–2min,乳酸限制)/有氧(2min+,持續+負責恢復)三系統 × 主導時長 × 燃料 × 限制因子 × 恢復 × 主導距離 × 訓練方向。系統運作標 🟡（教科書級公認生理），訓練方向標 🔵。caveat 明標三系統連續重疊非開關。已註冊進 _index.yaml。
+- 保留 1 🔴 `protocol_pending_zh`：各系統**精確可訓練協議數字**（衝刺距離/休息比/組數、乳酸生成 vs 耐受組配速、各 Maglischo 區量與配速）需 PMID 溯源後才寫，現僅給質性方向 → **派 m3 蒐集**（見下一步）。
+
+**④ my-site 同步（已執行，與上批不同）**
+- `python tools/sync_vortex.py` 已跑：periodization 三檔 + 上批已提交的 instructional（水下蝶腳/出發轉身）+ drills/technical-analysis 全部propagate 到 my-site `data/`。canonical 三 YAML 經 `yaml.safe_load` 驗證 OK。
+
+---
+
 ## 當前狀態（2026-06-22）
 
 ### 已完成——整合 Hestia VM 兩份游泳研究報告進 research/instructional 散文層（2026-06-22）
