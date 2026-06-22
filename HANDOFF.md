@@ -4,7 +4,27 @@
 
 ---
 
-## 當前狀態（2026-06-22 · 傍晚）
+## 當前狀態（2026-06-22 · 夜）
+
+### 已完成——呼吸訓練輔助軸畢業進 canonical + 呼吸感知 drills 上脊椎（2026-06-22）
+
+> 觸發：MiniMax-M3 v2 審查（Hestia VM `/home/hangsau/vortex-review-2026-06-22.md`）指出呼吸內容單薄。我先驗證 M3 聲稱（filter「bug」其實是內容缺口=只有 1 個呼吸 drill；誤區「沒正確版」半錯=correct_concept 有渲染、真缺的是 cross_ref 連結）。用戶授權「整理要做哪些→規劃→一次執行完」。**未照 M3 處方（身份/topic 入口、L 自評測都違反既有設計原則），只做有價值且原則相容的部分。**
+
+**框架決策：呼吸拆「兩條線」**
+- ① 感知線（水中呼吸節律/吐氣/換氣）= 水感一部分，按 L0–L6 分級，住 drills。
+- ② 生理線（呼吸肌 IMT/RMT + CO2 耐受）= 硬體側輔助軸，定位**平行於 dryland**，**按負荷分級不按 L 分級**。
+
+**① 感知線：新增 4 個呼吸 drill 進 `Drills/drills_freestyle.yaml`**
+- FrBr1 韻律呼吸(L0) / FrBr2 放鬆下沉(L0) / FrBr3 連續涓流吐氣(L1) / FrBr4 兩側換氣(L2)。皆描述「物理/呼吸力學」(吐氣連續、浮力)非規定內在感覺，可分級。誠實標 source「通用游泳教學法（Vortex 整理）」（非 Sherret 書，避免假歸因）。FrBr2 failure_signal 明標偏瘦/低體脂者沉=硬體浮力低非緊張（硬體 vs 感知反推）。sync 後 drills 125→129。
+
+**② 生理線：新建 canonical `health/breathing-training.yaml`（5 節點，安全置頂）**
+- **safety（🟢，渲染必置頂）**：缺氧昏迷(SWB)機轉 + CDC MMWR 2015（紐約 1988–2011，16 DUBB / 4 死，17–22 歲男）+ 美國紅十字會/YMCA/USA Swimming 三方聯合聲明（缺氧訓練只能水面做、不能水下）。本軸所有方法零水下憋氣。
+- **overview（🔵）**：兩條線框架 + 作者立場（先問瓶頸是感知還是呼吸肌）。
+- **imt_rmt（🟡）**：IMT/RMT 證據**分距離看**——MIP 必進步(robust)、但短中距(≤200m)游泳成績無顯著、長距/有氧 modest；協議 **50% MIP**(非 30%，30% 是臨床病人劑量)→80%、30 breaths×2/day、6–12 週、POWERbreathe。誠實反例 Cunha 2019 (PMID 33501396) 菁英 null。
+- **co2_tolerance（🔴）**：CO2 表對游泳表現**無實證=游泳脈絡的 bro-science**；陸上做無溺水風險但有迷走暈厥、勿獨自；自由潛水脈絡不外推游泳。
+- **grading（🔵）**：回答用戶「呼吸能不能分級」——能，但兩套軸：感知線按 L、呼吸肌按負荷(%MIP)、CO2 表不列入游泳分級。
+- **查證**：bounded 證據蒐集派 general-purpose（Sonnet）跑 WebSearch 驗 PMID/DOI，三關校正+框架整合由我做（同 dryland 不派 m3 之理）。
+- ⚠ 此檔**未進 _INDEX.md/RESEARCH_PLAN**（health 域非 periodization _index 管轄；injuries 也是獨立 health artifact）。
 
 ### 已完成——陸上力量訓練軸畢業進 canonical + 上站（2026-06-22）
 
