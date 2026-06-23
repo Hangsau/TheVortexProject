@@ -6,6 +6,21 @@
 
 ## 當前狀態（2026-06-23）
 
+### 已完成——感知×週期化「缺口」：從 🔴 純假設升級為 🔵 作者綜合（2026-06-23）
+
+> 觸發：用戶質疑「把感知×週期化叫缺口」的正當性——若兩者本是不同東西，硬找連結永遠不成；若有連結還叫缺口，就該去補而不是只貼標籤。要求掃描他處有無同類誤標。
+
+**① 分類掃描結論**：全 canonical 的「缺口/空白/待補」標記分四類——A 概念橋接缺口（該不該連）、B 素材缺口（某族群無文獻）、C 研究空白（游泳專屬量測不存在）、D 引用待補（DOI/PMID）。B/C/D 都是誠實的資料缺位標記（正確做法，非誤標）；**A 類「硬湊連結」型全專案只有一個——感知×週期化**，且它本就不是「只貼標籤」（已含 hypothesis_zh 三點推論）。沒有需要撤標的假連結。
+
+**② 跑 🔴查證工作流補實證**（CLAUDE.md 規定「不接受搜不到作為結束」）：原節點寫「目前無直接文獻支持此接點」**講過頭**。查證後分兩層——
+- 通用層**有據**：Branscheidt et al. 2019（eLife 8:e40578，四來源交叉確認）證實疲勞損害技能「學習」本身非僅執行、延續隔天；Otte/Millar/Klatt 2019 PoST 框架（Front. Sports Act. Living 1:61）證實「技能週期化」是已發表框架；減量研究證實降頻掉 motor sensation。
+- 真正仍 🔴 的只剩**水感知（L0–L6）專屬層**：無人直接量測過「水感知品質的週期化」。
+
+**③ 改動**：`canonical/periodization/structure.yaml` perception_periodization_bridge 節點 cert 🔴→🔵、source/hypothesis_zh/status_zh/plain_zh 全改為分兩層誠實標記＋內嵌兩條查實引用；`canonical/periodization/_index.yaml` gist 同步；`FUTURE_RESEARCH.md` 新增 §0.6（水感知的週期化，⭐⭐）。三關校正通過。
+- 同步 my-site `data/periodization/`，Hugo build EXIT=0，`public/vortex/periodization/index.html` 含新內容（Branscheidt/PoST/分兩層）。週期化頁 layout 第 166–173 行渲染此節點。
+
+---
+
 ### 已完成——背式誤區 5→9 + udk/starts-turns drills 0→5 + Ward 引用全式統一（2026-06-23）
 
 > 觸發：my-site 全站健康檢查（4 路 inventory agent → Claude grep → M3 三輪審查）抓出三個真缺口。用戶授權「該做的就去做、改整理得全部整理好」。全程 canonical-first，補完 sync 進 my-site + Hugo build 驗證。
