@@ -141,7 +141,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 ### canonical/（結構化資料層，public/diagnostic 兩層；下游經 sync_vortex.py / submodule 消費）
 | 文件 | 狀態 | 備註 |
 |------|------|------|
-| instructional/teaching-errors.yaml | **完成** · 6 式 76 條教學誤區；public{misconception/physical_reason/evidence/correct_concept/perception_impact} + diagnostic{type} |
+| instructional/teaching-errors.yaml | **完成** · 6 式 80 條教學誤區（背式 5→9，補 err6–9，2026-06-23）；public{misconception/physical_reason/evidence/correct_concept/perception_impact} + diagnostic{type} |
 | instructional/technical-analysis.yaml | **完成** · 6 式 188 技術點；全 public（物理層），無 diagnostic |
 | technica/l-indicators.yaml | **完成** · L 指標矩陣 43 indicators（6 levels × 5 strokes，30 格）；public{indicator/framework_state/quant_ref/evidence} + diagnostic{failure_signal（6 common 格）/ type（3 格 A/B/C）} |
 | technica/water-sense-levels.yaml | **完成** · 水感層級 26 levels（free/back L0–L6，breast/fly pre+L2–L6）；public{description/methods/indicators/quant/stagnation/milestone + 各式特有欄位} + diagnostic{type_diagnosis/type_states/type_training/type_milestones/stagnation_by_type} + 頂層 three_types/appendices；公開層三型/A/B/C 0 leaks |
@@ -163,6 +163,8 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | drills_breaststroke.yaml | **完成 + how_to** · Br1–Br34（34）|
 | drills_butterfly.yaml | **完成 + how_to** · Fl1–Fl31（31，含水下蝶腳）|
 | drills_sculling.yaml | **完成 + how_to** · Sc1–Sc10（10，划水感知）|
+| drills_udk.yaml | **完成 + how_to**（2026-06-23）· UDK1–5（5，水下海豚腳；垂直打水/流線換面/繫繩最大努力/節拍器找頻率/比賽配速）|
+| drills_starts-turns.yaml | **完成 + how_to**（2026-06-23）· ST1–5（5，出發轉身；中池翻滾/翻牆踩牆/流線測距/旗下數划手/轉體出水）|
 | DRILL_INDEX.md | **完成** · 完整索引（Schema / L級 / ABC型 / 快速查找）|
 | 註 | | 來源 *There's a Drill for That*（Laurie Sherret）；125 動作；how_to 於 2026-06-06 commit a4ddee1 補入 |
 

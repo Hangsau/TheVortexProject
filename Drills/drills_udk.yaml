@@ -1,0 +1,100 @@
+# Underwater Dolphin Kick Drills — Vortex
+# Percussion layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 水下海豚腳：以「全身波動由核心發起、腳背末端鞭打」為核心感知；
+# 多數 drill 屬 B 型腳感，但 UDK 本質是全身場（L5–L6）的整合輸出。
+
+drills:
+  - id: UDK1
+    name_en: "Vertical Kicking"
+    name_zh: "垂直打水"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "直立姿態隔離海豚腳，拿掉浮力這個拐杖，逼出雙向（前後）都要主動推水的打水。"
+    how_to:
+      - "在深水區直立，雙手抱胸或舉高，靠海豚腳把頭維持在水面或水面附近"
+      - "波動由核心（胸-髖）發起，往下傳到大腿、小腿、腳背，前後兩個方向都主動壓水"
+      - "10–20 秒一組，組間充分休息；進階可雙手出水增加負荷"
+    perception_goal: "感覺水被腳背往兩個方向推，核心像鞭柄、腳背像鞭梢；不是只有膝蓋在踩。"
+    success_signal: "頭能穩定維持在水面附近，前後兩個踢向都感覺到水壓。"
+    failure_signal: "身體下沉、只靠膝蓋猛踩、單向（只有下踢）有力。"
+    deficiency_fixes: [B]
+    source: "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide"
+
+  - id: UDK2
+    name_en: "Streamline Kick — Orientation Switch"
+    name_zh: "流線打水換面（仰／側／俯）"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: [fins]
+    l_target: [L4, L5]
+    abc_type: B
+    purpose_zh: "在同一趟內輪流以仰、側、俯三個身體面打水，檢查波動是否依賴特定身體朝向。"
+    how_to:
+      - "蹬牆成流線，水下打 4–6 下仰躺打水 → 轉成側身打 4–6 下 → 再轉俯臥打 4–6 下"
+      - "保持手臂緊鎖流線、波動幅度一致，只換身體朝向不換節律"
+      - "全程在水下、頭在身體線內，浮起前完成換面"
+    perception_goal: "三個朝向的腳背推水感一致；波動由核心發起，不因翻面而散掉。"
+    success_signal: "換面後仍維持推進與緊湊流線，速度不明顯掉。"
+    failure_signal: "某個朝向（常是俯臥）波動變小或膝蓋代償；換面時流線鬆掉。"
+    deficiency_fixes: [B, C]
+    source: "Competitor Swim UDK drills；swimswam UDK sets"
+
+  - id: UDK3
+    name_en: "Tethered Max Dolphin Kick"
+    name_zh: "繫繩最大努力海豚腳"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: [tubing]
+    l_target: [L4, L5]
+    abc_type: B
+    purpose_zh: "用短彈力繩製造阻力，做最大努力打水，發展打水的力量與相位。"
+    how_to:
+      - "腰繫短彈力繩固定於牆，俯臥或側身水下打水"
+      - "4×5 秒最大努力，每組間完全休息（約 60 秒）"
+      - "每週 2–3 次；專注維持核心發起的完整波動，不為了用力而變成踩水"
+    perception_goal: "阻力下仍能感覺核心→腳背的完整波動傳遞，而非膝蓋孤立發力。"
+    success_signal: "繩阻力下身體仍前移、波動完整。"
+    failure_signal: "波動塌成純膝蓋踩、髖部不參與。"
+    deficiency_fixes: [B]
+    source: "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
+
+  - id: UDK4
+    name_en: "Tempo Trainer Kick to Cone"
+    name_zh: "節拍器找個人打水頻率"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: [tempo_trainer]
+    l_target: [L4, L5]
+    abc_type: B
+    purpose_zh: "用節拍器測試不同打水頻率，找出能最快游到固定距離的個人最佳頻率（非套用統一數字）。"
+    how_to:
+      - "池底放一個標記（如 15 公尺處），節拍器設不同節奏"
+      - "每個頻率水下打到標記，教練計時，比較哪個頻率最快"
+      - "高頻不一定快——找的是個人「頻率×幅度」最佳組合"
+    perception_goal: "在最佳頻率時，每一下都感覺腳背確實壓到水，波動不被頻率追著跑而變淺。"
+    success_signal: "找到一個明顯比其他頻率快的個人節奏。"
+    failure_signal: "一味追高頻率使幅度塌掉、推進反而變差。"
+    deficiency_fixes: [B]
+    source: "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
+
+  - id: UDK5
+    name_en: "Race-Tempo Underwater Off the Wall"
+    name_zh: "比賽配速水下打水"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L5, L6]
+    abc_type: B
+    purpose_zh: "把水下打水放回比賽情境：蹬牆後以比賽強度打到旗標再接出水，整合速度與時序。"
+    how_to:
+      - "蹬牆成流線，以比賽強度水下打水到 10–15 公尺（依規則上限內）"
+      - "在接近最高速時乾淨地接第一次划手（breakout），不讓速度先掉"
+      - "多數水下打水量以較高強度進行；組間充分恢復維持品質"
+    perception_goal: "高強度下仍維持核心發起的波動與緊湊流線；breakout 時機在速度尚高時。"
+    success_signal: "出水接划手沒有明顯減速、波動到最後一下仍完整。"
+    failure_signal: "後段波動塌掉、太晚或太早出水、breakout 卡頓。"
+    deficiency_fixes: [B, C]
+    source: "yourswimlog.com（race-tempo underwater）；swimswam UDK sets"

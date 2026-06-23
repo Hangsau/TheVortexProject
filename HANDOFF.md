@@ -4,6 +4,31 @@
 
 ---
 
+## 當前狀態（2026-06-23）
+
+### 已完成——背式誤區 5→9 + udk/starts-turns drills 0→5 + Ward 引用全式統一（2026-06-23）
+
+> 觸發：my-site 全站健康檢查（4 路 inventory agent → Claude grep → M3 三輪審查）抓出三個真缺口。用戶授權「該做的就去做、改整理得全部整理好」。全程 canonical-first，補完 sync 進 my-site + Hugo build 驗證。
+
+**① 背式 teaching-errors 5 → 9（`canonical/instructional/teaching-errors.yaml`）**
+- 新增 back.err6（直臂划手 / pull / A型）、err7（呼吸無節律 / breathing / C型）、err8（僵直腿過度矯正 / kick / B型，與 err5 踢向錯不同軸）、err9（拱背 / body-position / C型）。
+- **刻意停在 9 不灌水到 14**：嚴格套「教練主動這樣教」收錄標準後，多數背式「常見錯誤」文獻實為選手習慣（crossover、高頭位）非教練錯口令。M3 列的 4 條補充候選（划手到大腿/頭不要動/膝蓋出水/永遠六拍）經查證**無一通過收錄標準**——反向驗證 9 是把關非偷懶。
+- **邊界透明**：err6/err9 是收錄標準邊界案例（M3 A3/A4 合理質疑），內容已自帶 🟠＋明文揭露爭議（不偽裝鐵案）。
+
+**② udk + starts-turns drills 各 0 → 5（新建 `Drills/drills_udk.yaml`、`Drills/drills_starts-turns.yaml`）**
+- UDK1–5（垂直打水 / 流線換面 / 繫繩最大努力 / 節拍器找頻率 / 比賽配速），ST1–5（中池翻滾 / 翻牆踩牆 / 流線測距 / 旗下數划手 / 轉體出水）。
+- 管線原本**無此兩 slot**：另在 my-site `tools/sync_vortex.py` 的 `DRILL_STROKES` 加 `udk`/`starts-turns`、layout 補分類名「出發轉身」。
+- UDK3「4×5 繫繩」經 WebSearch 確認 yourswimlog 原文逐字相符（M3 B1-1 疑為自創，證偽）。
+
+**③ Ward 引用全式補 2018（資料層＋散文層）**
+- `canonical/instructional/technical-analysis.yaml`（蛙式 late-kick）、`canonical/technica/l-indicators.yaml`（breast.L4/L5 兩處）→ Ward 2018（碩士論文 U Hawaii Manoa；亦見 JSR Vol.26）。
+- 散文層 `Instructional/蛙式深度技術分析.md`（3 處，含書目行補 (2018)+JSR）、`Technica/技術指標_L級對應框架.md`（2 處）→ Ward 2018，全式統一。
+- scope 驗證：三處引用全為 stroke:breast，無跨式 scope creep。
+
+> ⚠ 本輪只動我的 7 檔（teaching-errors / technical-analysis / l-indicators / 2 散文 md / 2 drills）。其餘 untracked（periodization plans、canonical/perception/、蝶式 md 等）為他輪未提交工作，**未 stage**。
+
+---
+
 ## 當前狀態（2026-06-22 · 夜）
 
 ### 已完成——呼吸訓練輔助軸畢業進 canonical + 呼吸感知 drills 上脊椎（2026-06-22）

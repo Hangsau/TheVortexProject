@@ -478,7 +478,7 @@ indicators:
       framework_state: 壓力下感知失守——身體平衡
       evidence:
         - {certainty: 🟡, text: Colman 1998, source: Colman 1998}
-        - {certainty: 🟠, text: Ward 研究, source: Ward}
+        - {certainty: 🟠, text: Ward 2018 研究, source: Ward 2018}
 
   - id: breast.L5.late-kick
     stroke: breast
@@ -488,7 +488,7 @@ indicators:
       indicator: insweep 啟動時才踢腿（比傳統更晚）；速度谷值明顯縮小；%VDO 降低
       framework_state: 感知自動化過渡
       evidence:
-        - {certainty: 🟠, text: Ward 研究；Peaty 技術, source: Ward；Peaty}
+        - {certainty: 🟠, text: Ward 2018 研究；Peaty 技術, source: Ward 2018；Peaty}
 
   - id: breast.L5.undulation-stability
     stroke: breast

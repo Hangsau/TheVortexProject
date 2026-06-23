@@ -1,0 +1,100 @@
+# Starts & Turns Drills — Vortex
+# Percussion layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 出發與轉身：核心感知是「翻轉時身體軸線不散、蹬牆瞬間流線最緊、轉體與打水連動」；
+# 多屬 C 型（全身張力 / 空間定向），把轉身拆成 接近→執行→出水 三段練。
+
+drills:
+  - id: ST1
+    name_en: "Mid-Pool Somersault"
+    name_zh: "中池翻滾"
+    strokes: [starts_turns]
+    category: turn
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: C
+    purpose_zh: "離開牆面練翻滾本身，先建立「直線翻過去、不歪斜」的身體定向，再帶到牆邊。"
+    how_to:
+      - "在池中央俯臥漂浮，雙手放大腿"
+      - "打一下緊湊海豚腳、同時把頭往膝蓋帶，腿用力翻過去；手掌前臂從大腿掃到肩膀"
+      - "翻完檢查身體是否正對原方向（沒有左右歪）"
+    perception_goal: "翻滾是一個緊湊的團身，軸線維持在矢狀面，翻完仍朝原方向。"
+    success_signal: "能在原地直線翻過去，不向側邊偏。"
+    failure_signal: "翻滾鬆散、身體歪向一側、翻完方向跑掉。"
+    deficiency_fixes: [C]
+    source: "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression"
+
+  - id: ST2
+    name_en: "Wall Flip + Foot Plant"
+    name_zh: "翻牆踩牆（腳尖朝上）"
+    strokes: [starts_turns]
+    category: turn
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: C
+    purpose_zh: "把中池翻滾帶到牆邊，只練「翻過去、雙腳穩穩踩上牆、腳尖朝正上方」這一段。"
+    how_to:
+      - "游近牆，翻滾後把雙腳平貼牆面，腳尖指向正上方（確保翻得正、準備仰躺出去）"
+      - "先不蹬出，只確認踩牆位置與身體朝向正確"
+      - "穩定後再延伸成蹬牆成仰躺流線"
+    perception_goal: "雙腳同時、對稱地踩到牆，腳尖朝上代表翻轉軸線正確。"
+    success_signal: "雙腳穩踩牆、腳尖朝上、身體準備好仰躺蹬出。"
+    failure_signal: "單腳先到、踩牆位置太高或太低、身體歪斜。"
+    deficiency_fixes: [C]
+    source: "U.S. Masters Swimming Faster Flip Turns（wall progression）"
+
+  - id: ST3
+    name_en: "Streamline Push-Off Distance"
+    name_zh: "蹬牆流線測距"
+    strokes: [starts_turns]
+    category: turn
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: C
+    purpose_zh: "練蹬牆瞬間把身體鎖成最緊、最窄的流線，用「滑多遠」當客觀回饋。"
+    how_to:
+      - "蹬牆成流線（雙手交疊鎖住、夾耳、全身拉長），不打水純滑行"
+      - "看自己能滑到哪（如旗標、某條池底線），記住距離"
+      - "重複，嘗試讓身體更窄更緊以滑更遠"
+    perception_goal: "蹬離牆瞬間全身像一支箭，水從身體兩側乾淨滑過，沒有任何鼓出的阻力面。"
+    success_signal: "同樣力道下滑行距離增加、感覺水阻變小。"
+    failure_signal: "頭抬起、手沒鎖緊、身體鬆開，很快就停。"
+    deficiency_fixes: [C]
+    source: "U.S. Masters Swimming Turns guides（tight streamline push-off）"
+
+  - id: ST4
+    name_en: "Backstroke Flag Stroke-Count"
+    name_zh: "仰式旗下數划手"
+    strokes: [starts_turns]
+    category: turn
+    equipment: [fins]
+    l_target: [L3, L4]
+    abc_type: C
+    purpose_zh: "仰式看不到牆，用旗標（距牆 5 公尺）建立固定划手數，不靠回頭偷看就能準確翻身。"
+    how_to:
+      - "正常仰式游，經過背泳旗標時開始數划手，記錄到牆需要幾下"
+      - "用這個固定划手數，在最後一下轉體翻身，不抬頭偷看"
+      - "加蛙鞋以比賽速度測試，校正高速下的划手數"
+    perception_goal: "靠固定划手節律就知道牆在哪；轉體在不減速、不偷看的狀態下啟動。"
+    success_signal: "用划手數就能準確到牆翻身，不需偷看、不撞牆或撈空。"
+    failure_signal: "仍需抬頭看牆、划手數不穩、到牆距離忽遠忽近。"
+    deficiency_fixes: [C]
+    source: "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）"
+
+  - id: ST5
+    name_en: "Push-and-Rotate Breakout"
+    name_zh: "蹬牆轉體出水"
+    strokes: [starts_turns]
+    category: turn
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: C
+    purpose_zh: "自由式翻身蹬牆時人是仰／側躺，練在水下邊打水邊旋轉回俯臥，再乾淨接第一次划手。"
+    how_to:
+      - "翻身蹬牆，蹬出時維持側／仰流線、保持窄而緊"
+      - "水下打水，利用腳的擺動帶動身體從背／側轉回俯臥"
+      - "在速度仍高時接第一次划手出水（breakout），不先把速度滑掉"
+    perception_goal: "旋轉由打水自然帶動、流線全程不散；breakout 接在速度尚高的時點。"
+    success_signal: "出水順、無卡頓、轉體中流線維持、銜接划手不減速。"
+    failure_signal: "為了轉體鬆開流線、太早浮起、breakout 時明顯減速。"
+    deficiency_fixes: [C]
+    source: "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills"
