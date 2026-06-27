@@ -1,5 +1,6 @@
 # Backstroke Drills — There's a Drill for That
 # Perception layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 9-axis tag fingerprint v1.0 (2026-06-27): 見 Drills/TAG_SCHEMA.md
 
 drills:
   - id: Bk1
@@ -20,6 +21,15 @@ drills:
     failure_signal: "臀部下沉；膝蓋大幅出水（自行車踢）"
     deficiency_fixes: [5, 6]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [streamline_line, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: water_sound
+    difficulty_tier: foundation
 
   - id: Bk2
     name_en: "Flutter Kick Cross"
@@ -40,6 +50,15 @@ drills:
     failure_signal: "水淹過臉；感覺頭部太低或太高"
     deficiency_fixes: [1, 2, 13]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [buoyancy_balance, streamline_line]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: surface_break
+    difficulty_tier: foundation
 
   - id: Bk3
     name_en: "Board Down Kick"
@@ -58,6 +77,15 @@ drills:
     failure_signal: "浮板彈跳（代表膝蓋或大腿在碰板）"
     deficiency_fixes: [7]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [kick_origin, kick_amplitude]
+    stroke_phase: non_stroke
+    drill_function: corrective
+    cognitive_load: low
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
 
   - id: Bk4
     name_en: "Head Lead Balance Kick on Side"
@@ -78,6 +106,15 @@ drills:
     failure_signal: "旋轉到90度；感覺在上坡"
     deficiency_fixes: [3, 4]
     source: "There's a Drill for That"
+    body_position: side
+    constraints: [no_arms]
+    movement_pattern: progressive
+    skill_focus: [buoyancy_balance, core_tension]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: core_tension_internal
+    difficulty_tier: foundation
 
   - id: Bk5
     name_en: "Head Lead Balance Kick with Rotation"
@@ -98,6 +135,15 @@ drills:
     failure_signal: "頭部跟著身體搖晃；旋轉後踢水停止"
     deficiency_fixes: [3, 4]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: [no_arms]
+    movement_pattern: rotational
+    skill_focus: [hip_drive, rotation_connection]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Bk6
     name_en: "Superman Kick"
@@ -117,6 +163,15 @@ drills:
     failure_signal: "身體下沉；無法維持雙臂後伸姿勢"
     deficiency_fixes: [10]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [streamline_line, core_tension]
+    stroke_phase: entry
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: core_tension_internal
+    difficulty_tier: foundation
 
   - id: Bk7
     name_en: "Vertical Flutter Kick"
@@ -137,6 +192,15 @@ drills:
     failure_signal: "需要大踢幅才能維持；膝蓋大幅彎曲"
     deficiency_fixes: [4, 5, 7]
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: [no_arms]
+    movement_pattern: rotational
+    skill_focus: [kick_origin, rotation_connection]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Bk8
     name_en: "Arm Lead Balance"
@@ -156,6 +220,15 @@ drills:
     failure_signal: "手掌飄移（代表核心姿勢有問題）；身體過度旋轉"
     deficiency_fixes: [6]
     source: "There's a Drill for That"
+    body_position: side
+    constraints: [single_arm]
+    movement_pattern: progressive
+    skill_focus: [buoyancy_balance, streamline_line]
+    stroke_phase: glide
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: pool_floor_visual
+    difficulty_tier: foundation
 
   - id: Bk9
     name_en: "Alternating Arm Lead"
@@ -175,6 +248,15 @@ drills:
     failure_signal: "手先入水再旋轉（順序反了）；感覺平游而非旋轉"
     deficiency_fixes: [3, 4, 10]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: [single_arm]
+    movement_pattern: alternating
+    skill_focus: [hip_drive, rotation_connection]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Bk10
     name_en: "Head Lead Balance with 1/4 Arm Lifts"
@@ -194,6 +276,15 @@ drills:
     failure_signal: "手臂抬起和旋轉分離，感覺是兩個獨立動作"
     deficiency_fixes: [8]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: []
+    movement_pattern: alternating
+    skill_focus: [rotation_connection, recovery_path]
+    stroke_phase: recovery
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Bk11
     name_en: "Catch Up Backstroke"
@@ -213,6 +304,15 @@ drills:
     failure_signal: "等待時水蓋過臉；踢水太慢"
     deficiency_fixes: [6]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: []
+    movement_pattern: pause_pulse
+    skill_focus: [buoyancy_balance, core_tension]
+    stroke_phase: recovery
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Bk12
     name_en: "Double Arm Backstroke"
@@ -232,6 +332,15 @@ drills:
     failure_signal: "手超過中線；一側比另一側難"
     deficiency_fixes: [9]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [recovery_path, entry_extension]
+    stroke_phase: recovery
+    drill_function: corrective
+    cognitive_load: low
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Bk13
     name_en: "One Arm Stroke"
@@ -251,6 +360,15 @@ drills:
     failure_signal: "過度旋轉到90度；拉水感覺直臂往下"
     deficiency_fixes: [11]
     source: "There's a Drill for That"
+    body_position: side
+    constraints: [single_arm]
+    movement_pattern: continuous
+    skill_focus: [hip_drive, forearm_pressure]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Bk14
     name_en: "L Drill"
@@ -271,6 +389,15 @@ drills:
     failure_signal: "手臂被身體夾住；旋轉感覺費力"
     deficiency_fixes: [3, 8, 15]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: [single_arm]
+    movement_pattern: alternating
+    skill_focus: [hip_drive, catch_evf]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Bk15
     name_en: "Switching L"
@@ -291,6 +418,15 @@ drills:
     failure_signal: "頭部跟著旋轉；踢水停頓"
     deficiency_fixes: [2, 3, 8, 13]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: [tempo_constrained]
+    movement_pattern: alternating
+    skill_focus: [hip_drive, rhythm_tempo]
+    stroke_phase: catch
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Bk16
     name_en: "Switching L to Regular Backstroke"
@@ -310,6 +446,15 @@ drills:
     failure_signal: "正式仰式比L形費力；胸部太高背部拱起"
     deficiency_fixes: [10]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [rotation_connection]
+    stroke_phase: whole_stroke
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Bk17
     name_en: "Pause Point"
@@ -330,6 +475,15 @@ drills:
     failure_signal: "無法找到45度暫停點；感覺只是在平游加手臂"
     deficiency_fixes: [3]
     source: "There's a Drill for That"
+    body_position: side
+    constraints: []
+    movement_pattern: pause_pulse
+    skill_focus: [hip_drive, rotation_connection]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Bk18
     name_en: "Sky Point"
@@ -349,6 +503,15 @@ drills:
     failure_signal: "無法維持指天姿勢；踢水停頓"
     deficiency_fixes: [4]
     source: "There's a Drill for That"
+    body_position: side
+    constraints: [single_arm, tension_held]
+    movement_pattern: alternating
+    skill_focus: [kick_origin, core_tension]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Bk19
     name_en: "Fist Swimming"
@@ -369,6 +532,15 @@ drills:
     failure_signal: "握拳時幾乎無法前進（代表只靠手掌）"
     deficiency_fixes: [11]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [closed_fist]
+    movement_pattern: continuous
+    skill_focus: [forearm_pressure]
+    stroke_phase: pull
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Bk20
     name_en: "Russian Rollover"
@@ -388,6 +560,15 @@ drills:
     failure_signal: "翻轉時方向感混亂；感覺完全是兩個不同動作"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: []
+    movement_pattern: alternating
+    skill_focus: [catch_evf, rotation_connection]
+    stroke_phase: catch
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Bk21
     name_en: "Three & Glide"
@@ -407,6 +588,15 @@ drills:
     failure_signal: "滑行時立刻開始下沉"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: side
+    constraints: []
+    movement_pattern: alternating
+    skill_focus: [core_tension, glide_efficiency]
+    stroke_phase: glide
+    drill_function: skill_integration
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Bk22
     name_en: "Goggle Balance"
@@ -425,6 +615,15 @@ drills:
     failure_signal: "小物品掉落（代表頭部在移動或位置不對）"
     deficiency_fixes: [1, 2, 13]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [streamline_line, spatial_awareness]
+    stroke_phase: whole_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: foundation
 
   - id: Bk23
     name_en: "Spin"
@@ -445,6 +644,15 @@ drills:
     failure_signal: "划頻提高後旋轉消失；身體打平"
     deficiency_fixes: [14]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [rhythm_tempo, hand_acceleration]
+    stroke_phase: whole_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: elite
 
   - id: Bk24
     name_en: "Backstroke Pull"
@@ -465,6 +673,15 @@ drills:
     failure_signal: "拉水感覺虛弱；感覺在平推水"
     deficiency_fixes: [3, 9, 11]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_kick]
+    movement_pattern: continuous
+    skill_focus: [hip_drive, forearm_pressure]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Bk25
     name_en: "Accelerated Hand Strike"
@@ -484,6 +701,15 @@ drills:
     failure_signal: "入水猶豫輕柔；缺乏加速感"
     deficiency_fixes: [10, 12, 14]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [hand_acceleration, entry_extension]
+    stroke_phase: entry
+    drill_function: corrective
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Bk26
     name_en: "Lane Line Pull"
@@ -504,3 +730,12 @@ drills:
     failure_signal: "拉水位置沒有「掛住」的感覺"
     deficiency_fixes: [15]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [single_arm]
+    movement_pattern: continuous
+    skill_focus: [catch_evf, hand_acceleration]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
