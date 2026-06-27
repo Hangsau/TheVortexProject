@@ -886,3 +886,34 @@ drills:
     cognitive_load: low
     tactile_anchor: core_tension_internal
     difficulty_tier: intermediate
+
+  # === 菁英層 drill from The Race Club (v1.1, 2026-06-27) ===
+
+  - id: BkEL1
+    name_en: "Backstroke 6 Kicks 1 Stroke"
+    name_zh: "仰式 6K1S（蛙鞋）"
+    strokes: [backstroke]
+    category: timing
+    equipment: [fins]
+    l_target: [L5]
+    abc_type: null
+    purpose_zh: "Race Club 仰式節律 drill：每側踢 6 下 + 1 划手循環，蛙鞋維持配速，專注每划之間的旋轉時間和距離"
+    how_to:
+      - "穿蛙鞋，仰躺 streamline 出發"
+      - "右側躺位置（45°）踢 6 下，然後一個完整仰式划手換到左側躺，再踢 6 下"
+      - "划手時感覺距離最大化——這是 distance per stroke 訓練"
+      - "做 6×50 公尺，組間休 30 秒；關注每划之間維持的距離"
+    perception_goal: "每划的推進距離明確；旋轉是 90° 大幅度；踢腿不間斷"
+    success_signal: "每 6 拍踢腿 + 1 划之後身體有明顯前進距離"
+    failure_signal: "划手後距離很短；踢腿和划手時序脫節"
+    deficiency_fixes: [3, 14]
+    source: "The Race Club — Fundamentals of Fast Swimming Ch 13, 16"
+    body_position: transitional
+    constraints: [tempo_constrained]
+    movement_pattern: alternating
+    skill_focus: [rhythm_tempo, rotation_connection]
+    stroke_phase: whole_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: elite

@@ -1,20 +1,20 @@
 # Vortex Drill Database — Index
 
-> Sources: *There's a Drill for That* (Laurie Sherret) + Vortex 整理（呼吸、UDK、starts-turns、9-axis gap fills）  
+> Sources: *There's a Drill for That* (Laurie Sherret) + *Fundamentals of Fast Swimming* (The Race Club / Gary Hall Sr) + Vortex 整理（呼吸、UDK、starts-turns、gap fills）  
 > Perception layer mapping: Vortex L0–L6 framework (Hangsau 2026)  
 > 9-axis tag fingerprint v1.0 (2026-06-27): 見 `TAG_SCHEMA.md`  
-> Total: **164 drills** (Fr36 + Bk31 + Br38 + Fl34 + Sc12 + ST6 + UDK7)
+> Total: **176 drills** (Fr44 + Bk32 + Br38 + Fl34 + Sc12 + ST9 + UDK7)；其中 **22 elite**
 
 ## Files
 
 | File | Count | Content |
 |------|-------|---------|
-| `drills_freestyle.yaml` | 36 | Fr1–Fr24 + FrBr1–FrBr4（呼吸）+ FrEC1/FrPad1/FrSt1/FrP1/FrP2/FrSide1/FrSide2/FrLow1（gap fills） |
-| `drills_backstroke.yaml` | 31 | Bk1–Bk26 + BkEC1/BkPad1/BkSt1/BkP1/BkLow1（gap fills） |
+| `drills_freestyle.yaml` | 44 | Fr1–Fr24 + FrBr1–FrBr4（呼吸）+ FrEC1/FrPad1/FrSt1/FrP1/FrP2/FrSide1/FrSide2/FrLow1（gap fills）+ FrEL1–FrEL8（Race Club elite） |
+| `drills_backstroke.yaml` | 32 | Bk1–Bk26 + BkEC1/BkPad1/BkSt1/BkP1/BkLow1（gap fills）+ BkEL1（Race Club elite） |
 | `drills_breaststroke.yaml` | 38 | Br1–Br34 + BrEC1/BrPad1/BrSt1/BrLow1（gap fills） |
 | `drills_butterfly.yaml` | 34 | Fl1–Fl31 + FlEC1/FlPad1/FlSt1（gap fills） |
 | `drills_sculling.yaml` | 12 | Sc1–Sc10 + ScFist/ScUW1（gap fills） |
-| `drills_starts-turns.yaml` | 6 | ST1–ST5 + STSpat1（gap fills） |
+| `drills_starts-turns.yaml` | 9 | ST1–ST5 + STSpat1（gap fills）+ STEL1–STEL3（Race Club 仰式出發） |
 | `drills_udk.yaml` | 7 | UDK1–UDK5 + UDKEC1/UDKLow1（gap fills） |
 
 ## YAML Schema

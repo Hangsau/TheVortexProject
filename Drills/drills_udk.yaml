@@ -87,7 +87,7 @@ drills:
     drill_function: progression
     cognitive_load: high
     tactile_anchor: equipment_feedback
-    difficulty_tier: advanced
+    difficulty_tier: elite
 
   - id: UDK4
     name_en: "Tempo Trainer Kick to Cone"
@@ -115,7 +115,7 @@ drills:
     drill_function: progression
     cognitive_load: high
     tactile_anchor: equipment_feedback
-    difficulty_tier: advanced
+    difficulty_tier: elite
 
   - id: UDK5
     name_en: "Race-Tempo Underwater Off the Wall"

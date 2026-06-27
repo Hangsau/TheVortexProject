@@ -50,7 +50,7 @@
 - `instructional/*.md`（12 檔，280–711 行）— 四式 + 起跳轉身 + 水下蝶腳的技術分析 & 誤區深探
 - `technica/*.md`、`bridge/*.md`（6+6 檔）— L 框架 + 感知橋接（**Bridge/ 可能退役，見雷 §4**）
 - `research/{感知科學,物理現象,週期化}/`（~25 檔）— 文獻/假設層，狀態碼 🔵🟢🟡🟠🔴
-- `Drills/drills_*.yaml`（7 檔，共 **164 drill**，每 drill 9 軸 fingerprint）+ `DRILL_INDEX.md` + `TAG_SCHEMA.md`
+- `Drills/drills_*.yaml`（7 檔，共 **176 drill**，每 drill 9 軸 fingerprint；含 22 個 Race Club 來源的 elite 層）+ `DRILL_INDEX.md` + `TAG_SCHEMA.md`
 - `observations/*.md`（3 檔）— 教練觀察案例
 
 ### 治理文件

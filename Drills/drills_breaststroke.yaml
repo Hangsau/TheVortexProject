@@ -561,7 +561,7 @@ drills:
     drill_function: progression
     cognitive_load: high
     tactile_anchor: hand_pressure
-    difficulty_tier: advanced
+    difficulty_tier: elite
 
   - id: Br21
     name_en: "Dive Downs"

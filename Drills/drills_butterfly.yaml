@@ -758,7 +758,7 @@ drills:
     drill_function: skill_integration
     cognitive_load: high
     tactile_anchor: foot_pressure
-    difficulty_tier: advanced
+    difficulty_tier: elite
 
   - id: Fl28
     name_en: "Vertical Strokes"

@@ -6,6 +6,23 @@
 
 ## 當前狀態（2026-06-27）
 
+### 已完成——drills 菁英層擴充：Race Club 12 新 drill + 4 retag（2026-06-27 下午）
+
+> 觸發：用戶看完 9 軸 UI 後問「菁英 drill 哪裡來、為什麼少」。盤點現況 6 個 elite 全來自《There's a Drill for That》最難的幾個 + 我的 STSpat1，素材池本身就薄。
+
+**動作**：
+- 從 `resources/books/Fundamentals_of_Fast_Swimming/`（The Race Club / Gary Hall Sr 2020）派 Haiku agent 平行掃 24 章，extract 36 個 drill；過濾掉跟既有重複的（One arm / Catch-up / Breast Pull with Flutter Kick 等已收），確認 12 個全新 elite-tier 可加。
+- 同時審 advanced tier 找出 4 個實質屬於 elite 的 retag：Fl27 每划四踢、UDK3 繫繩最大努力、UDK4 節拍器找頻率、Br20 時速拉手（mph 比賽配速隱喻）。
+
+**12 新 elite drill**：
+- 自由式 +8：FrEL1 六踢換邊、FrEL2 四踢二划（衝刺）、FrEL3 Snap 手掌板、FrEL4 高肘撥水（手掌板）、FrEL5 Race Club 全身旋轉、FrEL6 波頂/波底入水、FrEL7 比賽配速短反覆、FrEL8 三秒暫停趕上
+- 仰式 +1：BkEL1 仰式 6K1S
+- 仰式出發 +3：STEL1 階梯式出發、STEL2 腿驅動跳、STEL3 踢沙灘球（partner）
+
+來源全部 cite Race Club 章節（Ch 6/7/10/13/16/24）。
+
+**結果**：drill 總數 164 → **176**；elite 從 6 → **22**（自由式 8 / 仰式 2 / 蛙式 3 / 蝶式 2 / UDK 3 / 仰式出發 4）。
+
 ### 已完成——drills 9 軸特色指紋系統 + 25 個新 drill 填空白格（2026-06-27）
 
 > 觸發：用戶反映「drill 全擠在 category=arm 或 L3 那 38 個泥裡，每個 drill 沒有特色出場機會」。要求重新分類 + 找空白格 + 補新 drill。
