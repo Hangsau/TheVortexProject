@@ -1,5 +1,6 @@
 # Breaststroke Drills — There's a Drill for That
 # Perception layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 9-axis tag fingerprint v1.0 (2026-06-27): 見 Drills/TAG_SCHEMA.md
 
 drills:
   - id: Br1
@@ -20,6 +21,15 @@ drills:
     failure_signal: "腳跟一拉臀部就離牆（代表從膝蓋前推）"
     deficiency_fixes: [11, 12, 13]
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: [no_arms, tension_held]
+    movement_pattern: static
+    skill_focus: [kick_origin]
+    stroke_phase: non_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: wall_contact
+    difficulty_tier: foundation
 
   - id: Br2
     name_en: "Egg Beater Kick"
@@ -39,6 +49,15 @@ drills:
     failure_signal: "感覺不到腿內側壓力；腳底在踢"
     deficiency_fixes: [11]
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: []
+    movement_pattern: static
+    skill_focus: [kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: foot_pressure
+    difficulty_tier: foundation
 
   - id: Br3
     name_en: "Vertical Breaststroke Kick"
@@ -58,6 +77,15 @@ drills:
     failure_signal: "膝蓋前推超過身體線；感覺上彈很弱"
     deficiency_fixes: [11, 12, 13]
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: [no_arms]
+    movement_pattern: static
+    skill_focus: [kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: foot_pressure
+    difficulty_tier: intermediate
 
   - id: Br4
     name_en: "Vertical Kick with Streamline Arms"
@@ -77,6 +105,15 @@ drills:
     failure_signal: "無法在流線臂下維持垂直；膝蓋前推"
     deficiency_fixes: [12, 13]
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: [tension_held]
+    movement_pattern: static
+    skill_focus: [kick_origin, kick_amplitude]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: medium
+    tactile_anchor: foot_pressure
+    difficulty_tier: advanced
 
   - id: Br5
     name_en: "Pull-Buoy Kick"
@@ -96,6 +133,15 @@ drills:
     failure_signal: "浮力棒掉落（代表膝蓋太寬）"
     deficiency_fixes: [11, 13]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_arms, tension_held]
+    movement_pattern: continuous
+    skill_focus: [kick_origin, glide_efficiency]
+    stroke_phase: non_stroke
+    drill_function: corrective
+    cognitive_load: low
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
 
   - id: Br6
     name_en: "Hands Down Kick on Stomach"
@@ -115,6 +161,15 @@ drills:
     failure_signal: "無法用腳踝碰手（代表從膝蓋前推）；踢後沒有滑行感"
     deficiency_fixes: [2, 10, 11]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: foot_pressure
+    difficulty_tier: intermediate
 
   - id: Br7
     name_en: "Hands Down Kick on Back"
@@ -134,6 +189,15 @@ drills:
     failure_signal: "膝蓋出水（代表試圖前推膝蓋）"
     deficiency_fixes: [11, 12, 13]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [kick_origin]
+    stroke_phase: non_stroke
+    drill_function: corrective
+    cognitive_load: low
+    tactile_anchor: foot_pressure
+    difficulty_tier: intermediate
 
   - id: Br8
     name_en: "Superman Kick on Stomach"
@@ -153,6 +217,15 @@ drills:
     failure_signal: "踢完後身體平直沒有波動；腳合攏無力"
     deficiency_fixes: [16]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [kick_origin, wave_undulation]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
 
   - id: Br9
     name_en: "Superman Kick on Back"
@@ -172,6 +245,15 @@ drills:
     failure_signal: "膝蓋出水；臀部下沉"
     deficiency_fixes: [12]
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_arms]
+    movement_pattern: continuous
+    skill_focus: [kick_origin, streamline_line]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: surface_break
+    difficulty_tier: intermediate
 
   - id: Br10
     name_en: "Tombstone Kick"
@@ -191,6 +273,15 @@ drills:
     failure_signal: "浮板傾斜；踢水距離很短"
     deficiency_fixes: [11, 14]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [kick_origin, kick_amplitude]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
 
   - id: Br11
     name_en: "Barrowman Kick"
@@ -210,6 +301,15 @@ drills:
     failure_signal: "踢腿在頂部停頓（增加阻力）；節律感不足"
     deficiency_fixes: [11]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [single_leg]
+    movement_pattern: alternating
+    skill_focus: [kick_origin, rhythm_tempo]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: medium
+    tactile_anchor: foot_pressure
+    difficulty_tier: advanced
 
   - id: Br12
     name_en: "Breaststroke Arm Sweeps"
@@ -229,6 +329,15 @@ drills:
     failure_signal: "需要明顯抬頭才能換氣；感覺不到內划推力"
     deficiency_fixes: [4]
     source: "There's a Drill for That"
+    body_position: standing
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [catch_evf, breath_rhythm]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: hand_pressure
+    difficulty_tier: foundation
 
   - id: Br13
     name_en: "Breaststroke Arm Pull"
@@ -248,6 +357,15 @@ drills:
     failure_signal: "肘部拉到肩膀後面；內划和外划速度一樣慢"
     deficiency_fixes: [4]
     source: "There's a Drill for That"
+    body_position: standing
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [catch_evf, hand_acceleration]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: foundation
 
   - id: Br14
     name_en: "High Elbow Pull"
@@ -267,6 +385,15 @@ drills:
     failure_signal: "完全無法浮起（代表手位置太窄或肘部沒有高起）"
     deficiency_fixes: [3]
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: [no_kick]
+    movement_pattern: pause_pulse
+    skill_focus: [catch_evf]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: wall_contact
+    difficulty_tier: intermediate
 
   - id: Br15
     name_en: "Breast Pull with Flutter Kick"
@@ -286,6 +413,15 @@ drills:
     failure_signal: "頭部太高；感覺不到滑行感"
     deficiency_fixes: [6, 10]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [glide_efficiency, streamline_line]
+    stroke_phase: glide
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Br16
     name_en: "Breast Pull with Dolphin Kick"
@@ -305,6 +441,15 @@ drills:
     failure_signal: "換氣需要主動抬頭；感覺不到髖部的「裝填」感"
     deficiency_fixes: [2, 6, 16]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, hip_drive]
+    stroke_phase: transition
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br17
     name_en: "Cobra"
@@ -325,6 +470,15 @@ drills:
     failure_signal: "感覺不到髖部前推；落地時上下搖晃不是向前"
     deficiency_fixes: [2, 6, 7, 8, 10]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick]
+    movement_pattern: pause_pulse
+    skill_focus: [hip_drive, entry_extension]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br18
     name_en: "One-Arm Breaststroke"
@@ -344,6 +498,15 @@ drills:
     failure_signal: "弱側感覺完全不同且很吃力"
     deficiency_fixes: [3]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [single_arm]
+    movement_pattern: continuous
+    skill_focus: [forearm_pressure, hand_acceleration]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Br19
     name_en: "Fist Pulling"
@@ -362,6 +525,15 @@ drills:
     failure_signal: "握拳幾乎無法前進（代表只靠手掌）"
     deficiency_fixes: [4]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [closed_fist]
+    movement_pattern: continuous
+    skill_focus: [forearm_pressure]
+    stroke_phase: pull
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Br20
     name_en: "Miles Per Hour Pull"
@@ -381,6 +553,15 @@ drills:
     failure_signal: "三段速度相同（全部慢）；換氣需要抬頭"
     deficiency_fixes: [1, 2, 3, 6, 7, 8, 10]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick]
+    movement_pattern: continuous
+    skill_focus: [hand_acceleration, rhythm_tempo]
+    stroke_phase: pull
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Br21
     name_en: "Dive Downs"
@@ -400,6 +581,15 @@ drills:
     failure_signal: "潛水時阻力大（流線不緊）；沒有滑行感"
     deficiency_fixes: [8, 9]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [streamline_line, glide_efficiency]
+    stroke_phase: transition
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br22
     name_en: "Flat Breaststroke Pull"
@@ -419,6 +609,15 @@ drills:
     failure_signal: "頭部跟著拉手移動；拉手動作緩慢"
     deficiency_fixes: [1, 3]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick]
+    movement_pattern: continuous
+    skill_focus: [hand_acceleration, streamline_line]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
 
   - id: Br23
     name_en: "Underwater Undulation"
@@ -438,6 +637,15 @@ drills:
     failure_signal: "波動過大導致往下鑽；頭部移動"
     deficiency_fixes: [1, 16]
     source: "There's a Drill for That"
+    body_position: underwater
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, forearm_pressure]
+    stroke_phase: whole_stroke
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br24
     name_en: "Kick-Dive Progression"
@@ -457,6 +665,15 @@ drills:
     failure_signal: "流線鬆弛或換氣需求導致提前起來"
     deficiency_fixes: [9]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: [no_breath]
+    movement_pattern: pause_pulse
+    skill_focus: [streamline_line, glide_efficiency]
+    stroke_phase: glide
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br25
     name_en: "Head-Up Breaststroke Shoots"
@@ -476,6 +693,15 @@ drills:
     failure_signal: "手臂前推緩慢；沒有加速感"
     deficiency_fixes: [5]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [hand_acceleration]
+    stroke_phase: recovery
+    drill_function: progression
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Br26
     name_en: "Breaststroke with a Snorkel"
@@ -495,6 +721,15 @@ drills:
     failure_signal: "頭部仍然隨著動作移動"
     deficiency_fixes: [1]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [streamline_line]
+    stroke_phase: whole_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: equipment_feedback
+    difficulty_tier: foundation
 
   - id: Br27
     name_en: "Underwater Full Breaststroke"
@@ -514,6 +749,15 @@ drills:
     failure_signal: "水下幾乎無法前進（代表動作效率低）"
     deficiency_fixes: [1]
     source: "There's a Drill for That"
+    body_position: underwater
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [glide_efficiency, pressure_mapping]
+    stroke_phase: whole_stroke
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br28
     name_en: "Upside Down Underwater Breaststroke"
@@ -533,6 +777,15 @@ drills:
     failure_signal: "完全感覺不同（代表動作有偏側）"
     deficiency_fixes: [1, 3]
     source: "There's a Drill for That"
+    body_position: underwater
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [spatial_awareness, pressure_mapping]
+    stroke_phase: whole_stroke
+    drill_function: corrective
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br29
     name_en: "Up-Down Combos"
@@ -552,6 +805,15 @@ drills:
     failure_signal: "切換後頭部位置改變；感覺混亂"
     deficiency_fixes: [1]
     source: "There's a Drill for That"
+    body_position: transitional
+    constraints: []
+    movement_pattern: alternating
+    skill_focus: [streamline_line, spatial_awareness]
+    stroke_phase: whole_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: Br30
     name_en: "Pull Stop Kick Stop"
@@ -571,6 +833,15 @@ drills:
     failure_signal: "停頓時姿勢立刻崩潰；動作之間不清楚"
     deficiency_fixes: [9]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: pause_pulse
+    skill_focus: [streamline_line, glide_efficiency]
+    stroke_phase: transition
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
 
   - id: Br31
     name_en: "Overlap Timing"
@@ -590,6 +861,15 @@ drills:
     failure_signal: "重疊導致動作衝突；感覺更慢"
     deficiency_fixes: [9, 15]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [rhythm_tempo, glide_efficiency]
+    stroke_phase: transition
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: elite
 
   - id: Br32
     name_en: "Stroke Count Speed Drill"
@@ -609,6 +889,15 @@ drills:
     failure_signal: "划次增加但速度沒有提升（代表效率低）"
     deficiency_fixes: [15]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [tempo_constrained]
+    movement_pattern: continuous
+    skill_focus: [rhythm_tempo, glide_efficiency]
+    stroke_phase: whole_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: equipment_feedback
+    difficulty_tier: elite
 
   - id: Br33
     name_en: "Short Axis Combo"
@@ -628,6 +917,15 @@ drills:
     failure_signal: "完全感覺是兩個不同的動作；換氣方式截然不同"
     deficiency_fixes: [2, 16]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: alternating
+    skill_focus: [wave_undulation, hip_drive]
+    stroke_phase: whole_stroke
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Br34
     name_en: "Frozen Head"
@@ -642,8 +940,17 @@ drills:
       - "拿一顆網球，或略大一點的軟橡膠充氣球"
       - "夾在下巴下游蛙式，設法讓球留在原位"
       - "藉此保持眼睛朝下、頭與脊椎成一線"
-    perception_goal: "頭部完全靜止；感覺動作從髖部以下發起，不帶動頭部"
+    perception_goal: "頭部完全靜止；感覺動作從髖部以下發起，不帶動頭部移動"
     success_signal: "一趟下來頭部零晃動；換氣完全靠身體動作創造空間"
     failure_signal: "頭部跟著拉手上下移動"
     deficiency_fixes: [1]
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [streamline_line, spatial_awareness]
+    stroke_phase: whole_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
