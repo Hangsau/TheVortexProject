@@ -1,0 +1,38 @@
+name: Notify my-site to sync
+
+# Vortex 內容變動推到 master 後，發 repository_dispatch 通知 my-site (Hangsau/cortex)
+# 觸發 my-site 的 sync-from-vortex 工作流，自動把新內容拉進去並 deploy。
+#
+# 只在實際會影響 my-site 的路徑變動時觸發（避免 Talos 個人協作檔等無關 commit）。
+#
+# 需要 secret: MYSITE_DISPATCH_TOKEN（GitHub PAT，scope: repo）
+
+on:
+  push:
+    branches: [master]
+    paths:
+      - 'canonical/**'
+      - 'Drills/**'
+
+permissions:
+  contents: read
+
+jobs:
+  notify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Trigger my-site sync
+        env:
+          GH_TOKEN: ${{ secrets.MYSITE_DISPATCH_TOKEN }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::MYSITE_DISPATCH_TOKEN secret not set. See repo settings → Secrets → Actions."
+            exit 1
+          fi
+          curl -fsS -X POST \
+            -H "Accept: application/vnd.github+json" \
+            -H "Authorization: Bearer $GH_TOKEN" \
+            -H "X-GitHub-Api-Version: 2022-11-28" \
+            "https://api.github.com/repos/Hangsau/cortex/dispatches" \
+            -d '{"event_type":"vortex-content-updated","client_payload":{"sha":"${{ github.sha }}","ref":"${{ github.ref }}"}}'
+          echo "Dispatch sent to Hangsau/cortex."
