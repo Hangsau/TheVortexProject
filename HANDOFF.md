@@ -6,6 +6,34 @@
 
 ## 當前狀態（2026-06-27）
 
+### 已完成——Race Club + Science of Swimming Faster 兩本書 4 批整合（2026-06-27 晚）
+
+> 觸發：用戶看完菁英 drill 擴充後問「這兩本書有沒有可以提取到計畫的內容做交叉比對」。盤點 4 批高 ROI 主題，整批執行。中途用戶定下「未來所有書包含我們用的內容都要整理吸收後才寫出來；不要到處引用結果整個內容都是引用拼裝物」——存成 feedback memory `feedback_synthesize_not_citation_patchwork.md`，全程套用。
+
+**Batch 1 — Race Club 結構性擴充（4 子任務）**
+- B1.1 Three Styles of Freestyle：既有 free.tech.4/5/6 重寫成深綜述，加入 SPM 範圍、front-end/back-end 力學細節、菁英代表選手、Anthony Ervin 案例
+- B1.2 6-phase 拉手週期：free.tech.8 升級加入升力相時長分風格（hip 0.6s+/shoulder 0.3s-）、前象限推進 0.15–0.21s、推進峰值位置依風格變動；新增 free.tech.27（入水手部位置與小指朝下、+13% 到 -9.5% 阻力對照）+ free.tech.28（手指微張製造紊流）
+- B1.3 Coupling Motions：free.tech.16 升級加入走路類比、coupling 三必要條件、雙 coupling（旋轉 + 晚期回臂）；新增 free.tech.29（手砸水強度 = 肩旋轉速度同源驅動）
+- B1.4 10 Points to Great Start：tech.4 加入頭部位置兩派並陳；新增 tech.41 重心前傾 vs 後仰、tech.42 hyperstreamline+hip lift+ toes pointed、tech.43 起跳三個 coupling 動作、tech.44 自由式 Breakout 七要點
+
+**Batch 2 — Science of Swimming Faster 週期化交叉驗證（3 子任務）**
+- B2.1 Ch 9 Periodization：structure.yaml 加入 GAS 三階段框架（Selye 1974/76）作為週期化生物學底層；microcycle 加入 6:1 vs 4:1 vs 7:0 休日模式
+- B2.2 Ch 10 Tapering：taper.yaml swim_application 加入 level-stratified gains（高中 5–8% / 大學 2.6–3.2% / 國際級 1.5–2.5%）、no event specificity（跨距離跨泳式一致）、心理面與生理面同等重要
+- B2.3 Ch 17 Growth/Development：matrix.yaml dev.physical.l2t/t2t 加入 pre-PHV 速度柔軟度窗口、年幼不是迷你成人生理、PHV-PWV-PSV 順序與肌力跟不上骨架的傷病風險；dev.mental.l2t 加入生理年齡 vs 實際年齡公平性、晚熟者留下機制
+
+**Batch 3 — L4-L6 biomarker 補實測**
+- l-indicators.yaml 新增 free.L5.coupling-timing（肩-髖旋轉 0.2–0.3 秒時間差）+ free.L5.lift-phase-duration（升力相時長與風格匹配）
+
+**Batch 4 — 族群差異化（1 子任務 + 1 跳過）**
+- B4.1 跳過：Science Ch 18 sports medicine 概論性內容對既有 45 個 health drafts 已無新增價值（rotator-cuff 等深度遠超 Ch 18 提供）
+- B4.2 新建 `canonical/development/populations.yaml`：5 大族群（青少年/Masters/女性/開放水/Adaptive）每族群 4–5 個高 ROI 結構洞察 + 3 個跨族群共通原則；整本書 5 章內容綜述進 Vortex 自己的結構，非引用拼裝
+
+**⚠ 待補**：
+- `populations.yaml` 是新檔，my-site `sync_vortex.py` 尚未認識；下次想讓網站讀此檔需 ① 新增 `sync_adm_populations` 函數 ② my-site 新建 `data/adm/populations.yaml` 消費端 ③ Hugo layout 渲染
+- 既有 4 批內容對 matrix.yaml / taper.yaml / structure.yaml / technical-analysis.yaml / l-indicators.yaml 的修改可由現有 sync 路徑帶到 my-site
+
+---
+
 ### 已完成——drills 菁英層擴充：Race Club 12 新 drill + 4 retag（2026-06-27 下午）
 
 > 觸發：用戶看完 9 軸 UI 後問「菁英 drill 哪裡來、為什麼少」。盤點現況 6 個 elite 全來自《There's a Drill for That》最難的幾個 + 我的 STSpat1，素材池本身就薄。
