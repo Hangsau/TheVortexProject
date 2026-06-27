@@ -1,5 +1,6 @@
 # Starts & Turns Drills — Vortex
 # Percussion layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 9-axis tag fingerprint v1.0 (2026-06-27): 見 Drills/TAG_SCHEMA.md
 # 出發與轉身：核心感知是「翻轉時身體軸線不散、蹬牆瞬間流線最緊、轉體與打水連動」；
 # 多屬 C 型（全身張力 / 空間定向），把轉身拆成 接近→執行→出水 三段練。
 
@@ -22,6 +23,15 @@ drills:
     failure_signal: "翻滾鬆散、身體歪向一側、翻完方向跑掉。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression"
+    body_position: transitional
+    constraints: []
+    movement_pattern: rotational
+    skill_focus: [spatial_awareness, core_tension]
+    stroke_phase: transition
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: foundation
 
   - id: ST2
     name_en: "Wall Flip + Foot Plant"
@@ -41,6 +51,15 @@ drills:
     failure_signal: "單腳先到、踩牆位置太高或太低、身體歪斜。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Faster Flip Turns（wall progression）"
+    body_position: transitional
+    constraints: []
+    movement_pattern: pause_pulse
+    skill_focus: [spatial_awareness, streamline_line]
+    stroke_phase: transition
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: wall_contact
+    difficulty_tier: intermediate
 
   - id: ST3
     name_en: "Streamline Push-Off Distance"
@@ -60,6 +79,15 @@ drills:
     failure_signal: "頭抬起、手沒鎖緊、身體鬆開，很快就停。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Turns guides（tight streamline push-off）"
+    body_position: prone
+    constraints: [no_arms, no_kick, tension_held]
+    movement_pattern: static
+    skill_focus: [streamline_line, glide_efficiency]
+    stroke_phase: glide
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: pool_floor_visual
+    difficulty_tier: intermediate
 
   - id: ST4
     name_en: "Backstroke Flag Stroke-Count"
@@ -79,6 +107,15 @@ drills:
     failure_signal: "仍需抬頭看牆、划手數不穩、到牆距離忽遠忽近。"
     deficiency_fixes: [C]
     source: "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）"
+    body_position: supine
+    constraints: [tempo_constrained]
+    movement_pattern: continuous
+    skill_focus: [spatial_awareness, rhythm_tempo]
+    stroke_phase: transition
+    drill_function: corrective
+    cognitive_load: high
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
 
   - id: ST5
     name_en: "Push-and-Rotate Breakout"
@@ -98,3 +135,12 @@ drills:
     failure_signal: "為了轉體鬆開流線、太早浮起、breakout 時明顯減速。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills"
+    body_position: transitional
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [streamline_line, rotation_connection]
+    stroke_phase: transition
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced

@@ -1,5 +1,6 @@
 # Sculling Drills — There's a Drill for That
 # Percussion layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 9-axis tag fingerprint v1.0 (2026-06-27): 見 Drills/TAG_SCHEMA.md
 # 划水感知的核心訓練組，適用所有泳式，特別對蛙式和蝶式有益
 
 drills:
@@ -21,6 +22,15 @@ drills:
     failure_signal: "感覺不到水壓；只是讓手在水中移動"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick]
+    movement_pattern: static
+    skill_focus: [forearm_pressure, catch_evf]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Sc2
     name_en: "Head Down Scull with Buoy"
@@ -40,6 +50,15 @@ drills:
     failure_signal: "手臂整體在做大動作；感覺不到精細水壓"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick, tension_held]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, pressure_mapping]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Sc3
     name_en: "Head Up Scull with Buoy"
@@ -59,6 +78,15 @@ drills:
     failure_signal: "抬頭時幾乎無法前進"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick, tension_held]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, catch_evf]
+    stroke_phase: catch
+    drill_function: progression
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Sc4
     name_en: "Windshield Wipers Head Down"
@@ -78,6 +106,15 @@ drills:
     failure_signal: "肘部跟著動；感覺只是在隨便划水"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick]
+    movement_pattern: alternating
+    skill_focus: [forearm_pressure]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Sc5
     name_en: "Windshield Wipers Chin Up"
@@ -97,6 +134,15 @@ drills:
     failure_signal: "感覺比Sc4容易（代表沒有在加大工作角度）"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick, tension_held]
+    movement_pattern: alternating
+    skill_focus: [forearm_pressure, breath_rhythm]
+    stroke_phase: catch
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Sc6
     name_en: "Feet First Scull"
@@ -116,6 +162,15 @@ drills:
     failure_signal: "幾乎無法移動（代表沒有抓到水）"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, pressure_mapping]
+    stroke_phase: push
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Sc7
     name_en: "Hip Scull"
@@ -135,6 +190,15 @@ drills:
     failure_signal: "感覺不到任何水壓"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick, tension_held]
+    movement_pattern: static
+    skill_focus: [forearm_pressure, hand_acceleration]
+    stroke_phase: push
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
 
   - id: Sc8
     name_en: "Seated Scull"
@@ -154,6 +218,15 @@ drills:
     failure_signal: "肘部拉到肩膀後面；前推無力"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: vertical
+    constraints: []
+    movement_pattern: static
+    skill_focus: [catch_evf, hand_acceleration]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Sc9
     name_en: "Single Arm Scull"
@@ -173,6 +246,15 @@ drills:
     failure_signal: "單臂時身體明顯歪向划水側"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: prone
+    constraints: [no_kick, single_arm]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, core_tension]
+    stroke_phase: catch
+    drill_function: corrective
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
 
   - id: Sc10
     name_en: "Behind the Head Scull"
@@ -192,3 +274,12 @@ drills:
     failure_signal: "完全感覺不到用力點；頸部緊繃"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    body_position: supine
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, catch_evf]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced

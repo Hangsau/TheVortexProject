@@ -1,5 +1,6 @@
 # Underwater Dolphin Kick Drills — Vortex
 # Percussion layer annotations: Vortex L0–L6 framework (Hangsau 2026)
+# 9-axis tag fingerprint v1.0 (2026-06-27): 見 Drills/TAG_SCHEMA.md
 # 水下海豚腳：以「全身波動由核心發起、腳背末端鞭打」為核心感知；
 # 多數 drill 屬 B 型腳感，但 UDK 本質是全身場（L5–L6）的整合輸出。
 
@@ -22,6 +23,15 @@ drills:
     failure_signal: "身體下沉、只靠膝蓋猛踩、單向（只有下踢）有力。"
     deficiency_fixes: [B]
     source: "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide"
+    body_position: vertical
+    constraints: [tension_held]
+    movement_pattern: static
+    skill_focus: [wave_undulation, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: foot_pressure
+    difficulty_tier: intermediate
 
   - id: UDK2
     name_en: "Streamline Kick — Orientation Switch"
@@ -41,6 +51,15 @@ drills:
     failure_signal: "某個朝向（常是俯臥）波動變小或膝蓋代償；換面時流線鬆掉。"
     deficiency_fixes: [B, C]
     source: "Competitor Swim UDK drills；swimswam UDK sets"
+    body_position: transitional
+    constraints: [tension_held]
+    movement_pattern: alternating
+    skill_focus: [wave_undulation, spatial_awareness]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
 
   - id: UDK3
     name_en: "Tethered Max Dolphin Kick"
@@ -60,6 +79,15 @@ drills:
     failure_signal: "波動塌成純膝蓋踩、髖部不參與。"
     deficiency_fixes: [B]
     source: "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
+    body_position: underwater
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
 
   - id: UDK4
     name_en: "Tempo Trainer Kick to Cone"
@@ -79,6 +107,15 @@ drills:
     failure_signal: "一味追高頻率使幅度塌掉、推進反而變差。"
     deficiency_fixes: [B]
     source: "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
+    body_position: underwater
+    constraints: [tempo_constrained]
+    movement_pattern: continuous
+    skill_focus: [rhythm_tempo, kick_amplitude]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
 
   - id: UDK5
     name_en: "Race-Tempo Underwater Off the Wall"
@@ -98,3 +135,12 @@ drills:
     failure_signal: "後段波動塌掉、太晚或太早出水、breakout 卡頓。"
     deficiency_fixes: [B, C]
     source: "yourswimlog.com（race-tempo underwater）；swimswam UDK sets"
+    body_position: underwater
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, rhythm_tempo]
+    stroke_phase: transition
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: elite
