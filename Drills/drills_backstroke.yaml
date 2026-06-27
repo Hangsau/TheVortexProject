@@ -739,3 +739,150 @@ drills:
     cognitive_load: medium
     tactile_anchor: equipment_feedback
     difficulty_tier: intermediate
+
+  # === 9-axis gap-fill drills (v1.0, 2026-06-27) ===
+
+  - id: BkEC1
+    name_en: "Eyes Closed Streamline Backkick"
+    name_zh: "閉眼仰式流線踢水"
+    strokes: [backstroke]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: null
+    purpose_zh: "閉眼仰式流線踢水，靠耳朵感覺池底距離、靠體感確認身體線；建立純粹的本體感"
+    how_to:
+      - "確認泳道淨空、最好有同伴看著；仰躺 streamline 踢水"
+      - "閉眼出發，靠耳朵聽水流方向、靠身體感覺水面位置"
+      - "踢 8 拍後睜眼確認方向；逐步延長到 16 拍"
+      - "重點是當視覺消失時，身體線必須由核心而非眼睛維持"
+    perception_goal: "閉眼後身體線變成純內部感覺；耳朵的水聲變成方向參考"
+    success_signal: "睜眼時仍在中線；身體線沒有彎掉"
+    failure_signal: "嚴重漂離中線；身體下沉"
+    deficiency_fixes: [3]
+    source: "Vortex 整理（proprioception × spatial axis）"
+    body_position: supine
+    constraints: [eyes_closed, no_arms]
+    movement_pattern: continuous
+    skill_focus: [streamline_line, spatial_awareness]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: water_sound
+    difficulty_tier: intermediate
+
+  - id: BkPad1
+    name_en: "Paddle Backstroke Pull"
+    name_zh: "手掌板仰式拉手"
+    strokes: [backstroke]
+    category: arm
+    equipment: [paddles, pull_buoy]
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "戴小手掌板夾浮棒游仰式，放大拉水路徑壓力差，幫助找到 S 路徑的甜蜜點"
+    how_to:
+      - "戴小手掌板（防傷肩，不戴大型）、夾 pull buoy"
+      - "正常仰式划水，全程感受手掌板的水壓變化"
+      - "肘部收近身體、像「往腳的方向丟東西」——板會把這個位置標記得很清楚"
+      - "做 4×50，每組停下回報「最有壓力的點在哪」"
+    perception_goal: "手掌板讓拉水路徑變成有方向感的壓力地圖"
+    success_signal: "能說出整段拉水中壓力最大的位置"
+    failure_signal: "全程壓力平均（代表路徑沒分段）"
+    deficiency_fixes: [11, 15]
+    source: "Maglischo Swimming Fastest（paddles for S-pattern feedback）"
+    body_position: supine
+    constraints: [paddle_amplifier, no_kick]
+    movement_pattern: continuous
+    skill_focus: [forearm_pressure, hand_acceleration]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
+
+  - id: BkSt1
+    name_en: "Standing Backstroke Sweep"
+    name_zh: "站姿仰式划手模擬"
+    strokes: [backstroke]
+    category: arm
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: A
+    purpose_zh: "站姿模擬仰式入水與拉水軌跡，初學者建立小指先入水與肘部位置；熱身用"
+    how_to:
+      - "站在及胸水深，身體後仰約 15°"
+      - "緩慢做仰式划手循環：拇指朝上出水、小指先入水、肘高於手、拉到大腿"
+      - "視覺確認入水位置在肩膀正延伸線、不越過中線"
+      - "兩側交替各 10 次"
+    perception_goal: "建立小指入水的感覺；確認肘高於手"
+    success_signal: "小指清楚先入水；肘部位置正確"
+    failure_signal: "拇指或手掌先入水；越過中線"
+    deficiency_fixes: [9, 10]
+    source: "USA Swimming Foundations of Swimming（站姿動作預演）"
+    body_position: standing
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [catch_evf, recovery_path]
+    stroke_phase: entry
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: hand_pressure
+    difficulty_tier: foundation
+
+  - id: BkP1
+    name_en: "Partner Pace Side-by-Side"
+    name_zh: "同伴並肩配速仰式"
+    strokes: [backstroke]
+    category: timing
+    equipment: [partner]
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "與同伴在相鄰泳道並肩游仰式，互相鎖節律，外部視覺與聽覺成為節律錨"
+    how_to:
+      - "兩人選相鄰泳道，事先約定划手次數（例：每 25 公尺 14 次）"
+      - "並肩出發，餘光與水聲互相回饋；節律以慢者為準（不競速）"
+      - "做 6×50，每組換配速約定（13、14、15 划/25）"
+      - "重點是在被動接收節律下能否維持身體線"
+    perception_goal: "節律從外部回饋變成內化參考；身體線不為了追節律而崩潰"
+    success_signal: "兩人能在約定划數下到牆，划水節律穩定"
+    failure_signal: "為了配速犧牲身體線；節律跟不上"
+    deficiency_fixes: []
+    source: "通用團隊訓練法（pair pacing in adjacent lanes）"
+    body_position: supine
+    constraints: [tempo_constrained]
+    movement_pattern: continuous
+    skill_focus: [rhythm_tempo, spatial_awareness]
+    stroke_phase: whole_stroke
+    drill_function: skill_integration
+    cognitive_load: high
+    tactile_anchor: partner_feedback
+    difficulty_tier: advanced
+
+  - id: BkLow1
+    name_en: "Six Kick Switch"
+    name_zh: "六踢換邊"
+    strokes: [backstroke]
+    category: timing
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: null
+    purpose_zh: "低強度仰式六踢換邊，作為仰式 main set 前的感知激活與節律建立"
+    how_to:
+      - "仰躺側躺位置出發，數 6 拍踢水後翻到另一側"
+      - "翻轉時不划水，只用核心驅動旋轉、肩膀短暫出水"
+      - "持續 4×100 公尺，配速放慢"
+      - "重點在每次切換都找回平衡點，不在速度"
+    perception_goal: "每 6 拍找到新平衡；核心驅動旋轉、頭部完全靜止"
+    success_signal: "切換流暢；節律穩定不亂"
+    failure_signal: "翻邊時失去平衡；頭部跟著晃"
+    deficiency_fixes: [3, 4]
+    source: "通用游泳教學法（switch drill warmup variant）"
+    body_position: transitional
+    constraints: []
+    movement_pattern: alternating
+    skill_focus: [rotation_connection, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate

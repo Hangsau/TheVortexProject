@@ -817,3 +817,236 @@ drills:
     cognitive_load: medium
     tactile_anchor: surface_break
     difficulty_tier: intermediate
+
+  # === 9-axis gap-fill drills (v1.0, 2026-06-27) ===
+
+  - id: FrEC1
+    name_en: "Eyes Closed Catch-Up"
+    name_zh: "閉眼超人趕上"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "閉眼版超人趕上，拿掉視覺後逼出前臂錨定與髖部旋轉的本體感"
+    how_to:
+      - "確認泳道淨空、無他人；超人姿勢俯臥，雙臂前伸與肩同寬，輕踢水"
+      - "閉上眼睛（戴遮蔽鏡或泳鏡塗膠帶最佳），做超人趕上節律"
+      - "全程靠手感判斷另一手是否回到會合點，不靠視覺；每 6 划停下抬頭確認方向"
+      - "捕水時感覺髖同步旋轉、前手錨定不動"
+    perception_goal: "閉眼後感知放大；前手錨定與髖旋轉變得明顯；沒有視覺仍能維持身體線"
+    success_signal: "能維持與肩同寬的會合點；划水有明確錨定感"
+    failure_signal: "失去方向（漂離中線）；划手感覺混亂"
+    deficiency_fixes: [4, 6, 11]
+    source: "Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理"
+    body_position: prone
+    constraints: [eyes_closed]
+    movement_pattern: pause_pulse
+    skill_focus: [catch_evf, hip_drive]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
+
+  - id: FrPad1
+    name_en: "Paddle Catch Hold"
+    name_zh: "手掌板捕水靜止"
+    strokes: [freestyle]
+    category: arm
+    equipment: [paddles]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "戴手掌板放大前臂水壓訊號，靜止錨定 3 秒讓捕水感固化"
+    how_to:
+      - "戴標準捕水板（小或中號，避免傷肩），超人姿勢俯臥輕踢"
+      - "單臂划手到捕水位置（前臂垂直、肘高於手），停住 3 秒感受手掌板的水壓"
+      - "完成拉水，前手停在前方等待換手；每側做 8 次"
+      - "板會把細微壓力差異放大，幫助大腦標記正確角度"
+    perception_goal: "手掌板讓水壓變得「響亮」；停住時感覺前臂全長都在抓水，不只是手掌"
+    success_signal: "停 3 秒手仍有支撐感不下滑；左右側壓力感類似"
+    failure_signal: "板一停就下沉（代表肘部沒高於手）；左右側差異很大"
+    deficiency_fixes: [13]
+    source: "Maglischo Swimming Fastest（paddle catch isolation）"
+    body_position: prone
+    constraints: [paddle_amplifier, single_arm]
+    movement_pattern: pause_pulse
+    skill_focus: [catch_evf, forearm_pressure]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
+
+  - id: FrSt1
+    name_en: "Standing High Elbow Trace"
+    name_zh: "站姿高肘軌跡描繪"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: A
+    purpose_zh: "及胸水深站姿模擬自由式回臂與入水，慢動作建立高肘記憶；熱身或初學者乾預演"
+    how_to:
+      - "站在及胸水深，身體微前傾（脊椎打直、不彎腰駝背）"
+      - "雙手放大腿，緩慢做自由式划手循環：抬肘→指尖入水→延伸→拉到大腿"
+      - "全程肘部高於手腕，視覺確認手指軌跡擦過水面"
+      - "兩側各做 10 次，重點在感覺肩部三角肌位置和肘部高度"
+    perception_goal: "肘高於手；指尖先入水；無速度壓力下建立正確路徑記憶"
+    success_signal: "肘部明顯高於手腕；入水時手指先觸水"
+    failure_signal: "肘部下垂；手掌整片拍水"
+    deficiency_fixes: [9, 12]
+    source: "USA Swimming Foundations of Swimming（dryland-in-water 模擬）"
+    body_position: standing
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [recovery_path]
+    stroke_phase: recovery
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: surface_break
+    difficulty_tier: foundation
+
+  - id: FrP1
+    name_en: "Partner Hand Touch Recovery"
+    name_zh: "同伴擊掌恢復臂"
+    strokes: [freestyle]
+    category: arm
+    equipment: [partner]
+    l_target: [L3]
+    abc_type: A
+    purpose_zh: "同伴站在泳道邊把手伸到水面當固定點，回臂時必須輕擊那隻手，強制建立穩定恢復路徑"
+    how_to:
+      - "同伴站在泳道邊（或水中），把手平伸到游者預期入水點外側 10 公分處"
+      - "游自由式，每次恢復臂的最高點（或入水前）輕擊同伴的手"
+      - "持續 25 公尺，左右側都練；同伴慢慢調整手的位置試探游者的舒適區"
+      - "目的不是擊中而是建立空間參考"
+    perception_goal: "恢復路徑有外部空間錨點；同伴的手成為「正確位置」的回饋"
+    success_signal: "穩定擊中同伴的手；左右側都能精準"
+    failure_signal: "擊中位置忽前忽後（代表回臂路徑不穩定）"
+    deficiency_fixes: [8, 12]
+    source: "通用團隊訓練法（pair-tap drill 美式 NCAA 慣用）"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [recovery_path, spatial_awareness]
+    stroke_phase: recovery
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: partner_feedback
+    difficulty_tier: intermediate
+
+  - id: FrP2
+    name_en: "Partner Resistance Belt Tow"
+    name_zh: "同伴阻力帶拖游"
+    strokes: [freestyle]
+    category: timing
+    equipment: [partner, tubing]
+    l_target: [L4, L5]
+    abc_type: null
+    purpose_zh: "腰繫彈力繩、同伴在岸上輕拉，阻力下游自由式，感覺核心必須持續做功維持身體線"
+    how_to:
+      - "腰繫長彈力繩，同伴站在岸上或前方水中輕拉繩另一端（拉力溫和，不爆衝）"
+      - "游自由式，阻力下注意身體不能往下沉、髖必須持續驅動"
+      - "做 4×15 秒，組間休 30 秒；繩拉力固定不變"
+      - "核心一鬆身體會立刻下沉——這是回饋"
+    perception_goal: "核心持續發力；髖部旋轉不間斷；阻力放大了「沒做功」的代價"
+    success_signal: "阻力下仍能維持高臀位；划水節律不亂"
+    failure_signal: "臀部下沉；划水變慢且亂"
+    deficiency_fixes: [5, 6]
+    source: "Salo & Riewald Complete Conditioning for Swimming（tethered work）"
+    body_position: prone
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [hip_drive, core_tension]
+    stroke_phase: whole_stroke
+    drill_function: progression
+    cognitive_load: medium
+    tactile_anchor: partner_feedback
+    difficulty_tier: advanced
+
+  - id: FrSide1
+    name_en: "Side Catch Anchor"
+    name_zh: "側躺前手錨定捕水"
+    strokes: [freestyle]
+    category: arm
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "在 45° 側躺位置只練前手的捕水錨定，把捕水從旋轉與呼吸中孤立出來"
+    how_to:
+      - "右側躺 45°，右手前伸、左手放左臀，輕踢水保持平衡"
+      - "右手做捕水動作：肘部抬高、前臂垂直、手指朝池底，停住 3 秒"
+      - "感覺前臂全長都在抓水（不只是手掌）；不拉到底，只練捕水那一段"
+      - "停夠後放鬆讓手回前方，重複 8 次再換側"
+    perception_goal: "捕水位置的水壓清晰；前臂感覺像「掛在水上」"
+    success_signal: "停住時手沒有下沉；前臂感受得到水壓"
+    failure_signal: "手一停就下沉（肘部沒抬）；只感覺手掌不感覺前臂"
+    deficiency_fixes: [11, 13]
+    source: "Counsilman 捕水傳統（hand-arm pressure isolation）"
+    body_position: side
+    constraints: [single_arm, no_breath]
+    movement_pattern: pause_pulse
+    skill_focus: [catch_evf, forearm_pressure]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
+
+  - id: FrSide2
+    name_en: "Side Glide Pressure Check"
+    name_zh: "側躺滑行壓力檢查"
+    strokes: [freestyle]
+    category: balance
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "側躺滑行時用前伸手的手背感受水流方向，建立「身體切水」的細微感知"
+    how_to:
+      - "側躺 45°，前手伸直、掌心略朝池底，後手放臀"
+      - "輕踢水緩慢前進，把注意力放在前伸手的「手背」上"
+      - "手背應感覺水從指尖流向手腕的均勻壓力——這代表身體切水方向正確"
+      - "如果手背感覺亂流或側面壓力，代表手腕或肩膀沒對齊"
+    perception_goal: "手背的水流是均勻向後的壓力，不是側壓也不是亂流"
+    success_signal: "手背能清楚感受到方向性的水流"
+    failure_signal: "手背只感覺到亂流或無感（代表姿勢有偏）"
+    deficiency_fixes: [4, 10]
+    source: "Vortex 整理（pressure mapping 系列）"
+    body_position: side
+    constraints: [no_arms]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, glide_efficiency]
+    stroke_phase: glide
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: intermediate
+
+  - id: FrLow1
+    name_en: "Snorkel Easy Catch"
+    name_zh: "戴呼吸管輕鬆捕水"
+    strokes: [freestyle]
+    category: arm
+    equipment: [snorkel]
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "戴呼吸管消除換氣負擔的低強度自由式，把感官完全給捕水；熱身或主項目前感知激活用"
+    how_to:
+      - "戴呼吸管游自由式，配速 60–70% (能聊天強度)，划幅放大"
+      - "每一划都明確感受捕水時前臂的水壓；速度不重要"
+      - "做 4×100，組間休 20 秒；這是「感官開機」不是體能訓練"
+    perception_goal: "在不疲勞的狀態下重訪捕水感；建立 main set 之前的感知基線"
+    success_signal: "每一划都能準確描述捕水的位置和力量"
+    failure_signal: "心智散漫；只是無感地游"
+    deficiency_fixes: []
+    source: "FINIS 教練資源（snorkel-based perception priming）"
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [catch_evf]
+    stroke_phase: catch
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: equipment_feedback
+    difficulty_tier: foundation

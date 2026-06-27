@@ -954,3 +954,121 @@ drills:
     cognitive_load: medium
     tactile_anchor: equipment_feedback
     difficulty_tier: intermediate
+
+  # === 9-axis gap-fill drills (v1.0, 2026-06-27) ===
+
+  - id: BrEC1
+    name_en: "Eyes Closed Streamline Pulldown"
+    name_zh: "閉眼水下流線蛙式拉手"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L4]
+    abc_type: null
+    purpose_zh: "閉眼做水下蛙式 pulldown（出發第一動作），用本體感確認雙手對稱與流線軸線"
+    how_to:
+      - "蹬牆成 streamline 滑進水面下"
+      - "閉眼做一次完整水下蛙式拉手（外撇→下推→雙手在身體下方會合→沿身體推回）"
+      - "全程閉眼，靠對稱感維持直線"
+      - "出水睜眼確認位置；做 6 次"
+    perception_goal: "閉眼後雙手對稱性放大；左右側不對稱會直接表現在偏離方向"
+    success_signal: "出水時仍在中線；雙手感覺對稱"
+    failure_signal: "嚴重偏離；一手感覺比另一手早結束"
+    deficiency_fixes: [1, 3]
+    source: "Vortex 整理（pulldown × proprioception 結合）"
+    body_position: underwater
+    constraints: [eyes_closed, no_breath]
+    movement_pattern: pause_pulse
+    skill_focus: [glide_efficiency, spatial_awareness]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced
+
+  - id: BrPad1
+    name_en: "Paddle Breast Sweep"
+    name_zh: "手掌板蛙式外撇"
+    strokes: [breaststroke]
+    category: arm
+    equipment: [paddles, pull_buoy]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "戴小手掌板做蛙式拉手（不踢），把外撇→內撇的加速差異放大成明確的壓力感"
+    how_to:
+      - "戴小手掌板、夾 pull buoy，完全不踢水"
+      - "做蛙式拉手：外撇慢、內撇加速、前刺最快"
+      - "手掌板會把「加速 = 壓力增加」這個關係放大"
+      - "做 4×50，每組計算划水次數"
+    perception_goal: "外撇 vs 內撇的壓力差異明顯；前刺時板「載得起來」是甜蜜點"
+    success_signal: "三段速度差異反映在板上的壓力變化；划水數穩定"
+    failure_signal: "三段都平均壓力（代表沒在加速）"
+    deficiency_fixes: [4, 5]
+    source: "Maglischo Swimming Fastest（breaststroke paddle work）"
+    body_position: prone
+    constraints: [paddle_amplifier, no_kick]
+    movement_pattern: progressive
+    skill_focus: [catch_evf, hand_acceleration]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
+
+  - id: BrSt1
+    name_en: "Standing Wall Glide Setup"
+    name_zh: "站姿牆邊流線設定"
+    strokes: [breaststroke]
+    category: balance
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: null
+    purpose_zh: "站姿在牆邊建立蛙式 streamline 的肌肉感覺，作為下水前的姿勢校正；蛙式熱身首選"
+    how_to:
+      - "站在牆邊及胸水深，背貼牆、腳跟距牆 30 公分"
+      - "雙手交疊上舉成 streamline，肘部夾耳、肩胛下沉"
+      - "感覺背部、肩胛、頭頸都在一直線上"
+      - "停 10 秒，重複 5 次；下水後立刻做一次蛙式拉手檢查 streamline 是否一致"
+    perception_goal: "建立 streamline 的內部肌肉記憶；下水後能立刻找回此姿勢"
+    success_signal: "肘部夾耳、背平、肩下沉的感覺清楚"
+    failure_signal: "肩膀聳起；肘部無法夾耳（柔軟度限制——這是硬體邊界）"
+    deficiency_fixes: [9]
+    source: "USA Swimming Foundations / 通用蛙式教學熱身"
+    body_position: standing
+    constraints: [no_arms, no_kick]
+    movement_pattern: static
+    skill_focus: [streamline_line, core_tension]
+    stroke_phase: glide
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: wall_contact
+    difficulty_tier: foundation
+
+  - id: BrLow1
+    name_en: "Pull-Pull-Kick"
+    name_zh: "拉拉踢"
+    strokes: [breaststroke]
+    category: timing
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: null
+    purpose_zh: "兩次拉手只一次踢腿的低強度組合，建立蛙式拉手獨立性與滑行感；蛙式熱身用"
+    how_to:
+      - "做兩次完整蛙式拉手（每次都換氣），第三次只做踢腿、雙手保持 streamline"
+      - "拉拉踢、拉拉踢，循環"
+      - "重點不在速度，在分段感的清晰度"
+      - "做 4×100，配速 60–70%"
+    perception_goal: "拉手與踢腿成為兩個獨立的感知單元；滑行段拉長"
+    success_signal: "三個動作分得清楚；踢腿後滑行明顯"
+    failure_signal: "動作糊在一起；沒有滑行感"
+    deficiency_fixes: [9]
+    source: "通用蛙式教學（fractional drill 變體）"
+    body_position: prone
+    constraints: []
+    movement_pattern: pause_pulse
+    skill_focus: [hip_drive, glide_efficiency]
+    stroke_phase: transition
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate

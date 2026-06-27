@@ -144,3 +144,34 @@ drills:
     cognitive_load: high
     tactile_anchor: core_tension_internal
     difficulty_tier: advanced
+
+  # === 9-axis gap-fill drills (v1.0, 2026-06-27) ===
+
+  - id: STSpat1
+    name_en: "Wall Approach by Sound (Eyes Closed)"
+    name_zh: "閉眼靠水聲判斷牆距"
+    strokes: [starts_turns]
+    category: turn
+    equipment: []
+    l_target: [L5]
+    abc_type: C
+    purpose_zh: "閉眼仰式游近牆，靠水反射聲與壁壓變化判斷牆距；ST4 數划手系統的「聽覺進階版」"
+    how_to:
+      - "（需同伴在牆邊監看，最好戴泳帽防撞）距牆 15 公尺仰式出發"
+      - "閉眼游，集中注意力在耳朵聽到的水流回音與牆壓變化"
+      - "感覺「快到了」就翻身蹬牆；同伴回報距牆距離"
+      - "做 6 次，每次調整對牆距的聽覺判斷"
+    perception_goal: "建立純聽覺/觸覺的空間判斷，取代視覺；極限的空間感訓練"
+    success_signal: "誤差在 30 公分內；翻身不撞牆不撈空"
+    failure_signal: "嚴重誤差（>1 公尺）；需要睜眼或撞牆"
+    deficiency_fixes: [C]
+    source: "Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）"
+    body_position: supine
+    constraints: [eyes_closed]
+    movement_pattern: continuous
+    skill_focus: [spatial_awareness, rhythm_tempo]
+    stroke_phase: transition
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: water_sound
+    difficulty_tier: elite

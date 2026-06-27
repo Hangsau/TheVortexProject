@@ -1,0 +1,172 @@
+# ============================================================
+# Canonical 知識結構 — 感知領域 / 自由式
+# ------------------------------------------------------------
+# 單一真相來源 (single source of truth)。
+# swim-coach (app) 與 my-site (網站) 都從這裡讀，不各自抄一份。
+#
+# 階層：domain（領域）→ stroke（泳式）→ movement（動作=感知時刻）→ facets（細節）
+#
+# 每個動作的細節分兩層（按範疇，不按難易）：
+#   public:     公開網站呈現。解釋「這個動作是什麼」。
+#               物理現實 / 硬體邊界 / drill / 誤區 / L0–L6 發展地圖。
+#   diagnostic: 教練判讀 + 研究用，不公開。判斷「這個泳者感知到哪」。
+#               操作→對比→區辨的探查協議、三型診斷、感知訊號。
+#   → my-site 只 render public；swim-coach 教練工具讀 diagnostic。
+#
+# 未來 strength / periodization / psychology 用同一 schema 各加一個 domain 檔。
+# ============================================================
+
+domain: perception
+domain_name_zh: 感知
+stroke: free
+stroke_name_zh: 自由式
+schema_version: 2
+source_repo: TheVortexProject/Bridge/自由式感知橋接.md
+
+# 自由式的感知本質（公開，放在動作清單之前）
+stroke_premise:
+  layer: public
+  one_line: 划手距離(SL)是技術指標，划頻(SR)是生理指標——兩者是不同對象，不可混為一談。
+  certainty: 🔵
+
+# ------------------------------------------------------------
+# movements = 8 個感知時刻（=「動作」）
+# ------------------------------------------------------------
+movements:
+
+  - id: free.m1
+    moment_num: 1
+    name_zh: 入水位置感知
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+  # ====== 完整範例：一張卡的兩層長這樣 ======
+  - id: free.m2
+    moment_num: 2
+    name_zh: 捕水感知（EVF）
+    status: complete
+
+    # ---------- 公開層（網站 render 這塊）----------
+    public:
+      physical:
+        certainty: 🔵
+        text: >-
+          Early Vertical Forearm（EVF）是捕水階段最重要的技術概念。
+          關鍵釐清：高肘的目的是降低上臂阻力，不是讓前臂推進。
+          上臂是自由式中阻力最大的部位——高肘讓上臂與游進方向平行、截面積最小化，
+          同時讓手掌朝向後方、推進面積最大化。手掌才是主推進面，不是前臂。
+
+      hardware_boundary:
+        certainty: 🔵
+        text: >-
+          前鋸肌是 EVF 的硬體前提。前鋸肌疲勞後肩胛骨失穩，高肘姿態無法維持，EVF 自然崩潰
+          ——這不是技術感知問題，是肌肉撐不住。長距離後段的 EVF 崩潰，多半是前鋸肌耐力問題，
+          不要用感知訓練介入。
+
+      # L0–L6 發展地圖上的位置（描述性，不是「你該感覺到 X」）
+      l_levels: [L3, L4]
+      l_note: 捕水是 L3–L4 的核心技術點；連動鏈耦合要到 L5。
+
+      # drill 只引用，本體在 drill DB（公開渲染 drill 時只給 purpose/how-to，不給 signal）
+      drill_refs:
+        - id: Fr16          # 握拳划手（拳頭游→張開手）
+          role: primary
+        - id: Fr10          # 帆船划手
+        - id: Fr17          # 三點觸碰
+
+      # 誤區（教練主動講錯的口令 → 較佳替代）
+      misconception_refs:
+        - cue: 前臂壓下去推水
+          why: 前臂是圓形截面，推進效果遠差於手掌；高肘是為了降上臂阻力。
+          better: 肘尖保持朝向前方游進方向
+
+      sources:
+        - TheVortexProject/Bridge/自由式感知橋接.md#感知時刻二
+
+    # ---------- 判讀層（不公開，給教練診斷 / 研究）----------
+    diagnostic:
+      abc_type: A
+      abc_note: EVF 崩潰、只靠手掌蠻力划水 = A 型（手感缺失）主要訊號。
+
+      # 不靠「泳者講對詞」判斷（講對詞≠有感知，奧運選手也未必講得出來）。
+      # 靠：操作 → 前後對比 → 區辨追問。
+      perception_probe:
+        certainty: 🟠     # 教練觀測級，非實證
+        manipulation: 握拳游一趟 → 張開手游一趟
+        contrast_question: 兩趟哪裡不一樣？（用什麼詞不重要）
+        signal_structure:        # 算到位的是結構，不是某句話
+          - 報得出前後差異（不是「都一樣」）
+          - 能把差異定位到「手掌」
+        discriminators:          # 排掉「講對詞但沒感知」/「只是形式記憶」
+          - cue: 把改變歸到「前臂」
+            probe: 阻力在手掌還是前臂？
+            reading: 歸前臂 = 形式記憶/常見誤解，不是捕水感知
+          - cue: 只說「我有抬肘」
+            probe: 上臂往旁邊，還是跟前進方向平行？
+            reading: 只會講動作 ≠ 有感知
+          - cue: 說沒差別 / 講不出來
+            reading: 感知還沒建立——不是 cue 不對，是還沒到 L3，回頭補基礎
+  # ====== 範例結束 ======
+
+  - id: free.m3
+    moment_num: 3
+    name_zh: 拉水加速感知
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+  - id: free.m4
+    moment_num: 4
+    name_zh: 旋轉耦合感知
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+  - id: free.m5
+    moment_num: 5
+    name_zh: 踢水節律感知
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+  - id: free.m6
+    moment_num: 6
+    name_zh: 頭部位置感知
+    note: 最容易自我欺騙的感知
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+  - id: free.m7
+    moment_num: 7
+    name_zh: 划距感知
+    note: 最重要的疲勞指標
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+  - id: free.m8
+    moment_num: 8
+    name_zh: 旋轉連動鏈感知
+    note: 進階（L5+）
+    status: skeleton
+    public: {}
+    diagnostic: {}
+
+# ------------------------------------------------------------
+# 跨動作主題
+# ------------------------------------------------------------
+cross_cutting:
+  fatigue_collapse_order:
+    name_zh: 疲勞崩潰的感知順序
+    layer: public            # 「會先垮哪裡」是解釋性的，可公開
+    status: skeleton
+  three_type_quick_id:
+    name_zh: 三型快速識別
+    layer: diagnostic        # 判讀用
+    status: skeleton
+  cue_effectiveness:
+    name_zh: 指導語有效性速查
+    layer: public            # 哪些口令是錯的 → 公開（屬誤區性質）
+    status: skeleton

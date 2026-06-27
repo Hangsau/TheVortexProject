@@ -870,3 +870,92 @@ drills:
     cognitive_load: high
     tactile_anchor: hand_pressure
     difficulty_tier: advanced
+
+  # === 9-axis gap-fill drills (v1.0, 2026-06-27) ===
+
+  - id: FlEC1
+    name_en: "Eyes Closed Dolphin Kick"
+    name_zh: "閉眼蝶腿"
+    strokes: [butterfly, underwater_dolphin_kick]
+    category: kick
+    equipment: [snorkel]
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "戴呼吸管閉眼蝶腿，拿掉視覺後讓核心驅動波動的感覺浮出來"
+    how_to:
+      - "戴呼吸管、面朝下，雙手放身側"
+      - "閉眼打蝶腿，把感官集中在腹部與胸口的波動傳遞"
+      - "每 10 秒睜眼確認方向；逐步延長到 20 秒"
+      - "重點不在距離，在感受波動是否仍從核心啟動"
+    perception_goal: "閉眼後波動的源頭變得明顯；核心是鞭柄、腳是鞭梢"
+    success_signal: "閉眼期間方向穩定；波動感清楚"
+    failure_signal: "立刻漂離中線；波動從膝蓋啟動"
+    deficiency_fixes: [8]
+    source: "Vortex 整理（proprioception × wave undulation）"
+    body_position: prone
+    constraints: [eyes_closed]
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: intermediate
+
+  - id: FlPad1
+    name_en: "Paddle Underwater Recovery"
+    name_zh: "手掌板水下恢復臂"
+    strokes: [butterfly]
+    category: arm
+    equipment: [paddles, snorkel]
+    l_target: [L4, L5]
+    abc_type: A
+    purpose_zh: "戴小手掌板做蝶式水下恢復（像蛙式恢復），用板放大高肘捕水的壓力訊號"
+    how_to:
+      - "戴小手掌板、戴呼吸管"
+      - "做 Fl17 蝶式水下恢復：高肘捕水→拉到身體下方會合→沿身體推回前方"
+      - "板會把高肘捕水時前臂的水壓變大，幫助找到正確角度"
+      - "配蝶腿，做 4×25 公尺"
+    perception_goal: "手掌板讓「高肘 vs 低肘」的壓力差異變得很大；正確時水壓清晰"
+    success_signal: "捕水時板上有強烈壓力；推進感明顯"
+    failure_signal: "板上沒壓力（代表肘部下垂）"
+    deficiency_fixes: [2, 12]
+    source: "Maglischo Swimming Fastest（butterfly paddle work）"
+    body_position: prone
+    constraints: [paddle_amplifier]
+    movement_pattern: continuous
+    skill_focus: [catch_evf, hand_acceleration]
+    stroke_phase: pull
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: equipment_feedback
+    difficulty_tier: advanced
+
+  - id: FlSt1
+    name_en: "Standing Chest Press"
+    name_zh: "站姿胸壓+髖前後"
+    strokes: [butterfly]
+    category: kick
+    equipment: []
+    l_target: [L1, L2]
+    abc_type: null
+    purpose_zh: "站姿模擬蝶式胸壓帶動髖前後的動作，建立短軸波動的肌肉感覺；蝶式熱身首選"
+    how_to:
+      - "站在及腰水深，雙手放大腿"
+      - "把胸口往前下壓——同時髖往後拱（像 cobra 弓背）"
+      - "再把胸口往上挺——髖往前送（骨盆前傾）"
+      - "重複 10 次，配呼吸節律；下水時把這個感覺帶進蝶腿"
+    perception_goal: "胸壓和髖動作的反向連動清晰；蝶式波動的源頭可視化"
+    success_signal: "胸與髖的反向動作流暢；身體像柔軟的桿子"
+    failure_signal: "胸與髖一起前後（沒有反向）；動作僵硬"
+    deficiency_fixes: [8]
+    source: "USA Swimming Foundations / Vortex 整理（短軸動作預演）"
+    body_position: standing
+    constraints: [no_arms, no_kick]
+    movement_pattern: pause_pulse
+    skill_focus: [wave_undulation, hip_drive]
+    stroke_phase: non_stroke
+    drill_function: warmup
+    cognitive_load: low
+    tactile_anchor: core_tension_internal
+    difficulty_tier: foundation

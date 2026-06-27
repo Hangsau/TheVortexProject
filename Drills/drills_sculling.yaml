@@ -283,3 +283,63 @@ drills:
     cognitive_load: medium
     tactile_anchor: hand_pressure
     difficulty_tier: advanced
+
+  # === 9-axis gap-fill drills (v1.0, 2026-06-27) ===
+
+  - id: ScFist
+    name_en: "Fist Sculling"
+    name_zh: "握拳划水"
+    strokes: [freestyle, breaststroke, butterfly]
+    category: sculling
+    equipment: [pull_buoy]
+    l_target: [L3, L4]
+    abc_type: A
+    purpose_zh: "握拳做寬 Y 划水，把前臂感知逼到最大；開拳後感覺手掌的「額外推進」是前臂之上的附加層"
+    how_to:
+      - "夾 pull buoy、不踢水，雙手握拳做 Sc1 寬 Y 划水"
+      - "全程靠前臂壓力推進；25 公尺後改為張開手繼續划"
+      - "對照前臂感知 vs 加上手掌後的感知差異"
+      - "做 4 趟，前 2 趟全程握拳、後 2 趟前 12.5 公尺握拳、後 12.5 開手"
+    perception_goal: "握拳時前臂感覺最強；開手後手掌變成「點綴」而非主力"
+    success_signal: "握拳能前進；開手後推進量明顯多但感覺基線在前臂"
+    failure_signal: "握拳完全無法前進（代表整個系統依賴手掌）"
+    deficiency_fixes: []
+    source: "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）"
+    body_position: prone
+    constraints: [closed_fist, no_kick, tension_held]
+    movement_pattern: static
+    skill_focus: [forearm_pressure]
+    stroke_phase: catch
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
+
+  - id: ScUW1
+    name_en: "Underwater Wide Y Hover"
+    name_zh: "水下寬 Y 懸停"
+    strokes: [freestyle, breaststroke, butterfly]
+    category: sculling
+    equipment: []
+    l_target: [L4]
+    abc_type: A
+    purpose_zh: "水下做寬 Y 划水試圖「懸停」（不上浮不下沉），這是捕水力量的精確測試"
+    how_to:
+      - "深吸一口氣下潛到約 1.5 公尺深，俯臥水下"
+      - "雙臂前伸做 Sc1 寬 Y 撥水，目標是讓身體停在那個深度（不浮不沉）"
+      - "做 10–15 秒一組，回水面換氣 30 秒再重複"
+      - "做 4 組；過程注意呼吸安全（淺水區、有同伴監看）"
+    perception_goal: "懸停代表撥水的力量恰好抵消浮力，是捕水效率的客觀標尺"
+    success_signal: "能維持深度 10 秒以上不浮"
+    failure_signal: "立刻上浮（撥水沒抓到水）"
+    deficiency_fixes: []
+    source: "Counsilman 沉浮平衡傳統（hover sculling）"
+    body_position: underwater
+    constraints: [no_kick, no_breath]
+    movement_pattern: static
+    skill_focus: [forearm_pressure, pressure_mapping]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: high
+    tactile_anchor: hand_pressure
+    difficulty_tier: advanced
