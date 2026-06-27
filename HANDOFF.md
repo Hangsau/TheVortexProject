@@ -28,9 +28,12 @@
 - B4.1 跳過：Science Ch 18 sports medicine 概論性內容對既有 45 個 health drafts 已無新增價值（rotator-cuff 等深度遠超 Ch 18 提供）
 - B4.2 新建 `canonical/development/populations.yaml`：5 大族群（青少年/Masters/女性/開放水/Adaptive）每族群 4–5 個高 ROI 結構洞察 + 3 個跨族群共通原則；整本書 5 章內容綜述進 Vortex 自己的結構，非引用拼裝
 
-**⚠ 待補**：
-- `populations.yaml` 是新檔，my-site `sync_vortex.py` 尚未認識；下次想讓網站讀此檔需 ① 新增 `sync_adm_populations` 函數 ② my-site 新建 `data/adm/populations.yaml` 消費端 ③ Hugo layout 渲染
-- 既有 4 批內容對 matrix.yaml / taper.yaml / structure.yaml / technical-analysis.yaml / l-indicators.yaml 的修改可由現有 sync 路徑帶到 my-site
+**已補完（同日晚）**：populations 端到端 + 跨 repo 自動化
+- `sync_vortex.py` 加 `sync_adm_populations`；VORTEX_SRC/HUGO_ROOT 改 env var 可覆寫
+- my-site 新建 `layouts/vortex/vortex-populations.html` + content stub + sidebar 入口 + CSS
+- `.github/workflows/sync-from-vortex.yml`（my-site）：on `repository_dispatch:vortex-content-updated` 或 manual；checkout 兩 repo → 跑 sync → commit + push hugo-source（觸發 deploy）
+- `.github/workflows/notify-mysite.yml`（vortex）：push 到 master 且改 `canonical/**` 或 `Drills/**` 時自動 dispatch
+- ⚠ **待用戶完成 PAT 設定才會真正動起來**：見 vortex repo Settings → Secrets → Actions 加 `MYSITE_DISPATCH_TOKEN`
 
 ---
 
