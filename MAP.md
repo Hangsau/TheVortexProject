@@ -3,7 +3,7 @@
 > 結構地圖，給冷啟動讀者（人/LLM）。格式與維護流程見 `C:\claudehome\CODEBASE_MAP_METHODOLOGY.md`。
 > 行為規範見 `CLAUDE.md`；進度/待辦見 `HANDOFF.md`。
 >
-> `last_verified: 2026-06-15`
+> `last_verified: 2026-06-27`
 
 ---
 
@@ -25,7 +25,8 @@
 | 改 L0–L6 水感框架 | `canonical/technica/{l-indicators,water-sense-levels}.yaml`（散文底稿在 `technica/`、`bridge/`） |
 | 改 ADM（運動員發展矩陣） | `canonical/development/{matrix,technical-standards}.yaml` |
 | 改週期化 | `canonical/periodization/{structure,taper,zones,_index}.yaml`（研究底稿在 `research/週期化/`） |
-| 加練習 drill | `drills/drills_<泳式>.yaml`（schema 見 `drills/DRILL_INDEX.md`） |
+| 加練習 drill | `Drills/drills_<泳式>.yaml`（schema 見 `Drills/DRILL_INDEX.md` + 9 軸 fingerprint 見 `Drills/TAG_SCHEMA.md`；新增 drill 必填 9 軸） |
+| 找 drill 分布 / 空白格 | `python tools/tag_coverage_report.py`（9 軸交叉表 + 碰撞分析） |
 | 改 diagnostic（A/B/C 型診斷、失敗訊號）——**只給教練/swim-coach** | canonical YAML 的 `diagnostic{}` 區塊；**絕不會進 my-site** |
 | 加研究主題/假設 | `research/{感知科學,物理現象,週期化}/`，狀態碼見下方 §4 |
 
@@ -49,7 +50,7 @@
 - `instructional/*.md`（12 檔，280–711 行）— 四式 + 起跳轉身 + 水下蝶腳的技術分析 & 誤區深探
 - `technica/*.md`、`bridge/*.md`（6+6 檔）— L 框架 + 感知橋接（**Bridge/ 可能退役，見雷 §4**）
 - `research/{感知科學,物理現象,週期化}/`（~25 檔）— 文獻/假設層，狀態碼 🔵🟢🟡🟠🔴
-- `drills/drills_*.yaml`（5 檔，194–649 行，共 125 drill）+ `DRILL_INDEX.md`
+- `Drills/drills_*.yaml`（7 檔，共 **164 drill**，每 drill 9 軸 fingerprint）+ `DRILL_INDEX.md` + `TAG_SCHEMA.md`
 - `observations/*.md`（3 檔）— 教練觀察案例
 
 ### 治理文件

@@ -4,7 +4,39 @@
 
 ---
 
-## 當前狀態（2026-06-23）
+## 當前狀態（2026-06-27）
+
+### 已完成——drills 9 軸特色指紋系統 + 25 個新 drill 填空白格（2026-06-27）
+
+> 觸發：用戶反映「drill 全擠在 category=arm 或 L3 那 38 個泥裡，每個 drill 沒有特色出場機會」。要求重新分類 + 找空白格 + 補新 drill。
+
+**① 設計 9 軸正交標籤系統（`Drills/TAG_SCHEMA.md`）**：
+`body_position / constraints / movement_pattern / skill_focus / stroke_phase / drill_function / cognitive_load / tactile_anchor / difficulty_tier`。每軸有明確 enum 與判別準則，每個 drill 在 9D 空間有獨特指紋，可從 9 個角度被檢索（取代原本只能靠 category/L/abc_type 三軸的稀薄分類）。所有既有欄位保留，9 軸為附加，下游 `sync_vortex.py` pass-through 無影響。
+
+**② 139 個既有 drill 全部補完 9 軸（5 commits，每泳式一檔）**：
+自由式 28 → 仰式 26 → 蛙式 34 → 蝶式 31 → sculling/UDK/starts-turns 20。`python tools/tag_coverage_report.py` 驗證無重大碰撞（4 組碰撞均為跨泳式同概念 drill，設計上允許）。
+
+**③ 寫 `tools/tag_coverage_report.py` 做 gap 分析**：發現重大空白格——`eyes_closed: 0`、`paddle_amplifier: 0`、`warmup: 2`、`partner_feedback: 1`、`standing: 4`。
+
+**④ 補 25 個新 drill 填空白格（commit fc370b8）**：
+- 自由式 +8（FrEC1 閉眼超人趕上、FrPad1 手掌板捕水靜止、FrSt1 站姿高肘軌跡、FrP1 同伴擊掌恢復、FrP2 同伴阻力帶拖游、FrSide1 側躺前手錨定、FrSide2 側躺滑行壓力、FrLow1 戴呼吸管輕鬆捕水）
+- 仰式 +5（BkEC1 閉眼流線踢水、BkPad1 手掌板拉手、BkSt1 站姿划手模擬、BkP1 同伴並肩配速、BkLow1 六踢換邊）
+- 蛙式 +4（BrEC1 閉眼水下拉手、BrPad1 手掌板外撇、BrSt1 站姿牆邊流線、BrLow1 拉拉踢）
+- 蝶式 +3（FlEC1 閉眼蝶腿、FlPad1 手掌板水下恢復、FlSt1 站姿胸壓+髖前後）
+- sculling +2（ScFist 握拳划水、ScUW1 水下寬 Y 懸停）
+- starts-turns +1（STSpat1 閉眼靠水聲判斷牆距）
+- UDK +2（UDKEC1 閉眼垂直蝶腿、UDKLow1 戴呼吸管水下巡航）
+
+來源涵蓋 Counsilman 捕水傳統、Maglischo Swimming Fastest、USA Swimming Foundations、Salo & Riewald、Total Immersion 感知訓練、FINIS 教練資源。
+
+**結果**：drill 總數 139 → **164**；`warmup 2→10` / `eyes_closed 0→6` / `paddle_amplifier 0→4` / `partner_feedback 1→4` / `standing 4→8`。
+
+**⚠ 未做**：
+- `DRILL_INDEX.md` 與 `MAP.md` 還沒更新 drill 計數（145/125 已過時，應 → 164）
+- 下游 `sync_vortex.py` 還沒跑，my-site `data/vortex/drills.yaml` 仍是舊 139；下次 sync 自動會帶 25 個新 drill + 9 軸欄位過去
+- swim-coach 未檢查（pin 在某 commit）
+
+---
 
 ### 已完成——感知×週期化「缺口」：從 🔴 純假設升級為 🔵 作者綜合（2026-06-23）
 
