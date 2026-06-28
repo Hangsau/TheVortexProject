@@ -15,7 +15,7 @@
 | 章節 | 條目數 | 備註 |
 |---|---|---|
 | `technical-analysis` | 201 | 泳式分布：{'free': 33, 'back': 27, 'breast': 31, 'fly': 35, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 84, '🟢': 81, '🟠': 32, '🟡': 4} |
-| `teaching-errors` | 97 | 泳式分布：{'free': 25, 'back': 17, 'breast': 12, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
+| `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 45 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -269,9 +269,9 @@
 | udk.tech.28 | kick |  | 🟢 |
 | udk.tech.29 | streamline |  | 🔵 |
 
-### `teaching-errors.yaml` — 教學誤區（**97 條目**）
+### `teaching-errors.yaml` — 教學誤區（**102 條目**）
 
-**泳式分布**：仰式 17, 蛙式 12, 蝶式 16, 自由式 25, 起跳轉身 14, 水下蝶腳 13
+**泳式分布**：仰式 17, 蛙式 17, 蝶式 16, 自由式 25, 起跳轉身 14, 水下蝶腳 13
 
 #### 自由式 (25)
 
@@ -325,7 +325,7 @@
 | back.err16 | recovery |  |
 | back.err17 | recovery |  |
 
-#### 蛙式 (12)
+#### 蛙式 (17)
 
 | ID | 範疇 | 標題/摘要 |
 |---|---|---|
@@ -341,6 +341,11 @@
 | breast.err10 | timing |  |
 | breast.err11 | timing |  |
 | breast.err12 | streamline |  |
+| breast.err13 | breathing |  |
+| breast.err14 | kick |  |
+| breast.err15 | pull |  |
+| breast.err16 | undulation |  |
+| breast.err17 | breathing |  |
 
 #### 蝶式 (16)
 
