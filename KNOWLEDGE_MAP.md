@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 201 | 泳式分布：{'free': 33, 'back': 27, 'breast': 31, 'fly': 35, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 84, '🟢': 81, '🟠': 32, '🟡': 4} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
-| `l-indicators` | 45 | L0–L6 各泳式感知指標 |
+| `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
 | `development/technical-standards` | 22 | 技術基準 |
@@ -409,7 +409,7 @@
 
 ## 感知層 `canonical/technica/`
 
-### `l-indicators.yaml` — L 級指標（**45 條目**）
+### `l-indicators.yaml` — L 級指標（**47 條目**）
 
 | ID | 泳式 | L | 面向 | 指標 |
 |---|---|---|---|---|
@@ -436,6 +436,9 @@
 | back.L3.pull | back | L3 | 手部划水 | 前臂在水下有水壓感知；能描述拉水「有抓住什麼」；入水不跨越中線（蛇行感知） |
 | back.L3.shoulder-roll | back | L3 | 肩旋轉感知 | 能感知「回臂側肩膀向上帶起」；旋轉幅度約 30-40°可自評 |
 | back.L4.roll-stability | back | L4 | 旋轉穩定 | 高划頻下旋轉幅度縮小；加速後蛇行明顯；流線型滑行後提早抬頭 |
+| back.L4.head-stillness | back | L4 | 頭部加速靜止度 | 加速後頭部仍能維持完全靜止（不左右晃、不前後點）；額頭水線位置不偏移。
+L4 訊號是「加速時頭部開始輕微晃動但仍能控制」；L5 是「全速下完全不動」。
+測試：在 |
 | back.L5.roll-invariant | back | L5 | 旋轉不隨速縮 | 仰式精英特徵：速度增加時旋轉幅度維持（≠ 自由式）；划距穩定 |
 | back.L5.start-turn | back | L5 | 出發轉身流線 | 推蹬後流線型滑行至速度降至游進速度才開始划手；時機感知穩定 |
 | back.L6.stability | back | L6 | 技術穩定性 | 疲勞後技術與前段差距極小；六拍踢節律全程維持；划距跨速度穩定 |
@@ -447,6 +450,8 @@
 | fly.L4.second-kick | fly | L4 | 第二踢失守 | 加速後第二踢消失；疲勞後手出水無法「飛過」水面；髖部下沉明顯 |
 | fly.L4.outsweep | fly | L4 | 外划過大 | 捕水感知不穩時外划幅度代償性增大；前臂感知比手掌感知更弱 |
 | fly.L5.two-kick-differentiation | fly | L5 | 兩踢功能分化 | 能區分第一踢（輕、穩、觸發）和第二踢（強、同步出水）的不同感知 |
+| fly.L5.glide-elimination | fly | L5 | 滑行相消除 | 每個 stroke cycle 的「滑行/減速期」幾乎消失——推進力連續銜接、不存在「等」的瞬間。
+L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | fly.L6.chain-closure | fly | L6 | 波動鏈閉環 | 每個划手週期從胸到腳感知連貫；疲勞後仍維持兩踢時機；SWOLF 穩定 |
 | breast.pre.resistance | breast | pre | 阻力感知 | 靜止漂浮感覺到「緊的身體滑更遠」；能描述阻力存在（非推進） |
 | breast.L2.leg-propulsion | breast | L2 | 腿部推進 | 浮板踢水能穩定前進；翻腳掌時腳掌有水壓感知（非腳心朝後） |
