@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 201 | 泳式分布：{'free': 33, 'back': 27, 'breast': 31, 'fly': 35, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 80, '🟢': 79, '🟠': 32, '🟡': 8, '🔴': 2} |
+| `technical-analysis` | 201 | 泳式分布：{'free': 33, 'back': 27, 'breast': 31, 'fly': 35, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 84, '🟢': 81, '🟠': 32, '🟡': 4} |
 | `teaching-errors` | 85 | 泳式分布：{'free': 23, 'back': 14, 'breast': 12, 'fly': 14, 'udk': 13, 'starts-turns': 9} |
 | `l-indicators` | 45 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -67,7 +67,7 @@
 | free.tech.20 | errors |  | 🟢 |
 | free.tech.21 | errors |  | 🟢 |
 | free.tech.22 | errors |  | 🔵 |
-| free.tech.23 | errors |  | 🟡 |
+| free.tech.23 | errors |  | 🟢 |
 | free.tech.24 | fatigue |  | 🟢 |
 | free.tech.25 | watersense |  | 🟢 |
 | free.tech.26 | comparison |  | 🔵 |
@@ -89,8 +89,8 @@
 | back.tech.7 | tempo |  | 🟠 |
 | back.tech.8 | stroke-cycle |  | 🔵 |
 | back.tech.9 | errors |  | 🔵 |
-| back.tech.10 | stroke-cycle |  | 🟡 |
-| back.tech.11 | stroke-cycle |  | 🟡 |
+| back.tech.10 | stroke-cycle |  | 🔵 |
+| back.tech.11 | stroke-cycle |  | 🟢 |
 | back.tech.12 | stroke-cycle |  | 🔵 |
 | back.tech.13 | stroke-cycle |  | 🔵 |
 | back.tech.14 | errors |  | 🔵 |
@@ -189,7 +189,7 @@
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
 | starts-turns.tech.1 | comparison |  | 🔵 |
-| starts-turns.tech.2 | stroke-cycle |  | 🟡 |
+| starts-turns.tech.2 | stroke-cycle |  | 🔵 |
 | starts-turns.tech.3 | hardware |  | 🟢 |
 | starts-turns.tech.4 | head |  | 🟠 |
 | starts-turns.tech.41 | stroke-cycle |  | 🟠 |
@@ -259,7 +259,7 @@
 | udk.tech.18 | depth |  | 🔵 |
 | udk.tech.19 | depth |  | 🔵 |
 | udk.tech.20 | depth |  | 🔵 |
-| udk.tech.21 | depth |  | 🔴 |
+| udk.tech.21 | depth |  | 🔵 |
 | udk.tech.22 | comparison |  | 🔵 |
 | udk.tech.23 | comparison |  | 🔵 |
 | udk.tech.24 | streamline |  | 🟠 |
@@ -267,7 +267,7 @@
 | udk.tech.26 | kick |  | 🟢 |
 | udk.tech.27 | tempo |  | 🟢 |
 | udk.tech.28 | kick |  | 🟢 |
-| udk.tech.29 | streamline |  | 🔴 |
+| udk.tech.29 | streamline |  | 🔵 |
 
 ### `teaching-errors.yaml` — 教學誤區（**85 條目**）
 
