@@ -110,12 +110,23 @@ Observations/    → 觀察層：教學案例
 ## AI 收尾規則（強制）
 
 每次對話結束前，若本次做了任何實質修改（新增文件、更新內容、格式整理等），**必須**：
-1. 更新 `HANDOFF.md` 的「當前狀態」與「下一步建議」兩個區塊
-2. 更新 `_INDEX.md` 的對應文件狀態（如有變動）
-3. 若 Research/ 層有新文件完成：同步 `RESEARCH_PLAN.md`（Layer 完成標記）+ `FUTURE_RESEARCH.md`（原題目畢業標記）
-4. `git add` + `git commit` + `git push` 到 GitHub
-5. **此 repo 無 CI workflow**，push 後跳過 `gh run list`，不需要檢查 CI
+1. **凡動到 canonical/ 或 Drills/ 的內容**：先跑 `python tools/build_knowledge_map.py` 重生 `KNOWLEDGE_MAP.md`，再 commit。地圖是查內容/找缺口/評估更新優先序的單一入口，不能落後於實際內容
+2. 更新 `HANDOFF.md` 的「當前狀態」與「下一步建議」兩個區塊
+3. 更新 `_INDEX.md` 的對應文件狀態（如有變動）
+4. 若 Research/ 層有新文件完成：同步 `RESEARCH_PLAN.md`（Layer 完成標記）+ `FUTURE_RESEARCH.md`（原題目畢業標記）
+5. `git add` + `git commit` + `git push` 到 GitHub
+6. **此 repo 雖無 Hugo build CI，但 push 後 notify-mysite workflow 會通知 my-site 自動同步**——確認 `.github/workflows/notify-mysite.yml` 觸發後才算完整流程
 
 不需要等使用者提醒。這是固定流程。
 
 **「下一步建議」更新標準**：完成大任務後整段重寫，不只改最後一句——舊內容可能已過期。
+
+## 加新內容前的標準流程
+
+凡是要對 canonical/ 加新條目或修改既有條目，**必須**：
+1. 先讀 `KNOWLEDGE_MAP.md` 對應章節，確認沒有近似條目（避免重複）
+2. 若已有近似條目 → 修現有條目，不另開
+3. 若有不確定的範圍，用 ID 去 `grep canonical/` 看實際內容再決定
+4. 動完之後重跑地圖
+
+這是為了避免「一下說缺一下說沒缺」的反覆——地圖是真相，不靠記憶。
