@@ -15,7 +15,7 @@
 | 章節 | 條目數 | 備註 |
 |---|---|---|
 | `technical-analysis` | 201 | 泳式分布：{'free': 33, 'back': 27, 'breast': 31, 'fly': 35, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 84, '🟢': 81, '🟠': 32, '🟡': 4} |
-| `teaching-errors` | 85 | 泳式分布：{'free': 23, 'back': 14, 'breast': 12, 'fly': 14, 'udk': 13, 'starts-turns': 9} |
+| `teaching-errors` | 90 | 泳式分布：{'free': 23, 'back': 14, 'breast': 12, 'fly': 14, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 45 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -269,9 +269,9 @@
 | udk.tech.28 | kick |  | 🟢 |
 | udk.tech.29 | streamline |  | 🔵 |
 
-### `teaching-errors.yaml` — 教學誤區（**85 條目**）
+### `teaching-errors.yaml` — 教學誤區（**90 條目**）
 
-**泳式分布**：仰式 14, 蛙式 12, 蝶式 14, 自由式 23, 起跳轉身 9, 水下蝶腳 13
+**泳式分布**：仰式 14, 蛙式 12, 蝶式 14, 自由式 23, 起跳轉身 14, 水下蝶腳 13
 
 #### 自由式 (23)
 
@@ -356,7 +356,7 @@
 | fly.err13 | breathing |  |
 | fly.err14 | breathing |  |
 
-#### 起跳轉身 (9)
+#### 起跳轉身 (14)
 
 | ID | 範疇 | 標題/摘要 |
 |---|---|---|
@@ -369,6 +369,11 @@
 | starts-turns.err7 | turn |  |
 | starts-turns.err8 | depth |  |
 | starts-turns.err9 | concept |  |
+| starts-turns.err10 | head |  |
+| starts-turns.err11 | approach |  |
+| starts-turns.err12 | breakout |  |
+| starts-turns.err13 | timing |  |
+| starts-turns.err14 | breakout |  |
 
 #### 水下蝶腳 (13)
 

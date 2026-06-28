@@ -2709,3 +2709,157 @@ errors:
         推蹬後速度快不快，取決於那個對齊感是否到位——不是腿有多用力。
     diagnostic:
       type: C
+
+  # ── 補強：起跳抬頭/轉身速度/breakout/pullout 時序/第一划換氣 ──
+  - id: starts-turns.err10
+    stroke: starts-turns
+    category: head
+    title: 起跳一定要抬頭（或反向：絕對不能抬頭）——二元口令兩派都過度執行
+    public:
+      misconception: >-
+        起跳時頭部位置有兩派教法，常見以絕對化口令呈現：
+        派 A「起跳一定要抬頭看遠處才能飛得遠」、派 B「絕對不能抬頭，會破壞 streamline」。
+        執行端兩派都過度——抬頭派把所有人都教成抬頭、低頭派把所有人都壓住頭，
+        但實際是兩派各有適用情境，非二元。
+      physical_reason:
+        certainty: 🟠
+        text: >-
+          頭部 11 磅快速向上抬升是 Race Club 確認的 coupling 動作（量測：抬頭比低頭遠 0.32m、12m 快 0.12 秒），
+          但這個效應依賴選手能在抬頭瞬間維持身體軸線——核心力量不足或柔軟度有限的選手抬頭會破壞 streamline，
+          coupling 增益被 streamline 損失蓋過。
+          低頭派的對立論述也成立：對追求快入水策略的選手（如 Anthony Ervin 風格），低頭飛行軌跡更直接、入水更快，
+          抬頭反而拖慢入水時機。所以這不是「對 vs 錯」而是「策略選擇」。
+      evidence:
+        - certainty: 🟠
+          text: Amanda Kendall VM 量測抬頭 vs 低頭：抬頭飛行距離 +11%、到 12m 時間 -3%；但量測對象需要本身有足夠核心控制配合。
+          source: Race Club Ch 23（菁英影像觀察）
+      correct_concept: >-
+        評估選手核心控制與飛行軌跡偏好再決定：核心強+追求飛行距離的選手用抬頭 coupling；
+        核心普通或追求快入水策略的用低頭。教學初期先用中立姿勢（不刻意抬也不壓），
+        技術成熟後再加入抬頭訓練作為進階選項。
+      perception_impact: >-
+        絕對化口令逼選手執行不適合自己的動作。抬頭派下的非合適者破壞 streamline、低頭派下的合適者放棄 coupling 增益——
+        兩種情況都把感知從「身體軸線回饋」轉移到「我有沒有達到口令要求」的動作監控。
+      cross_ref: starts-turns.tech.4（兩派並陳分析）
+    diagnostic:
+      type: C
+
+  - id: starts-turns.err11
+    stroke: starts-turns
+    category: approach
+    title: 轉身越快越好——approach 速度過快反失分
+    public:
+      misconception: >-
+        部分教練只強調「轉身越快越好」「不要減速」，把 approach（接近牆）速度當成轉身品質的唯一指標。
+        結果選手在接近牆時無法精確控制翻滾啟動時機，要嘛太早翻、要嘛撞牆，
+        反而比稍微減速但精確翻滾的選手慢。
+      physical_reason:
+        certainty: 🔵
+        text: >-
+          轉身效率 = approach 速度 × 翻滾精確度 × 推蹬品質。三者乘積決定總時間，
+          只追求 approach 速度（其中一項）會犧牲翻滾精確度（另一項）——當翻滾時機誤差 0.1 秒，
+          推蹬位置與最佳位置可能偏離 30-50 公分，後續水下推進距離與方向都受影響。
+          菁英選手在最後 5 公尺通常有「微減速 + 精確翻滾啟動」的模式，
+          不是「全力衝牆 + 隨機翻滾」。
+      correct_concept: >-
+        approach 訓練要同時涵蓋速度與精確度，不是只追求速度。
+        Drill：在最後 5 公尺刻意調整 stroke count（例如固定 3 划接翻），
+        建立「速度可調 + 翻滾時機精確」的雙重控制感。
+      perception_impact: >-
+        只追求速度時感知頻寬鎖在「我夠不夠快」，犧牲了「我什麼時候該啟動翻滾」的時機感。
+        加上時機感的訓練後，選手會發現「稍慢但精確」的總時間比「全力但隨機」更短。
+    diagnostic:
+      type: C
+
+  - id: starts-turns.err12
+    stroke: starts-turns
+    category: breakout
+    title: Breakout 多踢幾下、慢慢上來避免掉速——水下越久速度衰減越多
+    public:
+      misconception: >-
+        常見教練口令「再多踢幾下、慢慢上來，不要太快出水會掉速」，
+        立意是避免出水時 streamline 鬆掉造成速度損失。
+        但實際是水下推進的速度衰減比水面游速更快——超過個人最佳出水時機後，
+        每多一下水下踢都在掉速。
+      physical_reason:
+        certainty: 🟢
+        text: >-
+          水下推進速度從蹬牆瞬間（5-6 m/s）就開始衰減，海豚踢主要功能是「維持速度」而非「加速」。
+          當水下速度衰減到接近個人游速時，繼續水下就是淨損失——應該立刻出水接划手。
+          每位選手有自己的「最佳出水點」（通常在 5-12 公尺之間，依個人水下踢力與游速比例而定），
+          超過這個點都是浪費。
+          「慢慢上來」口令把「保持 streamline」（對）與「待越久越好」（錯）混淆。
+      evidence:
+        - certainty: 🟢
+          text: 水下推進速度衰減模型 + 菁英選手出水時機影像分析。
+          source: 通用游泳科學共識（Race Club / 多項游泳生物力學研究）
+      correct_concept: >-
+        個別化測試最佳出水點——用秒錶與標記比較不同距離出水的 15m 總時間，
+        找到個人最快的出水位置。多數選手最佳點在 5-10 公尺；超過 12 公尺通常已是淨損失區。
+      perception_impact: >-
+        「慢慢上來」口令把感知重點放在「我能撐多久水下」，反而錯過了「速度何時開始低於游速」這個關鍵訊號。
+        正確的感知目標是「速度感」——感覺水下推進開始費力、速度感開始下降，就是出水時機。
+    diagnostic:
+      type: A
+
+  - id: starts-turns.err13
+    stroke: starts-turns
+    category: timing
+    title: 蛙式 pullout 完全靜止才划手——錯失最佳推進力疊加時機
+    public:
+      misconception: >-
+        部分教練教蛙式 pullout 時要求「等流線完全靜止再開始划手」，
+        立意是避免 streamline 不到位就動，但實際是錯過了推進力疊加的最佳時機。
+      physical_reason:
+        certainty: 🟠
+        text: >-
+          蛙式 pullout 的物理目標是「流線速度 + 第一划水推進力」的疊加最大化，
+          不是「等到完全靜止才動」。最佳啟動時機是當流線速度衰減到接近、但尚未低於蛙式游速時——
+          這個時候啟動第一划水，加速度推進可以接續上殘留的水下速度，避免速度斷層。
+          等到完全靜止才划，等於放棄了水下殘留動能，
+          相當於每次轉身都要從零開始加速到蛙式游速——明顯效率低。
+      correct_concept: >-
+        啟動時機判斷：感覺「水下速度開始低於游速」就是該動的訊號。
+        不是視覺判斷（看不到自己），是身體對水流速度感的判斷。
+        訓練 drill：在不同時機啟動第一划，計時對比，找到個人最佳時機。
+      perception_impact: >-
+        「等完全靜止」口令把感知頻寬鎖在「我有沒有靜止」，把焦點放錯方向。
+        正確感知是「水流速度感的轉折點」——這需要 L3 以上的水感才能準確判斷。
+    diagnostic:
+      type: A
+
+  - id: starts-turns.err14
+    stroke: starts-turns
+    category: breakout
+    title: 起跳後第一划要呼吸補氣（200m 以上）——破壞 breakout 速度的最大錯誤
+    public:
+      misconception: >-
+        有教練對 200m 以上自由式選手教「起跳後第一划就要呼吸補氣，後面才有體力」，
+        立意是避免缺氧。但這個口令把選手的最快速度段（起跳後 breakout）拿來呼吸，
+        是速度損失最大的時段之一。
+      physical_reason:
+        certainty: 🟢
+        text: >-
+          起跳後 breakout 的速度通常是整趟最快段（接近水下推進殘留動能）。
+          抬頭呼吸即時打破 streamline 與身體軸線，速度立刻下降——
+          這個損失遠大於「不換氣 1 划」對體能的負擔（一划約 1-2 秒，氧氣儲備充足）。
+          Race Club Ch 23 第 7 點明確規定：起跳後第一划絕對不換氣，
+          無論比賽距離（200/400/800/1500 都一樣）。
+          轉身後第一划換氣（200m 以上）是另一回事——那是補回轉身屏氣的需求，
+          兩者不能類推。
+      evidence:
+        - certainty: 🟠
+          text: Race Club 觀察菁英 200m+ 選手的 breakout 模式，幾乎全部第一划不換氣。
+          source: Race Club Ch 23 第 7 點（菁英教練共識）
+      correct_concept: >-
+        起跳後第一划絕對不換氣，第二划開始建立呼吸節律。
+        轉身後可以第一划換氣（200m+ 距離），是不同情境的不同決策。
+        教練要分清楚兩個情境再給口令。
+      perception_impact: >-
+        「第一划要呼吸」口令讓選手把感知放在呼吸時機監控，
+        破壞了 breakout 那段最寶貴的「速度感」回饋——
+        而 breakout 速度感是判斷流線與出水時機的核心感知。
+      cross_ref: starts-turns.tech.44（自由式 Breakout 七要點，含「第一划不換氣」）
+    diagnostic:
+      type: C
+
