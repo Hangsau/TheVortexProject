@@ -1,0 +1,58 @@
+id: iron-deficiency-swimmer
+zh: 泳者鐵質缺乏（含非貧血性鐵缺）
+en: Iron deficiency in swimmers (including non-anemic iron deficiency)
+category: D-endocrine
+environment: [pool, open_water]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [紅血球系統, 攜氧鏈, 肌紅蛋白, 細胞色素鏈, 認知/疲勞調節]
+mechanism:
+  summary: 鐵不只用於血紅素——肌紅蛋白、粒線體細胞色素鏈、神經傳導物合成都依賴鐵。鐵缺乏分三階段：① 鐵儲備耗竭（鐵蛋白↓但血紅素正常）；② 紅血球生成減弱（血紅素開始下滑）；③ 缺鐵性貧血。耐力表現在階段 ① 就已下降——光看血紅素會錯失大量「鐵蛋白偏低但 Hb 正常」的選手。
+  driver: "鐵蛋白(ferritin) < 20 ng/mL 即視為儲備不足；< 12 ng/mL 為臨床缺鐵；女性比男性更易缺鐵（月經損失+多吃植物來源+紅肉攝取低）"
+  trigger_phase: 高強度訓練期 / 月經期 / 訓練量驟增期
+  who: 女性運動員、青少年成長期者、素食/純素傾向者、月經量大者、訓練量驟增者
+  swim_context: 游泳是非衝擊運動，足部撞擊性溶血較跑者少；但訓練強度與量大、運動性發炎（hepcidin 升高抑制吸收）+ 訓練後 24 小時內鐵吸收窗口縮窄，仍易累積缺鐵
+
+epidemiology:
+  prevalence: "女性運動員 11–41% 鐵缺乏（範圍取決於切點與族群）；女子泳者報告 ferritin < 20 ng/mL 比例可達 50%（即使口服鐵補充劑加倍從 20 mg → 40 mg/日，盛行率仍未顯著下降，顯示吸收效率才是瓶頸）"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 「鐵儲備不足」vs「臨床貧血」切點差異大；運動性偽貧血（高血漿量稀釋）會讓 Hb 看似低但其實有益於耐力，要與真鐵缺乏區分
+  sources:
+    - "IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
+    - "Sim et al. 2019, Eur J Appl Physiol（hepcidin 與運動誘發鐵吸收抑制；具體引用待核實）"
+
+risk_factors:
+  - { text: "女性（月經損失約每月 30 mg）", grade: A }
+  - { text: "素食/純素傾向（植物來源鐵吸收率僅 5–10% vs 動物來源 25–30%）", grade: A }
+  - { text: "維生素 C 攝入不足（抑制非血基質鐵吸收）", grade: B }
+  - { text: "高強度訓練期 hepcidin 升高（運動後 3–6 小時吸收降低）", grade: B }
+  - { text: "咖啡因/茶/鈣質與鐵補充劑同服（抑制吸收 30–60%）", grade: B }
+  - { text: "青少年成長期（生長性需求疊加運動性損失）", grade: A }
+
+prevention:
+  - { text: "女性運動員年度 ferritin 監測（建議目標 > 30 ng/mL；耐力選手 > 35 ng/mL）", grade: B }
+  - { text: "動物來源鐵優先（紅肉、肝、貝類、深色禽肉）", grade: A }
+  - { text: "植物來源鐵 + 維生素 C 同食（菠菜+柑橘/番茄/紅椒）", grade: A }
+  - { text: "訓練後 30 分鐘內勿補鐵（hepcidin 高峰），改在隔天清晨空腹或訓練前 2 小時前", grade: B }
+  - { text: "鐵補充劑與咖啡因/鈣分隔 ≥2 小時", grade: B }
+
+management:
+  red_flags:
+    - "Hb < 11.0 g/dL（女）或 < 13.0 g/dL（男）+ 疲倦/頭暈/心悸 → 就醫排除其他病因"
+    - "ferritin < 12 ng/mL + 持續疲勞 → 全套貧血評估"
+    - "口服鐵補充 8 週後 ferritin 仍 < 20 → 排除吸收障礙（celiac、H. pylori、IBD）"
+  acute: "若 ferritin < 30 ng/mL：硫酸亞鐵 100–200 mg 元素鐵/日 + 維生素 C 500 mg 同服（鐵吸收提升約 30%）；避免咖啡因/鈣/茶於同時段"
+  pain_rules: ~
+  rehab: "ferritin 回升期間（4–12 週）：高強度訓練量減半，重點放在技術與基礎有氧；恢復後逐漸加量"
+  functional_progression_criteria:
+    - "ferritin > 30 ng/mL（耐力選手 > 35）"
+    - "主觀疲勞回到基線"
+    - "靜息心率回到基線"
+  swim_modifications_in_rehab:
+    - "氧合不足時高強度訓練品質低，浪費窗口；改成技術 drill + 基礎有氧"
+    - "監測訓練後恢復時間（鐵缺乏者顯著延長）"
+  return_to_train: "ferritin > 30 ng/mL + 主觀疲勞回正 → 漸進回歸（每週量增 ≤10%）"
+  return_to_compete: "ferritin > 35（耐力）+ Hb 在正常範圍 + 訓練質量已恢復"
+  prognosis: "純鐵缺乏無潛在病因者 8–12 週可完全恢復；忽視持續高量訓練則演變為慢性疲勞、表現停滯、過度訓練症候群"

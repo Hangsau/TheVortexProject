@@ -1,0 +1,56 @@
+id: sci-hip-flexor-contracture
+zh: 脊髓損傷泳者的髖屈攣縮
+en: Hip flexor contracture in SCI swimmers
+category: C-nonMSK-medical
+environment: [pool]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [髂腰肌, 股直肌, 髖關節囊, 骨盆-腰椎連結]
+mechanism:
+  summary: 脊髓損傷（SCI）選手長期坐輪椅，髖屈肌（髂腰肌、股直肌）長期處於縮短位置，加上下肢主動伸展能力受限，造成髖屈攣縮可達 60–90° 屈曲。游泳時這個攣縮無法靠水中拉伸快速消除——俯臥泳式時下肢往後伸不直，造成正面阻力大、軀幹拱起；仰式因軀幹控制不足會被攣縮的髖屈肌拉著腰椎前彎而更困難。不主動介入會持續惡化，極端情況需手術做髖關節囊釋放。
+  driver: "髖屈攣縮角度 = 受傷時間 × 每日坐姿時間 × 是否有規律髖屈拉伸介入；坐輪椅 ≥ 2 年且無拉伸介入者攣縮普遍 ≥ 30°"
+  trigger_phase: 俯臥泳式下肢伸展位 / 仰式軀幹姿勢
+  who: SCI 完全性損傷者、輪椅依賴 ≥ 2 年且無規律拉伸介入者、L1–L3 段以上損傷者
+  swim_context: SCI 泳者在水中對下肢的本體感覺與主動控制能力有限，無法靠游泳本身展開髖部；陸上拉伸是必要而非選項
+
+epidemiology:
+  prevalence: "SCI 泳者髖屈攣縮幾乎普遍存在；嚴重攣縮（≥ 60°）報告比例 30–50%（依損傷層級與輪椅依賴年限）"
+  certainty: 🟠
+  evidence_grade: B
+  caveat: 多數數據來自臨床觀察與小規模個案系列，缺大型流病
+  sources:
+    - "Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述；待核實具體引用）"
+
+risk_factors:
+  - { text: "完全性 SCI（vs 不完全性）", grade: B }
+  - { text: "受傷時間 > 2 年", grade: B }
+  - { text: "每日輪椅時間 > 12 小時", grade: B }
+  - { text: "無規律髖屈拉伸介入", grade: Expert }
+  - { text: "L1–L3 段以上損傷（下肢主動伸展更受限）", grade: B }
+
+prevention:
+  - { text: "每日髂腰肌與股直肌拉伸（俯臥髖伸展、Thomas 姿）≥ 2 × 30 秒，每日至少 1 次", grade: B }
+  - { text: "PT/OT 介入建立家用拉伸計畫，傷後 6 個月內開始", grade: Expert }
+  - { text: "游泳訓練前後加陸上動態髖伸展 10 分鐘", grade: Expert }
+  - { text: "考慮夜間使用髖伸展支架（已有攣縮者）", grade: Expert }
+
+management:
+  red_flags:
+    - "新發疼痛或攣縮加速 → 排除異位性骨化（HO）"
+    - "皮膚壓瘡風險增加（攣縮改變坐姿） → PT 重新評估輪椅適配"
+    - "保守治療 6 個月無進展 + 攣縮 > 60° 影響日常功能 → 骨科會診評估手術釋放"
+  acute: ~
+  pain_rules: "拉伸時 NRS ≤ 4 為安全範圍；> 4 或拉伸後 24 小時持續疼痛 → 降低強度"
+  rehab: "①每日 2 × 30 秒拉伸 ②水中俯臥使用 pull buoy 補償腿位 ③陸上髖伸展肌力訓練（臀大肌、後鏈）"
+  functional_progression_criteria:
+    - "陸上俯臥姿勢髖伸展角度逐月改善"
+    - "游泳時軀幹拱起減少"
+    - "比賽姿勢可維持時間延長"
+  swim_modifications_in_rehab:
+    - "俯臥泳式（自由式、蝶式）使用 pull buoy 提高腿位、減少正面阻力"
+    - "仰式時加強核心訓練補償腰椎被動前彎"
+    - "考慮起跳改用水中起跳（避開站立式起跳對攣縮髖部的衝擊）"
+  return_to_train: "新近介入拉伸計畫 → 立即可訓練；不應因攣縮而停訓，但訓練量與技術期望需依攣縮程度調整"
+  return_to_compete: ~
+  prognosis: "早期介入 (傷後 < 6 月) 可有效預防嚴重攣縮；已有 > 60° 攣縮者保守治療效果有限，需手術才能顯著改善"

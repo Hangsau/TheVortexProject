@@ -13,7 +13,7 @@ mechanism:
   swim_context: 泳者每日高熱量消耗 + 體型/外觀壓力 + 大量陸訓，能量赤字易被低估
 
 epidemiology:
-  prevalence: "女性運動員 LEA/三聯症盛行率報導範圍極廣；游泳專項數字待 WebFetch 核實"
+  prevalence: "女性運動員 LEA/三聯症盛行率報導範圍極廣；游泳專項數字待 WebFetch 核實。青少年女子泳者 disordered eating 盛行率 25–31%、月經失調 3–65%（範圍極廣反映定義差異），是同年齡男性與非運動族群的數倍"
   certainty: 🟡
   evidence_grade: B
   caveat: 定義與篩檢工具(LEAF-Q/RED-S CAT2)差異大→盛行率不可橫向比較；男性 RED-S 長期被低估

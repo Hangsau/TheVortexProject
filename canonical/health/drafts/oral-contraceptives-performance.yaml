@@ -1,0 +1,52 @@
+id: oral-contraceptives-performance
+zh: 口服避孕藥對運動表現的影響
+en: Oral contraceptives and athletic performance
+category: D-endocrine
+environment: [pool, open_water]
+sport_variant: [swim]
+layer: [public, clinical]
+
+structures: [下視丘-腦下垂體-性腺軸, 雌激素受體, 心血管自主神經, 骨代謝, 肌肉修復]
+mechanism:
+  summary: 三相型口服避孕藥（triphasic OC）會抑制內源性雌激素與黃體素的週期性波動，外加合成荷爾蒙的相對穩定。對運動表現的主要影響：交感神經激活下降→ VO₂max 降 10–11%（範圍 6–15%，個人差異大）；體溫基線略升；液體滯留輕度增加。低劑量配方（少 30–40% 荷爾蒙）影響較小。雌激素對運動後肌肉損傷有保護作用（透過抗氧化機制與膜穩定）——OC 使用者運動後 CK 與肌酸激酶較低。
+  driver: "三相型 > 單相型 > 低劑量單相型 對 VO₂max 的影響強度依序遞減"
+  trigger_phase: 耐力項目（400m 以上）/ 開放水域 / 鐵人三項
+  who: 服用三相型或高劑量 OC 的女性耐力選手、賽前 12 個月內換配方者、未與教練/運科告知 OC 使用的選手
+  swim_context: 游泳 50/100/200 等爆發/中距離受 VO₂max 影響相對小（無氧為主），但 400m 以上耐力項目受影響顯著；女性選手大量服用 OC（避孕、月經調節、皮膚問題）但對表現影響的諮詢不足
+
+epidemiology:
+  prevalence: "成年女運動員 OC 使用率 30–50%（依族群與年齡）；正在用 OC 的菁英選手與其教練的相關知識落差大"
+  certainty: 🟡
+  evidence_grade: B
+  caveat: 個體反應差異大（雌激素受體多型性）；多數研究 N 小、配方混雜；新一代低劑量配方研究稀少
+  sources:
+    - "Elliott-Sale et al. 2020, Br J Sports Med（OC 與運動表現綜述；具體引用待核實）"
+    - "Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）"
+
+risk_factors:
+  # 此節為「影響增強」的因子（不是疾病風險因子），維持 schema 兼容
+  - { text: "三相型配方（vs 單相型）", grade: B }
+  - { text: "高劑量配方（每錠 > 35 μg ethinylestradiol）", grade: B }
+  - { text: "耐力為主項目（400m 以上 / 開放水域 / 鐵人三項）", grade: B }
+  - { text: "選手未告知教練/運科 OC 使用", grade: Expert }
+
+prevention:
+  - { text: "選手與教練在 OC 開始前/換配方前共同諮詢運動醫學醫師", grade: Expert }
+  - { text: "對耐力選手優先選擇低劑量單相型或非荷爾蒙避孕（IUD、保險套）", grade: Expert }
+  - { text: "賽前 12 個月內不換配方（避免賽前出現未知的表現變化）", grade: Expert }
+  - { text: "教練紀錄選手 OC 使用狀況作為 VO₂max 基線校準依據", grade: Expert }
+
+management:
+  red_flags:
+    - "OC 使用後出現腿部腫脹疼痛、胸痛、呼吸困難 → 立即就醫排除血栓"
+    - "急性嚴重頭痛 + 視覺變化 → 就醫評估腦血管事件"
+    - "黃疸或上腹劇痛 → 評估肝臟反應"
+  acute: ~
+  pain_rules: ~
+  rehab: ~
+  functional_progression_criteria:
+    - "若懷疑 OC 影響表現：與醫師討論換配方或停用，3 個月後重測 VO₂max 確認"
+  swim_modifications_in_rehab: ~
+  return_to_train: ~
+  return_to_compete: ~
+  prognosis: "OC 對表現的影響可逆——停用或換低劑量配方後 2–3 個月 VO₂max 通常回升；但避孕需求需另行規劃替代方案"
