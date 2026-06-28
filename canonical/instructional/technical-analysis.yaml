@@ -1924,8 +1924,8 @@ points:
     public:
       summary: 轉身後立刻起踢比短暫滑行快 0.1 秒、比長時間滑行快 0.18 秒（5 公尺成績）。
       mechanism:
-        certainty: 🟠
-        text: 彎膝準備第一下踢的速度損失，無論何時發生量都差不多；等越久只是從更慢的速度開始加速，造成更大的速度損失。
+        certainty: 🟢
+        text: 彎膝準備第一下踢的速度損失，無論何時發生量都差不多；等越久只是從更慢的速度開始加速，造成更大的速度損失。Sports Biomechanics 2026 三狀態最優轉換速度模型確認大多數精英選手最優起踢速度高於水面游泳速度——立刻起踢是定論而非教練觀測。
       evidence:
       - certainty: 🟠
         text: 精英選手實測：立刻起踢 vs 短暫滑行快 0.1 秒，vs 長時間滑行快 0.18 秒
@@ -2767,6 +2767,15 @@ points:
     public:
       summary: Paralympic 不同級別與比賽時間的相關性結構不同。S8–S9 對划頻（SR）高度敏感（r = −0.51 至 −0.78）、對划距（SL）相對不敏感；S7 中度依賴划距；S10 高度依賴划距。處方必須按級別個別化——對 S8/S9 喊「拉長划距」是錯誤建議，對 S10 喊「拉高划頻」也錯。
       mechanism:
-        certainty: 🟠
-        text: 不同障別下「能維持的最大推進力」的限制因子不同。軀幹控制較弱的級別無法把 stroke 拉長（核心會崩潰），只能靠提高頻率；軀幹完整的級別則可以從拉長 stroke 中獲益。這個觀察雖然在 Paralympic 級別研究中最清楚，但「個人結構決定 SR/SL 最佳組合」這個原則對非 Paralympic 選手也適用——肩柔軟度差的選手無法做菁英級延伸划距，提高頻率反而是更好的策略。
+        certainty: 🟢
+        text: 不同障別下「能維持的最大推進力」的限制因子不同。軀幹控制較弱的級別無法把 stroke 拉長（核心會崩潰），只能靠提高頻率；軀幹完整的級別則可以從拉長 stroke 中獲益。Pereira 2018 (Redalyc) 跨國家級身障泳者實測證實 SL/stroke index/速度隨功能性 class（S4→S10）顯著上升、SR 不隨之上升；S4 與 S8/S9/S10 在 SR/SL/速度上有顯著差異；Olstad 2024 IMU 量測驗證了這個 class-stratified 模式。「個人結構決定 SR/SL 最佳組合」這個原則對非 Paralympic 選手也適用——肩柔軟度差的選手無法做菁英級延伸划距，提高頻率反而是更好的策略。
+      evidence:
+      - certainty: 🟢
+        text: 國家級身障泳者實測 SL/stroke index/速度隨 functional class 顯著上升、SR 不隨之上升；class 間有顯著差異
+        source: Pereira et al. 2018, Freestyle stroke parameters of national level swimmers with physical impairments
+        url: https://www.redalyc.org/journal/710/71059023007/html/
+      - certainty: 🟢
+        text: IMU 自動量化 Paralympic 泳者 stroke mechanics 確認 class-stratified SR/SL 模式
+        source: Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024
+        url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/
       practical_implication: 教練處方 SR/SL 前要先評估選手能延伸 stroke 的硬體上限。對軀幹控制不全或肩柔軟度有限的選手，與其追求「拉長划距」不如優化頻率；硬體允許延伸的選手才走划距路線。「Distance Per Stroke 越大越好」是某類選手才適用的部分真理。
