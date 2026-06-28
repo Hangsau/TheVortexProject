@@ -397,6 +397,38 @@ points:
       practical_implication: 理解四式技術差異有助於跨式訓練設計；自由式無「唯一正確技術」的特性使評估框架必須依個人生理條件調適，不能用統一標準強加於不同泳者。
       cross_ref: free.tech.1（無唯一最優技術的框架前提）
 
+  - id: free.tech.32
+    stroke: free
+    category: stroke-cycle
+    title: 恢復臂能量光譜——彎臂低 / 中等 / 直臂高三層，按距離與專項分流
+    public:
+      summary: 恢復臂的能量成本不是「彎一點或直一點」的二分，而是一個連續光譜。光譜上的位置決定 coupling 動能與能量代價的權衡——直臂回臂的動能與「手臂長度平方 × 角速度平方」成正比，把手臂從彎到直拉長一倍，恢復同樣速度需要四倍能量。所以光譜選位實質上是「能量預算分配給推進 vs 分配給 coupling」的策略決定，按距離與專項分流。
+      mechanism:
+        certainty: 🟠
+        text: |
+          三層光譜（Race Club 命名借用汽車辛烷值類比，因應化學能燃燒高低）：
+          - **低能量（彎臂 low-octane）**：肘部明顯彎曲、手在水面附近輕鬆繞回，能量代價最低但 coupling 動能小。適合 800/1500m 以上長距離有氧、三鐵節能策略。Hip-driven 風格通常配低能量。
+          - **中等能量（半彎 mid-octane）**：肘部微彎、手臂部分延伸，介於前兩者。100/200m 中距離的多數菁英選手位於此區。Hybrid 風格的呼吸側典型。
+          - **高能量（直臂 high-octane）**：肘部幾乎打直、手臂走垂直軌跡，coupling 動能最大但能量代價也最大（約是彎臂四倍）。專屬 50m 衝刺、shoulder-driven 風格。Brad Tandy 的直臂大圓繞臂是典型代表。
+          選擇邏輯：能量代價隨手臂長度與角速度的平方放大，所以「拉直」的代價是非線性陡升。距離越長，總能量預算越緊，能量分配給推進的比例必須提高、coupling 比例下降。
+      practical_implication: 對教練：依選手主項距離與風格決定光譜定位，不要把衝刺直臂訓練套到長距離選手身上。對選手：練多種光譜位置以備不同距離與後段策略——例如 200m 前段用 mid、後段切高能量直臂衝。轉換並不會自然發生，需專門訓練。
+      cross_ref: free.tech.4/5/6（hip/shoulder/hybrid 風格的對應位置）、free.tech.16（晚期回臂作為 coupling 動作）
+
+  - id: free.tech.33
+    stroke: free
+    category: hardware
+    title: 螺旋筋膜線——旋轉推進的全身連動硬體基礎
+    public:
+      summary: 自由式的旋轉不是肩膀獨自轉動，而是透過螺旋筋膜線（Spiral Line）把全身串成一條傳力鏈：對側腳掌外緣 → 大腿外側 → 對側腰 → 對側肩 → 手掌。當這條筋膜線的張力連貫時，肩旋轉峰值能透過張力傳遞到對側腳的踢水推進，是 free.tech.16 coupling 動作的解剖學基礎。任一節點筋膜緊繃或張力中斷會把連動鏈打斷，旋轉變成只有肩膀獨自轉、coupling 失效。
+      mechanism:
+        certainty: 🟠
+        text: |
+          螺旋線（Anatomy Trains 命名）由 12 條肌肉串聯：頭夾肌、菱形肌、前鋸肌、腹外斜肌、腹內斜肌、闊筋膜張肌、脛前肌、腓骨長肌、股二頭肌、薦結節韌帶、豎脊肌——形成左右兩條呈螺旋纏繞身體的張力鏈。游泳時這條線的功能是把肩旋轉的扭力傳到對側腳的下踢，把上下半身耦合成一個整體。
+          當鏈中任一節點失效（如腹外斜肌弱、闊筋膜張肌緊繃、薦結節韌帶受限），張力傳遞中斷——肩仍然會轉，但能量傳不到腳；外觀上看起來「打水跟划手脫節」，實際是筋膜傳導鏈斷掉。
+          這套理論對解釋「為什麼有人六拍踢就是『跟不上』划手」很有幫助：不是踢水技術問題，是肩到對側腳的張力傳遞斷在中間。
+      practical_implication: 對教練：當六拍踢與划手 coupling 看起來「就是不對」時，先檢查筋膜鏈中段（腹外斜肌、闊筋膜張肌、胸腰筋膜）的張力與柔軟度，比直接修改踢水動作更可能找到根因。對選手：螺旋線特定段的拉伸與啟動訓練（如螺旋伸展、單側 deadbug、單邊 carry）可改善這條鏈的功能性。對應 dryland 的 kinetic chain 整合訓練（見 dryland.yaml injury_prevention.kinetic_chain_zh）。
+      cross_ref: free.tech.10（前鋸肌）、free.tech.15（菱形肌啟動旋轉）、free.tech.16（coupling）
+
   - id: free.tech.30
     stroke: free
     category: rotation
