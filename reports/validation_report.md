@@ -23,10 +23,9 @@
 
 ## E003 — `links.*` 指向不存在的 ID
 
-**ERROR，共 2 筆**
+**ERROR，共 0 筆**
 
-  file=canonical\periodization\structure.yaml id='periodization.structure.gas' links.related='macrocycle'
-  file=canonical\periodization\structure.yaml id='periodization.structure.gas' links.related='microcycle'
+（無）
 
 ---
 
