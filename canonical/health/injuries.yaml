@@ -696,8 +696,12 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: 前鋸肌耐力是 EVF（早期垂直前臂）的硬體前提，疲勞後肩胛失穩→捕水崩潰
+    mechanism_link_ids: []
     technical_link: free.tech.10 前鋸肌硬體邊界 / free 疲勞崩潰順序第③步
+    technical_link_ids:
+    - free.tech.10
     perception_link: L4–L6 手感與全身張力
+    perception_link_ids: []
   references:
   - citation: Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. Br J Sports Med 2010;44(2):105-113
     certainty: 🔴
@@ -906,8 +910,11 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: 踢腿外翻負荷與髖外旋代償可接『硬體邊界 vs 感知缺陷』判斷(髖活動度=硬體)
+    mechanism_link_ids: []
     technical_link: 蛙式踢腿技術分析(外翻角/髖帶動)——待對應 canonical technical 條目
+    technical_link_ids: []
     perception_link: L2–L4 腳感層(踢腿節律與蹬夾感知)
+    perception_link_ids: []
   references:
   - citation: 蛙泳膝經典流病文獻（作者/年份/期刊全待 WebFetch 核實）
     certainty: 🟡
@@ -2514,6 +2521,7 @@ injuries:
     mechanism_link: null
     technical_link: null
     perception_link: 可接 L0 呼吸感知(冷水喘氣反射的生理意義)
+    perception_link_ids: []
   references:
   - citation: 'Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003'
     certainty: 🟢
@@ -2744,6 +2752,7 @@ injuries:
     mechanism_link: null
     technical_link: null
     perception_link: 可接 L0 呼吸感知層作為水安全教育素材(非技術介入)
+    perception_link_ids: []
   references:
   - citation: WHO 2024-12-13『Drowning deaths decline globally but the most vulnerable remain at risk』新聞稿
     certainty: 🟢
@@ -3086,6 +3095,7 @@ injuries:
     mechanism_link: null
     technical_link: null
     perception_link: 可接 L0 呼吸感知層：閉氣與換氣衝動的生理意義屬呼吸感知教育素材
+    perception_link_ids: []
   references:
   - citation: Shallow Water Blackout Prevention（組織衛教，待核實具體出處）
     certainty: 🟠
@@ -3191,6 +3201,7 @@ injuries:
     mechanism_link: null
     technical_link: null
     perception_link: 可接 L0 呼吸感知/配速感知教育(辨識異常呼吸窘迫 vs 正常喘)
+    perception_link_ids: []
   references:
   - citation: SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）
     certainty: 🔴
@@ -3284,6 +3295,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: female-athlete-triad
+    mechanism_link_ids:
+    - female-athlete-triad
     technical_link: null
     perception_link: null
   references:
@@ -3380,6 +3393,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: red-s
+    mechanism_link_ids:
+    - red-s
     technical_link: null
     perception_link: null
   references:
@@ -3725,6 +3740,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: swimmer-low-bone-density
+    mechanism_link_ids:
+    - swimmer-low-bone-density
     technical_link: null
     perception_link: null
   references:
@@ -3821,6 +3838,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: female-athlete-triad
+    mechanism_link_ids:
+    - female-athlete-triad
     technical_link: null
     perception_link: null
   references:
@@ -3929,6 +3948,7 @@ injuries:
   links:
     mechanism_link: null
     technical_link: 競賽出發台入水角度技術(racing start)——與出發台撞擊傷共享預防
+    technical_link_ids: []
     perception_link: null
   references:
   - citation: Prevention of spinal cord injuries in swimming pools, PubMed 9267915
@@ -4039,6 +4059,7 @@ injuries:
   links:
     mechanism_link: null
     technical_link: 翻滾轉身技術——時序與足位精準度直接影響受傷風險
+    technical_link_ids: []
     perception_link: null
   references:
   - citation: Biomechanics of swimming flip-turn (wall contact kinetics), PMC6409673
@@ -4360,6 +4381,7 @@ injuries:
   links:
     mechanism_link: null
     technical_link: 出發台 racing start 技術——與跳水頸椎傷共享水深/角度預防
+    technical_link_ids: []
     perception_link: null
   references:
   - citation: Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189
@@ -4550,6 +4572,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: diving-cervical-injury
+    mechanism_link_ids:
+    - diving-cervical-injury
     technical_link: null
     perception_link: null
   references:
@@ -4638,6 +4662,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: extension-low-back-pain
+    mechanism_link_ids:
+    - extension-low-back-pain
     technical_link: null
     perception_link: null
   references:
@@ -4831,6 +4857,8 @@ injuries:
     lifecycle: null
   links:
     mechanism_link: rotator-cuff-tendinopathy
+    mechanism_link_ids:
+    - rotator-cuff-tendinopathy
     technical_link: null
     perception_link: null
   references:

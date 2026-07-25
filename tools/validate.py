@@ -25,14 +25,17 @@ exit code：
   E004  category/stroke/certainty/status 出現不在 _taxonomy.yaml 的值
   E005  source_ids 指向不存在的 _sources.yaml ID
   E006  cross_ref_ids 內含無法解析的 ID（canonical 全集 + Drills）
+  E007  links.*_link_ids 內含無法解析的 ID（canonical 全集 + Drills）
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  certainty 為 green 或 yellow 但沒有 source_ids（S3 待辦）
   W003  孤兒條目：沒有任何 links 指入、自己也沒指出
-  W004  欄位名為 *_link 但值為散文（schema 債）：
-        mechanism_link / technical_link / perception_link
+  W004  links.*_link 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
+        對應的 links.*_link_ids（ids 與顯示字串脫節）
   W005  links 下未知子鍵（不在 ID 參照類、詞彙參照類或已知自由文字類中）
   W006  cross_ref 有值但完全沒有 cross_ref_ids 欄位（連空陣列都沒有）
+  W007  links.*_link 有非空字串但完全沒有對應的 *_link_ids 欄位
+        （連空陣列都沒有）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -46,6 +49,18 @@ exit code：
                    全域 ID 集合解析的穩定 ID。
                    `[]` = 已檢查過、確認無 ID 可連（多為指向 Instructional/
                    散文的節號）；欄位缺席 = 尚未處理（W006）。
+
+  *_link / *_link_ids 分工（S4b，與 cross_ref 同一模式）：
+    mechanism_link / technical_link / perception_link
+                   顯示層自由文字，下游 my-site 的 vortex-injuries.html 直接
+                   當純字串渲染，**不可改名或改成陣列**（會印出 Go slice 字面值）。
+    *_link_ids     機器鍵（list of string），放從對應 *_link 抽出且確實能在
+                   全域 ID 集合解析的穩定 ID。
+                   `[]` = 已檢查過、確認無 ID 可連（多為指向尚未建立的
+                   technical 條目、或無 stroke 前綴因而無法解析的水感層級
+                   L0/L4–L6 這類敘述）；欄位缺席 = 尚未處理（W007）。
+    真相來源是 canonical/health/drafts/*.yaml，改完要重跑
+    tools/build_injuries.py；**不可直接改 canonical/health/injuries.yaml**。
 """
 from __future__ import annotations
 
@@ -105,13 +120,16 @@ LINKS_VOCAB_REF_KEYS = {
     "development_stages": "development_stage",  # 值應為 development_stage 詞彙
 }
 
-# 自由文字類（W004 追蹤的 schema 債）：
-# mechanism_link、technical_link、perception_link 欄位名宣稱是 link，
-# 但實際值為散文。這是已知技術債，修法是拆成：
-#   *_link（ID 陣列）+ *_note（散文說明）
-# 並修改 canonical/health/drafts/*.yaml 再重跑 tools/build_injuries.py。
-# 注意：不可直接改 canonical/health/injuries.yaml（promoted artifact，檔頭寫明勿手改）。
+# 自由文字顯示類：mechanism_link、technical_link、perception_link 值是散文，
+# 下游 my-site 當純字串渲染，不可改名或改成陣列（S4b 定案）。
+# 機器可解析的部分改放同名 + _ids 的機器鍵（見 LINKS_IDS_KEYS）。
+# 真相來源是 canonical/health/drafts/*.yaml，改完重跑 tools/build_injuries.py；
+# 不可直接改 canonical/health/injuries.yaml（promoted artifact，檔頭寫明勿手改）。
 LINKS_FREE_TEXT_KEYS = {"mechanism_link", "technical_link", "perception_link"}
+
+# 機器鍵類（E007 / W004 / W007 檢查對象）：每個自由文字顯示鍵對應一個 _ids 鍵，
+# 值為 list of string，元素必須能在全域 ID 集合解析。
+LINKS_IDS_KEYS = {k + "_ids" for k in LINKS_FREE_TEXT_KEYS}
 
 # 用於從散文值中保守抽取候選 ID 的 regex
 # 匹配命名空間格式（如 free.tech.10、back.err2、starts-turns.err10）
@@ -253,6 +271,64 @@ def collect_outbound_ids(entry: dict) -> set[str]:
     return out
 
 
+# ── 機器鍵（*_ids）共用檢查 ───────────────────────────────────────────────────
+
+def collect_declared_ids(
+    rel: str,
+    eid: str,
+    ids_key: str,
+    raw_ids: object,
+    has_ids_key: bool,
+    all_id_set: set,
+    sink: list,
+) -> list[str]:
+    """驗證一個 *_ids 機器鍵並回傳其中宣告的 ID 清單。
+
+    型別錯誤、非字串元素、無法解析的 ID 都寫進 sink（呼叫端給對應的
+    ERROR 清單：cross_ref_ids → E006、links.*_link_ids → E007）。
+    cross_ref_ids 與 *_link_ids 共用本函式，不各寫一份。
+    """
+    declared_ids: list[str] = []
+    if isinstance(raw_ids, list):
+        for item in raw_ids:
+            if isinstance(item, str) and item.strip():
+                declared_ids.append(item)
+                if item not in all_id_set:
+                    sink.append(
+                        f"  file={rel} id={eid!r} "
+                        f"{ids_key} 含無法解析的 {item!r}"
+                    )
+            else:
+                sink.append(
+                    f"  file={rel} id={eid!r} "
+                    f"{ids_key} 含非字串元素 {item!r}"
+                )
+    elif has_ids_key and raw_ids is not None:
+        sink.append(
+            f"  file={rel} id={eid!r} {ids_key} "
+            f"型別應為 list，實際為 {type(raw_ids).__name__}"
+        )
+    return declared_ids
+
+
+def missing_declared_ids(
+    text: str, declared_ids: list[str], all_id_set: set
+) -> list[str]:
+    """列出 text 內疑似穩定 ID、但沒被宣告進 *_ids 的 token。
+
+    候選一律由 extract_candidate_ids() 產生（唯一一份抽取邏輯），另補一種
+    形態辨識抓不到的情況：整個字串本身就是一個可解析的 ID。health 傷害條目
+    的 ID 是裸 slug（red-s、female-athlete-triad），沒有命名空間點號，regex
+    認不出來——而「整個 *_link 就填一個條目 ID」正是 links.*_link 最常見的
+    寫法，不補這一項 W004 對它零覆蓋。W001（cross_ref）共用同一規則。
+    """
+    candidates = extract_candidate_ids(text)
+    whole = (text or "").strip()
+    if whole and whole in all_id_set and whole not in candidates:
+        candidates.append(whole)
+    return [t for t in candidates if t not in declared_ids]
+
+
 # ── cross_ref 契約檢查（E006 / W001 / W006）───────────────────────────────────
 
 def check_cross_ref(
@@ -274,28 +350,11 @@ def check_cross_ref(
     才能在報告中正確顯示中文。顯示截斷為 120 字元。
     """
     has_ids_key = "cross_ref_ids" in container
-    raw_ids = container.get("cross_ref_ids")
-
-    declared_ids: list[str] = []
-    if isinstance(raw_ids, list):
-        for item in raw_ids:
-            if isinstance(item, str) and item.strip():
-                declared_ids.append(item)
-                if item not in all_id_set:
-                    errors["E006"].append(
-                        f"  file={rel} id={eid!r} "
-                        f"{location}.cross_ref_ids 含無法解析的 {item!r}"
-                    )
-            else:
-                errors["E006"].append(
-                    f"  file={rel} id={eid!r} "
-                    f"{location}.cross_ref_ids 含非字串元素 {item!r}"
-                )
-    elif has_ids_key and raw_ids is not None:
-        errors["E006"].append(
-            f"  file={rel} id={eid!r} {location}.cross_ref_ids "
-            f"型別應為 list，實際為 {type(raw_ids).__name__}"
-        )
+    declared_ids = collect_declared_ids(
+        rel, eid, f"{location}.cross_ref_ids",
+        container.get("cross_ref_ids"), has_ids_key,
+        all_id_set, errors["E006"],
+    )
 
     cr = container.get("cross_ref")
     if not (isinstance(cr, str) and cr.strip()):
@@ -309,14 +368,60 @@ def check_cross_ref(
         )
         return
 
-    missing = [
-        t for t in extract_candidate_ids(cr) if t not in declared_ids
-    ]
+    missing = missing_declared_ids(cr, declared_ids, all_id_set)
     if missing:
         warnings["W001"].append(
             f"  file={rel} id={eid!r} {location}.cross_ref 內疑似穩定 ID "
             f"{missing} 未列入 cross_ref_ids (120 chars): {cr[:120]!r}"
         )
+
+
+# ── links.*_link 契約檢查（E007 / W004 / W007）────────────────────────────────
+
+def check_link_ids(
+    rel: str,
+    eid: str,
+    links: dict,
+    all_id_set: set,
+    errors: dict,
+    warnings: dict,
+):
+    """檢查 links 下三個自由文字顯示鍵與其 *_link_ids 機器鍵的契約。
+
+    E007  *_link_ids 內有無法解析的值（或型別不是 list）→ ERROR
+    W004  *_link 字串裡有疑似穩定 ID 的 token，但沒列進對應的 *_link_ids
+    W007  *_link 有非空字串但沒有 *_link_ids 欄位（連 [] 都沒寫）
+
+    注意：不做任何 ASCII encode 轉換，直接保留原始 Unicode 字串，
+    才能在報告中正確顯示中文。顯示截斷為 120 字元。
+    """
+    for link_key in sorted(LINKS_FREE_TEXT_KEYS):
+        ids_key = link_key + "_ids"
+        has_ids_key = ids_key in links
+        declared_ids = collect_declared_ids(
+            rel, eid, f"links.{ids_key}",
+            links.get(ids_key), has_ids_key,
+            all_id_set, errors["E007"],
+        )
+
+        val = links.get(link_key)
+        if not (isinstance(val, str) and val.strip()):
+            continue
+
+        if not has_ids_key:
+            # 尚未處理：與「明確宣告 []（已檢查、無 ID 可連）」區分開
+            warnings["W007"].append(
+                f"  file={rel} id={eid!r} links.{link_key} 有值但缺 "
+                f"{ids_key} 欄位 (120 chars): {val[:120]!r}"
+            )
+            continue
+
+        missing = missing_declared_ids(val, declared_ids, all_id_set)
+        if missing:
+            warnings["W004"].append(
+                f"  file={rel} id={eid!r} links.{link_key} 內疑似穩定 ID "
+                f"{missing} 未列入 {ids_key} (120 chars): {val[:120]!r}"
+            )
 
 
 # ── E001 輔助：在已知條目陣列鍵中偵測缺 id ────────────────────────────────────
@@ -388,10 +493,12 @@ def run_validation():
 
     # ── 錯誤/警告收集器 ──
     errors: dict[str, list[str]] = {
-        "E001": [], "E002": [], "E003": [], "E004": [], "E005": [], "E006": []
+        "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
+        "E006": [], "E007": []
     }
     warnings: dict[str, list[str]] = {
-        "W001": [], "W002": [], "W003": [], "W004": [], "W005": [], "W006": []
+        "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
+        "W006": [], "W007": []
     }
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -418,7 +525,8 @@ def run_validation():
 
         # ── E003: links.* ID 參照類斷鏈 ──
         # ── E004 (詞彙參照類): links.* 詞彙值不在 taxonomy ──
-        # 自由文字類（mechanism_link / technical_link / perception_link）跳過。
+        # 自由文字顯示類（*_link）與其機器鍵（*_link_ids）另由
+        # check_link_ids() 檢查（E007 / W004 / W007）。
         links = entry.get("links")
         if isinstance(links, dict):
             for link_type, targets in links.items():
@@ -463,23 +571,11 @@ def run_validation():
                         else:
                             inbound_ids[targets] += 1
                 elif link_type in LINKS_FREE_TEXT_KEYS:
-                    # 已知自由文字類（W004 schema 債追蹤）：
-                    # 欄位名宣稱是 link，實際存散文，null 值不計
-                    if isinstance(targets, str) and targets:
-                        snippet = targets[:120]
-                        # 保守抽取候選 ID（命名空間格式或 Drill 編號）
-                        candidates = _CANDIDATE_ID_RE.findall(targets)
-                        if candidates:
-                            candidate_note = (
-                                f"（候選 ID: {', '.join(candidates)}）"
-                            )
-                        else:
-                            candidate_note = ""
-                        warnings["W004"].append(
-                            f"  file={rel} id={eid!r} "
-                            f"links.{link_type} 散文前120字: {snippet!r}"
-                            + (f"\n    {candidate_note}" if candidate_note else "")
-                        )
+                    # 自由文字顯示鍵：契約由 check_link_ids() 統一檢查
+                    pass
+                elif link_type in LINKS_IDS_KEYS:
+                    # 機器鍵：契約由 check_link_ids() 統一檢查
+                    pass
                 else:
                     # 未知子鍵（W005 fail-closed）：
                     # 不在 ID 參照類、詞彙參照類或已知自由文字類中
@@ -492,6 +588,9 @@ def run_validation():
                         f"  file={rel} id={eid!r} "
                         f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
                     )
+
+            # ── E007 / W004 / W007: *_link 與 *_link_ids 契約 ──
+            check_link_ids(rel, eid, links, all_id_set, errors, warnings)
 
         # ── E004: taxonomy 不存在的值 ──
         for field in ("category", "stroke", "certainty", "status"):
@@ -638,6 +737,10 @@ def _write_report(
             "ERROR",
             "`cross_ref_ids` 內含無法解析的 ID",
         ),
+        "E007": (
+            "ERROR",
+            "`links.*_link_ids` 內含無法解析的 ID",
+        ),
         "W001": (
             "WARN",
             "`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`",
@@ -652,7 +755,7 @@ def _write_report(
         ),
         "W004": (
             "WARN",
-            "欄位名為 `*_link` 但值為散文（schema 債）",
+            "`links.*_link` 內的疑似穩定 ID 未列入對應的 `links.*_link_ids`",
         ),
         "W005": (
             "WARN",
@@ -661,6 +764,10 @@ def _write_report(
         "W006": (
             "WARN",
             "`cross_ref` 有值但缺 `cross_ref_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）",
+        ),
+        "W007": (
+            "WARN",
+            "`links.*_link` 有值但缺 `*_link_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）",
         ),
     }
 
@@ -677,9 +784,12 @@ def _write_report(
         if code == "W004" and not w004_header_written:
             w004_header_written = True
             lines.append(
-                "> **schema 債說明**：以下欄位名稱宣稱是 link，但值為散文。"
-                "修法是將每筆拆成 `*_link`（ID 陣列）+ `*_note`（散文說明），"
-                "並修改 `canonical/health/drafts/*.yaml` 再重跑 `tools/build_injuries.py`。"
+                "> **契約說明（S4b）**：`mechanism_link` / `technical_link` / "
+                "`perception_link` 是顯示層自由文字（下游 my-site 當純字串渲染，"
+                "不可改名或改成陣列）；可解析的穩定 ID 放同名 + `_ids` 的機器鍵。"
+                "本節列出「顯示字串裡看得到 ID、但機器鍵沒同步」的脫節案例。"
+                "修法是改 `canonical/health/drafts/*.yaml` 補進 `*_link_ids` 再重跑 "
+                "`tools/build_injuries.py`。"
                 "**不可直接改 `canonical/health/injuries.yaml`**（promoted artifact，檔頭寫明勿手改）。"
             )
             lines.append("")
@@ -687,7 +797,7 @@ def _write_report(
         if items:
             # W001/W002/W003/W004/W005 總數是後續工作量依據，完整列出
             max_show = (
-                200 if code in ("W001", "W002", "W004", "W005", "W006")
+                200 if code in ("W001", "W002", "W004", "W005", "W006", "W007")
                 else len(items)
             )
             for item in items[:max_show]:

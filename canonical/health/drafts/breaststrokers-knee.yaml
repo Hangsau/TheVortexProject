@@ -66,8 +66,11 @@ population_notes:
 
 links:
   mechanism_link: "踢腿外翻負荷與髖外旋代償可接『硬體邊界 vs 感知缺陷』判斷(髖活動度=硬體)"
+  mechanism_link_ids: []
   technical_link: "蛙式踢腿技術分析(外翻角/髖帶動)——待對應 canonical technical 條目"
+  technical_link_ids: []
   perception_link: "L2–L4 腳感層(踢腿節律與蹬夾感知)"
+  perception_link_ids: []
 
 references:
   - { citation: "蛙泳膝經典流病文獻（作者/年份/期刊全待 WebFetch 核實）", certainty: 🟡, verified: false }

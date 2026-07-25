@@ -133,11 +133,11 @@ class FixtureTestBase(unittest.TestCase):
 
         errors = {
             "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
-            "E006": [],
+            "E006": [], "E007": [],
         }
         warnings = {
             "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-            "W006": [],
+            "W006": [], "W007": [],
         }
 
         # E001
@@ -198,19 +198,11 @@ class FixtureTestBase(unittest.TestCase):
                             else:
                                 inbound_ids[targets] += 1
                     elif link_type in validate_mod.LINKS_FREE_TEXT_KEYS:
-                        # 已知自由文字類 → W004
-                        if isinstance(targets, str) and targets:
-                            snippet = targets[:120]
-                            candidates = validate_mod._CANDIDATE_ID_RE.findall(targets)
-                            candidate_note = (
-                                f"（候選 ID: {', '.join(candidates)}）"
-                                if candidates else ""
-                            )
-                            warnings["W004"].append(
-                                f"  {rel} {eid!r} "
-                                f"links.{link_type} 散文前120字: {snippet!r}"
-                                + (f"\n    {candidate_note}" if candidate_note else "")
-                            )
+                        # 自由文字顯示鍵 → 交給 check_link_ids()
+                        pass
+                    elif link_type in validate_mod.LINKS_IDS_KEYS:
+                        # 機器鍵 → 交給 check_link_ids()
+                        pass
                     else:
                         # 未知子鍵 → W005
                         val_preview = ""
@@ -222,6 +214,11 @@ class FixtureTestBase(unittest.TestCase):
                             f"  {rel} {eid!r} "
                             f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
                         )
+
+                # E007 / W004 / W007：直接呼叫產品程式碼的 *_link 契約檢查
+                validate_mod.check_link_ids(
+                    rel, eid, links, all_id_set, errors, warnings
+                )
 
             # E004（欄位值 taxonomy 驗證，與 links 無關）
             for field in ("category", "stroke", "certainty", "status"):
@@ -806,60 +803,67 @@ class TestW001ChineseEncoding(FixtureTestBase):
         )
 
 
-class TestW004FreeTextLink(FixtureTestBase):
-    """W004：*_link 欄位含散文應觸發 W004，null 值不觸發。"""
+class TestW004LinkIdsDesync(FixtureTestBase):
+    """W004：*_link 裡看得到的穩定 ID 沒同步進 *_link_ids → WARN。
 
-    def test_mechanism_link_prose_triggers_w004(self):
-        # mechanism_link 含散文應觸發 W004
+    S4b 起 W004 不再是「有散文就警告」，而是 fail-closed 的脫節偵測：
+    顯示字串抽得出可解析 ID、但機器鍵沒列 → 警告。
+    """
+
+    def test_namespaced_id_not_in_ids_triggers_w004(self):
+        # technical_link 內有 free.tech.10，ids 卻是空的 → W004
         self._write_yaml(
             self.canonical_dir / "injuries.yaml",
             {
                 "injuries": [
-                    {
-                        "id": "inj-001",
-                        "links": {
-                            "mechanism_link": "前鋸肌耐力是 EVF 的硬體前提，疲勞後肩胛失穩",
-                        },
-                    }
-                ]
-            },
-        )
-        _, warnings, _ = self._run()
-        self.assertGreater(
-            len(warnings["W004"]), 0,
-            "mechanism_link 含散文應觸發 W004"
-        )
-
-    def test_technical_link_with_candidate_id(self):
-        # technical_link 含 free.tech.10 這類 ID → W004 應附候選 ID 備註
-        self._write_yaml(
-            self.canonical_dir / "injuries.yaml",
-            {
-                "injuries": [
+                    {"id": "free.tech.10"},
                     {
                         "id": "inj-002",
                         "links": {
                             "technical_link": "free.tech.10 前鋸肌硬體邊界說明",
+                            "technical_link_ids": [],
                         },
-                    }
+                    },
                 ]
             },
         )
         _, warnings, _ = self._run()
-        self.assertGreater(
-            len(warnings["W004"]), 0,
-            "technical_link 含散文應觸發 W004"
+        self.assertEqual(
+            len(warnings["W004"]), 1,
+            "technical_link 含未同步的 free.tech.10 應觸發 W004"
         )
-        # 確認候選 ID 被抽出並附在警告中
-        w004_msg = warnings["W004"][0]
-        self.assertIn(
-            "free.tech.10",
-            w004_msg,
-            "W004 應附候選 ID free.tech.10"
-        )
+        self.assertIn("free.tech.10", warnings["W004"][0])
 
-    def test_perception_link_with_drill_id(self):
-        # perception_link 含 Drill 編號格式（如 FrBr3）→ W004 應附候選 ID
+    def test_bare_slug_link_not_in_ids_triggers_w004(self):
+        # 整個 mechanism_link 就是一個裸 slug 條目 ID（health 最常見寫法）
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {"id": "female-athlete-triad"},
+                    {
+                        "id": "exercise-amenorrhea",
+                        "links": {
+                            "mechanism_link": "female-athlete-triad",
+                            "mechanism_link_ids": [],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W004"]), 1,
+            "裸 slug 的 mechanism_link 未同步進 ids 應觸發 W004"
+        )
+        self.assertIn("female-athlete-triad", warnings["W004"][0])
+
+    def test_drill_id_not_in_ids_triggers_w004(self):
+        # perception_link 含 Drill 編號格式（FrBr3）且未同步 → W004
+        self._write_yaml(
+            self.drills_dir / "free.yaml",
+            {"drills": [{"id": "FrBr3"}]},
+        )
         self._write_yaml(
             self.canonical_dir / "injuries.yaml",
             {
@@ -868,25 +872,69 @@ class TestW004FreeTextLink(FixtureTestBase):
                         "id": "inj-003",
                         "links": {
                             "perception_link": "可接 FrBr3 drill 的感知層作業",
+                            "perception_link_ids": [],
                         },
                     }
                 ]
             },
         )
         _, warnings, _ = self._run()
-        self.assertGreater(
-            len(warnings["W004"]), 0,
-            "perception_link 含散文應觸發 W004"
+        self.assertEqual(
+            len(warnings["W004"]), 1,
+            "perception_link 含未同步的 FrBr3 應觸發 W004"
         )
-        w004_msg = warnings["W004"][0]
-        self.assertIn(
-            "FrBr3",
-            w004_msg,
-            "W004 應附候選 Drill ID FrBr3"
+        self.assertIn("FrBr3", warnings["W004"][0])
+
+    def test_ids_in_sync_no_w004(self):
+        # 顯示字串裡的 ID 已列入 ids → 不警告
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {"id": "free.tech.10"},
+                    {"id": "female-athlete-triad"},
+                    {
+                        "id": "inj-sync",
+                        "links": {
+                            "technical_link": "free.tech.10 前鋸肌硬體邊界說明",
+                            "technical_link_ids": ["free.tech.10"],
+                            "mechanism_link": "female-athlete-triad",
+                            "mechanism_link_ids": ["female-athlete-triad"],
+                        },
+                    },
+                ]
+            },
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W004"]), 0, "ids 已同步不應觸發 W004")
+        self.assertEqual(len(errors["E007"]), 0, "可解析 ID 不應觸發 E007")
+
+    def test_pure_prose_with_empty_ids_no_w004(self):
+        # 純散文、無任何可解析 ID，ids 明確寫 [] → 不警告（已檢查、無 ID 可連）
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-001",
+                        "links": {
+                            "mechanism_link": "前鋸肌耐力是 EVF 的硬體前提，疲勞後肩胛失穩",
+                            "mechanism_link_ids": [],
+                            "perception_link": "L4–L6 手感與全身張力",
+                            "perception_link_ids": [],
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W004"]), 0,
+            "純散文 + 明確 [] 不應觸發 W004"
         )
 
-    def test_null_link_no_w004(self):
-        # *_link 值為 null（Python None）不觸發 W004
+    def test_null_link_no_w004_no_w007(self):
+        # *_link 值為 null（Python None）不觸發 W004，也不要求補 ids 欄位
         self._write_yaml(
             self.canonical_dir / "injuries.yaml",
             {
@@ -903,9 +951,214 @@ class TestW004FreeTextLink(FixtureTestBase):
             },
         )
         _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W004"]), 0, "null 值不應觸發 W004")
+        self.assertEqual(len(warnings["W007"]), 0, "null 值不應觸發 W007")
+
+
+class TestE007LinkIds(FixtureTestBase):
+    """E007：links.*_link_ids 內含無法解析的 ID → ERROR。"""
+
+    def test_unresolvable_link_id_triggers_e007(self):
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-bad",
+                        "links": {
+                            "mechanism_link": "接某個機制條目",
+                            "mechanism_link_ids": ["no-such-injury"],
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
         self.assertEqual(
-            len(warnings["W004"]), 0,
-            "null 值不應觸發 W004"
+            len(errors["E007"]), 1,
+            "無法解析的 mechanism_link_ids 應觸發 E007"
+        )
+        self.assertIn("no-such-injury", errors["E007"][0])
+
+    def test_resolvable_link_ids_no_e007(self):
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {"id": "red-s"},
+                    {
+                        "id": "female-athlete-triad",
+                        "links": {
+                            "mechanism_link": "red-s",
+                            "mechanism_link_ids": ["red-s"],
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E007"]), 0,
+            "可解析的 mechanism_link_ids 不應觸發 E007"
+        )
+
+    def test_drill_id_in_link_ids_no_e007(self):
+        self._write_yaml(
+            self.drills_dir / "free.yaml",
+            {"drills": [{"id": "Fr12"}]},
+        )
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-drill",
+                        "links": {
+                            "perception_link": "可接 Fr12",
+                            "perception_link_ids": ["Fr12"],
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E007"]), 0,
+            "Drills 的 ID 也算全域 ID 集合，不應觸發 E007"
+        )
+
+    def test_non_list_link_ids_triggers_e007(self):
+        # 型別錯誤（寫成字串而非 list）也是 hard fail
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {"id": "red-s"},
+                    {
+                        "id": "inj-typed",
+                        "links": {
+                            "mechanism_link": "red-s",
+                            "mechanism_link_ids": "red-s",
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E007"]), 1,
+            "mechanism_link_ids 型別非 list 應觸發 E007"
+        )
+        self.assertIn("型別應為 list", errors["E007"][0])
+
+    def test_empty_ids_list_no_e007(self):
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-empty",
+                        "links": {
+                            "mechanism_link": "純散文，無 ID 可連",
+                            "mechanism_link_ids": [],
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E007"]), 0,
+            "空陣列是合法宣告，不應觸發 E007"
+        )
+
+
+class TestW007MissingLinkIdsKey(FixtureTestBase):
+    """W007：*_link 有值但連 *_link_ids 欄位都沒有 → WARN。"""
+
+    def test_missing_ids_key_triggers_w007(self):
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-nokey",
+                        "links": {
+                            "technical_link": "某個技術說明散文",
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W007"]), 1,
+            "technical_link 有值但缺 technical_link_ids 應觸發 W007"
+        )
+        self.assertIn("technical_link_ids", warnings["W007"][0])
+
+    def test_empty_ids_key_no_w007(self):
+        # 明確寫 [] = 已檢查、無 ID 可連 → 不算未處理
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-declared",
+                        "links": {
+                            "technical_link": "某個技術說明散文",
+                            "technical_link_ids": [],
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W007"]), 0,
+            "明確宣告 [] 不應觸發 W007"
+        )
+
+    def test_missing_ids_key_takes_precedence_over_w004(self):
+        # 缺欄位時只報 W007（未處理），不重複報 W004（脫節）
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {"id": "red-s"},
+                    {
+                        "id": "inj-both",
+                        "links": {"mechanism_link": "red-s"},
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W007"]), 1, "缺欄位應報 W007")
+        self.assertEqual(len(warnings["W004"]), 0, "缺欄位時不應重複報 W004")
+
+    def test_link_ids_keys_never_trigger_w005(self):
+        # *_link_ids 是已登錄的機器鍵，不可被當成未知子鍵
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-w005",
+                        "links": {
+                            "mechanism_link": "散文",
+                            "mechanism_link_ids": [],
+                            "technical_link_ids": [],
+                            "perception_link_ids": [],
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W005"]), 0,
+            "*_link_ids 不應觸發 W005"
         )
 
 

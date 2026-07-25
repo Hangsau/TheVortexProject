@@ -53,6 +53,14 @@
 
 ---
 
+## E007 — `links.*_link_ids` 內含無法解析的 ID
+
+**ERROR，共 0 筆**
+
+（無）
+
+---
+
 ## W001 — `cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`
 
 **WARN，共 0 筆**
@@ -639,33 +647,13 @@
 
 ---
 
-## W004 — 欄位名為 `*_link` 但值為散文（schema 債）
+## W004 — `links.*_link` 內的疑似穩定 ID 未列入對應的 `links.*_link_ids`
 
-**WARN，共 20 筆**
+**WARN，共 0 筆**
 
-> **schema 債說明**：以下欄位名稱宣稱是 link，但值為散文。修法是將每筆拆成 `*_link`（ID 陣列）+ `*_note`（散文說明），並修改 `canonical/health/drafts/*.yaml` 再重跑 `tools/build_injuries.py`。**不可直接改 `canonical/health/injuries.yaml`**（promoted artifact，檔頭寫明勿手改）。
+> **契約說明（S4b）**：`mechanism_link` / `technical_link` / `perception_link` 是顯示層自由文字（下游 my-site 當純字串渲染，不可改名或改成陣列）；可解析的穩定 ID 放同名 + `_ids` 的機器鍵。本節列出「顯示字串裡看得到 ID、但機器鍵沒同步」的脫節案例。修法是改 `canonical/health/drafts/*.yaml` 補進 `*_link_ids` 再重跑 `tools/build_injuries.py`。**不可直接改 `canonical/health/injuries.yaml`**（promoted artifact，檔頭寫明勿手改）。
 
-  file=canonical\health\injuries.yaml id='swimmers-shoulder' links.mechanism_link 散文前120字: '前鋸肌耐力是 EVF（早期垂直前臂）的硬體前提，疲勞後肩胛失穩→捕水崩潰'
-  file=canonical\health\injuries.yaml id='swimmers-shoulder' links.technical_link 散文前120字: 'free.tech.10 前鋸肌硬體邊界 / free 疲勞崩潰順序第③步'
-    （候選 ID: free.tech.10）
-  file=canonical\health\injuries.yaml id='swimmers-shoulder' links.perception_link 散文前120字: 'L4–L6 手感與全身張力'
-  file=canonical\health\injuries.yaml id='breaststrokers-knee' links.mechanism_link 散文前120字: '踢腿外翻負荷與髖外旋代償可接『硬體邊界 vs 感知缺陷』判斷(髖活動度=硬體)'
-  file=canonical\health\injuries.yaml id='breaststrokers-knee' links.technical_link 散文前120字: '蛙式踢腿技術分析(外翻角/髖帶動)——待對應 canonical technical 條目'
-  file=canonical\health\injuries.yaml id='breaststrokers-knee' links.perception_link 散文前120字: 'L2–L4 腳感層(踢腿節律與蹬夾感知)'
-  file=canonical\health\injuries.yaml id='cold-water-shock' links.perception_link 散文前120字: '可接 L0 呼吸感知(冷水喘氣反射的生理意義)'
-  file=canonical\health\injuries.yaml id='drowning' links.perception_link 散文前120字: '可接 L0 呼吸感知層作為水安全教育素材(非技術介入)'
-  file=canonical\health\injuries.yaml id='shallow-water-blackout' links.perception_link 散文前120字: '可接 L0 呼吸感知層：閉氣與換氣衝動的生理意義屬呼吸感知教育素材'
-  file=canonical\health\injuries.yaml id='sipe' links.perception_link 散文前120字: '可接 L0 呼吸感知/配速感知教育(辨識異常呼吸窘迫 vs 正常喘)'
-  file=canonical\health\injuries.yaml id='exercise-amenorrhea' links.mechanism_link 散文前120字: 'female-athlete-triad'
-  file=canonical\health\injuries.yaml id='female-athlete-triad' links.mechanism_link 散文前120字: 'red-s'
-  file=canonical\health\injuries.yaml id='stress-fracture-swimmer' links.mechanism_link 散文前120字: 'swimmer-low-bone-density'
-  file=canonical\health\injuries.yaml id='swimmer-low-bone-density' links.mechanism_link 散文前120字: 'female-athlete-triad'
-  file=canonical\health\injuries.yaml id='diving-cervical-injury' links.technical_link 散文前120字: '競賽出發台入水角度技術(racing start)——與出發台撞擊傷共享預防'
-  file=canonical\health\injuries.yaml id='flip-turn-wall-push' links.technical_link 散文前120字: '翻滾轉身技術——時序與足位精準度直接影響受傷風險'
-  file=canonical\health\injuries.yaml id='starting-block-impact' links.technical_link 散文前120字: '出發台 racing start 技術——與跳水頸椎傷共享水深/角度預防'
-  file=canonical\health\injuries.yaml id='salter-harris-physeal-fracture' links.mechanism_link 散文前120字: 'diving-cervical-injury'
-  file=canonical\health\injuries.yaml id='scheuermann-kyphosis' links.mechanism_link 散文前120字: 'extension-low-back-pain'
-  file=canonical\health\injuries.yaml id='youth-swimmer-apophysitis' links.mechanism_link 散文前120字: 'rotator-cuff-tendinopathy'
+（無）
 
 ---
 
@@ -678,6 +666,14 @@
 ---
 
 ## W006 — `cross_ref` 有值但缺 `cross_ref_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W007 — `links.*_link` 有值但缺 `*_link_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）
 
 **WARN，共 0 筆**
 

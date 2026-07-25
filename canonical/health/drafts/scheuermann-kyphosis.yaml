@@ -62,6 +62,7 @@ population_notes:
 
 links:
   mechanism_link: extension-low-back-pain
+  mechanism_link_ids: [extension-low-back-pain]
   technical_link: ~
   perception_link: ~
 

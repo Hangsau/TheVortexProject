@@ -69,6 +69,7 @@ links:
   mechanism_link: ~
   technical_link: ~
   perception_link: "可接 L0 呼吸感知(冷水喘氣反射的生理意義)"
+  perception_link_ids: []
 
 references:
   - { citation: "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003", certainty: 🟢, verified: true }

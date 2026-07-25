@@ -75,6 +75,7 @@ links:
   mechanism_link: ~
   technical_link: ~
   perception_link: "可接 L0 呼吸感知層作為水安全教育素材(非技術介入)"
+  perception_link_ids: []
 
 references:
   - { citation: "WHO 2024-12-13『Drowning deaths decline globally but the most vulnerable remain at risk』新聞稿", certainty: 🟢, verified: true }

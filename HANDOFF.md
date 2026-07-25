@@ -607,7 +607,7 @@
 | S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | 規劃後派工 |
 | S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
 | S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
-| S4b | injuries 的 **20 筆** `*_link` 散文欄位拆成 `*_link`（ID 陣列）+ `*_note`（散文） | 需讀內容判斷 | 派工 |
+| S4b | injuries 的 **20 筆** `*_link` 散文欄位加 `*_link_ids` 機器鍵（**不**拆成 ID 陣列，同 S4c 的「加欄位不換內容」） | 需讀內容判斷 | ✅ 已完成 2026-07-26（W004 20→0，新增 E007/W007） |
 | S4c | **W001 = 61 筆** `cross_ref` → 穩定 ID（新增 `cross_ref_ids` 機器鍵；節號類列為遺留債） | 機械為主 | ✅ 已完成 2026-07-26（W001 61→0，新增 E006/W006） |
 | S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | 派工 |
 | S6 | public/private 匯出隔離（hub P4 前置） | 需分層判斷 | 未規劃 |
@@ -669,6 +669,49 @@
 **新增檢查碼**：E006（ERROR，`cross_ref_ids` 內含無法解析的 ID，fail-closed 已實測：塞入 `free.tech.999` → exit=1）／W001 重新定義（`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`）／W006（`cross_ref` 有值但 `cross_ref_ids` 欄位整個缺席）。測試 harness 原本自行複製一份驗證邏輯（**導致語意改動後 28 tests 仍全綠的假陽性**），已改為直接呼叫 `validate.build_global_id_set()` 與 `validate.check_cross_ref()`。
 
 **當前基線**：E001–E006 全 0；W001 **0**（原 61）、W002 88、W003 476、W004 20、W005 0、W006 **0**。`python tools/build_knowledge_map.py` 跑通且 `KNOWLEDGE_MAP.md` 無 diff。
+
+#### S4b 驗收（2026-07-26）
+
+`python tools/validate.py`：**0 ERROR / 564 WARN**（原 584）；`python -m unittest discover -s tests`：**53 tests OK**（原 42 + 新增 11）。
+
+**資料契約決定（與 S4c 同型，不可回退成陣列）**：`mechanism_link` / `technical_link` / `perception_link` 維持自由文字顯示層，**逐字不動**；新增同名 + `_ids` 的機器鍵（list of string）。理由同 S4c：下游 `my-site/layouts/vortex/vortex-injuries.html` 第 262–264 行把三個欄位當純字串渲染（`{{ with .mechanism_link }}{{ . }}{{ end }}`），改陣列會在線上印出 Go slice 字面值。語意約定：`*_link_ids: []` = **已檢查、確認無 ID 可連**；欄位缺席 = **尚未處理**（觸發 W007）。112 筆 null 的 `*_link` 不補欄位（無值可檢查）。
+
+**20 筆的實際分類（重新統計）**：
+
+| 項目 | 用戶估計 | 實測 | 差異說明 |
+|---|---|---|---|
+| A 類：值本身就是合法傷害 ID（裸 slug） | 7 | **7** | 一致 |
+| B 類：散文內嵌可解析 ID（`free.tech.10`） | 1 | **1** | 一致 |
+| C 類：純散文、canonical 無對應目標 | 12 | **12** | 一致 |
+| 分佈檔案數 | 12 | **16 個 drafts 檔** | ⚠ 唯一估錯處。`swimmers-shoulder` 與 `breaststrokers-knee` 各自三個欄位都有值，所以 20 筆散在 16 檔而非 12 檔 |
+
+**C 類 12 筆為什麼連不上（逐類）**：
+
+- **水感層級（6 筆）**：`perception_link` 寫 `L4–L6 手感與全身張力`、`L2–L4 腳感層`、`可接 L0 呼吸感知` 這類裸層級。canonical 的水感 ID **全是泳式限定**（`free.L0` … `fly.L6`，另有 `breast.pre` / `fly.pre`），沒有跨泳式的 `L0`／`L4`，所以裸層級與區間寫法（`L4–L6`）都解析不到。
+- **不存在的技術條目（4 筆）**：`蛙式踢腿技術分析(外翻角/髖帶動)`（散文自己就寫「待對應 canonical technical 條目」）、`racing start` 出發台技術（`diving-cervical-injury` 與 `starting-block-impact` 各一筆，兩者以中文互指「與出發台撞擊傷共享預防」／「與跳水頸椎傷共享水深/角度預防」）、`翻滾轉身技術`。canonical technical 層目前沒有出發／轉身的獨立技術條目可指。
+- **機制敘述而非參照（2 筆）**：`swimmers-shoulder` 的 `mechanism_link`（前鋸肌耐力→EVF 硬體前提）與 `breaststrokers-knee` 的 `mechanism_link`（踢腿外翻負荷可接「硬體邊界 vs 感知缺陷」判斷）。這兩筆是把欄位當說明文字用，指向的是**概念**不是條目。
+
+**刻意不推論**：`diving-cervical-injury` ↔ `starting-block-impact` 用中文名互指，兩邊 ID 其實都存在，但該欄位的實際指向是「racing start 技術條目」而非對方傷害條目；把對方 ID 填進去等於改寫語意。兩筆都給 `[]`，列為發現不動手。
+
+**遺留債建議 1 —— 水感層級該不該建可被 health 層引用的穩定 ID**：**建議建**，但要當 schema 決策做，不是順手。現況是水感 ID 綁泳式（`free.L4`），而傷害條目講的是**跨泳式的感知層級本身**（「手感與全身張力」不分自由式蛙式）。若不建，這 6 筆會永遠停在 `[]`，knowledge-hub 的關係圖會缺掉「傷害 ↔ 感知層級」這條軸。可行做法是在 taxonomy 登錄 `L0`–`L6` 為跨泳式層級 ID（與泳式限定 ID 並存、互為 parent/child），但要先決定區間寫法（`L4–L6`）是展開成三個 ID 還是禁用。
+
+**遺留債建議 2 —— 出發／轉身技術條目缺席**：4 筆 C 類裡有 3 筆指向出發台入水角度、racing start、翻滾轉身。canonical 已有 `starts-turns.*` 命名空間（`starts-turns.tech.44` 等），但沒有可被傷害層引用的「技術動作」層條目。這是內容缺口不是資料缺陷，補內容時順手回填即可。
+
+**顯示層債（記錄，S4b 範圍外，未動手）**：A 類 7 筆的 `*_link` 值本身就是裸 slug，網站上現在會渲染成「機制關聯 red-s」「機制關聯 female-athlete-triad」這種**未翻譯的英文 slug**，對讀者不友善。涉及的 7 筆：`exercise-amenorrhea`→`female-athlete-triad`、`female-athlete-triad`→`red-s`、`stress-fracture-swimmer`→`swimmer-low-bone-density`、`swimmer-low-bone-density`→`female-athlete-triad`、`salter-harris-physeal-fracture`→`diving-cervical-injury`、`scheuermann-kyphosis`→`extension-low-back-pain`、`youth-swimmer-apophysitis`→`rotator-cuff-tendinopathy`。修法有兩條（顯示層改中文名／`*_link_ids` 存在時改渲染成連結），**兩條都是改顯示內容或改 my-site 模板，超出 S4b「只加欄位不改內容」的界線**，未動。
+
+**新增檢查碼**：E007（ERROR，`links.*_link_ids` 內含無法解析的 ID 或型別非 list）／W004 重新定義（`*_link` 內的疑似穩定 ID 未列入對應 `*_link_ids`）／W007（`*_link` 有值但 `*_link_ids` 欄位整個缺席）。
+
+**順帶補的抽取漏洞**：舊 `extract_candidate_ids()` 只認命名空間 ID 與 Drill ID，**認不出裸 slug**（無點號）——而 A 類 7 筆正好全是裸 slug，等於新 W004 對主流形態零覆蓋。修法是在共用的 `missing_declared_ids()` 裡加一種候選：整個字串本身就是可解析 ID 時列為候選（**不是**加第二套 regex）。此改動同時作用於 W001，實測 `cross_ref` 目前 0 筆屬此形態，故 W001 維持 0，無外溢。
+
+**測試誠實性**：harness 原本自帶一份 W004 邏輯副本（S4a 事故同型），已刪除並改為直接呼叫 `validate.check_link_ids()`。用突變測試驗證過覆蓋率——把產品端迴圈掏空 → 7 個測試失敗；還原 → 53 OK。
+
+**`tools/build_injuries.py` 未改**：確認它是整筆 `yaml.safe_load` / `safe_dump`，新鍵自動帶過。`injuries.yaml` 由重跑生成器產生（+28 行：20 個新欄位，其中 8 個非空清單以 block style 各佔 2 行），**未手改**。
+
+**刻意不做的變更**：同 S4c，W003 孤兒偵測**不**把 `*_link_ids` 計入出向連結，所以 W003 維持 476 無位移。要改應是明確決策。
+
+**當前基線**：E001–E007 全 0；W001 0、W002 88、W003 476、W004 **0**（原 20）、W005 0、W006 0、W007 **0**。`python tools/build_knowledge_map.py` 跑通且 `KNOWLEDGE_MAP.md` 無 diff（地圖不呈現 `*_link_ids`，符合預期）。
+
+**另記**：4 個 drafts 檔完全沒有 `links` 區塊——`_asian-epidemiology-supplement`、`iron-deficiency-swimmer`、`oral-contraceptives-performance`、`sci-hip-flexor-contracture`。未觸發任何警告（無 `*_link` 值可檢查），但值得日後確認是刻意還是漏填。
 
 ### Hestia 報告整合後續（2026-06-22）
 

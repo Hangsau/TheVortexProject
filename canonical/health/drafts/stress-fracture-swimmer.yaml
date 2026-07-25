@@ -68,6 +68,7 @@ population_notes:
 
 links:
   mechanism_link: swimmer-low-bone-density
+  mechanism_link_ids: [swimmer-low-bone-density]
   technical_link: ~
   perception_link: ~
 

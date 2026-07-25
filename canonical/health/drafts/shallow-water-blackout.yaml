@@ -66,6 +66,7 @@ links:
   mechanism_link: ~        # 與水感技術軸無機制交會
   technical_link: ~
   perception_link: "可接 L0 呼吸感知層：閉氣與換氣衝動的生理意義屬呼吸感知教育素材"
+  perception_link_ids: []
 
 references:
   - { citation: "Shallow Water Blackout Prevention（組織衛教，待核實具體出處）", certainty: 🟠, verified: false }

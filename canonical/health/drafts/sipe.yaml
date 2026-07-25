@@ -71,6 +71,7 @@ links:
   mechanism_link: ~        # 與水感技術軸無機制交會
   technical_link: ~
   perception_link: "可接 L0 呼吸感知/配速感知教育(辨識異常呼吸窘迫 vs 正常喘)"
+  perception_link_ids: []
 
 references:
   - { citation: "SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）", certainty: 🔴, verified: false }
