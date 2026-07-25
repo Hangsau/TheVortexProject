@@ -4,7 +4,30 @@
 
 ---
 
-## 當前狀態（2026-06-27）
+## 當前狀態（2026-07-25）
+
+### 進行中——canonical 資料契約升級（S0 完成，S1 進行）（2026-07-25）
+
+> 觸發：`CLAUDE.md` 新增「知識索引與證據規範（canonical）」一節（先前未提交，本次隨 S0 提交）。該規範宣告的四項設施 **目前 Vortex 一項都沒有**，本段記錄實作缺口，避免冷啟動誤以為已具備。
+
+**規範 vs 現況落差（2026-07-25 盤點）**
+
+| 規範要求 | 現況 |
+|---|---|
+| 受控 taxonomy 詞彙表 | ❌ 無檔案。`category` 291 筆 / 44 個相異值 / 7 個單次出現值，無中央登錄 |
+| 來源註冊表（`source_id` → DOI/PMID/ISBN/URL） | ❌ 無。`source` 335 + `sources` 160 筆為自由文字，PMID/DOI 塞在括號內 |
+| 引用完整性 / tag 合法性驗證器 | ❌ 無。`tools/` 只有 `build_knowledge_map.py`、`build_injuries.py`、`tag_coverage_report.py`，皆只做生成與統計 |
+| 四個機器索引 + 缺口報告 | ❌ 無。只有人讀的 `KNOWLEDGE_MAP.md` |
+
+**已具備的基礎（不必重建）**
+- 穩定 ID：`domain.sub.entity` 格式，63 個 canonical 檔一致
+- `links`（162 筆）已是結構化 ID 陣列 `{standards, drills, l_indicators}` — 本來就可驗證
+- `certainty`（651 筆）已是受控 enum 🔵🟢🟡🟠🔴；`status`（70 筆）只有 complete / draft
+- `canonical/periodization/_index.yaml` 已建立「`_` 前綴 meta 檔」慣例
+
+**關鍵縮減點**：規範只要求 🟢／🟡 的外部主張需要來源註冊。以 certainty 分布（🔵 205 / 🟢 134 / 🟠 60 / 🟡 30 / 🔴 1）計，真正要遷移的約 164 筆，非 335 筆。
+
+**與 knowledge-hub 的關係**：hub `registry/projects.yaml` 中 vortex 為 `status: planned` / `export_contract: pending` / `P4；必須先完成 public/private 匯出隔離`。hub 閘門要求「所有 tag、source ID、cross-reference 必須可解析」，Vortex 現況直接接 adapter 會全數 hard fail。本升級是 hub P4 的前置條件，**不是**把資料匯入 hub。
 
 ### 已完成——Race Club + Science of Swimming Faster 兩本書 4 批整合（2026-06-27 晚）
 
@@ -547,6 +570,24 @@
 ---
 
 ## 下一步建議
+
+### 最高優先——canonical 資料契約升級 S1–S5（2026-07-25）
+
+分段規劃如下。**S1 先行**：其驗證器跑完會產出真實錯誤清單，那份清單才是 S2/S3 的正確定量依據；現在直接承諾整套遷移是矇眼估工。
+
+| 段 | 內容 | 性質 | 派工 |
+|---|---|---|---|
+| S0 | 提交 CLAUDE.md 規範 + 本缺口條目 | 文件 | ✅ 已完成 2026-07-25 |
+| S1 | `canonical/_taxonomy.yaml`（照現況反向抽取，先登錄不歸一）+ `canonical/_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | 派 Sonnet |
+| S2 | 44 個 `category` 值歸一：合併近義、7 個 singleton 定去留、寫 alias | 需領域判斷 | 規劃後派工 |
+| S3 | 🟢🟡 約 164 筆來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
+| S4 | 61 筆 `cross_ref` → 穩定 ID，與 `links` 併軌 | 量小 | 派工 |
+| S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | 派工 |
+| S6 | public/private 匯出隔離（hub P4 前置） | 需分層判斷 | 未規劃 |
+
+**風險與預案**：S3 是唯一有資料損毀風險的一段（動 164 筆條目內容欄位）。對策＝`source_display` 保留原文字不刪，遷移只做「加欄位」不做「換內容」，任何時候可回退。S2 的歸一會改變既有 tag 值，須先跑「哪些條目會受影響」的預覽再動。
+
+**驗收**：`python tools/validate.py` 綠燈 + 缺口報告產出 + `build_knowledge_map.py` 仍能跑通且 `KNOWLEDGE_MAP.md` 無非預期 diff。
 
 ### Hestia 報告整合後續（2026-06-22）
 
