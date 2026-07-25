@@ -141,7 +141,7 @@ class FixtureTestBase(unittest.TestCase):
                 pass
 
         errors = {"E001": [], "E002": [], "E003": [], "E004": [], "E005": []}
-        warnings = {"W001": [], "W002": [], "W003": []}
+        warnings = {"W001": [], "W002": [], "W003": [], "W004": [], "W005": []}
 
         # E001
         for path in validate_files:
@@ -200,7 +200,31 @@ class FixtureTestBase(unittest.TestCase):
                                 )
                             else:
                                 inbound_ids[targets] += 1
-                    # else: 自由文字類，跳過
+                    elif link_type in validate_mod.LINKS_FREE_TEXT_KEYS:
+                        # 已知自由文字類 → W004
+                        if isinstance(targets, str) and targets:
+                            snippet = targets[:120]
+                            candidates = validate_mod._CANDIDATE_ID_RE.findall(targets)
+                            candidate_note = (
+                                f"（候選 ID: {', '.join(candidates)}）"
+                                if candidates else ""
+                            )
+                            warnings["W004"].append(
+                                f"  {rel} {eid!r} "
+                                f"links.{link_type} 散文前120字: {snippet!r}"
+                                + (f"\n    {candidate_note}" if candidate_note else "")
+                            )
+                    else:
+                        # 未知子鍵 → W005
+                        val_preview = ""
+                        if isinstance(targets, str):
+                            val_preview = targets[:120]
+                        elif isinstance(targets, list):
+                            val_preview = str(targets)[:120]
+                        warnings["W005"].append(
+                            f"  {rel} {eid!r} "
+                            f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
+                        )
 
             # E004（欄位值 taxonomy 驗證，與 links 無關）
             for field in ("category", "stroke", "certainty", "status"):
@@ -752,6 +776,212 @@ class TestW001ChineseEncoding(FixtureTestBase):
             "感知層",
             content,
             "報告中的 W001 中文必須完整，不能變問號"
+        )
+
+
+class TestW004FreeTextLink(FixtureTestBase):
+    """W004：*_link 欄位含散文應觸發 W004，null 值不觸發。"""
+
+    def test_mechanism_link_prose_triggers_w004(self):
+        # mechanism_link 含散文應觸發 W004
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-001",
+                        "links": {
+                            "mechanism_link": "前鋸肌耐力是 EVF 的硬體前提，疲勞後肩胛失穩",
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W004"]), 0,
+            "mechanism_link 含散文應觸發 W004"
+        )
+
+    def test_technical_link_with_candidate_id(self):
+        # technical_link 含 free.tech.10 這類 ID → W004 應附候選 ID 備註
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-002",
+                        "links": {
+                            "technical_link": "free.tech.10 前鋸肌硬體邊界說明",
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W004"]), 0,
+            "technical_link 含散文應觸發 W004"
+        )
+        # 確認候選 ID 被抽出並附在警告中
+        w004_msg = warnings["W004"][0]
+        self.assertIn(
+            "free.tech.10",
+            w004_msg,
+            "W004 應附候選 ID free.tech.10"
+        )
+
+    def test_perception_link_with_drill_id(self):
+        # perception_link 含 Drill 編號格式（如 FrBr3）→ W004 應附候選 ID
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-003",
+                        "links": {
+                            "perception_link": "可接 FrBr3 drill 的感知層作業",
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W004"]), 0,
+            "perception_link 含散文應觸發 W004"
+        )
+        w004_msg = warnings["W004"][0]
+        self.assertIn(
+            "FrBr3",
+            w004_msg,
+            "W004 應附候選 Drill ID FrBr3"
+        )
+
+    def test_null_link_no_w004(self):
+        # *_link 值為 null（Python None）不觸發 W004
+        self._write_yaml(
+            self.canonical_dir / "injuries.yaml",
+            {
+                "injuries": [
+                    {
+                        "id": "inj-null",
+                        "links": {
+                            "mechanism_link": None,
+                            "technical_link": None,
+                            "perception_link": None,
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W004"]), 0,
+            "null 值不應觸發 W004"
+        )
+
+
+class TestW005UnknownLinksKey(FixtureTestBase):
+    """W005：links 下未知子鍵應觸發 W005；已知子鍵不觸發。"""
+
+    def test_unknown_link_key_triggers_w005(self):
+        # links.foobar 不在任何已知集合中，應觸發 W005
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-unknown-link",
+                        "links": {
+                            "foobar": "some value",
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W005"]), 0,
+            "links.foobar 應觸發 W005"
+        )
+
+    def test_known_id_ref_key_no_w005(self):
+        # links.technical_analysis 是 ID 參照類，不觸發 W005（即使 ID 斷鏈也只觸發 E003）
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "target-id",
+                        "category": "kick",
+                        "stroke": "free",
+                    },
+                    {
+                        "id": "entry-known",
+                        "links": {
+                            "technical_analysis": ["target-id"],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W005"]), 0,
+            "links.technical_analysis（ID 參照類）不應觸發 W005"
+        )
+
+    def test_known_vocab_ref_key_no_w005(self):
+        # links.development_stages 是詞彙參照類，不觸發 W005
+        self._write_yaml(
+            self.canonical_dir / "_taxonomy.yaml",
+            make_taxonomy({
+                "category": [{"key": "kick"}],
+                "stroke": [{"key": "free"}],
+                "certainty": [{"key": "\U0001F7E2"}],
+                "status": [{"key": "complete"}],
+                "development_stage": [{"key": "fun"}, {"key": "l2t"}],
+            })
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-vocab",
+                        "links": {
+                            "development_stages": ["fun", "l2t"],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W005"]), 0,
+            "links.development_stages（詞彙參照類）不應觸發 W005"
+        )
+
+    def test_known_free_text_key_no_w005(self):
+        # links.mechanism_link 是已知自由文字類，不觸發 W005（可能觸發 W004）
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-free",
+                        "links": {
+                            "mechanism_link": "一些散文說明",
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W005"]), 0,
+            "links.mechanism_link（已知自由文字類）不應觸發 W005"
         )
 
 

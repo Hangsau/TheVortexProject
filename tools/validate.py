@@ -27,6 +27,9 @@ exit code：
   W001  cross_ref 是自由文字、無法解析成穩定 ID（S4 待辦）
   W002  certainty 為 green 或 yellow 但沒有 source_ids（S3 待辦）
   W003  孤兒條目：沒有任何 links 指入、自己也沒指出
+  W004  欄位名為 *_link 但值為散文（schema 債）：
+        mechanism_link / technical_link / perception_link
+  W005  links 下未知子鍵（不在 ID 參照類、詞彙參照類或已知自由文字類中）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -91,9 +94,21 @@ LINKS_VOCAB_REF_KEYS = {
     "development_stages": "development_stage",  # 值應為 development_stage 詞彙
 }
 
-# 自由文字類：mechanism_link、technical_link、perception_link 是 narrative 說明，
-# 混有自由文字與部分 ID 參照，統一不做 E003/E004 驗證。
-# （injuries.yaml 的設計慣例；後續 S5 可再拆成可驗證 ID 參照層）
+# 自由文字類（W004 追蹤的 schema 債）：
+# mechanism_link、technical_link、perception_link 欄位名宣稱是 link，
+# 但實際值為散文。這是已知技術債，修法是拆成：
+#   *_link（ID 陣列）+ *_note（散文說明）
+# 並修改 canonical/health/drafts/*.yaml 再重跑 tools/build_injuries.py。
+# 注意：不可直接改 canonical/health/injuries.yaml（promoted artifact，檔頭寫明勿手改）。
+LINKS_FREE_TEXT_KEYS = {"mechanism_link", "technical_link", "perception_link"}
+
+# 用於從散文值中保守抽取候選 ID 的 regex
+# 匹配命名空間格式（如 free.tech.10）或 Drill 編號（如 FrBr3、Fr1、Bk2）
+import re as _re
+_CANDIDATE_ID_RE = _re.compile(
+    r"\b(?:[a-z][a-z0-9]*(?:\.[a-z][a-z0-9]*)*\.\d+|"  # 命名空間格式：free.tech.10
+    r"[A-Z][a-z][A-Z]?[a-z]*\d+)"                        # Drill 編號格式：FrBr3, Fr1
+)
 
 
 # ── 工具函式 ─────────────────────────────────────────────────────────────────
@@ -273,7 +288,7 @@ def run_validation():
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": []
     }
     warnings: dict[str, list[str]] = {
-        "W001": [], "W002": [], "W003": []
+        "W001": [], "W002": [], "W003": [], "W004": [], "W005": []
     }
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -344,7 +359,36 @@ def run_validation():
                             )
                         else:
                             inbound_ids[targets] += 1
-                # else: 自由文字類（mechanism_link 等），跳過不驗證
+                elif link_type in LINKS_FREE_TEXT_KEYS:
+                    # 已知自由文字類（W004 schema 債追蹤）：
+                    # 欄位名宣稱是 link，實際存散文，null 值不計
+                    if isinstance(targets, str) and targets:
+                        snippet = targets[:120]
+                        # 保守抽取候選 ID（命名空間格式或 Drill 編號）
+                        candidates = _CANDIDATE_ID_RE.findall(targets)
+                        if candidates:
+                            candidate_note = (
+                                f"（候選 ID: {', '.join(candidates)}）"
+                            )
+                        else:
+                            candidate_note = ""
+                        warnings["W004"].append(
+                            f"  file={rel} id={eid!r} "
+                            f"links.{link_type} 散文前120字: {snippet!r}"
+                            + (f"\n    {candidate_note}" if candidate_note else "")
+                        )
+                else:
+                    # 未知子鍵（W005 fail-closed）：
+                    # 不在 ID 參照類、詞彙參照類或已知自由文字類中
+                    val_preview = ""
+                    if isinstance(targets, str):
+                        val_preview = targets[:120]
+                    elif isinstance(targets, list):
+                        val_preview = str(targets)[:120]
+                    warnings["W005"].append(
+                        f"  file={rel} id={eid!r} "
+                        f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
+                    )
 
         # ── E004: taxonomy 不存在的值 ──
         for field in ("category", "stroke", "certainty", "status"):
@@ -507,7 +551,17 @@ def _write_report(
             "WARN",
             "孤兒條目：無 links 指入、自身也無指出",
         ),
+        "W004": (
+            "WARN",
+            "欄位名為 `*_link` 但值為散文（schema 債）",
+        ),
+        "W005": (
+            "WARN",
+            "`links` 下未知子鍵（未歸類為 ID 參照類、詞彙參照類或已知自由文字類）",
+        ),
     }
+
+    w004_header_written = False
 
     for code, (tag, desc) in code_meta.items():
         items = errors.get(code, warnings.get(code, []))
@@ -515,9 +569,21 @@ def _write_report(
         lines.append("")
         lines.append(f"**{tag}，共 {len(items)} 筆**")
         lines.append("")
+
+        # W004 區塊開頭附說明
+        if code == "W004" and not w004_header_written:
+            w004_header_written = True
+            lines.append(
+                "> **schema 債說明**：以下欄位名稱宣稱是 link，但值為散文。"
+                "修法是將每筆拆成 `*_link`（ID 陣列）+ `*_note`（散文說明），"
+                "並修改 `canonical/health/drafts/*.yaml` 再重跑 `tools/build_injuries.py`。"
+                "**不可直接改 `canonical/health/injuries.yaml`**（promoted artifact，檔頭寫明勿手改）。"
+            )
+            lines.append("")
+
         if items:
-            # W001/W002/W003 總數是 S3/S4 工作量依據，完整列出
-            max_show = 200 if code in ("W001", "W002") else len(items)
+            # W001/W002/W003/W004/W005 總數是後續工作量依據，完整列出
+            max_show = 200 if code in ("W001", "W002", "W004", "W005") else len(items)
             for item in items[:max_show]:
                 lines.append(item)
             if len(items) > max_show:
