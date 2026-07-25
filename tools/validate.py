@@ -50,19 +50,50 @@ TAXONOMY_FILE = CANONICAL_DIR / "_taxonomy.yaml"
 SOURCES_FILE = CANONICAL_DIR / "_sources.yaml"
 REPORTS_DIR = ROOT / "reports"
 
+# 本專案慣例：詞彙定義表用 key（不需要 id），內容條目用 id。
+# VOCAB_LIST_KEYS 列出「詞彙定義表陣列鍵」——這些鍵下的元素是詞彙定義，
+# 用 key 欄位識別，不應被 E001 要求加 id。
+VOCAB_LIST_KEYS = {
+    "levels",    # technica/l-indicators — L 級感知層級定義表（key: pre/L2/L3/L4/L5/L6）
+    "stages",    # development/matrix    — LTD 發展階段定義表（key: fun/l2t/t2t/t2c/t2w）
+    "pillars",   # development/matrix    — 發展支柱定義表（key: physical/technical/mental/life）
+    "strokes",   # technica/l-indicators — 泳式定義表（key: common/free/back/fly/breast）
+}
+
 # 已知條目陣列鍵（用於 E001 偵測）
+# 這些鍵下的元素是內容條目，必須有 id。
+# VOCAB_LIST_KEYS 的鍵已明確排除在外，不會出現在此集合中。
 KNOWN_ENTRY_LIST_KEYS = {
     "points",       # technical-analysis, teaching-errors (errors 鍵)
     "errors",       # teaching-errors
-    "levels",       # water-sense-levels
-    "cells",        # development/matrix
+    "cells",        # development/matrix（內容格，不是詞彙定義）
     "standards",    # development/technical-standards
-    "indicators",   # technica/l-indicators
+    "indicators",   # technica/l-indicators（技術指標條目，有 id）
     "injuries",     # health/injuries
     "themes",       # psychology
     "drills",       # Drills/*.yaml
     "diagnostic_protocols",  # perception/*.yaml
 }
+
+# 本專案慣例：links 子鍵分三類
+# ID 參照類：值應對應全域 ID 集合，違規報 E003
+LINKS_ID_REF_KEYS = {
+    "standards",         # → development/technical-standards 的 std.* ID
+    "drills",            # → Drills/*.yaml 的 Fr*/Bk*/Br*/Fl*/Sc* ID
+    "l_indicators",      # → technica/l-indicators 的 {stroke}.{level}.{aspect} ID
+    "technical_analysis", # → instructional/technical-analysis 的 {stroke}.tech.N ID
+    "related",           # → 同 domain 其他條目 ID（periodization 內部互連）
+}
+
+# 詞彙參照類：值應對應 _taxonomy.yaml 的指定詞彙欄位，違規報 E004
+# 格式：{link_key: taxonomy_field}
+LINKS_VOCAB_REF_KEYS = {
+    "development_stages": "development_stage",  # 值應為 development_stage 詞彙
+}
+
+# 自由文字類：mechanism_link、technical_link、perception_link 是 narrative 說明，
+# 混有自由文字與部分 ID 參照，統一不做 E003/E004 驗證。
+# （injuries.yaml 的設計慣例；後續 S5 可再拆成可驗證 ID 參照層）
 
 
 # ── 工具函式 ─────────────────────────────────────────────────────────────────
@@ -162,10 +193,15 @@ def collect_outbound_ids(entry: dict) -> set[str]:
 # ── E001 輔助：在已知條目陣列鍵中偵測缺 id ────────────────────────────────────
 
 def find_missing_id_in_lists(data: object, rel: str, result: list):
-    """遞迴走訪，在 KNOWN_ENTRY_LIST_KEYS 的子列表中找缺 id 的元素。"""
+    """遞迴走訪，在 KNOWN_ENTRY_LIST_KEYS 的子列表中找缺 id 的元素。
+    VOCAB_LIST_KEYS 的鍵（詞彙定義表，用 key 識別）直接跳過，不要求 id。
+    """
     if isinstance(data, dict):
         for k, v in data.items():
-            if k in KNOWN_ENTRY_LIST_KEYS and isinstance(v, list):
+            if k in VOCAB_LIST_KEYS:
+                # 詞彙定義表：用 key 識別，不需要 id，跳過
+                pass
+            elif k in KNOWN_ENTRY_LIST_KEYS and isinstance(v, list):
                 for i, item in enumerate(v):
                     if isinstance(item, dict) and "id" not in item:
                         result.append(
@@ -262,28 +298,53 @@ def run_validation():
     for rel, entry in all_entries:
         eid = entry.get("id", "(no id)")
 
-        # ── E003: links.* 斷鏈 ──
+        # ── E003: links.* ID 參照類斷鏈 ──
+        # ── E004 (詞彙參照類): links.* 詞彙值不在 taxonomy ──
+        # 自由文字類（mechanism_link / technical_link / perception_link）跳過。
         links = entry.get("links")
         if isinstance(links, dict):
             for link_type, targets in links.items():
-                if isinstance(targets, list):
-                    for target in targets:
-                        if isinstance(target, str):
-                            if target not in all_id_set:
-                                errors["E003"].append(
-                                    f"  file={rel} id={eid!r} "
-                                    f"links.{link_type}={target!r}"
-                                )
-                            else:
-                                inbound_ids[target] += 1
-                elif isinstance(targets, str) and targets:
-                    if targets not in all_id_set:
-                        errors["E003"].append(
-                            f"  file={rel} id={eid!r} "
-                            f"links.{link_type}={targets!r}"
-                        )
-                    else:
-                        inbound_ids[targets] += 1
+                if link_type in LINKS_VOCAB_REF_KEYS:
+                    # 詞彙參照類：比對 taxonomy 指定欄位
+                    tax_field = LINKS_VOCAB_REF_KEYS[link_type]
+                    allowed_vocab = taxonomy.get(tax_field, set())
+                    if isinstance(targets, list):
+                        for target in targets:
+                            if isinstance(target, str) and target:
+                                if target not in allowed_vocab:
+                                    errors["E004"].append(
+                                        f"  file={rel} id={eid!r} "
+                                        f"links.{link_type}={target!r} "
+                                        f"（不在 taxonomy.{tax_field}）"
+                                    )
+                    elif isinstance(targets, str) and targets:
+                        if targets not in allowed_vocab:
+                            errors["E004"].append(
+                                f"  file={rel} id={eid!r} "
+                                f"links.{link_type}={targets!r} "
+                                f"（不在 taxonomy.{tax_field}）"
+                            )
+                elif link_type in LINKS_ID_REF_KEYS:
+                    # ID 參照類：比對全域 ID 集合
+                    if isinstance(targets, list):
+                        for target in targets:
+                            if isinstance(target, str):
+                                if target not in all_id_set:
+                                    errors["E003"].append(
+                                        f"  file={rel} id={eid!r} "
+                                        f"links.{link_type}={target!r}"
+                                    )
+                                else:
+                                    inbound_ids[target] += 1
+                    elif isinstance(targets, str) and targets:
+                        if targets not in all_id_set:
+                            errors["E003"].append(
+                                f"  file={rel} id={eid!r} "
+                                f"links.{link_type}={targets!r}"
+                            )
+                        else:
+                            inbound_ids[targets] += 1
+                # else: 自由文字類（mechanism_link 等），跳過不驗證
 
         # ── E004: taxonomy 不存在的值 ──
         for field in ("category", "stroke", "certainty", "status"):
@@ -306,13 +367,14 @@ def run_validation():
                     )
 
         # ── W001: cross_ref 自由文字（在 entry 頂層或 public 層）──
+        # 注意：不做任何 ASCII encode 轉換，直接保留原始 Unicode 字串，
+        # 才能在報告中正確顯示中文。顯示截斷改為 120 字元。
         def _check_cross_ref(d: dict, location: str):
             cr = d.get("cross_ref")
             if cr is not None and isinstance(cr, str) and cr.strip():
-                safe = cr.encode("ascii", errors="replace").decode("ascii")
                 warnings["W001"].append(
                     f"  file={rel} id={eid!r} "
-                    f"{location}.cross_ref (60 chars): {safe[:60]!r}"
+                    f"{location}.cross_ref (120 chars): {cr[:120]!r}"
                 )
 
         _check_cross_ref(entry, "entry")

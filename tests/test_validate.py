@@ -160,21 +160,49 @@ class FixtureTestBase(unittest.TestCase):
         for rel, entry in all_entries:
             eid = entry.get("id", "(no id)")
 
-            # E003
+            # E003 / E004（links 子鍵分三類，與 validate_mod 邏輯一致）
             links = entry.get("links")
             if isinstance(links, dict):
                 for link_type, targets in links.items():
-                    if isinstance(targets, list):
-                        for target in targets:
-                            if isinstance(target, str):
-                                if target not in all_id_set:
-                                    errors["E003"].append(
-                                        f"  {rel} {eid!r} links.{link_type}={target!r}"
-                                    )
-                                else:
-                                    inbound_ids[target] += 1
+                    if link_type in validate_mod.LINKS_VOCAB_REF_KEYS:
+                        # 詞彙參照類 → 比對 taxonomy，違規報 E004
+                        tax_field = validate_mod.LINKS_VOCAB_REF_KEYS[link_type]
+                        allowed_vocab = taxonomy.get(tax_field, set())
+                        if isinstance(targets, list):
+                            for target in targets:
+                                if isinstance(target, str) and target:
+                                    if target not in allowed_vocab:
+                                        errors["E004"].append(
+                                            f"  {rel} {eid!r} "
+                                            f"links.{link_type}={target!r}"
+                                        )
+                        elif isinstance(targets, str) and targets:
+                            if targets not in allowed_vocab:
+                                errors["E004"].append(
+                                    f"  {rel} {eid!r} "
+                                    f"links.{link_type}={targets!r}"
+                                )
+                    elif link_type in validate_mod.LINKS_ID_REF_KEYS:
+                        # ID 參照類 → 比對全域 ID 集合，違規報 E003
+                        if isinstance(targets, list):
+                            for target in targets:
+                                if isinstance(target, str):
+                                    if target not in all_id_set:
+                                        errors["E003"].append(
+                                            f"  {rel} {eid!r} links.{link_type}={target!r}"
+                                        )
+                                    else:
+                                        inbound_ids[target] += 1
+                        elif isinstance(targets, str) and targets:
+                            if targets not in all_id_set:
+                                errors["E003"].append(
+                                    f"  {rel} {eid!r} links.{link_type}={targets!r}"
+                                )
+                            else:
+                                inbound_ids[targets] += 1
+                    # else: 自由文字類，跳過
 
-            # E004
+            # E004（欄位值 taxonomy 驗證，與 links 無關）
             for field in ("category", "stroke", "certainty", "status"):
                 val = entry.get(field)
                 if val is not None and isinstance(val, str):
@@ -193,12 +221,12 @@ class FixtureTestBase(unittest.TestCase):
                             f"  {rel} {eid!r} source_ids={sid!r}"
                         )
 
-            # W001
+            # W001（保留完整 Unicode，不做 ASCII encode）
             def _check_cross_ref(d, location):
                 cr = d.get("cross_ref")
                 if cr is not None and isinstance(cr, str) and cr.strip():
                     warnings["W001"].append(
-                        f"  {rel} {eid!r} {location}.cross_ref"
+                        f"  {rel} {eid!r} {location}.cross_ref (120 chars): {cr[:120]!r}"
                     )
             _check_cross_ref(entry, "entry")
             pub = entry.get("public", {})
@@ -509,6 +537,221 @@ class TestCleanDataNoFalsePositive(FixtureTestBase):
         self.assertEqual(
             len(errors["E002"]), 0,
             "drafts/ 與 build artifact 的同 id 不應觸發 E002"
+        )
+
+
+class TestE001VocabListSkipped(FixtureTestBase):
+    """E001：詞彙定義表（key 型清單）不觸發 E001；真正缺 id 的條目仍觸發。"""
+
+    def test_vocab_list_key_no_e001(self):
+        # levels / stages / pillars 是詞彙定義表，元素用 key 不用 id，不應觸發 E001
+        self._write_yaml(
+            self.canonical_dir / "vocab_def.yaml",
+            {
+                "domain": "technica",
+                "levels": [
+                    {"key": "pre", "name_zh": "前置"},
+                    {"key": "L2", "name_zh": "L2"},
+                ],
+                "stages": [
+                    {"key": "l2t", "name_en": "Learn to Train"},
+                    {"key": "t2t", "name_en": "Train to Train"},
+                ],
+                "pillars": [
+                    {"key": "physical", "name_zh": "體能"},
+                ],
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E001"]), 0,
+            "詞彙定義表（levels/stages/pillars）不應觸發 E001"
+        )
+
+    def test_content_entry_without_id_still_triggers_e001(self):
+        # 真正的內容條目（cells 裡的元素）缺 id 應觸發 E001
+        self._write_yaml(
+            self.canonical_dir / "content.yaml",
+            {
+                "domain": "development",
+                "cells": [
+                    {"pillar": "physical", "stage": "l2t"},  # 缺 id
+                    {"id": "dev.physical.l2t", "pillar": "physical", "stage": "l2t"},  # 有 id
+                ],
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E001"]), 1, "缺 id 的 cells 元素應觸發 E001")
+
+
+class TestE003LinksVocabSeparation(FixtureTestBase):
+    """E003 / E004：links 詞彙參照類與 ID 參照類分離。"""
+
+    def setUp(self):
+        super().setUp()
+        # taxonomy 加入 development_stage 詞彙
+        self._write_yaml(
+            self.canonical_dir / "_taxonomy.yaml",
+            make_taxonomy({
+                "category": [{"key": "kick"}, {"key": "pull"}, {"key": "concept"}],
+                "stroke": [{"key": "free"}, {"key": "back"}, {"key": "common"}],
+                "certainty": [
+                    {"key": "\U0001F7E2"}, {"key": "\U0001F535"},
+                    {"key": "\U0001F7E0"}, {"key": "\U0001F7E1"},
+                    {"key": "\U0001F534"},
+                ],
+                "status": [{"key": "complete"}, {"key": "draft"}],
+                "development_stage": [
+                    {"key": "fun"}, {"key": "l2t"}, {"key": "t2t"},
+                    {"key": "t2c"}, {"key": "t2w"},
+                ],
+            })
+        )
+
+    def test_valid_development_stages_no_e003_no_e004(self):
+        # links.development_stages 用合法詞彙值，不應觸發 E003 也不觸發 E004
+        self._write_yaml(
+            self.canonical_dir / "periodization.yaml",
+            {
+                "entries": [
+                    {
+                        "id": "period.overview",
+                        "links": {
+                            "development_stages": ["l2t", "t2t", "t2c"],
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E003"]), 0,
+            "合法 development_stage 詞彙不應觸發 E003"
+        )
+        # E004 可能有其他 taxonomy 觸發，只確認 development_stages 這條沒問題
+        e004_devstage = [
+            m for m in errors["E004"] if "development_stages" in m
+        ]
+        self.assertEqual(
+            len(e004_devstage), 0,
+            "合法 development_stage 詞彙不應觸發 E004"
+        )
+
+    def test_invalid_development_stages_triggers_e004_not_e003(self):
+        # links.development_stages 用未登錄值應觸發 E004，不觸發 E003
+        self._write_yaml(
+            self.canonical_dir / "periodization.yaml",
+            {
+                "entries": [
+                    {
+                        "id": "period.overview",
+                        "links": {
+                            "development_stages": ["l2t", "INVALID_STAGE"],
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E003"]), 0,
+            "development_stages 值不應觸發 E003（應改報 E004）"
+        )
+        e004_devstage = [
+            m for m in errors["E004"] if "development_stages" in m
+        ]
+        self.assertGreater(
+            len(e004_devstage), 0,
+            "未登錄的 development_stage 值應觸發 E004"
+        )
+
+    def test_links_standards_broken_id_still_triggers_e003(self):
+        # links.standards 指向不存在 ID 仍觸發 E003（ID 參照類行為不變）
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-a",
+                        "links": {
+                            "standards": ["std.free.pull.nonexistent"],
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertGreater(
+            len(errors["E003"]), 0,
+            "links.standards 指向不存在 ID 應觸發 E003"
+        )
+
+
+class TestW001ChineseEncoding(FixtureTestBase):
+    """W001：cross_ref 中文字串寫入報告後可正確讀回（防 ASCII encode 回歸）。"""
+
+    def test_chinese_cross_ref_preserved_in_warning(self):
+        # cross_ref 含中文，W001 警告字串必須保留原始 Unicode，不能變問號
+        chinese_ref = "感知層 L2.1→L3.1 手感建立與水感萌芽連結"
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-chinese",
+                        "public": {
+                            "cross_ref": chinese_ref,
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W001"]), 0, "含中文 cross_ref 應觸發 W001"
+        )
+        # 驗證警告字串中的中文被完整保留（不是問號）
+        w001_msg = warnings["W001"][0]
+        self.assertIn(
+            "感知層",
+            w001_msg,
+            "W001 警告訊息必須保留中文，不能轉換成問號"
+        )
+
+    def test_chinese_cross_ref_in_report_file(self):
+        # 同樣的中文 cross_ref 必須能正確寫入 reports/validation_report.md 並讀回
+        chinese_ref = "感知層 L2.1→L3.1 手感建立與水感萌芽連結"
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-chinese-report",
+                        "public": {
+                            "cross_ref": chinese_ref,
+                        },
+                    }
+                ]
+            },
+        )
+        # 先跑一次以收集 warnings
+        from collections import defaultdict
+        errors_dict = {
+            "E001": [], "E002": [], "E003": [], "E004": [], "E005": []
+        }
+        _, warnings_dict, _ = self._run()
+
+        # 模擬寫入報告
+        self.reports_dir.mkdir(exist_ok=True)
+        validate_mod._write_report(errors_dict, warnings_dict, 1, 0)
+
+        # 讀回報告，確認中文完整
+        report_path = self.reports_dir / "validation_report.md"
+        content = report_path.read_text(encoding="utf-8")
+        self.assertIn(
+            "感知層",
+            content,
+            "報告中的 W001 中文必須完整，不能變問號"
         )
 
 

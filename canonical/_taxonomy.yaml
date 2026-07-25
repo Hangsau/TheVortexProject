@@ -150,3 +150,66 @@ fields:
     values:
       - key: complete
         count: 70
+
+  # ── 以下三個詞彙欄位來自正式定義來源，review_status: reviewed ──
+  # defined_in 指出定義的 canonical 檔案與路徑，以便後人追溯真相；
+  # 不在本 taxonomy 另建一份會漂移的副本。
+
+  development_stage:
+    controlled: true
+    review_status: reviewed
+    note: >
+      LTD 發展階段詞彙，來源為 ADM 框架（Higgs, Way & Harber 2019）。
+      fun 階段 has_cells: false（不在矩陣內容範圍），但仍是合法詞彙值。
+      供 links.development_stages 詞彙參照類驗證使用。
+    defined_in: "canonical/development/matrix.yaml#stages[].key"
+    values:
+      - key: fun
+        note: "FUNdamentals 基礎樂趣，has_cells: false"
+      - key: l2t
+        note: "Learn to Train 學習訓練"
+      - key: t2t
+        note: "Train to Train 訓練為訓練"
+      - key: t2c
+        note: "Train to Compete 訓練為競賽"
+      - key: t2w
+        note: "Train to Win 訓練為勝利"
+
+  pillar:
+    controlled: true
+    review_status: reviewed
+    note: >
+      發展支柱詞彙，來源為 ADM 框架（Higgs, Way & Harber 2019）。
+      矩陣四支柱，與 development_stage 共同構成 cells ID 命名空間。
+    defined_in: "canonical/development/matrix.yaml#pillars[].key"
+    values:
+      - key: physical
+        note: "體能"
+      - key: technical
+        note: "技術戰術"
+      - key: mental
+        note: "心理技能"
+      - key: life
+        note: "生活技能"
+
+  l_level:
+    controlled: true
+    review_status: reviewed
+    note: >
+      L 級感知發展層級詞彙，來源為 Vortex 水感框架。
+      注意 'pre' 是前置層，L0/L1 在框架散文中提及但未在 l-indicators.yaml 設條目；
+      L2–L6 是矩陣主體。此詞彙目前未用於 links 詞彙參照，供未來 S5 擴充使用。
+    defined_in: "canonical/technica/l-indicators.yaml#levels[].key"
+    values:
+      - key: pre
+        note: "前置層：感覺阻力存在，但未與動作連結"
+      - key: L2
+        note: "推進感萌芽"
+      - key: L3
+        note: "水感出現但不穩定"
+      - key: L4
+        note: "壓力下感知維持不住"
+      - key: L5
+        note: "感知自動化過渡"
+      - key: L6
+        note: "感知自動化完成"
