@@ -608,7 +608,7 @@
 | S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
 | S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
 | S4b | injuries 的 **20 筆** `*_link` 散文欄位拆成 `*_link`（ID 陣列）+ `*_note`（散文） | 需讀內容判斷 | 派工 |
-| S4c | **W001 = 61 筆** `cross_ref` → 穩定 ID（先機械抽內嵌 ID，再處理 `§` 節號） | 機械為主 | 派工 |
+| S4c | **W001 = 61 筆** `cross_ref` → 穩定 ID（新增 `cross_ref_ids` 機器鍵；節號類列為遺留債） | 機械為主 | ✅ 已完成 2026-07-26（W001 61→0，新增 E006/W006） |
 | S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | 派工 |
 | S6 | public/private 匯出隔離（hub P4 前置） | 需分層判斷 | 未規劃 |
 
@@ -637,6 +637,38 @@
 **S4b 的 20 筆定位**：全在 `canonical/health/injuries.yaml`（三個欄位各 44 次出現、共 132 處，其中 112 為 null，20 有散文值）。⚠ **`injuries.yaml` 是 `tools/build_injuries.py` 產生的 promoted artifact，不可直接改**；一律改 `canonical/health/drafts/*.yaml` 後重跑生成器。
 
 **S2 待用戶裁定（阻塞中）**：`category` 的 36 個值混了兩種語意——教學類別（`kick`、`stroke-cycle`…）與健康傷害類別（`A-shoulder-upper` … `F-pediatric-growth`，前綴來自 `build_injuries.py` 的 `CATEGORY_ORDER`）。要拆成兩個欄位，還是保留單欄位用命名空間前綴？未決前 S2 不動。
+
+#### S4c 驗收（2026-07-26）
+
+`python tools/validate.py`：**0 ERROR / 584 WARN**；`python -m unittest discover -s tests`：**42 tests OK**（原 28 + 新增 14）。
+
+**資料契約決定（不可回退成陣列）**：`cross_ref` 維持自由文字顯示層，**逐字不動**；新增 `cross_ref_ids`（list of string）當機器鍵。理由：下游 `my-site/layouts/vortex/vortex-database.html` 第 103 行把 `cross_ref` 當純字串渲染（`{{ with .cross_ref }}{{ . }}{{ end }}`），改成陣列會在線上印出 Go slice 字面值 `[a b c]`。語意約定：`cross_ref_ids: []` = **已檢查、確認無 ID 可連**；欄位缺席 = **尚未處理**（觸發 W006）。
+
+**61 筆的實際分類（重新統計，與用戶估計不符處已標出）**：
+
+| 項目 | 用戶估計 | 實測 | 差異說明 |
+|---|---|---|---|
+| 分佈檔案 | 全在 `teaching-errors.yaml` | **45 在 `teaching-errors.yaml` + 16 在 `technical-analysis.yaml`** | ⚠ 估錯。S4c 範圍依「W001 = 61 筆」這個錨點，兩檔都做了；只做 45 筆會留 16 筆警告 |
+| 內嵌可解析 ID | 26 | **27**（teaching-errors 12 + technical-analysis 15） | 多 1 筆 |
+| 節號／散文指向 | 35 | **34**（teaching-errors 33 + technical-analysis 1） | 少 1 筆 |
+
+**「看起來像 ID 但解析不到」的 token：0 筆**。但這一項查出更值得記的東西——**S4c 之前 W001 的抽取邏輯本身是漏的**：舊 `_CANDIDATE_ID_RE` 要求命名空間最後一段必須是純數字、且不允許連字號，所以 `back.err2`、`starts-turns.err10`、`starts-turns.tech.44` 這類真實 ID **從來沒被抽出來過**。第一輪分析因此誤報 22/39，修正 regex 後才得到 27/34。也就是說：舊 W001 不只是「沒解析」，是**連候選都少認**。修正後重跑，W004 區塊逐字無差異（確認 regex 改動沒有外溢影響）。
+
+**臨機規則（僅存在於一次性補欄腳本，此處存證）**：`free.tech.4/5/6` 這種斜線簡寫（出現在 `free.tech.32`、`free.tech.35`）展開成三個 ID 寫入。已先確認 `free.tech.5` / `free.tech.6` 確實存在才展開。驗證器**不**內建此規則——未來若有人再寫斜線簡寫，會正常觸發 W001 要求手動處理，這是刻意的。
+
+**遺留債（S4c 範圍外，未動手）——34 筆節號類 `cross_ref`**：這些指向 `Instructional/` 散文的節號，例如 `技術分析 §2.1`、`技術分析 §伍（身體旋轉）`、`技術分析 貳2.2 動力傳遞鏈`、`技術分析 拾壹11.3 不同距離技術差異化`。**canonical 目前沒有散文章節的穩定 ID**，`Instructional/自由式深度技術分析.md` 的標題是 `## 壹、分析框架：自由式的物理本質` 這種形式，無 ID 可指。
+
+- 建議：**在 `Instructional/` 散文層建立章節級穩定 ID**（如 `doc.free-tech-analysis.§2.1`），登錄進全域 ID 集合後回填這 34 筆。
+- 理由：這 34 筆不是壞資料，是**指向了一個還沒被納入 ID 體系的層**。若不做，`cross_ref_ids: []` 會永遠停在「已檢查、無 ID 可連」，等於承認散文層永遠只是顯示層、不可機器追蹤——那 knowledge-hub 的關係圖會缺掉「教學誤區 ↔ 技術分析」這條最密的連結（34/61，超過一半）。
+- 成本：要先決定散文章節 ID 的粒度（章 vs 節 vs 小節）與命名法，並確保散文標題改寫時 ID 不漂移。這是 schema 決策，不是機械工作，**不適合順手做**。
+
+**順帶查出、未修的資料品質問題 1 筆**：`technical-analysis.yaml` 的 `fly.tech.12`，其 `cross_ref` 值是「2024–2025 外划幅度縮小趨勢已成為精英教學主流演進方向」——這根本不是交叉參照，是一句趨勢陳述被誤填進 `cross_ref` 欄位。已給 `cross_ref_ids: []`（依約定正確），但**欄位誤用本身沒改**，因為改它等於動 `cross_ref` 顯示層內容，超出 S4c「只加欄位不改內容」的界線。這是 technical-analysis 唯一那筆非節號類的散文。
+
+**刻意不做的變更**：W003 孤兒偵測仍只讀 `links.*`，`cross_ref_ids` **不**計入出向連結。若計入，W003 會從 476 掉下來——但那是把「顯示層參照」偷渡成「結構化關係」，屬於用計算方式讓數字變好看，不是真的補了連結。要改應是明確決策，不是 S4c 的副作用。
+
+**新增檢查碼**：E006（ERROR，`cross_ref_ids` 內含無法解析的 ID，fail-closed 已實測：塞入 `free.tech.999` → exit=1）／W001 重新定義（`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`）／W006（`cross_ref` 有值但 `cross_ref_ids` 欄位整個缺席）。測試 harness 原本自行複製一份驗證邏輯（**導致語意改動後 28 tests 仍全綠的假陽性**），已改為直接呼叫 `validate.build_global_id_set()` 與 `validate.check_cross_ref()`。
+
+**當前基線**：E001–E006 全 0；W001 **0**（原 61）、W002 88、W003 476、W004 20、W005 0、W006 **0**。`python tools/build_knowledge_map.py` 跑通且 `KNOWLEDGE_MAP.md` 無 diff。
 
 ### Hestia 報告整合後續（2026-06-22）
 

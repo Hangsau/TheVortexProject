@@ -111,18 +111,9 @@ class FixtureTestBase(unittest.TestCase):
             p for p in all_canonical_files
             if not validate_mod.is_excluded(p)
         ]
-        id_source_files = [
-            p for p in all_canonical_files
-            if not p.name.startswith("_")
-        ]
-
-        drills_files = sorted(self.drills_dir.glob("*.yaml"))
-        drills_id_map = validate_mod.collect_all_ids_from_files(drills_files)
-        drills_id_set = set(drills_id_map.keys())
-
-        canonical_id_map = validate_mod.collect_all_ids_from_files(id_source_files)
-        canonical_id_set = set(canonical_id_map.keys())
-        all_id_set = canonical_id_set | drills_id_set
+        # 全域 ID 集合直接用產品程式碼的函式（路徑常數已在 setUp 猴子補丁），
+        # 測試不自己維護第二份收集邏輯
+        all_id_set, _, _ = validate_mod.build_global_id_set()
 
         from collections import defaultdict
         id_registry = defaultdict(list)
@@ -140,8 +131,14 @@ class FixtureTestBase(unittest.TestCase):
             except Exception:
                 pass
 
-        errors = {"E001": [], "E002": [], "E003": [], "E004": [], "E005": []}
-        warnings = {"W001": [], "W002": [], "W003": [], "W004": [], "W005": []}
+        errors = {
+            "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
+            "E006": [],
+        }
+        warnings = {
+            "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
+            "W006": [],
+        }
 
         # E001
         for path in validate_files:
@@ -245,17 +242,15 @@ class FixtureTestBase(unittest.TestCase):
                             f"  {rel} {eid!r} source_ids={sid!r}"
                         )
 
-            # W001（保留完整 Unicode，不做 ASCII encode）
-            def _check_cross_ref(d, location):
-                cr = d.get("cross_ref")
-                if cr is not None and isinstance(cr, str) and cr.strip():
-                    warnings["W001"].append(
-                        f"  {rel} {eid!r} {location}.cross_ref (120 chars): {cr[:120]!r}"
-                    )
-            _check_cross_ref(entry, "entry")
+            # E006 / W001 / W006：直接呼叫產品程式碼的 cross_ref 契約檢查
+            validate_mod.check_cross_ref(
+                rel, eid, entry, "entry", all_id_set, errors, warnings
+            )
             pub = entry.get("public", {})
             if isinstance(pub, dict):
-                _check_cross_ref(pub, "public")
+                validate_mod.check_cross_ref(
+                    rel, eid, pub, "public", all_id_set, errors, warnings
+                )
 
             # W002
             cert = entry.get("certainty")
@@ -712,10 +707,14 @@ class TestE003LinksVocabSeparation(FixtureTestBase):
 
 
 class TestW001ChineseEncoding(FixtureTestBase):
-    """W001：cross_ref 中文字串寫入報告後可正確讀回（防 ASCII encode 回歸）。"""
+    """cross_ref 中文字串寫入警告與報告後可正確讀回（防 ASCII encode 回歸）。
+
+    S4c 後：純散文（無疑似 ID）的 cross_ref 未處理時走 W006，
+    含疑似 ID 但未同步 cross_ref_ids 時走 W001；兩者都必須保留中文。
+    """
 
     def test_chinese_cross_ref_preserved_in_warning(self):
-        # cross_ref 含中文，W001 警告字串必須保留原始 Unicode，不能變問號
+        # cross_ref 含中文且未處理（無 cross_ref_ids）→ W006，中文須完整保留
         chinese_ref = "感知層 L2.1→L3.1 手感建立與水感萌芽連結"
         self._write_yaml(
             self.canonical_dir / "entries.yaml",
@@ -732,13 +731,41 @@ class TestW001ChineseEncoding(FixtureTestBase):
         )
         _, warnings, _ = self._run()
         self.assertGreater(
-            len(warnings["W001"]), 0, "含中文 cross_ref 應觸發 W001"
+            len(warnings["W006"]), 0, "未處理的中文 cross_ref 應觸發 W006"
         )
         # 驗證警告字串中的中文被完整保留（不是問號）
-        w001_msg = warnings["W001"][0]
+        w006_msg = warnings["W006"][0]
         self.assertIn(
             "感知層",
-            w001_msg,
+            w006_msg,
+            "W006 警告訊息必須保留中文，不能轉換成問號"
+        )
+
+    def test_chinese_cross_ref_with_id_preserved_in_w001(self):
+        # cross_ref 含中文 + 疑似 ID，但 cross_ref_ids 沒同步 → W001，中文須完整
+        chinese_ref = "感知層與 free.tech.7 的手感建立連結"
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {
+                        "id": "entry-chinese-w001",
+                        "public": {
+                            "cross_ref": chinese_ref,
+                            "cross_ref_ids": [],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W001"]), 0, "疑似 ID 未同步應觸發 W001"
+        )
+        self.assertIn(
+            "感知層",
+            warnings["W001"][0],
             "W001 警告訊息必須保留中文，不能轉換成問號"
         )
 
@@ -759,9 +786,9 @@ class TestW001ChineseEncoding(FixtureTestBase):
             },
         )
         # 先跑一次以收集 warnings
-        from collections import defaultdict
         errors_dict = {
-            "E001": [], "E002": [], "E003": [], "E004": [], "E005": []
+            "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
+            "E006": [],
         }
         _, warnings_dict, _ = self._run()
 
@@ -775,7 +802,7 @@ class TestW001ChineseEncoding(FixtureTestBase):
         self.assertIn(
             "感知層",
             content,
-            "報告中的 W001 中文必須完整，不能變問號"
+            "報告中的 cross_ref 中文必須完整，不能變問號"
         )
 
 
@@ -982,6 +1009,287 @@ class TestW005UnknownLinksKey(FixtureTestBase):
         self.assertEqual(
             len(warnings["W005"]), 0,
             "links.mechanism_link（已知自由文字類）不應觸發 W005"
+        )
+
+
+class TestE006CrossRefIds(FixtureTestBase):
+    """E006：cross_ref_ids 內含無法解析的 ID → ERROR。"""
+
+    def test_unresolvable_cross_ref_id_triggers_e006(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {
+                        "id": "free.err24",
+                        "public": {
+                            "cross_ref": "free.tech.7（S 形划水）、free.tech.999（不存在）",
+                            "cross_ref_ids": ["free.tech.7", "free.tech.999"],
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E006"]), 1,
+            "cross_ref_ids 內不存在的 ID 應觸發 E006"
+        )
+        self.assertIn("free.tech.999", errors["E006"][0])
+
+    def test_resolvable_cross_ref_ids_no_e006(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {"id": "back.err2"},
+                    {
+                        "id": "free.err24",
+                        "public": {
+                            "cross_ref": "free.tech.7（S 形划水）、back.err2（仰式同樣誤區）",
+                            "cross_ref_ids": ["free.tech.7", "back.err2"],
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E006"]), 0,
+            "全部可解析的 cross_ref_ids 不應觸發 E006"
+        )
+
+    def test_drill_id_in_cross_ref_ids_no_e006(self):
+        # Drill ID（Drills/*.yaml，不含點號）也是合法解析目標
+        self._write_yaml(
+            self.drills_dir / "free.yaml",
+            {"drills": [{"id": "FrBr3", "name": "連續涓流吐氣"}]},
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "breast.err17",
+                        "public": {
+                            "cross_ref": "自由式 FrBr3（連續涓流吐氣 drill）通用呼吸原則",
+                            "cross_ref_ids": ["FrBr3"],
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E006"]), 0, "Drill ID 應可解析，不觸發 E006"
+        )
+
+    def test_non_list_cross_ref_ids_triggers_e006(self):
+        # 型別錯誤（字串而非 list）同樣無法解析成穩定 ID → E006
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {
+                        "id": "free.err24",
+                        "public": {
+                            "cross_ref": "free.tech.7（S 形划水）",
+                            "cross_ref_ids": "free.tech.7",
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertGreater(
+            len(errors["E006"]), 0,
+            "cross_ref_ids 型別不是 list 應觸發 E006"
+        )
+
+
+class TestW001CrossRefIdsOutOfSync(FixtureTestBase):
+    """W001：cross_ref 內疑似穩定 ID 未同步到 cross_ref_ids → WARN。"""
+
+    def test_id_in_cross_ref_missing_from_ids_triggers_w001(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {"id": "back.err2"},
+                    {
+                        "id": "free.err24",
+                        "public": {
+                            # 只登錄了一個，back.err2 漏掉
+                            "cross_ref": "free.tech.7（S 形划水）、back.err2（仰式同樣誤區）",
+                            "cross_ref_ids": ["free.tech.7"],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W001"]), 1,
+            "cross_ref 有 ID 未列入 cross_ref_ids 應觸發 W001"
+        )
+        self.assertIn("back.err2", warnings["W001"][0])
+
+    def test_all_ids_synced_no_w001(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {"id": "back.err2"},
+                    {
+                        "id": "free.err24",
+                        "public": {
+                            "cross_ref": "free.tech.7（S 形划水）、back.err2（仰式同樣誤區）",
+                            "cross_ref_ids": ["free.tech.7", "back.err2"],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W001"]), 0,
+            "cross_ref_ids 已同步不應觸發 W001"
+        )
+
+    def test_prose_section_ref_with_empty_ids_no_w001(self):
+        # 指向散文節號（無疑似 ID token）+ 明確空陣列 → 不觸發 W001 也不觸發 W006
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "free.err1",
+                        "public": {
+                            "cross_ref": "技術分析 §2.1、§3.1（三種風格對應三種回臂策略）",
+                            "cross_ref_ids": [],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W001"]), 0, "散文節號不含疑似 ID，不應觸發 W001"
+        )
+        self.assertEqual(
+            len(warnings["W006"]), 0, "已宣告空陣列不應觸發 W006"
+        )
+
+    def test_unresolvable_lookalike_token_still_triggers_w001(self):
+        # 疑似 ID 但全域解析不到（打錯字 / 指向已刪條目）仍要警告，不可靜默放過
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "free.err24",
+                        "public": {
+                            "cross_ref": "free.tech.999（已刪除的條目）",
+                            "cross_ref_ids": [],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W001"]), 1,
+            "解析不到的疑似 ID token 仍應觸發 W001（可能是斷鏈或打錯字）"
+        )
+
+    def test_hyphen_and_err_style_ids_extracted(self):
+        # extract_candidate_ids 必須抽得到 starts-turns.err10 / back.err2 這類形態
+        tokens = validate_mod.extract_candidate_ids(
+            "starts-turns.err10（起跳）、back.err2、free.tech.7、FrBr3"
+        )
+        self.assertEqual(
+            tokens,
+            ["starts-turns.err10", "back.err2", "free.tech.7", "FrBr3"],
+        )
+
+
+class TestW006CrossRefIdsMissing(FixtureTestBase):
+    """W006：cross_ref 有值但完全沒有 cross_ref_ids 欄位 → WARN。"""
+
+    def test_missing_cross_ref_ids_triggers_w006(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "free.err1",
+                        "public": {
+                            "cross_ref": "技術分析 §2.1（三種風格對應三種回臂策略）",
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W006"]), 1,
+            "cross_ref 缺 cross_ref_ids 欄位應觸發 W006"
+        )
+
+    def test_empty_list_no_w006(self):
+        # 空陣列 = 已檢查過、確認無 ID 可連，與「根本沒處理」必須分開
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "free.err1",
+                        "public": {
+                            "cross_ref": "技術分析 §2.1（三種風格對應三種回臂策略）",
+                            "cross_ref_ids": [],
+                        },
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W006"]), 0,
+            "明確宣告空陣列不應觸發 W006"
+        )
+
+    def test_no_cross_ref_at_all_no_w006(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{"id": "free.err1", "public": {"misconception": "x"}}]},
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W006"]), 0, "沒有 cross_ref 就不該觸發 W006"
+        )
+
+    def test_entry_level_cross_ref_also_checked(self):
+        # cross_ref 在條目頂層（非 public 層）同樣要被檢查
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "free.err1",
+                        "cross_ref": "技術分析 §2.1",
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W006"]), 1,
+            "entry 頂層的 cross_ref 也應觸發 W006"
         )
 
 

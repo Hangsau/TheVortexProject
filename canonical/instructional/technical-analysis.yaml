@@ -67,6 +67,7 @@ points:
         source: Ruiz-Navarro et al. 2024
       practical_implication: SR 訓練目標是提高神經快速徵召能力上限；SL 訓練目標是在高 SR 下維持捕水效率和阻力控制；兩者都要練，不是二選一。
       cross_ref: free.tech.13（划頻 vs 划距的生理條件分析）
+      cross_ref_ids: [free.tech.13]
   - id: free.tech.4
     stroke: free
     category: style
@@ -167,6 +168,7 @@ points:
         source: Hall Sr. 2020
       practical_implication: 教學口令應從「讓前臂推水」改為「保持肘尖朝向游進方向」；高肘的訓練限制因素是前鋸肌耐力，而非技術理解。
       cross_ref: free.tech.10（前鋸肌硬體邊界）
+      cross_ref_ids: [free.tech.10]
   - id: free.tech.10
     stroke: free
     category: hardware
@@ -400,6 +402,7 @@ points:
         text: 自由式手臂推進的連續性比蝶式和蛙式高，速度波動最小化符合能量最優原則；三種系統性風格（hip/shoulder/hybrid）由生理條件和距離共同決定，而非純粹風格偏好。
       practical_implication: 理解四式技術差異有助於跨式訓練設計；自由式無「唯一正確技術」的特性使評估框架必須依個人生理條件調適，不能用統一標準強加於不同泳者。
       cross_ref: free.tech.1（無唯一最優技術的框架前提）
+      cross_ref_ids: [free.tech.1]
 
   - id: free.tech.32
     stroke: free
@@ -417,6 +420,7 @@ points:
           選擇邏輯：能量代價隨手臂長度與角速度的平方放大，所以「拉直」的代價是非線性陡升。距離越長，總能量預算越緊，能量分配給推進的比例必須提高、coupling 比例下降。
       practical_implication: 對教練：依選手主項距離與風格決定光譜定位，不要把衝刺直臂訓練套到長距離選手身上。對選手：練多種光譜位置以備不同距離與後段策略——例如 200m 前段用 mid、後段切高能量直臂衝。轉換並不會自然發生，需專門訓練。
       cross_ref: free.tech.4/5/6（hip/shoulder/hybrid 風格的對應位置）、free.tech.16（晚期回臂作為 coupling 動作）
+      cross_ref_ids: [free.tech.4, free.tech.5, free.tech.6, free.tech.16]
 
   - id: free.tech.33
     stroke: free
@@ -432,6 +436,7 @@ points:
           這套理論對解釋「為什麼有人六拍踢就是『跟不上』划手」很有幫助：不是踢水技術問題，是肩到對側腳的張力傳遞斷在中間。
       practical_implication: 對教練：當六拍踢與划手 coupling 看起來「就是不對」時，先檢查筋膜鏈中段（腹外斜肌、闊筋膜張肌、胸腰筋膜）的張力與柔軟度，比直接修改踢水動作更可能找到根因。對選手：螺旋線特定段的拉伸與啟動訓練（如螺旋伸展、單側 deadbug、單邊 carry）可改善這條鏈的功能性。對應 dryland 的 kinetic chain 整合訓練（見 dryland.yaml injury_prevention.kinetic_chain_zh）。
       cross_ref: free.tech.10（前鋸肌）、free.tech.15（菱形肌啟動旋轉）、free.tech.16（coupling）
+      cross_ref_ids: [free.tech.10, free.tech.15, free.tech.16]
 
   - id: free.tech.30
     stroke: free
@@ -472,6 +477,7 @@ points:
           推進效率 = 推力/阻力比，所以縮短偏離期比加大推力更有效率（推力提升受肌力限制，偏離縮短無限制）。
       practical_implication: 訓練流線型不是只在出發和轉身做；每個 stroke cycle 都有 streamline 回歸窗口（手出水前後）。教學重點是「回到 streamline 的速度」，不是「保持划手不變形」。Drill：每三划後刻意 streamline 滑行 3 秒，建立「划手 → streamline → 划手」的循環感知。
       cross_ref: free.tech.32（octane recovery 是 streamline 偏離程度的選擇）
+      cross_ref_ids: [free.tech.32]
 
   - id: free.tech.35
     stroke: free
@@ -489,6 +495,7 @@ points:
           菁英在 100% race pace 下的 SL 通常只比 80% pace 下降 5-15%；新手在同樣加速下 SL 可能降 30-50%。
       practical_implication: SR-SL 曲線測試是 L4-L5 評估的核心：用 4-6 個逐漸加速的 50m，記錄每趟 SR 與 SL（劃數/距離），繪出曲線。曲線斜率與絕對位置都是教練指標。訓練重點：先用 tempo trainer 在不同 SR 下保持 SL，建立曲線平緩的本體控制。
       cross_ref: free.tech.4/5/6（hip/shoulder/hybrid 風格決定起點位置）
+      cross_ref_ids: [free.tech.4, free.tech.5, free.tech.6]
 
   - id: back.tech.28
     stroke: back
@@ -509,6 +516,7 @@ points:
           肩柔軟度不足者強行直臂會肩衝擊（見 back.err16）；柔軟度好但選 low-octane 則放棄 coupling 增益。
       practical_implication: 仰式 recovery 處方應依距離與肩柔軟度評估。教學早期建立中等彎臂作為預設，待選手肩柔軟度與專項距離確定後再切換。直臂訓練前必須通過肩活動度評估，否則訓練越多傷越多。
       cross_ref: free.tech.32（octane 三層光譜物理基礎）、back.err15（誤套導致的傷害風險）
+      cross_ref_ids: [free.tech.32, back.err15]
 
   - id: back.tech.29
     stroke: back
@@ -527,6 +535,7 @@ points:
           常見錯誤本體感覺：選手感覺「我手在頭上方」實際在「身體中線之內」——身體軸線的本體圖被旋轉位置干擾。
       practical_implication: 必須用外部回饋校正入水位置：① 教練從泳池上方拍攝、選手回看影片；② 水道線輔助 drill——選手沿水道線游、用手腕輕觸水線確認入水點對齊；③ Bk22 泳鏡平衡 drill 鞏固身體軸線靜止後再評估手位置。本體感覺單獨不足以判定入水位置。
       cross_ref: back.err11（小指先入水執著常引發入水偏外）、Bk22（泳鏡平衡）
+      cross_ref_ids: [back.err11, Bk22]
 
   - id: back.tech.1
     stroke: back
@@ -1285,6 +1294,7 @@ points:
         text: 推進來自波動能量在體軸的定向傳遞，與自由式旋轉慣性耦合、蛙式雙脈衝推進機制本質不同；IVV（週期內速度波動）居四式中等水準。
       practical_implication: 任何動作的意義都依附於它在整條波動鏈中的角色，不能孤立評估單一動作。
       cross_ref: 四式推進機制對比見 fly.tech.2
+      cross_ref_ids: [fly.tech.2]
   - id: fly.tech.2
     stroke: fly
     category: comparison
@@ -1434,6 +1444,7 @@ points:
         source: Kudo et al. 2014
       practical_implication: 外划技術目標應設為「最小必要幅度的捕水位置準備」，不以外划形狀作為技術目標。
       cross_ref: 2024–2025 外划幅度縮小趨勢已成為精英教學主流演進方向
+      cross_ref_ids: []
   - id: fly.tech.13
     stroke: fly
     category: stroke-cycle
@@ -1493,6 +1504,7 @@ points:
         source: 法國研究者 CFD 模擬（年份未指定）
       practical_implication: 「向前不向上」是蝶式換氣最重要的感知建立目標，Chin Forward 技術成熟者每划換氣速度損失極小。
       cross_ref: 呼吸策略的決定因子是換氣方式，不是換氣次數（見 fly.tech.30）
+      cross_ref_ids: [fly.tech.30]
   - id: fly.tech.18
     stroke: fly
     category: timing
@@ -1568,6 +1580,7 @@ points:
         source: McCullough 2009
       practical_implication: 踝關節柔韌性訓練應列為蝶式訓練的優先基礎能力，早於腿部力量訓練。
       cross_ref: 四式踝關節柔韌性結論一致，見 fly.tech.34
+      cross_ref_ids: [fly.tech.34]
   - id: fly.tech.25
     stroke: fly
     category: hardware
@@ -2104,6 +2117,7 @@ points:
           所以教學目標不是「維持 streamline」，是「縮短兩個 streamline 通過點之間的時間 + 加深兩個通過點本身的低阻力品質」。
       practical_implication: 蝶式 streamline 訓練應該分兩段：① 入水後 streamline（最像自由式，可借用 streamline kick drill）；② 出水前 streamline（身體拉長、手臂高於臀部）。對選手喊「保持 streamline」會困惑——他無法在波動中保持不動。改成「入水那瞬間 streamline 要乾淨」更可執行。
       cross_ref: free.tech.34（自由式 streamline 基準姿態對照）、fly.tech.10（IVV 與波動效率）
+      cross_ref_ids: [free.tech.34, fly.tech.10]
 
   - id: breast.tech.35
     stroke: breast
@@ -2121,6 +2135,7 @@ points:
           選擇依個人體型（重心、肩柔軟度、髖內旋）、訓練史、距離綜合決定，不是「先進」優於「傳統」。
       practical_implication: 教練處方時序應先評估選手體型與目標距離，再選對應時序作為主訓。教學早期建立 Traditional 為基礎，待選手成熟後再評估是否切換。Touch-and-Go 需要極高無氧能力支撐、Wave 重疊需要高肩髖協調——兩者都不是「越早教越好」。
       cross_ref: breast.err16（wave style 誤套到 flat style 適合者）
+      cross_ref_ids: [breast.err16]
 
   - id: starts-turns.tech.1
     stroke: starts-turns
@@ -2154,6 +2169,7 @@ points:
         source: Welcher et al. 1979（歷史依據）
       practical_implication: 仍使用 Grab Start 的族群（Masters、平衡受限者）執行品質取決於個人技術；菁英與 t2c/t2w 階段請見 starts-turns.tech.41（Track Start 重心前傾 vs 後仰）。
       cross_ref: starts-turns.tech.41（Track Start 重心策略）
+      cross_ref_ids: [starts-turns.tech.41]
   - id: starts-turns.tech.3
     stroke: starts-turns
     category: hardware

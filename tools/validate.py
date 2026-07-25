@@ -24,17 +24,28 @@ exit code：
   E003  links.* 指向不存在的 ID（canonical 全集 + Drills）
   E004  category/stroke/certainty/status 出現不在 _taxonomy.yaml 的值
   E005  source_ids 指向不存在的 _sources.yaml ID
-  W001  cross_ref 是自由文字、無法解析成穩定 ID（S4 待辦）
+  E006  cross_ref_ids 內含無法解析的 ID（canonical 全集 + Drills）
+  W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
+        同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  certainty 為 green 或 yellow 但沒有 source_ids（S3 待辦）
   W003  孤兒條目：沒有任何 links 指入、自己也沒指出
   W004  欄位名為 *_link 但值為散文（schema 債）：
         mechanism_link / technical_link / perception_link
   W005  links 下未知子鍵（不在 ID 參照類、詞彙參照類或已知自由文字類中）
+  W006  cross_ref 有值但完全沒有 cross_ref_ids 欄位（連空陣列都沒有）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
   是 build artifact（正式 canonical）。本驗證器只掃 injuries.yaml，
   排除 drafts/ 以避免 ID 重複誤報。
+
+  cross_ref / cross_ref_ids 分工（S4c）：
+    cross_ref      顯示層自由文字，下游 my-site 的 vortex-database.html 直接
+                   當純字串渲染，**不可改成陣列**（會印出 Go slice 字面值）。
+    cross_ref_ids  機器鍵（list of string），放從 cross_ref 抽出且確實能在
+                   全域 ID 集合解析的穩定 ID。
+                   `[]` = 已檢查過、確認無 ID 可連（多為指向 Instructional/
+                   散文的節號）；欄位缺席 = 尚未處理（W006）。
 """
 from __future__ import annotations
 
@@ -103,12 +114,30 @@ LINKS_VOCAB_REF_KEYS = {
 LINKS_FREE_TEXT_KEYS = {"mechanism_link", "technical_link", "perception_link"}
 
 # 用於從散文值中保守抽取候選 ID 的 regex
-# 匹配命名空間格式（如 free.tech.10）或 Drill 編號（如 FrBr3、Fr1、Bk2）
+# 匹配命名空間格式（如 free.tech.10、back.err2、starts-turns.err10）
+# 或 Drill 編號（如 FrBr3、Fr1、Bk22）
+# 注意：命名空間段允許 - 與 _（真實 ID 有 starts-turns.tech.44、
+# psych.self_talk.trainable_skill 這類形態），最後一段不限定為純數字，
+# 否則 back.err2 / starts-turns.err10 這類會漏抽。
 import re as _re
 _CANDIDATE_ID_RE = _re.compile(
-    r"\b(?:[a-z][a-z0-9]*(?:\.[a-z][a-z0-9]*)*\.\d+|"  # 命名空間格式：free.tech.10
-    r"[A-Z][a-z][A-Z]?[a-z]*\d+)"                        # Drill 編號格式：FrBr3, Fr1
+    r"(?<![0-9A-Za-z_.-])(?:"
+    r"[a-z][a-z0-9_-]*(?:\.[a-z0-9_-]+)+"   # 命名空間格式：free.tech.10 / back.err2
+    r"|[A-Z][a-z][A-Z]?[a-z]*\d+"            # Drill 編號格式：FrBr3 / Fr1 / Bk22
+    r")"
 )
+
+
+def extract_candidate_ids(text: str) -> list[str]:
+    """從自由文字中保守抽取疑似穩定 ID 的 token（保序去重）。
+
+    只做形態辨識，不保證能解析——是否存在由呼叫端比對全域 ID 集合決定。
+    """
+    found: list[str] = []
+    for token in _CANDIDATE_ID_RE.findall(text or ""):
+        if token not in found:
+            found.append(token)
+    return found
 
 
 # ── 工具函式 ─────────────────────────────────────────────────────────────────
@@ -155,6 +184,25 @@ def is_excluded(path: Path) -> bool:
     if "drafts" in parts:
         return True
     return False
+
+
+# ── 全域 ID 集合 ──────────────────────────────────────────────────────────────
+
+def build_global_id_set() -> tuple[set[str], set[str], set[str]]:
+    """建立全域 ID 集合，回傳 (all_id_set, canonical_id_set, drills_id_set)。
+
+    canonical 端含 drafts/（drafts 條目仍是合法參照目標），只排除 _ 前綴
+    meta 檔。E003（links 斷鏈）與 E006（cross_ref_ids 斷鏈）都以此為準。
+    需要抽 ID 的外部腳本請直接呼叫本函式，不要另寫一份收集邏輯。
+    """
+    all_canonical_files = sorted(CANONICAL_DIR.rglob("*.yaml"))
+    id_source_files = [
+        p for p in all_canonical_files if not p.name.startswith("_")
+    ]
+    drills_files = sorted(DRILLS_DIR.glob("*.yaml"))
+    canonical_id_set = set(collect_all_ids_from_files(id_source_files).keys())
+    drills_id_set = set(collect_all_ids_from_files(drills_files).keys())
+    return canonical_id_set | drills_id_set, canonical_id_set, drills_id_set
 
 
 # ── Taxonomy 載入 ─────────────────────────────────────────────────────────────
@@ -205,6 +253,72 @@ def collect_outbound_ids(entry: dict) -> set[str]:
     return out
 
 
+# ── cross_ref 契約檢查（E006 / W001 / W006）───────────────────────────────────
+
+def check_cross_ref(
+    rel: str,
+    eid: str,
+    container: dict,
+    location: str,
+    all_id_set: set,
+    errors: dict,
+    warnings: dict,
+):
+    """檢查單一層（entry 或 public）的 cross_ref / cross_ref_ids 契約。
+
+    E006  cross_ref_ids 內有無法解析的值（或型別不是 list）→ ERROR
+    W001  cross_ref 字串裡有疑似穩定 ID 的 token，但沒列進 cross_ref_ids
+    W006  cross_ref 有值但沒有 cross_ref_ids 欄位（連 [] 都沒寫）
+
+    注意：不做任何 ASCII encode 轉換，直接保留原始 Unicode 字串，
+    才能在報告中正確顯示中文。顯示截斷為 120 字元。
+    """
+    has_ids_key = "cross_ref_ids" in container
+    raw_ids = container.get("cross_ref_ids")
+
+    declared_ids: list[str] = []
+    if isinstance(raw_ids, list):
+        for item in raw_ids:
+            if isinstance(item, str) and item.strip():
+                declared_ids.append(item)
+                if item not in all_id_set:
+                    errors["E006"].append(
+                        f"  file={rel} id={eid!r} "
+                        f"{location}.cross_ref_ids 含無法解析的 {item!r}"
+                    )
+            else:
+                errors["E006"].append(
+                    f"  file={rel} id={eid!r} "
+                    f"{location}.cross_ref_ids 含非字串元素 {item!r}"
+                )
+    elif has_ids_key and raw_ids is not None:
+        errors["E006"].append(
+            f"  file={rel} id={eid!r} {location}.cross_ref_ids "
+            f"型別應為 list，實際為 {type(raw_ids).__name__}"
+        )
+
+    cr = container.get("cross_ref")
+    if not (isinstance(cr, str) and cr.strip()):
+        return
+
+    if not has_ids_key:
+        # 尚未處理：與「明確宣告 []（已檢查、無 ID 可連）」區分開
+        warnings["W006"].append(
+            f"  file={rel} id={eid!r} {location}.cross_ref 有值但缺 "
+            f"cross_ref_ids 欄位 (120 chars): {cr[:120]!r}"
+        )
+        return
+
+    missing = [
+        t for t in extract_candidate_ids(cr) if t not in declared_ids
+    ]
+    if missing:
+        warnings["W001"].append(
+            f"  file={rel} id={eid!r} {location}.cross_ref 內疑似穩定 ID "
+            f"{missing} 未列入 cross_ref_ids (120 chars): {cr[:120]!r}"
+        )
+
+
 # ── E001 輔助：在已知條目陣列鍵中偵測缺 id ────────────────────────────────────
 
 def find_missing_id_in_lists(data: object, rel: str, result: list):
@@ -252,19 +366,8 @@ def run_validation():
     # 驗證用：排除 _ 前綴 meta 檔與 drafts/
     validate_files = [p for p in all_canonical_files if not is_excluded(p)]
 
-    # ID 集合用：canonical 全部檔案（含 drafts）都算 ID 來源
-    # 但排除 _ 前綴 meta 檔
-    id_source_files = [p for p in all_canonical_files if not p.name.startswith("_")]
-
-    # ── 掃描 Drills 取 ID ──
-    drills_files = sorted(DRILLS_DIR.glob("*.yaml"))
-    drills_id_map = collect_all_ids_from_files(drills_files)
-    drills_id_set = set(drills_id_map.keys())
-
-    # ── 建立 canonical ID 集合（全域，用於 E003 參照）──
-    canonical_id_map = collect_all_ids_from_files(id_source_files)
-    canonical_id_set = set(canonical_id_map.keys())
-    all_id_set = canonical_id_set | drills_id_set
+    # ── 建立全域 ID 集合（含 Drills，用於 E003 / E006 參照）──
+    all_id_set, _canonical_id_set, drills_id_set = build_global_id_set()
 
     # ── 收集驗證範圍內的條目 ──
     # {id: [(rel_path, entry)]}
@@ -285,10 +388,10 @@ def run_validation():
 
     # ── 錯誤/警告收集器 ──
     errors: dict[str, list[str]] = {
-        "E001": [], "E002": [], "E003": [], "E004": [], "E005": []
+        "E001": [], "E002": [], "E003": [], "E004": [], "E005": [], "E006": []
     }
     warnings: dict[str, list[str]] = {
-        "W001": [], "W002": [], "W003": [], "W004": [], "W005": []
+        "W001": [], "W002": [], "W003": [], "W004": [], "W005": [], "W006": []
     }
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -410,21 +513,13 @@ def run_validation():
                         f"包含不存在的 {sid!r}"
                     )
 
-        # ── W001: cross_ref 自由文字（在 entry 頂層或 public 層）──
-        # 注意：不做任何 ASCII encode 轉換，直接保留原始 Unicode 字串，
-        # 才能在報告中正確顯示中文。顯示截斷改為 120 字元。
-        def _check_cross_ref(d: dict, location: str):
-            cr = d.get("cross_ref")
-            if cr is not None and isinstance(cr, str) and cr.strip():
-                warnings["W001"].append(
-                    f"  file={rel} id={eid!r} "
-                    f"{location}.cross_ref (120 chars): {cr[:120]!r}"
-                )
-
-        _check_cross_ref(entry, "entry")
+        # ── E006 / W001 / W006: cross_ref 契約（entry 頂層與 public 層）──
+        check_cross_ref(rel, eid, entry, "entry", all_id_set, errors, warnings)
         pub = entry.get("public", {})
         if isinstance(pub, dict):
-            _check_cross_ref(pub, "public")
+            check_cross_ref(
+                rel, eid, pub, "public", all_id_set, errors, warnings
+            )
 
         # ── W002: certainty green/yellow 無 source_ids ──
         # 直接在 entry 層
@@ -539,9 +634,13 @@ def _write_report(
             "ERROR",
             "`source_ids` 指向不存在的 `_sources.yaml` ID",
         ),
+        "E006": (
+            "ERROR",
+            "`cross_ref_ids` 內含無法解析的 ID",
+        ),
         "W001": (
             "WARN",
-            "`cross_ref` 為自由文字、無法解析成穩定 ID（S4 待辦）",
+            "`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`",
         ),
         "W002": (
             "WARN",
@@ -558,6 +657,10 @@ def _write_report(
         "W005": (
             "WARN",
             "`links` 下未知子鍵（未歸類為 ID 參照類、詞彙參照類或已知自由文字類）",
+        ),
+        "W006": (
+            "WARN",
+            "`cross_ref` 有值但缺 `cross_ref_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）",
         ),
     }
 
@@ -583,7 +686,10 @@ def _write_report(
 
         if items:
             # W001/W002/W003/W004/W005 總數是後續工作量依據，完整列出
-            max_show = 200 if code in ("W001", "W002", "W004", "W005") else len(items)
+            max_show = (
+                200 if code in ("W001", "W002", "W004", "W005", "W006")
+                else len(items)
+            )
             for item in items[:max_show]:
                 lines.append(item)
             if len(items) > max_show:

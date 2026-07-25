@@ -45,71 +45,19 @@
 
 ---
 
-## W001 — `cross_ref` 為自由文字、無法解析成穩定 ID（S4 待辦）
+## E006 — `cross_ref_ids` 內含無法解析的 ID
 
-**WARN，共 61 筆**
+**ERROR，共 0 筆**
 
-  file=canonical\instructional\teaching-errors.yaml id='free.err1' public.cross_ref (120 chars): '技術分析 §2.1、§3.1（三種風格對應三種回臂策略）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err5' public.cross_ref (120 chars): '技術分析 §3.1（晚期回臂）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err10' public.cross_ref (120 chars): '技術分析 §3.1（後象限推進）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err12' public.cross_ref (120 chars): '技術分析 §肆（踢水機制）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err15' public.cross_ref (120 chars): '技術分析 §伍（身體旋轉）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err17' public.cross_ref (120 chars): '技術分析 §伍（Coupling 能量）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err18' public.cross_ref (120 chars): '技術分析 §陸（頭部位置與弓形波）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err20' public.cross_ref (120 chars): '技術分析 §柒（划頻 vs 划距）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err21' public.cross_ref (120 chars): '技術分析 §參（六階段划手週期 ①升力相）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err24' public.cross_ref (120 chars): 'free.tech.7（S 形划水歷史錯誤）、back.err2（仰式同樣誤區）'
-  file=canonical\instructional\teaching-errors.yaml id='free.err25' public.cross_ref (120 chars): 'free.tech.9（EVF 核心物理）、back.err3（仰式對應誤區）'
-  file=canonical\instructional\teaching-errors.yaml id='back.err1' public.cross_ref (120 chars): '技術分析 §旋轉機制'
-  file=canonical\instructional\teaching-errors.yaml id='back.err6' public.cross_ref (120 chars): '教學誤區 §back.err3（深度與肘位）'
-  file=canonical\instructional\teaching-errors.yaml id='back.err8' public.cross_ref (120 chars): '教學誤區 §back.err5（踢水方向）'
-  file=canonical\instructional\teaching-errors.yaml id='back.err9' public.cross_ref (120 chars): '教學誤區 §back.err1（旋轉壓制造成的張力）'
-  file=canonical\instructional\teaching-errors.yaml id='back.err13' public.cross_ref (120 chars): 'free.tech.33（螺旋筋膜線是 coupling 解剖基礎）'
-  file=canonical\instructional\teaching-errors.yaml id='back.err15' public.cross_ref (120 chars): 'free.tech.32（octane 三層光譜）、free.tech.29（手砸水 = 肩旋轉同源）'
-  file=canonical\instructional\teaching-errors.yaml id='back.err17' public.cross_ref (120 chars): 'starts-turns.err10（起跳抬頭二元口令的對應討論）'
-  file=canonical\instructional\teaching-errors.yaml id='breast.err4' public.cross_ref (120 chars): '技術分析 §3.2'
-  file=canonical\instructional\teaching-errors.yaml id='breast.err5' public.cross_ref (120 chars): '技術分析 §2.1'
-  file=canonical\instructional\teaching-errors.yaml id='breast.err11' public.cross_ref (120 chars): '技術分析 §2.3'
-  file=canonical\instructional\teaching-errors.yaml id='breast.err15' public.cross_ref (120 chars): 'free.tech.9（EVF 通用原理）、fly.tech.11（Insweep 是最大推進）'
-  file=canonical\instructional\teaching-errors.yaml id='breast.err17' public.cross_ref (120 chars): '自由式 FrBr3（連續涓流吐氣 drill）通用呼吸原則'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err1' public.cross_ref (120 chars): '技術分析 伍5.1（外划功能重建）；伍5.1 五階段划水'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err4' public.cross_ref (120 chars): '技術分析 柒7.2 Recovery物理目標表；捌8 疲勞崩潰第二環'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err6' public.cross_ref (120 chars): '技術分析 貳2.1 波動vs擺動；貳2.2 完整動力傳遞鏈'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err7' public.cross_ref (120 chars): '技術分析 拾壹11.1（踝關節蹠屈柔韌性）'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err8' public.cross_ref (120 chars): '技術分析 參3.1-3.3 兩踢功能不對稱矩陣'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err9' public.cross_ref (120 chars): '技術分析 參3.2 第二踢；肆4 連動鏈閉環'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err10' public.cross_ref (120 chars): '技術分析 貳2.3 幅度vs頻率策略表；拾壹11.3 不同距離技術差異化'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err11' public.cross_ref (120 chars): '技術分析 貳2.2 動力傳遞鏈；陸6.1 低頭：波動觸發器'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err12' public.cross_ref (120 chars): '技術分析 陸6.2 抬頭呼吸；陸6.3 完整呼吸時序；捌8 疲勞崩潰第三環'
-  file=canonical\instructional\teaching-errors.yaml id='fly.err14' public.cross_ref (120 chars): '技術分析 拾壹11.3 不同距離技術差異化'
-  file=canonical\instructional\teaching-errors.yaml id='udk.err6' public.cross_ref (120 chars): '技術分析 §陸（UDK vs 蝶式踢腿對照表）'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err1' public.cross_ref (120 chars): '技術分析 §壹 1.2 推蹬階段：起跳角度數據（精英 21–27°）'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err2' public.cross_ref (120 chars): '技術分析 §壹 1.3 Kick Start 變體：前後腳角色重新分配'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err3' public.cross_ref (120 chars): '技術分析 §壹 1.2 入水點：水平速度是主要預測變數'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err4' public.cross_ref (120 chars): '技術分析 §壹 1.4 仰式起跳'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err5' public.cross_ref (120 chars): '技術分析 §貳 2.3/2.4 接近與旋轉：完整最後一划'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err6' public.cross_ref (120 chars): '技術分析 §貳 2.1 接觸與推蹬：流線型應在觸牆前就位'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err7' public.cross_ref (120 chars): '技術分析 §貳 2.2 接近與旋轉：🔴 旗幟計步系統'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err8' public.cross_ref (120 chars): '技術分析 §貳 2.3/2.4 接觸與推蹬：觸牆深度'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err9' public.cross_ref (120 chars): '技術分析 §貳 通用：流線型品質與推蹬方向同等重要'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err10' public.cross_ref (120 chars): 'starts-turns.tech.4（兩派並陳分析）'
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err14' public.cross_ref (120 chars): 'starts-turns.tech.44（自由式 Breakout 七要點，含「第一划不換氣」）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.3' public.cross_ref (120 chars): 'free.tech.13（划頻 vs 划距的生理條件分析）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.9' public.cross_ref (120 chars): 'free.tech.10（前鋸肌硬體邊界）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.26' public.cross_ref (120 chars): 'free.tech.1（無唯一最優技術的框架前提）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.32' public.cross_ref (120 chars): 'free.tech.4/5/6（hip/shoulder/hybrid 風格的對應位置）、free.tech.16（晚期回臂作為 coupling 動作）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.33' public.cross_ref (120 chars): 'free.tech.10（前鋸肌）、free.tech.15（菱形肌啟動旋轉）、free.tech.16（coupling）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.34' public.cross_ref (120 chars): 'free.tech.32（octane recovery 是 streamline 偏離程度的選擇）'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.35' public.cross_ref (120 chars): 'free.tech.4/5/6（hip/shoulder/hybrid 風格決定起點位置）'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.28' public.cross_ref (120 chars): 'free.tech.32（octane 三層光譜物理基礎）、back.err15（誤套導致的傷害風險）'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.29' public.cross_ref (120 chars): 'back.err11（小指先入水執著常引發入水偏外）、Bk22（泳鏡平衡）'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.1' public.cross_ref (120 chars): '四式推進機制對比見 fly.tech.2'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.12' public.cross_ref (120 chars): '2024–2025 外划幅度縮小趨勢已成為精英教學主流演進方向'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.17' public.cross_ref (120 chars): '呼吸策略的決定因子是換氣方式，不是換氣次數（見 fly.tech.30）'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.24' public.cross_ref (120 chars): '四式踝關節柔韌性結論一致，見 fly.tech.34'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.36' public.cross_ref (120 chars): 'free.tech.34（自由式 streamline 基準姿態對照）、fly.tech.10（IVV 與波動效率）'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.35' public.cross_ref (120 chars): 'breast.err16（wave style 誤套到 flat style 適合者）'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.2' public.cross_ref (120 chars): 'starts-turns.tech.41（Track Start 重心策略）'
+（無）
+
+---
+
+## W001 — `cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`
+
+**WARN，共 0 筆**
+
+（無）
 
 ---
 
@@ -722,6 +670,14 @@
 ---
 
 ## W005 — `links` 下未知子鍵（未歸類為 ID 參照類、詞彙參照類或已知自由文字類）
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W006 — `cross_ref` 有值但缺 `cross_ref_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）
 
 **WARN，共 0 筆**
 
