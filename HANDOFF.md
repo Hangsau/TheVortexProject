@@ -745,6 +745,56 @@ S3a 可立刻派工；S3b 建議先做一個 10 筆的 pilot 看判定準則穩�
 
 **另記**：4 個 drafts 檔完全沒有 `links` 區塊——`_asian-epidemiology-supplement`、`iron-deficiency-swimmer`、`oral-contraceptives-performance`、`sci-hip-flexor-contracture`。未觸發任何警告（無 `*_link` 值可檢查），但值得日後確認是刻意還是漏填。
 
+#### S3a 驗收（2026-07-26）
+
+**已完成**：138 個來源登錄進 `canonical/_sources.yaml`，201 個 🟢／🟡 區塊加上 `source_ids`（`technical-analysis` 121、`teaching-errors` 46、`l-indicators` 34），孤兒來源 0、斷鏈 0。`source` 顯示字串**一字未動**（前兩檔是純插入 0 刪行，`l-indicators` 是 flow style 只在 `}` 前追加 `, source_ids: [...]`）。
+
+**`_sources.yaml` 契約改到 v2，改了什麼、為什麼**：
+
+v1 把 `title` / `authors` / `year` / `identifier` / `retrieved_on` 全列必填，且 `identifier` 至少要有一個可重取識別。但實際 138 筆裡，多數只有「作者＋年份」，有些連作者都沒有（`PMC6409673`、`PLOS ONE 2020`），5 筆根本不是文獻（「通用游泳醫學共識」「歷史背景」）。照 v1 走，唯一能填滿的辦法就是去猜 DOI／期刊／標題——正是明文禁止的捏造。**所以是契約錯，不是資料錯。**
+
+| 欄位 | v1 | v2 | 理由 |
+|---|---|---|---|
+| `verification_status` | 無 | **無條件必填**，封閉值域 `verified`／`unverified` | 把「查沒查過」變成資料本身的欄位，而不是靠註解 |
+| `display` | 無 | **無條件必填** | 逐字保留原顯示字串當溯源錨點，S3c 靠它對回原文位置 |
+| `id` / `type` | 必填 | 維持無條件必填 | 不查證也能確定為真 |
+| `title` / `identifier` / `retrieved_on` | 必填 | **僅 `verified` 時必填** | 沒查過就沒有標題／識別碼／查驗日可填 |
+| `authors` / `year` | 必填 | **僅 `verified` 時必填**（超出原指示） | 原指示只點名 title/identifier/retrieved_on，但實測有無作者、無單一年份的字串（複合字串、純 PMC 編號），不放寬同樣會逼出捏造 |
+| `container` / `et_al` / `notes` | 無 | 選填 | `et_al` 用布林標記「作者蓄意不完整」，而不是把字面 `et al.` 塞進 `authors` 讓它看起來像人名 |
+
+**138 筆全部 `unverified`——包含那 40 筆有識別碼的。** 原指示允許把帶 DOI／PMID 的標成 `verified`，但我的契約要求 `verified` 必填查驗日，而我一筆都沒有 dereference 過，標 `verified` 就得編一個查驗日，違反最重要那條。折衷是：識別碼照樣**逐字轉錄**（23 筆來自顯示字串內的 PMID／PMCID／DOI，17 筆來自同層 `url:` 欄位，合計 40 筆），但狀態留 `unverified`。S3c 只要把這 40 筆查一遍就能直接翻成 `verified`，零資訊損失。
+
+**順帶更正原任務書的一個前提**：任務書寫「這批**沒有 DOI／PMID／ISBN**」，實際上 138 筆裡 23 筆字串內就帶識別碼，另有 30 個區塊帶同層 `url:`（各顯示字串對應的 url 無衝突）。
+
+**刻意不合併的疑似重複（25 組、共 64 筆）**：碰撞者各給獨立 ID（依 display 排序加 `-a/-b/-c`），notes 互指「疑似同一文獻，待 S3c 查證後合併」。**寧可留可合併的重複，不可誤併成一筆**——誤併會把兩篇不同文獻的主張混在同一個 `source_id` 底下，事後從資料上看不出來；重複只是暫時多幾筆，S3c 查到 DOI 後合併是安全的單向操作。典型無法判定的例子就是 `Staunton et al. 2025` vs `Staunton, Ruiz-Navarro & Born 2025`。
+
+- 4 筆組（4 組）：`staunton-2025`、`sanders-1995`、`maglischo-2003`、`pmc8960438`
+- 3 筆組（6 組）：`atkison-2014`、`gonjo-2020`、`gonjo-2021`、`nicol-2022`、`strzala-2013`、`tanaka-2024`
+- 2 筆組（15 組）：`benjanuvatra-2007`、`colman-1998`、`gonzalez-rave-2025`、`journal-pone-0241345`、`mason-1992`、`mccullough`、`mccullough-2009`、`novais-2012`、`pink-1991`、`pmc4234766`、`pmc6409673`、`pmc8442910`、`pmc9402090`、`pmid-40252339`、`welcher-2008`
+- 另有 **13 組跨消歧組共用識別碼**（如 pmid 24290609 橫跨 `atkison-2014-a/b/c`、pmid 27149652 橫跨 `takai`／`takai-2016`、pmid 24984154 橫跨 `pmid-24984154`／`pmc9402090-a`），同樣在 notes 互相標注、同樣不合併。
+
+**其他 S3a 沒動、留給 S3c 的**：20 筆是複合字串（一個字串含多筆文獻，以 `;`／`；` 分隔）→ 待拆；5 筆非文獻引用（通則／共識敘述）→ 須判定改標確定性或補實際來源；34 筆無識別碼且缺作者或年份，不足以唯一定位。全部已寫進各筆 `notes`。
+
+**`tools/validate.py` 改動**：
+
+- **W002 覆蓋缺口已修**：改成遞迴掃描任何含 `certainty` 的 dict（新增 `iter_blocks()`），不再只看 `entry.certainty` 與 `entry.public.mechanism.certainty`。覆蓋從 88 跳到 510。
+- **W002 拆成兩碼**（原指示允許同碼不同訊息或拆碼，選了拆碼，因為兩者修法完全不同、且 W002 應該歸零而 W009 是長期債）：
+  - **W002 = 39**：🟢／🟡 且**有**來源顯示字串但缺 `source_ids`。這 39 筆全是 `sources`（**複數清單**）格式，來自 `health/injuries.yaml` 與 `psychology.yaml`，不在 S3a（`source` 單數字串）範圍。S3a 該歸零的部分**已歸零**。
+  - **W009 = 270**：🟢／🟡 且**完全沒有**任何來源資訊 → S3b 範圍。（39 + 270 = 309，與 S3 範圍重估的 309 對得上。）
+- **E008 沒有新增，改為擴充 E005**：查過既有 E005，語意已經就是「`source_ids` 指向 `_sources.yaml` 不存在的 ID → ERROR」，只是**只跑條目頂層**，對全部落在巢狀 `evidence[]` 的 201 筆機器鍵零覆蓋。新增第二個碼會是重複定義，所以改成遞迴，並補了型別錯誤與非字串元素兩種情況。
+- **W008（新增）**：`_sources.yaml` 有登錄但無任何條目引用的孤兒來源。目前 0。
+
+**測試誠實性**：harness 原本自帶一份 E005／W002 邏輯副本（與 S4a、S4c 同型事故）。已刪除，改為呼叫產品端新抽出的 `check_source_blocks()` 與 `check_orphan_sources()`。53 → **67 tests OK**（原 2 個 W002 測試改寫成 7 個涵蓋 W002／W009 分流與巢狀掃描，另加 6 個 E005、3 個 W008）。
+
+**當前基線**：E001–E007 全 0；W001 0、**W002 39**（原 88，語意已變）、W003 476、W004 0、W005 0、W006 0、W007 0、**W008 0**、**W009 270**。總計 0 ERROR / 785 WARN（原 564；增加的 221 是原本就存在、只是掃不到的債）。`python tools/build_knowledge_map.py` 跑通且 `KNOWLEDGE_MAP.md` 無 diff。
+
+**發現但沒處理的問題**：
+
+1. **176 個帶 `source` 顯示字串的區塊不在任何檢查裡**（canonical 共 377 個 `source` 區塊，S3a 只覆蓋 201）——它們的 certainty 是 🟠 118／無 57／🔵 1，不觸發 W002/W009。分佈：`teaching-errors` 93、`technical-analysis` 20、`periodization/structure` 20、`periodization/zones` 17、`periodization/taper` 10、`periodization/dryland` 7、`l-indicators` 6、`health/breathing-training` 3。其中 `periodization/*.yaml` 那 54 筆的 `source` 字串**帶真 DOI／PMID**（如 `Mujika & Padilla 2003 (PMID 12840640)`、`DOI 10.3389/fphys.2025.1638739`），品質比 S3a 這批高，卻因為所在區塊**沒有 `certainty` 欄位**而完全落在網外。這是**檢查條件綁 certainty 造成的盲區**，值得單獨決策：要不要改成「有 `source` 就該有 `source_ids`」（那樣 W002 會從 39 跳到 215）。
+2. **`sources`（複數清單）與 `source`（單數字串）是兩套並行格式**，前者用在 `injuries.yaml`／`psychology.yaml`（49 + 62 個清單），且已含已驗證的 PMCID。S3a 沒碰。要不要統一、以及複數清單怎麼對到 `source_ids`，需要先決策再動。
+3. **`title` 全部留空**（138/138）。這是刻意的——寧可空白也不編。但代表 `_sources.yaml` 目前對人類讀者的可讀性只靠 `display`。
+4. **W003 = 476 未動**：同 S4b/S4c，孤兒偵測不把 `source_ids` 計入出向連結。要改應是明確決策，不順手改。
+
 ### Hestia 報告整合後續（2026-06-22）
 
 研究/instructional 散文層整合已完成、查證已逐筆把關。剩餘為可選後續：

@@ -160,6 +160,7 @@ errors:
             直臂回臂對肩部影響並非單向：高肘回臂若配合過高的肩膀抬舉，反而可能增加肩峰下撞擊
             （subacromial impingement）風險。
           source: Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875
+          source_ids: [src.pmc3438875]
           url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/
       correct_concept: >-
         先問「這個學員為什麼用直臂？」再決定是否需要調整。直臂回臂不等於錯誤，高肘回臂也不等於安全。
@@ -245,10 +246,12 @@ errors:
             阻力係數提升 2–5%、力矩提升 5–8%；最佳間距接近放鬆手的自然姿態。機制是指縫產生噴流，
             抑制大渦流形成。多篇 CFD 重複確認。
           source: Marinho et al. (2010), Journal of Applied Biomechanics
+          source_ids: [src.marinho-2010]
           url: https://pubmed.ncbi.nlm.nih.gov/20733242/
         - certainty: 🟢
           text: 入水瞬間手指與拇指應緊合像刀片劃入；進入抓水後手指應略微張開以增大受力面積。
           source: The Race Club
+          source_ids: [src.the-race-club]
           url: https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/
       correct_concept: >-
         入水瞬間指尖領先、手形緊實；進入捕水後微微張開至約 10° 自然位。只教「全程夾緊」會限制抓水面積。
@@ -324,10 +327,12 @@ errors:
           text: >-
             S 形路徑由 James "Doc" Counsilman 在《The Science of Swimming》（1968）依水下攝影觀察提出。
           source: 歷史背景
+          source_ids: [src.historical-background-unattributed]
         - certainty: 🟢
           text: >-
             高速影像顯示菁英選手手部路徑相當直線；過去看到的 S 形是身體轉體造成的視覺錯覺。
           source: Rocketswim
+          source_ids: [src.rocketswim]
           url: https://rocketswim.com/four-phases-of-freestyle-arm-stroke/
       cross_ref: 技術分析 §3.1（後象限推進）
       cross_ref_ids: []
@@ -359,6 +364,7 @@ errors:
             踝關節蹠屈柔韌性與踢水速度直接相關；陸上踝柔韌性訓練能改善踢水效率。跑步背景者最容易踝僵硬，
             踢水時最易制動。
           source: McCullough et al. (2009/2010), J. Strength & Conditioning Research
+          source_ids: [src.mccullough-a]
           url: https://pubmed.ncbi.nlm.nih.gov/19387413/
       correct_concept: >-
         踝關節柔韌性訓練優先於力量。跑步背景選手需先評估蹠屈幅度確認硬體邊界，再決定踢水訓練方向。
@@ -470,6 +476,7 @@ errors:
           text: >-
             推水末段肩胛肌群（菱形肌）是旋轉的主動發動肌，髖部被動跟隨。「把肩膀教好，髖部自然跟著動。」
           source: Pink et al. (1991) EMG；Science of Swimming Faster (Riewald & Rodeo 2015)
+          source_ids: [src.pink]
       cross_ref: 技術分析 §伍（身體旋轉）
       cross_ref_ids: []
       correct_concept: >-
@@ -616,6 +623,7 @@ errors:
             50m 中 SL 是主要速度決定因子；SR 在男子 50m 中甚至與速度呈負相關。精英金牌優勢在「高 SR 下
             維持 SL」，而非更高的 SR。
           source: Staunton et al. (2025), Frontiers in Sports and Active Living
+          source_ids: [src.staunton-2025-b]
       cross_ref: 技術分析 §柒（划頻 vs 划距）
       cross_ref_ids: []
       correct_concept: >-
@@ -675,6 +683,7 @@ errors:
           text: >-
             精英金牌相對於一般精英的優勢正在於「高 SR 下維持 SL 不下降」——兩者不是取捨，是同時最大化的目標。
           source: Staunton et al. (2025)
+          source_ids: [src.staunton-2025-a]
       correct_concept: >-
         SR 與 SL 都要訓練但目標不同：SR 訓練神經快速徵召；SL 訓練在高 SR 下維持捕水效率和阻力控制。
         問題不是「選哪個」，而是「目前 SR 壓力下 SL 下降的原因是技術問題還是生理條件問題」。
@@ -739,6 +748,7 @@ errors:
           text: 現代水下高速攝影確認手部相對水流軌跡接近直線後推，
                  朝中線斜拉是過時或錯誤理解。
           source: Gonjo et al. 2020；Maglischo 2003 修正
+          source_ids: [src.gonjo]
       correct_concept: >-
         拉水方向感目標是「手掌持續朝後、推進方向與游進方向相反」。
         手相對身體的位置可以略有自然弧度（這是關節角度限制造成的自然軌跡），
@@ -775,6 +785,7 @@ errors:
           text: PDM 量測確認手部主推進來自掌面而非前臂深度；
                  深拉水的上臂阻力代價已在多項菁英研究中量化。
           source: Race Club PDM；通用菁英研究
+          source_ids: [src.race-club-pdm-elite-general]
       correct_concept: >-
         拉水深度應該以「肘部高於手腕、手腕高於指尖」的相對位置維持，
         絕對深度依個人條件（衝刺可較深、長距較淺），
@@ -810,10 +821,12 @@ errors:
           text: >-
             3D 運動學實測：精英男性仰式肩旋轉平均 49.73 ± 5.73°，高旋轉幅度是群體常態而非個別特徵。
           source: "Gonjo et al. (2020)"
+          source_ids: [src.gonjo-2020-b]
         - certainty: 🟢
           text: >-
             仰式在不同速度下不縮小旋轉幅度，異於自由式；速度增加不應成為縮小旋轉的理由。
           source: "Gonjo et al. (2021)"
+          source_ids: [src.gonjo-2021-b]
         - certainty: 🟠
           text: >-
             正確的感知目標是「回臂側肩膀盡量向上抬高」，划水側的深沉是自然結果，不需主動下壓。
@@ -852,10 +865,12 @@ errors:
             流體力學研究指出划水中升力推進效率低於阻力推進；Maglischo（2003）已修正為「橢圓路徑」，
             近期研究確認個體差異顯著。
           source: "Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest"
+          source_ids: [src.toussaint-colwin-1990-maglischo-2003-swimmin]
         - certainty: 🟢
           text: >-
             近期研究（Gonjo 2020 等）確認路徑形狀的個體差異顯著，「前臂面向推進方向」比路徑是否筆直更重要。
           source: "Gonjo et al. (2020)"
+          source_ids: [src.gonjo-2020-b]
       correct_concept: >-
         「手掌是否面向推進方向」比「路徑是否走 S 形或直線」更重要。刻意 S 形是已過時的誤解；
         輕微 S 形（關節角度限制的自然結果）不需強行消除；被動 S 形（入水慣性造成）則應強化
@@ -921,6 +936,7 @@ errors:
             仰式在不同速度下不縮小滾轉幅度，與自由式正好相反；距離增加不應成為縮小旋轉的理由，
             但距離影響主導方式的選擇。
           source: "Gonjo et al. (2021)"
+          source_ids: [src.gonjo-2021-b]
       correct_concept: >-
         滾轉主導方式應依選手踢水能力與比賽距離判斷，不強制單一模式。
         有效教學路徑：髖部主導從踢水訓練切入，讓腿打水節律帶動身體旋轉；
@@ -954,6 +970,7 @@ errors:
             仰式上踢（up-kick）是主要推進踢水方向，主肌群為股四頭肌（伸膝）；
             自由式下踢方向與仰式相反。
           source: "Maglischo (2003) Swimming Fastest"
+          source_ids: [src.maglischo-2003-a]
       correct_concept: >-
         仰式踢水的感知目標是「上踢時腳背感覺到水在往後推」，而非腿往上移動的空間位置感。
         上踢振幅的最優值目前文獻報告範圍過寬（30–60 cm），缺乏控制實驗，不應給定精確數字。
@@ -1050,6 +1067,7 @@ errors:
             仰式踢水應由髖啟動，上踢時膝自然微屈形成鞭打，非完全僵直亦非主動屈膝踩踏；
             單純「從膝蓋踢」會失去推進並增加阻力。
           source: "U.S. Masters Swimming Backstroke Kick guide；多家教學指引一致"
+          source_ids: [src.usms-backstroke-kick-guide]
       cross_ref: 教學誤區 §back.err5（踢水方向）
       cross_ref_ids: [back.err5]
       correct_concept: >-
@@ -1292,6 +1310,7 @@ errors:
         - certainty: 🟡
           text: 仰式選手肩痛盛行率約 70-80%，與重複負荷直接相關。
           source: 通用游泳醫學共識
+          source_ids: [src.general-swim-medicine-consensus]
       correct_concept: >-
         回臂應該主動發力的只有「出水的瞬間」（從水中提起需肌肉收縮）+「入水前的最後加速」
         （coupling 動作）。中間過程應該放鬆讓手臂借重力擺動。
@@ -1359,6 +1378,7 @@ errors:
           text: >-
             CFD 研究確認：蛙腿的主推進機制是 outsweep→insweep 兩段渦流合併後向後噴射，而非旋轉拉力。
           source: "Tanaka et al. (2024). CFD study. Journal of Biomechanics"
+          source_ids: [src.tanaka-2024-b]
       correct_concept: >-
         踢腳的目標是「直接向後推水」。旋轉感是動作設定和收腳帶來的副產品，不應被誇大為主要目標。
       perception_impact: >-
@@ -1394,6 +1414,7 @@ errors:
             膝外旋（knee external rotation）與蛙腿游速顯著相關，但這是腳掌翻轉到位的功能性指標，
             不是膝蓋開角本身。
           source: "Strzała et al. (2013). Journal of Human Kinetics"
+          source_ids: [src.strzala-2013-b]
       correct_concept: >-
         踢腳寬度的前提是「腳能否外翻」，而非「膝蓋能開多寬」。最優寬度因解剖條件
         （髖關節活動度、踝關節柔韌性）不同而異，不應強求統一。
@@ -1485,6 +1506,7 @@ errors:
             系統綜述確認：insweep 是蛙式手部動作的主推進相，精英選手比國家選手更早啟動此相，
             允許更大推進力輸出。
           source: "Nicol et al. (2022). Systematic review. Sports Biomechanics"
+          source_ids: [src.nicol-2022-b]
       cross_ref: 技術分析 §2.1
       cross_ref_ids: []
       correct_concept: >-
@@ -1644,6 +1666,7 @@ errors:
             arm-leg coordination 時序與游速的相關性在各項技術指標中最高，是文獻中最有力支持
             「時機配合是蛙式效率最敏感變數」的直接證據。
           source: "Nicol et al. (2022). Systematic review. Sports Biomechanics"
+          source_ids: [src.nicol-2022-b]
       correct_concept: >-
         蛙式的核心原則是「划手時腳保持流線、踢腳時手保持流線」——手腳的推進階段必須交替發生，
         不能重疊。
@@ -2060,6 +2083,7 @@ errors:
         - certainty: 🟡
           text: "蝶式的能量主要集中在第一正弦諧波（H1），從髖傳到踝的過程中振幅逐節增大。"
           source: "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech"
+          source_ids: [src.sanders-1995-c]
       cross_ref: "技術分析 貳2.1 波動vs擺動；貳2.2 完整動力傳遞鏈"
       cross_ref_ids: []
       correct_concept: >-
@@ -2218,6 +2242,7 @@ errors:
         - certainty: 🟡
           text: "胸部是波動起點，髖部為波動放大器，能量從頭部向下傳遞至踝。"
           source: "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech"
+          source_ids: [src.sanders-1995-c]
       cross_ref: "技術分析 貳2.2 動力傳遞鏈；陸6.1 低頭：波動觸發器"
       cross_ref_ids: []
       correct_concept: >-
@@ -2403,6 +2428,7 @@ errors:
         - certainty: 🟢
           text: 競技選手有效踢幅約為身長的 0.2–0.3 倍，與魚類最優推進比例相符。
           source: Veiga et al. 2022 systematic review
+          source_ids: [src.veiga-2022]
         - certainty: 🟠
           text: "踢腿幅度太大會造成極大阻力，消耗大量能量。踢腿應緊湊有力，膝蓋彎曲程度不需過大。"
           source: Train Daly
@@ -2474,10 +2500,12 @@ errors:
             下踢腳尖速度 / 上踢腳尖速度的比值，與水平游速呈顯著負相關——相對上踢越強的選手，
             水下速度越快。
           source: Atkison et al. 2014
+          source_ids: [src.atkison-2014-a]
           url: https://pubmed.ncbi.nlm.nih.gov/24290609/
         - certainty: 🟢
           text: 上踢本身在高速下也能利用下踢製造的渦流產生推進力。
           source: Arellano 2013; ScienceDaily 2024
+          source_ids: [src.arellano]
         - certainty: 🟠
           text: >-
             快速上踢是提升海豚踢最有效的投資之一——它讓你在推進相待得更久，減少阻力，
@@ -2511,6 +2539,7 @@ errors:
             當選手被要求以超過最大努力的踢頻踢腿時，振幅顯著下降，但游速沒有增加。
             Froude 效率從 0.72 降至 0.70，肌肉共收縮相增加，代謝負擔上升。
           source: Gonjo et al.
+          source_ids: [src.pmid-28605694]
           url: https://pubmed.ncbi.nlm.nih.gov/28605694/
       correct_concept: >-
         不要強迫提高踢頻，而是提高踢腿效率——在同樣頻率下產生更多推進力，或在不犧牲振幅的前提下自然
@@ -2580,6 +2609,7 @@ errors:
             蝶式游泳第二踢的髖屈曲峰值角度，顯著小於踢板海豚踢和水下海豚踢。
             蝶式游泳第二踢的膝蓋伸展峰值角度，也顯著小於其他踢腿類型。
           source: 三維分析研究，ResearchGate 2018
+          source_ids: [src.researchgate-3d-analysis-2018]
       cross_ref: 技術分析 §陸（UDK vs 蝶式踢腿對照表）
       cross_ref_ids: []
       correct_concept: >-
@@ -2610,12 +2640,15 @@ errors:
         - certainty: 🟢
           text: "深度 0.4–0.6 m 可獲得顯著波浪阻力減少；0.6 m 時波浪阻力比水面降低約 20%（2.2 m/s 測量）。"
           source: Lyttle et al. 1998
+          source_ids: [src.lyttle-1998]
         - certainty: 🟢
           text: 深度超過 0.7 m 後，波浪阻力已低於總阻力 5%，趨於穩定。
           source: ScienceDirect 波浪阻力研究
+          source_ids: [src.sciencedirect-wave-drag-study]
         - certainty: 🟢
           text: 深度超過 0.75 m 無額外效益，反而增加上浮耗時。
           source: Novais et al. 2012, Journal of Human Kinetics
+          source_ids: [src.novais-2012-b]
       correct_concept: >-
         實用深度約 0.4–0.6 m，超過 0.75 m 沒有追加效益。推牆後的流線型深度以此範圍為目標，
         不需要特別往深處去。
@@ -2655,6 +2688,7 @@ errors:
             流線型滑行→UDK→出水划手的最優轉換速度模型確認，大多數精英選手的最優轉換速度高於
             其水面游泳速度，支持盡早起踢的邏輯。
           source: Sports Biomechanics 2026
+          source_ids: [src.sports-biomechanics-2026]
       correct_concept: >-
         轉身後，第一下上踢應在離牆後盡快啟動，而非等待滑行。目標是最小化從推牆到第一踢之間的速度損失窗口。
         注意：出發起跳後的水下情境略有不同，入水瞬間需要建立流線型姿勢，有一個短暫的身體整合窗口。
@@ -2683,6 +2717,7 @@ errors:
             在 100m 項目中，較快的選手並非踢得更遠——而是踢得更快。水下距離不是差異的關鍵，
             水下速度才是。
           source: Frontiers in Physiology 2021
+          source_ids: [src.pmc8442910-a]
           url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/
         - certainty: 🟠
           text: >-
@@ -2762,6 +2797,7 @@ errors:
             仰臥下踢的加速度顯著低於俯臥——但整體速度曲線更加平穩，代表仰臥踢腿的效率反而更高
             （維持更恆定的速度）。
           source: SwimSwam / Kinematic Comparison，WKU Digital Commons
+          source_ids: [src.swimswam-wku-kinematic]
       correct_concept: >-
         仰式 UDK 的技術指導應強調「對抗浮力的下踢感」和「速度穩定感」，
         而非套用俯式的「向下爆發感」口令。仰式 UDK 速度維持能力是生物力學上的結構優勢。
@@ -2789,6 +2825,7 @@ errors:
         - certainty: 🟢
           text: 人類 UDK 與海豚踢腿在生物力學上有根本差異，包括擺動方向與脊椎彈性蓄能機制。
           source: Rohr & Fish 2004, dolphin kinematics comparison
+          source_ids: [src.rohr-2004]
         - certainty: 🟠
           text: 有效的 UDK 教學需要具體的技術語言，指向身體的特定部位和感知目標。
           source: USMS, Swimming World Magazine, The Race Club
@@ -2857,6 +2894,7 @@ errors:
             精英選手起跳角度約 21.25–27.45°，非精英選手約 39.62°——精英角度遠低於傳統建議的 30–40°。
             入水的重心水平速度與入水距離是起跑成績的主要預測變數。
           source: "Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start: A Review"
+          source_ids: [src.benjanuvatra-2007-b]
           url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/
       cross_ref: 技術分析 §壹 1.2 推蹬階段：起跳角度數據（精英 21–27°）
       cross_ref_ids: []
@@ -2890,6 +2928,7 @@ errors:
             「後足的水平衝量顯著高於前足；前足的垂直衝量顯著高於後足。」
             慣用腳放前緣時 block 時間更短、2m 和 5m 成績更好。
           source: "Takai et al. 2016; PMC8700779 (2021)"
+          source_ids: [src.takai]
           url: https://pubmed.ncbi.nlm.nih.gov/27149652/
       cross_ref: 技術分析 §壹 1.3 Kick Start 變體：前後腳角色重新分配
       cross_ref_ids: []
@@ -2924,6 +2963,7 @@ errors:
             入水角度本身影響次要，但較平的入水角度與較好的成績相關
             （入水角度每平 1 弧度，成績約進 0.5 秒）。
           source: Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020
+          source_ids: [src.journal-pone-0241345-b]
           url: https://doi.org/10.1371/journal.pone.0241345
       cross_ref: 技術分析 §壹 1.2 入水點：水平速度是主要預測變數
       cross_ref_ids: []
@@ -2955,6 +2995,7 @@ errors:
         - certainty: 🟢
           text: 起跳角度越大，仰式成績越差。
           source: "The Backstroke Swimming Start: State of the Art, PMC4234766; PubMed 23688055"
+          source_ids: [src.pmc4234766-b]
           url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/
       cross_ref: 技術分析 §壹 1.4 仰式起跳
       cross_ref_ids: []
@@ -2987,6 +3028,7 @@ errors:
         - certainty: 🟢
           text: 進牆速度是轉身成績的關鍵變數。
           source: "Biomechanical Factors Influencing Breaststroke Turns, Journal of Applied Biomechanics 1998; PMC8960438"
+          source_ids: [src.pmc8960438-a]
         - certainty: 🟠
           text: >-
             「另一個常見錯誤是靠近牆時彎曲手臂把自己拉過去。正確做法是保持手臂伸直，盡量離牆遠——用伸直的手觸牆。」
@@ -3082,6 +3124,7 @@ errors:
         - certainty: 🟢
           text: 蛙式最優觸牆深度為 30–40 cm。
           source: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438"
+          source_ids: [src.pmc8960438-b]
         - certainty: 🟠
           text: >-
             「拉著自己靠近牆時會讓髖部下沉，就像放錨一樣。髖部下沉讓你很難啟動轉身。
@@ -3123,10 +3166,12 @@ errors:
         - certainty: 🟢
           text: 推蹬力道解釋轉身成績約 42% 的變異。
           source: Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673
+          source_ids: [src.pmc6409673-a]
           url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/
         - certainty: 🟢
           text: 出水速度與推蹬力向量對齊重心方向的相關係數為 r = 0.76（p < 0.001）。
           source: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339"
+          source_ids: [src.pmid-40252339-a]
           url: https://pubmed.ncbi.nlm.nih.gov/40252339/
         - certainty: 🟠
           text: >-
@@ -3227,6 +3272,7 @@ errors:
         - certainty: 🟢
           text: 水下推進速度衰減模型 + 菁英選手出水時機影像分析。
           source: 通用游泳科學共識（Race Club / 多項游泳生物力學研究）
+          source_ids: [src.general-swim-science-consensus]
       correct_concept: >-
         個別化測試最佳出水點——用秒錶與標記比較不同距離出水的 15m 總時間，
         找到個人最快的出水位置。多數選手最佳點在 5-10 公尺；超過 12 公尺通常已是淨損失區。

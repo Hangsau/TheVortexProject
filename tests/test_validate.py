@@ -137,7 +137,7 @@ class FixtureTestBase(unittest.TestCase):
         }
         warnings = {
             "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-            "W006": [], "W007": [],
+            "W006": [], "W007": [], "W008": [], "W009": [],
         }
 
         # E001
@@ -230,14 +230,8 @@ class FixtureTestBase(unittest.TestCase):
                             f"  {rel} {eid!r} {field}={val!r}"
                         )
 
-            # E005
-            source_ids = entry.get("source_ids")
-            if source_ids and isinstance(source_ids, list):
-                for sid in source_ids:
-                    if isinstance(sid, str) and sid not in allowed_source_ids:
-                        errors["E005"].append(
-                            f"  {rel} {eid!r} source_ids={sid!r}"
-                        )
+            # E005 / W002 / W009：由 check_source_blocks() 逐檔遞迴處理
+            # （見下方），這裡不重複一份條目層邏輯
 
             # E006 / W001 / W006：直接呼叫產品程式碼的 cross_ref 契約檢查
             validate_mod.check_cross_ref(
@@ -249,21 +243,23 @@ class FixtureTestBase(unittest.TestCase):
                     rel, eid, pub, "public", all_id_set, errors, warnings
                 )
 
-            # W002
-            cert = entry.get("certainty")
-            if cert in validate_mod.CERTAINTY_NEEDS_SOURCE:
-                if not entry.get("source_ids"):
-                    warnings["W002"].append(f"  {rel} {eid!r} cert no-source")
-            pub2 = entry.get("public", {})
-            if isinstance(pub2, dict):
-                mech = pub2.get("mechanism", {})
-                if isinstance(mech, dict):
-                    cert_pub = mech.get("certainty")
-                    if cert_pub in validate_mod.CERTAINTY_NEEDS_SOURCE:
-                        if not entry.get("source_ids"):
-                            warnings["W002"].append(
-                                f"  {rel} {eid!r} pub.mech.cert no-source"
-                            )
+        # E005 / W002 / W009：直接呼叫產品程式碼的 source 契約檢查
+        # （遞迴走訪整棵樹，不只條目層）
+        referenced_source_ids = set()
+        for path in validate_files:
+            try:
+                data = validate_mod.load_yaml(path)
+            except Exception:
+                continue
+            rel = str(path.relative_to(self.root))
+            referenced_source_ids |= validate_mod.check_source_blocks(
+                rel, data, allowed_source_ids, errors, warnings
+            )
+
+        # W008：直接呼叫產品程式碼的孤兒來源檢查
+        validate_mod.check_orphan_sources(
+            allowed_source_ids, referenced_source_ids, warnings
+        )
 
         # W003
         for rel, entry in all_entries:
@@ -404,9 +400,15 @@ class TestE004TaxonomyViolation(FixtureTestBase):
 
 
 class TestW002CertaintyNoSource(FixtureTestBase):
-    """W002：certainty green/yellow 但無 source_ids。"""
+    """W002 / W009：certainty green/yellow 但無 source_ids 的兩種型態。
 
-    def test_green_no_source_triggers_w002(self):
+    S3a 把舊 W002 拆成兩碼，因為兩者的修法完全不同：
+      W002  已經有 source/sources 顯示字串 → 只差登錄成來源條目再補機器鍵
+      W009  連顯示字串都沒有             → 得回頭找主張依據（S3b），
+                                            不能靠遷移或佔位來源解決
+    """
+
+    def test_green_no_source_info_triggers_w009_not_w002(self):
         self._write_yaml(
             self.canonical_dir / "entries.yaml",
             {
@@ -421,9 +423,16 @@ class TestW002CertaintyNoSource(FixtureTestBase):
             },
         )
         _, warnings, _ = self._run()
-        self.assertGreater(len(warnings["W002"]), 0, "green certainty 無 source_ids 應觸發 W002")
+        self.assertGreater(
+            len(warnings["W009"]), 0,
+            "green 且完全無來源資訊應觸發 W009",
+        )
+        self.assertEqual(
+            len(warnings["W002"]), 0,
+            "沒有 source 顯示字串就不是 W002（不可用 W002 混稱）",
+        )
 
-    def test_yellow_no_source_triggers_w002(self):
+    def test_yellow_no_source_info_triggers_w009_not_w002(self):
         self._write_yaml(
             self.canonical_dir / "entries.yaml",
             {
@@ -438,7 +447,144 @@ class TestW002CertaintyNoSource(FixtureTestBase):
             },
         )
         _, warnings, _ = self._run()
-        self.assertGreater(len(warnings["W002"]), 0, "yellow certainty 無 source_ids 應觸發 W002")
+        self.assertGreater(len(warnings["W009"]), 0, "yellow 無來源資訊應觸發 W009")
+        self.assertEqual(len(warnings["W002"]), 0)
+
+    def test_green_with_source_string_triggers_w002_not_w009(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-src",
+                        "certainty": "\U0001F7E2",
+                        "source": "Nicol et al. 2022",
+                        "category": "kick",
+                        "stroke": "free",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W002"]), 0,
+            "有 source 顯示字串但缺 source_ids 應觸發 W002",
+        )
+        self.assertEqual(
+            len(warnings["W009"]), 0,
+            "有 source 顯示字串就不算「完全無來源資訊」",
+        )
+        self.assertIn("source 顯示字串", warnings["W002"][0])
+
+    def test_sources_plural_list_triggers_w002_not_w009(self):
+        # health/injuries、psychology 用的是 sources（複數清單）
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-srcs",
+                        "certainty": "\U0001F7E1",
+                        "sources": ["Masters shoulder ultrasound, PMC7824457"],
+                        "category": "kick",
+                        "stroke": "free",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertGreater(len(warnings["W002"]), 0)
+        self.assertEqual(len(warnings["W009"]), 0)
+
+    def test_empty_source_string_counts_as_no_source_info(self):
+        # source: '' 是「有欄位但沒內容」，不算來源資訊 → W009 不是 W002
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-empty-src",
+                        "certainty": "\U0001F7E2",
+                        "source": "   ",
+                        "category": "kick",
+                        "stroke": "free",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W002"]), 0)
+        self.assertGreater(len(warnings["W009"]), 0)
+
+    def test_nested_evidence_block_is_scanned(self):
+        # S3a 修正重點：certainty 掛在巢狀 evidence[] 上也要被掃到
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-nested",
+                        "category": "kick",
+                        "stroke": "free",
+                        "public": {
+                            "evidence": [
+                                {
+                                    "certainty": "\U0001F7E2",
+                                    "text": "巢狀證據",
+                                    "source": "Gonjo & Olstad 2023",
+                                },
+                                {
+                                    "certainty": "\U0001F7E2",
+                                    "text": "沒有來源的巢狀證據",
+                                },
+                            ]
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W002"]), 1,
+            "巢狀 evidence[] 的 certainty 必須被遞迴掃到（舊版只看條目頂層）",
+        )
+        self.assertEqual(len(warnings["W009"]), 1)
+        self.assertIn("public.evidence[0]", warnings["W002"][0])
+        self.assertIn("entry-nested", warnings["W009"][0])
+
+    def test_nested_block_with_source_ids_no_warning(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.test-2000", "type": "other",
+                           "verification_status": "unverified",
+                           "display": "Test 2000"}]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-nested-ok",
+                        "category": "kick",
+                        "stroke": "free",
+                        "public": {
+                            "evidence": [
+                                {
+                                    "certainty": "\U0001F7E2",
+                                    "text": "有機器鍵",
+                                    "source": "Test 2000",
+                                    "source_ids": ["src.test-2000"],
+                                }
+                            ]
+                        },
+                    }
+                ]
+            },
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W002"]), 0)
+        self.assertEqual(len(warnings["W009"]), 0)
+        self.assertEqual(len(errors["E005"]), 0)
 
     def test_orange_no_source_no_w002(self):
         # orange（教練觀測）不需要 source_ids
@@ -457,6 +603,7 @@ class TestW002CertaintyNoSource(FixtureTestBase):
         )
         _, warnings, _ = self._run()
         self.assertEqual(len(warnings["W002"]), 0, "orange certainty 不應觸發 W002")
+        self.assertEqual(len(warnings["W009"]), 0, "orange certainty 不應觸發 W009")
 
     def test_green_with_source_no_w002(self):
         # green + source_ids → 正常，不觸發 W002
@@ -483,6 +630,248 @@ class TestW002CertaintyNoSource(FixtureTestBase):
         )
         _, warnings, _ = self._run()
         self.assertEqual(len(warnings["W002"]), 0, "green + source_ids 不應觸發 W002")
+        self.assertEqual(len(warnings["W009"]), 0, "green + source_ids 不應觸發 W009")
+
+
+class TestE005SourceIdsResolution(FixtureTestBase):
+    """E005：source_ids 指向 _sources.yaml 不存在的 ID（任意深度）。
+
+    S3a 前 E005 只掃條目頂層；201 筆機器鍵全在巢狀 evidence[] 上，
+    等於對實際資料零覆蓋。這裡兩層都測。
+    """
+
+    def _sources_fixture(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.nicol-2022", "type": "other",
+                           "verification_status": "unverified",
+                           "display": "Nicol et al. 2022"}]),
+        )
+
+    def test_dangling_source_id_at_entry_level_triggers_e005(self):
+        self._sources_fixture()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-a",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source": "Nicol et al. 2022",
+                        "source_ids": ["src.does-not-exist"],
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 1)
+        self.assertIn("src.does-not-exist", errors["E005"][0])
+
+    def test_dangling_source_id_in_nested_block_triggers_e005(self):
+        self._sources_fixture()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-b",
+                        "category": "kick",
+                        "stroke": "free",
+                        "public": {
+                            "evidence": [
+                                {
+                                    "certainty": "\U0001F7E2",
+                                    "source": "Nicol et al. 2022",
+                                    "source_ids": ["src.ghost-1999"],
+                                }
+                            ]
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E005"]), 1,
+            "巢狀區塊的 source_ids 斷鏈必須被抓到",
+        )
+        self.assertIn("src.ghost-1999", errors["E005"][0])
+        self.assertIn("public.evidence[0]", errors["E005"][0])
+
+    def test_resolvable_source_id_no_e005(self):
+        self._sources_fixture()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-c",
+                        "category": "kick",
+                        "stroke": "free",
+                        "public": {
+                            "evidence": [
+                                {
+                                    "certainty": "\U0001F7E2",
+                                    "source": "Nicol et al. 2022",
+                                    "source_ids": ["src.nicol-2022"],
+                                }
+                            ]
+                        },
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 0)
+
+    def test_non_list_source_ids_triggers_e005(self):
+        self._sources_fixture()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-d",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source_ids": "src.nicol-2022",  # 應為 list
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 1)
+        self.assertIn("型別應為 list", errors["E005"][0])
+
+    def test_non_string_element_triggers_e005(self):
+        self._sources_fixture()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-e",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source_ids": ["src.nicol-2022", 123],
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 1)
+        self.assertIn("非字串元素", errors["E005"][0])
+
+    def test_empty_source_ids_list_no_e005(self):
+        # [] = 已檢查、確認無來源可連（與欄位缺席不同義）
+        self._sources_fixture()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-f",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source_ids": [],
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 0)
+
+
+class TestW008OrphanSources(FixtureTestBase):
+    """W008：_sources.yaml 有登錄但沒有任何條目引用。"""
+
+    def test_unreferenced_source_triggers_w008(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([
+                {"id": "src.used-2020", "type": "other",
+                 "verification_status": "unverified", "display": "Used 2020"},
+                {"id": "src.orphan-1999", "type": "other",
+                 "verification_status": "unverified", "display": "Orphan 1999"},
+            ]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-w008",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source": "Used 2020",
+                        "source_ids": ["src.used-2020"],
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W008"]), 1)
+        self.assertIn("src.orphan-1999", warnings["W008"][0])
+
+    def test_all_sources_referenced_no_w008(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([
+                {"id": "src.used-2020", "type": "other",
+                 "verification_status": "unverified", "display": "Used 2020"},
+            ]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-w008-ok",
+                        "category": "kick",
+                        "stroke": "free",
+                        "public": {
+                            "evidence": [
+                                {
+                                    "certainty": "\U0001F7E1",
+                                    "source": "Used 2020",
+                                    "source_ids": ["src.used-2020"],
+                                }
+                            ]
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W008"]), 0)
+
+    def test_dangling_reference_does_not_suppress_w008(self):
+        # 引用了不存在的 ID（E005），已登錄的來源仍是孤兒（W008），兩碼各報各的
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([
+                {"id": "src.real-2020", "type": "other",
+                 "verification_status": "unverified", "display": "Real 2020"},
+            ]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-w008-dangling",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source_ids": ["src.typo-2020"],
+                    }
+                ]
+            },
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 1)
+        self.assertEqual(len(warnings["W008"]), 1)
+        self.assertIn("src.real-2020", warnings["W008"][0])
 
 
 class TestCleanDataNoFalsePositive(FixtureTestBase):

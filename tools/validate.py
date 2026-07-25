@@ -24,11 +24,13 @@ exit code：
   E003  links.* 指向不存在的 ID（canonical 全集 + Drills）
   E004  category/stroke/certainty/status 出現不在 _taxonomy.yaml 的值
   E005  source_ids 指向不存在的 _sources.yaml ID
+        （任意深度的區塊，不限條目頂層）
   E006  cross_ref_ids 內含無法解析的 ID（canonical 全集 + Drills）
   E007  links.*_link_ids 內含無法解析的 ID（canonical 全集 + Drills）
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
-  W002  certainty 為 green 或 yellow 但沒有 source_ids（S3 待辦）
+  W002  certainty 為 green/yellow 且**有**來源顯示資訊（source 字串或
+        sources 清單），但同一區塊沒有 source_ids（機器鍵沒跟上顯示層）
   W003  孤兒條目：沒有任何 links 指入、自己也沒指出
   W004  links.*_link 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         對應的 links.*_link_ids（ids 與顯示字串脫節）
@@ -36,6 +38,9 @@ exit code：
   W006  cross_ref 有值但完全沒有 cross_ref_ids 欄位（連空陣列都沒有）
   W007  links.*_link 有非空字串但完全沒有對應的 *_link_ids 欄位
         （連空陣列都沒有）
+  W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用
+  W009  certainty 為 green/yellow 且**完全沒有**任何來源資訊
+        （既無 source/sources 顯示字串，也無 source_ids）→ S3b 範圍
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -61,6 +66,18 @@ exit code：
                    L0/L4–L6 這類敘述）；欄位缺席 = 尚未處理（W007）。
     真相來源是 canonical/health/drafts/*.yaml，改完要重跑
     tools/build_injuries.py；**不可直接改 canonical/health/injuries.yaml**。
+
+  source / source_ids 分工（S3a，與 cross_ref 同一模式）：
+    source         顯示層自由文字，下游 my-site 的 vortex-*.html 直接當純字串
+                   渲染，**不可改寫或改成陣列**。
+    source_ids     機器鍵（list of string），指向 canonical/_sources.yaml 的
+                   src.<slug>。**與 certainty / source 放在同一個區塊**
+                   （證據 block 上，不是掛在條目頂層），機器鍵才不會跨層對錯。
+    certainty 掃描範圍（S3a 修正）：舊版只看 entry.certainty 與
+    entry.public.mechanism.certainty（覆蓋 88 個區塊），實際上 934 個帶
+    certainty 的區塊散落在 evidence / references / phenomenon / epidemiology
+    等任意深度。現改為遞迴掃描任何含 certainty 的 dict，W002/W009 數字因此
+    大幅上升——那是原本就存在、只是沒被看見的債。
 """
 from __future__ import annotations
 
@@ -175,6 +192,46 @@ def iter_entries(data: object):
     elif isinstance(data, list):
         for item in data:
             yield from iter_entries(item)
+
+
+def iter_blocks(data: object, path: str = "", nearest_id: str = "(no id)"):
+    """遞迴走訪 YAML 樹，yield (dot_path, nearest_entry_id, dict)。
+
+    與 iter_entries() 的差別：iter_entries 只給「有 id 的 dict」（條目層），
+    本函式給**每一個 dict**，並附帶它在檔案內的路徑與最近一層祖先條目的 id。
+    certainty / source / source_ids 這類欄位可以出現在任意深度（evidence[]、
+    references[]、public.mechanism、public.phenomenon…），只掃條目層會漏掉
+    絕大多數區塊，所以 E005 / W002 / W009 都走這一份走訪。
+    """
+    if isinstance(data, dict):
+        if isinstance(data.get("id"), str):
+            nearest_id = data["id"]
+        yield (path or "(root)", nearest_id, data)
+        for k, v in data.items():
+            child = f"{path}.{k}" if path else str(k)
+            yield from iter_blocks(v, child, nearest_id)
+    elif isinstance(data, list):
+        for i, item in enumerate(data):
+            yield from iter_blocks(item, f"{path}[{i}]", nearest_id)
+
+
+def has_display_source(block: dict) -> bool:
+    """區塊上是否有「來源顯示資訊」。
+
+    兩種既有寫法都算：
+      source   單數字串（instructional / technica）
+      sources  複數字串清單（health/injuries、psychology）
+    有顯示資訊但缺機器鍵 → W002；兩者皆無 → W009（需要補來源，不是補鍵）。
+    """
+    src = block.get("source")
+    if isinstance(src, str) and src.strip():
+        return True
+    srcs = block.get("sources")
+    if isinstance(srcs, list) and any(
+        isinstance(s, str) and s.strip() for s in srcs
+    ):
+        return True
+    return False
 
 
 def collect_all_ids_from_files(files) -> dict[str, list[str]]:
@@ -424,6 +481,82 @@ def check_link_ids(
             )
 
 
+# ── source 契約檢查（E005 / W002 / W009）──────────────────────────────────────
+
+def check_source_blocks(
+    rel: str,
+    data: object,
+    allowed_source_ids: set,
+    errors: dict,
+    warnings: dict,
+) -> set[str]:
+    """遞迴檢查單一檔案內所有區塊的 source 契約，回傳被引用到的 source_id。
+
+    E005  source_ids 型別錯、含非字串元素、或指向 _sources.yaml 沒有的 ID
+    W002  certainty green/yellow + 有 source/sources 顯示字串 + 缺 source_ids
+    W009  certainty green/yellow + 完全沒有來源資訊
+
+    走 iter_blocks()（任意深度），不是只看條目頂層——certainty 與 source 大多
+    掛在 evidence[] / references[] / public.mechanism 這類巢狀區塊上。
+    回傳值供呼叫端做 W008（孤兒來源）比對。
+    """
+    referenced: set[str] = set()
+    for loc, eid, block in iter_blocks(data):
+        raw_ids = block.get("source_ids")
+        if "source_ids" in block:
+            if isinstance(raw_ids, list):
+                for sid in raw_ids:
+                    if isinstance(sid, str) and sid.strip():
+                        referenced.add(sid)
+                        if sid not in allowed_source_ids:
+                            errors["E005"].append(
+                                f"  file={rel} id={eid!r} at={loc} "
+                                f"source_ids 包含不存在的 {sid!r}"
+                            )
+                    else:
+                        errors["E005"].append(
+                            f"  file={rel} id={eid!r} at={loc} "
+                            f"source_ids 含非字串元素 {sid!r}"
+                        )
+            elif raw_ids is not None:
+                errors["E005"].append(
+                    f"  file={rel} id={eid!r} at={loc} source_ids "
+                    f"型別應為 list，實際為 {type(raw_ids).__name__}"
+                )
+
+        cert = block.get("certainty")
+        if cert not in CERTAINTY_NEEDS_SOURCE:
+            continue
+        if raw_ids:
+            continue
+        cert_label = "green" if cert == "\U0001F7E2" else "yellow"
+        if has_display_source(block):
+            field = "source" if block.get("source") else "sources"
+            warnings["W002"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"certainty={cert_label} 有 {field} 顯示字串但無 source_ids"
+            )
+        else:
+            warnings["W009"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"certainty={cert_label} 完全無來源資訊"
+                f"（無 source/sources，也無 source_ids）"
+            )
+    return referenced
+
+
+def check_orphan_sources(
+    allowed_source_ids: set,
+    referenced_source_ids: set,
+    warnings: dict,
+):
+    """W008：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用。"""
+    for sid in sorted(allowed_source_ids - referenced_source_ids):
+        warnings["W008"].append(
+            f"  source_id={sid!r} 已登錄於 _sources.yaml 但無任何條目引用"
+        )
+
+
 # ── E001 輔助：在已知條目陣列鍵中偵測缺 id ────────────────────────────────────
 
 def find_missing_id_in_lists(data: object, rel: str, result: list):
@@ -498,7 +631,7 @@ def run_validation():
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-        "W006": [], "W007": []
+        "W006": [], "W007": [], "W008": [], "W009": []
     }
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -602,15 +735,9 @@ def run_validation():
                         f"  file={rel} id={eid!r} {field}={val!r}"
                     )
 
-        # ── E005: source_ids 指向不存在的 ID ──
-        source_ids = entry.get("source_ids")
-        if source_ids and isinstance(source_ids, list):
-            for sid in source_ids:
-                if isinstance(sid, str) and sid not in allowed_source_ids:
-                    errors["E005"].append(
-                        f"  file={rel} id={eid!r} source_ids "
-                        f"包含不存在的 {sid!r}"
-                    )
+        # ── E005: source_ids 斷鏈 ──
+        # 已移到下方「逐區塊檢查」的遞迴走訪（source_ids 可出現在任意深度，
+        # 只掃條目頂層會漏掉 evidence[] 上的 201 筆機器鍵）。
 
         # ── E006 / W001 / W006: cross_ref 契約（entry 頂層與 public 層）──
         check_cross_ref(rel, eid, entry, "entry", all_id_set, errors, warnings)
@@ -620,32 +747,22 @@ def run_validation():
                 rel, eid, pub, "public", all_id_set, errors, warnings
             )
 
-        # ── W002: certainty green/yellow 無 source_ids ──
-        # 直接在 entry 層
-        cert = entry.get("certainty")
-        if cert in CERTAINTY_NEEDS_SOURCE:
-            if not entry.get("source_ids"):
-                cert_label = "green" if cert == "\U0001F7E2" else "yellow"
-                warnings["W002"].append(
-                    f"  file={rel} id={eid!r} "
-                    f"certainty={cert_label} 無 source_ids"
-                )
-        # 在 public.mechanism.certainty 層
-        pub = entry.get("public", {})
-        if isinstance(pub, dict):
-            mech = pub.get("mechanism", {})
-            if isinstance(mech, dict):
-                cert_pub = mech.get("certainty")
-                if cert_pub in CERTAINTY_NEEDS_SOURCE:
-                    if not entry.get("source_ids"):
-                        cert_label = (
-                            "green" if cert_pub == "\U0001F7E2" else "yellow"
-                        )
-                        warnings["W002"].append(
-                            f"  file={rel} id={eid!r} "
-                            f"public.mechanism.certainty={cert_label} "
-                            f"無 source_ids"
-                        )
+    # ── 逐區塊檢查（E005 / W002 / W009）：遞迴走訪任意深度 ──
+    # certainty 與 source/source_ids 多數不在條目頂層，而在 evidence[]、
+    # references[]、public.mechanism 這類巢狀區塊上；per-entry 迴圈看不到。
+    referenced_source_ids: set[str] = set()
+    for path in validate_files:
+        try:
+            data = load_yaml(path)
+        except Exception:
+            continue
+        rel = str(path.relative_to(ROOT))
+        referenced_source_ids |= check_source_blocks(
+            rel, data, allowed_source_ids, errors, warnings
+        )
+
+    # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
+    check_orphan_sources(allowed_source_ids, referenced_source_ids, warnings)
 
     # ── W003: 孤兒條目 ──
     for rel, entry in all_entries:
@@ -747,7 +864,8 @@ def _write_report(
         ),
         "W002": (
             "WARN",
-            "`certainty` 為 green 或 yellow 但沒有 `source_ids`（S3 待辦）",
+            "`certainty` green/yellow 且**有**來源顯示字串（`source`/`sources`）"
+            "但同區塊缺 `source_ids`（機器鍵沒跟上顯示層）",
         ),
         "W003": (
             "WARN",
@@ -769,9 +887,19 @@ def _write_report(
             "WARN",
             "`links.*_link` 有值但缺 `*_link_ids` 欄位（未處理；`[]` 才是「已檢查、無 ID 可連」）",
         ),
+        "W008": (
+            "WARN",
+            "孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用",
+        ),
+        "W009": (
+            "WARN",
+            "`certainty` green/yellow 且**完全沒有**來源資訊"
+            "（無 `source`/`sources`，也無 `source_ids`）→ 需補來源，S3b 範圍",
+        ),
     }
 
     w004_header_written = False
+    w002_header_written = False
 
     for code, (tag, desc) in code_meta.items():
         items = errors.get(code, warnings.get(code, []))
@@ -779,6 +907,21 @@ def _write_report(
         lines.append("")
         lines.append(f"**{tag}，共 {len(items)} 筆**")
         lines.append("")
+
+        # W002 區塊開頭附說明
+        if code == "W002" and not w002_header_written:
+            w002_header_written = True
+            lines.append(
+                "> **契約說明（S3a）**：`source` 是顯示層自由文字（下游 my-site 當純"
+                "字串渲染，不可改寫或改成陣列）；可解析的來源鍵放同區塊的 "
+                "`source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。"
+                "W002 與 W009 都是「🟢/🟡 但沒有 `source_ids`」，差別在**有沒有來源"
+                "顯示資訊**：W002 已經有 `source`/`sources` 字串，只差把它登錄成"
+                "來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出"
+                "主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用"
+                "佔位來源填掉 W009。"
+            )
+            lines.append("")
 
         # W004 區塊開頭附說明
         if code == "W004" and not w004_header_written:
@@ -795,9 +938,12 @@ def _write_report(
             lines.append("")
 
         if items:
-            # W001/W002/W003/W004/W005 總數是後續工作量依據，完整列出
+            # WARN 類總數是後續工作量依據，列到 400 筆（W009 是 S3b 全量清單）
             max_show = (
-                200 if code in ("W001", "W002", "W004", "W005", "W006", "W007")
+                400 if code in (
+                    "W001", "W002", "W004", "W005", "W006", "W007",
+                    "W008", "W009",
+                )
                 else len(items)
             )
             for item in items[:max_show]:

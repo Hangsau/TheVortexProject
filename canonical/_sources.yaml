@@ -1,67 +1,1288 @@
-schema_version: 1
+schema_version: 2
 domain: _meta
-description: >
+description: >-
   Vortex canonical 來源註冊表。
-  S1 只定契約與空清單；S3 執行實際 164 筆來源遷移。
+  S3a 已完成第一批遷移：把帶 🟢／🟡 確定性標記且有 source 顯示字串的區塊，
+  逐字登錄成來源條目並由條目端以 source_ids 指入。
   來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
-generated_date: "2026-07-25"
+generated_date: "2026-07-26"
 
-# ── 欄位契約（S3 執行者必讀）────────────────────────────────────────────────
+# ── 欄位契約（v2；S3a 修訂）─────────────────────────────────────────────────
 #
-# 每筆來源必須包含以下欄位：
+# 【為什麼 v1 契約要改】
+# v1 把 title / authors / year / identifier / retrieved_on 全列為「必填」，
+# 並要求 identifier 至少有一個可重取識別（doi/pmid/pmcid/isbn/url）。
+# 但 S3a 實際遷移的 138 筆顯示字串，多數只有「作者＋年份」（如 Nicol et al. 2022），
+# 有些連作者都沒有（如 PMC6409673、PLOS ONE 2020），甚至根本不是文獻
+# （如「通用游泳醫學共識」）。照 v1 契約走，唯一能「填滿」的方法就是去猜 DOI、
+# 猜期刊、猜完整標題——這正是專案與 knowledge-hub 規則明文禁止的捏造。
 #
-#   id          string  必填  格式 src.<slug>；全域唯一；slug 建議用
-#                             第一作者姓 + 年份（如 src.sein-2010）
+# 因此 v2 改成「條件必填」：無條件必填的只有那些「不查證也能確定為真」的欄位；
+# 其餘欄位只有在 verification_status: verified（真的查證過）時才必填。
+# 寧可讓資料看起來不完整，也不讓它看起來完整但其實是編的。
 #
-#   type        string  必填  值域（封閉清單）：
-#                               journal-article   期刊論文
-#                               review            系統性回顧/統合分析
-#                               book              書籍整本
-#                               book-chapter      書籍章節
-#                               guideline         官方指引/臨床指南
-#                               org-page          組織/機構官方網頁
-#                               dataset           資料集
-#                               video             影片/線上課程
-#                               other             不屬於以上任何類型
+# 【無條件必填】
 #
-#   title       string  必填  完整標題（英文優先，可附中文）
+#   id            string  格式 src.<slug>；全域唯一
 #
-#   authors     list    必填  作者清單（姓名字串），最少一筆；
-#                             組織作者（如 FINA/WHO）用組織名稱字串
+#   display       string  來源在 canonical 條目中的原始顯示字串，**逐字保留**。
+#                         這是溯源錨點：S3c 查證時要靠它對回原文位置。
+#                         條目端的 source 欄位不得為了對齊本欄而改寫。
 #
-#   year        int     必填  發表年份（西元年）
+#   type          string  值域（封閉清單）：
+#                           journal-article / review / book / book-chapter /
+#                           guideline / org-page / dataset / video / other
+#                         S3a 判型規則（保守）：只有顯示字串**明講**才標非 other——
+#                           book   字串點名書（Maglischo《Swimming Fastest》）
+#                           review 字串寫明 systematic review
+#                         其餘一律 other。**不得**因為看到期刊名或 PMID 就推定
+#                         journal-article；那是猜測不是轉錄。
 #
-#   container   string  選填  期刊名 / 書名 / 會議名 / 機構名；
-#                             type=journal-article 或 review 時強烈建議填入
+#   verification_status  string  值域（封閉清單，只有兩個值）：
+#                           verified    識別碼已實際 dereference 並確認
+#                                       與本筆的作者／年份／標題相符
+#                           unverified  尚未查證，或字串資訊不足以查證
+#                         注意：本欄講的是「來源查驗狀態」，與條目上的確定性
+#                         標記（🟢🟡🟠🔴🔵）是兩回事，不可互相代替。
 #
-#   identifier  mapping 必填  至少提供一個可重取的識別，可含以下鍵：
-#                               doi    DOI 字串（不含 https://doi.org/ 前綴）
-#                               pmid   PubMed ID（整數或字串皆可）
-#                               pmcid  PubMed Central ID
-#                               isbn   ISBN-13 或 ISBN-10
-#                               url    可存取的永久 URL（doi.org / 出版社 / 機構官方）
-#                             注意：顯示名稱、縮寫或「文獻/教練觀測」等級不算識別
+# 【verification_status: verified 時必填；unverified 時可省略或留 null】
 #
-#   retrieved_on  string 必填  查驗日，格式 YYYY-MM-DD
+#   title         string  完整標題。不確定就**不要填**，不要用摘要或自造描述充數。
 #
-#   notes       string  選填  補充說明（版本、章節、頁碼、存取限制等）
+#   authors       list    作者姓名字串清單；組織作者用組織名稱。
+#                         只填顯示字串裡真的出現的姓氏，不展開 et al.
+#                         （見下方 et_al 欄）。
+#
+#   year          int     發表年份（西元年）。顯示字串給不出單一明確年份時留空。
+#
+#   identifier    mapping 可重取識別，可含 doi / pmid / pmcid / isbn / url。
+#                         verified 時至少要有一個。
+#                         unverified 時可為空 mapping {} 或整個省略。
+#                         顯示名稱、期刊縮寫、「文獻／教練觀測」等級都不算識別。
+#
+#   retrieved_on  string  查驗日 YYYY-MM-DD。**只有真的查過才填**。
+#                         unverified 一律不填——沒查過就沒有查驗日。
+#
+# 【選填】
+#
+#   container     string  期刊名／書名／機構名。S3a 一律不填：從顯示字串推期刊名
+#                         風險過高，留給 S3c 查證時一併補。
+#
+#   et_al         bool    顯示字串以 et al. 略記，代表 authors 蓄意不完整。
+#                         用布林欄位標記，而不是把字面 "et al." 塞進 authors——
+#                         那會讓它看起來像一個人名。
+#
+#   notes         string  補充說明：疑似重複、複合字串、無法定位、待辦事項等。
+#
+# ── ID 命名與消歧規則（S3a 定案）──────────────────────────────────────────
+#
+# slug 依序取第一個可用者：
+#   1. 第一作者姓 + 年份        → src.nicol-2022、src.maglischo-2003
+#   2. 無作者但有 PMCID         → src.pmc6409673
+#   3. 無作者但有 PMID          → src.pmid-24984154
+#   4. 無作者但有 DOI           → 取 DOI 末段  src.journal-pone-0241345
+#   5. 以上皆無                 → 由顯示字串轉寫的描述性 slug
+#
+# 【消歧：碰撞時加 -a / -b / -c，且刻意不合併】
+# 同姓同年（或同識別碼）會碰撞，例如：
+#   "Staunton et al. 2025" 與 "Staunton, Ruiz-Navarro & Born 2025"
+# 這兩個字串**有可能是同一篇，也可能是不同篇**——在沒有 DOI 的情況下無法確定。
+# 規則是：碰撞者各給獨立 ID（依 display 字串排序加 -a/-b/-c 後綴），
+# 並在 notes 互相標注「疑似同一文獻，待 S3c 查證後合併」。
+#
+# **寧可留下可合併的重複，不可誤併成一筆。**
+# 誤併會把兩篇不同文獻的主張混在同一個 source_id 底下，事後從資料上看不出來；
+# 重複則只是暫時多幾筆，S3c 查到 DOI 後合併是安全的單向操作。
 #
 # ── 使用方式 ────────────────────────────────────────────────────────────────
 #
-# canonical 條目引用來源：
-#   source_ids:
-#     - src.sein-2010
-#     - src.yanai-2004
+# canonical 條目引用來源（source 顯示字串保留，source_ids 是機器鍵）：
+#   - certainty: 🟢
+#     text: ...
+#     source: Nicol et al. 2022          # 顯示層，逐字不動
+#     source_ids: [src.nicol-2022-c]     # 機器鍵
 #
-# 驗證器（tools/validate.py E005）會確認 source_ids 每個值
-# 都對應本檔某個 id；不存在的 ID 視為 ERROR。
+# 驗證器（tools/validate.py）：
+#   E005  source_ids 指向本檔不存在的 ID          → ERROR
+#   W002  🟢/🟡 區塊缺 source_ids                 → WARN（分 a/b 兩型）
+#   W008  本檔登錄但無任何條目引用的孤兒來源       → WARN
 #
-# ── 健康 drafts 的既有 references 欄位 ──────────────────────────────────────
+# ── S3a 已知限制（交給 S3c）──────────────────────────────────────────────
 #
-# health/drafts/*.yaml 目前用自由文字 references（citation 字串）而非 source_ids。
-# S3 任務：將這些 citation 遷移至本檔並補完 identifier，
-# 遷移完成後 drafts 條目改用 source_ids 欄位指向本表。
+# 1. 138 筆全部是 unverified。S3a 沒有做任何外部查證。
+# 2. 其中 40 筆的 identifier 是從顯示字串或同層 url 欄位**逐字轉錄**而來
+#    （PMID / PMCID / DOI / URL），沒有 dereference 確認，所以仍是 unverified。
+#    S3c 只要把這 40 筆的識別碼查一遍，就能直接翻成 verified。
+# 3. 20 筆是複合字串（一個字串裡有多筆文獻），待拆分。
+# 4. 5 筆根本不是文獻引用（通則／共識敘述），須判定改標確定性或補來源。
+# 5. 34 筆無識別碼且缺作者或年份，不足以唯一定位。
 #
-# ── 空清單 ──────────────────────────────────────────────────────────────────
+# ── 其他來源型欄位（不在 S3a 範圍）─────────────────────────────────────────
+#
+# health/injuries.yaml 與 psychology.yaml 用的是 sources（複數，list of string），
+# periodization/*.yaml 的 source 字串多帶 DOI/PMID 但所在區塊沒有 certainty 欄位。
+# 這些都不在 S3a（🟢/🟡 且有 source 單數字串）的範圍內，另案處理。
 
-sources: []
+sources:
+
+  - id: src.arellano
+    display: "Arellano 2013; ScienceDaily 2024"
+    type: other
+    verification_status: unverified
+    authors: ["Arellano"]
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.atkison-2014-a
+    display: "Atkison et al. 2014"
+    type: other
+    verification_status: unverified
+    authors: ["Atkison"]
+    et_al: true
+    year: 2014
+    identifier:
+      pmid: "24290609"
+      url: "https://pubmed.ncbi.nlm.nih.gov/24290609/"
+    notes: "疑似與 src.atkison-2014-b、src.atkison-2014-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-b、src.atkison-2014-c 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.atkison-2014-b
+    display: "Atkison et al. 2014, PubMed 24290609"
+    type: other
+    verification_status: unverified
+    authors: ["Atkison"]
+    et_al: true
+    year: 2014
+    identifier:
+      pmid: "24290609"
+    notes: "疑似與 src.atkison-2014-a、src.atkison-2014-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-a、src.atkison-2014-c 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.atkison-2014-c
+    display: "Atkison et al. 2014, PubMed 24290609; ScienceDirect"
+    type: other
+    verification_status: unverified
+    authors: ["Atkison"]
+    et_al: true
+    year: 2014
+    identifier:
+      pmid: "24290609"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.atkison-2014-a、src.atkison-2014-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-a、src.atkison-2014-b 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.benjanuvatra-2007-a
+    display: "Benjanuvatra et al. 2007"
+    type: other
+    verification_status: unverified
+    authors: ["Benjanuvatra"]
+    et_al: true
+    year: 2007
+    identifier:
+      pmcid: "PMC3990873"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
+    notes: "疑似與 src.benjanuvatra-2007-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.benjanuvatra-2007-b 共用 pmcid PMC3990873，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.benjanuvatra-2007-b
+    display: "Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start: A Review"
+    type: other
+    verification_status: unverified
+    authors: ["Benjanuvatra"]
+    et_al: true
+    year: 2007
+    identifier:
+      pmcid: "PMC3990873"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.benjanuvatra-2007-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.benjanuvatra-2007-a 共用 pmcid PMC3990873，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.blanksby-2002
+    display: "Blanksby et al. 2002"
+    type: other
+    verification_status: unverified
+    authors: ["Blanksby"]
+    et_al: true
+    year: 2002
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.colman-1998-a
+    display: "Colman 1998"
+    type: other
+    verification_status: unverified
+    authors: ["Colman"]
+    year: 1998
+    notes: "疑似與 src.colman-1998-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.colman-1998-b
+    display: "Colman et al. 1998"
+    type: other
+    verification_status: unverified
+    authors: ["Colman"]
+    et_al: true
+    year: 1998
+    notes: "疑似與 src.colman-1998-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.elite-japanese-swimmer-4month
+    display: "Elite Japanese swimmer study, 4-month intervention"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.fernandes-2024
+    display: "Fernandes et al. 2024"
+    type: other
+    verification_status: unverified
+    authors: ["Fernandes"]
+    et_al: true
+    year: 2024
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.fina-sw64-usas-usms
+    display: "FINA/World Aquatics SW 6.4; USA Swimming; USMS"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.french-cfd-simulation-undated
+    display: "法國研究者 CFD 模擬（年份未指定）"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.frontiers-2021
+    display: "Frontiers 2021"
+    type: other
+    verification_status: unverified
+    year: 2021
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.general-swim-medicine-consensus
+    display: "通用游泳醫學共識"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.general-swim-science-consensus
+    display: "通用游泳科學共識（Race Club / 多項游泳生物力學研究）"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.gonjo
+    display: "Gonjo et al. 2020；Maglischo 2003 修正"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.gonjo-2016
+    display: "Gonjo et al. 2016"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2016
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2017
+    display: "Gonjo et al. 2017, PubMed 28605694"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2017
+    identifier:
+      pmid: "28605694"
+    notes: "與 src.pmid-28605694 共用 pmid 28605694，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2018
+    display: "Gonjo et al. 2018"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2018
+    identifier:
+      pmid: "30694108"
+      url: "https://pubmed.ncbi.nlm.nih.gov/30694108/"
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2020-a
+    display: "Gonjo 2020"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    year: 2020
+    notes: "疑似與 src.gonjo-2020-b、src.gonjo-2020-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.gonjo-2020-b
+    display: "Gonjo et al. (2020)"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2020
+    notes: "疑似與 src.gonjo-2020-a、src.gonjo-2020-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2020-c
+    display: "Gonjo et al. 2020"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2020
+    notes: "疑似與 src.gonjo-2020-a、src.gonjo-2020-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2021-a
+    display: "Gonjo 2021"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    year: 2021
+    notes: "疑似與 src.gonjo-2021-b、src.gonjo-2021-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.gonjo-2021-b
+    display: "Gonjo et al. (2021)"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2021
+    notes: "疑似與 src.gonjo-2021-a、src.gonjo-2021-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2021-c
+    display: "Gonjo et al. 2021"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo"]
+    et_al: true
+    year: 2021
+    notes: "疑似與 src.gonjo-2021-a、src.gonjo-2021-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.gonjo-2023
+    display: "Gonjo & Olstad 2023"
+    type: other
+    verification_status: unverified
+    authors: ["Gonjo", "Olstad"]
+    year: 2023
+
+  - id: src.gonzalez-rave-2025-a
+    display: "González-Ravé 2025"
+    type: other
+    verification_status: unverified
+    authors: ["González-Ravé"]
+    year: 2025
+    notes: "疑似與 src.gonzalez-rave-2025-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.gonzalez-rave-2025-b
+    display: "González-Ravé et al. 2025"
+    type: other
+    verification_status: unverified
+    authors: ["González-Ravé"]
+    et_al: true
+    year: 2025
+    notes: "疑似與 src.gonzalez-rave-2025-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.hayashi
+    display: "Hayashi 2025；Strzała 2013"
+    type: other
+    verification_status: unverified
+    authors: ["Hayashi"]
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.hayashi-2025
+    display: "Hayashi et al. 2025"
+    type: other
+    verification_status: unverified
+    authors: ["Hayashi"]
+    et_al: true
+    year: 2025
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.historical-background-unattributed
+    display: "歷史背景"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.hvid-2024
+    display: "Hvid et al. 2024, Sports, PMC11125574"
+    type: other
+    verification_status: unverified
+    authors: ["Hvid"]
+    et_al: true
+    year: 2024
+    identifier:
+      pmcid: "PMC11125574"
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.journal-pone-0241345-a
+    display: "PLOS ONE 2020"
+    type: other
+    verification_status: unverified
+    year: 2020
+    identifier:
+      doi: "10.1371/journal.pone.0241345"
+      url: "https://doi.org/10.1371/journal.pone.0241345"
+    notes: "疑似與 src.journal-pone-0241345-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.journal-pone-0241345-b 共用 doi 10.1371/journal.pone.0241345，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.journal-pone-0241345-b
+    display: "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020"
+    type: other
+    verification_status: unverified
+    year: 2020
+    identifier:
+      doi: "10.1371/journal.pone.0241345"
+      url: "https://doi.org/10.1371/journal.pone.0241345"
+    notes: "疑似與 src.journal-pone-0241345-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.journal-pone-0241345-a 共用 doi 10.1371/journal.pone.0241345，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.kudo-2014
+    display: "Kudo et al. 2014"
+    type: other
+    verification_status: unverified
+    authors: ["Kudo"]
+    et_al: true
+    year: 2014
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.lyttle
+    display: "Lyttle 1998; Novais et al. 2012"
+    type: other
+    verification_status: unverified
+    authors: ["Lyttle"]
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.lyttle-1998
+    display: "Lyttle et al. 1998"
+    type: other
+    verification_status: unverified
+    authors: ["Lyttle"]
+    et_al: true
+    year: 1998
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.maglischo-2003-a
+    display: "Maglischo (2003) Swimming Fastest"
+    type: book
+    verification_status: unverified
+    authors: ["Maglischo"]
+    year: 2003
+    notes: "疑似與 src.maglischo-2003-b、src.maglischo-2003-c、src.maglischo-2003-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.maglischo-2003-b
+    display: "Maglischo 2003"
+    type: book
+    verification_status: unverified
+    authors: ["Maglischo"]
+    year: 2003
+    notes: "疑似與 src.maglischo-2003-a、src.maglischo-2003-c、src.maglischo-2003-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.maglischo-2003-c
+    display: "Maglischo 2003（屬定性方向參考，量化數字待現代研究更新）"
+    type: book
+    verification_status: unverified
+    authors: ["Maglischo"]
+    year: 2003
+    notes: "疑似與 src.maglischo-2003-a、src.maglischo-2003-b、src.maglischo-2003-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.maglischo-2003-d
+    display: "Maglischo 2003（量化區間屬歷史參考，現代研究尚未更新具體值）"
+    type: book
+    verification_status: unverified
+    authors: ["Maglischo"]
+    year: 2003
+    notes: "疑似與 src.maglischo-2003-a、src.maglischo-2003-b、src.maglischo-2003-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.marinho-2010
+    display: "Marinho et al. (2010), Journal of Applied Biomechanics"
+    type: other
+    verification_status: unverified
+    authors: ["Marinho"]
+    et_al: true
+    year: 2010
+    identifier:
+      pmid: "20733242"
+      url: "https://pubmed.ncbi.nlm.nih.gov/20733242/"
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.mason-1992-a
+    display: "Mason 1992"
+    type: other
+    verification_status: unverified
+    authors: ["Mason"]
+    year: 1992
+    notes: "疑似與 src.mason-1992-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.mason-1992-b
+    display: "Mason et al. 1992"
+    type: other
+    verification_status: unverified
+    authors: ["Mason"]
+    et_al: true
+    year: 1992
+    notes: "疑似與 src.mason-1992-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.mccullough-2009-a
+    display: "McCullough 2009"
+    type: other
+    verification_status: unverified
+    authors: ["McCullough"]
+    year: 2009
+    notes: "疑似與 src.mccullough-2009-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.mccullough-2009-b
+    display: "McCullough et al. 2009"
+    type: other
+    verification_status: unverified
+    authors: ["McCullough"]
+    et_al: true
+    year: 2009
+    notes: "疑似與 src.mccullough-2009-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.mccullough-a
+    display: "McCullough et al. (2009/2010), J. Strength & Conditioning Research"
+    type: other
+    verification_status: unverified
+    authors: ["McCullough"]
+    et_al: true
+    identifier:
+      pmid: "19387413"
+      url: "https://pubmed.ncbi.nlm.nih.gov/19387413/"
+    notes: "疑似與 src.mccullough-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.mccullough-b
+    display: "McCullough et al. 2009/2010"
+    type: other
+    verification_status: unverified
+    authors: ["McCullough"]
+    et_al: true
+    notes: "疑似與 src.mccullough-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.mdpi-2024
+    display: "MDPI 2024"
+    type: other
+    verification_status: unverified
+    year: 2024
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.morais-2019
+    display: "Morais et al. 2019"
+    type: other
+    verification_status: unverified
+    authors: ["Morais"]
+    et_al: true
+    year: 2019
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.nicol-2022-a
+    display: "Nicol 2022"
+    type: other
+    verification_status: unverified
+    authors: ["Nicol"]
+    year: 2022
+    notes: "疑似與 src.nicol-2022-b、src.nicol-2022-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.nicol-2022-b
+    display: "Nicol et al. (2022). Systematic review. Sports Biomechanics"
+    type: review
+    verification_status: unverified
+    authors: ["Nicol"]
+    et_al: true
+    year: 2022
+    notes: "疑似與 src.nicol-2022-a、src.nicol-2022-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.nicol-2022-c
+    display: "Nicol et al. 2022"
+    type: other
+    verification_status: unverified
+    authors: ["Nicol"]
+    et_al: true
+    year: 2022
+    notes: "疑似與 src.nicol-2022-a、src.nicol-2022-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.novais-2012-a
+    display: "Novais et al. 2012 (JHK)"
+    type: other
+    verification_status: unverified
+    authors: ["Novais"]
+    et_al: true
+    year: 2012
+    notes: "疑似與 src.novais-2012-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.novais-2012-b
+    display: "Novais et al. 2012, Journal of Human Kinetics"
+    type: other
+    verification_status: unverified
+    authors: ["Novais"]
+    et_al: true
+    year: 2012
+    notes: "疑似與 src.novais-2012-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.pereira-2018
+    display: "Pereira et al. 2018, Freestyle stroke parameters of national level swimmers with physical impairments"
+    type: other
+    verification_status: unverified
+    authors: ["Pereira"]
+    et_al: true
+    year: 2018
+    identifier:
+      url: "https://www.redalyc.org/journal/710/71059023007/html/"
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.peyrebrune-2007
+    display: "Peyrebrune & Turner 2007"
+    type: other
+    verification_status: unverified
+    authors: ["Peyrebrune", "Turner"]
+    year: 2007
+
+  - id: src.pink
+    display: "Pink et al. (1991) EMG；Science of Swimming Faster (Riewald & Rodeo 2015)"
+    type: other
+    verification_status: unverified
+    authors: ["Pink"]
+    et_al: true
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.pink-1991-a
+    display: "Pink et al. 1991"
+    type: other
+    verification_status: unverified
+    authors: ["Pink"]
+    et_al: true
+    year: 1991
+    notes: "疑似與 src.pink-1991-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.pink-1991-b
+    display: "Pink, Perry et al. 1991"
+    type: other
+    verification_status: unverified
+    authors: ["Pink", "Perry"]
+    et_al: true
+    year: 1991
+    notes: "疑似與 src.pink-1991-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.pla-2021
+    display: "Pla et al. 2021, Frontiers in Physiology"
+    type: other
+    verification_status: unverified
+    authors: ["Pla"]
+    et_al: true
+    year: 2021
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.pmc-2018
+    display: "PMC 2018"
+    type: other
+    verification_status: unverified
+    year: 2018
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.pmc10813451
+    display: "Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024"
+    type: other
+    verification_status: unverified
+    year: 2024
+    identifier:
+      pmcid: "PMC10813451"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/"
+
+  - id: src.pmc3438875
+    display: "Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC3438875"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/"
+    notes: "顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc4234766-a
+    display: "The Backstroke Swimming Start: State of the Art"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC4234766"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
+    notes: "疑似與 src.pmc4234766-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc4234766-b 共用 pmcid PMC4234766，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc4234766-b
+    display: "The Backstroke Swimming Start: State of the Art, PMC4234766; PubMed 23688055"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmid: "23688055"
+      pmcid: "PMC4234766"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc4234766-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc4234766-a 共用 pmcid PMC4234766，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc6409673-a
+    display: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC6409673"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+    notes: "疑似與 src.pmc6409673-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc6409673-b 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc6409673-b
+    display: "PMC6409673"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC6409673"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+    notes: "疑似與 src.pmc6409673-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc6409673-a 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc7918682
+    display: "PMC7918682"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC7918682"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7918682/"
+    notes: "顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc8442910-a
+    display: "Frontiers in Physiology 2021"
+    type: other
+    verification_status: unverified
+    year: 2021
+    identifier:
+      pmcid: "PMC8442910"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/"
+    notes: "疑似與 src.pmc8442910-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8442910-b 共用 pmcid PMC8442910，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc8442910-b
+    display: "Frontiers in Physiology 2021, PMC8442910"
+    type: other
+    verification_status: unverified
+    year: 2021
+    identifier:
+      pmcid: "PMC8442910"
+    notes: "疑似與 src.pmc8442910-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8442910-a 共用 pmcid PMC8442910，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc8700779
+    display: "Leg Dominance 研究 2021"
+    type: other
+    verification_status: unverified
+    year: 2021
+    identifier:
+      pmcid: "PMC8700779"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/"
+    notes: "與 src.takai 共用 pmcid PMC8700779，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc8960438-a
+    display: "Biomechanical Factors Influencing Breaststroke Turns, Journal of Applied Biomechanics 1998; PMC8960438"
+    type: other
+    verification_status: unverified
+    year: 1998
+    identifier:
+      pmcid: "PMC8960438"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc8960438-b、src.pmc8960438-c、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-b、src.pmc8960438-c、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc8960438-b
+    display: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC8960438"
+    notes: "疑似與 src.pmc8960438-a、src.pmc8960438-c、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-c、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc8960438-c
+    display: "Journal of Applied Biomechanics 1998; PMC8960438"
+    type: other
+    verification_status: unverified
+    year: 1998
+    identifier:
+      pmcid: "PMC8960438"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc8960438-d
+    display: "PMC8960438"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmcid: "PMC8960438"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8960438/"
+    notes: "疑似與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-c 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmc9402090-a
+    display: "PMC9402090 2022; PubMed 24984154"
+    type: other
+    verification_status: unverified
+    year: 2022
+    identifier:
+      pmid: "24984154"
+      pmcid: "PMC9402090"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc9402090-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc9402090-b 共用 pmcid PMC9402090，疑似同一文獻，待 S3c 查證。 與 src.pmid-24984154 共用 pmid 24984154，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc9402090-b
+    display: "PMC9402090, 2022"
+    type: other
+    verification_status: unverified
+    year: 2022
+    identifier:
+      pmcid: "PMC9402090"
+    notes: "疑似與 src.pmc9402090-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc9402090-a 共用 pmcid PMC9402090，疑似同一文獻，待 S3c 查證。"
+
+  - id: src.pmc9445308
+    display: "PMC9445308 Frontiers 2022"
+    type: other
+    verification_status: unverified
+    year: 2022
+    identifier:
+      pmcid: "PMC9445308"
+      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/"
+
+  - id: src.pmid-24984154
+    display: "PubMed 24984154"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmid: "24984154"
+    notes: "與 src.pmc9402090-a 共用 pmid 24984154，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmid-25455956
+    display: "PubMed 25455956 2014"
+    type: other
+    verification_status: unverified
+    year: 2014
+    identifier:
+      pmid: "25455956"
+      url: "https://pubmed.ncbi.nlm.nih.gov/25455956/"
+
+  - id: src.pmid-28605694
+    display: "Gonjo et al."
+    type: other
+    verification_status: unverified
+    identifier:
+      pmid: "28605694"
+      url: "https://pubmed.ncbi.nlm.nih.gov/28605694/"
+    notes: "與 src.gonjo-2017 共用 pmid 28605694，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmid-28975846
+    display: "PubMed 28975846"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmid: "28975846"
+      url: "https://pubmed.ncbi.nlm.nih.gov/28975846/"
+    notes: "顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmid-40252339-a
+    display: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmid: "40252339"
+      url: "https://pubmed.ncbi.nlm.nih.gov/40252339/"
+    notes: "疑似與 src.pmid-40252339-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmid-40252339-b 共用 pmid 40252339，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.pmid-40252339-b
+    display: "PubMed 40252339"
+    type: other
+    verification_status: unverified
+    identifier:
+      pmid: "40252339"
+    notes: "疑似與 src.pmid-40252339-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmid-40252339-a 共用 pmid 40252339，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.psycharakis-2010
+    display: "Psycharakis & Sanders 2010"
+    type: other
+    verification_status: unverified
+    authors: ["Psycharakis", "Sanders"]
+    year: 2010
+
+  - id: src.race-club
+    display: "Race Club"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.race-club-pdm-data
+    display: "The Race Club PDM 量測資料"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.race-club-pdm-elite-general
+    display: "Race Club PDM；通用菁英研究"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.researchgate-3d-analysis-2018
+    display: "三維分析研究，ResearchGate 2018"
+    type: other
+    verification_status: unverified
+    year: 2018
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.researchgate-kinematic-differences
+    display: "Kinematic differences research (ResearchGate)"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.rocketswim
+    display: "Rocketswim"
+    type: other
+    verification_status: unverified
+    identifier:
+      url: "https://rocketswim.com/four-phases-of-freestyle-arm-stroke/"
+    notes: "顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.rohr-2004
+    display: "Rohr & Fish 2004, dolphin kinematics comparison"
+    type: other
+    verification_status: unverified
+    authors: ["Rohr", "Fish"]
+    year: 2004
+
+  - id: src.ruiz-navarro-2024
+    display: "Ruiz-Navarro et al. 2024"
+    type: other
+    verification_status: unverified
+    authors: ["Ruiz-Navarro"]
+    et_al: true
+    year: 2024
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.sanders-1995-a
+    display: "Sanders 1995"
+    type: other
+    verification_status: unverified
+    authors: ["Sanders"]
+    year: 1995
+    notes: "疑似與 src.sanders-1995-b、src.sanders-1995-c、src.sanders-1995-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.sanders-1995-b
+    display: "Sanders et al. 1995"
+    type: other
+    verification_status: unverified
+    authors: ["Sanders"]
+    et_al: true
+    year: 1995
+    notes: "疑似與 src.sanders-1995-a、src.sanders-1995-c、src.sanders-1995-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.sanders-1995-c
+    display: "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech"
+    type: other
+    verification_status: unverified
+    authors: ["Sanders", "Cappaert", "Devlin"]
+    year: 1995
+    notes: "疑似與 src.sanders-1995-a、src.sanders-1995-b、src.sanders-1995-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.sanders-1995-d
+    display: "Sanders, Cappaert & Devlin 1995"
+    type: other
+    verification_status: unverified
+    authors: ["Sanders", "Cappaert", "Devlin"]
+    year: 1995
+    notes: "疑似與 src.sanders-1995-a、src.sanders-1995-b、src.sanders-1995-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.sanders-1998
+    display: "Sanders 1998"
+    type: other
+    verification_status: unverified
+    authors: ["Sanders"]
+    year: 1998
+
+  - id: src.schleihauf-1979
+    display: "Schleihauf 1979（歷史依據，非當前定論）"
+    type: other
+    verification_status: unverified
+    authors: ["Schleihauf"]
+    year: 1979
+
+  - id: src.sciencedirect-2014
+    display: "ScienceDirect 2014"
+    type: other
+    verification_status: unverified
+    year: 2014
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.sciencedirect-wave-drag-study
+    display: "ScienceDirect 波浪阻力研究"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.sports-biomechanics-2026
+    display: "Sports Biomechanics 2026"
+    type: other
+    verification_status: unverified
+    year: 2026
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.statpearls-2023
+    display: "StatPearls 2023"
+    type: other
+    verification_status: unverified
+    year: 2023
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.staunton-2025-a
+    display: "Staunton et al. (2025)"
+    type: other
+    verification_status: unverified
+    authors: ["Staunton"]
+    et_al: true
+    year: 2025
+    notes: "疑似與 src.staunton-2025-b、src.staunton-2025-c、src.staunton-2025-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.staunton-2025-b
+    display: "Staunton et al. (2025), Frontiers in Sports and Active Living"
+    type: other
+    verification_status: unverified
+    authors: ["Staunton"]
+    et_al: true
+    year: 2025
+    notes: "疑似與 src.staunton-2025-a、src.staunton-2025-c、src.staunton-2025-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.staunton-2025-c
+    display: "Staunton et al. 2025"
+    type: other
+    verification_status: unverified
+    authors: ["Staunton"]
+    et_al: true
+    year: 2025
+    notes: "疑似與 src.staunton-2025-a、src.staunton-2025-b、src.staunton-2025-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.staunton-2025-d
+    display: "Staunton, Ruiz-Navarro & Born 2025"
+    type: other
+    verification_status: unverified
+    authors: ["Staunton", "Ruiz-Navarro", "Born"]
+    year: 2025
+    notes: "疑似與 src.staunton-2025-a、src.staunton-2025-b、src.staunton-2025-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.strzala-2013-a
+    display: "Strzała 2013"
+    type: other
+    verification_status: unverified
+    authors: ["Strzała"]
+    year: 2013
+    notes: "疑似與 src.strzala-2013-b、src.strzala-2013-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.strzala-2013-b
+    display: "Strzała et al. (2013). Journal of Human Kinetics"
+    type: other
+    verification_status: unverified
+    authors: ["Strzała"]
+    et_al: true
+    year: 2013
+    notes: "疑似與 src.strzala-2013-a、src.strzala-2013-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.strzala-2013-c
+    display: "Strzała et al. 2013"
+    type: other
+    verification_status: unverified
+    authors: ["Strzała"]
+    et_al: true
+    year: 2013
+    notes: "疑似與 src.strzala-2013-a、src.strzala-2013-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.strzala-2017
+    display: "Strzała et al. 2017"
+    type: other
+    verification_status: unverified
+    authors: ["Strzała"]
+    et_al: true
+    year: 2017
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.swim-like-a-fish-2025
+    display: "Swim Like A Fish 2025"
+    type: other
+    verification_status: unverified
+    year: 2025
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.swimswam-koga-wku-kinematic
+    display: "SwimSwam Junya Koga analysis; WKU Digital Commons Kinematic Comparison"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.swimswam-wku-kinematic
+    display: "SwimSwam / Kinematic Comparison，WKU Digital Commons"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.takai
+    display: "Takai et al. 2016; PMC8700779 (2021)"
+    type: other
+    verification_status: unverified
+    authors: ["Takai"]
+    et_al: true
+    identifier:
+      pmid: "27149652"
+      pmcid: "PMC8700779"
+      url: "https://pubmed.ncbi.nlm.nih.gov/27149652/"
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 與 src.pmc8700779 共用 pmcid PMC8700779，疑似同一文獻，待 S3c 查證。 與 src.takai-2016 共用 pmid 27149652，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.takai-2016
+    display: "Takai et al. 2016"
+    type: other
+    verification_status: unverified
+    authors: ["Takai"]
+    et_al: true
+    year: 2016
+    identifier:
+      pmid: "27149652"
+      url: "https://pubmed.ncbi.nlm.nih.gov/27149652/"
+    notes: "與 src.takai 共用 pmid 27149652，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.tanaka-2024-a
+    display: "Tanaka 2024"
+    type: other
+    verification_status: unverified
+    authors: ["Tanaka"]
+    year: 2024
+    notes: "疑似與 src.tanaka-2024-b、src.tanaka-2024-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.tanaka-2024-b
+    display: "Tanaka et al. (2024). CFD study. Journal of Biomechanics"
+    type: other
+    verification_status: unverified
+    authors: ["Tanaka"]
+    et_al: true
+    year: 2024
+    notes: "疑似與 src.tanaka-2024-a、src.tanaka-2024-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.tanaka-2024-c
+    display: "Tanaka et al. 2024"
+    type: other
+    verification_status: unverified
+    authors: ["Tanaka"]
+    et_al: true
+    year: 2024
+    notes: "疑似與 src.tanaka-2024-a、src.tanaka-2024-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.tanaka-2025
+    display: "Tanaka et al. 2025"
+    type: other
+    verification_status: unverified
+    authors: ["Tanaka"]
+    et_al: true
+    year: 2025
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.the-race-club
+    display: "The Race Club"
+    type: other
+    verification_status: unverified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/"
+    notes: "顯示字串未給出單一明確年份，year 留空。"
+
+  - id: src.toussaint-colwin-1990-maglischo-2003-swimmin
+    display: "Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.university-of-tsukuba-2024-journal-of-biomec-2024
+    display: "University of Tsukuba 2024, Journal of Biomechanics"
+    type: other
+    verification_status: unverified
+    year: 2024
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.usms-backstroke-kick-guide
+    display: "U.S. Masters Swimming Backstroke Kick guide；多家教學指引一致"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.veiga-2022
+    display: "Veiga et al. 2022 systematic review"
+    type: review
+    verification_status: unverified
+    authors: ["Veiga"]
+    et_al: true
+    year: 2022
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.virag-2014
+    display: "Virag et al. 2014"
+    type: other
+    verification_status: unverified
+    authors: ["Virag"]
+    et_al: true
+    year: 2014
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.ward-2018
+    display: "Ward 2018（碩士論文，University of Hawaii at Manoa；亦見 Journal of Swimming Research Vol. 26）"
+    type: other
+    verification_status: unverified
+    authors: ["Ward"]
+    year: 2018
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
+
+  - id: src.welcher-1979
+    display: "Welcher et al. 1979（歷史依據）"
+    type: other
+    verification_status: unverified
+    authors: ["Welcher"]
+    et_al: true
+    year: 1979
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.welcher-2008-a
+    display: "Welcher et al. 2008"
+    type: other
+    verification_status: unverified
+    authors: ["Welcher"]
+    et_al: true
+    year: 2008
+    notes: "疑似與 src.welcher-2008-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.welcher-2008-b
+    display: "Welcher, Hinrichs & George 2008"
+    type: other
+    verification_status: unverified
+    authors: ["Welcher", "Hinrichs", "George"]
+    year: 2008
+    notes: "疑似與 src.welcher-2008-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+
+  - id: src.wilson-1983
+    display: "Wilson & Marino 1983"
+    type: other
+    verification_status: unverified
+    authors: ["Wilson", "Marino"]
+    year: 1983
+
+  - id: src.yamakawa-2024
+    display: "Yamakawa et al. 2024"
+    type: other
+    verification_status: unverified
+    authors: ["Yamakawa"]
+    et_al: true
+    year: 2024
+    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.yeadon-et-al-mdpi-2024
+    display: "Yeadon et al. / MDPI 2024"
+    type: other
+    verification_status: unverified
+    year: 2024
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.yourswimlog-monofin
+    display: "yourswimlog monofin 研究"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.yourswimlog-phantomlattice-core
+    display: "yourswimlog 核心力量研究；phantomlattice.com 生物力學分析"
+    type: other
+    verification_status: unverified
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.zamparo
+    display: "Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004"
+    type: other
+    verification_status: unverified
+    authors: ["Zamparo"]
+    et_al: true
+    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
