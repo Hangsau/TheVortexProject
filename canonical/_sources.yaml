@@ -1,0 +1,67 @@
+schema_version: 1
+domain: _meta
+description: >
+  Vortex canonical 來源註冊表。
+  S1 只定契約與空清單；S3 執行實際 164 筆來源遷移。
+  來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
+generated_date: "2026-07-25"
+
+# ── 欄位契約（S3 執行者必讀）────────────────────────────────────────────────
+#
+# 每筆來源必須包含以下欄位：
+#
+#   id          string  必填  格式 src.<slug>；全域唯一；slug 建議用
+#                             第一作者姓 + 年份（如 src.sein-2010）
+#
+#   type        string  必填  值域（封閉清單）：
+#                               journal-article   期刊論文
+#                               review            系統性回顧/統合分析
+#                               book              書籍整本
+#                               book-chapter      書籍章節
+#                               guideline         官方指引/臨床指南
+#                               org-page          組織/機構官方網頁
+#                               dataset           資料集
+#                               video             影片/線上課程
+#                               other             不屬於以上任何類型
+#
+#   title       string  必填  完整標題（英文優先，可附中文）
+#
+#   authors     list    必填  作者清單（姓名字串），最少一筆；
+#                             組織作者（如 FINA/WHO）用組織名稱字串
+#
+#   year        int     必填  發表年份（西元年）
+#
+#   container   string  選填  期刊名 / 書名 / 會議名 / 機構名；
+#                             type=journal-article 或 review 時強烈建議填入
+#
+#   identifier  mapping 必填  至少提供一個可重取的識別，可含以下鍵：
+#                               doi    DOI 字串（不含 https://doi.org/ 前綴）
+#                               pmid   PubMed ID（整數或字串皆可）
+#                               pmcid  PubMed Central ID
+#                               isbn   ISBN-13 或 ISBN-10
+#                               url    可存取的永久 URL（doi.org / 出版社 / 機構官方）
+#                             注意：顯示名稱、縮寫或「文獻/教練觀測」等級不算識別
+#
+#   retrieved_on  string 必填  查驗日，格式 YYYY-MM-DD
+#
+#   notes       string  選填  補充說明（版本、章節、頁碼、存取限制等）
+#
+# ── 使用方式 ────────────────────────────────────────────────────────────────
+#
+# canonical 條目引用來源：
+#   source_ids:
+#     - src.sein-2010
+#     - src.yanai-2004
+#
+# 驗證器（tools/validate.py E005）會確認 source_ids 每個值
+# 都對應本檔某個 id；不存在的 ID 視為 ERROR。
+#
+# ── 健康 drafts 的既有 references 欄位 ──────────────────────────────────────
+#
+# health/drafts/*.yaml 目前用自由文字 references（citation 字串）而非 source_ids。
+# S3 任務：將這些 citation 遷移至本檔並補完 identifier，
+# 遷移完成後 drafts 條目改用 source_ids 欄位指向本表。
+#
+# ── 空清單 ──────────────────────────────────────────────────────────────────
+
+sources: []

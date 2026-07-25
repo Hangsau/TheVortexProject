@@ -1,0 +1,152 @@
+schema_version: 1
+domain: _meta
+description: >
+  Vortex canonical 受控詞彙表。S1 由現況反向抽取，尚未歸一化。
+  S2 執行同義值合併、孤立值定去留；在此之前所有值原樣登錄。
+generated_from: "canonical/**/*.yaml"
+generated_date: "2026-07-25"
+
+fields:
+  category:
+    controlled: true
+    review_status: unreviewed
+    # S2 待歸一：health 傷害類別（A-/B-/C-/D-/E-/F- 前綴）與教學類別混用同欄位；
+    # '_meta-reference' 疑為 meta 用途非內容分類；單次出現值（body-position/core/approach/tactic/coupling）
+    # 需領域判斷後決定保留或合併。
+    values:
+      - key: kick
+        count: 44
+      - key: stroke-cycle
+        count: 41
+      - key: C-nonMSK-medical
+        count: 20
+      - key: comparison
+        count: 17
+      - key: hardware
+        count: 16
+      - key: rotation
+        count: 15
+      - key: depth
+        count: 15
+      - key: streamline
+        count: 15
+      - key: concept
+        count: 15
+      - key: errors
+        count: 15
+      - key: A-shoulder-upper
+        count: 14
+      - key: D-systemic-acute
+        count: 14
+      - key: D-endocrine
+        count: 14
+      - key: tempo
+        count: 13
+      - key: B-lower-spine-strokespecific
+        count: 12
+      - key: breathing
+        count: 12
+      - key: recovery
+        count: 11
+      - key: pull
+        count: 11
+      - key: timing
+        count: 11
+      - key: E-acute-trauma
+        count: 10
+      - key: F-pediatric-growth
+        count: 10
+      - key: undulation
+        count: 10
+      - key: entry
+        count: 9
+      - key: head
+        count: 9
+      - key: style
+        count: 7
+      - key: fatigue
+        count: 5
+      - key: watersense
+        count: 5
+      - key: turn
+        count: 3
+      - key: start
+        count: 3
+      - key: _meta-reference
+        count: 2
+      - key: breakout
+        count: 2
+      - key: body-position
+        count: 1
+      - key: core
+        count: 1
+      - key: approach
+        count: 1
+      - key: tactic
+        count: 1
+      - key: coupling
+        count: 1
+
+  stroke:
+    controlled: true
+    review_status: reviewed
+    values:
+      - key: free
+        count: 80
+      - key: fly
+        count: 68
+      - key: breast
+        count: 65
+      - key: back
+        count: 62
+      - key: starts-turns
+        count: 60
+      - key: udk
+        count: 42
+      - key: common
+        count: 6
+
+  # certainty 使用 emoji 字元；YAML key 用 Unicode 碼點描述，實際值是單一 emoji。
+  # 五個值與 CLAUDE.md 「確定性層次標記」對應，已穩定無需歸一。
+  certainty:
+    controlled: true
+    review_status: reviewed
+    values:
+      # \U0001F7E2 LARGE GREEN CIRCLE — 近期文獻
+      - key: "\U0001F7E2"
+        label: green-circle
+        meaning: "近期文獻"
+        count: 502
+      # \U0001F535 LARGE BLUE CIRCLE — 推導
+      - key: "\U0001F535"
+        label: blue-circle
+        meaning: "推導"
+        count: 227
+      # \U0001F7E0 LARGE ORANGE CIRCLE — 教練觀測
+      - key: "\U0001F7E0"
+        label: orange-circle
+        meaning: "教練觀測"
+        count: 203
+      # \U0001F7E1 LARGE YELLOW CIRCLE — 舊文獻
+      - key: "\U0001F7E1"
+        label: yellow-circle
+        meaning: "舊文獻"
+        count: 148
+      # \U0001F534 LARGE RED CIRCLE — 待查/個人假設
+      - key: "\U0001F534"
+        label: red-circle
+        meaning: "待查/個人假設"
+        count: 15
+
+  status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      目前 canonical 中 status 只有 'complete' 一個值（70 次）。
+      CLAUDE.md 知識索引規範定義了另一組狀態階梯
+      （draft / indexed / source-linked / verified / disputed / unverified），
+      這是未來才會引入的欄位，與現況 status 尚未接軌。
+      本 taxonomy 只登錄實際存在的值，不預填規範值。
+    values:
+      - key: complete
+        count: 70
