@@ -606,13 +606,37 @@
 | S1 | `_taxonomy.yaml` + `_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | ✅ 已完成 2026-07-25（commit a04df0a） |
 | S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | 規劃後派工 |
 | S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
-| S4 | 參照修復：**E003 = 108 筆**斷鏈（development_stages 短鍵 + injuries 中文自由文字）+ **W001 = 61 筆** `cross_ref` → 穩定 ID，與 `links` 併軌。順帶決定 E001 = 6 筆 `l-indicators.levels[]` 是否加 ID | 量中，機械為主 | 派工 |
+| S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
+| S4b | injuries 的 **20 筆** `*_link` 散文欄位拆成 `*_link`（ID 陣列）+ `*_note`（散文） | 需讀內容判斷 | 派工 |
+| S4c | **W001 = 61 筆** `cross_ref` → 穩定 ID（先機械抽內嵌 ID，再處理 `§` 節號） | 機械為主 | 派工 |
 | S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | 派工 |
 | S6 | public/private 匯出隔離（hub P4 前置） | 需分層判斷 | 未規劃 |
 
 **風險與預案**：S3 是唯一有資料損毀風險的一段（動 164 筆條目內容欄位）。對策＝`source_display` 保留原文字不刪，遷移只做「加欄位」不做「換內容」，任何時候可回退。S2 的歸一會改變既有 tag 值，須先跑「哪些條目會受影響」的預覽再動。
 
 **驗收**：`python tools/validate.py` 綠燈 + 缺口報告產出 + `build_knowledge_map.py` 仍能跑通且 `KNOWLEDGE_MAP.md` 無非預期 diff。
+
+#### S4a 驗收與當前基線（2026-07-25，commit 634b298）
+
+`python tools/validate.py`：**2 ERROR / 645 WARN**；`python -m unittest discover -s tests`：**28 tests OK**。
+
+| 代碼 | S1 初測 | 現在 | 說明 |
+|---|---|---|---|
+| E001 缺 id | 6 | **0** | 全是驗證器誤判——`l-indicators.levels[]` 用 `key` 是 Vortex 既定慣例（詞彙定義表用 `key`、內容條目用 `id`） |
+| E003 斷鏈 | 108 | **2** | ~70 筆是同一誤判（`links.development_stages: l2t` 是 `matrix.yaml stages[].key` 的合法詞彙值，不是條目 ID）。剩 2 筆是真斷鏈 |
+| W001 cross_ref 自由文字 | 61 | 61 | 未動，S4c |
+| W002 🟢/🟡 缺 source_ids | 88 | 88 | 未動，S3 |
+| W003 孤兒條目 | 473 | 476 | ⚠ 差 3 未解釋（撞配額前沒查完） |
+| W004 `*_link` 散文無 ID | — | **20** | 新增檢查揭出的真債（見下） |
+| W005 未知 links 子鍵 | — | 0 | 新增，堵住 fail-open |
+
+**S4a 過程中攔截的一次品質事故**：第一版 S4a 把 `mechanism_link` / `technical_link` / `perception_link` 歸為「自由文字類，跳過驗證」，等於讓真實的連結債從報告中消失；且未知 `links` 子鍵走 `else` 靜默放行（fail-open）。已要求補 W004/W005 修正。**教訓：驗證器的「誤判修正」與「把問題改成低風險類型」只有一線之隔，每次縮小檢查範圍都要問「這是誤判，還是把債藏起來」。**
+
+**剩餘 2 筆 E003**（真斷鏈，可直接修）：`canonical/periodization/structure.yaml` 條目 `periodization.structure.gas` 的 `links.related` 用短名 `macrocycle` / `microcycle`，應為 `periodization.structure.macrocycle` / `periodization.structure.microcycle`。
+
+**S4b 的 20 筆定位**：全在 `canonical/health/injuries.yaml`（三個欄位各 44 次出現、共 132 處，其中 112 為 null，20 有散文值）。⚠ **`injuries.yaml` 是 `tools/build_injuries.py` 產生的 promoted artifact，不可直接改**；一律改 `canonical/health/drafts/*.yaml` 後重跑生成器。
+
+**S2 待用戶裁定（阻塞中）**：`category` 的 36 個值混了兩種語意——教學類別（`kick`、`stroke-cycle`…）與健康傷害類別（`A-shoulder-upper` … `F-pediatric-growth`，前綴來自 `build_injuries.py` 的 `CATEGORY_ORDER`）。要拆成兩個欄位，還是保留單欄位用命名空間前綴？未決前 S2 不動。
 
 ### Hestia 報告整合後續（2026-06-22）
 
