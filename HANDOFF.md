@@ -6,7 +6,32 @@
 
 ## 當前狀態（2026-07-25）
 
-### 進行中——canonical 資料契約升級（S0 完成，S1 進行）（2026-07-25）
+### 進行中——canonical 資料契約升級（S0 + S1 完成）（2026-07-25）
+
+**S1 已完成（commit a04df0a）**：`canonical/_taxonomy.yaml`（受控詞彙表，照現況反向抽取未歸一）、`canonical/_sources.yaml`（來源註冊表空殼 + 欄位契約）、`tools/validate.py`（8 項檢查，ERROR/WARN 兩級）、`tests/test_validate.py`（13 tests 全通過）、`reports/validation_report.md`。`build_knowledge_map.py` 未修改（它硬寫檔名清單，自然跳過 `_` 前綴檔）。
+
+**驗證器首跑實測（規模：canonical 594 條目 + Drills 176 ID = 全域 770 ID）**
+
+| 代碼 | 筆數 | 意義 |
+|---|---|---|
+| E001 | 6 | `l-indicators.yaml` 的 `levels[]` 用 `key` 不用 `id` — 需領域判斷是否該有 ID |
+| E002 | 0 | ID 無重複 |
+| E003 | **108** | 斷鏈。① `links.development_stages` 用短鍵 `l2t`/`t2t`，但 matrix.yaml 是 `dev.*.l2t` 全 ID（約 70）② `health/injuries.yaml` 的 `mechanism_link`/`technical_link`/`perception_link` 是中文自由文字（約 38） |
+| E004 | 0 | tag 全合法（反向抽取的自洽性檢查通過，抽取邏輯無 bug） |
+| E005 | 0 | 尚無條目引用 sources（空殼） |
+| W001 | **61** | `cross_ref` 自由文字 → S4 工作量 |
+| W002 | **88** | 🟢/🟡 但無 `source_ids` → S3 工作量 |
+| W003 | 473 | 孤兒條目；修完 E003 後應大幅下降，不必單獨處理 |
+
+**⚠ 修正先前盤點的錯誤數字**（S1 實測為準）：
+- `category`：先前記 291 筆 / 44 相異值 — **錯**，實測 405 筆 / 36 相異值
+- `certainty`：先前記 651 筆 — **錯**，實測 1,095 筆（health drafts 的 sub-dict 內也有 certainty，先前只算了頂層）
+- `status`：先前記 complete + draft 兩值 — **錯**，實測只有 `complete` 單一值
+- **S3 工作量：先前估「🟢🟡 約 164 筆」— 錯**，實際需補來源的是 W002 = **88 筆**
+
+**S2 新發現**：`category` 欄位混用兩套語意 — 教學類別（kick / stroke-cycle…）與健康傷害類別（`A-`/`B-`/`C-`/`D-`/`E-`/`F-` 前綴）共用同一欄位。S2 需先決定是否拆欄位，再談歸一。
+
+### 進行中——canonical 資料契約升級（S0 完成）（2026-07-25）
 
 > 觸發：`CLAUDE.md` 新增「知識索引與證據規範（canonical）」一節（先前未提交，本次隨 S0 提交）。該規範宣告的四項設施 **目前 Vortex 一項都沒有**，本段記錄實作缺口，避免冷啟動誤以為已具備。
 
@@ -578,10 +603,10 @@
 | 段 | 內容 | 性質 | 派工 |
 |---|---|---|---|
 | S0 | 提交 CLAUDE.md 規範 + 本缺口條目 | 文件 | ✅ 已完成 2026-07-25 |
-| S1 | `canonical/_taxonomy.yaml`（照現況反向抽取，先登錄不歸一）+ `canonical/_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | 派 Sonnet |
-| S2 | 44 個 `category` 值歸一：合併近義、7 個 singleton 定去留、寫 alias | 需領域判斷 | 規劃後派工 |
-| S3 | 🟢🟡 約 164 筆來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
-| S4 | 61 筆 `cross_ref` → 穩定 ID，與 `links` 併軌 | 量小 | 派工 |
+| S1 | `_taxonomy.yaml` + `_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | ✅ 已完成 2026-07-25（commit a04df0a） |
+| S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | 規劃後派工 |
+| S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
+| S4 | 參照修復：**E003 = 108 筆**斷鏈（development_stages 短鍵 + injuries 中文自由文字）+ **W001 = 61 筆** `cross_ref` → 穩定 ID，與 `links` 併軌。順帶決定 E001 = 6 筆 `l-indicators.levels[]` 是否加 ID | 量中，機械為主 | 派工 |
 | S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | 派工 |
 | S6 | public/private 匯出隔離（hub P4 前置） | 需分層判斷 | 未規劃 |
 
