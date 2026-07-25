@@ -701,6 +701,38 @@
 
 **新增檢查碼**：E007（ERROR，`links.*_link_ids` 內含無法解析的 ID 或型別非 list）／W004 重新定義（`*_link` 內的疑似穩定 ID 未列入對應 `*_link_ids`）／W007（`*_link` 有值但 `*_link_ids` 欄位整個缺席）。
 
+#### ⚠ S3 範圍重估：W002 = 88 是**嚴重低報**，實際約 510（2026-07-26）
+
+動手 S3 前先量了一次，發現 W002 的檢查範圍有覆蓋缺口。`tools/validate.py` 的 W002 只查兩個位置——`entry.certainty` 與 `entry.public.mechanism.certainty`。但 canonical（不含 drafts）裡帶 🟢／🟡 的區塊實際分佈是：
+
+| 位置 | 數量 | 有 `source` 顯示字串 |
+|---|---|---|
+| `evidence[]` | 201 | 多數有 |
+| `references` | 101 | — |
+| `mechanism` | 88 | **全無** |
+| `phenomenon` | 44 | 部分 |
+| `epidemiology` | 37 | 部分 |
+| `physical_reason` | 19 | 部分 |
+| `intervention_refs` / `hardware_boundary` / `premise` / 其他 | 19 | 部分 |
+| **合計** | **510** | 201 有 / 309 無 |
+
+**所以 S3 的真實工作量是 ~510 個區塊、138 個不重複來源字串，不是 88。** 先前 HANDOFF 寫的「S3 = 88 筆」要作廢。
+
+**兩種債性質完全不同，必須分開處理**：
+
+1. **有 `source` 顯示字串的 201 筆**：格式是 `Staunton, Ruiz-Navarro & Born 2025`、`Maglischo 2003`、`Nicol et al. 2022`（出現 11 次，最高頻）這種作者＋年份，**沒有 DOI／PMID／ISBN**。這批可機械處理：去重成 138 個 `src.*` 條目寫進 `_sources.yaml`、`display` 逐字保留、`locator: null` + `verification_status: unverified`，條目加 `source_ids`。**零內容改動、零捏造風險**。
+2. **完全沒有 source 字串的 309 筆（含 mechanism 全部 88 筆）**：這批不是「忘記填來源」，而是**確定性標記本身可能標錯**。實例 `free.tech.3` 的 `mechanism.certainty: 🟢` 但文字是「SR 提高而 SL 下降是『技術沒有同步支撐划頻』的結果，不是物理必然」——這是**從 evidence 推導出的詮釋**，按專案的確定性階梯應該是 🔵推導，不是 🟢近期文獻。**逐筆判斷是內容工作，不可機械批次，也不可外包給不懂框架的 agent 亂降級。**
+
+**因此 S3 拆成三段**：
+
+| 段 | 內容 | 性質 | 風險 |
+|---|---|---|---|
+| S3a | 138 個來源字串 → `_sources.yaml` 註冊 + 201 筆加 `source_ids`；同時修 W002 覆蓋缺口（改成掃所有帶 `certainty` 的區塊） | 純機械 | 低。加欄位不換內容 |
+| S3b | 309 筆無來源的 🟢／🟡 逐筆判定：該降 🔵推導，還是漏填引用 | 內容判斷 | **高**。動確定性標記＝動對外可信度宣告 |
+| S3c | 138 個來源補 DOI／PMID／ISBN（WebSearch + 追一手） | 查證 | 中。**嚴禁捏造識別碼**，查不到就留 `unverified` |
+
+S3a 可立刻派工；S3b 建議先做一個 10 筆的 pilot 看判定準則穩不穩，再決定要不要批次；S3c 是既有查證債（HANDOFF 別處已記錄 49 處 `pending_verification`）的同類工作，可合併規劃。
+
 **順帶補的抽取漏洞**：舊 `extract_candidate_ids()` 只認命名空間 ID 與 Drill ID，**認不出裸 slug**（無點號）——而 A 類 7 筆正好全是裸 slug，等於新 W004 對主流形態零覆蓋。修法是在共用的 `missing_declared_ids()` 裡加一種候選：整個字串本身就是可解析 ID 時列為候選（**不是**加第二套 regex）。此改動同時作用於 W001，實測 `cross_ref` 目前 0 筆屬此形態，故 W001 維持 0，無外溢。
 
 **測試誠實性**：harness 原本自帶一份 W004 邏輯副本（S4a 事故同型），已刪除並改為直接呼叫 `validate.check_link_ids()`。用突變測試驗證過覆蓋率——把產品端迴圈掏空 → 7 個測試失敗；還原 → 53 OK。
