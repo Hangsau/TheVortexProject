@@ -6,11 +6,11 @@
 
 ## 當前狀態（2026-07-26）
 
-### 進行中——canonical 資料契約升級：S0／S1／S4a／S4c／S4b／S3a／S3a-2／S2（canonical 側）完成
+### 進行中——canonical 資料契約升級：S0／S1／S2／S3a／S3a-2／S4a／S4b／S4c 完成
 
 **基線**：`python tools/validate.py` **0 ERROR／746 WARN**（E001–E009 全 0；W003 476 孤兒條目、W009 270 缺來源，皆為刻意留待的內容債）；`python -m unittest discover -s tests` **90 tests OK**。
 
-**下一步**：S2 的 my-site 側（`sync_vortex.py` 帶 `Drills/_categories.yaml` → 消掉最後兩份硬編標籤字典），接著 S3b（270 筆 🟢/🟡 無來源，先做 10 筆試點）。各段驗收詳見下方「下一步建議」章節內的分段驗收紀錄。
+**下一步**：S3b（270 筆 🟢/🟡 完全無來源 = W009，多半是 certainty 標錯而非真的缺文獻；先做 10 筆試點確認判準再談批次）。之後是 S5（`tools/build_indices.py` 四視圖）與 S3c（476 筆來源查 DOI/PMID/ISBN）。各段驗收詳見下方「下一步建議」章節內的分段驗收紀錄。
 
 ### 進行中——canonical 資料契約升級（S0 + S1 完成）（2026-07-25）
 
@@ -610,7 +610,7 @@
 |---|---|---|---|
 | S0 | 提交 CLAUDE.md 規範 + 本缺口條目 | 文件 | ✅ 已完成 2026-07-25 |
 | S1 | `_taxonomy.yaml` + `_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | ✅ 已完成 2026-07-25（commit a04df0a） |
-| S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | ✅ canonical 側完成 2026-07-26（不拆欄位，改 per-value `scope`；新增 E008/E009/W010）；my-site 側待做 |
+| S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | ✅ 已完成 2026-07-26（不拆欄位，改 per-value `scope`；新增 E008/E009/W010；my-site 硬編標籤字典全清） |
 | S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
 | S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
 | S4b | injuries 的 **20 筆** `*_link` 散文欄位加 `*_link_ids` 機器鍵（**不**拆成 ID 陣列，同 S4c 的「加欄位不換內容」） | 需讀內容判斷 | ✅ 已完成 2026-07-26（W004 20→0，新增 E007/W007） |
@@ -872,10 +872,13 @@ v1 把 `title` / `authors` / `year` / `identifier` / `retrieved_on` 全列必填
 - `vortex-stroke.html:40` 的 `$drillCatName` 漏了 `turn` → starts-turns 頁 9 張 drill 卡的分類標籤全空（commit `0597861`）。
 - `vortex-database.html:15` 硬編了一份漂移的 `$injCatName`，而 `injuries.yaml` 早已自帶 `categories` 區塊 → 改成從資料 merge，同時修好三個標籤漂移（肩與上肢→肩部與上肢、內分泌→內分泌與骨骼、急性創傷→急性外傷）（commit `6bdd91f`）。
 
-**S2 未完的一半——my-site 側**（下一步就做）：
+**S2 的 my-site 側——已完成**（commit `ba03da8`／`19da9d2`，CI 綠）：
 
-1. `my-site/tools/sync_vortex.py` 的 `sync_drills()`（約 line 283）目前只吐 `{"drills": all_drills}`，要改成讀 `Drills/_categories.yaml` 並吐 `{"categories": ..., "drills": all_drills}`。
-2. 然後把 `vortex-drills.html:16` 與 `vortex-stroke.html:40` 兩處 `$drillCatName` 改成從資料 merge——這是站上**最後兩份硬編標籤字典**，也正是上面那個 `turn` bug 的成因。
+1. `sync_vortex.py` 的 `sync_drills()` 現在把 `Drills/_categories.yaml` 帶進 `data/vortex/drills.yaml` 的 `categories` 區塊（與 teaching-errors／technical-analysis 同一模式）。
+2. `vortex-drills.html:16` 與 `vortex-stroke.html:40` 兩處 `$drillCatName` 改成從資料 merge。**站上已無任何硬編分類標籤字典**（`grep "CatName := dict \""` 零命中）。
+3. 同批把 canonical 累積未同步的內容一併帶下去（`source_ids`、S2 的 category 歸一、`periodization.structure.related` 短名修正、兩筆 🟠→🟢）。**24 行刪除逐條稽核過**，全數為預期改名／修正，無內容遺失。
+4. **驗證**：176 張 drill 卡的分類標籤逐筆比對 `drills.yaml`，7 類數量全中（呼吸 5／平衡 13／踢腿 43／划手 51／銜接 42／搖櫓 13／出發轉身 9），**0 空標籤**。
+5. 規則寫進 `my-site/CLAUDE.md`（「Vortex 分類標籤：一律從資料讀，禁止在 layout 硬編」），含 Hugo 靜默失敗的成因說明。
 
 **legacy debt（本批刻意不動）**：
 
