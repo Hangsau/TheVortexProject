@@ -21,6 +21,7 @@ epidemiology:
     - "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)"
     - "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)"
     - "Trichloramine and lung function, PMC3488741 (已驗證)"
+  source_ids: [src.pmc6092370, src.pmc1626429, src.pmc3488741]
 
 risk_factors:
   - { text: "室內泳池長期訓練(>100 小時)", grade: B }

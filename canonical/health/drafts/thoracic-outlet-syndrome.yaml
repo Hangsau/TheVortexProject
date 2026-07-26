@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)"
     - "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)"
+  source_ids: [src.pmc7340704, src.pmc11277273]
 
 risk_factors:
   - { text: "反覆過頭→斜角肌/胸小肌肥大", grade: B }

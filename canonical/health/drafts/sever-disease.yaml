@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Sever's disease (calcaneal apophysitis), StatPearls NBK441928 (已驗證)"
     - "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)"
+  source_ids: [src.sever-s-disease-calcaneal-apophysitis-statpe, src.pmc8827183]
 
 risk_factors:
   - { text: "快速生長高峰", grade: B }

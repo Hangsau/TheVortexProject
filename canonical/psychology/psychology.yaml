@@ -120,6 +120,7 @@ themes:
         介入要先卸評價威脅；族群差異見本主題「恐懼的不同臉孔」。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#FWAQ
+      source_ids: [src.research-psych-03-a]
     diagnostic:
       abc_link: C
       abc_note: 失控型恐懼多以 C 型（全身張力）呈現——換氣或入水觸發全身防衛性收縮。
@@ -161,6 +162,7 @@ themes:
         better: 先降恐懼、打開感知頻寬，再教動作——感知是輸入，動作是輸出。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#感知遮蔽機制
+      source_ids: [src.research-psych-03-d]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -201,6 +203,7 @@ themes:
         better: 降低威脅、恢復安全信號（聲音、觸碰許可、可預測性），讓神經系統先離開凍結。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#凍結反應
+      source_ids: [src.research-psych-03-b]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -244,6 +247,7 @@ themes:
         how_to: 建立固定的吸—轉頭—吐入水節律，規律本身就抑制 CO₂ 驟升。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#呼吸介入
+      source_ids: [src.research-psych-03-c]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -278,6 +282,7 @@ themes:
         how_to: 引導學習者緩慢讓臉部接觸水，利用潛水反射的自然鎮靜——前提是先建立安全感，避免突然的冷水觸發驚嚇而轉成交感主導。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#潛水反射
+      source_ids: [src.research-psych-03-f]
     diagnostic:
       reading_signals:
       - 緩慢自願讓臉入水後心率/緊繃下降 = 潛水反射鎮靜路徑開啟，可作為暴露階梯的一階
@@ -315,6 +320,7 @@ themes:
         how_to: 每一步先說會發生什麼、徵得同意再做，把不可預測性降到最低。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#社會安全感
+      source_ids: [src.research-psych-03-g]
     diagnostic:
       reading_signals:
       - 學習者頻繁看教練臉、確認位置 = 在用社會信號維持安全感，此時教練的一致性比指令內容更關鍵
@@ -351,6 +357,7 @@ themes:
         better: 成人先卸評價威脅再暴露；鐵人做開放水域情境減敏（群泳模擬、定位呼吸）；青少年往表現焦慮查。
       sources:
       - Research/心理/03_水中恐懼與學習者心理.md#族群特異性
+      source_ids: [src.research-psych-03-e]
     diagnostic:
       reading_signals:
       - 先定位族群再選介入：同樣說「怕水」，成人多指社會評價、鐵人多指開放水域情境、青少年多指被看見的失敗
@@ -449,6 +456,7 @@ themes:
       sources:
       - Research/心理/08_心理感知生理交互.md#1.1
       - Research/心理/08_心理感知生理交互.md#1.3
+      source_ids: [src.research-psych-08-a, src.research-psych-08-c]
     diagnostic:
       reading_signals:
       - 入水後頻繁說「好奇怪的感覺」「心跳很快」「覺得快沉了」但客觀上姿勢穩定 = 前島放大訊號，而非感知缺失；介入點是降低評估增益而非教更多技術
@@ -521,6 +529,7 @@ themes:
       sources:
       - Research/心理/08_心理感知生理交互.md#1.2
       - Research/心理/08_心理感知生理交互.md#4.2
+      source_ids: [src.research-psych-08-b, src.research-psych-08-j]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -601,6 +610,7 @@ themes:
       - Research/心理/08_心理感知生理交互.md#1.4
       - Research/心理/08_心理感知生理交互.md#5.1
       - Research/心理/08_心理感知生理交互.md#5.2
+      source_ids: [src.research-psych-08-d, src.research-psych-08-k, src.research-psych-08-l]
     diagnostic:
       reading_signals:
       - 「游幾下就覺得很累，但上來喘一下就好了」= RPE 超標而非真正疲竭，認知/焦慮成分高
@@ -662,6 +672,7 @@ themes:
         至競技焦慮而非流場感知。文獻樣本偏壓認知心理學的一般成人，族群差異待研究。
       sources:
       - Research/心理/08_心理感知生理交互.md#1.6
+      source_ids: [src.research-psych-08-e]
     diagnostic:
       reading_signals:
       - 在簡單漂浮時能描述壓力感，轉入划水就說「什麼都感覺不到了」= 划水動作提高喚醒， 觸發注意力窄化，外周水感訊號被過濾
@@ -723,6 +734,7 @@ themes:
       sources:
       - Research/心理/08_心理感知生理交互.md#1.7
       - Research/心理/08_心理感知生理交互.md#4.1
+      source_ids: [src.research-psych-08-f, src.research-psych-08-i]
     diagnostic:
       reading_signals:
       - 學習者在課程進展上「忽快忽慢」而非線性進步 = 可能反映迷走張力的狀態波動 （當日 HRV 較低時脫敏進展停滯），而非動機問題
@@ -783,6 +795,7 @@ themes:
         凍結文獻多來自動物研究與臨床創傷研究，游泳教學中輕度凍結的識別缺乏標準化方法。
       sources:
       - Research/心理/08_心理感知生理交互.md#1.8
+      source_ids: [src.research-psych-08-g]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -852,6 +865,7 @@ themes:
         (1:2 → 1:3)，換氣側的認知負荷比預期高，可能影響感知品質。
       sources:
       - Research/心理/08_心理感知生理交互.md#1.9
+      source_ids: [src.research-psych-08-h]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -920,6 +934,7 @@ themes:
       sources:
       - Research/心理/08_心理感知生理交互.md#1.3
       - Research/心理/08_心理感知生理交互.md#4.1
+      source_ids: [src.research-psych-08-c, src.research-psych-08-i]
     diagnostic:
       reading_signals:
       - 學習者在水中靜止待幾分鐘後（有支撐）自發開始描述身體感覺（「感覺水在動」 「腳有點飄」）= 內感通道在低威脅水浸後打開，此時進入感知引導效率更高
@@ -991,6 +1006,7 @@ themes:
       sources:
       - Research/心理/04_動機與自我決定.md#核心理論
       - Research/心理/04_動機與自我決定.md#游泳特異研究
+      source_ids: [src.research-psych-04-e, src.research-psych-04-f]
     diagnostic:
       reading_signals:
       - 學員說「我想試試看我自己來」= 自主需求呼喚，給選擇空間
@@ -1035,6 +1051,7 @@ themes:
       sources:
       - Research/心理/04_動機與自我決定.md#核心理論
       - Research/心理/04_動機與自我決定.md#SDT應用
+      source_ids: [src.research-psych-04-e, src.research-psych-04-b]
     diagnostic:
       reading_signals:
       - 學員說「反正教練叫我來 / 媽媽要我學」= 外在調節，需主動建立內化橋梁（讓他說出自己為什麼想學）
@@ -1090,6 +1107,7 @@ themes:
       sources:
       - Research/心理/04_動機與自我決定.md#SDT應用
       - Research/心理/04_動機與自我決定.md#需求受阻
+      source_ids: [src.research-psych-04-b, src.research-psych-04-i]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -1147,6 +1165,7 @@ themes:
       - Research/心理/04_動機與自我決定.md#動機氣候
       - Research/心理/04_動機與自我決定.md#游泳特異研究
       - Research/心理/04_動機與自我決定.md#連結
+      source_ids: [src.research-psych-04-c, src.research-psych-04-f, src.research-psych-04-h]
     diagnostic:
       reading_signals:
       - 學員游完一趟主動報「我這趟手感不一樣欸」= 感知探索意識開啟，精熟氣候正在運作
@@ -1189,6 +1208,7 @@ themes:
       sources:
       - Research/心理/04_動機與自我決定.md#連結
       - Research/心理/04_動機與自我決定.md#SDT應用
+      source_ids: [src.research-psych-04-h, src.research-psych-04-b]
     diagnostic:
       reading_signals:
       - 學員每個 drill 都執行了、但問「有感覺到什麼嗎」一律答「沒有 / 還好」= amotivation 或外在調節，注意力沒有在裡面
@@ -1241,6 +1261,7 @@ themes:
       sources:
       - Research/心理/04_動機與自我決定.md#族群特異性
       - Research/心理/04_動機與自我決定.md#連結
+      source_ids: [src.research-psych-04-d, src.research-psych-04-h]
     diagnostic:
       reading_signals:
       - 學員試了新感知動作後立刻說「我做得不好 / 沒有人家好」= 社會比較被激活，勝任感低+表現氣候中
@@ -1281,6 +1302,7 @@ themes:
           目前有兩個不同技能任務（雜耍、籃球）支持，仍需游泳情境複製。
       sources:
       - Research/心理/04_動機與自我決定.md#精熟氣候實驗研究
+      source_ids: [src.research-psych-04-g]
     diagnostic:
       reading_signals:
       - 學員在有排名或公開評比的課程後明顯疲勞感加重、動作精度下降 = 可能是表現氣候觸發壓力生理反應的行為表現
@@ -1332,6 +1354,7 @@ themes:
         成功的開放水域感知體驗是情境層修復的最有力路徑（🔵）。
       sources:
       - Research/心理/04_動機與自我決定.md#HMIEM
+      source_ids: [src.research-psych-04-a]
     diagnostic:
       reading_signals:
       - 學員說「我從來不覺得我適合游泳 / 我就是不擅長水」= 整體層負向自我認定，口頭說服無效，需創造可驗證的感知成功
@@ -1387,6 +1410,7 @@ themes:
       sources:
       - Research/心理/04_動機與自我決定.md#族群特異性
       - Research/心理/04_動機與自我決定.md#游泳特異研究
+      source_ids: [src.research-psych-04-d, src.research-psych-04-f]
     diagnostic:
       reading_signals:
       - 先問「你來游泳的主要原因是什麼」再定位族群，才能選對動機介入語言
@@ -1459,6 +1483,7 @@ themes:
         L5–L6 用意象整合全身場感知。每個 L 級的意象效果受當前技能水平決定，初學者意象精準度低但仍有益。
       sources:
       - Research/心理/05_意象與心理演練.md#1-功能等價functional-equivalence
+      source_ids: [src.research-psych-05-a]
     diagnostic:
       reading_signals:
       - 泳者描述「我想了很多遍但下水還是不對」= 意象內容可能偏視覺而非動覺，或意象速度與實際不符
@@ -1511,6 +1536,7 @@ themes:
         兒童與成人初學適用方式屬素材缺口，不以競技樣本直接外推。
       sources:
       - Research/心理/05_意象與心理演練.md#2-pettlep-意象模型
+      source_ids: [src.research-psych-05-b]
     diagnostic:
       reading_signals:
       - 泳者描述意象時只說「想了一下游泳」= PETTLEP 各元素幾乎都缺，重點引導 Task 元素（感受手掌壓水）
@@ -1571,6 +1597,7 @@ themes:
       sources:
       - Research/心理/05_意象與心理演練.md#4-內部視角-vs-外部視角internal--external-imagery-perspective
       - Research/心理/05_意象與心理演練.md#c-動覺意象-vs-視覺意象的分離效應
+      source_ids: [src.research-psych-05-d, src.research-psych-05-g]
     diagnostic:
       reading_signals:
       - 泳者說「我有想、但下水還是找不到感覺」= 意象可能以視覺為主而非動覺；詢問「你在想什麼」
@@ -1621,6 +1648,7 @@ themes:
       sources:
       - Research/心理/05_意象與心理演練.md#5-運動意象與-feedforward-預測模型的關係
       - Research/心理/05_意象與心理演練.md#a-動覺意象能否預先建立或強化水感
+      source_ids: [src.research-psych-05-e, src.research-psych-05-f]
     diagnostic:
       abc_link: A
       reading_signals:
@@ -1669,6 +1697,7 @@ themes:
         的優先度高於技術演練。現有功能分類研究以競技運動員為主，兒童與恐懼族群的分類效度是素材缺口。
       sources:
       - Research/心理/05_意象與心理演練.md#3-意象的功能分類paivio-1985--hall-et-al-1998
+      source_ids: [src.research-psych-05-c]
     diagnostic:
       reading_signals:
       - 泳者說「我有想，但下水更緊張」= CS 意象可能強化了焦慮記憶，先切換為 MG-A 或 MG-M 類
@@ -1724,6 +1753,7 @@ themes:
         其他停水情境（旅行、季外、育兒中斷）的效果是素材缺口。
       sources:
       - Research/心理/05_意象與心理演練.md#視角與測量
+      source_ids: [src.research-psych-05-h]
     diagnostic:
       reading_signals:
       - 泳者停水後說「感覺手感都消失了」= 是停訓期未維持動覺意象的常見結果，可回溯確認並建立下次方案
@@ -1801,6 +1831,7 @@ themes:
         鐵人三項、青少年競技、成人初學對此框架的反應差異均屬素材缺口，需分族群判斷。
       sources:
       - Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義
+      source_ids: [src.research-psych-01-a]
     diagnostic:
       reading_signals:
       - 泳者說「我知道手要怎麼動，但游起來還是亂」= 可能陷入過度 IF 的意識干擾
@@ -1863,6 +1894,7 @@ themes:
       - Research/心理/01_注意力焦點與動作學習.md#2-受限動作假說cah
       - Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis
       - Research/心理/01_注意力焦點與動作學習.md#游泳直接證據
+      source_ids: [src.research-psych-01-b, src.research-psych-01-e, src.research-psych-01-h]
     diagnostic:
       abc_link: A
       reading_signals:
@@ -1915,6 +1947,7 @@ themes:
         在 EF/IF 干擾敏感度上缺乏直接研究，不應直接套用精英成人的容忍度預設。
       sources:
       - Research/心理/01_注意力焦點與動作學習.md#游泳直接證據
+      source_ids: [src.research-psych-01-h]
     diagnostic:
       reading_signals:
       - 高競技水平泳者說「我有時候會在游的時候反覆想技術」= 需評估是否為 IF 干擾來源
@@ -1973,6 +2006,7 @@ themes:
       sources:
       - Research/心理/01_注意力焦點與動作學習.md#4-距離效應distance-effect
       - Research/心理/01_注意力焦點與動作學習.md#研究空白
+      source_ids: [src.research-psych-01-c, src.research-psych-01-i]
     diagnostic:
       reading_signals:
       - 泳者說「我試著想水但還是不自覺又回到想手」= proximal/IF 切換困難，可嘗試 distal EF 錨點（水流路徑的末端）
@@ -2057,6 +2091,7 @@ themes:
       - Research/心理/01_注意力焦點與動作學習.md#外部焦點-vs-感覺水-的張力分析
       - Research/心理/01_注意力焦點與動作學習.md#與水感框架的連結
       - Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis
+      source_ids: [src.research-psych-01-f, src.research-psych-01-j, src.research-psych-01-e]
     diagnostic:
       reading_signals:
       - 泳者說「我不知道我在感覺什麼，好像沒有水感」= 感知耦合尚未建立，非 IF/EF 問題
@@ -2122,6 +2157,7 @@ themes:
       sources:
       - Research/心理/01_注意力焦點與動作學習.md#5-聯結-vs-分離策略association-vs-dissociation
       - Research/心理/01_注意力焦點與動作學習.md#游泳特異證據-vs-跨運動外推
+      source_ids: [src.research-psych-01-d, src.research-psych-01-g]
     diagnostic:
       reading_signals:
       - 泳者說「游到後段就什麼都不想了，只是在撐」= 無意識分離策略啟動，疲痛超過警戒線
@@ -2200,6 +2236,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#核心概念
       - Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單
+      source_ids: [src.research-psych-06-c, src.research-psych-06-i]
     diagnostic:
       reading_signals:
       - 泳者在趟間自發說「我知道我手又跑掉了」= 有後設監控但無替換語言，可直接給 cue word
@@ -2258,6 +2295,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#指導型-vs-激勵型自我對話
       - Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推
+      source_ids: [src.research-psych-06-b, src.research-psych-06-d]
     diagnostic:
       abc_link: A
       reading_signals:
@@ -2318,6 +2356,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#與水感框架指令層次注意力焦點的連結
       - Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推
+      source_ids: [src.research-psych-06-g, src.research-psych-06-d]
     diagnostic:
       abc_link: A
       reading_signals:
@@ -2378,6 +2417,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#自我對話的作用機制
       - Research/心理/06_自我對話與心理技能訓練.md#與水感框架指令層次注意力焦點的連結
+      source_ids: [src.research-psych-06-e, src.research-psych-06-g]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -2427,6 +2467,7 @@ themes:
         對非競技或兒童族群屬外推，需謹慎。
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#自我對話的時態框架過去現在未來
+      source_ids: [src.research-psych-06-f]
     diagnostic:
       reading_signals:
       - 趟間自說「我從來都沒贏過她」「上次失誤又來了」= 過去時態偏移，引導回當趟一個工作
@@ -2473,6 +2514,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單
       - Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推
+      source_ids: [src.research-psych-06-i, src.research-psych-06-d]
     diagnostic:
       reading_signals:
       - 鐵人三項游泳段完成後說「游完就沒力了，根本不是技術問題」= 典型耐力任務， MST 介入點是比賽中維持努力語言，不是技術修正
@@ -2531,6 +2573,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#賽前例行程序
       - Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單
+      source_ids: [src.research-psych-06-h, src.research-psych-06-i]
     diagnostic:
       reading_signals:
       - 泳者每次比賽表現落差大但訓練穩定 = PPR 介入點，先訪談是否有固定賽前序列
@@ -2590,6 +2633,7 @@ themes:
       sources:
       - Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫
       - Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單
+      source_ids: [src.research-psych-06-a, src.research-psych-06-i]
     diagnostic:
       reading_signals:
       - 泳者說「我知道應該要告訴自己XXX但壓力大的時候就忘了」= cue word 尚未和感知狀態綁定， 返回低壓趟重新練習連結
@@ -2672,6 +2716,7 @@ themes:
         青少年競技的評價焦慮與高水平游泳員的競賽焦慮屬不同結構，不可互相外推最佳喚醒範圍。
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
+      source_ids: [src.research-psych-02-b]
     diagnostic:
       reading_signals:
       - 游者描述「賽前感覺太平靜，結果游得很差」= 可能底線喚醒不足，需往 IZOF 方向個人化診斷
@@ -2717,6 +2762,7 @@ themes:
         鐵人三項的開放水域環境使情緒激活混入環境恐懼，診斷需區隔。
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
+      source_ids: [src.research-psych-02-b]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -2775,6 +2821,7 @@ themes:
         在技術崩潰前已先觸發恐慌性動作退化，與封閉泳道情境的崩潰路徑可能不同。
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
+      source_ids: [src.research-psych-02-b]
     diagnostic:
       reading_signals:
       - 游者報「後半段突然什麼感覺都沒有了、動作完全不對了」= 可能跨越了崩潰閾值，滯後效應啟動
@@ -2845,6 +2892,7 @@ themes:
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節
+      source_ids: [src.research-psych-02-b, src.research-psych-02-a]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -2900,6 +2948,7 @@ themes:
           而非掃瞄內部動作細節；感知目標語言正是設計來取代解剖指令的工具。
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
+      source_ids: [src.research-psych-02-b]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -2960,6 +3009,7 @@ themes:
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#與水感框架的連結
+      source_ids: [src.research-psych-02-c, src.research-psych-02-d]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3015,6 +3065,7 @@ themes:
         機制相似但觸發源不同——干預需從環境減敏著手而不只是節拍訓練。
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性
+      source_ids: [src.research-psych-02-c]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3075,6 +3126,7 @@ themes:
       sources:
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節
       - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
+      source_ids: [src.research-psych-02-a, src.research-psych-02-b]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3154,6 +3206,7 @@ themes:
       - Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度
       - Research/心理/07_心流與最佳表現.md#4-精英運動員心流研究jackson1995-1996
       - Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推
+      source_ids: [src.research-psych-07-a, src.research-psych-07-c, src.research-psych-07-m]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3210,6 +3263,7 @@ themes:
       - Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化
       - Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用
       - Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導
+      source_ids: [src.research-psych-07-b, src.research-psych-07-i, src.research-psych-07-l]
     diagnostic:
       reading_signals:
       - 泳者說「這個好無聊，我都不用想就會了」= 挑戰低於技能，需提升任務難度才能進心流帶
@@ -3245,6 +3299,7 @@ themes:
       sources:
       - Research/心理/07_心流與最佳表現.md#5-swann-等人心流系統回顧2012
       - Research/心理/07_心流與最佳表現.md#8-心流-表現關係-meta-analysis
+      source_ids: [src.research-psych-07-d, src.research-psych-07-g]
     diagnostic:
       reading_signals:
       - 泳者賽後說「那趟不知道怎麼了，感覺特別順」= 事後回報式心流，正常；收集前提條件（賽前狀態、難度感、睡眠等）
@@ -3283,6 +3338,7 @@ themes:
         對兒童競技與青少年競技：兩種狀態都可能出現，但比例和觸發條件的系統研究缺失。
       sources:
       - Research/心理/07_心流與最佳表現.md#6-flow-vs-clutch-statesswann-等人2017-2023
+      source_ids: [src.research-psych-07-e]
     diagnostic:
       reading_signals:
       - 泳者賽後說「那趟感覺特別輕鬆，不知道時間怎麼過的」= flow 報告
@@ -3335,6 +3391,7 @@ themes:
       sources:
       - Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008
       - Research/心理/07_心流與最佳表現.md#flow-vs-reinvestment-對照
+      source_ids: [src.research-psych-07-k, src.research-psych-07-j]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3394,6 +3451,7 @@ themes:
       - Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用
       - Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結
       - Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008
+      source_ids: [src.research-psych-07-i, src.research-psych-07-n, src.research-psych-07-k]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3449,6 +3507,7 @@ themes:
         不能直接套用成人前額葉假說。
       sources:
       - Research/心理/07_心流與最佳表現.md#9-心流的神經認知機制
+      source_ids: [src.research-psych-07-h]
     diagnostic:
       reading_signals:
       - 泳者說「那趟時間過很快，感覺一下子就游完了」= 時間扭曲，心流後效維度之一
@@ -3495,6 +3554,7 @@ themes:
       sources:
       - Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導
       - Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化
+      source_ids: [src.research-psych-07-l, src.research-psych-07-b]
     diagnostic:
       reading_signals:
       - L0 初學者說「啊！我沒有沉！」且繼續自己重試 = autotelic 雛形，挑戰-技能匹配已發生，維持難度帶
@@ -3544,6 +3604,7 @@ themes:
       - Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度
       - Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推
       - Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結
+      source_ids: [src.research-psych-07-a, src.research-psych-07-m, src.research-psych-07-n]
     diagnostic:
       reading_signals:
       - 泳者說「我根本不知道我的手在做什麼，沒有感覺」= 即時回饋通道訊號太弱，心流前提條件不足，先回到水感建立
@@ -3597,6 +3658,7 @@ themes:
       sources:
       - Research/心理/07_心流與最佳表現.md#7-理想表現狀態ips--the-zone
       - Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推
+      source_ids: [src.research-psych-07-f, src.research-psych-07-m]
     diagnostic:
       reading_signals:
       - 選手賽前說「我需要安靜一下，不想被打擾」= 個人最佳喚醒可能在低激活帶，給他空間

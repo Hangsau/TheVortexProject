@@ -29,8 +29,8 @@ exit code：
   E007  links.*_link_ids 內含無法解析的 ID（canonical 全集 + Drills）
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
-  W002  certainty 為 green/yellow 且**有**來源顯示資訊（source 字串或
-        sources 清單），但同一區塊沒有 source_ids（機器鍵沒跟上顯示層）
+  W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
+        （機器鍵沒跟上顯示層）。**不看 certainty**——見下方 S3a-2 說明
   W003  孤兒條目：沒有任何 links 指入、自己也沒指出
   W004  links.*_link 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         對應的 links.*_link_ids（ids 與顯示字串脫節）
@@ -67,17 +67,32 @@ exit code：
     真相來源是 canonical/health/drafts/*.yaml，改完要重跑
     tools/build_injuries.py；**不可直接改 canonical/health/injuries.yaml**。
 
-  source / source_ids 分工（S3a，與 cross_ref 同一模式）：
-    source         顯示層自由文字，下游 my-site 的 vortex-*.html 直接當純字串
-                   渲染，**不可改寫或改成陣列**。
+  source / sources / source_ids 分工（S3a，與 cross_ref 同一模式）：
+    source         顯示層自由文字（單數，字串）。下游 my-site 的 vortex-*.html
+                   直接當純字串渲染，**不可改寫或改成陣列**。
+    sources        顯示層自由文字（複數，list of string）。psychology.yaml 與
+                   health/injuries.yaml 用這一種，my-site 的
+                   vortex-injuries.html 直接 range 它，**不可改名成 source**。
+                   兩種顯示形式並存是既有事實；驗證器對兩者一視同仁，
+                   不為了統一而改欄位名（那會炸掉線上頁面）。
     source_ids     機器鍵（list of string），指向 canonical/_sources.yaml 的
-                   src.<slug>。**與 certainty / source 放在同一個區塊**
+                   src.<slug>。**與 source / sources 放在同一個區塊**
                    （證據 block 上，不是掛在條目頂層），機器鍵才不會跨層對錯。
-    certainty 掃描範圍（S3a 修正）：舊版只看 entry.certainty 與
+
+    掃描範圍（S3a 修正）：舊版只看 entry.certainty 與
     entry.public.mechanism.certainty（覆蓋 88 個區塊），實際上 934 個帶
     certainty 的區塊散落在 evidence / references / phenomenon / epidemiology
-    等任意深度。現改為遞迴掃描任何含 certainty 的 dict，W002/W009 數字因此
-    大幅上升——那是原本就存在、只是沒被看見的債。
+    等任意深度。現改為遞迴掃描任何含 certainty 的 dict。
+
+    W002 與 certainty 解耦（S3a-2）：「這個區塊有沒有標確定性」跟「這個來源
+    該不該進註冊表」是兩件事，把 W002 綁在 certainty 上是舊 W002 框架的殘留。
+    現在只要區塊有 source/sources 顯示字串就要求 source_ids。W009 不動——
+    它問的是「標了 🟢/🟡 卻拿不出任何來源」，本來就以 certainty 為前提。
+
+    來源檢查（E005/W002/W009）另外掃 Drills/*.yaml：Drills 也有大量帶 source
+    的區塊，過去完全不在任何檢查範圍內。只擴這一組代碼，不把 Drills 併進
+    validate_files——否則 E001/E004/W003/W005 這些 canonical 專屬規則會一次
+    套到全部 drills 上，那是另一個決策。
 """
 from __future__ import annotations
 
@@ -493,11 +508,16 @@ def check_source_blocks(
     """遞迴檢查單一檔案內所有區塊的 source 契約，回傳被引用到的 source_id。
 
     E005  source_ids 型別錯、含非字串元素、或指向 _sources.yaml 沒有的 ID
-    W002  certainty green/yellow + 有 source/sources 顯示字串 + 缺 source_ids
+    W002  有 source/sources 顯示字串 + 缺 source_ids（**與 certainty 無關**）
     W009  certainty green/yellow + 完全沒有來源資訊
 
     走 iter_blocks()（任意深度），不是只看條目頂層——certainty 與 source 大多
     掛在 evidence[] / references[] / public.mechanism 這類巢狀區塊上。
+
+    W002 自 S3a-2 起與 certainty 解耦：「這個區塊有沒有標確定性」跟「這個來源
+    該不該被註冊」是兩件事，把檢查條件綁在 certainty 上是舊 W002 框架的殘留。
+    W009 則仍綁 certainty——它問的是「宣稱有文獻依據卻拿不出任何來源」，
+    語意本來就以確定性標記為前提。
     回傳值供呼叫端做 W008（孤兒來源）比對。
     """
     referenced: set[str] = set()
@@ -524,19 +544,22 @@ def check_source_blocks(
                     f"型別應為 list，實際為 {type(raw_ids).__name__}"
                 )
 
-        cert = block.get("certainty")
-        if cert not in CERTAINTY_NEEDS_SOURCE:
-            continue
         if raw_ids:
             continue
-        cert_label = "green" if cert == "\U0001F7E2" else "yellow"
+
+        cert = block.get("certainty")
+        cert_label = {"\U0001F7E2": "green", "\U0001F7E1": "yellow"}.get(cert)
+
+        # W002：有顯示字串就該有機器鍵，不看 certainty
         if has_display_source(block):
             field = "source" if block.get("source") else "sources"
+            suffix = f" certainty={cert_label}" if cert_label else " 無 certainty"
             warnings["W002"].append(
                 f"  file={rel} id={eid!r} at={loc} "
-                f"certainty={cert_label} 有 {field} 顯示字串但無 source_ids"
+                f"有 {field} 顯示字串但無 source_ids（{suffix.strip()}）"
             )
-        else:
+        # W009：宣稱 🟢/🟡 卻連顯示字串都沒有（仍以 certainty 為前提）
+        elif cert in CERTAINTY_NEEDS_SOURCE:
             warnings["W009"].append(
                 f"  file={rel} id={eid!r} at={loc} "
                 f"certainty={cert_label} 完全無來源資訊"
@@ -750,8 +773,14 @@ def run_validation():
     # ── 逐區塊檢查（E005 / W002 / W009）：遞迴走訪任意深度 ──
     # certainty 與 source/source_ids 多數不在條目頂層，而在 evidence[]、
     # references[]、public.mechanism 這類巢狀區塊上；per-entry 迴圈看不到。
+    #
+    # 掃描範圍另外加上 Drills/*.yaml：Drills 也有大量帶 source 的區塊，
+    # 只把它們納入**來源契約**這一組檢查（E005/W002/W009），不併進
+    # validate_files——後者會連帶把 E001/E004/W003/W005 等 canonical 專屬
+    # 規則套到 Drills 上，那是另一個決策，不在 S3a-2 範圍。
+    source_scan_files = validate_files + sorted(DRILLS_DIR.glob("*.yaml"))
     referenced_source_ids: set[str] = set()
-    for path in validate_files:
+    for path in source_scan_files:
         try:
             data = load_yaml(path)
         except Exception:
@@ -864,8 +893,8 @@ def _write_report(
         ),
         "W002": (
             "WARN",
-            "`certainty` green/yellow 且**有**來源顯示字串（`source`/`sources`）"
-            "但同區塊缺 `source_ids`（機器鍵沒跟上顯示層）",
+            "區塊**有**來源顯示字串（`source`/`sources`）但缺 `source_ids`"
+            "（機器鍵沒跟上顯示層）；S3a-2 起不看 `certainty`",
         ),
         "W003": (
             "WARN",
@@ -912,14 +941,19 @@ def _write_report(
         if code == "W002" and not w002_header_written:
             w002_header_written = True
             lines.append(
-                "> **契約說明（S3a）**：`source` 是顯示層自由文字（下游 my-site 當純"
-                "字串渲染，不可改寫或改成陣列）；可解析的來源鍵放同區塊的 "
+                "> **契約說明（S3a／S3a-2）**：`source`（單數字串）與 `sources`"
+                "（複數清單）都是顯示層自由文字，下游 my-site 直接渲染，"
+                "**不可改寫、改名或改成陣列**；可解析的來源鍵放同區塊的 "
                 "`source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。"
-                "W002 與 W009 都是「🟢/🟡 但沒有 `source_ids`」，差別在**有沒有來源"
-                "顯示資訊**：W002 已經有 `source`/`sources` 字串，只差把它登錄成"
-                "來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出"
-                "主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用"
-                "佔位來源填掉 W009。"
+                "W002 自 S3a-2 起**與 `certainty` 解耦**：一個區塊只要帶了來源"
+                "顯示字串，不論有沒有標確定性，那個來源都該進註冊表、都該有"
+                "`source_ids` 指過去。掃描範圍也含 `Drills/*.yaml`。"
+                "W009 仍綁 `certainty`——它問的是「標了 🟢/🟡 卻拿不出任何來源」，"
+                "語意本來就以確定性標記為前提。"
+                "兩者差別在**有沒有來源顯示資訊**：W002 已經有字串，只差把它"
+                "登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，"
+                "得回頭找出主張的依據（S3b，不能靠遷移解決）。"
+                "兩者不可互相代替，也不可用佔位來源填掉 W009。"
             )
             lines.append("")
 

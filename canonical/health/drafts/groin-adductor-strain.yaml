@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)"
     - "Adductor loading/return-to-sport practice (Coast Sport, 已驗證)"
+  source_ids: [src.grote-2004, src.adductor-loading-return-to-sport-practice-co]
 
 risk_factors:
   - { text: "蛙泳踢腿幅度過大", grade: B }

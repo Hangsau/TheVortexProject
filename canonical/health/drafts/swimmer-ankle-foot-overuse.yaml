@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Swimming injury imaging review (踝部約 1%), radiologykey (已驗證)"
     - "Stress fractures in swimmers systematic review, journals.aiac.org.au (已驗證)"
+  source_ids: [src.swimming-injury-imaging-review-1-radiologyke, src.stress-fractures-in-swimmers-systematic-revi]
 
 risk_factors:
   - { text: "蛙鞋過用/尺寸不合", grade: Expert }

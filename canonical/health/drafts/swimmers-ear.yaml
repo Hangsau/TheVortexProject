@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "StatPearls Otitis Externa, PMID 32310515 (已驗證)"
     - "CDC MMWR 急性外耳道炎門診資料 2003–2007 (已驗證)"
+  source_ids: [src.pmid-32310515, src.cdc-mmwr-2003-2007]
 
 risk_factors:
   - { text: "游泳/頻繁潛水", grade: B }

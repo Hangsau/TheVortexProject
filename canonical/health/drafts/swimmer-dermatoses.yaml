@@ -22,6 +22,7 @@ epidemiology:
     - "Aquatic dermatoses 回顧, PMC5286756 (已驗證)"
     - "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)"
     - "Hot tub folliculitis 回顧, PMC7584313 (已驗證)"
+  source_ids: [src.pmc5286756, src.pmc1448328, src.pmc7584313]
 
 risk_factors:
   - { text: "熱浴缸長時間浸泡(>30 分)+消毒不良(毛囊炎)", grade: B }

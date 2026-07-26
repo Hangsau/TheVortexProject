@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Swimming low back pain by stroke, PMC11531034 (已驗證)"
     - "Competitive swimmers spine degeneration, PMC3435931 (已驗證)"
+  source_ids: [src.pmc11531034, src.pmc3435931]
 
 risk_factors:
   - { text: "蝶/蛙反覆腰椎過伸", grade: B }

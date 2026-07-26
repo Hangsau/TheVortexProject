@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "IOC RED-S 共識聲明（2014 首版，2018/2023 更新；具體 DOI 待查）"
     - "Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）"
+  source_ids: [src.ioc-red-s-2014-2018-2023-doi, src.mountjoy-ioc-consensus-webfetch]
 
 risk_factors:
   - { text: "能量攝取不足以匹配訓練量（有意或無意）", grade: B }

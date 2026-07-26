@@ -22,6 +22,7 @@ epidemiology:
     - "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)"
     - "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"
     - "Quebec 44-year diving SCI study, ScienceDirect (已驗證)"
+  source_ids: [src.pmc2899837, src.pmc8192199, src.quebec-44-year-diving-sci-study-sciencedirec]
 
 risk_factors:
   - { text: "水深不足(<1.5m)——最強可改變風險因子", grade: A }

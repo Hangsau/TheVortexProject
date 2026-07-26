@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)"
     - "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)"
+  source_ids: [src.pmid-30521295, src.pmc7077213]
 
 risk_factors:
   - { text: "冷水(<19°C)暴露頻率與累積時數", grade: B }

@@ -22,6 +22,7 @@ epidemiology:
     - "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)"
     - "義大利 ECG 篩查自然實驗(SCD 3.6→0.4 /10 萬，降 89%) (已驗證 URL)"
     - "Commotio Cordis in 2023, PMC10356869 (已驗證)"
+  source_ids: [src.pmc11985649, src.ecg-scd-3-6-0-4-10-89-url, src.pmc10356869]
 
 risk_factors:
   - { text: "HCM(肥厚性心肌病，最常見單一原因)", grade: A }

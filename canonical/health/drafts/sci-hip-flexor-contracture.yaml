@@ -21,6 +21,7 @@ epidemiology:
   caveat: 多數數據來自臨床觀察與小規模個案系列，缺大型流病
   sources:
     - "Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述；待核實具體引用）"
+  source_ids: [src.akkurt-2017]
 
 risk_factors:
   - { text: "完全性 SCI（vs 不完全性）", grade: B }

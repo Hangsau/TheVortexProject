@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)"
     - "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)"
+  source_ids: [src.aiac-ijkss-v-6n-1p-25, src.pmc9724109]
 
 risk_factors:
   - { text: "RED-S/低 BMD", grade: A }

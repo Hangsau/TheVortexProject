@@ -169,6 +169,7 @@ points:
       - certainty: 🟠
         text: The Race Club PDM 測試確認手掌（非前臂）是推進力的主要來源；三個物理原因（形狀、速度、拳頭測試）均支持此結論。
         source: Hall Sr. 2020
+        source_ids: [src.hall-sr-2020]
       practical_implication: 教學口令應從「讓前臂推水」改為「保持肘尖朝向游進方向」；高肘的訓練限制因素是前鋸肌耐力，而非技術理解。
       cross_ref: free.tech.10（前鋸肌硬體邊界）
       cross_ref_ids: [free.tech.10]
@@ -254,6 +255,7 @@ points:
       - certainty: 🟠
         text: Hip-driven 與 Shoulder-driven 風格的髖旋轉幅度範圍來自菁英影像觀察。
         source: Race Club / 通用菁英觀察
+        source_ids: [src.race-club-b]
       practical_implication: 在高划頻下刻意主動旋轉髖部會讓動作失調；短距離訓練應讓髖保持相對穩定，「把肩膀教好，髖部自然跟著動」。
   - id: free.tech.16
     stroke: free
@@ -1125,9 +1127,11 @@ points:
       - certainty: 🟠
         text: 每增加一度 hip internal rotation，推進力增加約 5%（教練觀測，非學術研究控制數字）
         source: The Race Club
+        source_ids: [src.the-race-club]
       - certainty: 🟠
         text: Adam Peaty 和 Rebecca Soni 能在約 120° 髖-大腿角啟動踢腿；一般選手需要更大角度（100–110°）
         source: 教練觀測
+        source_ids: [src.coach-observation]
       practical_implication: 評估泳者前應先區分「解剖固定限制」與「可訓練軟組織限制」，不能給相同的訓練建議；hip internal rotation 是蛙腿技術的解剖前提，而不只是效率因子。
   - id: breast.tech.16
     stroke: breast
@@ -1398,6 +1402,7 @@ points:
       - certainty: 🟠
         text: 50m蝶式的技術不是波動消失，而是波動幅度壓縮後的緊湊版本
         source: Coach Andrew Sheaff 2022
+        source_ids: [src.coach-andrew-sheaff-2022]
       practical_implication: 不同距離的技術差異在於波動幅度與節律調配，不應按距離切換為本質不同的技術。
   - id: fly.tech.6
     stroke: fly
@@ -1412,6 +1417,7 @@ points:
       - certainty: 🟠
         text: 把兩踢當同一動作做兩次是最常見的訓練錯誤
         source: Swim Like A Fish 2025
+        source_ids: [src.swim-like-a-fish-2025]
       practical_implication: 訓練應明確區分兩踢任務，不用單一踢水口令覆蓋兩者。
   - id: fly.tech.7
     stroke: fly
@@ -1445,6 +1451,7 @@ points:
       - certainty: 🟠
         text: 精英泳者第二踢穩定性是技術持續性的關鍵分界
         source: Swim Like A Fish 2025
+        source_ids: [src.swim-like-a-fish-2025]
       practical_implication: 第二踢與出水的同步是最容易被忽略但影響最大的時序問題，疲勞後需優先維持。
   - id: fly.tech.9
     stroke: fly
@@ -1459,6 +1466,7 @@ points:
       - certainty: 🟠
         text: 兩踢合計推進比例約 80%
         source: Swim Like A Fish 2025
+        source_ids: [src.swim-like-a-fish-2025]
       practical_implication: 踢水訓練是蝶式的核心不可簡化，踝關節訓練優先於腿部力量訓練。
   - id: fly.tech.10
     stroke: fly
@@ -1708,6 +1716,7 @@ points:
       - certainty: 🟠
         text: 精英選手如 Walsh、Huske 採用每划換氣（Chin Forward 技術前提）
         source: 教練觀測 2024–2025
+        source_ids: [src.2024-2025]
       practical_implication: 呼吸頻率訓練應以換氣技術成熟度為前提，而非直接套用精英的換氣次數模式。
   - id: fly.tech.31
     stroke: fly
@@ -2027,6 +2036,7 @@ points:
       - certainty: 🟠
         text: 精英選手實測：立刻起踢 vs 短暫滑行快 0.1 秒，vs 長時間滑行快 0.18 秒
         source: The Race Club velocity meter 實測
+        source_ids: [src.the-race-club-velocity-meter-a]
       - certainty: 🟢
         text: 建立「流線型滑行 → UDK → 出水划手」三狀態最優轉換速度模型，確認大多數精英選手最優起踢速度高於水面游泳速度
         source: Sports Biomechanics 2026
@@ -2120,6 +2130,7 @@ points:
       - certainty: 🟠
         text: 成功水下踢腿最重要因素之一是選手在緊縮流線型中開始並在正確時機起踢
         source: USMS Body Alignment Guide
+        source_ids: [src.usms-body-alignment-guide-a]
       practical_implication: UDK 訓練的先決條件是流線型品質；流線型訓練優先於踢腿力量訓練。
   - id: udk.tech.25
     stroke: udk
@@ -2245,6 +2256,7 @@ points:
       - certainty: 🟠
         text: 雪梨奧運頂尖選手出發的水下階段佔整體起跑時間約 84%，不同起跳方式在精英層級結果不顯著。
         source: Cossor & Mason 2001
+        source_ids: [src.cossor-2001]
       practical_implication: 選手技術選擇應依個人計時測試決定；精英層級起跳方式差異不顯著，水下表現才是決定因素。
   - id: starts-turns.tech.2
     stroke: starts-turns
@@ -2344,6 +2356,7 @@ points:
           Amanda Kendall 測試抬頭 vs 低頭起跳：入水距離 2.96 vs 2.64 公尺（+11%），到 12m 時間 5.41 vs 5.56 秒（-3%）。
           Isabella Arcila 測試圓背 vs 平背 set position：peak acceleration 23.46 vs 22.48 m/s²，入水距離 2.89 vs 2.75（+5%）。
         source: The Race Club VM 量測資料
+        source_ids: [src.the-race-club-vm-b]
       practical_implication: 訓練優先序：① 先確認後腿踢的存在與幅度（多數人忽略，回報最大）；② 教大圓直臂繞臂（需要肩柔軟度，沒有就保留小圓）；③ 抬頭視角訓練。Set position 配合：背要圓不要平（圓背 5% 飛行距離、3% 到 12m 時間）。
 
   - id: starts-turns.tech.44
@@ -2592,6 +2605,7 @@ points:
       - certainty: 🟠
         text: 縮臂湊牆被直接列名為轉身錯誤。
         source: MySwimPro 2022
+        source_ids: [src.myswimpro-2022]
       practical_implication: 教學口令：「划完再轉，不夠就踢，不要縮手湊。」
   - id: starts-turns.tech.20
     stroke: starts-turns
@@ -2606,6 +2620,7 @@ points:
       - certainty: 🟠
         text: 翻滾啟動時機研究以 tuck index 為主要變數；頭部朝下是教練觀測共識。
         source: PMC5260528; The Race Club; 360swim
+        source_ids: [src.pmc5260528]
       practical_implication: 訓練計步能力是自由式轉身的核心技能；啟動翻滾時視線向下看池底，不看牆。
   - id: starts-turns.tech.21
     stroke: starts-turns
@@ -2651,6 +2666,7 @@ points:
       - certainty: 🟠
         text: 旗幟到牆的划手次數取決於速度與划效，游速快慢會讓預期距離偏移。
         source: U.S. Masters Swimming
+        source_ids: [src.u-s-masters-swimming]
       practical_implication: 教練應幫助泳者建立三速計步庫（慢/中/比賽速），並在訓練量或技術改變後重新標定。
   - id: starts-turns.tech.24
     stroke: starts-turns
@@ -2770,6 +2786,7 @@ points:
       - certainty: 🟠
         text: 適用情境分類來自教練系統觀測。
         source: 360swim; USMS; Swimming World
+        source_ids: [src.360swim-usms-swimming-world]
       practical_implication: 400 IM 疲勞段若無法完整執行 Crossover，改用 Open turn 更穩定；100/200 IM 技術熟練者可考慮 Crossover。
   - id: starts-turns.tech.32
     stroke: starts-turns
@@ -2834,6 +2851,7 @@ points:
       - certainty: 🟠
         text: 效率損失清單來自教練系統觀測。
         source: USMS; SGSwim
+        source_ids: [src.usms-sgswim]
       practical_implication: 訓練口令：觸牆不停頓（同時縮腿）、膝蓋快收向胸口、全程閉氣到出水。
   - id: starts-turns.tech.37
     stroke: starts-turns
@@ -2858,6 +2876,7 @@ points:
       - certainty: 🟠
         text: 以 tuck index（腳觸牆時臀部距牆距離）為主要測量變數；最優翻滾啟動距離無跨選手通用量化值。
         source: PMC5260528; The Race Club; 360swim
+        source_ids: [src.pmc5260528]
       practical_implication: 以「最後一划末端啟動、頭已低於水面」作為計步之外的啟動參照信號。
   - id: starts-turns.tech.39
     stroke: starts-turns
@@ -2872,6 +2891,7 @@ points:
       - certainty: 🟠
         text: 水下階段佔整體起跳時間約 84%。
         source: Cossor & Mason 2001
+        source_ids: [src.cossor-2001]
       practical_implication: 選手評估起跳技術時應以最終成績指標（15m 時間）為主，不以單一中間指標（如離台速度）判斷優劣。
   - id: starts-turns.tech.40
     stroke: starts-turns

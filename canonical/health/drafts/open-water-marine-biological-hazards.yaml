@@ -23,6 +23,7 @@ epidemiology:
     - "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)"
     - "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)"
     - "Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）"
+  source_ids: [src.pmc8147101, src.pmc2858141, src.jellyfish-envenomation-first-aid]
 
 risk_factors:
   - { text: "免疫低下/慢性肝病（創傷弧菌壞死性筋膜炎）", grade: A }

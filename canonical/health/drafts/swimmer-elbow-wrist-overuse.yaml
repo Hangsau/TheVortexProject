@@ -20,6 +20,7 @@ epidemiology:
   caveat: 證據幾乎全為教練觀察與臨床回報；無控制研究；常見引用的『精英泳者 58% 曾有肘不適』來自商業平台文章，不可作公開數字
   sources:
     - "臨床/教練回報(無系統性流行病學研究)"
+  source_ids: [src.clinical-coach-report-no-epidemiology]
 
 risk_factors:
   - { text: "蝶/蛙拉水技術不正(手肘下垂、過中線)", grade: Expert }

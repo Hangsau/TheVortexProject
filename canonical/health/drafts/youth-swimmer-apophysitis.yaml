@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)"
     - "Proximal humeral epiphysiolysis (little league shoulder), PMID 30485006 (摘要層級)"
+  source_ids: [src.pmc11297363-b, src.pmid-30485006]
 
 risk_factors:
   - { text: "開放骨骺期+高過頭訓練量", grade: B }

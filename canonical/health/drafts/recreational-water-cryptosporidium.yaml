@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)"
     - "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)"
+  source_ids: [src.pmc6597118, src.pmc8136425]
 
 risk_factors:
   - { text: "吞入泳池水", grade: B }

@@ -23,6 +23,7 @@ drills:
     failure_signal: "身體下沉、只靠膝蓋猛踩、單向（只有下踢）有力。"
     deficiency_fixes: [B]
     source: "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide"
+    source_ids: [src.yourswimlog-com-vertical-kicking-u-s-masters]
     body_position: vertical
     constraints: [tension_held]
     movement_pattern: static
@@ -51,6 +52,7 @@ drills:
     failure_signal: "某個朝向（常是俯臥）波動變小或膝蓋代償；換面時流線鬆掉。"
     deficiency_fixes: [B, C]
     source: "Competitor Swim UDK drills；swimswam UDK sets"
+    source_ids: [src.competitor-swim-udk-drills-swimswam-udk-sets]
     body_position: transitional
     constraints: [tension_held]
     movement_pattern: alternating
@@ -79,6 +81,7 @@ drills:
     failure_signal: "波動塌成純膝蓋踩、髖部不參與。"
     deficiency_fixes: [B]
     source: "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
+    source_ids: [src.yourswimlog-com-4-5-tethered-60s-rest-2-3]
     body_position: underwater
     constraints: [tension_held]
     movement_pattern: continuous
@@ -107,6 +110,7 @@ drills:
     failure_signal: "一味追高頻率使幅度塌掉、推進反而變差。"
     deficiency_fixes: [B]
     source: "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
+    source_ids: [src.yourswimlog-com-tempo-trainer-cone-15m]
     body_position: underwater
     constraints: [tempo_constrained]
     movement_pattern: continuous
@@ -135,6 +139,7 @@ drills:
     failure_signal: "後段波動塌掉、太晚或太早出水、breakout 卡頓。"
     deficiency_fixes: [B, C]
     source: "yourswimlog.com（race-tempo underwater）；swimswam UDK sets"
+    source_ids: [src.yourswimlog-com-race-tempo-underwater-swimsw]
     body_position: underwater
     constraints: [tension_held]
     movement_pattern: continuous
@@ -166,6 +171,7 @@ drills:
     failure_signal: "立刻歪斜或下沉"
     deficiency_fixes: [B, C]
     source: "Vortex 整理（vertical kick × proprioception）"
+    source_ids: [src.vortex-vertical-kick-proprioception]
     body_position: vertical
     constraints: [eyes_closed, tension_held]
     movement_pattern: static
@@ -195,6 +201,7 @@ drills:
     failure_signal: "波動很快變不均；膝蓋代償"
     deficiency_fixes: []
     source: "FINIS 教練資源（snorkel UDK warmup standard）"
+    source_ids: [src.finis-snorkel-udk-warmup-standard]
     body_position: underwater
     constraints: []
     movement_pattern: continuous

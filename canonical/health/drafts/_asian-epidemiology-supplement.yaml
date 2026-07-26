@@ -26,6 +26,7 @@ sections:
     sources:
       - "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)"
       - "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)"
+    source_ids: [src.pmc6863674, src.pmc6464216]
   china_drowning:
     summary: "中國未成年(<20 歲)溺水死亡 2013–2021"
     data:
@@ -38,6 +39,7 @@ sections:
     evidence_grade: B
     sources:
       - "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)"
+    source_ids: [src.pmc10689961]
   taiwan_drowning:
     summary: "台灣溺水數據(全部 pending_verification，原始來源待查)"
     data:

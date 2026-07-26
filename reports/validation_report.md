@@ -69,51 +69,13 @@
 
 ---
 
-## W002 — `certainty` green/yellow 且**有**來源顯示字串（`source`/`sources`）但同區塊缺 `source_ids`（機器鍵沒跟上顯示層）
+## W002 — 區塊**有**來源顯示字串（`source`/`sources`）但缺 `source_ids`（機器鍵沒跟上顯示層）；S3a-2 起不看 `certainty`
 
-**WARN，共 39 筆**
+**WARN，共 0 筆**
 
-> **契約說明（S3a）**：`source` 是顯示層自由文字（下游 my-site 當純字串渲染，不可改寫或改成陣列）；可解析的來源鍵放同區塊的 `source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。W002 與 W009 都是「🟢/🟡 但沒有 `source_ids`」，差別在**有沒有來源顯示資訊**：W002 已經有 `source`/`sources` 字串，只差把它登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用佔位來源填掉 W009。
+> **契約說明（S3a／S3a-2）**：`source`（單數字串）與 `sources`（複數清單）都是顯示層自由文字，下游 my-site 直接渲染，**不可改寫、改名或改成陣列**；可解析的來源鍵放同區塊的 `source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。W002 自 S3a-2 起**與 `certainty` 解耦**：一個區塊只要帶了來源顯示字串，不論有沒有標確定性，那個來源都該進註冊表、都該有`source_ids` 指過去。掃描範圍也含 `Drills/*.yaml`。W009 仍綁 `certainty`——它問的是「標了 🟢/🟡 卻拿不出任何來源」，語意本來就以確定性標記為前提。兩者差別在**有沒有來源顯示資訊**：W002 已經有字串，只差把它登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用佔位來源填掉 W009。
 
-  file=canonical\health\injuries.yaml id='_asian-epidemiology-supplement' at=meta_references[0].sections.japan_competitive certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='_asian-epidemiology-supplement' at=meta_references[0].sections.china_drowning certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='biceps-tendinopathy' at=injuries[0].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='rotator-cuff-tendinopathy' at=injuries[1].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='swimmers-shoulder' at=injuries[5].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='breaststrokers-knee' at=injuries[7].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='extension-low-back-pain' at=injuries[8].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='femoroacetabular-impingement' at=injuries[9].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='groin-adductor-strain' at=injuries[10].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='spondylolysis' at=injuries[11].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='acanthamoeba-keratitis' at=injuries[13].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='chlorine-eye-irritation' at=injuries[14].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='recreational-water-cryptosporidium' at=injuries[15].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='surfers-ear-exostosis' at=injuries[17].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='swimmer-dental-erosion' at=injuries[18].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='swimmer-dermatoses' at=injuries[19].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='swimmers-ear' at=injuries[20].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='swimming-induced-bronchoconstriction' at=injuries[21].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='uv-photo-damage' at=injuries[22].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='dehydration-hyponatremia' at=injuries[24].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='drowning' at=injuries[25].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='exertional-sudden-cardiac-death' at=injuries[26].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='hypothermia-swimmers' at=injuries[27].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='sipe' at=injuries[29].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='exercise-amenorrhea' at=injuries[30].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='female-athlete-triad' at=injuries[31].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='iron-deficiency-swimmer' at=injuries[32].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='oral-contraceptives-performance' at=injuries[33].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='red-s' at=injuries[34].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='swimmer-low-bone-density' at=injuries[36].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='diving-cervical-injury' at=injuries[37].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='flip-turn-wall-push' at=injuries[38].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='open-water-marine-biological-hazards' at=injuries[39].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].epidemiology certainty=yellow 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='starting-block-impact' at=injuries[41].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='osgood-schlatter' at=injuries[42].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='salter-harris-physeal-fracture' at=injuries[43].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='scheuermann-kyphosis' at=injuries[44].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
-  file=canonical\health\injuries.yaml id='sever-disease' at=injuries[45].epidemiology certainty=green 有 sources 顯示字串但無 source_ids
+（無）
 
 ---
 

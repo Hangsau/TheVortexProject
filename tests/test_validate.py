@@ -244,9 +244,11 @@ class FixtureTestBase(unittest.TestCase):
                 )
 
         # E005 / W002 / W009：直接呼叫產品程式碼的 source 契約檢查
-        # （遞迴走訪整棵樹，不只條目層）
+        # （遞迴走訪整棵樹，不只條目層；掃描範圍與產品端一致，含 Drills）
+        source_scan_files = validate_files + sorted(
+            self.drills_dir.glob("*.yaml"))
         referenced_source_ids = set()
-        for path in validate_files:
+        for path in source_scan_files:
             try:
                 data = validate_mod.load_yaml(path)
             except Exception:
@@ -400,12 +402,15 @@ class TestE004TaxonomyViolation(FixtureTestBase):
 
 
 class TestW002CertaintyNoSource(FixtureTestBase):
-    """W002 / W009：certainty green/yellow 但無 source_ids 的兩種型態。
+    """W002 / W009：缺 source_ids 的兩種型態。
 
     S3a 把舊 W002 拆成兩碼，因為兩者的修法完全不同：
       W002  已經有 source/sources 顯示字串 → 只差登錄成來源條目再補機器鍵
       W009  連顯示字串都沒有             → 得回頭找主張依據（S3b），
                                             不能靠遷移或佔位來源解決
+
+    S3a-2 再把 W002 與 certainty 解耦（見 TestW002DecoupledFromCertainty）：
+    有顯示字串就要有機器鍵，不論該區塊有沒有標確定性。W009 維持綁 certainty。
     """
 
     def test_green_no_source_info_triggers_w009_not_w002(self):
@@ -631,6 +636,204 @@ class TestW002CertaintyNoSource(FixtureTestBase):
         _, warnings, _ = self._run()
         self.assertEqual(len(warnings["W002"]), 0, "green + source_ids 不應觸發 W002")
         self.assertEqual(len(warnings["W009"]), 0, "green + source_ids 不應觸發 W009")
+
+
+class TestW002DecoupledFromCertainty(FixtureTestBase):
+    """S3a-2：W002 不再以 certainty 為前提。
+
+    「這個區塊有沒有標確定性」跟「這個來源該不該被註冊」是兩件事。
+    綁在 certainty 上是舊 W002 框架的殘留，會讓 periodization/*、Drills/* 這類
+    沒標確定性但確實帶 source 的區塊完全逃過檢查。
+    W009 相反——它問的是「標了 🟢/🟡 卻拿不出來源」，本來就該綁 certainty。
+    """
+
+    def test_source_without_certainty_still_triggers_w002(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-no-cert",
+                        "category": "kick",
+                        "stroke": "free",
+                        # 刻意不給 certainty
+                        "source": "Ch5 Periodization Terminology; Ch8 Phases",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W002"]), 1,
+            "有 source 字串就該要求 source_ids，不論有沒有 certainty",
+        )
+        self.assertIn("無 certainty", warnings["W002"][0])
+        self.assertEqual(
+            len(warnings["W009"]), 0,
+            "沒有 certainty 就不該進 W009（W009 仍以 certainty 為前提）",
+        )
+
+    def test_sources_plural_without_certainty_triggers_w002(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-no-cert-plural",
+                        "category": "kick",
+                        "stroke": "free",
+                        "epidemiology": {
+                            "sources": ["IOC RED-S 共識聲明", "Mountjoy 等 IOC consensus"],
+                        },
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W002"]), 1)
+        self.assertIn("有 sources 顯示字串", warnings["W002"][0])
+        self.assertIn("epidemiology", warnings["W002"][0])
+        self.assertEqual(len(warnings["W009"]), 0)
+
+    def test_no_certainty_no_source_is_silent(self):
+        # 沒 certainty 又沒 source → 兩碼都不該叫（解耦不等於全面收網）
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-plain",
+                        "category": "kick",
+                        "stroke": "free",
+                        "text": "純敘述，沒有來源主張",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W002"]), 0)
+        self.assertEqual(len(warnings["W009"]), 0)
+
+    def test_source_without_certainty_resolved_by_source_ids(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.ch5-ch8", "type": "other",
+                           "verification_status": "unverified",
+                           "display": "Ch5; Ch8"}]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "entry-no-cert-ok",
+                        "category": "kick",
+                        "stroke": "free",
+                        "source": "Ch5; Ch8",
+                        "source_ids": ["src.ch5-ch8"],
+                    }
+                ]
+            },
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W002"]), 0)
+        self.assertEqual(len(errors["E005"]), 0)
+        self.assertEqual(
+            len(warnings["W008"]), 0,
+            "無 certainty 的區塊引用也應算數，來源不該被判成孤兒",
+        )
+
+
+class TestSourceCheckCoversDrills(FixtureTestBase):
+    """S3a-2：來源契約檢查（E005/W002/W009）擴到 Drills/*.yaml。
+
+    Drills 過去只被 build_global_id_set() 用來湊 ID 集合，
+    它裡面 176 個帶 source 的區塊不在任何檢查範圍內。
+    這裡只擴這一組代碼——Drills 沒有 canonical 的 links/category 契約，
+    把它併進 validate_files 會一次噴出大量無關的 E001/E004/W003/W005。
+    """
+
+    def test_drills_source_without_ids_triggers_w002(self):
+        self._write_yaml(
+            self.drills_dir / "drills_freestyle.yaml",
+            {
+                "drills": [
+                    {
+                        "id": "Fr01",
+                        "name_zh": "測試 drill",
+                        "source": "There's a Drill for That",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W002"]), 1,
+            "Drills 的 source 區塊也要被來源契約檢查覆蓋",
+        )
+        self.assertIn("drills_freestyle.yaml", warnings["W002"][0])
+
+    def test_drills_dangling_source_ids_triggers_e005(self):
+        self._write_yaml(
+            self.drills_dir / "drills_butterfly.yaml",
+            {
+                "drills": [
+                    {
+                        "id": "Fl01",
+                        "source": "Maglischo Swimming Fastest",
+                        "source_ids": ["src.does-not-exist"],
+                    }
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 1)
+        self.assertIn("src.does-not-exist", errors["E005"][0])
+
+    def test_drills_reference_counts_against_w008(self):
+        # Drills 的引用要算進「有人引用」，否則來源會被誤判成孤兒
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.theres-a-drill-for-that", "type": "book",
+                           "verification_status": "unverified",
+                           "display": "There's a Drill for That"}]),
+        )
+        self._write_yaml(
+            self.drills_dir / "drills_sculling.yaml",
+            {
+                "drills": [
+                    {
+                        "id": "Sc01",
+                        "source": "There's a Drill for That",
+                        "source_ids": ["src.theres-a-drill-for-that"],
+                    }
+                ]
+            },
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(errors["E005"]), 0)
+        self.assertEqual(len(warnings["W002"]), 0)
+        self.assertEqual(
+            len(warnings["W008"]), 0,
+            "只被 Drills 引用的來源不是孤兒",
+        )
+
+    def test_drills_certainty_without_source_triggers_w009(self):
+        self._write_yaml(
+            self.drills_dir / "drills_backstroke.yaml",
+            {
+                "drills": [
+                    {
+                        "id": "Bk01",
+                        "certainty": "\U0001F7E2",
+                        "text": "宣稱有文獻但沒給來源",
+                    }
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W009"]), 1)
+        self.assertEqual(len(warnings["W002"]), 0)
 
 
 class TestE005SourceIdsResolution(FixtureTestBase):

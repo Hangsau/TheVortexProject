@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003 (已驗證 URL)"
     - "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)"
+  source_ids: [src.tipton-mj-et-al-cold-water-immersion-sudden-2003, src.pmc12234767]
 
 risk_factors:
   - { text: "水溫 <15°C(尤 <10°C)", grade: B }

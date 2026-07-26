@@ -21,6 +21,7 @@ drills:
     failure_signal: "臀部下沉；膝蓋大幅出水（自行車踢）"
     deficiency_fixes: [5, 6]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [no_arms]
     movement_pattern: continuous
@@ -50,6 +51,7 @@ drills:
     failure_signal: "水淹過臉；感覺頭部太低或太高"
     deficiency_fixes: [1, 2, 13]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [no_arms]
     movement_pattern: continuous
@@ -77,6 +79,7 @@ drills:
     failure_signal: "浮板彈跳（代表膝蓋或大腿在碰板）"
     deficiency_fixes: [7]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [no_arms]
     movement_pattern: continuous
@@ -106,6 +109,7 @@ drills:
     failure_signal: "旋轉到90度；感覺在上坡"
     deficiency_fixes: [3, 4]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: side
     constraints: [no_arms]
     movement_pattern: progressive
@@ -135,6 +139,7 @@ drills:
     failure_signal: "頭部跟著身體搖晃；旋轉後踢水停止"
     deficiency_fixes: [3, 4]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: transitional
     constraints: [no_arms]
     movement_pattern: rotational
@@ -163,6 +168,7 @@ drills:
     failure_signal: "身體下沉；無法維持雙臂後伸姿勢"
     deficiency_fixes: [10]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [tension_held]
     movement_pattern: continuous
@@ -192,6 +198,7 @@ drills:
     failure_signal: "需要大踢幅才能維持；膝蓋大幅彎曲"
     deficiency_fixes: [4, 5, 7]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: vertical
     constraints: [no_arms]
     movement_pattern: rotational
@@ -220,6 +227,7 @@ drills:
     failure_signal: "手掌飄移（代表核心姿勢有問題）；身體過度旋轉"
     deficiency_fixes: [6]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: side
     constraints: [single_arm]
     movement_pattern: progressive
@@ -248,6 +256,7 @@ drills:
     failure_signal: "手先入水再旋轉（順序反了）；感覺平游而非旋轉"
     deficiency_fixes: [3, 4, 10]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: transitional
     constraints: [single_arm]
     movement_pattern: alternating
@@ -276,6 +285,7 @@ drills:
     failure_signal: "手臂抬起和旋轉分離，感覺是兩個獨立動作"
     deficiency_fixes: [8]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: transitional
     constraints: []
     movement_pattern: alternating
@@ -304,6 +314,7 @@ drills:
     failure_signal: "等待時水蓋過臉；踢水太慢"
     deficiency_fixes: [6]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: []
     movement_pattern: pause_pulse
@@ -332,6 +343,7 @@ drills:
     failure_signal: "手超過中線；一側比另一側難"
     deficiency_fixes: [9]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: []
     movement_pattern: continuous
@@ -360,6 +372,7 @@ drills:
     failure_signal: "過度旋轉到90度；拉水感覺直臂往下"
     deficiency_fixes: [11]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: side
     constraints: [single_arm]
     movement_pattern: continuous
@@ -389,6 +402,7 @@ drills:
     failure_signal: "手臂被身體夾住；旋轉感覺費力"
     deficiency_fixes: [3, 8, 15]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: transitional
     constraints: [single_arm]
     movement_pattern: alternating
@@ -418,6 +432,7 @@ drills:
     failure_signal: "頭部跟著旋轉；踢水停頓"
     deficiency_fixes: [2, 3, 8, 13]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: transitional
     constraints: [tempo_constrained]
     movement_pattern: alternating
@@ -446,6 +461,7 @@ drills:
     failure_signal: "正式仰式比L形費力；胸部太高背部拱起"
     deficiency_fixes: [10]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: []
     movement_pattern: continuous
@@ -475,6 +491,7 @@ drills:
     failure_signal: "無法找到45度暫停點；感覺只是在平游加手臂"
     deficiency_fixes: [3]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: side
     constraints: []
     movement_pattern: pause_pulse
@@ -503,6 +520,7 @@ drills:
     failure_signal: "無法維持指天姿勢；踢水停頓"
     deficiency_fixes: [4]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: side
     constraints: [single_arm, tension_held]
     movement_pattern: alternating
@@ -532,6 +550,7 @@ drills:
     failure_signal: "握拳時幾乎無法前進（代表只靠手掌）"
     deficiency_fixes: [11]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [closed_fist]
     movement_pattern: continuous
@@ -560,6 +579,7 @@ drills:
     failure_signal: "翻轉時方向感混亂；感覺完全是兩個不同動作"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: transitional
     constraints: []
     movement_pattern: alternating
@@ -588,6 +608,7 @@ drills:
     failure_signal: "滑行時立刻開始下沉"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: side
     constraints: []
     movement_pattern: alternating
@@ -615,6 +636,7 @@ drills:
     failure_signal: "小物品掉落（代表頭部在移動或位置不對）"
     deficiency_fixes: [1, 2, 13]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: []
     movement_pattern: continuous
@@ -644,6 +666,7 @@ drills:
     failure_signal: "划頻提高後旋轉消失；身體打平"
     deficiency_fixes: [14]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: []
     movement_pattern: continuous
@@ -673,6 +696,7 @@ drills:
     failure_signal: "拉水感覺虛弱；感覺在平推水"
     deficiency_fixes: [3, 9, 11]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [no_kick]
     movement_pattern: continuous
@@ -701,6 +725,7 @@ drills:
     failure_signal: "入水猶豫輕柔；缺乏加速感"
     deficiency_fixes: [10, 12, 14]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: []
     movement_pattern: continuous
@@ -730,6 +755,7 @@ drills:
     failure_signal: "拉水位置沒有「掛住」的感覺"
     deficiency_fixes: [15]
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [single_arm]
     movement_pattern: continuous
@@ -761,6 +787,7 @@ drills:
     failure_signal: "嚴重漂離中線；身體下沉"
     deficiency_fixes: [3]
     source: "Vortex 整理（proprioception × spatial axis）"
+    source_ids: [src.vortex-proprioception-spatial-axis]
     body_position: supine
     constraints: [eyes_closed, no_arms]
     movement_pattern: continuous
@@ -790,6 +817,7 @@ drills:
     failure_signal: "全程壓力平均（代表路徑沒分段）"
     deficiency_fixes: [11, 15]
     source: "Maglischo Swimming Fastest（paddles for S-pattern feedback）"
+    source_ids: [src.maglischo-swimming-fastest-paddles-for-s-pat]
     body_position: supine
     constraints: [paddle_amplifier, no_kick]
     movement_pattern: continuous
@@ -819,6 +847,7 @@ drills:
     failure_signal: "拇指或手掌先入水；越過中線"
     deficiency_fixes: [9, 10]
     source: "USA Swimming Foundations of Swimming（站姿動作預演）"
+    source_ids: [src.usa-swimming-foundations-of-swimming]
     body_position: standing
     constraints: [no_kick]
     movement_pattern: progressive
@@ -848,6 +877,7 @@ drills:
     failure_signal: "為了配速犧牲身體線；節律跟不上"
     deficiency_fixes: []
     source: "通用團隊訓練法（pair pacing in adjacent lanes）"
+    source_ids: [src.pair-pacing-in-adjacent-lanes]
     body_position: supine
     constraints: [tempo_constrained]
     movement_pattern: continuous
@@ -877,6 +907,7 @@ drills:
     failure_signal: "翻邊時失去平衡；頭部跟著晃"
     deficiency_fixes: [3, 4]
     source: "通用游泳教學法（switch drill warmup variant）"
+    source_ids: [src.switch-drill-warmup-variant]
     body_position: transitional
     constraints: []
     movement_pattern: alternating
@@ -908,6 +939,7 @@ drills:
     failure_signal: "划手後距離很短；踢腿和划手時序脫節"
     deficiency_fixes: [3, 14]
     source: "The Race Club — Fundamentals of Fast Swimming Ch 13, 16"
+    source_ids: [src.the-race-club-fundamentals-of-fast-swimming-a]
     body_position: transitional
     constraints: [tempo_constrained]
     movement_pattern: alternating

@@ -23,6 +23,7 @@ drills:
     failure_signal: "翻滾鬆散、身體歪向一側、翻完方向跑掉。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression"
+    source_ids: [src.u-s-masters-swimming-faster-flip-turns-eatsl]
     body_position: transitional
     constraints: []
     movement_pattern: rotational
@@ -51,6 +52,7 @@ drills:
     failure_signal: "單腳先到、踩牆位置太高或太低、身體歪斜。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Faster Flip Turns（wall progression）"
+    source_ids: [src.u-s-masters-swimming-faster-flip-turns-wall]
     body_position: transitional
     constraints: []
     movement_pattern: pause_pulse
@@ -79,6 +81,7 @@ drills:
     failure_signal: "頭抬起、手沒鎖緊、身體鬆開，很快就停。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Turns guides（tight streamline push-off）"
+    source_ids: [src.u-s-masters-swimming-turns-guides-tight-stre]
     body_position: prone
     constraints: [no_arms, no_kick, tension_held]
     movement_pattern: static
@@ -107,6 +110,7 @@ drills:
     failure_signal: "仍需抬頭看牆、划手數不穩、到牆距離忽遠忽近。"
     deficiency_fixes: [C]
     source: "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）"
+    source_ids: [src.train-daly-u-s-masters-swimming-5yd-m]
     body_position: supine
     constraints: [tempo_constrained]
     movement_pattern: continuous
@@ -135,6 +139,7 @@ drills:
     failure_signal: "為了轉體鬆開流線、太早浮起、breakout 時明顯減速。"
     deficiency_fixes: [C]
     source: "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills"
+    source_ids: [src.u-s-masters-swimming-flip-turn-fundamentals]
     body_position: transitional
     constraints: []
     movement_pattern: continuous
@@ -166,6 +171,7 @@ drills:
     failure_signal: "嚴重誤差（>1 公尺）；需要睜眼或撞牆"
     deficiency_fixes: [C]
     source: "Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）"
+    source_ids: [src.vortex-paralympic-visually-impaired-tapper-s]
     body_position: supine
     constraints: [eyes_closed]
     movement_pattern: continuous
@@ -197,6 +203,7 @@ drills:
     failure_signal: "蠻力撐起；單腳先離開；身體歪斜"
     deficiency_fixes: [C]
     source: "The Race Club (Gary Hall Sr) — Fundamentals of Fast Swimming Ch 24 (Backstroke Starts)"
+    source_ids: [src.the-race-club-gary-hall-sr-fundamentals-of-f-a]
     body_position: vertical
     constraints: []
     movement_pattern: progressive
@@ -226,6 +233,7 @@ drills:
     failure_signal: "靠手拉起身體；身體入水時已散"
     deficiency_fixes: [C]
     source: "The Race Club — Fundamentals of Fast Swimming Ch 24"
+    source_ids: [src.the-race-club-fundamentals-of-fast-swimming-b]
     body_position: transitional
     constraints: []
     movement_pattern: pause_pulse
@@ -255,6 +263,7 @@ drills:
     failure_signal: "踢不到球（腿驅動不夠）；身體入水時拱起"
     deficiency_fixes: [C]
     source: "The Race Club — Fundamentals of Fast Swimming Ch 24"
+    source_ids: [src.the-race-club-fundamentals-of-fast-swimming-b]
     body_position: transitional
     constraints: []
     movement_pattern: pause_pulse

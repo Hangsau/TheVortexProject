@@ -19,6 +19,7 @@ epidemiology:
   caveat: 屬罕見但破壞性極強之眼科急症；發生率受隱形眼鏡使用率與通報品質影響，地區差異大；游泳特異性歸因比例缺精確分母
   sources:
     - "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)"
+  source_ids: [src.pmc11424229]
 
 risk_factors:
   - { text: "戴隱形眼鏡游泳/泡水", grade: B }

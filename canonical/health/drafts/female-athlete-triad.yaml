@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Female athlete triad in swimmers systematic review, JWSM (已驗證，無 PMID 記載)"
     - "RED-S Clinical Assessment Tool framework (IOC)"
+  source_ids: [src.female-athlete-triad-in-swimmers-systematic, src.red-s-clinical-assessment-tool-framework-ioc]
 
 risk_factors:
   - { text: "低能量可及性(LEA <30 kcal/kg FFM/天)", grade: A }

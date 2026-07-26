@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "SLAP lesions overview & rehab, PMC3811737 (已驗證)"
     - "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)"
+  source_ids: [src.pmc3811737, src.pmc4528289]
 
 risk_factors:
   - { text: "GIRD(內旋缺損 >13–15°)", grade: B }

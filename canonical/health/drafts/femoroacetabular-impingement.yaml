@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Cam morphology in aquatic athletes, PMC7605769 (已驗證)"
     - "FAI rehabilitation & RTS, PMC11642080 (已驗證)"
+  source_ids: [src.pmc7605769, src.pmc11642080]
 
 risk_factors:
   - { text: "青少年期大量水上運動(骨骺敏感)", grade: B }

@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Osgood-Schlatter disease, StatPearls NBK441995 (已驗證)"
     - "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)"
+  source_ids: [src.osgood-schlatter-disease-statpearls-nbk44199, src.pmc8869186]
 
 risk_factors:
   - { text: "快速身高增長", grade: B }

@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)"
     - "Swimming injuries narrative review, PubMed 33010194 (已驗證)"
+  source_ids: [src.pmc6409673-c, src.pmid-33010194]
 
 risk_factors:
   - { text: "轉身技術未成熟（足踝角度/牆距判斷）", grade: Expert }

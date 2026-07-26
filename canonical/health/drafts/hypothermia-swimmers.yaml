@@ -22,6 +22,7 @@ epidemiology:
     - "Brannigan et al., Hypothermia... Mass Participation Open Water Swimming, Wilderness Environ Med 2009 (已驗證)"
     - "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
     - "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)"
+  source_ids: [src.brannigan-et-al-hypothermia-mass-participati-2009, src.pmid-40783351, src.pmid-39500300]
 
 risk_factors:
   - { text: "水溫 <18°C(競賽分界)", grade: B }

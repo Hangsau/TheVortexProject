@@ -22,6 +22,7 @@ drills:
     failure_signal: "感覺不到水壓；只是讓手在水中移動"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick]
     movement_pattern: static
@@ -50,6 +51,7 @@ drills:
     failure_signal: "手臂整體在做大動作；感覺不到精細水壓"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick, tension_held]
     movement_pattern: progressive
@@ -78,6 +80,7 @@ drills:
     failure_signal: "抬頭時幾乎無法前進"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick, tension_held]
     movement_pattern: progressive
@@ -106,6 +109,7 @@ drills:
     failure_signal: "肘部跟著動；感覺只是在隨便划水"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick]
     movement_pattern: alternating
@@ -134,6 +138,7 @@ drills:
     failure_signal: "感覺比Sc4容易（代表沒有在加大工作角度）"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick, tension_held]
     movement_pattern: alternating
@@ -162,6 +167,7 @@ drills:
     failure_signal: "幾乎無法移動（代表沒有抓到水）"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [no_kick]
     movement_pattern: progressive
@@ -190,6 +196,7 @@ drills:
     failure_signal: "感覺不到任何水壓"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick, tension_held]
     movement_pattern: static
@@ -218,6 +225,7 @@ drills:
     failure_signal: "肘部拉到肩膀後面；前推無力"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: vertical
     constraints: []
     movement_pattern: static
@@ -246,6 +254,7 @@ drills:
     failure_signal: "單臂時身體明顯歪向划水側"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: prone
     constraints: [no_kick, single_arm]
     movement_pattern: progressive
@@ -274,6 +283,7 @@ drills:
     failure_signal: "完全感覺不到用力點；頸部緊繃"
     deficiency_fixes: []
     source: "There's a Drill for That"
+    source_ids: [src.theres-a-drill-for-that]
     body_position: supine
     constraints: [no_kick]
     movement_pattern: progressive
@@ -305,6 +315,7 @@ drills:
     failure_signal: "握拳完全無法前進（代表整個系統依賴手掌）"
     deficiency_fixes: []
     source: "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）"
+    source_ids: [src.counsilman-fist-sculling]
     body_position: prone
     constraints: [closed_fist, no_kick, tension_held]
     movement_pattern: static
@@ -334,6 +345,7 @@ drills:
     failure_signal: "立刻上浮（撥水沒抓到水）"
     deficiency_fixes: []
     source: "Counsilman 沉浮平衡傳統（hover sculling）"
+    source_ids: [src.counsilman-hover-sculling]
     body_position: underwater
     constraints: [no_kick, no_breath]
     movement_pattern: static

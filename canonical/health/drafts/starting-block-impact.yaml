@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)"
     - "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024 (已驗證)"
+  source_ids: [src.pmc10372189, src.neurobehavioral-consequences-of-repetitive-h]
 
 risk_factors:
   - { text: "出發技術未成熟(入水角度過陡致頭部觸底)", grade: Expert }

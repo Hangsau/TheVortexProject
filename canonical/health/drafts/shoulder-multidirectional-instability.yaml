@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Multidirectional instability of the shoulder, StatPearls NBK557726 (已驗證)"
     - "MDI management review, Annals of Joint (已驗證)"
+  source_ids: [src.multidirectional-instability-of-the-shoulder, src.mdi-management-review-annals-of-joint]
 
 risk_factors:
   - { text: "廣泛韌帶鬆弛", grade: B }

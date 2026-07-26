@@ -210,7 +210,7 @@ indicators:
       framework_state: 感知自動化過渡
       note: 同步旋轉代表把肩髖當剛體一起轉，失去 coupling 機制；菁英的時間差是讓肩旋轉先進入拉水前段、髖旋轉接到拉水末段，整個拉水週期都有 coupling 加成。可由水下高速攝影或 IMU 多軸感測量測。
       evidence:
-        - {certainty: 🟠, text: Race Club Pressure Meter 同步量測肩-髖角速度與手壓力, source: 整合 Race Club + 通用菁英觀察}
+        - {certainty: 🟠, text: Race Club Pressure Meter 同步量測肩-髖角速度與手壓力, source: 整合 Race Club + 通用菁英觀察, source_ids: [src.race-club-c]}
 
   - id: free.L5.lift-phase-duration
     stroke: free
@@ -221,7 +221,7 @@ indicators:
       framework_state: 感知自動化過渡
       note: 升力相 = 手入水到開始向後產生推進力之間的時間。這個指標把風格從外觀判斷（觀察 SR）升級到力學判斷（觀察推進啟動時機）。長距離選手做高 SR 但升力相短 = 形似 shoulder-driven 神不到。
       evidence:
-        - {certainty: 🟠, text: Race Club Velocity Meter 量測 Gary Hall Sr 100 SPM 升力相 0.34 秒, source: 整合 Race Club 量測}
+        - {certainty: 🟠, text: Race Club Velocity Meter 量測 Gary Hall Sr 100 SPM 升力相 0.34 秒, source: 整合 Race Club 量測, source_ids: [src.race-club-d]}
 
   - id: free.L5.serratus
     stroke: free
@@ -310,7 +310,7 @@ indicators:
       framework_state: 壓力下感知失守
       note: 頭部靜止度與身體軸線穩定直接連動——頭一動，肩旋轉軸線偏移，划手對齊度下降。多數教練只看「外觀有沒有動」，但實際應該看「加速曲線中何時開始動」。
       evidence:
-        - {certainty: 🟠, text: "教練影像觀察—菁英仰式選手在 sub-1:00 100m 配速下頭部位移 <3cm", source: "通用菁英影像共識"}
+        - {certainty: 🟠, text: "教練影像觀察—菁英仰式選手在 sub-1:00 100m 配速下頭部位移 <3cm", source: "通用菁英影像共識", source_ids: [src.elite-video-consensus]}
     diagnostic:
       type: C
 
@@ -449,7 +449,7 @@ indicators:
             下一個推進相已經開始。這與「划手快」是不同的——划手快但有滑行的選手 IVV 仍大；
             真菁英是「划手節律 + 滑行消除」雙重特徵。
       evidence:
-        - {certainty: 🟠, text: 菁英蝶式 IVV 觀察—Phelps/Milak/Dressel 50/100m 影像分析, source: 通用菁英影像共識}
+        - {certainty: 🟠, text: 菁英蝶式 IVV 觀察—Phelps/Milak/Dressel 50/100m 影像分析, source: 通用菁英影像共識, source_ids: [src.elite-video-consensus]}
 
   - id: fly.L6.chain-closure
     stroke: fly
@@ -534,7 +534,7 @@ indicators:
       framework_state: 壓力下感知失守——身體平衡
       evidence:
         - {certainty: 🟡, text: Colman 1998, source: Colman 1998, source_ids: [src.colman-1998-a]}
-        - {certainty: 🟠, text: Ward 2018 研究, source: Ward 2018}
+        - {certainty: 🟠, text: Ward 2018 研究, source: Ward 2018, source_ids: [src.ward-2018-b]}
 
   - id: breast.L5.late-kick
     stroke: breast
@@ -544,7 +544,7 @@ indicators:
       indicator: insweep 啟動時才踢腿（比傳統更晚）；速度谷值明顯縮小；%VDO 降低
       framework_state: 感知自動化過渡
       evidence:
-        - {certainty: 🟠, text: Ward 2018 研究；Peaty 技術, source: Ward 2018；Peaty}
+        - {certainty: 🟠, text: Ward 2018 研究；Peaty 技術, source: Ward 2018；Peaty, source_ids: [src.ward-2018-c]}
 
   - id: breast.L5.undulation-stability
     stroke: breast

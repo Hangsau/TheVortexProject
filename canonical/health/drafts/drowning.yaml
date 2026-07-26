@@ -22,6 +22,7 @@ epidemiology:
     - "WHO 2024-12-13 新聞稿『Drowning deaths decline globally』(已驗證 URL)"
     - "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)"
     - "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)"
+  source_ids: [src.who-2024-12-13-drowning-deaths-decline-globa-2024, src.pmc11954903, src.pmc11115434]
 
 risk_factors:
   - { text: "缺乏監督(幼童最關鍵，佔兒童溺水約 52%)", grade: A }

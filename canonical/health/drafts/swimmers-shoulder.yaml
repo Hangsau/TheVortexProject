@@ -19,6 +19,7 @@ epidemiology:
   sources:
     - "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）"
     - "StatPearls Swimmer's Shoulder, NCBI Bookshelf NBK470589"
+  source_ids: [src.mckenzie-2023-a, src.statpearls-swimmer-s-shoulder-ncbi-bookshelf]
 
 risk_factors:
   - { text: "訓練量 >35 km/週", grade: B }

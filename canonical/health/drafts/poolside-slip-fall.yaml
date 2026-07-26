@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "ASTM F2508 / 防滑摩擦係數標準（工程標準，非流病）"
     - "Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）"
+  source_ids: [src.astm-f2508, src.falls-and-hip-fracture-mortality-pmid]
 
 risk_factors:
   - { text: "濕滑硬質地面（摩擦係數 <0.5）", grade: A }

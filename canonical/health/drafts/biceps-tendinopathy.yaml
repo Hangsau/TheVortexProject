@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
     - "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)"
+  source_ids: [src.pmc7824457, src.pmc4247626]
 
 risk_factors:
   - { text: "棘上肌腱病共存", grade: B }

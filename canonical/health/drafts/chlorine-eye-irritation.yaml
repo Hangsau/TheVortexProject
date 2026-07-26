@@ -19,6 +19,7 @@ epidemiology:
   caveat: 缺游泳者眼症狀全球前瞻盛行率；『結膜炎』vs『刺激』判準不一；多數研究聚焦職業工作者非一般泳者
   sources:
     - "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)"
+  source_ids: [src.pmc6137694]
 
 risk_factors:
   - { text: "不戴泳鏡游泳", grade: Expert }

@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Rovere & Nichols 等蛙泳膝經典文獻（作者/年份/期刊待查）"
     - "游泳膝傷流病系統綜述（待 WebFetch 核實）"
+  source_ids: [src.rovere-nichols, src.swimmers-knee-epidemiology-sr]
 
 risk_factors:
   - { text: "蛙式為主項 + 高週踢腿量", grade: B }

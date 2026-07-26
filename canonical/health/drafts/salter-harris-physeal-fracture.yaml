@@ -19,6 +19,7 @@ epidemiology:
   caveat: 游泳特定的生長板骨折分母缺；V 型急性期 X-ray 常正常易低估
   sources:
     - "Salter-Harris fractures, StatPearls NBK430688 (已驗證)"
+  source_ids: [src.salter-harris-fractures-statpearls-nbk430688]
 
 risk_factors:
   - { text: "開放骨骺年齡", grade: A }

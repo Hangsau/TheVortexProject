@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "SIPE 病理生理與鐵人三項案例系列（作者/年份待查）"
     - "軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）"
+  source_ids: [src.sipe, src.military-swim-training-sipe]
 
 risk_factors:
   - { text: "冷水浸泡", grade: B }

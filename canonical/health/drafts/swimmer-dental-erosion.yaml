@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)"
     - "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)"
+  source_ids: [src.pmc3579418, src.pmc10713671]
 
 risk_factors:
   - { text: "競技游泳(高訓練量)", grade: B }

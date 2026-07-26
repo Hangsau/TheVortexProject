@@ -21,6 +21,7 @@ epidemiology:
   sources:
     - "Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）"
     - "美軍/海軍 breath-hold training 安全準則（具體文件待查）"
+  source_ids: [src.shallow-water-blackout-prevention-webfetch, src.breath-hold-training]
 
 risk_factors:
   - { text: "潛前主動過度換氣（hyperventilation）", grade: B }

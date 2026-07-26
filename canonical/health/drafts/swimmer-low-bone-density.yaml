@@ -20,6 +20,7 @@ epidemiology:
   sources:
     - "Site-specific BMD in female swimmers, PMC7039474 (已驗證)"
     - "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)"
+  source_ids: [src.pmc7039474, src.pmc11744971]
 
 risk_factors:
   - { text: "純游泳專項、缺乏重力負荷交叉訓練", grade: A }

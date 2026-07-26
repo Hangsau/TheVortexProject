@@ -795,6 +795,41 @@ v1 把 `title` / `authors` / `year` / `identifier` / `retrieved_on` 全列必填
 3. **`title` 全部留空**（138/138）。這是刻意的——寧可空白也不編。但代表 `_sources.yaml` 目前對人類讀者的可讀性只靠 `display`。
 4. **W003 = 476 未動**：同 S4b/S4c，孤兒偵測不把 `source_ids` 計入出向連結。要改應是明確決策，不順手改。
 
+#### S3a-2 驗收（2026-07-26）
+
+處理 S3a 發現 ① ②。**決策：來源檢查與 `certainty` 解耦**——「這個區塊有沒有標確定性」跟「這個來源該不該被註冊」是兩件事，綁在 `certainty` 上是原始 W002 框架的殘留。
+
+**`tools/validate.py` 檢查語意改動**：
+
+| 碼 | 舊條件 | 新條件 |
+|---|---|---|
+| W002 | 🟢／🟡 **且**有 `source`／`sources` 但缺 `source_ids` | **有 `source`／`sources` 就必須有 `source_ids`**，不看 `certainty`（訊息尾綴標 `certainty=green/yellow` 或 `無 certainty`，兩態可分辨） |
+| W009 | 🟢／🟡 且完全無來源資訊 | **維持不變**——「宣稱高確定性卻連顯示字串都沒有」的語意本來就以 `certainty` 為前提，綁對了 |
+
+**掃描範圍另外加上 `Drills/*.yaml`**（176 個帶 `source` 的區塊原本完全在網外）。只把 Drills 納入**來源契約這一組**檢查（E005／W002／W009），**不**併進 `validate_files`——後者會連帶把 E001/E004/W003/W005 等 canonical 專屬規則套到 Drills 上，那是另一個決策，不在本批範圍。
+
+**`sources`（複數）不改名。** `my-site/layouts/vortex/vortex-injuries.html:180` 是 `{{ with .sources }}{{ range ... }}`，改名直接打壞線上頁面。改法是驗證器**同時接受兩種形態**、兩種都要求 `source_ids`。格式統一列為 legacy debt（見文末）。
+
+**遷移成果**：`_sources.yaml` 138 → **476 筆**（+338），全部 `verification_status: unverified`，130 筆帶逐字轉錄的 `identifier`。**既有 138 筆的 `id` 一律釘住不動**——新來源若與既有 base 碰撞，只能往後續排字母（既有無字母的 `src.<base>` 視同佔用 `-a` 位，新成員從 `-b` 起）。舊筆只有 6 筆被改動，且**只改 `notes`**（`src.mccullough-a/-b`、`src.pmc6409673-a/-b`、`src.race-club`、`src.ward-2018`，各追加一句「疑似與 … 為同一來源，待 S3c 查證後合併」）。
+
+`source_ids` 補齊 **463 處**，分佈：`Drills/*.yaml` 176、`teaching-errors` 93、`psychology` 62、`injuries`（經 drafts 重生成）49、`technical-analysis` 20、`periodization/structure` 20、`zones` 17、`taper` 10、`dryland` 7、`l-indicators` 6、`health/breathing-training` 3。**`source` 顯示字串逐字未動**——65 個改動檔全數比對 HEAD，0 字串變更。`injuries.yaml` 未手改，由 `tools/build_injuries.py` 重生（149 插入／0 刪除）。
+
+**`periodization/*` 的識別碼照原則處理**：字串內的 PMID／DOI（`Mujika & Padilla 2003 (PMID 12840640)`、`DOI 10.3389/fphys.2025.1638739` 等）**逐字轉錄進 `identifier`，但狀態留 `unverified`**——沒 dereference 過就不能標 `verified`（會逼出捏造的查驗日）。
+
+**測試**：67 → **75 tests OK**。新增 `TestW002DecoupledFromCertainty`（4：無 certainty 的 `source` 仍觸發、`sources` 複數同樣觸發、無 certainty 也無來源時靜默、補 `source_ids` 後解除且不製造 W008）與 `TestSourceCheckCoversDrills`（4：Drills 的 W002／E005／W008 計數／W009）。harness 一樣直接呼叫產品端 `check_source_blocks()`，無邏輯副本。**突變測試驗過覆蓋率**：把 W002 重新綁回 `certainty` → 5 個測試失敗；把 Drills 移出掃描範圍 → 4 個失敗。
+
+**當前基線**：E001–E007 全 0；W001 0、**W002 39 → 0**、W003 476（未動，同前批決策）、W004 0、W005 0、W006 0、W007 0、W008 0、**W009 270（不變，解耦不影響其語意）**。總計 0 ERROR / 746 WARN。`build_knowledge_map.py` 跑通且 `KNOWLEDGE_MAP.md` **無 diff**（地圖不呈現 `source_ids`，符合預期）。
+
+**仍未被任何檢查覆蓋的帶 `source` 區塊：49 個，不是 0。** 全部在 `canonical/health/drafts/`（48 檔各 1 個 `epidemiology.sources`，`_asian-epidemiology-supplement.yaml` 2 個）。原因是 `is_excluded()` **刻意**把整個 `drafts/` 排除在所有檢查外——drafts 是 `injuries.yaml` 的建構來源，納入掃描會讓每個傷害條目都觸發 E002 重複 ID 誤報。**資料本身已被覆蓋**：這 49 個區塊的內容經 `build_injuries.py` 升格進被掃描的 `injuries.yaml`，且該 49 個 draft 區塊本身也都已補上 `source_ids`。所以這是**檢查器覆蓋的缺口，不是資料的缺口**。要真正歸零需先讓驗證器分辨「來源建構層 vs 升格產物」，屬獨立決策。
+
+**legacy debt（本批刻意不動）**：
+
+1. **`source`／`sources` 兩套格式並存**。統一需同時改 canonical 資料、`build_injuries.py` 與 `my-site` 模板，跨 repo 且會動到線上頁面，須獨立決策。
+2. **90 筆識別碼已轉錄但未 dereference**，S3c 查一遍即可翻 `verified`，零資訊損失。
+3. **55 筆複合字串**（一個字串含多筆文獻，以 `;`／`；` 分隔）待拆。
+4. **73 筆是內部交叉參照**（`Research/心理/NN_*.md#anchor`），已給 `research-psych-NN` 系列 ID，但它們是專案內部檔案錨點而非外部文獻，日後可能該改用另一種指涉機制。
+5. **Drills 的書籍章節來源缺頁碼**（如 `There's a Drill for That`），只能定位到書不能定位到段落。
+
 ### Hestia 報告整合後續（2026-06-22）
 
 研究/instructional 散文層整合已完成、查證已逐筆把關。剩餘為可選後續：

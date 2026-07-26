@@ -22,6 +22,7 @@ epidemiology:
   sources:
     - "Elliott-Sale et al. 2020, Br J Sports Med（OC 與運動表現綜述；具體引用待核實）"
     - "Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）"
+  source_ids: [src.elliott-sale-2020, src.bushman-2006]
 
 risk_factors:
   # 此節為「影響增強」的因子（不是疾病風險因子），維持 schema 兼容
