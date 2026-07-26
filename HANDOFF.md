@@ -4,7 +4,13 @@
 
 ---
 
-## 當前狀態（2026-07-25）
+## 當前狀態（2026-07-26）
+
+### 進行中——canonical 資料契約升級：S0／S1／S4a／S4c／S4b／S3a／S3a-2／S2（canonical 側）完成
+
+**基線**：`python tools/validate.py` **0 ERROR／746 WARN**（E001–E009 全 0；W003 476 孤兒條目、W009 270 缺來源，皆為刻意留待的內容債）；`python -m unittest discover -s tests` **90 tests OK**。
+
+**下一步**：S2 的 my-site 側（`sync_vortex.py` 帶 `Drills/_categories.yaml` → 消掉最後兩份硬編標籤字典），接著 S3b（270 筆 🟢/🟡 無來源，先做 10 筆試點）。各段驗收詳見下方「下一步建議」章節內的分段驗收紀錄。
 
 ### 進行中——canonical 資料契約升級（S0 + S1 完成）（2026-07-25）
 
@@ -604,7 +610,7 @@
 |---|---|---|---|
 | S0 | 提交 CLAUDE.md 規範 + 本缺口條目 | 文件 | ✅ 已完成 2026-07-25 |
 | S1 | `_taxonomy.yaml` + `_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | ✅ 已完成 2026-07-25（commit a04df0a） |
-| S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | 規劃後派工 |
+| S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | ✅ canonical 側完成 2026-07-26（不拆欄位，改 per-value `scope`；新增 E008/E009/W010）；my-site 側待做 |
 | S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
 | S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
 | S4b | injuries 的 **20 筆** `*_link` 散文欄位加 `*_link_ids` 機器鍵（**不**拆成 ID 陣列，同 S4c 的「加欄位不換內容」） | 需讀內容判斷 | ✅ 已完成 2026-07-26（W004 20→0，新增 E007/W007） |
@@ -636,7 +642,7 @@
 
 **S4b 的 20 筆定位**：全在 `canonical/health/injuries.yaml`（三個欄位各 44 次出現、共 132 處，其中 112 為 null，20 有散文值）。⚠ **`injuries.yaml` 是 `tools/build_injuries.py` 產生的 promoted artifact，不可直接改**；一律改 `canonical/health/drafts/*.yaml` 後重跑生成器。
 
-**S2 待用戶裁定（阻塞中）**：`category` 的 36 個值混了兩種語意——教學類別（`kick`、`stroke-cycle`…）與健康傷害類別（`A-shoulder-upper` … `F-pediatric-growth`，前綴來自 `build_injuries.py` 的 `CATEGORY_ORDER`）。要拆成兩個欄位，還是保留單欄位用命名空間前綴？未決前 S2 不動。
+~~**S2 待用戶裁定（阻塞中）**：`category` 的 36 個值混了兩種語意……要拆成兩個欄位，還是保留單欄位用命名空間前綴？~~ → 已於 2026-07-26 解決，見下方「S2 驗收」：**不拆欄位**，改用 per-value `scope` + `domain_of()`。
 
 #### S4c 驗收（2026-07-26）
 
@@ -829,6 +835,52 @@ v1 把 `title` / `authors` / `year` / `identifier` / `retrieved_on` 全列必填
 3. **55 筆複合字串**（一個字串含多筆文獻，以 `;`／`；` 分隔）待拆。
 4. **73 筆是內部交叉參照**（`Research/心理/NN_*.md#anchor`），已給 `research-psych-NN` 系列 ID，但它們是專案內部檔案錨點而非外部文獻，日後可能該改用另一種指涉機制。
 5. **Drills 的書籍章節來源缺頁碼**（如 `There's a Drill for That`），只能定位到書不能定位到段落。
+
+#### S2 驗收（2026-07-26）——canonical 側完成，my-site 側待做
+
+**核心決策：`category` 不拆欄位，改用 per-value `scope`。**
+
+拆欄位（`category` → `technique_category` + `injury_category`）要同時改四份 my-site layout 與 `vortex-database.html` 的 `where $injuries "category" "D-systemic-acute"`，跨 repo 且會動線上頁面。實際上 `category` 是**三個互不相交的值空間共用一個欄位名**：instructional（技術面向）、health（傷害類別，`A-`–`F-` 前綴排序即嚴重度分層）、drills（練習環節）。只要在 `_taxonomy.yaml` 每個值上宣告 `scope`，再由 `domain_of(rel)` 從檔案路徑推網域，驗證器就能擋跨域誤用——**欄位名一個字都不用動**。三個重疊值（`kick`／`timing`／`turn`）語意相容故共用 scope。
+
+**標籤不上收 taxonomy。** 同一個 key 在不同檔可有不同措辭（`kick` 在 technical-analysis 是「踢水與腿部機制」，在 teaching-errors／drills 是「踢腿」）。所以 `_taxonomy.yaml` 只擁有**合法 key 集合 + scope**，各資料檔自己的 `categories:` 區塊擁有**標籤**。新建 `Drills/_categories.yaml` 補上 Drills 缺的那一份（7 個 key）。
+
+**內容歸一（逐筆有證據，非猜測）**：
+
+| 動作 | 值 | 依據 |
+|---|---|---|
+| 合併 | `body-position`（back.err9）、`core`（back.err13）→ `posture` | `posture` 原本**宣告了但零條目**（孤兒），這兩個是未宣告條目卻正屬於它——一次解掉一個孤兒 + 兩個未宣告 |
+| 合併 | `approach`（starts-turns.err11）→ `turn` | 內容是「轉身 approach 速度」，本就是 turn 環節 |
+| 合併 | `tactic`（free.tech.31）→ `fatigue` | 內容是「30 秒後系統性下降」，是疲勞不是戰術 |
+| 合併 | teaching-errors 的 `breathing` 12 筆 → `head` | 兩者標籤**同為「頭部與換氣」**、內容全是換氣時的頭位；統一到 `head` 後 `breathing` 收斂為 drills 專用（標籤「呼吸」），三網域 scope 乾淨切開 |
+| 保留宣告 | `coupling` | 橫跨 **8 個檔案**的框架級概念，不是雜訊 |
+| 補宣告 | `breakout`（2）、`recovery` | 真實且相異的類別，補進所屬檔的 `categories` 區塊 |
+
+**驗證器新增三碼**（`load_category_scope()` / `domain_of()` / `check_category_scope()` / `check_file_categories()`）：
+
+- **E008** 值合法但 scope 不含本檔網域（跨域誤用）。**未宣告 scope＝空集合＝報錯**，不是靜默放行。
+- **E009** 條目的 `category` 未宣告於**該檔自己的 `categories` 區塊**。這正是本批在 my-site 抓到的兩個線上 bug 的機制：Hugo 的 `{{ index $dict .key }}` 查不到 key 會回**空字串且不報錯**，標籤就這樣人間蒸發。
+- **W010** 死標籤（宣告了沒條目用）。
+
+**E008 一度是死碼——突變測試抓到的。** 前兩個突變（health 值塞進 drill 條目、把 `arm` 的 scope 清空）都回報 **E008: 0 筆**，因為 per-entry 迴圈跑的是 `validate_files`，而它**刻意排除 `Drills/`**（S3a-2 的決策）。先用「把 `arm` 塞進 canonical teaching-errors 條目」證明 E008 本身會動（1 筆），再把 E004／E008 補進 Drills 專段。重跑四個突變全部攔下：突變 2 → E008 1 + E009 1；突變 3 → **E008 51**；突變 4（Drills 塞不存在的值）→ E004 1 + E009 1；還原 → exit 0。**教訓同 S4a：新檢查上線前必須突變測試，否則「0 筆」分不清是乾淨還是沒跑到。**
+
+**測試**：75 → **90 tests OK**。新增 `TestE008CategoryScope`（6）、`TestE009FileCategories`（5）、`TestDomainOf`（4），全部直呼產品端函式。
+
+**當前基線**：`python tools/validate.py` **0 ERROR／746 WARN**（E001–E009 全 0；W003 476、W009 270 未動，同前批決策；W010 0）。`KNOWLEDGE_MAP.md` diff **恰為 16 行 category 改名**，無非預期變動。兩份 instructional 檔 0 未宣告／0 孤兒 category。
+
+**同批修掉的兩個 my-site 線上 bug**（已 push，CI 綠）：
+
+- `vortex-stroke.html:40` 的 `$drillCatName` 漏了 `turn` → starts-turns 頁 9 張 drill 卡的分類標籤全空（commit `0597861`）。
+- `vortex-database.html:15` 硬編了一份漂移的 `$injCatName`，而 `injuries.yaml` 早已自帶 `categories` 區塊 → 改成從資料 merge，同時修好三個標籤漂移（肩與上肢→肩部與上肢、內分泌→內分泌與骨骼、急性創傷→急性外傷）（commit `6bdd91f`）。
+
+**S2 未完的一半——my-site 側**（下一步就做）：
+
+1. `my-site/tools/sync_vortex.py` 的 `sync_drills()`（約 line 283）目前只吐 `{"drills": all_drills}`，要改成讀 `Drills/_categories.yaml` 並吐 `{"categories": ..., "drills": all_drills}`。
+2. 然後把 `vortex-drills.html:16` 與 `vortex-stroke.html:40` 兩處 `$drillCatName` 改成從資料 merge——這是站上**最後兩份硬編標籤字典**，也正是上面那個 `turn` bug 的成因。
+
+**legacy debt（本批刻意不動）**：
+
+1. **`A-`–`F-` 前綴留著**。前綴同時承載排序（嚴重度分層），去前綴要協同改 my-site，屬獨立決策。
+2. **`build_injuries.py` 的 `CATEGORY_ORDER` 仍是第二套排序真相源**。考慮過在 taxonomy 加 `sort_order` 收攏，未做。
 
 ### Hestia 報告整合後續（2026-06-22）
 

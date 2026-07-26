@@ -2138,5 +2138,128 @@ class TestW006CrossRefIdsMissing(FixtureTestBase):
         )
 
 
+class TestE008CategoryScope(unittest.TestCase):
+    """E008：category 跨網域誤用。
+
+    category 是三個互不相交的值空間（instructional / health / drills）
+    共用同一個欄位名。E004 只能擋「不存在的值」，擋不住「health 的傷害
+    類別出現在 drills 條目上」。
+    """
+
+    def _check(self, cat, domain, scope):
+        errors = {"E008": []}
+        validate_mod.check_category_scope(
+            "f.yaml", "e1", {"category": cat}, domain,
+            {cat: set(scope)}, {"category": {cat}}, errors,
+        )
+        return errors["E008"]
+
+    def test_in_scope_passes(self):
+        self.assertEqual(self._check("arm", "drills", ["drills"]), [])
+
+    def test_out_of_scope_flagged(self):
+        hits = self._check("A-shoulder-upper", "drills", ["health"])
+        self.assertEqual(len(hits), 1)
+        self.assertIn("drills", hits[0])
+
+    def test_shared_value_allowed_in_both(self):
+        self.assertEqual(self._check("kick", "drills", ["drills", "instructional"]), [])
+        self.assertEqual(
+            self._check("kick", "instructional", ["drills", "instructional"]), []
+        )
+
+    def test_missing_scope_is_fail_closed(self):
+        # scope 未宣告視為空集合，不預設放行
+        hits = self._check("arm", "drills", [])
+        self.assertEqual(len(hits), 1)
+        self.assertIn("未宣告", hits[0])
+
+    def test_unknown_value_left_to_e004(self):
+        # 值不在 taxonomy 時 E008 不重複報（E004 的職責）
+        errors = {"E008": []}
+        validate_mod.check_category_scope(
+            "f.yaml", "e1", {"category": "bogus"}, "drills",
+            {}, {"category": {"arm"}}, errors,
+        )
+        self.assertEqual(errors["E008"], [])
+
+    def test_non_string_category_ignored(self):
+        errors = {"E008": []}
+        validate_mod.check_category_scope(
+            "f.yaml", "e1", {"category": ["a"]}, "drills",
+            {}, {"category": set()}, errors,
+        )
+        self.assertEqual(errors["E008"], [])
+
+
+class TestE009FileCategories(unittest.TestCase):
+    """E009 / W010：條目 category 與該檔 categories 區塊互相涵蓋。
+
+    這組檢查對應一個實際線上 bug：2026-07-26 有 10 張卡片的分類標籤是
+    空字串，因為條目的 category 沒宣告在該檔的 categories 區塊裡，
+    而 Hugo 的 index 查不到 key 只會靜默回空字串。
+    """
+
+    def _run(self, declared, used):
+        errors, warnings = {"E009": []}, {"W010": []}
+        validate_mod.check_file_categories(
+            "f.yaml",
+            {"categories": declared},
+            [[{"id": f"e{i}", "category": c} for i, c in enumerate(used)]],
+            errors, warnings,
+        )
+        return errors["E009"], warnings["W010"]
+
+    def test_undeclared_category_flagged(self):
+        e, _ = self._run([{"key": "kick"}], ["kick", "body-position"])
+        self.assertEqual(len(e), 1)
+        self.assertIn("body-position", e[0])
+
+    def test_declared_but_unused_is_dead_label(self):
+        _, w = self._run([{"key": "kick"}, {"key": "posture"}], ["kick"])
+        self.assertEqual(len(w), 1)
+        self.assertIn("posture", w[0])
+
+    def test_exact_match_clean(self):
+        e, w = self._run([{"key": "kick"}, {"key": "pull"}], ["kick", "pull"])
+        self.assertEqual((e, w), ([], []))
+
+    def test_id_key_shape_accepted(self):
+        # injuries.yaml 的 categories 用 id/zh，不是 key/name_zh
+        e, w = self._run([{"id": "A-shoulder-upper"}], ["A-shoulder-upper"])
+        self.assertEqual((e, w), ([], []))
+
+    def test_no_categories_block_skipped(self):
+        errors, warnings = {"E009": []}, {"W010": []}
+        validate_mod.check_file_categories(
+            "f.yaml", {}, [[{"id": "e1", "category": "kick"}]],
+            errors, warnings,
+        )
+        self.assertEqual((errors["E009"], warnings["W010"]), ([], []))
+
+
+class TestDomainOf(unittest.TestCase):
+    """domain_of：由相對路徑推導網域，Windows 反斜線也要吃。"""
+
+    def test_canonical_domain(self):
+        self.assertEqual(
+            validate_mod.domain_of("canonical/instructional/teaching-errors.yaml"),
+            "instructional",
+        )
+
+    def test_windows_separator(self):
+        self.assertEqual(
+            validate_mod.domain_of("canonical\health\injuries.yaml"), "health"
+        )
+
+    def test_drills(self):
+        self.assertEqual(
+            validate_mod.domain_of("Drills/drills_freestyle.yaml"), "drills"
+        )
+
+    def test_canonical_root_file(self):
+        self.assertEqual(validate_mod.domain_of("canonical/_sources.yaml"), "_root")
+
+
 if __name__ == "__main__":
     unittest.main(verbosity=2)

@@ -27,6 +27,10 @@ exit code：
         （任意深度的區塊，不限條目頂層）
   E006  cross_ref_ids 內含無法解析的 ID（canonical 全集 + Drills）
   E007  links.*_link_ids 內含無法解析的 ID（canonical 全集 + Drills）
+  E008  category 跨網域誤用：值合法（在 _taxonomy.yaml）但該值的 scope
+        不含本檔所屬網域（instructional / health / drills）
+  E009  條目的 category 未宣告於**該檔自己的 categories 區塊**
+        → my-site 查表落空會渲染成空字串（無錯誤訊息的靜默失敗）
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
@@ -41,6 +45,7 @@ exit code：
   W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用
   W009  certainty 為 green/yellow 且**完全沒有**任何來源資訊
         （既無 source/sources 顯示字串，也無 source_ids）→ S3b 範圍
+  W010  死標籤：categories 區塊宣告了某 key，但該檔沒有任何條目使用
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -91,8 +96,23 @@ exit code：
 
     來源檢查（E005/W002/W009）另外掃 Drills/*.yaml：Drills 也有大量帶 source
     的區塊，過去完全不在任何檢查範圍內。只擴這一組代碼，不把 Drills 併進
-    validate_files——否則 E001/E004/W003/W005 這些 canonical 專屬規則會一次
-    套到全部 drills 上，那是另一個決策。
+    validate_files——否則 E001/W003/W005 這些 canonical 專屬規則會一次
+    套到全部 drills 上，那是另一個決策。S2 另把 E004/E008/E009/W010 加進
+    這個 Drills 專段（category 是 Drills 與 canonical 共用的欄位，不擴就是死碼）。
+
+  category 的兩層真相來源（S2）：
+    canonical/_taxonomy.yaml   擁有**合法 key 集合 + 每個值的 scope**。
+                               category 是三個互不相交的值空間共用一個欄位名
+                               （instructional 技術面向 / health 傷害類別 /
+                               drills 練習環節），scope 是唯一把它們分開的機制。
+                               不改欄位名——改名會炸掉四份 my-site layout
+                               與 `where $injuries "category" "D-..."`。
+    各資料檔的 categories 區塊  擁有**標籤（name_zh / zh）**。同一個 key 在不同
+                               檔可有不同措辭（kick 在 technical-analysis 是
+                               「踢水與腿部機制」，在 teaching-errors / drills 是
+                               「踢腿」），所以標籤不上收到 taxonomy。
+                               Drills 的標籤真相源是 Drills/_categories.yaml。
+                               my-site 一律從資料 merge，不得硬編副本。
 """
 from __future__ import annotations
 
@@ -307,6 +327,106 @@ def load_taxonomy() -> dict[str, set[str]]:
             keys.add(item["key"])
         result[field] = keys
     return result
+
+
+def load_category_scope() -> dict[str, set[str]]:
+    """回傳 {category_key: set_of_allowed_domains}。
+
+    category 是三個互不相交的值空間（instructional / health / drills）共用
+    同一個欄位名，光靠 E004 只能擋「不存在的值」，擋不住「把 health 的傷害
+    類別寫進 drills 條目」這種跨域誤用。scope 缺漏視為未宣告（空集合），
+    由 E008 報出——fail-closed，不預設放行。
+    """
+    data = load_yaml(TAXONOMY_FILE)
+    field = data.get("fields", {}).get("category", {})
+    return {
+        item["key"]: set(item.get("scope") or [])
+        for item in field.get("values", [])
+    }
+
+
+def domain_of(rel: str) -> str:
+    """由檔案相對路徑推導條目所屬網域，供 E008 比對 scope。
+
+    rel 由 str(path.relative_to(ROOT)) 產生，Windows 上是反斜線，
+    這裡兩種分隔符都吃。
+    """
+    parts = rel.replace("\\", "/").split("/")
+    if parts[0] == "Drills":
+        return "drills"
+    if parts[0] == "canonical" and len(parts) > 2:
+        return parts[1]
+    return "_root"
+
+
+def check_category_scope(
+    rel: str,
+    eid: str,
+    entry: dict,
+    domain: str,
+    category_scope: dict[str, set[str]],
+    taxonomy: dict[str, set[str]],
+    errors: dict[str, list[str]],
+) -> None:
+    """E008：條目的 category 必須容許出現在該條目所屬的網域。
+
+    值本身不存在於 taxonomy 的情況由 E004 負責，這裡不重複報。
+    """
+    cat = entry.get("category")
+    if not isinstance(cat, str):
+        return
+    if cat not in taxonomy.get("category", set()):
+        return
+    allowed = category_scope.get(cat, set())
+    if domain not in allowed:
+        errors["E008"].append(
+            f"  file={rel} id={eid!r} category={cat!r} "
+            f"用在 domain={domain!r}，但 scope 只容許 {sorted(allowed) or '（未宣告）'}"
+        )
+
+
+def check_file_categories(
+    rel: str,
+    data: dict,
+    entry_lists: list[list],
+    errors: dict[str, list[str]],
+    warnings: dict[str, list[str]],
+) -> None:
+    """E009 / W010：條目 category 與該檔 categories 區塊必須互相涵蓋。
+
+    my-site 的標籤字典是由各檔的 categories 區塊 merge 出來的
+    （vortex-database.html 的 errCatName / techCatName / injCatName）。
+    條目用了沒宣告的值，Hugo 的 index 查不到 key 會回空字串——分類標籤
+    直接消失在頁面上，而且不會有任何錯誤。2026-07-26 實測有 10 張卡片
+    正處於這個狀態，全靠 build 輸出比對才發現。E009 就是為了讓這件事
+    在 canonical 端就爆掉。
+
+    反向的 W010（宣告了但沒條目用）是死標籤：篩選 chip 點下去零結果。
+    """
+    declared = data.get("categories")
+    if not isinstance(declared, list) or not declared:
+        return
+    keys = {
+        c.get("key") or c.get("id")
+        for c in declared if isinstance(c, dict)
+    }
+    keys.discard(None)
+
+    used: set[str] = set()
+    for entries in entry_lists:
+        for e in entries:
+            if isinstance(e, dict) and isinstance(e.get("category"), str):
+                used.add(e["category"])
+
+    for cat in sorted(used - keys):
+        errors["E009"].append(
+            f"  file={rel} category={cat!r} 未宣告於本檔 categories 區塊"
+            f"（my-site 標籤會渲染成空字串）"
+        )
+    for cat in sorted(keys - used):
+        warnings["W010"].append(
+            f"  file={rel} category={cat!r} 已宣告但無任何條目使用（死標籤）"
+        )
 
 
 # ── Sources 載入 ──────────────────────────────────────────────────────────────
@@ -611,6 +731,7 @@ def run_validation():
     # ── 載入 taxonomy 與 sources ──
     try:
         taxonomy = load_taxonomy()
+        category_scope = load_category_scope()
     except Exception as e:
         print(f"[ERROR] Cannot load _taxonomy.yaml: {e}")
         sys.exit(1)
@@ -650,11 +771,11 @@ def run_validation():
     # ── 錯誤/警告收集器 ──
     errors: dict[str, list[str]] = {
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
-        "E006": [], "E007": []
+        "E006": [], "E007": [], "E008": [], "E009": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-        "W006": [], "W007": [], "W008": [], "W009": []
+        "W006": [], "W007": [], "W008": [], "W009": [], "W010": []
     }
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -665,6 +786,61 @@ def run_validation():
             find_missing_id_in_lists(data, rel, errors["E001"])
         except Exception:
             pass
+
+    # ── E009 / W010: 各檔 categories 區塊與條目 category 互相涵蓋 ──
+    # Drills 一併納入：Drills/_categories.yaml 是 drills 標籤的真相源，
+    # 但 drills_*.yaml 不在 validate_files（會誤觸 E001/W003），所以這裡
+    # 用「宣告檔 + 條目檔」的組合單獨檢查。
+    for path in validate_files:
+        try:
+            data = load_yaml(path)
+            rel = str(path.relative_to(ROOT))
+            if not isinstance(data, dict):
+                continue
+            entry_lists = [
+                v for k, v in data.items()
+                if k in KNOWN_ENTRY_LIST_KEYS and isinstance(v, list)
+            ]
+            check_file_categories(rel, data, entry_lists, errors, warnings)
+        except Exception:
+            pass
+
+    try:
+        drill_cats = load_yaml(DRILLS_DIR / "_categories.yaml")
+        drill_entry_lists = []
+        for path in sorted(DRILLS_DIR.glob("*.yaml")):
+            if path.name.startswith("_"):
+                continue
+            d = load_yaml(path)
+            if not isinstance(d, dict) or not isinstance(d.get("drills"), list):
+                continue
+            drill_entry_lists.append(d["drills"])
+            # E004 / E008：drills 條目不在 validate_files 的逐條目迴圈裡，
+            # 詞彙合法性與 scope 得在這裡自己跑一次，否則兩個檢查對 Drills
+            # 完全是死碼（實測：把 health 的 A-shoulder-upper 塞進 drill
+            # 條目，E008 靜默放行）。
+            drel = str(path.relative_to(ROOT))
+            for e in d["drills"]:
+                if not isinstance(e, dict):
+                    continue
+                cat = e.get("category")
+                if not isinstance(cat, str):
+                    continue
+                eid = e.get("id", "(no id)")
+                if cat not in taxonomy.get("category", set()):
+                    errors["E004"].append(
+                        f"  file={drel} id={eid!r} category={cat!r}"
+                    )
+                    continue
+                check_category_scope(
+                    drel, eid, e, "drills", category_scope, taxonomy, errors
+                )
+        check_file_categories(
+            "Drills/_categories.yaml", drill_cats, drill_entry_lists,
+            errors, warnings,
+        )
+    except Exception as e:
+        errors["E009"].append(f"  Drills/_categories.yaml 無法載入或比對: {e}")
 
     # ── E002: id 全域重複（僅在驗證範圍內）──
     for eid, occurrences in id_registry.items():
@@ -757,6 +933,11 @@ def run_validation():
                     errors["E004"].append(
                         f"  file={rel} id={eid!r} {field}={val!r}"
                     )
+
+        # ── E008: category 跨網域誤用 ──
+        check_category_scope(
+            rel, eid, entry, domain_of(rel), category_scope, taxonomy, errors
+        )
 
         # ── E005: source_ids 斷鏈 ──
         # 已移到下方「逐區塊檢查」的遞迴走訪（source_ids 可出現在任意深度，

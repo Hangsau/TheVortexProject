@@ -1,91 +1,63 @@
 schema_version: 1
 domain: _meta
 description: >
-  Vortex canonical 受控詞彙表。S1 由現況反向抽取，尚未歸一化。
-  S2 執行同義值合併、孤立值定去留；在此之前所有值原樣登錄。
-generated_from: "canonical/**/*.yaml"
-generated_date: "2026-07-25"
+  Vortex canonical 受控詞彙表。S1 由現況反向抽取，S2 完成 category 歸一
+  （同義值合併、孤立值定去留、per-value scope）。其餘欄位仍為 S1 原樣登錄。
+generated_from: "canonical/**/*.yaml + Drills/*.yaml"
+generated_date: "2026-07-26"
 
 fields:
   category:
     controlled: true
-    review_status: unreviewed
-    # S2 待歸一：health 傷害類別（A-/B-/C-/D-/E-/F- 前綴）與教學類別混用同欄位；
-    # '_meta-reference' 疑為 meta 用途非內容分類；單次出現值（body-position/core/approach/tactic/coupling）
-    # 需領域判斷後決定保留或合併。
+    review_status: reviewed
+    # S2 已歸一。category 是三個互不相交的值空間共用同一個欄位名：
+    #   instructional  技術面向（teaching-errors / technical-analysis）
+    #   health         傷害類別（A-/B-/C-/D-/E-/F- 前綴，排序即嚴重度分層）
+    #   drills         練習環節（Drills/）
+    # scope 宣告該值容許出現的網域，驗證器據此擋跨域誤用（E008）。
+    # 三個重疊值（kick / timing / turn）語意相容故共用；breathing 已收斂為
+    # drills 專用（instructional 的「頭部與換氣」統一用 head）。
+    # 標籤（name_zh）不在本檔：各資料檔自己的 categories 區塊是標籤真相源，
+    # 因為同一個 key 在不同檔可有不同措辭（kick 在 TA 是「踢水與腿部機制」，
+    # 在 teaching-errors / drills 是「踢腿」）。my-site 一律從資料讀，不得硬編。
+    # 例外：_meta-reference 是 injuries.yaml 的 meta 指標條目，非內容分類。
     values:
-      - key: kick
-        count: 44
-      - key: stroke-cycle
-        count: 41
-      - key: C-nonMSK-medical
-        count: 20
-      - key: comparison
-        count: 17
-      - key: hardware
-        count: 16
-      - key: rotation
-        count: 15
-      - key: depth
-        count: 15
-      - key: streamline
-        count: 15
-      - key: concept
-        count: 15
-      - key: errors
-        count: 15
-      - key: A-shoulder-upper
-        count: 14
-      - key: D-systemic-acute
-        count: 14
-      - key: D-endocrine
-        count: 14
-      - key: tempo
-        count: 13
-      - key: B-lower-spine-strokespecific
-        count: 12
-      - key: breathing
-        count: 12
-      - key: recovery
-        count: 11
-      - key: pull
-        count: 11
-      - key: timing
-        count: 11
-      - key: E-acute-trauma
-        count: 10
-      - key: F-pediatric-growth
-        count: 10
-      - key: undulation
-        count: 10
-      - key: entry
-        count: 9
-      - key: head
-        count: 9
-      - key: style
-        count: 7
-      - key: fatigue
-        count: 5
-      - key: watersense
-        count: 5
-      - key: turn
-        count: 3
-      - key: start
-        count: 3
-      - key: _meta-reference
-        count: 2
-      - key: breakout
-        count: 2
-      - key: body-position
-        count: 1
-      - key: core
-        count: 1
-      - key: approach
-        count: 1
-      - key: tactic
-        count: 1
-      - key: coupling
-        count: 1
+      - {key: kick, scope: [drills, instructional], count: 87}
+      - {key: timing, scope: [drills, instructional], count: 53}
+      - {key: arm, scope: [drills], count: 51}
+      - {key: stroke-cycle, scope: [instructional], count: 41}
+      - {key: head, scope: [instructional], count: 21}
+      - {key: comparison, scope: [instructional], count: 17}
+      - {key: hardware, scope: [instructional], count: 16}
+      - {key: concept, scope: [instructional], count: 15}
+      - {key: depth, scope: [instructional], count: 15}
+      - {key: errors, scope: [instructional], count: 15}
+      - {key: rotation, scope: [instructional], count: 15}
+      - {key: streamline, scope: [instructional], count: 15}
+      - {key: balance, scope: [drills], count: 13}
+      - {key: sculling, scope: [drills], count: 13}
+      - {key: tempo, scope: [instructional], count: 13}
+      - {key: turn, scope: [drills, instructional], count: 13}
+      - {key: pull, scope: [instructional], count: 11}
+      - {key: recovery, scope: [instructional], count: 11}
+      - {key: C-nonMSK-medical, scope: [health], count: 10}
+      - {key: undulation, scope: [instructional], count: 10}
+      - {key: entry, scope: [instructional], count: 9}
+      - {key: A-shoulder-upper, scope: [health], count: 7}
+      - {key: D-endocrine, scope: [health], count: 7}
+      - {key: D-systemic-acute, scope: [health], count: 7}
+      - {key: style, scope: [instructional], count: 7}
+      - {key: B-lower-spine-strokespecific, scope: [health], count: 6}
+      - {key: fatigue, scope: [instructional], count: 6}
+      - {key: E-acute-trauma, scope: [health], count: 5}
+      - {key: F-pediatric-growth, scope: [health], count: 5}
+      - {key: breathing, scope: [drills], count: 5}
+      - {key: watersense, scope: [instructional], count: 5}
+      - {key: start, scope: [instructional], count: 3}
+      - {key: breakout, scope: [instructional], count: 2}
+      - {key: posture, scope: [instructional], count: 2}
+      - {key: _meta-reference, scope: [health], count: 1}
+      - {key: coupling, scope: [instructional], count: 1}
 
   stroke:
     controlled: true

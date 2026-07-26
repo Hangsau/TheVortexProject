@@ -1,0 +1,25 @@
+# ============================================================
+# Drills 分類標籤 — 單一真相來源
+# ------------------------------------------------------------
+# drills_*.yaml 的 category 欄位只能取本檔宣告的 key。
+# 標籤（name_zh）以本檔為準；my-site 由 sync_vortex.py 帶進
+# data/vortex/drills.yaml，layout 不得硬編副本。
+#
+# 註：key 與 canonical/instructional 的同名值（kick / timing /
+# turn / breathing）語意相容但標籤不同——instructional 描述
+# 「技術面向」，drills 描述「練習環節」，各自的 categories 區塊
+# 各自為政，不合併。scope 見 canonical/_taxonomy.yaml。
+# ============================================================
+
+domain: drills
+sub: categories
+schema_version: 1
+
+categories:
+  - {key: breathing, name_zh: 呼吸}
+  - {key: balance,   name_zh: 平衡}
+  - {key: kick,      name_zh: 踢腿}
+  - {key: arm,       name_zh: 划手}
+  - {key: timing,    name_zh: 銜接}
+  - {key: sculling,  name_zh: 搖櫓}
+  - {key: turn,      name_zh: 出發轉身}

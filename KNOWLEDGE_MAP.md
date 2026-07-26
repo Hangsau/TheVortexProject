@@ -74,7 +74,7 @@
 | free.tech.32 | stroke-cycle |  | 🟠 |
 | free.tech.33 | hardware |  | 🟠 |
 | free.tech.30 | rotation |  | 🟠 |
-| free.tech.31 | tactic |  | 🟠 |
+| free.tech.31 | fatigue |  | 🟠 |
 | free.tech.34 | streamline |  | 🔵 |
 | free.tech.35 | timing |  | 🟢 |
 
@@ -300,8 +300,8 @@
 | free.err15 | rotation |  |
 | free.err16 | rotation |  |
 | free.err17 | rotation |  |
-| free.err18 | breathing |  |
-| free.err19 | breathing |  |
+| free.err18 | head |  |
+| free.err19 | head |  |
 | free.err20 | tempo |  |
 | free.err21 | tempo |  |
 | free.err22 | tempo |  |
@@ -319,14 +319,14 @@
 | back.err4 | rotation |  |
 | back.err5 | kick |  |
 | back.err6 | pull |  |
-| back.err7 | breathing |  |
+| back.err7 | head |  |
 | back.err8 | kick |  |
-| back.err9 | body-position |  |
+| back.err9 | posture |  |
 | back.err10 | head |  |
 | back.err11 | entry |  |
 | back.err12 | pull |  |
-| back.err13 | core |  |
-| back.err14 | breathing |  |
+| back.err13 | posture |  |
+| back.err14 | head |  |
 | back.err15 | recovery |  |
 | back.err16 | recovery |  |
 | back.err17 | recovery |  |
@@ -341,17 +341,17 @@
 | breast.err4 | kick |  |
 | breast.err5 | pull |  |
 | breast.err6 | pull |  |
-| breast.err7 | breathing |  |
-| breast.err8 | breathing |  |
-| breast.err9 | breathing |  |
+| breast.err7 | head |  |
+| breast.err8 | head |  |
+| breast.err9 | head |  |
 | breast.err10 | timing |  |
 | breast.err11 | timing |  |
 | breast.err12 | streamline |  |
-| breast.err13 | breathing |  |
+| breast.err13 | head |  |
 | breast.err14 | kick |  |
 | breast.err15 | pull |  |
 | breast.err16 | undulation |  |
-| breast.err17 | breathing |  |
+| breast.err17 | head |  |
 
 #### 蝶式 (16)
 
@@ -368,9 +368,9 @@
 | fly.err9 | timing |  |
 | fly.err10 | undulation |  |
 | fly.err11 | undulation |  |
-| fly.err12 | breathing |  |
-| fly.err13 | breathing |  |
-| fly.err14 | breathing |  |
+| fly.err12 | head |  |
+| fly.err13 | head |  |
+| fly.err14 | head |  |
 | fly.err15 | entry |  |
 | fly.err16 | entry |  |
 
@@ -388,7 +388,7 @@
 | starts-turns.err8 | depth |  |
 | starts-turns.err9 | concept |  |
 | starts-turns.err10 | head |  |
-| starts-turns.err11 | approach |  |
+| starts-turns.err11 | turn |  |
 | starts-turns.err12 | breakout |  |
 | starts-turns.err13 | timing |  |
 | starts-turns.err14 | breakout |  |

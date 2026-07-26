@@ -18,7 +18,9 @@ categories:                       # 面向篩選 chip（superset，跨 6 式統�
   - {key: kick,         name_zh: 踢水與腿部機制}
   - {key: rotation,     name_zh: 身體旋轉}
   - {key: undulation,   name_zh: 身體波動}
+  - {key: recovery,     name_zh: 回臂}
   - {key: timing,       name_zh: 手腳時序}
+  - {key: coupling,     name_zh: 動力耦合}
   - {key: head,         name_zh: 頭部與換氣}
   - {key: tempo,        name_zh: 划頻與划距}
   - {key: streamline,   name_zh: 流線與滑行}
@@ -467,7 +469,7 @@ points:
 
   - id: free.tech.31
     stroke: free
-    category: tactic
+    category: fatigue
     title: 神經肌肉控制限制下的技術退化——CP 選手 30 秒後系統性下降，配速策略要前低後高
     public:
       summary: 部分泳者（典型如腦性麻痺背景）的技術會在約 30 秒後系統性退化——這不是體能不足而是神經肌肉控制特性。傳統「保持均速、後段衝刺」的配速策略對這類選手會失效，比賽策略應反過來：前段刻意降強度以保留末段技術品質。

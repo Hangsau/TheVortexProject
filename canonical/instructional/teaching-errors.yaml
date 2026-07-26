@@ -32,13 +32,14 @@ categories:
   - {key: kick,       name_zh: 踢腿}
   - {key: rotation,   name_zh: 身體旋轉}
   - {key: undulation, name_zh: 身體波動}
-  - {key: breathing,  name_zh: 頭部與換氣}
+  - {key: head,       name_zh: 頭部與換氣}
   - {key: timing,     name_zh: 手腳時機}
   - {key: tempo,      name_zh: 划頻划距與訓練哲學}
   - {key: streamline, name_zh: 流線與滑行}
   - {key: depth,      name_zh: 深度與啟動}
   - {key: start,      name_zh: 出發}
   - {key: turn,       name_zh: 轉身}
+  - {key: breakout,   name_zh: 出水銜接}
   - {key: concept,    name_zh: 觀念框架}
 
 errors:
@@ -564,7 +565,7 @@ errors:
   # ── 頭部與換氣 ──
   - id: free.err18
     stroke: free
-    category: breathing
+    category: head
     title: 換氣時眼睛要「看到天花板」
     public:
       misconception: >-
@@ -594,7 +595,7 @@ errors:
 
   - id: free.err19
     stroke: free
-    category: breathing
+    category: head
     title: 換氣時前方手臂要「等在那裡」——catch-up 換氣
     public:
       misconception: >-
@@ -1040,7 +1041,7 @@ errors:
   # ── 呼吸節律 ──
   - id: back.err7
     stroke: back
-    category: breathing
+    category: head
     title: 仰式臉在水面上，想呼吸就呼吸、不用管節律
     public:
       misconception: >-
@@ -1106,7 +1107,7 @@ errors:
   # ── 身體姿態：挺胸拱背 ──
   - id: back.err9
     stroke: back
-    category: body-position
+    category: posture
     title: 肚臍頂出水面、挺胸——把浮力口令做成拱背
     public:
       misconception: >-
@@ -1231,7 +1232,7 @@ errors:
 
   - id: back.err13
     stroke: back
-    category: core
+    category: posture
     title: 核心要 brace 到極致——把柔性張力做成剛性硬塊割斷 coupling
     public:
       misconception: >-
@@ -1259,7 +1260,7 @@ errors:
 
   - id: back.err14
     stroke: back
-    category: breathing
+    category: head
     title: 仰式也要套自由式呼吸節律——每三划換氣、強迫節律
     public:
       misconception: >-
@@ -1583,7 +1584,7 @@ errors:
   # ── 換氣教學誤區 ──
   - id: breast.err7
     stroke: breast
-    category: breathing
+    category: head
     title: "換氣時抬頭正前看、眼睛看向對岸"
     public:
       misconception: >-
@@ -1618,7 +1619,7 @@ errors:
 
   - id: breast.err8
     stroke: breast
-    category: breathing
+    category: head
     title: "划手末段才抬頭換氣"
     public:
       misconception: >-
@@ -1652,7 +1653,7 @@ errors:
 
   - id: breast.err9
     stroke: breast
-    category: breathing
+    category: head
     title: "外划一開始就抬頭換氣是高效做法"
     public:
       misconception: >-
@@ -1791,7 +1792,7 @@ errors:
   # ── 補強：抬頭幅度 / 收腿速度 / 手肘收緊 / 波動幅度 / 吐氣節律 ──
   - id: breast.err13
     stroke: breast
-    category: breathing
+    category: head
     title: 抬頭越高吸氣越容易——把蛙式做成海豚式上下擺動
     public:
       misconception: >-
@@ -1924,7 +1925,7 @@ errors:
 
   - id: breast.err17
     stroke: breast
-    category: breathing
+    category: head
     title: 水中先把氣全吐光再吸——破壞蛙式 stroke 內的連續呼吸節律
     public:
       misconception: >-
@@ -2318,7 +2319,7 @@ errors:
 
   - id: fly.err12
     stroke: fly
-    category: breathing
+    category: head
     title: "蝶式換氣時頭要往上抬高、眼睛看前方"
     public:
       misconception: >-
@@ -2355,7 +2356,7 @@ errors:
 
   - id: fly.err13
     stroke: fly
-    category: breathing
+    category: head
     title: "蝶式只能向正前方換氣，側向換氣不規範"
     public:
       misconception: >-
@@ -2387,7 +2388,7 @@ errors:
 
   - id: fly.err14
     stroke: fly
-    category: breathing
+    category: head
     title: "蝶式每下必換氣，或每兩下才能換一次，是固定標準"
     public:
       misconception: >-
@@ -3317,7 +3318,7 @@ errors:
 
   - id: starts-turns.err11
     stroke: starts-turns
-    category: approach
+    category: turn
     title: 轉身越快越好——approach 速度過快反失分
     public:
       misconception: >-
