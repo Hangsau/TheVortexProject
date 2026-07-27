@@ -141,3 +141,14 @@ Vortex 已有 `KNOWLEDGE_MAP.md`、穩定 ID、`cross_ref`、確定性與公開�
 - **可驗證關係**：`cross_ref` 必須指向存在的穩定 ID；條目新增、刪除或改 ID 後，重生地圖前先跑引用完整性、tag 合法性、來源存在性與孤兒條目檢查。
 - **索引輸出**：由 canonical 自動產生四個視圖：內容／概念索引、tag 反向索引、來源反向索引、缺口報告（無來源高風險主張、孤兒標籤、未連結條目）。`KNOWLEDGE_MAP.md` 是人讀入口，不取代這些機器索引。
 - **狀態分開**：`draft`、`indexed`、`source-linked`、`verified`、`disputed`／`unverified` 不可互相冒用；確定性標記也不能代替來源驗證狀態。
+
+### 證據分層契約（S3b，驗證器強制）
+
+Vortex 不套單一文獻門檻——那會讓感知層永遠不合格。改成**兩種證據等級並存，各自有自證義務**；欄位語意登錄在 `canonical/_taxonomy.yaml#evidence_contract`，執行者是 `tools/validate.py`，兩邊必須同時改。
+
+- **標 certainty 前先判斷證據性質，不預設標綠**：物理／解剖推導是 🔵（不需來源），教學實務觀察是 🟠（不需來源但要 `observation_basis`），只有真有文獻才標 🟢／🟡（必須有來源）。判準逐值寫在 taxonomy `certainty.values[].criterion`。W009 的正解通常是改標記，不是補一個空引用。
+- **文獻證據**：`source_ids`（可解析成 `_sources.yaml` 的 `src.<slug>`）是唯一機器鍵；`source`／`sources`／`citation` 三個顯示字串只給人讀，算「已有來源」但仍是待遷移狀態（W002 追蹤）。
+- **實務證據**：🟠 條目寫 `observation_basis`，內含誰觀察／什麼族群／外推邊界三項。它**不冒充文獻**——不得寫「研究顯示」；也不需要 `source_ids`。缺此欄位 → W011。
+- **來源繼承**：祖先區塊帶來源時子區塊不重複要求，但繼承只在同一條目（最近的 `id`）子樹內成立，不跨兄弟條目。
+- **綜述行**：結論的證據由子條目承擔時寫 `evidence_from: [子條目 ID]`；空 list `[]` 不算宣告。
+- **公開／診斷分層是結構性的**：診斷判讀語（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`manipulation`／`contrast_question`…）只能放 `diagnostic` 子樹。`my-site/tools/sync_vortex.py` 對 `public` 整包 `rec.update(pub)`（白名單），所以新增 diagnostic 型兄弟鍵不會外洩，**唯一實際洩漏路徑是把診斷內容寫進 `public` 底下**——這條是 ERROR 級（E010），不是警告。

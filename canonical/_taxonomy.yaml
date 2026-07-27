@@ -2,9 +2,10 @@ schema_version: 1
 domain: _meta
 description: >
   Vortex canonical 受控詞彙表。S1 由現況反向抽取，S2 完成 category 歸一
-  （同義值合併、孤立值定去留、per-value scope）。其餘欄位仍為 S1 原樣登錄。
+  （同義值合併、孤立值定去留、per-value scope），S3b 補 certainty 判準與
+  檔尾 evidence_contract（證據承載欄位語意）。其餘欄位仍為 S1 原樣登錄。
 generated_from: "canonical/**/*.yaml + Drills/*.yaml"
-generated_date: "2026-07-26"
+generated_date: "2026-07-27"
 
 fields:
   category:
@@ -83,32 +84,59 @@ fields:
   certainty:
     controlled: true
     review_status: reviewed
+    # S3b 補：判準寫在 values[].criterion，驗證器據 CERTAINTY_NEEDS_SOURCE
+    # （綠 + 黃）要求來源。判準的作用是擋「預設標綠」——一條主張若其實是
+    # 從物理條件推導出來的，正確標記是 🔵 而非 🟢，標 🟢 就必須拿得出文獻。
     values:
       # \U0001F7E2 LARGE GREEN CIRCLE — 近期文獻
       - key: "\U0001F7E2"
         label: green-circle
         meaning: "近期文獻"
         count: 502
+        criterion: >
+          有具體可重取的文獻支撐（約 2010 年後）。必須有來源承載：
+          source_ids，或 source / sources / citation 顯示字串。
+          缺來源時驗證器出 W009——正解通常是改標 🔵 或 🟠，不是補一個空引用。
+        requires_source: true
       # \U0001F535 LARGE BLUE CIRCLE — 推導
       - key: "\U0001F535"
         label: blue-circle
         meaning: "推導"
         count: 227
+        criterion: >
+          從已成立的物理 / 解剖條件推導，本身不是文獻發現。
+          流體阻力、槓桿、浮心—重心關係這類推論屬此層，不需 source_ids；
+          但推導所依賴的前提若是文獻數字，該前提條目自己要有來源。
+        requires_source: false
       # \U0001F7E0 LARGE ORANGE CIRCLE — 教練觀測
       - key: "\U0001F7E0"
         label: orange-circle
         meaning: "教練觀測"
         count: 203
+        criterion: >
+          作者教學實務中反覆觀察到的規律，文獻未涵蓋。這是 practitioner
+          evidence，不冒充文獻證據，故不需 source_ids；代價是必須寫
+          observation_basis（誰觀察、什麼族群、外推邊界）。缺則 W011。
+        requires_source: false
+        requires_field: observation_basis
       # \U0001F7E1 LARGE YELLOW CIRCLE — 舊文獻
       - key: "\U0001F7E1"
         label: yellow-circle
         meaning: "舊文獻"
         count: 148
+        criterion: >
+          有文獻支撐但年代較早（約 2010 年前）或屬公認物理常數層級。
+          來源要求與 🟢 相同，差別只在時效標示。
+        requires_source: true
       # \U0001F534 LARGE RED CIRCLE — 待查/個人假設
       - key: "\U0001F534"
         label: red-circle
         meaning: "待查/個人假設"
         count: 15
+        criterion: >
+          尚未查證或明知是個人假設。必須以假說語氣書寫，不得用肯定句包裝；
+          查證流程見 CLAUDE.md「🔴 查證工作流」。不需來源（沒有才標紅）。
+        requires_source: false
 
   status:
     controlled: true
@@ -185,3 +213,65 @@ fields:
         note: "感知自動化過渡"
       - key: L6
         note: "感知自動化完成"
+
+# ─────────────────────────────────────────────────────────────────────
+# 證據承載契約（S3b）
+# 這一段不是受控詞彙，是「哪些欄位算證據、算到什麼程度」的欄位語意登錄。
+# 驗證器（tools/validate.py）是本契約的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+evidence_contract:
+  source_bearing_fields:
+    note: >
+      來源分兩類：機器鍵可解析、顯示字串只給人讀。🟢/🟡 條目至少要有其中一種，
+      但只有機器鍵能進來源反向索引，故顯示字串一律是待遷移狀態（W002）。
+    machine_key:
+      - field: source_ids
+        type: "list[str]"
+        resolves_to: "canonical/_sources.yaml#sources[].id（src.<slug>）"
+        note: "唯一可驗證的來源鍵。空 list [] 表示已檢查且確認無來源，非未處理。"
+    display_only:
+      - field: source
+        type: str
+        note: "單一來源顯示字串。"
+      - field: citation
+        type: str
+        note: >
+          出現在 references[] 元素內的引用字串。S3a 漏收此欄位，導致 101 筆
+          自帶引用的區塊被誤判成無來源；S3b 補入。
+      - field: sources
+        type: "list[str]"
+        note: "多來源顯示字串。"
+    migration: "顯示字串 → source_ids 的遷移由 W002 追蹤（現 111 筆）。"
+
+  inheritance:
+    rule: >
+      來源沿 YAML 樹向下繼承：若某區塊的祖先已帶來源資訊，其子區塊視為由該來源
+      覆蓋，不重複要求。繼承只在同一條目（最近的 id）子樹內成立，不跨兄弟條目。
+    enforced_by: "validate.py iter_blocks_with_source_inheritance()"
+
+  evidence_from:
+    type: "list[str]"
+    note: >
+      綜述型敘述用：本行結論的證據由所列子條目 ID 承擔，故本行自身不需來源。
+      空 list [] 不算宣告（等於沒寫），仍會被 W009 抓。
+
+  observation_basis:
+    applies_to: "certainty: 🟠（教練觀測）"
+    required_content:
+      - "誰觀察：作者本人 / 特定教練 / 隊伍"
+      - "什麼族群：年齡、程度、泳式、樣本量級"
+      - "外推邊界：明說在哪些族群未觀察過，不得暗示普適"
+    note: >
+      practitioner evidence 的自證方式。它不需要 source_ids，也不得反過來
+      冒充文獻證據（不可寫「研究顯示」）。缺此欄位 → W011（現 63 筆）。
+
+  public_diagnostic_layering:
+    rule: >
+      診斷判讀語（perception_probe / signal_structure / discriminators /
+      type_diagnosis / manipulation / contrast_question…）只能放在 diagnostic
+      子樹，不得出現在 public 子樹內。
+    why: >
+      my-site/tools/sync_vortex.py 是白名單：對 public 整包 rec.update(pub)，
+      diagnostic 整塊不取。所以新增 diagnostic 型兄弟鍵不會外洩，唯一實際
+      洩漏路徑就是把診斷內容寫進 public 底下。
+    enforced_by: "validate.py check_public_layer_leak()（E010，ERROR 級）"

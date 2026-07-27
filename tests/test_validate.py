@@ -133,11 +133,11 @@ class FixtureTestBase(unittest.TestCase):
 
         errors = {
             "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
-            "E006": [], "E007": [],
+            "E006": [], "E007": [], "E010": [], "E011": [],
         }
         warnings = {
             "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-            "W006": [], "W007": [], "W008": [], "W009": [],
+            "W006": [], "W007": [], "W008": [], "W009": [], "W011": [],
         }
 
         # E001
@@ -257,6 +257,10 @@ class FixtureTestBase(unittest.TestCase):
             referenced_source_ids |= validate_mod.check_source_blocks(
                 rel, data, allowed_source_ids, errors, warnings
             )
+            # W011 / E010 / E011：與產品端同一輪走訪
+            validate_mod.check_practitioner_blocks(rel, data, warnings)
+            validate_mod.check_public_layer_leak(rel, data, errors)
+            validate_mod.check_evidence_from(rel, data, all_id_set, errors)
 
         # W008：直接呼叫產品程式碼的孤兒來源檢查
         validate_mod.check_orphan_sources(
@@ -2238,6 +2242,342 @@ class TestE009FileCategories(unittest.TestCase):
         self.assertEqual((errors["E009"], warnings["W010"]), ([], []))
 
 
+class TestS3bSourceGranularity(FixtureTestBase):
+    """S3b：W009 的三個豁免——citation 承載、祖先繼承、evidence_from。
+
+    S3b triage 實測 270 筆 W009 只有 112 筆是真缺口，其餘 158 筆分兩類誤判：
+      101 筆  references[] 元素自帶 citation（元素本身就是一筆來源）
+       57 筆  來源登錄在父層，certainty 標在子區塊（粒度差，不是缺口）
+    這個類別把三個豁免各鎖一條負向測試，避免日後重構把誤判放回來。
+    """
+
+    def _point(self, public: dict) -> dict:
+        return {
+            "categories": [{"key": "concept", "name_zh": "概念"}],
+            "points": [{
+                "id": "free.tech.900",
+                "stroke": "free",
+                "category": "concept",
+                "public": public,
+            }],
+        }
+
+    def test_citation_counts_as_display_source(self):
+        """references[].citation 是來源顯示字串 → W002（缺機器鍵），不是 W009。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._point({
+                "references": [
+                    {"citation": "Gonjo et al. 2020, PMC7824457",
+                     "certainty": "\U0001F7E2"},
+                ],
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W009"]), 0,
+            "自帶 citation 的區塊不該被判成「拿不出任何來源」",
+        )
+        self.assertGreater(
+            len(warnings["W002"]), 0,
+            "citation 有字串但缺 source_ids → 應歸 W002（純遷移）",
+        )
+        self.assertIn("citation 顯示字串", warnings["W002"][0])
+
+    def test_ancestor_source_exempts_child_block(self):
+        """父層已有 source_ids，子區塊標 🟢 不算缺來源（粒度差）。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._point({
+                "source_ids": ["src.test-one"],
+                "sources": ["Test Source 2020"],
+                "mechanism": {"certainty": "\U0001F7E2", "text": "子區塊主張"},
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W009"]), 0,
+            "來源在正上方一層時，子區塊不是缺口",
+        )
+
+    def test_ancestor_exemption_does_not_leak_across_entries(self):
+        """繼承只沿同一顆樹；隔壁條目有來源不能豁免本條目。"""
+        data = {
+            "categories": [{"key": "concept", "name_zh": "概念"}],
+            "points": [
+                {
+                    "id": "free.tech.901",
+                    "stroke": "free",
+                    "category": "concept",
+                    "public": {
+                        "source_ids": ["src.test-one"],
+                        "sources": ["Test Source 2020"],
+                    },
+                },
+                {
+                    "id": "free.tech.902",
+                    "stroke": "free",
+                    "category": "concept",
+                    "public": {
+                        "mechanism": {
+                            "certainty": "\U0001F7E2", "text": "無來源主張",
+                        },
+                    },
+                },
+            ],
+        }
+        self._write_yaml(self.canonical_dir / "instructional" / "ta.yaml", data)
+        errors, warnings, _ = self._run()
+        self.assertGreater(
+            len(warnings["W009"]), 0,
+            "同檔隔壁條目的來源不得豁免本條目",
+        )
+        self.assertIn("free.tech.902", warnings["W009"][0])
+
+    def test_evidence_from_exempts_synthesis_line(self):
+        """綜述句以 evidence_from 指出證據所在的子條目 → 合法歸屬。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._point({
+                "mechanism": {
+                    "certainty": "\U0001F7E2",
+                    "text": "把底下條目濃縮成一句",
+                    "evidence_from": ["free.tech.1", "free.tech.2"],
+                },
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W009"]), 0)
+
+    def test_empty_evidence_from_is_not_a_declaration(self):
+        """`evidence_from: []` 不算宣告（沒指到任何條目）。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._point({
+                "mechanism": {
+                    "certainty": "\U0001F7E2",
+                    "text": "空宣告",
+                    "evidence_from": [],
+                },
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertGreater(len(warnings["W009"]), 0)
+
+
+class TestW011PractitionerEvidence(FixtureTestBase):
+    """W011：🟠 教練觀測必須交代 observation_basis。"""
+
+    def _entry(self, block: dict) -> dict:
+        return {
+            "categories": [{"key": "concept", "name_zh": "概念"}],
+            "points": [{
+                "id": "free.tech.910",
+                "stroke": "free",
+                "category": "concept",
+                "public": {"mechanism": block},
+            }],
+        }
+
+    def test_orange_without_basis_warns(self):
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry({"certainty": "\U0001F7E0", "text": "教練觀察到的現象"}),
+        )
+        errors, warnings, _ = self._run()
+        self.assertGreater(len(warnings["W011"]), 0)
+        self.assertIn("observation_basis", warnings["W011"][0])
+
+    def test_orange_with_basis_passes(self):
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry({
+                "certainty": "\U0001F7E0",
+                "text": "教練觀察到的現象",
+                "observation_basis": "作者教學實務，成人初學 30+ 人；未在競技族群驗證",
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W011"]), 0)
+
+    def test_orange_with_external_source_passes(self):
+        """引外部教練體系的觀測（如 Race Club 影像分析）→ 依據可追，不報。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry({
+                "certainty": "\U0001F7E0",
+                "text": "Race Club 影像觀察數據",
+                "sources": ["The Race Club, Fundamentals of Fast Swimming Ch 6"],
+                "source_ids": ["src.test-one"],
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W011"]), 0)
+
+    def test_orange_never_requires_source_ids(self):
+        """🟠 不進 W009——教練觀測不該被要求文獻來源。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry({
+                "certainty": "\U0001F7E0",
+                "text": "教練觀察",
+                "observation_basis": "作者教學實務",
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(
+            len(warnings["W009"]), 0,
+            "W009 只問 🟢/🟡；🟠 被拉進來就是逼人替自己的觀察硬找文獻",
+        )
+
+
+class TestE010DiagnosticLeak(FixtureTestBase):
+    """E010：診斷型鍵名不得出現在 public 子樹內。
+
+    sync_vortex.py 是白名單（`rec.update(pub)`），所以 diagnostic 同層鍵本來
+    就不會外流；唯一的洩漏路徑是把判讀語寫進 public 裡面。
+    """
+
+    def _entry(self, public: dict, diagnostic: dict | None = None) -> dict:
+        point = {
+            "id": "free.tech.920",
+            "stroke": "free",
+            "category": "concept",
+            "public": public,
+        }
+        if diagnostic is not None:
+            point["diagnostic"] = diagnostic
+        return {
+            "categories": [{"key": "concept", "name_zh": "概念"}],
+            "points": [point],
+        }
+
+    def test_probe_under_public_is_error(self):
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry({
+                "summary": "公開說明",
+                "perception_probe": {"principle": "泳者說 X 才算到位"},
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertGreater(len(errors["E010"]), 0)
+        self.assertIn("perception_probe", errors["E010"][0])
+
+    def test_probe_under_diagnostic_is_fine(self):
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry(
+                {"summary": "公開說明"},
+                {"perception_probe": {"principle": "泳者說 X 才算到位"}},
+            ),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(errors["E010"]), 0)
+
+    def test_nested_under_public_still_caught(self):
+        """埋在 public 更深處一樣要抓到（in_public 沿子樹傳遞）。"""
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._entry({
+                "summary": "公開說明",
+                "detail": {"items": [{"discriminators": ["講對詞不算"]}]},
+            }),
+        )
+        errors, warnings, _ = self._run()
+        self.assertGreater(len(errors["E010"]), 0)
+        self.assertIn("discriminators", errors["E010"][0])
+
+
+class TestE011EvidenceFromResolvable(FixtureTestBase):
+    """E011：evidence_from 是 W009 的豁免路徑，其 ID 必須解析得到。
+
+    不驗證的話，隨便寫一個不存在的 ID 就能讓 W009 消失——豁免必須有代價。
+    """
+
+    def _file(self, evidence_from) -> dict:
+        return {
+            "categories": [{"key": "concept", "name_zh": "概念"}],
+            "points": [
+                {
+                    "id": "free.tech.930",
+                    "stroke": "free",
+                    "category": "concept",
+                    "public": {
+                        "summary": "綜述句",
+                        "premise": {
+                            "certainty": "\U0001F7E2",
+                            "text": "本句結論由子條目承擔",
+                            "evidence_from": evidence_from,
+                        },
+                    },
+                },
+                {
+                    "id": "free.tech.931",
+                    "stroke": "free",
+                    "category": "concept",
+                    "public": {
+                        "summary": "承載證據的子條目",
+                        "evidence": [
+                            {
+                                "certainty": "\U0001F7E2",
+                                "text": "實測數據",
+                                "source_ids": ["src.real-one"],
+                            }
+                        ],
+                    },
+                },
+            ],
+        }
+
+    def test_resolvable_id_passes_and_exempts_w009(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.real-one", "type": "other",
+                           "verification_status": "unverified",
+                           "display": "來源 A"}]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._file(["free.tech.931"]),
+        )
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(errors["E011"]), 0)
+        self.assertEqual(
+            [w for w in warnings["W009"] if "free.tech.930" in w], []
+        )
+
+    def test_unresolvable_id_is_error(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.real-one", "type": "other",
+                           "verification_status": "unverified",
+                           "display": "來源 A"}]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._file(["free.tech.does-not-exist"]),
+        )
+        errors, warnings, _ = self._run()
+        self.assertGreater(len(errors["E011"]), 0)
+        self.assertIn("free.tech.does-not-exist", errors["E011"][0])
+
+    def test_wrong_type_is_error(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.real-one", "type": "other",
+                           "verification_status": "unverified",
+                           "display": "來源 A"}]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "instructional" / "ta.yaml",
+            self._file("free.tech.931"),
+        )
+        errors, warnings, _ = self._run()
+        self.assertGreater(len(errors["E011"]), 0)
+        self.assertIn("型別應為 list", errors["E011"][0])
+
+
 class TestDomainOf(unittest.TestCase):
     """domain_of：由相對路徑推導網域，Windows 反斜線也要吃。"""
 
@@ -2249,7 +2589,7 @@ class TestDomainOf(unittest.TestCase):
 
     def test_windows_separator(self):
         self.assertEqual(
-            validate_mod.domain_of("canonical\health\injuries.yaml"), "health"
+            validate_mod.domain_of(r"canonical\health\injuries.yaml"), "health"
         )
 
     def test_drills(self):

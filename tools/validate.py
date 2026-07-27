@@ -31,6 +31,14 @@ exit code：
         不含本檔所屬網域（instructional / health / drills）
   E009  條目的 category 未宣告於**該檔自己的 categories 區塊**
         → my-site 查表落空會渲染成空字串（無錯誤訊息的靜默失敗）
+  E010  診斷層洩漏：診斷型鍵名（perception_probe / signal_structure /
+        discriminators / type_diagnosis…）出現在 `public` 子樹內。
+        sync_vortex.py 是白名單（`rec.update(pub)` 整包搬 public），
+        所以 public 底下的任何東西都會上公開站——診斷判讀語寫在
+        public 裡是唯一的實際洩漏路徑（S6）
+  E011  evidence_from 內含無法解析的 ID。evidence_from 是 W009 的豁免路徑
+        （「本句證據由所列子條目承擔」），不驗證它指得到東西的話，寫一個
+        不存在的 ID 也能消警告——這條檢查是那個豁免的代價（S3b）
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
@@ -44,8 +52,13 @@ exit code：
         （連空陣列都沒有）
   W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用
   W009  certainty 為 green/yellow 且**完全沒有**任何來源資訊
-        （既無 source/sources 顯示字串，也無 source_ids）→ S3b 範圍
+        （既無 source/sources/citation 顯示字串，也無 source_ids，
+        祖先區塊也沒有，且未以 evidence_from 宣告證據由子條目承擔）
+        → S3b 範圍
   W010  死標籤：categories 區塊宣告了某 key，但該檔沒有任何條目使用
+  W011  certainty 為 orange（教練觀測）但缺 observation_basis：
+        教練觀測是第一手實務證據，不需要 source_ids，但必須說出
+        觀察基礎與外推邊界，否則與「沒有依據」無法區分（S6）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -250,16 +263,94 @@ def iter_blocks(data: object, path: str = "", nearest_id: str = "(no id)"):
             yield from iter_blocks(item, f"{path}[{i}]", nearest_id)
 
 
+def iter_blocks_with_source_inheritance(
+    data: object,
+    path: str = "",
+    nearest_id: str = "(no id)",
+    inherited: bool = False,
+):
+    """與 iter_blocks() 同樣走訪每個 dict，額外回傳「祖先是否已帶來源資訊」。
+
+    yield (dot_path, nearest_entry_id, dict, inherited_source)
+
+    為什麼 W009 需要這個：來源常登錄在條目層（例如 psychology 的
+    `concepts[].public` 同時放 `sources` + `source_ids`），而 certainty 標在
+    更細的子區塊（`public.phenomenon`）。只看同層的話，子區塊會被判成
+    「完全沒有來源資訊」，但它的來源就在正上方一層——那不是缺口，是粒度差。
+    實測 57 筆 W009 屬於這一類。
+
+    inherited 只在「同一顆樹上的祖先」成立，不跨條目繼承。
+    """
+    if isinstance(data, dict):
+        if isinstance(data.get("id"), str):
+            nearest_id = data["id"]
+        yield (path or "(root)", nearest_id, data, inherited)
+        child_inherited = inherited or has_source_info(data)
+        for k, v in data.items():
+            child = f"{path}.{k}" if path else str(k)
+            yield from iter_blocks_with_source_inheritance(
+                v, child, nearest_id, child_inherited
+            )
+    elif isinstance(data, list):
+        for i, item in enumerate(data):
+            yield from iter_blocks_with_source_inheritance(
+                item, f"{path}[{i}]", nearest_id, inherited
+            )
+
+
+def has_source_info(block: dict) -> bool:
+    """區塊自身是否帶任何來源資訊（顯示字串或機器鍵）。"""
+    if has_display_source(block):
+        return True
+    sids = block.get("source_ids")
+    return isinstance(sids, list) and any(
+        isinstance(s, str) and s.strip() for s in sids
+    )
+
+
+def display_source_field(block: dict) -> str:
+    """回傳該區塊承載來源顯示字串的欄位名（供警告訊息用）。"""
+    for field in ("source", "citation", "sources"):
+        if block.get(field):
+            return field
+    return "source"
+
+
+def has_evidence_from(block: dict) -> bool:
+    """區塊是否以 evidence_from 宣告「本句的證據由所列子條目承擔」。
+
+    用於綜述句：psychology 的 `themes[].premise` 是把整個主題底下 concepts 的
+    研究結論濃縮成一句，它自己不對應單一文獻，證據是子條目的集合。這種句子
+    要嘛拆成可裁決的單一主張，要嘛明講證據在哪些條目上——後者就是本欄位。
+    空 list 不算宣告（等於沒指），與 cross_ref_ids 的 `[]` 語意不同。
+    """
+    ef = block.get("evidence_from")
+    return isinstance(ef, list) and any(
+        isinstance(x, str) and x.strip() for x in ef
+    )
+
+
 def has_display_source(block: dict) -> bool:
     """區塊上是否有「來源顯示資訊」。
 
-    兩種既有寫法都算：
-      source   單數字串（instructional / technica）
-      sources  複數字串清單（health/injuries、psychology）
+    三種既有寫法都算：
+      source    單數字串（instructional / technica）
+      sources   複數字串清單（health/injuries、psychology）
+      citation  references[] 元素的來源顯示字串（health/injuries）
+
+    citation 是 S3b triage 才認出的第三種承載欄位：`references[]` 的每個元素
+    形如 {citation, certainty, verified}，元素本身就是一筆來源（多數還內嵌
+    PMC/PMID），只是欄位名不叫 source。S3a 沒認它，於是 101 筆「來源條目」
+    被 W009 判成「有 🟢 但拿不出來源」——是要求一筆引用去引用另一筆引用。
+    正確歸屬是 W002（有顯示字串、缺機器鍵，純遷移）。
+
     有顯示資訊但缺機器鍵 → W002；兩者皆無 → W009（需要補來源，不是補鍵）。
     """
     src = block.get("source")
     if isinstance(src, str) and src.strip():
+        return True
+    cit = block.get("citation")
+    if isinstance(cit, str) and cit.strip():
         return True
     srcs = block.get("sources")
     if isinstance(srcs, list) and any(
@@ -641,7 +732,7 @@ def check_source_blocks(
     回傳值供呼叫端做 W008（孤兒來源）比對。
     """
     referenced: set[str] = set()
-    for loc, eid, block in iter_blocks(data):
+    for loc, eid, block, inherited in iter_blocks_with_source_inheritance(data):
         raw_ids = block.get("source_ids")
         if "source_ids" in block:
             if isinstance(raw_ids, list):
@@ -672,20 +763,124 @@ def check_source_blocks(
 
         # W002：有顯示字串就該有機器鍵，不看 certainty
         if has_display_source(block):
-            field = "source" if block.get("source") else "sources"
+            field = display_source_field(block)
             suffix = f" certainty={cert_label}" if cert_label else " 無 certainty"
             warnings["W002"].append(
                 f"  file={rel} id={eid!r} at={loc} "
                 f"有 {field} 顯示字串但無 source_ids（{suffix.strip()}）"
             )
-        # W009：宣稱 🟢/🟡 卻連顯示字串都沒有（仍以 certainty 為前提）
+        # W009：宣稱 🟢/🟡 卻連顯示字串都沒有（仍以 certainty 為前提）。
+        # 兩個豁免（S3b）：祖先區塊已帶來源＝粒度差不是缺口；
+        # evidence_from 已宣告證據由子條目承擔＝綜述句的合法歸屬。
         elif cert in CERTAINTY_NEEDS_SOURCE:
+            if inherited or has_evidence_from(block):
+                continue
             warnings["W009"].append(
                 f"  file={rel} id={eid!r} at={loc} "
                 f"certainty={cert_label} 完全無來源資訊"
-                f"（無 source/sources，也無 source_ids）"
+                f"（無 source/sources/citation，也無 source_ids，"
+                f"祖先亦無，且未宣告 evidence_from）"
             )
     return referenced
+
+
+# ── 教練觀測層契約（W011）與診斷層洩漏（E010）─────────────────────────────────
+
+CERTAINTY_PRACTITIONER = "\U0001F7E0"  # LARGE ORANGE CIRCLE — 教練觀測
+
+DIAGNOSTIC_KEYS = frozenset({
+    "perception_probe",
+    "signal_structure",
+    "discriminators",
+    "type_diagnosis",
+    "type_diagnosis_note",
+    "diagnosis_note",
+    "diagnostic_protocols",
+    "manipulation",
+    "contrast_question",
+})
+
+
+def check_practitioner_blocks(rel: str, data: object, warnings: dict):
+    """W011：certainty 🟠（教練觀測）但沒說出觀察基礎。
+
+    🟠 是第一手實務證據，本來就不該被要求 source_ids（那會逼人去替教練觀察
+    硬找文獻，也就是把自己的觀察包裝成別人的研究）。但「第一手」不等於
+    「不用交代」——沒有 observation_basis 的 🟠 與「沒有依據」在資料上無法
+    區分。observation_basis 要能回答：誰觀察的、在什麼族群/樣本上、
+    這個判讀外推到哪裡為止。
+    """
+    for loc, eid, block in iter_blocks(data):
+        if block.get("certainty") != CERTAINTY_PRACTITIONER:
+            continue
+        basis = block.get("observation_basis")
+        if isinstance(basis, str) and basis.strip():
+            continue
+        if has_source_info(block):
+            # 已經指了外部來源（例如引 Race Club 的影像觀察）→ 依據可追
+            continue
+        warnings["W011"].append(
+            f"  file={rel} id={eid!r} at={loc} "
+            f"certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）"
+        )
+
+
+def check_public_layer_leak(rel: str, data: object, errors: dict):
+    """E010：診斷型鍵名出現在 public 子樹內。
+
+    sync_vortex.py 對每個檔案都做 `rec.update(pub)`——白名單，整包搬 public。
+    所以新增一個 diagnostic 同層鍵不會洩漏（不在白名單內就是不搬），
+    真正會洩漏的只有一種寫法：把診斷判讀語寫進 public 裡面。
+    這個檢查把那條路徑關掉。
+    """
+    def walk(node, path, in_public):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                child = f"{path}.{k}" if path else str(k)
+                if in_public and k in DIAGNOSTIC_KEYS:
+                    errors["E010"].append(
+                        f"  file={rel} at={child} "
+                        f"診斷型鍵 {k!r} 出現在 public 子樹內"
+                        f"（sync 白名單會整包搬上公開站）"
+                    )
+                walk(v, child, in_public or k == "public")
+        elif isinstance(node, list):
+            for i, item in enumerate(node):
+                walk(item, f"{path}[{i}]", in_public)
+
+    walk(data, "", False)
+
+
+def check_evidence_from(
+    rel: str, data: object, all_id_set: set, errors: dict
+):
+    """E011：evidence_from 內的 ID 必須可解析到全域 ID 集合。
+
+    evidence_from 是 W009 的豁免路徑（「本句的證據由所列子條目承擔」）。
+    若不驗證它指得到東西，它就變成零成本的免罪符——寫一個不存在的 ID
+    也能讓警告消失。這條檢查是那個豁免的代價。
+    """
+    for loc, eid, block, _inherited in iter_blocks_with_source_inheritance(data):
+        if "evidence_from" not in block:
+            continue
+        raw = block.get("evidence_from")
+        if not isinstance(raw, list):
+            errors["E011"].append(
+                f"  file={rel} id={eid!r} at={loc} evidence_from "
+                f"型別應為 list，實際為 {type(raw).__name__}"
+            )
+            continue
+        for item in raw:
+            if not (isinstance(item, str) and item.strip()):
+                errors["E011"].append(
+                    f"  file={rel} id={eid!r} at={loc} "
+                    f"evidence_from 含非字串元素 {item!r}"
+                )
+            elif item not in all_id_set:
+                errors["E011"].append(
+                    f"  file={rel} id={eid!r} at={loc} "
+                    f"evidence_from 含無法解析的 {item!r}"
+                )
 
 
 def check_orphan_sources(
@@ -771,11 +966,13 @@ def run_validation():
     # ── 錯誤/警告收集器 ──
     errors: dict[str, list[str]] = {
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
-        "E006": [], "E007": [], "E008": [], "E009": []
+        "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
+        "E011": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-        "W006": [], "W007": [], "W008": [], "W009": [], "W010": []
+        "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
+        "W011": []
     }
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -970,6 +1167,11 @@ def run_validation():
         referenced_source_ids |= check_source_blocks(
             rel, data, allowed_source_ids, errors, warnings
         )
+        # W011 / E010 與來源契約同一輪走訪範圍（含 Drills）：教練觀測與
+        # 診斷層鍵名在 Drills 也可能出現。
+        check_practitioner_blocks(rel, data, warnings)
+        check_public_layer_leak(rel, data, errors)
+        check_evidence_from(rel, data, all_id_set, errors)
 
     # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
     check_orphan_sources(allowed_source_ids, referenced_source_ids, warnings)
@@ -1068,6 +1270,27 @@ def _write_report(
             "ERROR",
             "`links.*_link_ids` 內含無法解析的 ID",
         ),
+        # E008 / E009 / W010 自 S2 起就有檢查，但當時漏了登錄進 code_meta，
+        # 於是即使有筆數也不會出現在報告裡（靜默的報告缺口）。S3b 補上。
+        "E008": (
+            "ERROR",
+            "`category` 跨網域誤用：值合法但該值的 scope 不含本檔所屬網域",
+        ),
+        "E009": (
+            "ERROR",
+            "條目的 `category` 未宣告於該檔自己的 `categories` 區塊"
+            "（my-site 查表落空 → 靜默渲染成空字串）",
+        ),
+        "E010": (
+            "ERROR",
+            "診斷層洩漏：診斷型鍵名出現在 `public` 子樹內"
+            "（`sync_vortex.py` 白名單會整包搬 public 上公開站）",
+        ),
+        "E011": (
+            "ERROR",
+            "`evidence_from` 含無法解析的 ID"
+            "（它是 W009 的豁免路徑，不驗證就變成零成本免罪符）",
+        ),
         "W001": (
             "WARN",
             "`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`",
@@ -1104,7 +1327,17 @@ def _write_report(
         "W009": (
             "WARN",
             "`certainty` green/yellow 且**完全沒有**來源資訊"
-            "（無 `source`/`sources`，也無 `source_ids`）→ 需補來源，S3b 範圍",
+            "（無 `source`/`sources`/`citation`，也無 `source_ids`，祖先亦無，"
+            "且未宣告 `evidence_from`）→ 需補來源或改確定性，S3b 範圍",
+        ),
+        "W010": (
+            "WARN",
+            "死標籤：`categories` 區塊宣告了某 key，但該檔沒有任何條目使用",
+        ),
+        "W011": (
+            "WARN",
+            "`certainty` orange（教練觀測）但缺 `observation_basis`"
+            "（未交代觀察基礎與外推邊界）→ S6 範圍",
         ),
     }
 

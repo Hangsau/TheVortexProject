@@ -249,6 +249,7 @@ errors:
         text: >-
           入水（切入）與抓水（捕水）是兩個不同動作、對應不同手型：入水瞬間手形緊實降低阻力；
           進入捕水後微微張開至放鬆自然位（約 10° 間距），增大推進面積。全程夾緊會限制抓水有效面積。
+        source_ids: [src.marinho-2010, src.the-race-club]
       evidence:
         - certainty: 🟢
           text: >-
@@ -881,6 +882,7 @@ errors:
           直接對推進方向施力（drag-based propulsion）效率明顯更高。
           路徑形狀遠不如「前臂面向推進方向」重要。仰式另有兩個特殊困難加重此問題：
           選手看不到自己的手（視覺回饋缺失），入水後手掌容易因慣性繼續往外滑形成被動 S 形。
+        source_ids: [src.toussaint-colwin-1990-maglischo-2003-swimmin, src.gonjo-2020-b]
       evidence:
         - certainty: 🟡
           text: >-
@@ -2491,6 +2493,7 @@ errors:
         text: >-
           系統回顧研究指出，競技選手的有效踢幅約為身長的 0.2–0.3 倍，與魚類的最優推進比例相符。
           超過這個範圍後，身體截面積增大、阻力急劇上升，核心需要額外力量對抗側向晃動，效率下降。
+        source_ids: [src.veiga-2022]
       evidence:
         - certainty: 🟢
           text: 競技選手有效踢幅約為身長的 0.2–0.3 倍，與魚類最優推進比例相符。

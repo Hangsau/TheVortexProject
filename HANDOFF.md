@@ -4,13 +4,30 @@
 
 ---
 
-## 當前狀態（2026-07-26）
+## 當前狀態（2026-07-27）
 
-### 進行中——canonical 資料契約升級：S0／S1／S2／S3a／S3a-2／S4a／S4b／S4c 完成
+### 進行中——canonical 資料契約升級：S0／S1／S2／S3a／S3a-2／S3b（契約 + 試點）／S4a／S4b／S4c 完成
 
-**基線**：`python tools/validate.py` **0 ERROR／746 WARN**（E001–E009 全 0；W003 476 孤兒條目、W009 270 缺來源，皆為刻意留待的內容債）；`python -m unittest discover -s tests` **90 tests OK**。
+**基線**：`python tools/validate.py` **0 ERROR／752 WARN**（E001–E011 全 0；W002 111、W003 476、W009 102、W011 63）；`python -m unittest discover -s tests` **105 tests OK**。
 
-**下一步**：S3b（270 筆 🟢/🟡 完全無來源 = W009，多半是 certainty 標錯而非真的缺文獻；先做 10 筆試點確認判準再談批次）。之後是 S5（`tools/build_indices.py` 四視圖）與 S3c（476 筆來源查 DOI/PMID/ISBN）。各段驗收詳見下方「下一步建議」章節內的分段驗收紀錄。
+**S3b 已完成的部分**
+
+1. **證據分層契約落地**（`canonical/_taxonomy.yaml#evidence_contract` + `CLAUDE.md`「證據分層契約」節）。不套單一文獻門檻——那會讓感知層永遠不合格。改成文獻證據（🟢/🟡，需 `source_ids`）與實務證據（🟠，需 `observation_basis` 交代誰觀察／什麼族群／外推邊界，不冒充文獻）兩級並存；`certainty` 逐值寫了 `criterion`，擋「預設標綠」。
+2. **W009 誤判 158 筆清除**（270 → 112）。HANDOFF 原本猜「多半是 certainty 標錯」是**錯的**：實測 101 筆是 `references[].citation` 這個 S3a 漏收的來源承載欄位、57 筆是祖先已帶來源的粒度差。驗證器改動：`has_display_source()` 認 `citation`、新增 `iter_blocks_with_source_inheritance()` 做來源沿樹繼承（不跨兄弟條目）。
+3. **新增三項檢查**：`W011`（🟠 缺 `observation_basis`，63 筆）、`E010`（診斷型鍵名寫進 `public` 子樹 = 唯一實際洩漏路徑，0 筆）、`E011`（`evidence_from` 的 ID 必須解析得到——它是 W009 的豁免路徑，不驗證就是零成本免罪符，0 筆）。另修一個既存的靜默回報缺口：E008/E009/W010 早有檢查但沒進 `code_meta`，所以從來沒出現在 `reports/validation_report.md`。
+4. **10 筆試點分流完成**（W009 112 → 102）。剩下 102 筆的形狀高度集中，分流規則已驗證可批次化：
+
+| 形狀 | 筆數 | 分流規則 |
+|---|---|---|
+| `technical-analysis.yaml` `points[].public.mechanism` | 88 | 兄弟 `evidence[]` 已帶註冊來源。mechanism 若是本站從該證據做的推導 → 改標 🔵（既有 `free.tech.1`/`.2` 本來就這樣寫）；若複述文獻（含數字或指名作者）→ 補 `source_ids` 指同 entry 的來源 |
+| `teaching-errors.yaml` `errors[].public.physical_reason` | 19 | 幾乎全是複述文獻（有的直接寫「系統回顧研究指出」）→ 補 `source_ids` |
+| `psychology.yaml` `themes[].premise` | 5 | 主題級綜述句 → `evidence_from: [承載證據的 concept ID]`（`source_dossier` 指向 Research/ 內部檔，不是註冊來源，不算） |
+
+**下一步**：S3b 批次收尾（102 筆照上表規則跑完，`mechanism` 那 88 筆逐筆要判「推導 vs 複述」，可派工但需附本表判準）。之後是 S5（`tools/build_indices.py` 四視圖）與 S3c（476 筆來源查 DOI/PMID/ISBN）。
+
+**同期浮出的新項目（尚未動）**
+- **W002 111 筆**：絕大多數是 `canonical/health/injuries.yaml` 的 `references[].citation`——有來源顯示字串但缺 `source_ids`，屬純遷移（S3a-3 候選，可派工）。⚠ `injuries.yaml` 是 build 產物，改動要進 `canonical/health/drafts/*.yaml` 再跑 `python tools/build_injuries.py`。
+- **W011 63 筆**：🟠 條目缺 `observation_basis`，屬 S6 範圍。
 
 ### 進行中——canonical 資料契約升級（S0 + S1 完成）（2026-07-25）
 
