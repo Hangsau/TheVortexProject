@@ -6,24 +6,32 @@
 
 ## 當前狀態（2026-07-27）
 
-### 進行中——canonical 資料契約升級：S0／S1／S2／S3a／S3a-2／S3b（契約 + 試點）／S4a／S4b／S4c 完成
+### 進行中——canonical 資料契約升級：S0／S1／S2／S3a／S3a-2／**S3b（全部完成）**／S4a／S4b／S4c 完成
 
-**基線**：`python tools/validate.py` **0 ERROR／752 WARN**（E001–E011 全 0；W002 111、W003 476、W009 102、W011 63）；`python -m unittest discover -s tests` **105 tests OK**。
+**基線**：`python tools/validate.py` **0 ERROR／650 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W011 63）；`python -m unittest discover -s tests` **105 tests OK**。
 
-**S3b 已完成的部分**
+**S3b 批次收尾：102 筆一次寫回（2026-07-27）**
+
+分流實測結果與先前預估的「88 推導 vs 19 複述」**不同**：102 筆裡只有 **11 筆**是真的沒有任何可用來源的獨立主張，其餘 91 筆同 entry 早就有註冊來源，只是 `mechanism`／`physical_reason` 是 `evidence[]` 的**兄弟節點**，繼承規則（只在最近的 `id` 子樹內）拿不到。
+
+| 動作 | 筆數 | 內容 |
+|---|---|---|
+| 補 `source_ids`（複述同 entry 已註冊的文獻） | 88 | 72 `mechanism` + 16 `physical_reason` |
+| 改標 🔵（純物理／解剖推導，無兄弟證據） | 7 | free.tech.11／12／25／28／35、breast.tech.25、starts-turns.tech.45 |
+| 改標 🔴（無來源的實證主張，誠實標待查） | 1 | udk.tech.5（核心肌群輪替激活是 EMG 型主張，全庫查無註冊來源） |
+| `evidence_from`（綜述句，證據由子條目承擔） | 6 | breast.tech.31、udk.tech.27、starts-turns.tech.40 + psychology 三個 `premise` |
+| 順帶降級 certainty | 4 | back.err16 🟢→🟡、breast.err15／starts-turns.err14 🟢→🟠、fly.tech.24 🟢→🟡（唯一來源是 2009 舊文獻或教練實測，原本標綠過頭） |
+
+執行方式：逐行手術腳本（定位 `- id:` → block key → `certainty:`，於其後插入來源鍵），**不做 `yaml.safe_dump` round-trip**——那會摧毀全部註解與折行。套用前先程式驗過「88 筆的來源鍵全在 `_sources.yaml`」與「6 筆 `evidence_from` 的 ID 全解析得到」，零漏。3 個轉 🟠 的條目因帶 `source_ids`（`has_source_info()` 豁免）不會新增 W011。
+
+**S3b 前段（契約 + 驗證器 + 試點）**
 
 1. **證據分層契約落地**（`canonical/_taxonomy.yaml#evidence_contract` + `CLAUDE.md`「證據分層契約」節）。不套單一文獻門檻——那會讓感知層永遠不合格。改成文獻證據（🟢/🟡，需 `source_ids`）與實務證據（🟠，需 `observation_basis` 交代誰觀察／什麼族群／外推邊界，不冒充文獻）兩級並存；`certainty` 逐值寫了 `criterion`，擋「預設標綠」。
 2. **W009 誤判 158 筆清除**（270 → 112）。HANDOFF 原本猜「多半是 certainty 標錯」是**錯的**：實測 101 筆是 `references[].citation` 這個 S3a 漏收的來源承載欄位、57 筆是祖先已帶來源的粒度差。驗證器改動：`has_display_source()` 認 `citation`、新增 `iter_blocks_with_source_inheritance()` 做來源沿樹繼承（不跨兄弟條目）。
 3. **新增三項檢查**：`W011`（🟠 缺 `observation_basis`，63 筆）、`E010`（診斷型鍵名寫進 `public` 子樹 = 唯一實際洩漏路徑，0 筆）、`E011`（`evidence_from` 的 ID 必須解析得到——它是 W009 的豁免路徑，不驗證就是零成本免罪符，0 筆）。另修一個既存的靜默回報缺口：E008/E009/W010 早有檢查但沒進 `code_meta`，所以從來沒出現在 `reports/validation_report.md`。
-4. **10 筆試點分流完成**（W009 112 → 102）。剩下 102 筆的形狀高度集中，分流規則已驗證可批次化：
+4. **10 筆試點分流完成**（W009 112 → 102），驗證分流規則可批次化——批次結果見上表。
 
-| 形狀 | 筆數 | 分流規則 |
-|---|---|---|
-| `technical-analysis.yaml` `points[].public.mechanism` | 88 | 兄弟 `evidence[]` 已帶註冊來源。mechanism 若是本站從該證據做的推導 → 改標 🔵（既有 `free.tech.1`/`.2` 本來就這樣寫）；若複述文獻（含數字或指名作者）→ 補 `source_ids` 指同 entry 的來源 |
-| `teaching-errors.yaml` `errors[].public.physical_reason` | 19 | 幾乎全是複述文獻（有的直接寫「系統回顧研究指出」）→ 補 `source_ids` |
-| `psychology.yaml` `themes[].premise` | 5 | 主題級綜述句 → `evidence_from: [承載證據的 concept ID]`（`source_dossier` 指向 Research/ 內部檔，不是註冊來源，不算） |
-
-**下一步**：S3b 批次收尾（102 筆照上表規則跑完，`mechanism` 那 88 筆逐筆要判「推導 vs 複述」，可派工但需附本表判準）。之後是 S5（`tools/build_indices.py` 四視圖）與 S3c（476 筆來源查 DOI/PMID/ISBN）。
+**下一步**：S5（`tools/build_indices.py` 四視圖：內容／概念索引、tag 反向索引、來源反向索引、缺口報告）→ S3c（476 筆來源查 DOI／PMID／ISBN，W003 的解）。
 
 **同期浮出的新項目（尚未動）**
 - **W002 111 筆**：絕大多數是 `canonical/health/injuries.yaml` 的 `references[].citation`——有來源顯示字串但缺 `source_ids`，屬純遷移（S3a-3 候選，可派工）。⚠ `injuries.yaml` 是 build 產物，改動要進 `canonical/health/drafts/*.yaml` 再跑 `python tools/build_injuries.py`。
@@ -628,12 +636,14 @@
 | S0 | 提交 CLAUDE.md 規範 + 本缺口條目 | 文件 | ✅ 已完成 2026-07-25 |
 | S1 | `_taxonomy.yaml` + `_sources.yaml` 空殼 + `tools/validate.py` + `tests/` | 純機械，零內容風險 | ✅ 已完成 2026-07-25（commit a04df0a） |
 | S2 | `category` 36 個值：先決定教學類別 vs 健康傷害類別（`A-`~`F-` 前綴）是否拆欄位，再談歸一與 alias | 需領域判斷 | ✅ 已完成 2026-07-26（不拆欄位，改 per-value `scope`；新增 E008/E009/W010；my-site 硬編標籤字典全清） |
-| S3 | **W002 = 88 筆**來源遷移：去重建 `src.*` ID、抽 DOI/PMID、條目加 `source_ids`，原字串保留為 `source_display` | 最大宗，可批次 | 批次派工 |
+| S3a／S3a-2／S3b | 來源註冊表建置 + 證據分層契約 + W009 歸零 | 最大宗 | ✅ 已完成 2026-07-26／27（476 筆 `src.*` 註冊；W009 270→0；新增 W011／E010／E011） |
+| S3c | 476 筆已註冊來源補 DOI／PMID／ISBN + 查驗日（W003 的解） | 機械查詢 | 可派工 |
+| S3a-3 | W002 剩 111 筆（多為 `injuries.yaml` `references[].citation`）→ `source_ids` | 純遷移 | 可派工 ⚠ 改 `canonical/health/drafts/` 再 build |
 | S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
 | S4b | injuries 的 **20 筆** `*_link` 散文欄位加 `*_link_ids` 機器鍵（**不**拆成 ID 陣列，同 S4c 的「加欄位不換內容」） | 需讀內容判斷 | ✅ 已完成 2026-07-26（W004 20→0，新增 E007/W007） |
 | S4c | **W001 = 61 筆** `cross_ref` → 穩定 ID（新增 `cross_ref_ids` 機器鍵；節號類列為遺留債） | 機械為主 | ✅ 已完成 2026-07-26（W001 61→0，新增 E006/W006） |
-| S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | 派工 |
-| S6 | public/private 匯出隔離（hub P4 前置） | 需分層判斷 | 未規劃 |
+| S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | **下一段**，可派工 |
+| S6 | public/private 匯出隔離（hub P4 前置）+ W011 63 筆補 `observation_basis` | 需分層判斷 | 未規劃 |
 
 **風險與預案**：S3 是唯一有資料損毀風險的一段（動 164 筆條目內容欄位）。對策＝`source_display` 保留原文字不刪，遷移只做「加欄位」不做「換內容」，任何時候可回退。S2 的歸一會改變既有 tag 值，須先跑「哪些條目會受影響」的預覽再動。
 

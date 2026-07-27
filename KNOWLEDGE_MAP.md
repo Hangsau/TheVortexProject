@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 88, '🟠': 33, '🟢': 82, '🟡': 4} |
+| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 95, '🟠': 33, '🟢': 73, '🟡': 5, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -51,11 +51,11 @@
 | free.tech.7 | stroke-cycle |  | 🟠 |
 | free.tech.8 | stroke-cycle |  | 🟠 |
 | free.tech.27 | stroke-cycle |  | 🔵 |
-| free.tech.28 | stroke-cycle |  | 🟢 |
+| free.tech.28 | stroke-cycle |  | 🔵 |
 | free.tech.9 | stroke-cycle |  | 🔵 |
 | free.tech.10 | hardware |  | 🟢 |
-| free.tech.11 | kick |  | 🟢 |
-| free.tech.12 | kick |  | 🟢 |
+| free.tech.11 | kick |  | 🔵 |
+| free.tech.12 | kick |  | 🔵 |
 | free.tech.13 | hardware |  | 🟢 |
 | free.tech.14 | kick |  | 🔵 |
 | free.tech.15 | rotation |  | 🟡 |
@@ -69,14 +69,14 @@
 | free.tech.22 | errors |  | 🔵 |
 | free.tech.23 | errors |  | 🟢 |
 | free.tech.24 | fatigue |  | 🟢 |
-| free.tech.25 | watersense |  | 🟢 |
+| free.tech.25 | watersense |  | 🔵 |
 | free.tech.26 | comparison |  | 🔵 |
 | free.tech.32 | stroke-cycle |  | 🟠 |
 | free.tech.33 | hardware |  | 🟠 |
 | free.tech.30 | rotation |  | 🟠 |
 | free.tech.31 | fatigue |  | 🟠 |
 | free.tech.34 | streamline |  | 🔵 |
-| free.tech.35 | timing |  | 🟢 |
+| free.tech.35 | timing |  | 🔵 |
 
 #### 仰式 (29)
 
@@ -140,7 +140,7 @@
 | breast.tech.22 | tempo |  | 🟢 |
 | breast.tech.23 | watersense |  | 🟢 |
 | breast.tech.24 | errors |  | 🟢 |
-| breast.tech.25 | errors |  | 🟢 |
+| breast.tech.25 | errors |  | 🔵 |
 | breast.tech.26 | errors |  | 🔵 |
 | breast.tech.27 | fatigue |  | 🟢 |
 | breast.tech.28 | streamline |  | 🟢 |
@@ -176,7 +176,7 @@
 | fly.tech.21 | timing |  | 🔵 |
 | fly.tech.22 | fatigue |  | 🔵 |
 | fly.tech.23 | fatigue |  | 🔵 |
-| fly.tech.24 | hardware |  | 🟢 |
+| fly.tech.24 | hardware |  | 🟡 |
 | fly.tech.25 | hardware |  | 🔵 |
 | fly.tech.26 | hardware |  | 🔵 |
 | fly.tech.27 | hardware |  | 🔵 |
@@ -238,7 +238,7 @@
 | starts-turns.tech.38 | errors |  | 🟠 |
 | starts-turns.tech.39 | concept |  | 🔵 |
 | starts-turns.tech.40 | hardware |  | 🟢 |
-| starts-turns.tech.45 | comparison |  | 🟢 |
+| starts-turns.tech.45 | comparison |  | 🔵 |
 | starts-turns.tech.46 | stroke-cycle |  | 🟢 |
 
 #### 水下蝶腳 (29)
@@ -249,7 +249,7 @@
 | udk.tech.2 | depth |  | 🔵 |
 | udk.tech.3 | depth |  | 🟢 |
 | udk.tech.4 | undulation |  | 🔵 |
-| udk.tech.5 | undulation |  | 🟢 |
+| udk.tech.5 | undulation |  | 🔴 |
 | udk.tech.6 | kick |  | 🟢 |
 | udk.tech.7 | kick |  | 🟢 |
 | udk.tech.8 | concept |  | 🔵 |
