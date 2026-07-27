@@ -1,0 +1,3264 @@
+{
+  "schema_version": 1,
+  "retrieved_on": "2026-07-27",
+  "candidate_count": 92,
+  "summary": {
+    "lookup_failed": 1,
+    "matched": 74,
+    "matched_with_correction": 8,
+    "mismatch": 5,
+    "needs_review": 4
+  },
+  "lookup_errors": [
+    "DOI 10.1111/sms.14454（doi: HTTP Error 404: Not Found"
+  ],
+  "results": [
+    {
+      "id": "src.aiac-ijkss-v-6n-1p-25",
+      "display": "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)",
+      "registry": "crossref",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "doi": "10.7575/aiac.ijkss.v.6n.1p.25"
+        }
+      },
+      "resolved": {
+        "title": "Swimmers Are At Risk For Stress Fractures? A Systematic Review",
+        "authors": [
+          "Angelo V. Vasiliadis",
+          "Vasileios Lampridis",
+          "Dimitrios Georgiannos",
+          "Ilias Bisbinas"
+        ],
+        "year": 2018,
+        "container": "International Journal of Kinesiology and Sports Science",
+        "type": "journal-article",
+        "identifier": {
+          "doi": "10.7575/aiac.ijkss.v.6n.1p.25",
+          "url": "https://doi.org/10.7575/aiac.ijkss.v.6n.1p.25"
+        }
+      }
+    },
+    {
+      "id": "src.atkison-2014-a",
+      "display": "Atkison et al. 2014",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "authors_match=True",
+        "year_match=True",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Atkison"
+        ],
+        "year": 2014,
+        "identifier": {
+          "pmid": "24290609",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/24290609/"
+        }
+      },
+      "resolved": {
+        "title": "Importance of sagittal kick symmetry for underwater dolphin kick performance.",
+        "authors": [
+          "Atkison RR",
+          "Dickey JP",
+          "Dragunas A",
+          "Nolte V"
+        ],
+        "year": 2014,
+        "container": "Human movement science",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "24290609",
+          "doi": "10.1016/j.humov.2013.08.013"
+        }
+      }
+    },
+    {
+      "id": "src.atkison-2014-b",
+      "display": "Atkison et al. 2014, PubMed 24290609",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "authors_match=True",
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Atkison"
+        ],
+        "year": 2014,
+        "identifier": {
+          "pmid": "24290609"
+        }
+      },
+      "resolved": {
+        "title": "Importance of sagittal kick symmetry for underwater dolphin kick performance.",
+        "authors": [
+          "Atkison RR",
+          "Dickey JP",
+          "Dragunas A",
+          "Nolte V"
+        ],
+        "year": 2014,
+        "container": "Human movement science",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "24290609",
+          "doi": "10.1016/j.humov.2013.08.013"
+        }
+      }
+    },
+    {
+      "id": "src.benjanuvatra-2007-a",
+      "display": "Benjanuvatra et al. 2007",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "mismatch",
+      "reasons": [
+        "authors_match=False",
+        "year_match=False",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Benjanuvatra"
+        ],
+        "year": 2007,
+        "identifier": {
+          "pmcid": "PMC3990873",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
+        }
+      },
+      "resolved": {
+        "title": "Biomechanical analysis of the swim-start: a review.",
+        "authors": [
+          "Vantorre J",
+          "Chollet D",
+          "Seifert L"
+        ],
+        "year": 2014,
+        "container": "Journal of sports science & medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "24790473",
+          "pmcid": "PMC3990873"
+        }
+      }
+    },
+    {
+      "id": "src.gonjo-2017",
+      "display": "Gonjo et al. 2017, PubMed 28605694",
+      "registry": "pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "authors_match=False",
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Gonjo"
+        ],
+        "year": 2017,
+        "identifier": {
+          "pmid": "28605694"
+        }
+      },
+      "resolved": {
+        "title": "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick.",
+        "authors": [
+          "Yamakawa KK",
+          "Shimojo H",
+          "Takagi H",
+          "Tsubakimoto S",
+          "Sengoku Y"
+        ],
+        "year": 2017,
+        "container": "Human movement science",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "28605694",
+          "doi": "10.1016/j.humov.2017.06.002"
+        }
+      }
+    },
+    {
+      "id": "src.gonjo-2018",
+      "display": "Gonjo et al. 2018",
+      "registry": "pubmed",
+      "decision": "mismatch",
+      "reasons": [
+        "authors_match=False",
+        "year_match=False",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Gonjo"
+        ],
+        "year": 2018,
+        "identifier": {
+          "pmid": "30694108",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/30694108/"
+        }
+      },
+      "resolved": {
+        "title": "The biomechanics of freestyle and butterfly turn technique in elite swimmers.",
+        "authors": [
+          "Nicol E",
+          "Ball K",
+          "Tor E"
+        ],
+        "year": 2021,
+        "container": "Sports biomechanics",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30694108",
+          "doi": "10.1080/14763141.2018.1561930"
+        }
+      }
+    },
+    {
+      "id": "src.grote-2004",
+      "display": "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "authors_match=True",
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Grote"
+        ],
+        "year": 2004,
+        "identifier": {
+          "pmid": "14754731"
+        }
+      },
+      "resolved": {
+        "title": "Hip adductor injury in competitive swimmers.",
+        "authors": [
+          "Grote K",
+          "Lincoln TL",
+          "Gamble JG"
+        ],
+        "year": 2004,
+        "container": "The American journal of sports medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "14754731",
+          "doi": "10.1177/0363546503258905"
+        }
+      }
+    },
+    {
+      "id": "src.hvid-2024",
+      "display": "Hvid et al. 2024, Sports, PMC11125574",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "authors_match=False",
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Hvid"
+        ],
+        "year": 2024,
+        "identifier": {
+          "pmcid": "PMC11125574"
+        }
+      },
+      "resolved": {
+        "title": "Higher Blood Lactate with Prolongation of Underwater Section in Submaximal Front-Crawl Swimming.",
+        "authors": [
+          "Venckunas T",
+          "Achramavicius J"
+        ],
+        "year": 2024,
+        "container": "Sports (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "38786990",
+          "pmcid": "PMC11125574",
+          "doi": "10.3390/sports12050121"
+        }
+      }
+    },
+    {
+      "id": "src.journal-pone-0241345-a",
+      "display": "PLOS ONE 2020",
+      "registry": "crossref",
+      "decision": "needs_review",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2020,
+        "identifier": {
+          "doi": "10.1371/journal.pone.0241345",
+          "url": "https://doi.org/10.1371/journal.pone.0241345"
+        }
+      },
+      "resolved": {
+        "title": "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers",
+        "authors": [
+          "Marit P. van Dijk",
+          "Peter J. Beek",
+          "A. J. Knoek van Soest"
+        ],
+        "year": 2020,
+        "container": "PLOS ONE",
+        "type": "journal-article",
+        "identifier": {
+          "doi": "10.1371/journal.pone.0241345",
+          "url": "https://doi.org/10.1371/journal.pone.0241345"
+        }
+      }
+    },
+    {
+      "id": "src.journal-pone-0241345-b",
+      "display": "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020",
+      "registry": "crossref",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=False",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2020,
+        "identifier": {
+          "doi": "10.1371/journal.pone.0241345",
+          "url": "https://doi.org/10.1371/journal.pone.0241345"
+        }
+      },
+      "resolved": {
+        "title": "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers",
+        "authors": [
+          "Marit P. van Dijk",
+          "Peter J. Beek",
+          "A. J. Knoek van Soest"
+        ],
+        "year": 2020,
+        "container": "PLOS ONE",
+        "type": "journal-article",
+        "identifier": {
+          "doi": "10.1371/journal.pone.0241345",
+          "url": "https://doi.org/10.1371/journal.pone.0241345"
+        }
+      }
+    },
+    {
+      "id": "src.marinho-2010",
+      "display": "Marinho et al. (2010), Journal of Applied Biomechanics",
+      "registry": "pubmed",
+      "decision": "mismatch",
+      "reasons": [
+        "authors_match=False",
+        "year_match=False",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Marinho"
+        ],
+        "year": 2010,
+        "identifier": {
+          "pmid": "20733242",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/20733242/"
+        }
+      },
+      "resolved": {
+        "title": "FEAST: sensitive local alignment with multiple rates of evolution.",
+        "authors": [
+          "Hudek AK",
+          "Brown DG"
+        ],
+        "year": 2011,
+        "container": "IEEE/ACM transactions on computational biology and bioinformatics",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "20733242",
+          "doi": "10.1109/TCBB.2010.76"
+        }
+      }
+    },
+    {
+      "id": "src.mccullough-a",
+      "display": "McCullough et al. (2009/2010), J. Strength & Conditioning Research",
+      "registry": "pubmed",
+      "decision": "mismatch",
+      "reasons": [
+        "authors_match=False",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "McCullough"
+        ],
+        "year": null,
+        "identifier": {
+          "pmid": "19387413",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/19387413/"
+        }
+      },
+      "resolved": {
+        "title": "Injury reduction effectiveness of selecting running shoes based on plantar shape.",
+        "authors": [
+          "Knapik JJ",
+          "Swedler DI",
+          "Grier TL",
+          "Hauret KG",
+          "Bullock SH",
+          "Williams KW",
+          "Darakjy SS",
+          "Lester ME",
+          "Tobler SK",
+          "Jones BH"
+        ],
+        "year": 2009,
+        "container": "Journal of strength and conditioning research",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "19387413",
+          "doi": "10.1519/JSC.0b013e3181a0fc63"
+        }
+      }
+    },
+    {
+      "id": "src.mckenzie-2023-a",
+      "display": "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）",
+      "registry": "crossref",
+      "decision": "lookup_failed",
+      "reasons": [
+        "registry returned no metadata"
+      ],
+      "current": {
+        "authors": [
+          "McKenzie"
+        ],
+        "year": 2023,
+        "identifier": {
+          "doi": "10.1111/sms.14454（DOI"
+        }
+      },
+      "resolved": null
+    },
+    {
+      "id": "src.pmc10339925",
+      "display": "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2023,
+        "identifier": {
+          "pmcid": "PMC10339925"
+        }
+      },
+      "resolved": {
+        "title": "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes-A Narrative Review.",
+        "authors": [
+          "Kliniec K",
+          "Tota M",
+          "Zalesińska A",
+          "Łyko M",
+          "Jankowska-Konsur A"
+        ],
+        "year": 2023,
+        "container": "Cancers",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "37444391",
+          "pmcid": "PMC10339925",
+          "doi": "10.3390/cancers15133281"
+        }
+      }
+    },
+    {
+      "id": "src.pmc10356869",
+      "display": "Commotio Cordis in 2023, PMC10356869 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2023,
+        "identifier": {
+          "pmcid": "PMC10356869"
+        }
+      },
+      "resolved": {
+        "title": "Commotio Cordis in 2023.",
+        "authors": [
+          "Peng T",
+          "Derry LT",
+          "Yogeswaran V",
+          "Goldschlager NF"
+        ],
+        "year": 2023,
+        "container": "Sports medicine (Auckland, N.Z.)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "37382827",
+          "pmcid": "PMC10356869",
+          "doi": "10.1007/s40279-023-01873-6"
+        }
+      }
+    },
+    {
+      "id": "src.pmc10366873",
+      "display": "Delayed Effect of Dry-Land Strength Training Sessions on Swimming Performance, J Funct Morphol Kinesiol 2023 (PMID 37489300 / PMC10366873)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2023,
+        "identifier": {
+          "pmid": "37489300",
+          "pmcid": "PMC10366873"
+        }
+      },
+      "resolved": {
+        "title": "Delayed Effect of Dry-Land Strength Training Sessions on Swimming Performance.",
+        "authors": [
+          "Tsoltos A",
+          "Arsoniadis G",
+          "Tsolakis C",
+          "Koulouvaris P",
+          "Simeonidis T",
+          "Chatzigiannakis A",
+          "Toubekis A"
+        ],
+        "year": 2023,
+        "container": "Journal of functional morphology and kinesiology",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "37489300",
+          "pmcid": "PMC10366873",
+          "doi": "10.3390/jfmk8030087"
+        }
+      }
+    },
+    {
+      "id": "src.pmc10372189",
+      "display": "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC10372189"
+        }
+      },
+      "resolved": {
+        "title": "Descriptive Epidemiology of High School Swimming and Diving Injuries.",
+        "authors": [
+          "Belilos E",
+          "Jow S",
+          "Maxwell M"
+        ],
+        "year": 2023,
+        "container": "Clinical journal of sport medicine : official journal of the Canadian Academy of Sport Medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "36715985",
+          "pmcid": "PMC10372189",
+          "doi": "10.1097/JSM.0000000000001121"
+        }
+      }
+    },
+    {
+      "id": "src.pmc10689961",
+      "display": "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "38047245",
+          "pmcid": "PMC10689961"
+        }
+      },
+      "resolved": {
+        "title": "Unintentional Drowning Mortality Among Individuals Under Age 20 - China, 2013-2021.",
+        "authors": [
+          "Li Z",
+          "Deng X",
+          "Jin Y",
+          "Duan L",
+          "Ye P"
+        ],
+        "year": 2023,
+        "container": "China CDC weekly",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "38047245",
+          "pmcid": "PMC10689961",
+          "doi": "10.46234/ccdcw2023.198"
+        }
+      }
+    },
+    {
+      "id": "src.pmc10713671",
+      "display": "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC10713671"
+        }
+      },
+      "resolved": {
+        "title": "Erosive tooth wear and salivary parameters among competitive swimmers and non-swimmers in Egypt: a cross-sectional study.",
+        "authors": [
+          "Abdelrahman HH",
+          "Ammar N",
+          "Hassan MG",
+          "Essam W",
+          "Amer H"
+        ],
+        "year": 2023,
+        "container": "Clinical oral investigations",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "37924355",
+          "pmcid": "PMC10713671",
+          "doi": "10.1007/s00784-023-05367-7"
+        }
+      }
+    },
+    {
+      "id": "src.pmc10813451",
+      "display": "Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "year_match=False",
+        "identifier_echo=False",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2024,
+        "identifier": {
+          "pmcid": "PMC10813451",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/"
+        }
+      },
+      "resolved": {
+        "title": "Validation of Automatically Quantified Swim Stroke Mechanics Using an Inertial Measurement Unit in Paralympic Athletes.",
+        "authors": [
+          "Slopecki M",
+          "Charbonneau M",
+          "Lavallière JM",
+          "Côté JN",
+          "Clément J"
+        ],
+        "year": 2023,
+        "container": "Bioengineering (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "38247892",
+          "pmcid": "PMC10813451",
+          "doi": "10.3390/bioengineering11010015"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11115434",
+      "display": "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2024,
+        "identifier": {
+          "pmcid": "PMC11115434"
+        }
+      },
+      "resolved": {
+        "title": "Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure - United States, 2019-2023.",
+        "authors": [
+          "Clemens T",
+          "Moreland B",
+          "Mack KA",
+          "Thomas K",
+          "Bergen G",
+          "Lee R"
+        ],
+        "year": 2024,
+        "container": "MMWR. Morbidity and mortality weekly report",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "38781109",
+          "pmcid": "PMC11115434",
+          "doi": "10.15585/mmwr.mm7320e1"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11277273",
+      "display": "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC11277273"
+        }
+      },
+      "resolved": {
+        "title": "Current Clinical Concepts: Rehabilitation of Thoracic Outlet Syndrome.",
+        "authors": [
+          "Hock G",
+          "Johnson A",
+          "Barber P",
+          "Papa C"
+        ],
+        "year": 2024,
+        "container": "Journal of athletic training",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39048118",
+          "pmcid": "PMC11277273",
+          "doi": "10.4085/1062-6050-0138.22"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11297363-a",
+      "display": "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC11297363"
+        }
+      },
+      "resolved": {
+        "title": "Shoulder Pain in Competitive Swimmers: A Multi-Site Survey Study.",
+        "authors": [
+          "Stirling BD",
+          "Sum JC",
+          "Baek L",
+          "Michener LA",
+          "Barrack AJ",
+          "Tate AR"
+        ],
+        "year": 2024,
+        "container": "International journal of sports physical therapy",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39100936",
+          "pmcid": "PMC11297363",
+          "doi": "10.26603/001c.121114"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11297363-b",
+      "display": "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "39100936",
+          "pmcid": "PMC11297363"
+        }
+      },
+      "resolved": {
+        "title": "Shoulder Pain in Competitive Swimmers: A Multi-Site Survey Study.",
+        "authors": [
+          "Stirling BD",
+          "Sum JC",
+          "Baek L",
+          "Michener LA",
+          "Barrack AJ",
+          "Tate AR"
+        ],
+        "year": 2024,
+        "container": "International journal of sports physical therapy",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39100936",
+          "pmcid": "PMC11297363",
+          "doi": "10.26603/001c.121114"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11424229",
+      "display": "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC11424229"
+        }
+      },
+      "resolved": {
+        "title": "A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies.",
+        "authors": [
+          "Garg D",
+          "Daigavane S"
+        ],
+        "year": 2024,
+        "container": "Cureus",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39328676",
+          "pmcid": "PMC11424229",
+          "doi": "10.7759/cureus.67803"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11531034",
+      "display": "Swimming low back pain by stroke, PMC11531034 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC11531034"
+        }
+      },
+      "resolved": {
+        "title": "Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review.",
+        "authors": [
+          "Hsu C",
+          "Krabak B",
+          "Cunningham B",
+          "Borg-Stein J"
+        ],
+        "year": 2024,
+        "container": "Sports health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "38262981",
+          "pmcid": "PMC11531034",
+          "doi": "10.1177/19417381231225213"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11642080",
+      "display": "FAI rehabilitation & RTS, PMC11642080 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC11642080"
+        }
+      },
+      "resolved": {
+        "title": "State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review.",
+        "authors": [
+          "Monselli C",
+          "Bianco Prevot L",
+          "Accetta R",
+          "Tronconi LP",
+          "Bolcato V",
+          "Basile G"
+        ],
+        "year": 2024,
+        "container": "Journal of clinical medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39685760",
+          "pmcid": "PMC11642080",
+          "doi": "10.3390/jcm13237302"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11744971",
+      "display": "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "39833826",
+          "pmcid": "PMC11744971"
+        }
+      },
+      "resolved": {
+        "title": "Exercise interventions to improve bone mineral density in athletes participating in low-impact sports: a scoping review.",
+        "authors": [
+          "Florvåg AG",
+          "Berg ØA",
+          "Røksund OD",
+          "Jorem GT",
+          "Bogen BE"
+        ],
+        "year": 2025,
+        "container": "BMC musculoskeletal disorders",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39833826",
+          "pmcid": "PMC11744971",
+          "doi": "10.1186/s12891-025-08316-5"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11954903",
+      "display": "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2025,
+        "identifier": {
+          "pmcid": "PMC11954903"
+        }
+      },
+      "resolved": {
+        "title": "Global burden of drowning and risk factors across 204 countries from 1990 to 2021.",
+        "authors": [
+          "Xie Z",
+          "Huang Z",
+          "Ran Q",
+          "Luo W",
+          "Du W"
+        ],
+        "year": 2025,
+        "container": "Scientific reports",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "40158004",
+          "pmcid": "PMC11954903",
+          "doi": "10.1038/s41598-025-95486-w"
+        }
+      }
+    },
+    {
+      "id": "src.pmc11985649",
+      "display": "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC11985649"
+        }
+      },
+      "resolved": {
+        "title": "Sex Differences in the Incidence of Sudden Cardiac Arrest/Death in Competitive Athletes: A Systematic Review and Meta-analysis.",
+        "authors": [
+          "Li L",
+          "Le Douairon Lahaye S",
+          "Ding S",
+          "Schnell F"
+        ],
+        "year": 2025,
+        "container": "Sports medicine (Auckland, N.Z.)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39752044",
+          "pmcid": "PMC11985649",
+          "doi": "10.1007/s40279-024-02163-5"
+        }
+      }
+    },
+    {
+      "id": "src.pmc12234767",
+      "display": "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2025,
+        "identifier": {
+          "pmcid": "PMC12234767"
+        }
+      },
+      "resolved": {
+        "title": "Assessment of arrhythmias and heart rate response in healthy adolescents performing face immersion and body submersion in ice-cold water.",
+        "authors": [
+          "Lundström A",
+          "Karlsson M",
+          "Rydberg A",
+          "Wiklund U"
+        ],
+        "year": 2025,
+        "container": "Physiological reports",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "40624837",
+          "pmcid": "PMC12234767",
+          "doi": "10.14814/phy2.70430"
+        }
+      }
+    },
+    {
+      "id": "src.pmc12847173",
+      "display": "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "year_match=False",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2025,
+        "identifier": {
+          "pmcid": "PMC12847173"
+        }
+      },
+      "resolved": {
+        "title": "Pathophysiology and treatment of exercise-associated hyponatremia.",
+        "authors": [
+          "Altieri B",
+          "Aini I",
+          "Cannavale G",
+          "Magnelli C",
+          "Mancini C",
+          "Zamponi V",
+          "Isidori AM",
+          "Colao A",
+          "Faggiano A",
+          "Peri A",
+          "NIKE group"
+        ],
+        "year": 2026,
+        "container": "Journal of endocrinological investigation",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "40913680",
+          "pmcid": "PMC12847173",
+          "doi": "10.1007/s40618-025-02673-7"
+        }
+      }
+    },
+    {
+      "id": "src.pmc1448328",
+      "display": "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC1448328"
+        }
+      },
+      "resolved": {
+        "title": "Swimmer's itch: incidence and risk factors.",
+        "authors": [
+          "Verbrugge LM",
+          "Rainey JJ",
+          "Reimink RL",
+          "Blankespoor HD"
+        ],
+        "year": 2004,
+        "container": "American journal of public health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "15117691",
+          "pmcid": "PMC1448328",
+          "doi": "10.2105/ajph.94.5.738"
+        }
+      }
+    },
+    {
+      "id": "src.pmc1626429",
+      "display": "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC1626429"
+        }
+      },
+      "resolved": {
+        "title": "Chlorinated pool attendance, atopy, and the risk of asthma during childhood.",
+        "authors": [
+          "Bernard A",
+          "Carbonnelle S",
+          "de Burbure C",
+          "Michel O",
+          "Nickmilder M"
+        ],
+        "year": 2006,
+        "container": "Environmental health perspectives",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "17035144",
+          "pmcid": "PMC1626429",
+          "doi": "10.1289/ehp.8461"
+        }
+      }
+    },
+    {
+      "id": "src.pmc2858141",
+      "display": "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC2858141"
+        }
+      },
+      "resolved": {
+        "title": "Outbreak of leptospirosis among triathlon participants in Germany, 2006.",
+        "authors": [
+          "Brockmann S",
+          "Piechotowski I",
+          "Bock-Hensley O",
+          "Winter C",
+          "Oehme R",
+          "Zimmermann S",
+          "Hartelt K",
+          "Luge E",
+          "Nöckler K",
+          "Schneider T",
+          "Stark K",
+          "Jansen A"
+        ],
+        "year": 2010,
+        "container": "BMC infectious diseases",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "20380736",
+          "pmcid": "PMC2858141",
+          "doi": "10.1186/1471-2334-10-91"
+        }
+      }
+    },
+    {
+      "id": "src.pmc2899837",
+      "display": "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC2899837"
+        }
+      },
+      "resolved": {
+        "title": "Cervical spine injuries resulting from diving accidents in swimming pools: outcome of 34 patients.",
+        "authors": [
+          "Borius PY",
+          "Gouader I",
+          "Bousquet P",
+          "Draper L",
+          "Roux FE"
+        ],
+        "year": 2010,
+        "container": "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "19956985",
+          "pmcid": "PMC2899837",
+          "doi": "10.1007/s00586-009-1230-3"
+        }
+      }
+    },
+    {
+      "id": "src.pmc3435931",
+      "display": "Competitive swimmers spine degeneration, PMC3435931 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC3435931"
+        }
+      },
+      "resolved": {
+        "title": "Epidemiology of injuries and prevention strategies in competitive swimmers.",
+        "authors": [
+          "Wanivenhaus F",
+          "Fox AJ",
+          "Chaudhury S",
+          "Rodeo SA"
+        ],
+        "year": 2012,
+        "container": "Sports health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "23016094",
+          "pmcid": "PMC3435931",
+          "doi": "10.1177/1941738112442132"
+        }
+      }
+    },
+    {
+      "id": "src.pmc3438875",
+      "display": "Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC3438875",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/"
+        }
+      },
+      "resolved": {
+        "title": "Biomechanical Considerations in the Competitive Swimmer's Shoulder.",
+        "authors": [
+          "Heinlein SA",
+          "Cosgarea AJ"
+        ],
+        "year": 2010,
+        "container": "Sports health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "23015983",
+          "pmcid": "PMC3438875",
+          "doi": "10.1177/1941738110377611"
+        }
+      }
+    },
+    {
+      "id": "src.pmc3488741",
+      "display": "Trichloramine and lung function, PMC3488741 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC3488741"
+        }
+      },
+      "resolved": {
+        "title": "Lung function in volunteers before and after exposure to trichloramine in indoor pool environments and asthma in a cohort of pool workers.",
+        "authors": [
+          "Nordberg GF",
+          "Lundstrom NG",
+          "Forsberg B",
+          "Hagenbjork-Gustafsson A",
+          "Lagerkvist BJ",
+          "Nilsson J",
+          "Svensson M",
+          "Blomberg A",
+          "Nilsson L",
+          "Bernard A",
+          "Dumont X",
+          "Bertilsson H",
+          "Eriksson K"
+        ],
+        "year": 2012,
+        "container": "BMJ open",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "23048058",
+          "pmcid": "PMC3488741",
+          "doi": "10.1136/bmjopen-2012-000973"
+        }
+      }
+    },
+    {
+      "id": "src.pmc3579418",
+      "display": "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC3579418"
+        }
+      },
+      "resolved": {
+        "title": "Prevalence of dental erosion in adolescent competitive swimmers exposed to gas-chlorinated swimming pool water.",
+        "authors": [
+          "Buczkowska-Radlińska J",
+          "Łagocka R",
+          "Kaczmarek W",
+          "Górski M",
+          "Nowicka A"
+        ],
+        "year": 2013,
+        "container": "Clinical oral investigations",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "22476450",
+          "pmcid": "PMC3579418",
+          "doi": "10.1007/s00784-012-0720-6"
+        }
+      }
+    },
+    {
+      "id": "src.pmc3811737",
+      "display": "SLAP lesions overview & rehab, PMC3811737 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC3811737"
+        }
+      },
+      "resolved": {
+        "title": "The recognition and treatment of superior labral (slap) lesions in the overhead athlete.",
+        "authors": [
+          "Wilk KE",
+          "Macrina LC",
+          "Cain EL",
+          "Dugas JR",
+          "Andrews JR"
+        ],
+        "year": 2013,
+        "container": "International journal of sports physical therapy",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "24175139",
+          "pmcid": "PMC3811737"
+        }
+      }
+    },
+    {
+      "id": "src.pmc4234766-a",
+      "display": "The Backstroke Swimming Start: State of the Art",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=False",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC4234766",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
+        }
+      },
+      "resolved": {
+        "title": "The backstroke swimming start: state of the art.",
+        "authors": [
+          "de Jesus K",
+          "de Jesus K",
+          "Fernandes RJ",
+          "Vilas-Boas JP",
+          "Sanders R"
+        ],
+        "year": 2014,
+        "container": "Journal of human kinetics",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "25414737",
+          "pmcid": "PMC4234766",
+          "doi": "10.2478/hukin-2014-0058"
+        }
+      }
+    },
+    {
+      "id": "src.pmc4247626",
+      "display": "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC4247626"
+        }
+      },
+      "resolved": {
+        "title": "Relationship between chronic pathologies of the supraspinatus tendon and the long head of the biceps tendon: systematic review.",
+        "authors": [
+          "Redondo-Alonso L",
+          "Chamorro-Moriana G",
+          "Jiménez-Rejano JJ",
+          "López-Tarrida P",
+          "Ridao-Fernández C"
+        ],
+        "year": 2014,
+        "container": "BMC musculoskeletal disorders",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "25408141",
+          "pmcid": "PMC4247626",
+          "doi": "10.1186/1471-2474-15-377"
+        }
+      }
+    },
+    {
+      "id": "src.pmc4528289",
+      "display": "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC4528289"
+        }
+      },
+      "resolved": {
+        "title": "Sorting swimmers shoulders: An observational study on swimmers that presented to a shoulder surgeon.",
+        "authors": [
+          "Butler D",
+          "Funk L",
+          "Mackenzie TA",
+          "Herrington LC"
+        ],
+        "year": 2015,
+        "container": "International journal of shoulder surgery",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "26288538",
+          "pmcid": "PMC4528289",
+          "doi": "10.4103/0973-6042.161444"
+        }
+      }
+    },
+    {
+      "id": "src.pmc5286756",
+      "display": "Aquatic dermatoses 回顧, PMC5286756 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC5286756"
+        }
+      },
+      "resolved": {
+        "title": "Marine and Other Aquatic Dermatoses.",
+        "authors": [
+          "Sridhar SC",
+          "Deo SC"
+        ],
+        "year": 2017,
+        "container": "Indian journal of dermatology",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "28216728",
+          "pmcid": "PMC5286756",
+          "doi": "10.4103/0019-5154.198052"
+        }
+      }
+    },
+    {
+      "id": "src.pmc5800136",
+      "display": "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC5800136"
+        }
+      },
+      "resolved": {
+        "title": "Occupational Exposure to Solar Radiation at Different Latitudes and Pterygium: A Systematic Review of the Last 10 Years of Scientific Literature.",
+        "authors": [
+          "Modenese A",
+          "Gobba F"
+        ],
+        "year": 2017,
+        "container": "International journal of environmental research and public health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "29278403",
+          "pmcid": "PMC5800136",
+          "doi": "10.3390/ijerph15010037"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6092370",
+      "display": "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC6092370"
+        }
+      },
+      "resolved": {
+        "title": "Exercise-induced bronchoconstriction: prevalence, pathophysiology, patient impact, diagnosis and management.",
+        "authors": [
+          "Aggarwal B",
+          "Mulgirigama A",
+          "Berend N"
+        ],
+        "year": 2018,
+        "container": "NPJ primary care respiratory medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30108224",
+          "pmcid": "PMC6092370",
+          "doi": "10.1038/s41533-018-0098-2"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6137694",
+      "display": "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC6137694"
+        }
+      },
+      "resolved": {
+        "title": "Water related ocular diseases.",
+        "authors": [
+          "Ahmad SS"
+        ],
+        "year": 2018,
+        "container": "Saudi journal of ophthalmology : official journal of the Saudi Ophthalmological Society",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30224888",
+          "pmcid": "PMC6137694",
+          "doi": "10.1016/j.sjopt.2017.10.009"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6409673-a",
+      "display": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC6409673",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+        }
+      },
+      "resolved": {
+        "title": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques.",
+        "authors": [
+          "Weimar W",
+          "Sumner A",
+          "Romer B",
+          "Fox J",
+          "Rehm J",
+          "Decoux B",
+          "Patel J"
+        ],
+        "year": 2019,
+        "container": "Sports (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30696072",
+          "pmcid": "PMC6409673",
+          "doi": "10.3390/sports7020032"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6409673-b",
+      "display": "PMC6409673",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC6409673",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+        }
+      },
+      "resolved": {
+        "title": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques.",
+        "authors": [
+          "Weimar W",
+          "Sumner A",
+          "Romer B",
+          "Fox J",
+          "Rehm J",
+          "Decoux B",
+          "Patel J"
+        ],
+        "year": 2019,
+        "container": "Sports (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30696072",
+          "pmcid": "PMC6409673",
+          "doi": "10.3390/sports7020032"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6409673-c",
+      "display": "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC6409673"
+        }
+      },
+      "resolved": {
+        "title": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques.",
+        "authors": [
+          "Weimar W",
+          "Sumner A",
+          "Romer B",
+          "Fox J",
+          "Rehm J",
+          "Decoux B",
+          "Patel J"
+        ],
+        "year": 2019,
+        "container": "Sports (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30696072",
+          "pmcid": "PMC6409673",
+          "doi": "10.3390/sports7020032"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6464216",
+      "display": "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "30986226",
+          "pmcid": "PMC6464216"
+        }
+      },
+      "resolved": {
+        "title": "Japanese translation and modification of the Oslo Sports Trauma Research Centre overuse injury questionnaire to evaluate overuse injuries in female college swimmers.",
+        "authors": [
+          "Nagano Y",
+          "Kobayashi-Yamakawa K",
+          "Higashihara A",
+          "Yako-Suketomo H"
+        ],
+        "year": 2019,
+        "container": "PloS one",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30986226",
+          "pmcid": "PMC6464216",
+          "doi": "10.1371/journal.pone.0215352"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6597118",
+      "display": "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC6597118"
+        }
+      },
+      "resolved": {
+        "title": "Cryptosporidiosis Outbreaks - United States, 2009-2017.",
+        "authors": [
+          "Gharpure R",
+          "Perez A",
+          "Miller AD",
+          "Wikswo ME",
+          "Silver R",
+          "Hlavsa MC"
+        ],
+        "year": 2019,
+        "container": "MMWR. Morbidity and mortality weekly report",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "31246941",
+          "pmcid": "PMC6597118",
+          "doi": "10.15585/mmwr.mm6825a3"
+        }
+      }
+    },
+    {
+      "id": "src.pmc6863674",
+      "display": "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2019,
+        "identifier": {
+          "pmid": "31798949",
+          "pmcid": "PMC6863674"
+        }
+      },
+      "resolved": {
+        "title": "Injury trend analysis in the Japan national swim team from 2002 to 2016: effect of the lumbar injury prevention project.",
+        "authors": [
+          "Matsuura Y",
+          "Hangai M",
+          "Koizumi K",
+          "Ueno K",
+          "Hirai N",
+          "Akuzawa H",
+          "Kaneoka K"
+        ],
+        "year": 2019,
+        "container": "BMJ open sport & exercise medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "31798949",
+          "pmcid": "PMC6863674",
+          "doi": "10.1136/bmjsem-2019-000615"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7039474",
+      "display": "Site-specific BMD in female swimmers, PMC7039474 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC7039474"
+        }
+      },
+      "resolved": {
+        "title": "Site-Specific Effects of Swimming on Bone Density in Female Collegiate Swimmers.",
+        "authors": [
+          "Miller M",
+          "Kojetin S",
+          "Scibora L"
+        ],
+        "year": 2020,
+        "container": "International journal of exercise science",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "32148613",
+          "pmcid": "PMC7039474",
+          "doi": "10.70252/RKTD5438"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7077213",
+      "display": "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC7077213"
+        }
+      },
+      "resolved": {
+        "title": "The Prevalence and Severity of External Auditory Exostosis in Young to Quadragenarian-Aged Warm-Water Surfers: A Preliminary Study.",
+        "authors": [
+          "Simas V",
+          "Hing W",
+          "Furness J",
+          "Walsh J",
+          "Climstein M"
+        ],
+        "year": 2020,
+        "container": "Sports (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "32033062",
+          "pmcid": "PMC7077213",
+          "doi": "10.3390/sports8020017"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7340704",
+      "display": "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "year_match=False",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2022,
+        "identifier": {
+          "pmcid": "PMC7340704"
+        }
+      },
+      "resolved": {
+        "title": "Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations.",
+        "authors": [
+          "Ohman JW",
+          "Thompson RW"
+        ],
+        "year": 2020,
+        "container": "Current reviews in musculoskeletal medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "32514995",
+          "pmcid": "PMC7340704",
+          "doi": "10.1007/s12178-020-09643-x"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7584313",
+      "display": "Hot tub folliculitis 回顧, PMC7584313 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC7584313"
+        }
+      },
+      "resolved": {
+        "title": "Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors.",
+        "authors": [
+          "Jacob JS",
+          "Tschen J"
+        ],
+        "year": 2020,
+        "container": "Cureus",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "33123436",
+          "pmcid": "PMC7584313",
+          "doi": "10.7759/cureus.10623"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7605769",
+      "display": "Cam morphology in aquatic athletes, PMC7605769 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC7605769"
+        }
+      },
+      "resolved": {
+        "title": "The prevalence of femoroacetabular impingement anatomy in Division 1 aquatic athletes who tread water.",
+        "authors": [
+          "Langner JL",
+          "Black MS",
+          "MacKay JW",
+          "Hall KE",
+          "Safran MR",
+          "Kogan F",
+          "Gold GE"
+        ],
+        "year": 2020,
+        "container": "Journal of hip preservation surgery",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "33163207",
+          "pmcid": "PMC7605769",
+          "doi": "10.1093/jhps/hnaa009"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7824457",
+      "display": "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC7824457"
+        }
+      },
+      "resolved": {
+        "title": "Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers.",
+        "authors": [
+          "Suzuki Y",
+          "Maeda N",
+          "Sasadai J",
+          "Kaneda K",
+          "Shirakawa T",
+          "Urabe Y"
+        ],
+        "year": 2020,
+        "container": "Medicina (Kaunas, Lithuania)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "33396219",
+          "pmcid": "PMC7824457",
+          "doi": "10.3390/medicina57010029"
+        }
+      }
+    },
+    {
+      "id": "src.pmc7918682",
+      "display": "PMC7918682",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC7918682",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7918682/"
+        }
+      },
+      "resolved": {
+        "title": "Backstroke to Breaststroke Turning Performance in Age-Group Swimmers: Hydrodynamic Characteristics and Pull-Out Strategy.",
+        "authors": [
+          "Chainok P",
+          "Machado L",
+          "de Jesus K",
+          "Abraldes JA",
+          "Borgonovo-Santos M",
+          "Fernandes RJ",
+          "Vilas-Boas JP"
+        ],
+        "year": 2021,
+        "container": "International journal of environmental research and public health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "33672908",
+          "pmcid": "PMC7918682",
+          "doi": "10.3390/ijerph18041858"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8136425",
+      "display": "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC8136425"
+        }
+      },
+      "resolved": {
+        "title": "Outbreaks Associated with Treated Recreational Water - United States, 2015-2019.",
+        "authors": [
+          "Hlavsa MC",
+          "Aluko SK",
+          "Miller AD",
+          "Person J",
+          "Gerdes ME",
+          "Lee S",
+          "Laco JP",
+          "Hannapel EJ",
+          "Hill VR"
+        ],
+        "year": 2021,
+        "container": "MMWR. Morbidity and mortality weekly report",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "34014907",
+          "pmcid": "PMC8136425",
+          "doi": "10.15585/mmwr.mm7020a1"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8147101",
+      "display": "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC8147101"
+        }
+      },
+      "resolved": {
+        "title": "Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan.",
+        "authors": [
+          "Lin IC",
+          "Hussain B",
+          "Hsu BM",
+          "Chen JS",
+          "Hsu YL",
+          "Chiu YC",
+          "Huang SW",
+          "Wang JL"
+        ],
+        "year": 2021,
+        "container": "Antibiotics (Basel, Switzerland)",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "33946739",
+          "pmcid": "PMC8147101",
+          "doi": "10.3390/antibiotics10050505"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8192199",
+      "display": "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC8192199"
+        }
+      },
+      "resolved": {
+        "title": "An Overview of Spinal Injuries due to Dive or Fall into Shallow Water: Our Long-Term, Double-Center Experience from the Aegean Coast.",
+        "authors": [
+          "Yılmaz M",
+          "Ikizoglu E",
+          "Arslan M",
+          "Ozgiray E",
+          "Calıskan KE",
+          "Erbayraktar RS"
+        ],
+        "year": 2021,
+        "container": "Emergency medicine international",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "34188959",
+          "pmcid": "PMC8192199",
+          "doi": "10.1155/2021/9937730"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8442910-a",
+      "display": "Frontiers in Physiology 2021",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "needs_review",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2021,
+        "identifier": {
+          "pmcid": "PMC8442910",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/"
+        }
+      },
+      "resolved": {
+        "title": "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers.",
+        "authors": [
+          "Pla R",
+          "Poszalczyk G",
+          "Souaissia C",
+          "Joulia F",
+          "Guimard A"
+        ],
+        "year": 2021,
+        "container": "Frontiers in physiology",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "34539436",
+          "pmcid": "PMC8442910",
+          "doi": "10.3389/fphys.2021.712652"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8442910-b",
+      "display": "Frontiers in Physiology 2021, PMC8442910",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2021,
+        "identifier": {
+          "pmcid": "PMC8442910"
+        }
+      },
+      "resolved": {
+        "title": "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers.",
+        "authors": [
+          "Pla R",
+          "Poszalczyk G",
+          "Souaissia C",
+          "Joulia F",
+          "Guimard A"
+        ],
+        "year": 2021,
+        "container": "Frontiers in physiology",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "34539436",
+          "pmcid": "PMC8442910",
+          "doi": "10.3389/fphys.2021.712652"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8700779",
+      "display": "Leg Dominance 研究 2021",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "needs_review",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2021,
+        "identifier": {
+          "pmcid": "PMC8700779",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/"
+        }
+      },
+      "resolved": {
+        "title": "Leg Dominance and OSB12 Kick Start Performance in Young Competitive Swimmers.",
+        "authors": [
+          "Matúš I",
+          "Ružbarský P",
+          "Vadašová B",
+          "Čech P"
+        ],
+        "year": 2021,
+        "container": "International journal of environmental research and public health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "34948765",
+          "pmcid": "PMC8700779",
+          "doi": "10.3390/ijerph182413156"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8827183",
+      "display": "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "35139872",
+          "pmcid": "PMC8827183"
+        }
+      },
+      "resolved": {
+        "title": "Incidence of calcaneal apophysitis (Sever's disease) and return-to-play in adolescent athletes of a German youth soccer academy: a retrospective study of 10 years.",
+        "authors": [
+          "Belikan P",
+          "Färber LC",
+          "Abel F",
+          "Nowak TE",
+          "Drees P",
+          "Mattyasovszky SG"
+        ],
+        "year": 2022,
+        "container": "Journal of orthopaedic surgery and research",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "35139872",
+          "pmcid": "PMC8827183",
+          "doi": "10.1186/s13018-022-02979-9"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8869186",
+      "display": "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "34990396",
+          "pmcid": "PMC8869186"
+        }
+      },
+      "resolved": {
+        "title": "Incidence and management of Osgood-Schlatter disease in general practice: retrospective cohort study.",
+        "authors": [
+          "van Leeuwen GJ",
+          "de Schepper EI",
+          "Rathleff MS",
+          "Bindels PJ",
+          "Bierma-Zeinstra SM",
+          "van Middelkoop M"
+        ],
+        "year": 2022,
+        "container": "The British journal of general practice : the journal of the Royal College of General Practitioners",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "34990396",
+          "pmcid": "PMC8869186",
+          "doi": "10.3399/BJGP.2021.0386"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8960438-b",
+      "display": "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC8960438"
+        }
+      },
+      "resolved": {
+        "title": "Biomechanical Features of Backstroke to Breaststroke Transition Techniques in Age-Group Swimmers.",
+        "authors": [
+          "Chainok P",
+          "de Jesus K",
+          "Mourão L",
+          "Fonseca PFP",
+          "Zacca R",
+          "Fernandes RJ",
+          "Vilas-Boas JP"
+        ],
+        "year": 2022,
+        "container": "Frontiers in sports and active living",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "35359502",
+          "pmcid": "PMC8960438",
+          "doi": "10.3389/fspor.2022.802967"
+        }
+      }
+    },
+    {
+      "id": "src.pmc8960438-d",
+      "display": "PMC8960438",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC8960438",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8960438/"
+        }
+      },
+      "resolved": {
+        "title": "Biomechanical Features of Backstroke to Breaststroke Transition Techniques in Age-Group Swimmers.",
+        "authors": [
+          "Chainok P",
+          "de Jesus K",
+          "Mourão L",
+          "Fonseca PFP",
+          "Zacca R",
+          "Fernandes RJ",
+          "Vilas-Boas JP"
+        ],
+        "year": 2022,
+        "container": "Frontiers in sports and active living",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "35359502",
+          "pmcid": "PMC8960438",
+          "doi": "10.3389/fspor.2022.802967"
+        }
+      }
+    },
+    {
+      "id": "src.pmc9057286",
+      "display": "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC9057286"
+        }
+      },
+      "resolved": {
+        "title": "Point prevalence of non-melanoma and melanoma skin cancers in Australian surfers and swimmers in Southeast Queensland and Northern New South Wales.",
+        "authors": [
+          "Climstein M",
+          "Doyle B",
+          "Stapelberg M",
+          "Rosic N",
+          "Hertess I",
+          "Furness J",
+          "Simas V",
+          "Walsh J"
+        ],
+        "year": 2022,
+        "container": "PeerJ",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "35505675",
+          "pmcid": "PMC9057286",
+          "doi": "10.7717/peerj.13243"
+        }
+      }
+    },
+    {
+      "id": "src.pmc9402090-b",
+      "display": "PMC9402090, 2022",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2022,
+        "identifier": {
+          "pmcid": "PMC9402090"
+        }
+      },
+      "resolved": {
+        "title": "Ankle joint flexibility affects undulatory underwater swimming speed.",
+        "authors": [
+          "Kuhn J",
+          "Legerlotz K"
+        ],
+        "year": 2022,
+        "container": "Frontiers in sports and active living",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "36032263",
+          "pmcid": "PMC9402090",
+          "doi": "10.3389/fspor.2022.948034"
+        }
+      }
+    },
+    {
+      "id": "src.pmc9445308",
+      "display": "PMC9445308 Frontiers 2022",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "year_match=True",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2022,
+        "identifier": {
+          "pmcid": "PMC9445308",
+          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/"
+        }
+      },
+      "resolved": {
+        "title": "The characteristics of the breaststroke pullout in elite swimming.",
+        "authors": [
+          "McCabe C",
+          "Mosscrop E",
+          "Hodierne R",
+          "Tor E"
+        ],
+        "year": 2022,
+        "container": "Frontiers in sports and active living",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "36081618",
+          "pmcid": "PMC9445308",
+          "doi": "10.3389/fspor.2022.963578"
+        }
+      }
+    },
+    {
+      "id": "src.pmc9658102",
+      "display": "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "36361122",
+          "pmcid": "PMC9658102"
+        }
+      },
+      "resolved": {
+        "title": "The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review.",
+        "authors": [
+          "Gimunová M",
+          "Paulínyová A",
+          "Bernaciková M",
+          "Paludo AC"
+        ],
+        "year": 2022,
+        "container": "International journal of environmental research and public health",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "36361122",
+          "pmcid": "PMC9658102",
+          "doi": "10.3390/ijerph192114243"
+        }
+      }
+    },
+    {
+      "id": "src.pmc9699060",
+      "display": "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)",
+      "registry": "pmc-idconv+pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmcid": "PMC9699060"
+        }
+      },
+      "resolved": {
+        "title": "Exercise-Associated Hyponatremia in Marathon Runners.",
+        "authors": [
+          "Klingert M",
+          "Nikolaidis PT",
+          "Weiss K",
+          "Thuany M",
+          "Chlíbková D",
+          "Knechtle B"
+        ],
+        "year": 2022,
+        "container": "Journal of clinical medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "36431252",
+          "pmcid": "PMC9699060",
+          "doi": "10.3390/jcm11226775"
+        }
+      }
+    },
+    {
+      "id": "src.pmc9724109",
+      "display": "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "36479178",
+          "pmcid": "PMC9724109"
+        }
+      },
+      "resolved": {
+        "title": "Relative Energy Deficiency in Sport (RED-S): Scientific, Clinical, and Practical Implications for the Female Athlete.",
+        "authors": [
+          "Cabre HE",
+          "Moore SR",
+          "Smith-Ryan AE",
+          "Hackney AC"
+        ],
+        "year": 2022,
+        "container": "Deutsche Zeitschrift fur Sportmedizin",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "36479178",
+          "pmcid": "PMC9724109",
+          "doi": "10.5960/dzsm.2022.546"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-24984154",
+      "display": "PubMed 24984154",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "24984154"
+        }
+      },
+      "resolved": {
+        "title": "The effect of ankle muscle strength and flexibility on dolphin kick performance in competitive swimmers.",
+        "authors": [
+          "Willems TM",
+          "Cornelis JA",
+          "De Deurwaerder LE",
+          "Roelandt F",
+          "De Mits S"
+        ],
+        "year": 2014,
+        "container": "Human movement science",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "24984154",
+          "doi": "10.1016/j.humov.2014.05.004"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-25443755",
+      "display": "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "25443755"
+        }
+      },
+      "resolved": {
+        "title": "Exercise-associated hyponatremic encephalopathy in an endurance open water swimmer.",
+        "authors": [
+          "Rogers IR",
+          "Grainger S",
+          "Nagree Y"
+        ],
+        "year": 2015,
+        "container": "Wilderness & environmental medicine",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "25443755",
+          "doi": "10.1016/j.wem.2014.07.010"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-25455956",
+      "display": "PubMed 25455956 2014",
+      "registry": "pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "year_match=False",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2014,
+        "identifier": {
+          "pmid": "25455956",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/25455956/"
+        }
+      },
+      "resolved": {
+        "title": "Comparing three underwater trajectories of the swimming start.",
+        "authors": [
+          "Tor E",
+          "Pease DL",
+          "Ball KA"
+        ],
+        "year": 2015,
+        "container": "Journal of science and medicine in sport",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "25455956",
+          "doi": "10.1016/j.jsams.2014.10.005"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-28605694",
+      "display": "Gonjo et al.",
+      "registry": "pubmed",
+      "decision": "needs_review",
+      "reasons": [
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "28605694",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28605694/"
+        }
+      },
+      "resolved": {
+        "title": "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick.",
+        "authors": [
+          "Yamakawa KK",
+          "Shimojo H",
+          "Takagi H",
+          "Tsubakimoto S",
+          "Sengoku Y"
+        ],
+        "year": 2017,
+        "container": "Human movement science",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "28605694",
+          "doi": "10.1016/j.humov.2017.06.002"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-28975846",
+      "display": "PubMed 28975846",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "28975846",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/28975846/"
+        }
+      },
+      "resolved": {
+        "title": "Backstroke start performance: the impact of using the Omega OBL2 backstroke ledge.",
+        "authors": [
+          "Barkwell GE",
+          "Dickey JP"
+        ],
+        "year": 2018,
+        "container": "Sports biomechanics",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "28975846",
+          "doi": "10.1080/14763141.2017.1353130"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-30485006",
+      "display": "Proximal humeral epiphysiolysis (little league shoulder), PMID 30485006 (摘要層級)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "30485006"
+        }
+      },
+      "resolved": {
+        "title": "Proximal Humeral Epiphysiolysis.",
+        "authors": [
+          "Collins AC",
+          "May T"
+        ],
+        "year": 2026,
+        "container": "",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30485006"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-30521295",
+      "display": "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "30521295"
+        }
+      },
+      "resolved": {
+        "title": "Surfer's Ear.",
+        "authors": [
+          "Bart RM",
+          "Lau H",
+          "Cooper JS"
+        ],
+        "year": 2026,
+        "container": "",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "30521295"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-32310515",
+      "display": "StatPearls Otitis Externa, PMID 32310515 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "32310515"
+        }
+      },
+      "resolved": {
+        "title": "Otitis Externa.",
+        "authors": [
+          "Medina-Blasini Y",
+          "Sharman T"
+        ],
+        "year": 2026,
+        "container": "",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "32310515"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-33010194",
+      "display": "Swimming injuries narrative review, PubMed 33010194 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "33010194"
+        }
+      },
+      "resolved": {
+        "title": "An Updated Review of the Epidemiology of Swimming Injuries.",
+        "authors": [
+          "Trinidad A",
+          "González-Garcia H",
+          "López-Valenciano A"
+        ],
+        "year": 2021,
+        "container": "PM & R : the journal of injury, function, and rehabilitation",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "33010194",
+          "doi": "10.1002/pmrj.12503"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-39500300",
+      "display": "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "year_match=False",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2024,
+        "identifier": {
+          "pmid": "39500300"
+        }
+      },
+      "resolved": {
+        "title": "Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024.",
+        "authors": [
+          "Esh CJ",
+          "Dablainville V",
+          "Dalansi F",
+          "Kathuria S",
+          "Cardinale M"
+        ],
+        "year": 2025,
+        "container": "International journal of sports physiology and performance",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "39500300",
+          "doi": "10.1123/ijspp.2024-0240"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-40252339-a",
+      "display": "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "40252339",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/40252339/"
+        }
+      },
+      "resolved": {
+        "title": "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?",
+        "authors": [
+          "Koster P",
+          "Schreven S",
+          "David S",
+          "Beek PJ"
+        ],
+        "year": 2025,
+        "container": "Journal of biomechanics",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "40252339",
+          "doi": "10.1016/j.jbiomech.2025.112694"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-40252339-b",
+      "display": "PubMed 40252339",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "40252339"
+        }
+      },
+      "resolved": {
+        "title": "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?",
+        "authors": [
+          "Koster P",
+          "Schreven S",
+          "David S",
+          "Beek PJ"
+        ],
+        "year": 2025,
+        "container": "Journal of biomechanics",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "40252339",
+          "doi": "10.1016/j.jbiomech.2025.112694"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-40783351",
+      "display": "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched_with_correction",
+      "reasons": [
+        "year_match=False",
+        "identifier_echo=True",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [],
+        "year": 2025,
+        "identifier": {
+          "pmid": "40783351"
+        }
+      },
+      "resolved": {
+        "title": "Thermoregulatory responses in open water and pool swimming: Presentation of hypothermia and hyperthermia within and outside of World Aquatics water temperature thresholds.",
+        "authors": [
+          "Markey K",
+          "Galan-Lopez N",
+          "Esh C",
+          "Carter S",
+          "Chrismas B",
+          "Mountjoy M",
+          "Constantini N",
+          "Taylor L"
+        ],
+        "year": 2026,
+        "container": "Journal of science and medicine in sport",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "40783351",
+          "doi": "10.1016/j.jsams.2025.07.004"
+        }
+      }
+    },
+    {
+      "id": "src.pmid-7673417",
+      "display": "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "identifier_echo=True",
+        "title_match=True"
+      ],
+      "current": {
+        "authors": [],
+        "year": null,
+        "identifier": {
+          "pmid": "7673417"
+        }
+      },
+      "resolved": {
+        "title": "Menstrual dysfunction in swimmers: a distinct entity.",
+        "authors": [
+          "Constantini NW",
+          "Warren MP"
+        ],
+        "year": 1995,
+        "container": "The Journal of clinical endocrinology and metabolism",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "7673417",
+          "doi": "10.1210/jcem.80.9.7673417"
+        }
+      }
+    },
+    {
+      "id": "src.takai-2016",
+      "display": "Takai et al. 2016",
+      "registry": "pubmed",
+      "decision": "mismatch",
+      "reasons": [
+        "authors_match=False",
+        "year_match=False",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "authors": [
+          "Takai"
+        ],
+        "year": 2016,
+        "identifier": {
+          "pmid": "27149652",
+          "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/"
+        }
+      },
+      "resolved": {
+        "title": "Contribution of hand and foot force to take-off velocity for the kick-start in competitive swimming.",
+        "authors": [
+          "Takeda T",
+          "Sakai S",
+          "Takagi H",
+          "Okuno K",
+          "Tsubakimoto S"
+        ],
+        "year": 2017,
+        "container": "Journal of sports sciences",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "27149652",
+          "doi": "10.1080/02640414.2016.1180417"
+        }
+      }
+    }
+  ]
+}

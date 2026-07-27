@@ -1,0 +1,7099 @@
+{
+  "schema_version": 1,
+  "source_count": 476,
+  "summary": {
+    "verification_status": {
+      "unverified": 401,
+      "verified": 75
+    },
+    "identifier_records": 130,
+    "identifier_keys": {
+      "doi": 79,
+      "pmcid": 79,
+      "pmid": 99,
+      "url": 40
+    },
+    "lanes": {
+      "bibliographic_search": 67,
+      "complete": 75,
+      "compound_split": 75,
+      "identifier_dereference": 17,
+      "internal_reference": 73,
+      "manual_reconstruction": 157,
+      "url_review": 12
+    },
+    "flags": {
+      "compound": 75,
+      "consensus_not_citation": 5,
+      "duplicate_candidate": 176,
+      "insufficient_bibliography": 273,
+      "internal_reference": 73
+    },
+    "identifier_collision_groups": 30
+  },
+  "identifier_collisions": [
+    {
+      "kind": "doi",
+      "value": "10.1016/j.humov.2013.08.013",
+      "source_ids": [
+        "src.atkison-2014-a",
+        "src.atkison-2014-b"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.1016/j.jbiomech.2025.112694",
+      "source_ids": [
+        "src.pmid-40252339-a",
+        "src.pmid-40252339-b"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.1111/sms.14454",
+      "source_ids": [
+        "src.mckenzie-2023-a",
+        "src.mckenzie-2023-b"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.1371/journal.pone.0241345",
+      "source_ids": [
+        "src.journal-pone-0241345-a",
+        "src.journal-pone-0241345-b"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.26603/001c.121114",
+      "source_ids": [
+        "src.pmc11297363-a",
+        "src.pmc11297363-b"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.3389/fspor.2022.802967",
+      "source_ids": [
+        "src.pmc8960438-b",
+        "src.pmc8960438-d"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.3390/sports7020032",
+      "source_ids": [
+        "src.pmc6409673-a",
+        "src.pmc6409673-b",
+        "src.pmc6409673-c"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC11297363",
+      "source_ids": [
+        "src.pmc11297363-a",
+        "src.pmc11297363-b"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC3990873",
+      "source_ids": [
+        "src.benjanuvatra-2007-a",
+        "src.benjanuvatra-2007-b"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC4234766",
+      "source_ids": [
+        "src.pmc4234766-a",
+        "src.pmc4234766-b"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC6409673",
+      "source_ids": [
+        "src.pmc6409673-a",
+        "src.pmc6409673-b",
+        "src.pmc6409673-c"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC8442910",
+      "source_ids": [
+        "src.pmc8442910-a",
+        "src.pmc8442910-b"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC8700779",
+      "source_ids": [
+        "src.pmc8700779",
+        "src.takai"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC8960438",
+      "source_ids": [
+        "src.pmc8960438-a",
+        "src.pmc8960438-b",
+        "src.pmc8960438-c",
+        "src.pmc8960438-d"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC9402090",
+      "source_ids": [
+        "src.pmc9402090-a",
+        "src.pmc9402090-b"
+      ]
+    },
+    {
+      "kind": "pmcid",
+      "value": "PMC9424421",
+      "source_ids": [
+        "src.pmc9424421-a",
+        "src.pmc9424421-b"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "12840640",
+      "source_ids": [
+        "src.pmid-12840640-a",
+        "src.pmid-12840640-b"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "24290609",
+      "source_ids": [
+        "src.atkison-2014-a",
+        "src.atkison-2014-b",
+        "src.atkison-2014-c"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "24984154",
+      "source_ids": [
+        "src.pmc9402090-a",
+        "src.pmid-24984154"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "27149652",
+      "source_ids": [
+        "src.takai",
+        "src.takai-2016"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "28605694",
+      "source_ids": [
+        "src.gonjo-2017",
+        "src.pmid-28605694"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "30696072",
+      "source_ids": [
+        "src.pmc6409673-a",
+        "src.pmc6409673-b",
+        "src.pmc6409673-c"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "35359502",
+      "source_ids": [
+        "src.pmc8960438-b",
+        "src.pmc8960438-d"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "39100936",
+      "source_ids": [
+        "src.pmc11297363-a",
+        "src.pmc11297363-b"
+      ]
+    },
+    {
+      "kind": "pmid",
+      "value": "40252339",
+      "source_ids": [
+        "src.pmid-40252339-a",
+        "src.pmid-40252339-b"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://doi.org/10.1371/journal.pone.0241345",
+      "source_ids": [
+        "src.journal-pone-0241345-a",
+        "src.journal-pone-0241345-b"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://pubmed.ncbi.nlm.nih.gov/27149652",
+      "source_ids": [
+        "src.takai",
+        "src.takai-2016"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873",
+      "source_ids": [
+        "src.benjanuvatra-2007-a",
+        "src.benjanuvatra-2007-b"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766",
+      "source_ids": [
+        "src.pmc4234766-a",
+        "src.pmc4234766-b"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673",
+      "source_ids": [
+        "src.pmc6409673-a",
+        "src.pmc6409673-b"
+      ]
+    }
+  ],
+  "items": [
+    {
+      "id": "src.2024-2025",
+      "display": "教練觀測 2024–2025",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.360swim",
+      "display": "360swim",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.360swim-usms-swimming-world",
+      "display": "360swim; USMS; Swimming World",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020",
+      "display": "AAP Pediatrics 2020;145(6):e20201011; NSCA Youth Resistance Training 立場聲明; Swimming Australia 處方",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2020
+    },
+    {
+      "id": "src.aaron-peirsol-ryan-murphy",
+      "display": "Aaron Peirsol / Ryan Murphy 水下影像分析（教練觀測）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.adductor-loading-return-to-sport-practice-co",
+      "display": "Adductor loading/return-to-sport practice (Coast Sport, 已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.aiac-ijkss-v-6n-1p-25",
+      "display": "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.7575/aiac.ijkss.v.6n.1p.25",
+        "url": "https://doi.org/10.7575/aiac.ijkss.v.6n.1p.25"
+      },
+      "authors": [
+        "Angelo V. Vasiliadis",
+        "Vasileios Lampridis",
+        "Dimitrios Georgiannos",
+        "Ilias Bisbinas"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.akkurt-2017",
+      "display": "Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述；待核實具體引用）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {},
+      "authors": [
+        "Akkurt"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "src.andersen-2020",
+      "display": "Andersen et al. (2020) 方向；PMID 32500807",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "32500807",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/32500807/"
+      },
+      "authors": [
+        "Andersen"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.arellano",
+      "display": "Arellano 2013; ScienceDaily 2024",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Arellano"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.astm-f2508",
+      "display": "ASTM F2508 / 防滑摩擦係數標準（工程標準，非流病）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.atkison-2014-a",
+      "display": "Atkison et al. 2014",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "24290609",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24290609/",
+        "doi": "10.1016/j.humov.2013.08.013"
+      },
+      "authors": [
+        "Atkison RR",
+        "Dickey JP",
+        "Dragunas A",
+        "Nolte V"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.atkison-2014-b",
+      "display": "Atkison et al. 2014, PubMed 24290609",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "24290609",
+        "doi": "10.1016/j.humov.2013.08.013"
+      },
+      "authors": [
+        "Atkison RR",
+        "Dickey JP",
+        "Dragunas A",
+        "Nolte V"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.atkison-2014-c",
+      "display": "Atkison et al. 2014, PubMed 24290609; ScienceDirect",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "24290609"
+      },
+      "authors": [
+        "Atkison"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.benjanuvatra-2007-a",
+      "display": "Benjanuvatra et al. 2007",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC3990873",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
+      },
+      "authors": [
+        "Benjanuvatra"
+      ],
+      "year": 2007
+    },
+    {
+      "id": "src.benjanuvatra-2007-b",
+      "display": "Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start: A Review",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC3990873",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
+      },
+      "authors": [
+        "Benjanuvatra"
+      ],
+      "year": 2007
+    },
+    {
+      "id": "src.blanksby-2002",
+      "display": "Blanksby et al. 2002",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Blanksby"
+      ],
+      "year": 2002
+    },
+    {
+      "id": "src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2",
+      "display": "作者綜合：Bompa & Buzzichelli 6th ed.；Issurin 2008/2010/2016；Seiler 2010；Olbrecht 2000；Sweetenham & Atkinson 2003；Hellard 2019",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.bompa-ch5-ch11-mcardle-exercise-physiology-s",
+      "display": "公認運動生理學（磷酸原/糖酵解/氧化三系統時程為教科書級共識，如 Bompa Ch5/Ch11、McArdle Exercise Physiology）；游泳項目對映見 swim_energy_by_distance 來源（Toussaint & Hollander 1994 / Rodríguez & Mader 2011）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.brannigan-et-al-hypothermia-mass-participati-2009",
+      "display": "Brannigan et al., Hypothermia... Mass Participation Open Water Swimming, Wilderness Environ Med 2009 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2009
+    },
+    {
+      "id": "src.breath-hold-training",
+      "display": "美軍/海軍 breath-hold training 安全準則（具體文件待查）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.brent-rushall-sdsu",
+      "display": "Brent Rushall, SDSU",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.british-swimming-a-guide-to-anaerobic-traini-a",
+      "display": "British Swimming《A Guide to Anaerobic Training—Lactate Production》(© British Swimming 2006, Revised 2020)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.british-swimming-a-guide-to-anaerobic-traini-b",
+      "display": "British Swimming《A Guide to Anaerobic Training—Lactate Tolerance》(© British Swimming 2006, Revised 2020)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.building-the-perfect-turn-push-off-strength",
+      "display": "Building the Perfect Turn: Push Off Strength, Tritonwear / SwimSwam",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.bushman-2006",
+      "display": "Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Bushman"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "src.cdc-mmwr-2003-2007",
+      "display": "CDC MMWR 急性外耳道炎門診資料 2003–2007 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch11-table-11-1-methods-of-developing-low-in",
+      "display": "Ch11 Table 11.1 Methods of developing low-intensity exercise endurance",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch11-table-11-2",
+      "display": "Ch11 Table 11.2",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-ch8",
+      "display": "Ch5; Ch8",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-endurance-periodization",
+      "display": "Ch5 Endurance periodization",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-periodization-terminology-ch8-phases",
+      "display": "Ch5 Periodization Terminology; Ch8 Phases",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-table-5-1-ch5-selective-periodization-ch",
+      "display": "Ch5 Table 5.1; Ch5 Selective Periodization; Ch8 (Fig 8.8)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-table-5-1-ch8-classifying-annual-plans-f",
+      "display": "Ch5 Table 5.1; Ch8 Classifying Annual Plans (Fig 8.4/8.5)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-table-5-1-ch8-fig-8-6-ch5-fig-5-11-200m",
+      "display": "Ch5 Table 5.1; Ch8 (Fig 8.6); Ch5 Fig 5.11 (游泳 200m 範例)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch5-table-5-1-ch8-fig-8-7",
+      "display": "Ch5 Table 5.1; Ch8 (Fig 8.7)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch7-planning-training-cycles",
+      "display": "Ch7 Planning Training Cycles",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch7-planning-training-cycles-table-7-1-zones",
+      "display": "Ch7 Planning Training Cycles (Table 7.1 強度分區見 zones.yaml)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch7-table-7-1-ch11-table-11-2",
+      "display": "Ch7 Table 7.1 + Ch11 Table 11.2 框架推導（游泳項目對映）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch7-table-7-1-intensity-zones-and-training-d",
+      "display": "Ch7 Table 7.1 Intensity Zones and Training Demand",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch8",
+      "display": "Ch8",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch8-table-8-2-mujika-padilla-2000",
+      "display": "Ch8 Table 8.2; Mujika & Padilla 2000",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2000
+    },
+    {
+      "id": "src.ch8-transition-phase",
+      "display": "Ch8 Transition Phase",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ch9",
+      "display": "Ch9",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.chilitri-com",
+      "display": "chilitri.com",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://chilitri.com/blog/karenparnell01@hotmail.com/bent-elbow-vs-straight-arm-recovery-which-is-best-for-you"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.clinical-coach-report-no-epidemiology",
+      "display": "臨床/教練回報(無系統性流行病學研究)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.coach-alan-tri-training-harder",
+      "display": "Coach Alan, Tri Training Harder",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://tritrainingharder.com/blog/2021/6/blog-is-straight-arm-better-than-high-elbow"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.coach-andrew-sheaff-2022",
+      "display": "Coach Andrew Sheaff 2022",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2022
+    },
+    {
+      "id": "src.coach-jozsef-nagy-swimswam-the-breaststroke",
+      "display": "Coach Jozsef Nagy / SwimSwam, The Breaststroke Turn",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.coach-observation",
+      "display": "教練觀測",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.colman-1998-a",
+      "display": "Colman 1998",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Colman"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "src.colman-1998-b",
+      "display": "Colman et al. 1998",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Colman"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "src.competitor-swim-udk-drills-swimswam-udk-sets",
+      "display": "Competitor Swim UDK drills；swimswam UDK sets",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.cossor-2001",
+      "display": "Cossor & Mason 2001",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Cossor",
+        "Mason"
+      ],
+      "year": 2001
+    },
+    {
+      "id": "src.counsilman-fist-sculling",
+      "display": "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.counsilman-hand-arm-pressure-isolation",
+      "display": "Counsilman 捕水傳統（hand-arm pressure isolation）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.counsilman-hover-sculling",
+      "display": "Counsilman 沉浮平衡傳統（hover sculling）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.danswim",
+      "display": "DanSwim",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.eatsleepswimcoach",
+      "display": "EatSleepSwimCoach",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ecg-scd-3-6-0-4-10-89-url",
+      "display": "義大利 ECG 篩查自然實驗(SCD 3.6→0.4 /10 萬，降 89%) (已驗證 URL)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.elite-japanese-swimmer-4month",
+      "display": "Elite Japanese swimmer study, 4-month intervention",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.elite-video-consensus",
+      "display": "通用菁英影像共識",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.elliott-sale-2020",
+      "display": "Elliott-Sale et al. 2020, Br J Sports Med（OC 與運動表現綜述；具體引用待核實）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {},
+      "authors": [
+        "Elliott-Sale"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.enjoy-swimming-com",
+      "display": "enjoy-swimming.com",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.falls-and-hip-fracture-mortality-pmid",
+      "display": "Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.female-athlete-triad-in-swimmers-systematic",
+      "display": "Female athlete triad in swimmers systematic review, JWSM (已驗證，無 PMID 記載)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.fernandes-2024",
+      "display": "Fernandes et al. 2024",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Fernandes"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.fina-sw64-usas-usms",
+      "display": "FINA/World Aquatics SW 6.4; USA Swimming; USMS",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.finis-snorkel-based-perception-priming",
+      "display": "FINIS 教練資源（snorkel-based perception priming）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.finis-snorkel-udk-warmup-standard",
+      "display": "FINIS 教練資源（snorkel UDK warmup standard）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.fphys-2024-1406518",
+      "display": "Amaro et al. 系統回顧 (Science & Sports, S0765159718302363); 簡短回顧 (Redalyc 3010); Frontiers Physiology 2024 統合分析 (DOI 10.3389/fphys.2024.1406518)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "doi": "10.3389/fphys.2024.1406518"
+      },
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.fractional-drill",
+      "display": "通用蛙式教學（fractional drill 變體）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.french-cfd-simulation-undated",
+      "display": "法國研究者 CFD 模擬（年份未指定）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.frontiers-2021",
+      "display": "Frontiers 2021",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2021
+    },
+    {
+      "id": "src.general-swim-medicine-consensus",
+      "display": "通用游泳醫學共識",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography",
+        "consensus_not_citation"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.general-swim-science-consensus",
+      "display": "通用游泳科學共識（Race Club / 多項游泳生物力學研究）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography",
+        "consensus_not_citation"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.getphysical-strengthmatters-alactic-power-in",
+      "display": "教練共識（getphysical / strengthmatters alactic power intervals）；與 PCr 再合成動力學一致（90–120s 部分恢復、3–5min 大致完全，見上 recovery_zh）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.gonjo",
+      "display": "Gonjo et al. 2020；Maglischo 2003 修正",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.gonjo-2016",
+      "display": "Gonjo et al. 2016",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2016
+    },
+    {
+      "id": "src.gonjo-2017",
+      "display": "Gonjo et al. 2017, PubMed 28605694",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "28605694"
+      },
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "src.gonjo-2018",
+      "display": "Gonjo et al. 2018",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "30694108",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30694108/"
+      },
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.gonjo-2020-a",
+      "display": "Gonjo 2020",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.gonjo-2020-b",
+      "display": "Gonjo et al. (2020)",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.gonjo-2020-c",
+      "display": "Gonjo et al. 2020",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.gonjo-2021-a",
+      "display": "Gonjo 2021",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.gonjo-2021-b",
+      "display": "Gonjo et al. (2021)",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.gonjo-2021-c",
+      "display": "Gonjo et al. 2021",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Gonjo"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.gonjo-2023",
+      "display": "Gonjo & Olstad 2023",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Gonjo",
+        "Olstad"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.gonzalez-rave",
+      "display": "González-Ravé et al. 2021 (IJSPP 16(7):913–926, PMID 33952709, 系統回顧 9 篇入選/162 筆 TID); Papadimitriou et al. 2025 (Eur J Appl Physiol, DOI 10.1007/s00421-025-06064-x，全文); Barbosa et al. 2019（衝刺者）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "doi": "10.1007/s00421-025-06064-x，全文",
+        "pmid": "33952709"
+      },
+      "authors": [
+        "González-Ravé"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.gonzalez-rave-2025-a",
+      "display": "González-Ravé 2025",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "González-Ravé"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.gonzalez-rave-2025-b",
+      "display": "González-Ravé et al. 2025",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "González-Ravé"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.grote-2004",
+      "display": "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "14754731",
+        "doi": "10.1177/0363546503258905"
+      },
+      "authors": [
+        "Grote K",
+        "Lincoln TL",
+        "Gamble JG"
+      ],
+      "year": 2004
+    },
+    {
+      "id": "src.hall-sr-2020",
+      "display": "Hall Sr. 2020",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2020
+    },
+    {
+      "id": "src.hayashi",
+      "display": "Hayashi 2025；Strzała 2013",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Hayashi"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.hayashi-2025",
+      "display": "Hayashi et al. 2025",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Hayashi"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.hellard",
+      "display": "Hellard et al. 2019 (PMC6470949); González-Ravé et al. 2022 (PMID 36247944, n=1)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "36247944",
+        "pmcid": "PMC6470949"
+      },
+      "authors": [
+        "Hellard"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.historical-background-unattributed",
+      "display": "歷史背景",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography",
+        "consensus_not_citation"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.how-to-use-backstroke-flags-in-swimming-u-s",
+      "display": "How to Use Backstroke Flags in Swimming, U.S. Masters Swimming",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.hvid-2024",
+      "display": "Hvid et al. 2024, Sports, PMC11125574",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11125574"
+      },
+      "authors": [
+        "Hvid"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.ioc-iron-in-sport-doi-webfetch",
+      "display": "IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ioc-red-s-2014-2018-2023-doi",
+      "display": "IOC RED-S 共識聲明（2014 首版，2018/2023 更新；具體 DOI 待查）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.issurin",
+      "display": "Issurin 2008《Block Periodization》; Issurin 2008 (PMID 18212712); 2010 (DOI 10.2165/11319770); 2016 (PMID 26573916); 2019 (PMID 30411234); Breil 2019 meta (PMID 31802956)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "doi": "10.2165/11319770",
+        "pmid": "18212712"
+      },
+      "authors": [
+        "Issurin"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.jellyfish-envenomation-first-aid",
+      "display": "Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.journal-pone-0241345-a",
+      "display": "PLOS ONE 2020",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "doi": "10.1371/journal.pone.0241345",
+        "url": "https://doi.org/10.1371/journal.pone.0241345"
+      },
+      "authors": [],
+      "year": 2020
+    },
+    {
+      "id": "src.journal-pone-0241345-b",
+      "display": "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "doi": "10.1371/journal.pone.0241345",
+        "url": "https://doi.org/10.1371/journal.pone.0241345"
+      },
+      "authors": [
+        "Marit P. van Dijk",
+        "Peter J. Beek",
+        "A. J. Knoek van Soest"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.kudo-2014",
+      "display": "Kudo et al. 2014",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Kudo"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012",
+      "display": "本檔 liee_methods（Bompa Ch11 Table 11.1）+ swim_maglischo（Maglischo 2012）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2012
+    },
+    {
+      "id": "src.lyttle",
+      "display": "Lyttle 1998; Novais et al. 2012",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Lyttle"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.lyttle-1998",
+      "display": "Lyttle et al. 1998",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Lyttle"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "src.maglischo-2003-a",
+      "display": "Maglischo (2003) Swimming Fastest",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Maglischo"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "src.maglischo-2003-b",
+      "display": "Maglischo 2003",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Maglischo"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "src.maglischo-2003-c",
+      "display": "Maglischo 2003（屬定性方向參考，量化數字待現代研究更新）",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Maglischo"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "src.maglischo-2003-d",
+      "display": "Maglischo 2003（量化區間屬歷史參考，現代研究尚未更新具體值）",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Maglischo"
+      ],
+      "year": 2003
+    },
+    {
+      "id": "src.maglischo-2012",
+      "display": "Maglischo 2012, Training Zones Revisited, J Swimming Research 19(2)（全文）",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Maglischo"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "src.maglischo-swimming-fastest-breaststroke-padd",
+      "display": "Maglischo Swimming Fastest（breaststroke paddle work）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.maglischo-swimming-fastest-butterfly-paddle",
+      "display": "Maglischo Swimming Fastest（butterfly paddle work）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.maglischo-swimming-fastest-paddle-catch-isol",
+      "display": "Maglischo Swimming Fastest（paddle catch isolation）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.maglischo-swimming-fastest-paddles-for-s-pat",
+      "display": "Maglischo Swimming Fastest（paddles for S-pattern feedback）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.marinho-2010",
+      "display": "Marinho et al. (2010), Journal of Applied Biomechanics",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "20733242",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20733242/"
+      },
+      "authors": [
+        "Marinho"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "src.mason-1992-a",
+      "display": "Mason 1992",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Mason"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "src.mason-1992-b",
+      "display": "Mason et al. 1992",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Mason"
+      ],
+      "year": 1992
+    },
+    {
+      "id": "src.matt-donovan-usms",
+      "display": "Matt Donovan, USMS",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/the-right-and-wrong-time-to-have-high-elbows-on-freestyle"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.mccullough-2009-a",
+      "display": "McCullough 2009",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "McCullough"
+      ],
+      "year": 2009
+    },
+    {
+      "id": "src.mccullough-2009-b",
+      "display": "McCullough et al. 2009",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "McCullough"
+      ],
+      "year": 2009
+    },
+    {
+      "id": "src.mccullough-a",
+      "display": "McCullough et al. (2009/2010), J. Strength & Conditioning Research",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "19387413",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19387413/"
+      },
+      "authors": [
+        "McCullough"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.mccullough-b",
+      "display": "McCullough et al. 2009/2010",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "McCullough"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.mccullough-c",
+      "display": "McCullough 2009/2010 方向",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "McCullough"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.mccullough-d",
+      "display": "McCullough et al. 2009/2010 踝活動度與踢水推進相關研究; Pink/Tibone 肩關節基線; 通用瑜伽解剖 / 運動科學共識",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "McCullough"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.mckenzie-2023-a",
+      "display": "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "doi": "10.1111/sms.14454",
+        "pmid": "37515375",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37515375/"
+      },
+      "authors": [
+        "Alec McKenzie",
+        "Sophie-Alexandra Larequi",
+        "Andrea Hams",
+        "Jonathon Headrick",
+        "Rod Whiteley",
+        "Steven Duhig"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.mckenzie-2023-b",
+      "display": "McKenzie et al. 2023 SR, Scand J Med Sci Sports (DOI 10.1111/sms.14454); Kabat D2 彈力帶計畫, Frontiers Physiology 2023 (PMC10679734); 綜合傷害預防 RCT (ScienceDirect S1360859225004899)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "doi": "10.1111/sms.14454",
+        "pmcid": "PMC10679734"
+      },
+      "authors": [
+        "McKenzie"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.mdi-management-review-annals-of-joint",
+      "display": "MDI management review, Annals of Joint (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.mdpi-2024",
+      "display": "MDPI 2024",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.melton-swimming",
+      "display": "Melton Swimming",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.military-swim-training-sipe",
+      "display": "軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.morais-2019",
+      "display": "Morais et al. 2019",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Morais"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.mountjoy-ioc-consensus-webfetch",
+      "display": "Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.mujika",
+      "display": "Mujika et al. 1996 (PMID 8775162); Mujika/Padilla/Pyne 2002 (PMID 12439774); Bosquet et al. 2007 (PMID 17762369)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "8775162"
+      },
+      "authors": [
+        "Mujika"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.multidirectional-instability-of-the-shoulder",
+      "display": "Multidirectional instability of the shoulder, StatPearls NBK557726 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.myswimpro",
+      "display": "MySwimPro",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.myswimpro-2022",
+      "display": "MySwimPro 2022",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2022
+    },
+    {
+      "id": "src.myswimpro-2022-coachsci-sdsu-edu-2022",
+      "display": "MySwimPro 2022; coachsci.sdsu.edu",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2022
+    },
+    {
+      "id": "src.neurobehavioral-consequences-of-repetitive-h",
+      "display": "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.nicol-2022-a",
+      "display": "Nicol 2022",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Nicol"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.nicol-2022-b",
+      "display": "Nicol et al. (2022). Systematic review. Sports Biomechanics",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Nicol"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.nicol-2022-c",
+      "display": "Nicol et al. 2022",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Nicol"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.novais-2012-a",
+      "display": "Novais et al. 2012 (JHK)",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Novais"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "src.novais-2012-b",
+      "display": "Novais et al. 2012, Journal of Human Kinetics",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Novais"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "src.olbrecht-2000",
+      "display": "Olbrecht 2000《The Science of Winning》(書摘/訪談重建); Scientific Triathlon EP#198 訪談; TMR Coaching / lactate.com / INSCYD 二手摘要",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {},
+      "authors": [
+        "Olbrecht"
+      ],
+      "year": 2000
+    },
+    {
+      "id": "src.osgood-schlatter-disease-statpearls-nbk44199",
+      "display": "Osgood-Schlatter disease, StatPearls NBK441995 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pair-pacing-in-adjacent-lanes",
+      "display": "通用團隊訓練法（pair pacing in adjacent lanes）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pair-tap-drill-ncaa",
+      "display": "通用團隊訓練法（pair-tap drill 美式 NCAA 慣用）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pereira-2018",
+      "display": "Pereira et al. 2018, Freestyle stroke parameters of national level swimmers with physical impairments",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://www.redalyc.org/journal/710/71059023007/html/"
+      },
+      "authors": [
+        "Pereira"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.peyrebrune-2007",
+      "display": "Peyrebrune & Turner 2007",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Peyrebrune",
+        "Turner"
+      ],
+      "year": 2007
+    },
+    {
+      "id": "src.pink",
+      "display": "Pink et al. (1991) EMG；Science of Swimming Faster (Riewald & Rodeo 2015)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Pink"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.pink-1991-a",
+      "display": "Pink et al. 1991",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Pink"
+      ],
+      "year": 1991
+    },
+    {
+      "id": "src.pink-1991-b",
+      "display": "Pink, Perry et al. 1991",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Pink",
+        "Perry"
+      ],
+      "year": 1991
+    },
+    {
+      "id": "src.pla-2021",
+      "display": "Pla et al. 2021, Frontiers in Physiology",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Pla"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc-2018",
+      "display": "PMC 2018",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2018
+    },
+    {
+      "id": "src.pmc10339925",
+      "display": "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC10339925",
+        "pmid": "37444391",
+        "doi": "10.3390/cancers15133281"
+      },
+      "authors": [
+        "Kliniec K",
+        "Tota M",
+        "Zalesińska A",
+        "Łyko M",
+        "Jankowska-Konsur A"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.pmc10356869",
+      "display": "Commotio Cordis in 2023, PMC10356869 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC10356869",
+        "pmid": "37382827",
+        "doi": "10.1007/s40279-023-01873-6"
+      },
+      "authors": [
+        "Peng T",
+        "Derry LT",
+        "Yogeswaran V",
+        "Goldschlager NF"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.pmc10366873",
+      "display": "Delayed Effect of Dry-Land Strength Training Sessions on Swimming Performance, J Funct Morphol Kinesiol 2023 (PMID 37489300 / PMC10366873)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "37489300",
+        "pmcid": "PMC10366873",
+        "doi": "10.3390/jfmk8030087"
+      },
+      "authors": [
+        "Tsoltos A",
+        "Arsoniadis G",
+        "Tsolakis C",
+        "Koulouvaris P",
+        "Simeonidis T",
+        "Chatzigiannakis A",
+        "Toubekis A"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.pmc10372189",
+      "display": "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC10372189",
+        "pmid": "36715985",
+        "doi": "10.1097/JSM.0000000000001121"
+      },
+      "authors": [
+        "Belilos E",
+        "Jow S",
+        "Maxwell M"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.pmc10689961",
+      "display": "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "38047245",
+        "pmcid": "PMC10689961",
+        "doi": "10.46234/ccdcw2023.198"
+      },
+      "authors": [
+        "Li Z",
+        "Deng X",
+        "Jin Y",
+        "Duan L",
+        "Ye P"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.pmc10713671",
+      "display": "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC10713671",
+        "pmid": "37924355",
+        "doi": "10.1007/s00784-023-05367-7"
+      },
+      "authors": [
+        "Abdelrahman HH",
+        "Ammar N",
+        "Hassan MG",
+        "Essam W",
+        "Amer H"
+      ],
+      "year": 2023
+    },
+    {
+      "id": "src.pmc10813451",
+      "display": "Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC10813451",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/"
+      },
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11115434",
+      "display": "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11115434",
+        "pmid": "38781109",
+        "doi": "10.15585/mmwr.mm7320e1"
+      },
+      "authors": [
+        "Clemens T",
+        "Moreland B",
+        "Mack KA",
+        "Thomas K",
+        "Bergen G",
+        "Lee R"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11277273",
+      "display": "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11277273",
+        "pmid": "39048118",
+        "doi": "10.4085/1062-6050-0138.22"
+      },
+      "authors": [
+        "Hock G",
+        "Johnson A",
+        "Barber P",
+        "Papa C"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11297363-a",
+      "display": "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC11297363",
+        "pmid": "39100936",
+        "doi": "10.26603/001c.121114"
+      },
+      "authors": [
+        "Stirling BD",
+        "Sum JC",
+        "Baek L",
+        "Michener LA",
+        "Barrack AJ",
+        "Tate AR"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11297363-b",
+      "display": "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "39100936",
+        "pmcid": "PMC11297363",
+        "doi": "10.26603/001c.121114"
+      },
+      "authors": [
+        "Stirling BD",
+        "Sum JC",
+        "Baek L",
+        "Michener LA",
+        "Barrack AJ",
+        "Tate AR"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11424229",
+      "display": "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11424229",
+        "pmid": "39328676",
+        "doi": "10.7759/cureus.67803"
+      },
+      "authors": [
+        "Garg D",
+        "Daigavane S"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11531034",
+      "display": "Swimming low back pain by stroke, PMC11531034 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11531034",
+        "pmid": "38262981",
+        "doi": "10.1177/19417381231225213"
+      },
+      "authors": [
+        "Hsu C",
+        "Krabak B",
+        "Cunningham B",
+        "Borg-Stein J"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11642080",
+      "display": "FAI rehabilitation & RTS, PMC11642080 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11642080",
+        "pmid": "39685760",
+        "doi": "10.3390/jcm13237302"
+      },
+      "authors": [
+        "Monselli C",
+        "Bianco Prevot L",
+        "Accetta R",
+        "Tronconi LP",
+        "Bolcato V",
+        "Basile G"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.pmc11744971",
+      "display": "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "39833826",
+        "pmcid": "PMC11744971",
+        "doi": "10.1186/s12891-025-08316-5"
+      },
+      "authors": [
+        "Florvåg AG",
+        "Berg ØA",
+        "Røksund OD",
+        "Jorem GT",
+        "Bogen BE"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.pmc11954903",
+      "display": "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11954903",
+        "pmid": "40158004",
+        "doi": "10.1038/s41598-025-95486-w"
+      },
+      "authors": [
+        "Xie Z",
+        "Huang Z",
+        "Ran Q",
+        "Luo W",
+        "Du W"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.pmc11985649",
+      "display": "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC11985649",
+        "pmid": "39752044",
+        "doi": "10.1007/s40279-024-02163-5"
+      },
+      "authors": [
+        "Li L",
+        "Le Douairon Lahaye S",
+        "Ding S",
+        "Schnell F"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.pmc12234767",
+      "display": "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC12234767",
+        "pmid": "40624837",
+        "doi": "10.14814/phy2.70430"
+      },
+      "authors": [
+        "Lundström A",
+        "Karlsson M",
+        "Rydberg A",
+        "Wiklund U"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.pmc12847173",
+      "display": "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC12847173"
+      },
+      "authors": [],
+      "year": 2025
+    },
+    {
+      "id": "src.pmc1448328",
+      "display": "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC1448328",
+        "pmid": "15117691",
+        "doi": "10.2105/ajph.94.5.738"
+      },
+      "authors": [
+        "Verbrugge LM",
+        "Rainey JJ",
+        "Reimink RL",
+        "Blankespoor HD"
+      ],
+      "year": 2004
+    },
+    {
+      "id": "src.pmc1626429",
+      "display": "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC1626429",
+        "pmid": "17035144",
+        "doi": "10.1289/ehp.8461"
+      },
+      "authors": [
+        "Bernard A",
+        "Carbonnelle S",
+        "de Burbure C",
+        "Michel O",
+        "Nickmilder M"
+      ],
+      "year": 2006
+    },
+    {
+      "id": "src.pmc2858141",
+      "display": "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC2858141",
+        "pmid": "20380736",
+        "doi": "10.1186/1471-2334-10-91"
+      },
+      "authors": [
+        "Brockmann S",
+        "Piechotowski I",
+        "Bock-Hensley O",
+        "Winter C",
+        "Oehme R",
+        "Zimmermann S",
+        "Hartelt K",
+        "Luge E",
+        "Nöckler K",
+        "Schneider T",
+        "Stark K",
+        "Jansen A"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "src.pmc2899837",
+      "display": "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC2899837",
+        "pmid": "19956985",
+        "doi": "10.1007/s00586-009-1230-3"
+      },
+      "authors": [
+        "Borius PY",
+        "Gouader I",
+        "Bousquet P",
+        "Draper L",
+        "Roux FE"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "src.pmc3435931",
+      "display": "Competitive swimmers spine degeneration, PMC3435931 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC3435931",
+        "pmid": "23016094",
+        "doi": "10.1177/1941738112442132"
+      },
+      "authors": [
+        "Wanivenhaus F",
+        "Fox AJ",
+        "Chaudhury S",
+        "Rodeo SA"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "src.pmc3438875",
+      "display": "Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC3438875",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/",
+        "pmid": "23015983",
+        "doi": "10.1177/1941738110377611"
+      },
+      "authors": [
+        "Heinlein SA",
+        "Cosgarea AJ"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "src.pmc3488741",
+      "display": "Trichloramine and lung function, PMC3488741 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC3488741",
+        "pmid": "23048058",
+        "doi": "10.1136/bmjopen-2012-000973"
+      },
+      "authors": [
+        "Nordberg GF",
+        "Lundstrom NG",
+        "Forsberg B",
+        "Hagenbjork-Gustafsson A",
+        "Lagerkvist BJ",
+        "Nilsson J",
+        "Svensson M",
+        "Blomberg A",
+        "Nilsson L",
+        "Bernard A",
+        "Dumont X",
+        "Bertilsson H",
+        "Eriksson K"
+      ],
+      "year": 2012
+    },
+    {
+      "id": "src.pmc3579418",
+      "display": "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC3579418",
+        "pmid": "22476450",
+        "doi": "10.1007/s00784-012-0720-6"
+      },
+      "authors": [
+        "Buczkowska-Radlińska J",
+        "Łagocka R",
+        "Kaczmarek W",
+        "Górski M",
+        "Nowicka A"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "src.pmc3811737",
+      "display": "SLAP lesions overview & rehab, PMC3811737 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC3811737",
+        "pmid": "24175139"
+      },
+      "authors": [
+        "Wilk KE",
+        "Macrina LC",
+        "Cain EL",
+        "Dugas JR",
+        "Andrews JR"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "src.pmc4234766-a",
+      "display": "The Backstroke Swimming Start: State of the Art",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC4234766",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/",
+        "pmid": "25414737",
+        "doi": "10.2478/hukin-2014-0058"
+      },
+      "authors": [
+        "de Jesus K",
+        "de Jesus K",
+        "Fernandes RJ",
+        "Vilas-Boas JP",
+        "Sanders R"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.pmc4234766-b",
+      "display": "The Backstroke Swimming Start: State of the Art, PMC4234766; PubMed 23688055",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "23688055",
+        "pmcid": "PMC4234766",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmc4247626",
+      "display": "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC4247626",
+        "pmid": "25408141",
+        "doi": "10.1186/1471-2474-15-377"
+      },
+      "authors": [
+        "Redondo-Alonso L",
+        "Chamorro-Moriana G",
+        "Jiménez-Rejano JJ",
+        "López-Tarrida P",
+        "Ridao-Fernández C"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.pmc4528289",
+      "display": "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC4528289",
+        "pmid": "26288538",
+        "doi": "10.4103/0973-6042.161444"
+      },
+      "authors": [
+        "Butler D",
+        "Funk L",
+        "Mackenzie TA",
+        "Herrington LC"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "src.pmc5260528",
+      "display": "PMC5260528; The Race Club; 360swim",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmcid": "PMC5260528"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmc5286756",
+      "display": "Aquatic dermatoses 回顧, PMC5286756 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC5286756",
+        "pmid": "28216728",
+        "doi": "10.4103/0019-5154.198052"
+      },
+      "authors": [
+        "Sridhar SC",
+        "Deo SC"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "src.pmc5800136",
+      "display": "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC5800136",
+        "pmid": "29278403",
+        "doi": "10.3390/ijerph15010037"
+      },
+      "authors": [
+        "Modenese A",
+        "Gobba F"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "src.pmc6092370",
+      "display": "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC6092370",
+        "pmid": "30108224",
+        "doi": "10.1038/s41533-018-0098-2"
+      },
+      "authors": [
+        "Aggarwal B",
+        "Mulgirigama A",
+        "Berend N"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.pmc6137694",
+      "display": "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC6137694",
+        "pmid": "30224888",
+        "doi": "10.1016/j.sjopt.2017.10.009"
+      },
+      "authors": [
+        "Ahmad SS"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.pmc6409673-a",
+      "display": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC6409673",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/",
+        "pmid": "30696072",
+        "doi": "10.3390/sports7020032"
+      },
+      "authors": [
+        "Weimar W",
+        "Sumner A",
+        "Romer B",
+        "Fox J",
+        "Rehm J",
+        "Decoux B",
+        "Patel J"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.pmc6409673-b",
+      "display": "PMC6409673",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC6409673",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/",
+        "pmid": "30696072",
+        "doi": "10.3390/sports7020032"
+      },
+      "authors": [
+        "Weimar W",
+        "Sumner A",
+        "Romer B",
+        "Fox J",
+        "Rehm J",
+        "Decoux B",
+        "Patel J"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.pmc6409673-c",
+      "display": "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC6409673",
+        "pmid": "30696072",
+        "doi": "10.3390/sports7020032"
+      },
+      "authors": [
+        "Weimar W",
+        "Sumner A",
+        "Romer B",
+        "Fox J",
+        "Rehm J",
+        "Decoux B",
+        "Patel J"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.pmc6464216",
+      "display": "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "30986226",
+        "pmcid": "PMC6464216",
+        "doi": "10.1371/journal.pone.0215352"
+      },
+      "authors": [
+        "Nagano Y",
+        "Kobayashi-Yamakawa K",
+        "Higashihara A",
+        "Yako-Suketomo H"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.pmc6597118",
+      "display": "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC6597118",
+        "pmid": "31246941",
+        "doi": "10.15585/mmwr.mm6825a3"
+      },
+      "authors": [
+        "Gharpure R",
+        "Perez A",
+        "Miller AD",
+        "Wikswo ME",
+        "Silver R",
+        "Hlavsa MC"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.pmc6863674",
+      "display": "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "31798949",
+        "pmcid": "PMC6863674",
+        "doi": "10.1136/bmjsem-2019-000615"
+      },
+      "authors": [
+        "Matsuura Y",
+        "Hangai M",
+        "Koizumi K",
+        "Ueno K",
+        "Hirai N",
+        "Akuzawa H",
+        "Kaneoka K"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.pmc7039474",
+      "display": "Site-specific BMD in female swimmers, PMC7039474 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7039474",
+        "pmid": "32148613",
+        "doi": "10.70252/RKTD5438"
+      },
+      "authors": [
+        "Miller M",
+        "Kojetin S",
+        "Scibora L"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.pmc7077213",
+      "display": "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7077213",
+        "pmid": "32033062",
+        "doi": "10.3390/sports8020017"
+      },
+      "authors": [
+        "Simas V",
+        "Hing W",
+        "Furness J",
+        "Walsh J",
+        "Climstein M"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.pmc7340704",
+      "display": "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7340704"
+      },
+      "authors": [],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc7584313",
+      "display": "Hot tub folliculitis 回顧, PMC7584313 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7584313",
+        "pmid": "33123436",
+        "doi": "10.7759/cureus.10623"
+      },
+      "authors": [
+        "Jacob JS",
+        "Tschen J"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.pmc7605769",
+      "display": "Cam morphology in aquatic athletes, PMC7605769 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7605769",
+        "pmid": "33163207",
+        "doi": "10.1093/jhps/hnaa009"
+      },
+      "authors": [
+        "Langner JL",
+        "Black MS",
+        "MacKay JW",
+        "Hall KE",
+        "Safran MR",
+        "Kogan F",
+        "Gold GE"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.pmc7824457",
+      "display": "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7824457",
+        "pmid": "33396219",
+        "doi": "10.3390/medicina57010029"
+      },
+      "authors": [
+        "Suzuki Y",
+        "Maeda N",
+        "Sasadai J",
+        "Kaneda K",
+        "Shirakawa T",
+        "Urabe Y"
+      ],
+      "year": 2020
+    },
+    {
+      "id": "src.pmc7918682",
+      "display": "PMC7918682",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC7918682",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7918682/",
+        "pmid": "33672908",
+        "doi": "10.3390/ijerph18041858"
+      },
+      "authors": [
+        "Chainok P",
+        "Machado L",
+        "de Jesus K",
+        "Abraldes JA",
+        "Borgonovo-Santos M",
+        "Fernandes RJ",
+        "Vilas-Boas JP"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8136425",
+      "display": "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC8136425",
+        "pmid": "34014907",
+        "doi": "10.15585/mmwr.mm7020a1"
+      },
+      "authors": [
+        "Hlavsa MC",
+        "Aluko SK",
+        "Miller AD",
+        "Person J",
+        "Gerdes ME",
+        "Lee S",
+        "Laco JP",
+        "Hannapel EJ",
+        "Hill VR"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8147101",
+      "display": "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC8147101",
+        "pmid": "33946739",
+        "doi": "10.3390/antibiotics10050505"
+      },
+      "authors": [
+        "Lin IC",
+        "Hussain B",
+        "Hsu BM",
+        "Chen JS",
+        "Hsu YL",
+        "Chiu YC",
+        "Huang SW",
+        "Wang JL"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8192199",
+      "display": "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC8192199",
+        "pmid": "34188959",
+        "doi": "10.1155/2021/9937730"
+      },
+      "authors": [
+        "Yılmaz M",
+        "Ikizoglu E",
+        "Arslan M",
+        "Ozgiray E",
+        "Calıskan KE",
+        "Erbayraktar RS"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8442910-a",
+      "display": "Frontiers in Physiology 2021",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC8442910",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/"
+      },
+      "authors": [],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8442910-b",
+      "display": "Frontiers in Physiology 2021, PMC8442910",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC8442910",
+        "pmid": "34539436",
+        "doi": "10.3389/fphys.2021.712652"
+      },
+      "authors": [
+        "Pla R",
+        "Poszalczyk G",
+        "Souaissia C",
+        "Joulia F",
+        "Guimard A"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8607769",
+      "display": "PMC8607769（Sprint Interval Swim Training Set 與 100m 自由式關聯，血乳酸+運動學）；另見 PMC10747448（訓練組順序對乳酸反應）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmcid": "PMC8607769"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmc8700779",
+      "display": "Leg Dominance 研究 2021",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC8700779",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/"
+      },
+      "authors": [],
+      "year": 2021
+    },
+    {
+      "id": "src.pmc8827183",
+      "display": "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "35139872",
+        "pmcid": "PMC8827183",
+        "doi": "10.1186/s13018-022-02979-9"
+      },
+      "authors": [
+        "Belikan P",
+        "Färber LC",
+        "Abel F",
+        "Nowak TE",
+        "Drees P",
+        "Mattyasovszky SG"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc8869186",
+      "display": "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "34990396",
+        "pmcid": "PMC8869186",
+        "doi": "10.3399/BJGP.2021.0386"
+      },
+      "authors": [
+        "van Leeuwen GJ",
+        "de Schepper EI",
+        "Rathleff MS",
+        "Bindels PJ",
+        "Bierma-Zeinstra SM",
+        "van Middelkoop M"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc8960438-a",
+      "display": "Biomechanical Factors Influencing Breaststroke Turns, Journal of Applied Biomechanics 1998; PMC8960438",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC8960438"
+      },
+      "authors": [],
+      "year": 1998
+    },
+    {
+      "id": "src.pmc8960438-b",
+      "display": "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC8960438",
+        "pmid": "35359502",
+        "doi": "10.3389/fspor.2022.802967"
+      },
+      "authors": [
+        "Chainok P",
+        "de Jesus K",
+        "Mourão L",
+        "Fonseca PFP",
+        "Zacca R",
+        "Fernandes RJ",
+        "Vilas-Boas JP"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc8960438-c",
+      "display": "Journal of Applied Biomechanics 1998; PMC8960438",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC8960438"
+      },
+      "authors": [],
+      "year": 1998
+    },
+    {
+      "id": "src.pmc8960438-d",
+      "display": "PMC8960438",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC8960438",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8960438/",
+        "pmid": "35359502",
+        "doi": "10.3389/fspor.2022.802967"
+      },
+      "authors": [
+        "Chainok P",
+        "de Jesus K",
+        "Mourão L",
+        "Fonseca PFP",
+        "Zacca R",
+        "Fernandes RJ",
+        "Vilas-Boas JP"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9057286",
+      "display": "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC9057286",
+        "pmid": "35505675",
+        "doi": "10.7717/peerj.13243"
+      },
+      "authors": [
+        "Climstein M",
+        "Doyle B",
+        "Stapelberg M",
+        "Rosic N",
+        "Hertess I",
+        "Furness J",
+        "Simas V",
+        "Walsh J"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9402090-a",
+      "display": "PMC9402090 2022; PubMed 24984154",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "24984154",
+        "pmcid": "PMC9402090"
+      },
+      "authors": [],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9402090-b",
+      "display": "PMC9402090, 2022",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC9402090",
+        "pmid": "36032263",
+        "doi": "10.3389/fspor.2022.948034"
+      },
+      "authors": [
+        "Kuhn J",
+        "Legerlotz K"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9424421-a",
+      "display": "Frontiers Physiology 2025 網絡統合分析 (DOI 10.3389/fphys.2025.1636595); 水上運動增強式 SR (PMC9424421, n=618); 前爬式 S&C 生物力學 SR (PMC8488830)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "doi": "10.3389/fphys.2025.1636595",
+        "pmcid": "PMC9424421"
+      },
+      "authors": [],
+      "year": 2025
+    },
+    {
+      "id": "src.pmc9424421-b",
+      "display": "簡短回顧 (Redalyc 3010); 增強式水上運動 SR (PMC9424421)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmcid": "PMC9424421"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmc9445308",
+      "display": "PMC9445308 Frontiers 2022",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC9445308",
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/",
+        "pmid": "36081618",
+        "doi": "10.3389/fspor.2022.963578"
+      },
+      "authors": [
+        "McCabe C",
+        "Mosscrop E",
+        "Hodierne R",
+        "Tor E"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9658102",
+      "display": "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "36361122",
+        "pmcid": "PMC9658102",
+        "doi": "10.3390/ijerph192114243"
+      },
+      "authors": [
+        "Gimunová M",
+        "Paulínyová A",
+        "Bernaciková M",
+        "Paludo AC"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9699060",
+      "display": "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmcid": "PMC9699060",
+        "pmid": "36431252",
+        "doi": "10.3390/jcm11226775"
+      },
+      "authors": [
+        "Klingert M",
+        "Nikolaidis PT",
+        "Weiss K",
+        "Thuany M",
+        "Chlíbková D",
+        "Knechtle B"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmc9724109",
+      "display": "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "36479178",
+        "pmcid": "PMC9724109",
+        "doi": "10.5960/dzsm.2022.546"
+      },
+      "authors": [
+        "Cabre HE",
+        "Moore SR",
+        "Smith-Ryan AE",
+        "Hackney AC"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.pmid-12840640-a",
+      "display": "Ch9; Mujika & Padilla 2003 (PMID 12840640)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "12840640"
+      },
+      "authors": [],
+      "year": 2003
+    },
+    {
+      "id": "src.pmid-12840640-b",
+      "display": "Ch9; Mujika & Padilla 2003 (PMID 12840640); Bosquet et al. 2007 (PMID 17762369)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "12840640"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmid-17762369",
+      "display": "Ch9; Bosquet et al. 2007 (PMID 17762369)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "17762369"
+      },
+      "authors": [],
+      "year": 2007
+    },
+    {
+      "id": "src.pmid-21259156",
+      "display": "Swimming Canada LTAD 分齡; PHV 文獻; Ford et al. 2011 (PMID 21259156); van Hooren & De Ste Croix 2020",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "21259156"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmid-24421735",
+      "display": "閉氣訓練統合分析 Frontiers Physiology 2022 (DOI 10.3389/fphys.2022.964144, 7 RCT n=126); 減少呼吸頻率訓練 RCT (PMID 24421735)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "doi": "10.3389/fphys.2022.964144",
+        "pmid": "24421735"
+      },
+      "authors": [],
+      "year": 2022
+    },
+    {
+      "id": "src.pmid-24984154",
+      "display": "PubMed 24984154",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "24984154",
+        "doi": "10.1016/j.humov.2014.05.004"
+      },
+      "authors": [
+        "Willems TM",
+        "Cornelis JA",
+        "De Deurwaerder LE",
+        "Roelandt F",
+        "De Mits S"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.pmid-25443755",
+      "display": "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "25443755",
+        "doi": "10.1016/j.wem.2014.07.010"
+      },
+      "authors": [
+        "Rogers IR",
+        "Grainger S",
+        "Nagree Y"
+      ],
+      "year": 2015
+    },
+    {
+      "id": "src.pmid-25455956",
+      "display": "PubMed 25455956 2014",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "25455956",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25455956/"
+      },
+      "authors": [],
+      "year": 2014
+    },
+    {
+      "id": "src.pmid-28605694",
+      "display": "Gonjo et al.",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "28605694",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28605694/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmid-28975846",
+      "display": "PubMed 28975846",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "28975846",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28975846/",
+        "doi": "10.1080/14763141.2017.1353130"
+      },
+      "authors": [
+        "Barkwell GE",
+        "Dickey JP"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.pmid-30485006",
+      "display": "Proximal humeral epiphysiolysis (little league shoulder), PMID 30485006 (摘要層級)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "30485006"
+      },
+      "authors": [
+        "Collins AC",
+        "May T"
+      ],
+      "year": 2026
+    },
+    {
+      "id": "src.pmid-30521295",
+      "display": "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "30521295"
+      },
+      "authors": [
+        "Bart RM",
+        "Lau H",
+        "Cooper JS"
+      ],
+      "year": 2026
+    },
+    {
+      "id": "src.pmid-32119507",
+      "display": "StatPearls 缺氧昏迷機轉 (PMID 32119507); CDC MMWR 2015;64(19) 紐約州 DUBB 致死研究; American Red Cross / YMCA / USA Swimming 缺氧昏迷聯合聲明 (2015/2022)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "32119507"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmid-32310515",
+      "display": "StatPearls Otitis Externa, PMID 32310515 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "32310515"
+      },
+      "authors": [
+        "Medina-Blasini Y",
+        "Sharman T"
+      ],
+      "year": 2026
+    },
+    {
+      "id": "src.pmid-33010194",
+      "display": "Swimming injuries narrative review, PubMed 33010194 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "33010194",
+        "doi": "10.1002/pmrj.12503"
+      },
+      "authors": [
+        "Trinidad A",
+        "González-Garcia H",
+        "López-Valenciano A"
+      ],
+      "year": 2021
+    },
+    {
+      "id": "src.pmid-39351143",
+      "display": "RMT 統合分析 Frontiers Physiology 2025 (DOI 10.3389/fphys.2025.1638739, 10 RCT n=230); 各距離分層統合分析 (DOI 10.3389/fphys.2026.1770925, 14 RCT n=375); 肺功能/MIP 統合分析 Frontiers Sports Act Living 2024 (PMID 39351143, 13 研究 n=277)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "doi": "10.3389/fphys.2025.1638739",
+        "pmid": "39351143"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.pmid-39500300",
+      "display": "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "39500300"
+      },
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.pmid-40252339-a",
+      "display": "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "40252339",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40252339/",
+        "doi": "10.1016/j.jbiomech.2025.112694"
+      },
+      "authors": [
+        "Koster P",
+        "Schreven S",
+        "David S",
+        "Beek PJ"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.pmid-40252339-b",
+      "display": "PubMed 40252339",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "pmid": "40252339",
+        "doi": "10.1016/j.jbiomech.2025.112694"
+      },
+      "authors": [
+        "Koster P",
+        "Schreven S",
+        "David S",
+        "Beek PJ"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.pmid-40783351",
+      "display": "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "40783351"
+      },
+      "authors": [],
+      "year": 2025
+    },
+    {
+      "id": "src.pmid-7673417",
+      "display": "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)",
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "7673417",
+        "doi": "10.1210/jcem.80.9.7673417"
+      },
+      "authors": [
+        "Constantini NW",
+        "Warren MP"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "src.psycharakis-2010",
+      "display": "Psycharakis & Sanders 2010",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Psycharakis",
+        "Sanders"
+      ],
+      "year": 2010
+    },
+    {
+      "id": "src.quebec-44-year-diving-sci-study-sciencedirec",
+      "display": "Quebec 44-year diving SCI study, ScienceDirect (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club",
+      "display": "Race Club",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-b",
+      "display": "Race Club / 通用菁英觀察",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-c",
+      "display": "整合 Race Club + 通用菁英觀察",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-ch-13-14",
+      "display": "教練影像觀察 / Race Club Ch 13-14",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-ch-14",
+      "display": "Race Club Ch 14；通用菁英影像觀察",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-ch-18",
+      "display": "Race Club Ch 18 / 通用菁英影像觀察",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-ch-23",
+      "display": "Race Club Ch 23（菁英影像觀察）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-ch-23-7",
+      "display": "Race Club Ch 23 第 7 點（菁英教練共識）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-d",
+      "display": "整合 Race Club 量測",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-gary-hall-jr",
+      "display": "Race Club, Gary Hall Jr.",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-gary-hall-jr-vs-u-s-masters-swimmi",
+      "display": "Race Club（Gary Hall Jr.）背式彎臂 vs 直臂分析；U.S. Masters Swimming Backstroke Pull guide",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-pdm-data",
+      "display": "The Race Club PDM 量測資料",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.race-club-pdm-elite-general",
+      "display": "Race Club PDM；通用菁英研究",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography",
+        "consensus_not_citation"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.red-s-clinical-assessment-tool-framework-ioc",
+      "display": "RED-S Clinical Assessment Tool framework (IOC)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-a",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-b",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#2-受限動作假說cah",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-c",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#4-距離效應distance-effect",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-d",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#5-聯結-vs-分離策略association-vs-dissociation",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-e",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-f",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#外部焦點-vs-感覺水-的張力分析",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-g",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#游泳特異證據-vs-跨運動外推",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-h",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#游泳直接證據",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-i",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#研究空白",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-01-j",
+      "display": "Research/心理/01_注意力焦點與動作學習.md#與水感框架的連結",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-02-a",
+      "display": "Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-02-b",
+      "display": "Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-02-c",
+      "display": "Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-02-d",
+      "display": "Research/心理/02_喚醒焦慮與壓力崩潰.md#與水感框架的連結",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-a",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#FWAQ",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-b",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#凍結反應",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-c",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#呼吸介入",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-d",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#感知遮蔽機制",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-e",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#族群特異性",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-f",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#潛水反射",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-03-g",
+      "display": "Research/心理/03_水中恐懼與學習者心理.md#社會安全感",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-a",
+      "display": "Research/心理/04_動機與自我決定.md#HMIEM",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-b",
+      "display": "Research/心理/04_動機與自我決定.md#SDT應用",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-c",
+      "display": "Research/心理/04_動機與自我決定.md#動機氣候",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-d",
+      "display": "Research/心理/04_動機與自我決定.md#族群特異性",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-e",
+      "display": "Research/心理/04_動機與自我決定.md#核心理論",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-f",
+      "display": "Research/心理/04_動機與自我決定.md#游泳特異研究",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-g",
+      "display": "Research/心理/04_動機與自我決定.md#精熟氣候實驗研究",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-h",
+      "display": "Research/心理/04_動機與自我決定.md#連結",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-04-i",
+      "display": "Research/心理/04_動機與自我決定.md#需求受阻",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-a",
+      "display": "Research/心理/05_意象與心理演練.md#1-功能等價functional-equivalence",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-b",
+      "display": "Research/心理/05_意象與心理演練.md#2-pettlep-意象模型",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-c",
+      "display": "Research/心理/05_意象與心理演練.md#3-意象的功能分類paivio-1985--hall-et-al-1998",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-d",
+      "display": "Research/心理/05_意象與心理演練.md#4-內部視角-vs-外部視角internal--external-imagery-perspective",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-e",
+      "display": "Research/心理/05_意象與心理演練.md#5-運動意象與-feedforward-預測模型的關係",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-f",
+      "display": "Research/心理/05_意象與心理演練.md#a-動覺意象能否預先建立或強化水感",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-g",
+      "display": "Research/心理/05_意象與心理演練.md#c-動覺意象-vs-視覺意象的分離效應",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-05-h",
+      "display": "Research/心理/05_意象與心理演練.md#視角與測量",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-a",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-b",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#指導型-vs-激勵型自我對話",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-c",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#核心概念",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-d",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-e",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#自我對話的作用機制",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-f",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#自我對話的時態框架過去現在未來",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-g",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#與水感框架指令層次注意力焦點的連結",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-h",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#賽前例行程序",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-06-i",
+      "display": "Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-a",
+      "display": "Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-b",
+      "display": "Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-c",
+      "display": "Research/心理/07_心流與最佳表現.md#4-精英運動員心流研究jackson1995-1996",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 1996
+    },
+    {
+      "id": "src.research-psych-07-d",
+      "display": "Research/心理/07_心流與最佳表現.md#5-swann-等人心流系統回顧2012",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-e",
+      "display": "Research/心理/07_心流與最佳表現.md#6-flow-vs-clutch-statesswann-等人2017-2023",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2023
+    },
+    {
+      "id": "src.research-psych-07-f",
+      "display": "Research/心理/07_心流與最佳表現.md#7-理想表現狀態ips--the-zone",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-g",
+      "display": "Research/心理/07_心流與最佳表現.md#8-心流-表現關係-meta-analysis",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-h",
+      "display": "Research/心理/07_心流與最佳表現.md#9-心流的神經認知機制",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-i",
+      "display": "Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-j",
+      "display": "Research/心理/07_心流與最佳表現.md#flow-vs-reinvestment-對照",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-k",
+      "display": "Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2008
+    },
+    {
+      "id": "src.research-psych-07-l",
+      "display": "Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-m",
+      "display": "Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-07-n",
+      "display": "Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-a",
+      "display": "Research/心理/08_心理感知生理交互.md#1.1",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-b",
+      "display": "Research/心理/08_心理感知生理交互.md#1.2",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-c",
+      "display": "Research/心理/08_心理感知生理交互.md#1.3",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-d",
+      "display": "Research/心理/08_心理感知生理交互.md#1.4",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-e",
+      "display": "Research/心理/08_心理感知生理交互.md#1.6",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-f",
+      "display": "Research/心理/08_心理感知生理交互.md#1.7",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-g",
+      "display": "Research/心理/08_心理感知生理交互.md#1.8",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-h",
+      "display": "Research/心理/08_心理感知生理交互.md#1.9",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-i",
+      "display": "Research/心理/08_心理感知生理交互.md#4.1",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-j",
+      "display": "Research/心理/08_心理感知生理交互.md#4.2",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-k",
+      "display": "Research/心理/08_心理感知生理交互.md#5.1",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.research-psych-08-l",
+      "display": "Research/心理/08_心理感知生理交互.md#5.2",
+      "verification_status": "unverified",
+      "lane": "internal_reference",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography",
+        "internal_reference"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.researchgate-3d-analysis-2018",
+      "display": "三維分析研究，ResearchGate 2018",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2018
+    },
+    {
+      "id": "src.researchgate-kinematic-differences",
+      "display": "Kinematic differences research (ResearchGate)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.rocketswim",
+      "display": "Rocketswim",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://rocketswim.com/four-phases-of-freestyle-arm-stroke/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.rod-havriluk-swimming-technology-research",
+      "display": "Rod Havriluk, Swimming Technology Research",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://chicagobluedolphins.com/article-freestyle-straight-arm-recovery/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.rohr-2004",
+      "display": "Rohr & Fish 2004, dolphin kinematics comparison",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Rohr",
+        "Fish"
+      ],
+      "year": 2004
+    },
+    {
+      "id": "src.rovere-nichols",
+      "display": "Rovere & Nichols 等蛙泳膝經典文獻（作者/年份/期刊待查）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ruiz-navarro-2024",
+      "display": "Ruiz-Navarro et al. 2024",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Ruiz-Navarro"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.salo-riewald-complete-conditioning-for-swimm",
+      "display": "Salo & Riewald Complete Conditioning for Swimming（tethered work）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.salter-harris-fractures-statpearls-nbk430688",
+      "display": "Salter-Harris fractures, StatPearls NBK430688 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.sanders-1995-a",
+      "display": "Sanders 1995",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Sanders"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "src.sanders-1995-b",
+      "display": "Sanders et al. 1995",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Sanders"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "src.sanders-1995-c",
+      "display": "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Sanders",
+        "Cappaert",
+        "Devlin"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "src.sanders-1995-d",
+      "display": "Sanders, Cappaert & Devlin 1995",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Sanders",
+        "Cappaert",
+        "Devlin"
+      ],
+      "year": 1995
+    },
+    {
+      "id": "src.sanders-1998",
+      "display": "Sanders 1998",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Sanders"
+      ],
+      "year": 1998
+    },
+    {
+      "id": "src.scheuermann-disease-statpearls-nbk499966",
+      "display": "Scheuermann disease, StatPearls NBK499966 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.schleihauf-1979",
+      "display": "Schleihauf 1979（歷史依據，非當前定論）",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Schleihauf"
+      ],
+      "year": 1979
+    },
+    {
+      "id": "src.sciencedirect-2014",
+      "display": "ScienceDirect 2014",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2014
+    },
+    {
+      "id": "src.sciencedirect-wave-drag-study",
+      "display": "ScienceDirect 波浪阻力研究",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.scott-bay-usms-level-5-coach",
+      "display": "Scott Bay, USMS Level 5 Coach",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/freestyle-demystified"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.seiler",
+      "display": "Seiler & Kjerland 2006 (PMID 16430681); Seiler 2010 (IJSPP 5(3):276–291); Stöggl & Sperlich 2014 (PMC3912323); González-Ravé et al. 2021 (PMID 33952709, IJSPP 16(7):913–926)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "16430681",
+        "pmcid": "PMC3912323"
+      },
+      "authors": [
+        "Seiler",
+        "Kjerland"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.selye",
+      "display": "Selye 1974, 1976; 整合進 Bompa 體系（多教練書共識）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Selye"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.sever-s-disease-calcaneal-apophysitis-statpe",
+      "display": "Sever's disease (calcaneal apophysitis), StatPearls NBK441928 (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.shallow-water-blackout-prevention-webfetch",
+      "display": "Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.sim-2019",
+      "display": "Sim et al. 2019, Eur J Appl Physiol（hepcidin 與運動誘發鐵吸收抑制；具體引用待核實）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {},
+      "authors": [
+        "Sim"
+      ],
+      "year": 2019
+    },
+    {
+      "id": "src.sipe",
+      "display": "SIPE 病理生理與鐵人三項案例系列（作者/年份待查）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.specificity-of-practice-usrpt",
+      "display": "Specificity of Practice；USRPT",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.sports-biomechanics-2026",
+      "display": "Sports Biomechanics 2026",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2026
+    },
+    {
+      "id": "src.statpearls-2023",
+      "display": "StatPearls 2023",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2023
+    },
+    {
+      "id": "src.statpearls-swimmer-s-shoulder-ncbi-bookshelf",
+      "display": "StatPearls Swimmer's Shoulder, NCBI Bookshelf NBK470589",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.staunton-2025-a",
+      "display": "Staunton et al. (2025)",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Staunton"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.staunton-2025-b",
+      "display": "Staunton et al. (2025), Frontiers in Sports and Active Living",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Staunton"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.staunton-2025-c",
+      "display": "Staunton et al. 2025",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Staunton"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.staunton-2025-d",
+      "display": "Staunton, Ruiz-Navarro & Born 2025",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Staunton",
+        "Ruiz-Navarro",
+        "Born"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.stress-fractures-in-swimmers-systematic-revi",
+      "display": "Stress fractures in swimmers systematic review, journals.aiac.org.au (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.strzala-2013-a",
+      "display": "Strzała 2013",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Strzała"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "src.strzala-2013-b",
+      "display": "Strzała et al. (2013). Journal of Human Kinetics",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Strzała"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "src.strzala-2013-c",
+      "display": "Strzała et al. 2013",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Strzała"
+      ],
+      "year": 2013
+    },
+    {
+      "id": "src.strzala-2017",
+      "display": "Strzała et al. 2017",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Strzała"
+      ],
+      "year": 2017
+    },
+    {
+      "id": "src.swim-like-a-fish",
+      "display": "Swim Like A Fish",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swim-like-a-fish-2025",
+      "display": "Swim Like A Fish 2025",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2025
+    },
+    {
+      "id": "src.swim-smart",
+      "display": "Swim Smart",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swim-teach-com",
+      "display": "swim-teach.com",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swim-teach-com-a3-performance-enjoy-swimming",
+      "display": "swim-teach.com、A3 Performance、enjoy-swimming 等背式呼吸教學指引（教學共識）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimcoachingblog-com",
+      "display": "swimcoachingblog.com",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimmers-knee-epidemiology-sr",
+      "display": "游泳膝傷流病系統綜述（待 WebFetch 核實）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimming-injury-imaging-review-1-radiologyke",
+      "display": "Swimming injury imaging review (踝部約 1%), radiologykey (已驗證)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimming-science-livio-cocozza",
+      "display": "Swimming Science / Livio Cocozza",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimming-world-magazine",
+      "display": "Swimming World Magazine",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://www.swimmingworldmagazine.com/news/science-of-performance-hand-entry/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimming-world-magazine-rod-havriluk",
+      "display": "Swimming World Magazine（Rod Havriluk）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimming-world-magazine-rod-havriluk-phd-bio",
+      "display": "Swimming World Magazine（Rod Havriluk, PhD biomechanist）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimoutlet",
+      "display": "SwimOutlet",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimswam-a",
+      "display": "SwimSwam",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimswam-b",
+      "display": "SwimSwam 教練觀察",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimswam-koga-wku-kinematic",
+      "display": "SwimSwam Junya Koga analysis; WKU Digital Commons Kinematic Comparison",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.swimswam-wku-kinematic",
+      "display": "SwimSwam / Kinematic Comparison，WKU Digital Commons",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.switch-drill-warmup-variant",
+      "display": "通用游泳教學法（switch drill warmup variant）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.takai",
+      "display": "Takai et al. 2016; PMC8700779 (2021)",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound"
+      ],
+      "identifier": {
+        "pmid": "27149652",
+        "pmcid": "PMC8700779",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/"
+      },
+      "authors": [
+        "Takai"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.takai-2016",
+      "display": "Takai et al. 2016",
+      "verification_status": "unverified",
+      "lane": "identifier_dereference",
+      "flags": [],
+      "identifier": {
+        "pmid": "27149652",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/"
+      },
+      "authors": [
+        "Takai"
+      ],
+      "year": 2016
+    },
+    {
+      "id": "src.tanaka-2024-a",
+      "display": "Tanaka 2024",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Tanaka"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.tanaka-2024-b",
+      "display": "Tanaka et al. (2024). CFD study. Journal of Biomechanics",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Tanaka"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.tanaka-2024-c",
+      "display": "Tanaka et al. 2024",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Tanaka"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.tanaka-2025",
+      "display": "Tanaka et al. 2025",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Tanaka"
+      ],
+      "year": 2025
+    },
+    {
+      "id": "src.the-race-club",
+      "display": "The Race Club",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-fundamentals-of-fast-swimming-a",
+      "display": "The Race Club — Fundamentals of Fast Swimming Ch 13, 16",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-fundamentals-of-fast-swimming-b",
+      "display": "The Race Club — Fundamentals of Fast Swimming Ch 24",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-fundamentals-of-fast-swimming-c",
+      "display": "The Race Club — Fundamentals of Fast Swimming Ch 6",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-fundamentals-of-fast-swimming-d",
+      "display": "The Race Club — Fundamentals of Fast Swimming Ch 7",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-fundamentals-of-fast-swimming-e",
+      "display": "The Race Club — Fundamentals of Fast Swimming Ch 7, 10 (Coupling Motions)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-gary-hall-sr-fundamentals-of-f-a",
+      "display": "The Race Club (Gary Hall Sr) — Fundamentals of Fast Swimming Ch 24 (Backstroke Starts)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-gary-hall-sr-fundamentals-of-f-b",
+      "display": "The Race Club (Gary Hall Sr) — Fundamentals of Fast Swimming Ch 6",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-velocity-meter-a",
+      "display": "The Race Club velocity meter 實測",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-velocity-meter-b",
+      "display": "The Race Club，velocity meter 實測",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-velocity-meter-pressure-meter",
+      "display": "The Race Club Velocity Meter + Pressure Meter",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-vm-a",
+      "display": "The Race Club VM 量化",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.the-race-club-vm-b",
+      "display": "The Race Club VM 量測資料",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.theres-a-drill-for-that",
+      "display": "There's a Drill for That",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.tid-three-zone-model",
+      "display": "游泳/耐力 TID 文獻通用三區模型（血乳酸界線）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.tipton-mj-et-al-cold-water-immersion-sudden-2003",
+      "display": "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003 (已驗證 URL)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2003
+    },
+    {
+      "id": "src.total-immersion-terry-laughlin-vortex",
+      "display": "Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.toussaint",
+      "display": "Toussaint & Hollander 1994 (Sports Med 18:384–405); Rodríguez & Mader 2011",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Toussaint",
+        "Hollander"
+      ],
+      "year": null
+    },
+    {
+      "id": "src.toussaint-colwin-1990-maglischo-2003-swimmin",
+      "display": "Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.train-daly",
+      "display": "Train Daly",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.train-daly-u-s-masters-swimming-5yd-m",
+      "display": "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.tri-coaching",
+      "display": "Tri-Coaching",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://tri-coaching.co.uk/2015/04/21/freestyle-recovery/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.tritonwear",
+      "display": "Tritonwear",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [],
+      "identifier": {
+        "url": "https://blog.tritonwear.com/how-to-have-a-flawless-freestyle-swimming-recovery"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.u-s-masters-swimming",
+      "display": "U.S. Masters Swimming",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.u-s-masters-swimming-backstroke-body-positio",
+      "display": "U.S. Masters Swimming Backstroke Body Position guide；swim-teach.com；enjoy-swimming（教學共識）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.u-s-masters-swimming-faster-flip-turns-eatsl",
+      "display": "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.u-s-masters-swimming-faster-flip-turns-wall",
+      "display": "U.S. Masters Swimming Faster Flip Turns（wall progression）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.u-s-masters-swimming-flip-turn-fundamentals",
+      "display": "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.u-s-masters-swimming-turns-guides-tight-stre",
+      "display": "U.S. Masters Swimming Turns guides（tight streamline push-off）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.university-of-tsukuba-2024-journal-of-biomec-2024",
+      "display": "University of Tsukuba 2024, Journal of Biomechanics",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.usa-swimming-foundations",
+      "display": "USA Swimming Foundations / 通用蛙式教學熱身",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usa-swimming-foundations-of-swimming",
+      "display": "USA Swimming Foundations of Swimming（站姿動作預演）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usa-swimming-foundations-of-swimming-dryland",
+      "display": "USA Swimming Foundations of Swimming（dryland-in-water 模擬）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usa-swimming-foundations-vortex",
+      "display": "USA Swimming Foundations / Vortex 整理（短軸動作預演）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms",
+      "display": "USMS",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-backstroke-kick-guide",
+      "display": "U.S. Masters Swimming Backstroke Kick guide；多家教學指引一致",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography",
+        "consensus_not_citation"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-body-alignment-guide-a",
+      "display": "USMS Body Alignment Guide",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-body-alignment-guide-b",
+      "display": "USMS, Body Alignment Guide",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-masters-teaching-article",
+      "display": "USMS Masters Teaching Article",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-sgswim",
+      "display": "USMS; SGSwim",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-swimming-world-magazine-the-race-club",
+      "display": "USMS, Swimming World Magazine, The Race Club",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.usms-wayne-mccauley",
+      "display": "USMS (Wayne McCauley)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.veiga-2022",
+      "display": "Veiga et al. 2022 systematic review",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Veiga"
+      ],
+      "year": 2022
+    },
+    {
+      "id": "src.virag-2014",
+      "display": "Virag et al. 2014",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Virag"
+      ],
+      "year": 2014
+    },
+    {
+      "id": "src.vortex-a",
+      "display": "Vortex 整理",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-b",
+      "display": "通用游泳教學法（Vortex 整理）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-l0-l6",
+      "display": "作者綜合（Vortex 核心命題 × 週期化）；通用『技能週期化』與『疲勞損害技能學習』有文獻支持，水感知(L0–L6)專屬層仍待驗證",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-paralympic-visually-impaired-tapper-s",
+      "display": "Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-pressure-mapping",
+      "display": "Vortex 整理（pressure mapping 系列）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-proprioception-spatial-axis",
+      "display": "Vortex 整理（proprioception × spatial axis）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-proprioception-wave-undulation",
+      "display": "Vortex 整理（proprioception × wave undulation）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-pulldown-proprioception",
+      "display": "Vortex 整理（pulldown × proprioception 結合）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.vortex-vertical-kick-proprioception",
+      "display": "Vortex 整理（vertical kick × proprioception）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.ward-2018",
+      "display": "Ward 2018（碩士論文，University of Hawaii at Manoa；亦見 Journal of Swimming Research Vol. 26）",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Ward"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.ward-2018-b",
+      "display": "Ward 2018",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Ward"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.ward-2018-c",
+      "display": "Ward 2018；Peaty",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Ward"
+      ],
+      "year": 2018
+    },
+    {
+      "id": "src.waterford-crystal-swimming-club",
+      "display": "Waterford Crystal Swimming Club",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.welcher-1979",
+      "display": "Welcher et al. 1979（歷史依據）",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Welcher"
+      ],
+      "year": 1979
+    },
+    {
+      "id": "src.welcher-2008-a",
+      "display": "Welcher et al. 2008",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Welcher"
+      ],
+      "year": 2008
+    },
+    {
+      "id": "src.welcher-2008-b",
+      "display": "Welcher, Hinrichs & George 2008",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {},
+      "authors": [
+        "Welcher",
+        "Hinrichs",
+        "George"
+      ],
+      "year": 2008
+    },
+    {
+      "id": "src.who-2024-12-13-drowning-deaths-decline-globa-2024",
+      "display": "WHO 2024-12-13 新聞稿『Drowning deaths decline globally』(已驗證 URL)",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.wikipedia-breaststroke",
+      "display": "Wikipedia Breaststroke",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.wilson-1983",
+      "display": "Wilson & Marino 1983",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Wilson",
+        "Marino"
+      ],
+      "year": 1983
+    },
+    {
+      "id": "src.yamakawa-2024",
+      "display": "Yamakawa et al. 2024",
+      "verification_status": "unverified",
+      "lane": "bibliographic_search",
+      "flags": [],
+      "identifier": {},
+      "authors": [
+        "Yamakawa"
+      ],
+      "year": 2024
+    },
+    {
+      "id": "src.yeadon-et-al-mdpi-2024",
+      "display": "Yeadon et al. / MDPI 2024",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": 2024
+    },
+    {
+      "id": "src.yourswimlog-a",
+      "display": "YourSwimLog",
+      "verification_status": "unverified",
+      "lane": "url_review",
+      "flags": [
+        "duplicate_candidate"
+      ],
+      "identifier": {
+        "url": "https://www.yourswimlog.com/how-to-improve-freestyle-hand-entry/"
+      },
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-b",
+      "display": "yourswimlog",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "duplicate_candidate",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-com-4-5-tethered-60s-rest-2-3",
+      "display": "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-com-race-tempo-underwater-swimsw",
+      "display": "yourswimlog.com（race-tempo underwater）；swimswam UDK sets",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-com-tempo-trainer-cone-15m",
+      "display": "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-com-vertical-kicking-u-s-masters",
+      "display": "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-monofin",
+      "display": "yourswimlog monofin 研究",
+      "verification_status": "unverified",
+      "lane": "manual_reconstruction",
+      "flags": [
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.yourswimlog-phantomlattice-core",
+      "display": "yourswimlog 核心力量研究；phantomlattice.com 生物力學分析",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [],
+      "year": null
+    },
+    {
+      "id": "src.zamparo",
+      "display": "Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004",
+      "verification_status": "unverified",
+      "lane": "compound_split",
+      "flags": [
+        "compound",
+        "insufficient_bibliography"
+      ],
+      "identifier": {},
+      "authors": [
+        "Zamparo"
+      ],
+      "year": null
+    }
+  ]
+}

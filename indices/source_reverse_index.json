@@ -99,9 +99,10 @@
     {
       "id": "src.aiac-ijkss-v-6n-1p-25",
       "display": "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "doi": "10.7575/aiac.ijkss.v.6n.1p.25"
+        "doi": "10.7575/aiac.ijkss.v.6n.1p.25",
+        "url": "https://doi.org/10.7575/aiac.ijkss.v.6n.1p.25"
       },
       "usage_count": 1,
       "usages": [
@@ -179,10 +180,11 @@
     {
       "id": "src.atkison-2014-a",
       "display": "Atkison et al. 2014",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "24290609",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/24290609/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24290609/",
+        "doi": "10.1016/j.humov.2013.08.013"
       },
       "usage_count": 2,
       "usages": [
@@ -201,9 +203,10 @@
     {
       "id": "src.atkison-2014-b",
       "display": "Atkison et al. 2014, PubMed 24290609",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "24290609"
+        "pmid": "24290609",
+        "doi": "10.1016/j.humov.2013.08.013"
       },
       "usage_count": 2,
       "usages": [
@@ -1592,9 +1595,10 @@
     {
       "id": "src.grote-2004",
       "display": "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "14754731"
+        "pmid": "14754731",
+        "doi": "10.1177/0363546503258905"
       },
       "usage_count": 1,
       "usages": [
@@ -1817,7 +1821,7 @@
     {
       "id": "src.journal-pone-0241345-b",
       "display": "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "doi": "10.1371/journal.pone.0241345",
         "url": "https://doi.org/10.1371/journal.pone.0241345"
@@ -2249,9 +2253,11 @@
     {
       "id": "src.mckenzie-2023-a",
       "display": "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "doi": "10.1111/sms.14454（DOI"
+        "doi": "10.1111/sms.14454",
+        "pmid": "37515375",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37515375/"
       },
       "usage_count": 1,
       "usages": [
@@ -2853,9 +2859,11 @@
     {
       "id": "src.pmc10339925",
       "display": "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC10339925"
+        "pmcid": "PMC10339925",
+        "pmid": "37444391",
+        "doi": "10.3390/cancers15133281"
       },
       "usage_count": 1,
       "usages": [
@@ -2869,9 +2877,11 @@
     {
       "id": "src.pmc10356869",
       "display": "Commotio Cordis in 2023, PMC10356869 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC10356869"
+        "pmcid": "PMC10356869",
+        "pmid": "37382827",
+        "doi": "10.1007/s40279-023-01873-6"
       },
       "usage_count": 1,
       "usages": [
@@ -2885,10 +2895,11 @@
     {
       "id": "src.pmc10366873",
       "display": "Delayed Effect of Dry-Land Strength Training Sessions on Swimming Performance, J Funct Morphol Kinesiol 2023 (PMID 37489300 / PMC10366873)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "37489300",
-        "pmcid": "PMC10366873"
+        "pmcid": "PMC10366873",
+        "doi": "10.3390/jfmk8030087"
       },
       "usage_count": 1,
       "usages": [
@@ -2902,9 +2913,11 @@
     {
       "id": "src.pmc10372189",
       "display": "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC10372189"
+        "pmcid": "PMC10372189",
+        "pmid": "36715985",
+        "doi": "10.1097/JSM.0000000000001121"
       },
       "usage_count": 1,
       "usages": [
@@ -2918,10 +2931,11 @@
     {
       "id": "src.pmc10689961",
       "display": "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "38047245",
-        "pmcid": "PMC10689961"
+        "pmcid": "PMC10689961",
+        "doi": "10.46234/ccdcw2023.198"
       },
       "usage_count": 1,
       "usages": [
@@ -2935,9 +2949,11 @@
     {
       "id": "src.pmc10713671",
       "display": "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC10713671"
+        "pmcid": "PMC10713671",
+        "pmid": "37924355",
+        "doi": "10.1007/s00784-023-05367-7"
       },
       "usage_count": 1,
       "usages": [
@@ -2973,9 +2989,11 @@
     {
       "id": "src.pmc11115434",
       "display": "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11115434"
+        "pmcid": "PMC11115434",
+        "pmid": "38781109",
+        "doi": "10.15585/mmwr.mm7320e1"
       },
       "usage_count": 1,
       "usages": [
@@ -2989,9 +3007,11 @@
     {
       "id": "src.pmc11277273",
       "display": "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11277273"
+        "pmcid": "PMC11277273",
+        "pmid": "39048118",
+        "doi": "10.4085/1062-6050-0138.22"
       },
       "usage_count": 1,
       "usages": [
@@ -3005,9 +3025,11 @@
     {
       "id": "src.pmc11297363-a",
       "display": "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11297363"
+        "pmcid": "PMC11297363",
+        "pmid": "39100936",
+        "doi": "10.26603/001c.121114"
       },
       "usage_count": 1,
       "usages": [
@@ -3021,10 +3043,11 @@
     {
       "id": "src.pmc11297363-b",
       "display": "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "39100936",
-        "pmcid": "PMC11297363"
+        "pmcid": "PMC11297363",
+        "doi": "10.26603/001c.121114"
       },
       "usage_count": 1,
       "usages": [
@@ -3038,9 +3061,11 @@
     {
       "id": "src.pmc11424229",
       "display": "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11424229"
+        "pmcid": "PMC11424229",
+        "pmid": "39328676",
+        "doi": "10.7759/cureus.67803"
       },
       "usage_count": 1,
       "usages": [
@@ -3054,9 +3079,11 @@
     {
       "id": "src.pmc11531034",
       "display": "Swimming low back pain by stroke, PMC11531034 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11531034"
+        "pmcid": "PMC11531034",
+        "pmid": "38262981",
+        "doi": "10.1177/19417381231225213"
       },
       "usage_count": 2,
       "usages": [
@@ -3075,9 +3102,11 @@
     {
       "id": "src.pmc11642080",
       "display": "FAI rehabilitation & RTS, PMC11642080 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11642080"
+        "pmcid": "PMC11642080",
+        "pmid": "39685760",
+        "doi": "10.3390/jcm13237302"
       },
       "usage_count": 1,
       "usages": [
@@ -3091,10 +3120,11 @@
     {
       "id": "src.pmc11744971",
       "display": "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "39833826",
-        "pmcid": "PMC11744971"
+        "pmcid": "PMC11744971",
+        "doi": "10.1186/s12891-025-08316-5"
       },
       "usage_count": 1,
       "usages": [
@@ -3108,9 +3138,11 @@
     {
       "id": "src.pmc11954903",
       "display": "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11954903"
+        "pmcid": "PMC11954903",
+        "pmid": "40158004",
+        "doi": "10.1038/s41598-025-95486-w"
       },
       "usage_count": 1,
       "usages": [
@@ -3124,9 +3156,11 @@
     {
       "id": "src.pmc11985649",
       "display": "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11985649"
+        "pmcid": "PMC11985649",
+        "pmid": "39752044",
+        "doi": "10.1007/s40279-024-02163-5"
       },
       "usage_count": 1,
       "usages": [
@@ -3140,9 +3174,11 @@
     {
       "id": "src.pmc12234767",
       "display": "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC12234767"
+        "pmcid": "PMC12234767",
+        "pmid": "40624837",
+        "doi": "10.14814/phy2.70430"
       },
       "usage_count": 1,
       "usages": [
@@ -3172,9 +3208,11 @@
     {
       "id": "src.pmc1448328",
       "display": "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC1448328"
+        "pmcid": "PMC1448328",
+        "pmid": "15117691",
+        "doi": "10.2105/ajph.94.5.738"
       },
       "usage_count": 1,
       "usages": [
@@ -3188,9 +3226,11 @@
     {
       "id": "src.pmc1626429",
       "display": "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC1626429"
+        "pmcid": "PMC1626429",
+        "pmid": "17035144",
+        "doi": "10.1289/ehp.8461"
       },
       "usage_count": 1,
       "usages": [
@@ -3204,9 +3244,11 @@
     {
       "id": "src.pmc2858141",
       "display": "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC2858141"
+        "pmcid": "PMC2858141",
+        "pmid": "20380736",
+        "doi": "10.1186/1471-2334-10-91"
       },
       "usage_count": 1,
       "usages": [
@@ -3220,9 +3262,11 @@
     {
       "id": "src.pmc2899837",
       "display": "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC2899837"
+        "pmcid": "PMC2899837",
+        "pmid": "19956985",
+        "doi": "10.1007/s00586-009-1230-3"
       },
       "usage_count": 1,
       "usages": [
@@ -3236,9 +3280,11 @@
     {
       "id": "src.pmc3435931",
       "display": "Competitive swimmers spine degeneration, PMC3435931 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC3435931"
+        "pmcid": "PMC3435931",
+        "pmid": "23016094",
+        "doi": "10.1177/1941738112442132"
       },
       "usage_count": 2,
       "usages": [
@@ -3257,10 +3303,12 @@
     {
       "id": "src.pmc3438875",
       "display": "Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC3438875",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/",
+        "pmid": "23015983",
+        "doi": "10.1177/1941738110377611"
       },
       "usage_count": 1,
       "usages": [
@@ -3274,9 +3322,11 @@
     {
       "id": "src.pmc3488741",
       "display": "Trichloramine and lung function, PMC3488741 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC3488741"
+        "pmcid": "PMC3488741",
+        "pmid": "23048058",
+        "doi": "10.1136/bmjopen-2012-000973"
       },
       "usage_count": 1,
       "usages": [
@@ -3290,9 +3340,11 @@
     {
       "id": "src.pmc3579418",
       "display": "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC3579418"
+        "pmcid": "PMC3579418",
+        "pmid": "22476450",
+        "doi": "10.1007/s00784-012-0720-6"
       },
       "usage_count": 1,
       "usages": [
@@ -3306,9 +3358,10 @@
     {
       "id": "src.pmc3811737",
       "display": "SLAP lesions overview & rehab, PMC3811737 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC3811737"
+        "pmcid": "PMC3811737",
+        "pmid": "24175139"
       },
       "usage_count": 1,
       "usages": [
@@ -3322,10 +3375,12 @@
     {
       "id": "src.pmc4234766-a",
       "display": "The Backstroke Swimming Start: State of the Art",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC4234766",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/",
+        "pmid": "25414737",
+        "doi": "10.2478/hukin-2014-0058"
       },
       "usage_count": 2,
       "usages": [
@@ -3362,9 +3417,11 @@
     {
       "id": "src.pmc4247626",
       "display": "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC4247626"
+        "pmcid": "PMC4247626",
+        "pmid": "25408141",
+        "doi": "10.1186/1471-2474-15-377"
       },
       "usage_count": 1,
       "usages": [
@@ -3378,9 +3435,11 @@
     {
       "id": "src.pmc4528289",
       "display": "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC4528289"
+        "pmcid": "PMC4528289",
+        "pmid": "26288538",
+        "doi": "10.4103/0973-6042.161444"
       },
       "usage_count": 1,
       "usages": [
@@ -3415,9 +3474,11 @@
     {
       "id": "src.pmc5286756",
       "display": "Aquatic dermatoses 回顧, PMC5286756 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC5286756"
+        "pmcid": "PMC5286756",
+        "pmid": "28216728",
+        "doi": "10.4103/0019-5154.198052"
       },
       "usage_count": 1,
       "usages": [
@@ -3431,9 +3492,11 @@
     {
       "id": "src.pmc5800136",
       "display": "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC5800136"
+        "pmcid": "PMC5800136",
+        "pmid": "29278403",
+        "doi": "10.3390/ijerph15010037"
       },
       "usage_count": 1,
       "usages": [
@@ -3447,9 +3510,11 @@
     {
       "id": "src.pmc6092370",
       "display": "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC6092370"
+        "pmcid": "PMC6092370",
+        "pmid": "30108224",
+        "doi": "10.1038/s41533-018-0098-2"
       },
       "usage_count": 1,
       "usages": [
@@ -3463,9 +3528,11 @@
     {
       "id": "src.pmc6137694",
       "display": "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC6137694"
+        "pmcid": "PMC6137694",
+        "pmid": "30224888",
+        "doi": "10.1016/j.sjopt.2017.10.009"
       },
       "usage_count": 1,
       "usages": [
@@ -3479,10 +3546,12 @@
     {
       "id": "src.pmc6409673-a",
       "display": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC6409673",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/",
+        "pmid": "30696072",
+        "doi": "10.3390/sports7020032"
       },
       "usage_count": 1,
       "usages": [
@@ -3496,10 +3565,12 @@
     {
       "id": "src.pmc6409673-b",
       "display": "PMC6409673",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC6409673",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/",
+        "pmid": "30696072",
+        "doi": "10.3390/sports7020032"
       },
       "usage_count": 4,
       "usages": [
@@ -3528,9 +3599,11 @@
     {
       "id": "src.pmc6409673-c",
       "display": "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC6409673"
+        "pmcid": "PMC6409673",
+        "pmid": "30696072",
+        "doi": "10.3390/sports7020032"
       },
       "usage_count": 1,
       "usages": [
@@ -3544,10 +3617,11 @@
     {
       "id": "src.pmc6464216",
       "display": "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "30986226",
-        "pmcid": "PMC6464216"
+        "pmcid": "PMC6464216",
+        "doi": "10.1371/journal.pone.0215352"
       },
       "usage_count": 1,
       "usages": [
@@ -3561,9 +3635,11 @@
     {
       "id": "src.pmc6597118",
       "display": "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC6597118"
+        "pmcid": "PMC6597118",
+        "pmid": "31246941",
+        "doi": "10.15585/mmwr.mm6825a3"
       },
       "usage_count": 1,
       "usages": [
@@ -3577,10 +3653,11 @@
     {
       "id": "src.pmc6863674",
       "display": "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "31798949",
-        "pmcid": "PMC6863674"
+        "pmcid": "PMC6863674",
+        "doi": "10.1136/bmjsem-2019-000615"
       },
       "usage_count": 1,
       "usages": [
@@ -3594,9 +3671,11 @@
     {
       "id": "src.pmc7039474",
       "display": "Site-specific BMD in female swimmers, PMC7039474 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC7039474"
+        "pmcid": "PMC7039474",
+        "pmid": "32148613",
+        "doi": "10.70252/RKTD5438"
       },
       "usage_count": 1,
       "usages": [
@@ -3610,9 +3689,11 @@
     {
       "id": "src.pmc7077213",
       "display": "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC7077213"
+        "pmcid": "PMC7077213",
+        "pmid": "32033062",
+        "doi": "10.3390/sports8020017"
       },
       "usage_count": 1,
       "usages": [
@@ -3642,9 +3723,11 @@
     {
       "id": "src.pmc7584313",
       "display": "Hot tub folliculitis 回顧, PMC7584313 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC7584313"
+        "pmcid": "PMC7584313",
+        "pmid": "33123436",
+        "doi": "10.7759/cureus.10623"
       },
       "usage_count": 1,
       "usages": [
@@ -3658,9 +3741,11 @@
     {
       "id": "src.pmc7605769",
       "display": "Cam morphology in aquatic athletes, PMC7605769 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC7605769"
+        "pmcid": "PMC7605769",
+        "pmid": "33163207",
+        "doi": "10.1093/jhps/hnaa009"
       },
       "usage_count": 1,
       "usages": [
@@ -3674,9 +3759,11 @@
     {
       "id": "src.pmc7824457",
       "display": "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC7824457"
+        "pmcid": "PMC7824457",
+        "pmid": "33396219",
+        "doi": "10.3390/medicina57010029"
       },
       "usage_count": 2,
       "usages": [
@@ -3695,10 +3782,12 @@
     {
       "id": "src.pmc7918682",
       "display": "PMC7918682",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC7918682",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7918682/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7918682/",
+        "pmid": "33672908",
+        "doi": "10.3390/ijerph18041858"
       },
       "usage_count": 1,
       "usages": [
@@ -3712,9 +3801,11 @@
     {
       "id": "src.pmc8136425",
       "display": "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC8136425"
+        "pmcid": "PMC8136425",
+        "pmid": "34014907",
+        "doi": "10.15585/mmwr.mm7020a1"
       },
       "usage_count": 1,
       "usages": [
@@ -3728,9 +3819,11 @@
     {
       "id": "src.pmc8147101",
       "display": "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC8147101"
+        "pmcid": "PMC8147101",
+        "pmid": "33946739",
+        "doi": "10.3390/antibiotics10050505"
       },
       "usage_count": 1,
       "usages": [
@@ -3744,9 +3837,11 @@
     {
       "id": "src.pmc8192199",
       "display": "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC8192199"
+        "pmcid": "PMC8192199",
+        "pmid": "34188959",
+        "doi": "10.1155/2021/9937730"
       },
       "usage_count": 1,
       "usages": [
@@ -3777,9 +3872,11 @@
     {
       "id": "src.pmc8442910-b",
       "display": "Frontiers in Physiology 2021, PMC8442910",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC8442910"
+        "pmcid": "PMC8442910",
+        "pmid": "34539436",
+        "doi": "10.3389/fphys.2021.712652"
       },
       "usage_count": 1,
       "usages": [
@@ -3826,10 +3923,11 @@
     {
       "id": "src.pmc8827183",
       "display": "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "35139872",
-        "pmcid": "PMC8827183"
+        "pmcid": "PMC8827183",
+        "doi": "10.1186/s13018-022-02979-9"
       },
       "usage_count": 1,
       "usages": [
@@ -3843,10 +3941,11 @@
     {
       "id": "src.pmc8869186",
       "display": "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "34990396",
-        "pmcid": "PMC8869186"
+        "pmcid": "PMC8869186",
+        "doi": "10.3399/BJGP.2021.0386"
       },
       "usage_count": 1,
       "usages": [
@@ -3876,9 +3975,11 @@
     {
       "id": "src.pmc8960438-b",
       "display": "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC8960438"
+        "pmcid": "PMC8960438",
+        "pmid": "35359502",
+        "doi": "10.3389/fspor.2022.802967"
       },
       "usage_count": 1,
       "usages": [
@@ -3913,10 +4014,12 @@
     {
       "id": "src.pmc8960438-d",
       "display": "PMC8960438",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC8960438",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8960438/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8960438/",
+        "pmid": "35359502",
+        "doi": "10.3389/fspor.2022.802967"
       },
       "usage_count": 4,
       "usages": [
@@ -3945,9 +4048,11 @@
     {
       "id": "src.pmc9057286",
       "display": "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC9057286"
+        "pmcid": "PMC9057286",
+        "pmid": "35505675",
+        "doi": "10.7717/peerj.13243"
       },
       "usage_count": 1,
       "usages": [
@@ -3983,9 +4088,11 @@
     {
       "id": "src.pmc9402090-b",
       "display": "PMC9402090, 2022",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC9402090"
+        "pmcid": "PMC9402090",
+        "pmid": "36032263",
+        "doi": "10.3389/fspor.2022.948034"
       },
       "usage_count": 1,
       "usages": [
@@ -4032,10 +4139,12 @@
     {
       "id": "src.pmc9445308",
       "display": "PMC9445308 Frontiers 2022",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC9445308",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/",
+        "pmid": "36081618",
+        "doi": "10.3389/fspor.2022.963578"
       },
       "usage_count": 2,
       "usages": [
@@ -4054,10 +4163,11 @@
     {
       "id": "src.pmc9658102",
       "display": "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "36361122",
-        "pmcid": "PMC9658102"
+        "pmcid": "PMC9658102",
+        "doi": "10.3390/ijerph192114243"
       },
       "usage_count": 1,
       "usages": [
@@ -4071,9 +4181,11 @@
     {
       "id": "src.pmc9699060",
       "display": "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC9699060"
+        "pmcid": "PMC9699060",
+        "pmid": "36431252",
+        "doi": "10.3390/jcm11226775"
       },
       "usage_count": 1,
       "usages": [
@@ -4087,10 +4199,11 @@
     {
       "id": "src.pmc9724109",
       "display": "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "36479178",
-        "pmcid": "PMC9724109"
+        "pmcid": "PMC9724109",
+        "doi": "10.5960/dzsm.2022.546"
       },
       "usage_count": 1,
       "usages": [
@@ -4200,9 +4313,10 @@
     {
       "id": "src.pmid-24984154",
       "display": "PubMed 24984154",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "24984154"
+        "pmid": "24984154",
+        "doi": "10.1016/j.humov.2014.05.004"
       },
       "usage_count": 3,
       "usages": [
@@ -4226,9 +4340,10 @@
     {
       "id": "src.pmid-25443755",
       "display": "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "25443755"
+        "pmid": "25443755",
+        "doi": "10.1016/j.wem.2014.07.010"
       },
       "usage_count": 1,
       "usages": [
@@ -4281,10 +4396,11 @@
     {
       "id": "src.pmid-28975846",
       "display": "PubMed 28975846",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "28975846",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/28975846/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28975846/",
+        "doi": "10.1080/14763141.2017.1353130"
       },
       "usage_count": 2,
       "usages": [
@@ -4303,7 +4419,7 @@
     {
       "id": "src.pmid-30485006",
       "display": "Proximal humeral epiphysiolysis (little league shoulder), PMID 30485006 (摘要層級)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "30485006"
       },
@@ -4319,7 +4435,7 @@
     {
       "id": "src.pmid-30521295",
       "display": "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "30521295"
       },
@@ -4351,7 +4467,7 @@
     {
       "id": "src.pmid-32310515",
       "display": "StatPearls Otitis Externa, PMID 32310515 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "32310515"
       },
@@ -4367,9 +4483,10 @@
     {
       "id": "src.pmid-33010194",
       "display": "Swimming injuries narrative review, PubMed 33010194 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "33010194"
+        "pmid": "33010194",
+        "doi": "10.1002/pmrj.12503"
       },
       "usage_count": 1,
       "usages": [
@@ -4416,10 +4533,11 @@
     {
       "id": "src.pmid-40252339-a",
       "display": "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "40252339",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/40252339/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40252339/",
+        "doi": "10.1016/j.jbiomech.2025.112694"
       },
       "usage_count": 1,
       "usages": [
@@ -4433,9 +4551,10 @@
     {
       "id": "src.pmid-40252339-b",
       "display": "PubMed 40252339",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "40252339"
+        "pmid": "40252339",
+        "doi": "10.1016/j.jbiomech.2025.112694"
       },
       "usage_count": 4,
       "usages": [
@@ -4480,9 +4599,10 @@
     {
       "id": "src.pmid-7673417",
       "display": "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "7673417"
+        "pmid": "7673417",
+        "doi": "10.1210/jcem.80.9.7673417"
       },
       "usage_count": 1,
       "usages": [

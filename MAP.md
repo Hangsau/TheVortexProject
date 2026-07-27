@@ -30,6 +30,7 @@
 | 改 diagnostic（A/B/C 型診斷、失敗訊號）——**只給教練/swim-coach** | canonical YAML 的 `diagnostic{}` 區塊；**絕不會進 my-site** |
 | 加研究主題/假設 | `research/{感知科學,物理現象,週期化}/`，狀態碼見下方 §4 |
 | 重生機器索引／查看資料缺口 | `python tools/build_indices.py` → `indices/*.json` |
+| 盤點／批次查驗來源 | `python tools/audit_sources.py` → `python tools/verify_source_identifiers.py`；review 後才用 `python tools/apply_verified_sources.py --apply` |
 
 ---
 

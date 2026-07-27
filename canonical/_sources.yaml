@@ -7,7 +7,7 @@ description: >-
   再登錄 338 筆（含 canonical 單數、Drills、psychology／health 的 sources 複數清單），
   合計 476 筆。兩批都是逐字登錄成來源條目，並由條目端以 source_ids 指入。
   來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
-generated_date: "2026-07-26"
+generated_date: "2026-07-27"
 
 # ── 欄位契約（v2；S3a 修訂）─────────────────────────────────────────────────
 #
@@ -125,7 +125,11 @@ generated_date: "2026-07-26"
 #
 # ── 已知限制（交給 S3c）──────────────────────────────────────────────────
 #
-# 全 476 筆都是 unverified：S3a／S3a-2 沒有做任何外部查證，只做轉錄。
+# S3c 狀態（2026-07-27）：第一批 authoritative identifier dereference 完成。
+# 74 筆由 PubMed／PMC／Crossref metadata 完全對上後標 verified；另 1 筆
+# McKenzie 2023 因原 DOI 值夾帶全形註記使 Crossref 查詢失敗，改以 PubMed 37515375
+# 與 Wiley DOI metadata 人工交叉核對後標 verified。現為 verified 75／unverified 401。
+# 其餘 S3a／S3a-2 歷史盤點保留如下，數字描述的是「遷入當時」而非當前狀態。
 #
 # S3a（138 筆）
 #   1. 40 筆的 identifier 是從顯示字串或同層 url 欄位**逐字轉錄**而來
@@ -188,10 +192,16 @@ sources:
 
   - id: src.aiac-ijkss-v-6n-1p-25
     display: "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)"
+    title: "Swimmers Are At Risk For Stress Fractures? A Systematic Review"
     type: review
-    verification_status: unverified
+    verification_status: verified
+    authors: ["Angelo V. Vasiliadis", "Vasileios Lampridis", "Dimitrios Georgiannos", "Ilias Bisbinas"]
+    year: 2018
+    container: "International Journal of Kinesiology and Sports Science"
     identifier:
       doi: "10.7575/aiac.ijkss.v.6n.1p.25"
+      url: "https://doi.org/10.7575/aiac.ijkss.v.6n.1p.25"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.akkurt-2017
@@ -230,25 +240,33 @@ sources:
 
   - id: src.atkison-2014-a
     display: "Atkison et al. 2014"
-    type: other
-    verification_status: unverified
-    authors: ["Atkison"]
-    et_al: true
+    title: "Importance of sagittal kick symmetry for underwater dolphin kick performance."
+    type: journal-article
+    verification_status: verified
+    authors: ["Atkison RR", "Dickey JP", "Dragunas A", "Nolte V"]
     year: 2014
+    container: "Human movement science"
     identifier:
       pmid: "24290609"
       url: "https://pubmed.ncbi.nlm.nih.gov/24290609/"
+      doi: "10.1016/j.humov.2013.08.013"
+    retrieved_on: "2026-07-27"
+    et_al: true
     notes: "疑似與 src.atkison-2014-b、src.atkison-2014-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-b、src.atkison-2014-c 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.atkison-2014-b
     display: "Atkison et al. 2014, PubMed 24290609"
-    type: other
-    verification_status: unverified
-    authors: ["Atkison"]
-    et_al: true
+    title: "Importance of sagittal kick symmetry for underwater dolphin kick performance."
+    type: journal-article
+    verification_status: verified
+    authors: ["Atkison RR", "Dickey JP", "Dragunas A", "Nolte V"]
     year: 2014
+    container: "Human movement science"
     identifier:
       pmid: "24290609"
+      doi: "10.1016/j.humov.2013.08.013"
+    retrieved_on: "2026-07-27"
+    et_al: true
     notes: "疑似與 src.atkison-2014-a、src.atkison-2014-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-a、src.atkison-2014-c 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.atkison-2014-c
@@ -810,13 +828,16 @@ sources:
 
   - id: src.grote-2004
     display: "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)"
-    type: other
-    verification_status: unverified
-    authors: ["Grote"]
+    title: "Hip adductor injury in competitive swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Grote K", "Lincoln TL", "Gamble JG"]
     year: 2004
+    container: "The American journal of sports medicine"
     identifier:
       pmid: "14754731"
-
+      doi: "10.1177/0363546503258905"
+    retrieved_on: "2026-07-27"
   - id: src.hall-sr-2020
     display: "Hall Sr. 2020"
     type: other
@@ -914,12 +935,16 @@ sources:
 
   - id: src.journal-pone-0241345-b
     display: "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020"
-    type: other
-    verification_status: unverified
+    title: "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Marit P. van Dijk", "Peter J. Beek", "A. J. Knoek van Soest"]
     year: 2020
+    container: "PLOS ONE"
     identifier:
       doi: "10.1371/journal.pone.0241345"
       url: "https://doi.org/10.1371/journal.pone.0241345"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.journal-pone-0241345-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.journal-pone-0241345-a 共用 doi 10.1371/journal.pone.0241345，疑似同一文獻，待 S3c 查證。"
 
   - id: src.kudo-2014
@@ -1107,13 +1132,18 @@ sources:
 
   - id: src.mckenzie-2023-a
     display: "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）"
-    type: other
-    verification_status: unverified
-    authors: ["McKenzie"]
+    title: "Shoulder pain and injury risk factors in competitive swimmers: A systematic review"
+    type: review
+    verification_status: verified
+    authors: ["Alec McKenzie", "Sophie-Alexandra Larequi", "Andrea Hams", "Jonathon Headrick", "Rod Whiteley", "Steven Duhig"]
     year: 2023
+    container: "Scandinavian Journal of Medicine & Science in Sports"
     identifier:
-      doi: "10.1111/sms.14454（DOI"
-    notes: "疑似與 src.mckenzie-2023-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。"
+      doi: "10.1111/sms.14454"
+      pmid: "37515375"
+      url: "https://pubmed.ncbi.nlm.nih.gov/37515375/"
+    retrieved_on: "2026-07-27"
+    notes: "疑似與 src.mckenzie-2023-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。S3c：DOI 與 PMID 37515375 已交叉核對。"
 
   - id: src.mckenzie-2023-b
     display: "McKenzie et al. 2023 SR, Scand J Med Sci Sports (DOI 10.1111/sms.14454); Kabat D2 彈力帶計畫, Frontiers Physiology 2023 (PMC10679734); 綜合傷害預防 RCT (ScienceDirect S1360859225004899)"
@@ -1341,52 +1371,86 @@ sources:
 
   - id: src.pmc10339925
     display: "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes-A Narrative Review."
+    type: journal-article
+    verification_status: verified
+    authors: ["Kliniec K", "Tota M", "Zalesińska A", "Łyko M", "Jankowska-Konsur A"]
     year: 2023
+    container: "Cancers"
     identifier:
       pmcid: "PMC10339925"
-
+      pmid: "37444391"
+      doi: "10.3390/cancers15133281"
+    retrieved_on: "2026-07-27"
   - id: src.pmc10356869
     display: "Commotio Cordis in 2023, PMC10356869 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Commotio Cordis in 2023."
+    type: journal-article
+    verification_status: verified
+    authors: ["Peng T", "Derry LT", "Yogeswaran V", "Goldschlager NF"]
     year: 2023
+    container: "Sports medicine (Auckland, N.Z.)"
     identifier:
       pmcid: "PMC10356869"
-
+      pmid: "37382827"
+      doi: "10.1007/s40279-023-01873-6"
+    retrieved_on: "2026-07-27"
   - id: src.pmc10366873
     display: "Delayed Effect of Dry-Land Strength Training Sessions on Swimming Performance, J Funct Morphol Kinesiol 2023 (PMID 37489300 / PMC10366873)"
-    type: other
-    verification_status: unverified
+    title: "Delayed Effect of Dry-Land Strength Training Sessions on Swimming Performance."
+    type: journal-article
+    verification_status: verified
+    authors: ["Tsoltos A", "Arsoniadis G", "Tsolakis C", "Koulouvaris P", "Simeonidis T", "Chatzigiannakis A", "Toubekis A"]
     year: 2023
+    container: "Journal of functional morphology and kinesiology"
     identifier:
       pmid: "37489300"
       pmcid: "PMC10366873"
-
+      doi: "10.3390/jfmk8030087"
+    retrieved_on: "2026-07-27"
   - id: src.pmc10372189
     display: "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Descriptive Epidemiology of High School Swimming and Diving Injuries."
+    type: journal-article
+    verification_status: verified
+    authors: ["Belilos E", "Jow S", "Maxwell M"]
+    year: 2023
+    container: "Clinical journal of sport medicine : official journal of the Canadian Academy of Sport Medicine"
     identifier:
       pmcid: "PMC10372189"
+      pmid: "36715985"
+      doi: "10.1097/JSM.0000000000001121"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc10689961
     display: "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Unintentional Drowning Mortality Among Individuals Under Age 20 - China, 2013-2021."
+    type: journal-article
+    verification_status: verified
+    authors: ["Li Z", "Deng X", "Jin Y", "Duan L", "Ye P"]
+    year: 2023
+    container: "China CDC weekly"
     identifier:
       pmid: "38047245"
       pmcid: "PMC10689961"
+      doi: "10.46234/ccdcw2023.198"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc10713671
     display: "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Erosive tooth wear and salivary parameters among competitive swimmers and non-swimmers in Egypt: a cross-sectional study."
+    type: journal-article
+    verification_status: verified
+    authors: ["Abdelrahman HH", "Ammar N", "Hassan MG", "Essam W", "Amer H"]
+    year: 2023
+    container: "Clinical oral investigations"
     identifier:
       pmcid: "PMC10713671"
+      pmid: "37924355"
+      doi: "10.1007/s00784-023-05367-7"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc10813451
@@ -1400,94 +1464,163 @@ sources:
 
   - id: src.pmc11115434
     display: "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure - United States, 2019-2023."
+    type: journal-article
+    verification_status: verified
+    authors: ["Clemens T", "Moreland B", "Mack KA", "Thomas K", "Bergen G", "Lee R"]
     year: 2024
+    container: "MMWR. Morbidity and mortality weekly report"
     identifier:
       pmcid: "PMC11115434"
-
+      pmid: "38781109"
+      doi: "10.15585/mmwr.mm7320e1"
+    retrieved_on: "2026-07-27"
   - id: src.pmc11277273
     display: "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Current Clinical Concepts: Rehabilitation of Thoracic Outlet Syndrome."
+    type: journal-article
+    verification_status: verified
+    authors: ["Hock G", "Johnson A", "Barber P", "Papa C"]
+    year: 2024
+    container: "Journal of athletic training"
     identifier:
       pmcid: "PMC11277273"
+      pmid: "39048118"
+      doi: "10.4085/1062-6050-0138.22"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11297363-a
     display: "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Shoulder Pain in Competitive Swimmers: A Multi-Site Survey Study."
+    type: journal-article
+    verification_status: verified
+    authors: ["Stirling BD", "Sum JC", "Baek L", "Michener LA", "Barrack AJ", "Tate AR"]
+    year: 2024
+    container: "International journal of sports physical therapy"
     identifier:
       pmcid: "PMC11297363"
+      pmid: "39100936"
+      doi: "10.26603/001c.121114"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc11297363-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc11297363-b 共用 pmcid PMC11297363，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11297363-b
     display: "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Shoulder Pain in Competitive Swimmers: A Multi-Site Survey Study."
+    type: journal-article
+    verification_status: verified
+    authors: ["Stirling BD", "Sum JC", "Baek L", "Michener LA", "Barrack AJ", "Tate AR"]
+    year: 2024
+    container: "International journal of sports physical therapy"
     identifier:
       pmid: "39100936"
       pmcid: "PMC11297363"
+      doi: "10.26603/001c.121114"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc11297363-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc11297363-a 共用 pmcid PMC11297363，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11424229
     display: "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies."
+    type: journal-article
+    verification_status: verified
+    authors: ["Garg D", "Daigavane S"]
+    year: 2024
+    container: "Cureus"
     identifier:
       pmcid: "PMC11424229"
+      pmid: "39328676"
+      doi: "10.7759/cureus.67803"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11531034
     display: "Swimming low back pain by stroke, PMC11531034 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review."
+    type: journal-article
+    verification_status: verified
+    authors: ["Hsu C", "Krabak B", "Cunningham B", "Borg-Stein J"]
+    year: 2024
+    container: "Sports health"
     identifier:
       pmcid: "PMC11531034"
+      pmid: "38262981"
+      doi: "10.1177/19417381231225213"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11642080
     display: "FAI rehabilitation & RTS, PMC11642080 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review."
+    type: journal-article
+    verification_status: verified
+    authors: ["Monselli C", "Bianco Prevot L", "Accetta R", "Tronconi LP", "Bolcato V", "Basile G"]
+    year: 2024
+    container: "Journal of clinical medicine"
     identifier:
       pmcid: "PMC11642080"
+      pmid: "39685760"
+      doi: "10.3390/jcm13237302"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11744971
     display: "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Exercise interventions to improve bone mineral density in athletes participating in low-impact sports: a scoping review."
+    type: journal-article
+    verification_status: verified
+    authors: ["Florvåg AG", "Berg ØA", "Røksund OD", "Jorem GT", "Bogen BE"]
+    year: 2025
+    container: "BMC musculoskeletal disorders"
     identifier:
       pmid: "39833826"
       pmcid: "PMC11744971"
+      doi: "10.1186/s12891-025-08316-5"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11954903
     display: "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Global burden of drowning and risk factors across 204 countries from 1990 to 2021."
+    type: journal-article
+    verification_status: verified
+    authors: ["Xie Z", "Huang Z", "Ran Q", "Luo W", "Du W"]
     year: 2025
+    container: "Scientific reports"
     identifier:
       pmcid: "PMC11954903"
-
+      pmid: "40158004"
+      doi: "10.1038/s41598-025-95486-w"
+    retrieved_on: "2026-07-27"
   - id: src.pmc11985649
     display: "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Sex Differences in the Incidence of Sudden Cardiac Arrest/Death in Competitive Athletes: A Systematic Review and Meta-analysis."
+    type: journal-article
+    verification_status: verified
+    authors: ["Li L", "Le Douairon Lahaye S", "Ding S", "Schnell F"]
+    year: 2025
+    container: "Sports medicine (Auckland, N.Z.)"
     identifier:
       pmcid: "PMC11985649"
+      pmid: "39752044"
+      doi: "10.1007/s40279-024-02163-5"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc12234767
     display: "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Assessment of arrhythmias and heart rate response in healthy adolescents performing face immersion and body submersion in ice-cold water."
+    type: journal-article
+    verification_status: verified
+    authors: ["Lundström A", "Karlsson M", "Rydberg A", "Wiklund U"]
     year: 2025
+    container: "Physiological reports"
     identifier:
       pmcid: "PMC12234767"
-
+      pmid: "40624837"
+      doi: "10.14814/phy2.70430"
+    retrieved_on: "2026-07-27"
   - id: src.pmc12847173
     display: "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)"
     type: other
@@ -1498,84 +1631,153 @@ sources:
 
   - id: src.pmc1448328
     display: "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Swimmer's itch: incidence and risk factors."
+    type: journal-article
+    verification_status: verified
+    authors: ["Verbrugge LM", "Rainey JJ", "Reimink RL", "Blankespoor HD"]
+    year: 2004
+    container: "American journal of public health"
     identifier:
       pmcid: "PMC1448328"
+      pmid: "15117691"
+      doi: "10.2105/ajph.94.5.738"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc1626429
     display: "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Chlorinated pool attendance, atopy, and the risk of asthma during childhood."
+    type: journal-article
+    verification_status: verified
+    authors: ["Bernard A", "Carbonnelle S", "de Burbure C", "Michel O", "Nickmilder M"]
+    year: 2006
+    container: "Environmental health perspectives"
     identifier:
       pmcid: "PMC1626429"
+      pmid: "17035144"
+      doi: "10.1289/ehp.8461"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc2858141
     display: "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Outbreak of leptospirosis among triathlon participants in Germany, 2006."
+    type: journal-article
+    verification_status: verified
+    authors: ["Brockmann S", "Piechotowski I", "Bock-Hensley O", "Winter C", "Oehme R", "Zimmermann S", "Hartelt K", "Luge E", "Nöckler K", "Schneider T", "Stark K", "Jansen A"]
+    year: 2010
+    container: "BMC infectious diseases"
     identifier:
       pmcid: "PMC2858141"
+      pmid: "20380736"
+      doi: "10.1186/1471-2334-10-91"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc2899837
     display: "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Cervical spine injuries resulting from diving accidents in swimming pools: outcome of 34 patients."
+    type: journal-article
+    verification_status: verified
+    authors: ["Borius PY", "Gouader I", "Bousquet P", "Draper L", "Roux FE"]
+    year: 2010
+    container: "European spine journal : official publication of the European Spine Society, the European Spinal Deformity Society, and the European Section of the Cervical Spine Research Society"
     identifier:
       pmcid: "PMC2899837"
+      pmid: "19956985"
+      doi: "10.1007/s00586-009-1230-3"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3435931
     display: "Competitive swimmers spine degeneration, PMC3435931 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Epidemiology of injuries and prevention strategies in competitive swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Wanivenhaus F", "Fox AJ", "Chaudhury S", "Rodeo SA"]
+    year: 2012
+    container: "Sports health"
     identifier:
       pmcid: "PMC3435931"
+      pmid: "23016094"
+      doi: "10.1177/1941738112442132"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3438875
     display: "Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875"
-    type: other
-    verification_status: unverified
+    title: "Biomechanical Considerations in the Competitive Swimmer's Shoulder."
+    type: journal-article
+    verification_status: verified
+    authors: ["Heinlein SA", "Cosgarea AJ"]
+    year: 2010
+    container: "Sports health"
     identifier:
       pmcid: "PMC3438875"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/"
+      pmid: "23015983"
+      doi: "10.1177/1941738110377611"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3488741
     display: "Trichloramine and lung function, PMC3488741 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Lung function in volunteers before and after exposure to trichloramine in indoor pool environments and asthma in a cohort of pool workers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Nordberg GF", "Lundstrom NG", "Forsberg B", "Hagenbjork-Gustafsson A", "Lagerkvist BJ", "Nilsson J", "Svensson M", "Blomberg A", "Nilsson L", "Bernard A", "Dumont X", "Bertilsson H", "Eriksson K"]
+    year: 2012
+    container: "BMJ open"
     identifier:
       pmcid: "PMC3488741"
+      pmid: "23048058"
+      doi: "10.1136/bmjopen-2012-000973"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3579418
     display: "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Prevalence of dental erosion in adolescent competitive swimmers exposed to gas-chlorinated swimming pool water."
+    type: journal-article
+    verification_status: verified
+    authors: ["Buczkowska-Radlińska J", "Łagocka R", "Kaczmarek W", "Górski M", "Nowicka A"]
+    year: 2013
+    container: "Clinical oral investigations"
     identifier:
       pmcid: "PMC3579418"
+      pmid: "22476450"
+      doi: "10.1007/s00784-012-0720-6"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3811737
     display: "SLAP lesions overview & rehab, PMC3811737 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "The recognition and treatment of superior labral (slap) lesions in the overhead athlete."
+    type: journal-article
+    verification_status: verified
+    authors: ["Wilk KE", "Macrina LC", "Cain EL", "Dugas JR", "Andrews JR"]
+    year: 2013
+    container: "International journal of sports physical therapy"
     identifier:
       pmcid: "PMC3811737"
+      pmid: "24175139"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc4234766-a
     display: "The Backstroke Swimming Start: State of the Art"
-    type: other
-    verification_status: unverified
+    title: "The backstroke swimming start: state of the art."
+    type: journal-article
+    verification_status: verified
+    authors: ["de Jesus K", "de Jesus K", "Fernandes RJ", "Vilas-Boas JP", "Sanders R"]
+    year: 2014
+    container: "Journal of human kinetics"
     identifier:
       pmcid: "PMC4234766"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
+      pmid: "25414737"
+      doi: "10.2478/hukin-2014-0058"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc4234766-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc4234766-b 共用 pmcid PMC4234766，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc4234766-b
@@ -1590,18 +1792,32 @@ sources:
 
   - id: src.pmc4247626
     display: "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)"
+    title: "Relationship between chronic pathologies of the supraspinatus tendon and the long head of the biceps tendon: systematic review."
     type: review
-    verification_status: unverified
+    verification_status: verified
+    authors: ["Redondo-Alonso L", "Chamorro-Moriana G", "Jiménez-Rejano JJ", "López-Tarrida P", "Ridao-Fernández C"]
+    year: 2014
+    container: "BMC musculoskeletal disorders"
     identifier:
       pmcid: "PMC4247626"
+      pmid: "25408141"
+      doi: "10.1186/1471-2474-15-377"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc4528289
     display: "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Sorting swimmers shoulders: An observational study on swimmers that presented to a shoulder surgeon."
+    type: journal-article
+    verification_status: verified
+    authors: ["Butler D", "Funk L", "Mackenzie TA", "Herrington LC"]
+    year: 2015
+    container: "International journal of shoulder surgery"
     identifier:
       pmcid: "PMC4528289"
+      pmid: "26288538"
+      doi: "10.4103/0973-6042.161444"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc5260528
@@ -1614,102 +1830,182 @@ sources:
 
   - id: src.pmc5286756
     display: "Aquatic dermatoses 回顧, PMC5286756 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Marine and Other Aquatic Dermatoses."
+    type: journal-article
+    verification_status: verified
+    authors: ["Sridhar SC", "Deo SC"]
+    year: 2017
+    container: "Indian journal of dermatology"
     identifier:
       pmcid: "PMC5286756"
+      pmid: "28216728"
+      doi: "10.4103/0019-5154.198052"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc5800136
     display: "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)"
+    title: "Occupational Exposure to Solar Radiation at Different Latitudes and Pterygium: A Systematic Review of the Last 10 Years of Scientific Literature."
     type: review
-    verification_status: unverified
+    verification_status: verified
+    authors: ["Modenese A", "Gobba F"]
+    year: 2017
+    container: "International journal of environmental research and public health"
     identifier:
       pmcid: "PMC5800136"
+      pmid: "29278403"
+      doi: "10.3390/ijerph15010037"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6092370
     display: "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Exercise-induced bronchoconstriction: prevalence, pathophysiology, patient impact, diagnosis and management."
+    type: journal-article
+    verification_status: verified
+    authors: ["Aggarwal B", "Mulgirigama A", "Berend N"]
+    year: 2018
+    container: "NPJ primary care respiratory medicine"
     identifier:
       pmcid: "PMC6092370"
+      pmid: "30108224"
+      doi: "10.1038/s41533-018-0098-2"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6137694
     display: "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Water related ocular diseases."
+    type: journal-article
+    verification_status: verified
+    authors: ["Ahmad SS"]
+    year: 2018
+    container: "Saudi journal of ophthalmology : official journal of the Saudi Ophthalmological Society"
     identifier:
       pmcid: "PMC6137694"
+      pmid: "30224888"
+      doi: "10.1016/j.sjopt.2017.10.009"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6409673-a
     display: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673"
-    type: other
-    verification_status: unverified
+    title: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques."
+    type: journal-article
+    verification_status: verified
+    authors: ["Weimar W", "Sumner A", "Romer B", "Fox J", "Rehm J", "Decoux B", "Patel J"]
+    year: 2019
+    container: "Sports (Basel, Switzerland)"
     identifier:
       pmcid: "PMC6409673"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+      pmid: "30696072"
+      doi: "10.3390/sports7020032"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc6409673-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc6409673-b 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。 S3a-2 補記：疑似與 src.pmc6409673-c（S3a-2 新增，共用 pmcid PMC6409673）、src.pmc6409673-c（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
 
   - id: src.pmc6409673-b
     display: "PMC6409673"
-    type: other
-    verification_status: unverified
+    title: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques."
+    type: journal-article
+    verification_status: verified
+    authors: ["Weimar W", "Sumner A", "Romer B", "Fox J", "Rehm J", "Decoux B", "Patel J"]
+    year: 2019
+    container: "Sports (Basel, Switzerland)"
     identifier:
       pmcid: "PMC6409673"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
+      pmid: "30696072"
+      doi: "10.3390/sports7020032"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc6409673-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc6409673-a 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。 S3a-2 補記：疑似與 src.pmc6409673-c（S3a-2 新增，共用 pmcid PMC6409673）、src.pmc6409673-c（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
 
   - id: src.pmc6409673-c
     display: "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)"
-    type: other
-    verification_status: unverified
+    title: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques."
+    type: journal-article
+    verification_status: verified
+    authors: ["Weimar W", "Sumner A", "Romer B", "Fox J", "Rehm J", "Decoux B", "Patel J"]
+    year: 2019
+    container: "Sports (Basel, Switzerland)"
     identifier:
       pmcid: "PMC6409673"
+      pmid: "30696072"
+      doi: "10.3390/sports7020032"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc6409673-a、src.pmc6409673-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc6409673-a、src.pmc6409673-b 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6464216
     display: "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Japanese translation and modification of the Oslo Sports Trauma Research Centre overuse injury questionnaire to evaluate overuse injuries in female college swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Nagano Y", "Kobayashi-Yamakawa K", "Higashihara A", "Yako-Suketomo H"]
+    year: 2019
+    container: "PloS one"
     identifier:
       pmid: "30986226"
       pmcid: "PMC6464216"
+      doi: "10.1371/journal.pone.0215352"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6597118
     display: "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Cryptosporidiosis Outbreaks - United States, 2009-2017."
+    type: journal-article
+    verification_status: verified
+    authors: ["Gharpure R", "Perez A", "Miller AD", "Wikswo ME", "Silver R", "Hlavsa MC"]
+    year: 2019
+    container: "MMWR. Morbidity and mortality weekly report"
     identifier:
       pmcid: "PMC6597118"
+      pmid: "31246941"
+      doi: "10.15585/mmwr.mm6825a3"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6863674
     display: "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)"
-    type: other
-    verification_status: unverified
+    title: "Injury trend analysis in the Japan national swim team from 2002 to 2016: effect of the lumbar injury prevention project."
+    type: journal-article
+    verification_status: verified
+    authors: ["Matsuura Y", "Hangai M", "Koizumi K", "Ueno K", "Hirai N", "Akuzawa H", "Kaneoka K"]
     year: 2019
+    container: "BMJ open sport & exercise medicine"
     identifier:
       pmid: "31798949"
       pmcid: "PMC6863674"
-
+      doi: "10.1136/bmjsem-2019-000615"
+    retrieved_on: "2026-07-27"
   - id: src.pmc7039474
     display: "Site-specific BMD in female swimmers, PMC7039474 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Site-Specific Effects of Swimming on Bone Density in Female Collegiate Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Miller M", "Kojetin S", "Scibora L"]
+    year: 2020
+    container: "International journal of exercise science"
     identifier:
       pmcid: "PMC7039474"
+      pmid: "32148613"
+      doi: "10.70252/RKTD5438"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7077213
     display: "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "The Prevalence and Severity of External Auditory Exostosis in Young to Quadragenarian-Aged Warm-Water Surfers: A Preliminary Study."
+    type: journal-article
+    verification_status: verified
+    authors: ["Simas V", "Hing W", "Furness J", "Walsh J", "Climstein M"]
+    year: 2020
+    container: "Sports (Basel, Switzerland)"
     identifier:
       pmcid: "PMC7077213"
+      pmid: "32033062"
+      doi: "10.3390/sports8020017"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7340704
@@ -1722,59 +2018,108 @@ sources:
 
   - id: src.pmc7584313
     display: "Hot tub folliculitis 回顧, PMC7584313 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors."
+    type: journal-article
+    verification_status: verified
+    authors: ["Jacob JS", "Tschen J"]
+    year: 2020
+    container: "Cureus"
     identifier:
       pmcid: "PMC7584313"
+      pmid: "33123436"
+      doi: "10.7759/cureus.10623"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7605769
     display: "Cam morphology in aquatic athletes, PMC7605769 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "The prevalence of femoroacetabular impingement anatomy in Division 1 aquatic athletes who tread water."
+    type: journal-article
+    verification_status: verified
+    authors: ["Langner JL", "Black MS", "MacKay JW", "Hall KE", "Safran MR", "Kogan F", "Gold GE"]
+    year: 2020
+    container: "Journal of hip preservation surgery"
     identifier:
       pmcid: "PMC7605769"
+      pmid: "33163207"
+      doi: "10.1093/jhps/hnaa009"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7824457
     display: "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Suzuki Y", "Maeda N", "Sasadai J", "Kaneda K", "Shirakawa T", "Urabe Y"]
+    year: 2020
+    container: "Medicina (Kaunas, Lithuania)"
     identifier:
       pmcid: "PMC7824457"
+      pmid: "33396219"
+      doi: "10.3390/medicina57010029"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7918682
     display: "PMC7918682"
-    type: other
-    verification_status: unverified
+    title: "Backstroke to Breaststroke Turning Performance in Age-Group Swimmers: Hydrodynamic Characteristics and Pull-Out Strategy."
+    type: journal-article
+    verification_status: verified
+    authors: ["Chainok P", "Machado L", "de Jesus K", "Abraldes JA", "Borgonovo-Santos M", "Fernandes RJ", "Vilas-Boas JP"]
+    year: 2021
+    container: "International journal of environmental research and public health"
     identifier:
       pmcid: "PMC7918682"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC7918682/"
+      pmid: "33672908"
+      doi: "10.3390/ijerph18041858"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8136425
     display: "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Outbreaks Associated with Treated Recreational Water - United States, 2015-2019."
+    type: journal-article
+    verification_status: verified
+    authors: ["Hlavsa MC", "Aluko SK", "Miller AD", "Person J", "Gerdes ME", "Lee S", "Laco JP", "Hannapel EJ", "Hill VR"]
+    year: 2021
+    container: "MMWR. Morbidity and mortality weekly report"
     identifier:
       pmcid: "PMC8136425"
+      pmid: "34014907"
+      doi: "10.15585/mmwr.mm7020a1"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8147101
     display: "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan."
+    type: journal-article
+    verification_status: verified
+    authors: ["Lin IC", "Hussain B", "Hsu BM", "Chen JS", "Hsu YL", "Chiu YC", "Huang SW", "Wang JL"]
+    year: 2021
+    container: "Antibiotics (Basel, Switzerland)"
     identifier:
       pmcid: "PMC8147101"
+      pmid: "33946739"
+      doi: "10.3390/antibiotics10050505"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8192199
     display: "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "An Overview of Spinal Injuries due to Dive or Fall into Shallow Water: Our Long-Term, Double-Center Experience from the Aegean Coast."
+    type: journal-article
+    verification_status: verified
+    authors: ["Yılmaz M", "Ikizoglu E", "Arslan M", "Ozgiray E", "Calıskan KE", "Erbayraktar RS"]
+    year: 2021
+    container: "Emergency medicine international"
     identifier:
       pmcid: "PMC8192199"
+      pmid: "34188959"
+      doi: "10.1155/2021/9937730"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8442910-a
@@ -1789,11 +2134,17 @@ sources:
 
   - id: src.pmc8442910-b
     display: "Frontiers in Physiology 2021, PMC8442910"
-    type: other
-    verification_status: unverified
+    title: "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Pla R", "Poszalczyk G", "Souaissia C", "Joulia F", "Guimard A"]
     year: 2021
+    container: "Frontiers in physiology"
     identifier:
       pmcid: "PMC8442910"
+      pmid: "34539436"
+      doi: "10.3389/fphys.2021.712652"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc8442910-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8442910-a 共用 pmcid PMC8442910，疑似同一文獻，待 S3c 查證。"
 
   - id: src.pmc8607769
@@ -1816,20 +2167,32 @@ sources:
 
   - id: src.pmc8827183
     display: "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Incidence of calcaneal apophysitis (Sever's disease) and return-to-play in adolescent athletes of a German youth soccer academy: a retrospective study of 10 years."
+    type: journal-article
+    verification_status: verified
+    authors: ["Belikan P", "Färber LC", "Abel F", "Nowak TE", "Drees P", "Mattyasovszky SG"]
+    year: 2022
+    container: "Journal of orthopaedic surgery and research"
     identifier:
       pmid: "35139872"
       pmcid: "PMC8827183"
+      doi: "10.1186/s13018-022-02979-9"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8869186
     display: "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Incidence and management of Osgood-Schlatter disease in general practice: retrospective cohort study."
+    type: journal-article
+    verification_status: verified
+    authors: ["van Leeuwen GJ", "de Schepper EI", "Rathleff MS", "Bindels PJ", "Bierma-Zeinstra SM", "van Middelkoop M"]
+    year: 2022
+    container: "The British journal of general practice : the journal of the Royal College of General Practitioners"
     identifier:
       pmid: "34990396"
       pmcid: "PMC8869186"
+      doi: "10.3399/BJGP.2021.0386"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8960438-a
@@ -1843,10 +2206,17 @@ sources:
 
   - id: src.pmc8960438-b
     display: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438"
-    type: other
-    verification_status: unverified
+    title: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques in Age-Group Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Chainok P", "de Jesus K", "Mourão L", "Fonseca PFP", "Zacca R", "Fernandes RJ", "Vilas-Boas JP"]
+    year: 2022
+    container: "Frontiers in sports and active living"
     identifier:
       pmcid: "PMC8960438"
+      pmid: "35359502"
+      doi: "10.3389/fspor.2022.802967"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc8960438-a、src.pmc8960438-c、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-c、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8960438-c
@@ -1860,19 +2230,33 @@ sources:
 
   - id: src.pmc8960438-d
     display: "PMC8960438"
-    type: other
-    verification_status: unverified
+    title: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques in Age-Group Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Chainok P", "de Jesus K", "Mourão L", "Fonseca PFP", "Zacca R", "Fernandes RJ", "Vilas-Boas JP"]
+    year: 2022
+    container: "Frontiers in sports and active living"
     identifier:
       pmcid: "PMC8960438"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8960438/"
+      pmid: "35359502"
+      doi: "10.3389/fspor.2022.802967"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-c 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9057286
     display: "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Point prevalence of non-melanoma and melanoma skin cancers in Australian surfers and swimmers in Southeast Queensland and Northern New South Wales."
+    type: journal-article
+    verification_status: verified
+    authors: ["Climstein M", "Doyle B", "Stapelberg M", "Rosic N", "Hertess I", "Furness J", "Simas V", "Walsh J"]
+    year: 2022
+    container: "PeerJ"
     identifier:
       pmcid: "PMC9057286"
+      pmid: "35505675"
+      doi: "10.7717/peerj.13243"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9402090-a
@@ -1887,11 +2271,17 @@ sources:
 
   - id: src.pmc9402090-b
     display: "PMC9402090, 2022"
-    type: other
-    verification_status: unverified
+    title: "Ankle joint flexibility affects undulatory underwater swimming speed."
+    type: journal-article
+    verification_status: verified
+    authors: ["Kuhn J", "Legerlotz K"]
     year: 2022
+    container: "Frontiers in sports and active living"
     identifier:
       pmcid: "PMC9402090"
+      pmid: "36032263"
+      doi: "10.3389/fspor.2022.948034"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmc9402090-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc9402090-a 共用 pmcid PMC9402090，疑似同一文獻，待 S3c 查證。"
 
   - id: src.pmc9424421-a
@@ -1914,37 +2304,61 @@ sources:
 
   - id: src.pmc9445308
     display: "PMC9445308 Frontiers 2022"
-    type: other
-    verification_status: unverified
+    title: "The characteristics of the breaststroke pullout in elite swimming."
+    type: journal-article
+    verification_status: verified
+    authors: ["McCabe C", "Mosscrop E", "Hodierne R", "Tor E"]
     year: 2022
+    container: "Frontiers in sports and active living"
     identifier:
       pmcid: "PMC9445308"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/"
-
+      pmid: "36081618"
+      doi: "10.3389/fspor.2022.963578"
+    retrieved_on: "2026-07-27"
   - id: src.pmc9658102
     display: "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review."
+    type: journal-article
+    verification_status: verified
+    authors: ["Gimunová M", "Paulínyová A", "Bernaciková M", "Paludo AC"]
+    year: 2022
+    container: "International journal of environmental research and public health"
     identifier:
       pmid: "36361122"
       pmcid: "PMC9658102"
+      doi: "10.3390/ijerph192114243"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9699060
     display: "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Exercise-Associated Hyponatremia in Marathon Runners."
+    type: journal-article
+    verification_status: verified
+    authors: ["Klingert M", "Nikolaidis PT", "Weiss K", "Thuany M", "Chlíbková D", "Knechtle B"]
+    year: 2022
+    container: "Journal of clinical medicine"
     identifier:
       pmcid: "PMC9699060"
+      pmid: "36431252"
+      doi: "10.3390/jcm11226775"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9724109
     display: "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Relative Energy Deficiency in Sport (RED-S): Scientific, Clinical, and Practical Implications for the Female Athlete."
+    type: journal-article
+    verification_status: verified
+    authors: ["Cabre HE", "Moore SR", "Smith-Ryan AE", "Hackney AC"]
+    year: 2022
+    container: "Deutsche Zeitschrift fur Sportmedizin"
     identifier:
       pmid: "36479178"
       pmcid: "PMC9724109"
+      doi: "10.5960/dzsm.2022.546"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-12840640-a
@@ -1993,18 +2407,30 @@ sources:
 
   - id: src.pmid-24984154
     display: "PubMed 24984154"
-    type: other
-    verification_status: unverified
+    title: "The effect of ankle muscle strength and flexibility on dolphin kick performance in competitive swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Willems TM", "Cornelis JA", "De Deurwaerder LE", "Roelandt F", "De Mits S"]
+    year: 2014
+    container: "Human movement science"
     identifier:
       pmid: "24984154"
+      doi: "10.1016/j.humov.2014.05.004"
+    retrieved_on: "2026-07-27"
     notes: "與 src.pmc9402090-a 共用 pmid 24984154，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-25443755
     display: "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Exercise-associated hyponatremic encephalopathy in an endurance open water swimmer."
+    type: journal-article
+    verification_status: verified
+    authors: ["Rogers IR", "Grainger S", "Nagree Y"]
+    year: 2015
+    container: "Wilderness & environmental medicine"
     identifier:
       pmid: "25443755"
+      doi: "10.1016/j.wem.2014.07.010"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-25455956
@@ -2027,27 +2453,41 @@ sources:
 
   - id: src.pmid-28975846
     display: "PubMed 28975846"
-    type: other
-    verification_status: unverified
+    title: "Backstroke start performance: the impact of using the Omega OBL2 backstroke ledge."
+    type: journal-article
+    verification_status: verified
+    authors: ["Barkwell GE", "Dickey JP"]
+    year: 2018
+    container: "Sports biomechanics"
     identifier:
       pmid: "28975846"
       url: "https://pubmed.ncbi.nlm.nih.gov/28975846/"
+      doi: "10.1080/14763141.2017.1353130"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-30485006
     display: "Proximal humeral epiphysiolysis (little league shoulder), PMID 30485006 (摘要層級)"
-    type: other
-    verification_status: unverified
+    title: "Proximal Humeral Epiphysiolysis."
+    type: journal-article
+    verification_status: verified
+    authors: ["Collins AC", "May T"]
+    year: 2026
     identifier:
       pmid: "30485006"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-30521295
     display: "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Surfer's Ear."
+    type: journal-article
+    verification_status: verified
+    authors: ["Bart RM", "Lau H", "Cooper JS"]
+    year: 2026
     identifier:
       pmid: "30521295"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-32119507
@@ -2060,18 +2500,28 @@ sources:
 
   - id: src.pmid-32310515
     display: "StatPearls Otitis Externa, PMID 32310515 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Otitis Externa."
+    type: journal-article
+    verification_status: verified
+    authors: ["Medina-Blasini Y", "Sharman T"]
+    year: 2026
     identifier:
       pmid: "32310515"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-33010194
     display: "Swimming injuries narrative review, PubMed 33010194 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "An Updated Review of the Epidemiology of Swimming Injuries."
+    type: journal-article
+    verification_status: verified
+    authors: ["Trinidad A", "González-Garcia H", "López-Valenciano A"]
+    year: 2021
+    container: "PM & R : the journal of injury, function, and rehabilitation"
     identifier:
       pmid: "33010194"
+      doi: "10.1002/pmrj.12503"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-39351143
@@ -2093,19 +2543,31 @@ sources:
 
   - id: src.pmid-40252339-a
     display: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339"
-    type: other
-    verification_status: unverified
+    title: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Koster P", "Schreven S", "David S", "Beek PJ"]
+    year: 2025
+    container: "Journal of biomechanics"
     identifier:
       pmid: "40252339"
       url: "https://pubmed.ncbi.nlm.nih.gov/40252339/"
+      doi: "10.1016/j.jbiomech.2025.112694"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmid-40252339-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmid-40252339-b 共用 pmid 40252339，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-40252339-b
     display: "PubMed 40252339"
-    type: other
-    verification_status: unverified
+    title: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Koster P", "Schreven S", "David S", "Beek PJ"]
+    year: 2025
+    container: "Journal of biomechanics"
     identifier:
       pmid: "40252339"
+      doi: "10.1016/j.jbiomech.2025.112694"
+    retrieved_on: "2026-07-27"
     notes: "疑似與 src.pmid-40252339-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmid-40252339-a 共用 pmid 40252339，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-40783351
@@ -2118,10 +2580,16 @@ sources:
 
   - id: src.pmid-7673417
     display: "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)"
-    type: other
-    verification_status: unverified
+    title: "Menstrual dysfunction in swimmers: a distinct entity."
+    type: journal-article
+    verification_status: verified
+    authors: ["Constantini NW", "Warren MP"]
+    year: 1995
+    container: "The Journal of clinical endocrinology and metabolism"
     identifier:
       pmid: "7673417"
+      doi: "10.1210/jcem.80.9.7673417"
+    retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.psycharakis-2010
