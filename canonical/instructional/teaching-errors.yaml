@@ -368,14 +368,14 @@ errors:
       physical_reason:
         certainty: 🔵
         text: >-
-          踢水推進力來自腳掌面向後方的推水面積，踝關節蹠屈幅度直接決定此面積：柔韌性足夠 → 腳掌接近垂直
-          朝後 → 有效面積最大；踝關節僵硬 → 腳背而非腳掌面朝後 → 踢水反而制動。增加力量但蹠屈不足，
-          只是更有力地產生阻力。
+          踝關節蹠屈幅度會改變腳部推進面的方向；蹠屈受限時，單純增加踢水力量未必能轉化為有效推進。
+          McCullough 研究顯示蹠屈與 flutter-kick 速度相關、垂直跳力量則未呈顯著相關，但這不足以證明
+          柔軟度訓練必然優於力量訓練，應先評估個別限制再選介入。
       evidence:
-        - certainty: 🟢
+        - certainty: 🟡
           text: >-
-            踝關節蹠屈柔韌性與踢水速度直接相關；陸上踝柔韌性訓練能改善踢水效率。跑步背景者最容易踝僵硬，
-            踢水時最易制動。
+            20 名女性競技／休閒泳者中，踝蹠屈與 flutter-kick 速度呈中度相關（r=0.509）；垂直跳力量未呈顯著相關。
+            這是相關研究，沒有測試陸上柔軟度訓練，也沒有分析跑步背景或倒退力。
           source: McCullough et al. 2009, J. Strength & Conditioning Research
           source_ids: [src.mccullough-a]
           url: https://pubmed.ncbi.nlm.nih.gov/19855342/
@@ -460,9 +460,9 @@ errors:
           （p=0.0008），但同期 25m 踢板成績改善尚未顯著（p=0.40）——柔韌性改善先於表現。「先天不可改」
           常來自短期介入未見速度提升後的誤判。
       evidence:
-        - certainty: 🟠
-          text: 陸上踝柔韌性訓練（泡沫軸放鬆腓腸肌、主動蹠屈伸展、跪坐拉伸）可改善踢水效率。
-          source: McCullough 2009/2010 方向
+        - certainty: 🔴
+          text: 原記錄的 6 週介入數字與具體陸上處方尚未定位到原始研究；McCullough 2009 是橫斷相關研究，不能支持此介入效果。
+          source: 原始介入研究待查（不是 McCullough 2009）
           source_ids: [src.mccullough-c]
       correct_concept: >-
         踝柔韌性是可訓練的硬體條件，不是不可改變的先天限制。診斷僵硬後應設計踝專項訓練，同時在水中用

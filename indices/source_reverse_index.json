@@ -2164,8 +2164,12 @@
     {
       "id": "src.mccullough-2009-a",
       "display": "McCullough 2009",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19855342",
+        "doi": "10.1519/JSC.0b013e31819ab977",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+      },
       "usage_count": 3,
       "usages": [
         {
@@ -2188,8 +2192,12 @@
     {
       "id": "src.mccullough-2009-b",
       "display": "McCullough et al. 2009",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19855342",
+        "doi": "10.1519/JSC.0b013e31819ab977",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -6238,8 +6246,11 @@
     {
       "id": "src.sanders-1995-a",
       "display": "Sanders 1995",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -6252,8 +6263,11 @@
     {
       "id": "src.sanders-1995-b",
       "display": "Sanders et al. 1995",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -8854,8 +8868,11 @@
     {
       "id": "src.welcher-2008-a",
       "display": "Welcher et al. 2008",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/14763140701683247",
+        "url": "https://doi.org/10.1080/14763140701683247"
+      },
       "usage_count": 2,
       "usages": [
         {

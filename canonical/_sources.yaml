@@ -1120,20 +1120,34 @@ sources:
 
   - id: src.mccullough-2009-a
     display: "McCullough 2009"
-    type: other
-    verification_status: unverified
-    authors: ["McCullough"]
+    title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["McCullough AS", "Kraemer WJ", "Volek JS", "Solomon-Hill GF Jr", "Hatfield DL", "Vingren JL", "Ho JY", "Fragala MS", "Thomas GA", "Häkkinen K", "Maresh CM"]
     year: 2009
-    notes: "疑似與 src.mccullough-2009-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Journal of strength and conditioning research"
+    identifier:
+      pmid: "19855342"
+      doi: "10.1519/JSC.0b013e31819ab977"
+      url: "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由正文踝蹠屈／踢水速度脈絡確認為 src.mccullough-a 同篇穩定 alias；研究只支持相關性，不是柔軟度訓練介入試驗。"
 
   - id: src.mccullough-2009-b
     display: "McCullough et al. 2009"
-    type: other
-    verification_status: unverified
-    authors: ["McCullough"]
+    title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["McCullough AS", "Kraemer WJ", "Volek JS", "Solomon-Hill GF Jr", "Hatfield DL", "Vingren JL", "Ho JY", "Fragala MS", "Thomas GA", "Häkkinen K", "Maresh CM"]
     et_al: true
     year: 2009
-    notes: "疑似與 src.mccullough-2009-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    container: "Journal of strength and conditioning research"
+    identifier:
+      pmid: "19855342"
+      doi: "10.1519/JSC.0b013e31819ab977"
+      url: "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由正文踝蹠屈／踢水速度脈絡確認為 src.mccullough-a 同篇穩定 alias；原字串以 et al. 略記。研究只支持相關性，不是柔軟度訓練介入試驗。"
 
   - id: src.mccullough-a
     display: "McCullough et al. (2009/2010), J. Strength & Conditioning Research"
@@ -3297,20 +3311,32 @@ sources:
 
   - id: src.sanders-1995-a
     display: "Sanders 1995"
-    type: other
-    verification_status: unverified
-    authors: ["Sanders"]
+    title: "Wave characteristics of butterfly swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
     year: 1995
-    notes: "疑似與 src.sanders-1995-b、src.sanders-1995-c、src.sanders-1995-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Journal of Biomechanics"
+    identifier:
+      doi: "10.1016/0021-9290(95)80002-6"
+      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由正文蝶式波動整合脈絡確認與 src.sanders-1995-c/d 同篇；暫留穩定 alias。"
 
   - id: src.sanders-1995-b
     display: "Sanders et al. 1995"
-    type: other
-    verification_status: unverified
-    authors: ["Sanders"]
+    title: "Wave characteristics of butterfly swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
     et_al: true
     year: 1995
-    notes: "疑似與 src.sanders-1995-a、src.sanders-1995-c、src.sanders-1995-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    container: "Journal of Biomechanics"
+    identifier:
+      doi: "10.1016/0021-9290(95)80002-6"
+      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由正文 H1 諧波分析脈絡確認與 src.sanders-1995-c/d 同篇；原字串以 et al. 略記，暫留穩定 alias。"
 
   - id: src.sanders-1995-c
     display: "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech"
@@ -4074,12 +4100,18 @@ sources:
 
   - id: src.welcher-2008-a
     display: "Welcher et al. 2008"
-    type: other
-    verification_status: unverified
-    authors: ["Welcher"]
+    title: "Front- or rear-weighted track start or grab start: Which is the best for female swimmers?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Robert L. Welcher", "Richard N. Hinrichs", "Thomas R. George"]
     et_al: true
     year: 2008
-    notes: "疑似與 src.welcher-2008-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    container: "Sports Biomechanics"
+    identifier:
+      doi: "10.1080/14763140701683247"
+      url: "https://doi.org/10.1080/14763140701683247"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由正文後重心起跳脈絡確認與 src.welcher-2008-b 同篇；原字串以 et al. 略記，暫留穩定 alias。"
 
   - id: src.welcher-2008-b
     display: "Welcher, Hinrichs & George 2008"

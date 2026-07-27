@@ -4403,6 +4403,7 @@
           "hardware"
         ],
         "certainty": [
+          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -8092,6 +8093,7 @@
           "hardware"
         ],
         "certainty": [
+          "🔵",
           "🟡"
         ],
         "stroke": [
@@ -8926,7 +8928,7 @@
         ],
         "certainty": [
           "🔵",
-          "🟢"
+          "🟡"
         ],
         "stroke": [
           "free"
@@ -8994,8 +8996,8 @@
           "kick"
         ],
         "certainty": [
-          "🔵",
-          "🟠"
+          "🔴",
+          "🔵"
         ],
         "stroke": [
           "free"
@@ -9564,8 +9566,7 @@
           "hardware"
         ],
         "certainty": [
-          "🟡",
-          "🟢"
+          "🟡"
         ],
         "stroke": [
           "free"

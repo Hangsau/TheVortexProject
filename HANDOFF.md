@@ -10,6 +10,14 @@
 
 **基線**：`python tools/validate.py` **0 ERROR／651 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W008 1、W011 63）；`python -m unittest discover -s tests -v` **135 tests OK**。
 
+**S3c 作者＋年份同家族 alias 第二批（2026-07-28）**
+
+- 從 ambiguous queue 優先審核已驗證論文的同作者同年 alias，逐筆以 canonical 正文用途交叉判斷，不只靠姓氏／年份：`src.mccullough-2009-a/b`（踝蹠屈與 flutter-kick 速度）、`src.sanders-1995-a/b`（蝶式 H1 諧波／波動）、`src.welcher-2008-a`（後重心起跳）共 **5/5 確認**，沿用已驗證同篇 metadata 並保留穩定 source ID。
+- McCullough 2009 原始摘要核對出新的證據越界：它是 20 名女性競技／休閒泳者的橫斷相關研究，只支持踝蹠屈與 flutter-kick 速度中度相關（r=0.509），未測柔軟度介入、仰／蝶式、跑者背景、倒退力，也未證明柔軟度訓練優於力量訓練。已收窄自由／仰／蝶技術分析、自由式教學誤區與 dryland 踝段落的因果語言。
+- `src.mccullough-c` 原掛的「6 週柔軟度介入、p=0.0008／p=0.40」不是 McCullough 2009 可支持的內容；該 evidence 改標 🔴 並明記「原始介入研究待查」，沒有用正確 DOI 洗白錯誤主張。
+- **目前 registry：477 筆，verified 102／unverified 375；bibliographic_search lane 58。** 當前分流為 47 ambiguous、10 no-candidate、1 near-year。`reports/source_bibliography_candidates.json` 保留首輪 67 筆不可變 review snapshot；最新剩餘數以 `reports/source_audit.json` 為準。
+- 收尾實測：`python tools/audit_sources.py`、`python tools/build_indices.py`、`python tools/validate.py`、完整 unittest 均通過；仍為 **0 ERROR／651 WARN、135 tests OK**。
+
 **S3c 作者＋年份候選搜尋第一批（2026-07-28）**
 
 - 新增 `tools/search_source_bibliography.py`，對 67 筆 `bibliographic_search` lane 只查 Crossref、產生 `reports/source_bibliography_candidates.json`，不直接改 canonical；候選依作者覆蓋、年份差、display 詞彙重疊與 API rank 排序。429／5xx 有限次指數退避後，完整批次 **67/67 完成、0 lookup error**。
@@ -65,7 +73,7 @@
 3. **新增三項檢查**：`W011`（🟠 缺 `observation_basis`，63 筆）、`E010`（診斷型鍵名寫進 `public` 子樹 = 唯一實際洩漏路徑，0 筆）、`E011`（`evidence_from` 的 ID 必須解析得到——它是 W009 的豁免路徑，不驗證就是零成本免罪符，0 筆）。另修一個既存的靜默回報缺口：E008/E009/W010 早有檢查但沒進 `code_meta`，所以從來沒出現在 `reports/validation_report.md`。
 4. **10 筆試點分流完成**（W009 112 → 102），驗證分流規則可批次化——批次結果見上表。
 
-**下一步**：作者＋年份 lane 尚餘 **63 筆**。優先把 52 筆 ambiguous 依正文脈絡、完整作者資訊與重複家族切成小批人工審核；10 筆 no-candidate 需改用更廣的權威書目搜尋，1 筆 near-year 需單獨判讀，仍不得自動寫 canonical。12 筆 URL review 可另作小批；75 複合引用與 73 內部錨點另案，不與自動查驗混跑。之後進 S6。W002 111 筆可另以 S3a-3 純遷移批次處理。
+**下一步**：作者＋年份 lane 尚餘 **58 筆**。下一批優先審「正文脈絡最完整的重複家族」，建議順序：Nicol 2022 三筆 → Novais 2012 兩筆 → Strzała 2013 三筆；每一家族都先比正文主張再決定是否同篇，不能因同姓同年直接合併。其餘為 47 ambiguous、10 no-candidate、1 near-year；no-candidate 需更廣的權威書目搜尋，near-year 單獨判讀。12 筆 URL review、75 複合引用與 73 內部錨點另案，不與自動查驗混跑。之後進 S6。W002 111 筆可另以 S3a-3 純遷移批次處理。
 
 **同期浮出的新項目（尚未動）**
 - **W002 111 筆**：絕大多數是 `canonical/health/injuries.yaml` 的 `references[].citation`——有來源顯示字串但缺 `source_ids`，屬純遷移（S3a-3 候選，可派工）。⚠ `injuries.yaml` 是 build 產物，改動要進 `canonical/health/drafts/*.yaml` 再跑 `python tools/build_injuries.py`。

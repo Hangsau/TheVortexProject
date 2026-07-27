@@ -3,19 +3,19 @@
   "source_count": 477,
   "summary": {
     "verification_status": {
-      "unverified": 380,
-      "verified": 97
+      "unverified": 375,
+      "verified": 102
     },
-    "identifier_records": 135,
+    "identifier_records": 140,
     "identifier_keys": {
-      "doi": 100,
+      "doi": 105,
       "pmcid": 79,
-      "pmid": 107,
-      "url": 44
+      "pmid": 109,
+      "url": 49
     },
     "lanes": {
-      "bibliographic_search": 63,
-      "complete": 97,
+      "bibliographic_search": 58,
+      "complete": 102,
       "compound_split": 75,
       "internal_reference": 73,
       "manual_reconstruction": 157,
@@ -24,17 +24,19 @@
     "flags": {
       "compound": 75,
       "consensus_not_citation": 5,
-      "duplicate_candidate": 169,
+      "duplicate_candidate": 164,
       "insufficient_bibliography": 273,
       "internal_reference": 73
     },
-    "identifier_collision_groups": 33
+    "identifier_collision_groups": 38
   },
   "identifier_collisions": [
     {
       "kind": "doi",
       "value": "10.1016/0021-9290(95)80002-6",
       "source_ids": [
+        "src.sanders-1995-a",
+        "src.sanders-1995-b",
         "src.sanders-1995-c",
         "src.sanders-1995-d"
       ]
@@ -65,6 +67,14 @@
     },
     {
       "kind": "doi",
+      "value": "10.1080/14763140701683247",
+      "source_ids": [
+        "src.welcher-2008-a",
+        "src.welcher-2008-b"
+      ]
+    },
+    {
+      "kind": "doi",
       "value": "10.1111/sms.14454",
       "source_ids": [
         "src.mckenzie-2023-a",
@@ -77,6 +87,15 @@
       "source_ids": [
         "src.journal-pone-0241345-a",
         "src.journal-pone-0241345-b"
+      ]
+    },
+    {
+      "kind": "doi",
+      "value": "10.1519/jsc.0b013e31819ab977",
+      "source_ids": [
+        "src.mccullough-2009-a",
+        "src.mccullough-2009-b",
+        "src.mccullough-a"
       ]
     },
     {
@@ -189,6 +208,15 @@
     },
     {
       "kind": "pmid",
+      "value": "19855342",
+      "source_ids": [
+        "src.mccullough-2009-a",
+        "src.mccullough-2009-b",
+        "src.mccullough-a"
+      ]
+    },
+    {
+      "kind": "pmid",
       "value": "24290609",
       "source_ids": [
         "src.atkison-2014-a",
@@ -265,8 +293,18 @@
       "kind": "url",
       "value": "https://doi.org/10.1016/0021-9290(95)80002-6",
       "source_ids": [
+        "src.sanders-1995-a",
+        "src.sanders-1995-b",
         "src.sanders-1995-c",
         "src.sanders-1995-d"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://doi.org/10.1080/14763140701683247",
+      "source_ids": [
+        "src.welcher-2008-a",
+        "src.welcher-2008-b"
       ]
     },
     {
@@ -275,6 +313,15 @@
       "source_ids": [
         "src.journal-pone-0241345-a",
         "src.journal-pone-0241345-b"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://pubmed.ncbi.nlm.nih.gov/19855342",
+      "source_ids": [
+        "src.mccullough-2009-a",
+        "src.mccullough-2009-b",
+        "src.mccullough-a"
       ]
     },
     {
@@ -1967,28 +2014,52 @@
     {
       "id": "src.mccullough-2009-a",
       "display": "McCullough 2009",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "19855342",
+        "doi": "10.1519/JSC.0b013e31819ab977",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+      },
       "authors": [
-        "McCullough"
+        "McCullough AS",
+        "Kraemer WJ",
+        "Volek JS",
+        "Solomon-Hill GF Jr",
+        "Hatfield DL",
+        "Vingren JL",
+        "Ho JY",
+        "Fragala MS",
+        "Thomas GA",
+        "Häkkinen K",
+        "Maresh CM"
       ],
       "year": 2009
     },
     {
       "id": "src.mccullough-2009-b",
       "display": "McCullough et al. 2009",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "pmid": "19855342",
+        "doi": "10.1519/JSC.0b013e31819ab977",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+      },
       "authors": [
-        "McCullough"
+        "McCullough AS",
+        "Kraemer WJ",
+        "Volek JS",
+        "Solomon-Hill GF Jr",
+        "Hatfield DL",
+        "Vingren JL",
+        "Ho JY",
+        "Fragala MS",
+        "Thomas GA",
+        "Häkkinen K",
+        "Maresh CM"
       ],
       "year": 2009
     },
@@ -5607,28 +5678,34 @@
     {
       "id": "src.sanders-1995-a",
       "display": "Sanders 1995",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "authors": [
-        "Sanders"
+        "Ross H. Sanders",
+        "Jane M. Cappaert",
+        "Roni K. Devlin"
       ],
       "year": 1995
     },
     {
       "id": "src.sanders-1995-b",
       "display": "Sanders et al. 1995",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "authors": [
-        "Sanders"
+        "Ross H. Sanders",
+        "Jane M. Cappaert",
+        "Roni K. Devlin"
       ],
       "year": 1995
     },
@@ -7042,14 +7119,17 @@
     {
       "id": "src.welcher-2008-a",
       "display": "Welcher et al. 2008",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.1080/14763140701683247",
+        "url": "https://doi.org/10.1080/14763140701683247"
+      },
       "authors": [
-        "Welcher"
+        "Robert L. Welcher",
+        "Richard N. Hinrichs",
+        "Thomas R. George"
       ],
       "year": 2008
     },
