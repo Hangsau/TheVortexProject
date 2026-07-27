@@ -3,19 +3,19 @@
   "source_count": 477,
   "summary": {
     "verification_status": {
-      "unverified": 384,
-      "verified": 93
+      "unverified": 380,
+      "verified": 97
     },
-    "identifier_records": 131,
+    "identifier_records": 135,
     "identifier_keys": {
-      "doi": 96,
+      "doi": 100,
       "pmcid": 79,
-      "pmid": 106,
-      "url": 41
+      "pmid": 107,
+      "url": 44
     },
     "lanes": {
-      "bibliographic_search": 67,
-      "complete": 93,
+      "bibliographic_search": 63,
+      "complete": 97,
       "compound_split": 75,
       "internal_reference": 73,
       "manual_reconstruction": 157,
@@ -24,13 +24,21 @@
     "flags": {
       "compound": 75,
       "consensus_not_citation": 5,
-      "duplicate_candidate": 172,
+      "duplicate_candidate": 169,
       "insufficient_bibliography": 273,
       "internal_reference": 73
     },
-    "identifier_collision_groups": 31
+    "identifier_collision_groups": 33
   },
   "identifier_collisions": [
+    {
+      "kind": "doi",
+      "value": "10.1016/0021-9290(95)80002-6",
+      "source_ids": [
+        "src.sanders-1995-c",
+        "src.sanders-1995-d"
+      ]
+    },
     {
       "kind": "doi",
       "value": "10.1016/j.humov.2013.08.013",
@@ -251,6 +259,14 @@
       "source_ids": [
         "src.pmid-40252339-a",
         "src.pmid-40252339-b"
+      ]
+    },
+    {
+      "kind": "url",
+      "value": "https://doi.org/10.1016/0021-9290(95)80002-6",
+      "source_ids": [
+        "src.sanders-1995-c",
+        "src.sanders-1995-d"
       ]
     },
     {
@@ -5527,13 +5543,16 @@
     {
       "id": "src.rohr-2004",
       "display": "Rohr & Fish 2004, dolphin kinematics comparison",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
+      "verification_status": "verified",
+      "lane": "complete",
       "flags": [],
-      "identifier": {},
+      "identifier": {
+        "pmid": "15073196",
+        "doi": "10.1242/jeb.00948"
+      },
       "authors": [
-        "Rohr",
-        "Fish"
+        "Rohr JJ",
+        "Fish FE"
       ],
       "year": 2004
     },
@@ -5616,32 +5635,34 @@
     {
       "id": "src.sanders-1995-c",
       "display": "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "authors": [
-        "Sanders",
-        "Cappaert",
-        "Devlin"
+        "Ross H. Sanders",
+        "Jane M. Cappaert",
+        "Roni K. Devlin"
       ],
       "year": 1995
     },
     {
       "id": "src.sanders-1995-d",
       "display": "Sanders, Cappaert & Devlin 1995",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "authors": [
-        "Sanders",
-        "Cappaert",
-        "Devlin"
+        "Ross H. Sanders",
+        "Jane M. Cappaert",
+        "Roni K. Devlin"
       ],
       "year": 1995
     },
@@ -7035,16 +7056,17 @@
     {
       "id": "src.welcher-2008-b",
       "display": "Welcher, Hinrichs & George 2008",
-      "verification_status": "unverified",
-      "lane": "bibliographic_search",
-      "flags": [
-        "duplicate_candidate"
-      ],
-      "identifier": {},
+      "verification_status": "verified",
+      "lane": "complete",
+      "flags": [],
+      "identifier": {
+        "doi": "10.1080/14763140701683247",
+        "url": "https://doi.org/10.1080/14763140701683247"
+      },
       "authors": [
-        "Welcher",
-        "Hinrichs",
-        "George"
+        "Robert L. Welcher",
+        "Richard N. Hinrichs",
+        "Thomas R. George"
       ],
       "year": 2008
     },

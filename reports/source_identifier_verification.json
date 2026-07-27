@@ -1,244 +1,132 @@
 {
   "schema_version": 1,
   "retrieved_on": "2026-07-28",
-  "candidate_count": 18,
+  "candidate_count": 4,
   "summary": {
-    "matched": 18
+    "matched": 4
   },
   "lookup_errors": [],
   "results": [
     {
-      "id": "src.benjanuvatra-2007-a",
-      "display": "Benjanuvatra, Edmunds & Blanksby 2007, Jumping Abilities and Swimming Grab-Start Performances in Elite and Recreational Swimmers",
+      "id": "src.rohr-2004",
+      "display": "Rohr & Fish 2004, dolphin kinematics comparison",
+      "registry": "pubmed",
+      "decision": "matched",
+      "reasons": [
+        "authors_match=True",
+        "year_match=True",
+        "identifier_echo=False",
+        "title_match=False"
+      ],
+      "current": {
+        "type": "other",
+        "authors": [
+          "Rohr",
+          "Fish"
+        ],
+        "year": 2004,
+        "identifier": {
+          "pmid": "15073196",
+          "doi": "10.1242/jeb.00948"
+        }
+      },
+      "resolved": {
+        "title": "Strouhal numbers and optimization of swimming by odontocete cetaceans.",
+        "authors": [
+          "Rohr JJ",
+          "Fish FE"
+        ],
+        "year": 2004,
+        "container": "The Journal of experimental biology",
+        "type": "journal-article",
+        "identifier": {
+          "pmid": "15073196",
+          "doi": "10.1242/jeb.00948"
+        }
+      }
+    },
+    {
+      "id": "src.sanders-1995-c",
+      "display": "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech",
       "registry": "crossref",
       "decision": "matched",
       "reasons": [
         "authors_match=True",
         "year_match=True",
         "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [
-          "Benjanuvatra"
-        ],
-        "year": 2007,
-        "identifier": {
-          "doi": "10.25035/ijare.01.03.06",
-          "url": "https://doi.org/10.25035/ijare.01.03.06"
-        }
-      },
-      "resolved": {
-        "title": "Jumping Abilities and Swimming Grab-Start Performances in Elite and Recreational Swimmers",
-        "authors": [
-          "Nat Benjanuvatra",
-          "Katie Edmunds",
-          "Brian Blanksby"
-        ],
-        "year": 2007,
-        "container": "International Journal of Aquatic Research and Education",
-        "type": "journal-article",
-        "identifier": {
-          "doi": "10.25035/ijare.01.03.06",
-          "url": "https://doi.org/10.25035/ijare.01.03.06"
-        }
-      }
-    },
-    {
-      "id": "src.born-2022-im",
-      "display": "Born, Romann & Stöggl 2022, Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley, PMC9157519",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "journal-article",
-        "authors": [
-          "Born"
-        ],
-        "year": 2022,
-        "identifier": {
-          "pmcid": "PMC9157519",
-          "pmid": "35719225",
-          "doi": "10.52082/jssm.2022.233",
-          "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9157519/"
-        }
-      },
-      "resolved": {
-        "title": "Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley.",
-        "authors": [
-          "Born DP",
-          "Romann M",
-          "Stöggl T"
-        ],
-        "year": 2022,
-        "container": "Journal of sports science & medicine",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "35719225",
-          "pmcid": "PMC9157519",
-          "doi": "10.52082/jssm.2022.233"
-        }
-      }
-    },
-    {
-      "id": "src.gonjo-2017",
-      "display": "Yamakawa et al. 2017, PubMed 28605694",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=True",
         "title_match=False"
       ],
       "current": {
         "type": "other",
         "authors": [
-          "Yamakawa"
+          "Sanders",
+          "Cappaert",
+          "Devlin"
         ],
-        "year": 2017,
+        "year": 1995,
         "identifier": {
-          "pmid": "28605694"
+          "doi": "10.1016/0021-9290(95)80002-6"
         }
       },
       "resolved": {
-        "title": "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick.",
+        "title": "Wave characteristics of butterfly swimming",
         "authors": [
-          "Yamakawa KK",
-          "Shimojo H",
-          "Takagi H",
-          "Tsubakimoto S",
-          "Sengoku Y"
+          "Ross H. Sanders",
+          "Jane M. Cappaert",
+          "Roni K. Devlin"
         ],
-        "year": 2017,
-        "container": "Human movement science",
+        "year": 1995,
+        "container": "Journal of Biomechanics",
         "type": "journal-article",
         "identifier": {
-          "pmid": "28605694",
-          "doi": "10.1016/j.humov.2017.06.002"
+          "doi": "10.1016/0021-9290(95)80002-6",
+          "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
         }
       }
     },
     {
-      "id": "src.gonjo-2018",
-      "display": "Nicol, Ball & Tor 2021, The biomechanics of freestyle and butterfly turn technique in elite swimmers",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [
-          "Nicol"
-        ],
-        "year": 2021,
-        "identifier": {
-          "pmid": "30694108",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/30694108/"
-        }
-      },
-      "resolved": {
-        "title": "The biomechanics of freestyle and butterfly turn technique in elite swimmers.",
-        "authors": [
-          "Nicol E",
-          "Ball K",
-          "Tor E"
-        ],
-        "year": 2021,
-        "container": "Sports biomechanics",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "30694108",
-          "doi": "10.1080/14763141.2018.1561930"
-        }
-      }
-    },
-    {
-      "id": "src.hvid-2024",
-      "display": "Venckunas & Achramavicius 2024, Sports, PMC11125574",
-      "registry": "pmc-idconv+pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=False"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [
-          "Venckunas"
-        ],
-        "year": 2024,
-        "identifier": {
-          "pmcid": "PMC11125574"
-        }
-      },
-      "resolved": {
-        "title": "Higher Blood Lactate with Prolongation of Underwater Section in Submaximal Front-Crawl Swimming.",
-        "authors": [
-          "Venckunas T",
-          "Achramavicius J"
-        ],
-        "year": 2024,
-        "container": "Sports (Basel, Switzerland)",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "38786990",
-          "pmcid": "PMC11125574",
-          "doi": "10.3390/sports12050121"
-        }
-      }
-    },
-    {
-      "id": "src.journal-pone-0241345-a",
-      "display": "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers, PLOS ONE 2020",
+      "id": "src.sanders-1995-d",
+      "display": "Sanders, Cappaert & Devlin 1995",
       "registry": "crossref",
       "decision": "matched",
       "reasons": [
+        "authors_match=True",
         "year_match=True",
         "identifier_echo=False",
-        "title_match=True"
+        "title_match=False"
       ],
       "current": {
         "type": "other",
-        "authors": [],
-        "year": 2020,
+        "authors": [
+          "Sanders",
+          "Cappaert",
+          "Devlin"
+        ],
+        "year": 1995,
         "identifier": {
-          "doi": "10.1371/journal.pone.0241345",
-          "url": "https://doi.org/10.1371/journal.pone.0241345"
+          "doi": "10.1016/0021-9290(95)80002-6"
         }
       },
       "resolved": {
-        "title": "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers",
+        "title": "Wave characteristics of butterfly swimming",
         "authors": [
-          "Marit P. van Dijk",
-          "Peter J. Beek",
-          "A. J. Knoek van Soest"
+          "Ross H. Sanders",
+          "Jane M. Cappaert",
+          "Roni K. Devlin"
         ],
-        "year": 2020,
-        "container": "PLOS ONE",
+        "year": 1995,
+        "container": "Journal of Biomechanics",
         "type": "journal-article",
         "identifier": {
-          "doi": "10.1371/journal.pone.0241345",
-          "url": "https://doi.org/10.1371/journal.pone.0241345"
+          "doi": "10.1016/0021-9290(95)80002-6",
+          "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
         }
       }
     },
     {
-      "id": "src.marinho-2010",
-      "display": "Marinho et al. (2010), Journal of Applied Biomechanics",
-      "registry": "pubmed",
+      "id": "src.welcher-2008-b",
+      "display": "Welcher, Hinrichs & George 2008",
+      "registry": "crossref",
       "decision": "matched",
       "reasons": [
         "authors_match=True",
@@ -249,461 +137,28 @@
       "current": {
         "type": "other",
         "authors": [
-          "Marinho"
+          "Welcher",
+          "Hinrichs",
+          "George"
         ],
-        "year": 2010,
+        "year": 2008,
         "identifier": {
-          "pmid": "20147761",
-          "doi": "10.1123/jab.26.1.87",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/20147761/"
+          "doi": "10.1080/14763140701683247"
         }
       },
       "resolved": {
-        "title": "Swimming propulsion forces are enhanced by a small finger spread.",
+        "title": "Front- or rear-weighted track start or grab start: Which is the best for female swimmers?",
         "authors": [
-          "Marinho DA",
-          "Barbosa TM",
-          "Reis VM",
-          "Kjendlie PL",
-          "Alves FB",
-          "Vilas-Boas JP",
-          "Machado L",
-          "Silva AJ",
-          "Rouboa AI"
+          "Robert L. Welcher",
+          "Richard N. Hinrichs",
+          "Thomas R. George"
         ],
-        "year": 2010,
-        "container": "Journal of applied biomechanics",
+        "year": 2008,
+        "container": "Sports Biomechanics",
         "type": "journal-article",
         "identifier": {
-          "pmid": "20147761",
-          "doi": "10.1123/jab.26.1.87"
-        }
-      }
-    },
-    {
-      "id": "src.mccullough-a",
-      "display": "McCullough et al. 2009, Factors affecting flutter kicking speed in women who are competitive and recreational swimmers",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [
-          "McCullough"
-        ],
-        "year": 2009,
-        "identifier": {
-          "pmid": "19855342",
-          "doi": "10.1519/JSC.0b013e31819ab977",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
-        }
-      },
-      "resolved": {
-        "title": "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers.",
-        "authors": [
-          "McCullough AS",
-          "Kraemer WJ",
-          "Volek JS",
-          "Solomon-Hill GF Jr",
-          "Hatfield DL",
-          "Vingren JL",
-          "Ho JY",
-          "Fragala MS",
-          "Thomas GA",
-          "Häkkinen K",
-          "Maresh CM"
-        ],
-        "year": 2009,
-        "container": "Journal of strength and conditioning research",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "19855342",
-          "doi": "10.1519/JSC.0b013e31819ab977"
-        }
-      }
-    },
-    {
-      "id": "src.pmc10813451",
-      "display": "Validation of Automatically Quantified Swim Stroke Mechanics Using an Inertial Measurement Unit in Paralympic Athletes, PMC10813451",
-      "registry": "pmc-idconv+pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2023,
-        "identifier": {
-          "pmcid": "PMC10813451",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/"
-        }
-      },
-      "resolved": {
-        "title": "Validation of Automatically Quantified Swim Stroke Mechanics Using an Inertial Measurement Unit in Paralympic Athletes.",
-        "authors": [
-          "Slopecki M",
-          "Charbonneau M",
-          "Lavallière JM",
-          "Côté JN",
-          "Clément J"
-        ],
-        "year": 2023,
-        "container": "Bioengineering (Basel, Switzerland)",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "38247892",
-          "pmcid": "PMC10813451",
-          "doi": "10.3390/bioengineering11010015"
-        }
-      }
-    },
-    {
-      "id": "src.pmc12847173",
-      "display": "Pathophysiology and treatment of exercise-associated hyponatremia, PMC12847173",
-      "registry": "pmc-idconv+pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2026,
-        "identifier": {
-          "pmcid": "PMC12847173"
-        }
-      },
-      "resolved": {
-        "title": "Pathophysiology and treatment of exercise-associated hyponatremia.",
-        "authors": [
-          "Altieri B",
-          "Aini I",
-          "Cannavale G",
-          "Magnelli C",
-          "Mancini C",
-          "Zamponi V",
-          "Isidori AM",
-          "Colao A",
-          "Faggiano A",
-          "Peri A",
-          "NIKE group"
-        ],
-        "year": 2026,
-        "container": "Journal of endocrinological investigation",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "40913680",
-          "pmcid": "PMC12847173",
-          "doi": "10.1007/s40618-025-02673-7"
-        }
-      }
-    },
-    {
-      "id": "src.pmc7340704",
-      "display": "Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations, PMC7340704",
-      "registry": "pmc-idconv+pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "review",
-        "authors": [],
-        "year": 2020,
-        "identifier": {
-          "pmcid": "PMC7340704"
-        }
-      },
-      "resolved": {
-        "title": "Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations.",
-        "authors": [
-          "Ohman JW",
-          "Thompson RW"
-        ],
-        "year": 2020,
-        "container": "Current reviews in musculoskeletal medicine",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "32514995",
-          "pmcid": "PMC7340704",
-          "doi": "10.1007/s12178-020-09643-x"
-        }
-      }
-    },
-    {
-      "id": "src.pmc8442910-a",
-      "display": "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers, Frontiers in Physiology 2021",
-      "registry": "pmc-idconv+pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2021,
-        "identifier": {
-          "pmcid": "PMC8442910",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/"
-        }
-      },
-      "resolved": {
-        "title": "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers.",
-        "authors": [
-          "Pla R",
-          "Poszalczyk G",
-          "Souaissia C",
-          "Joulia F",
-          "Guimard A"
-        ],
-        "year": 2021,
-        "container": "Frontiers in physiology",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "34539436",
-          "pmcid": "PMC8442910",
-          "doi": "10.3389/fphys.2021.712652"
-        }
-      }
-    },
-    {
-      "id": "src.pmc8700779",
-      "display": "Leg Dominance and OSB12 Kick Start Performance in Young Competitive Swimmers, 2021",
-      "registry": "pmc-idconv+pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2021,
-        "identifier": {
-          "pmcid": "PMC8700779",
-          "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/"
-        }
-      },
-      "resolved": {
-        "title": "Leg Dominance and OSB12 Kick Start Performance in Young Competitive Swimmers.",
-        "authors": [
-          "Matúš I",
-          "Ružbarský P",
-          "Vadašová B",
-          "Čech P"
-        ],
-        "year": 2021,
-        "container": "International journal of environmental research and public health",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "34948765",
-          "pmcid": "PMC8700779",
-          "doi": "10.3390/ijerph182413156"
-        }
-      }
-    },
-    {
-      "id": "src.pmid-25455956",
-      "display": "Comparing three underwater trajectories of the swimming start, PubMed 25455956",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2015,
-        "identifier": {
-          "pmid": "25455956",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/25455956/"
-        }
-      },
-      "resolved": {
-        "title": "Comparing three underwater trajectories of the swimming start.",
-        "authors": [
-          "Tor E",
-          "Pease DL",
-          "Ball KA"
-        ],
-        "year": 2015,
-        "container": "Journal of science and medicine in sport",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "25455956",
-          "doi": "10.1016/j.jsams.2014.10.005"
-        }
-      }
-    },
-    {
-      "id": "src.pmid-28605694",
-      "display": "Yamakawa et al. 2017, Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [
-          "Yamakawa"
-        ],
-        "year": 2017,
-        "identifier": {
-          "pmid": "28605694",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/28605694/"
-        }
-      },
-      "resolved": {
-        "title": "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick.",
-        "authors": [
-          "Yamakawa KK",
-          "Shimojo H",
-          "Takagi H",
-          "Tsubakimoto S",
-          "Sengoku Y"
-        ],
-        "year": 2017,
-        "container": "Human movement science",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "28605694",
-          "doi": "10.1016/j.humov.2017.06.002"
-        }
-      }
-    },
-    {
-      "id": "src.pmid-39500300",
-      "display": "Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024, PubMed 39500300",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2025,
-        "identifier": {
-          "pmid": "39500300"
-        }
-      },
-      "resolved": {
-        "title": "Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024.",
-        "authors": [
-          "Esh CJ",
-          "Dablainville V",
-          "Dalansi F",
-          "Kathuria S",
-          "Cardinale M"
-        ],
-        "year": 2025,
-        "container": "International journal of sports physiology and performance",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "39500300",
-          "doi": "10.1123/ijspp.2024-0240"
-        }
-      }
-    },
-    {
-      "id": "src.pmid-40783351",
-      "display": "Thermoregulatory responses in open water and pool swimming, PubMed 40783351",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "year_match=True",
-        "identifier_echo=True",
-        "title_match=False"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [],
-        "year": 2026,
-        "identifier": {
-          "pmid": "40783351"
-        }
-      },
-      "resolved": {
-        "title": "Thermoregulatory responses in open water and pool swimming: Presentation of hypothermia and hyperthermia within and outside of World Aquatics water temperature thresholds.",
-        "authors": [
-          "Markey K",
-          "Galan-Lopez N",
-          "Esh C",
-          "Carter S",
-          "Chrismas B",
-          "Mountjoy M",
-          "Constantini N",
-          "Taylor L"
-        ],
-        "year": 2026,
-        "container": "Journal of science and medicine in sport",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "40783351",
-          "doi": "10.1016/j.jsams.2025.07.004"
-        }
-      }
-    },
-    {
-      "id": "src.takai-2016",
-      "display": "Takeda et al. 2017, Contribution of hand and foot force to take-off velocity for the kick-start in competitive swimming",
-      "registry": "pubmed",
-      "decision": "matched",
-      "reasons": [
-        "authors_match=True",
-        "year_match=True",
-        "identifier_echo=False",
-        "title_match=True"
-      ],
-      "current": {
-        "type": "other",
-        "authors": [
-          "Takeda"
-        ],
-        "year": 2017,
-        "identifier": {
-          "pmid": "27149652",
-          "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/"
-        }
-      },
-      "resolved": {
-        "title": "Contribution of hand and foot force to take-off velocity for the kick-start in competitive swimming.",
-        "authors": [
-          "Takeda T",
-          "Sakai S",
-          "Takagi H",
-          "Okuno K",
-          "Tsubakimoto S"
-        ],
-        "year": 2017,
-        "container": "Journal of sports sciences",
-        "type": "journal-article",
-        "identifier": {
-          "pmid": "27149652",
-          "doi": "10.1080/02640414.2016.1180417"
+          "doi": "10.1080/14763140701683247",
+          "url": "https://doi.org/10.1080/14763140701683247"
         }
       }
     }

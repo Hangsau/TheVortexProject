@@ -6,9 +6,17 @@
 
 ## 當前狀態（2026-07-28）
 
-### 進行中——canonical 資料契約升級：S0–S5 完成，S3c identifier queue 完成（S6 待續）
+### 進行中——canonical 資料契約升級：S0–S5 完成，S3c 作者年份批次進行中（S6 待續）
 
-**基線**：`python tools/validate.py` **0 ERROR／651 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W008 1、W011 63）；`python -m unittest discover -s tests -v` **129 tests OK**。
+**基線**：`python tools/validate.py` **0 ERROR／651 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W008 1、W011 63）；`python -m unittest discover -s tests -v` **135 tests OK**。
+
+**S3c 作者＋年份候選搜尋第一批（2026-07-28）**
+
+- 新增 `tools/search_source_bibliography.py`，對 67 筆 `bibliographic_search` lane 只查 Crossref、產生 `reports/source_bibliography_candidates.json`，不直接改 canonical；候選依作者覆蓋、年份差、display 詞彙重疊與 API rank 排序。429／5xx 有限次指數退避後，完整批次 **67/67 完成、0 lookup error**。
+- 分流實測：52 `ambiguous_author_year`、10 `no_candidate`、1 `near_year_candidate`、1 `strong_review_candidate`、3 `unique_author_year`。即使唯一作者年份也只列 review candidate，不自動判定 matched；這批證實多數短作者字串無法安全自動寫回。
+- 人工回正文脈絡審核四筆候選並以 identifier verifier 重跑，**4/4 matched**：`src.rohr-2004`、`src.sanders-1995-c`、`src.sanders-1995-d`、`src.welcher-2008-b`。原始 `display` 全部保留，權威 metadata／識別碼與差異說明寫入 source block。
+- Rohr 2004 審核另攔到正文的實質錯誤：原文把鯨豚研究說成直接比較人類 UDK，並誤述海豚尾鰭運動方向。已改成「水平展開的尾鰭做背腹向拍動」，並明示跨到人類髖－膝－踝鏈是綜合推論，不是該研究的直接結論；certainty 同步降到符合證據邊界。
+- **目前 registry：477 筆，verified 97／unverified 380；bibliographic_search lane 67 → 63。** 新增 6 tests，候選搜尋、失敗分流與 retry 契約均覆蓋。
 
 **S3c review queue 收束（2026-07-28）**
 
@@ -57,7 +65,7 @@
 3. **新增三項檢查**：`W011`（🟠 缺 `observation_basis`，63 筆）、`E010`（診斷型鍵名寫進 `public` 子樹 = 唯一實際洩漏路徑，0 筆）、`E011`（`evidence_from` 的 ID 必須解析得到——它是 W009 的豁免路徑，不驗證就是零成本免罪符，0 筆）。另修一個既存的靜默回報缺口：E008/E009/W010 早有檢查但沒進 `code_meta`，所以從來沒出現在 `reports/validation_report.md`。
 4. **10 筆試點分流完成**（W009 112 → 102），驗證分流規則可批次化——批次結果見上表。
 
-**下一步**：S3c identifier queue 已清空；若繼續來源治理，下一個低風險批次是 **67 筆作者＋年份書目搜尋**（先候選報告、再人工 review，不直接寫 canonical）。12 筆 URL review 可並行作另一小批；75 複合引用與 73 內部錨點另案，不與自動查驗混跑。之後進 S6。W002 111 筆可另以 S3a-3 純遷移批次處理。
+**下一步**：作者＋年份 lane 尚餘 **63 筆**。優先把 52 筆 ambiguous 依正文脈絡、完整作者資訊與重複家族切成小批人工審核；10 筆 no-candidate 需改用更廣的權威書目搜尋，1 筆 near-year 需單獨判讀，仍不得自動寫 canonical。12 筆 URL review 可另作小批；75 複合引用與 73 內部錨點另案，不與自動查驗混跑。之後進 S6。W002 111 筆可另以 S3a-3 純遷移批次處理。
 
 **同期浮出的新項目（尚未動）**
 - **W002 111 筆**：絕大多數是 `canonical/health/injuries.yaml` 的 `references[].citation`——有來源顯示字串但缺 `source_ids`，屬純遷移（S3a-3 候選，可派工）。⚠ `injuries.yaml` 是 build 產物，改動要進 `canonical/health/drafts/*.yaml` 再跑 `python tools/build_injuries.py`。

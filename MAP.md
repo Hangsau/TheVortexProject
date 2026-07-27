@@ -3,7 +3,7 @@
 > 結構地圖，給冷啟動讀者（人/LLM）。格式與維護流程見 `C:\claudehome\CODEBASE_MAP_METHODOLOGY.md`。
 > 行為規範見 `CLAUDE.md`；進度/待辦見 `HANDOFF.md`。
 >
-> `last_verified: 2026-07-27`
+> `last_verified: 2026-07-28`
 
 ---
 
@@ -30,7 +30,7 @@
 | 改 diagnostic（A/B/C 型診斷、失敗訊號）——**只給教練/swim-coach** | canonical YAML 的 `diagnostic{}` 區塊；**絕不會進 my-site** |
 | 加研究主題/假設 | `research/{感知科學,物理現象,週期化}/`，狀態碼見下方 §4 |
 | 重生機器索引／查看資料缺口 | `python tools/build_indices.py` → `indices/*.json` |
-| 盤點／批次查驗來源 | `python tools/audit_sources.py` → `python tools/verify_source_identifiers.py`；review 後才用 `python tools/apply_verified_sources.py --apply` |
+| 盤點／批次查驗來源 | `python tools/audit_sources.py` 分流；有 identifier 用 `python tools/verify_source_identifiers.py`，只有作者＋年份用 `python tools/search_source_bibliography.py` 產候選；review 後才用 `python tools/apply_verified_sources.py --apply` |
 
 ---
 

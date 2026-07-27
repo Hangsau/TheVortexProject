@@ -6160,8 +6160,11 @@
     {
       "id": "src.rohr-2004",
       "display": "Rohr & Fish 2004, dolphin kinematics comparison",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "15073196",
+        "doi": "10.1242/jeb.00948"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -6263,8 +6266,11 @@
     {
       "id": "src.sanders-1995-c",
       "display": "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -6282,8 +6288,11 @@
     {
       "id": "src.sanders-1995-d",
       "display": "Sanders, Cappaert & Devlin 1995",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/0021-9290(95)80002-6",
+        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -8864,8 +8873,11 @@
     {
       "id": "src.welcher-2008-b",
       "display": "Welcher, Hinrichs & George 2008",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/14763140701683247",
+        "url": "https://doi.org/10.1080/14763140701683247"
+      },
       "usage_count": 1,
       "usages": [
         {

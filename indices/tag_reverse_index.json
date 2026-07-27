@@ -820,6 +820,7 @@
         "swimmer-elbow-wrist-overuse",
         "thoracic-outlet-syndrome",
         "udk.err11",
+        "udk.err12",
         "udk.err13",
         "udk.err2",
         "udk.err5",
@@ -1099,6 +1100,7 @@
         "swimmers-ear",
         "swimmers-shoulder",
         "swimming-induced-bronchoconstriction",
+        "udk.err12",
         "uv-photo-damage"
       ],
       "🟢": [
@@ -1314,7 +1316,6 @@
         "thoracic-outlet-syndrome",
         "udk.err1",
         "udk.err11",
-        "udk.err12",
         "udk.err3",
         "udk.err4",
         "udk.err6",

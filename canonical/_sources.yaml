@@ -3256,10 +3256,17 @@ sources:
 
   - id: src.rohr-2004
     display: "Rohr & Fish 2004, dolphin kinematics comparison"
-    type: other
-    verification_status: unverified
-    authors: ["Rohr", "Fish"]
+    title: "Strouhal numbers and optimization of swimming by odontocete cetaceans."
+    type: journal-article
+    verification_status: verified
+    authors: ["Rohr JJ", "Fish FE"]
     year: 2004
+    container: "The Journal of experimental biology"
+    identifier:
+      pmid: "15073196"
+      doi: "10.1242/jeb.00948"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 書目搜尋定位到鯨豚 Strouhal 與尾鰭運動學研究；只支持動物端機制，不是人類 UDK 對照實驗，正文已收窄。"
 
   - id: src.rovere-nichols
     display: "Rovere & Nichols 等蛙泳膝經典文獻（作者/年份/期刊待查）"
@@ -3307,19 +3314,31 @@ sources:
 
   - id: src.sanders-1995-c
     display: "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech"
-    type: other
-    verification_status: unverified
-    authors: ["Sanders", "Cappaert", "Devlin"]
+    title: "Wave characteristics of butterfly swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
     year: 1995
-    notes: "疑似與 src.sanders-1995-a、src.sanders-1995-b、src.sanders-1995-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Journal of Biomechanics"
+    identifier:
+      doi: "10.1016/0021-9290(95)80002-6"
+      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 確認原 display 的 J Appl Biomech 期刊名誤植；實為 Journal of Biomechanics。與 src.sanders-1995-d 確認同篇；a/b 尚待判讀。"
 
   - id: src.sanders-1995-d
     display: "Sanders, Cappaert & Devlin 1995"
-    type: other
-    verification_status: unverified
-    authors: ["Sanders", "Cappaert", "Devlin"]
+    title: "Wave characteristics of butterfly swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
     year: 1995
-    notes: "疑似與 src.sanders-1995-a、src.sanders-1995-b、src.sanders-1995-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Journal of Biomechanics"
+    identifier:
+      doi: "10.1016/0021-9290(95)80002-6"
+      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 確認與 src.sanders-1995-c 為同一文獻；暫留穩定 alias，待專門合併批次處理。a/b 尚待判讀。"
 
   - id: src.sanders-1998
     display: "Sanders 1998"
@@ -4064,11 +4083,17 @@ sources:
 
   - id: src.welcher-2008-b
     display: "Welcher, Hinrichs & George 2008"
-    type: other
-    verification_status: unverified
-    authors: ["Welcher", "Hinrichs", "George"]
+    title: "Front- or rear-weighted track start or grab start: Which is the best for female swimmers?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Robert L. Welcher", "Richard N. Hinrichs", "Thomas R. George"]
     year: 2008
-    notes: "疑似與 src.welcher-2008-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Sports Biomechanics"
+    identifier:
+      doi: "10.1080/14763140701683247"
+      url: "https://doi.org/10.1080/14763140701683247"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由完整作者、年份、正文 20 名女子選手脈絡與 Crossref 題名交叉確認；src.welcher-2008-a 尚待判讀。"
 
   - id: src.who-2024-12-13-drowning-deaths-decline-globa-2024
     display: "WHO 2024-12-13 新聞稿『Drowning deaths decline globally』(已驗證 URL)"

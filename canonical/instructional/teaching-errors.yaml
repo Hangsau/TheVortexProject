@@ -2915,16 +2915,17 @@ errors:
       misconception: >-
         「像海豚一樣！」是最廣泛使用的 UDK 口令之一，簡單直覺，教練和學員都很熟悉。
       physical_reason:
-        certainty: 🟢
+        certainty: 🔵
         source_ids: [src.rohr-2004, src.usms-swimming-world-magazine-the-race-club]
         text: >-
-          人類 UDK 與海豚踢腿在生物力學上有根本差異：海豚靠尾鰭水平擺動，人類靠雙腿垂直擺動；
-          海豚脊椎的彈性蓄能機制，人類幾乎無法複製。這個類比無法告訴學員波動從哪裡啟動、
+          鯨豚以水平展開的尾鰭做背腹向拍動，人類則以髖—膝—踝關節鏈驅動雙腿；兩者推進構造不同。
+          Rohr & Fish (2004) 只量化鯨豚的尾鰭頻率、振幅、速度與 Strouhal number，並未直接比較人類 UDK。
+          因此「像海豚」只能作形象類比，無法告訴學員波動從哪裡啟動、
           上踢的速度目標，或流線型的核心穩定要求。
       evidence:
-        - certainty: 🟢
-          text: 人類 UDK 與海豚踢腿在生物力學上有根本差異，包括擺動方向與脊椎彈性蓄能機制。
-          source: Rohr & Fish 2004, dolphin kinematics comparison
+        - certainty: 🟡
+          text: Rohr & Fish 量化鯨豚尾鰭頻率、振幅、游速與 Strouhal number；研究未測量或直接比較人類 UDK。
+          source: Rohr & Fish 2004, odontocete swimming kinematics
           source_ids: [src.rohr-2004]
         - certainty: 🟠
           text: 有效的 UDK 教學需要具體的技術語言，指向身體的特定部位和感知目標。
