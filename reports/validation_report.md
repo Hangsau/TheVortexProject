@@ -1,6 +1,6 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-07-27  
+> 生成日期：2026-07-28  
 > 驗證條目數：594，Drills ID 數：176
 
 ---
@@ -740,9 +740,9 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 0 筆**
+**WARN，共 1 筆**
 
-（無）
+  source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 

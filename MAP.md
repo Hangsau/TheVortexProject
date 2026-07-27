@@ -61,7 +61,7 @@
 ### 機器索引（generated views，不手改）
 - `indices/content_index.json` — 770 個 promoted canonical／Drill ID 的內容與概念索引
 - `indices/tag_reverse_index.json` — taxonomy field/value → 內容 ID
-- `indices/source_reverse_index.json` — 476 個 registry source → 精確使用位置
+- `indices/source_reverse_index.json` — 477 個 registry source → 精確使用位置
 - `indices/gap_report.json` — 無來源高確定性主張／未使用 taxonomy value／W003 同語意未連結條目
 - 生成器：`python tools/build_indices.py`；契約測試：`python -m unittest tests.test_build_indices`
 

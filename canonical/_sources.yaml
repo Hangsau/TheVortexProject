@@ -5,9 +5,10 @@ description: >-
   S3a 完成第一批遷移（帶 🟢／🟡 確定性標記且有 source 單數字串的區塊，138 筆）；
   S3a-2 把來源檢查與 certainty 解耦，凡帶 source／sources 的區塊一律納入，
   再登錄 338 筆（含 canonical 單數、Drills、psychology／health 的 sources 複數清單），
-  合計 476 筆。兩批都是逐字登錄成來源條目，並由條目端以 source_ids 指入。
+  合計 476 筆。兩批都是逐字登錄成來源條目，並由條目端以 source_ids 指入；
+  S3c 另補 1 筆修正錯誤引用所需的來源，目前合計 477 筆。
   來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
-generated_date: "2026-07-27"
+generated_date: "2026-07-28"
 
 # ── 欄位契約（v2；S3a 修訂）─────────────────────────────────────────────────
 #
@@ -52,8 +53,9 @@ generated_date: "2026-07-27"
 #   title         string  完整標題。不確定就**不要填**，不要用摘要或自造描述充數。
 #
 #   authors       list    作者姓名字串清單；組織作者用組織名稱。
-#                         只填顯示字串裡真的出現的姓氏，不展開 et al.
-#                         （見下方 et_al 欄）。
+#                         unverified 階段只填顯示字串裡真的出現的姓氏，不展開 et al.；
+#                         verified 後改用權威 metadata 回傳的完整作者清單。
+#                         et_al 仍保留為原始 display 曾略記作者的溯源標記。
 #
 #   year          int     發表年份（西元年）。顯示字串給不出單一明確年份時留空。
 #
@@ -282,15 +284,18 @@ sources:
 
   - id: src.benjanuvatra-2007-a
     display: "Benjanuvatra et al. 2007"
-    type: other
-    verification_status: unverified
-    authors: ["Benjanuvatra"]
-    et_al: true
+    title: "Jumping Abilities and Swimming Grab-Start Performances in Elite and Recreational Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Nat Benjanuvatra", "Katie Edmunds", "Brian Blanksby"]
     year: 2007
+    container: "International Journal of Aquatic Research and Education"
     identifier:
-      pmcid: "PMC3990873"
-      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
-    notes: "疑似與 src.benjanuvatra-2007-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.benjanuvatra-2007-b 共用 pmcid PMC3990873，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+      doi: "10.25035/ijare.01.03.06"
+      url: "https://doi.org/10.25035/ijare.01.03.06"
+    retrieved_on: "2026-07-28"
+    et_al: true
+    notes: "原字串以 et al. 略記。S3c 查證確認原掛 PMC3990873 錯誤；依正文角度數據改連 Benjanuvatra、Edmunds & Blanksby 2007（DOI 10.25035/ijare.01.03.06）。src.benjanuvatra-2007-b 仍是另一筆待拆解的複合字串。"
 
   - id: src.benjanuvatra-2007-b
     display: "Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start: A Review"
@@ -324,6 +329,22 @@ sources:
     type: other
     verification_status: unverified
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+
+  - id: src.born-2022-im
+    display: "Born, Romann & Stöggl 2022, Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley, PMC9157519"
+    title: "Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley."
+    type: journal-article
+    verification_status: verified
+    authors: ["Born DP", "Romann M", "Stöggl T"]
+    year: 2022
+    container: "Journal of sports science & medicine"
+    identifier:
+      pmcid: "PMC9157519"
+      pmid: "35719225"
+      doi: "10.52082/jssm.2022.233"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9157519/"
+    retrieved_on: "2026-07-28"
+    notes: "S3c review queue 補入：取代誤連到 Nicol et al. 轉身生物力學論文的 IM 分段論述來源。"
 
   - id: src.brannigan-et-al-hypothermia-mass-participati-2009
     display: "Brannigan et al., Hypothermia... Mass Participation Open Water Swimming, Wilderness Environ Med 2009 (已驗證)"
@@ -718,26 +739,32 @@ sources:
 
   - id: src.gonjo-2017
     display: "Gonjo et al. 2017, PubMed 28605694"
-    type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
+    title: "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick."
+    type: journal-article
+    verification_status: verified
+    authors: ["Yamakawa KK", "Shimojo H", "Takagi H", "Tsubakimoto S", "Sengoku Y"]
     year: 2017
+    container: "Human movement science"
     identifier:
       pmid: "28605694"
-    notes: "與 src.pmid-28605694 共用 pmid 28605694，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+      doi: "10.1016/j.humov.2017.06.002"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 依原字串明列的 PMID 28605694 確認作者應為 Yamakawa et al.，正文引用已更正。與 src.pmid-28605694 確認為同一文獻；暫留穩定 alias，待專門合併批次處理。"
 
   - id: src.gonjo-2018
     display: "Gonjo et al. 2018"
-    type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
-    year: 2018
+    title: "The biomechanics of freestyle and butterfly turn technique in elite swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Nicol E", "Ball K", "Tor E"]
+    year: 2021
+    container: "Sports biomechanics"
     identifier:
       pmid: "30694108"
       url: "https://pubmed.ncbi.nlm.nih.gov/30694108/"
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+      doi: "10.1080/14763141.2018.1561930"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 確認原掛 PMID 30694108 實為 Nicol、Ball & Tor 的自由式／蝶式轉身研究；該識別碼不支持原 IM 轉身主張，正文已改連 src.born-2022-im。"
 
   - id: src.gonjo-2020-a
     display: "Gonjo 2020"
@@ -886,14 +913,18 @@ sources:
 
   - id: src.hvid-2024
     display: "Hvid et al. 2024, Sports, PMC11125574"
-    type: other
-    verification_status: unverified
-    authors: ["Hvid"]
-    et_al: true
+    title: "Higher Blood Lactate with Prolongation of Underwater Section in Submaximal Front-Crawl Swimming."
+    type: journal-article
+    verification_status: verified
+    authors: ["Venckunas T", "Achramavicius J"]
     year: 2024
+    container: "Sports (Basel, Switzerland)"
     identifier:
       pmcid: "PMC11125574"
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+      pmid: "38786990"
+      doi: "10.3390/sports12050121"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 依 PMCID PMC11125574 確認作者應為 Venckunas & Achramavicius，正文引用已更正。"
 
   - id: src.ioc-iron-in-sport-doi-webfetch
     display: "IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
@@ -925,13 +956,17 @@ sources:
 
   - id: src.journal-pone-0241345-a
     display: "PLOS ONE 2020"
-    type: other
-    verification_status: unverified
+    title: "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Marit P. van Dijk", "Peter J. Beek", "A. J. Knoek van Soest"]
     year: 2020
+    container: "PLOS ONE"
     identifier:
       doi: "10.1371/journal.pone.0241345"
       url: "https://doi.org/10.1371/journal.pone.0241345"
-    notes: "疑似與 src.journal-pone-0241345-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.journal-pone-0241345-b 共用 doi 10.1371/journal.pone.0241345，疑似同一文獻，待 S3c 查證。"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由 DOI 確認與 src.journal-pone-0241345-b 為同一文獻；暫留穩定 alias，待專門合併批次處理。"
 
   - id: src.journal-pone-0241345-b
     display: "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020"
@@ -1044,15 +1079,19 @@ sources:
 
   - id: src.marinho-2010
     display: "Marinho et al. (2010), Journal of Applied Biomechanics"
-    type: other
-    verification_status: unverified
-    authors: ["Marinho"]
-    et_al: true
+    title: "Swimming propulsion forces are enhanced by a small finger spread."
+    type: journal-article
+    verification_status: verified
+    authors: ["Marinho DA", "Barbosa TM", "Reis VM", "Kjendlie PL", "Alves FB", "Vilas-Boas JP", "Machado L", "Silva AJ", "Rouboa AI"]
     year: 2010
+    container: "Journal of applied biomechanics"
     identifier:
-      pmid: "20733242"
-      url: "https://pubmed.ncbi.nlm.nih.gov/20733242/"
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+      pmid: "20147761"
+      doi: "10.1123/jab.26.1.87"
+      url: "https://pubmed.ncbi.nlm.nih.gov/20147761/"
+    retrieved_on: "2026-07-28"
+    et_al: true
+    notes: "原字串以 et al. 略記。S3c 確認原掛 PMID 20733242 為無關論文，已改為 PMID 20147761／DOI 10.1123/jab.26.1.87。"
 
   - id: src.mason-1992-a
     display: "Mason 1992"
@@ -1098,14 +1137,19 @@ sources:
 
   - id: src.mccullough-a
     display: "McCullough et al. (2009/2010), J. Strength & Conditioning Research"
-    type: other
-    verification_status: unverified
-    authors: ["McCullough"]
-    et_al: true
+    title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["McCullough AS", "Kraemer WJ", "Volek JS", "Solomon-Hill GF Jr", "Hatfield DL", "Vingren JL", "Ho JY", "Fragala MS", "Thomas GA", "Häkkinen K", "Maresh CM"]
+    year: 2009
+    container: "Journal of strength and conditioning research"
     identifier:
-      pmid: "19387413"
-      url: "https://pubmed.ncbi.nlm.nih.gov/19387413/"
-    notes: "疑似與 src.mccullough-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 S3a-2 補記：疑似與 src.mccullough-c（S3a-2 新增，同 base）、src.mccullough-d（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
+      pmid: "19855342"
+      doi: "10.1519/JSC.0b013e31819ab977"
+      url: "https://pubmed.ncbi.nlm.nih.gov/19855342/"
+    retrieved_on: "2026-07-28"
+    et_al: true
+    notes: "原字串以 et al. 略記且年份含糊。S3c 確認原掛 PMID 19387413 為無關跑鞋研究，已改為 McCullough et al. 2009 的 PMID 19855342／DOI 10.1519/JSC.0b013e31819ab977；同 base 的 b/c/d 尚待各自重建。"
 
   - id: src.mccullough-b
     display: "McCullough et al. 2009/2010"
@@ -1455,13 +1499,19 @@ sources:
 
   - id: src.pmc10813451
     display: "Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024"
-    type: other
-    verification_status: unverified
-    year: 2024
+    title: "Validation of Automatically Quantified Swim Stroke Mechanics Using an Inertial Measurement Unit in Paralympic Athletes."
+    type: journal-article
+    verification_status: verified
+    authors: ["Slopecki M", "Charbonneau M", "Lavallière JM", "Côté JN", "Clément J"]
+    year: 2023
+    container: "Bioengineering (Basel, Switzerland)"
     identifier:
       pmcid: "PMC10813451"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/"
-
+      pmid: "38247892"
+      doi: "10.3390/bioengineering11010015"
+    retrieved_on: "2026-07-28"
+    notes: "原 display 以 2024 標示期卷年；PubMed metadata 的發表年為 2023，S3c 依權威紀錄保存。"
   - id: src.pmc11115434
     display: "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)"
     title: "Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure - United States, 2019-2023."
@@ -1623,12 +1673,18 @@ sources:
     retrieved_on: "2026-07-27"
   - id: src.pmc12847173
     display: "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)"
-    type: other
-    verification_status: unverified
-    year: 2025
+    title: "Pathophysiology and treatment of exercise-associated hyponatremia."
+    type: journal-article
+    verification_status: verified
+    authors: ["Altieri B", "Aini I", "Cannavale G", "Magnelli C", "Mancini C", "Zamponi V", "Isidori AM", "Colao A", "Faggiano A", "Peri A", "NIKE group"]
+    year: 2026
+    container: "Journal of endocrinological investigation"
     identifier:
       pmcid: "PMC12847173"
-
+      pmid: "40913680"
+      doi: "10.1007/s40618-025-02673-7"
+    retrieved_on: "2026-07-28"
+    notes: "原 display 記 2025（DOI／online 年）；PubMed 所列期卷年為 2026，S3c 依權威紀錄保存。"
   - id: src.pmc1448328
     display: "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)"
     title: "Swimmer's itch: incidence and risk factors."
@@ -2010,12 +2066,18 @@ sources:
 
   - id: src.pmc7340704
     display: "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)"
+    title: "Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations."
     type: review
-    verification_status: unverified
-    year: 2022
+    verification_status: verified
+    authors: ["Ohman JW", "Thompson RW"]
+    year: 2020
+    container: "Current reviews in musculoskeletal medicine"
     identifier:
       pmcid: "PMC7340704"
-
+      pmid: "32514995"
+      doi: "10.1007/s12178-020-09643-x"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 確認原 display 的 Frontiers 2022／systematic review 描述錯誤；實為 Ohman & Thompson 2020 的 overhead athlete 診療回顧，正文來源字串已更正。"
   - id: src.pmc7584313
     display: "Hot tub folliculitis 回顧, PMC7584313 (已驗證)"
     title: "Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors."
@@ -2124,13 +2186,19 @@ sources:
 
   - id: src.pmc8442910-a
     display: "Frontiers in Physiology 2021"
-    type: other
-    verification_status: unverified
+    title: "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Pla R", "Poszalczyk G", "Souaissia C", "Joulia F", "Guimard A"]
     year: 2021
+    container: "Frontiers in physiology"
     identifier:
       pmcid: "PMC8442910"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/"
-    notes: "疑似與 src.pmc8442910-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8442910-b 共用 pmcid PMC8442910，疑似同一文獻，待 S3c 查證。"
+      pmid: "34539436"
+      doi: "10.3389/fphys.2021.712652"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由 PMCID 確認與 src.pmc8442910-b 為同一文獻；暫留穩定 alias，待專門合併批次處理。"
 
   - id: src.pmc8442910-b
     display: "Frontiers in Physiology 2021, PMC8442910"
@@ -2157,13 +2225,19 @@ sources:
 
   - id: src.pmc8700779
     display: "Leg Dominance 研究 2021"
-    type: other
-    verification_status: unverified
+    title: "Leg Dominance and OSB12 Kick Start Performance in Young Competitive Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Matúš I", "Ružbarský P", "Vadašová B", "Čech P"]
     year: 2021
+    container: "International journal of environmental research and public health"
     identifier:
       pmcid: "PMC8700779"
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/"
-    notes: "與 src.takai 共用 pmcid PMC8700779，疑似同一文獻，待 S3c 查證。"
+      pmid: "34948765"
+      doi: "10.3390/ijerph182413156"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由 PMCID 確認本筆身分；src.takai 是同時混入 PMC8700779 與 PMID 27149652 的複合條目，仍待拆分。"
 
   - id: src.pmc8827183
     display: "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)"
@@ -2435,21 +2509,32 @@ sources:
 
   - id: src.pmid-25455956
     display: "PubMed 25455956 2014"
-    type: other
-    verification_status: unverified
-    year: 2014
+    title: "Comparing three underwater trajectories of the swimming start."
+    type: journal-article
+    verification_status: verified
+    authors: ["Tor E", "Pease DL", "Ball KA"]
+    year: 2015
+    container: "Journal of science and medicine in sport"
     identifier:
       pmid: "25455956"
       url: "https://pubmed.ncbi.nlm.nih.gov/25455956/"
-
+      doi: "10.1016/j.jsams.2014.10.005"
+    retrieved_on: "2026-07-28"
+    notes: "原 display 記 online／DOI 年 2014；PubMed 所列期卷年為 2015。"
   - id: src.pmid-28605694
     display: "Gonjo et al."
-    type: other
-    verification_status: unverified
+    title: "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick."
+    type: journal-article
+    verification_status: verified
+    authors: ["Yamakawa KK", "Shimojo H", "Takagi H", "Tsubakimoto S", "Sengoku Y"]
+    year: 2017
+    container: "Human movement science"
     identifier:
       pmid: "28605694"
       url: "https://pubmed.ncbi.nlm.nih.gov/28605694/"
-    notes: "與 src.gonjo-2017 共用 pmid 28605694，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.1016/j.humov.2017.06.002"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 由 PMID 28605694 確認作者應為 Yamakawa et al.；與 src.gonjo-2017 為同一文獻，暫留穩定 alias，待專門合併批次處理。"
 
   - id: src.pmid-28975846
     display: "PubMed 28975846"
@@ -2535,12 +2620,17 @@ sources:
 
   - id: src.pmid-39500300
     display: "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)"
-    type: other
-    verification_status: unverified
-    year: 2024
+    title: "Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024."
+    type: journal-article
+    verification_status: verified
+    authors: ["Esh CJ", "Dablainville V", "Dalansi F", "Kathuria S", "Cardinale M"]
+    year: 2025
+    container: "International journal of sports physiology and performance"
     identifier:
       pmid: "39500300"
-
+      doi: "10.1123/ijspp.2024-0240"
+    retrieved_on: "2026-07-28"
+    notes: "原 display 的 2024 是賽事年份；論文發表年為 2025。"
   - id: src.pmid-40252339-a
     display: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?, PubMed 40252339"
     title: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?"
@@ -2572,12 +2662,17 @@ sources:
 
   - id: src.pmid-40783351
     display: "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
-    type: other
-    verification_status: unverified
-    year: 2025
+    title: "Thermoregulatory responses in open water and pool swimming: Presentation of hypothermia and hyperthermia within and outside of World Aquatics water temperature thresholds."
+    type: journal-article
+    verification_status: verified
+    authors: ["Markey K", "Galan-Lopez N", "Esh C", "Carter S", "Chrismas B", "Mountjoy M", "Constantini N", "Taylor L"]
+    year: 2026
+    container: "Journal of science and medicine in sport"
     identifier:
       pmid: "40783351"
-
+      doi: "10.1016/j.jsams.2025.07.004"
+    retrieved_on: "2026-07-28"
+    notes: "原 display 記 online／DOI 年 2025；PubMed 所列期卷年為 2026。"
   - id: src.pmid-7673417
     display: "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)"
     title: "Menstrual dysfunction in swimmers: a distinct entity."
@@ -3538,15 +3633,18 @@ sources:
 
   - id: src.takai-2016
     display: "Takai et al. 2016"
-    type: other
-    verification_status: unverified
-    authors: ["Takai"]
-    et_al: true
-    year: 2016
+    title: "Contribution of hand and foot force to take-off velocity for the kick-start in competitive swimming."
+    type: journal-article
+    verification_status: verified
+    authors: ["Takeda T", "Sakai S", "Takagi H", "Okuno K", "Tsubakimoto S"]
+    year: 2017
+    container: "Journal of sports sciences"
     identifier:
       pmid: "27149652"
       url: "https://pubmed.ncbi.nlm.nih.gov/27149652/"
-    notes: "與 src.takai 共用 pmid 27149652，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+      doi: "10.1080/02640414.2016.1180417"
+    retrieved_on: "2026-07-28"
+    notes: "S3c 依 PMID 27149652 確認作者應為 Takeda et al.，正文引用已更正；src.takai 是同時混入本 PMID 與 PMC8700779 的複合條目，仍待拆分。"
 
   - id: src.tanaka-2024-a
     display: "Tanaka 2024"

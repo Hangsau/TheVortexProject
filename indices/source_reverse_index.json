@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 476,
+  "source_count": 477,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -246,10 +246,10 @@
     {
       "id": "src.benjanuvatra-2007-a",
       "display": "Benjanuvatra et al. 2007",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC3990873",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
+        "doi": "10.25035/ijare.01.03.06",
+        "url": "https://doi.org/10.25035/ijare.01.03.06"
       },
       "usage_count": 1,
       "usages": [
@@ -321,6 +321,30 @@
           "id": "periodization.zones.energy_systems_primer",
           "file": "canonical/periodization/zones.yaml",
           "path": "energy_systems_primer"
+        }
+      ]
+    },
+    {
+      "id": "src.born-2022-im",
+      "display": "Born, Romann & Stöggl 2022, Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley, PMC9157519",
+      "verification_status": "verified",
+      "identifier": {
+        "pmcid": "PMC9157519",
+        "pmid": "35719225",
+        "doi": "10.52082/jssm.2022.233",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9157519/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "starts-turns.tech.28",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[192].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.28",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[192].public.mechanism"
         }
       ]
     },
@@ -1269,9 +1293,10 @@
     {
       "id": "src.gonjo-2017",
       "display": "Gonjo et al. 2017, PubMed 28605694",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "28605694"
+        "pmid": "28605694",
+        "doi": "10.1016/j.humov.2017.06.002"
       },
       "usage_count": 2,
       "usages": [
@@ -1290,24 +1315,14 @@
     {
       "id": "src.gonjo-2018",
       "display": "Gonjo et al. 2018",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "30694108",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/30694108/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30694108/",
+        "doi": "10.1080/14763141.2018.1561930"
       },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "starts-turns.tech.28",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[192].public.evidence[0]"
-        },
-        {
-          "id": "starts-turns.tech.28",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[192].public.mechanism"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.gonjo-2020-a",
@@ -1724,9 +1739,11 @@
     {
       "id": "src.hvid-2024",
       "display": "Hvid et al. 2024, Sports, PMC11125574",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11125574"
+        "pmcid": "PMC11125574",
+        "pmid": "38786990",
+        "doi": "10.3390/sports12050121"
       },
       "usage_count": 1,
       "usages": [
@@ -1799,7 +1816,7 @@
     {
       "id": "src.journal-pone-0241345-a",
       "display": "PLOS ONE 2020",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "doi": "10.1371/journal.pone.0241345",
         "url": "https://doi.org/10.1371/journal.pone.0241345"
@@ -2070,10 +2087,11 @@
     {
       "id": "src.marinho-2010",
       "display": "Marinho et al. (2010), Journal of Applied Biomechanics",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "20733242",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/20733242/"
+        "pmid": "20147761",
+        "doi": "10.1123/jab.26.1.87",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20147761/"
       },
       "usage_count": 2,
       "usages": [
@@ -2189,10 +2207,11 @@
     {
       "id": "src.mccullough-a",
       "display": "McCullough et al. (2009/2010), J. Strength & Conditioning Research",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "19387413",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/19387413/"
+        "pmid": "19855342",
+        "doi": "10.1519/JSC.0b013e31819ab977",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
       },
       "usage_count": 1,
       "usages": [
@@ -2967,10 +2986,12 @@
     {
       "id": "src.pmc10813451",
       "display": "Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC10813451",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC10813451/",
+        "pmid": "38247892",
+        "doi": "10.3390/bioengineering11010015"
       },
       "usage_count": 2,
       "usages": [
@@ -3192,9 +3213,11 @@
     {
       "id": "src.pmc12847173",
       "display": "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC12847173"
+        "pmcid": "PMC12847173",
+        "pmid": "40913680",
+        "doi": "10.1007/s40618-025-02673-7"
       },
       "usage_count": 1,
       "usages": [
@@ -3707,9 +3730,11 @@
     {
       "id": "src.pmc7340704",
       "display": "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC7340704"
+        "pmcid": "PMC7340704",
+        "pmid": "32514995",
+        "doi": "10.1007/s12178-020-09643-x"
       },
       "usage_count": 1,
       "usages": [
@@ -3855,10 +3880,12 @@
     {
       "id": "src.pmc8442910-a",
       "display": "Frontiers in Physiology 2021",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC8442910",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8442910/",
+        "pmid": "34539436",
+        "doi": "10.3389/fphys.2021.712652"
       },
       "usage_count": 1,
       "usages": [
@@ -3906,10 +3933,12 @@
     {
       "id": "src.pmc8700779",
       "display": "Leg Dominance 研究 2021",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC8700779",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/"
+        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC8700779/",
+        "pmid": "34948765",
+        "doi": "10.3390/ijerph182413156"
       },
       "usage_count": 1,
       "usages": [
@@ -4357,10 +4386,11 @@
     {
       "id": "src.pmid-25455956",
       "display": "PubMed 25455956 2014",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "25455956",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/25455956/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/25455956/",
+        "doi": "10.1016/j.jsams.2014.10.005"
       },
       "usage_count": 1,
       "usages": [
@@ -4374,10 +4404,11 @@
     {
       "id": "src.pmid-28605694",
       "display": "Gonjo et al.",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "28605694",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/28605694/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28605694/",
+        "doi": "10.1016/j.humov.2017.06.002"
       },
       "usage_count": 2,
       "usages": [
@@ -4517,9 +4548,10 @@
     {
       "id": "src.pmid-39500300",
       "display": "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "39500300"
+        "pmid": "39500300",
+        "doi": "10.1123/ijspp.2024-0240"
       },
       "usage_count": 1,
       "usages": [
@@ -4583,9 +4615,10 @@
     {
       "id": "src.pmid-40783351",
       "display": "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "40783351"
+        "pmid": "40783351",
+        "doi": "10.1016/j.jsams.2025.07.004"
       },
       "usage_count": 1,
       "usages": [
@@ -7065,10 +7098,11 @@
     {
       "id": "src.takai-2016",
       "display": "Takai et al. 2016",
-      "verification_status": "unverified",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "27149652",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/",
+        "doi": "10.1080/02640414.2016.1180417"
       },
       "usage_count": 2,
       "usages": [

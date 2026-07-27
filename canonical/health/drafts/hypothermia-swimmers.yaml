@@ -20,8 +20,8 @@ epidemiology:
   caveat: 同一場賽事可同時出現低體溫與高體溫個案(核心溫變化 −3.1 至 +2.7°C)；多數研究為觀察性無對照
   sources:
     - "Brannigan et al., Hypothermia... Mass Participation Open Water Swimming, Wilderness Environ Med 2009 (已驗證)"
-    - "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
-    - "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)"
+    - "JSAMS 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
+    - "Doha 2024 Masters 3km 核心溫研究（2025 發表）, PubMed 39500300 (已驗證)"
   source_ids: [src.brannigan-et-al-hypothermia-mass-participati-2009, src.pmid-40783351, src.pmid-39500300]
 
 risk_factors:

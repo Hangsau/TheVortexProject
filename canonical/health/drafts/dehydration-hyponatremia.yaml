@@ -21,7 +21,7 @@ epidemiology:
   sources:
     - "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)"
     - "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)"
-    - "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)"
+    - "Pathophysiology and treatment of EAH, J Endocrinol Invest, PMC12847173 (已驗證)"
   source_ids: [src.pmc9699060, src.pmid-25443755, src.pmc12847173]
 
 risk_factors:

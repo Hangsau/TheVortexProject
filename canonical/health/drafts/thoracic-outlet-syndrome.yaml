@@ -19,7 +19,7 @@ epidemiology:
   evidence_grade: C
   caveat: TOS 診斷標準無完全共識(CORE-TOS 等)，盛行率差異大；易與 MDI/旋轉肌袖損傷混淆；游泳者文獻多為 1990s–2010s 小系列
   sources:
-    - "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)"
+    - "Thoracic Outlet Syndrome in the Overhead Athlete — diagnosis and treatment review, PMC7340704 (已驗證)"
     - "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)"
   source_ids: [src.pmc7340704, src.pmc11277273]
 

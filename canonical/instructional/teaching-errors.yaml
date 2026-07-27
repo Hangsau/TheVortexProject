@@ -258,7 +258,7 @@ errors:
             抑制大渦流形成。多篇 CFD 重複確認。
           source: Marinho et al. (2010), Journal of Applied Biomechanics
           source_ids: [src.marinho-2010]
-          url: https://pubmed.ncbi.nlm.nih.gov/20733242/
+          url: https://pubmed.ncbi.nlm.nih.gov/20147761/
         - certainty: 🟢
           text: 入水瞬間手指與拇指應緊合像刀片劃入；進入抓水後手指應略微張開以增大受力面積。
           source: The Race Club
@@ -376,9 +376,9 @@ errors:
           text: >-
             踝關節蹠屈柔韌性與踢水速度直接相關；陸上踝柔韌性訓練能改善踢水效率。跑步背景者最容易踝僵硬，
             踢水時最易制動。
-          source: McCullough et al. (2009/2010), J. Strength & Conditioning Research
+          source: McCullough et al. 2009, J. Strength & Conditioning Research
           source_ids: [src.mccullough-a]
-          url: https://pubmed.ncbi.nlm.nih.gov/19387413/
+          url: https://pubmed.ncbi.nlm.nih.gov/19855342/
       correct_concept: >-
         踝關節柔韌性訓練優先於力量。跑步背景選手需先評估蹠屈幅度確認硬體邊界，再決定踢水訓練方向。
       perception_impact: >-
@@ -2625,7 +2625,7 @@ errors:
           text: >-
             當選手被要求以超過最大努力的踢頻踢腿時，振幅顯著下降，但游速沒有增加。
             Froude 效率從 0.72 降至 0.70，肌肉共收縮相增加，代謝負擔上升。
-          source: Gonjo et al.
+          source: Yamakawa et al. 2017
           source_ids: [src.pmid-28605694]
           url: https://pubmed.ncbi.nlm.nih.gov/28605694/
       correct_concept: >-

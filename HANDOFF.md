@@ -4,11 +4,18 @@
 
 ---
 
-## 當前狀態（2026-07-27）
+## 當前狀態（2026-07-28）
 
-### 進行中——canonical 資料契約升級：S0–S5 完成，S3c 第一批完成（S6 待續）
+### 進行中——canonical 資料契約升級：S0–S5 完成，S3c identifier queue 完成（S6 待續）
 
-**基線**：`python tools/validate.py` **0 ERROR／650 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W011 63）；`python -m unittest discover -s tests` **129 tests OK**。
+**基線**：`python tools/validate.py` **0 ERROR／651 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W008 1、W011 63）；`python -m unittest discover -s tests -v` **129 tests OK**。
+
+**S3c review queue 收束（2026-07-28）**
+
+- 前批留下的 17 筆（8 `matched_with_correction`／5 mismatch／4 needs-review）已逐筆回正文脈絡查核；另為 IM 轉身主張新增真正對應的 `src.born-2022-im`，合計 **18/18 經 PubMed／PMC／Crossref 重跑為 `matched`**，0 lookup error，全部以 block-surgical apply 寫回。
+- 攔截並修正四個明顯錯識別碼：Benjanuvatra 2007（原誤掛 Vantorre 2014 PMCID）、Marinho 2010（原誤掛 bioinformatics PMID）、McCullough 2009（原誤掛跑鞋研究 PMID）、IM 蝶→背（原誤掛 Nicol 的自由式／蝶式 turn paper）。正文 URL、作者字串與 source ID 一併校正；原始 `display` 仍逐字保留作溯源錨點，差異寫入 verified metadata／notes。
+- 其餘作者與期卷年誤植（Gonjo→Yamakawa、Hvid→Venckunas & Achramavicius、Takai→Takeda；online year vs issue year）皆按權威 metadata 收束。`src.gonjo-2018` 因錯誤用途被替換後成為唯一 orphan source，故新增 **W008 1**；保留記錄比刪掉錯誤歷史更可追溯。
+- **目前 registry：477 筆，verified 93／unverified 384；identifier_dereference lane 已歸零。** 剩餘分流：作者＋年份書目搜尋 67、URL review 12、複合引用 75、內部錨點 73、人工重建 157。
 
 **S3c 第一批：identifier-first 低 token 查證（2026-07-27）**
 
@@ -50,7 +57,7 @@
 3. **新增三項檢查**：`W011`（🟠 缺 `observation_basis`，63 筆）、`E010`（診斷型鍵名寫進 `public` 子樹 = 唯一實際洩漏路徑，0 筆）、`E011`（`evidence_from` 的 ID 必須解析得到——它是 W009 的豁免路徑，不驗證就是零成本免罪符，0 筆）。另修一個既存的靜默回報缺口：E008/E009/W010 早有檢查但沒進 `code_meta`，所以從來沒出現在 `reports/validation_report.md`。
 4. **10 筆試點分流完成**（W009 112 → 102），驗證分流規則可批次化——批次結果見上表。
 
-**下一步**：先處理 S3c review queue（8 筆需校正 + 5 錯配 + 4 人工判讀），再批次做 67 筆作者＋年份書目搜尋；75 複合引用與 73 內部錨點另案，不與自動查驗混跑。之後進 S6。W002 111 筆可另以 S3a-3 純遷移批次處理。
+**下一步**：S3c identifier queue 已清空；若繼續來源治理，下一個低風險批次是 **67 筆作者＋年份書目搜尋**（先候選報告、再人工 review，不直接寫 canonical）。12 筆 URL review 可並行作另一小批；75 複合引用與 73 內部錨點另案，不與自動查驗混跑。之後進 S6。W002 111 筆可另以 S3a-3 純遷移批次處理。
 
 **同期浮出的新項目（尚未動）**
 - **W002 111 筆**：絕大多數是 `canonical/health/injuries.yaml` 的 `references[].citation`——有來源顯示字串但缺 `source_ids`，屬純遷移（S3a-3 候選，可派工）。⚠ `injuries.yaml` 是 build 產物，改動要進 `canonical/health/drafts/*.yaml` 再跑 `python tools/build_injuries.py`。
