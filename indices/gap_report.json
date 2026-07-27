@@ -1,0 +1,2397 @@
+{
+  "schema_version": 1,
+  "summary": {
+    "high_certainty_without_source": 0,
+    "unused_taxonomy_values": 1,
+    "unlinked_records": 476
+  },
+  "high_certainty_without_source": [],
+  "unused_taxonomy_values": [
+    {
+      "field": "development_stage",
+      "value": "fun"
+    }
+  ],
+  "unlinked_records": [
+    {
+      "id": "A-shoulder-upper",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[0]"
+    },
+    {
+      "id": "B-lower-spine-strokespecific",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[1]"
+    },
+    {
+      "id": "C-nonMSK-medical",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[2]"
+    },
+    {
+      "id": "D-endocrine",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[4]"
+    },
+    {
+      "id": "D-systemic-acute",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[3]"
+    },
+    {
+      "id": "E-acute-trauma",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[5]"
+    },
+    {
+      "id": "F-pediatric-growth",
+      "file": "canonical/health/injuries.yaml",
+      "path": "categories[6]"
+    },
+    {
+      "id": "_asian-epidemiology-supplement",
+      "file": "canonical/health/injuries.yaml",
+      "path": "meta_references[0]"
+    },
+    {
+      "id": "acanthamoeba-keratitis",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[13]"
+    },
+    {
+      "id": "back.L0",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[7]"
+    },
+    {
+      "id": "back.L1",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[8]"
+    },
+    {
+      "id": "back.L2",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[9]"
+    },
+    {
+      "id": "back.L2.up-kick",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[19]"
+    },
+    {
+      "id": "back.L3",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[10]"
+    },
+    {
+      "id": "back.L4",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[11]"
+    },
+    {
+      "id": "back.L4.head-stillness",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[23]"
+    },
+    {
+      "id": "back.L5",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[12]"
+    },
+    {
+      "id": "back.L6",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[13]"
+    },
+    {
+      "id": "back.err1",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[25]"
+    },
+    {
+      "id": "back.err10",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[34]"
+    },
+    {
+      "id": "back.err11",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[35]"
+    },
+    {
+      "id": "back.err12",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[36]"
+    },
+    {
+      "id": "back.err13",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[37]"
+    },
+    {
+      "id": "back.err14",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[38]"
+    },
+    {
+      "id": "back.err15",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[39]"
+    },
+    {
+      "id": "back.err16",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[40]"
+    },
+    {
+      "id": "back.err17",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[41]"
+    },
+    {
+      "id": "back.err2",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[26]"
+    },
+    {
+      "id": "back.err3",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[27]"
+    },
+    {
+      "id": "back.err4",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[28]"
+    },
+    {
+      "id": "back.err5",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[29]"
+    },
+    {
+      "id": "back.err6",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[30]"
+    },
+    {
+      "id": "back.err7",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[31]"
+    },
+    {
+      "id": "back.err8",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[32]"
+    },
+    {
+      "id": "back.err9",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[33]"
+    },
+    {
+      "id": "back.pre.orientation",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[18]"
+    },
+    {
+      "id": "back.tech.10",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[46]"
+    },
+    {
+      "id": "back.tech.11",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[47]"
+    },
+    {
+      "id": "back.tech.12",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[48]"
+    },
+    {
+      "id": "back.tech.13",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[49]"
+    },
+    {
+      "id": "back.tech.14",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[50]"
+    },
+    {
+      "id": "back.tech.15",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[51]"
+    },
+    {
+      "id": "back.tech.16",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[52]"
+    },
+    {
+      "id": "back.tech.17",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[53]"
+    },
+    {
+      "id": "back.tech.18",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[54]"
+    },
+    {
+      "id": "back.tech.19",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[55]"
+    },
+    {
+      "id": "back.tech.2",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[38]"
+    },
+    {
+      "id": "back.tech.20",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[56]"
+    },
+    {
+      "id": "back.tech.21",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[57]"
+    },
+    {
+      "id": "back.tech.22",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[58]"
+    },
+    {
+      "id": "back.tech.23",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[59]"
+    },
+    {
+      "id": "back.tech.24",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[60]"
+    },
+    {
+      "id": "back.tech.25",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[61]"
+    },
+    {
+      "id": "back.tech.26",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[62]"
+    },
+    {
+      "id": "back.tech.27",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[63]"
+    },
+    {
+      "id": "back.tech.28",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[35]"
+    },
+    {
+      "id": "back.tech.29",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[36]"
+    },
+    {
+      "id": "back.tech.3",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[39]"
+    },
+    {
+      "id": "back.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[40]"
+    },
+    {
+      "id": "back.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[41]"
+    },
+    {
+      "id": "back.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[42]"
+    },
+    {
+      "id": "back.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[43]"
+    },
+    {
+      "id": "back.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[44]"
+    },
+    {
+      "id": "back.tech.9",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[45]"
+    },
+    {
+      "id": "biceps-tendinopathy",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[0]"
+    },
+    {
+      "id": "breast.L2",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[15]"
+    },
+    {
+      "id": "breast.L3",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[16]"
+    },
+    {
+      "id": "breast.L4",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[17]"
+    },
+    {
+      "id": "breast.L5",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[18]"
+    },
+    {
+      "id": "breast.L6",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[19]"
+    },
+    {
+      "id": "breast.err1",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[42]"
+    },
+    {
+      "id": "breast.err10",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[51]"
+    },
+    {
+      "id": "breast.err11",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[52]"
+    },
+    {
+      "id": "breast.err12",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[53]"
+    },
+    {
+      "id": "breast.err13",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[54]"
+    },
+    {
+      "id": "breast.err14",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[55]"
+    },
+    {
+      "id": "breast.err15",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[56]"
+    },
+    {
+      "id": "breast.err16",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[57]"
+    },
+    {
+      "id": "breast.err17",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[58]"
+    },
+    {
+      "id": "breast.err2",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[43]"
+    },
+    {
+      "id": "breast.err3",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[44]"
+    },
+    {
+      "id": "breast.err4",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[45]"
+    },
+    {
+      "id": "breast.err5",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[46]"
+    },
+    {
+      "id": "breast.err6",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[47]"
+    },
+    {
+      "id": "breast.err7",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[48]"
+    },
+    {
+      "id": "breast.err8",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[49]"
+    },
+    {
+      "id": "breast.err9",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[50]"
+    },
+    {
+      "id": "breast.pre",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[14]"
+    },
+    {
+      "id": "breast.pre.resistance",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[37]"
+    },
+    {
+      "id": "breast.tech.10",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[73]"
+    },
+    {
+      "id": "breast.tech.11",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[74]"
+    },
+    {
+      "id": "breast.tech.12",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[75]"
+    },
+    {
+      "id": "breast.tech.13",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[76]"
+    },
+    {
+      "id": "breast.tech.14",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[77]"
+    },
+    {
+      "id": "breast.tech.15",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[78]"
+    },
+    {
+      "id": "breast.tech.16",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[79]"
+    },
+    {
+      "id": "breast.tech.17",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[80]"
+    },
+    {
+      "id": "breast.tech.18",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[81]"
+    },
+    {
+      "id": "breast.tech.19",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[82]"
+    },
+    {
+      "id": "breast.tech.2",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[65]"
+    },
+    {
+      "id": "breast.tech.20",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[83]"
+    },
+    {
+      "id": "breast.tech.21",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[84]"
+    },
+    {
+      "id": "breast.tech.22",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[85]"
+    },
+    {
+      "id": "breast.tech.23",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[86]"
+    },
+    {
+      "id": "breast.tech.24",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[87]"
+    },
+    {
+      "id": "breast.tech.25",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[88]"
+    },
+    {
+      "id": "breast.tech.26",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[89]"
+    },
+    {
+      "id": "breast.tech.27",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[90]"
+    },
+    {
+      "id": "breast.tech.28",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[91]"
+    },
+    {
+      "id": "breast.tech.29",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[92]"
+    },
+    {
+      "id": "breast.tech.3",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[66]"
+    },
+    {
+      "id": "breast.tech.30",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[93]"
+    },
+    {
+      "id": "breast.tech.31",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[94]"
+    },
+    {
+      "id": "breast.tech.35",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[160]"
+    },
+    {
+      "id": "breast.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[67]"
+    },
+    {
+      "id": "breast.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[68]"
+    },
+    {
+      "id": "breast.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[69]"
+    },
+    {
+      "id": "breast.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[70]"
+    },
+    {
+      "id": "breast.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[71]"
+    },
+    {
+      "id": "breast.tech.9",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[72]"
+    },
+    {
+      "id": "chlorine-eye-irritation",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[14]"
+    },
+    {
+      "id": "common.pre.resistance",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[0]"
+    },
+    {
+      "id": "dehydration-hyponatremia",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[24]"
+    },
+    {
+      "id": "dev.life.l2t",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[12]"
+    },
+    {
+      "id": "dev.life.t2c",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[14]"
+    },
+    {
+      "id": "dev.life.t2t",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[13]"
+    },
+    {
+      "id": "dev.life.t2w",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[15]"
+    },
+    {
+      "id": "dev.mental.l2t",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[8]"
+    },
+    {
+      "id": "dev.mental.t2c",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[10]"
+    },
+    {
+      "id": "dev.mental.t2t",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[9]"
+    },
+    {
+      "id": "dev.mental.t2w",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[11]"
+    },
+    {
+      "id": "dev.physical.l2t",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[0]"
+    },
+    {
+      "id": "dev.physical.t2c",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[2]"
+    },
+    {
+      "id": "dev.physical.t2t",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[1]"
+    },
+    {
+      "id": "dev.physical.t2w",
+      "file": "canonical/development/matrix.yaml",
+      "path": "cells[3]"
+    },
+    {
+      "id": "exertional-sudden-cardiac-death",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[26]"
+    },
+    {
+      "id": "extension-low-back-pain",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[8]"
+    },
+    {
+      "id": "femoroacetabular-impingement",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[9]"
+    },
+    {
+      "id": "fly.L2",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[21]"
+    },
+    {
+      "id": "fly.L2.kick",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[28]"
+    },
+    {
+      "id": "fly.L3",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[22]"
+    },
+    {
+      "id": "fly.L4",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[23]"
+    },
+    {
+      "id": "fly.L5",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[24]"
+    },
+    {
+      "id": "fly.L5.glide-elimination",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[35]"
+    },
+    {
+      "id": "fly.L6",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[25]"
+    },
+    {
+      "id": "fly.err1",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[59]"
+    },
+    {
+      "id": "fly.err10",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[68]"
+    },
+    {
+      "id": "fly.err11",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[69]"
+    },
+    {
+      "id": "fly.err12",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[70]"
+    },
+    {
+      "id": "fly.err13",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[71]"
+    },
+    {
+      "id": "fly.err14",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[72]"
+    },
+    {
+      "id": "fly.err15",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[73]"
+    },
+    {
+      "id": "fly.err16",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[74]"
+    },
+    {
+      "id": "fly.err2",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[60]"
+    },
+    {
+      "id": "fly.err3",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[61]"
+    },
+    {
+      "id": "fly.err4",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[62]"
+    },
+    {
+      "id": "fly.err5",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[63]"
+    },
+    {
+      "id": "fly.err6",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[64]"
+    },
+    {
+      "id": "fly.err7",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[65]"
+    },
+    {
+      "id": "fly.err8",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[66]"
+    },
+    {
+      "id": "fly.err9",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[67]"
+    },
+    {
+      "id": "fly.pre",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[20]"
+    },
+    {
+      "id": "fly.pre.undulation",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[27]"
+    },
+    {
+      "id": "fly.tech.10",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[104]"
+    },
+    {
+      "id": "fly.tech.11",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[105]"
+    },
+    {
+      "id": "fly.tech.12",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[106]"
+    },
+    {
+      "id": "fly.tech.13",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[107]"
+    },
+    {
+      "id": "fly.tech.14",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[108]"
+    },
+    {
+      "id": "fly.tech.15",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[109]"
+    },
+    {
+      "id": "fly.tech.16",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[110]"
+    },
+    {
+      "id": "fly.tech.17",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[111]"
+    },
+    {
+      "id": "fly.tech.18",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[112]"
+    },
+    {
+      "id": "fly.tech.19",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[113]"
+    },
+    {
+      "id": "fly.tech.2",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[96]"
+    },
+    {
+      "id": "fly.tech.20",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[114]"
+    },
+    {
+      "id": "fly.tech.21",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[115]"
+    },
+    {
+      "id": "fly.tech.22",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[116]"
+    },
+    {
+      "id": "fly.tech.23",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[117]"
+    },
+    {
+      "id": "fly.tech.24",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[118]"
+    },
+    {
+      "id": "fly.tech.25",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[119]"
+    },
+    {
+      "id": "fly.tech.26",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[120]"
+    },
+    {
+      "id": "fly.tech.27",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[121]"
+    },
+    {
+      "id": "fly.tech.28",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[122]"
+    },
+    {
+      "id": "fly.tech.29",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[123]"
+    },
+    {
+      "id": "fly.tech.3",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[97]"
+    },
+    {
+      "id": "fly.tech.30",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[124]"
+    },
+    {
+      "id": "fly.tech.31",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[125]"
+    },
+    {
+      "id": "fly.tech.32",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[126]"
+    },
+    {
+      "id": "fly.tech.33",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[127]"
+    },
+    {
+      "id": "fly.tech.34",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[128]"
+    },
+    {
+      "id": "fly.tech.35",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[129]"
+    },
+    {
+      "id": "fly.tech.36",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[159]"
+    },
+    {
+      "id": "fly.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[98]"
+    },
+    {
+      "id": "fly.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[99]"
+    },
+    {
+      "id": "fly.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[100]"
+    },
+    {
+      "id": "fly.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[101]"
+    },
+    {
+      "id": "fly.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[102]"
+    },
+    {
+      "id": "fly.tech.9",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[103]"
+    },
+    {
+      "id": "free.L0",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[0]"
+    },
+    {
+      "id": "free.L1",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[1]"
+    },
+    {
+      "id": "free.L2",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[2]"
+    },
+    {
+      "id": "free.L2.kick",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[7]"
+    },
+    {
+      "id": "free.L3",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[3]"
+    },
+    {
+      "id": "free.L3.kick-rhythm",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[10]"
+    },
+    {
+      "id": "free.L4",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[4]"
+    },
+    {
+      "id": "free.L5",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[5]"
+    },
+    {
+      "id": "free.L5.coupling-timing",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[14]"
+    },
+    {
+      "id": "free.L5.lift-phase-duration",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[15]"
+    },
+    {
+      "id": "free.L6",
+      "file": "canonical/technica/water-sense-levels.yaml",
+      "path": "levels[6]"
+    },
+    {
+      "id": "free.err1",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[0]"
+    },
+    {
+      "id": "free.err10",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[9]"
+    },
+    {
+      "id": "free.err11",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[10]"
+    },
+    {
+      "id": "free.err12",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[11]"
+    },
+    {
+      "id": "free.err13",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[12]"
+    },
+    {
+      "id": "free.err14",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[13]"
+    },
+    {
+      "id": "free.err15",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[14]"
+    },
+    {
+      "id": "free.err16",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[15]"
+    },
+    {
+      "id": "free.err17",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[16]"
+    },
+    {
+      "id": "free.err18",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[17]"
+    },
+    {
+      "id": "free.err19",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[18]"
+    },
+    {
+      "id": "free.err2",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[1]"
+    },
+    {
+      "id": "free.err20",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[19]"
+    },
+    {
+      "id": "free.err21",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[20]"
+    },
+    {
+      "id": "free.err22",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[21]"
+    },
+    {
+      "id": "free.err23",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[22]"
+    },
+    {
+      "id": "free.err24",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[23]"
+    },
+    {
+      "id": "free.err25",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[24]"
+    },
+    {
+      "id": "free.err3",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[2]"
+    },
+    {
+      "id": "free.err4",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[3]"
+    },
+    {
+      "id": "free.err5",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[4]"
+    },
+    {
+      "id": "free.err6",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[5]"
+    },
+    {
+      "id": "free.err7",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[6]"
+    },
+    {
+      "id": "free.err8",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[7]"
+    },
+    {
+      "id": "free.err9",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[8]"
+    },
+    {
+      "id": "free.pre.resistance",
+      "file": "canonical/technica/l-indicators.yaml",
+      "path": "indicators[6]"
+    },
+    {
+      "id": "free.tech.10",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[11]"
+    },
+    {
+      "id": "free.tech.11",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[12]"
+    },
+    {
+      "id": "free.tech.12",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[13]"
+    },
+    {
+      "id": "free.tech.13",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[14]"
+    },
+    {
+      "id": "free.tech.14",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[15]"
+    },
+    {
+      "id": "free.tech.15",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[16]"
+    },
+    {
+      "id": "free.tech.16",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[17]"
+    },
+    {
+      "id": "free.tech.17",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[19]"
+    },
+    {
+      "id": "free.tech.18",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[20]"
+    },
+    {
+      "id": "free.tech.19",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[21]"
+    },
+    {
+      "id": "free.tech.20",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[22]"
+    },
+    {
+      "id": "free.tech.21",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[23]"
+    },
+    {
+      "id": "free.tech.22",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[24]"
+    },
+    {
+      "id": "free.tech.23",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[25]"
+    },
+    {
+      "id": "free.tech.24",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[26]"
+    },
+    {
+      "id": "free.tech.25",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[27]"
+    },
+    {
+      "id": "free.tech.26",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[28]"
+    },
+    {
+      "id": "free.tech.27",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[8]"
+    },
+    {
+      "id": "free.tech.28",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[9]"
+    },
+    {
+      "id": "free.tech.29",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[18]"
+    },
+    {
+      "id": "free.tech.3",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[2]"
+    },
+    {
+      "id": "free.tech.30",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[31]"
+    },
+    {
+      "id": "free.tech.31",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[32]"
+    },
+    {
+      "id": "free.tech.32",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[29]"
+    },
+    {
+      "id": "free.tech.33",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[30]"
+    },
+    {
+      "id": "free.tech.34",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[33]"
+    },
+    {
+      "id": "free.tech.35",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[34]"
+    },
+    {
+      "id": "free.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[3]"
+    },
+    {
+      "id": "free.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[4]"
+    },
+    {
+      "id": "free.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[5]"
+    },
+    {
+      "id": "free.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[6]"
+    },
+    {
+      "id": "free.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[7]"
+    },
+    {
+      "id": "free.tech.9",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[10]"
+    },
+    {
+      "id": "groin-adductor-strain",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[10]"
+    },
+    {
+      "id": "hypothermia-swimmers",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[27]"
+    },
+    {
+      "id": "iron-deficiency-swimmer",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[32]"
+    },
+    {
+      "id": "open-water-marine-biological-hazards",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[39]"
+    },
+    {
+      "id": "oral-contraceptives-performance",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[33]"
+    },
+    {
+      "id": "osgood-schlatter",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[42]"
+    },
+    {
+      "id": "periodization.structure.annual.multipeak",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "annual_plan_types[3]"
+    },
+    {
+      "id": "periodization.taper.definition",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "definition"
+    },
+    {
+      "id": "periodization.taper.duration",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "variables[3]"
+    },
+    {
+      "id": "periodization.taper.frequency",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "variables[2]"
+    },
+    {
+      "id": "periodization.taper.intensity",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "variables[1]"
+    },
+    {
+      "id": "periodization.taper.peak_window",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "peak"
+    },
+    {
+      "id": "periodization.taper.type.fast_exponential",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "taper_types[2]"
+    },
+    {
+      "id": "periodization.taper.type.linear",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "taper_types[0]"
+    },
+    {
+      "id": "periodization.taper.type.step",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "taper_types[1]"
+    },
+    {
+      "id": "periodization.taper.volume",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "variables[0]"
+    },
+    {
+      "id": "periodization.zones.table_11_1",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "liee_methods"
+    },
+    {
+      "id": "periodization.zones.table_11_2",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "hr_vo2_ergogenesis"
+    },
+    {
+      "id": "periodization.zones.table_7_1",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "intensity_zones"
+    },
+    {
+      "id": "poolside-slip-fall",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[40]"
+    },
+    {
+      "id": "protocol.free.evf",
+      "file": "canonical/perception/free.yaml",
+      "path": "diagnostic_protocols[0]"
+    },
+    {
+      "id": "psych.arousal",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6]"
+    },
+    {
+      "id": "psych.arousal.breath_reinvestment",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[6]"
+    },
+    {
+      "id": "psych.arousal.catastrophe",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[2]"
+    },
+    {
+      "id": "psych.arousal.explicit_monitoring",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[4]"
+    },
+    {
+      "id": "psych.arousal.implicit_learning",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[7]"
+    },
+    {
+      "id": "psych.arousal.inverted_u",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[0]"
+    },
+    {
+      "id": "psych.arousal.izof",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[1]"
+    },
+    {
+      "id": "psych.arousal.muscle_tension_loop",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[5]"
+    },
+    {
+      "id": "psych.arousal.reinvestment",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[6].concepts[3]"
+    },
+    {
+      "id": "psych.attention",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4]"
+    },
+    {
+      "id": "psych.attention.association_dissociation",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4].concepts[5]"
+    },
+    {
+      "id": "psych.attention.cah",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4].concepts[1]"
+    },
+    {
+      "id": "psych.attention.distance_effect",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4].concepts[3]"
+    },
+    {
+      "id": "psych.attention.ef_if_definition",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4].concepts[0]"
+    },
+    {
+      "id": "psych.attention.elite_resilience",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4].concepts[2]"
+    },
+    {
+      "id": "psych.attention.water_sense_third_category",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[4].concepts[4]"
+    },
+    {
+      "id": "psych.fear",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0]"
+    },
+    {
+      "id": "psych.fear.co2_breath_panic",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[3]"
+    },
+    {
+      "id": "psych.fear.control_loss",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[0]"
+    },
+    {
+      "id": "psych.fear.diving_reflex_calm",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[4]"
+    },
+    {
+      "id": "psych.fear.freeze_reflex",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[2]"
+    },
+    {
+      "id": "psych.fear.perception_masking",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[1]"
+    },
+    {
+      "id": "psych.fear.population_faces",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[6]"
+    },
+    {
+      "id": "psych.fear.safety_precondition",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[0].concepts[5]"
+    },
+    {
+      "id": "psych.flow",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7]"
+    },
+    {
+      "id": "psych.flow.action_awareness_merging",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[0]"
+    },
+    {
+      "id": "psych.flow.challenge_skill_balance",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[1]"
+    },
+    {
+      "id": "psych.flow.de_reinvestment",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[5]"
+    },
+    {
+      "id": "psych.flow.flow_across_levels",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[7]"
+    },
+    {
+      "id": "psych.flow.flow_vs_clutch",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[3]"
+    },
+    {
+      "id": "psych.flow.hypofrontality",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[6]"
+    },
+    {
+      "id": "psych.flow.indirect_control",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[2]"
+    },
+    {
+      "id": "psych.flow.izof_individual_zones",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[9]"
+    },
+    {
+      "id": "psych.flow.reinvestment",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[4]"
+    },
+    {
+      "id": "psych.flow.water_as_feedback",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[7].concepts[8]"
+    },
+    {
+      "id": "psych.imagery",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3]"
+    },
+    {
+      "id": "psych.imagery.feedforward_calibration",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3].concepts[3]"
+    },
+    {
+      "id": "psych.imagery.functional_equivalence",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3].concepts[0]"
+    },
+    {
+      "id": "psych.imagery.functional_types",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3].concepts[4]"
+    },
+    {
+      "id": "psych.imagery.kinesthetic_priority",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3].concepts[2]"
+    },
+    {
+      "id": "psych.imagery.off_water_maintenance",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3].concepts[5]"
+    },
+    {
+      "id": "psych.imagery.pettlep",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[3].concepts[1]"
+    },
+    {
+      "id": "psych.interaction",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1]"
+    },
+    {
+      "id": "psych.interaction.anterior_insula_gain",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[0]"
+    },
+    {
+      "id": "psych.interaction.attentional_narrowing",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[3]"
+    },
+    {
+      "id": "psych.interaction.breathing_cognitive_load",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[6]"
+    },
+    {
+      "id": "psych.interaction.freeze_prefrontal_shutdown",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[5]"
+    },
+    {
+      "id": "psych.interaction.rpe_psychobiological",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[2]"
+    },
+    {
+      "id": "psych.interaction.stress_hypertonia",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[1]"
+    },
+    {
+      "id": "psych.interaction.vagal_tone_fear_extinction",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[4]"
+    },
+    {
+      "id": "psych.interaction.water_immersion_interoception",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[1].concepts[7]"
+    },
+    {
+      "id": "psych.motivation",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2]"
+    },
+    {
+      "id": "psych.motivation.amotivation_trap",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[4]"
+    },
+    {
+      "id": "psych.motivation.autonomy_support",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[2]"
+    },
+    {
+      "id": "psych.motivation.bpn_triad",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[0]"
+    },
+    {
+      "id": "psych.motivation.climate_biology",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[6]"
+    },
+    {
+      "id": "psych.motivation.competence_moderator",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[5]"
+    },
+    {
+      "id": "psych.motivation.continuum",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[1]"
+    },
+    {
+      "id": "psych.motivation.hmiem_bottomup",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[7]"
+    },
+    {
+      "id": "psych.motivation.mastery_vs_performance_climate",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[3]"
+    },
+    {
+      "id": "psych.motivation.population_engines",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[2].concepts[8]"
+    },
+    {
+      "id": "psych.self_talk",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5]"
+    },
+    {
+      "id": "psych.self_talk.external_focus_ist",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[2]"
+    },
+    {
+      "id": "psych.self_talk.interfering_thoughts_bandwidth",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[3]"
+    },
+    {
+      "id": "psych.self_talk.ist_mst_matching",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[1]"
+    },
+    {
+      "id": "psych.self_talk.mst_endurance_efficiency",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[5]"
+    },
+    {
+      "id": "psych.self_talk.pre_performance_routine",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[6]"
+    },
+    {
+      "id": "psych.self_talk.systematic_training",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[7]"
+    },
+    {
+      "id": "psych.self_talk.tense_drift",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[4]"
+    },
+    {
+      "id": "psych.self_talk.trainable_skill",
+      "file": "canonical/psychology/psychology.yaml",
+      "path": "themes[5].concepts[0]"
+    },
+    {
+      "id": "recreational-water-cryptosporidium",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[15]"
+    },
+    {
+      "id": "red-s",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[34]"
+    },
+    {
+      "id": "rotator-cuff-tendinopathy",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[1]"
+    },
+    {
+      "id": "sci-hip-flexor-contracture",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[16]"
+    },
+    {
+      "id": "sever-disease",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[45]"
+    },
+    {
+      "id": "shoulder-multidirectional-instability",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[2]"
+    },
+    {
+      "id": "slap-lesion",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[3]"
+    },
+    {
+      "id": "spondylolysis",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[11]"
+    },
+    {
+      "id": "starts-turns.err1",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[88]"
+    },
+    {
+      "id": "starts-turns.err10",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[97]"
+    },
+    {
+      "id": "starts-turns.err11",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[98]"
+    },
+    {
+      "id": "starts-turns.err12",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[99]"
+    },
+    {
+      "id": "starts-turns.err13",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[100]"
+    },
+    {
+      "id": "starts-turns.err14",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[101]"
+    },
+    {
+      "id": "starts-turns.err2",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[89]"
+    },
+    {
+      "id": "starts-turns.err3",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[90]"
+    },
+    {
+      "id": "starts-turns.err4",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[91]"
+    },
+    {
+      "id": "starts-turns.err5",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[92]"
+    },
+    {
+      "id": "starts-turns.err6",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[93]"
+    },
+    {
+      "id": "starts-turns.err7",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[94]"
+    },
+    {
+      "id": "starts-turns.err8",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[95]"
+    },
+    {
+      "id": "starts-turns.err9",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[96]"
+    },
+    {
+      "id": "starts-turns.tech.10",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[174]"
+    },
+    {
+      "id": "starts-turns.tech.11",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[175]"
+    },
+    {
+      "id": "starts-turns.tech.12",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[176]"
+    },
+    {
+      "id": "starts-turns.tech.13",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[177]"
+    },
+    {
+      "id": "starts-turns.tech.14",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[178]"
+    },
+    {
+      "id": "starts-turns.tech.15",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[179]"
+    },
+    {
+      "id": "starts-turns.tech.16",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[180]"
+    },
+    {
+      "id": "starts-turns.tech.17",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[181]"
+    },
+    {
+      "id": "starts-turns.tech.18",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[182]"
+    },
+    {
+      "id": "starts-turns.tech.19",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[183]"
+    },
+    {
+      "id": "starts-turns.tech.2",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[162]"
+    },
+    {
+      "id": "starts-turns.tech.20",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[184]"
+    },
+    {
+      "id": "starts-turns.tech.21",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[185]"
+    },
+    {
+      "id": "starts-turns.tech.22",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[186]"
+    },
+    {
+      "id": "starts-turns.tech.23",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[187]"
+    },
+    {
+      "id": "starts-turns.tech.24",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[188]"
+    },
+    {
+      "id": "starts-turns.tech.25",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[189]"
+    },
+    {
+      "id": "starts-turns.tech.26",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[190]"
+    },
+    {
+      "id": "starts-turns.tech.27",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[191]"
+    },
+    {
+      "id": "starts-turns.tech.28",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[192]"
+    },
+    {
+      "id": "starts-turns.tech.29",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[193]"
+    },
+    {
+      "id": "starts-turns.tech.3",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[163]"
+    },
+    {
+      "id": "starts-turns.tech.30",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[194]"
+    },
+    {
+      "id": "starts-turns.tech.31",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[195]"
+    },
+    {
+      "id": "starts-turns.tech.32",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[196]"
+    },
+    {
+      "id": "starts-turns.tech.33",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[197]"
+    },
+    {
+      "id": "starts-turns.tech.34",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[198]"
+    },
+    {
+      "id": "starts-turns.tech.35",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[199]"
+    },
+    {
+      "id": "starts-turns.tech.36",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[200]"
+    },
+    {
+      "id": "starts-turns.tech.37",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[201]"
+    },
+    {
+      "id": "starts-turns.tech.38",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[202]"
+    },
+    {
+      "id": "starts-turns.tech.39",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[203]"
+    },
+    {
+      "id": "starts-turns.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[164]"
+    },
+    {
+      "id": "starts-turns.tech.40",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[204]"
+    },
+    {
+      "id": "starts-turns.tech.41",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[165]"
+    },
+    {
+      "id": "starts-turns.tech.42",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[166]"
+    },
+    {
+      "id": "starts-turns.tech.43",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[167]"
+    },
+    {
+      "id": "starts-turns.tech.44",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[168]"
+    },
+    {
+      "id": "starts-turns.tech.45",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[205]"
+    },
+    {
+      "id": "starts-turns.tech.46",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[206]"
+    },
+    {
+      "id": "starts-turns.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[169]"
+    },
+    {
+      "id": "starts-turns.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[170]"
+    },
+    {
+      "id": "starts-turns.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[171]"
+    },
+    {
+      "id": "starts-turns.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[172]"
+    },
+    {
+      "id": "starts-turns.tech.9",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[173]"
+    },
+    {
+      "id": "surfers-ear-exostosis",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[17]"
+    },
+    {
+      "id": "swimmer-ankle-foot-overuse",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[12]"
+    },
+    {
+      "id": "swimmer-dental-erosion",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[18]"
+    },
+    {
+      "id": "swimmer-dermatoses",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[19]"
+    },
+    {
+      "id": "swimmer-elbow-wrist-overuse",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[4]"
+    },
+    {
+      "id": "swimmers-ear",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[20]"
+    },
+    {
+      "id": "swimming-induced-bronchoconstriction",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[21]"
+    },
+    {
+      "id": "thoracic-outlet-syndrome",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[6]"
+    },
+    {
+      "id": "udk.err1",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[75]"
+    },
+    {
+      "id": "udk.err10",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[84]"
+    },
+    {
+      "id": "udk.err11",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[85]"
+    },
+    {
+      "id": "udk.err12",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[86]"
+    },
+    {
+      "id": "udk.err13",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[87]"
+    },
+    {
+      "id": "udk.err2",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[76]"
+    },
+    {
+      "id": "udk.err3",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[77]"
+    },
+    {
+      "id": "udk.err4",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[78]"
+    },
+    {
+      "id": "udk.err5",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[79]"
+    },
+    {
+      "id": "udk.err6",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[80]"
+    },
+    {
+      "id": "udk.err7",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[81]"
+    },
+    {
+      "id": "udk.err8",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[82]"
+    },
+    {
+      "id": "udk.err9",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[83]"
+    },
+    {
+      "id": "udk.tech.10",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[139]"
+    },
+    {
+      "id": "udk.tech.11",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[140]"
+    },
+    {
+      "id": "udk.tech.12",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[141]"
+    },
+    {
+      "id": "udk.tech.13",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[142]"
+    },
+    {
+      "id": "udk.tech.14",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[143]"
+    },
+    {
+      "id": "udk.tech.15",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[144]"
+    },
+    {
+      "id": "udk.tech.16",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[145]"
+    },
+    {
+      "id": "udk.tech.17",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[146]"
+    },
+    {
+      "id": "udk.tech.18",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[147]"
+    },
+    {
+      "id": "udk.tech.19",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[148]"
+    },
+    {
+      "id": "udk.tech.2",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[131]"
+    },
+    {
+      "id": "udk.tech.20",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[149]"
+    },
+    {
+      "id": "udk.tech.21",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[150]"
+    },
+    {
+      "id": "udk.tech.22",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[151]"
+    },
+    {
+      "id": "udk.tech.23",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[152]"
+    },
+    {
+      "id": "udk.tech.24",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[153]"
+    },
+    {
+      "id": "udk.tech.25",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[154]"
+    },
+    {
+      "id": "udk.tech.26",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[155]"
+    },
+    {
+      "id": "udk.tech.27",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[156]"
+    },
+    {
+      "id": "udk.tech.28",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[157]"
+    },
+    {
+      "id": "udk.tech.29",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[158]"
+    },
+    {
+      "id": "udk.tech.3",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[132]"
+    },
+    {
+      "id": "udk.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[133]"
+    },
+    {
+      "id": "udk.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[134]"
+    },
+    {
+      "id": "udk.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[135]"
+    },
+    {
+      "id": "udk.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[136]"
+    },
+    {
+      "id": "udk.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[137]"
+    },
+    {
+      "id": "udk.tech.9",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[138]"
+    },
+    {
+      "id": "uv-photo-damage",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[22]"
+    }
+  ]
+}

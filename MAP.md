@@ -3,7 +3,7 @@
 > 結構地圖，給冷啟動讀者（人/LLM）。格式與維護流程見 `C:\claudehome\CODEBASE_MAP_METHODOLOGY.md`。
 > 行為規範見 `CLAUDE.md`；進度/待辦見 `HANDOFF.md`。
 >
-> `last_verified: 2026-06-27`
+> `last_verified: 2026-07-27`
 
 ---
 
@@ -29,6 +29,7 @@
 | 找 drill 分布 / 空白格 | `python tools/tag_coverage_report.py`（9 軸交叉表 + 碰撞分析） |
 | 改 diagnostic（A/B/C 型診斷、失敗訊號）——**只給教練/swim-coach** | canonical YAML 的 `diagnostic{}` 區塊；**絕不會進 my-site** |
 | 加研究主題/假設 | `research/{感知科學,物理現象,週期化}/`，狀態碼見下方 §4 |
+| 重生機器索引／查看資料缺口 | `python tools/build_indices.py` → `indices/*.json` |
 
 ---
 
@@ -55,6 +56,13 @@
 
 ### 治理文件
 `_INDEX.md`(150) 內容導航 / `RESEARCH_PLAN.md`(341) 研究策略 / `FUTURE_RESEARCH.md`(366) 未解問題池 / `COLLAB.md`(101) 與 Talos 協作 / `三關校正_沒過清單_*.md` QA。
+
+### 機器索引（generated views，不手改）
+- `indices/content_index.json` — 770 個 promoted canonical／Drill ID 的內容與概念索引
+- `indices/tag_reverse_index.json` — taxonomy field/value → 內容 ID
+- `indices/source_reverse_index.json` — 476 個 registry source → 精確使用位置
+- `indices/gap_report.json` — 無來源高確定性主張／未使用 taxonomy value／W003 同語意未連結條目
+- 生成器：`python tools/build_indices.py`；契約測試：`python -m unittest tests.test_build_indices`
 
 ---
 

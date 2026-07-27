@@ -6,9 +6,19 @@
 
 ## 當前狀態（2026-07-27）
 
-### 進行中——canonical 資料契約升級：S0／S1／S2／S3a／S3a-2／**S3b（全部完成）**／S4a／S4b／S4c 完成
+### 進行中——canonical 資料契約升級：S0–S5 完成（S3c／S6 待續）
 
-**基線**：`python tools/validate.py` **0 ERROR／650 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W011 63）；`python -m unittest discover -s tests` **105 tests OK**。
+**基線**：`python tools/validate.py` **0 ERROR／650 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W011 63）；`python -m unittest discover -s tests` **112 tests OK**。
+
+**S5 四視圖機器索引完成（2026-07-27）**
+
+- 新增 `tools/build_indices.py`，由 promoted canonical + 176 Drills 生成 deterministic JSON；drafts 與 `_` meta 檔不進內容索引，來源／taxonomy 則各讀自己的 canonical registry。
+- `indices/content_index.json`：770 個穩定 ID（canonical 594 + Drills 176），含檔案、YAML path、標題、受控 tags、來源與機器關係。
+- `indices/tag_reverse_index.json`：7 個 taxonomy field 的反向索引；目前唯一未使用的 taxonomy value 是 `development_stage: fun`（ADM 刻意沒有 FUN cells，屬已知結構空位）。
+- `indices/source_reverse_index.json`：476 個已註冊來源及精確使用位置；與內容索引採 nested-entry ownership 邊界，心理 theme 不會誤吃 concept 的 tags／sources。
+- `indices/gap_report.json`：高確定性無來源 0、未使用 taxonomy value 1、未連結條目 476；未連結語意刻意與驗證器 W003 完全一致，不把 `cross_ref_ids`／`source_ids` 偷算成內容關係。
+- 新增 `tests/test_build_indices.py` 7 tests：巢狀 ownership／來源隔離、四視圖／ID 唯一性、反向索引可解析、gap scanner 活性與 summary、重生 byte-for-byte deterministic。
+- **數字釐清**：`_sources.yaml` 的 476 個來源與 W003 的 476 個未連結條目只是同數，並非同一批資料；S3c 查來源識別碼不會自然解掉 W003。
 
 **S3b 批次收尾：102 筆一次寫回（2026-07-27）**
 
@@ -31,7 +41,7 @@
 3. **新增三項檢查**：`W011`（🟠 缺 `observation_basis`，63 筆）、`E010`（診斷型鍵名寫進 `public` 子樹 = 唯一實際洩漏路徑，0 筆）、`E011`（`evidence_from` 的 ID 必須解析得到——它是 W009 的豁免路徑，不驗證就是零成本免罪符，0 筆）。另修一個既存的靜默回報缺口：E008/E009/W010 早有檢查但沒進 `code_meta`，所以從來沒出現在 `reports/validation_report.md`。
 4. **10 筆試點分流完成**（W009 112 → 102），驗證分流規則可批次化——批次結果見上表。
 
-**下一步**：S5（`tools/build_indices.py` 四視圖：內容／概念索引、tag 反向索引、來源反向索引、缺口報告）→ S3c（476 筆來源查 DOI／PMID／ISBN，W003 的解）。
+**下一步**：S3c（476 筆已註冊來源查 DOI／PMID／ISBN／正式 URL 與查驗日）→ S6（public/private 匯出隔離 + W011 63 筆）。W002 111 筆可另以 S3a-3 純遷移批次處理。
 
 **同期浮出的新項目（尚未動）**
 - **W002 111 筆**：絕大多數是 `canonical/health/injuries.yaml` 的 `references[].citation`——有來源顯示字串但缺 `source_ids`，屬純遷移（S3a-3 候選，可派工）。⚠ `injuries.yaml` 是 build 產物，改動要進 `canonical/health/drafts/*.yaml` 再跑 `python tools/build_injuries.py`。
@@ -642,7 +652,7 @@
 | S4a | 校正驗證器誤判 + 補 fail-closed | 機械 | ✅ 已完成 2026-07-25（6ae575e、634b298） |
 | S4b | injuries 的 **20 筆** `*_link` 散文欄位加 `*_link_ids` 機器鍵（**不**拆成 ID 陣列，同 S4c 的「加欄位不換內容」） | 需讀內容判斷 | ✅ 已完成 2026-07-26（W004 20→0，新增 E007/W007） |
 | S4c | **W001 = 61 筆** `cross_ref` → 穩定 ID（新增 `cross_ref_ids` 機器鍵；節號類列為遺留債） | 機械為主 | ✅ 已完成 2026-07-26（W001 61→0，新增 E006/W006） |
-| S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | **下一段**，可派工 |
+| S5 | `tools/build_indices.py`：四視圖（內容／tag 反向／來源反向／缺口報告） | 機械 | ✅ 已完成 2026-07-27（770 records／476 sources／7 tests） |
 | S6 | public/private 匯出隔離（hub P4 前置）+ W011 63 筆補 `observation_basis` | 需分層判斷 | 未規劃 |
 
 **風險與預案**：S3 是唯一有資料損毀風險的一段（動 164 筆條目內容欄位）。對策＝`source_display` 保留原文字不刪，遷移只做「加欄位」不做「換內容」，任何時候可回退。S2 的歸一會改變既有 tag 值，須先跑「哪些條目會受影響」的預覽再動。
