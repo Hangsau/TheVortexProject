@@ -1128,9 +1128,3 @@ canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
 
 *最後更新：2026-06-16（Phase 2 完成：心理層 8 主題 62 概念全接入 Vortex 網站——三帶「心理地圖」著陸頁〔沿 L0→L6／初學→競技脊椎，8 主題全 complete〕+ 首頁入口。canonical/psychology/ 8 theme/62 concept〔fear 手寫 pilot + 7 主題 7 並行 Sonnet agent 寫、ruamel merge〕，每條過三關校正、public/diagnostic 0 洩漏，各 agent 沒過清單已記。my-site CI success）*
 *下次更新時機：my-site 週期化知識整合（B）動工後*
-# 游泳動力鏈 Knowledge Hub consumer（2026-07-29）
-
-- `tools/import_kinetic_chain_hub.py` 已接上 Atlas commit `760f8ee06339` 的 Hub 不可變快照，核對 project/schema/commit/content hash 後才原子寫入。
-- `canonical/evidence/kinetic-chain-knowledge-hub.json` 已生成：62 analyses、299 findings、28 claims、43 evidence references、3 publications、5 practice tools。
-- `canonical/periodization/taper.yaml` 與 `dryland.yaml` 已把固定最佳值改為研究候選範圍、個人驗收與 proxy 邊界；保留研究數字但不寫成通用保證。
-- my-site 由 `tools/sync_vortex.py` 複製此 public bundle，網站不直接讀 Atlas 或 Hub 工作樹。
