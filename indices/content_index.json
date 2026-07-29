@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 770,
+  "record_count": 771,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -5760,19 +5760,21 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[79]",
-      "title": "腰椎伸展幅度：波動風格的解剖天花板",
+      "title": "軀幹伸展能力：波動蛙式的策略條件之一",
       "tags": {
         "category": [
           "hardware"
         ],
         "certainty": [
-          "🔵"
+          "🟠"
         ],
         "stroke": [
           "breast"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
       "outgoing_ids": []
     },
     {
@@ -7752,19 +7754,24 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[95]",
-      "title": "蝶式推進本質：全身波動能量傳遞",
+      "title": "蝶式整體模型：全身相位鏈與兩次踢水",
       "tags": {
         "category": [
           "concept"
         ],
         "certainty": [
-          "🔵"
+          "🟠",
+          "🟡",
+          "🟢"
         ],
         "stroke": [
           "fly"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.riewald-rodeo-2015",
+        "src.veiga-2022"
+      ],
       "outgoing_ids": [
         "fly.tech.2"
       ]
@@ -8386,19 +8393,23 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[98]",
-      "title": "完整動力傳遞鏈六節點",
+      "title": "六節點相位診斷鏈",
       "tags": {
         "category": [
           "undulation"
         ],
         "certainty": [
-          "🔵"
+          "🟠",
+          "🟢"
         ],
         "stroke": [
           "fly"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.veiga-2022"
+      ],
       "outgoing_ids": []
     },
     {
@@ -9626,19 +9637,23 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[17]",
-      "title": "Coupling 能量——旋轉與回臂峰值若與推力峰值對齊就疊加放大推力",
+      "title": "Coupling 教練模型——比較旋轉、回臂與對側拉水的相位關係",
       "tags": {
         "category": [
           "rotation"
         ],
         "certainty": [
-          "🟠"
+          "🟠",
+          "🟡"
         ],
         "stroke": [
           "free"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.hyodo-2025"
+      ],
       "outgoing_ids": []
     },
     {
@@ -9708,19 +9723,24 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[1]",
-      "title": "自由式推進結構——手臂主引擎，腿部輔助，旋轉為耦合放大器",
+      "title": "自由式推進結構——手臂通常主導，腿與軀幹共同改變整體輸出",
       "tags": {
         "category": [
           "concept"
         ],
         "certainty": [
-          "🔵"
+          "🟡",
+          "🟢"
         ],
         "stroke": [
           "free"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.gonjo-2021",
+        "src.hyodo-2025",
+        "src.morouco-2015"
+      ],
       "outgoing_ids": []
     },
     {
@@ -10036,7 +10056,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[30]",
-      "title": "螺旋筋膜線——旋轉推進的全身連動硬體基礎",
+      "title": "螺旋筋膜線——全身連動的解剖觀察模型",
       "tags": {
         "category": [
           "hardware"
@@ -10048,7 +10068,9 @@
           "free"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.myers-2021"
+      ],
       "outgoing_ids": [
         "free.tech.10",
         "free.tech.15",
@@ -10448,7 +10470,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "concurrent_scheduling",
-      "title": "怕重訓害你隔天游不動？至少這份研究說：隔一個晚上（約 12 小時）就恢復了，隔天 100 公尺一樣快。所以重訓最好排在關鍵課的前一天、留一晚睡眠，別跟比賽擠在同一天。但這只測了 8 個成年人、只測一次，青少年或比賽週的情況還不知道，別當鐵律。",
+      "title": "這 8 名泳者隔一晚後，研究沒有測出 100 公尺差異。因此可以先測『重陸訓與關鍵課隔一晚』，再用隔天配速、SR/SL、RPE 和個人平常波動判斷；不是看到 12 小時就自動算恢復。",
       "tags": {
         "certainty": [
           "🟢"
@@ -10464,13 +10486,14 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "flexibility_mobility",
-      "title": "游泳對三個關節活動度的依賴度高於多數運動：**肩**（划手延伸與高肘恢復）、**髖**（蛙腿外翻與蝶腰波動）、**踝**（蹠屈推進面積）。三個關節若活動度不足，技術天花板會被『硬體上限』壓住，無論再怎麼練感知都打不破。柔軟度訓練在陸訓裡屬於『拆天花板』那一側，跟最大力量訓練（蓋更高的功率輸出）並列、不互相替代。",
+      "title": "肩、髖、踝的可用活動度可能限制某些游泳策略，但限制必須在目標動作中確認；被動角度不足、主動控制不足、疼痛保護與技術選擇需要分開。活動度是候選條件，不是看到動作問題就自動成立的硬體天花板。",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
+        "src.kaminoff-matthews-2007",
         "src.mccullough-d"
       ],
       "outgoing_ids": []
@@ -10480,7 +10503,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "injury_prevention",
-      "title": "游泳肩不是運氣不好，是划手把『內旋』練太強、『外旋』練太弱的必然結果。陸上拿彈力帶練外旋和肩胛穩定（8 週就有效），是把這個失衡扳回來的標準做法。而且新研究發現：練整條手臂—肩—核心的連動，比只練肩膀那幾條小肌肉更有效，還能順便讓你游更快。",
+      "title": "肩部活動度、肌力與肩胛動作都值得觀察，但沒有單一數字能判斷誰一定受傷。彈力帶或整體動力鏈訓練可以改善部分能力；是否減少疼痛或傷害仍要另外追蹤。",
       "tags": {
         "certainty": [
           "🟢"
@@ -10496,7 +10519,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "methods",
-      "title": "不是所有陸訓都一樣。要游速進步，最大力量訓練最靠譜；增強式跳躍主要幫你『跳得更遠、轉身蹬得更猛』，但對中間那段游程幫助有限。最聰明的做法是讓陸訓盡量像游泳——划手板、拖傘比深蹲更容易『轉移』到水裡。",
+      "title": "不是所有陸訓都一樣，也沒有一套對所有人最佳。先確認想改的是力量、出發、轉身還是完整游速，選候選方案後分別測乾地能力、水中段落和完整成績。",
       "tags": {
         "certainty": [
           "🟠",
@@ -10505,7 +10528,24 @@
         ]
       },
       "source_ids": [
+        "src.hermosilla-2021",
         "src.pmc9424421-a"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "periodization.dryland.needs_analysis",
+      "domain": "periodization",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "needs_analysis",
+      "title": "先定義比賽任務與個人限制，再選測試和處方。測試必須可靠、與欲回答的問題相符，並能在相近條件重測；不能因某個陸上數字容易量，就把它當成游速的代理。",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.haff-triplett-2016"
       ],
       "outgoing_ids": []
     },
@@ -10528,7 +10568,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "transfer_evidence",
-      "title": "別把陸訓當保證。最該記住的數字是：回顧裡大約每兩篇就有一篇看不到效果。會看到效果的，通常是技術已經穩、練的是最大力量、而且練法盡量貼近游泳動作的人。如果你還在抓水感、或練的是跟游泳八竿子打不著的動作，效果很可能是零。",
+      "title": "陸訓不是保證，也不是沒用。先說清楚要改哪個限制，再測三層：陸上能力有沒有變、水中動作或外力有沒有變、目標泳段有沒有變。任何一層沒接上，就調整動作、劑量或排程。",
       "tags": {
         "certainty": [
           "🟡"
@@ -10838,13 +10878,14 @@
       "domain": "periodization",
       "file": "canonical/periodization/taper.yaml",
       "path": "peak",
-      "title": "巔峰狀態不是無限期的——大概只能撐 7–14 天。所以主賽一定要排在這個窗口裡。一個賽季有好幾場重要比賽時，就用幾段短減量，分別對準每一場（見 structure.yaml 多巔峰）。",
+      "title": "7–14 天是常用的排程起點，不是每個人的硬期限。留下每次減量後的日序、訓練量、主觀狀態與成績，逐季估計自己的高表現窗口。",
       "tags": {
         "certainty": [
           "🟡"
         ]
       },
       "source_ids": [
+        "src.bompa-buzzichelli-2019",
         "src.ch9"
       ],
       "outgoing_ids": []
@@ -10854,7 +10895,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/taper.yaml",
       "path": "swim_application",
-      "title": "游泳的實際做法：對準主賽往前推 8–14 天開始減量，總量降到平常的四到六成，但下水次數和短距離快游照舊，曲線用前快後慢的指數型。研究顯示游泳選手減三週平均能進步約 2–3%——在獎牌只差零點幾個百分點的場合，這幾個百分點足以決定名次。",
+      "title": "可先從研究常見的 8–14 天、總量降到約四至六成、保留部分下水與賽速暴露開始測試。三週游泳研究的平均改善是特定樣本結果，不是每個人保證進步；每次都要留下自己的基線與結果。",
       "tags": {
         "certainty": [
           "🟢"
@@ -15318,13 +15359,14 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[146]",
-      "title": "轉身後應立刻起踢，不先滑行",
+      "title": "多數精英情境傾向盡早起踢；用個人速度曲線確認",
       "tags": {
         "category": [
           "depth"
         ],
         "certainty": [
           "🟠",
+          "🟡",
           "🟢"
         ],
         "stroke": [

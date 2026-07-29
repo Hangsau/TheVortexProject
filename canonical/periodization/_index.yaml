@@ -42,15 +42,15 @@ structure:
 # ── 賽前減量與達峰（taper.yaml）──
 taper:
   - {id: periodization.taper.definition, file: taper.yaml, name_zh: 減量定義, gist_zh: "賽前慢慢降量；保留體能、消掉疲勞，比賽當天有料又不累", stages: [t2c, t2w]}
-  - {id: periodization.taper.volume, file: taper.yaml, name_zh: 訓練量, gist_zh: "減量主旋鈕；砍量 41–60%（重負荷可 60–90%）", stages: [t2c, t2w]}
+  - {id: periodization.taper.volume, file: taper.yaml, name_zh: 訓練量, gist_zh: "減量主旋鈕；研究區間作候選起點，以個人 pretaper 負荷與反應校準", stages: [t2c, t2w]}
   - {id: periodization.taper.intensity, file: taper.yaml, name_zh: 訓練強度, gist_zh: "保適應旋鈕；強度不能跟著砍，要留快游", stages: [t2c, t2w]}
-  - {id: periodization.taper.frequency, file: taper.yaml, name_zh: 訓練頻率, gist_zh: "保技術旋鈕；下水次數維持 ≥80% 保手感", stages: [t2c, t2w]}
+  - {id: periodization.taper.frequency, file: taper.yaml, name_zh: 訓練頻率, gist_zh: "保技術旋鈕；維持部分下水與賽速暴露，比例依個人反應調整", stages: [t2c, t2w]}
   - {id: periodization.taper.duration, file: taper.yaml, name_zh: 減量時長, gist_zh: "8–14 天為主；之前越累拉越長", stages: [t2c, t2w]}
-  - {id: periodization.taper.type.linear, file: taper.yaml, name_zh: 線性遞減, gist_zh: "等量直線下降；效果差", stages: [t2c, t2w]}
-  - {id: periodization.taper.type.step, file: taper.yaml, name_zh: 階梯式減量, gist_zh: "一次砍到低水平維持；增益最小 ≈1.2–1.5%", stages: [t2c, t2w]}
-  - {id: periodization.taper.type.fast_exponential, file: taper.yaml, name_zh: 快速指數遞減, gist_zh: "前快後慢曲線；增益最大 ≈4–5%，首選", stages: [t2c, t2w]}
-  - {id: periodization.taper.peak_window, file: taper.yaml, name_zh: 達峰窗, gist_zh: "巔峰只能撐 7–14 天；主賽要排在窗內", stages: [t2c, t2w]}
-  - {id: periodization.taper.swim, file: taper.yaml, name_zh: 游泳減量應用, gist_zh: "對準主賽推 8–14 天、量降 40–60%；三週減量約進步 2–3%", stages: [t2c, t2w]}
+  - {id: periodization.taper.type.linear, file: taper.yaml, name_zh: 線性遞減, gist_zh: "等量直線下降；可用方案之一，與個人歷次反應比較", stages: [t2c, t2w]}
+  - {id: periodization.taper.type.step, file: taper.yaml, name_zh: 階梯式減量, gist_zh: "一次降量後維持；統合平均較低，不代表個人必然較差", stages: [t2c, t2w]}
+  - {id: periodization.taper.type.fast_exponential, file: taper.yaml, name_zh: 快速指數遞減, gist_zh: "前快後慢；統合平均訊號較高，作候選而非固定首選", stages: [t2c, t2w]}
+  - {id: periodization.taper.peak_window, file: taper.yaml, name_zh: 達峰窗, gist_zh: "7–14 天作排程起點；用歷次反應估計個人高表現窗", stages: [t2c, t2w]}
+  - {id: periodization.taper.swim, file: taper.yaml, name_zh: 游泳減量應用, gist_zh: "常見天數與降量範圍作候選；按主項、pretaper 負荷與個人反應校準", stages: [t2c, t2w]}
 
 # ── 能量系統強度分區（zones.yaml）──
 zones:
@@ -73,6 +73,7 @@ dryland:
   - {id: periodization.dryland.transfer, file: dryland.yaml, name_zh: 力量轉移效果, gist_zh: "16篇約7篇無效;最大力量最有效;轉移看技術成熟度+專項性;臥推未必預測衝刺速度", stages: [t2c, t2w]}
   - {id: periodization.dryland.methods, file: dryland.yaml, name_zh: 陸訓模式比較, gist_zh: "最大力量轉移最強;增強式只助出發轉身非整體游速(618人SR無效);專項阻力(划手板/拖傘)轉移高", stages: [t2c, t2w]}
   - {id: periodization.dryland.concurrent, file: dryland.yaml, name_zh: 並行排程殘留疲勞, gist_zh: "傍晚陸訓+12h睡眠→隔天100m無殘留疲勞(n=8);重陸訓排關鍵課前一天非當天", stages: [t2c, t2w]}
+  - {id: periodization.dryland.needs_analysis, file: dryland.yaml, name_zh: NSCA需求分析與三層驗收, gist_zh: "先找掉速任務與個人限制；依序驗收陸上能力、水中相位／外力與完整泳段", stages: [t2t, t2c, t2w]}
   - {id: periodization.dryland.injury, file: dryland.yaml, name_zh: 游泳肩傷害預防, gist_zh: "划手讓內旋>外旋失衡=游泳肩源頭;彈力帶練外旋+肩胛8週有效;練整條動力鏈優於孤立肩肌", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.dryland.youth, file: dryland.yaml, name_zh: 青少年負重安全, gist_zh: "無最低年齡硬門檻(能守安全規則~7-8歲);成熟度>實齡;PHV前只徒手;成人初學/masters/para是缺口", stages: [l2t, t2t]}
   - {id: periodization.dryland.caveats, file: dryland.yaml, name_zh: 陸訓誠實反例, gist_zh: "7/16無效+臥推未必預測衝刺+三組100m無差+增強式對游速無效;轉移有條件成立非普遍", stages: [t2c, t2w]}

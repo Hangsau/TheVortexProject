@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 477,
+  "source_count": 487,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -293,6 +293,22 @@
           "id": "starts-turns.tech.3",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[163].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.bompa-buzzichelli-2019",
+      "display": "Bompa & Buzzichelli, Periodization, 6th ed., 2019",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9781492544814"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.taper.peak_window",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "peak"
         }
       ]
     },
@@ -1422,6 +1438,28 @@
       ]
     },
     {
+      "id": "src.gonjo-2021",
+      "display": "Gonjo et al. 2021, Sports Biomechanics",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/14763141.2021.1921835",
+        "url": "https://doi.org/10.1080/14763141.2021.1921835"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.evidence[2]"
+        },
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.gonjo-2021-a",
       "display": "Gonjo 2021",
       "verification_status": "unverified",
@@ -1625,6 +1663,48 @@
       ]
     },
     {
+      "id": "src.haff-triplett-2016",
+      "display": "Haff & Triplett (eds.), NSCA Essentials of Strength Training and Conditioning, 4th ed., 2016",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9781718210868"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.needs_analysis",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "needs_analysis"
+        }
+      ]
+    },
+    {
+      "id": "src.hall-murphy-2020",
+      "display": "Hall & Murphy, Fundamentals of Fast Swimming, 2020",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9781735441412"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "breast.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[79].public.evidence[0]"
+        },
+        {
+          "id": "fly.tech.4",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[98].public.evidence[1]"
+        },
+        {
+          "id": "free.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[17].public.evidence[0]"
+        }
+      ]
+    },
+    {
       "id": "src.hall-sr-2020",
       "display": "Hall Sr. 2020",
       "verification_status": "unverified",
@@ -1709,6 +1789,24 @@
       ]
     },
     {
+      "id": "src.hermosilla-2021",
+      "display": "Hermosilla et al. 2021, dry-land turn systematic review",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3390/ijerph18179340",
+        "pmcid": "PMC8431432",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC8431432/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.methods",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "methods"
+        }
+      ]
+    },
+    {
       "id": "src.historical-background-unattributed",
       "display": "歷史背景",
       "verification_status": "unverified",
@@ -1751,6 +1849,33 @@
           "id": "udk.tech.19",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[148].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.hyodo-2025",
+      "display": "Hyodo 2025, trunk rotation review",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.2479/swex.28.6",
+        "url": "https://doi.org/10.2479/swex.28.6"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "free.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[17].public.evidence[1]"
+        },
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.evidence[1]"
+        },
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.mechanism"
         }
       ]
     },
@@ -1849,6 +1974,22 @@
           "id": "starts-turns.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[90].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.kaminoff-matthews-2007",
+      "display": "Kaminoff & Matthews, Yoga Anatomy, 2007",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9780736062787"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.flexibility",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "flexibility_mobility"
         }
       ]
     },
@@ -2393,6 +2534,24 @@
       ]
     },
     {
+      "id": "src.morouco-2015",
+      "display": "Morouço et al. 2015, fully tethered front crawl",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1155/2015/563206",
+        "pmcid": "PMC4619838",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4619838/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.evidence[0]"
+        }
+      ]
+    },
+    {
       "id": "src.mountjoy-ioc-consensus-webfetch",
       "display": "Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）",
       "verification_status": "unverified",
@@ -2433,6 +2592,22 @@
           "id": "shoulder-multidirectional-instability",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[2].epidemiology"
+        }
+      ]
+    },
+    {
+      "id": "src.myers-2021",
+      "display": "Myers, Anatomy Trains, 4th ed., 2021",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9780702078132"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.tech.33",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[30].public.evidence[0]"
         }
       ]
     },
@@ -6134,6 +6309,27 @@
       ]
     },
     {
+      "id": "src.riewald-rodeo-2015",
+      "display": "Riewald & Rodeo (eds.), Science of Swimming Faster, 2015",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9780736095716"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "fly.tech.1",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[95].public.evidence[1]"
+        },
+        {
+          "id": "fly.tech.1",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[95].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.rocketswim",
       "display": "Rocketswim",
       "verification_status": "unverified",
@@ -7479,8 +7675,10 @@
     {
       "id": "src.theres-a-drill-for-that",
       "display": "There's a Drill for That",
-      "verification_status": "unverified",
-      "identifier": {},
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9781456602383"
+      },
       "usage_count": 125,
       "usages": [
         {
@@ -8594,10 +8792,29 @@
     {
       "id": "src.veiga-2022",
       "display": "Veiga et al. 2022 systematic review",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3390/ijerph191912196",
+        "pmcid": "PMC9566274",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9566274/"
+      },
+      "usage_count": 5,
       "usages": [
+        {
+          "id": "fly.tech.1",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[95].public.evidence[0]"
+        },
+        {
+          "id": "fly.tech.1",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[95].public.mechanism"
+        },
+        {
+          "id": "fly.tech.4",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[98].public.evidence[0]"
+        },
         {
           "id": "udk.err1",
           "file": "canonical/instructional/teaching-errors.yaml",

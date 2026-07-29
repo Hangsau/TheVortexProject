@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-07-29
-> 驗證條目數：594，Drills ID 數：176
+> 驗證條目數：595，Drills ID 數：176
 
 ---
 
@@ -764,7 +764,7 @@
 
 ## W011 — `certainty` orange（教練觀測）但缺 `observation_basis`（未交代觀察基礎與外推邊界）→ S6 範圍
 
-**WARN，共 63 筆**
+**WARN，共 65 筆**
 
   file=canonical\instructional\teaching-errors.yaml id='free.err3' at=errors[2].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\teaching-errors.yaml id='free.err9' at=errors[8].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
@@ -803,6 +803,8 @@
   file=canonical\instructional\technical-analysis.yaml id='back.tech.6' at=points[42].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='back.tech.7' at=points[43].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.15' at=points[78].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='breast.tech.16' at=points[79].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='fly.tech.4' at=points[98].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.5' at=points[99].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.6' at=points[100].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.9' at=points[103].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）

@@ -6,7 +6,8 @@ description: >-
   S3a-2 把來源檢查與 certainty 解耦，凡帶 source／sources 的區塊一律納入，
   再登錄 338 筆（含 canonical 單數、Drills、psychology／health 的 sources 複數清單），
   合計 476 筆。兩批都是逐字登錄成來源條目，並由條目端以 source_ids 指入；
-  S3c 另補 1 筆修正錯誤引用所需的來源，目前合計 477 筆。
+  S3c 另補 1 筆修正錯誤引用所需的來源；2026-07-29 書籍整合新增 10 筆，
+  並把既有 Veiga 2022 記錄查證完成，目前合計 487 筆。
   來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
 generated_date: "2026-07-29"
 
@@ -154,6 +155,115 @@ generated_date: "2026-07-29"
 #      "There's a Drill for That"），缺頁碼與版本，S3c 須補 book-chapter 細節。
 
 sources:
+
+  - id: src.riewald-rodeo-2015
+    display: "Riewald & Rodeo (eds.), Science of Swimming Faster, 2015"
+    title: "Science of Swimming Faster"
+    type: book
+    verification_status: verified
+    authors: ["Scott A. Riewald", "Scott A. Rodeo"]
+    year: 2015
+    identifier: {isbn: "9780736095716"}
+    retrieved_on: "2026-07-29"
+    notes: "依 Atlas 本地完整書檔與 ISBN 核對；authors 為編者。書中技術段落作教材／教練模型使用，不等同直接實驗。"
+
+  - id: src.hall-murphy-2020
+    display: "Hall & Murphy, Fundamentals of Fast Swimming, 2020"
+    title: "Fundamentals of Fast Swimming"
+    type: book
+    verification_status: verified
+    authors: ["Gary W. Hall", "Devin Murphy"]
+    year: 2020
+    identifier: {isbn: "9781735441412"}
+    retrieved_on: "2026-07-29"
+    notes: "依 Atlas 本地完整書檔與 ISBN 核對。書中的 Race Club／Velocity Meter 個案須以原測試情境解讀。"
+
+  - id: src.haff-triplett-2016
+    display: "Haff & Triplett (eds.), NSCA Essentials of Strength Training and Conditioning, 4th ed., 2016"
+    title: "NSCA's Essentials of Strength Training and Conditioning"
+    type: book
+    verification_status: verified
+    authors: ["G. Gregory Haff", "N. Travis Triplett"]
+    year: 2016
+    identifier: {isbn: "9781718210868"}
+    retrieved_on: "2026-07-29"
+    notes: "依 Atlas 本地完整書檔核對；ISBN 為本地電子版。作需求分析、測試與處方框架使用。"
+
+  - id: src.myers-2021
+    display: "Myers, Anatomy Trains, 4th ed., 2021"
+    title: "Anatomy Trains: Myofascial Meridians for Manual Therapists and Movement Professionals"
+    type: book
+    verification_status: verified
+    authors: ["Thomas W. Myers"]
+    year: 2021
+    identifier: {isbn: "9780702078132"}
+    retrieved_on: "2026-07-29"
+    notes: "依 Atlas 本地完整書檔與 ISBN 核對。螺旋線是解剖／動作組織模型，不是已證實的游泳節段能量路徑。"
+
+  - id: src.kaminoff-matthews-2007
+    display: "Kaminoff & Matthews, Yoga Anatomy, 2007"
+    title: "Yoga Anatomy"
+    type: book
+    verification_status: verified
+    authors: ["Leslie Kaminoff", "Amy Matthews"]
+    year: 2007
+    identifier: {isbn: "9780736062787"}
+    retrieved_on: "2026-07-29"
+    notes: "依 Atlas 本地完整書檔與 ISBN 核對；作呼吸、胸廓、脊柱與肩帶主動控制候選來源。"
+
+  - id: src.bompa-buzzichelli-2019
+    display: "Bompa & Buzzichelli, Periodization, 6th ed., 2019"
+    title: "Periodization: Theory and Methodology of Training"
+    type: book
+    verification_status: verified
+    authors: ["Tudor O. Bompa", "Carlo A. Buzzichelli"]
+    year: 2019
+    identifier: {isbn: "9781492544814"}
+    retrieved_on: "2026-07-29"
+    notes: "依 Atlas 本地完整書檔與 ISBN 核對；範圍用作方案起點，需以泳者歷次反應校準。"
+
+  - id: src.morouco-2015
+    display: "Morouço et al. 2015, fully tethered front crawl"
+    title: "Relative Contribution of Arms and Legs in 30 s Fully Tethered Front Crawl Swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Pedro G. Morouço", "Daniel A. Marinho", "Mikel Izquierdo", "Henrique Neiva", "Mário C. Marques"]
+    year: 2015
+    identifier: {doi: "10.1155/2015/563206", pmcid: "PMC4619838", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4619838/"}
+    retrieved_on: "2026-07-29"
+    notes: "NCBI metadata 與全文核對。比例是 30 秒最大強度完全繫繩測試中，分開手／腿條件的力貢獻估計，不是自由游固定推進比例。"
+
+  - id: src.gonjo-2021
+    display: "Gonjo et al. 2021, Sports Biomechanics"
+    title: "Differences in the rotational effect of buoyancy and trunk kinematics between front crawl and backstroke swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Tomohiro Gonjo", "Ricardo J. Fernandes", "João Paulo Vilas-Boas", "Ross Sanders"]
+    year: 2021
+    container: "Sports Biomechanics"
+    identifier: {doi: "10.1080/14763141.2021.1921835", url: "https://doi.org/10.1080/14763141.2021.1921835"}
+    retrieved_on: "2026-07-29"
+
+  - id: src.hyodo-2025
+    display: "Hyodo 2025, trunk rotation review"
+    title: "A Review of Trunk Rotation Mechanics in Front Crawl Swimming"
+    type: review
+    verification_status: verified
+    authors: ["Hiroki Hyodo"]
+    year: 2025
+    container: "Swimming Exercise"
+    identifier: {doi: "10.2479/swex.28.6", url: "https://doi.org/10.2479/swex.28.6"}
+    retrieved_on: "2026-07-29"
+
+  - id: src.hermosilla-2021
+    display: "Hermosilla et al. 2021, dry-land turn systematic review"
+    title: "Effects of Dry-Land Training Programs on Swimming Turn Performance: A Systematic Review"
+    type: review
+    verification_status: verified
+    authors: ["Fernando Hermosilla", "Ross Sanders", "Fernando González-Mohíno", "Inés Yustres", "José M. González-Ravé"]
+    year: 2021
+    identifier: {doi: "10.3390/ijerph18179340", pmcid: "PMC8431432", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8431432/"}
+    retrieved_on: "2026-07-29"
 
   - id: src.2024-2025
     display: "教練觀測 2024–2025"
@@ -3995,12 +4105,15 @@ sources:
 
   - id: src.veiga-2022
     display: "Veiga et al. 2022 systematic review"
+    title: "Kinematic Analysis of the Underwater Undulatory Swimming Cycle: A Systematic and Synthetic Review"
     type: review
-    verification_status: unverified
-    authors: ["Veiga"]
+    verification_status: verified
+    authors: ["Santiago Veiga", "Jorge Lorenzo", "Ana Trinidad", "Robin Pla", "Andrea Fallas-Campos", "Alfonso de la Rubia"]
     et_al: true
     year: 2022
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    identifier: {doi: "10.3390/ijerph191912196", pmcid: "PMC9566274", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC9566274/"}
+    retrieved_on: "2026-07-29"
+    notes: "原字串以 et al. 略記；2026-07-29 以 NCBI metadata 與全文查證完成。"
 
   - id: src.virag-2014
     display: "Virag et al. 2014"
