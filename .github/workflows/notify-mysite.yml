@@ -10,11 +10,13 @@ name: Sync Vortex content to my-site
 # 需要 secret: MYSITE_DISPATCH_TOKEN（GitHub PAT，scope: repo）
 
 on:
+  workflow_dispatch:
   push:
     branches: [master]
     paths:
       - 'canonical/**'
       - 'Drills/**'
+      - '.github/workflows/notify-mysite.yml'
 
 permissions:
   contents: read
