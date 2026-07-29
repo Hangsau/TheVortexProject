@@ -1,6 +1,6 @@
 # Vortex Drill Database — Index
 
-> Sources: *There's a Drill for That* (Laurie Sherret) + *Fundamentals of Fast Swimming* (The Race Club / Gary Hall Sr) + Vortex 整理（呼吸、UDK、starts-turns、gap fills）  
+> Sources: *There's a Drill for That!* (Cokie Lepinski, 2011) + *Fundamentals of Fast Swimming* (The Race Club / Gary Hall Sr) + Vortex 整理（呼吸、UDK、starts-turns、gap fills）
 > Perception layer mapping: Vortex L0–L6 framework (Hangsau 2026)  
 > 9-axis tag fingerprint v1.0 (2026-06-27): 見 `TAG_SCHEMA.md`  
 > Total: **176 drills** (Fr44 + Bk32 + Br38 + Fl34 + Sc12 + ST9 + UDK7)；其中 **22 elite**

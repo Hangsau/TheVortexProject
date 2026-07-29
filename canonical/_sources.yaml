@@ -8,7 +8,7 @@ description: >-
   合計 476 筆。兩批都是逐字登錄成來源條目，並由條目端以 source_ids 指入；
   S3c 另補 1 筆修正錯誤引用所需的來源，目前合計 477 筆。
   來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
-generated_date: "2026-07-28"
+generated_date: "2026-07-29"
 
 # ── 欄位契約（v2；S3a 修訂）─────────────────────────────────────────────────
 #
@@ -3808,9 +3808,15 @@ sources:
 
   - id: src.theres-a-drill-for-that
     display: "There's a Drill for That"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    type: book
+    verification_status: verified
+    title: "There's A Drill For That!"
+    authors: ["Cokie Lepinski"]
+    year: 2011
+    identifier:
+      isbn: "9781456602383"
+    retrieved_on: "2026-07-29"
+    notes: "Atlas L1/L5 由本機 EPUB 題名頁、版權資料與 ISBN 核對；year 取本機版本明載的 Copyright 2011。外部零售書目將同 ISBN 的 publish date 列為 2014-04-08，視為平台／版本日期差異，不靜默覆寫本機版本。125 個既有 drill ID 保持不變；原索引誤標 Laurie Sherret，已更正為 Cokie Lepinski。"
 
   - id: src.tid-three-zone-model
     display: "游泳/耐力 TID 文獻通用三區模型（血乳酸界線）"

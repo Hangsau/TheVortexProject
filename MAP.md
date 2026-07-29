@@ -3,7 +3,7 @@
 > 結構地圖，給冷啟動讀者（人/LLM）。格式與維護流程見 `C:\claudehome\CODEBASE_MAP_METHODOLOGY.md`。
 > 行為規範見 `CLAUDE.md`；進度/待辦見 `HANDOFF.md`。
 >
-> `last_verified: 2026-07-28`
+> `last_verified: 2026-07-29`
 
 ---
 
@@ -85,3 +85,8 @@
 - **不要手改 my-site `data/` 或 swim-coach `vendor/vortex`**：那些是這裡的同步產物（my-site 單向 sync，swim-coach 用 submodule pin）。
 - **Hestia vault（~344 篇論文）不是主研究源**：週期化研究主要靠外部 PubMed/游泳專門文獻（Bompa/Olbrecht/Seiler/Maglischo…），vault 僅 ~2 篇直接相關。
 - **`水感教學研究記錄.xlsx`** 是外部 Google Sheets 快照，未整合進 canonical，人工維護。
+# Knowledge Hub 公開證據層
+
+- `tools/import_kinetic_chain_hub.py`：核對 Knowledge Hub snapshot hash 與 Atlas commit，fail-closed 生成公開 bundle。
+- `canonical/evidence/kinetic-chain-knowledge-hub.json`：游泳動力鏈網站與查詢層的單一公開資料包；含 62 analyses、299 findings、28 claims、43 evidence references、3 publications 與 5 practice tools。
+- bundle 是生成物，不手改；來源內容回到 kinetic-chain-knowledge-atlas，選取與版本回到 knowledge-hub。

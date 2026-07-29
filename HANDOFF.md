@@ -4,11 +4,17 @@
 
 ---
 
-## 當前狀態（2026-07-28）
+## 當前狀態（2026-07-29）
 
 ### 進行中——canonical 資料契約升級：S0–S5 完成，S3c 作者年份批次進行中（S6 待續）
 
 **基線**：`python tools/validate.py` **0 ERROR／651 WARN**（E001–E011 全 0、**W009 已歸零**；剩 W002 111、W003 476、W008 1、W011 63）；`python -m unittest discover -s tests -v` **135 tests OK**。
+
+**Atlas L5 drill source 修正（2026-07-29）**
+
+- `src.theres-a-drill-for-that` 已由本機題名頁／版權頁／ISBN 核對為 Cokie Lepinski、Copyright 2011、ISBN 9781456602383，狀態改為 verified；外部零售書目列 2014-04-08，已在 notes 保留版本／平台日期差異。Drill index 與 freestyle 檔頭的 Laurie Sherret 誤標已同步修正。
+- 176 個 drill ID、九軸 taxonomy 與操作內容均未改動；125 項書籍基底保持完整。另 51 項補充 drill 使用的 43 個其他 source IDs 目前全為 unverified，來源存在不等於證據已查證。
+- Atlas evidence／risk／transfer 採外掛 gate；`failure_signal` 仍是技術／感知失敗，不當作醫療 stop signal。validator 0 ERROR、135 tests 通過。
 
 **S3c 作者＋年份同家族 alias 第二批（2026-07-28）**
 
@@ -1122,3 +1128,9 @@ canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
 
 *最後更新：2026-06-16（Phase 2 完成：心理層 8 主題 62 概念全接入 Vortex 網站——三帶「心理地圖」著陸頁〔沿 L0→L6／初學→競技脊椎，8 主題全 complete〕+ 首頁入口。canonical/psychology/ 8 theme/62 concept〔fear 手寫 pilot + 7 主題 7 並行 Sonnet agent 寫、ruamel merge〕，每條過三關校正、public/diagnostic 0 洩漏，各 agent 沒過清單已記。my-site CI success）*
 *下次更新時機：my-site 週期化知識整合（B）動工後*
+# 游泳動力鏈 Knowledge Hub consumer（2026-07-29）
+
+- `tools/import_kinetic_chain_hub.py` 已接上 Atlas commit `760f8ee06339` 的 Hub 不可變快照，核對 project/schema/commit/content hash 後才原子寫入。
+- `canonical/evidence/kinetic-chain-knowledge-hub.json` 已生成：62 analyses、299 findings、28 claims、43 evidence references、3 publications、5 practice tools。
+- `canonical/periodization/taper.yaml` 與 `dryland.yaml` 已把固定最佳值改為研究候選範圍、個人驗收與 proxy 邊界；保留研究數字但不寫成通用保證。
+- my-site 由 `tools/sync_vortex.py` 複製此 public bundle，網站不直接讀 Atlas 或 Hub 工作樹。

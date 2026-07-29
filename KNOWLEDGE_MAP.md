@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-07-27 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-07-29 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 95, '🟠': 33, '🟢': 73, '🟡': 5, '🔴': 1} |
+| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 96, '🟠': 33, '🟢': 71, '🟡': 6, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -56,7 +56,7 @@
 | free.tech.10 | hardware |  | 🟢 |
 | free.tech.11 | kick |  | 🔵 |
 | free.tech.12 | kick |  | 🔵 |
-| free.tech.13 | hardware |  | 🟢 |
+| free.tech.13 | hardware |  | 🟡 |
 | free.tech.14 | kick |  | 🔵 |
 | free.tech.15 | rotation |  | 🟡 |
 | free.tech.16 | rotation |  | 🟠 |
@@ -99,7 +99,7 @@
 | back.tech.13 | stroke-cycle |  | 🔵 |
 | back.tech.14 | errors |  | 🔵 |
 | back.tech.15 | kick |  | 🟡 |
-| back.tech.16 | hardware |  | 🟢 |
+| back.tech.16 | hardware |  | 🟡 |
 | back.tech.17 | kick |  | 🟢 |
 | back.tech.18 | kick |  | 🟡 |
 | back.tech.19 | kick |  | 🔵 |
@@ -176,7 +176,7 @@
 | fly.tech.21 | timing |  | 🔵 |
 | fly.tech.22 | fatigue |  | 🔵 |
 | fly.tech.23 | fatigue |  | 🔵 |
-| fly.tech.24 | hardware |  | 🟡 |
+| fly.tech.24 | hardware |  | 🔵 |
 | fly.tech.25 | hardware |  | 🔵 |
 | fly.tech.26 | hardware |  | 🔵 |
 | fly.tech.27 | hardware |  | 🔵 |

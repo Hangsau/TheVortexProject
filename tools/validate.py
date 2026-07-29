@@ -1235,7 +1235,7 @@ def _write_report(
     lines: list[str] = []
     lines.append("# Vortex Canonical 驗證報告")
     lines.append("")
-    lines.append(f"> 生成日期：{date.today()}  ")
+    lines.append(f"> 生成日期：{date.today()}")
     lines.append(f"> 驗證條目數：{entry_count}，Drills ID 數：{drills_count}")
     lines.append("")
     lines.append("---")
