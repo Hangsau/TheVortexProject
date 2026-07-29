@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 487,
+  "source_count": 495,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -941,6 +941,23 @@
       ]
     },
     {
+      "id": "src.deschodt-1999",
+      "display": "Deschodt, Arsac & Rouard 1999",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1007/s004210050581",
+        "url": "https://doi.org/10.1007/s004210050581"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.eatsleepswimcoach",
       "display": "EatSleepSwimCoach",
       "verification_status": "unverified",
@@ -1445,17 +1462,12 @@
         "doi": "10.1080/14763141.2021.1921835",
         "url": "https://doi.org/10.1080/14763141.2021.1921835"
       },
-      "usage_count": 2,
+      "usage_count": 1,
       "usages": [
         {
           "id": "free.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[1].public.evidence[2]"
-        },
-        {
-          "id": "free.tech.2",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[1].public.mechanism"
         }
       ]
     },
@@ -1685,7 +1697,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -1701,6 +1713,11 @@
           "id": "free.tech.16",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[17].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[17].public.mechanism"
         }
       ]
     },
@@ -1860,7 +1877,7 @@
         "doi": "10.2479/swex.28.6",
         "url": "https://doi.org/10.2479/swex.28.6"
       },
-      "usage_count": 3,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.tech.16",
@@ -1871,11 +1888,6 @@
           "id": "free.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[1].public.evidence[1]"
-        },
-        {
-          "id": "free.tech.2",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[1].public.mechanism"
         }
       ]
     },
@@ -1978,6 +1990,29 @@
       ]
     },
     {
+      "id": "src.kadi-2024",
+      "display": "Kadi et al. 2024, kicking action and hand force",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/14763141.2024.2303361",
+        "pmid": "38250792",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38250792/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.evidence[4]"
+        },
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.kaminoff-matthews-2007",
       "display": "Kaminoff & Matthews, Yoga Anatomy, 2007",
       "verification_status": "verified",
@@ -1990,6 +2025,25 @@
           "id": "periodization.dryland.flexibility",
           "file": "canonical/periodization/dryland.yaml",
           "path": "flexibility_mobility"
+        }
+      ]
+    },
+    {
+      "id": "src.karpinski-2020",
+      "display": "Karpiński et al. 2020, six-week core training RCT",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1371/journal.pone.0227394",
+        "pmid": "32866148",
+        "pmcid": "PMC7458297",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7458297/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.tech.33",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[30].public.evidence[1]"
         }
       ]
     },
@@ -2008,6 +2062,39 @@
       ]
     },
     {
+      "id": "src.kudo-yanai-matsuda-2025",
+      "display": "Kudo, Yanai & Matsuda 2025, front-crawl stroke power",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/j.jbiomech.2025.112984",
+        "pmid": "41076906",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41076906/"
+      },
+      "usage_count": 4,
+      "usages": [
+        {
+          "id": "free.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[17].public.evidence[2]"
+        },
+        {
+          "id": "free.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[17].public.mechanism"
+        },
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.evidence[3]"
+        },
+        {
+          "id": "free.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[1].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012",
       "display": "本檔 liee_methods（Bompa Ch11 Table 11.1）+ swim_maglischo（Maglischo 2012）",
       "verification_status": "unverified",
@@ -2020,6 +2107,18 @@
           "path": "energy_systems_primer.training_protocols[4]"
         }
       ]
+    },
+    {
+      "id": "src.liu-2025-core-meta",
+      "display": "Liu et al. 2025, youth swimmer core-training meta-analysis",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1186/s13102-025-01366-1",
+        "pmid": "41219810",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41219810/"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.lyttle",
@@ -2056,6 +2155,23 @@
           "id": "udk.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[131].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.lyttle-2000",
+      "display": "Lyttle et al. 2000, underwater kicking transition speed",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/026404100419856",
+        "url": "https://doi.org/10.1080/026404100419856"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[146].public.evidence[2]"
         }
       ]
     },
@@ -6734,22 +6850,12 @@
       "display": "Sports Biomechanics 2026",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 1,
       "usages": [
         {
           "id": "udk.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[82].public.evidence[2]"
-        },
-        {
-          "id": "udk.tech.17",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[146].public.evidence[1]"
-        },
-        {
-          "id": "udk.tech.17",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[146].public.mechanism"
         }
       ]
     },
@@ -7334,6 +7440,28 @@
           "id": "starts-turns.tech.7",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[171].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.takeda-2026",
+      "display": "Takeda et al. 2026, glide–DK–front-crawl transition",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/14763141.2026.2627415",
+        "url": "https://doi.org/10.1080/14763141.2026.2627415"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "udk.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[146].public.evidence[1]"
+        },
+        {
+          "id": "udk.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[146].public.mechanism"
         }
       ]
     },
@@ -9004,6 +9132,24 @@
           "id": "UDKEC1",
           "file": "Drills/drills_udk.yaml",
           "path": "drills[5]"
+        }
+      ]
+    },
+    {
+      "id": "src.wang-2025-training-nma",
+      "display": "Wang et al. 2025, swimming training network meta-analysis",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fphys.2025.1636595",
+        "pmid": "40951636",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/40951636/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.transfer",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "transfer_evidence"
         }
       ]
     },

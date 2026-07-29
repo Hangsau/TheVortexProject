@@ -740,9 +740,10 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 1 筆**
+**WARN，共 2 筆**
 
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 
@@ -764,7 +765,7 @@
 
 ## W011 — `certainty` orange（教練觀測）但缺 `observation_basis`（未交代觀察基礎與外推邊界）→ S6 範圍
 
-**WARN，共 65 筆**
+**WARN，共 64 筆**
 
   file=canonical\instructional\teaching-errors.yaml id='free.err3' at=errors[2].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\teaching-errors.yaml id='free.err9' at=errors[8].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
@@ -792,7 +793,6 @@
   file=canonical\instructional\technical-analysis.yaml id='free.tech.6' at=points[5].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.7' at=points[6].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.8' at=points[7].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.16' at=points[17].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.29' at=points[18].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.32' at=points[29].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.33' at=points[30].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）

@@ -5760,7 +5760,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[79]",
-      "title": "軀幹伸展能力：波動蛙式的策略條件之一",
+      "title": "蛙式風格分流——用軀幹伸展能力選擇 flat、wave 或 undulating",
       "tags": {
         "category": [
           "hardware"
@@ -7754,7 +7754,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[95]",
-      "title": "蝶式整體模型：全身相位鏈與兩次踢水",
+      "title": "蝶式動力鏈——胸廓起波、髖膝踝依序加速、兩踢接上手臂推進",
       "tags": {
         "category": [
           "concept"
@@ -8393,7 +8393,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[98]",
-      "title": "六節點相位診斷鏈",
+      "title": "六節點動力鏈——用最早失序點決定修正位置",
       "tags": {
         "category": [
           "undulation"
@@ -9637,14 +9637,15 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[17]",
-      "title": "Coupling 教練模型——比較旋轉、回臂與對側拉水的相位關係",
+      "title": "Coupling 動力鏈——胸廓旋轉、肩內收與肘伸共同產生划水功率",
       "tags": {
         "category": [
           "rotation"
         ],
         "certainty": [
           "🟠",
-          "🟡"
+          "🟡",
+          "🟢"
         ],
         "stroke": [
           "free"
@@ -9652,7 +9653,8 @@
       },
       "source_ids": [
         "src.hall-murphy-2020",
-        "src.hyodo-2025"
+        "src.hyodo-2025",
+        "src.kudo-yanai-matsuda-2025"
       ],
       "outgoing_ids": []
     },
@@ -9723,7 +9725,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[1]",
-      "title": "自由式推進結構——手臂通常主導，腿與軀幹共同改變整體輸出",
+      "title": "自由式動力鏈——手臂產力、踢腿減阻、胸廓旋轉增益划水功率",
       "tags": {
         "category": [
           "concept"
@@ -9737,8 +9739,11 @@
         ]
       },
       "source_ids": [
+        "src.deschodt-1999",
         "src.gonjo-2021",
         "src.hyodo-2025",
+        "src.kadi-2024",
+        "src.kudo-yanai-matsuda-2025",
         "src.morouco-2015"
       ],
       "outgoing_ids": []
@@ -10056,19 +10061,21 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[30]",
-      "title": "螺旋筋膜線——全身連動的解剖觀察模型",
+      "title": "螺旋線動力鏈——用跨側肩、軀幹、髖、腳定位連動斷點",
       "tags": {
         "category": [
           "hardware"
         ],
         "certainty": [
-          "🟠"
+          "🟠",
+          "🟢"
         ],
         "stroke": [
           "free"
         ]
       },
       "source_ids": [
+        "src.karpinski-2020",
         "src.myers-2021"
       ],
       "outgoing_ids": [
@@ -10454,7 +10461,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "null_caveats",
-      "title": "如果有人跟你說『重訓一定讓你游更快』，他沒讀過反面的那一半研究。陸訓有用是有前提的——技術要先穩、要練對的東西（最大力量）、練法要像游泳。前提不滿足，花在陸上的時間很可能換不到水裡的速度。",
+      "title": "陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式只保留給出發和轉身。每4–6週照三層結果換法。",
       "tags": {
         "certainty": [
           "🟡"
@@ -10470,7 +10477,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "concurrent_scheduling",
-      "title": "這 8 名泳者隔一晚後，研究沒有測出 100 公尺差異。因此可以先測『重陸訓與關鍵課隔一晚』，再用隔天配速、SR/SL、RPE 和個人平常波動判斷；不是看到 12 小時就自動算恢復。",
+      "title": "一般訓練週把重陸訓和下一堂品質水課隔一晚；如果隔天配速、SR/SL或RPE連續兩次低於個人基線，就把間隔拉到24–36小時。比賽週與減量週則把重陸訓移出主賽前48小時。",
       "tags": {
         "certainty": [
           "🟢"
@@ -10486,7 +10493,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "flexibility_mobility",
-      "title": "肩、髖、踝的可用活動度可能限制某些游泳策略，但限制必須在目標動作中確認；被動角度不足、主動控制不足、疼痛保護與技術選擇需要分開。活動度是候選條件，不是看到動作問題就自動成立的硬體天花板。",
+      "title": "活動度決定泳者能使用哪些技術路徑：肩屈曲／旋轉不足會限制流線與回臂，髖內旋不足會迫使蛙腿加寬，踝蹠屈不足會縮小自由式與蝶腳的有效推進面。處方先分成被動角度不足、主動控制不足與疼痛三型。",
       "tags": {
         "certainty": [
           "🟢"
@@ -10503,7 +10510,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "injury_prevention",
-      "title": "肩部活動度、肌力與肩胛動作都值得觀察，但沒有單一數字能判斷誰一定受傷。彈力帶或整體動力鏈訓練可以改善部分能力；是否減少疼痛或傷害仍要另外追蹤。",
+      "title": "有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。",
       "tags": {
         "certainty": [
           "🟢"
@@ -10519,7 +10526,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "methods",
-      "title": "不是所有陸訓都一樣，也沒有一套對所有人最佳。先確認想改的是力量、出發、轉身還是完整游速，選候選方案後分別測乾地能力、水中段落和完整成績。",
+      "title": "出發慢做爆發，推牆或划水產力不足做最大力量，轉身後5m與軀幹控制差做核心，後段姿勢先散才做力量耐力；每一項都用對應水中分段驗收。",
       "tags": {
         "certainty": [
           "🟠",
@@ -10538,7 +10545,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "needs_analysis",
-      "title": "先定義比賽任務與個人限制，再選測試和處方。測試必須可靠、與欲回答的問題相符，並能在相近條件重測；不能因某個陸上數字容易量，就把它當成游速的代理。",
+      "title": "陸訓處方從比賽掉速段反推：先定位出發、轉身、水下或水面段，再測最可能限制該段的力量、爆發力、活動度、軀幹控制與左右差，最後選能直接改變該限制的訓練。",
       "tags": {
         "certainty": [
           "🟡"
@@ -10554,7 +10561,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "overview",
-      "title": "陸上力量常被當成『游得快的捷徑』或被當成『沒用、浪費水感』兩個極端來吵。兩種都是誤讀。陸訓能讓人變強這件事幾乎沒爭議；真正有爭議的是三件事：① 變強的力量能不能轉移到游速（轉移問題）；② 陸訓那天的疲勞會不會吃掉隔天的泳池課（並行排程問題）；③ 還沒發育的孩子能不能負重（成熟度問題）。把陸訓放進『週期化』這一頁，就是因",
+      "title": "陸訓能提高游泳表現，最佳使用方式是和水中訓練結合：阻力訓練負責提高可用力量，核心與爆發訓練分別補足軀幹傳力、出發與轉身，再由水中賽速訓練把能力接回泳姿。",
       "tags": {
         "certainty": [
           "🔵"
@@ -10568,14 +10575,15 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "transfer_evidence",
-      "title": "陸訓不是保證，也不是沒用。先說清楚要改哪個限制，再測三層：陸上能力有沒有變、水中動作或外力有沒有變、目標泳段有沒有變。任何一層沒接上，就調整動作、劑量或排程。",
+      "title": "最有效的預設不是只練陸上，而是陸上提高能力、水中把能力接回動作。每個方法都對準一個掉速段：爆發對出發，力量對推牆與划水功率，核心對轉身後5m和短距離穩定。",
       "tags": {
         "certainty": [
           "🟡"
         ]
       },
       "source_ids": [
-        "src.fphys-2024-1406518"
+        "src.fphys-2024-1406518",
+        "src.wang-2025-training-nma"
       ],
       "outgoing_ids": []
     },
@@ -10584,7 +10592,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "youth_safety",
-      "title": "孩子幾歲能重訓？關鍵不是年齡數字，而是『聽不聽得懂指令、守不守得住安全規則』——大約 7、8 歲就可以開始（先用自體重量）。游泳界的標準更保守：發育衝刺期之前只做徒手，女生大約 13 歲後才上負重。重點永遠是先把動作做對，再加重量。（注意：成人初學、高齡、身障泳者的陸訓資料還很缺，別套用青少年的標準。）",
+      "title": "約7、8歲、能守指令就能從自體重量開始；PHV前以徒手為主，成熟後再逐步負重。成人初學先學動作，masters 加長恢復並看關節反應，para 依可用肢段與輔具設定；完成品質穩定再增加2.5–5%。",
       "tags": {
         "certainty": [
           "🟢"
@@ -10878,7 +10886,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/taper.yaml",
       "path": "peak",
-      "title": "7–14 天是常用的排程起點，不是每個人的硬期限。留下每次減量後的日序、訓練量、主觀狀態與成績，逐季估計自己的高表現窗口。",
+      "title": "把最重要的比賽放進7–14天高表現窗。第二場主賽若隔得更久，中間不要一路休息：先恢復，再補少量賽速刺激，最後做短減量。",
       "tags": {
         "certainty": [
           "🟡"
@@ -10895,7 +10903,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/taper.yaml",
       "path": "swim_application",
-      "title": "可先從研究常見的 8–14 天、總量降到約四至六成、保留部分下水與賽速暴露開始測試。三週游泳研究的平均改善是特定樣本結果，不是每個人保證進步；每次都要留下自己的基線與結果。",
+      "title": "沒有個人減量歷史時，直接從標準方案開始：8–14天、快速指數降量、總量少41–60%、下水次數留八成、每堂保留少量賽速。高量訓練後把降量提高到60–90%；停量後容易失速者取8天端並增加短賽速。",
       "tags": {
         "certainty": [
           "🟢"
@@ -15359,14 +15367,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[146]",
-      "title": "多數精英情境傾向盡早起踢；用個人速度曲線確認",
+      "title": "UDK 起踢規則——滑到個人滑行／海豚踢交叉速度就開始踢",
       "tags": {
         "category": [
           "depth"
         ],
         "certainty": [
           "🟠",
-          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -15374,7 +15381,8 @@
         ]
       },
       "source_ids": [
-        "src.sports-biomechanics-2026",
+        "src.lyttle-2000",
+        "src.takeda-2026",
         "src.the-race-club-velocity-meter-a"
       ],
       "outgoing_ids": []

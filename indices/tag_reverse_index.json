@@ -1107,7 +1107,6 @@
         "swimmers-shoulder",
         "swimming-induced-bronchoconstriction",
         "udk.err12",
-        "udk.tech.17",
         "uv-photo-damage"
       ],
       "🟢": [
@@ -1202,6 +1201,7 @@
         "free.err4",
         "free.err7",
         "free.tech.10",
+        "free.tech.16",
         "free.tech.19",
         "free.tech.2",
         "free.tech.20",
@@ -1210,6 +1210,7 @@
         "free.tech.24",
         "free.tech.27",
         "free.tech.3",
+        "free.tech.33",
         "health.breathing.safety",
         "hypothermia-swimmers",
         "open-water-marine-biological-hazards",

@@ -46,3 +46,14 @@
 - [x] my-site sync dry-run、實際同步與 Hugo production build 通過。
 - [x] 網站不復活 Knowledge Hub，更新內容可追到 Vortex canonical。
 - [x] commit、push、CI 與線上抽查完成（Vortex `452a910`；my-site `99d5565`）。
+
+## F. 肯定式公開重寫（2026-07-29）
+
+- [x] 自由式主幹改為直接功率分解：胸廓旋轉、肩內收、肘伸與踢腿減阻。
+- [x] 自由式、蝶式、蛙式與 UDK 全部加入「看到什麼問題 → 修哪個節點 → 用什麼驗收」。
+- [x] UDK 以個人滑行／踢腿淨力交叉速度決定起踢，保留 1.9–2.2 m/s 群體起點。
+- [x] 陸訓改成出發、推牆、水面功率、轉身後 5m、疼痛與活動度的條件分流。
+- [x] 早期無反應研究改寫成 4–6 週後的換法規則，不再當成整頁否定句。
+- [x] taper 改成可直接執行的減量幅度、頻率、天數與比賽分流。
+- [x] Vortex canonical 驗證、全測試、索引冪等與 diff check。
+- [ ] 同步 my-site、Hugo production build、部署與線上抽查。
