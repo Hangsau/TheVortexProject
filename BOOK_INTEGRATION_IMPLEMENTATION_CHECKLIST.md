@@ -56,4 +56,4 @@
 - [x] 早期無反應研究改寫成 4–6 週後的換法規則，不再當成整頁否定句。
 - [x] taper 改成可直接執行的減量幅度、頻率、天數與比賽分流。
 - [x] Vortex canonical 驗證、全測試、索引冪等與 diff check。
-- [ ] 同步 my-site、Hugo production build、部署與線上抽查。
+- [x] 同步 my-site、Hugo production build、部署與線上抽查（Vortex `48efa92`；my-site `1feab71`）。
