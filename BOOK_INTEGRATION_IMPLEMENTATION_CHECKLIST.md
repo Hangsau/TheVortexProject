@@ -43,6 +43,6 @@
 - [x] `python tools/validate.py`：0 ERROR。
 - [x] Vortex 全測試通過，drill ID／taxonomy 零漂移。
 - [x] `python tools/build_indices.py` 連續重建一致。
-- [ ] my-site sync dry-run 與 Hugo production build通過（dry-run 已通過；待實際同步與 build）。
-- [ ] 網站不復活 Knowledge Hub，更新內容可追到 Vortex canonical。
-- [ ] commit、push、CI 與線上抽查完成。
+- [x] my-site sync dry-run、實際同步與 Hugo production build 通過。
+- [x] 網站不復活 Knowledge Hub，更新內容可追到 Vortex canonical。
+- [x] commit、push、CI 與線上抽查完成（Vortex `452a910`；my-site `99d5565`）。
