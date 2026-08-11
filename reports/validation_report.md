@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-08-11
-> 驗證條目數：616，Drills ID 數：176
+> 驗證條目數：611，Drills ID 數：176
 
 ---
 

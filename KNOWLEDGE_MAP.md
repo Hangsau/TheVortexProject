@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-07-29 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-08-11 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 96, '🟠': 33, '🟢': 71, '🟡': 6, '🔴': 1} |
+| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 92, '🟢': 73, '🟠': 34, '🟡': 7, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -23,10 +23,14 @@
 | `periodization/structure` | 9 | 各節點 |
 | `periodization/taper` | 3 | 各節點 |
 | `periodization/zones` | 12 | 各節點 |
-| `periodization/dryland` | 8 | 各節點 |
+| `periodization/dryland` | 9 | 各節點 |
 | `periodization/_index` | 0 | 各節點 |
+| `breathing/safety` | 2 | 各節點 |
+| `breathing/framework` | 3 | 各節點 |
+| `breathing/physiology` | 5 | 各節點 |
+| `breathing/training` | 5 | 各節點 |
+| `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
-| `health/breathing-training` | 5 | 呼吸訓練（生理線） |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
@@ -43,7 +47,7 @@
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
 | free.tech.1 | concept |  | 🔵 |
-| free.tech.2 | concept |  | 🔵 |
+| free.tech.2 | concept |  | 🟢 |
 | free.tech.3 | tempo |  | 🔵 |
 | free.tech.4 | style |  | 🟠 |
 | free.tech.5 | style |  | 🟠 |
@@ -59,7 +63,7 @@
 | free.tech.13 | hardware |  | 🟡 |
 | free.tech.14 | kick |  | 🔵 |
 | free.tech.15 | rotation |  | 🟡 |
-| free.tech.16 | rotation |  | 🟠 |
+| free.tech.16 | rotation |  | 🟢 |
 | free.tech.29 | rotation |  | 🟠 |
 | free.tech.17 | head |  | 🔵 |
 | free.tech.18 | head |  | 🔵 |
@@ -131,7 +135,7 @@
 | breast.tech.13 | kick |  | 🔵 |
 | breast.tech.14 | hardware |  | 🟢 |
 | breast.tech.15 | hardware |  | 🟠 |
-| breast.tech.16 | hardware |  | 🔵 |
+| breast.tech.16 | hardware |  | 🟠 |
 | breast.tech.17 | style |  | 🟢 |
 | breast.tech.18 | style |  | 🟢 |
 | breast.tech.19 | style |  | 🟢 |
@@ -153,10 +157,10 @@
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
-| fly.tech.1 | concept |  | 🔵 |
+| fly.tech.1 | concept |  | 🟡 |
 | fly.tech.2 | comparison |  | 🔵 |
 | fly.tech.3 | undulation |  | 🟢 |
-| fly.tech.4 | undulation |  | 🔵 |
+| fly.tech.4 | undulation |  | 🟠 |
 | fly.tech.5 | undulation |  | 🟠 |
 | fly.tech.6 | kick |  | 🟠 |
 | fly.tech.7 | kick |  | 🟢 |
@@ -576,8 +580,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
 | periodization.taper.definition | 🟢 | 減量＝比賽前那幾週，故意把訓練量慢慢降下來。關鍵在：之前練出來的本事（體能）會留著，但累積的疲勞會被消掉。比賽當天身體既有料又不累，成績自然跑得出來。 |
-| periodization.taper.peak_window | 🟡 | 巔峰狀態不是無限期的——大概只能撐 7–14 天。所以主賽一定要排在這個窗口裡。一個賽季有好幾場重要比賽時，就用幾段短減量，分別對準每一場（見 structure.yaml 多巔峰 |
-| periodization.taper.swim | 🟢 | 游泳的實際做法：對準主賽往前推 8–14 天開始減量，總量降到平常的四到六成，但下水次數和短距離快游照舊，曲線用前快後慢的指數型。研究顯示游泳選手減三週平均能進步約 2–3%——在 |
+| periodization.taper.peak_window | 🟡 | 把最重要的比賽放進7–14天高表現窗。第二場主賽若隔得更久，中間不要一路休息：先恢復，再補少量賽速刺激，最後做短減量。 |
+| periodization.taper.swim | 🟢 | 沒有個人減量歷史時，直接從標準方案開始：8–14天、快速指數降量、總量少41–60%、下水次數留八成、每堂保留少量賽速。高量訓練後把降量提高到60–90%；停量後容易失速者取8天端 |
 
 ### `zones.yaml` （**12 節點**）
 
@@ -596,22 +600,73 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.zones.school_polarized | 🟢 | 極化派（Seiler）問的不是『每區強度多少』而是『每區各占幾成』。他觀察菁英耐力選手，發現他們自然形成『大量輕鬆＋少量超吃力、中間幾乎不練』的分布——大約 80% 低強度、20% |
 | periodization.zones.olbrecht_model | 🟡 | Olbrecht（游泳能量系統論）的核心是『最適，不是最大』：有氧和無氧都不是越大越好，要配到最適組合點——無氧太強會拖累有氧效率，有氧練過頭又壓掉速度。他最有名的是質疑閾值訓練是 |
 
-### `dryland.yaml` （**8 節點**）
+### `dryland.yaml` （**9 節點**）
 
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
-| periodization.dryland.overview | 🔵 | 陸上力量常被當成『游得快的捷徑』或被當成『沒用、浪費水感』兩個極端來吵。兩種都是誤讀。陸訓能讓人變強這件事幾乎沒爭議；真正有爭議的是三件事：① 變強的力量能不能轉移到游速（轉移問題 |
-| periodization.dryland.transfer | 🟡 | 別把陸訓當保證。最該記住的數字是：回顧裡大約每兩篇就有一篇看不到效果。會看到效果的，通常是技術已經穩、練的是最大力量、而且練法盡量貼近游泳動作的人。如果你還在抓水感、或練的是跟游泳 |
-| periodization.dryland.methods | 🟢 | 不是所有陸訓都一樣。要游速進步，最大力量訓練最靠譜；增強式跳躍主要幫你『跳得更遠、轉身蹬得更猛』，但對中間那段游程幫助有限。最聰明的做法是讓陸訓盡量像游泳——划手板、拖傘比深蹲更容 |
-| periodization.dryland.concurrent | 🟢 | 怕重訓害你隔天游不動？至少這份研究說：隔一個晚上（約 12 小時）就恢復了，隔天 100 公尺一樣快。所以重訓最好排在關鍵課的前一天、留一晚睡眠，別跟比賽擠在同一天。但這只測了 8 |
-| periodization.dryland.injury | 🟢 | 游泳肩不是運氣不好，是划手把『內旋』練太強、『外旋』練太弱的必然結果。陸上拿彈力帶練外旋和肩胛穩定（8 週就有效），是把這個失衡扳回來的標準做法。而且新研究發現：練整條手臂—肩—核 |
-| periodization.dryland.youth | 🟢 | 孩子幾歲能重訓？關鍵不是年齡數字，而是『聽不聽得懂指令、守不守得住安全規則』——大約 7、8 歲就可以開始（先用自體重量）。游泳界的標準更保守：發育衝刺期之前只做徒手，女生大約 1 |
-| periodization.dryland.flexibility | 🟢 | 游泳對三個關節活動度的依賴度高於多數運動：**肩**（划手延伸與高肘恢復）、**髖**（蛙腿外翻與蝶腰波動）、**踝**（蹠屈推進面積）。三個關節若活動度不足，技術天花板會被『硬體 |
-| periodization.dryland.caveats | 🟡 | 如果有人跟你說『重訓一定讓你游更快』，他沒讀過反面的那一半研究。陸訓有用是有前提的——技術要先穩、要練對的東西（最大力量）、練法要像游泳。前提不滿足，花在陸上的時間很可能換不到水裡 |
+| periodization.dryland.overview | 🔵 | 陸訓能提高游泳表現，最佳使用方式是和水中訓練結合：阻力訓練負責提高可用力量，核心與爆發訓練分別補足軀幹傳力、出發與轉身，再由水中賽速訓練把能力接回泳姿。 |
+| periodization.dryland.transfer | 🟡 | 最有效的預設不是只練陸上，而是陸上提高能力、水中把能力接回動作。每個方法都對準一個掉速段：爆發對出發，力量對推牆與划水功率，核心對轉身後5m和短距離穩定。 |
+| periodization.dryland.methods | 🟢 | 出發慢做爆發，推牆或划水產力不足做最大力量，轉身後5m與軀幹控制差做核心，後段姿勢先散才做力量耐力；每一項都用對應水中分段驗收。 |
+| periodization.dryland.concurrent | 🟢 | 一般訓練週把重陸訓和下一堂品質水課隔一晚；如果隔天配速、SR/SL或RPE連續兩次低於個人基線，就把間隔拉到24–36小時。比賽週與減量週則把重陸訓移出主賽前48小時。 |
+| periodization.dryland.needs_analysis | 🟡 | 陸訓處方從比賽掉速段反推：先定位出發、轉身、水下或水面段，再測最可能限制該段的力量、爆發力、活動度、軀幹控制與左右差，最後選能直接改變該限制的訓練。 |
+| periodization.dryland.injury | 🟢 | 有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。 |
+| periodization.dryland.youth | 🟢 | 約7、8歲、能守指令就能從自體重量開始；PHV前以徒手為主，成熟後再逐步負重。成人初學先學動作，masters 加長恢復並看關節反應，para 依可用肢段與輔具設定；完成品質穩定再 |
+| periodization.dryland.flexibility | 🟢 | 活動度決定泳者能使用哪些技術路徑：肩屈曲／旋轉不足會限制流線與回臂，髖內旋不足會迫使蛙腿加寬，踝蹠屈不足會縮小自由式與蝶腳的有效推進面。處方先分成被動角度不足、主動控制不足與疼痛三 |
+| periodization.dryland.caveats | 🟡 | 陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式只保留給出發和轉身。每4–6週照三層結果換法。 |
 
 ### `_index.yaml` （**0 節點**）
 
 （無）
+
+---
+
+## 呼吸 `canonical/breathing/`
+
+### `safety.yaml` （**2 節點**）
+
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| breathing.safety.hypoxic_blackout | 🟢 | 這一頁只有一句話最重要：不要在水下憋氣，也不要下水前猛吸幾口大氣再潛。那不是在練肺活量，是在關掉身體的警報器——二氧化碳才是讓你『想呼吸』的訊號，先把它排掉，人就會在完全沒有窒息感 |
+| breathing.safety.hypocapnia_mechanism | 🟢 | 有人會拿血氧機說『你看血氧正常啊』，這個判斷是錯的。過度換氣真正危險的地方是二氧化碳被排掉後腦血管會收縮，送到腦部的血流變少——血氧機量不到這件事。順便說清楚一個常被搞反的觀念：二 |
+
+### `framework.yaml` （**3 節點**）
+
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| breathing.framework.overview | 🔵 | 🔵 『呼吸要不要練、怎麼練』之所以永遠講不清楚，是因為大家把三件不同的事混在一起。Vortex 把呼吸拆成三條線：① **感知線（在水裡）**——吐氣連不連續、換氣會不會緊張、兩側 |
+| breathing.framework.grading | 🔵 | 🔵 『呼吸訓練能不能分級？』能，但要看哪一條線——三條線的分級軸完全不一樣。教練要知道這件事的理由很實際：軸選錯，進度指標就會錯。拿『強度』去衡量一條該用『順序』走的線，或拿『秒數 |
+| breathing.framework.boundaries | 🔵 | 🔵 這一節寫的是**這章刻意不收什麼、以及為什麼**。它的用途是防守：呼吸是所有領域都在講的東西，一旦沒有邊界，一般健康、助眠、瑜伽的呼吸法會源源不絕地灌進游泳知識庫，把章節稀釋成 |
+
+### `physiology.yaml` （**5 節點**）
+
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| breathing.physiology.muscles | 🟡 | 吸氣一定要出力（肌肉把胸腔撐開），平靜時的吐氣則是放鬆讓它自己回彈，只有用力吐才要出力。最主要的吸氣肌是橫膈膜，一般說它佔平靜吸氣的七成多——但這個比例會隨姿勢大幅改變：坐著的時候 |
+| breathing.physiology.neural_control | 🟢 | 🟢 呼吸的特殊之處在於：它**不像心臟那樣完全自動**。它是**腦幹的節律產生器**加上**皮質的意識控制**兩層疊加而成的。這一條就是整章呼吸訓練得以成立的前提——如果呼吸跟心跳 |
+| breathing.physiology.chemoreceptors | 🟢 | 🟢 多數人以為呼吸的驅動力是「缺氧」——身體發現氧氣不夠了，所以叫你呼吸。**這是錯的**。正常情況下的主要驅動力是**血液中的二氧化碳濃度**。這個誤解不只是知識細節，它直接連著 |
+| breathing.physiology.autonomic_coupling | 🟢 | 吸氣會讓心跳稍微變快（偏興奮那一邊），吐氣會讓心跳稍微變慢（偏放鬆那一邊）——所以「把吐氣拉長」真的會鎮定，這不是心理作用。迷走神經正好經過心臟、肺和橫膈膜附近，深而慢的呼吸等於直 |
+| breathing.physiology.baroreflex_resonance | 🟢 | 🟢 血壓調節系統中的**壓力反射迴路**本身存在一個自然振盪頻率，族群平均約 **0.1 赫茲**——換算成呼吸就是每個週期約 10 秒、每分鐘 6 次。這個數字在坊間流傳得很廣， |
+
+### `training.yaml` （**5 節點**）
+
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| breathing.training.imt | 🟡 | 用有阻力的呼吸器練「吸氣的那組肌肉」，肌肉確實會變強——統合分析看到最大吸氣壓平均進步 29.35 cmH2O，這點很一致。但變強會不會讓你游更快？同一份分析裡 13 篇研究只有  |
+| breathing.training.co2_tolerance | 🔴 | 自由潛水圈那套「CO2 表」（一組一組閉氣、休息越來越短）在游泳圈也很流行，但沒有任何像樣的研究測過它能不能讓你游更快——這是從別的運動硬搬過來的說法。最接近的研究兩份：一份看閉氣 |
+| breathing.training.buteyko | 🟡 | 布泰科呼吸法練的是「呼吸得輕一點、少一點、慢一點」，加上吐完氣後停一下的「控制停頓」，說法是讓身體更耐受二氧化碳。它的證據狀況要講清楚：澳洲政府委託 Cochrane Austra |
+| breathing.training.bolt_test | 🟢 | BOLT 是一個自己就能測的閉氣秒數。測法：先安靜坐著休息至少 10 分鐘，用鼻子做一次「平常的」吸氣跟吐氣（不是深呼吸），吐完捏住鼻子開始計時，計到「第一次明顯想吸氣」為止就停— |
+| breathing.training.self_tracking | 🔵 | 呼吸訓練的效果慢又不明顯，光憑感覺判斷「有沒有效」很容易被當天狀態騙。可以記的幾項很簡單：每天早上起床測靜息心率、HRV（RMSSD 或手錶給的分數，一樣早上起床測最準）、每天用  |
+
+### `regulation.yaml` （**6 節點**）
+
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| breathing.regulation.principle | 🔵 | 🔵 這一條線處理的問題很具體：**泳者在下水之前就已經繃住了**。賽前發抖、成人初學站在池邊心跳狂跳、鐵三選手在開放水域起跑前呼吸變淺變快——這些都不是技術問題，也不是呼吸肌力量問 |
+| breathing.regulation.physiological_sigh | 🟢 | 生理性嘆息就是把身體本來就會做的那個動作變成主動可用的版本——你情緒緩下來時那個不由自主的「深吸一口再長長吐出去」，就是它。做法三步：用鼻子吸一口氣，先不要吐，**接著再補吸一小口 |
+| breathing.regulation.resonance_breathing | 🟡 | 共振呼吸是把呼吸放很慢——吸 5 到 6 秒、吐 5 到 6 秒（大約一分鐘 5 到 6 次），每天做 10 到 20 分鐘，坐在陸地上做。原理是身體調節血壓的迴路本身有個自然節奏 |
+| breathing.regulation.box_breathing | 🟡 | 箱式呼吸就是把呼吸切成四段等長：吸 4 秒、閉 4 秒、吐 4 秒、閉 4 秒，像個正方形，所以叫方塊呼吸。這裡的「閉氣」只是短暫停頓，不是憋到極限，跟那些「練憋氣耐受」的東西完全 |
+| breathing.regulation.wim_hof | 🟡 | Wim Hof 法的呼吸部分是**刻意的過度換氣**——連續幾十次又深又快的呼吸，把二氧化碳大量排掉（造成呼吸性鹼中毒），然後閉氣，反覆幾輪，完整版本還會搭配泡冷水跟冥想。注意它跟 |
+| breathing.regulation.claims_gap | 🔵 | 🔵 這一節不介紹任何呼吸法，它是一組**判斷工具**。使用情境非常具體：**學生（或家長）從網路、社群、商業課程帶著某個呼吸法的宣稱來問「這個對游泳有沒有用」**。教練不可能對每一 |
 
 ---
 
@@ -700,16 +755,6 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | scheuermann-kyphosis | Scheuermann 病（青少年脊椎後凸） | Scheuermann's kyphosis | 🟢 |
 | sever-disease | Sever 病（跟骨骨突炎） | Sever's disease (calcaneal apophysitis) | 🟢 |
 | youth-swimmer-apophysitis | 年輕游泳員肩/肘骨骺與骨突損傷 | Youth swimmer shoulder/elbow physeal & apophyseal injury | 🟠 |
-
-### `breathing-training.yaml` — 呼吸訓練生理線（**5 節點**）
-
-| ID | 確定性 | premise/摘要 |
-|---|---|---|
-| health.breathing.safety | 🟢 |  |
-| health.breathing.overview | 🔵 | 『呼吸要不要練、怎麼練』之所以講不清楚，是因為大家把兩件不同的事混在一起。Vortex 把呼吸拆成兩條線：① **感知線**——吐氣連不連續、換氣會不會緊張、兩側順不順，這是水感的 |
-| health.breathing.imt_rmt | 🟡 | 用阻力呼吸器練『吸氣的肌肉』，肌肉確實會變強，這點研究很一致。但變強會不會讓你游更快？短距離（50–200）多數研究說沒差，長一點的距離可能有一點點幫助，別期待太大。如果你已經是練 |
-| health.breathing.co2_tolerance | 🔴 | 自由潛水那套『閉氣表』在游泳圈很流行，但沒有任何像樣的研究證明它能讓你游更快——這是從別的運動硬搬過來的說法。真要練 CO2 耐受，只在陸上、找人陪、別獨自做；而且永遠不要把閉氣帶 |
-| health.breathing.grading | 🔵 | 『純粹的呼吸訓練能不能分級？』能，但要看哪一條線，而且分級的軸不一樣： |
 
 ---
 

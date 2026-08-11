@@ -163,11 +163,17 @@ def extract_breathing(path: Path):
             continue
         if not isinstance(val, dict):
             continue
+        # 各節的第一段敘述欄位命名不一（premise_zh / danger_zh / what_zh / why_zh…），
+        # 固定順序取不到時退回該節第一個 *_zh 字串，避免摘要留空
+        title = val.get("premise_zh") or val.get("plain_zh") or ""
+        if not title:
+            title = next((v for k, v in val.items()
+                          if k.endswith("_zh") and isinstance(v, str)), "")
         rows.append({
             "id": val.get("id", key),
             "section": key,
             "cert": val.get("cert", ""),
-            "title": (val.get("premise_zh") or val.get("plain_zh") or "")[:90],
+            "title": title[:90],
         })
     return rows
 
@@ -355,6 +361,23 @@ def main():
         lines.extend(render_table(rows, [("id", "ID"), ("cert", "確定性"), ("title", "premise/摘要")]))
         lines.append("")
 
+    # === 呼吸 breathing ===
+    lines.append("---")
+    lines.append("")
+    lines.append("## 呼吸 `canonical/breathing/`")
+    lines.append("")
+    # safety 置頂：缺氧昏迷是讀其他節點的前提，不是並列主題之一
+    for fname in ["safety", "framework", "physiology", "training", "regulation"]:
+        path = ROOT / f"canonical/breathing/{fname}.yaml"
+        if not path.exists():
+            continue
+        rows = extract_breathing(path)
+        summary_rows.append((f"breathing/{fname}", len(rows), "各節點"))
+        lines.append(f"### `{fname}.yaml` （**{len(rows)} 節點**）")
+        lines.append("")
+        lines.extend(render_table(rows, [("id", "ID"), ("cert", "確定性"), ("title", "premise/摘要")]))
+        lines.append("")
+
     # === 健康 health ===
     lines.append("---")
     lines.append("")
@@ -377,13 +400,6 @@ def main():
             lines.append("")
             lines.extend(render_table(rows, [("id", "ID"), ("zh", "中文名"), ("en", "英文名"), ("cert", "流病確定性")]))
             lines.append("")
-
-    br = extract_breathing(ROOT / "canonical/health/breathing-training.yaml")
-    summary_rows.append(("health/breathing-training", len(br), "呼吸訓練（生理線）"))
-    lines.append(f"### `breathing-training.yaml` — 呼吸訓練生理線（**{len(br)} 節點**）")
-    lines.append("")
-    lines.extend(render_table(br, [("id", "ID"), ("cert", "確定性"), ("title", "premise/摘要")]))
-    lines.append("")
 
     # === 心理 psychology ===
     lines.append("---")
