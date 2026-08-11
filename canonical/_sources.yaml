@@ -4578,3 +4578,39 @@ sources:
     identifier:
       pmcid: "PMC4422496"
     notes: "僅確認標題與 PMCID，作者、年份、期刊未經查證。"
+
+  - id: src.pmid-24799686
+    display: "Wim Hof 法內毒素試驗：Kox M, van Eijk LT, Zwaag J, et al. (2014). Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans. PNAS, 111(20), 7379–7384."
+    type: journal-article
+    verification_status: verified
+    authors: ["Kox M", "van Eijk LT", "Zwaag J"]
+    et_al: true
+    year: 2014
+    title: "Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans"
+    container: "Proceedings of the National Academy of Sciences"
+    identifier:
+      pmid: "24799686"
+    notes: "訓練組 12 人 vs 對照組 12 人（訓練組自 18 名隨機分派者中選入）。介入是呼吸法＋冷暴露＋冥想三合一，無法拆解單一變項。"
+
+  - id: src.au-natural-therapies-buteyko-2024
+    display: "澳洲政府委託 Buteyko 證據評估：Natural Therapies Review 2024 — Buteyko evidence evaluation (Australian Department of Health / Cochrane Australia)"
+    type: guideline
+    verification_status: unverified
+    title: "Natural Therapies Review 2024 – Buteyko evidence evaluation"
+    container: "Australian Department of Health and Aged Care"
+    year: 2024
+    identifier:
+      url: "https://www.health.gov.au/sites/default/files/2025-03/natural-therapies-review-2024-buteyko-evidence-evaluation.pdf"
+    notes: "納入 11 篇氣喘 RCT（樣本多在 28–100 人）。審查者對多數關鍵結果評為 very uncertain（極低確定性）。未記錄查閱日與完整作者群，故標 unverified。"
+
+  - id: src.wu-2026-buteyko-meta
+    display: "Buteyko 氣喘統合分析：Wu S, Zhang X, Huang W. (2026). The effect of the Buteyko breathing technique on asthma control and quality of life: a systematic review and meta-analysis of RCTs. Explore (NY), 22(4), 103414."
+    type: review
+    verification_status: verified
+    authors: ["Wu S", "Zhang X", "Huang W"]
+    year: 2026
+    title: "The effect of the Buteyko breathing technique on asthma control and quality of life: a systematic review and meta-analysis of RCTs"
+    container: "Explore (New York, N.Y.)"
+    identifier:
+      pmid: "41930853"
+    notes: "7 篇 RCT。氣喘控制 SMD −0.33（95% CI −0.54 至 −0.13）；整體生活品質無顯著差異（SMD 0.13, p=0.47）。作者結論明寫 evidence remains limited，不可寫成中等確定性。"
