@@ -4427,3 +4427,154 @@ sources:
     authors: ["Zamparo"]
     et_al: true
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+
+  - id: src.pmid-26855425
+    display: "嘆息迴路定位：Li P, Janczewski WA, Yackle K, et al. (2016). The peptidergic control circuit for sighing. Nature, 530(7590), 293–297."
+    type: journal-article
+    verification_status: verified
+    title: "The peptidergic control circuit for sighing"
+    authors: ["Li P", "Janczewski WA", "Yackle K"]
+    et_al: true
+    year: 2016
+    container: "Nature"
+    identifier:
+      pmid: "26855425"
+    retrieved_on: "2026-08-11"
+
+  - id: src.pmid-36630953
+    display: "呼吸法對照 RCT：Balban MY, Neri E, Kogon MM, et al. (2023). Brief structured respiration practices enhance mood and reduce physiological arousal. Cell Reports Medicine, 4(1), 100895."
+    type: journal-article
+    verification_status: verified
+    title: "Brief structured respiration practices enhance mood and reduce physiological arousal"
+    authors: ["Balban MY", "Neri E", "Kogon MM"]
+    et_al: true
+    year: 2023
+    container: "Cell Reports Medicine"
+    identifier:
+      pmid: "36630953"
+    retrieved_on: "2026-08-11"
+
+  - id: src.pmid-36917418
+    display: "HRVB 方法學回顧：Lalanza JF, Lorente S, Bullich R, García C, Losilla JM, Capdevila L. (2023). Methods for Heart Rate Variability Biofeedback (HRVB): A Systematic Review and Guidelines. Applied Psychophysiology and Biofeedback, 48(3), 275–297."
+    type: review
+    verification_status: verified
+    title: "Methods for Heart Rate Variability Biofeedback (HRVB): A Systematic Review and Guidelines"
+    authors: ["Lalanza JF", "Lorente S", "Bullich R", "García C", "Losilla JM", "Capdevila L"]
+    year: 2023
+    container: "Applied Psychophysiology and Biofeedback"
+    identifier:
+      pmid: "36917418"
+    retrieved_on: "2026-08-11"
+    notes: "這是方法學與 protocol 回顧（檢討 HRVB 研究普遍未充分報告呼吸參數），不是療效統合分析。引用時不可當成療效證據。"
+
+  - id: src.pmid-26194270
+    display: "期望效應分析：van Middendorp H, Kox M, Pickkers P, Evers AWM. (2016). The role of outcome expectancies for a training program consisting of meditation, breathing exercises, and cold exposure on the response to endotoxin administration: a proof-of-principle study. Clinical Rheumatology, 35(4), 1081–1085."
+    type: journal-article
+    verification_status: verified
+    title: "The role of outcome expectancies for a training program consisting of meditation, breathing exercises, and cold exposure on the response to endotoxin administration: a proof-of-principle study"
+    authors: ["van Middendorp H", "Kox M", "Pickkers P", "Evers AWM"]
+    year: 2016
+    container: "Clinical Rheumatology"
+    identifier:
+      pmid: "26194270"
+    retrieved_on: "2026-08-11"
+    notes: "proof-of-principle，n=12（僅訓練組），相關性非因果。"
+
+  - id: src.pmid-35213875
+    display: "guru 效應檢驗：Zwaag J, Naaktgeboren R, van Herwaarden AE, Pickkers P, Kox M. (2022). The Effects of Cold Exposure Training and a Breathing Exercise on the Inflammatory Response in Humans: A Pilot Study. Psychosomatic Medicine, 84(4), 457–467."
+    type: journal-article
+    verification_status: verified
+    title: "The Effects of Cold Exposure Training and a Breathing Exercise on the Inflammatory Response in Humans: A Pilot Study"
+    authors: ["Zwaag J", "Naaktgeboren R", "van Herwaarden AE", "Pickkers P", "Kox M"]
+    year: 2022
+    container: "Psychosomatic Medicine"
+    identifier:
+      pmid: "35213875"
+    retrieved_on: "2026-08-11"
+    notes: "pilot study。腎上腺素反應不受訓練時長或授課者（獨立教練 vs 創始人本人）影響。"
+
+  - id: src.blades-2024-whm
+    display: "Wim Hof 主動對照 RCT：Blades R, Mendes WB, Don BP, et al. (2024). A randomized controlled clinical trial of a Wim Hof Method intervention in women with high depressive symptoms. Comprehensive Psychoneuroendocrinology, 20, 100272."
+    type: journal-article
+    verification_status: verified
+    title: "A randomized controlled clinical trial of a Wim Hof Method intervention in women with high depressive symptoms"
+    authors: ["Blades R", "Mendes WB", "Don BP"]
+    et_al: true
+    year: 2024
+    container: "Comprehensive Psychoneuroendocrinology"
+    identifier:
+      pmcid: "PMC11599992"
+    retrieved_on: "2026-08-11"
+    notes: "n=84，設有可信主動對照組。憂鬱、焦慮、壓力三項組間皆無顯著差異。"
+
+  - id: src.kowalski-2024-bolt
+    display: "BOLT 與運動表現無關聯：Kowalski T, et al. (2024). Body Oxygen Level Test (BOLT) is not associated with exercise performance in highly-trained individuals. Frontiers in Physiology."
+    type: journal-article
+    verification_status: verified
+    title: "Body Oxygen Level Test (BOLT) is not associated with exercise performance in highly-trained individuals"
+    authors: ["Kowalski T"]
+    et_al: true
+    year: 2024
+    container: "Frontiers in Physiology"
+    identifier:
+      pmcid: "PMC11406178"
+    retrieved_on: "2026-08-11"
+    notes: "n=49 菁英競速滑冰選手，Wingate 與 CPET 皆無顯著相關。原文明述 BOLT 尚未經科學驗證。"
+
+  - id: src.pmid-1194152
+    display: "胸廓與腹部貢獻比例：Konno & Mead, Relative contributions of rib cage and abdomen to breathing in normal subjects (PMID 1194152)"
+    type: journal-article
+    verification_status: unverified
+    title: "Relative contributions of rib cage and abdomen to breathing in normal subjects"
+    authors: ["Konno K", "Mead J"]
+    identifier:
+      pmid: "1194152"
+    notes: "僅確認標題與 PMID，期刊名與年份未經查證，故留空。"
+
+  - id: src.statpearls-tidal-volume
+    display: "潮氣量與呼吸肌：StatPearls, Physiology, Tidal Volume (NCBI Bookshelf NBK482502)"
+    type: book-chapter
+    verification_status: unverified
+    title: "Physiology, Tidal Volume"
+    container: "StatPearls"
+    identifier:
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK482502/"
+    notes: "StatPearls 條目會持續改版，未記錄查閱日與作者。"
+
+  - id: src.statpearls-bohr-effect
+    display: "波爾效應與氧合血紅素解離：StatPearls (NCBI Bookshelf NBK526028)"
+    type: book-chapter
+    verification_status: unverified
+    container: "StatPearls"
+    identifier:
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK526028/"
+    notes: "僅確認 Bookshelf ID，未記錄條目標題、作者與查閱日。"
+
+  - id: src.jap-hyperventilation-cerebral-2013
+    display: "低碳酸與腦灌流：J Appl Physiol (DOI 10.1152/japplphysiol.00637.2013)"
+    type: journal-article
+    verification_status: unverified
+    container: "Journal of Applied Physiology"
+    identifier:
+      doi: "10.1152/japplphysiol.00637.2013"
+    notes: "僅確認 DOI 與期刊，標題、作者、年份未經查證。"
+
+  - id: src.vaschillo-2002-baroreflex
+    display: "壓力反射共振頻率實測：Vaschillo et al. 2002 (DOI 10.1023/A:1014587304314)"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Vaschillo E"]
+    et_al: true
+    year: 2002
+    identifier:
+      doi: "10.1023/A:1014587304314"
+    notes: "僅確認作者姓氏、年份與 DOI，完整標題與期刊未經查證。"
+
+  - id: src.pmc4422496
+    display: "腦橋呼吸控制機制與 pneumotaxic 框架的修正：Pontine Mechanisms of Respiratory Control (PMC4422496)"
+    type: review
+    verification_status: unverified
+    title: "Pontine Mechanisms of Respiratory Control"
+    identifier:
+      pmcid: "PMC4422496"
+    notes: "僅確認標題與 PMCID，作者、年份、期刊未經查證。"
