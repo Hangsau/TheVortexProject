@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-08-11
-> 驗證條目數：610，Drills ID 數：176
+> 驗證條目數：616，Drills ID 數：176
 
 ---
 
@@ -740,17 +740,10 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 9 筆**
+**WARN，共 2 筆**
 
-  source_id='src.blades-2024-whm' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.pmid-24799686' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.pmid-26194270' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.pmid-26855425' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.pmid-35213875' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.pmid-36630953' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.pmid-36917418' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 
