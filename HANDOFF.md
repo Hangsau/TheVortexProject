@@ -4,7 +4,44 @@
 
 ---
 
-## 當前狀態（2026-07-29）
+## 當前狀態（2026-08-11）
+
+### 已完成——呼吸升格為獨立章節 `canonical/breathing/`（三條線架構，21 節點）＋ my-site 上站（2026-08-11）
+
+**起點**：`resources/raw/notes/呼吸訓練完全指南.md` 一份外部筆記。查證後不當「一篇新內容」收進 `canonical/health/`，而是判定呼吸原本就散在三個不同層（水感 drill／陸上生理／自律神經），沒有一個地方講清楚它們的分工——所以升格成獨立章節，先立框架再放內容。
+
+**三條線架構**（`framework.yaml` 是這章的組織原理，不是導言）：
+
+- ① **感知線（在水裡）**——按 L0–L2 分級，**內容不在本章**，在 drills 的 FrBr1–FrBr4。本章只負責指路。
+- ② **生理線（陸上）**——呼吸肌力量與 CO2 耐受，按負荷（% MIP）分級，跟水感無關。→ `training.yaml`
+- ③ **喚醒調節線（陸上）**——用呼吸節律調自律神經，處理賽前緊張／水中恐懼／成人初學焦慮。→ `regulation.yaml`
+- `physiology.yaml` 是三條線共用的機制層，各節的「為什麼」都指回這裡。
+
+**章節內非協商的排序規則**：`safety.yaml` 永遠置頂。缺氧昏迷是讀其他任何一節的前提——不先講「不要在水下憋氣」，後面 CO2 耐受、循環過度換氣（Wim Hof）那幾節都會被誤用。此規則同時寫在 `_index.yaml` 與 `safety.yaml` 檔頭，呈現層也照辦（見下）。
+
+**檔案與節點（21 個穩定 ID，全 public，本章無 diagnostic 分層）**：
+
+| 檔案 | 節點數 | 內容 |
+|------|-------|------|
+| `safety.yaml` | 2 | hypoxic_blackout（禁令＋判例＋教練處置）、hypocapnia_mechanism |
+| `framework.yaml` | 3 | overview（三條線）、grading（各線分級軸不同）、boundaries（刻意不收什麼＋兩條總則） |
+| `physiology.yaml` | 5 | muscles、neural_control、chemoreceptors、autonomic_coupling、baroreflex_resonance |
+| `training.yaml` | 5 | imt、co2_tolerance、buteyko、bolt_test、self_tracking |
+| `regulation.yaml` | 6 | principle、physiological_sigh、box_breathing、resonance_breathing、wim_hof、claims_gap |
+| `_index.yaml` | — | 21 節點的一句話 gist 目錄，供下游生成導覽（呈現層直接讀它，不另抄一份） |
+
+**查證攔下的實質錯誤**（原筆記照抄會出錯的地方）：
+
+- 「橫膈膜佔吸氣 80%」無可查出處 → 改為一般引用的 70–75%，並補上 Konno & Mead 的姿勢依賴（坐姿胸廓可達 74%），因為泳者是俯臥水平姿勢、兩種量測情境都不是他 → 標為素材缺口。
+- 生理性嘆息的機制歸因方向相反：坊間說「嘆息神經元在 preBötC」，實際上發訊端是 RTN/pFRG，preBötC 是收訊端。
+- Wim Hof：Kox 2014 的內毒素反應結果不能外推成表現增益，另補期望效應與 Blades 的對照；`safety_zh` 在呈現層被刻意排在 `what_zh` 之前。
+- `boundaries` 立了兩條總則：情緒／喚醒改善的證據 ≠ 游泳表現改善的證據；自由潛水是另一個脈絡，結論不互通。
+
+**退役**：舊的 `canonical/health/breathing-training.yaml`（5 節，只有生理線）已刪，`KNOWLEDGE_MAP.md` 改讀新章節；my-site 的 `data/vortex/breathing-training.yaml` 一併 `git rm`。
+
+**驗證鏈**：`tools/validate.py` **0 ERROR／653 WARN**（新增的 W002 111／W011 64 是本章 `source` 顯示字串未遷 `source_ids`、以及 🟠 條目的 observation_basis 覆蓋，屬既有追蹤項不是新缺陷）；`build_knowledge_map.py`、`build_indices.py` 已重生。
+
+**下游 my-site 已同步上站**（repo `Hangsau/cortex`）：`sync_vortex.py` 新增 `sync_breathing()`（目錄式整檔搬運，本章全 public 不剝離）→ `data/breathing/*.yaml`；`vortex-breathing.html` 重寫成 5 面板 21 節點；概念地圖與「查資料」頁的 21 張卡片**都由 `_index.yaml` 生成**，不在 layout 硬編節點名單。
 
 ### 進行中——canonical 資料契約升級：S0–S5 完成，S3c 作者年份批次進行中（S6 待續）
 
@@ -674,6 +711,15 @@
 ---
 
 ## 下一步建議
+
+### 呼吸章的後續（2026-08-11 起）
+
+章節骨架已立、內容已上站，剩下的是把它接回既有軸線。按優先序：
+
+1. **感知線的實質接續**——本章刻意把感知線留給 drills（FrBr1–FrBr4），但那 4 個 drill 是舊有的，還沒按本章 `framework.grading` 的 L0–L2 分級對過帳。下一步是回 `Drills/freestyle.yaml` 檢查這 4 條的 L 級標記與本章是否一致，不一致的以本章為準（框架比 drill 晚寫，drill 那邊沒有這條線的概念）。
+2. **心理層互指**——`regulation.yaml` 的喚醒調節線與心理層既有的水中恐懼／喚醒調節／迷走張力是同一條線的兩端，目前只有單向文字提及，還沒建 `cross_ref_ids`。兩邊都要加，否則從心理層那頭進來的人找不到呼吸協議。
+3. **本章的 W002／W011 補完**——本章貢獻了新的 `source` 顯示字串（未遷 `source_ids`）與 🟠 條目，併入 S3c／S6 批次處理即可，不單獨開輪次。
+4. **自由潛水擴充時的邊界**——`framework.boundaries` 已預先立了「自由潛水是另一個脈絡」總則。未來真的寫自由潛水內容時，兩邊結論要各自標適用脈絡，**不得共用本章的 CO2 耐受與安全結論**（本章的立場是水下憋氣一律禁止，自由潛水脈絡下規則不同，混用會出人命）。
 
 ### 最高優先——canonical 資料契約升級 S1–S5（2026-07-25）
 

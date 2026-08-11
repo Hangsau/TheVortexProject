@@ -154,6 +154,13 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | 註（periodization） | | 來源 Bompa《Periodization》6th ed. + 游泳外部文獻（Mujika/Maglischo/Hellard/Papadimitriou 等）；canonical 三檔加 plain_zh 白話層；一源兩消費全鏈打通——my-site 呈現（hugo 綠）+ swim-coach FTS（31 列，73/73 pass）。commit 7d03619 |
 | psychology/psychology.yaml | **Phase 2 完成（2026-06-16）** · theme→concept schema（跨泳式/跨族群）。**8 主題 62 概念全 complete，沿 L0→L6／初學→競技脊椎排三帶**（band/l_band/level_tag/concept_count）：初學端 ①水中恐懼(7) ②心理-感知-生理交互(8)；貫穿全程 ③動機與動機氣候(9) ④意象與心理演練(6)；進階競技端 ⑤注意力焦點(6) ⑥自我對話與心理技能(8) ⑦喚醒焦慮與壓力崩潰(8) ⑧心流與去再投資(10)。fear 手寫 pilot + 其餘 7 主題 7 並行 Sonnet agent 各讀 dossier 寫、ruamel round-trip merge（保留 fear 格式/註解）。每概念 public{phenomenon/hardware_boundary/l_levels/misconception/intervention/population_note/sources} + diagnostic{abc_link/reading_signals/probe}（不公開，sync 剝除，my-site 0 洩漏）。各 agent 三關校正沒過清單已記 HANDOFF。my-site「心理地圖」三帶著陸頁（8 ready 卡/62 panel）+ 首頁入口（commit 36d51f5 / my-site 3df8b56·a655926）|
 | health/injuries.yaml | **完成（2026-06-21）** · 運動傷害層，**傷害為獨立軸（非掛 L0–L6 水感脊椎）**。44 條傷害 + 1 meta，七大分類（A 肩部上肢7 / B 腰椎泳式特異6 / C 非肌骨醫療9 / D 全身急性7 / D 內分泌骨骼5 / E 急性外傷5 / F 兒童生長5）。v2 schema：mechanism/epidemiology(certainty+evidence_grade A/B/C/Expert)/risk_factors/prevention/management(red_flags+acute+rehab+RTC)/population_notes(全光譜並列 youth/adult/masters/sex/para)/contested/references(verified flag)。drafts/ → `tools/build_injuries.py`（正規化 schema drift + 一致性稽核）→ injuries.yaml。Sonnet 獨立審查：無 P0、無安全風險，4 處 certainty 矛盾已修。49 處 pending_verification 待 W3 查證。my-site「運動傷害」頁（44 panel + 緊急置頂 + 七分類折疊 + 「你怎麼了」處境入口）|
+| breathing/safety.yaml | **完成（2026-08-11）** · 全章置頂，非協商順序。2 節：hypoxic_blackout（水下憋氣禁令＋判例＋教練處置）、hypocapnia_mechanism（過度換氣壓低 CO2 → 窒息感延後但血氧照掉）。缺氧昏迷是讀其他任何一節的前提，呈現層不可收合、不可移位 |
+| breathing/framework.yaml | **完成（2026-08-11）** · 本章組織原理。3 節：overview（三條線：①感知線在水裡→內容在 drills FrBr1–4 ②生理線陸上→training ③喚醒調節線陸上→regulation）、grading（三線分級軸各不相同，感知按 L0–L2／呼吸肌按 %MIP／調節按練習量累積）、boundaries（刻意不收 4-7-8／火呼吸／Ujjayi／Nadi Shodhana／COPD 復健；兩條總則：喚醒改善≠表現改善、自由潛水是另一脈絡） |
+| breathing/physiology.yaml | **完成（2026-08-11）** · 三條線共用的機制層，各節「為什麼」都指回這裡。5 節：muscles（吸主動/平靜吐被動的不對稱；橫膈 70–75% 且強烈依姿勢，俯臥水平無對應量測＝素材缺口）、neural_control（腦幹節律＋皮質覆寫＝呼吸訓練成立的前提；接心理層「再投資代價」）、chemoreceptors（驅動力是 CO2 不是缺氧＝安全鐵則的機制根據）、autonomic_coupling（吸→交感/吐→副交感；RSA 與潛水反射是水中兩條同向路徑）、baroreflex_resonance（0.1 Hz 是族群平均非個人處方，實測 0.055–0.11 Hz） |
+| breathing/training.yaml | **完成（2026-08-11）** · 生理線（陸上），按負荷分級，與水感無關。5 節：imt（呼吸肌訓練，證據衝突與 null 結果並列）、co2_tolerance（機制方向說得通但游泳表現無實證，任何水下版本致命）、buteyko（review/meta 分列＋更正）、bolt_test（常模真相：坊間數字無出處）、self_tracking |
+| breathing/regulation.yaml | **完成（2026-08-11）** · 喚醒調節線（陸上），走自律神經路徑，處理賽前緊張／水中恐懼／成人初學焦慮。6 節：principle（含 land_only 與 gap）、physiological_sigh（機制歸因更正：發訊端在 RTN/pFRG 非 preBötC；池畔唯一可當場用的工具）、box_breathing、resonance_breathing、wim_hof（Kox 2014 不可外推表現；safety_zh 呈現層強制排在 what_zh 之前）、claims_gap |
+| breathing/_index.yaml | **完成（2026-08-11）** · 21 節點一句話 gist 目錄（safety2/framework3/physiology5/training5/regulation6）；**下游導覽直接讀它**——my-site 的全章概念地圖與「查資料」頁 21 張卡片皆由此生成，layout 不另抄節點名單 |
+| 註（breathing） | | 2026-08-11 由外部筆記查證後升格為獨立章節（原 `health/breathing-training.yaml` 5 節已退役刪除）。全 public，無 diagnostic 分層。查證攔下：橫膈 80% 無出處、嘆息神經元歸因方向相反、Wim Hof 外推。感知線內容**不在本章**，在 Drills 的 FrBr1–FrBr4 |
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
@@ -166,7 +173,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | drills_udk.yaml | **完成 + how_to**（2026-06-23）· UDK1–5（5，水下海豚腳；垂直打水/流線換面/繫繩最大努力/節拍器找頻率/比賽配速）|
 | drills_starts-turns.yaml | **完成 + how_to**（2026-06-23）· ST1–5（5，出發轉身；中池翻滾/翻牆踩牆/流線測距/旗下數划手/轉體出水）|
 | DRILL_INDEX.md | **完成** · 完整索引（Schema / L級 / ABC型 / 快速查找）|
-| 註 | | 來源 *There's a Drill for That*（Laurie Sherret）；125 動作；how_to 於 2026-06-06 commit a4ddee1 補入 |
+| 註 | | 來源 *There's a Drill for That*（Cokie Lepinski, 2011, ISBN 9781456602383）；125 動作；how_to 於 2026-06-06 commit a4ddee1 補入 |
 
 ---
 

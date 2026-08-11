@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 771,
+  "record_count": 787,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -6321,6 +6321,336 @@
       "outgoing_ids": []
     },
     {
+      "id": "breathing.framework.boundaries",
+      "domain": "breathing",
+      "file": "canonical/breathing/framework.yaml",
+      "path": "boundaries",
+      "title": "🔵 這一節寫的是**這章刻意不收什麼、以及為什麼**。它的用途是防守：呼吸是所有領域都在講的東西，一旦沒有邊界，一般健康、助眠、瑜伽的呼吸法會源源不絕地灌進游泳知識庫，把章節稀釋成一份『各種呼吸法大全』。教練需要這一節，是因為學生最常拿網路上看到的呼吸法來問『這個對游泳有沒有用』——這一節就是那個問題的答案。",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.framework.grading",
+      "domain": "breathing",
+      "file": "canonical/breathing/framework.yaml",
+      "path": "grading",
+      "title": "🔵 『呼吸訓練能不能分級？』能，但要看哪一條線——三條線的分級軸完全不一樣。教練要知道這件事的理由很實際：軸選錯，進度指標就會錯。拿『強度』去衡量一條該用『順序』走的線，或拿『秒數』去衡量一條該用『累積練習量』走的線，都會逼學生往錯的方向努力。",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.framework.overview",
+      "domain": "breathing",
+      "file": "canonical/breathing/framework.yaml",
+      "path": "overview",
+      "title": "🔵 『呼吸要不要練、怎麼練』之所以永遠講不清楚，是因為大家把三件不同的事混在一起。Vortex 把呼吸拆成三條線：① **感知線（在水裡）**——吐氣連不連續、換氣會不會緊張、兩側順不順，這是水感的一部分，跟『手感腳感』一樣按 L0–L6 分級，靠水裡的 drill 練。② **生理線（陸上）**——呼吸肌（吸氣那組肌",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.physiology.autonomic_coupling",
+      "domain": "breathing",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "autonomic_coupling",
+      "title": "吸氣會讓心跳稍微變快（偏興奮那一邊），吐氣會讓心跳稍微變慢（偏放鬆那一邊）——所以「把吐氣拉長」真的會鎮定，這不是心理作用。迷走神經正好經過心臟、肺和橫膈膜附近，深而慢的呼吸等於直接刺激它。心跳隨呼吸起伏的現象叫 RSA，起伏越明顯代表迷走神經功能越好。放到游泳上很有意思：臉入水本身會觸發潛水反射，那是另一條讓人平靜下",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.physiology.baroreflex_resonance",
+      "domain": "breathing",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "baroreflex_resonance",
+      "title": "🟢 血壓調節系統中的**壓力反射迴路**本身存在一個自然振盪頻率，族群平均約 **0.1 赫茲**——換算成呼吸就是每個週期約 10 秒、每分鐘 6 次。這個數字在坊間流傳得很廣，但幾乎都漏掉了下一段的限定。",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.vaschillo-2002-baroreflex"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.physiology.chemoreceptors",
+      "domain": "breathing",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "chemoreceptors",
+      "title": "🟢 多數人以為呼吸的驅動力是「缺氧」——身體發現氧氣不夠了，所以叫你呼吸。**這是錯的**。正常情況下的主要驅動力是**血液中的二氧化碳濃度**。這個誤解不只是知識細節，它直接連著本章最嚴重的安全問題。",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-32119507"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.physiology.muscles",
+      "domain": "breathing",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "muscles",
+      "title": "吸氣一定要出力（肌肉把胸腔撐開），平靜時的吐氣則是放鬆讓它自己回彈，只有用力吐才要出力。最主要的吸氣肌是橫膈膜，一般說它佔平靜吸氣的七成多——但這個比例會隨姿勢大幅改變：坐著的時候其實是胸廓在主導（可達七成四），躺著才換成肚子主導。而泳者是趴著水平的，這個姿勢目前沒有對應的量測資料，所以陸上那套「腹式呼吸佔八成」不能直",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-1194152",
+        "src.statpearls-tidal-volume"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.physiology.neural_control",
+      "domain": "breathing",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "neural_control",
+      "title": "🟢 呼吸的特殊之處在於：它**不像心臟那樣完全自動**。它是**腦幹的節律產生器**加上**皮質的意識控制**兩層疊加而成的。這一條就是整章呼吸訓練得以成立的前提——如果呼吸跟心跳一樣完全不受意識管，那所有「呼吸法」都不會存在。",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.pmc4422496"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.regulation.box_breathing",
+      "domain": "breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "box_breathing",
+      "title": "箱式呼吸就是把呼吸切成四段等長：吸 4 秒、閉 4 秒、吐 4 秒、閉 4 秒，像個正方形，所以叫方塊呼吸。這裡的「閉氣」只是短暫停頓，不是憋到極限，跟那些「練憋氣耐受」的東西完全是兩回事。它流傳得非常廣，但有件事一定要更正：在 2023 年那份四組對照研究裡，**箱式呼吸的情緒改善雖然比正念冥想那組好一點，但沒有達到",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-36630953"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.regulation.claims_gap",
+      "domain": "breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "claims_gap",
+      "title": "🔵 這一節不介紹任何呼吸法，它是一組**判斷工具**。使用情境非常具體：**學生（或家長）從網路、社群、商業課程帶著某個呼吸法的宣稱來問「這個對游泳有沒有用」**。教練不可能對每一種呼吸法都讀過原始研究，但可以用四個固定的樣式去問問題——這四個樣式不是抽象的方法學原則，它們全都是本檔前面幾節真實踩到的坑。",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.regulation.physiological_sigh",
+      "domain": "breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "physiological_sigh",
+      "title": "生理性嘆息就是把身體本來就會做的那個動作變成主動可用的版本——你情緒緩下來時那個不由自主的「深吸一口再長長吐出去」，就是它。做法三步：用鼻子吸一口氣，先不要吐，**接著再補吸一小口**（這一步最常被漏掉，漏了就變成普通深呼吸），然後用嘴巴長長地吐出去，吐氣要明顯比吸氣長。連做幾次。機制上它有一條專屬的神經迴路：發出嘆息",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-26855425",
+        "src.pmid-36630953"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.regulation.principle",
+      "domain": "breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "principle",
+      "title": "🔵 這一條線處理的問題很具體：**泳者在下水之前就已經繃住了**。賽前發抖、成人初學站在池邊心跳狂跳、鐵三選手在開放水域起跑前呼吸變淺變快——這些都不是技術問題，也不是呼吸肌力量問題，而是**自律神經的喚醒程度失調**。用動作指令去修它（「放輕鬆」「手再伸長一點」）幾乎沒有效果，因為問題根本不在動作那一層。喚醒調節線就",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.regulation.resonance_breathing",
+      "domain": "breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "resonance_breathing",
+      "title": "共振呼吸是把呼吸放很慢——吸 5 到 6 秒、吐 5 到 6 秒（大約一分鐘 5 到 6 次），每天做 10 到 20 分鐘，坐在陸地上做。原理是身體調節血壓的迴路本身有個自然節奏，呼吸對上它的時候兩個波會疊起來互相放大（詳細機制看本章「生理機制」那頁，這裡不重複）。這一個跟生理性嘆息完全相反：**它要練，不是當場就靈",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-36917418",
+        "src.vaschillo-2002-baroreflex"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.regulation.wim_hof",
+      "domain": "breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "wim_hof",
+      "title": "Wim Hof 法的呼吸部分是**刻意的過度換氣**——連續幾十次又深又快的呼吸，把二氧化碳大量排掉（造成呼吸性鹼中毒），然後閉氣，反覆幾輪，完整版本還會搭配泡冷水跟冥想。注意它跟這一頁前面三個方法方向相反：前面都是把呼吸放慢、吐氣拉長，這個是把呼吸加快加深。**先講安全，因為這一段比效果重要一百倍：絕對不要在水裡做、",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.blades-2024-whm",
+        "src.pmid-24799686",
+        "src.pmid-26194270",
+        "src.pmid-35213875"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.safety.hypocapnia_mechanism",
+      "domain": "breathing",
+      "file": "canonical/breathing/safety.yaml",
+      "path": "hypocapnia_mechanism",
+      "title": "有人會拿血氧機說『你看血氧正常啊』，這個判斷是錯的。過度換氣真正危險的地方是二氧化碳被排掉後腦血管會收縮，送到腦部的血流變少——血氧機量不到這件事。順便說清楚一個常被搞反的觀念：二氧化碳多、偏酸的時候，血紅素反而更願意把氧放給肌肉（這就是波爾效應）；把二氧化碳吹掉不會讓你更有氧，只會讓警報失靈。防線不是儀器，是不憋氣、",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.jap-hyperventilation-cerebral-2013",
+        "src.statpearls-bohr-effect"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.safety.hypoxic_blackout",
+      "domain": "breathing",
+      "file": "canonical/breathing/safety.yaml",
+      "path": "hypoxic_blackout",
+      "title": "這一頁只有一句話最重要：不要在水下憋氣，也不要下水前猛吸幾口大氣再潛。那不是在練肺活量，是在關掉身體的警報器——二氧化碳才是讓你『想呼吸』的訊號，先把它排掉，人就會在完全沒有窒息感的情況下，安安靜靜地在水裡昏過去。這件事有實際死亡案例，美國紅十字會、YMCA、USA Swimming 三方也明文禁止。想練水裡的呼吸，練",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-32119507"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.training.bolt_test",
+      "domain": "breathing",
+      "file": "canonical/breathing/training.yaml",
+      "path": "bolt_test",
+      "title": "BOLT 是一個自己就能測的閉氣秒數。測法：先安靜坐著休息至少 10 分鐘，用鼻子做一次「平常的」吸氣跟吐氣（不是深呼吸），吐完捏住鼻子開始計時，計到「第一次明顯想吸氣」為止就停——不是硬撐到極限。這兩個細節做錯，測出來就不是同一回事。重點來了：網路上流傳的「理想 40 秒、多數人 15 到 25 秒」**沒有任何正式",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.kowalski-2024-bolt"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.training.buteyko",
+      "domain": "breathing",
+      "file": "canonical/breathing/training.yaml",
+      "path": "buteyko",
+      "title": "布泰科呼吸法練的是「呼吸得輕一點、少一點、慢一點」，加上吐完氣後停一下的「控制停頓」，說法是讓身體更耐受二氧化碳。它的證據狀況要講清楚：澳洲政府委託 Cochrane Australia 做的評估收了 11 篇氣喘研究（多是 28 到 100 人的小型試驗），結論是對多數重要結果「極低確定性」——那不是支持，那是「我們",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.au-natural-therapies-buteyko-2024",
+        "src.wu-2026-buteyko-meta"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.training.co2_tolerance",
+      "domain": "breathing",
+      "file": "canonical/breathing/training.yaml",
+      "path": "co2_tolerance",
+      "title": "自由潛水圈那套「CO2 表」（一組一組閉氣、休息越來越短）在游泳圈也很流行，但沒有任何像樣的研究測過它能不能讓你游更快——這是從別的運動硬搬過來的說法。最接近的研究兩份：一份看閉氣訓練（7 篇彙整），發現最大攝氧量沒進步，只有乳酸峰值上升（比較像無氧那邊的適應）；另一份確實讓身體對二氧化碳的耐受提高了 45%，但那是 ",
+      "tags": {
+        "certainty": [
+          "🔴"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-24421735"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.training.imt",
+      "domain": "breathing",
+      "file": "canonical/breathing/training.yaml",
+      "path": "imt",
+      "title": "用有阻力的呼吸器練「吸氣的那組肌肉」，肌肉確實會變強——統合分析看到最大吸氣壓平均進步 29.35 cmH2O，這點很一致。但變強會不會讓你游更快？同一份分析裡 13 篇研究只有 3 篇看到成績進步，吐氣肌力和肺功能指標則完全沒動。不過另一份 2025 年的統合分析（10 篇、230 人）合併後倒是看到成績有小幅但顯著",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.pmid-39351143"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breathing.training.self_tracking",
+      "domain": "breathing",
+      "file": "canonical/breathing/training.yaml",
+      "path": "self_tracking",
+      "title": "呼吸訓練的效果慢又不明顯，光憑感覺判斷「有沒有效」很容易被當天狀態騙。可以記的幾項很簡單：每天早上起床測靜息心率、HRV（RMSSD 或手錶給的分數，一樣早上起床測最準）、每天用 1 到 10 分自評壓力跟睡眠，再加上每週測一次 BOLT（測法看本頁 BOLT 那節，記得那節說過參考值沒有常模，這裡只跟自己比）。最重要",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
       "id": "chlorine-eye-irritation",
       "domain": "health",
       "file": "canonical/health/injuries.yaml",
@@ -10273,82 +10603,6 @@
       "source_ids": [
         "src.adductor-loading-return-to-sport-practice-co",
         "src.grote-2004"
-      ],
-      "outgoing_ids": []
-    },
-    {
-      "id": "health.breathing.co2_tolerance",
-      "domain": "health",
-      "file": "canonical/health/breathing-training.yaml",
-      "path": "co2_tolerance",
-      "title": "自由潛水那套『閉氣表』在游泳圈很流行，但沒有任何像樣的研究證明它能讓你游更快——這是從別的運動硬搬過來的說法。真要練 CO2 耐受，只在陸上、找人陪、別獨自做；而且永遠不要把閉氣帶進水裡（那是會死人的）。它跟自由潛水是兩回事，自由潛水的結論不能直接套到游泳。",
-      "tags": {
-        "certainty": [
-          "🔴"
-        ]
-      },
-      "source_ids": [
-        "src.pmid-24421735"
-      ],
-      "outgoing_ids": []
-    },
-    {
-      "id": "health.breathing.grading",
-      "domain": "health",
-      "file": "canonical/health/breathing-training.yaml",
-      "path": "grading",
-      "title": "『純粹的呼吸訓練能不能分級？』能，但要看哪一條線，而且分級的軸不一樣：",
-      "tags": {
-        "certainty": [
-          "🔵"
-        ]
-      },
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "health.breathing.imt_rmt",
-      "domain": "health",
-      "file": "canonical/health/breathing-training.yaml",
-      "path": "imt_rmt",
-      "title": "用阻力呼吸器練『吸氣的肌肉』，肌肉確實會變強，這點研究很一致。但變強會不會讓你游更快？短距離（50–200）多數研究說沒差，長一點的距離可能有一點點幫助，別期待太大。如果你已經是練很多年的高手，有份菁英研究甚至完全沒看到效果。協議是 50% 強度起、一次 30 下、一天 1–2 次、練 6–12 週。它是錦上添花的輔助",
-      "tags": {
-        "certainty": [
-          "🟡"
-        ]
-      },
-      "source_ids": [
-        "src.pmid-39351143"
-      ],
-      "outgoing_ids": []
-    },
-    {
-      "id": "health.breathing.overview",
-      "domain": "health",
-      "file": "canonical/health/breathing-training.yaml",
-      "path": "overview",
-      "title": "『呼吸要不要練、怎麼練』之所以講不清楚，是因為大家把兩件不同的事混在一起。Vortex 把呼吸拆成兩條線：① **感知線**——吐氣連不連續、換氣會不會緊張、兩側順不順，這是水感的一部分，跟『手感腳感』一樣按 L0–L6 分級，靠水裡的 drill 練（FrBr1–FrBr4）。② **生理線（本頁）**——呼吸肌（吸",
-      "tags": {
-        "certainty": [
-          "🔵"
-        ]
-      },
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "health.breathing.safety",
-      "domain": "health",
-      "file": "canonical/health/breathing-training.yaml",
-      "path": "safety",
-      "title": "",
-      "tags": {
-        "certainty": [
-          "🟢"
-        ]
-      },
-      "source_ids": [
-        "src.pmid-32119507"
       ],
       "outgoing_ids": []
     },

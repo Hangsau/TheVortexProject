@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 495,
+  "source_count": 511,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -244,6 +244,22 @@
       ]
     },
     {
+      "id": "src.au-natural-therapies-buteyko-2024",
+      "display": "澳洲政府委託 Buteyko 證據評估：Natural Therapies Review 2024 — Buteyko evidence evaluation (Australian Department of Health / Cochrane Australia)",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://www.health.gov.au/sites/default/files/2025-03/natural-therapies-review-2024-buteyko-evidence-evaluation.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.buteyko",
+          "file": "canonical/breathing/training.yaml",
+          "path": "buteyko"
+        }
+      ]
+    },
+    {
       "id": "src.benjanuvatra-2007-a",
       "display": "Benjanuvatra et al. 2007",
       "verification_status": "verified",
@@ -274,6 +290,22 @@
           "id": "starts-turns.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[88].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.blades-2024-whm",
+      "display": "Wim Hof 主動對照 RCT：Blades R, Mendes WB, Don BP, et al. (2024). A randomized controlled clinical trial of a Wim Hof Method intervention in women with high depressive symptoms. Comprehensive Psychoneuroendocrinology, 20, 100272.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmcid": "PMC11599992"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.regulation.wim_hof",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "wim_hof"
         }
       ]
     },
@@ -1937,6 +1969,22 @@
       ]
     },
     {
+      "id": "src.jap-hyperventilation-cerebral-2013",
+      "display": "低碳酸與腦灌流：J Appl Physiol (DOI 10.1152/japplphysiol.00637.2013)",
+      "verification_status": "unverified",
+      "identifier": {
+        "doi": "10.1152/japplphysiol.00637.2013"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.safety.hypocapnia_mechanism",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypocapnia_mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.jellyfish-envenomation-first-aid",
       "display": "Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）",
       "verification_status": "unverified",
@@ -2044,6 +2092,22 @@
           "id": "free.tech.33",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[30].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.kowalski-2024-bolt",
+      "display": "BOLT 與運動表現無關聯：Kowalski T, et al. (2024). Body Oxygen Level Test (BOLT) is not associated with exercise performance in highly-trained individuals. Frontiers in Physiology.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmcid": "PMC11406178"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.bolt_test",
+          "file": "canonical/breathing/training.yaml",
+          "path": "bolt_test"
         }
       ]
     },
@@ -3755,6 +3819,22 @@
       ]
     },
     {
+      "id": "src.pmc4422496",
+      "display": "腦橋呼吸控制機制與 pneumotaxic 框架的修正：Pontine Mechanisms of Respiratory Control (PMC4422496)",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmcid": "PMC4422496"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.physiology.neural_control",
+          "file": "canonical/breathing/physiology.yaml",
+          "path": "neural_control"
+        }
+      ]
+    },
+    {
       "id": "src.pmc4528289",
       "display": "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)",
       "verification_status": "verified",
@@ -4543,6 +4623,22 @@
       ]
     },
     {
+      "id": "src.pmid-1194152",
+      "display": "胸廓與腹部貢獻比例：Konno & Mead, Relative contributions of rib cage and abdomen to breathing in normal subjects (PMID 1194152)",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "1194152"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.physiology.muscles",
+          "file": "canonical/breathing/physiology.yaml",
+          "path": "muscles"
+        }
+      ]
+    },
+    {
       "id": "src.pmid-12840640-a",
       "display": "Ch9; Mujika & Padilla 2003 (PMID 12840640)",
       "verification_status": "unverified",
@@ -4632,9 +4728,25 @@
       "usage_count": 1,
       "usages": [
         {
-          "id": "health.breathing.co2_tolerance",
-          "file": "canonical/health/breathing-training.yaml",
+          "id": "breathing.training.co2_tolerance",
+          "file": "canonical/breathing/training.yaml",
           "path": "co2_tolerance"
+        }
+      ]
+    },
+    {
+      "id": "src.pmid-24799686",
+      "display": "Wim Hof 法內毒素試驗：Kox M, van Eijk LT, Zwaag J, et al. (2014). Voluntary activation of the sympathetic nervous system and attenuation of the innate immune response in humans. PNAS, 111(20), 7379–7384.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "24799686"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.regulation.wim_hof",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "wim_hof"
         }
       ]
     },
@@ -4697,6 +4809,38 @@
           "id": "starts-turns.tech.13",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[177].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.pmid-26194270",
+      "display": "期望效應分析：van Middendorp H, Kox M, Pickkers P, Evers AWM. (2016). The role of outcome expectancies for a training program consisting of meditation, breathing exercises, and cold exposure on the response to endotoxin administration: a proof-of-principle study. Clinical Rheumatology, 35(4), 1081–1085.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26194270"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.regulation.wim_hof",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "wim_hof"
+        }
+      ]
+    },
+    {
+      "id": "src.pmid-26855425",
+      "display": "嘆息迴路定位：Li P, Janczewski WA, Yackle K, et al. (2016). The peptidergic control circuit for sighing. Nature, 530(7590), 293–297.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26855425"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.regulation.physiological_sigh",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "physiological_sigh"
         }
       ]
     },
@@ -4785,12 +4929,17 @@
       "identifier": {
         "pmid": "32119507"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
-          "id": "health.breathing.safety",
-          "file": "canonical/health/breathing-training.yaml",
-          "path": "safety"
+          "id": "breathing.physiology.chemoreceptors",
+          "file": "canonical/breathing/physiology.yaml",
+          "path": "chemoreceptors"
+        },
+        {
+          "id": "breathing.safety.hypoxic_blackout",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypoxic_blackout"
         }
       ]
     },
@@ -4828,6 +4977,59 @@
       ]
     },
     {
+      "id": "src.pmid-35213875",
+      "display": "guru 效應檢驗：Zwaag J, Naaktgeboren R, van Herwaarden AE, Pickkers P, Kox M. (2022). The Effects of Cold Exposure Training and a Breathing Exercise on the Inflammatory Response in Humans: A Pilot Study. Psychosomatic Medicine, 84(4), 457–467.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35213875"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.regulation.wim_hof",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "wim_hof"
+        }
+      ]
+    },
+    {
+      "id": "src.pmid-36630953",
+      "display": "呼吸法對照 RCT：Balban MY, Neri E, Kogon MM, et al. (2023). Brief structured respiration practices enhance mood and reduce physiological arousal. Cell Reports Medicine, 4(1), 100895.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "36630953"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "breathing.regulation.box_breathing",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "box_breathing"
+        },
+        {
+          "id": "breathing.regulation.physiological_sigh",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "physiological_sigh"
+        }
+      ]
+    },
+    {
+      "id": "src.pmid-36917418",
+      "display": "HRVB 方法學回顧：Lalanza JF, Lorente S, Bullich R, García C, Losilla JM, Capdevila L. (2023). Methods for Heart Rate Variability Biofeedback (HRVB): A Systematic Review and Guidelines. Applied Psychophysiology and Biofeedback, 48(3), 275–297.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "36917418"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.regulation.resonance_breathing",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "resonance_breathing"
+        }
+      ]
+    },
+    {
       "id": "src.pmid-39351143",
       "display": "RMT 統合分析 Frontiers Physiology 2025 (DOI 10.3389/fphys.2025.1638739, 10 RCT n=230); 各距離分層統合分析 (DOI 10.3389/fphys.2026.1770925, 14 RCT n=375); 肺功能/MIP 統合分析 Frontiers Sports Act Living 2024 (PMID 39351143, 13 研究 n=277)",
       "verification_status": "unverified",
@@ -4838,9 +5040,9 @@
       "usage_count": 1,
       "usages": [
         {
-          "id": "health.breathing.imt_rmt",
-          "file": "canonical/health/breathing-training.yaml",
-          "path": "imt_rmt"
+          "id": "breathing.training.imt",
+          "file": "canonical/breathing/training.yaml",
+          "path": "imt"
         }
       ]
     },
@@ -6884,6 +7086,22 @@
       ]
     },
     {
+      "id": "src.statpearls-bohr-effect",
+      "display": "波爾效應與氧合血紅素解離：StatPearls (NCBI Bookshelf NBK526028)",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK526028/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.safety.hypocapnia_mechanism",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypocapnia_mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.statpearls-swimmer-s-shoulder-ncbi-bookshelf",
       "display": "StatPearls Swimmer's Shoulder, NCBI Bookshelf NBK470589",
       "verification_status": "unverified",
@@ -6894,6 +7112,22 @@
           "id": "swimmers-shoulder",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[5].epidemiology"
+        }
+      ]
+    },
+    {
+      "id": "src.statpearls-tidal-volume",
+      "display": "潮氣量與呼吸肌：StatPearls, Physiology, Tidal Volume (NCBI Bookshelf NBK482502)",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK482502/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.physiology.muscles",
+          "file": "canonical/breathing/physiology.yaml",
+          "path": "muscles"
         }
       ]
     },
@@ -8918,6 +9152,27 @@
       ]
     },
     {
+      "id": "src.vaschillo-2002-baroreflex",
+      "display": "壓力反射共振頻率實測：Vaschillo et al. 2002 (DOI 10.1023/A:1014587304314)",
+      "verification_status": "unverified",
+      "identifier": {
+        "doi": "10.1023/A:1014587304314"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "breathing.physiology.baroreflex_resonance",
+          "file": "canonical/breathing/physiology.yaml",
+          "path": "baroreflex_resonance"
+        },
+        {
+          "id": "breathing.regulation.resonance_breathing",
+          "file": "canonical/breathing/regulation.yaml",
+          "path": "resonance_breathing"
+        }
+      ]
+    },
+    {
       "id": "src.veiga-2022",
       "display": "Veiga et al. 2022 systematic review",
       "verification_status": "verified",
@@ -9306,6 +9561,22 @@
           "id": "starts-turns.tech.6",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[170].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.wu-2026-buteyko-meta",
+      "display": "Buteyko 氣喘統合分析：Wu S, Zhang X, Huang W. (2026). The effect of the Buteyko breathing technique on asthma control and quality of life: a systematic review and meta-analysis of RCTs. Explore (NY), 22(4), 103414.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "41930853"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.buteyko",
+          "file": "canonical/breathing/training.yaml",
+          "path": "buteyko"
         }
       ]
     },
