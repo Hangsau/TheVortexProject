@@ -68,7 +68,7 @@
 
 三件事，全部是讀檔，很便宜：
 
-1. 讀 `canonical/psychology/psychology.yaml` 的 8 個 themes 清單。**若其中已有「倦怠 / 恢復 / 動機耗竭」相關 theme（目前 7 個 status: planned，未確認主題名）**，第四章內容改為併入該 theme，不另開 `recovery/mental.yaml`。這是本規劃唯一的未確認前提。
+1. ~~讀 psychology.yaml 的 8 個 themes 清單~~ **→ 2026-08-12 已查證完畢，見下方「W1.1 結果」，此項不必重做。**
 2. 讀 `canonical/breathing/framework.yaml` 前 80 行，確認獨立章的 theme/concept 欄位實際寫法（psychology.yaml 的 schema 已知，但呼吸章是「全 public 無 diagnostic」的先例，格式可能略有差異）。
 3. 確認 `l_levels` 欄位在呼吸章怎麼處理。
 
@@ -80,9 +80,32 @@
 
 約 5 概念：睡眠（證據等級最高）、冷水浸泡的短期效益與長期代價、機械式介入（按摩 / 加壓衣 / 震動）、安慰劑效應與雙盲困境、證據強度總覽表。
 
+### W1.1 結果（2026-08-12 已查證，取代原 W1 第 1 項）
+
+`canonical/psychology/psychology.yaml` 的 8 個 theme 為：
+
+| id | 名稱 | 與恢復章的關係 |
+|---|---|---|
+| `psych.fear` | 水中恐懼 | 無重疊 |
+| `psych.interaction` | 心理–感知–生理交互 | 無重疊 |
+| `psych.motivation` | 動機與動機氣候 | **重疊：SDT / 教練動機氣候** |
+| `psych.imagery` | 意象與心理演練 | **重疊：心像技術** |
+| `psych.attention` | 注意力焦點 | 邊界相鄰 |
+| `psych.self_talk` | 自我對話與心理技能 | **重疊：PST / 自我對話 / 目標設定** |
+| `psych.arousal` | 喚醒、焦慮與壓力崩潰 | 邊界相鄰（壓力側） |
+| `psych.flow` | 心流與去再投資 | 無重疊 |
+
+**結論一：沒有恢復 / 倦怠 theme，維持原計畫另開 `recovery/mental.yaml`，不併入。**
+
+**結論二：W4 範圍要縮小。** 來源稿 4.5 節「介入方法光譜」有相當部分已被既有 theme 吃掉——心像進 `psych.imagery`、自我對話與目標設定進 `psych.self_talk`、SDT 與教練行為進 `psych.motivation`。這些一律改成 cross-ref 指過去，**不在恢復章重寫**（呼應使用者「分得太多了」的原則：同一件事只有一個家）。
+
+另注意：實際檔案進度比先前調查回報的樂觀——`psych.fear`（7 概念）與 `psych.interaction`（至少 3 概念）都已 `status: complete`，不是只有恐懼一章完成。W4 動手前先確認上表三個「重疊」theme 的既有概念清單，避免撞號。
+
 ### W4　mental.yaml（第四章）　`[blocked: 管道待恢復，見 R6]`
 
-約 8 概念：Kellmann 壓力—恢復平衡（剪刀模型）、COR 資源保存理論、恢復經驗四構念（心理脫離 / 放鬆 / 掌控 / 控制感）、倦怠 Maslach 三因子、過度訓練症候群與倦怠的區辨、急性心理恢復（POMS 軌跡）、介入方法光譜（行為 / 認知 / 心像 / 正念 ACT）、SDT 與教練行為。
+原估 8 概念，扣掉上表三處重疊後**約 5 概念**：Kellmann 壓力—恢復平衡（剪刀模型）、COR 資源保存理論、恢復經驗四構念（心理脫離 / 放鬆 / 掌控 / 控制感）、倦怠 Maslach 三因子與過度訓練症候群的區辨、急性心理恢復（POMS 軌跡）。
+
+正念 / ACT 的歸屬待定：既可放恢復章（作為對抗心理疲勞的手段），也可能屬 `psych.arousal`。W4 開工時一併決定。
 
 ### W5　barriers.yaml（第五章）　`[blocked: 管道待恢復，見 R6]`
 
