@@ -72,19 +72,19 @@
 2. 讀 `canonical/breathing/framework.yaml` 前 80 行，確認獨立章的 theme/concept 欄位實際寫法（psychology.yaml 的 schema 已知，但呼吸章是「全 public 無 diagnostic」的先例，格式可能略有差異）。
 3. 確認 `l_levels` 欄位在呼吸章怎麼處理。
 
-### W2　framework.yaml（第二章）　`[delegate: minimax-m2.7]`
+### W2　framework.yaml（第二章）　`[blocked: 管道待恢復，見 R6]`
 
 約 6 概念：被動休息 vs 主動恢復的時間尺度反轉、超補償模型及其侷限、雙因子模型、恢復監測工具（HRV / CMJ / 生化 / 主觀量表）、個體與項目差異、恢復的三條生理路徑概覽。
 
-### W3　physiology.yaml（第三章）　`[delegate: minimax-m2.7]`
+### W3　physiology.yaml（第三章）　`[blocked: 管道待恢復，見 R6]`
 
 約 5 概念：睡眠（證據等級最高）、冷水浸泡的短期效益與長期代價、機械式介入（按摩 / 加壓衣 / 震動）、安慰劑效應與雙盲困境、證據強度總覽表。
 
-### W4　mental.yaml（第四章）　`[delegate: minimax-m2.7]`
+### W4　mental.yaml（第四章）　`[blocked: 管道待恢復，見 R6]`
 
 約 8 概念：Kellmann 壓力—恢復平衡（剪刀模型）、COR 資源保存理論、恢復經驗四構念（心理脫離 / 放鬆 / 掌控 / 控制感）、倦怠 Maslach 三因子、過度訓練症候群與倦怠的區辨、急性心理恢復（POMS 軌跡）、介入方法光譜（行為 / 認知 / 心像 / 正念 ACT）、SDT 與教練行為。
 
-### W5　barriers.yaml（第五章）　`[delegate: minimax-m2.7]`
+### W5　barriers.yaml（第五章）　`[blocked: 管道待恢復，見 R6]`
 
 約 5 概念：休息等於偷懶的隱性偏見、教練知識與工具落差、賽制結構性壓縮、污名化（**須標 🔴，來源稿自承是邏輯推論非定論**）、跨文化比較與台灣體育班制度因素。
 
@@ -110,9 +110,10 @@
 Vortex canonical 要求綜述語言、不做引用拼裝物；來源稿通篇是「一份研究發現…」「系統性回顧指出…」的引用拼裝體。
 → 緩解：schema 本身已提供解法。`public.phenomenon` 分 `text`（學術陳述）與 `plain_text`（白話版），把引用語氣收進 `text`，`plain_text` 寫成綜述語言。派工 spec 必須明寫這條，否則外包回來會是整段貼原文。
 
-**R2　超補償批判與既有 periodization 章衝突**
-來源稿第二章主張超補償模型是「被過度簡化的比喻」、理論根基（Selye GAS 源自大鼠實驗）可疑；而 `canonical/periodization/` 以 Bompa 為主，Bompa 體系正是建立在超補償上。
-→ 這是真實的內容矛盾，不是格式問題。**W2 執行前必須先讀 `canonical/periodization/structure.yaml` 確認它怎麼陳述超補償**，兩章之間要嘛統一立場，要嘛明確標成「對立觀點歸屬」（這正是 Vortex 允許保留 citation 的三種情形之一）。不可讓兩章各說各話。
+**R2　超補償批判與既有 periodization 章衝突　→ 2026-08-12 已查證，風險降級**
+原本擔心來源稿第二章批判超補償（「被過度簡化的比喻」、Selye GAS 源自大鼠實驗）會撞上以 Bompa 為主的 `canonical/periodization/`。
+實際 grep 結果：超補償在 periodization 章只命中兩處，都是順帶的操作性引用——`structure.yaml:317`「不適合初中級者（達超補償只需 2–3 課）」、`zones.yaml:300`「每 5–6 週在小週期第一週（超補償高峰、疲勞最低）重測」。**該章沒有把超補償當理論支柱陳述**，而且 `structure.yaml` 已有 `critique_of_traditional_zh`（引 Issurin 2010 批評 Bompa/Matveyev 線性模型）、`limitations_zh`、`author_note_zh`，本來就是多派並陳的寫法。
+→ 恢復章的超補償批判可直接接上既有 critique 脈絡，不需統一立場。**唯一要注意**：別讓「超補償是簡化比喻」的批判，跟 `zones.yaml:300`「超補償高峰重測乳酸」這條操作建議互相打臉——W2 寫到監測工具時，把後者定位成「操作上的實用近似」而非理論背書。
 
 **R3　l_levels 對應牽強**
 恢復概念（睡眠、CWI、倦怠）與 L0–L6 感知階梯沒有自然對應——L0 是呼吸感知建立、L6 是全身場感知，恢復不是感知級別。
@@ -126,9 +127,17 @@ Vortex canonical 要求綜述語言、不做引用拼裝物；來源稿通篇是
 路徑寫死，新目錄不加進去就靜默不上站，而且不會報錯。
 → W7 已列為獨立步驟，且驗收要求開線上頁面確認渲染，不接受「push 成功」當完成。
 
-**R6　配額**
-7D 剩 3%，W2–W5 是四個 50–300 行的完整新檔，正是派工方法論指定發包的體裁（單檔 verbatim spec，1 W = 1 file = 1 API call）。
-→ 全數發包 minimax-m2.7，Claude 只做 spec 撰寫與驗收。W0 發 haiku。W1 / W6 / W8 是讀檔與文件對齊，量小留手動。
+**R6　配額：三條管道同時見底（2026-08-12 實查，這是目前唯一的真正阻塞）**
+
+| 管道 | 7D 用量 | 重置時點 | 備註 |
+|---|---|---|---|
+| Claude | 98% | 約 2026-08-14 上午 | 5H 窗雖會先重置，但 7D 才是天花板 |
+| MiniMax | 93% | 約 2026-08-17 早上 | 且使用者告知它正在跑翻譯，翻完前無空檔 |
+| Codex / ChatGPT | 100% | 約 2026-08-18 中午 | 讀數為 24 小時前快照（stale），非即時 |
+
+→ W2–W5 是四個 50–300 行完整新檔，正是發包體裁（單檔 verbatim spec，1 W = 1 file = 1 call），但**現在沒有任何管道可承接**，故全數標 `[blocked]`。
+→ **最早可動的是 Claude 8/14 上午那一窗**。屆時的優先序：先 W1（三項確認，讀檔，最便宜）→ W0（書目補完，發 haiku）→ 再看剩餘配額決定 W2 是自寫還是等 MiniMax 8/17。
+→ 若 8/14 那窗配額寬裕（>50%），W2–W5 可由 Claude 自寫，不必等 MiniMax——這四檔總量約 800–1200 行 YAML，屬於單窗吃得下的量級。查額度指令：`cd C:/claudehome/tools/deskboard && python -c "import llm_usage; print(llm_usage.read_claude())"`
 
 ---
 
