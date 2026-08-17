@@ -103,7 +103,7 @@
 
 ## W002 — 區塊**有**來源顯示字串（`source`/`sources`）但缺 `source_ids`（機器鍵沒跟上顯示層）；S3a-2 起不看 `certainty`
 
-**WARN，共 114 筆**
+**WARN，共 118 筆**
 
 > **契約說明（S3a／S3a-2）**：`source`（單數字串）與 `sources`（複數清單）都是顯示層自由文字，下游 my-site 直接渲染，**不可改寫、改名或改成陣列**；可解析的來源鍵放同區塊的 `source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。W002 自 S3a-2 起**與 `certainty` 解耦**：一個區塊只要帶了來源顯示字串，不論有沒有標確定性，那個來源都該進註冊表、都該有`source_ids` 指過去。掃描範圍也含 `Drills/*.yaml`。W009 仍綁 `certainty`——它問的是「標了 🟢/🟡 卻拿不出任何來源」，語意本來就以確定性標記為前提。兩者差別在**有沒有來源顯示資訊**：W002 已經有字串，只差把它登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用佔位來源填掉 W009。
 
@@ -187,8 +187,9 @@
   file=canonical\health\injuries.yaml id='hypothermia-swimmers' at=injuries[27].references[3] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='shallow-water-blackout' at=injuries[28].references[0] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='shallow-water-blackout' at=injuries[28].references[1] 有 citation 顯示字串但無 source_ids（無 certainty）
-  file=canonical\health\injuries.yaml id='sipe' at=injuries[29].references[0] 有 citation 顯示字串但無 source_ids（無 certainty）
-  file=canonical\health\injuries.yaml id='sipe' at=injuries[29].references[1] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='sipe' at=injuries[29].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
+  file=canonical\health\injuries.yaml id='sipe' at=injuries[29].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
+  file=canonical\health\injuries.yaml id='sipe' at=injuries[29].references[2] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='exercise-amenorrhea' at=injuries[30].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='exercise-amenorrhea' at=injuries[30].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='female-athlete-triad' at=injuries[31].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
@@ -211,6 +212,9 @@
   file=canonical\health\injuries.yaml id='open-water-marine-biological-hazards' at=injuries[39].references[2] 有 citation 顯示字串但無 source_ids（certainty=yellow）
   file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].references[0] 有 citation 顯示字串但無 source_ids（certainty=yellow）
   file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].references[1] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].references[2] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].references[3] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].references[4] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='starting-block-impact' at=injuries[41].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='starting-block-impact' at=injuries[41].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='starting-block-impact' at=injuries[41].references[2] 有 citation 顯示字串但無 source_ids（certainty=yellow）
@@ -758,13 +762,16 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 6 筆**
+**WARN，共 9 筆**
 
   source_id='src.akkurt-2017' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.bushman-2006' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.falls-and-hip-fracture-mortality-pmid' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.military-swim-training-sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.nordin-frankel-2012' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---

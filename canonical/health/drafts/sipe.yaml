@@ -14,14 +14,30 @@ mechanism:
   who: 鐵人三項/開放水域泳者尤高危；亦見軍事泳訓、SCUBA、健康年輕人
 
 epidemiology:
-  prevalence: "開放水域/鐵人族群報導發生率範圍待 WebFetch 核實；可能因誤診為溺水/氣喘而低估"
+  prevalence: >-
+    發生率**高度取決於族群與賽事型態，不存在單一數字**。目前最大的前瞻資料是瑞典 Vansbrosimningen
+    2016–2019 年 47,573 人次，SIPE 發生率 **0.44%**（CI 0.39–0.51）；同一份資料的性別差距極大——
+    **女性 0.75% vs 男性 0.09%**（調整後 OR 8.59），並隨年齡上升（18–30 歲 0.08% → ≥61 歲 1.1%，OR 12.74）。
+    軍事極端負荷族群則高一個數量級：美國海軍 SEAL 儲訓生 2,117 人中 **5.0%**。
+    2018 年系統回顧納入的 9 篇研究彼此差距近三個數量級（英國鐵人賽 5 年 0.01%、瑞典河賽 0.5%、
+    以色列海上軍訓計時游 1.8–26.7%），**因異質性過高而無法做量化統合**——任何「SIPE 發生率是 X%」的單一說法都不成立。
+    另可能因誤診為溺水／運動性氣喘而低估。
   certainty: 🟡
   evidence_grade: B
-  caveat: 常被誤判為近乎溺水或運動性氣喘；真實發生率不明
+  caveat: >-
+    **2026-08-17 來源健檢結果**：本條原本的兩個 source_id（`src.sipe`、`src.military-swim-training-sipe`）
+    顯示字串都寫著「待查」「待 WebFetch 核實」，是佔位字串而非文獻；原 prevalence 欄位也只寫「範圍待核實」。
+    已查得三篇真實文獻並填入實際數字（Spencer 2018 系統回顧、Hårdstedt 2021 世代、Volk 2021 軍事世代）。
+    **引用紀律**：① 0.44% 與 5.0% 分屬完全不同族群，相差逾十倍，不可互相取代或平均；
+    ② Hårdstedt 的分母是「游程人次」不是「人數」，且 2016–17 與 2018–19 的診斷方法不同（臨床判斷 vs 肺部超音波）；
+    ③ Spencer 2018 明確寫出「**找不到任何報告 SIPE 死亡的研究**」——本條標 `fatal_acute: true` 是基於機制上的致命潛勢
+    與臨床急症處置需求，**不是基於已發表的死亡率數據**，兩者不可混為一談。
+    餘下限制不變：常被誤判為近乎溺水或運動性氣喘。
   sources:
-    - "SIPE 病理生理與鐵人三項案例系列（作者/年份待查）"
-    - "軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）"
-  source_ids: [src.sipe, src.military-swim-training-sipe]
+    - "Spencer S, Dickinson J, Forbes L. (2018). Occurrence, Risk Factors, Prognosis and Prevention of Swimming-Induced Pulmonary Oedema: a Systematic Review. Sports Med Open 4(1):43. PMID 30238206（**僅 9 篇納入、異質性過高無法量化統合**）"
+    - "Hårdstedt M, et al. (2021). Incidence of Swimming-Induced Pulmonary Edema: A Cohort Study Based on 47,600 Open-Water Swimming Distances. Chest 160(5):1789–1798. PMID 34186036"
+    - "Volk C, et al. (2021). Incidence and Impact of Swimming-Induced Pulmonary Edema on Navy SEAL Candidates. Chest 159(5):1934–1941. PMID 33245874"
+  source_ids: [src.spencer-2018-sipe-systematic-review, src.hardstedt-2021-sipe-incidence-cohort, src.volk-2021-sipe-navy-seal]
 
 risk_factors:
   - { text: "冷水浸泡", grade: B }
@@ -29,12 +45,13 @@ risk_factors:
   - { text: "緊身防寒衣(wetsuit)胸廓壓迫", grade: C }
   - { text: "高血壓/既往 SIPE 史(高復發)", grade: B }
   - { text: "過量賽前補液(增加前負荷)", grade: C }
-  - { text: "女性、年齡較長為部分研究指出的相關因子(待核實)", grade: C }
+  - { text: "女性（Hårdstedt 2021：女 0.75% vs 男 0.09%，調整後 OR 8.59）", grade: B }
+  - { text: "年齡較長（同研究 18–30 歲 0.08% → ≥61 歲 1.1%，OR 12.74）", grade: B }
 
 prevention:
   - { text: "避免冷水中爆發式起泳，漸進加溫加速", grade: C }
   - { text: "防寒衣合身不過緊，必要時剪鬆領口/胸口", grade: C }
-  - { text: "既往 SIPE 史者就醫評估血壓，討論用藥(如部分研究探討的西地那非，須醫囑)", grade: C }
+  - { text: "既往 SIPE 史者就醫評估血壓（約 30% 會復發）。**西地那非預防復發的建議已於 2026-08-17 撤除**：Spencer 2018 系統回顧指出該用法只有兩篇極小型無對照研究、結論不確定，不足以支撐建議，且用藥決定超出教練角色", grade: Expert }
   - { text: "避免賽前過度補液", grade: C }
   - { text: "認識早期症狀(呼吸困難/咳嗽/咳泡沫痰)即停止上岸", grade: B }
 
@@ -54,7 +71,7 @@ management:
     - "調整防寒衣鬆緊、賽前補液量"
   return_to_train: "症狀緩解 + 心肺評估綠燈 + 誘因矯正(配速/防寒衣/補液) → 漸進回水，避免冷水高強度起泳"
   return_to_compete: "心肺專科評估通過 + 既往發作誘因已處理 → 復賽；高復發者需個別風險討論"
-  prognosis: "急性發作多在離水後數小時緩解；但復發率高(尤其誘因未矯正)，個別嚴重者需住院"
+  prognosis: "急性發作多在離水後 24 小時內緩解（Spencer 2018 納入的三篇研究），惟一篇小型研究觀察到限制型肺功能缺損可持續約一週；約 30% 會復發（兩篇研究），誘因未矯正者更高；個別嚴重者需住院。長期預後只有一篇小型研究，未發現發作者與未發作者有差異"
 
 population_notes:
   age:
@@ -62,7 +79,7 @@ population_notes:
     adult_beginner: "成人鐵人/開放水域初入者冷水+高強度起泳組合高危"
     masters: "高齡+高血壓增風險"
   sex:
-    female: "部分研究指女性風險較高(待核實)"
+    female: "女性風險顯著較高：Hårdstedt 2021 的 47,573 人次世代中，SIPE 患者 90% 為女性（參賽性別比接近 1:1），發生率女 0.75% vs 男 0.09%"
     male: ~
   ability: ~
   lifecycle:
@@ -75,17 +92,17 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "SIPE 病理生理綜述（作者/年份/期刊待 WebFetch 核實）", certainty: 🔴, verified: false }
-  - { citation: "鐵人三項 SIPE 案例系列（具體出處待查）", certainty: 🟡, verified: false }
+  - { citation: "Spencer S, Dickinson J, Forbes L. (2018). Occurrence, Risk Factors, Prognosis and Prevention of Swimming-Induced Pulmonary Oedema: a Systematic Review. Sports Med Open 4(1):43. PMID 30238206", certainty: 🟢, verified: true }
+  - { citation: "Hårdstedt M, et al. (2021). Incidence of Swimming-Induced Pulmonary Edema: A Cohort Study Based on 47,600 Open-Water Swimming Distances. Chest 160(5):1789–1798. PMID 34186036", certainty: 🟢, verified: true }
+  - { citation: "Volk C, et al. (2021). Incidence and Impact of Swimming-Induced Pulmonary Edema on Navy SEAL Candidates. Chest 159(5):1934–1941. PMID 33245874", certainty: 🟢, verified: true }
 
 flags:
   pending_verification:
-    - "所有發生率/女性風險數字待查；public 層不放數字"
-    - "西地那非預防用藥證據等級待核實，public 層僅提『須醫囑』不給劑量"
+    - "台灣／亞洲族群的 SIPE 發生率無資料；現有數字全來自瑞典、美國、英國、以色列族群"
   contested:
     - claim: "SIPE 與既往高血壓/心臟結構的因果強度"
       consensus_source: "多數研究支持壓力性機制與高血壓相關"
       dissent_source: "部分病例為健康年輕無心血管病史者，提示單純浸水+運動+冷水即足以誘發"
   vintage_warning: false
 
-audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
+audit: { last_reviewed: 2026-08-17, reviewer: opus, supersedes: ~ }

@@ -446,10 +446,33 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.astm-f2508
-    display: "ASTM F2508 / 防滑摩擦係數標準（工程標準，非流病）"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "ASTM F2508-23, Standard Practice for Validation of Walkway Tribometry Using Research-based Reference Materials（前版 F2508-16e1 題為 Validation, Calibration, and Certification of Walkway Tribometers Using Reference Surfaces）"
+    title: "Standard Practice for Validation of Walkway Tribometry Using Research-based Reference Materials"
+    type: guideline
+    verification_status: verified
+    year: 2023
+    identifier:
+      url: "https://store.astm.org/standards/f2508"
+    notes: >-
+      2026-08-17 查證更正。**使用邊界（極重要）**：F2508 規範的是「步道摩擦計（walkway tribometer）如何用參考表面做驗證、校準與認證」，
+      **它不訂定任何摩擦係數門檻值**。原先 `poolside-slip-fall` 以本標準支撐「ASTM 建議濕地最低標 0.6」屬張冠李戴——
+      ASTM 從未發布走道最低摩擦係數。0.60／0.40 的分級門檻出自 **ANSI/NFSI B101.1**（見 src.ansi-nfsi-b101-1），
+      引用時兩者不得互換。本來源只能用來支撐「摩擦係數量測需經校驗才可比較」這類方法學陳述。
+
+  - id: src.ansi-nfsi-b101-1
+    display: "ANSI/NFSI B101.1, Test Method for Measuring Wet SCOF of Common Hard-Surface Floor Materials（2009 初版，2022 改版）"
+    title: "Test Method for Measuring Wet SCOF of Common Hard-Surface Floor Materials"
+    type: guideline
+    verification_status: verified
+    year: 2022
+    identifier:
+      url: "https://webstore.ansi.org/standards/nfsi/ansinfsib1012022"
+    notes: >-
+      2026-08-17 新增，用以取代原先誤掛在 ASTM F2508 下的摩擦係數門檻。本標準把**濕態靜摩擦係數（wet SCOF）**分三級：
+      **≥ 0.60 高抓地力／0.40–0.60 中等／< 0.40 低抓地力**。
+      **使用邊界**：① 這三個數字全都是「濕態」值，不可拿來描述乾混凝土；
+      ② 這是量測方法與分級標準，不是流行病學來源，不能用來支撐傷害發生率；
+      ③ NFSI 宣稱「wet SCOF ≥ 0.60 可使滑倒索賠減少達 90%」屬該機構自述的關聯性數據，非同儕審查文獻，本專案不引用該 90%。
 
   - id: src.atkison-2014-a
     display: "Atkison et al. 2014"
@@ -868,10 +891,18 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.falls-and-hip-fracture-mortality-pmid
-    display: "Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）"
+    display: "【佔位字串，非真實文獻】原記為「Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）」——顯示字串本身就寫著「待補 PMID」，從未指向任何一篇可解析文獻"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為**佔位字串**並解除全部引用。它唯一支撐的是 `poolside-slip-fall` 的
+      「高齡髖骨折後一年死亡率 20–30%」。改以真實文獻查證後發現**該數字對本專案的讀者族群偏高約 1.5–2 倍**：
+      台灣健保資料庫（src.wang-2013-taiwan-hip-fracture-mortality，n=143,595）年死亡率 1999 年 18.10% 降至 2009 年 13.98%；
+      台灣術後世代（src.lee-2017-taiwan-hip-fracture-1yr-mortality，n=5,442）整體一年死亡率 16.8%；
+      亞太區系統回顧（src.harvey-2024-asia-pacific-hip-fracture-mortality，142 研究／1,139,752 人）一年死亡率
+      自新加坡 10.8% 至紐西蘭 23.8%，亞洲約為澳紐的一半。
+      20–30% 大致落在澳紐等西方族群上緣，直接套用到台灣讀者會誇大風險。
+      **本 id 保持 unverified 且不得再被任何條目引用；成為孤兒來源（W008）是正確結果。**
 
   - id: src.female-athlete-triad-in-swimmers-systematic
     display: "Female athlete triad in swimmers systematic review, JWSM (已驗證，無 PMID 記載)"
@@ -1104,6 +1135,23 @@ sources:
     year: 2020
     notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
+  - id: src.harvey-2024-asia-pacific-hip-fracture-mortality
+    display: "Harvey LA, Payne NL, Tan A, et al. (2024). Variation in mortality following hip fracture across the Asia Pacific region: Systematic review and proportional meta-analysis. Arch Gerontol Geriatr 126:105519."
+    title: "Variation in mortality following hip fracture across the Asia Pacific region: Systematic review and proportional meta-analysis."
+    type: review
+    verification_status: verified
+    year: 2024
+    authors: ["Harvey LA", "Payne NL", "Tan A", "Zhang J", "Lai YC", "Taylor ME", "Armstrong E", "McVeigh C", "Mikolaizak AS", "Hairu R", "Scott TA", "Bishop M", "Close J"]
+    identifier:
+      pmid: "38941947"
+      doi: "10.1016/j.archger.2024.105519"
+    notes: >-
+      2026-08-17 查證新增。244 篇研究納入統合；其中一年死亡率由 142 篇（1,139,752 人、14 個國家／地區）貢獻，
+      **範圍自新加坡 10.8%（95%CI 9.6–12.1）至澳洲 23.3%（95%CI 22.3–24.5）與紐西蘭 23.8%**。
+      **使用邊界**：① 引用「一年死亡率」時必須同時說出是哪個地區——本研究的核心結論就是「亞太區內差異極大」，
+      給單一數字等於抹掉該研究的結論；② 亞洲國家短期死亡率低至澳紐的四分之一，一年期仍約為一半，
+      因此**不得把西方族群的 20–30% 直接套用於台灣讀者**；③ 收案為 ≥50 歲低能量創傷髖骨折住院者，非游泳族群。
+
   - id: src.hayashi
     display: "Hayashi 2025；Strzała 2013"
     type: other
@@ -1248,6 +1296,24 @@ sources:
       作者結論用語為「may influence elite sporting performance in some women；仍需進一步研究」。
       另注意「兩名受試者下降 4 與 9 **ml/kg/min**」是**絕對值**，不是百分比，
       舊稿的「6–15%」「10–11%」疑似由此誤讀而來，已於同日撤除。
+
+  - id: src.lee-2017-taiwan-hip-fracture-1yr-mortality
+    display: "Lee TC, Ho PS, Lin HT, Ho ML, Huang HT, Chang JK. (2017). One-Year Readmission Risk and Mortality after Hip Fracture Surgery: A National Population-Based Study in Taiwan. Aging Dis 8(4):402–409."
+    title: "One-Year Readmission Risk and Mortality after Hip Fracture Surgery: A National Population-Based Study in Taiwan."
+    type: journal-article
+    verification_status: verified
+    year: 2017
+    authors: ["Lee TC", "Ho PS", "Lin HT", "Ho ML", "Huang HT", "Chang JK"]
+    identifier:
+      pmid: "28840055"
+      doi: "10.14336/AD.2016.1228"
+      pmcid: "PMC5524803"
+    notes: >-
+      2026-08-17 查證新增。台灣健保資料庫 2000–2009 年髖骨折**手術**患者 5,442 人（61.2% 女、平均 78.8 歲、
+      排除 60 歲以下／病理性骨折／重大車禍／既往髖部手術／住院中死亡者）。
+      **整體一年死亡率 16.8%**；30 天內再入院者 44.9%、30 天至 1 年再入院者 32.3%。
+      **使用邊界**：① 16.8% 是「已完成手術且撐過該次住院」的族群，本身已排除最高危者，
+      引用時不可略去排除條件；② 44.9% 屬再入院次族群，不得當成一般髖骨折死亡率。
 
   - id: src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012
     display: "本檔 liee_methods（Bompa Ch11 Table 11.1）+ swim_maglischo（Maglischo 2012）"
@@ -1493,10 +1559,13 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.military-swim-training-sipe
-    display: "軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）"
+    display: "【佔位字串，非真實文獻】原記為「軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為佔位字串並解除引用。真實對應文獻已查得並登錄為
+      src.volk-2021-sipe-navy-seal（PMID 33245874，美國海軍 SEAL 儲訓生 2,117 人、SIPE 發生率 5.0%）。
+      本 id 保持 unverified，成為孤兒來源（W008）是正確結果。
 
   - id: src.morais-2019
     display: "Morais et al. 2019"
@@ -3789,10 +3858,70 @@ sources:
       不要把整篇當成 hepcidin 專論引用。
 
   - id: src.sipe
-    display: "SIPE 病理生理與鐵人三項案例系列（作者/年份待查）"
+    display: "【佔位字串，非真實文獻】原記為「SIPE 病理生理與鐵人三項案例系列（作者/年份待查）」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為佔位字串並解除引用。已改以兩篇真實文獻取代：
+      src.spencer-2018-sipe-systematic-review（PMID 30238206，系統回顧）與
+      src.hardstedt-2021-sipe-incidence-cohort（PMID 34186036，47,573 人次前瞻世代）。
+      本 id 保持 unverified，成為孤兒來源（W008）是正確結果。
+
+  - id: src.spencer-2018-sipe-systematic-review
+    display: "Spencer S, Dickinson J, Forbes L. (2018). Occurrence, Risk Factors, Prognosis and Prevention of Swimming-Induced Pulmonary Oedema: a Systematic Review. Sports Med Open 4(1):43."
+    title: "Occurrence, Risk Factors, Prognosis and Prevention of Swimming-Induced Pulmonary Oedema: a Systematic Review."
+    type: review
+    verification_status: verified
+    year: 2018
+    authors: ["Spencer S", "Dickinson J", "Forbes L"]
+    identifier:
+      pmid: "30238206"
+      doi: "10.1186/s40798-018-0158-8"
+      pmcid: "PMC6146959"
+    notes: >-
+      2026-08-17 查證新增。**僅 9 篇研究納入，異質性太高而無法做量化統合**——引用時必須說出這點，
+      否則會讓讀者以為那些百分比是統合估計值。各研究發生率彼此差距近三個數量級：
+      英國鐵人賽 5 年 0.01%、瑞典河賽 3 天 0.5%、以色列海上計時游（三篇，男性青少年軍訓生）1.8–26.7%；
+      另一篇報告美國鐵人選手 1.4% 曾經歷 SIPE。約 30% 的人會復發（兩篇研究）。
+      **本回顧明確寫出「找不到任何報告 SIPE 死亡的研究」**——條目談致命性時必須誠實反映這點。
+      西地那非預防復發只有兩篇極小型非對照研究，結論不確定，**不足以支撐任何用藥建議**。
+      2019 年有勘誤（Sports Med Open 5(1):12）。
+
+  - id: src.hardstedt-2021-sipe-incidence-cohort
+    display: "Hårdstedt M, Kristiansson L, Seiler C, Braman Eriksson A, Sundh J. (2021). Incidence of Swimming-Induced Pulmonary Edema: A Cohort Study Based on 47,600 Open-Water Swimming Distances. Chest 160(5):1789–1798."
+    title: "Incidence of Swimming-Induced Pulmonary Edema: A Cohort Study Based on 47,600 Open-Water Swimming Distances."
+    type: journal-article
+    verification_status: verified
+    year: 2021
+    authors: ["Hårdstedt M", "Kristiansson L", "Seiler C", "Braman Eriksson A", "Sundh J"]
+    identifier:
+      pmid: "34186036"
+      doi: "10.1016/j.chest.2021.06.034"
+      pmcid: "PMC8628172"
+    notes: >-
+      2026-08-17 查證新增。瑞典最大開放水域賽事 Vansbrosimningen，2016–2019 四年、47,573 人次前瞻世代。
+      **SIPE 發生率 0.44%（CI 0.39–0.51）**，逐年 0.34%／0.47%／0.41%／0.57%。
+      性別差異極大：**女性 0.75% vs 男性 0.09%**（參賽男女比例相當，調整後 OR 8.59）；
+      年齡自 18–30 歲 0.08% 升至 ≥61 歲 1.1%（最老 vs 最年輕 OR 12.74）。
+      **使用邊界**：① 分母是「游程人次」不是「人數」；② 2016–2017 靠臨床判斷、2018–2019 才用肺部超音波診斷，
+      前後兩期的病例定義不同；③ 這是單一賽事單一國家，不可外推成全球發生率。
+
+  - id: src.volk-2021-sipe-navy-seal
+    display: "Volk C, Spiro J, Boswell G, et al. (2021). Incidence and Impact of Swimming-Induced Pulmonary Edema on Navy SEAL Candidates. Chest 159(5):1934–1941."
+    title: "Incidence and Impact of Swimming-Induced Pulmonary Edema on Navy SEAL Candidates."
+    type: journal-article
+    verification_status: verified
+    year: 2021
+    authors: ["Volk C", "Spiro J", "Boswell G", "Lindholm P", "Schwartz J", "Wilson Z", "Burger S", "Tripp M"]
+    identifier:
+      pmid: "33245874"
+      doi: "10.1016/j.chest.2020.11.019"
+    notes: >-
+      2026-08-17 查證新增。美國海軍特種作戰儲訓生 2,117 人、15 個月前瞻觀察，**SIPE 106 例（5.0%）**，
+      另有 10 例為已診斷者的再次發作。症狀：咳嗽 90.4%、粉紅泡沫痰 35.6%、咳血 23.7%；
+      80.1% 的人血氧仍 ≥ 90%，23% 理學檢查完全正常。**ECG 對診斷與篩檢皆無用**；身高體重與風險無關。
+      **使用邊界**：受試者是年輕男性軍事儲訓生、承受極端訓練負荷，
+      5.0% **絕不可外推到一般開放水域泳者或鐵人選手**（同期一般賽事族群約 0.44%，相差逾十倍）。
 
   - id: src.specificity-of-practice-usrpt
     display: "Specificity of Practice；USRPT"
@@ -4430,6 +4559,23 @@ sources:
     type: other
     verification_status: unverified
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+
+  - id: src.wang-2013-taiwan-hip-fracture-mortality
+    display: "Wang CB, Lin CF, Liang WM, et al. (2013). Excess mortality after hip fracture among the elderly in Taiwan: a nationwide population-based cohort study. Bone 56(1):147–153."
+    title: "Excess mortality after hip fracture among the elderly in Taiwan: a nationwide population-based cohort study."
+    type: journal-article
+    verification_status: verified
+    year: 2013
+    authors: ["Wang CB", "Lin CF", "Liang WM", "Cheng CF", "Chang YJ", "Wu HC", "Wu TN", "Leu TH"]
+    identifier:
+      pmid: "23727435"
+      doi: "10.1016/j.bone.2013.05.015"
+    notes: >-
+      2026-08-17 查證新增。台灣健保資料庫 1999–2009 年、≥60 歲髖骨折住院者 143,595 人，追蹤至 2010 年底。
+      **年死亡率由 1999 年 18.10% 降至 2009 年 13.98%**；一、二、五、十年的標準化死亡比（SMR）分別為 9.67、5.28、3.31、2.89。
+      作者結論：髖骨折影響**短期**死亡率，長期則否。
+      **使用邊界**：① 這是全國住院登記的粗死亡率，不是「超額」死亡率；SMR 才是超額指標，兩者不可混用；
+      ② 數字逐年下降，引用時必須寫出年份，不能寫成一個固定值；③ 非游泳族群，只能作為高齡跌倒後果的一般背景。
 
   - id: src.ward-2018
     display: "Ward 2018（碩士論文，University of Hawaii at Manoa；亦見 Journal of Swimming Research Vol. 26）"
