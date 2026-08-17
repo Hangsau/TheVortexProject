@@ -9,7 +9,12 @@ layer: [public, clinical]
 structures: [棘上肌腱, 肱二頭肌長頭腱, 肩峰下滑囊, 旋轉肌袖]
 mechanism:
   summary: 高度重複過頭划水；前鋸肌疲勞→肩胛骨去穩定(winging)→旋轉肌過載→繼發夾擊/肌腱病。是傘狀總稱，涵蓋肩峰下夾擊、旋轉肌腱病、內夾擊等亞型。
-  stroke_phase: 自由式/蝶式抓水—早期推水（肱骨高度外展+內旋，通過喙肩弓下方）；恢復期高肘崩潰
+  stroke_phase: >-
+    自由式抓水—早期推水（肱骨高度外展+內旋，通過喙肩弓下方）；恢復期高肘崩潰。
+    **蝶式不可沿用同一句**：本描述的來源(StatPearls NBK470589)全篇只處理自由式，無蝶式內容。
+    蝶式唯一的一手肌電/電影分析(Pink 1993)描述入水時肱骨為**外展、伸展、外旋**，
+    與「入水即內旋夾擠位置」相反；蝶式的易傷機制在該研究中是**前鋸肌與肩胛下肌全程高激活→易疲勞**，
+    屬肌肉耐力層而非姿勢夾擠層。蝶式肩位置的具體描述以 Pink 1993 為準，不由自由式外推。
 
 epidemiology:
   prevalence: "菁英泳者肩痛 40–91%"
@@ -74,15 +79,17 @@ references:
   - { citation: "Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. Br J Sports Med 2010;44(2):105-113", certainty: 🔴, verified: false }
   - { citation: "McKenzie 系統綜述 2023, Scand J Med Sci Sports, DOI:10.1111/sms.14454", certainty: 🔴, verified: false }
   - { citation: "Masters 泳者肩超音波研究, PMC7824457", certainty: 🟡, verified: false }
+  - { citation: "Pink M, Jobe FW, Perry J, Kerrigan J, Browne A, Scovazzo ML. (1993). The normal shoulder during the butterfly swim stroke. Clin Orthop Relat Res (288):48–59. PMID 8458154", certainty: 🟡, verified: true }
 
 flags:
   pending_verification:
     - "Olympic 96% / collegiate 44% supraspinatus tendinosis 為「來源轉述」，發布前須追原文核實，目前不進 public 層"
     - "Sein 2010 引用（BJSM 44:105-113）待 WebFetch 確認——note: m3 審稿曾誤改為 JOSPT，已駁回，以 BJSM 為準再驗"
+    - "2026-08-17 查證：StatPearls NBK470589 全篇只涵蓋自由式，本條目原將其機制句一併套用於蝶式屬過度外推，已於 stroke_phase 分離。蝶式部分改依 Pink 1993，但僅取得摘要層級——Pink 描述入水時肱骨 extended 一項與蝶式外觀直覺不符，須全文的分期定義才能判讀，該詞暫不寫入任何 public 層"
   contested:
     - claim: "機制為真正喙肩弓下夾擊 vs 不穩定繼發的肌腱病"
       consensus_source: "近期學界偏向不穩定+疲勞繼發肌腱病（Sein 2010 指鬆弛與夾擊關聯極小）"
       dissent_source: "早期 Neer 肩峰下夾擊模型"
   vintage_warning: false
 
-audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
+audit: { last_reviewed: 2026-08-17, reviewer: opus, supersedes: "2026-06-20 版：stroke_phase 將自由式的『外展+內旋通過喙肩弓』機制一併掛在蝶式上，來源(StatPearls NBK470589)實際不含蝶式內容" }

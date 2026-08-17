@@ -3514,10 +3514,26 @@ sources:
     notes: "S3c 書目搜尋定位到鯨豚 Strouhal 與尾鰭運動學研究；只支持動物端機制，不是人類 UDK 對照實驗，正文已收窄。"
 
   - id: src.rovere-nichols
-    display: "Rovere & Nichols 等蛙泳膝經典文獻（作者/年份/期刊待查）"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Rovere GD, Nichols AW. (1985). Frequency, associated factors, and treatment of breaststroker's knee in competitive swimmers. Am J Sports Med 13(2):99–104."
+    type: journal-article
+    verification_status: verified
+    authors: ["G D Rovere", "A W Nichols"]
+    year: 1985
+    title: "Frequency, associated factors, and treatment of breaststroker's knee in competitive swimmers"
+    container: "The American Journal of Sports Medicine"
+    identifier:
+      doi: "10.1177/036354658501300204"
+      pmid: "3985267"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 由「作者/年份/期刊待查」的記憶式引用查證定位完成（PubMed esearch → efetch）。
+      n=36 競技蛙式選手，訪談＋理學檢查。86% 曾有至少一次蛙式相關膝痛，47.2% 每週至少一次。
+      與較頻繁膝痛顯著相關者：年齡增加、競賽年數增加、**蛙式訓練距離增加、暖身距離減少**。
+      **方向必須照抄**：頻繁膝痛者被發現的是**髖關節內旋（internal rotation）活動度較低**——
+      **不是**外旋不足。Vortex 舊草稿寫「髖外旋活動度不足」屬歸因錯誤，已於 2026-08-17 更正。
+      另：每週膝痛者中 47% 有壓痛且增厚的內側滑膜皺襞，觸診可誘發與蛙踢相同的疼痛。
+      作者建議處置順位為**先減蛙式訓練距離**，其次冰敷、改踢腿技術、增加髖旋轉的伸展、
+      並確保暖身距離足夠。僅取得摘要層級，1985 年舊文獻，標 🟡。
 
   - id: src.ruiz-navarro-2024
     display: "Ruiz-Navarro et al. 2024"
@@ -4647,3 +4663,84 @@ sources:
     identifier:
       pmid: "41930853"
     notes: "7 篇 RCT。氣喘控制 SMD −0.33（95% CI −0.54 至 −0.13）；整體生活品質無顯著差異（SMD 0.13, p=0.47）。作者結論明寫 evidence remains limited，不可寫成中等確定性。"
+
+  - id: src.vizsolyi-1987
+    display: "Vizsolyi P, Taunton J, Robertson G, et al. (1987). Breaststroker's knee. An analysis of epidemiological and biomechanical factors. Am J Sports Med 15(1):63–71."
+    type: journal-article
+    verification_status: verified
+    authors: ["P Vizsolyi", "J Taunton", "G Robertson", "L Filsinger", "H S Shannon", "D Whittingham", "M Gleave"]
+    year: 1987
+    title: "Breaststroker's knee. An analysis of epidemiological and biomechanical factors"
+    container: "The American Journal of Sports Medicine"
+    identifier:
+      doi: "10.1177/036354658701500109"
+      pmid: "3812862"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      問卷調查 n=391，另 21 人詳細評估（訪談、理學檢查、Cybex 等速肌力、電影動作分析）。
+      膝痛盛行率：蛙式專項 73%、非蛙式專項 48%。受累部位為內側副韌帶與髕骨內下緣。
+      **關鍵的陰性結果必須一併引用**：Cybex 肌力測試與運動學影片分析**未能**顯示傷者與
+      非傷者間的統計差異。所謂「起踢時髖外展角 <37° 或 >42° 傷害率明顯上升」是作者在
+      無統計顯著性的前提下描述的雙峰型態，**不是已達統計顯著的閾值**，引用時不得寫成
+      實證閾值。1987 年舊文獻，標 🟡。
+
+  - id: src.vasiliadis-2019
+    display: "Vasiliadis AV, Kalitsis C, Biniaris G, Saridis A. (2019). Anterior Shoulder Dislocation during Breaststroke Swimming Technique: A Case Report and Review of the Literature. Case Rep Orthop 2019:9320569."
+    type: journal-article
+    verification_status: verified
+    authors: ["Angelo V Vasiliadis", "C Kalitsis", "G Biniaris", "A Saridis"]
+    year: 2019
+    title: "Anterior Shoulder Dislocation during Breaststroke Swimming Technique: A Case Report and Review of the Literature"
+    container: "Case Reports in Orthopedics"
+    identifier:
+      doi: "10.1155/2019/9320569"
+      pmid: "31093402"
+      pmcid: "PMC6481107"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      **單一病例報告（n=1）**，36 歲女性蛙式訓練中發生肩關節前脫位，閉鎖復位成功。
+      證據等級最低，**不得用於支持任何發生率或風險宣稱**。
+      機制描述須逐字照抄：作者寫的是「初始拉手期（initial pull phase）」與肩關節處於
+      「**伸展併外旋（extension and external rotation）**」的最弱位置之間的關聯——
+      **不是**內掃期、**不是**內旋內收。此點與解剖學一致：前脫位的典型機制本就是
+      外展＋外旋＋伸展。
+
+  - id: src.pink-1993
+    display: "Pink M, Jobe FW, Perry J, Kerrigan J, Browne A, Scovazzo ML. (1993). The normal shoulder during the butterfly swim stroke. An electromyographic and cinematographic analysis of twelve muscles. Clin Orthop Relat Res (288):48–59."
+    type: journal-article
+    verification_status: verified
+    authors: ["M Pink", "F W Jobe", "J Perry", "J Kerrigan", "A Browne", "M L Scovazzo"]
+    year: 1993
+    title: "The normal shoulder during the butterfly swim stroke. An electromyographic and cinematographic analysis of twelve muscles"
+    container: "Clinical Orthopaedics and Related Research"
+    identifier:
+      pmid: "8458154"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      蝶式肩部十二條肌肉的肌電圖＋電影動作分析，是蝶式肩最接近一手的來源。
+      入水時作者描述肱骨為「**外展、伸展、外旋**」，菱形肌與上斜方肌同時後縮並上迴旋
+      肩胛骨。**這與網路次級來源流傳的「入水＝上舉＋水平內收＋內旋的夾擠位置」相反**，
+      引用蝶式入水肩位置時以本文為準。
+      另一結論：前鋸肌與肩胛下肌全程維持高激活，因此特別易疲勞、易受傷。1993 年舊文獻，標 🟡。
+
+  - id: src.cheng-2022-breaststrokers-knee-mri
+    display: "Cheng KY, Chambers H, Dwek JR. (2022). Magnetic resonance imaging appearance of breaststroker's knee. Pediatr Radiol 52(13):2645–2647."
+    type: journal-article
+    verification_status: verified
+    authors: ["K Y Cheng", "H Chambers", "J R Dwek"]
+    year: 2022
+    title: "Magnetic resonance imaging appearance of breaststroker's knee"
+    container: "Pediatric Radiology"
+    identifier:
+      doi: "10.1007/s00247-022-05407-6"
+      pmid: "35672477"
+      pmcid: "PMC9701648"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      **單一病例報告（n=1）**，年輕蛙式選手內側膝痛，MRI 顯示股骨內髁前側骨髓水腫；
+      作者自稱是蛙泳膝的首例 MRI 影像報告。**不得用於任何發生率宣稱**。
+      本條的真正價值在其背景陳述，且該陳述直接影響 Vortex 既有的 contested 標記：
+      **關節鏡研究至今未能找出對應蛙泳膝的特定結構異常**，僅部分報告觀察到增厚的內側滑膜皺襞、
+      以內側為主的滑膜炎、或髕股軟骨流失與蛙式選手膝痛併存。
+      因此「蛙泳膝的主要病理是 MCL 還是髕股／皺襞」不是資料不足的暫時分歧，
+      而是**結構層面至今無定論**——引用時不得寫成任一子型已被確立。標 🟡。

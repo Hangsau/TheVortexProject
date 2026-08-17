@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-08-17
-> 驗證條目數：624，Drills ID 數：176
+> 驗證條目數：626，Drills ID 數：176
 
 ---
 
@@ -103,7 +103,7 @@
 
 ## W002 — 區塊**有**來源顯示字串（`source`/`sources`）但缺 `source_ids`（機器鍵沒跟上顯示層）；S3a-2 起不看 `certainty`
 
-**WARN，共 111 筆**
+**WARN，共 114 筆**
 
 > **契約說明（S3a／S3a-2）**：`source`（單數字串）與 `sources`（複數清單）都是顯示層自由文字，下游 my-site 直接渲染，**不可改寫、改名或改成陣列**；可解析的來源鍵放同區塊的 `source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。W002 自 S3a-2 起**與 `certainty` 解耦**：一個區塊只要帶了來源顯示字串，不論有沒有標確定性，那個來源都該進註冊表、都該有`source_ids` 指過去。掃描範圍也含 `Drills/*.yaml`。W009 仍綁 `certainty`——它問的是「標了 🟢/🟡 卻拿不出任何來源」，語意本來就以確定性標記為前提。兩者差別在**有沒有來源顯示資訊**：W002 已經有字串，只差把它登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用佔位來源填掉 W009。
 
@@ -126,9 +126,12 @@
   file=canonical\health\injuries.yaml id='swimmers-shoulder' at=injuries[5].references[0] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='swimmers-shoulder' at=injuries[5].references[1] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='swimmers-shoulder' at=injuries[5].references[2] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='swimmers-shoulder' at=injuries[5].references[3] 有 citation 顯示字串但無 source_ids（certainty=yellow）
   file=canonical\health\injuries.yaml id='thoracic-outlet-syndrome' at=injuries[6].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='thoracic-outlet-syndrome' at=injuries[6].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='breaststrokers-knee' at=injuries[7].references[0] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='breaststrokers-knee' at=injuries[7].references[1] 有 citation 顯示字串但無 source_ids（certainty=yellow）
+  file=canonical\health\injuries.yaml id='breaststrokers-knee' at=injuries[7].references[2] 有 citation 顯示字串但無 source_ids（certainty=yellow）
   file=canonical\health\injuries.yaml id='extension-low-back-pain' at=injuries[8].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='extension-low-back-pain' at=injuries[8].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='femoroacetabular-impingement' at=injuries[9].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
@@ -223,7 +226,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 489 筆**
+**WARN，共 491 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -542,7 +545,9 @@
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.36'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.37'
+  file=canonical\instructional\technical-analysis.yaml id='breast.tech.38'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.37'
+  file=canonical\instructional\technical-analysis.yaml id='fly.tech.38'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.47'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.48'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.35'
@@ -753,11 +758,12 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 3 筆**
+**WARN，共 4 筆**
 
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.nordin-frankel-2012' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 
@@ -825,17 +831,17 @@
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.30' at=points[131].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.16' at=points[152].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.24' at=points[160].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.35' at=points[173].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.4' at=points[177].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.41' at=points[178].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.43' at=points[180].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.44' at=points[181].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.23' at=points[200].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.31' at=points[208].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.34' at=points[211].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.36' at=points[213].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.37' at=points[214].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.38' at=points[215].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='breast.tech.35' at=points[175].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.4' at=points[179].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.41' at=points[180].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.43' at=points[182].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.44' at=points[183].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.23' at=points[202].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.31' at=points[210].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.34' at=points[213].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.36' at=points[215].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.37' at=points[216].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.38' at=points[217].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\perception\free.yaml id='protocol.free.evf' at=diagnostic_protocols[0].perception_probe certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\psychology\psychology.yaml id='psych.fear.control_loss' at=themes[0].concepts[0].public.intervention_refs[1] certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\psychology\psychology.yaml id='psych.fear.safety_precondition' at=themes[0].concepts[5].public.intervention_refs[0] certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）

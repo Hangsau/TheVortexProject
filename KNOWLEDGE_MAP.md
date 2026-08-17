@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 220 | 泳式分布：{'free': 41, 'back': 30, 'breast': 34, 'fly': 37, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 103, '🟢': 75, '🟠': 34, '🟡': 7, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 102, '🟢': 75, '🟠': 34, '🟡': 10, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -38,9 +38,9 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**220 條目**）
+### `technical-analysis.yaml` — 技術分析（**222 條目**）
 
-**泳式分布**：仰式 30, 蛙式 34, 蝶式 37, 自由式 41, 起跳轉身 48, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 起跳轉身 48, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -123,7 +123,7 @@
 | back.tech.26 | comparison |  | 🔵 |
 | back.tech.27 | comparison |  | 🟢 |
 
-#### 蛙式 (34)
+#### 蛙式 (35)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -160,9 +160,10 @@
 | breast.tech.31 | concept |  | 🟢 |
 | breast.tech.36 | kick |  | 🔵 |
 | breast.tech.37 | hardware |  | 🔵 |
+| breast.tech.38 | errors |  | 🟡 |
 | breast.tech.35 | timing |  | 🟠 |
 
-#### 蝶式 (37)
+#### 蝶式 (38)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -192,7 +193,7 @@
 | fly.tech.24 | hardware |  | 🔵 |
 | fly.tech.25 | hardware |  | 🔵 |
 | fly.tech.26 | hardware |  | 🔵 |
-| fly.tech.27 | hardware |  | 🔵 |
+| fly.tech.27 | hardware |  | 🟡 |
 | fly.tech.28 | errors |  | 🔵 |
 | fly.tech.29 | errors |  | 🔵 |
 | fly.tech.30 | tempo |  | 🟠 |
@@ -203,6 +204,7 @@
 | fly.tech.35 | concept |  | 🟢 |
 | fly.tech.36 | streamline |  | 🔵 |
 | fly.tech.37 | hardware |  | 🔵 |
+| fly.tech.38 | errors |  | 🟡 |
 
 #### 起跳轉身 (48)
 
