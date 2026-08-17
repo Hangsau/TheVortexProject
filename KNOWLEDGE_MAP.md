@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 219 | 泳式分布：{'free': 41, 'back': 30, 'breast': 34, 'fly': 37, 'udk': 30, 'starts-turns': 47}；確定性：{'🔵': 102, '🟢': 75, '🟠': 34, '🟡': 7, '🔴': 1} |
+| `technical-analysis` | 220 | 泳式分布：{'free': 41, 'back': 30, 'breast': 34, 'fly': 37, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 103, '🟢': 75, '🟠': 34, '🟡': 7, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -38,9 +38,9 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**219 條目**）
+### `technical-analysis.yaml` — 技術分析（**220 條目**）
 
-**泳式分布**：仰式 30, 蛙式 34, 蝶式 37, 自由式 41, 起跳轉身 47, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 34, 蝶式 37, 自由式 41, 起跳轉身 48, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -204,11 +204,12 @@
 | fly.tech.36 | streamline |  | 🔵 |
 | fly.tech.37 | hardware |  | 🔵 |
 
-#### 起跳轉身 (47)
+#### 起跳轉身 (48)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
 | starts-turns.tech.47 | streamline |  | 🔵 |
+| starts-turns.tech.48 | hardware |  | 🔵 |
 | starts-turns.tech.1 | comparison |  | 🔵 |
 | starts-turns.tech.2 | stroke-cycle |  | 🔵 |
 | starts-turns.tech.3 | hardware |  | 🟢 |
