@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 207 | 泳式分布：{'free': 35, 'back': 29, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 92, '🟢': 73, '🟠': 34, '🟡': 7, '🔴': 1} |
+| `technical-analysis` | 214 | 泳式分布：{'free': 41, 'back': 30, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 97, '🟢': 75, '🟠': 34, '🟡': 7, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -38,11 +38,11 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**207 條目**）
+### `technical-analysis.yaml` — 技術分析（**214 條目**）
 
-**泳式分布**：仰式 29, 蛙式 32, 蝶式 36, 自由式 35, 起跳轉身 46, 水下蝶腳 29
+**泳式分布**：仰式 30, 蛙式 32, 蝶式 36, 自由式 41, 起跳轉身 46, 水下蝶腳 29
 
-#### 自由式 (35)
+#### 自由式 (41)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -81,14 +81,21 @@
 | free.tech.31 | fatigue |  | 🟠 |
 | free.tech.34 | streamline |  | 🔵 |
 | free.tech.35 | timing |  | 🔵 |
+| free.tech.36 | stroke-cycle |  | 🔵 |
+| free.tech.37 | stroke-cycle |  | 🔵 |
+| free.tech.38 | hardware |  | 🔵 |
+| free.tech.39 | rotation |  | 🟢 |
+| free.tech.40 | head |  | 🟢 |
+| free.tech.41 | hardware |  | 🔵 |
 
-#### 仰式 (29)
+#### 仰式 (30)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
 | back.tech.28 | recovery |  | 🟠 |
 | back.tech.29 | recovery |  | 🟠 |
 | back.tech.1 | rotation |  | 🟢 |
+| back.tech.30 | kick |  | 🔵 |
 | back.tech.2 | rotation |  | 🟢 |
 | back.tech.3 | rotation |  | 🔵 |
 | back.tech.4 | rotation |  | 🔵 |

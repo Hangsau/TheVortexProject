@@ -32,11 +32,33 @@
 
 **順帶修正**：主張清單的仰式分類統計原為 off-by-one（標 A 29 / C 6，逐條清點實為 A 30 / C 5），已更正，總數 81 不變。
 
-**注意**：`tools/validate.py` 0 ERROR；W008 孤兒來源 4 筆仍是預期狀態（兩本教科書尚未被 canonical 條目引用，P5 整合後才會消失），**不是缺陷**。
+### P5 整合（已完成第一階段：canonical 層）
+
+**先更正一個先前寫錯的判斷**：本檔稍早版本寫「整合進 `Instructional/` 後 W008 隨之歸零」——**錯**。查 `tools/validate.py:1159`，W008 只掃 `canonical/**.yaml` 與 `Drills/*.yaml`，**不掃 `Instructional/*.md`**。要清 W008 必須有 canonical 條目以 `source_ids` 引用該來源。
+
+這個更正改變了 P5 的設計。原本的假設是「把 60 條裁決搬進 Instructional 散文」，但實際看檔後發現兩件事：① `Instructional/*.md` 是主題式散文（自由式 291 行、仰式 295 行），根本沒有關節逐條層，硬塞 60 列表格會破壞文體；② `canonical/instructional/technical-analysis.yaml` 才是從那些散文萃取出的結構層，也是 `source_ids` 實際落地處。
+
+**因此採取的判斷**：canonical 只收裁決中**跨兩式、教科書錨定、且會改變現行教學說法**的發現，不收 60 條「命名正確」的確認。理由是後者只是驗證既有內容沒錯，對 canonical 讀者沒有新增資訊；前者才是這批工作真正產出的知識。
+
+**已寫入 `canonical/instructional/technical-analysis.yaml` 的 7 個新條目**：
+
+| ID | 類別 | 內容 |
+|---|---|---|
+| `free.tech.36` | stroke-cycle | 「肩由屈曲轉為外展」不是兩個動作，缺的是上舉平面欄位；外旋是必然伴隨（第六運動學原理） |
+| `free.tech.37` | stroke-cycle | 手掌空間朝向不能反推前臂旋前／旋後 |
+| `free.tech.38` | hardware | 踝無內外旋（單一自由度），足部擺動屬距下／橫跗；全蹠屈是鬆弛位 |
+| `free.tech.39` | rotation | body roll 幾乎不來自腰椎（胸椎 25–35°/側，腰椎僅 5–7°）——「從腰發動轉體」不成立 |
+| `free.tech.40` | head | 轉頭換氣 50–60% 發生在寰樞關節，是上頸段事件 |
+| `free.tech.41` | hardware | 教練說的「膝蓋鎖死」與教科書 screw-home locking 意思相反 |
+| `back.tech.30` | kick | 仰式上踢＝髖屈曲；治本是所有泳式下肢改雙欄標注 |
+
+`KNOWLEDGE_MAP.md` 已重生，7 條均已入圖。`validate.py` 0 ERROR、W009 0、**W008 由 4 降為 3**。
+
+**W008 剩下的 1 筆是 `src.nordin-frankel-2012`，這是誠實的狀態不是遺漏**：A 類 60 條全部是關節命名問題，Neumann 就答完了，Nordin 一次都沒用上（它是組織力學書：骨、軟骨、肌腱韌帶、肌肉的負荷行為）。硬湊一個引用只會製造假的來源連結。它會在寫組織負荷相關內容時才被引用。
 
 ### 下一步建議
 
-1. **P5 整合（下一個主要工作）**：把 60 條裁決併入既有 `Instructional/自由式深度技術分析.md`、`仰式深度技術分析.md`（**改既有檔，不另開新檔**），整合時強制補上表四個欄位。完成後兩本教科書才會被實際引用，W008 隨之歸零。
+1. **P5 第二階段（可選）**：把上述 7 條的教學語言回寫進 `Instructional/自由式深度技術分析.md`、`仰式深度技術分析.md` 的對應章節（**改既有檔，不另開新檔**）。優先序低於下面兩項——canonical 已經落地，散文層是呈現層。
 2. **蛙式／蝶式／超流線（餘 3 式，約 109 條）**：待 Claude 7D reset（08-21 09:00）後拆解＋裁決。拆解時**直接套用已確立的四個欄位**，不要重蹈原文的單欄設計。
 3. **B 類 5 條 ROM 查表**：待 codex 恢復（08-21 14:10）發包。**MiniMax 不可用於此**（目前專用於經文 pipeline）。
 4. **C 類 16 條**：轉 `resources/books/swimming-kinetic-chain/` 文獻集；查無文獻者明標「待游泳文獻」，不得偽裝成已驗證。
