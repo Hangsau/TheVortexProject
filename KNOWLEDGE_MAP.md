@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 214 | 泳式分布：{'free': 41, 'back': 30, 'breast': 32, 'fly': 36, 'udk': 29, 'starts-turns': 46}；確定性：{'🔵': 97, '🟢': 75, '🟠': 34, '🟡': 7, '🔴': 1} |
+| `technical-analysis` | 219 | 泳式分布：{'free': 41, 'back': 30, 'breast': 34, 'fly': 37, 'udk': 30, 'starts-turns': 47}；確定性：{'🔵': 102, '🟢': 75, '🟠': 34, '🟡': 7, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -38,9 +38,9 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**214 條目**）
+### `technical-analysis.yaml` — 技術分析（**219 條目**）
 
-**泳式分布**：仰式 30, 蛙式 32, 蝶式 36, 自由式 41, 起跳轉身 46, 水下蝶腳 29
+**泳式分布**：仰式 30, 蛙式 34, 蝶式 37, 自由式 41, 起跳轉身 47, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -123,7 +123,7 @@
 | back.tech.26 | comparison |  | 🔵 |
 | back.tech.27 | comparison |  | 🟢 |
 
-#### 蛙式 (32)
+#### 蛙式 (34)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -158,9 +158,11 @@
 | breast.tech.29 | comparison |  | 🔵 |
 | breast.tech.30 | kick |  | 🟢 |
 | breast.tech.31 | concept |  | 🟢 |
+| breast.tech.36 | kick |  | 🔵 |
+| breast.tech.37 | hardware |  | 🔵 |
 | breast.tech.35 | timing |  | 🟠 |
 
-#### 蝶式 (36)
+#### 蝶式 (37)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -200,11 +202,13 @@
 | fly.tech.34 | comparison |  | 🔵 |
 | fly.tech.35 | concept |  | 🟢 |
 | fly.tech.36 | streamline |  | 🔵 |
+| fly.tech.37 | hardware |  | 🔵 |
 
-#### 起跳轉身 (46)
+#### 起跳轉身 (47)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
+| starts-turns.tech.47 | streamline |  | 🔵 |
 | starts-turns.tech.1 | comparison |  | 🔵 |
 | starts-turns.tech.2 | stroke-cycle |  | 🔵 |
 | starts-turns.tech.3 | hardware |  | 🟢 |
@@ -252,7 +256,7 @@
 | starts-turns.tech.45 | comparison |  | 🔵 |
 | starts-turns.tech.46 | stroke-cycle |  | 🟢 |
 
-#### 水下蝶腳 (29)
+#### 水下蝶腳 (30)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -285,6 +289,7 @@
 | udk.tech.27 | tempo |  | 🟢 |
 | udk.tech.28 | kick |  | 🟢 |
 | udk.tech.29 | streamline |  | 🔵 |
+| udk.tech.30 | kick |  | 🔵 |
 
 ### `teaching-errors.yaml` — 教學誤區（**102 條目**）
 
