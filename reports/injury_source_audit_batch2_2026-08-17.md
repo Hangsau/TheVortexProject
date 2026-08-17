@@ -10,7 +10,7 @@
 實際做下來，處置比預期好一級：**其中幾個佔位符背後是有真文獻的，只是從來沒人去找**。
 所以本批的動作不是「撤數字」，而是「查到真文獻 → 對照 → 發現數字錯了 → 改成對的」。
 
-## 已完成（3 個佔位符解除，7 個真來源新增）
+## 已完成（4 個佔位符解除，10 個真來源新增）
 
 ### 1. `poolside-slip-fall` — 兩處錯誤，一處是數字灌水，一處是張冠李戴
 
@@ -88,18 +88,50 @@ NFSI 自述的「wet SCOF ≥ 0.60 可使滑倒索賠減少達 90%」屬機構�
 **無需更正**——這是本輪健檢第一個。同條的另一個 source_id
 `src.adductor-loading-return-to-sport-practice-co` 仍是佔位符，但它沒有支撐任何數字（數字全在 Grote 名下）。
 
+### 4. `open-water-marine-biological-hazards` — 一處來源—宣稱不匹配，加一句無來源敘述
+
+原條目掛三個 source_id，其中一個是佔位符、一個被錯用。
+
+| 原記載 | 掛在哪個來源 | 實際 |
+|---|---|---|
+| 壞死性筋膜炎死亡率「一般文獻 >20%」 | `src.pmc8147101` | 該文是台灣水域**環境分離株**的微生物學研究，**沒有任何臨床預後數據** |
+| 「台灣為鉤端螺旋體中度流行區」 | 無（`src.pmc2858141` 是德國三鐵群聚） | 無來源 |
+| 水母急救「熱水浸泡 43–45°C」「箱型水母用醋為共識」 | `src.jellyfish-envenomation-first-aid`（佔位符） | Cochrane 2023 對所有處置給 very low certainty |
+
+三個發現：
+
+1. **這次的錯誤方向是低估，不是灌水。** 創傷弧菌 VNSSTI 的死亡率必須連族群講：
+   Chuang 2019（PMID 31652263，12 篇研究／1,157 人）合併結果為**有慢性肝病 53.9%（292/542）
+   vs 無肝病 16.1%（99/615），RR 2.61（2.14–3.19）**。條目自己點名的正是肝病族群，
+   而「>20%」對該族群低了一半以上。前兩批抓到的都是誇大，這條反過來——
+   所以判準不是「有沒有誇大」，是「這個數字是不是來源報的那個數字」。
+2. **來源—宣稱不匹配是獨立於 verification_status 的錯誤類別。** `src.pmc8147101` 是 verified、
+   有 PMID／PMCID／DOI、書目完全正確——但它結構上就承載不了臨床死亡率。
+   `verified` 只保證「這篇文獻存在且書目正確」，不保證「它能支撐掛在它下面的那句話」。
+   已改寫其 notes 明訂使用邊界：只能支撐「創傷弧菌存在於台灣水域環境」。
+3. **台灣鉤端螺旋體的真實輪廓與原稿的暗示相反。** Tsai 2020（PMID 31916706，疾管署 2007–2014）：
+   通報 10,917 例、確診 665 例（6.1%），**年平均發生率 0.4/100,000**，高屏 37.3%、台北 26.2%。
+   確診者的風險輪廓是**職業性與洪災暴露**（農牧獸醫 24.8%、接觸豬 9.4%、接觸鼠 8.6%），
+   不是娛樂性游泳。條目原本把「台灣流行區」與「賽事群聚」並置，讀起來像台灣泳者風險高，
+   已改為分開陳述並註明台灣尚無對應世代。
+
+另：`contested` 區塊原寫「箱型水母用醋抑制刺絲胞為共識」——降級為體外實驗與地區指引推論層級，
+並補上 Cochrane 2013 反方向的發現（醋／嫩肉粉相較熱水使皮膚外觀更差，RR 0.31, 0.14–0.72）。
+`management.acute` 的「43–45°C」撤除：Cochrane 明言水溫、時長、水種皆不清楚。
+
 ## 驗證狀態
 
-`python tools/validate.py` → **0 ERROR**（W008 4 → 7、W011 維持 64）。
+`python tools/validate.py` → **0 ERROR**（W008 6 → 10、W011 維持 64）。
 
-W008 由 6 增至 7 是正確結果：`src.falls-and-hip-fracture-mortality-pmid`、`src.sipe`、
-`src.military-swim-training-sipe` 解除引用後成為孤兒。與第 1 批同一原則——
-不會為了消掉 WARN 去補假引用，也不會為了避免孤兒而把佔位符留在條目上。
+**更正**：本報告前一版寫「W008 4 → 7」是**錯的**——第 2 批開工前實為 6 筆，
+解除 `src.falls-and-hip-fracture-mortality-pmid`、`src.sipe`、`src.military-swim-training-sipe`
+三個佔位引用後為 9 筆，再加本輪的 `src.jellyfish-envenomation-first-aid` 為 10 筆。
+
+孤兒數上升是正確結果，與第 1 批同一原則——不會為了消掉 WARN 去補假引用，
+也不會為了避免孤兒而把佔位符留在條目上。
 
 ## 本批尚未處理
 
-- `src.jellyfish-envenomation-first-aid`（`open-water-marine-biological-hazards`，🟡，
-  含壞死性筋膜炎死亡率 >20%、台灣為創傷弧菌／鉤端螺旋體流行區等宣稱）
 - `src.breath-hold-training` + `src.shallow-water-blackout-prevention-webfetch`
   （`shallow-water-blackout`，🟠，無硬數字，暴險低）
 - `src.clinical-coach-report-no-epidemiology`（`swimmer-elbow-wrist-overuse`，🔵，無硬數字，暴險低）

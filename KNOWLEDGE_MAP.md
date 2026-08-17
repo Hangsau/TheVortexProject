@@ -757,7 +757,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 |---|---|---|---|
 | diving-cervical-injury | 跳水 / 入水頸椎與脊髓損傷 | Diving-related cervical spine and spinal cord injury | 🟢 |
 | flip-turn-wall-push | 轉身 / 蹬牆相關急性傷 | Flip-turn and wall-push acute injuries | 🟡 |
-| open-water-marine-biological-hazards | 開放水域海洋生物危害（螫刺 / 感染） | Open-water marine biological hazards — stings, punctures, infections | 🟡 |
+| open-water-marine-biological-hazards | 開放水域海洋生物危害（螫刺 / 感染） | Open-water marine biological hazards — stings, punctures, infections | 🟢 |
 | poolside-slip-fall | 池畔濕滑跌倒傷 | Poolside slip-and-fall injuries | 🟡 |
 | starting-block-impact | 出發台 / 牆面 / 水面撞擊傷 | Starting block, wall, and water-surface impact injuries | 🟢 |
 

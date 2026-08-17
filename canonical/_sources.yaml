@@ -1229,10 +1229,39 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.jellyfish-envenomation-first-aid
-    display: "Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）"
+    display: "【佔位字串，非真實文獻】原記為「Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為佔位字串並解除引用。真正該引的是 Cochrane 回顧
+      src.cochrane-2023-jellyfish-interventions（PMID 37272501）。
+      該回顧的結論**與本佔位符原本被用來支撐的內容方向相反**：它對所有處置方式（含熱水浸泡與醋）
+      都給「very low certainty」，並非「種屬特異但各有定論」。本 id 保持 unverified。
+
+  - id: src.cochrane-2023-jellyfish-interventions
+    display: "McGee RG, Webster AC, Lewis SR, Welsford M. (2023). Interventions for the symptoms and signs resulting from jellyfish stings. Cochrane Database Syst Rev 6(6):CD009688.（2013 年版 pub2 的更新）"
+    title: "Interventions for the symptoms and signs resulting from jellyfish stings."
+    type: review
+    verification_status: verified
+    year: 2023
+    authors: ["McGee RG", "Webster AC", "Lewis SR", "Welsford M"]
+    identifier:
+      pmid: "37272501"
+      doi: "10.1002/14651858.CD009688.pub3"
+      pmcid: "PMC10240560"
+    notes: >-
+      2026-08-17 查證新增。9 篇研究（6 RCT + 3 quasi-RCT）、574 人。
+      **作者結論一句話：「given the very low certainty of all the evidence, we are unsure of the
+      effectiveness of any of the treatments evaluated」——所有處置方式的證據確定性都是 very low。**
+      熱敷 vs 冷敷對 Physalia（僧帽水母）六小時內顯著止痛 RR 2.25（CI 1.42–3.56，2 篇 142 人），
+      但對 Carybdea alata／Chironex fleckeri 為 RR 1.66（CI 0.56–4.94，2 篇 71 人，跨越 1）。
+      局部外用（海水、淡水、Sting Aid、木瓜酵素嫩肉粉、異丙醇、氨水、加熱水、醋酸、碳酸氫鈉）**全部無法判定有效性**；
+      其中氨水因一名受試者一度灼傷而中止。2013 年版另有一發現：醋或嫩肉粉相較熱水**使皮膚外觀更差**（RR 0.31, CI 0.14–0.72）。
+      **使用邊界（極重要）**：① 本回顧**不支持任何具體水溫或浸泡時間**——2013 年版明言
+      「what type of application, temperature, duration of treatment and type of water (salt or fresh)
+      仍不清楚」，因此「43–45°C」這類具體數字不得掛在本來源下；
+      ② 「箱型水母用醋」屬體外刺絲胞抑制實驗與地區急救指引的推論，**不是臨床試驗結論**，引用時須說明層級；
+      ③ 本回顧只談處置，不含流行病學。
 
   - id: src.journal-pone-0241345-a
     display: "PLOS ONE 2020"
@@ -2539,7 +2568,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8147101
-    display: "Vibrio vulnificus infection Taiwan 案例, PMC8147101 (已驗證)"
+    display: "Lin IC, Hussain B, Hsu BM, et al. (2021). Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan. Antibiotics 10(5):505."
     title: "Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan."
     type: journal-article
     verification_status: verified
@@ -2551,7 +2580,60 @@ sources:
       pmid: "33946739"
       doi: "10.3390/antibiotics10050505"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: >-
+      2026-08-17 更正顯示字串。**原記為「Vibrio vulnificus infection Taiwan 案例」是錯的**——
+      本文是台灣水域**環境分離株**的微生物學研究（盛行、基因多樣性、抗藥性、毒力基因），
+      不是臨床病例系列，**沒有任何死亡率或臨床預後數據**。
+      `open-water-marine-biological-hazards` 原先把「壞死性筋膜炎死亡率 >20%」掛在本來源下，屬來源—宣稱不匹配，已解除。
+      **使用邊界**：本來源只能支撐「創傷弧菌存在於台灣水域環境」這一件事，不能支撐感染率、死亡率或臨床處置。
+
+  - id: src.chuang-2019-vibrio-vulnificus-mortality-meta
+    display: "Chuang PY, Yang TY, Huang TW, Tsai YH, Huang KC, Weng HH. (2019). Hepatic disease and the risk of mortality of Vibrio vulnificus necrotizing skin and soft tissue infections: A systematic review and meta-analysis. PLoS One 14(10):e0223513."
+    title: "Hepatic disease and the risk of mortality of Vibrio vulnificus necrotizing skin and soft tissue infections: A systematic review and meta-analysis."
+    type: review
+    verification_status: verified
+    year: 2019
+    authors: ["Chuang PY", "Yang TY", "Huang TW", "Tsai YH", "Huang KC", "Weng HH"]
+    container: "PLoS One"
+    identifier:
+      pmid: "31652263"
+      doi: "10.1371/journal.pone.0223513"
+      pmcid: "PMC6814278"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證新增，用以取代原先掛在 src.pmc8147101（環境分離株研究）下的死亡率宣稱。
+      1966–2018 年中的 12 篇觀察性研究、1,157 名創傷弧菌壞死性皮膚軟組織感染（VNSSTI）患者。
+      **合併結果：46.8% 的 VNSSTI 患者本身有肝病（HD）；有肝病者死亡率 53.9%（292/542），
+      無肝病者 16.1%（99/615），RR 2.61（95% CI 2.14–3.19）。**
+      肝硬化（末期肝病）相較非肝硬化 RR 1.84（1.21–2.79）、相較無肝病 RR 2.00（1.41–2.85）。
+      **使用邊界**：① 死亡率必須連族群一起說——「>20%」對整體偏高、對肝病族群則**嚴重低估**，
+      不可寫成單一數字；② 12 篇研究以台灣、韓國、美國沿岸為主，作者群為台灣長庚，
+      但本文是跨國合併非台灣本土世代；③ 分母是「已發生 VNSSTI 者」，不是「接觸海水者」，
+      不能拿來推估開放水域游泳的感染風險。
+
+  - id: src.tsai-2020-taiwan-leptospirosis-nationwide
+    display: "Tsai CT, Lin JN, Lee CH, Sun W, Chang YC, Chen YH, Lai CH. (2020). The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014: A nationwide database study. Zoonoses Public Health 67(2):156-166."
+    title: "The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014: A nationwide database study."
+    type: journal-article
+    verification_status: verified
+    year: 2020
+    authors: ["Tsai CT", "Lin JN", "Lee CH", "Sun W", "Chang YC", "Chen YH", "Lai CH"]
+    container: "Zoonoses and Public Health"
+    identifier:
+      pmid: "31916706"
+      doi: "10.1111/zph.12667"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證新增，用以取代「台灣為鉤端螺旋體中度流行區」這句原本無來源的敘述。
+      台灣疾管署 2007-10 至 2014-12 全國通報資料：10,917 例通報，其中 665 例（6.1%）確診。
+      **年平均發生率 0.4/100,000。** 確診者集中於高屏（248 例，37.3%）與台北（174 例，26.2%）。
+      確診 vs 未確診者比較：男性 83.6% vs 67.9%、高風險職業（農民／畜牧／獸醫）24.8% vs 13.7%、
+      接觸鼠 8.6% vs 4.9%、接觸豬 9.4% vs 1.9%（均 p < .01）。北部以鼠、南部以豬為主要暴露。
+      2009 年屏東因水災合併豬隻曾發生群聚。另有 23 例合併恙蟲病、4 例合併 Q 熱。
+      **使用邊界（重要）**：① 本研究確立台灣為地方流行區，但**確診病例的風險輪廓是職業性與洪災暴露，
+      不是娛樂性開放水域游泳**——引用時不得把它讀成「台灣泳者感染風險高」；
+      ② 開放水域賽事群聚的證據來自國外（見 src.pmc2858141，德國三鐵賽事），台灣尚無對應世代；
+      ③ 0.4/100,000 是全人口年發生率，不是水域暴露者的發生率。
 
   - id: src.pmc8192199
     display: "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"

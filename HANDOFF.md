@@ -6,6 +6,34 @@
 
 ## 當前狀態（2026-08-17，最新）
 
+### ✅ 傷害條目來源健檢 第 2 批（佔位字串 4/8）——**佔位符背後有真文獻，而且掛在上面的數字四處全錯**
+
+完整報告見 `reports/injury_source_audit_batch2_2026-08-17.md`。
+
+**切入點**：8 個 source_id 的顯示字串本身就寫著「待查」「待補 PMID」「待 WebFetch 核實」——它們從一開始就不是引用，是佔位符。第 1 批預期的處置是「解除引用、撤掉依附的數字」，**實際比預期好一級：其中幾個佔位符背後是有真文獻的，只是從來沒人去找**。所以動作變成「查到真文獻 → 對照 → 發現數字錯了 → 改成對的」。
+
+| 條目 | 問題 | 更正 |
+|---|---|---|
+| `poolside-slip-fall` | 髖骨折一年死亡率寫 **20–30%** | 台灣資料 **14–17%**（Wang 2013 n=143,595：18.10%→13.98%；Lee 2017 n=5,442：16.8%），西方 20%+ 不可直接套台灣讀者 |
+| `poolside-slip-fall` | 摩擦係數門檻掛 **ASTM F2508** | **張冠李戴**：F2508 只規範摩擦計如何校驗，**不訂任何門檻值**；0.60／0.40 分級出自 **ANSI/NFSI B101.1**（且是**濕態** SCOF） |
+| `sipe` | 發生率佔位未填 | 不存在單一數字：一般賽事 **0.44%**（Hardstedt 2021 n=47,573）vs 海豹儲訓 **5.0%**（Volk 2021），差逾十倍；**女性 0.75% vs 男性 0.09%，OR 8.59** |
+| `open-water-marine-biological-hazards` | 壞死性筋膜炎死亡率寫 **>20%** | **方向相反的錯誤——低估**：Chuang 2019（12 篇／1,157 人）有肝病 **53.9%** vs 無肝病 **16.1%**，RR 2.61 |
+
+#### 本批最重要的兩件事
+
+1. **錯誤方向不是固定的。** 第 1 批是灌水（VO₂max 4.7% 寫成 10–11%）與反寫（陰性結果寫成「受影響顯著」），本批同時出現灌水（髖骨折死亡率）、張冠李戴（ASTM）、**與低估**（創傷弧菌對肝病族群）。**判準不是「有沒有誇大」，是「這個數字是不是來源報的那個數字」。**
+2. **`verified` 不等於「能支撐掛在它下面的話」——來源—宣稱不匹配是獨立的錯誤類別。** `src.pmc8147101` 是 verified、PMID／PMCID／DOI 齊全、書目完全正確，但它是**環境分離株的微生物學研究**，結構上就沒有任何臨床預後數據，卻被拿來承載死亡率。已為本批新增的每個來源都寫入 `使用邊界` 區塊。
+
+其餘更正：`sipe` 的 `fatal_acute: true` **保留但改寫依據**——Spencer 2018 明講「找不到任何報告 SIPE 死亡的研究」，該標記現在寫明是基於機制致命潛勢與急症處置需求，不是死亡率數據；水母急救的「43–45°C」撤除（Cochrane 2023 對所有處置皆給 very low certainty，並明言水溫／時長／水種不清楚）；「箱型水母用醋為共識」降級為體外實驗與地區指引推論；台灣鉤端螺旋體補 Tsai 2020（年發生率 **0.4/100,000**，但確診者風險輪廓是**職業性與洪災暴露，不是娛樂性游泳**）。
+
+`groin-adductor-strain` 是本輪健檢**第一個完全乾淨的條目**：Grote 2004 的六個統計數字與摘要逐字相符，無需更正。
+
+#### 驗證
+
+`tools/validate.py` → **0 ERROR**（W008 6 → 10、W011 維持 64）。孤兒數上升是正確結果：4 個佔位符解除引用後成為孤兒。新增 10 個 verified 來源。
+
+---
+
 ### ✅ 傷害條目來源健檢 第 1 批（12/34）——**2 筆引用查無此文獻，1 個條目整條與其證據衝突**
 
 完整報告見 `reports/injury_source_audit_2026-08-17.md`。
@@ -134,12 +162,12 @@
 
 1. **C 類其餘 34 條**（39 減本批 5 條）：改用 `resources/books/swimming-kinetic-chain/` 文獻集裁決，**不得再用兩本解剖教科書**。本批已證實這類條目的錯誤型態是「機制記反」而非「誇大」，因此**逐條追一手來源逐字比對是唯一有效的方法，不能靠讀起來合不合理來篩**。查無文獻者明標「待游泳文獻」，不得偽裝成已驗證。
 
-2. **既有 canonical 傷害條目的來源健檢**（**第 1 批已完成 12/34，見最上方段落與 `reports/injury_source_audit_2026-08-17.md`**）：第 1 批的判斷已被證實——12 個來源查出 2 個查無此文獻、3 個書目記錯，且順藤摸出 `oral-contraceptives-performance` 整條與其證據牴觸。**剩 22 個，優先序仍高於第 1 項**，分三類：
-   - **可查但非 PubMed（8 個）**：ASTM 標準、CDC MMWR、WHO 新聞稿、IOC 共識聲明（RED-S / Iron）、義大利 ECG 篩查數據等——走官方網站或 DOI
+2. **既有 canonical 傷害條目的來源健檢**（**已完成 16/34：第 1 批 12 個、第 2 批 4 個**；見最上方兩段與 `reports/injury_source_audit_2026-08-17.md`、`reports/injury_source_audit_batch2_2026-08-17.md`）：**剩 18 個，優先序仍高於第 1 項**，分三類：
+   - **佔位字串，剩 4 個（暴險低，先清完）**：`src.breath-hold-training` + `src.shallow-water-blackout-prevention-webfetch`（`shallow-water-blackout`，🟠，無硬數字）、`src.clinical-coach-report-no-epidemiology`（`swimmer-elbow-wrist-overuse`，🔵，無硬數字）、`src.adductor-loading-return-to-sport-practice-co`（數字已由已驗證的 Grote 2004 承擔，只需解除引用）
+   - **可查但非 PubMed（7 個）**：CDC MMWR、WHO 新聞稿、IOC 共識聲明（RED-S / Iron / Mountjoy / RED-S CAT）、義大利 ECG 篩查數據——走官方網站或 DOI（ASTM 已於第 2 批處理完畢）
    - **標題可查、需回推書目（6 個）**：女性運動員三聯症系統回顧、MDI 綜述、Para 游泳重複頭部撞擊、Quebec 44 年跳水 SCI、泳者壓力性骨折系統回顧、游泳傷害影像綜述
-   - **佔位字串、預期無法定位（8 個）**：`src.breath-hold-training`、`src.sipe`、`src.military-swim-training-sipe`、`src.jellyfish-envenomation-first-aid`、`src.falls-and-hip-fracture-mortality-pmid`、`src.shallow-water-blackout-prevention-webfetch`、`src.clinical-coach-report-no-epidemiology`、`src.adductor-loading-return-to-sport-practice-co`
 
-   第三類的處置比照 akkurt / bushman：保持 unverified、解除引用、**檢查依附其上的數字是否也要撤除**。**這批的重點不是把來源變 verified，而是找出還有多少數字掛在空引用下。**另外全庫仍有 50 筆 `flags.pending_verification` 與 15 筆 `references: verified: false` 未逐條處理。
+   **方法已被兩批證實**：不能只判斷「來源存不存在」，必須逐條把數字追回摘要逐字比對——第 2 批四處錯誤中有一處是**低估**、一處是**標準張冠李戴**，兩者都不會在「讀起來合不合理」的篩檢中露出來。另外，**`verification_status: verified` 不保證該來源能支撐掛在它下面的宣稱**（`src.pmc8147101` 事件），新增來源一律附 `使用邊界`。全庫仍有約 50 筆 `flags.pending_verification` 與 15 筆 `references: verified: false` 未逐條處理。
 
 3. **P5 第二階段（可選）**：把 canonical 的 14 條新發現回寫進 `Instructional/*深度技術分析.md` 對應章節（**改既有檔，不另開新檔**）。canonical 已落地，散文層只是呈現層。
 
