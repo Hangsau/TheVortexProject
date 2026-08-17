@@ -7,8 +7,10 @@ description: >-
   再登錄 338 筆（含 canonical 單數、Drills、psychology／health 的 sources 複數清單），
   合計 476 筆。兩批都是逐字登錄成來源條目，並由條目端以 source_ids 指入；
   S3c 另補 1 筆修正錯誤引用所需的來源；2026-07-29 書籍整合新增 10 筆，
-  並把既有 Veiga 2022 記錄查證完成；同日操作化改寫再新增 7 筆，
-  目前合計 495 筆。
+  並把既有 Veiga 2022 記錄查證完成；同日操作化改寫再新增 7 筆。
+  2026-08-17 新增 Neumann 2017、Nordin & Frankel 2012 兩本通用肌骨教科書
+  （僅供關節動作定義與 ROM 裁決，**非游泳來源**），實測條目數 513
+  （先前敘述的 495 筆已與實際不符，本次依實際計數更正）。
   來源 ID 格式：src.<slug>（slug 用小寫英文、數字、連字號，不含空格）。
 generated_date: "2026-07-29"
 
@@ -1489,6 +1491,23 @@ sources:
     year: 2022
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
+  - id: src.neumann-2017
+    display: "Neumann DA. (2017). Kinesiology of the Musculoskeletal System: Foundations for Rehabilitation. 3rd ed. St. Louis: Elsevier."
+    type: book
+    verification_status: verified
+    authors: ["Donald A. Neumann"]
+    year: 2017
+    title: "Kinesiology of the Musculoskeletal System: Foundations for Rehabilitation"
+    identifier: {isbn: "9780323287531"}
+    retrieved_on: "2026-08-17"
+    notes: >-
+      通用肌骨運動學教科書，依本地全文（792 頁）與版權頁 ISBN 核對。
+      適用範圍：關節骨動學（osteokinematics）定義、關節活動度正常值、肌肉作用線與力矩。
+      **不是游泳來源**：全書僅 5 處提及 swimming，不得用本書支持任何游泳分期、
+      推進機制或時序主張；游泳專屬主張須另引游泳運動學文獻。
+      Ch.12 明載動作命名一律以解剖位置為基準（不隨身體空間朝向翻轉），
+      為仰式「上踢＝髖屈曲」的裁決依據。
+
   - id: src.neurobehavioral-consequences-of-repetitive-h
     display: "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024 (已驗證)"
     type: other
@@ -1520,6 +1539,20 @@ sources:
     et_al: true
     year: 2022
     notes: "疑似與 src.nicol-2022-a、src.nicol-2022-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+
+  - id: src.nordin-frankel-2012
+    display: "Nordin M, Frankel VH (eds). (2012). Basic Biomechanics of the Musculoskeletal System. 4th ed. Baltimore: Lippincott Williams & Wilkins."
+    type: book
+    verification_status: verified
+    authors: ["Margareta Nordin", "Victor H. Frankel"]
+    year: 2012
+    title: "Basic Biomechanics of the Musculoskeletal System"
+    identifier: {isbn: "9781609133351"}
+    retrieved_on: "2026-08-17"
+    notes: >-
+      通用肌骨生物力學教科書，依本地全文（470 頁）與版權頁 ISBN 核對；authors 為編者。
+      適用範圍：組織力學（骨、軟骨、肌腱韌帶、肌肉）與各關節生物力學原理。
+      **不是游泳來源**：全書 0 處提及 swimming，不得用本書支持任何游泳專屬主張。
 
   - id: src.novais-2012-a
     display: "Novais et al. 2012 (JHK)"
