@@ -163,7 +163,7 @@
   file=canonical\health\injuries.yaml id='uv-photo-damage' at=injuries[22].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='uv-photo-damage' at=injuries[22].references[2] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='uv-photo-damage' at=injuries[22].references[3] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='cold-water-shock' at=injuries[23].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
+  file=canonical\health\injuries.yaml id='cold-water-shock' at=injuries[23].references[0] 有 citation 顯示字串但無 source_ids（certainty=yellow）
   file=canonical\health\injuries.yaml id='cold-water-shock' at=injuries[23].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='cold-water-shock' at=injuries[23].references[2] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='cold-water-shock' at=injuries[23].references[3] 有 citation 顯示字串但無 source_ids（certainty=green）
@@ -758,8 +758,10 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 4 筆**
+**WARN，共 6 筆**
 
+  source_id='src.akkurt-2017' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.bushman-2006' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.nordin-frankel-2012' 已登錄於 _sources.yaml 但無任何條目引用

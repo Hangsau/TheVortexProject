@@ -407,13 +407,24 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.akkurt-2017
-    display: "Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述；待核實具體引用）"
+    display: "【查無此文獻】原記為「Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述）」，PubMed 檢索不到對應文獻"
     type: other
     verification_status: unverified
     authors: ["Akkurt"]
     et_al: true
     year: 2017
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      **2026-08-17 查證結果：定位失敗，本 id 不得當作證據使用。**
+      NCBI E-utilities 以 `Akkurt[au] AND 2017[dp] AND "J Phys Ther Sci"[ta]` 檢索回傳 0 筆；
+      放寬為 `Akkurt[au] AND (contracture OR "spinal cord")` 後，2017 年唯一相符者為
+      **Akkurt H, Karapolat HU, Kirazli Y. (2017). The effects of upper extremity aerobic exercise
+      in patients with spinal cord injury: a randomized controlled study. Eur J Phys Rehabil Med. PMID 27824234**
+      ——**期刊不同（Eur J Phys Rehabil Med ≠ J Phys Ther Sci）、主題不同（上肢有氧運動 RCT ≠ 髖屈攣縮綜述）、
+      文獻類型不同（RCT ≠ 綜述）**，三項皆不符，不能認定為同一篇。
+      故本條屬**無法定位的引用**（可能是記憶誤植或拼裝），不是「暫時查不到」。
+      依 Vortex 誠實原則保留 unverified 且不補假引用；引用它的
+      `sci-hip-flexor-contracture` 盛行率數字已於同日改標 🟠 + `observation_basis`。
 
   - id: src.andersen-2020
     display: "Andersen et al. (2020) 方向；PMID 32500807"
@@ -547,11 +558,16 @@ sources:
     notes: "S3c review queue 補入：取代誤連到 Nicol et al. 轉身生物力學論文的 IM 分段論述來源。"
 
   - id: src.brannigan-et-al-hypothermia-mass-participati-2009
-    display: "Brannigan et al., Hypothermia... Mass Participation Open Water Swimming, Wilderness Environ Med 2009 (已驗證)"
-    type: other
-    verification_status: unverified
+    display: "Brannigan D, Rogers IR, Jacobs I, et al. (2009). Hypothermia is a significant medical risk of mass participation long-distance open water swimming. Wilderness Environ Med 20(1):14–18."
+    type: journal-article
+    verification_status: verified
+    authors: ["Brannigan D", "Rogers IR", "Jacobs I"]
+    et_al: true
     year: 2009
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    identifier:
+      pmid: "19364182"
+    retrieved_on: "2026-08-17"
+    notes: "2026-08-17 以 NCBI E-utilities 證實：PMID 19364182，Wilderness Environ Med 2009 Spring。原顯示字串的作者、期刊、年份與標題全部相符，只是缺識別碼；本次補 PMID 並升 verified。"
 
   - id: src.breath-hold-training
     display: "美軍/海軍 breath-hold training 安全準則（具體文件待查）"
@@ -584,13 +600,22 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.bushman-2006
-    display: "Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）"
+    display: "【查無此文獻】原記為「Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）」，該期刊無此作者文獻"
     type: other
     verification_status: unverified
     authors: ["Bushman"]
     et_al: true
     year: 2006
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      **2026-08-17 查證結果：定位失敗，本 id 不得當作證據使用。**
+      `Bushman[au] AND "Phys Sportsmed"[ta]` 回傳 **0 筆**；`Bushman[au] AND (VO2 OR "aerobic capacity")` 亦無相符文獻。
+      唯一真實存在的 Bushman × 口服避孕藥文獻是
+      **Bushman B, Masterson G, Nelsen J. (2006). Anaerobic power performance and the menstrual cycle:
+      eumenorrheic and oral contraceptive users. J Sports Med Phys Fitness. PMID 16596112**
+      ——**期刊不同（J Sports Med Phys Fitness ≠ Phys Sportsmed）、測量指標不同（無氧功率 ≠ VO₂max）**，不能認定為同一篇。
+      即使認定為同一篇，該研究測的是無氧功率與月經週期，**也無法支撐它目前掛著的「OC 使用率 30–50%」盛行率主張**
+      ——那是流行病學使用率，不是運動表現研究的輸出。此為「來源存在與否」之外的第二層錯誤：**引用與主張不對應**。
 
   - id: src.cdc-mmwr-2003-2007
     display: "CDC MMWR 急性外耳道炎門診資料 2003–2007 (已驗證)"
@@ -821,13 +846,20 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.elliott-sale-2020
-    display: "Elliott-Sale et al. 2020, Br J Sports Med（OC 與運動表現綜述；具體引用待核實）"
-    type: other
-    verification_status: unverified
-    authors: ["Elliott-Sale"]
+    display: "Elliott-Sale KJ, McNulty KL, Ansdell P, et al. (2020). The Effects of Oral Contraceptives on Exercise Performance in Women: A Systematic Review and Meta-analysis. Sports Med 50(10):1785–1812."
+    type: journal-article
+    verification_status: verified
+    authors: ["Elliott-Sale KJ", "McNulty KL", "Ansdell P"]
     et_al: true
     year: 2020
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    identifier:
+      pmid: "32666247"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證：文獻存在且為系統回顧+統合分析，但**原記載的期刊錯誤**——
+      實際刊於 **Sports Med**，不是 Br J Sports Med；本次更正並補 PMID 32666247。
+      **使用邊界**：本文的輸出是「OC 對運動表現的影響」，**不是 OC 使用率**。
+      引用它來支撐「女運動員 OC 使用率 30–50%」屬引用與主張不對應，該數字需另尋流病來源或改標 🟠。
 
   - id: src.enjoy-swimming-com
     display: "enjoy-swimming.com"
@@ -1191,6 +1223,32 @@ sources:
     year: 2014
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
+  - id: src.lebrun-2003-triphasic-oc-vo2max
+    display: "Lebrun CM, Petit MA, McKenzie DC, Taunton JE, Prior JC. (2003). Decreased maximal aerobic capacity with use of a triphasic oral contraceptive in highly active women: a randomised controlled trial. Br J Sports Med 37(4):315–320."
+    type: journal-article
+    verification_status: verified
+    authors: ["Lebrun CM", "Petit MA", "McKenzie DC", "Taunton JE", "Prior JC"]
+    et_al: false
+    year: 2003
+    identifier:
+      pmid: "12893716"
+      doi: "10.1136/bjsm.37.4.315"
+      pmcid: "PMC1724664"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 新增。這才是 Vortex「三相型 OC 使 VO₂max 下降」說法的真正出處
+      （原本掛在查無此文的 `src.bushman-2006` 名下，且數字被放大）。
+      **數字必須照抄，不得四捨五入或擴張**：雙盲安慰劑對照 RCT，**n = 14**（VO₂max ≥ 50 ml/kg/min 的高訓練量女性）；
+      從濾泡期到 OC 期，OC 組 VO₂max **下降 4.7%**，安慰劑組 **+1.5%**。
+      **這個 4.7% 出現時必須同時寫出 n=14。**
+      **同研究的陰性結果一樣重要，引用 4.7% 時必須併陳**：無氧速度測試、
+      **有氧耐力（90% VO₂max 力竭時間）**、等速肌力、最大通氣量、心率、呼吸交換率、血比容
+      **均無顯著變化**；唯一另一項顯著者是皮脂厚度總和上升（p<0.01）。
+      → 因此**不能**用本研究支撐「400m 以上耐力項目受影響顯著」——該研究直接測了耐力且測不出差異。
+      作者結論用語為「may influence elite sporting performance in some women；仍需進一步研究」。
+      另注意「兩名受試者下降 4 與 9 **ml/kg/min**」是**絕對值**，不是百分比，
+      舊稿的「6–15%」「10–11%」疑似由此誤讀而來，已於同日撤除。
+
   - id: src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012
     display: "本檔 liee_methods（Bompa Ch11 Table 11.1）+ swim_maglischo（Maglischo 2012）"
     type: book
@@ -1466,10 +1524,16 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.multidirectional-instability-of-the-shoulder
-    display: "Multidirectional instability of the shoulder, StatPearls NBK557726 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Dwidmuthe SC. Multidirectional Shoulder Instability. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK557726（最後更新 2025-11-07）。"
+    type: book-chapter
+    verification_status: verified
+    authors: ["Dwidmuthe SC"]
+    year: 2025
+    identifier:
+      bookshelf: "NBK557726"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK557726/"
+    retrieved_on: "2026-08-17"
+    notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在。**原顯示標題有誤**：實際章名為 Multidirectional Shoulder Instability，非 Multidirectional instability of the shoulder，已更正並補作者。StatPearls 是持續更新的臨床參考章節，非原始研究，引用時屬教科書層級證據。"
 
   - id: src.myswimpro
     display: "MySwimPro"
@@ -1581,10 +1645,16 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
 
   - id: src.osgood-schlatter-disease-statpearls-nbk44199
-    display: "Osgood-Schlatter disease, StatPearls NBK441995 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Smith JM. Osgood-Schlatter Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441995（最後更新 2023-08-04）。"
+    type: book-chapter
+    verification_status: verified
+    authors: ["Smith JM"]
+    year: 2023
+    identifier:
+      bookshelf: "NBK441995"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK441995/"
+    retrieved_on: "2026-08-17"
+    notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在。注意本條 id slug 尾碼被截成 nbk44199，正確 accession 是 **NBK441995**，以 identifier 欄為準。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.pair-pacing-in-adjacent-lanes
     display: "通用團隊訓練法（pair pacing in adjacent lanes）"
@@ -3551,10 +3621,16 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.salter-harris-fractures-statpearls-nbk430688
-    display: "Salter-Harris fractures, StatPearls NBK430688 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Levine RH. Salter-Harris Fracture. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK430688（最後更新 2023-08-10）。"
+    type: book-chapter
+    verification_status: verified
+    authors: ["Levine RH"]
+    year: 2023
+    identifier:
+      bookshelf: "NBK430688"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK430688/"
+    retrieved_on: "2026-08-17"
+    notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在。**原顯示標題有誤**：實際章名為單數 Salter-Harris Fracture，已更正並補作者。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.sanders-1995-a
     display: "Sanders 1995"
@@ -3621,10 +3697,16 @@ sources:
     year: 1998
 
   - id: src.scheuermann-disease-statpearls-nbk499966
-    display: "Scheuermann disease, StatPearls NBK499966 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Mansfield JT. Scheuermann Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK499966（最後更新 2023-07-31）。"
+    type: book-chapter
+    verification_status: verified
+    authors: ["Mansfield JT"]
+    year: 2023
+    identifier:
+      bookshelf: "NBK499966"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK499966/"
+    retrieved_on: "2026-08-17"
+    notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在，標題相符，補作者與 accession。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.schleihauf-1979
     display: "Schleihauf 1979（歷史依據，非當前定論）"
@@ -3672,10 +3754,16 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.sever-s-disease-calcaneal-apophysitis-statpe
-    display: "Sever's disease (calcaneal apophysitis), StatPearls NBK441928 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Smith JM. Sever Disease (Calcaneal Apophysitis). In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441928（最後更新 2024-01-11）。"
+    type: book-chapter
+    verification_status: verified
+    authors: ["Smith JM"]
+    year: 2024
+    identifier:
+      bookshelf: "NBK441928"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK441928/"
+    retrieved_on: "2026-08-17"
+    notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在，標題相符（官方章名不帶所有格 's），補作者與 accession。與 src.osgood-schlatter-disease-statpearls-nbk44199 同一作者 Smith JM。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.shallow-water-blackout-prevention-webfetch
     display: "Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）"
@@ -3684,13 +3772,21 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.sim-2019
-    display: "Sim et al. 2019, Eur J Appl Physiol（hepcidin 與運動誘發鐵吸收抑制；具體引用待核實）"
-    type: other
-    verification_status: unverified
-    authors: ["Sim"]
+    display: "Sim M, Garvican-Lewis LA, Cox GR, et al. (2019). Iron considerations for the athlete: a narrative review. Eur J Appl Physiol 119(7):1463–1478."
+    type: journal-article
+    verification_status: verified
+    authors: ["Sim M", "Garvican-Lewis LA", "Cox GR"]
     et_al: true
     year: 2019
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    identifier:
+      pmid: "31055680"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證：PMID 31055680，作者、年份、期刊皆相符，補識別碼後升 verified。
+      **兩點使用邊界**：① 這是 **narrative review（敘事綜述）**，不是系統回顧、不是原始研究——
+      引用它時證據等級是「綜述轉述」，不得寫成「研究發現」；
+      ② 標題主題是**運動員鐵營養的全面綜述**，hepcidin 與運動誘發吸收抑制只是其中一節，
+      不要把整篇當成 hepcidin 專論引用。
 
   - id: src.sipe
     display: "SIPE 病理生理與鐵人三項案例系列（作者/年份待查）"
@@ -3719,10 +3815,20 @@ sources:
     notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.statpearls-swimmer-s-shoulder-ncbi-bookshelf
-    display: "StatPearls Swimmer's Shoulder, NCBI Bookshelf NBK470589"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Davis DD. Swimmer's Shoulder. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK470589（最後更新 2023-11-22）。"
+    type: book-chapter
+    verification_status: verified
+    authors: ["Davis DD"]
+    year: 2023
+    identifier:
+      bookshelf: "NBK470589"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK470589/"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 直接取 NCBI Bookshelf 頁面證實存在，標題相符，補作者與 accession。
+      **既有的使用邊界（2026-08-17 C 類裁決已記載，勿刪）：本章全篇只處理自由式，無蝶式內容。**
+      `swimmers-shoulder` 的夾擠時相描述曾被沿用到蝶式，屬跨式外推錯誤，已於同日更正。
+      StatPearls 屬教科書層級證據，非原始研究。
 
   - id: src.staunton-2025-a
     display: "Staunton et al. (2025)"
@@ -4072,11 +4178,21 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.tipton-mj-et-al-cold-water-immersion-sudden-2003
-    display: "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003 (已驗證 URL)"
-    type: other
-    verification_status: unverified
+    display: "Tipton M. (2003). Cold water immersion: sudden death and prolonged survival. Lancet 362 Suppl:s12–13."
+    type: journal-article
+    verification_status: verified
+    authors: ["Tipton M"]
+    et_al: false
     year: 2003
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    identifier:
+      pmid: "14698111"
+      doi: "10.1016/s0140-6736(03)15057-x"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 以 efetch 取得完整書目：PMID 14698111，Lancet 2003 Dec;362 Suppl:s12-3。
+      **兩處更正**：① **單一作者 Tipton M（University of Portsmouth），不是「Tipton MJ et al.」**——
+      原字串的 et al. 是虛構的共同作者；② 篇幅為 supplement 的 **s12–13 兩頁短文**，
+      性質是評論/概觀而非原始研究，引用時不得寫成「Tipton 等人的研究發現」。
 
   - id: src.total-immersion-terry-laughlin-vortex
     display: "Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理"

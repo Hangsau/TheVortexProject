@@ -719,7 +719,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | acanthamoeba-keratitis | 棘阿米巴角膜炎（隱形眼鏡泳者） | Acanthamoeba keratitis in swimmers | 🟢 |
 | chlorine-eye-irritation | 氯 / 化學性結膜炎與角膜刺激 | Chlorine / chemical conjunctivitis & corneal irritation | 🟡 |
 | recreational-water-cryptosporidium | 隱孢子蟲 / 泳池水傳染腸道病 | Cryptosporidium & recreational water illness | 🟢 |
-| sci-hip-flexor-contracture | 脊髓損傷泳者的髖屈攣縮 | Hip flexor contracture in SCI swimmers | 🟠 |
+| sci-hip-flexor-contracture | 脊髓損傷泳者的髖屈攣縮 | Hip flexor contracture in SCI swimmers | 🔵 |
 | surfers-ear-exostosis | 外耳道骨瘤 / 骨疣（衝浪耳） | Surfer's ear / external auditory exostosis | 🟡 |
 | swimmer-dental-erosion | 牙齒酸蝕（游泳者） | Swimmer's dental erosion | 🟡 |
 | swimmer-dermatoses | 泳者皮膚問題群 | Swimmer dermatoses (folliculitis / swimmer's itch / green hair / chlorine dermatitis) | 🟡 |

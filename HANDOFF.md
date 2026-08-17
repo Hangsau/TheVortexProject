@@ -6,6 +6,47 @@
 
 ## 當前狀態（2026-08-17，最新）
 
+### ✅ 傷害條目來源健檢 第 1 批（12/34）——**2 筆引用查無此文獻，1 個條目整條與其證據衝突**
+
+完整報告見 `reports/injury_source_audit_2026-08-17.md`。
+
+**切入點**：傷害條目引用的 95 個 `source_ids` 中，**34 個 `verification_status` 不是 verified**——這些正被當機器鍵使用卻沒人確認存在。本批處理最易判定的 12 個（6 個 StatPearls + 6 個具名作者期刊文獻）。
+
+**檢索**：期刊走 NCBI E-utilities（esearch → esummary → efetch）；StatPearls 直接取 Bookshelf 頁面讀 `<title>` 與 meta。判定原則：**期刊、年份、主題、文獻類型四項同時相符才算同一篇，一項不符即記為無法定位，不以近似文獻頂替**。
+
+| 結果 | 數量 | 內容 |
+|---|---|---|
+| ✅ 直接升 verified | 7 | 6 個 StatPearls 章節（補作者 + accession + URL）、Brannigan 2009（PMID 19364182） |
+| ⚠️ 更正後 verified | 3 | Tipton 2003（**單一作者，原記的 et al. 共同作者不存在**，且為 Lancet supplement 兩頁短文）、Sim 2019（**敘事綜述**非原始研究）、Elliott-Sale 2020（**期刊記錯**：Sports Med 非 Br J Sports Med） |
+| ❌ 查無此文獻 | 2 | `src.akkurt-2017`、`src.bushman-2006` |
+
+#### 本批最嚴重：`oral-contraceptives-performance` 整條與其證據牴觸
+
+追 `src.bushman-2006` 時找到 VO₂max 數字的真正出處是 **Lebrun 2003（Br J Sports Med, PMID 12893716）**，取得摘要後對出四處錯誤：
+
+| 舊稿 | 一手文獻 |
+|---|---|
+| VO₂max 降 **10–11%**（範圍 6–15%） | 降 **4.7%**（安慰劑 +1.5%），**n = 14** |
+| 「400m 以上耐力項目**受影響顯著**」 | 同研究直接測有氧耐力**無顯著變化**；無氧、肌力、通氣、心率、血比容亦全無差異 |
+| 「三相型 > 單相型 > 低劑量」排序標 grade B | 只測了三相型一種配方，無跨配方對照 |
+| prevention 建議耐力選手改用低劑量或非荷爾蒙避孕 | Elliott-Sale 2020（42 篇/590 人）：群體效果**極可能 trivial**，**證據不足以支持通則性建議** |
+
+「6–15%」疑似誤讀原文「兩名受試者下降 4 與 9 **ml/kg/min**」（絕對值）為百分比。另撤除使用率「30–50%」與「停用後 2–3 個月回升」兩處無來源數字。
+
+**這與 C 類批次是同一種錯誤型態**：不是誇大，是把一手文獻的結論反過來寫，而且句子帶著引用、讀起來精確。
+
+#### 數字使用紀律（已寫入 `_sources.yaml` notes）
+
+- 引用 **4.7%** 必須同句寫 **n = 14**，且必須併陳同研究的陰性結果（耐力/無氧/肌力皆無差異）
+- Elliott-Sale 2020 只能談**表現影響**，不能談**使用率**
+- Sim 2019 寫「綜述指出」不寫「研究發現」；Tipton 2003 不寫「Tipton 等人的研究發現」
+
+#### 驗證
+
+`tools/validate.py` → **0 ERROR**（W008 4 → 6，W011 維持 64）。W008 +2 是正確結果：兩筆查無此文獻的引用解除後成為孤兒。**不會為了消掉這兩個 WARN 去補假引用，也不會為了避免孤兒而把假引用留在條目上。**
+
+---
+
 ### ✅ C 類高風險傷害宣稱（⚠︎⚠︎ 5 條）全部追到一手文獻——**3 條機制記反，2 條方向相反**
 
 這是原本擋住「刪除原始筆記」的最後一塊石頭，現已解除。裁決見 `plans/關節主張裁決_C類傷害宣稱.md`。
@@ -93,15 +134,22 @@
 
 1. **C 類其餘 34 條**（39 減本批 5 條）：改用 `resources/books/swimming-kinetic-chain/` 文獻集裁決，**不得再用兩本解剖教科書**。本批已證實這類條目的錯誤型態是「機制記反」而非「誇大」，因此**逐條追一手來源逐字比對是唯一有效的方法，不能靠讀起來合不合理來篩**。查無文獻者明標「待游泳文獻」，不得偽裝成已驗證。
 
-2. **既有 canonical 傷害條目的來源健檢**（本批衍生的新工作，優先序可能高於第 1 項）：本批在只碰兩個 injury 條目的情況下，就抓到一個方向性歸因錯誤、一個跨泳式過度外推、一個記憶式引用。`canonical/health/drafts/` 還有 45 個條目沒查過，`flags.pending_verification` 全庫共 50 筆。**建議先掃一遍所有 `pending_verification` 與 `verification_status: unverified` 的來源**，這是已知的高密度錯誤區。
+2. **既有 canonical 傷害條目的來源健檢**（**第 1 批已完成 12/34，見最上方段落與 `reports/injury_source_audit_2026-08-17.md`**）：第 1 批的判斷已被證實——12 個來源查出 2 個查無此文獻、3 個書目記錯，且順藤摸出 `oral-contraceptives-performance` 整條與其證據牴觸。**剩 22 個，優先序仍高於第 1 項**，分三類：
+   - **可查但非 PubMed（8 個）**：ASTM 標準、CDC MMWR、WHO 新聞稿、IOC 共識聲明（RED-S / Iron）、義大利 ECG 篩查數據等——走官方網站或 DOI
+   - **標題可查、需回推書目（6 個）**：女性運動員三聯症系統回顧、MDI 綜述、Para 游泳重複頭部撞擊、Quebec 44 年跳水 SCI、泳者壓力性骨折系統回顧、游泳傷害影像綜述
+   - **佔位字串、預期無法定位（8 個）**：`src.breath-hold-training`、`src.sipe`、`src.military-swim-training-sipe`、`src.jellyfish-envenomation-first-aid`、`src.falls-and-hip-fracture-mortality-pmid`、`src.shallow-water-blackout-prevention-webfetch`、`src.clinical-coach-report-no-epidemiology`、`src.adductor-loading-return-to-sport-practice-co`
+
+   第三類的處置比照 akkurt / bushman：保持 unverified、解除引用、**檢查依附其上的數字是否也要撤除**。**這批的重點不是把來源變 verified，而是找出還有多少數字掛在空引用下。**另外全庫仍有 50 筆 `flags.pending_verification` 與 15 筆 `references: verified: false` 未逐條處理。
 
 3. **P5 第二階段（可選）**：把 canonical 的 14 條新發現回寫進 `Instructional/*深度技術分析.md` 對應章節（**改既有檔，不另開新檔**）。canonical 已落地，散文層只是呈現層。
 
 4. **收尾**：第 1 項完成後依 `resources/CLAUDE.md` 刪除 `raw/notes/游泳四式關節動作全拆解(整合版).md` 原檔。
 
-**維持誠實的兩個缺口**（不要為了消 WARN 去補假引用）：
+**維持誠實的四個缺口**（不要為了消 WARN 去補假引用）：
 - `src.nordin-frankel-2012` 仍是孤兒來源——B 類裁決實際用到它，但用法是「反向套用非承重情境」，沒有一條 canonical 條目適合直接掛它
 - `src.swimmers-knee-epidemiology-sr`（「游泳膝傷流病系統綜述」）**至今未能定位到實際文獻**，維持 unverified，不得引用其存在
+- `src.akkurt-2017`（2026-08-17 新增）——PubMed 查無，已解除引用成為孤兒；依附的「攣縮 30–50%」數字已撤除
+- `src.bushman-2006`（2026-08-17 新增）——PubMed 查無，已解除引用成為孤兒；依附的 VO₂max 數字已改依真正出處 Lebrun 2003 並更正為 4.7%
 5. **懸而未決**：`_sources.yaml` 的 Nordin 目前仍是孤兒來源（W008）。136 條 A 類全是關節命名問題，Neumann 單獨即可裁決，本批僅蛙式 BR-28 實際引用到 Nordin 但寫在 plans/ 而非 canonical/，而 validator 不掃 `plans/`。**這是誠實狀態，不要為了消 W008 去補一個假引用。**
 
 ---

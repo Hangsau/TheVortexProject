@@ -21,7 +21,7 @@ epidemiology:
   caveat: 「鐵儲備不足」vs「臨床貧血」切點差異大；運動性偽貧血（高血漿量稀釋）會讓 Hb 看似低但其實有益於耐力，要與真鐵缺乏區分
   sources:
     - "IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
-    - "Sim et al. 2019, Eur J Appl Physiol（hepcidin 與運動誘發鐵吸收抑制；具體引用待核實）"
+    - "Sim M, Garvican-Lewis LA, Cox GR, et al. (2019). Iron considerations for the athlete: a narrative review. Eur J Appl Physiol 119(7):1463–1478. PMID 31055680（**敘事綜述，非原始研究亦非系統回顧**；hepcidin 只是其中一節，引用時屬綜述轉述層級）"
   source_ids: [src.ioc-iron-in-sport-doi-webfetch, src.sim-2019]
 
 risk_factors:

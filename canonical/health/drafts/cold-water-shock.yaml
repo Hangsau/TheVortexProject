@@ -19,7 +19,7 @@ epidemiology:
   evidence_grade: B
   caveat: 被認為是意外落水後最常見的『立即』死因(低體溫需 >30 分才危及生命)；機制證據多為生理實驗，缺大型流病
   sources:
-    - "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003 (已驗證 URL)"
+    - "Tipton M. (2003). Cold water immersion: sudden death and prolonged survival. Lancet 362 Suppl:s12–13. PMID 14698111（單一作者，兩頁短文性質為評論／概觀，非原始研究）"
     - "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)"
   source_ids: [src.tipton-mj-et-al-cold-water-immersion-sudden-2003, src.pmc12234767]
 
@@ -73,7 +73,7 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Tipton MJ et al., Cold water immersion: sudden death and prolonged survival, Lancet 2003", certainty: 🟢, verified: true }
+  - { citation: "Tipton M. (2003). Cold water immersion: sudden death and prolonged survival. Lancet 362 Suppl:s12–13. PMID 14698111 / DOI 10.1016/s0140-6736(03)15057-x（2026-08-17 更正：單一作者，原記「Tipton MJ et al.」的共同作者不存在）", certainty: 🟡, verified: true }
   - { citation: "Habituation of the cold shock response: systematic review and meta-analysis, 2024, PubMed 38211547", certainty: 🟢, verified: true }
   - { citation: "Lundström et al., face immersion/body submersion ice-cold water adolescents, Physiol Rep 2025, PMC12234767", certainty: 🟢, verified: true }
   - { citation: "Farstad & Dunn, Cold Water Immersion Syndrome, Wilderness Environ Med 2019", certainty: 🟢, verified: true }
