@@ -202,9 +202,9 @@
    1. `resources/books/Science_of_Swimming_Faster/`（234 檔）＋ `Fundamentals_of_Fast_Swimming/`（34 檔）— 四式全覆蓋，含角度量測
    2. `resources/books/swimming-kinetic-chain/`（43 篇）— 僅自由式／仰式／水下蝶腳有料，**蛙蝶踝 body roll 查無不算證據**
    3. NCBI E-utilities（`esearch` → `esummary` → `efetch`）— 前兩層皆無時才用；`db=books` 無效、`pubmed.ncbi.nlm.nih.gov` 的 WebFetch 被 cookie 頁擋住
-   4. 三層皆無 → 傷害類走協議 §1b 的解剖推導（標 🔵、禁頻率語言與具名診斷）；角度類標「待游泳量測」，不得偽裝成已驗證
+   4. 三層皆無 → **數字直接拿掉，保留定性內容**（「髖屈曲 30–45°」→「髖屈曲」）；傷害類走協議 §1b 的解剖推導（標 🔵、禁頻率語言與具名診斷）
 
-   全程適用四軸同一性規則（期刊／年份／主題／文章型態全中才算命中，錯一項就記「找不到」，不得用近似論文頂替）。B 類角度另適用協議 §1a 的「解剖上限 vs 游泳實際值」兩層區分。
+   全程適用四軸同一性規則（期刊／年份／主題／文章型態全中才算命中，錯一項就記「找不到」，不得用近似論文頂替）。
 
 2. ~~**既有 canonical 傷害條目的來源健檢**~~ — **34/34 已於 2026-08-18 全部完成**（第 1 批 12、第 2 批 9、第 3 批 13；三份報告見 `reports/injury_source_audit_2026-08-17.md`、`_batch2_2026-08-17.md`、`_batch3_2026-08-18.md`）。
 
