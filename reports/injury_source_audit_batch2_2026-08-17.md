@@ -10,7 +10,7 @@
 實際做下來，處置比預期好一級：**其中幾個佔位符背後是有真文獻的，只是從來沒人去找**。
 所以本批的動作不是「撤數字」，而是「查到真文獻 → 對照 → 發現數字錯了 → 改成對的」。
 
-## 已完成（4 個佔位符解除，10 個真來源新增）
+## 已完成（8 個佔位符全部處理，14 個真來源新增）
 
 ### 1. `poolside-slip-fall` — 兩處錯誤，一處是數字灌水，一處是張冠李戴
 
@@ -119,22 +119,54 @@ NFSI 自述的「wet SCOF ≥ 0.60 可使滑倒索賠減少達 90%」屬機構�
 並補上 Cochrane 2013 反方向的發現（醋／嫩肉粉相較熱水使皮膚外觀更差，RR 0.31, 0.14–0.72）。
 `management.acute` 的「43–45°C」撤除：Cochrane 明言水溫、時長、水種皆不清楚。
 
+### 5. 剩下四個「暴險低」的佔位符——結果三個都有真文獻
+
+原本判定為「無硬數字、暴險低、只需解除引用」的四個，實際處理後只有一個真的只需解除。
+
+| 條目 | 佔位符 | 結果 |
+|---|---|---|
+| `shallow-water-blackout` | `src.shallow-water-blackout-prevention-webfetch`、`src.breath-hold-training` | 補 StatPearls NBK554620 + Lippmann 2023；**另抓到術語錯誤** |
+| `swimmer-elbow-wrist-overuse` | `src.clinical-coach-report-no-epidemiology` | 補 Belilos 2023 + Wolf 2009 |
+| `groin-adductor-strain` | `src.adductor-loading-return-to-sport-practice-co` | 純解除（數字全由 Grote 2004 承擔） |
+
+三個發現：
+
+1. **`src.clinical-coach-report-no-epidemiology` 根本不是來源——它是「沒有來源」這件事的描述。**
+   顯示字串就寫著「臨床/教練回報(無系統性流行病學研究)」，卻被登錄成 `source_id` 掛在條目上。
+   在機器層它算「已有來源」，在人讀層它看起來像有引用，實際上兩者都不是。
+   這是本輪唯一一個**類型錯誤**（把後設敘述當成來源），比佔位符更難察覺。
+   而且該條目其實有資料可用：高中傷害監測（Belilos 2023，563 件／2,171,260 人次暴露）
+   與 NCAA 單隊五季（Wolf 2009）都把**肩列為第一（48.6%）**，兩份都**未單列肘部**——
+   所以「肘佔比低」有支撐，但那是推論不是數據，`evidence_grade` 維持 C。
+2. **「美軍／海軍閉氣訓練安全準則」查證後不存在。** 這是本批唯一一個真正查無下落的佔位符。
+   原本掛在它下面的預防建議（禁止潛前過度換氣、禁止單獨閉氣、1:1 直接看護）
+   實際上是急救組織與教練實務共識，已改由實務層承擔，不再偽裝成軍方文件。
+3. **順手抓到術語錯誤：「shallow water blackout」已被官方棄用。** StatPearls NBK554620 明載，
+   美國紅十字會、YMCA 與 USA Swimming 已改稱 **hypoxic blackout**，理由是「淺水」有誤導性
+   （意識喪失典型發生於 5 m 以內，但溺水可發生於任何深度）。條目保留舊名便於檢索，
+   但已註明正式定義以 hypoxic blackout 為準。
+   另補澳洲驗屍官資料（Lippmann 2023，2014–2018 共 91 例死亡，約三分之一涉閉氣潛水，64 例單獨從事），
+   並明訂使用邊界：**那是海域浮潛／閉氣潛水、只有分子沒有分母，不是泳池 SWB 的發生率**。
+
+`groin-adductor-strain` 的 Grote 2004 一併補齊書目（Am J Sports Med 32(1):104-8），
+`display` 從「摘要層級待驗證」改為正式引用格式。
+
 ## 驗證狀態
 
-`python tools/validate.py` → **0 ERROR**（W008 6 → 10、W011 維持 64）。
+`python tools/validate.py` → **0 ERROR**（W008 6 → 14、W009 維持 0、W011 維持 64）。
 
-**更正**：本報告前一版寫「W008 4 → 7」是**錯的**——第 2 批開工前實為 6 筆，
-解除 `src.falls-and-hip-fracture-mortality-pmid`、`src.sipe`、`src.military-swim-training-sipe`
-三個佔位引用後為 9 筆，再加本輪的 `src.jellyfish-envenomation-first-aid` 為 10 筆。
+**更正**：本報告前一版寫「W008 4 → 7」是**錯的**——第 2 批開工前實為 6 筆。
+逐步變化：解除 `src.falls-and-hip-fracture-mortality-pmid`、`src.sipe`、
+`src.military-swim-training-sipe` → 9；`src.jellyfish-envenomation-first-aid` → 10；
+最後四個（`src.breath-hold-training`、`src.shallow-water-blackout-prevention-webfetch`、
+`src.clinical-coach-report-no-epidemiology`、`src.adductor-loading-return-to-sport-practice-co`）→ 14。
 
 孤兒數上升是正確結果，與第 1 批同一原則——不會為了消掉 WARN 去補假引用，
 也不會為了避免孤兒而把佔位符留在條目上。
 
-## 本批尚未處理
+## 本批總結
 
-- `src.breath-hold-training` + `src.shallow-water-blackout-prevention-webfetch`
-  （`shallow-water-blackout`，🟠，無硬數字，暴險低）
-- `src.clinical-coach-report-no-epidemiology`（`swimmer-elbow-wrist-overuse`，🔵，無硬數字，暴險低）
-- `src.adductor-loading-return-to-sport-practice-co`（數字已由 Grote 2004 承擔，只需解除引用）
+**8 個佔位符全部處理完畢**：7 個背後找到真文獻並更正了掛在其上的內容，1 個（美軍閉氣準則）確認不存在。
+共新增 **14 個 verified 來源**，每個都附 `使用邊界` 區塊。
 
-以及第 1 批列出的另兩類共 14 個：可查但非 PubMed（8）、標題可查需回推書目（6）。
+剩下的是第 1 批列出的另兩類共 13 個：可查但非 PubMed（7，ASTM 已完成）、標題可查需回推書目（6）。

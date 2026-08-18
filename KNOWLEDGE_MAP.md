@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-08-17 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-08-18 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -697,7 +697,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | rotator-cuff-tendinopathy | 旋轉肌袖肌腱病（棘上肌） | Rotator cuff (supraspinatus) tendinopathy | 🟡 |
 | shoulder-multidirectional-instability | 多向性肩關節不穩定（MDI） | Multidirectional shoulder instability | 🟠 |
 | slap-lesion | 上盂唇前後損傷（SLAP） | Superior labrum anterior-posterior (SLAP) lesion | 🟠 |
-| swimmer-elbow-wrist-overuse | 游泳者肘/腕過度使用傷 | Swimmer's elbow & wrist overuse | 🔵 |
+| swimmer-elbow-wrist-overuse | 游泳者肘/腕過度使用傷 | Swimmer's elbow & wrist overuse | 🟢 |
 | swimmers-shoulder | 游泳肩 | Swimmer's shoulder | 🟡 |
 | thoracic-outlet-syndrome | 胸廓出口症候群（TOS） | Thoracic outlet syndrome in swimmers | 🔵 |
 
@@ -736,7 +736,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | drowning | 溺水 / 近乎溺水 | Drowning / Near-drowning | 🟢 |
 | exertional-sudden-cardiac-death | 運動性猝死（游泳 / 運動員） | Exertional sudden cardiac death — swimming / athletes | 🟢 |
 | hypothermia-swimmers | 游泳者低體溫（開放水域） | Hypothermia in swimmers / open-water hypothermia | 🟡 |
-| shallow-water-blackout | 淺水昏迷 | Shallow water blackout (SWB) | 🟠 |
+| shallow-water-blackout | 淺水昏迷 | Shallow water blackout (SWB) | 🟢 |
 | sipe | 游泳誘發肺水腫 | Swimming-Induced Pulmonary Edema (SIPE) | 🟡 |
 
 #### 內分泌與骨骼 (D-endocrine, 7)

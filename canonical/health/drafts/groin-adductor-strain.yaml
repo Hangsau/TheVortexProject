@@ -16,11 +16,15 @@ epidemiology:
   prevalence: "蛙泳者 42.7% 過去一年因腹股溝傷無法完成蛙泳訓練(vs 個人混合式 21.5%、非蛙泳 5.8%)；當前腹股溝痛蛙泳 6.92% vs 個人混合式 0%(p=0.015)"
   certainty: 🟡
   evidence_grade: B
-  caveat: 主要數字來自 2004 年單一研究(Grote 等，AJSM)，現代訓練模式不同；全文未開啟，數字屬待查
+  caveat: >-
+    主要數字來自 2004 年單一研究（Grote 等，AJSM，n = 296），現代訓練模式不同。
+    2026-08-17 已取回摘要**逐字比對，六個統計數字全部相符**，數字不再屬待查——
+    但仍是**摘要層級**驗證（全文未開啟），且為單一橫斷研究。
+    同時解除 `src.adductor-loading-return-to-sport-practice-co`：該顯示字串標「已驗證」卻無作者、
+    無年份、無識別碼，指向一家診所的實務做法而非可重取文獻；它沒有支撐本條任何數字，解除不影響內容。
   sources:
-    - "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)"
-    - "Adductor loading/return-to-sport practice (Coast Sport, 已驗證)"
-  source_ids: [src.grote-2004, src.adductor-loading-return-to-sport-practice-co]
+    - "Grote K, Lincoln TL, Gamble JG (2004). Hip adductor injury in competitive swimmers. Am J Sports Med. PMID 14754731（摘要層級已逐字比對）"
+  source_ids: [src.grote-2004]
 
 risk_factors:
   - { text: "蛙泳踢腿幅度過大", grade: B }

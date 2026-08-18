@@ -6,7 +6,7 @@
 
 ## 當前狀態（2026-08-17，最新）
 
-### ✅ 傷害條目來源健檢 第 2 批（佔位字串 4/8）——**佔位符背後有真文獻，而且掛在上面的數字四處全錯**
+### ✅ 傷害條目來源健檢 第 2 批（佔位字串 8/8 全部完成）——**佔位符背後有真文獻，而且掛在上面的數字幾乎全錯**
 
 完整報告見 `reports/injury_source_audit_batch2_2026-08-17.md`。
 
@@ -26,11 +26,19 @@
 
 其餘更正：`sipe` 的 `fatal_acute: true` **保留但改寫依據**——Spencer 2018 明講「找不到任何報告 SIPE 死亡的研究」，該標記現在寫明是基於機制致命潛勢與急症處置需求，不是死亡率數據；水母急救的「43–45°C」撤除（Cochrane 2023 對所有處置皆給 very low certainty，並明言水溫／時長／水種不清楚）；「箱型水母用醋為共識」降級為體外實驗與地區指引推論；台灣鉤端螺旋體補 Tsai 2020（年發生率 **0.4/100,000**，但確診者風險輪廓是**職業性與洪災暴露，不是娛樂性游泳**）。
 
-`groin-adductor-strain` 是本輪健檢**第一個完全乾淨的條目**：Grote 2004 的六個統計數字與摘要逐字相符，無需更正。
+`groin-adductor-strain` 是本輪健檢**第一個完全乾淨的條目**：Grote 2004 的六個統計數字與摘要逐字相符，無需更正（已補齊書目 Am J Sports Med 32(1):104-8）。
+
+#### 最後四個「暴險低」的佔位符，結果三個都有真文獻
+
+原判定為「無硬數字、只需解除引用」，實際只有一個真的只需解除：
+
+- **`src.clinical-coach-report-no-epidemiology` 根本不是來源，是「沒有來源」這件事的描述**（顯示字串就寫著「臨床/教練回報(無系統性流行病學研究)」），卻被登錄成 `source_id` 掛著。這是**類型錯誤**，比佔位符更難察覺。該條目其實有資料：Belilos 2023（563 件／2,171,260 人次暴露）與 Wolf 2009 都把**肩列第一（48.6%）**、兩份都未單列肘部——「肘佔比低」有支撐但屬推論，`evidence_grade` 維持 C。
+- **「美軍／海軍閉氣訓練安全準則」查證後不存在**——本批唯一真正查無下落者；原掛其下的預防建議改由實務層承擔，不再偽裝成軍方文件。
+- **順手抓到術語錯誤**：StatPearls NBK554620 明載，美國紅十字會、YMCA 與 USA Swimming 已把 SWB 改稱 **hypoxic blackout**（「淺水」有誤導性）。另補澳洲驗屍官資料（Lippmann 2023，91 例）並明訂邊界：**海域浮潛／閉氣潛水、只有分子沒有分母，不是泳池 SWB 發生率**。
 
 #### 驗證
 
-`tools/validate.py` → **0 ERROR**（W008 6 → 10、W011 維持 64）。孤兒數上升是正確結果：4 個佔位符解除引用後成為孤兒。新增 10 個 verified 來源。
+`tools/validate.py` → **0 ERROR**（W008 6 → 14、W009 維持 0、W011 維持 64）。孤兒數上升是正確結果：8 個佔位符解除引用後全成孤兒。**新增 14 個 verified 來源，每個都附 `使用邊界` 區塊。**
 
 ---
 
@@ -162,10 +170,9 @@
 
 1. **C 類其餘 34 條**（39 減本批 5 條）：改用 `resources/books/swimming-kinetic-chain/` 文獻集裁決，**不得再用兩本解剖教科書**。本批已證實這類條目的錯誤型態是「機制記反」而非「誇大」，因此**逐條追一手來源逐字比對是唯一有效的方法，不能靠讀起來合不合理來篩**。查無文獻者明標「待游泳文獻」，不得偽裝成已驗證。
 
-2. **既有 canonical 傷害條目的來源健檢**（**已完成 16/34：第 1 批 12 個、第 2 批 4 個**；見最上方兩段與 `reports/injury_source_audit_2026-08-17.md`、`reports/injury_source_audit_batch2_2026-08-17.md`）：**剩 18 個，優先序仍高於第 1 項**，分三類：
-   - **佔位字串，剩 4 個（暴險低，先清完）**：`src.breath-hold-training` + `src.shallow-water-blackout-prevention-webfetch`（`shallow-water-blackout`，🟠，無硬數字）、`src.clinical-coach-report-no-epidemiology`（`swimmer-elbow-wrist-overuse`，🔵，無硬數字）、`src.adductor-loading-return-to-sport-practice-co`（數字已由已驗證的 Grote 2004 承擔，只需解除引用）
-   - **可查但非 PubMed（7 個）**：CDC MMWR、WHO 新聞稿、IOC 共識聲明（RED-S / Iron / Mountjoy / RED-S CAT）、義大利 ECG 篩查數據——走官方網站或 DOI（ASTM 已於第 2 批處理完畢）
-   - **標題可查、需回推書目（6 個）**：女性運動員三聯症系統回顧、MDI 綜述、Para 游泳重複頭部撞擊、Quebec 44 年跳水 SCI、泳者壓力性骨折系統回顧、游泳傷害影像綜述
+2. **既有 canonical 傷害條目的來源健檢**（**已完成 21/34：第 1 批 12 個、第 2 批 8 個佔位字串全清 + ASTM**；見最上方兩段與 `reports/injury_source_audit_2026-08-17.md`、`reports/injury_source_audit_batch2_2026-08-17.md`）：**剩 13 個，優先序仍高於第 1 項**，分兩類：
+   - **可查但非 PubMed（7 個）**：`src.cdc-mmwr-2003-2007`、`src.who-2024-12-13-drowning-deaths-decline-globa-2024`、`src.ioc-red-s-2014-2018-2023-doi`、`src.ioc-iron-in-sport-doi-webfetch`、`src.mountjoy-ioc-consensus-webfetch`、`src.red-s-clinical-assessment-tool-framework-ioc`、`src.ecg-scd-3-6-0-4-10-89-url`——走官方網站或 DOI
+   - **標題可查、需回推書目（6 個）**：`src.female-athlete-triad-in-swimmers-systematic`、`src.mdi-management-review-annals-of-joint`、`src.neurobehavioral-consequences-of-repetitive-h`、`src.quebec-44-year-diving-sci-study-sciencedirec`、`src.stress-fractures-in-swimmers-systematic-revi`、`src.swimming-injury-imaging-review-1-radiologyke`
 
    **方法已被兩批證實**：不能只判斷「來源存不存在」，必須逐條把數字追回摘要逐字比對——第 2 批四處錯誤中有一處是**低估**、一處是**標準張冠李戴**，兩者都不會在「讀起來合不合理」的篩檢中露出來。另外，**`verification_status: verified` 不保證該來源能支撐掛在它下面的宣稱**（`src.pmc8147101` 事件），新增來源一律附 `使用邊界`。全庫仍有約 50 筆 `flags.pending_verification` 與 15 筆 `references: verified: false` 未逐條處理。
 

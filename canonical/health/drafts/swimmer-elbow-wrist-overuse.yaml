@@ -14,13 +14,26 @@ mechanism:
   who: 過度用划手板者、蝶/蛙專項、技術不穩的成人初學者
 
 epidemiology:
-  prevalence: "肘部佔游泳整體傷害比例低(肩部佔絕大多數)，無前瞻大型數據；腕部游泳特定流行率幾乎缺失"
-  certainty: 🔵
+  prevalence: >-
+    肩部佔游泳傷害的絕大多數：美國高中傷害監測（2008–2019 學年，563 件／2,171,260 人次暴露，
+    整體 0.26 件／1000 AE）中，**泳者傷害以肩最多，佔 48.6%**，且 58.0% 屬過度使用／慢性；
+    NCAA Division I 單隊五季資料同樣把**肩／上臂列第一、頸／背第二**。
+    **兩份監測研究都沒有把肘或腕單獨列進主要部位清單**——「肘佔比低」是由此推得，
+    不是任何研究直接報出的數字。腕部的游泳特定流行率幾乎完全缺失。
+  certainty: 🟢
   evidence_grade: C
-  caveat: 證據幾乎全為教練觀察與臨床回報；無控制研究；常見引用的『精英泳者 58% 曾有肘不適』來自商業平台文章，不可作公開數字
+  caveat: >-
+    2026-08-17 更正：本區塊原本的唯一 source_id 是 `src.clinical-coach-report-no-epidemiology`
+    ——**那不是來源，是「沒有來源」這件事的描述**，卻被登錄成 source_id 掛著，讀起來像有引用。
+    已改掛兩份真實的傷害監測研究。但**證據等級仍維持 C**：兩份研究支撐的是「肩部主導」，
+    肘與腕的佔比是推論而非數據；游泳者肘／腕本身沒有前瞻性控制研究。
+    另：常見引用的『精英泳者 58% 曾有肘不適』來自商業平台文章，不可作公開數字。
   sources:
-    - "臨床/教練回報(無系統性流行病學研究)"
-  source_ids: [src.clinical-coach-report-no-epidemiology]
+    - "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434"
+    - "Wolf BR, Ebinger AE, Lawler MP, Britton CL (2009). Injury patterns in Division I collegiate swimming. Am J Sports Med 37(10):2037-42"
+  source_ids:
+    - src.belilos-2023-hs-swimming-injury-epi
+    - src.wolf-2009-ncaa-swimming-injury-patterns
 
 risk_factors:
   - { text: "蝶/蛙拉水技術不正(手肘下垂、過中線)", grade: Expert }
@@ -73,15 +86,17 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "臨床綜述/教練實務(游泳者肘/腕過用無大型流行病學研究)", certainty: 🟠, verified: false }
+  - { citation: "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434. PMID 36715985", certainty: 🟢, verified: true }
+  - { citation: "Wolf BR, Ebinger AE, Lawler MP, Britton CL (2009). Injury patterns in Division I collegiate swimming. Am J Sports Med 37(10):2037-42. PMID 19633232", certainty: 🟡, verified: true }
 
 flags:
   pending_verification:
     - "『精英泳者 58% 肘不適』『80–95% 保守成功率』為商業平台(USMS)摘要，不進 public 數字；原始來源待查"
+    - "肘與腕的游泳特定發生率——兩份傷害監測研究均未單列，屬文獻空白"
   contested:
     - claim: "划手板的角色"
       consensus_source: "划手板被視為加速因素"
       dissent_source: "為主因或促因未定論；無安全劑量 RCT"
   vintage_warning: false
 
-audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }
+audit: { last_reviewed: 2026-08-17, reviewer: opus, supersedes: ~ }

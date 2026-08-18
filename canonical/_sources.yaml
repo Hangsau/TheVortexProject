@@ -387,10 +387,15 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.adductor-loading-return-to-sport-practice-co
-    display: "Adductor loading/return-to-sport practice (Coast Sport, 已驗證)"
+    display: "【佔位字串，非真實文獻】原記為「Adductor loading/return-to-sport practice (Coast Sport, 已驗證)」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為佔位字串並解除引用。顯示字串標「已驗證」但無作者、無年份、無識別碼，
+      指向的是一家運動傷害診所（Coast Sport）的實務做法而非可重取的文獻。
+      `groin-adductor-strain` 的所有統計數字都由 src.grote-2004（PMID 14754731，已逐字比對相符）承擔，
+      解除本引用不影響任何數字；復健／重返運動的部分改以 🟠 教練觀測層承擔。
+      本 id 保持 unverified 且不得再被引用。
 
   - id: src.aiac-ijkss-v-6n-1p-25
     display: "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)"
@@ -593,10 +598,14 @@ sources:
     notes: "2026-08-17 以 NCBI E-utilities 證實：PMID 19364182，Wilderness Environ Med 2009 Spring。原顯示字串的作者、期刊、年份與標題全部相符，只是缺識別碼；本次補 PMID 並升 verified。"
 
   - id: src.breath-hold-training
-    display: "美軍/海軍 breath-hold training 安全準則（具體文件待查）"
+    display: "【佔位字串，非真實文獻】原記為「美軍/海軍 breath-hold training 安全準則（具體文件待查）」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為佔位字串並解除引用。查證後未能定位到任何具名的美軍／海軍閉氣訓練安全準則文件；
+      條目原本掛在本 id 下的預防建議（禁止潛前過度換氣、禁止單獨閉氣、1:1 直接看護）
+      實際上是急救組織與教練實務的共識，改以 🟠 教練觀測層並補 `observation_basis` 承擔，
+      不偽裝成軍方文件。本 id 保持 unverified 且不得再被引用。
 
   - id: src.brent-rushall-sdsu
     display: "Brent Rushall, SDSU"
@@ -758,10 +767,61 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.clinical-coach-report-no-epidemiology
-    display: "臨床/教練回報(無系統性流行病學研究)"
+    display: "【非文獻，是證據狀態描述】原記為「臨床/教練回報(無系統性流行病學研究)」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定並解除引用。這個字串**根本不是來源**——它描述的是「沒有來源」這件事本身，
+      卻被登錄成 source_id 掛在條目上，讀起來像有引用。
+      `swimmer-elbow-wrist-overuse` 的「肩部佔絕大多數、肘部佔比低」實際上是有監測資料的：
+      已改掛 src.belilos-2023-hs-swimming-injury-epi 與 src.wolf-2009-ncaa-swimming-injury-patterns。
+      本 id 保持 unverified 且不得再被引用。
+
+  - id: src.belilos-2023-hs-swimming-injury-epi
+    display: "Belilos E, Jow S, Maxwell M. (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434."
+    title: "Descriptive Epidemiology of High School Swimming and Diving Injuries."
+    type: journal-article
+    verification_status: verified
+    authors: ["Belilos E", "Jow S", "Maxwell M"]
+    year: 2023
+    container: "Clinical Journal of Sport Medicine"
+    identifier:
+      pmid: "36715985"
+      doi: "10.1097/JSM.0000000000001121"
+      pmcid: "PMC10372189"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證新增。High School RIO 全國傷害監測系統 2008–2019 學年：
+      **563 件游泳與跳水傷害／2,171,260 人次暴露（0.26 件／1000 AE）**。
+      女性傷害率高於男性（整體 RR 1.57、練習 RR 1.53、比賽 RR 1.81，均 P < 0.05）。
+      **泳者傷害部位以肩最多（48.6%）**，最常與自由式相關（67.3%），過度使用／慢性佔 58.0%；
+      跳水者以頭／臉最多（36.6%）。
+      **使用邊界**：① 摘要層級**未列出肘部的獨立比例**——本來源能支撐的是「肩部主導」，
+      「肘佔比低」是由肘未進入主要部位清單所做的推論，不是直接數據；
+      ② 族群為美國高中（約 14–18 歲），不可直接外推到成人分齡或菁英選手；
+      ③ 分母是 athlete-exposure 不是人數。
+
+  - id: src.wolf-2009-ncaa-swimming-injury-patterns
+    display: "Wolf BR, Ebinger AE, Lawler MP, Britton CL. (2009). Injury patterns in Division I collegiate swimming. Am J Sports Med 37(10):2037-42."
+    title: "Injury patterns in Division I collegiate swimming."
+    type: journal-article
+    verification_status: verified
+    authors: ["Wolf BR", "Ebinger AE", "Lawler MP", "Britton CL"]
+    year: 2009
+    container: "The American Journal of Sports Medicine"
+    identifier:
+      pmid: "19633232"
+      doi: "10.1177/0363546509339364"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證新增。單一 NCAA Division I 隊伍 2002–2007 五季、44 男 50 女：
+      傷害率男 4.00／1000 exposures、女 3.78；37% 造成缺席。
+      **傷害部位第一為肩／上臂，其次頸／背**；大一新生傷害最多，年級越高傷害越少。
+      非自由式專項相對風險略高（RR 1.33, 1.00–1.77，下界貼 1）。
+      **38% 的傷害發生在練習與比賽之外的隊務活動（如重量訓練）**——這是常被略過的一項。
+      部位與泳式專項之間**無顯著關聯**。
+      **使用邊界**：① 單一隊伍、n 小，屬描述性流行病學，不是族群估計；
+      ② 2009 年資料，訓練型態已可能改變（🟡 級）；③ 同樣**未單列肘部**。
 
   - id: src.coach-alan-tri-training-harder
     display: "Coach Alan, Tri Training Harder"
@@ -1117,7 +1177,7 @@ sources:
     notes: "疑似與 src.gonzalez-rave-2025-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.grote-2004
-    display: "Grote 2004 breaststroke groin injury, AJSM PMID 14754731 (摘要層級待驗證)"
+    display: "Grote K, Lincoln TL, Gamble JG. (2004). Hip adductor injury in competitive swimmers. Am J Sports Med 32(1):104-8."
     title: "Hip adductor injury in competitive swimmers."
     type: journal-article
     verification_status: verified
@@ -3917,10 +3977,59 @@ sources:
     notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在，標題相符（官方章名不帶所有格 's），補作者與 accession。與 src.osgood-schlatter-disease-statpearls-nbk44199 同一作者 Smith JM。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.shallow-water-blackout-prevention-webfetch
-    display: "Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）"
+    display: "【佔位字串，非真實文獻】原記為「Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）」"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: >-
+      2026-08-17 判定為佔位字串並解除引用。真正該引的是 StatPearls 章節
+      src.statpearls-shallow-water-blackout-nbk554620（PMID 32119507）與
+      src.lippmann-2023-australia-breathhold-fatalities（PMID 37718294）。
+      本 id 保持 unverified 且不得再被引用。
+
+  - id: src.statpearls-shallow-water-blackout-nbk554620
+    display: "Bart RM, Murray BP, Lau H. Shallow Water Blackout. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK554620（最後更新 2026-06-08）。"
+    title: "Shallow Water Blackout."
+    type: book-chapter
+    verification_status: verified
+    authors: ["Bart RM", "Murray BP", "Lau H"]
+    year: 2026
+    identifier:
+      bookshelf: "NBK554620"
+      pmid: "32119507"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證新增。**術語更正（本章最主要的內容）**：「shallow water blackout」一詞
+      經常被誤用為「過度換氣後的溺水」的同義詞；美國紅十字會、YMCA 與 USA Swimming 已把本症改稱
+      **hypoxic blackout**，定義為「閉氣潛沒（且潛前有過度換氣）期間，在排除其他意識喪失原因後，
+      水下泳者或潛水者發生的意識喪失」。典型發生於**水深 5 m（15 ft）以內**，但溺水可發生於任何深度，
+      「淺水」一詞本身有誤導性。存活取決於即時有效的救援，延誤即提高致死風險。
+      **使用邊界**：StatPearls 屬教科書層級證據，非原始研究；**本章不提供任何發生率或死亡率數字**，
+      不得拿來支撐盛行率宣稱。
+
+  - id: src.lippmann-2023-australia-breathhold-fatalities
+    display: "Lippmann J. (2023). Snorkelling and breath-hold diving fatalities in Australian waters, 2014 to 2018. Diving Hyperb Med 53(3):210-217."
+    title: "Snorkelling and breath-hold diving fatalities in Australian waters, 2014 to 2018."
+    type: journal-article
+    verification_status: verified
+    authors: ["Lippmann J"]
+    year: 2023
+    container: "Diving and Hyperbaric Medicine"
+    identifier:
+      pmid: "37718294"
+      doi: "10.28920/dhm53.3.210-217"
+      pmcid: "PMC10751292"
+    retrieved_on: "2026-08-17"
+    notes: >-
+      2026-08-17 查證新增。以媒體報導與 National Coronial Information System（驗屍官資料庫）
+      回溯 2014–2018 澳洲水域 **91 例**浮潛／閉氣潛水死亡（男 78、女 13，中位年齡 48 歲，範圍 16–80）；
+      **約三分之一涉及閉氣潛水**，64 例為單獨從事，51 例為觀光客，77 例已知 BMI 者中 52 例過重或肥胖。
+      失能主因：原發性溺水 39%、心因性事件 31%（但列為死因者僅 21%）。作者結論明列
+      「延長閉氣造成的窒息性缺氧與看護不足仍是問題」。
+      **使用邊界（重要）**：① 這是**澳洲海域浮潛／閉氣潛水**的死亡資料，**不是泳池 SWB 的發生率**，
+      兩者族群與情境不同，不得互換；② 分子來自驗屍紀錄、**沒有分母**，只能支撐「主要證據來自
+      個案系列與驗屍報告」這類敘述，不能算出發生率；③ 心因性與肥胖因素在此族群比重高，
+      不能外推到年輕泳池閉氣訓練者。
 
   - id: src.sim-2019
     display: "Sim M, Garvican-Lewis LA, Cox GR, et al. (2019). Iron considerations for the athlete: a narrative review. Eur J Appl Physiol 119(7):1463–1478."
