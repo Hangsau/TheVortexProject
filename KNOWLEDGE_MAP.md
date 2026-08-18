@@ -81,12 +81,12 @@
 | free.tech.31 | fatigue |  | 🟠 |
 | free.tech.34 | streamline |  | 🔵 |
 | free.tech.35 | timing |  | 🔵 |
-| free.tech.36 | stroke-cycle |  | 🔵 |
-| free.tech.37 | stroke-cycle |  | 🔵 |
-| free.tech.38 | hardware |  | 🔵 |
-| free.tech.39 | rotation |  | 🟢 |
-| free.tech.40 | head |  | 🟢 |
-| free.tech.41 | hardware |  | 🔵 |
+| free.tech.36 | joint |  | 🔵 |
+| free.tech.37 | joint |  | 🔵 |
+| free.tech.38 | joint |  | 🔵 |
+| free.tech.39 | joint |  | 🟢 |
+| free.tech.40 | joint |  | 🟢 |
+| free.tech.41 | joint |  | 🔵 |
 
 #### 仰式 (30)
 
@@ -95,7 +95,7 @@
 | back.tech.28 | recovery |  | 🟠 |
 | back.tech.29 | recovery |  | 🟠 |
 | back.tech.1 | rotation |  | 🟢 |
-| back.tech.30 | kick |  | 🔵 |
+| back.tech.30 | joint |  | 🔵 |
 | back.tech.2 | rotation |  | 🟢 |
 | back.tech.3 | rotation |  | 🔵 |
 | back.tech.4 | rotation |  | 🔵 |
@@ -158,8 +158,8 @@
 | breast.tech.29 | comparison |  | 🔵 |
 | breast.tech.30 | kick |  | 🟢 |
 | breast.tech.31 | concept |  | 🟢 |
-| breast.tech.36 | kick |  | 🔵 |
-| breast.tech.37 | hardware |  | 🔵 |
+| breast.tech.36 | joint |  | 🔵 |
+| breast.tech.37 | joint |  | 🔵 |
 | breast.tech.38 | errors |  | 🟡 |
 | breast.tech.35 | timing |  | 🟠 |
 
@@ -203,15 +203,15 @@
 | fly.tech.34 | comparison |  | 🔵 |
 | fly.tech.35 | concept |  | 🟢 |
 | fly.tech.36 | streamline |  | 🔵 |
-| fly.tech.37 | hardware |  | 🔵 |
+| fly.tech.37 | joint |  | 🔵 |
 | fly.tech.38 | errors |  | 🟡 |
 
 #### 起跳轉身 (48)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
-| starts-turns.tech.47 | streamline |  | 🔵 |
-| starts-turns.tech.48 | hardware |  | 🔵 |
+| starts-turns.tech.47 | joint |  | 🔵 |
+| starts-turns.tech.48 | joint |  | 🔵 |
 | starts-turns.tech.1 | comparison |  | 🔵 |
 | starts-turns.tech.2 | stroke-cycle |  | 🔵 |
 | starts-turns.tech.3 | hardware |  | 🟢 |
@@ -292,7 +292,7 @@
 | udk.tech.27 | tempo |  | 🟢 |
 | udk.tech.28 | kick |  | 🟢 |
 | udk.tech.29 | streamline |  | 🔵 |
-| udk.tech.30 | kick |  | 🔵 |
+| udk.tech.30 | joint |  | 🔵 |
 
 ### `teaching-errors.yaml` — 教學誤區（**102 條目**）
 

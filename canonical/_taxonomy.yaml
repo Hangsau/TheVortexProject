@@ -23,20 +23,21 @@ fields:
     # 在 teaching-errors / drills 是「踢腿」）。my-site 一律從資料讀，不得硬編。
     # 例外：_meta-reference 是 injuries.yaml 的 meta 指標條目，非內容分類。
     values:
-      - {key: kick, scope: [drills, instructional], count: 87}
+      - {key: kick, scope: [drills, instructional], count: 84}
       - {key: timing, scope: [drills, instructional], count: 53}
       - {key: arm, scope: [drills], count: 51}
-      - {key: stroke-cycle, scope: [instructional], count: 41}
-      - {key: head, scope: [instructional], count: 21}
+      - {key: stroke-cycle, scope: [instructional], count: 39}
+      - {key: head, scope: [instructional], count: 20}
       - {key: comparison, scope: [instructional], count: 17}
-      - {key: hardware, scope: [instructional], count: 16}
+      - {key: hardware, scope: [instructional], count: 12}
       - {key: concept, scope: [instructional], count: 15}
       - {key: depth, scope: [instructional], count: 15}
       - {key: errors, scope: [instructional], count: 15}
-      - {key: rotation, scope: [instructional], count: 15}
-      - {key: streamline, scope: [instructional], count: 15}
+      - {key: rotation, scope: [instructional], count: 14}
+      - {key: streamline, scope: [instructional], count: 14}
       - {key: balance, scope: [drills], count: 13}
       - {key: sculling, scope: [drills], count: 13}
+      - {key: joint, scope: [instructional], count: 13}
       - {key: tempo, scope: [instructional], count: 13}
       - {key: turn, scope: [drills, instructional], count: 13}
       - {key: pull, scope: [instructional], count: 11}
