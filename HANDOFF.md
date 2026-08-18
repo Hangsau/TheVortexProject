@@ -195,12 +195,16 @@
 
    **來源路徑分兩條（2026-08-18 更正）**——原本此處寫「全部 34 條改用 `resources/books/swimming-kinetic-chain/`」，那是錯的，兩個理由：① 已完成的 5 條 ⚠︎⚠︎ 主張**根本沒用這個資料夾**，是用 NCBI E-utilities 抓 `src.vizsolyi-1987`／`src.vasiliadis-2019`／`src.pink-1993` 三篇裁決的；② 該資料夾 43 篇的關鍵字統計是**蛙式 0、蝶式 0、海豚踢 0、踝 0、body roll 0**，而 34 條裡有 16 條正是蛙式與蝶式。照原路由做只會生出 16 個假的「查無文獻」——那是**蒐集缺口偽裝成文獻缺口**，正是本專案稽核一路在抓的同一類錯誤。
 
-   | 批次 | 條數 | 裁決來源 |
-   |---|---|---|
-   | 自由式 11 + 仰式 5 + 起跳轉身 2 | 18 | `resources/books/swimming-kinetic-chain/`（Carmigniani 2020、Guignard 2019、Hyodo 2025、Gonjo 2021、Relative Contribution Arms/Legs Tethered、Underwater Undulatory SR） |
-   | 蛙式 8 + 蝶式 8 | 16 | NCBI E-utilities（`esearch` → `esummary` → `efetch`），與已完成 5 條同路徑；`db=books` 無效、`pubmed.ncbi.nlm.nih.gov` 的 WebFetch 被 cookie 頁擋住 |
+   **再更正（同日稍後）**：上一段把蛙式蝶式全推給 PubMed 也不對——理由（文獻集蛙蝶各 0 篇）成立，但**當時沒查 `resources/books/`**。該處有兩本游泳書，覆蓋率正好補上文獻集缺的每一項：breaststroke（SoSF 21 檔／FoFS 16 檔）、butterfly（28／15）、dolphin（13／17）、ankle（18／11）、plantarflex（7／9）、body roll（17／0）。且含游泳專項角度量測，例如 SoSF Figure 2.7「整個划手週期各時點的平均肘角度，分 sprint 與 distance 兩種配速」。**兩次都是同一個毛病：拿手邊那個資料夾的「查無」當成文獻缺口，沒先把可用來源盤點完。**
 
-   兩批都適用四軸同一性規則（期刊／年份／主題／文章型態全中才算命中，錯一項就記「找不到」，不得用近似論文頂替）。
+   **定案的查找順序（每條主張都照此走，找到即停）：**
+
+   1. `resources/books/Science_of_Swimming_Faster/`（234 檔）＋ `Fundamentals_of_Fast_Swimming/`（34 檔）— 四式全覆蓋，含角度量測
+   2. `resources/books/swimming-kinetic-chain/`（43 篇）— 僅自由式／仰式／水下蝶腳有料，**蛙蝶踝 body roll 查無不算證據**
+   3. NCBI E-utilities（`esearch` → `esummary` → `efetch`）— 前兩層皆無時才用；`db=books` 無效、`pubmed.ncbi.nlm.nih.gov` 的 WebFetch 被 cookie 頁擋住
+   4. 三層皆無 → 傷害類走協議 §1b 的解剖推導（標 🔵、禁頻率語言與具名診斷）；角度類標「待游泳量測」，不得偽裝成已驗證
+
+   全程適用四軸同一性規則（期刊／年份／主題／文章型態全中才算命中，錯一項就記「找不到」，不得用近似論文頂替）。B 類角度另適用協議 §1a 的「解剖上限 vs 游泳實際值」兩層區分。
 
 2. ~~**既有 canonical 傷害條目的來源健檢**~~ — **34/34 已於 2026-08-18 全部完成**（第 1 批 12、第 2 批 9、第 3 批 13；三份報告見 `reports/injury_source_audit_2026-08-17.md`、`_batch2_2026-08-17.md`、`_batch3_2026-08-18.md`）。
 
