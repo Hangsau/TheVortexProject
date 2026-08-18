@@ -80,6 +80,19 @@ fields:
       - key: common
         count: 6
 
+  # joint_region 只給 category=joint 的條目用：關節校正條目的第一軸是解剖部位
+  # （讀者問「肩怎麼命名」而不是「自由式的肩怎麼命名」），泳式是第二軸。
+  # 標籤（name_zh）同 category 慣例不放本檔，真相源是 technical-analysis.yaml
+  # 自己的 joint_regions 區塊。
+  joint_region:
+    controlled: true
+    review_status: reviewed
+    values:
+      - {key: shoulder-arm, count: 4}
+      - {key: hip-knee,     count: 4}
+      - {key: spine-neck,   count: 3}
+      - {key: ankle-foot,   count: 2}
+
   # certainty 使用 emoji 字元；YAML key 用 Unicode 碼點描述，實際值是單一 emoji。
   # 五個值與 CLAUDE.md 「確定性層次標記」對應，已穩定無需歸一。
   certainty:

@@ -1122,7 +1122,7 @@ def run_validation():
             check_link_ids(rel, eid, links, all_id_set, errors, warnings)
 
         # ── E004: taxonomy 不存在的值 ──
-        for field in ("category", "stroke", "certainty", "status"):
+        for field in ("category", "stroke", "certainty", "status", "joint_region"):
             val = entry.get(field)
             if val is not None and isinstance(val, str):
                 allowed = taxonomy.get(field, set())

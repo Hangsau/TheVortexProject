@@ -28,6 +28,19 @@
 
 **下游**：`my-site/tools/sync_vortex.py` 的白名單加 `also_strokes` 直通；`layouts/vortex/vortex-stroke.html` 的 `$techs` 從單一 `where` 改成手動 range 累積（Hugo 的 `where` 表達不了「stroke 相符 **或** also_strokes 含本式」）。
 
+### ✅ 關節章節開頂層入口——**分類做對了但入口沒開，使用者還是找不到**
+
+上一項做完後使用者回報「網頁上還是找不到入口」。查全站側欄（`my-site/layouts/partials/vortex/sidebar.html`，每頁常駐）確認：11 個主題入口裡「呼吸」「傷害」都在，就是沒有「關節」。13 條被放在第三層——泳式頁 → 往下滾到「深入機制」面板 → 點 chip → 展開卡片。**不先知道這章存在的人，不會點進任一泳式頁去翻。**
+
+根因是我把使用者那句「可以在各式裡呈現」當成唯一擺放位置，只解了「在各式裡怎麼擺」，沒解「怎麼知道它存在」。呼吸章是現成反例：它既是側欄頂層入口，內容也在各式頁被引用，兩件事不衝突。
+
+**canonical 側新增兩個欄位**：
+
+- `joint_region`（受控詞彙，登錄於 `_taxonomy.yaml`）：`shoulder-arm` 4 / `hip-knee` 4 / `spine-neck` 3 / `ankle-foot` 2。**關節校正條目的第一軸是解剖部位不是泳式**——讀者問的是「肩怎麼命名」而不是「自由式的肩怎麼命名」。標籤真相源是 `technical-analysis.yaml` 自己的 `joint_regions` 區塊（同 `categories` 慣例，不放 taxonomy）。驗證器把 `joint_region` 加進 E004 的欄位組，負向測試通過（注入 `bogus-region` 有抓到）。
+- `nav_zh`（沿用 psychology.yaml 既有慣例）：13 條各給 4–7 字短標籤。**沒有這個欄位左欄與分組卡會塞滿整句標題變文字牆**——這章的 title 是完整論斷句（40+ 字），不像傷害條目的 `zh` 是短名。
+
+**my-site 側**：新增 `content/vortex/joints/` + `layouts/vortex/vortex-joints.html` + `static/css/vortex-joints.css`，側欄「內容 · 從地基到表面」加一條「節 骨關節動作 · 命名校正」（排在呼吸與傷害之間）。頁面是文件式全展開（不收合），按部位分四組，每條標它適用哪些泳式並連回各式頁。各式頁的「深入機制」面板反向加一行指路到本章。CSS 走獨立 `vx-jt-*` 前綴自足檔，不 import `vortex-injuries.css`（那份檔名綁傷害頁，跨頁引用會讓歸屬變模糊）。
+
 ### ✅ 傷害條目來源健檢 第 3 批（13/13）——**34/34 全部走完；本批抓到「引用不存在的權威」與「歸屬顛倒」**
 
 完整報告見 `reports/injury_source_audit_batch3_2026-08-18.md`。
