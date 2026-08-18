@@ -6,6 +6,28 @@
 
 ## 當前狀態（2026-08-18，最新）
 
+### ✅ 關節內容可找性修復——新增 `joint` 分類 + `also_strokes` 跨式共用欄位
+
+**問題**：13 條關節校正條目寫進 canonical 後，使用者在網站上「完全找不到」。根因是它們被分散掛在 6 個既有 category（stroke-cycle / hardware / kick / rotation / head / streamline）底下，各式頁的篩選 chip 沒有任何一個能把它們聚起來。
+
+**修法一：`joint` 分類**。`_taxonomy.yaml` 登錄 `joint`（scope: instructional, count: 13），`technical-analysis.yaml` 的 categories 區塊在 `hardware` 後插入 `{key: joint, name_zh: 關節命名與解剖校正}`，13 條全部改掛。順帶修正 6 個因搬離而失準的 count（kick 87→84、stroke-cycle 41→39、head 21→20、hardware 16→12、rotation 15→14、streamline 15→14）。各式頁的 chip 是從該式實際出現的分類自動生成的，所以不需改版型就會冒出「關節命名與解剖校正」按鈕。
+
+**修法二：`also_strokes` 欄位**。使用者問「為什麼自由式 6 個、仰式只有 1 個」——查裁決檔後確認那不是內容不均，是**去重的副作用**：21 條裁決為「修正」的主張裡有大量同源條目（例：BK-08 的根因行明寫「結構性缺陷，與 BK-04 同源」），落 canonical 時採「先裁決的泳式先落地」，所以 5 條其實是四式通用的規則，卻只掛在自由式名下。新增 `also_strokes` 讓一張卡宣告它在哪些別式同樣成立——**一份內容、一個 ID、多式顯示**，不是複製卡片。已掛 5 條：
+
+| 卡片 | 主題 | also_strokes |
+|---|---|---|
+| free.tech.36 | 肩上舉平面缺漏 + 外旋必然伴隨 | back, breast, fly |
+| free.tech.37 | 手掌朝向不能反推前臂旋前旋後 | back, breast, fly |
+| free.tech.38 | 踝無內外旋，三維擺動在距下／橫跗 | back, breast, fly, udk |
+| free.tech.39 | body roll 幾乎不來自腰椎 | back |
+| free.tech.41 | 「膝蓋鎖死」與教科書 knee locking 相反 | back, breast, fly, udk |
+
+各式頁關節卡數量：自由式 6、仰式 6、蛙式 6、蝶式 5、水下蝶腳 3、起跳轉身 2（改前是 6 / 1 / 2 / 1 / 1 / 2）。跨式卡在 summary 掛「跨式通則」標籤，讓讀者知道那不是本式專屬。
+
+**驗證器同步**：`tools/validate.py` 的 E004 原本只檢查 string 欄位，list 欄位一律放行。已補 `also_strokes` 逐值檢查——非 list、含未登錄泳式、或自列本式（會讓該頁畫出兩張同樣的卡）三種情況都報 ERROR。負向測試通過（注入 `[back, free, bogus]` → 抓到 2 個 ERROR）。
+
+**下游**：`my-site/tools/sync_vortex.py` 的白名單加 `also_strokes` 直通；`layouts/vortex/vortex-stroke.html` 的 `$techs` 從單一 `where` 改成手動 range 累積（Hugo 的 `where` 表達不了「stroke 相符 **或** also_strokes 含本式」）。
+
 ### ✅ 傷害條目來源健檢 第 3 批（13/13）——**34/34 全部走完；本批抓到「引用不存在的權威」與「歸屬顛倒」**
 
 完整報告見 `reports/injury_source_audit_batch3_2026-08-18.md`。

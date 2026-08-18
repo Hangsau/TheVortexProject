@@ -1131,6 +1131,27 @@ def run_validation():
                         f"  file={rel} id={eid!r} {field}={val!r}"
                     )
 
+        # ── E004: also_strokes（跨式適用宣告）逐值檢查 ──
+        # 一張卡只有一份內容、一個歸屬泳式（stroke）；also_strokes 宣告它在哪些
+        # 別式同樣成立，各式頁據此顯示同一張卡。自列本式會讓該頁畫出兩張。
+        also = entry.get("also_strokes")
+        if also is not None:
+            allowed = taxonomy.get("stroke", set())
+            if not isinstance(also, list):
+                errors["E004"].append(
+                    f"  file={rel} id={eid!r} also_strokes 須為 list，實際 {type(also).__name__}"
+                )
+            else:
+                for v in also:
+                    if v not in allowed:
+                        errors["E004"].append(
+                            f"  file={rel} id={eid!r} also_strokes 含未登錄泳式 {v!r}"
+                        )
+                    elif v == entry.get("stroke"):
+                        errors["E004"].append(
+                            f"  file={rel} id={eid!r} also_strokes 重複列出自身泳式 {v!r}"
+                        )
+
         # ── E008: category 跨網域誤用 ──
         check_category_scope(
             rel, eid, entry, domain_of(rel), category_scope, taxonomy, errors

@@ -576,6 +576,7 @@ points:
 
   - id: free.tech.36
     stroke: free
+    also_strokes: [back, breast, fly]
     category: joint
     title: 「肩由屈曲轉為外展」不是兩個動作——上舉平面才是缺漏的欄位，且外旋是必然伴隨
     public:
@@ -593,6 +594,7 @@ points:
 
   - id: free.tech.37
     stroke: free
+    also_strokes: [back, breast, fly]
     category: joint
     title: 手掌在水中朝哪裡，不能反推前臂旋前或旋後
     public:
@@ -609,6 +611,7 @@ points:
 
   - id: free.tech.38
     stroke: free
+    also_strokes: [back, breast, fly, udk]
     category: joint
     title: 踝關節沒有「內旋／外旋」——足部的三維擺動發生在距下與橫跗關節
     public:
@@ -625,6 +628,7 @@ points:
 
   - id: free.tech.39
     stroke: free
+    also_strokes: [back]
     category: joint
     title: body roll 幾乎不來自腰椎——胸椎每側 25–35°，腰椎僅 5–7°
     public:
@@ -659,6 +663,7 @@ points:
 
   - id: free.tech.41
     stroke: free
+    also_strokes: [back, breast, fly, udk]
     category: joint
     title: 教練說的「膝蓋鎖死」與教科書的 knee locking 意思相反
     public:
