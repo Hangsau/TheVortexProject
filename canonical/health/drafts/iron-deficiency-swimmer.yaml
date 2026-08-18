@@ -18,11 +18,17 @@ epidemiology:
   prevalence: "女性運動員 11–41% 鐵缺乏（範圍取決於切點與族群）；女子泳者報告 ferritin < 20 ng/mL 比例可達 50%（即使口服鐵補充劑加倍從 20 mg → 40 mg/日，盛行率仍未顯著下降，顯示吸收效率才是瓶頸）"
   certainty: 🟡
   evidence_grade: B
-  caveat: 「鐵儲備不足」vs「臨床貧血」切點差異大；運動性偽貧血（高血漿量稀釋）會讓 Hb 看似低但其實有益於耐力，要與真鐵缺乏區分
+  caveat: >-
+    2026-08-18 更正（查無此文獻）：本欄原掛 `src.ioc-iron-in-sport-doi-webfetch`，
+    引用「IOC 共識聲明 — Iron in sport」——**IOC 從未發表過以鐵為主題的共識聲明**，
+    該 source_id 已解除。移除它不影響任何內容，只是拿掉了「有 IOC 背書」的假象。
+    連帶：**11–41%、50%、20→40 mg 三個數字目前只剩 Sim 2019 這份敘事綜述可掛，
+    而該文是轉述層級、非原始研究**，三者皆須視為待查，不進 public 數字。
+    另：「鐵儲備不足」vs「臨床貧血」切點差異大；運動性偽貧血（高血漿量稀釋）
+    會讓 Hb 看似低但其實有益於耐力，要與真鐵缺乏區分。
   sources:
-    - "IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
     - "Sim M, Garvican-Lewis LA, Cox GR, et al. (2019). Iron considerations for the athlete: a narrative review. Eur J Appl Physiol 119(7):1463–1478. PMID 31055680（**敘事綜述，非原始研究亦非系統回顧**；hepcidin 只是其中一節，引用時屬綜述轉述層級）"
-  source_ids: [src.ioc-iron-in-sport-doi-webfetch, src.sim-2019]
+  source_ids: [src.sim-2019]
 
 risk_factors:
   - { text: "女性（月經損失約每月 30 mg）", grade: A }

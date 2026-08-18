@@ -14,13 +14,23 @@ mechanism:
   who: 初學出發動作的青少年競技泳者、技術訓練不足者、泳道秩序混亂(公開水域起跑)
 
 epidemiology:
-  prevalence: "高中游泳與跳水：563 件傷害 / 2,171,260 次暴露(0.26/1000 AE)；跳水項目頭/臉傷 36.6%、接觸池面/地面傷 68.3%、腦震盪為最常見傷型(31.7%)。游泳/跳水是高中 20 項運動傷害率最低者之一"
+  prevalence: >-
+    高中游泳與跳水（RIO 監測 2008–2019 學年）：563 件傷害 ／ 2,171,260 次暴露（0.26／1000 AE）；
+    **跳水者頭／臉傷佔 36.6%、接觸池面／地面所致佔 68.3%**。
+    游泳／跳水是高中運動中傷害率最低者之一。
   certainty: 🟢
   evidence_grade: B
-  caveat: 競賽出發台直接致脊髓損傷的獨立流病數據缺乏(多併入一般跳水傷統計)；『70% 泳池傷害為頭頸部』為二手引用、原始數據源待查
+  caveat: >-
+    2026-08-18 更正（兩處）：① 原寫「腦震盪為最常見傷型(31.7%)」——
+    Belilos 等 2023 摘要**未報出腦震盪佔比**，此數字無來源，已移出；
+    ② 原將 Helmich 等 2024 的 Para 個案寫成「視障選手」——
+    該個案實為**肢體缺損（limb deficiency）**組別泳者，且是 **n=1 個案報告**，
+    不能作為族群風險陳述。
+    另：競賽出發台直接致脊髓損傷的獨立流病數據缺乏(多併入一般跳水傷統計)；
+    『70% 泳池傷害為頭頸部』為二手引用、原始數據源待查。
   sources:
-    - "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)"
-    - "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024 (已驗證)"
+    - "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434. PMID 36715985"
+    - "Helmich I, et al. (2024). Neurobehavioural consequences of repetitive head impacts in Para swimming（n=1 個案報告）. J Sci Med Sport 27(1):16-19. PMID 37923648"
   source_ids: [src.pmc10372189, src.neurobehavioral-consequences-of-repetitive-h]
 
 risk_factors:
@@ -60,7 +70,7 @@ population_notes:
     masters: ~
   sex: ~
   ability:
-    para: "視障 Para 選手腦震盪累積風險，需特別監測"
+    para: "Para 選手反覆頭部撞擊的神經行為後遺——文獻僅有 n=1 個案（肢體缺損組泳者，Helmich 2024），不足以推論族群風險；視障組別的觸牆撞擊風險屬機制推導(🔵)，無流病數據"
   lifecycle:
     open_water: "公開水域起跑碰撞為獨特場景"
 
@@ -71,17 +81,18 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189", certainty: 🟢, verified: true }
+  - { citation: "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434. PMID 36715985", certainty: 🟢, verified: true }
   - { citation: "Epidemiology NCAA Swimming and Diving, PubMed 34280272", certainty: 🟢, verified: true }
-  - { citation: "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024", certainty: 🟡, verified: true }
+  - { citation: "Helmich I, et al. (2024). Neurobehavioural consequences of repetitive head impacts in Para swimming（n=1 個案報告，肢體缺損組）. J Sci Med Sport 27(1):16-19. PMID 37923648", certainty: 🟡, verified: true }
 
 flags:
   pending_verification:
     - "『70% 泳池傷害為頭頸部』為二手引用，原始數據源待查，不進 public 數字；作者/DOI 待 W3"
+    - "『腦震盪為最常見傷型 31.7%』——Belilos 2023 摘要無此數字，已從流行率欄移出，原始出處待查"
   contested:
     - claim: "腦震盪在游泳的發生率估計"
-      consensus_source: "高中數據腦震盪為最常見游泳/跳水傷型"
-      dissent_source: "『>50% 泳池傷害為頭部』來源不明，二手引用不應視為流病數據"
+      consensus_source: "跳水者頭／臉為最常受傷部位(36.6%)有監測數據支持"
+      dissent_source: "『腦震盪為最常見傷型』與『>50% 泳池傷害為頭部』皆無可追溯來源，不應視為流病數據"
   vintage_warning: false
 
 audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

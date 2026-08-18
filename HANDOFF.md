@@ -4,7 +4,30 @@
 
 ---
 
-## 當前狀態（2026-08-17，最新）
+## 當前狀態（2026-08-18，最新）
+
+### ✅ 傷害條目來源健檢 第 3 批（13/13）——**34/34 全部走完；本批抓到「引用不存在的權威」與「歸屬顛倒」**
+
+完整報告見 `reports/injury_source_audit_batch3_2026-08-18.md`。
+
+**進度**：34 個非 verified 的 source_id 全部處置完畢（第 1 批 12、第 2 批 9、第 3 批 13）。本批 10 個升級 verified、4 個解除引用、1 個新增（Trikha 2022 NCAA D1 泳者 641 人研究）。
+
+#### 本批新增的四種錯誤型態
+
+1. **引用不存在的權威**：`iron-deficiency-swimmer` 掛「IOC 共識聲明 — Iron in sport」——**IOC 從未發表過以鐵為主題的共識聲明**。已解除。移除它一個字的內容都沒少，只是拿掉了「有 IOC 背書」的假象；連帶該條目 11–41%／50%／20→40 mg 三個數字現在只剩一份敘事綜述可掛，全降為待查。
+2. **歸屬顛倒**：`drowning` 寫「WHO 2024：約 274,200 人（另估 ~30 萬）」——**方向反了，30 萬才是 WHO 的數字，274,200 屬 GBD／IHME**。純機器檢查抓不到：source_id 存在、URL 可驗、數字也真的存在於文獻中，只是屬於另一個機構。
+3. **重複登錄（三組）**：Mountjoy IOC 共識 ×2、Vasiliadis 應力性骨折回顧 ×2、Belilos 高中傷害監測 ×2（第三組是我自己在第 2 批誤建的，已刪除並在存活 id 記下更正）。危害在來源反向索引——**一份文獻顯示成兩份獨立支撐**。
+4. **族群張冠李戴**：`starting-block-impact` 把 Helmich 2024 的 Para 個案寫成「視障選手」，實為**肢體缺損**組別，且是 **n=1 個案報告**，卻被寫進 `population_notes.ability.para` 當族群風險——族群錯、樣本量隱去、個案放大成族群，三重失真。
+
+#### 被移出流行率欄的 7 個無來源數字
+
+這些數字原本掛在**真實且已驗證**的來源之下，但該來源的摘要並未報出它們：腦震盪 31.7%、女性佔 MDI 35.7%、喙肱距每 mm +20%、游泳三聯症 41%、踝部佔傷害 1%、外耳炎 5 倍風險、「肘佔比低」。全部改列 `flags.pending_verification`。
+
+#### W008 上升到 18 筆是正確結果
+
+孤兒來源代表「這份登錄不再有任何條目依賴它」。把查無實據的引用解除之後本來就會多出孤兒；**反過來把它們硬升級成 verified 才會讓警告消失，那是造假**。
+
+---
 
 ### ✅ 傷害條目來源健檢 第 2 批（佔位字串 8/8 全部完成）——**佔位符背後有真文獻，而且掛在上面的數字幾乎全錯**
 
@@ -170,11 +193,14 @@
 
 1. **C 類其餘 34 條**（39 減本批 5 條）：改用 `resources/books/swimming-kinetic-chain/` 文獻集裁決，**不得再用兩本解剖教科書**。本批已證實這類條目的錯誤型態是「機制記反」而非「誇大」，因此**逐條追一手來源逐字比對是唯一有效的方法，不能靠讀起來合不合理來篩**。查無文獻者明標「待游泳文獻」，不得偽裝成已驗證。
 
-2. **既有 canonical 傷害條目的來源健檢**（**已完成 21/34：第 1 批 12 個、第 2 批 8 個佔位字串全清 + ASTM**；見最上方兩段與 `reports/injury_source_audit_2026-08-17.md`、`reports/injury_source_audit_batch2_2026-08-17.md`）：**剩 13 個，優先序仍高於第 1 項**，分兩類：
-   - **可查但非 PubMed（7 個）**：`src.cdc-mmwr-2003-2007`、`src.who-2024-12-13-drowning-deaths-decline-globa-2024`、`src.ioc-red-s-2014-2018-2023-doi`、`src.ioc-iron-in-sport-doi-webfetch`、`src.mountjoy-ioc-consensus-webfetch`、`src.red-s-clinical-assessment-tool-framework-ioc`、`src.ecg-scd-3-6-0-4-10-89-url`——走官方網站或 DOI
-   - **標題可查、需回推書目（6 個）**：`src.female-athlete-triad-in-swimmers-systematic`、`src.mdi-management-review-annals-of-joint`、`src.neurobehavioral-consequences-of-repetitive-h`、`src.quebec-44-year-diving-sci-study-sciencedirec`、`src.stress-fractures-in-swimmers-systematic-revi`、`src.swimming-injury-imaging-review-1-radiologyke`
+2. ~~**既有 canonical 傷害條目的來源健檢**~~ — **34/34 已於 2026-08-18 全部完成**（第 1 批 12、第 2 批 9、第 3 批 13；三份報告見 `reports/injury_source_audit_2026-08-17.md`、`_batch2_2026-08-17.md`、`_batch3_2026-08-18.md`）。
 
-   **方法已被兩批證實**：不能只判斷「來源存不存在」，必須逐條把數字追回摘要逐字比對——第 2 批四處錯誤中有一處是**低估**、一處是**標準張冠李戴**，兩者都不會在「讀起來合不合理」的篩檢中露出來。另外，**`verification_status: verified` 不保證該來源能支撐掛在它下面的宣稱**（`src.pmc8147101` 事件），新增來源一律附 `使用邊界`。全庫仍有約 50 筆 `flags.pending_verification` 與 15 筆 `references: verified: false` 未逐條處理。
+   **三批共同驗證的方法**：不能只判斷「來源存不存在」，必須逐條把數字追回摘要逐字比對——錯誤方向不固定（灌水／反寫／**低估**／張冠李戴／歸屬顛倒），全都不會在「讀起來合不合理」的篩檢中露出來。另外，**`verification_status: verified` 不保證該來源能支撐掛在它下面的宣稱**（`src.pmc8147101` 事件），新增來源一律附 `使用邊界`。
+
+   **接續的下一層工作**（優先序低於第 1 項）：
+   - 第 3 批移出流行率欄的 **7 個無來源數字**逐一回追原始文獻，找不到就永久標為文獻空白
+   - 全庫約 50 筆 `flags.pending_verification`
+   - 48 份 drafts 中的 `references: verified: false` 條目
 
 3. **P5 第二階段（可選）**：把 canonical 的 14 條新發現回寫進 `Instructional/*深度技術分析.md` 對應章節（**改既有檔，不另開新檔**）。canonical 已落地，散文層只是呈現層。
 

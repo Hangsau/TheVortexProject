@@ -17,11 +17,16 @@ epidemiology:
   prevalence: "美國每年約 800 起跳水致脊髓損傷(約 90% 永久癱)；90% 發生於水深 <6 英尺(1.83m)、57% <4 英尺(1.22m)；受傷節段 C5 最常見(60.9%)；入院 55% 為完全性四肢癱(AIS A)"
   certainty: 🟢
   evidence_grade: B
-  caveat: 「每年 800 起」為多個美國傷害登記的廣泛引用估計(非單一 peer-reviewed 計數)；跳水佔所有脊髓損傷 1.2–22%(族群/登記系統差異大)
+  caveat: >-
+    「每年 800 起」為多個美國傷害登記的廣泛引用估計(非單一 peer-reviewed 計數)；
+    跳水佔所有脊髓損傷 1.2–22%(族群/登記系統差異大)。
+    **使用邊界（2026-08-18 補）**：Barss 等 2008 的魁北克 44 年研究**回收率僅 44%**，
+    存在選擇偏誤；其樣本以**私人／住家泳池的休閒式跳水**為主，
+    **不是競賽出發台跳水**——本條目談出發台時不得直接套用其數字。資料涵蓋至 2004 年（🟡）。
   sources:
     - "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)"
     - "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"
-    - "Quebec 44-year diving SCI study, ScienceDirect (已驗證)"
+    - "Barss P, et al. (2008). Risk factors and prevention for spinal cord injury from diving, Quebec 1963-2004. Accid Anal Prev 40(2):787-97. PMID 18329434"
   source_ids: [src.pmc2899837, src.pmc8192199, src.quebec-44-year-diving-sci-study-sciencedirec]
 
 risk_factors:

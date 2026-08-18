@@ -17,10 +17,15 @@ epidemiology:
   prevalence: "競技運動員(≤35 歲)SCA/SCD 男性約 1.46、女性約 0.30 /10 萬運動員年；≤35 歲青年運動員猝死中 HCM 約佔 36%"
   certainty: 🟢
   evidence_grade: B
-  caveat: 游泳池獨立 SCD 數字無可靠單一來源，多依運動員整體數據推算；鐵人三項游泳段每 10 萬數字研究間差異大
+  caveat: >-
+    游泳池獨立 SCD 數字無可靠單一來源，多依運動員整體數據推算；鐵人三項游泳段每 10 萬數字研究間差異大。
+    **使用邊界（2026-08-18 補）**：「3.6→0.4／10 萬、降 89%」出自 Corrado 等 2006（JAMA 296(13):1593-601），
+    其資料範圍是**義大利 Veneto 單一大區、1979–2004 年、全體競技運動員**，
+    **不是游泳專項**；且 ECG 全面篩查的成本效益在 ACC／AHA 立場中仍有異議，
+    引用此數字時須同時呈現該爭議（見 flags.contested）。
   sources:
     - "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)"
-    - "義大利 ECG 篩查自然實驗(SCD 3.6→0.4 /10 萬，降 89%) (已驗證 URL)"
+    - "Corrado D, Basso C, Pavei A, et al. (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601. PMID 17018804, doi:10.1001/jama.296.13.1593"
     - "Commotio Cordis in 2023, PMC10356869 (已驗證)"
   source_ids: [src.pmc11985649, src.ecg-scd-3-6-0-4-10-89-url, src.pmc10356869]
 
@@ -83,6 +88,7 @@ references:
   - { citation: "Athletic Activity for Patients with Hypertrophic Cardiomyopathy, JACC 2022", certainty: 🟢, verified: true }
   - { citation: "Commotio Cordis in 2023, PMC10356869", certainty: 🟢, verified: true }
   - { citation: "Meta-analysis on ECG Screening for SCD in Young Athletes, PMC10478328", certainty: 🟢, verified: true }
+  - { citation: "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601. PMID 17018804（義大利 Veneto 單區、全體競技運動員、非游泳專項）", certainty: 🟢, verified: true }
   - { citation: "Lundström et al. diving reflex arrhythmia 2025, PMC12234767", certainty: 🟢, verified: true }
 
 flags:

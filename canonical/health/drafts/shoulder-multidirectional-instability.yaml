@@ -13,13 +13,20 @@ mechanism:
   who: 女性、雙側症狀者、結締組織鬆弛者、年輕游泳者
 
 epidemiology:
-  prevalence: "MDI 佔所有肩不穩定 <10%；女性佔 MDI 患者約 35.7%(整體肩不穩定男性為 2.7 倍但 MDI 性別趨近)；喙肱距每增 1 mm 風險上升約 20%；游泳者 MDI 盛行率高於其他運動但無精確數字"
+  prevalence: >-
+    MDI 佔所有肩不穩定 <10%；游泳者 MDI 盛行率被認為高於其他運動，但**無精確數字**。
+    對照 Trikha 等 2022（NCAA D1 泳者）：肩部佔肌肉骨骼傷害 **23.3%（126/540）**，
+    為第一大部位——但該研究**未區分 MDI 與其他肩病理**，不能當 MDI 盛行率。
   certainty: 🟠
   evidence_grade: C
-  caveat: TOS/旋轉肌袖損傷易混淆；游泳者 MDI 特定盛行率僅為摘要層級無前瞻數據；診斷標準不完全統一
+  caveat: >-
+    2026-08-18 更正（來源撐不起數字）：原欄寫「女性佔 MDI 患者約 35.7%」「喙肱距每增 1 mm 風險上升約 20%」，
+    掛在 Bishop 等 2022（Ann Joint 7:10）之下——**該文是敘事型回顧、以女性運動員視角撰寫、未做統合統計，
+    摘要中沒有這兩個數字**，已移出流行率欄。要保留須另找原始研究。
+    另：TOS／旋轉肌袖損傷易混淆；游泳者 MDI 特定盛行率僅為摘要層級無前瞻數據；診斷標準不完全統一。
   sources:
     - "Multidirectional instability of the shoulder, StatPearls NBK557726 (已驗證)"
-    - "MDI management review, Annals of Joint (已驗證)"
+    - "Bishop ME, et al. (2022). Multidirectional instability of the shoulder（敘事型回顧）. Ann Joint 7:10. PMID 38529164"
   source_ids: [src.multidirectional-instability-of-the-shoulder, src.mdi-management-review-annals-of-joint]
 
 risk_factors:
@@ -74,12 +81,13 @@ links:
 
 references:
   - { citation: "Multidirectional instability of the shoulder, StatPearls NBK557726", certainty: 🟢, verified: true }
-  - { citation: "MDI management and surgical outcomes review, Annals of Joint", certainty: 🟢, verified: true }
+  - { citation: "Bishop ME, Ode GE, Hurwit DJ, et al. (2022). Multidirectional instability of the shoulder（敘事型回顧，女性運動員視角，無統合統計）. Ann Joint 7:10. PMID 38529164, doi:10.21037/aoj-20-33", certainty: 🟢, verified: true }
   - { citation: "Arthroscopic vs open MDI repair outcomes, PMC5611704", certainty: 🟢, verified: true }
 
 flags:
   pending_verification:
     - "游泳者 MDI 特定盛行率僅摘要層級；作者全名/DOI 待 W3"
+    - "「女性佔 MDI 患者約 35.7%」「喙肱距每增 1 mm 風險上升約 20%」——原掛的 Bishop 2022 摘要無此二數，已移出流行率欄，待找原始研究"
   contested:
     - claim: "先天 vs 後天鬆弛比例"
       consensus_source: "MDI 涵蓋先天廣泛鬆弛與後天反覆微創傷兩型"

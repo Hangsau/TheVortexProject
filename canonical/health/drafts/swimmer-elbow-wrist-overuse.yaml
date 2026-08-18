@@ -32,7 +32,7 @@ epidemiology:
     - "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434"
     - "Wolf BR, Ebinger AE, Lawler MP, Britton CL (2009). Injury patterns in Division I collegiate swimming. Am J Sports Med 37(10):2037-42"
   source_ids:
-    - src.belilos-2023-hs-swimming-injury-epi
+    - src.pmc10372189
     - src.wolf-2009-ncaa-swimming-injury-patterns
 
 risk_factors:

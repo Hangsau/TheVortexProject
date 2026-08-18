@@ -14,14 +14,24 @@ mechanism:
   who: 過用蛙鞋者、快速增量者、翻滾轉身技術不良者
 
 epidemiology:
-  prevalence: "踝部佔游泳整體傷害約 1%；蛙鞋使用者個案報告外側踝骨髓水腫(11 歲女精英)、趾伸支持帶水腫(14 歲女精英)；系統性流行率游泳特定幾乎缺失"
+  prevalence: >-
+    游泳踝足的專項發生率**目前沒有可引用的來源**。
+    可對照的是 Trikha 等 2022（NCAA D1 泳者 641 人、1030 件健康事件）：
+    足／踝／小腿佔肌肉骨骼傷害 **15.0%（81/540）**，排名第三。
+    蛙鞋相關僅有個案報告（外側踝骨髓水腫、趾伸支持帶水腫，皆為青少年女性精英個案）。
   certainty: 🔵
   evidence_grade: C
-  caveat: 幾乎全靠個案報告與推斷，無控制研究；公開呈現須明標證據等級低；蛙鞋安全劑量無 RCT
+  caveat: >-
+    2026-08-18 更正（來源解除）：原引「踝部佔游泳整體傷害約 1%」出自 radiologykey.com，
+    該站是教科書章節的未授權轉載、無作者／年份／書名，**不可引用，已解除**；
+    該 1% 數字因此成為孤兒數字，且與 Trikha 2022 的 15.0% 相差一個量級（分組定義不同，
+    不構成嚴格反證，但足以說明不可再引用）。
+    另：Vasiliadis 等 2018 的游泳應力性骨折回顧**主題是肋骨，不是踝足**，
+    不能拿來支撐本條目的踝足流行率。
+    幾乎全靠個案報告與推斷，無控制研究；公開呈現須明標證據等級低；蛙鞋安全劑量無 RCT。
   sources:
-    - "Swimming injury imaging review (踝部約 1%), radiologykey (已驗證)"
-    - "Stress fractures in swimmers systematic review, journals.aiac.org.au (已驗證)"
-  source_ids: [src.swimming-injury-imaging-review-1-radiologyke, src.stress-fractures-in-swimmers-systematic-revi]
+    - "Trikha R, et al. (2022). Characterizing Health Events and Return to Sport in Collegiate Swimmers. Orthop J Sports Med 10(4):23259671221083588. PMID 35400141"
+  source_ids: [src.trikha-2022-collegiate-swimmer-health-events]
 
 risk_factors:
   - { text: "蛙鞋過用/尺寸不合", grade: Expert }
@@ -74,12 +84,13 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Imaging of swimming injuries (ankle ~1%), radiologykey", certainty: 🟠, verified: true }
-  - { citation: "Stress fractures in swimmers (systematic review), journals.aiac.org.au", certainty: 🟢, verified: true }
+  - { citation: "Trikha R, Schroeder GG, Greig DE, Kremen TJ Jr (2022). Characterizing Health Events and Return to Sport in Collegiate Swimmers. Orthop J Sports Med 10(4):23259671221083588. PMID 35400141", certainty: 🟢, verified: true }
+  - { citation: "Vasiliadis AV, et al. (2018). Stress fractures in swimmers: systematic review. Int J Kinesiol Sports Sci 6(3):25-31（主題為肋骨，非踝足；僅作對照）", certainty: 🟡, verified: true }
 
 flags:
   pending_verification:
     - "趾伸肌腱病 2–6 週恢復(NHS Lanarkshire)、個案影像數據為摘要/小樣本待 W3"
+    - "『踝部佔游泳整體傷害約 1%』——原引用(radiologykey)已解除，此數字目前無來源，不得進 public"
   contested:
     - claim: "游泳是否『保護』踝足"
       consensus_source: "普遍認為低衝擊極少傷"

@@ -13,12 +13,21 @@ mechanism:
   who: 偏瘦/耐力型女性、菁英訓練量者、青春期中後期者
 
 epidemiology:
-  prevalence: "女性運動員約 40% 至少有一項三聯症成分；游泳族群約 41% 有三聯症風險(系統性回顧 n=478，17 研究)；完整三聯症(三項全具備)盛行率約 1–4%"
+  prevalence: >-
+    游泳專項系統性回顧（Buchanan 等 2025, J Womens Sports Med）：
+    **低能量可及性約 51%、低骨密度約 12%**；月經失調比例各研究差距極大。
+    納入研究數與泳者總人數在文中有兩種讀法（17 篇納入／478 人來自其中報出人數的 11 篇），
+    **本條目不採用單一「n=478，17 研究」的寫法**。
+    女性運動員整體「至少有一項三聯症成分」約 40%、完整三聯症約 1–4% 屬跨運動舊估計，非游泳專項。
   certainty: 🟡
   evidence_grade: B
-  caveat: 各研究診斷標準不一；游泳族群月經失調可能含高雄激素型(見 exercise-amenorrhea)，與低雌激素型骨骼影響不同
+  caveat: >-
+    2026-08-18 更正：原寫「游泳族群約 41% 有三聯症風險(系統性回顧 n=478，17 研究)」——
+    41% 無法在該回顧摘要中對上，樣本描述亦有歧義，已改寫為可對上的 51%／12% 兩項。
+    另：各研究診斷標準不一；游泳族群月經失調可能含高雄激素型(見 exercise-amenorrhea)，
+    與低雌激素型骨骼影響不同。
   sources:
-    - "Female athlete triad in swimmers systematic review, JWSM (已驗證，無 PMID 記載)"
+    - "Buchanan BK, et al. (2025). Female athlete triad in swimmers: a systematic review. J Womens Sports Med 5(1):30-38. doi:10.53646/ahq2qs39"
     - "RED-S Clinical Assessment Tool framework (IOC)"
   source_ids: [src.female-athlete-triad-in-swimmers-systematic, src.red-s-clinical-assessment-tool-framework-ioc]
 

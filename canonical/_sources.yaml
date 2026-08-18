@@ -398,18 +398,21 @@ sources:
       本 id 保持 unverified 且不得再被引用。
 
   - id: src.aiac-ijkss-v-6n-1p-25
-    display: "Stress fractures in swimmers systematic review, IJKSS DOI 10.7575/aiac.ijkss.v.6n.1p.25 (已驗證)"
+    display: "【重複登錄，已解除】與 src.stress-fractures-in-swimmers-systematic-revi 為同一篇（Vasiliadis 2018, IJKSS）"
     title: "Swimmers Are At Risk For Stress Fractures? A Systematic Review"
     type: review
-    verification_status: verified
-    authors: ["Angelo V. Vasiliadis", "Vasileios Lampridis", "Dimitrios Georgiannos", "Ilias Bisbinas"]
+    verification_status: unverified
     year: 2018
     container: "International Journal of Kinesiology and Sports Science"
     identifier:
       doi: "10.7575/aiac.ijkss.v.6n.1p.25"
-      url: "https://doi.org/10.7575/aiac.ijkss.v.6n.1p.25"
-    retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 稽核（重複登錄）：本 id 與 `src.stress-fractures-in-swimmers-systematic-revi`
+      指向同一篇文獻（同標題、同 DOI、同作者群），只是登錄時間與顯示字串不同。
+      同一份文獻掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐。
+      已統一到書目較完整、含使用邊界的 `src.stress-fractures-in-swimmers-systematic-revi`，
+      本 id 解除引用、不再使用。
 
   - id: src.akkurt-2017
     display: "【查無此文獻】原記為「Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述）」，PubMed 檢索不到對應文獻"
@@ -650,10 +653,27 @@ sources:
       ——那是流行病學使用率，不是運動表現研究的輸出。此為「來源存在與否」之外的第二層錯誤：**引用與主張不對應**。
 
   - id: src.cdc-mmwr-2003-2007
-    display: "CDC MMWR 急性外耳道炎門診資料 2003–2007 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Centers for Disease Control and Prevention. (2011). Estimated burden of acute otitis externa — United States, 2003-2007. MMWR Morb Mortal Wkly Rep 60(19):605-9."
+    title: "Estimated burden of acute otitis externa--United States, 2003-2007."
+    type: journal-article
+    verification_status: verified
+    authors: ["Centers for Disease Control and Prevention (CDC)", "Piercefield EW", "Collier SA", "Hlavsa MC", "Beach MJ"]
+    year: 2011
+    container: "MMWR. Morbidity and Mortality Weekly Report"
+    identifier:
+      pmid: "21597452"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 逐字比對摘要定位成功。原顯示字串「CDC MMWR 急性外耳道炎門診資料 2003–2007」
+      沒有作者、期刊、卷期卻標「已驗證」；實際文獻**發表於 2011 年**，
+      2003–2007 是資料期間不是文獻年份，原字串把兩者混為一談。
+      摘要數字：**2007 年估計 240 萬次就診（每千人 8.1）**；2003–2007 年門診率
+      以 5–9 歲最高（每千人 18.6）、10–14 歲次之（15.8）；**53% 的就診發生在 ≥20 歲成人**（每千人 5.3）；
+      夏季高峰；南部區域最高（9.1）；年直接醫療費用達 5 億美元。
+      **使用邊界**：① **240 萬次／每千人 8.1 是 2007 單年數字**，
+      不可寫成「2003–2007 年年門診約 240 萬次」；
+      ② 分母是全美人口就診，**不是游泳者**——本來源不能支撐任何「游泳者相對風險」倍數；
+      ③ 行政資料（門診／急診資料庫）以診斷碼計，非前瞻監測。
 
   - id: src.ch11-table-11-1-methods-of-developing-low-in
     display: "Ch11 Table 11.1 Methods of developing low-intensity exercise endurance"
@@ -774,32 +794,8 @@ sources:
       2026-08-17 判定並解除引用。這個字串**根本不是來源**——它描述的是「沒有來源」這件事本身，
       卻被登錄成 source_id 掛在條目上，讀起來像有引用。
       `swimmer-elbow-wrist-overuse` 的「肩部佔絕大多數、肘部佔比低」實際上是有監測資料的：
-      已改掛 src.belilos-2023-hs-swimming-injury-epi 與 src.wolf-2009-ncaa-swimming-injury-patterns。
+      已改掛 src.pmc10372189 與 src.wolf-2009-ncaa-swimming-injury-patterns。
       本 id 保持 unverified 且不得再被引用。
-
-  - id: src.belilos-2023-hs-swimming-injury-epi
-    display: "Belilos E, Jow S, Maxwell M. (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434."
-    title: "Descriptive Epidemiology of High School Swimming and Diving Injuries."
-    type: journal-article
-    verification_status: verified
-    authors: ["Belilos E", "Jow S", "Maxwell M"]
-    year: 2023
-    container: "Clinical Journal of Sport Medicine"
-    identifier:
-      pmid: "36715985"
-      doi: "10.1097/JSM.0000000000001121"
-      pmcid: "PMC10372189"
-    retrieved_on: "2026-08-17"
-    notes: >-
-      2026-08-17 查證新增。High School RIO 全國傷害監測系統 2008–2019 學年：
-      **563 件游泳與跳水傷害／2,171,260 人次暴露（0.26 件／1000 AE）**。
-      女性傷害率高於男性（整體 RR 1.57、練習 RR 1.53、比賽 RR 1.81，均 P < 0.05）。
-      **泳者傷害部位以肩最多（48.6%）**，最常與自由式相關（67.3%），過度使用／慢性佔 58.0%；
-      跳水者以頭／臉最多（36.6%）。
-      **使用邊界**：① 摘要層級**未列出肘部的獨立比例**——本來源能支撐的是「肩部主導」，
-      「肘佔比低」是由肘未進入主要部位清單所做的推論，不是直接數據；
-      ② 族群為美國高中（約 14–18 歲），不可直接外推到成人分齡或菁英選手；
-      ③ 分母是 athlete-exposure 不是人數。
 
   - id: src.wolf-2009-ncaa-swimming-injury-patterns
     display: "Wolf BR, Ebinger AE, Lawler MP, Britton CL. (2009). Injury patterns in Division I collegiate swimming. Am J Sports Med 37(10):2037-42."
@@ -911,10 +907,27 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.ecg-scd-3-6-0-4-10-89-url
-    display: "義大利 ECG 篩查自然實驗(SCD 3.6→0.4 /10 萬，降 89%) (已驗證 URL)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G. (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601."
+    title: "Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program."
+    type: journal-article
+    verification_status: verified
+    authors: ["Corrado D", "Basso C", "Pavei A", "Michieli P", "Schiavon M", "Thiene G"]
+    year: 2006
+    container: "JAMA"
+    identifier:
+      pmid: "17018804"
+      doi: "10.1001/jama.296.13.1593"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 逐字比對摘要，**3.6 → 0.4／10 萬人年、降 89% 完全相符**（P for trend < .001）。
+      義大利 Veneto 區 1979–2004 年 12–35 歲族群研究：篩查運動員 55 例心因猝死
+      （1.9／10 萬人年），未篩查非運動員 265 例（0.79／10 萬人年）且期間**沒有顯著變化**——
+      這個對照組才是「自然實驗」成立的關鍵。相對風險：早期篩查期 0.56（95% CI 0.29–1.15），
+      晚期 0.21（0.09–0.48）。**下降幾乎全來自心肌病變猝死減少**（1.50 → 0.15／10 萬人年）。
+      **使用邊界**：① 單一區域（Veneto）觀察性自然實驗，不是 RCT；
+      ② 族群是**全體競技運動員，不是游泳者**——不能支撐游泳專項的篩查效益；
+      ③ 這是義大利強制篩查制度下的結果，不可外推到篩查涵蓋率低的地區；
+      ④ ACC/AHA 對常規 ECG 篩查的反對意見依然存在，本來源只是爭議的一方。
 
   - id: src.elite-japanese-swimmer-4month
     display: "Elite Japanese swimmer study, 4-month intervention"
@@ -965,10 +978,30 @@ sources:
       **本 id 保持 unverified 且不得再被任何條目引用；成為孤兒來源（W008）是正確結果。**
 
   - id: src.female-athlete-triad-in-swimmers-systematic
-    display: "Female athlete triad in swimmers systematic review, JWSM (已驗證，無 PMID 記載)"
+    display: "Buchanan BK, Bergstein VE, Rothschild EF, Coslick A. (2025). The Female Athlete Triad in Swimmers: a Review of Current Literature. J Womens Sports Med 5(1):30-38."
+    title: "The Female Athlete Triad in Swimmers: a Review of Current Literature"
     type: review
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: verified
+    authors: ["Buchanan BK", "Bergstein VE", "Rothschild EF", "Coslick A"]
+    year: 2025
+    container: "Journal of Women's Sports Medicine"
+    identifier:
+      doi: "10.53646/ahq2qs39"
+    url: "https://jwomenssportsmed.org/index.php/jwsm/article/view/68"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 取回期刊頁面定位成功。原顯示字串只有「JWSM（已驗證，無 PMID 記載）」，
+      沒有作者、年份、卷期——現補齊：**2025 年、第 5 卷第 1 期、30-38 頁、DOI 10.53646/ahq2qs39**。
+      2023-11-08 檢索 PubMed 與 Google Scholar，259 篇中納入 **17 篇**。
+      數字：**約 41% 女性泳者被評估為有三聯症風險**；月經失調最常見（平均約 41%）；
+      **低骨密度近 12%**；**低能量可用性 51%**。
+      **使用邊界**：① 標題自稱「a Review of Current Literature」，
+      期刊頁摘要卻寫 systematic review——**體例自我不一致**，引用時以「文獻回顧」看待較保險；
+      ② **「17 篇／478 人」的對應關係有兩種說法**：檢索結果指出 478 人是
+      **有報告人數的 11 篇**加總，期刊頁摘要則寫成 17 篇 478 人（全文未開啟，未能判定），
+      引用時不應寫死「17 研究 n=478」；
+      ③ **不是 PubMed 收錄期刊**，無 PMID；
+      ④ 各納入研究的三聯症判定標準不一，41% 是彙整值不是合併統計量。
 
   - id: src.fernandes-2024
     display: "Fernandes et al. 2024"
@@ -1267,16 +1300,45 @@ sources:
     notes: "S3c 依 PMCID PMC11125574 確認作者應為 Venckunas & Achramavicius，正文引用已更正。"
 
   - id: src.ioc-iron-in-sport-doi-webfetch
-    display: "IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
+    display: "【查無此文獻，已解除】IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 解除引用。**IOC 從未發表過以鐵（iron）為主題的共識聲明**——
+      這個字串把一份不存在的權威文件掛在條目上，性質同 `open-water-slip-fall` 的
+      ASTM F2508 張冠李戴：不是引錯版本，是引了一份沒有的東西。
+      IOC 共識聲明系列涵蓋 RED-S／REDs、營養、膳食補充劑等主題，鐵只在其中被順帶處理，
+      不構成獨立聲明。
+      `iron-deficiency-swimmer` 條目實際可用的權威敘述來自
+      **Sim M 等 2019 年 Eur J Appl Physiol 敘事綜述**（src.sim-2019，PMID 31055680），
+      該條目本來就已掛著它，解除本 id 不會使任何內容失去支撐，
+      只是移除了「有 IOC 背書」的假象。
+      本 id 保持 unverified 且不得再被引用。
 
   - id: src.ioc-red-s-2014-2018-2023-doi
-    display: "IOC RED-S 共識聲明（2014 首版，2018/2023 更新；具體 DOI 待查）"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Mountjoy M, Ackerman KE, Bailey DM, et al. (2023). 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs). Br J Sports Med 57(17):1073-1097."
+    title: "2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs)."
+    type: guideline
+    verification_status: verified
+    authors: ["Mountjoy M", "Ackerman KE", "Bailey DM", "Burke LM", "Constantini N", "Hackney AC", "Heikura IA", "Melin A", "Pensgaard AM", "Stellingwerff T", "Sundgot-Borgen JK", "Torstveit MK", "Jacobsen AU", "Verhagen E", "Budgett R", "Engebretsen L", "Erdener U"]
+    year: 2023
+    container: "British Journal of Sports Medicine"
+    identifier:
+      pmid: "37752011"
+      doi: "10.1136/bjsports-2023-106994"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 定位成功。原顯示字串把 2014／2018／2023 三個版本綁在同一個 id 上，
+      **等於一個 source_id 同時代表三份不同文獻**，掛在它下面的數字無法回溯出自哪一版。
+      本 id 現已固定指向**最新的 2023 REDs 共識**
+      （有勘誤：BJSM 2024;58(3):e4，DOI 10.1136/bjsports-2023-106994corr1）。
+      2023 版重點：自 2018 共識後新增 >170 篇原始研究；更新健康與表現概念模型並新增生理模型；
+      提出 REDs CAT2；**術語由 RED-S 正式改為 REDs**。
+      **使用邊界**：① 若主張其實出自 **2018 版**（Mountjoy 等，BJSM 52(11):687-697，
+      DOI 10.1136/bjsports-2018-099193）或 **2014 首版**，**必須另建來源條目**，不可掛本 id；
+      ② 共識聲明是**專家小組意見整合，不是原始研究**，其中數字須追到被引用的原研究；
+      ③ 非游泳專項，游泳族群盛行率需另尋來源。
 
   - id: src.issurin
     display: "Issurin 2008《Block Periodization》; Issurin 2008 (PMID 18212712); 2010 (DOI 10.2165/11319770); 2016 (PMID 26573916); 2019 (PMID 30411234); Breil 2019 meta (PMID 31802956)"
@@ -1629,10 +1691,28 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.mckenzie-2023-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.mdi-management-review-annals-of-joint
-    display: "MDI management review, Annals of Joint (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Bishop ME, Patel H, Erickson BJ, Dodson CC. (2022). Multidirectional instability in female athletes. Ann Joint 7:10."
+    title: "Multidirectional instability in female athletes."
+    type: review
+    verification_status: verified
+    authors: ["Bishop ME", "Patel H", "Erickson BJ", "Dodson CC"]
+    year: 2022
+    container: "Annals of Joint"
+    identifier:
+      pmid: "38529164"
+      pmcid: "PMC10929405"
+      doi: "10.21037/aoj-20-33"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 定位成功。原顯示字串「MDI management review」把它描述成一般性的 MDI 處置綜述，
+      **實際標題是「Multidirectional instability in female athletes」**，
+      屬 Annals of Joint「女性運動員運動傷害」專輯的**敘事性綜述**。
+      內容要點：MDI 定義為廣泛性關節囊鬆弛加上一個方向以上的症狀性不穩且必含下方不穩；
+      女性因關節鬆弛度較高而特別易患 MDI（男性整體肩不穩較高，但主因是接觸性運動等外在因子）；
+      **治療主軸是強化動態穩定肌群的物理治療**，復健失敗者才考慮開放或關節鏡關節囊緊縮術。
+      **使用邊界**：① **敘事性綜述，非系統回顧、無合併統計**，不可引用為量化證據；
+      ② 視角是**女性運動員**，當成性別中立的處置準則會失真；
+      ③ 未針對游泳專項，游泳者 MDI 需另尋來源。
 
   - id: src.mdpi-2024
     display: "MDPI 2024"
@@ -1666,10 +1746,16 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.mountjoy-ioc-consensus-webfetch
-    display: "Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）"
+    display: "【重複登錄，已解除】Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 解除引用。這個字串指的就是 IOC RED-S／REDs 共識聲明，
+      與 `src.ioc-red-s-2014-2018-2023-doi` **是同一份文獻的第二個 id**——
+      同一條目（red-s）同時掛兩個 id，看起來像有兩份獨立來源支持，實際只有一份。
+      已統一改掛 `src.ioc-red-s-2014-2018-2023-doi`（2023 REDs 共識，PMID 37752011）。
+      本 id 保持 unverified 且不得再被引用。
 
   - id: src.mujika
     display: "Mujika et al. 1996 (PMID 8775162); Mujika/Padilla/Pyne 2002 (PMID 12439774); Bosquet et al. 2007 (PMID 17762369)"
@@ -1731,10 +1817,28 @@ sources:
       為仰式「上踢＝髖屈曲」的裁決依據。
 
   - id: src.neurobehavioral-consequences-of-repetitive-h
-    display: "Neurobehavioral consequences of repetitive head impacts in Para swimming, ScienceDirect 2023/2024 (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Helmich I, Chang YY, Gemmerich R, et al. (2024). Neurobehavioral consequences of repetitive head impacts in Para swimming: A case report. J Sci Med Sport 27(1):16-19."
+    title: "Neurobehavioral consequences of repetitive head impacts in Para swimming: A case report."
+    type: journal-article
+    verification_status: verified
+    authors: ["Helmich I", "Chang YY", "Gemmerich R", "Rodrigo L", "Funken J", "Arun KM", "Van de Vliet P"]
+    year: 2024
+    container: "Journal of Science and Medicine in Sport"
+    identifier:
+      pmid: "37923648"
+      doi: "10.1016/j.jsams.2023.10.015"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 定位成功。**這是 n = 1 的個案報告**（標題即寫 "A case report"），
+      受試者是一名 dysmelia（肢體缺損）Para 泳者：因缺乏可觸牆的肢體，**必須用頭撞牆完成比賽**。
+      量測到平均撞擊 **13.6 g、平均撞擊力 6689.9 N**；有撞擊的 T1 前後行為與腦功能指標下降，
+      無撞擊的 T2 則否。
+      **使用邊界**：① **單一受試者，不能當發生率或風險證據**，
+      只能支撐「此機制在 Para 游泳存在且可量測」；
+      ② 受影響族群是**肢體缺損（用頭觸牆）選手，不是視覺障礙選手**——
+      原條目寫成視障選手的累積風險是族群張冠李戴；
+      ③ 原顯示字串只寫「ScienceDirect 2023/2024」，年份含糊：
+      線上先行 2023-10-24、正式刊期 2024 年 1 月。
 
   - id: src.nicol-2022-a
     display: "Nicol 2022"
@@ -1926,7 +2030,7 @@ sources:
       doi: "10.3390/jfmk8030087"
     retrieved_on: "2026-07-27"
   - id: src.pmc10372189
-    display: "Descriptive Epidemiology of High School Swimming and Diving Injuries, PMC10372189 (已驗證)"
+    display: "Belilos E, Jow S, Maxwell M. (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434."
     title: "Descriptive Epidemiology of High School Swimming and Diving Injuries."
     type: journal-article
     verification_status: verified
@@ -1937,8 +2041,19 @@ sources:
       pmcid: "PMC10372189"
       pmid: "36715985"
       doi: "10.1097/JSM.0000000000001121"
-    retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 逐字比對摘要。High School RIO 全國傷害監測 2008–2019 學年：
+      **563 件游泳與跳水傷害／2,171,260 人次暴露（0.26 件／1000 AE）**。
+      女性傷害率高於男性（整體 RR 1.57、練習 RR 1.53、比賽 RR 1.81，均 P < 0.05）。
+      **泳者以肩最多（48.6%）**，最常與自由式相關（67.3%），過度使用／慢性佔 58.0%；
+      **跳水者以頭／臉最多（36.6%），接觸池面／地面所致佔 68.3%**。
+      **使用邊界**：① 摘要**未列出肘部的獨立比例**，也**未報出腦震盪佔比**——
+      「肘佔比低」「腦震盪為最常見傷型 31.7%」都不是本來源能支撐的數字；
+      ② 族群為美國高中（約 14–18 歲），不可外推到成人分齡或菁英選手；
+      ③ 分母是 athlete-exposure 不是人數；④ 便利取樣（參與回報的學校），非全國普查。
+      2026-08-18 更正：第 2 批曾為同一篇另建 `src.belilos-2023-hs-swimming-injury-epi`，
+      屬重複登錄，已刪除並統一回本 id。
 
   - id: src.pmc10689961
     display: "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)"
@@ -2671,6 +2786,35 @@ sources:
       但本文是跨國合併非台灣本土世代；③ 分母是「已發生 VNSSTI 者」，不是「接觸海水者」，
       不能拿來推估開放水域游泳的感染風險。
 
+  - id: src.trikha-2022-collegiate-swimmer-health-events
+    display: "Trikha R, Schroeder GG, Greig DE, Kremen TJ Jr. (2022). Characterizing Health Events and Return to Sport in Collegiate Swimmers. Orthop J Sports Med 10(4):23259671221083588."
+    title: "Characterizing Health Events and Return to Sport in Collegiate Swimmers."
+    type: journal-article
+    verification_status: verified
+    authors: ["Trikha R", "Schroeder GG", "Greig DE", "Kremen TJ Jr"]
+    year: 2022
+    container: "Orthopaedic Journal of Sports Medicine"
+    identifier:
+      pmid: "35400141"
+      pmcid: "PMC8988675"
+      doi: "10.1177/23259671221083588"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 逐字比對摘要新增。NCAA Division I（Pacific Coast Conference）
+      2016-17 與 2019-20 學年回溯資料：**641 名泳者（男 301／女 340）、1030 件健康事件**
+      （女性 635 件 61.7%、男性 395 件 38.3%）。
+      **540 件肌肉骨骼傷害的部位分布：肩 126（23.3%）、脊椎 95（17.6%）、
+      足／踝／小腿 81（15.0%）、膝／大腿 67（12.4%）、手／腕／前臂 52（9.6%）**。
+      490 件非肌肉骨骼事件：呼吸道感染 119（24.3%）、未指明內科疾病 93（19.0%）、
+      **腦震盪 58（11.8%）**、**耳部感染 25（5.1%）**、腸胃道 24（4.9%）。
+      女性泳者肌肉骨骼傷害 RR 1.5（95% CI 1.22–1.83）、非肌肉骨骼 RR 1.32（1.04–1.68）；
+      腦震盪女性 9.1% vs 男性 4.3%（RR 2.11，1.13–3.96）；
+      58 件腦震盪中 8 件（13.8%）終結該季、14 件（24.1%）終結運動生涯。
+      **使用邊界**：① 單一聯盟回溯性資料，分母是**事件數不是人次暴露**，
+      不可與 High School RIO 的「每 1000 AE」直接比較；
+      ② 「足／踝／小腿」是**合併分組**，不等於單獨的踝關節佔比；
+      ③ 菁英大學層級，不可外推到兒童、成人初學或分齡選手。
+
   - id: src.tsai-2020-taiwan-leptospirosis-nationwide
     display: "Tsai CT, Lin JN, Lee CH, Sun W, Chang YC, Chen YH, Lai CH. (2020). The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014: A nationwide database study. Zoonoses Public Health 67(2):156-166."
     title: "The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014: A nationwide database study."
@@ -3221,10 +3365,28 @@ sources:
     year: 2010
 
   - id: src.quebec-44-year-diving-sci-study-sciencedirec
-    display: "Quebec 44-year diving SCI study, ScienceDirect (已驗證)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Barss P, Djerrari H, Leduc BE, Lepage Y, Dionne CE. (2008). Risk factors and prevention for spinal cord injury from diving in swimming pools and natural sites in Quebec, Canada: a 44-year study. Accid Anal Prev 40(2):787-97."
+    title: "Risk factors and prevention for spinal cord injury from diving in swimming pools and natural sites in Quebec, Canada: a 44-year study."
+    type: journal-article
+    verification_status: verified
+    authors: ["Barss P", "Djerrari H", "Leduc BE", "Lepage Y", "Dionne CE"]
+    year: 2008
+    container: "Accident Analysis and Prevention"
+    identifier:
+      pmid: "18329434"
+      doi: "10.1016/j.aap.2007.09.017"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 逐字比對摘要。魁北克 1961–2004 年因跳水致脊髓損傷者的訪談研究：
+      目標 203 人，**實際受訪 89 人（回覆率 44%）**。92% 男性、85% 未滿 35 歲；
+      **傷前知道跳水有脊髓損傷風險者僅 37%，受過水域安全訓練者僅 33%**。
+      場地：泳池 51%（45 例）／自然水域 49%（44 例）；泳池案例中 87% 是單戶住宅泳池、57% 為地上型。
+      **深度標示缺失：地上型泳池 100%、地下型 74%**；地下型泳池的傷害 63% 撞在深淺池底斜坡上。
+      **52% 的泳池與 79% 的自然水域事發水深不足 1.4 m**；47% 通報有飲酒。
+      **使用邊界**：① **回覆率僅 44%，存在選擇偏誤**，比例應視為受訪者分布而非母體分布；
+      ② 這是**休閒跳水（住宅泳池、碼頭）**，**不是競技出發台起跳**——
+      不可用來支撐競賽出發的風險，只能支撐「淺水跳入」這一共通機制；
+      ③ 資料截至 2004 年，其後泳池設計規範與警示標示已有變動（🟡 vintage）。
 
   - id: src.race-club
     display: "Race Club"
@@ -3305,10 +3467,23 @@ sources:
     notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.red-s-clinical-assessment-tool-framework-ioc
-    display: "RED-S Clinical Assessment Tool framework (IOC)"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Mountjoy M, Sundgot-Borgen J, Burke L, et al. (2015). The IOC relative energy deficiency in sport clinical assessment tool (RED-S CAT). Br J Sports Med 49(21):1354."
+    title: "The IOC relative energy deficiency in sport clinical assessment tool (RED-S CAT)."
+    type: guideline
+    verification_status: verified
+    authors: ["Mountjoy M", "Sundgot-Borgen J", "Burke L", "Carter S", "Constantini N", "Lebrun C", "Meyer N", "Sherman R", "Steffen K", "Budgett R", "Ljungqvist A", "Ackerman K"]
+    year: 2015
+    container: "British Journal of Sports Medicine"
+    identifier:
+      pmid: "26764434"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 定位成功。BJSM 2015;49(21):1354，**單頁工具文件、PubMed 無摘要亦無 DOI 記錄**。
+      **使用邊界**：① 這是 **RED-S CAT 第一版（2015）**；
+      2023 年 IOC 共識已推出 **REDs CAT2**（Stellingwerff 等，BJSM 57(17):1109-1118，
+      DOI 10.1136/bjsports-2023-106914），紅／黃／綠燈判定內容與分層邏輯已改版。
+      引用臨床判定門檻時**必須指明版本**，只寫「RED-S CAT」會指向已被取代的工具；
+      ② 它是**風險分層與參賽決策工具，不是診斷標準**，不能當盛行率或療效證據。
 
   - id: src.research-psych-01-a
     display: "Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義"
@@ -4186,10 +4361,30 @@ sources:
     notes: "疑似與 src.staunton-2025-a、src.staunton-2025-b、src.staunton-2025-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
 
   - id: src.stress-fractures-in-swimmers-systematic-revi
-    display: "Stress fractures in swimmers systematic review, journals.aiac.org.au (已驗證)"
+    display: "Vasiliadis AV, Lampridis V, Georgiannos D, Bisbinas I. (2018). Swimmers Are At Risk For Stress Fractures? A Systematic Review. Int J Kinesiol Sports Sci 6(3):25-31."
+    title: "Swimmers Are At Risk For Stress Fractures? A Systematic Review"
     type: review
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: verified
+    authors: ["Vasiliadis AV", "Lampridis V", "Georgiannos D", "Bisbinas I"]
+    year: 2018
+    container: "International Journal of Kinesiology and Sports Science"
+    identifier:
+      doi: "10.7575/aiac.ijkss.v.6n.1p.25"
+    url: "https://journals.aiac.org.au/index.php/IJKSS/article/view/4580"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 取回期刊頁面定位成功。檢索 PubMed 與 ResearchGate 至 2017 年 1 月，
+      **全文獻僅 10 篇描述泳者應力性骨折**。
+      核心結論：**最常見部位是肋骨**（年輕競技泳者，與主項泳式無關），
+      其餘為第一肋、恥骨支各一例、以及一例歷史性的**蹠骨**個案；
+      作者結論是「競技游泳在此面向相對安全」。
+      **使用邊界**：① **本來源的重點是肋骨，不是踝足**——
+      把它掛在踝足條目下當作足部應力性骨折的證據會失真，
+      它能支撐的是「泳者應力性骨折罕見、且以肋骨為主」以及「蹠骨僅見單一歷史個案」；
+      ② 納入僅 10 篇且多為個案報告，**無合併統計、無分母**，不能導出發生率；
+      ③ 檢索截止 2017 年 1 月（🟡 vintage）；
+      ④ 期刊頁標為第 6 卷第 3 期，但官方 DOI 字串寫作 `v.6n.1p.25`（卷期與 DOI 自相矛盾），
+      DOI 依原樣登錄。
 
   - id: src.strzala-2013-a
     display: "Strzała 2013"
@@ -4270,10 +4465,22 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.swimming-injury-imaging-review-1-radiologyke
-    display: "Swimming injury imaging review (踝部約 1%), radiologykey (已驗證)"
+    display: "【非可引用來源，已解除】Swimming injury imaging review (踝部約 1%), radiologykey"
     type: other
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 解除引用。radiologykey.com 是**未經授權重製放射學教科書章節的網站**，
+      相對應頁面為「Imaging of Water Sports Injuries」，**站上不顯示作者、年份、原書名與頁碼**，
+      無法回溯到可重取的原始出處，也不應作為引用對象。原顯示字串卻標「已驗證」。
+      **它承載的「踝部佔游泳整體傷害約 1%」因此失去來源支撐，且與實測資料衝突**：
+      Trikha 等 2022 年 NCAA D-I 泳者資料中，540 件肌肉骨骼傷害裡
+      **足／踝／小腿佔 81 件（15.0%）**（見 src.trikha-2022-collegiate-swimmer-health-events）。
+      兩者分組範圍不同（單指踝 vs 足踝小腿合計），不足以直接否證，
+      但 1% 與 15% 差一個數量級，在原數字連作者年份都沒有的情況下不得續用。
+      該頁唯一仍具參考價值的敘述（蛙鞋致踝足骨髓應力反應與伸肌支持帶／肌腱部分損傷）
+      屬影像學描述性觀察，已改以 🟠 觀察等級處理，不作流行率數字。
+      本 id 保持 unverified 且不得再被引用。
 
   - id: src.swimming-science-livio-cocozza
     display: "Swimming Science / Livio Cocozza"
@@ -4837,11 +5044,29 @@ sources:
     notes: "S3c 由完整作者、年份、正文 20 名女子選手脈絡與 Crossref 題名交叉確認；src.welcher-2008-a 尚待判讀。"
 
   - id: src.who-2024-12-13-drowning-deaths-decline-globa-2024
-    display: "WHO 2024-12-13 新聞稿『Drowning deaths decline globally』(已驗證 URL)"
+    display: "World Health Organization. (2024-12-13). Drowning deaths decline globally, but the most vulnerable remain at risk [news release]. Accompanying the Global status report on drowning prevention 2024."
+    title: "Drowning deaths decline globally, but the most vulnerable remain at risk"
     type: other
-    verification_status: unverified
+    verification_status: verified
+    authors: ["World Health Organization"]
     year: 2024
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    container: "WHO news release"
+    url: "https://www.who.int/news/item/13-12-2024-drowning-deaths-decline-globally-but-the-most-vulnerable-remain-at-risk"
+    retrieved_on: "2026-08-18"
+    notes: >-
+      2026-08-18 取回原文核對。WHO 新聞稿逐字數字：
+      **「300 000 people dying by drowning in 2021 alone」**；
+      「Almost half of all drowning deaths occur among people below the age of 29 years,
+      and a quarter occur among children under the age of 5 years」；
+      自 2000 年以來全球溺水死亡率**下降 38%**；每小時逾 30 人溺斃；
+      若趨勢不變，至 2050 年恐累計 720 萬人死於溺水。
+      **2026-08-18 更正（歸屬顛倒）**：`drowning` 條目原寫「WHO 2024：2021 全球溺水死亡約 274,200 人
+      （另估 ~30 萬，方法不同）」——**方向反了**。
+      **30 萬才是 WHO 自己報的數字**，274,200 是 GBD／IHME 系列估計（見 src.pmc11954903），
+      原文把 WHO 沒說過的數字掛在 WHO 名下，再把 WHO 的實際數字降級成「另估」。
+      **使用邊界**：① 這是**新聞稿**不是報告本體，數字須以《Global status report on drowning
+      prevention 2024》為準；② WHO 與 GBD 兩套估計方法不同，**不可混用或相減**；
+      ③ 全球彙總數字，無泳池／開放水域分層。
 
   - id: src.wikipedia-breaststroke
     display: "Wikipedia Breaststroke"

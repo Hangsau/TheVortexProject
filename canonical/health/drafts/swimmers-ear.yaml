@@ -13,13 +13,20 @@ mechanism:
   who: 5–14 歲兒童(發生率最高)、頻繁游泳者、糖尿病/免疫低下者(重症化)、濕疹/乾癬者
 
 epidemiology:
-  prevalence: "終身盛行率約 10%；美國 2003–2007 年外耳道炎年門診約 240 萬次(每千人 8.1)，5–9 歲最高(每千人 18.6)，逾半數就診者為 20 歲以上成人；游泳者罹患急性外耳道炎風險為非游泳者約 5 倍"
+  prevalence: >-
+    終身盛行率約 10%；美國 **2007 年單一年度**急性外耳道炎門診約 240 萬次（每千人 8.1），
+    5–9 歲最高（每千人 18.6），逾半數就診者為 20 歲以上成人。
   certainty: 🟡
   evidence_grade: B
-  caveat: 美國 CDC 資料為 2003–2007，缺最新全球系統回顧；開放水域 vs 室內泳池分層數據不足
+  caveat: >-
+    2026-08-18 更正（期間標錯）：原寫「2003–2007 年年門診約 240 萬次」，
+    像是五年平均；CDC MMWR 60(19) 的 240 萬／8.1 per 1000 是 **2007 年單一年度**數值，已更正。
+    **使用邊界**：該分母是**全美總人口**、不是游泳人口，
+    因此「游泳者風險為非游泳者約 5 倍」**不可能出自此來源**——該倍數目前為 StatPearls 轉述、原始研究待查，已移出本欄。
+    另：缺最新全球系統回顧；開放水域 vs 室內泳池分層數據不足。
   sources:
     - "StatPearls Otitis Externa, PMID 32310515 (已驗證)"
-    - "CDC MMWR 急性外耳道炎門診資料 2003–2007 (已驗證)"
+    - "CDC (2011). Estimated Burden of Acute Otitis Externa — United States, 2003-2007. MMWR 60(19):605-9. PMID 21597452"
   source_ids: [src.pmid-32310515, src.cdc-mmwr-2003-2007]
 
 risk_factors:
@@ -71,11 +78,12 @@ links:
 
 references:
   - { citation: "Otitis Externa, StatPearls (Medina-Blasini & Sharman), PMID 32310515", certainty: 🟢, verified: true }
-  - { citation: "CDC MMWR Estimated Burden of Acute Otitis Externa United States 2003–2007", certainty: 🟢, verified: true }
+  - { citation: "CDC (2011). Estimated Burden of Acute Otitis Externa — United States, 2003-2007. MMWR Morb Mortal Wkly Rep 60(19):605-9. PMID 21597452", certainty: 🟢, verified: true }
 
 flags:
   pending_verification:
-    - "美國門診數字為 2003–2007，最新全球盛行率待補；『5 倍風險』為 StatPearls 引述，原始研究待查"
+    - "『游泳者風險為非游泳者約 5 倍』為 StatPearls 轉述，原始研究待查；CDC MMWR 的分母是全美人口，撐不起此倍數，不進 public 數字"
+    - "美國門診數字止於 2007，最新全球盛行率待補"
   contested:
     - claim: "預防性酸化耳滴劑與耳塞效益"
       consensus_source: "游泳後乾燥耳道為共識"
