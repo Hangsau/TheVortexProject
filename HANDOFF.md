@@ -4,7 +4,53 @@
 
 ---
 
-## 當前狀態（2026-08-18，最新）
+## 當前狀態（2026-08-27，最新）
+
+### ⏸️ 骨關節命名章語意稽核完成；動作—肌群—訓練—活動度圖譜已完成 plan-check，尚未實作
+
+**使用者需求**：檢視 my-site「骨關節動作 · 命名校正」是否有錯，並規劃延伸到各泳姿動作使用的肌群、相應訓練與拉伸／活動度內容；本輪要求把計畫書與交接單保存進 Vortex。
+
+**計畫真相源**：`plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。該檔已包含 plan-check 六項：目標狀態、affected/excluded scope、服務情境與分散邏輯、分階段執行路徑、runtime／structural 風險、逐項 preflight／rollback 與可執行驗收。**依 plan-check gate，使用者說「開始」前不修改 canonical、驗證器、同步碼或網站。**
+
+#### 稽核結論
+
+- 現有公開章仍是 **13 張命名校正卡**，不是完整動作圖譜；它由 `technical-analysis.yaml` 單一資料源供頂層 joint 頁與六式頁共用。
+- Vortex 底稿有 **183 條關節主張**（A 解剖 136、B ROM 8、C 泳姿特定 39）。A、B 已裁決；C 類完成 5 條高風險項目，**其餘 34 條仍須游泳一手文獻**，不得以 Neumann／Nordin 補成泳姿事實。
+- 13 卡語意處置：**5 條必修**（`free.tech.38`、`free.tech.39`、`udk.tech.30`、`fly.tech.37`、`starts-turns.tech.48`）；**7 條須把解剖事實／泳姿推論／教學應用分層**（`free.tech.36/40/41`、`back.tech.30`、`breast.tech.36/37`、`starts-turns.tech.47`）；`free.tech.37` 核心可保留並補量測邊界。
+- my-site `vortex-joints.html` 目前有顯示 certainty 與 optional evidence，卻**沒有解析並顯示 `mechanism.source_ids`**；讀者看得到色圓，看不到來源。
+- `periodization/dryland.yaml#flexibility_mobility` 有三個直接相關衝突：①蛙式以「髖內旋讓腳掌外翻」概括全相位，與 `breast.tech.36` 的髖外旋描述互撞；②蹠屈不足預設腓腸肌伸展，方向不對；③ sleeper stretch／後囊鬆動被寫得過度接近預設處方。
+
+#### 架構決策
+
+保留 joint 頁作「13 個高風險命名校正案例」，另建 `canonical/movement/`：
+
+1. `actions.yaml`：解剖動作；
+2. `muscle-groups.yaml`：一般肌群能力與別名；
+3. `stroke-demands.yaml`：泳式 × 相位 × 體位 × 池畔方向 × 解剖動作；
+4. `interventions.yaml`：有條件的訓練／活動度／伸展決策；
+5. `_index.yaml`：讀者路徑與覆蓋索引。
+
+肌肉角色至少分產力、離心煞車、關節穩定、力量傳遞。每項活動度介入都有 `conditional／not-routine／evidence-gap` 明確決策；「補齊」不等於每條肌肉都硬配一個伸展。每項介入必填 `affirmative_conclusion / works_when / fails_when / how_to_identify / action / remaining_boundary`。
+
+#### 本輪修改邊界與檢查
+
+- 本輪只新增 plan、更新 HANDOFF／`_INDEX.md`；**未動 canonical、my-site、swim-coach**。
+- 先前只跑過結構 validator，結果 0 ERROR；這不被當成 13 卡語意正確的證明。
+- `reports/validation_report.md` 因檢查只改了生成日期，本輪已還原，不把無關 generated diff 帶進計畫 commit。
+
+### 下一步建議
+
+1. **等待使用者確認**：說「開始」後才進 implementation；若要調整範圍，先改 plan，不邊做邊漂移。
+2. **W0 基線與覆蓋分母**：feature branch、完整測試基線、凍結六式相位 coverage；不明工作樹修改先隔離。
+3. **W1 先修既有內容**：13 卡語意、dryland 三處衝突與 joint 頁來源顯示，不等新圖譜才修。
+4. **W2 兩條 pilot**：只做「超流線肩上舉」與「踝蹠屈／UDK、flutter kick」完整鏈；人工核准 schema 後才擴全身。
+5. **W3/W4 雙 lane**：C 類 34 條逐條走游泳書／本地文獻／NCBI；圖譜按 shoulder-arm → ankle-foot → hip-knee → spine-neck 完成，一區一 gate。
+6. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
+7. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+
+---
+
+## 上一階段狀態（2026-08-18）
 
 ### ✅ 關節內容可找性修復——新增 `joint` 分類 + `also_strokes` 跨式共用欄位
 
@@ -222,7 +268,7 @@
 
 > 落地時抓到自己兩處 cross_ref 引錯（把 `free.tech.39` 當成外旋條、`free.tech.41` 當成踝條，實際分別是 body roll 與 knee locking），已改為 `free.tech.36` 與 `free.tech.38`。**教訓：cross_ref 目標一律 grep 標題確認，不憑 ID 記憶。**
 
-### 下一步建議
+### 當時的下一步建議（已被 2026-08-27 圖譜計畫取代，保留脈絡）
 
 教科書可裁決的範圍（A 類 136 條 + B 類 8 條）已全部收尾，C 類的高風險部分也已解除。剩下的工作性質變了——**從「查教科書」轉為「查游泳文獻」與「回寫呈現層」**。
 

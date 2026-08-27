@@ -180,8 +180,10 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 ## 規劃文件
 - `RESEARCH_PLAN.md` — 四層研究架構完整說明
 - `FUTURE_RESEARCH.md` — 前沿假設庫（渦流、頻率、感受器等）
-- `CLAUDE.md` — 交接日誌（給 AI 讀的當前狀態）
+- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **待執行（2026-08-27）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜 + my-site rollout gates
+- `CLAUDE.md` — 協作規則、證據契約與強制收尾流程
+- `HANDOFF.md` — 當前狀態、下一步與歷史交接
 
 ---
 
-*最後更新：2026-06-22（整合 Hestia VM 兩份游泳研究報告：① 週期化研究層補 4 檔（Seiler TID 分流 + González-Ravé PMID 33952709 歸因修正 / Issurin·Sweetenham 缺 RCT 證據缺口）並新建 2 檔（Sandbakk 教練哲學 / VHL·RSH 低通氣）；② Instructional 補水下蝶腳 Veiga 2023 末段衰退 + Marinho 2022 即時監測盲區、出發轉身補陸地訓練「增益器非分水嶺」節。全程逐筆 WebSearch 查證，校正報告多處歸因錯誤（Beattie→Thng、重複 PMID）。本批均為 research/instructional 散文層，未動 canonical，故 my-site 不觸發同步）*
+*最後更新：2026-08-27（新增骨關節動作—肌群—訓練—活動度圖譜 plan-check 與 HANDOFF 入口；本批只保存計畫，未動 canonical 或下游）*
