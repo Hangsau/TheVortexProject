@@ -1,3 +1,4 @@
 *.docx
 *.xlsx
 __pycache__/
+.implementation_*.md
