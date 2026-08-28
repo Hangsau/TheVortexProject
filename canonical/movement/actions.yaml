@@ -1,0 +1,29 @@
+domain: movement
+sub: actions
+schema_version: 1
+description: 關節／節段動作定義、平面與軸、可觀察邊界、一般解剖能力
+
+# actions[] 條目 schema（以下僅描述欄位與語意）：
+# id: 使用 movement.action.* 命名空間的穩定識別碼。
+# name: 動作的正確名稱。
+# aliases: 可檢索但不取代正名的同義詞。
+# joint_region: 動作所屬的關節或節段區域。
+# definition: 動作本身及其量測邊界的定義。
+# plane: 動作發生的解剖平面。
+# axis: 動作繞行的解剖軸。
+# observable_boundaries: 可由觀察或量測辨識的起訖與排除邊界。
+# general_anatomical_capacity: 一般解剖條件下可承擔的能力，不推論泳姿時序。
+# publication_status: 記錄的發布狀態。
+# claim_status: 記錄內主張的證據支持度。
+# action_status: 記錄可否據以行動。
+# evidence_profile: 記錄的證據性質分類。
+# source_ids: 支撐記錄的已登錄來源鍵。
+# public: 對讀者公開的教育內容與來源。
+# diagnostic: 不公開的量測、分類與教練判讀內容。
+#
+# public／diagnostic 分層契約：
+# public: 正確命名、一般肌肉角色、教育性訓練選項、works_when／fails_when 白話版、公開安全停止條件與來源。
+# diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
+# public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
+
+actions: []

@@ -228,6 +228,75 @@ fields:
       - key: L6
         note: "感知自動化完成"
 
+  # ── Movement 網域契約詞彙 ──
+  # 不重用現有 status（目前唯一值為 complete）承載證據或發布狀態；
+  # 證據狀態、決策狀態、發布狀態是三個獨立軸，壓進單一 status 會無法分辨。
+
+  publication_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      發布狀態。published 只代表可對讀者發布，不等於所有主張因果確定。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: draft
+      - key: reviewed
+      - key: published
+      - key: withheld
+
+  claim_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      主張的證據支持度。unverified 在這裡指主張未經查證，與
+      canonical/_sources.yaml 裡來源 metadata 的 verification_status 是兩回事，
+      不可互相冒用。本欄位不維護 count；實際使用數以
+      indices/tag_reverse_index.json 為準。
+    values:
+      - key: supported
+      - key: partially-supported
+      - key: disputed
+      - key: unverified
+
+  action_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      可否據以行動。do-not-prescribe 表示不得寫成處方。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: ready
+      - key: provisional
+      - key: do-not-prescribe
+
+  evidence_profile:
+    controlled: true
+    review_status: reviewed
+    note: >
+      該筆記錄的證據性質屬哪一類，用來擋跨用（例如解剖教科書不能證明泳姿時序、
+      EMG 振幅不能等同肌力）。本欄位不維護 count；實際使用數以
+      indices/tag_reverse_index.json 為準。
+    values:
+      - key: anatomy
+      - key: swimming-kinematics
+      - key: swimming-emg
+      - key: intervention
+      - key: practice-observation
+      - key: synthesis-inference
+
+  mobility_decision:
+    controlled: true
+    review_status: reviewed
+    note: >
+      活動度決策。conditional：確認被動限制且無禁忌時使用；not-routine：正常活動度、
+      主動控制不足、過度活動或沒有轉移證據時不常規拉伸；evidence-gap：目前沒有足夠
+      資料給特定處方，保留評估與重測，不捏造動作。本欄位不維護 count；實際使用數以
+      indices/tag_reverse_index.json 為準。
+    values:
+      - key: conditional
+      - key: not-routine
+      - key: evidence-gap
+
 # ─────────────────────────────────────────────────────────────────────
 # 證據承載契約（S3b）
 # 這一段不是受控詞彙，是「哪些欄位算證據、算到什麼程度」的欄位語意登錄。

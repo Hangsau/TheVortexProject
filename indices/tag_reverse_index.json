@@ -1,6 +1,11 @@
 {
   "schema_version": 1,
   "fields": {
+    "action_status": {
+      "do-not-prescribe": [],
+      "provisional": [],
+      "ready": []
+    },
     "category": {
       "A-shoulder-upper": [
         "biceps-tendinopathy",
@@ -1409,6 +1414,12 @@
         "youth-swimmer-apophysitis"
       ]
     },
+    "claim_status": {
+      "disputed": [],
+      "partially-supported": [],
+      "supported": [],
+      "unverified": []
+    },
     "development_stage": {
       "fun": [],
       "l2t": [
@@ -1457,6 +1468,14 @@
         "dev.physical.t2w",
         "dev.technical.t2w"
       ]
+    },
+    "evidence_profile": {
+      "anatomy": [],
+      "intervention": [],
+      "practice-observation": [],
+      "swimming-emg": [],
+      "swimming-kinematics": [],
+      "synthesis-inference": []
     },
     "joint_region": {
       "ankle-foot": [
@@ -1848,6 +1867,11 @@
         "free.pre.resistance"
       ]
     },
+    "mobility_decision": {
+      "conditional": [],
+      "evidence-gap": [],
+      "not-routine": []
+    },
     "pillar": {
       "life": [
         "dev.life.l2t",
@@ -1873,6 +1897,12 @@
         "dev.technical.t2t",
         "dev.technical.t2w"
       ]
+    },
+    "publication_status": {
+      "draft": [],
+      "published": [],
+      "reviewed": [],
+      "withheld": []
     },
     "status": {
       "complete": [

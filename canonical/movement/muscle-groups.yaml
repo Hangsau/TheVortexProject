@@ -1,0 +1,27 @@
+domain: movement
+sub: muscle-groups
+schema_version: 1
+description: 肌群名稱、同義詞、跨關節特性與可承擔的角色；不宣稱任何泳姿一定如何招募
+
+# muscle_groups[] 條目 schema（以下僅描述欄位與語意）：
+# id: 使用 movement.muscle.* 命名空間的穩定識別碼。
+# name: 肌群的正確名稱。
+# aliases: 可檢索但不取代正名的同義詞。
+# joint_regions: 肌群跨越或影響的關節與節段區域。
+# cross_joint_characteristics: 肌群跨關節時的長度、位置與角色邊界。
+# general_capabilities: 肌群在一般解剖條件下可承擔的能力。
+# roles: 可連結的角色名稱與適用邊界，不宣稱特定泳姿必然招募。
+# publication_status: 記錄的發布狀態。
+# claim_status: 記錄內主張的證據支持度。
+# action_status: 記錄可否據以行動。
+# evidence_profile: 記錄的證據性質分類。
+# source_ids: 支撐記錄的已登錄來源鍵。
+# public: 對讀者公開的教育內容與來源。
+# diagnostic: 不公開的量測、分類與教練判讀內容。
+#
+# public／diagnostic 分層契約：
+# public: 正確命名、一般肌肉角色、教育性訓練選項、works_when／fails_when 白話版、公開安全停止條件與來源。
+# diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
+# public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
+
+muscle_groups: []

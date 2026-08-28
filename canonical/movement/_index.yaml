@@ -1,0 +1,27 @@
+domain: movement
+sub: index
+schema_version: 1
+description: 章節順序、讀者路徑、覆蓋範圍與穩定 ID 目錄
+
+# sections[] 條目 schema（以下僅描述欄位與語意）：
+# id: 章節的穩定識別碼。
+# title: 章節的讀者可見名稱。
+# order: 章節在 movement 網域中的固定順序。
+# reader_path: 讀者進入與銜接章節的路徑說明。
+# coverage: 本章節承擔與明確排除的覆蓋範圍。
+# record_ids: 本章節所收錄穩定 ID 的目錄。
+# publication_status: 本章節的發布狀態。
+#
+# ID 命名空間互不冒用：
+# movement.action.*: 解剖動作與量測邊界。
+# movement.muscle.*: 肌群的一般能力、跨關節特性與別名。
+# movement.demand.*: 泳式相位中的動作需求與肌肉角色。
+# movement.intervention.*: 只有在可辨識條件成立時才採用的訓練／活動度決策。
+# ID 不含角度數字、證據等級或可變文案，避免內容修正時被迫換 ID。
+#
+# public／diagnostic 分層契約：
+# public: 正確命名、一般肌肉角色、教育性訓練選項、works_when／fails_when 白話版、公開安全停止條件與來源。
+# diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
+# public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
+
+sections: []

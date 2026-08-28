@@ -2,14 +2,94 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 1,
+    "unused_taxonomy_values": 21,
     "unlinked_records": 491
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
     {
+      "field": "action_status",
+      "value": "do-not-prescribe"
+    },
+    {
+      "field": "action_status",
+      "value": "provisional"
+    },
+    {
+      "field": "action_status",
+      "value": "ready"
+    },
+    {
+      "field": "claim_status",
+      "value": "disputed"
+    },
+    {
+      "field": "claim_status",
+      "value": "partially-supported"
+    },
+    {
+      "field": "claim_status",
+      "value": "supported"
+    },
+    {
+      "field": "claim_status",
+      "value": "unverified"
+    },
+    {
       "field": "development_stage",
       "value": "fun"
+    },
+    {
+      "field": "evidence_profile",
+      "value": "anatomy"
+    },
+    {
+      "field": "evidence_profile",
+      "value": "intervention"
+    },
+    {
+      "field": "evidence_profile",
+      "value": "practice-observation"
+    },
+    {
+      "field": "evidence_profile",
+      "value": "swimming-emg"
+    },
+    {
+      "field": "evidence_profile",
+      "value": "swimming-kinematics"
+    },
+    {
+      "field": "evidence_profile",
+      "value": "synthesis-inference"
+    },
+    {
+      "field": "mobility_decision",
+      "value": "conditional"
+    },
+    {
+      "field": "mobility_decision",
+      "value": "evidence-gap"
+    },
+    {
+      "field": "mobility_decision",
+      "value": "not-routine"
+    },
+    {
+      "field": "publication_status",
+      "value": "draft"
+    },
+    {
+      "field": "publication_status",
+      "value": "published"
+    },
+    {
+      "field": "publication_status",
+      "value": "reviewed"
+    },
+    {
+      "field": "publication_status",
+      "value": "withheld"
     }
   ],
   "unlinked_records": [

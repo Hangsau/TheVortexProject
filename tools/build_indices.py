@@ -38,6 +38,11 @@ TAG_FIELD_ALIASES = {
     "development_stage": ("stage", "applies_from"),
     "pillar": ("pillar",),
     "l_level": ("level", "l_target"),
+    "publication_status": ("publication_status",),
+    "claim_status": ("claim_status",),
+    "action_status": ("action_status",),
+    "evidence_profile": ("evidence_profile",),
+    "mobility_decision": ("mobility_decision",),
 }
 
 TITLE_FIELDS = (

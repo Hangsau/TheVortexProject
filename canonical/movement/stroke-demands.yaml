@@ -1,0 +1,28 @@
+domain: movement
+sub: stroke-demands
+schema_version: 1
+description: 泳式 × 相位 × 體位 × 池畔方向 × 解剖動作，連到 action 與 muscle-role；泳姿專屬主張須用游泳證據
+
+# demands[] 條目 schema（以下僅描述欄位與語意）：
+# id: 使用 movement.demand.* 命名空間的穩定識別碼。
+# stroke: 此需求所屬泳式，待實際內容落地時逐筆裁決。
+# phase_model: 此需求採用的相位模型，暫不登錄為受控詞彙。
+# phase: 相位模型內的相位鍵，暫不登錄為受控詞彙。
+# body_position: 動作需求成立時的身體位置。
+# poolside_direction: 從池畔觀察所使用的方向基準。
+# action_ids: 連到 movement.action.* 的解剖動作需求。
+# muscle_roles: 連到 movement.muscle.* 的可承擔角色，不把振幅直接等同肌力。
+# publication_status: 記錄的發布狀態。
+# claim_status: 記錄內主張的證據支持度。
+# action_status: 記錄可否據以行動。
+# evidence_profile: 記錄的證據性質分類。
+# source_ids: 支撐泳姿專屬主張的游泳證據來源鍵。
+# public: 對讀者公開的教育內容與來源。
+# diagnostic: 不公開的量測、分類與教練判讀內容。
+#
+# public／diagnostic 分層契約：
+# public: 正確命名、一般肌肉角色、教育性訓練選項、works_when／fails_when 白話版、公開安全停止條件與來源。
+# diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
+# public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
+
+demands: []

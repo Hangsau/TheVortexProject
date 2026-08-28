@@ -1,0 +1,33 @@
+domain: movement
+sub: interventions
+schema_version: 1
+description: 依限制型態整理訓練、活動度／伸展、進退階、劑量來源、水中重測與安全停止條件
+
+# interventions[] 條目 schema（以下僅描述欄位與語意）：
+# id: 使用 movement.intervention.* 命名空間的穩定識別碼。
+# limitation_type: 介入所針對且可辨識的限制型態。
+# action_ids: 連到 movement.action.* 的相關動作。
+# demand_ids: 連到 movement.demand.* 的相關泳式需求。
+# affirmative_conclusion: 現階段能肯定說什麼
+# works_when: 哪些可觀察條件成立時適用
+# fails_when: 哪些條件下無效或不應使用
+# how_to_identify: 用什麼 ROM、力量、症狀或水中重測分流
+# action: 實際訓練／活動度步驟與進退階
+# remaining_boundary: 做完後仍不能回答什麼
+# mobility_decision: 所有活動度記錄必填的活動度決策。
+# dosage_source_ids: 支撐劑量的已登錄來源鍵。
+# safety_stop_conditions: 必須公開的安全停止條件。
+# publication_status: 記錄的發布狀態。
+# claim_status: 記錄內主張的證據支持度。
+# action_status: 記錄可否據以行動。
+# evidence_profile: 記錄的證據性質分類。
+# source_ids: 支撐記錄的已登錄來源鍵。
+# public: 對讀者公開的教育內容與來源。
+# diagnostic: 不公開的量測、分類與教練判讀內容。
+#
+# public／diagnostic 分層契約：
+# public: 正確命名、一般肌肉角色、教育性訓練選項、works_when／fails_when 白話版、公開安全停止條件與來源。
+# diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
+# public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
+
+interventions: []
