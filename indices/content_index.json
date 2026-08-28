@@ -4755,6 +4755,9 @@
         "certainty": [
           "🔵"
         ],
+        "joint_region": [
+          "hip-knee"
+        ],
         "stroke": [
           "back"
         ]
@@ -6206,6 +6209,9 @@
           "🔵",
           "🟢"
         ],
+        "joint_region": [
+          "ankle-foot"
+        ],
         "stroke": [
           "breast"
         ]
@@ -6231,6 +6237,9 @@
         "certainty": [
           "🔵",
           "🟢"
+        ],
+        "joint_region": [
+          "hip-knee"
         ],
         "stroke": [
           "breast"
@@ -8839,6 +8848,9 @@
         "certainty": [
           "🔵"
         ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
         "stroke": [
           "fly"
         ]
@@ -10632,6 +10644,9 @@
         "certainty": [
           "🔵"
         ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
         "stroke": [
           "free"
         ]
@@ -10655,6 +10670,9 @@
         ],
         "certainty": [
           "🔵"
+        ],
+        "joint_region": [
+          "shoulder-arm"
         ],
         "stroke": [
           "free"
@@ -10680,6 +10698,9 @@
         "certainty": [
           "🔵"
         ],
+        "joint_region": [
+          "ankle-foot"
+        ],
         "stroke": [
           "free"
         ]
@@ -10704,6 +10725,9 @@
         "certainty": [
           "🔵",
           "🟢"
+        ],
+        "joint_region": [
+          "spine-neck"
         ],
         "stroke": [
           "free"
@@ -10749,6 +10773,9 @@
         "certainty": [
           "🟢"
         ],
+        "joint_region": [
+          "spine-neck"
+        ],
         "stroke": [
           "free"
         ]
@@ -10773,6 +10800,9 @@
         "certainty": [
           "🔵",
           "🟢"
+        ],
+        "joint_region": [
+          "hip-knee"
         ],
         "stroke": [
           "free"
@@ -14681,6 +14711,9 @@
         "certainty": [
           "🔵"
         ],
+        "joint_region": [
+          "spine-neck"
+        ],
         "stroke": [
           "starts-turns"
         ]
@@ -14706,6 +14739,9 @@
         "certainty": [
           "🔵",
           "🟢"
+        ],
+        "joint_region": [
+          "shoulder-arm"
         ],
         "stroke": [
           "starts-turns"
@@ -16316,6 +16352,9 @@
         ],
         "certainty": [
           "🔵"
+        ],
+        "joint_region": [
+          "hip-knee"
         ],
         "stroke": [
           "udk"

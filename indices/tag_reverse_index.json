@@ -1459,10 +1459,27 @@
       ]
     },
     "joint_region": {
-      "ankle-foot": [],
-      "hip-knee": [],
-      "shoulder-arm": [],
-      "spine-neck": []
+      "ankle-foot": [
+        "breast.tech.36",
+        "free.tech.38"
+      ],
+      "hip-knee": [
+        "back.tech.30",
+        "breast.tech.37",
+        "free.tech.41",
+        "udk.tech.30"
+      ],
+      "shoulder-arm": [
+        "fly.tech.37",
+        "free.tech.36",
+        "free.tech.37",
+        "starts-turns.tech.48"
+      ],
+      "spine-neck": [
+        "free.tech.39",
+        "free.tech.40",
+        "starts-turns.tech.47"
+      ]
     },
     "l_level": {
       "L2": [

@@ -32,6 +32,7 @@ SCHEMA_VERSION = 1
 TAG_FIELD_ALIASES = {
     "category": ("category",),
     "stroke": ("stroke", "strokes"),
+    "joint_region": ("joint_region",),
     "certainty": ("certainty", "cert"),
     "status": ("status",),
     "development_stage": ("stage", "applies_from"),

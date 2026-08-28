@@ -2,7 +2,7 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 5,
+    "unused_taxonomy_values": 1,
     "unlinked_records": 491
   },
   "high_certainty_without_source": [],
@@ -10,22 +10,6 @@
     {
       "field": "development_stage",
       "value": "fun"
-    },
-    {
-      "field": "joint_region",
-      "value": "ankle-foot"
-    },
-    {
-      "field": "joint_region",
-      "value": "hip-knee"
-    },
-    {
-      "field": "joint_region",
-      "value": "shoulder-arm"
-    },
-    {
-      "field": "joint_region",
-      "value": "spine-neck"
     }
   ],
   "unlinked_records": [
