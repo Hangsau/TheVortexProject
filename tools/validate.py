@@ -63,6 +63,8 @@ exit code：
   W013  movement 受控值不在 _taxonomy.yaml 對應欄位
   W014  movement 跨檔引用無法解析，或連到存在但命名空間錯誤的 ID
   W015  published movement 條目缺少狀態、證據或介入決策必填欄位
+  W016  mobility_decision 為 evidence-gap，但該介入仍寫成可執行處方
+        （action_status 不是 do-not-prescribe，或帶了劑量來源）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -171,6 +173,12 @@ MOVEMENT_REFERENCE_FIELDS = {
     "demand_ids": "movement.demand.",
     "intervention_ids": "movement.intervention.",
 }
+
+# movement → 既有網域的反向橋。這些欄位指向 movement 以外的 canonical ID，
+# 所以不能套 MOVEMENT_REFERENCE_FIELDS 的「必須是 movement.*」規則，改為
+# 「必須存在於 canonical，且必須不是 movement.*」——後者用來擋把 demand_ids
+# 該做的事寫進 derived_from_ids。
+MOVEMENT_EXTERNAL_REFERENCE_FIELDS = ("derived_from_ids",)
 
 # 本專案慣例：詞彙定義表用 key（不需要 id），內容條目用 id。
 # VOCAB_LIST_KEYS 列出「詞彙定義表陣列鍵」——這些鍵下的元素是詞彙定義，
@@ -966,12 +974,15 @@ def check_movement_references(
     entry_key: str,
     entries: list[tuple[int, dict]],
     movement_id_set: set[str],
+    canonical_id_set: set[str],
     warnings: dict,
 ):
     """W014：movement 跨檔引用須存在，且落在欄位指定的命名空間。
 
     先判斷目標是否存在；存在但前綴不符時另報「命名空間錯」，以區分
     一般斷鏈與「確實連到東西、但連錯 movement 層」的較隱蔽錯誤。
+    derived_from_ids 是反向橋，判定條件相反：必須解析到 movement 以外的
+    canonical ID。
     """
     for index, entry in entries:
         eid = entry.get("id", "(no id)")
@@ -1002,6 +1013,32 @@ def check_movement_references(
                             f"必須指向 {expected_prefix + '*'!r}"
                         )
 
+            for field in MOVEMENT_EXTERNAL_REFERENCE_FIELDS:
+                if field not in block:
+                    continue
+                raw_targets = block.get(field)
+                if isinstance(raw_targets, str):
+                    targets = [raw_targets]
+                elif isinstance(raw_targets, list):
+                    targets = [v for v in raw_targets if isinstance(v, str)]
+                else:
+                    continue
+
+                for target in targets:
+                    if target.startswith("movement."):
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 方向錯：本欄位是 movement 對"
+                            "既有網域的來源橋，movement 內部連結請用 "
+                            "action_ids／muscle_ids／demand_ids／intervention_ids"
+                        )
+                    elif target not in canonical_id_set:
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 無法解析："
+                            "目標 ID 不存在於 canonical"
+                        )
+
 
 def check_movement_published_completeness(
     rel: str,
@@ -1015,6 +1052,9 @@ def check_movement_published_completeness(
         "action_status",
         "evidence_profile",
     )
+    # demand 是 movement 與既有 instructional 記錄唯一的接點：published 的
+    # demand 若不指出它是從哪一筆技術記錄推出來的，這個網域就沒有回溯路徑。
+    demand_required = ("derived_from_ids",)
     intervention_required = (
         "affirmative_conclusion",
         "works_when",
@@ -1030,6 +1070,8 @@ def check_movement_published_completeness(
             continue
 
         required = common_required
+        if entry_key == "demands":
+            required += demand_required
         if entry_key == "interventions":
             required += intervention_required
 
@@ -1054,6 +1096,47 @@ def check_movement_published_completeness(
                 f"  file={rel} id={eid!r} at={entry_key}[{index}] "
                 "publication_status='published' 完整性不足："
                 f"缺必填欄位 {', '.join(missing)}"
+            )
+
+
+def check_mobility_evidence_gap(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W016：evidence-gap 必須真的沒有處方，不能只是換個標籤。
+
+    evidence-gap 存在的理由是「不知道」與「不該做」是兩件事：not-routine 是
+    一個主張（正常活動度或缺轉移證據，所以不常規拉伸），evidence-gap 是
+    承認資料不足。但這個承認很容易被當成免責標籤——標了 evidence-gap，
+    底下照樣寫出可照做的劑量。本檢查把兩個矛盾組合擋掉。
+    """
+    if entry_key != "interventions":
+        return
+
+    for index, entry in entries:
+        if entry.get("mobility_decision") != "evidence-gap":
+            continue
+
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+
+        action_status = entry.get("action_status")
+        if action_status != "do-not-prescribe":
+            warnings["W016"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"mobility_decision='evidence-gap' 但 action_status="
+                f"{action_status!r}：資料不足就不能標成可據以行動，"
+                "應為 'do-not-prescribe'"
+            )
+
+        dosage = entry.get("dosage_source_ids")
+        if isinstance(dosage, list) and dosage:
+            warnings["W016"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                "mobility_decision='evidence-gap' 但 dosage_source_ids 非空："
+                "有劑量來源就不是證據空白，請改標 conditional 或 not-routine"
             )
 
 
@@ -1150,7 +1233,7 @@ def run_validation():
     validate_files = [p for p in all_canonical_files if not is_excluded(p)]
 
     # ── 建立全域 ID 集合（含 Drills，用於 E003 / E006 參照）──
-    all_id_set, _canonical_id_set, drills_id_set = build_global_id_set()
+    all_id_set, canonical_id_set, drills_id_set = build_global_id_set()
 
     # ── 收集驗證範圍內的條目 ──
     # {id: [(rel_path, entry)]}
@@ -1178,7 +1261,8 @@ def run_validation():
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
-        "W011": [], "W012": [], "W013": [], "W014": [], "W015": []
+        "W011": [], "W012": [], "W013": [], "W014": [], "W015": [],
+        "W016": []
     }
 
     # ── W012–W015: movement 網域契約（只掃四個明列內容檔）──
@@ -1214,11 +1298,12 @@ def run_validation():
         )
         check_movement_taxonomy(rel, entry_key, entries, taxonomy, warnings)
         check_movement_references(
-            rel, entry_key, entries, movement_id_set, warnings
+            rel, entry_key, entries, movement_id_set, canonical_id_set, warnings
         )
         check_movement_published_completeness(
             rel, entry_key, entries, warnings
         )
+        check_mobility_evidence_gap(rel, entry_key, entries, warnings)
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
     for path in validate_files:
@@ -1620,6 +1705,10 @@ def _write_report(
         "W015": (
             "WARN",
             "`published` movement 條目缺少狀態、證據或介入決策必填欄位",
+        ),
+        "W016": (
+            "WARN",
+            "`mobility_decision: evidence-gap` 的介入仍寫成可執行處方",
         ),
     }
 

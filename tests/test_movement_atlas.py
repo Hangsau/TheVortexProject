@@ -34,7 +34,7 @@ MOVEMENT_TAXONOMY = {
     "claim_status": {"supported"},
     "action_status": {"actionable"},
     "evidence_profile": {"direct"},
-    "mobility_decision": {"evidence-gap"},
+    "mobility_decision": {"evidence-gap", "not-routine"},
 }
 
 MOVEMENT_IDS = {
@@ -44,8 +44,11 @@ MOVEMENT_IDS = {
     "intervention_ids": "movement.intervention.scapular-control",
 }
 
+# derived_from_ids 指向 movement 以外的既有 canonical 記錄。
+CANONICAL_IDS = {"free.tech.6", "starts-turns.tech.27"}
+
 def make_warnings():
-    return {code: [] for code in ("W012", "W013", "W014", "W015")}
+    return {code: [] for code in ("W012", "W013", "W014", "W015", "W016")}
 
 
 def make_errors():
@@ -78,15 +81,21 @@ def make_sources(source_ids=None):
     }
 
 
-def make_published_entry(eid: str, *, intervention: bool = False):
+def make_published_entry(
+    eid: str, *, intervention: bool = False, demand: bool = False
+):
     entry = {
         "id": eid,
         "publication_status": "published",
         "claim_status": "supported",
         "action_status": "actionable",
         "evidence_profile": "direct",
-        "mobility_decision": "evidence-gap",
+        # evidence-gap 會被 W016 要求配 do-not-prescribe，用它當通用 fixture
+        # 會讓所有正向案例都變成 W016 案例，故預設用 not-routine。
+        "mobility_decision": "not-routine",
     }
+    if demand:
+        entry["derived_from_ids"] = sorted(CANONICAL_IDS)[:1]
     if intervention:
         entry.update(
             {
@@ -136,9 +145,12 @@ def run_movement_checks(documents):
             rel, entry_key, entries, MOVEMENT_TAXONOMY, warnings
         )
         validate_mod.check_movement_references(
-            rel, entry_key, entries, movement_id_set, warnings
+            rel, entry_key, entries, movement_id_set, CANONICAL_IDS, warnings
         )
         validate_mod.check_movement_published_completeness(
+            rel, entry_key, entries, warnings
+        )
+        validate_mod.check_mobility_evidence_gap(
             rel, entry_key, entries, warnings
         )
 
@@ -221,7 +233,7 @@ class TestMovementPositive(unittest.TestCase):
     def test_four_valid_published_records_pass_all_checks(self):
         action = make_published_entry(MOVEMENT_IDS["action_ids"])
         muscle = make_published_entry(MOVEMENT_IDS["muscle_ids"])
-        demand = make_published_entry(MOVEMENT_IDS["demand_ids"])
+        demand = make_published_entry(MOVEMENT_IDS["demand_ids"], demand=True)
         intervention = make_published_entry(
             MOVEMENT_IDS["intervention_ids"], intervention=True
         )
@@ -247,7 +259,7 @@ class TestMovementPositive(unittest.TestCase):
 
         self.assertEqual(
             warnings,
-            {"W012": [], "W013": [], "W014": [], "W015": []},
+            {"W012": [], "W013": [], "W014": [], "W015": [], "W016": []},
         )
 
 
@@ -344,16 +356,46 @@ class TestW013MovementTaxonomy(unittest.TestCase):
 
 
 class TestW014MovementReferences(unittest.TestCase):
-    def _check(self, entry, movement_ids=None):
+    def _check(self, entry, movement_ids=None, canonical_ids=None):
         warnings = make_warnings()
         validate_mod.check_movement_references(
             "canonical/movement/actions.yaml",
             "actions",
             [(0, entry)],
             set(movement_ids or MOVEMENT_IDS.values()),
+            set(canonical_ids or CANONICAL_IDS),
             warnings,
         )
         return warnings["W014"]
+
+    def test_external_bridge_resolving_outside_movement_does_not_warn(self):
+        entry = {
+            "id": "movement.demand.test",
+            "derived_from_ids": ["free.tech.6"],
+        }
+        self.assertEqual(self._check(entry), [])
+
+    def test_external_bridge_unresolvable_warns(self):
+        entry = {
+            "id": "movement.demand.test",
+            "derived_from_ids": ["free.tech.99999"],
+        }
+        messages = self._check(entry)
+        self.assertEqual(len(messages), 1)
+        self.assertIn("目標 ID 不存在於 canonical", messages[0])
+
+    def test_external_bridge_pointing_into_movement_warns_direction(self):
+        entry = {
+            "id": "movement.demand.test",
+            "derived_from_ids": [MOVEMENT_IDS["action_ids"]],
+        }
+        messages = self._check(entry)
+        self.assertEqual(len(messages), 1)
+        self.assertIn("方向錯", messages[0])
+
+    def test_external_bridge_empty_list_does_not_warn(self):
+        entry = {"id": "movement.demand.test", "derived_from_ids": []}
+        self.assertEqual(self._check(entry), [])
 
     def test_unresolvable_scalar_reference_warns(self):
         messages = self._check(
@@ -450,6 +492,80 @@ class TestW015PublishedCompleteness(unittest.TestCase):
         )
         self.assertEqual(len(messages), 1)
         self.assertIn(field, messages[0])
+
+    def test_evidence_gap_with_actionable_status_warns(self):
+        warnings = make_warnings()
+        entry = make_published_entry(
+            "movement.intervention.test", intervention=True
+        )
+        entry["mobility_decision"] = "evidence-gap"
+        validate_mod.check_mobility_evidence_gap(
+            "canonical/movement/interventions.yaml",
+            "interventions",
+            [(0, entry)],
+            warnings,
+        )
+        self.assertEqual(len(warnings["W016"]), 1)
+        self.assertIn("do-not-prescribe", warnings["W016"][0])
+
+    def test_evidence_gap_with_dosage_sources_warns(self):
+        warnings = make_warnings()
+        entry = make_published_entry(
+            "movement.intervention.test", intervention=True
+        )
+        entry["mobility_decision"] = "evidence-gap"
+        entry["action_status"] = "do-not-prescribe"
+        entry["dosage_source_ids"] = ["src.example"]
+        validate_mod.check_mobility_evidence_gap(
+            "canonical/movement/interventions.yaml",
+            "interventions",
+            [(0, entry)],
+            warnings,
+        )
+        self.assertEqual(len(warnings["W016"]), 1)
+        self.assertIn("dosage_source_ids", warnings["W016"][0])
+
+    def test_honest_evidence_gap_does_not_warn(self):
+        warnings = make_warnings()
+        entry = make_published_entry(
+            "movement.intervention.test", intervention=True
+        )
+        entry["mobility_decision"] = "evidence-gap"
+        entry["action_status"] = "do-not-prescribe"
+        entry["dosage_source_ids"] = []
+        validate_mod.check_mobility_evidence_gap(
+            "canonical/movement/interventions.yaml",
+            "interventions",
+            [(0, entry)],
+            warnings,
+        )
+        self.assertEqual(warnings["W016"], [])
+
+    def test_evidence_gap_check_ignores_non_interventions(self):
+        warnings = make_warnings()
+        entry = make_published_entry("movement.demand.test", demand=True)
+        entry["mobility_decision"] = "evidence-gap"
+        validate_mod.check_mobility_evidence_gap(
+            "canonical/movement/stroke-demands.yaml",
+            "demands",
+            [(0, entry)],
+            warnings,
+        )
+        self.assertEqual(warnings["W016"], [])
+
+    def test_published_demand_missing_derived_from_ids_warns(self):
+        entry = make_published_entry("movement.demand.test")
+        messages = self._check(entry, "demands")
+        self.assertEqual(len(messages), 1)
+        self.assertIn("derived_from_ids", messages[0])
+
+    def test_published_demand_with_derived_from_ids_does_not_warn(self):
+        entry = make_published_entry("movement.demand.test", demand=True)
+        self.assertEqual(self._check(entry, "demands"), [])
+
+    def test_derived_from_ids_not_required_outside_demands(self):
+        entry = make_published_entry("movement.action.test")
+        self.assertEqual(self._check(entry, "actions"), [])
 
     def test_missing_claim_status_warns(self):
         self._assert_missing_warns("claim_status")

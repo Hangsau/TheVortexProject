@@ -10,6 +10,10 @@ description: 泳式 × 相位 × 體位 × 池畔方向 × 解剖動作，連到
 # phase: 相位模型內的相位鍵，暫不登錄為受控詞彙。
 # body_position: 動作需求成立時的身體位置。
 # poolside_direction: 從池畔觀察所使用的方向基準。
+# derived_from_ids: 本需求是從哪幾筆既有 instructional 技術記錄推出來的；
+#   目標為非 movement 的 canonical ID，來源是 plans/movement_coverage_denominator.yaml
+#   的 phases[].evidence[].record_id。published 條目必填（W015）；
+#   空 list 表示已查 denominator 確認該相位無對應記錄，不是未處理。
 # action_ids: 連到 movement.action.* 的解剖動作需求。
 # muscle_roles: 連到 movement.muscle.* 的可承擔角色，不把振幅直接等同肌力。
 # publication_status: 記錄的發布狀態。
@@ -31,6 +35,9 @@ demands:
     phase_model: descriptive
     phase: underwater-glide
     body_position: prone
+    derived_from_ids:
+      - starts-turns.tech.27
+      - starts-turns.tech.34
     action_ids:
       - movement.action.shoulder-complex.elevation
     muscle_roles:
@@ -82,6 +89,9 @@ demands:
     phase: down-kick
     body_position: prone
     poolside_direction: 足部由水面側向池底側移動
+    derived_from_ids:
+      - udk.tech.5
+      - udk.tech.9
     action_ids:
       - movement.action.ankle-foot.plantarflexion
     muscle_roles:
@@ -132,6 +142,9 @@ demands:
     phase: down-kick
     body_position: prone
     poolside_direction: 足部由水面側向池底側移動
+    derived_from_ids:
+      - free.tech.6
+      - free.tech.11
     action_ids:
       - movement.action.ankle-foot.plantarflexion
     muscle_roles:

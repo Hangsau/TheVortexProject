@@ -290,12 +290,53 @@ fields:
     note: >
       活動度決策。conditional：確認被動限制且無禁忌時使用；not-routine：正常活動度、
       主動控制不足、過度活動或沒有轉移證據時不常規拉伸；evidence-gap：目前沒有足夠
-      資料給特定處方，保留評估與重測，不捏造動作。本欄位不維護 count；實際使用數以
-      indices/tag_reverse_index.json 為準。
+      資料給特定處方，保留評估與重測，不捏造動作。
+      not-routine 與 evidence-gap 的分界：not-routine 是一個主張（有理由認為不該
+      常規做），evidence-gap 是承認不知道。兩者不可互相冒用——把不知道寫成
+      not-routine 等於憑空多出一個否定結論。
+      evidence-gap 不是免責標籤：標了它就不得同時給出可照做的處方，因此
+      action_status 必須是 do-not-prescribe 且 dosage_source_ids 必須為空，
+      由 tools/validate.py 的 W016 強制。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
     values:
       - key: conditional
       - key: not-routine
       - key: evidence-gap
+
+# ─────────────────────────────────────────────────────────────────────
+# Movement 參照契約
+# 同樣不是受控詞彙，是「哪個欄位可以指向哪一群 ID」的登錄。
+# 驗證器（tools/validate.py，W014）是本契約的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+movement_reference_contract:
+  internal:
+    note: >
+      movement 網域內部連結。目標必須存在於 movement 四個內容檔，且必須落在
+      欄位指定的命名空間；「連到存在但層別錯的 ID」與一般斷鏈分開報。
+    fields:
+      - field: action_ids
+        resolves_to: "movement.action.*"
+      - field: muscle_ids
+        resolves_to: "movement.muscle.*"
+      - field: demand_ids
+        resolves_to: "movement.demand.*"
+      - field: intervention_ids
+        resolves_to: "movement.intervention.*"
+  external:
+    note: >
+      movement 對既有網域的回溯橋，方向固定為 movement → 既有記錄。目標必須
+      存在於 canonical 全集且必須不是 movement.*，藉此擋掉「該用 demand_ids
+      卻寫進 derived_from_ids」。反方向（既有記錄 → movement）不落成欄位，
+      避免為了雙向連結去改動約六百筆既有條目，改由索引產生。
+    fields:
+      - field: derived_from_ids
+        type: "list[str]"
+        applies_to: "canonical/movement/stroke-demands.yaml#demands[]"
+        resolves_to: "canonical 全集內的非 movement ID（如 free.tech.6）"
+        source_of_truth: "plans/movement_coverage_denominator.yaml 的 phases[].evidence[].record_id"
+        note: >
+          published 的 demand 必填（W015）。空 list [] 表示已查 denominator
+          並確認該相位沒有對應技術記錄，不是未處理。
 
 # ─────────────────────────────────────────────────────────────────────
 # 證據承載契約（S3b）
