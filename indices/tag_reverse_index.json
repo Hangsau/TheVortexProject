@@ -2,15 +2,23 @@
   "schema_version": 1,
   "fields": {
     "action_status": {
-      "do-not-prescribe": [],
+      "do-not-prescribe": [
+        "movement.demand.free.down-kick.ankle-plantarflexion"
+      ],
       "provisional": [
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
+        "movement.intervention.ankle-plantarflexion.capacity-control",
+        "movement.intervention.ankle-plantarflexion.conditional-mobility",
         "movement.intervention.shoulder-elevation.active-control",
         "movement.intervention.shoulder-elevation.conditional-soft-tissue",
         "movement.muscle.latissimus-dorsi"
       ],
       "ready": [
+        "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.muscle.ankle-dorsiflexors",
+        "movement.muscle.ankle-plantarflexors",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators"
       ]
@@ -1427,16 +1435,24 @@
       "disputed": [],
       "partially-supported": [
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
+        "movement.intervention.ankle-plantarflexion.capacity-control",
+        "movement.intervention.ankle-plantarflexion.conditional-mobility",
         "movement.intervention.shoulder-elevation.active-control",
         "movement.intervention.shoulder-elevation.conditional-soft-tissue",
         "movement.muscle.latissimus-dorsi"
       ],
       "supported": [
+        "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.muscle.ankle-dorsiflexors",
+        "movement.muscle.ankle-plantarflexors",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators"
       ],
-      "unverified": []
+      "unverified": [
+        "movement.demand.free.down-kick.ankle-plantarflexion"
+      ]
     },
     "development_stage": {
       "fun": [],
@@ -1489,7 +1505,10 @@
     },
     "evidence_profile": {
       "anatomy": [
+        "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.muscle.ankle-dorsiflexors",
+        "movement.muscle.ankle-plantarflexors",
         "movement.muscle.latissimus-dorsi",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators"
@@ -1501,14 +1520,19 @@
       "swimming-emg": [],
       "swimming-kinematics": [],
       "synthesis-inference": [
+        "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
+        "movement.intervention.ankle-plantarflexion.capacity-control",
+        "movement.intervention.ankle-plantarflexion.conditional-mobility",
         "movement.intervention.shoulder-elevation.conditional-soft-tissue"
       ]
     },
     "joint_region": {
       "ankle-foot": [
         "breast.tech.36",
-        "free.tech.38"
+        "free.tech.38",
+        "movement.action.ankle-foot.plantarflexion"
       ],
       "hip-knee": [
         "back.tech.30",
@@ -1898,10 +1922,12 @@
     },
     "mobility_decision": {
       "conditional": [
+        "movement.intervention.ankle-plantarflexion.conditional-mobility",
         "movement.intervention.shoulder-elevation.conditional-soft-tissue"
       ],
       "evidence-gap": [],
       "not-routine": [
+        "movement.intervention.ankle-plantarflexion.capacity-control",
         "movement.intervention.shoulder-elevation.active-control"
       ]
     },
@@ -1933,10 +1959,17 @@
     },
     "publication_status": {
       "draft": [
+        "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
+        "movement.intervention.ankle-plantarflexion.capacity-control",
+        "movement.intervention.ankle-plantarflexion.conditional-mobility",
         "movement.intervention.shoulder-elevation.active-control",
         "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+        "movement.muscle.ankle-dorsiflexors",
+        "movement.muscle.ankle-plantarflexors",
         "movement.muscle.latissimus-dorsi",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators"
@@ -2320,7 +2353,8 @@
         "free.tech.6",
         "free.tech.7",
         "free.tech.8",
-        "free.tech.9"
+        "free.tech.9",
+        "movement.demand.free.down-kick.ankle-plantarflexion"
       ],
       "starts-turns": [
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -2388,6 +2422,7 @@
         "starts-turns.tech.9"
       ],
       "udk": [
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
         "udk.err1",
         "udk.err10",
         "udk.err11",

@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-08-28
-> 驗證條目數：633，Drills ID 數：176
+> 生成日期：2026-08-29
+> 驗證條目數：640，Drills ID 數：176
 
 ---
 
@@ -235,7 +235,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 498 筆**
+**WARN，共 505 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -606,12 +606,19 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
   file=canonical\movement\actions.yaml id='movement.action.shoulder-complex.elevation'
+  file=canonical\movement\actions.yaml id='movement.action.ankle-foot.plantarflexion'
   file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.active-control'
   file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.conditional-soft-tissue'
+  file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.conditional-mobility'
+  file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.capacity-control'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.scapular-upward-rotators'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.rotator-cuff'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.latissimus-dorsi'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-plantarflexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-dorsiflexors'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.shoulder-elevation'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.udk.down-kick.ankle-plantarflexion'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.ankle-plantarflexion'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'
@@ -774,13 +781,12 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 21 筆**
+**WARN，共 19 筆**
 
   source_id='src.adductor-loading-return-to-sport-practice-co' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.aiac-ijkss-v-6n-1p-25' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.akkurt-2017' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.breath-hold-training' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.brockett-2016' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.bushman-2006' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.clinical-coach-report-no-epidemiology' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.falls-and-hip-fracture-mortality-pmid' 已登錄於 _sources.yaml 但無任何條目引用
@@ -796,7 +802,6 @@
   source_id='src.sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimming-injury-imaging-review-1-radiologyke' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.yamakawa-2022' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 

@@ -2,22 +2,14 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 11,
-    "unlinked_records": 498
+    "unused_taxonomy_values": 9,
+    "unlinked_records": 505
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
     {
-      "field": "action_status",
-      "value": "do-not-prescribe"
-    },
-    {
       "field": "claim_status",
       "value": "disputed"
-    },
-    {
-      "field": "claim_status",
-      "value": "unverified"
     },
     {
       "field": "development_stage",
@@ -1469,14 +1461,39 @@
       "path": "injuries[32]"
     },
     {
+      "id": "movement.action.ankle-foot.plantarflexion",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[1]"
+    },
+    {
       "id": "movement.action.shoulder-complex.elevation",
       "file": "canonical/movement/actions.yaml",
       "path": "actions[0]"
     },
     {
+      "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[2]"
+    },
+    {
       "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[0]"
+    },
+    {
+      "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[1]"
+    },
+    {
+      "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[3]"
+    },
+    {
+      "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[2]"
     },
     {
       "id": "movement.intervention.shoulder-elevation.active-control",
@@ -1487,6 +1504,16 @@
       "id": "movement.intervention.shoulder-elevation.conditional-soft-tissue",
       "file": "canonical/movement/interventions.yaml",
       "path": "interventions[1]"
+    },
+    {
+      "id": "movement.muscle.ankle-dorsiflexors",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[4]"
+    },
+    {
+      "id": "movement.muscle.ankle-plantarflexors",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[3]"
     },
     {
       "id": "movement.muscle.latissimus-dorsi",

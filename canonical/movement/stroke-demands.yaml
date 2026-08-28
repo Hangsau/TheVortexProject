@@ -75,3 +75,97 @@ demands:
         無法達到完整超流線位的潛在原因包括：盂肱關節被動活動度不足、
         肩胛上旋肌群主動控制不足、闊背肌或肩後囊柔韌性限制、以及疼痛
         或夾擠引起的保護性受限。不同原因的介入方向完全不同，需分流評估。
+
+  - id: movement.demand.udk.down-kick.ankle-plantarflexion
+    stroke: udk
+    phase_model: descriptive
+    phase: down-kick
+    body_position: prone
+    poolside_direction: 足部由水面側向池底側移動
+    action_ids:
+      - movement.action.ankle-foot.plantarflexion
+    muscle_roles:
+      - muscle_id: movement.muscle.ankle-plantarflexors
+        role: >
+          支持踝在下踢中進入並維持蹠屈方向。泳者研究直接量到腓腸肌活動
+          與踝蹠屈運動，但不能把腓腸肌的表面肌電擴成整個蹠屈肌群的固定
+          招募模式，也不能把肌電振幅直接等同肌力、力矩或推進貢獻。
+      - muscle_id: movement.muscle.ankle-dorsiflexors
+        role: >
+          脛前肌在 Yamakawa 研究的 UDK 下踢相出現活動峰值，顯示背屈肌並非
+          單純休息的拮抗肌；結合其一般作用線，可提出換向與蹠屈方向制動的
+          控制角色。該研究未直接判定離心收縮或因果性推進貢獻，本條不作
+          這兩項延伸。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.veiga-2022
+      - src.yamakawa-2022
+      - src.pmc9402090-b
+    public:
+      name_zh: 水下蝶式打腿下踢的踝蹠屈需求
+      description: >
+        水下蝶式打腿的下踢相，可用腳趾從週期中的較高位置移到較低位置來
+        描述。泳者運動學顯示，踝在這段週期中有明確的蹠屈與背屈變化，
+        最大蹠屈出現在下踢已開始之後；泳者肌電研究也同時量到腓腸肌與
+        脛前肌活動。這表示踝需要可用的蹠屈範圍，也需要雙向的主動控制，
+        不能把腳踝理解成完全放鬆、任水流被動甩動。現有資料沒有建立所有
+        泳者共用的目標角度，也不支持「角度越大越好」。
+      limitation_context: >
+        腳尖姿勢沒有出現時，原因不只一種，處理方向也可能相反；只看水中
+        外觀不能判定原因或該採哪一種處理，需個別評估後再決定。
+      safety_note: >
+        下踢或繃腳時若出現踝部疼痛、麻木、明顯無力或不穩定感，不應繼續
+        強壓腳尖或追求更大角度。
+    diagnostic:
+      assessment_note: >
+        以固定膝位分別量測被動與主動蹠屈，另測蹠屈肌與背屈肌的末端維持、
+        換向及離心控制；再以同一速度與任務的水中影片同步觀察踝角度與
+        腳趾軌跡。被動限制、主動控制缺口、疼痛保護及足部其他關節代償的
+        分流與重測判讀屬診斷層。
+
+  - id: movement.demand.free.down-kick.ankle-plantarflexion
+    stroke: free
+    phase_model: descriptive
+    phase: down-kick
+    body_position: prone
+    poolside_direction: 足部由水面側向池底側移動
+    action_ids:
+      - movement.action.ankle-foot.plantarflexion
+    muscle_roles:
+      - muscle_id: movement.muscle.ankle-plantarflexors
+        role: >
+          依一般作用線可承擔蹠屈與末端姿勢維持，是本筆待驗證的候選角色。
+          本批允許來源沒有自由式下踢的踝運動學或相位化 EMG，故不宣稱
+          此肌群在該相位必然以特定時序或程度招募。
+      - muscle_id: movement.muscle.ankle-dorsiflexors
+        role: >
+          依一般作用線可承擔蹠屈方向的制動與動作換向，也是待驗證的候選
+          角色；目前不能由 UDK 或一般解剖資料外推自由式下踢的收縮型態，
+          更不能推論背屈肌訓練會改善打腿效率。
+    publication_status: draft
+    claim_status: unverified
+    action_status: do-not-prescribe
+    evidence_profile: synthesis-inference
+    source_ids: []
+    public:
+      name_zh: 自由式打腿下踢的踝蹠屈需求
+      description: >
+        本圖譜的既有覆蓋分母把自由式下踢連到踝足區域，本筆因此先把踝蹠屈
+        建成待驗證的動作需求，讓同一解剖動作可連到第二個泳式相位。但本批
+        允許來源中沒有自由式下踢的踝關節運動學，不能確認蹠屈角度、時序或
+        肌肉招募；這筆草稿不是角度標準，也不得作為伸展或肌力處方依據。
+      limitation_context: >
+        若觀察到腳背姿勢不同，不能直接判定原因或處理方向；在取得自由式
+        專屬運動學與肌電證據前，介入只能依個別評估與重測暫定。
+      safety_note: >
+        自由式打腿或繃腳時若出現疼痛、麻木、明顯無力或不穩定感，應停止
+        強壓腳尖，不要為了符合外觀而追求更大角度。
+    diagnostic:
+      assessment_note: >
+        後續需取得自由式泳者下踢相的踝關節分節段運動學，並把腓腸肌、
+        脛前肌等肌電與相位同步，才能確認本需求。現階段若個別評估，仍須
+        分開記錄固定膝位的被動與主動蹠屈、症狀、控制能力及同任務水中表現，
+        不把 UDK 結果直接當作自由式判讀標準。

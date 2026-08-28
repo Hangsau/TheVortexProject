@@ -493,8 +493,14 @@
         "pmcid": "PMC4994968",
         "doi": "10.1016/j.mporth.2016.04.015"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.action.ankle-foot.plantarflexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[1]"
+        }
+      ]
     },
     {
       "id": "src.building-the-perfect-turn-push-off-strength",
@@ -1294,8 +1300,13 @@
         "pmcid": "PMC8804114",
         "doi": "10.1186/s40798-022-00410-5"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        },
         {
           "id": "movement.intervention.shoulder-elevation.active-control",
           "file": "canonical/movement/interventions.yaml",
@@ -3010,8 +3021,13 @@
         "pmid": "31343554",
         "doi": "10.1519/JSC.0000000000003256"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        },
         {
           "id": "movement.intervention.shoulder-elevation.active-control",
           "file": "canonical/movement/interventions.yaml",
@@ -3089,7 +3105,7 @@
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 25,
+      "usage_count": 30,
       "usages": [
         {
           "id": "back.tech.30",
@@ -3167,14 +3183,39 @@
           "path": "points[40].public.mechanism"
         },
         {
+          "id": "movement.action.ankle-foot.plantarflexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[1]"
+        },
+        {
           "id": "movement.action.shoulder-complex.elevation",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[0]"
         },
         {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[2]"
+        },
+        {
           "id": "movement.intervention.shoulder-elevation.conditional-soft-tissue",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[1]"
+        },
+        {
+          "id": "movement.muscle.ankle-dorsiflexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[4]"
+        },
+        {
+          "id": "movement.muscle.ankle-plantarflexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[3]"
         },
         {
           "id": "movement.muscle.latissimus-dorsi",
@@ -4924,8 +4965,18 @@
         "pmid": "36032263",
         "doi": "10.3389/fspor.2022.948034"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[1]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[2]"
+        },
         {
           "id": "udk.tech.14",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -9695,7 +9746,7 @@
         "pmcid": "PMC9566274",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9566274/"
       },
-      "usage_count": 5,
+      "usage_count": 6,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -9711,6 +9762,11 @@
           "id": "fly.tech.4",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[105].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[1]"
         },
         {
           "id": "udk.err1",
@@ -10171,8 +10227,19 @@
         "pmcid": "PMC9051435",
         "doi": "10.3389/fspor.2022.829618"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[1]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        }
+      ]
     },
     {
       "id": "src.yamakawa-2024",

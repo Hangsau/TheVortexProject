@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 809,
+  "record_count": 816,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -10980,6 +10980,35 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.action.ankle-foot.plantarflexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[1]",
+      "title": "踝蹠屈",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "ankle-foot"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.brockett-2016",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.action.shoulder-complex.elevation",
       "domain": "movement",
       "file": "canonical/movement/actions.yaml",
@@ -11011,6 +11040,32 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[2]",
+      "title": "自由式打腿下踢的踝蹠屈需求",
+      "tags": {
+        "action_status": [
+          "do-not-prescribe"
+        ],
+        "claim_status": [
+          "unverified"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
       "domain": "movement",
       "file": "canonical/movement/stroke-demands.yaml",
@@ -11035,6 +11090,96 @@
       },
       "source_ids": [
         "src.martens-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[1]",
+      "title": "水下蝶式打腿下踢的踝蹠屈需求",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.pmc9402090-b",
+        "src.veiga-2022",
+        "src.yamakawa-2022"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[3]",
+      "title": "踝蹠屈容量與主動控制訓練",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "mobility_decision": [
+          "not-routine"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.fone-2022",
+        "src.muniz-pardos-2019",
+        "src.neumann-2017",
+        "src.yamakawa-2022"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[2]",
+      "title": "條件式踝蹠屈活動度介入",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "mobility_decision": [
+          "conditional"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.pmc9402090-b"
       ],
       "outgoing_ids": []
     },
@@ -11085,6 +11230,56 @@
         ],
         "mobility_decision": [
           "conditional"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.ankle-dorsiflexors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[4]",
+      "title": "踝背屈肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.ankle-plantarflexors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[3]",
+      "title": "踝蹠屈肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
         ],
         "publication_status": [
           "draft"
