@@ -77,7 +77,7 @@
 
 ---
 
-## E010 — 診斷層洩漏：診斷型鍵名出現在 `public` 子樹內（`sync_vortex.py` 白名單會整包搬 public 上公開站）
+## E010 — 診斷層洩漏：既有與 movement 診斷型鍵名出現在 `public` 子樹內（`sync_vortex.py` 白名單會整包搬 public 上公開站）
 
 **ERROR，共 0 筆**
 
@@ -874,5 +874,37 @@
   file=canonical\psychology\psychology.yaml id='psych.flow.izof_individual_zones' at=themes[7].concepts[9].public.hardware_boundary certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\technica\l-indicators.yaml id='free.L3.kick-rhythm' at=indicators[10].public.evidence[0] certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\technica\l-indicators.yaml id='fly.L3.undulation-integration' at=indicators[30].public.evidence[1] certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+
+---
+
+## W012 — movement 條目 ID 的檔案命名空間或分段格式違規
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W013 — movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W014 — movement 跨檔引用無法解析，或目標存在但命名空間錯誤
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W015 — `published` movement 條目缺少狀態、證據或介入決策必填欄位
+
+**WARN，共 0 筆**
+
+（無）
 
 ---

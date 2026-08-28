@@ -59,6 +59,10 @@ exit code：
   W011  certainty 為 orange（教練觀測）但缺 observation_basis：
         教練觀測是第一手實務證據，不需要 source_ids，但必須說出
         觀察基礎與外推邊界，否則與「沒有依據」無法區分（S6）
+  W012  movement ID 的檔案命名空間或分段格式違規
+  W013  movement 受控值不在 _taxonomy.yaml 對應欄位
+  W014  movement 跨檔引用無法解析，或連到存在但命名空間錯誤的 ID
+  W015  published movement 條目缺少狀態、證據或介入決策必填欄位
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -143,6 +147,30 @@ DRILLS_DIR = ROOT / "Drills"
 TAXONOMY_FILE = CANONICAL_DIR / "_taxonomy.yaml"
 SOURCES_FILE = CANONICAL_DIR / "_sources.yaml"
 REPORTS_DIR = ROOT / "reports"
+MOVEMENT_DIR = CANONICAL_DIR / "movement"
+
+# movement 驗證只掃這四個內容檔；_index.yaml 是 _ 前綴 meta 檔，不在範圍內。
+MOVEMENT_FILE_RULES = {
+    "actions.yaml": ("actions", "movement.action."),
+    "muscle-groups.yaml": ("muscle_groups", "movement.muscle."),
+    "stroke-demands.yaml": ("demands", "movement.demand."),
+    "interventions.yaml": ("interventions", "movement.intervention."),
+}
+
+MOVEMENT_TAXONOMY_FIELDS = (
+    "publication_status",
+    "claim_status",
+    "action_status",
+    "evidence_profile",
+    "mobility_decision",
+)
+
+MOVEMENT_REFERENCE_FIELDS = {
+    "action_ids": "movement.action.",
+    "muscle_ids": "movement.muscle.",
+    "demand_ids": "movement.demand.",
+    "intervention_ids": "movement.intervention.",
+}
 
 # 本專案慣例：詞彙定義表用 key（不需要 id），內容條目用 id。
 # VOCAB_LIST_KEYS 列出「詞彙定義表陣列鍵」——這些鍵下的元素是詞彙定義，
@@ -203,6 +231,7 @@ LINKS_IDS_KEYS = {k + "_ids" for k in LINKS_FREE_TEXT_KEYS}
 # psych.self_talk.trainable_skill 這類形態），最後一段不限定為純數字，
 # 否則 back.err2 / starts-turns.err10 這類會漏抽。
 import re as _re
+_MOVEMENT_ID_SEGMENT_RE = _re.compile(r"^[a-z][a-z0-9-]*$")
 _CANDIDATE_ID_RE = _re.compile(
     r"(?<![0-9A-Za-z_.-])(?:"
     r"[a-z][a-z0-9_-]*(?:\.[a-z0-9_-]+)+"   # 命名空間格式：free.tech.10 / back.err2
@@ -798,6 +827,15 @@ DIAGNOSTIC_KEYS = frozenset({
     "diagnostic_protocols",
     "manipulation",
     "contrast_question",
+    # movement 網域的被動／主動 ROM 測量、力量耐力測試、限制分類、教練決策樹與個別水中重測判讀必須擋在 public 外，避免診斷推理被公開站整包搬走。
+    "passive_rom",
+    "active_rom",
+    "rom_measurement",
+    "strength_endurance_test",
+    "limitation_classification",
+    "coach_decision_tree",
+    "in_water_retest",
+    "retest_reading",
 })
 
 
@@ -831,7 +869,8 @@ def check_public_layer_leak(rel: str, data: object, errors: dict):
     sync_vortex.py 對每個檔案都做 `rec.update(pub)`——白名單，整包搬 public。
     所以新增一個 diagnostic 同層鍵不會洩漏（不在白名單內就是不搬），
     真正會洩漏的只有一種寫法：把診斷判讀語寫進 public 裡面。
-    這個檢查把那條路徑關掉。
+    黑名單也涵蓋 movement 的 ROM／力量耐力量測、限制分類、教練決策樹與
+    個別水中重測判讀鍵名；這個檢查把所有這類洩漏路徑關掉。
     """
     def walk(node, path, in_public):
         if isinstance(node, dict):
@@ -849,6 +888,173 @@ def check_public_layer_leak(rel: str, data: object, errors: dict):
                 walk(item, f"{path}[{i}]", in_public)
 
     walk(data, "", False)
+
+
+# ── Movement 網域契約（W012–W015）────────────────────────────────────────────
+
+def check_movement_id_names(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    expected_prefix: str,
+    warnings: dict,
+):
+    """W012：movement 條目 ID 須符合檔案命名空間與穩定分段格式。
+
+    每段只允許小寫字母起頭及小寫字母、數字、連字號；純數字段也禁止，
+    避免把角度數字、證據等級或可變文案編進 ID，造成內容修正時被迫換 ID。
+    """
+    for index, entry in entries:
+        eid = entry.get("id")
+        loc = f"{entry_key}[{index}]"
+
+        if not isinstance(eid, str) or not eid:
+            warnings["W012"].append(
+                f"  file={rel} id={eid!r} at={loc} movement ID 段格式違規："
+                "ID 必須是非空字串"
+            )
+            continue
+
+        if not eid.startswith(expected_prefix):
+            warnings["W012"].append(
+                f"  file={rel} id={eid!r} at={loc} movement ID 命名空間違規："
+                f"預期前綴 {expected_prefix!r}"
+            )
+
+        invalid_segments = [
+            segment for segment in eid.split(".")
+            if segment.isdigit() or not _MOVEMENT_ID_SEGMENT_RE.fullmatch(segment)
+        ]
+        if invalid_segments:
+            warnings["W012"].append(
+                f"  file={rel} id={eid!r} at={loc} movement ID 段格式違規："
+                f"不合法段={invalid_segments!r}（每段須符合 "
+                "^[a-z][a-z0-9-]*$，且不得為純數字）"
+            )
+
+
+def check_movement_taxonomy(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    taxonomy: dict[str, set[str]],
+    warnings: dict,
+):
+    """W013：movement 任意層的五個受控欄位都必須存在於 taxonomy。
+
+    這一條刻意維持 WARN：等 Step 12 pilot 內容穩定後，Step 21 才會考慮
+    是否升級成 E004 等級。
+    """
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        entry_loc = f"{entry_key}[{index}]"
+        for loc, _nearest_id, block in iter_blocks(entry, entry_loc, str(eid)):
+            for field in MOVEMENT_TAXONOMY_FIELDS:
+                if field not in block:
+                    continue
+                value = block.get(field)
+                allowed = taxonomy.get(field, set())
+                if not isinstance(value, str) or value not in allowed:
+                    warnings["W013"].append(
+                        f"  file={rel} id={eid!r} at={loc}.{field} "
+                        f"{field}={value!r} 不在 taxonomy.{field}"
+                    )
+
+
+def check_movement_references(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    movement_id_set: set[str],
+    warnings: dict,
+):
+    """W014：movement 跨檔引用須存在，且落在欄位指定的命名空間。
+
+    先判斷目標是否存在；存在但前綴不符時另報「命名空間錯」，以區分
+    一般斷鏈與「確實連到東西、但連錯 movement 層」的較隱蔽錯誤。
+    """
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        entry_loc = f"{entry_key}[{index}]"
+        for loc, _nearest_id, block in iter_blocks(entry, entry_loc, str(eid)):
+            for field, expected_prefix in MOVEMENT_REFERENCE_FIELDS.items():
+                if field not in block:
+                    continue
+                raw_targets = block.get(field)
+                if isinstance(raw_targets, str):
+                    targets = [raw_targets]
+                elif isinstance(raw_targets, list):
+                    targets = [v for v in raw_targets if isinstance(v, str)]
+                else:
+                    continue
+
+                for target in targets:
+                    if target not in movement_id_set:
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 無法解析："
+                            "目標 ID 不存在於 movement 檔案"
+                        )
+                    elif not target.startswith(expected_prefix):
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 命名空間錯：目標存在，但本欄位"
+                            f"必須指向 {expected_prefix + '*'!r}"
+                        )
+
+
+def check_movement_published_completeness(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W015：published movement 條目須具備可發布的狀態與決策欄位。"""
+    common_required = (
+        "claim_status",
+        "action_status",
+        "evidence_profile",
+    )
+    intervention_required = (
+        "affirmative_conclusion",
+        "works_when",
+        "fails_when",
+        "how_to_identify",
+        "action",
+        "remaining_boundary",
+        "mobility_decision",
+    )
+
+    for index, entry in entries:
+        if entry.get("publication_status") != "published":
+            continue
+
+        required = common_required
+        if entry_key == "interventions":
+            required += intervention_required
+
+        missing = []
+        for field in required:
+            value = entry.get(field)
+            filled = (
+                isinstance(value, str) and bool(value.strip())
+            ) or (
+                isinstance(value, list) and bool(value)
+            )
+            if not filled:
+                missing.append(field)
+
+        # plan 尚未提供可機器判定「活動度記錄」的欄位，所以目前把
+        # interventions.yaml 中所有 published 條目都視為必填 mobility_decision；
+        # evidence-gap 永遠是誠實可用的值，不會逼作者編造。Step 13 pilot
+        # 審查後重新檢討。
+        if missing:
+            eid = entry.get("id", "(no id)")
+            warnings["W015"].append(
+                f"  file={rel} id={eid!r} at={entry_key}[{index}] "
+                "publication_status='published' 完整性不足："
+                f"缺必填欄位 {', '.join(missing)}"
+            )
 
 
 def check_evidence_from(
@@ -972,8 +1178,47 @@ def run_validation():
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
-        "W011": []
+        "W011": [], "W012": [], "W013": [], "W014": [], "W015": []
     }
+
+    # ── W012–W015: movement 網域契約（只掃四個明列內容檔）──
+    movement_documents: list[
+        tuple[str, str, str, list[tuple[int, dict]]]
+    ] = []
+    movement_id_set: set[str] = set()
+    for filename, (entry_key, expected_prefix) in MOVEMENT_FILE_RULES.items():
+        path = MOVEMENT_DIR / filename
+        try:
+            data = load_yaml(path)
+        except Exception as e:
+            sys.stderr.write(f"[WARN] load error {path}: {e}\n")
+            continue
+
+        rel = str(path.relative_to(ROOT))
+        raw_entries = data.get(entry_key) if isinstance(data, dict) else None
+        entries = [
+            (index, entry)
+            for index, entry in enumerate(raw_entries)
+            if isinstance(entry, dict)
+        ] if isinstance(raw_entries, list) else []
+        movement_documents.append((rel, entry_key, expected_prefix, entries))
+        movement_id_set.update(
+            entry["id"]
+            for _index, entry in entries
+            if isinstance(entry.get("id"), str)
+        )
+
+    for rel, entry_key, expected_prefix, entries in movement_documents:
+        check_movement_id_names(
+            rel, entry_key, entries, expected_prefix, warnings
+        )
+        check_movement_taxonomy(rel, entry_key, entries, taxonomy, warnings)
+        check_movement_references(
+            rel, entry_key, entries, movement_id_set, warnings
+        )
+        check_movement_published_completeness(
+            rel, entry_key, entries, warnings
+        )
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
     for path in validate_files:
@@ -1304,7 +1549,7 @@ def _write_report(
         ),
         "E010": (
             "ERROR",
-            "診斷層洩漏：診斷型鍵名出現在 `public` 子樹內"
+            "診斷層洩漏：既有與 movement 診斷型鍵名出現在 `public` 子樹內"
             "（`sync_vortex.py` 白名單會整包搬 public 上公開站）",
         ),
         "E011": (
@@ -1359,6 +1604,22 @@ def _write_report(
             "WARN",
             "`certainty` orange（教練觀測）但缺 `observation_basis`"
             "（未交代觀察基礎與外推邊界）→ S6 範圍",
+        ),
+        "W012": (
+            "WARN",
+            "movement 條目 ID 的檔案命名空間或分段格式違規",
+        ),
+        "W013": (
+            "WARN",
+            "movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合",
+        ),
+        "W014": (
+            "WARN",
+            "movement 跨檔引用無法解析，或目標存在但命名空間錯誤",
+        ),
+        "W015": (
+            "WARN",
+            "`published` movement 條目缺少狀態、證據或介入決策必填欄位",
         ),
     }
 
