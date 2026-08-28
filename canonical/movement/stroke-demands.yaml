@@ -6,8 +6,12 @@ description: 泳式 × 相位 × 體位 × 池畔方向 × 解剖動作，連到
 # demands[] 條目 schema（以下僅描述欄位與語意）：
 # id: 使用 movement.demand.* 命名空間的穩定識別碼。
 # stroke: 此需求所屬泳式，待實際內容落地時逐筆裁決。
-# phase_model: 此需求採用的相位模型，暫不登錄為受控詞彙。
-# phase: 相位模型內的相位鍵，暫不登錄為受控詞彙。
+# phase_model: 此需求採用的相位模型，受控詞彙見 _taxonomy.yaml#fields.phase_model。
+#   分期不是單一真相，數套各有來源的分期並存；本欄位的作用是讓「這個相位名出自
+#   哪一套」顯性化，跨模型的相位不可互相換算（BK-26 裁決）。
+# phase: 相位模型內的相位鍵。合法值隨泳式而異，登錄在
+#   _taxonomy.yaml#movement_phase_registry.strokes.<stroke>；要新增相位先改登錄表，
+#   不得在本檔就地發明。(stroke, phase, phase_model) 三者一致性由 W017 強制。
 # body_position: 動作需求成立時的身體位置。
 # poolside_direction: 從池畔觀察所使用的方向基準。
 # derived_from_ids: 本需求是從哪幾筆既有 instructional 技術記錄推出來的；

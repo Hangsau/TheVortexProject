@@ -39,6 +39,7 @@
   - 可寫入：四段式是仰式常見拆法之一，出處為 Fernandes et al. 2022 的影像編碼定義；同時並列六相（Chollet 2008／Race Club）與 Catch-Midpull-Finish-Rotation（Science of Swimming Faster）兩套。
   - 不得寫入：把四段式當「標準分期」；把四段式當完整週期——Fernandes 自己把 recovery 另列為第 5 相，四個 sweep **不涵蓋移臂**。
   - movement 落地（**擋 W4**）：`canonical/movement/` 不得把任一套分期當網域真相。相位 ID 必須帶「出自哪套分期」的欄位，且仰式若採四 sweep，移臂段會整段無 ID——W4 前必須先決定是補 recovery 相位還是改採六相。此為 Step 17 的前置。
+  - **已解除（2026-08-29）**：`phase_model` 登錄為受控詞彙（`_taxonomy.yaml#fields.phase_model`，四值：`descriptive` / `race-club-6phase` / `kudo-power-phase` / `event-window`），相位鍵依泳式登錄於 `#movement_phase_registry`（6 泳式 58 相位，由 denominator 一次性歸納），`(stroke, phase, phase_model)` 三者一致性由 `tools/validate.py` W017 強制，跨分期搬運與就地發明相位名兩條都擋。仰式的決定是**維持 `descriptive`（含 `recovery` 相位）、不改採四 sweep**，理由與決定同時寫進 `movement_phase_registry.backstroke_decision`——這是分期選擇不是對四 sweep 的否證，日後要引用四 sweep 的結論須另立 `phase_model`，不得把它的相位名塞進 `descriptive`。
   - 根因：個案（命名溯源缺失），但與 BF-09 同型，見文末結構性根因 5。
 
 ## FR-09｜前伸滑行期：肩胛骨前伸可「增加划距」

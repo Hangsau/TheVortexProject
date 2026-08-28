@@ -2,7 +2,12 @@ schema_version: 1
 generated_by: codex
 generated_date: "2026-08-28"
 purpose: movement atlas coverage denominator (frozen before content authoring)
-note: 相位詞彙為既有內容歸納結果，尚未成為受控詞彙，待人工裁決
+note: >
+  相位詞彙原為既有內容歸納結果。2026-08-29 已裁決並登錄為受控詞彙：
+  canonical/_taxonomy.yaml#movement_phase_registry（相位鍵，依泳式分組）與
+  #fields.phase_model（分期模型），由 tools/validate.py 的 W017 強制。
+  登錄表自此為 canonical，本檔保留的是當時的相位證據引文（phases[].evidence[]）
+  與 derived_from_ids 的分母角色；兩邊相位集合若分歧，以登錄表為準。
 
 strokes:
   - stroke: free

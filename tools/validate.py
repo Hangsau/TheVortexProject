@@ -65,6 +65,8 @@ exit code：
   W015  published movement 條目缺少狀態、證據或介入決策必填欄位
   W016  mobility_decision 為 evidence-gap，但該介入仍寫成可執行處方
         （action_status 不是 do-not-prescribe，或帶了劑量來源）
+  W017  demand 的 (stroke, phase) 未登錄於 movement_phase_registry，
+        或 phase_model 與登錄表不符（相位跨分期系統搬運）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -165,6 +167,7 @@ MOVEMENT_TAXONOMY_FIELDS = (
     "action_status",
     "evidence_profile",
     "mobility_decision",
+    "phase_model",
 )
 
 MOVEMENT_REFERENCE_FIELDS = {
@@ -455,6 +458,25 @@ def load_taxonomy() -> dict[str, set[str]]:
             keys.add(item["key"])
         result[field] = keys
     return result
+
+
+def load_phase_registry() -> dict[str, dict[str, str]]:
+    """回傳 {stroke: {phase_key: phase_model}}，供 W017 比對。
+
+    相位鍵的合法範圍隨泳式而異（free 有 lift，breast 沒有），所以它不能像
+    其他受控欄位那樣放進扁平的 fields，登錄在 movement_phase_registry。
+    登錄表缺漏視為空集合——fail-closed，不預設放行。
+    """
+    data = load_yaml(TAXONOMY_FILE)
+    strokes = (data.get("movement_phase_registry") or {}).get("strokes") or {}
+    return {
+        stroke: {
+            phase["key"]: phase.get("phase_model")
+            for phase in (phases or [])
+            if isinstance(phase, dict) and isinstance(phase.get("key"), str)
+        }
+        for stroke, phases in strokes.items()
+    }
 
 
 def load_category_scope() -> dict[str, set[str]]:
@@ -1140,6 +1162,61 @@ def check_mobility_evidence_gap(
             )
 
 
+def check_movement_phase(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    phase_registry: dict[str, dict[str, str]],
+    warnings: dict,
+):
+    """W017：demand 的 (stroke, phase) 須已登錄，且 phase_model 須與登錄一致。
+
+    分期不是單一真相（BK-26 裁決：型 1 座標系衝突），數套分期各有來源並存。
+    因此這裡擋的不是「用錯分期」，而是兩件會讓並存變成混亂的事：
+    就地發明相位名，以及把同一個相位掛到另一套分期底下——後者會讓
+    race-club-6phase 的 front-quadrant-propulsion 與 kudo-power-phase 的 pull
+    看起來可以互換，而它們既不是同一段也不是同一個量。
+    要新增相位一律先改 movement_phase_registry。
+    """
+    if entry_key != "demands":
+        return
+
+    for index, entry in entries:
+        if "phase" not in entry:
+            continue
+
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+        stroke = entry.get("stroke")
+        phase = entry.get("phase")
+
+        known_phases = phase_registry.get(stroke) if isinstance(stroke, str) else None
+        if known_phases is None:
+            warnings["W017"].append(
+                f"  file={rel} id={eid!r} at={loc} stroke={stroke!r} "
+                "未登錄於 movement_phase_registry.strokes，無法判定相位合法性"
+            )
+            continue
+
+        if phase not in known_phases:
+            warnings["W017"].append(
+                f"  file={rel} id={eid!r} at={loc} phase={phase!r} "
+                f"不在 movement_phase_registry.strokes.{stroke}："
+                "請先在登錄表新增相位，不要在 demand 端就地發明"
+            )
+            continue
+
+        registered_model = known_phases[phase]
+        declared_model = entry.get("phase_model")
+        if declared_model != registered_model:
+            warnings["W017"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"phase={phase!r} 登錄於 {registered_model!r}，"
+                f"但本筆寫 phase_model={declared_model!r}："
+                "相位不可跨分期系統搬運"
+            )
+
+
 def check_evidence_from(
     rel: str, data: object, all_id_set: set, errors: dict
 ):
@@ -1215,6 +1292,7 @@ def run_validation():
     # ── 載入 taxonomy 與 sources ──
     try:
         taxonomy = load_taxonomy()
+        phase_registry = load_phase_registry()
         category_scope = load_category_scope()
     except Exception as e:
         print(f"[ERROR] Cannot load _taxonomy.yaml: {e}")
@@ -1262,7 +1340,7 @@ def run_validation():
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W013": [], "W014": [], "W015": [],
-        "W016": []
+        "W016": [], "W017": []
     }
 
     # ── W012–W015: movement 網域契約（只掃四個明列內容檔）──
@@ -1304,6 +1382,9 @@ def run_validation():
             rel, entry_key, entries, warnings
         )
         check_mobility_evidence_gap(rel, entry_key, entries, warnings)
+        check_movement_phase(
+            rel, entry_key, entries, phase_registry, warnings
+        )
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
     for path in validate_files:
@@ -1709,6 +1790,10 @@ def _write_report(
         "W016": (
             "WARN",
             "`mobility_decision: evidence-gap` 的介入仍寫成可執行處方",
+        ),
+        "W017": (
+            "WARN",
+            "demand 的相位未登錄，或 phase_model 與 movement_phase_registry 不符",
         ),
     }
 

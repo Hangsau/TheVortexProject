@@ -284,6 +284,39 @@ fields:
       - key: practice-observation
       - key: synthesis-inference
 
+  phase_model:
+    controlled: true
+    review_status: reviewed
+    note: >
+      該筆 movement 需求的相位鍵出自哪一套分期。登錄這個欄位的理由來自
+      plans/證據包_C類_shoulder-arm.md 的 BK-26 裁決：泳姿分期不是單一真相，
+      而是數套各有來源的操作型定義並存（型 1 座標系衝突），所以不選邊，
+      改成讓「這個相位名出自哪一套」在欄位上顯性化。
+      因此跨模型的相位名不得互相冒用或互相換算——race-club-6phase 的
+      front-quadrant-propulsion 與 kudo-power-phase 的 pull 不是同一段，
+      也不是同一個量；要對照兩套分期必須兩套都寫出來，不可合併成一個相位。
+      合法相位鍵不列在本欄位，另見檔尾 movement_phase_registry（依泳式分組）。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: descriptive
+        note: >
+          從 Vortex 既有 instructional 記錄歸納出的描述性分期，不主張對應
+          任何已發表的分期系統。它是多數相位的實際取值，但不是「未查證」的
+          同義詞：採用它等於宣告本相位不引用外部分期權威，因此不得拿它去
+          支撐「某某研究把這一段稱為 X」這類歸屬主張。
+      - key: race-club-6phase
+        note: >
+          The Race Club 六相分期（lift／front-quadrant-propulsion／
+          rear-quadrant-propulsion／release／early-recovery／late-recovery）。
+      - key: kudo-power-phase
+        note: >
+          以拉水／推水劃分的動力相分期，粒度比六相粗；同一段水下路徑在兩套
+          底下的邊界不同，不可互換。
+      - key: event-window
+        note: >
+          不是划水分期，而是跨在數個相位之上的事件視窗（如蝶式呼吸視窗）。
+          與其他三套不在同一軸上，不得與相位並列比較先後或當成互斥階段。
+
   mobility_decision:
     controlled: true
     review_status: reviewed
@@ -337,6 +370,210 @@ movement_reference_contract:
         note: >
           published 的 demand 必填（W015）。空 list [] 表示已查 denominator
           並確認該相位沒有對應技術記錄，不是未處理。
+
+# ─────────────────────────────────────────────────────────────────────
+# Movement 相位登錄表
+# 受控詞彙，但因為相位鍵的合法範圍隨泳式而異（free 的 lift 在 breast 不成立），
+# 不放進上面的扁平 fields，改成依泳式分組登錄。
+# 驗證器（tools/validate.py，W017）是本登錄表的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+movement_phase_registry:
+  note: >
+    canonical/movement/stroke-demands.yaml 的 demands[] 只能使用本表登錄的
+    (stroke, phase) 組合，且該筆的 phase_model 必須與本表對該 phase 的登錄一致。
+    這是為了擋掉 W4 大量填圖時各自造相位名，或把同一段路徑在不同筆記成不同
+    分期系統。要新增相位一律先改本表，不得在 demand 端就地發明。
+  provenance: >
+    2026-08-29 由 plans/movement_coverage_denominator.yaml 的 strokes[].phases[]
+    一次性歸納，該檔是 W4 前凍結的涵蓋分母，本表與它的相位集合必須一致；
+    往後以本表為 canonical，denominator 只保留當時的證據引文出處。
+  backstroke_decision: >
+    仰式維持 descriptive（entry／catch／pull／push／recovery），不改採
+    Fernandes 2022 的四 sweep。理由見 BK-26 裁決：四 sweep 只涵蓋水下路徑，
+    移臂整段沒有對應相位鍵，改採之後 back 的 recovery 需求會無處可掛。
+    這是分期選擇，不是對四 sweep 的否證——要引用四 sweep 的文獻結論時
+    另立 phase_model，不得把它的相位名塞進 descriptive。
+  strokes:
+    free:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水期"
+      - key: lift
+        phase_model: race-club-6phase
+        label_zh: "升力相"
+      - key: catch
+        phase_model: descriptive
+        label_zh: "抓水期"
+      - key: front-quadrant-propulsion
+        phase_model: race-club-6phase
+        label_zh: "前象限推進"
+      - key: pull
+        phase_model: kudo-power-phase
+        label_zh: "拉水相"
+      - key: rear-quadrant-propulsion
+        phase_model: race-club-6phase
+        label_zh: "後象限推進"
+      - key: push
+        phase_model: kudo-power-phase
+        label_zh: "推水相"
+      - key: release
+        phase_model: race-club-6phase
+        label_zh: "釋放相"
+      - key: early-recovery
+        phase_model: race-club-6phase
+        label_zh: "早期回臂"
+      - key: late-recovery
+        phase_model: race-club-6phase
+        label_zh: "晚期回臂"
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢"
+    back:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+      - key: catch
+        phase_model: descriptive
+        label_zh: "捕水"
+      - key: pull
+        phase_model: descriptive
+        label_zh: "拉水"
+      - key: push
+        phase_model: descriptive
+        label_zh: "推水"
+      - key: recovery
+        phase_model: descriptive
+        label_zh: "回臂"
+      - key: up-kick
+        phase_model: descriptive
+        label_zh: "上踢"
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢"
+    breast:
+      - key: arm-outsweep
+        phase_model: descriptive
+        label_zh: "外划"
+      - key: arm-catch
+        phase_model: descriptive
+        label_zh: "捕水"
+      - key: arm-insweep
+        phase_model: descriptive
+        label_zh: "內划"
+      - key: arm-recovery
+        phase_model: descriptive
+        label_zh: "回臂"
+      - key: glide
+        phase_model: descriptive
+        label_zh: "流線型滑行"
+      - key: leg-recovery
+        phase_model: descriptive
+        label_zh: "收腿"
+      - key: foot-flip
+        phase_model: descriptive
+        label_zh: "翻腳期"
+      - key: leg-outsweep
+        phase_model: descriptive
+        label_zh: "外划（Outsweep）"
+      - key: leg-insweep
+        phase_model: descriptive
+        label_zh: "內划（Insweep）"
+    fly:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+      - key: entry-pause
+        phase_model: descriptive
+        label_zh: "入水停頓"
+      - key: first-kick
+        phase_model: descriptive
+        label_zh: "第一踢"
+      - key: arm-outsweep
+        phase_model: descriptive
+        label_zh: "外划"
+      - key: arm-catch
+        phase_model: descriptive
+        label_zh: "捕水"
+      - key: arm-insweep
+        phase_model: descriptive
+        label_zh: "內划"
+      - key: arm-upsweep
+        phase_model: descriptive
+        label_zh: "上划"
+      - key: exit
+        phase_model: descriptive
+        label_zh: "出水"
+      - key: second-kick
+        phase_model: descriptive
+        label_zh: "第二踢"
+      - key: aerial-recovery
+        phase_model: descriptive
+        label_zh: "空中恢復"
+      - key: breathing-window
+        phase_model: event-window
+        label_zh: "呼吸視窗"
+    udk:
+      - key: streamlined-glide
+        phase_model: descriptive
+        label_zh: "流線滑行"
+      - key: kick-initiation
+        phase_model: descriptive
+        label_zh: "起踢"
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢相"
+      - key: terminal-down-kick
+        phase_model: descriptive
+        label_zh: "下踢末段"
+      - key: down-to-up-transition
+        phase_model: descriptive
+        label_zh: "下踢→上踢過渡"
+      - key: up-kick
+        phase_model: descriptive
+        label_zh: "上踢相"
+      - key: breakout
+        phase_model: descriptive
+        label_zh: "出水划手"
+    starts-turns:
+      - key: set-position
+        phase_model: descriptive
+        label_zh: "零位姿勢"
+      - key: takeoff
+        phase_model: descriptive
+        label_zh: "起跳"
+      - key: flight
+        phase_model: descriptive
+        label_zh: "飛行階段"
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+      - key: underwater-glide
+        phase_model: descriptive
+        label_zh: "水下滑行"
+      - key: underwater-dolphin-kick
+        phase_model: descriptive
+        label_zh: "海豚踢"
+      - key: breaststroke-pullout
+        phase_model: descriptive
+        label_zh: "蛙式 Pullout"
+      - key: breakout
+        phase_model: descriptive
+        label_zh: "出水過渡期"
+      - key: turn-approach
+        phase_model: descriptive
+        label_zh: "進牆"
+      - key: flip
+        phase_model: descriptive
+        label_zh: "翻滾"
+      - key: wall-contact
+        phase_model: descriptive
+        label_zh: "觸牆"
+      - key: wall-rotation
+        phase_model: descriptive
+        label_zh: "旋轉在牆上完成"
+      - key: wall-push-off
+        phase_model: descriptive
+        label_zh: "推蹬"
 
 # ─────────────────────────────────────────────────────────────────────
 # 證據承載契約（S3b）

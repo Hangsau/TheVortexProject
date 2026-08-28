@@ -931,3 +931,11 @@
 （無）
 
 ---
+
+## W017 — demand 的相位未登錄，或 phase_model 與 movement_phase_registry 不符
+
+**WARN，共 0 筆**
+
+（無）
+
+---
