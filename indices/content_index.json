@@ -6203,7 +6203,8 @@
           "joint"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "breast"
@@ -6228,7 +6229,8 @@
           "joint"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "breast"
@@ -8829,7 +8831,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[171]",
-      "title": "蝶式移臂漏標外旋的後果比自由式更嚴重——額狀面上舉比肩胛骨平面更強迫外旋",
+      "title": "純額狀面上舉與肱骨義務性外旋的耦合最強——移臂描述漏掉旋轉欄位，等於漏掉整組上舉的必要成分",
       "tags": {
         "category": [
           "joint"
@@ -10670,7 +10672,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[37]",
-      "title": "踝關節沒有「內旋／外旋」——足部的三維擺動發生在距下與橫跗關節",
+      "title": "踝（距小腿）關節以背屈／蹠屈為主——水中看到的足部三維擺動不能單獨歸給任何一個關節",
       "tags": {
         "category": [
           "joint"
@@ -10694,12 +10696,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[38]",
-      "title": "body roll 幾乎不來自腰椎——胸椎每側 25–35°，腰椎僅 5–7°",
+      "title": "脊椎節間旋轉與 body roll 是兩種量——胸椎每側 25–35 度、腰椎 5–7 度不能拿來分配整體滾轉角",
       "tags": {
         "category": [
           "joint"
         ],
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "stroke": [
@@ -10768,7 +10771,8 @@
           "joint"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "free"
@@ -11045,7 +11049,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "flexibility_mobility",
-      "title": "活動度決定泳者能使用哪些技術路徑：肩屈曲／旋轉不足會限制流線與回臂，髖內旋不足會迫使蛙腿加寬，踝蹠屈不足會縮小自由式與蝶腳的有效推進面。處方先分成被動角度不足、主動控制不足與疼痛三型。",
+      "title": "活動度決定泳者能使用哪些技術路徑：過頭活動度不足會限制流線與回臂，蛙式翻腳的角度同時來自髖、膝與足部三處而不是單一關節，踝蹠屈不足會縮小自由式與蝶式踢腿的有效推進面。處方先分成被動角度不足、主動末端控制不足與疼痛三型；分型之前不預設限制落在哪一個關節，也不預設哪一種伸展。",
       "tags": {
         "certainty": [
           "🟢"
@@ -11053,7 +11057,8 @@
       },
       "source_ids": [
         "src.kaminoff-matthews-2007",
-        "src.mccullough-d"
+        "src.mccullough-d",
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -14699,7 +14704,8 @@
           "joint"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "starts-turns"
@@ -16303,7 +16309,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[167]",
-      "title": "水下海豚打腿的關節命名隨體位翻轉——仰躺時「下踢」在解剖學上是髖伸展",
+      "title": "關節動作的名稱不隨體位改變——會翻轉的是「池畔可見方向」與「解剖動作」之間的對照",
       "tags": {
         "category": [
           "joint"

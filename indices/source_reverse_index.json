@@ -2960,7 +2960,7 @@
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 13,
+      "usage_count": 20,
       "usages": [
         {
           "id": "back.tech.30",
@@ -2970,7 +2970,17 @@
         {
           "id": "breast.tech.36",
           "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[168].public.evidence[0]"
+        },
+        {
+          "id": "breast.tech.36",
+          "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[168].public.mechanism"
+        },
+        {
+          "id": "breast.tech.37",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[169].public.evidence[0]"
         },
         {
           "id": "breast.tech.37",
@@ -3000,7 +3010,17 @@
         {
           "id": "free.tech.39",
           "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[38].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.39",
+          "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[38].public.mechanism"
+        },
+        {
+          "id": "free.tech.40",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[39].public.evidence[0]"
         },
         {
           "id": "free.tech.40",
@@ -3010,12 +3030,27 @@
         {
           "id": "free.tech.41",
           "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[40].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.41",
+          "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[40].public.mechanism"
+        },
+        {
+          "id": "periodization.dryland.flexibility",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "flexibility_mobility"
         },
         {
           "id": "starts-turns.tech.47",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[173].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.48",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[174].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.48",
