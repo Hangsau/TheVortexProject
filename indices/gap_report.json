@@ -2,14 +2,30 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 1,
-    "unlinked_records": 476
+    "unused_taxonomy_values": 5,
+    "unlinked_records": 491
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
     {
       "field": "development_stage",
       "value": "fun"
+    },
+    {
+      "field": "joint_region",
+      "value": "ankle-foot"
+    },
+    {
+      "field": "joint_region",
+      "value": "hip-knee"
+    },
+    {
+      "field": "joint_region",
+      "value": "shoulder-arm"
+    },
+    {
+      "field": "joint_region",
+      "value": "spine-neck"
     }
   ],
   "unlinked_records": [
@@ -196,142 +212,147 @@
     {
       "id": "back.tech.10",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[46]"
+      "path": "points[53]"
     },
     {
       "id": "back.tech.11",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[47]"
+      "path": "points[54]"
     },
     {
       "id": "back.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[48]"
+      "path": "points[55]"
     },
     {
       "id": "back.tech.13",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[49]"
+      "path": "points[56]"
     },
     {
       "id": "back.tech.14",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[50]"
+      "path": "points[57]"
     },
     {
       "id": "back.tech.15",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[51]"
+      "path": "points[58]"
     },
     {
       "id": "back.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[52]"
+      "path": "points[59]"
     },
     {
       "id": "back.tech.17",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[53]"
+      "path": "points[60]"
     },
     {
       "id": "back.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[54]"
+      "path": "points[61]"
     },
     {
       "id": "back.tech.19",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[55]"
+      "path": "points[62]"
     },
     {
       "id": "back.tech.2",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[38]"
+      "path": "points[45]"
     },
     {
       "id": "back.tech.20",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[56]"
+      "path": "points[63]"
     },
     {
       "id": "back.tech.21",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[57]"
+      "path": "points[64]"
     },
     {
       "id": "back.tech.22",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[58]"
+      "path": "points[65]"
     },
     {
       "id": "back.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[59]"
+      "path": "points[66]"
     },
     {
       "id": "back.tech.24",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[60]"
+      "path": "points[67]"
     },
     {
       "id": "back.tech.25",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[61]"
+      "path": "points[68]"
     },
     {
       "id": "back.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[62]"
+      "path": "points[69]"
     },
     {
       "id": "back.tech.27",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[63]"
+      "path": "points[70]"
     },
     {
       "id": "back.tech.28",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[35]"
+      "path": "points[41]"
     },
     {
       "id": "back.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[36]"
+      "path": "points[42]"
     },
     {
       "id": "back.tech.3",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[39]"
+      "path": "points[46]"
     },
     {
-      "id": "back.tech.4",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[40]"
-    },
-    {
-      "id": "back.tech.5",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[41]"
-    },
-    {
-      "id": "back.tech.6",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[42]"
-    },
-    {
-      "id": "back.tech.7",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[43]"
-    },
-    {
-      "id": "back.tech.8",
+      "id": "back.tech.30",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[44]"
     },
     {
+      "id": "back.tech.4",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[47]"
+    },
+    {
+      "id": "back.tech.5",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[48]"
+    },
+    {
+      "id": "back.tech.6",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[49]"
+    },
+    {
+      "id": "back.tech.7",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[50]"
+    },
+    {
+      "id": "back.tech.8",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[51]"
+    },
+    {
       "id": "back.tech.9",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[45]"
+      "path": "points[52]"
     },
     {
       "id": "biceps-tendinopathy",
@@ -461,157 +482,172 @@
     {
       "id": "breast.tech.10",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[73]"
+      "path": "points[80]"
     },
     {
       "id": "breast.tech.11",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[74]"
+      "path": "points[81]"
     },
     {
       "id": "breast.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[75]"
+      "path": "points[82]"
     },
     {
       "id": "breast.tech.13",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[76]"
+      "path": "points[83]"
     },
     {
       "id": "breast.tech.14",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[77]"
+      "path": "points[84]"
     },
     {
       "id": "breast.tech.15",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[78]"
+      "path": "points[85]"
     },
     {
       "id": "breast.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[79]"
+      "path": "points[86]"
     },
     {
       "id": "breast.tech.17",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[80]"
+      "path": "points[87]"
     },
     {
       "id": "breast.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[81]"
+      "path": "points[88]"
     },
     {
       "id": "breast.tech.19",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[82]"
+      "path": "points[89]"
     },
     {
       "id": "breast.tech.2",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[65]"
+      "path": "points[72]"
     },
     {
       "id": "breast.tech.20",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[83]"
+      "path": "points[90]"
     },
     {
       "id": "breast.tech.21",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[84]"
+      "path": "points[91]"
     },
     {
       "id": "breast.tech.22",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[85]"
+      "path": "points[92]"
     },
     {
       "id": "breast.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[86]"
+      "path": "points[93]"
     },
     {
       "id": "breast.tech.24",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[87]"
+      "path": "points[94]"
     },
     {
       "id": "breast.tech.25",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[88]"
+      "path": "points[95]"
     },
     {
       "id": "breast.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[89]"
+      "path": "points[96]"
     },
     {
       "id": "breast.tech.27",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[90]"
+      "path": "points[97]"
     },
     {
       "id": "breast.tech.28",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[91]"
+      "path": "points[98]"
     },
     {
       "id": "breast.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[92]"
+      "path": "points[99]"
     },
     {
       "id": "breast.tech.3",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[66]"
+      "path": "points[73]"
     },
     {
       "id": "breast.tech.30",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[93]"
+      "path": "points[100]"
     },
     {
       "id": "breast.tech.31",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[94]"
+      "path": "points[101]"
     },
     {
       "id": "breast.tech.35",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[160]"
+      "path": "points[175]"
+    },
+    {
+      "id": "breast.tech.36",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[168]"
+    },
+    {
+      "id": "breast.tech.37",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[169]"
+    },
+    {
+      "id": "breast.tech.38",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[170]"
     },
     {
       "id": "breast.tech.4",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[67]"
+      "path": "points[74]"
     },
     {
       "id": "breast.tech.5",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[68]"
+      "path": "points[75]"
     },
     {
       "id": "breast.tech.6",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[69]"
+      "path": "points[76]"
     },
     {
       "id": "breast.tech.7",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[70]"
+      "path": "points[77]"
     },
     {
       "id": "breast.tech.8",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[71]"
+      "path": "points[78]"
     },
     {
       "id": "breast.tech.9",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[72]"
+      "path": "points[79]"
     },
     {
       "id": "chlorine-eye-irritation",
@@ -831,177 +867,187 @@
     {
       "id": "fly.tech.10",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[104]"
+      "path": "points[111]"
     },
     {
       "id": "fly.tech.11",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[105]"
+      "path": "points[112]"
     },
     {
       "id": "fly.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[106]"
+      "path": "points[113]"
     },
     {
       "id": "fly.tech.13",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[107]"
+      "path": "points[114]"
     },
     {
       "id": "fly.tech.14",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[108]"
+      "path": "points[115]"
     },
     {
       "id": "fly.tech.15",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[109]"
+      "path": "points[116]"
     },
     {
       "id": "fly.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[110]"
+      "path": "points[117]"
     },
     {
       "id": "fly.tech.17",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[111]"
+      "path": "points[118]"
     },
     {
       "id": "fly.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[112]"
+      "path": "points[119]"
     },
     {
       "id": "fly.tech.19",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[113]"
+      "path": "points[120]"
     },
     {
       "id": "fly.tech.2",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[96]"
+      "path": "points[103]"
     },
     {
       "id": "fly.tech.20",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[114]"
+      "path": "points[121]"
     },
     {
       "id": "fly.tech.21",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[115]"
+      "path": "points[122]"
     },
     {
       "id": "fly.tech.22",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[116]"
+      "path": "points[123]"
     },
     {
       "id": "fly.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[117]"
+      "path": "points[124]"
     },
     {
       "id": "fly.tech.24",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[118]"
+      "path": "points[125]"
     },
     {
       "id": "fly.tech.25",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[119]"
+      "path": "points[126]"
     },
     {
       "id": "fly.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[120]"
+      "path": "points[127]"
     },
     {
       "id": "fly.tech.27",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[121]"
+      "path": "points[128]"
     },
     {
       "id": "fly.tech.28",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[122]"
+      "path": "points[129]"
     },
     {
       "id": "fly.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[123]"
+      "path": "points[130]"
     },
     {
       "id": "fly.tech.3",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[97]"
+      "path": "points[104]"
     },
     {
       "id": "fly.tech.30",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[124]"
+      "path": "points[131]"
     },
     {
       "id": "fly.tech.31",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[125]"
+      "path": "points[132]"
     },
     {
       "id": "fly.tech.32",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[126]"
+      "path": "points[133]"
     },
     {
       "id": "fly.tech.33",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[127]"
+      "path": "points[134]"
     },
     {
       "id": "fly.tech.34",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[128]"
+      "path": "points[135]"
     },
     {
       "id": "fly.tech.35",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[129]"
+      "path": "points[136]"
     },
     {
       "id": "fly.tech.36",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[159]"
+      "path": "points[166]"
+    },
+    {
+      "id": "fly.tech.37",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[171]"
+    },
+    {
+      "id": "fly.tech.38",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[172]"
     },
     {
       "id": "fly.tech.4",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[98]"
+      "path": "points[105]"
     },
     {
       "id": "fly.tech.5",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[99]"
+      "path": "points[106]"
     },
     {
       "id": "fly.tech.6",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[100]"
+      "path": "points[107]"
     },
     {
       "id": "fly.tech.7",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[101]"
+      "path": "points[108]"
     },
     {
       "id": "fly.tech.8",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[102]"
+      "path": "points[109]"
     },
     {
       "id": "fly.tech.9",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[103]"
+      "path": "points[110]"
     },
     {
       "id": "free.L0",
@@ -1324,9 +1370,39 @@
       "path": "points[34]"
     },
     {
+      "id": "free.tech.36",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[35]"
+    },
+    {
+      "id": "free.tech.37",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[36]"
+    },
+    {
+      "id": "free.tech.38",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[37]"
+    },
+    {
+      "id": "free.tech.39",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[38]"
+    },
+    {
       "id": "free.tech.4",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[3]"
+    },
+    {
+      "id": "free.tech.40",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[39]"
+    },
+    {
+      "id": "free.tech.41",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[40]"
     },
     {
       "id": "free.tech.5",
@@ -1921,227 +1997,237 @@
     {
       "id": "starts-turns.tech.10",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[174]"
+      "path": "points[189]"
     },
     {
       "id": "starts-turns.tech.11",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[175]"
+      "path": "points[190]"
     },
     {
       "id": "starts-turns.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[176]"
+      "path": "points[191]"
     },
     {
       "id": "starts-turns.tech.13",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[177]"
+      "path": "points[192]"
     },
     {
       "id": "starts-turns.tech.14",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[178]"
+      "path": "points[193]"
     },
     {
       "id": "starts-turns.tech.15",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[179]"
+      "path": "points[194]"
     },
     {
       "id": "starts-turns.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[180]"
+      "path": "points[195]"
     },
     {
       "id": "starts-turns.tech.17",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[181]"
+      "path": "points[196]"
     },
     {
       "id": "starts-turns.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[182]"
+      "path": "points[197]"
     },
     {
       "id": "starts-turns.tech.19",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[183]"
+      "path": "points[198]"
     },
     {
       "id": "starts-turns.tech.2",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[162]"
+      "path": "points[177]"
     },
     {
       "id": "starts-turns.tech.20",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[184]"
+      "path": "points[199]"
     },
     {
       "id": "starts-turns.tech.21",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[185]"
+      "path": "points[200]"
     },
     {
       "id": "starts-turns.tech.22",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[186]"
+      "path": "points[201]"
     },
     {
       "id": "starts-turns.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[187]"
+      "path": "points[202]"
     },
     {
       "id": "starts-turns.tech.24",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[188]"
+      "path": "points[203]"
     },
     {
       "id": "starts-turns.tech.25",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[189]"
+      "path": "points[204]"
     },
     {
       "id": "starts-turns.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[190]"
+      "path": "points[205]"
     },
     {
       "id": "starts-turns.tech.27",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[191]"
+      "path": "points[206]"
     },
     {
       "id": "starts-turns.tech.28",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[192]"
+      "path": "points[207]"
     },
     {
       "id": "starts-turns.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[193]"
+      "path": "points[208]"
     },
     {
       "id": "starts-turns.tech.3",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[163]"
+      "path": "points[178]"
     },
     {
       "id": "starts-turns.tech.30",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[194]"
+      "path": "points[209]"
     },
     {
       "id": "starts-turns.tech.31",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[195]"
+      "path": "points[210]"
     },
     {
       "id": "starts-turns.tech.32",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[196]"
+      "path": "points[211]"
     },
     {
       "id": "starts-turns.tech.33",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[197]"
+      "path": "points[212]"
     },
     {
       "id": "starts-turns.tech.34",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[198]"
+      "path": "points[213]"
     },
     {
       "id": "starts-turns.tech.35",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[199]"
+      "path": "points[214]"
     },
     {
       "id": "starts-turns.tech.36",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[200]"
+      "path": "points[215]"
     },
     {
       "id": "starts-turns.tech.37",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[201]"
+      "path": "points[216]"
     },
     {
       "id": "starts-turns.tech.38",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[202]"
+      "path": "points[217]"
     },
     {
       "id": "starts-turns.tech.39",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[203]"
+      "path": "points[218]"
     },
     {
       "id": "starts-turns.tech.4",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[164]"
+      "path": "points[179]"
     },
     {
       "id": "starts-turns.tech.40",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[204]"
+      "path": "points[219]"
     },
     {
       "id": "starts-turns.tech.41",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[165]"
+      "path": "points[180]"
     },
     {
       "id": "starts-turns.tech.42",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[166]"
+      "path": "points[181]"
     },
     {
       "id": "starts-turns.tech.43",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[167]"
+      "path": "points[182]"
     },
     {
       "id": "starts-turns.tech.44",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[168]"
+      "path": "points[183]"
     },
     {
       "id": "starts-turns.tech.45",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[205]"
+      "path": "points[220]"
     },
     {
       "id": "starts-turns.tech.46",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[206]"
+      "path": "points[221]"
+    },
+    {
+      "id": "starts-turns.tech.47",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[173]"
+    },
+    {
+      "id": "starts-turns.tech.48",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[174]"
     },
     {
       "id": "starts-turns.tech.5",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[169]"
+      "path": "points[184]"
     },
     {
       "id": "starts-turns.tech.6",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[170]"
+      "path": "points[185]"
     },
     {
       "id": "starts-turns.tech.7",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[171]"
+      "path": "points[186]"
     },
     {
       "id": "starts-turns.tech.8",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[172]"
+      "path": "points[187]"
     },
     {
       "id": "starts-turns.tech.9",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[173]"
+      "path": "points[188]"
     },
     {
       "id": "surfers-ear-exostosis",
@@ -2251,142 +2337,147 @@
     {
       "id": "udk.tech.10",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[139]"
+      "path": "points[146]"
     },
     {
       "id": "udk.tech.11",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[140]"
+      "path": "points[147]"
     },
     {
       "id": "udk.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[141]"
+      "path": "points[148]"
     },
     {
       "id": "udk.tech.13",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[142]"
+      "path": "points[149]"
     },
     {
       "id": "udk.tech.14",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[143]"
+      "path": "points[150]"
     },
     {
       "id": "udk.tech.15",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[144]"
+      "path": "points[151]"
     },
     {
       "id": "udk.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[145]"
+      "path": "points[152]"
     },
     {
       "id": "udk.tech.17",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[146]"
+      "path": "points[153]"
     },
     {
       "id": "udk.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[147]"
+      "path": "points[154]"
     },
     {
       "id": "udk.tech.19",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[148]"
+      "path": "points[155]"
     },
     {
       "id": "udk.tech.2",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[131]"
+      "path": "points[138]"
     },
     {
       "id": "udk.tech.20",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[149]"
+      "path": "points[156]"
     },
     {
       "id": "udk.tech.21",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[150]"
+      "path": "points[157]"
     },
     {
       "id": "udk.tech.22",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[151]"
+      "path": "points[158]"
     },
     {
       "id": "udk.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[152]"
+      "path": "points[159]"
     },
     {
       "id": "udk.tech.24",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[153]"
+      "path": "points[160]"
     },
     {
       "id": "udk.tech.25",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[154]"
+      "path": "points[161]"
     },
     {
       "id": "udk.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[155]"
+      "path": "points[162]"
     },
     {
       "id": "udk.tech.27",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[156]"
+      "path": "points[163]"
     },
     {
       "id": "udk.tech.28",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[157]"
+      "path": "points[164]"
     },
     {
       "id": "udk.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[158]"
+      "path": "points[165]"
     },
     {
       "id": "udk.tech.3",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[132]"
+      "path": "points[139]"
+    },
+    {
+      "id": "udk.tech.30",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[167]"
     },
     {
       "id": "udk.tech.4",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[133]"
+      "path": "points[140]"
     },
     {
       "id": "udk.tech.5",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[134]"
+      "path": "points[141]"
     },
     {
       "id": "udk.tech.6",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[135]"
+      "path": "points[142]"
     },
     {
       "id": "udk.tech.7",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[136]"
+      "path": "points[143]"
     },
     {
       "id": "udk.tech.8",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[137]"
+      "path": "points[144]"
     },
     {
       "id": "udk.tech.9",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[138]"
+      "path": "points[145]"
     },
     {
       "id": "uv-photo-damage",

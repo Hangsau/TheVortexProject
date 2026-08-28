@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 787,
+  "record_count": 802,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -4245,7 +4245,7 @@
       "id": "back.tech.1",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[37]",
+      "path": "points[43]",
       "title": "精英仰式泳者肩旋轉與髖旋轉的現代運動學數據",
       "tags": {
         "category": [
@@ -4267,7 +4267,7 @@
       "id": "back.tech.10",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[46]",
+      "path": "points[53]",
       "title": "捕水：高肘確立，前臂面向推進方向，捕水點在肩線後約 10–15 cm",
       "tags": {
         "category": [
@@ -4290,7 +4290,7 @@
       "id": "back.tech.11",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[47]",
+      "path": "points[54]",
       "title": "拉水：橢圓曲線路徑，肘部屈曲 90–100°（S形路徑已過時）",
       "tags": {
         "category": [
@@ -4314,7 +4314,7 @@
       "id": "back.tech.12",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[48]",
+      "path": "points[55]",
       "title": "推水：手臂加速推至大腿側，指尖朝向池底，充分伸展至髖部",
       "tags": {
         "category": [
@@ -4334,7 +4334,7 @@
       "id": "back.tech.13",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[49]",
+      "path": "points[56]",
       "title": "回臂：拇指先出水，弧線向前，肩旋轉帶動；直臂或微彎均可",
       "tags": {
         "category": [
@@ -4354,7 +4354,7 @@
       "id": "back.tech.14",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[50]",
+      "path": "points[57]",
       "title": "手臂直線推水：有效槳面積縮小，肩部剪力增加",
       "tags": {
         "category": [
@@ -4374,7 +4374,7 @@
       "id": "back.tech.15",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[51]",
+      "path": "points[58]",
       "title": "仰式上踢為推進主力，對應自由式的下踢",
       "tags": {
         "category": [
@@ -4396,7 +4396,7 @@
       "id": "back.tech.16",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[52]",
+      "path": "points[59]",
       "title": "踝關節蹠屈柔韌性：踢水速度的直接決定因子",
       "tags": {
         "category": [
@@ -4419,7 +4419,7 @@
       "id": "back.tech.17",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[53]",
+      "path": "points[60]",
       "title": "六拍踢 vs 兩拍踢：距離決定策略，200m 中提升划手距離優先於提升踢水頻率",
       "tags": {
         "category": [
@@ -4441,7 +4441,7 @@
       "id": "back.tech.18",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[54]",
+      "path": "points[61]",
       "title": "踢水深度最優區間約 30–40 cm，越深不等於越好",
       "tags": {
         "category": [
@@ -4463,7 +4463,7 @@
       "id": "back.tech.19",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[55]",
+      "path": "points[62]",
       "title": "踢水與旋轉連動：對側腳上踢與拉水相位對齊，穩定旋轉軸",
       "tags": {
         "category": [
@@ -4483,7 +4483,7 @@
       "id": "back.tech.2",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[38]",
+      "path": "points[45]",
       "title": "仰式在不同速度下維持旋轉幅度（不像自由式縮小）",
       "tags": {
         "category": [
@@ -4506,7 +4506,7 @@
       "id": "back.tech.20",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[56]",
+      "path": "points[63]",
       "title": "踢水膝蓋彎曲過大：正面阻力增加，踢水路徑縮短",
       "tags": {
         "category": [
@@ -4526,7 +4526,7 @@
       "id": "back.tech.21",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[57]",
+      "path": "points[64]",
       "title": "頭部基礎位置：耳朵與水面齊平，下巴略收，頭頂與脊椎成直線",
       "tags": {
         "category": [
@@ -4546,7 +4546,7 @@
       "id": "back.tech.22",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[58]",
+      "path": "points[65]",
       "title": "出發/轉身流線型：雙臂夾耳、頭完全入水，是 100m 成績的最重要技術預測因子之一",
       "tags": {
         "category": [
@@ -4569,7 +4569,7 @@
       "id": "back.tech.23",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[59]",
+      "path": "points[66]",
       "title": "提前浮頭錯誤：轉身推蹬後頭部必須維持水面下至流線型滑行結束",
       "tags": {
         "category": [
@@ -4589,7 +4589,7 @@
       "id": "back.tech.24",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[60]",
+      "path": "points[67]",
       "title": "仰式疲勞崩潰序列：四個代償階段",
       "tags": {
         "category": [
@@ -4611,7 +4611,7 @@
       "id": "back.tech.25",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[61]",
+      "path": "points[68]",
       "title": "訓練優先級更新：現代文獻建議出發+轉身流線型 ≥ 游進技術",
       "tags": {
         "category": [
@@ -4633,7 +4633,7 @@
       "id": "back.tech.26",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[62]",
+      "path": "points[69]",
       "title": "蝶式 vs 仰式：旋轉軸向、推進機制、呼吸代價對照",
       "tags": {
         "category": [
@@ -4658,7 +4658,7 @@
       "id": "back.tech.27",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[63]",
+      "path": "points[70]",
       "title": "仰式出發/轉身佔比在四式中最高，100m 中是成績最重要的技術預測因子",
       "tags": {
         "category": [
@@ -4680,7 +4680,7 @@
       "id": "back.tech.28",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[35]",
+      "path": "points[41]",
       "title": "仰式 recovery 能量光譜——直臂高能量 vs 彎臂低能量的距離分流",
       "tags": {
         "category": [
@@ -4703,7 +4703,7 @@
       "id": "back.tech.29",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[36]",
+      "path": "points[42]",
       "title": "仰式 recovery 入水位置——肩線延伸線 vs 中線的橫向力差異",
       "tags": {
         "category": [
@@ -4726,7 +4726,7 @@
       "id": "back.tech.3",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[39]",
+      "path": "points[46]",
       "title": "旋轉放大推進力：有效拉力臂增加（邏輯推導）",
       "tags": {
         "category": [
@@ -4743,10 +4743,34 @@
       "outgoing_ids": []
     },
     {
+      "id": "back.tech.30",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[44]",
+      "title": "仰式「上踢」在解剖學上是髖屈曲——池畔看到的方向與關節動作名稱相反",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "free.tech.36"
+      ]
+    },
+    {
       "id": "back.tech.4",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[40]",
+      "path": "points[47]",
       "title": "旋轉放大推進力：背闊肌進入最佳收縮起始長度（邏輯推導）",
       "tags": {
         "category": [
@@ -4766,7 +4790,7 @@
       "id": "back.tech.5",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[41]",
+      "path": "points[48]",
       "title": "旋轉最優區間：45–50° 為群體中位數，個體差異合理",
       "tags": {
         "category": [
@@ -4788,7 +4812,7 @@
       "id": "back.tech.6",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[42]",
+      "path": "points[49]",
       "title": "仰式旋轉的不對稱性：回臂側主動上抬，划水側被動深沉",
       "tags": {
         "category": [
@@ -4808,7 +4832,7 @@
       "id": "back.tech.7",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[43]",
+      "path": "points[50]",
       "title": "精英仰式划手頻率參考範圍（教練觀測）",
       "tags": {
         "category": [
@@ -4828,7 +4852,7 @@
       "id": "back.tech.8",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[44]",
+      "path": "points[51]",
       "title": "入水：小指先入水，沿肩線延伸，角度 30–45°，不跨越中線",
       "tags": {
         "category": [
@@ -4848,7 +4872,7 @@
       "id": "back.tech.9",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[45]",
+      "path": "points[52]",
       "title": "跨越中線入水：引發蛇行偏移的幾何必然",
       "tags": {
         "category": [
@@ -5602,7 +5626,7 @@
       "id": "breast.tech.1",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[64]",
+      "path": "points[71]",
       "title": "雙峰速度曲線與速度波動管理",
       "tags": {
         "category": [
@@ -5622,7 +5646,7 @@
       "id": "breast.tech.10",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[73]",
+      "path": "points[80]",
       "title": "收腿：阻力最大時刻與最優路徑",
       "tags": {
         "category": [
@@ -5647,7 +5671,7 @@
       "id": "breast.tech.11",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[74]",
+      "path": "points[81]",
       "title": "腳掌翻轉（Foot Flip）：獨立感知事件",
       "tags": {
         "category": [
@@ -5670,7 +5694,7 @@
       "id": "breast.tech.12",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[75]",
+      "path": "points[82]",
       "title": "insweep 腳速是推進力的直接決定因子",
       "tags": {
         "category": [
@@ -5692,7 +5716,7 @@
       "id": "breast.tech.13",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[76]",
+      "path": "points[83]",
       "title": "膝距窄的雙重效益：減阻 + 增推進",
       "tags": {
         "category": [
@@ -5712,7 +5736,7 @@
       "id": "breast.tech.14",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[77]",
+      "path": "points[84]",
       "title": "踝關節蹠屈柔韌性：第一解剖決定因子",
       "tags": {
         "category": [
@@ -5736,7 +5760,7 @@
       "id": "breast.tech.15",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[78]",
+      "path": "points[85]",
       "title": "髖關節內旋（Hip Internal Rotation）：第二關鍵解剖因子",
       "tags": {
         "category": [
@@ -5759,7 +5783,7 @@
       "id": "breast.tech.16",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[79]",
+      "path": "points[86]",
       "title": "蛙式風格分流——用軀幹伸展能力選擇 flat、wave 或 undulating",
       "tags": {
         "category": [
@@ -5781,7 +5805,7 @@
       "id": "breast.tech.17",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[80]",
+      "path": "points[87]",
       "title": "Flat 平式：波幅最小、滑行最長",
       "tags": {
         "category": [
@@ -5804,7 +5828,7 @@
       "id": "breast.tech.18",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[81]",
+      "path": "points[88]",
       "title": "Wave Style 波動式：競技主流的最優平衡",
       "tags": {
         "category": [
@@ -5827,7 +5851,7 @@
       "id": "breast.tech.19",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[82]",
+      "path": "points[89]",
       "title": "Undulating 波浪式：柔韌性超群者的特殊最優解",
       "tags": {
         "category": [
@@ -5851,7 +5875,7 @@
       "id": "breast.tech.2",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[65]",
+      "path": "points[72]",
       "title": "三式速度波動對比",
       "tags": {
         "category": [
@@ -5871,7 +5895,7 @@
       "id": "breast.tech.20",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[83]",
+      "path": "points[90]",
       "title": "波動的雙重功能：推進 + 收腿減阻",
       "tags": {
         "category": [
@@ -5891,7 +5915,7 @@
       "id": "breast.tech.21",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[84]",
+      "path": "points[91]",
       "title": "三種風格的解剖決定論",
       "tags": {
         "category": [
@@ -5911,7 +5935,7 @@
       "id": "breast.tech.22",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[85]",
+      "path": "points[92]",
       "title": "精英優勢在划距穩定性，非划頻",
       "tags": {
         "category": [
@@ -5933,7 +5957,7 @@
       "id": "breast.tech.23",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[86]",
+      "path": "points[93]",
       "title": "精英神經肌肉活化：更精省不是更大力",
       "tags": {
         "category": [
@@ -5955,7 +5979,7 @@
       "id": "breast.tech.24",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[87]",
+      "path": "points[94]",
       "title": "外划過寬：效率雙重損失",
       "tags": {
         "category": [
@@ -5977,7 +6001,7 @@
       "id": "breast.tech.25",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[88]",
+      "path": "points[95]",
       "title": "提前蹬水（腳掌未翻轉到位）：渦流整合失敗",
       "tags": {
         "category": [
@@ -5997,7 +6021,7 @@
       "id": "breast.tech.26",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[89]",
+      "path": "points[96]",
       "title": "過度強調波動：波阻反效果",
       "tags": {
         "category": [
@@ -6017,7 +6041,7 @@
       "id": "breast.tech.27",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[90]",
+      "path": "points[97]",
       "title": "疲勞崩潰序列：五層遞進惡性循環",
       "tags": {
         "category": [
@@ -6039,7 +6063,7 @@
       "id": "breast.tech.28",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[91]",
+      "path": "points[98]",
       "title": "最優滑行長度管理",
       "tags": {
         "category": [
@@ -6061,7 +6085,7 @@
       "id": "breast.tech.29",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[92]",
+      "path": "points[99]",
       "title": "蛙式的獨特性：每週期滑行管理",
       "tags": {
         "category": [
@@ -6081,7 +6105,7 @@
       "id": "breast.tech.3",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[66]",
+      "path": "points[73]",
       "title": "外划（Outsweep）：定位不推進",
       "tags": {
         "category": [
@@ -6103,7 +6127,7 @@
       "id": "breast.tech.30",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[93]",
+      "path": "points[100]",
       "title": "水面 vs 水下踢腿：波阻是主要差異來源",
       "tags": {
         "category": [
@@ -6125,7 +6149,7 @@
       "id": "breast.tech.31",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[94]",
+      "path": "points[101]",
       "title": "群體共識技術原則（解剖無關）",
       "tags": {
         "category": [
@@ -6150,7 +6174,7 @@
       "id": "breast.tech.35",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[160]",
+      "path": "points[175]",
       "title": "蛙式三種時序策略——Touch-and-Go / Traditional / Wave 重疊，按距離與個人選擇",
       "tags": {
         "category": [
@@ -6169,10 +6193,85 @@
       ]
     },
     {
+      "id": "breast.tech.36",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[168]",
+      "title": "蛙式翻腳的「腳尖朝外」是四個關節的合成，不是踝關節外翻",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "breast.tech.15",
+        "free.tech.38"
+      ]
+    },
+    {
+      "id": "breast.tech.37",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[169]",
+      "title": "蛙式專屬硬體邊界——深屈膝時髖伸展被股直肌壓到只剩中立位",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "breast.tech.14",
+        "breast.tech.15"
+      ]
+    },
+    {
+      "id": "breast.tech.38",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[170]",
+      "title": "蛙式肩最脆弱的位置在拉手起始、不在內掃——流傳版本把時相與旋轉方向都寫反了",
+      "tags": {
+        "category": [
+          "errors"
+        ],
+        "certainty": [
+          "🟡"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.vasiliadis-2019"
+      ],
+      "outgoing_ids": [
+        "fly.tech.38",
+        "free.tech.36"
+      ]
+    },
+    {
       "id": "breast.tech.4",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[67]",
+      "path": "points[74]",
       "title": "捕水（Catch）：建立最大槳面",
       "tags": {
         "category": [
@@ -6192,7 +6291,7 @@
       "id": "breast.tech.5",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[68]",
+      "path": "points[75]",
       "title": "內划（Insweep）：主推進相與加速時序",
       "tags": {
         "category": [
@@ -6214,7 +6313,7 @@
       "id": "breast.tech.6",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[69]",
+      "path": "points[76]",
       "title": "回臂（Recovery）：最小阻力回位",
       "tags": {
         "category": [
@@ -6236,7 +6335,7 @@
       "id": "breast.tech.7",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[70]",
+      "path": "points[77]",
       "title": "流線型滑行（Glide）：阻力最小點的動能保存",
       "tags": {
         "category": [
@@ -6258,7 +6357,7 @@
       "id": "breast.tech.8",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[71]",
+      "path": "points[78]",
       "title": "手腳時序：效率最敏感的變數",
       "tags": {
         "category": [
@@ -6281,7 +6380,7 @@
       "id": "breast.tech.9",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[72]",
+      "path": "points[79]",
       "title": "蛙腿推進機制：渦流整合而非反作用力",
       "tags": {
         "category": [
@@ -6315,10 +6414,14 @@
         ]
       },
       "source_ids": [
+        "src.cheng-2022-breaststrokers-knee-mri",
         "src.rovere-nichols",
-        "src.swimmers-knee-epidemiology-sr"
+        "src.vizsolyi-1987"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.36",
+        "breast.tech.37"
+      ]
     },
     {
       "id": "breathing.framework.boundaries",
@@ -6682,6 +6785,7 @@
         ],
         "certainty": [
           "🟠",
+          "🟡",
           "🟢"
         ]
       },
@@ -8083,7 +8187,7 @@
       "id": "fly.tech.1",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[95]",
+      "path": "points[102]",
       "title": "蝶式動力鏈——胸廓起波、髖膝踝依序加速、兩踢接上手臂推進",
       "tags": {
         "category": [
@@ -8110,7 +8214,7 @@
       "id": "fly.tech.10",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[104]",
+      "path": "points[111]",
       "title": "一個完整划手週期的閉環連動地圖",
       "tags": {
         "category": [
@@ -8130,7 +8234,7 @@
       "id": "fly.tech.11",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[105]",
+      "path": "points[112]",
       "title": "五個推進加速峰值量化（Mason et al. 1992）",
       "tags": {
         "category": [
@@ -8152,7 +8256,7 @@
       "id": "fly.tech.12",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[106]",
+      "path": "points[113]",
       "title": "外划（Outsweep）功能重建：定位準備而非主動推進",
       "tags": {
         "category": [
@@ -8177,7 +8281,7 @@
       "id": "fly.tech.13",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[107]",
+      "path": "points[114]",
       "title": "五階段划水分析（外划→捕水→內划→上划→回臂）",
       "tags": {
         "category": [
@@ -8199,7 +8303,7 @@
       "id": "fly.tech.14",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[108]",
+      "path": "points[115]",
       "title": "EVF（早期垂直前臂）在蝶式的實現路徑",
       "tags": {
         "category": [
@@ -8219,7 +8323,7 @@
       "id": "fly.tech.15",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[109]",
+      "path": "points[116]",
       "title": "蝶式划水與四式對比",
       "tags": {
         "category": [
@@ -8239,7 +8343,7 @@
       "id": "fly.tech.16",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[110]",
+      "path": "points[117]",
       "title": "頭部雙重角色：波動觸發器（低頭）+ 波動跟隨者（呼吸）",
       "tags": {
         "category": [
@@ -8259,7 +8363,7 @@
       "id": "fly.tech.17",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[111]",
+      "path": "points[118]",
       "title": "呼吸方向：向前（chin forward）而非向上（head up）",
       "tags": {
         "category": [
@@ -8283,7 +8387,7 @@
       "id": "fly.tech.18",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[112]",
+      "path": "points[119]",
       "title": "完整呼吸時序五節點",
       "tags": {
         "category": [
@@ -8303,7 +8407,7 @@
       "id": "fly.tech.19",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[113]",
+      "path": "points[120]",
       "title": "蝶式頭部動作與四式對比",
       "tags": {
         "category": [
@@ -8323,7 +8427,7 @@
       "id": "fly.tech.2",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[96]",
+      "path": "points[103]",
       "title": "四式推進機制與速度結構對比",
       "tags": {
         "category": [
@@ -8343,7 +8447,7 @@
       "id": "fly.tech.20",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[114]",
+      "path": "points[121]",
       "title": "出水順序與空中恢復（Recovery）的物理目標",
       "tags": {
         "category": [
@@ -8363,7 +8467,7 @@
       "id": "fly.tech.21",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[115]",
+      "path": "points[122]",
       "title": "入水停頓機制：水平動量轉換為垂直動量",
       "tags": {
         "category": [
@@ -8383,7 +8487,7 @@
       "id": "fly.tech.22",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[116]",
+      "path": "points[123]",
       "title": "蝶式疲勞崩潰五環序列",
       "tags": {
         "category": [
@@ -8403,7 +8507,7 @@
       "id": "fly.tech.23",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[117]",
+      "path": "points[124]",
       "title": "四式疲勞崩潰模式對比",
       "tags": {
         "category": [
@@ -8423,7 +8527,7 @@
       "id": "fly.tech.24",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[118]",
+      "path": "points[125]",
       "title": "踝關節蹠屈柔韌性：蝶式鞭打力學硬體上限",
       "tags": {
         "category": [
@@ -8448,7 +8552,7 @@
       "id": "fly.tech.25",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[119]",
+      "path": "points[126]",
       "title": "肩關節活動度：Recovery 低位路徑的硬體前提",
       "tags": {
         "category": [
@@ -8468,7 +8572,7 @@
       "id": "fly.tech.26",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[120]",
+      "path": "points[127]",
       "title": "胸椎活動度：波動觸發品質的解剖前提",
       "tags": {
         "category": [
@@ -8488,27 +8592,29 @@
       "id": "fly.tech.27",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[121]",
+      "path": "points[128]",
       "title": "核心旋轉穩定性與前鋸肌耐力：波動導管與 EVF 硬體前提",
       "tags": {
         "category": [
           "hardware"
         ],
         "certainty": [
-          "🔵"
+          "🟡"
         ],
         "stroke": [
           "fly"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.pink-1993"
+      ],
       "outgoing_ids": []
     },
     {
       "id": "fly.tech.28",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[122]",
+      "path": "points[129]",
       "title": "六個核心感知目標與對應執行目標",
       "tags": {
         "category": [
@@ -8528,7 +8634,7 @@
       "id": "fly.tech.29",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[123]",
+      "path": "points[130]",
       "title": "常見技術錯誤：腰部彎曲代替胸部起波",
       "tags": {
         "category": [
@@ -8548,7 +8654,7 @@
       "id": "fly.tech.3",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[97]",
+      "path": "points[104]",
       "title": "波動 vs 上下擺動：最根本的概念區分",
       "tags": {
         "category": [
@@ -8570,7 +8676,7 @@
       "id": "fly.tech.30",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[124]",
+      "path": "points[131]",
       "title": "不同距離的划頻策略與呼吸頻率",
       "tags": {
         "category": [
@@ -8592,7 +8698,7 @@
       "id": "fly.tech.31",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[125]",
+      "path": "points[132]",
       "title": "IVV（週期內速度波動）作為訓練指標",
       "tags": {
         "category": [
@@ -8614,7 +8720,7 @@
       "id": "fly.tech.32",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[126]",
+      "path": "points[133]",
       "title": "神經協調差異：精英 vs 休閒泳者的肌肉協調模式",
       "tags": {
         "category": [
@@ -8636,7 +8742,7 @@
       "id": "fly.tech.33",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[127]",
+      "path": "points[134]",
       "title": "蝶式 vs 蛙式：同為對稱泳式的技術根本分歧",
       "tags": {
         "category": [
@@ -8656,7 +8762,7 @@
       "id": "fly.tech.34",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[128]",
+      "path": "points[135]",
       "title": "EVF 四式共通概念對比",
       "tags": {
         "category": [
@@ -8676,7 +8782,7 @@
       "id": "fly.tech.35",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[129]",
+      "path": "points[136]",
       "title": "2024–2025 技術教學主流演進趨勢",
       "tags": {
         "category": [
@@ -8699,7 +8805,7 @@
       "id": "fly.tech.36",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[159]",
+      "path": "points[166]",
       "title": "蝶式 streamline 是脈衝式不是維持式——基準姿態只存在於波動低點",
       "tags": {
         "category": [
@@ -8719,10 +8825,61 @@
       ]
     },
     {
+      "id": "fly.tech.37",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[171]",
+      "title": "蝶式移臂漏標外旋的後果比自由式更嚴重——額狀面上舉比肩胛骨平面更強迫外旋",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "fly.tech.25",
+        "free.tech.36"
+      ]
+    },
+    {
+      "id": "fly.tech.38",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[172]",
+      "title": "「蝶式入水是夾擠位置」流傳甚廣，但唯一的一手量測說入水是外旋不是內旋",
+      "tags": {
+        "category": [
+          "errors"
+        ],
+        "certainty": [
+          "🟡"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.pink-1993"
+      ],
+      "outgoing_ids": [
+        "fly.tech.25",
+        "fly.tech.27",
+        "fly.tech.37"
+      ]
+    },
+    {
       "id": "fly.tech.4",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[98]",
+      "path": "points[105]",
       "title": "六節點動力鏈——用最早失序點決定修正位置",
       "tags": {
         "category": [
@@ -8746,7 +8903,7 @@
       "id": "fly.tech.5",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[99]",
+      "path": "points[106]",
       "title": "波動幅度與頻率的距離差異化策略",
       "tags": {
         "category": [
@@ -8768,7 +8925,7 @@
       "id": "fly.tech.6",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[100]",
+      "path": "points[107]",
       "title": "兩踢功能高度不對稱：不可混同對待",
       "tags": {
         "category": [
@@ -8790,7 +8947,7 @@
       "id": "fly.tech.7",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[101]",
+      "path": "points[108]",
       "title": "第一踢（Entry Kick）：波動啟動與推進橋接",
       "tags": {
         "category": [
@@ -8814,7 +8971,7 @@
       "id": "fly.tech.8",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[102]",
+      "path": "points[109]",
       "title": "第二踢（Exit Kick / Power Kick）：推進放大與恢復助力",
       "tags": {
         "category": [
@@ -8837,7 +8994,7 @@
       "id": "fly.tech.9",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[103]",
+      "path": "points[110]",
       "title": "兩踢推進貢獻量化與四式踢水對照",
       "tags": {
         "category": [
@@ -10461,6 +10618,102 @@
       ]
     },
     {
+      "id": "free.tech.36",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[35]",
+      "title": "「肩由屈曲轉為外展」不是兩個動作——上舉平面才是缺漏的欄位，且外旋是必然伴隨",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "free.tech.37"
+      ]
+    },
+    {
+      "id": "free.tech.37",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[36]",
+      "title": "手掌在水中朝哪裡，不能反推前臂旋前或旋後",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "free.tech.36"
+      ]
+    },
+    {
+      "id": "free.tech.38",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[37]",
+      "title": "踝關節沒有「內旋／外旋」——足部的三維擺動發生在距下與橫跗關節",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "free.tech.39"
+      ]
+    },
+    {
+      "id": "free.tech.39",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[38]",
+      "title": "body roll 幾乎不來自腰椎——胸椎每側 25–35°，腰椎僅 5–7°",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🟢"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "free.tech.36"
+      ]
+    },
+    {
       "id": "free.tech.4",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
@@ -10478,6 +10731,52 @@
         ]
       },
       "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "free.tech.40",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[39]",
+      "title": "轉頭換氣主要是上頸段事件——50–60% 的頸部旋轉集中在寰樞關節",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🟢"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "free.tech.39"
+      ]
+    },
+    {
+      "id": "free.tech.41",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[40]",
+      "title": "教練說的「膝蓋鎖死」與教科書的 knee locking 意思相反",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
       "outgoing_ids": []
     },
     {
@@ -10601,7 +10900,6 @@
         ]
       },
       "source_ids": [
-        "src.adductor-loading-return-to-sport-practice-co",
         "src.grote-2004"
       ],
       "outgoing_ids": []
@@ -10643,7 +10941,6 @@
         ]
       },
       "source_ids": [
-        "src.ioc-iron-in-sport-doi-webfetch",
         "src.sim-2019"
       ],
       "outgoing_ids": []
@@ -10659,14 +10956,15 @@
           "E-acute-trauma"
         ],
         "certainty": [
-          "🟡",
           "🟢"
         ]
       },
       "source_ids": [
-        "src.jellyfish-envenomation-first-aid",
+        "src.chuang-2019-vibrio-vulnificus-mortality-meta",
+        "src.cochrane-2023-jellyfish-interventions",
         "src.pmc2858141",
-        "src.pmc8147101"
+        "src.pmc8147101",
+        "src.tsai-2020-taiwan-leptospirosis-nationwide"
       ],
       "outgoing_ids": []
     },
@@ -10685,8 +10983,8 @@
         ]
       },
       "source_ids": [
-        "src.bushman-2006",
-        "src.elliott-sale-2020"
+        "src.elliott-sale-2020",
+        "src.lebrun-2003-triphasic-oc-vo2max"
       ],
       "outgoing_ids": []
     },
@@ -11444,12 +11742,16 @@
           "E-acute-trauma"
         ],
         "certainty": [
-          "🟡"
+          "🟡",
+          "🟢"
         ]
       },
       "source_ids": [
+        "src.ansi-nfsi-b101-1",
         "src.astm-f2508",
-        "src.falls-and-hip-fracture-mortality-pmid"
+        "src.harvey-2024-asia-pacific-hip-fracture-mortality",
+        "src.lee-2017-taiwan-hip-fracture-1yr-mortality",
+        "src.wang-2013-taiwan-hip-fracture-mortality"
       ],
       "outgoing_ids": []
     },
@@ -12914,8 +13216,7 @@
         ]
       },
       "source_ids": [
-        "src.ioc-red-s-2014-2018-2023-doi",
-        "src.mountjoy-ioc-consensus-webfetch"
+        "src.ioc-red-s-2014-2018-2023-doi"
       ],
       "outgoing_ids": []
     },
@@ -12993,12 +13294,10 @@
           "C-nonMSK-medical"
         ],
         "certainty": [
-          "🟠"
+          "🔵"
         ]
       },
-      "source_ids": [
-        "src.akkurt-2017"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -13033,12 +13332,12 @@
         ],
         "certainty": [
           "🔴",
-          "🟠"
+          "🟢"
         ]
       },
       "source_ids": [
-        "src.breath-hold-training",
-        "src.shallow-water-blackout-prevention-webfetch"
+        "src.lippmann-2023-australia-breathhold-fatalities",
+        "src.statpearls-shallow-water-blackout-nbk554620"
       ],
       "outgoing_ids": []
     },
@@ -13074,13 +13373,14 @@
           "D-systemic-acute"
         ],
         "certainty": [
-          "🔴",
-          "🟡"
+          "🟡",
+          "🟢"
         ]
       },
       "source_ids": [
-        "src.military-swim-training-sipe",
-        "src.sipe"
+        "src.hardstedt-2021-sipe-incidence-cohort",
+        "src.spencer-2018-sipe-systematic-review",
+        "src.volk-2021-sipe-navy-seal"
       ],
       "outgoing_ids": []
     },
@@ -13473,7 +13773,7 @@
       "id": "starts-turns.tech.1",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[161]",
+      "path": "points[176]",
       "title": "Grab Start vs Track Start 基本差異",
       "tags": {
         "category": [
@@ -13498,7 +13798,7 @@
       "id": "starts-turns.tech.10",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[174]",
+      "path": "points[189]",
       "title": "飛行階段：姿勢整理是主要任務",
       "tags": {
         "category": [
@@ -13518,7 +13818,7 @@
       "id": "starts-turns.tech.11",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[175]",
+      "path": "points[190]",
       "title": "「全身穿過同一個洞」入水原則",
       "tags": {
         "category": [
@@ -13538,7 +13838,7 @@
       "id": "starts-turns.tech.12",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[176]",
+      "path": "points[191]",
       "title": "入水距離與水平速度是成績最強預測因子",
       "tags": {
         "category": [
@@ -13560,7 +13860,7 @@
       "id": "starts-turns.tech.13",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[177]",
+      "path": "points[192]",
       "title": "入水深度：最優約 −0.92 m，過淺顯著損害成績",
       "tags": {
         "category": [
@@ -13583,7 +13883,7 @@
       "id": "starts-turns.tech.14",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[178]",
+      "path": "points[193]",
       "title": "仰式起跳：髖部高度是核心表現變數",
       "tags": {
         "category": [
@@ -13605,7 +13905,7 @@
       "id": "starts-turns.tech.15",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[179]",
+      "path": "points[194]",
       "title": "仰式出發台（Backstroke Ledge）效益：改善入水距離而非推力",
       "tags": {
         "category": [
@@ -13627,7 +13927,7 @@
       "id": "starts-turns.tech.16",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[180]",
+      "path": "points[195]",
       "title": "仰式起跳推蹬：臀部先出水再蹬腿",
       "tags": {
         "category": [
@@ -13647,7 +13947,7 @@
       "id": "starts-turns.tech.17",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[181]",
+      "path": "points[196]",
       "title": "轉身核心目標：速度損失最小化",
       "tags": {
         "category": [
@@ -13671,7 +13971,7 @@
       "id": "starts-turns.tech.18",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[182]",
+      "path": "points[197]",
       "title": "流線型應在腳觸牆前完成，而非推出後整理",
       "tags": {
         "category": [
@@ -13691,7 +13991,7 @@
       "id": "starts-turns.tech.19",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[183]",
+      "path": "points[198]",
       "title": "進牆速度保護：最後一划完整，距離不對補踢腿",
       "tags": {
         "category": [
@@ -13714,7 +14014,7 @@
       "id": "starts-turns.tech.2",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[162]",
+      "path": "points[177]",
       "title": "Grab Start 抓台拉力效益爭議",
       "tags": {
         "category": [
@@ -13739,7 +14039,7 @@
       "id": "starts-turns.tech.20",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[184]",
+      "path": "points[199]",
       "title": "自由式翻滾：計步判距，頭不抬",
       "tags": {
         "category": [
@@ -13762,7 +14062,7 @@
       "id": "starts-turns.tech.21",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[185]",
+      "path": "points[200]",
       "title": "自由式轉身觸牆：膝蓋屈曲 100–120° 最優",
       "tags": {
         "category": [
@@ -13784,7 +14084,7 @@
       "id": "starts-turns.tech.22",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[186]",
+      "path": "points[201]",
       "title": "自由式轉身推蹬：力向量對齊重心決定出水速度",
       "tags": {
         "category": [
@@ -13806,7 +14106,7 @@
       "id": "starts-turns.tech.23",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[187]",
+      "path": "points[202]",
       "title": "仰式轉身計步：无跨選手通用數字，需分速度標定",
       "tags": {
         "category": [
@@ -13828,7 +14128,7 @@
       "id": "starts-turns.tech.24",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[188]",
+      "path": "points[203]",
       "title": "仰式轉身：翻滾動作與自由式相同，俯臥觸牆不違規",
       "tags": {
         "category": [
@@ -13848,7 +14148,7 @@
       "id": "starts-turns.tech.25",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[189]",
+      "path": "points[204]",
       "title": "蛙式轉身觸牆深度：最優 30–40 cm",
       "tags": {
         "category": [
@@ -13870,7 +14170,7 @@
       "id": "starts-turns.tech.26",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[190]",
+      "path": "points[205]",
       "title": "蛙式 Pullout 三種技術：無統計顯著差異，個人測試決定",
       "tags": {
         "category": [
@@ -13892,7 +14192,7 @@
       "id": "starts-turns.tech.27",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[191]",
+      "path": "points[206]",
       "title": "蛙式水下滑行最優深度 0.4–0.6 m",
       "tags": {
         "category": [
@@ -13914,7 +14214,7 @@
       "id": "starts-turns.tech.28",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[192]",
+      "path": "points[207]",
       "title": "IM 蝶→背轉身：四式 IM 中最快的轉身",
       "tags": {
         "category": [
@@ -13936,7 +14236,7 @@
       "id": "starts-turns.tech.29",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[193]",
+      "path": "points[208]",
       "title": "背→蛙規則：觸牆時仰臥、離牆時俯臥，旋轉在牆上完成",
       "tags": {
         "category": [
@@ -13958,7 +14258,7 @@
       "id": "starts-turns.tech.3",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[163]",
+      "path": "points[178]",
       "title": "Set Position 膝蓋角度與肌肉特性相關",
       "tags": {
         "category": [
@@ -13980,7 +14280,7 @@
       "id": "starts-turns.tech.30",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[194]",
+      "path": "points[209]",
       "title": "背→蛙三種轉法比較：Crossover 推出速度最高，但 7.5m 成績無顯著差異",
       "tags": {
         "category": [
@@ -14003,7 +14303,7 @@
       "id": "starts-turns.tech.31",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[195]",
+      "path": "points[210]",
       "title": "背→蛙三種轉法適用情境",
       "tags": {
         "category": [
@@ -14025,7 +14325,7 @@
       "id": "starts-turns.tech.32",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[196]",
+      "path": "points[211]",
       "title": "水下比水面快：無波浪阻力 + 初始速度優勢",
       "tags": {
         "category": [
@@ -14048,7 +14348,7 @@
       "id": "starts-turns.tech.33",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[197]",
+      "path": "points[212]",
       "title": "UDK 速度關鍵：上踢腳尖峰值速度，精英靠踢速而非踢距",
       "tags": {
         "category": [
@@ -14070,7 +14370,7 @@
       "id": "starts-turns.tech.34",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[198]",
+      "path": "points[213]",
       "title": "UDK 動作要點：入水後先滑行再起踢，小幅高頻，最後一踢銜接第一抓水",
       "tags": {
         "category": [
@@ -14090,7 +14390,7 @@
       "id": "starts-turns.tech.35",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[199]",
+      "path": "points[214]",
       "title": "各式 UDK 姿勢差異：蛙式不用 UDK，改為 pullout",
       "tags": {
         "category": [
@@ -14110,7 +14410,7 @@
       "id": "starts-turns.tech.36",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[200]",
+      "path": "points[215]",
       "title": "蝶→背轉身三大效率損失：停頓、旋轉慢、換氣",
       "tags": {
         "category": [
@@ -14132,7 +14432,7 @@
       "id": "starts-turns.tech.37",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[201]",
+      "path": "points[216]",
       "title": "背→蛙常見犯規：觸牆前肩部提前過垂直面",
       "tags": {
         "category": [
@@ -14152,7 +14452,7 @@
       "id": "starts-turns.tech.38",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[202]",
+      "path": "points[217]",
       "title": "翻滾啟動時機：太早導致觸牆角度過垂直，太晚損失進牆速度",
       "tags": {
         "category": [
@@ -14174,7 +14474,7 @@
       "id": "starts-turns.tech.39",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[203]",
+      "path": "points[218]",
       "title": "起跳技術測量指標不一致：反應時間/入水速度/15m 時間結論可能相反",
       "tags": {
         "category": [
@@ -14197,7 +14497,7 @@
       "id": "starts-turns.tech.4",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[164]",
+      "path": "points[179]",
       "title": "起跳零位姿勢頭部位置——靜態中立 vs 動態抬頭兩派",
       "tags": {
         "category": [
@@ -14217,7 +14517,7 @@
       "id": "starts-turns.tech.40",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[204]",
+      "path": "points[219]",
       "title": "膝蓋角度與個人肌肉特性高度相關，無跨選手通用最優值",
       "tags": {
         "category": [
@@ -14240,7 +14540,7 @@
       "id": "starts-turns.tech.41",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[165]",
+      "path": "points[180]",
       "title": "重心前傾 vs 重心後仰起跳——兩種 Track Start 的設置策略",
       "tags": {
         "category": [
@@ -14260,7 +14560,7 @@
       "id": "starts-turns.tech.42",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[166]",
+      "path": "points[181]",
       "title": "起跳乾淨入水的三段姿勢——Hyperstreamline、髖屈 15°、腳尖伸直",
       "tags": {
         "category": [
@@ -14282,7 +14582,7 @@
       "id": "starts-turns.tech.43",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[167]",
+      "path": "points[182]",
       "title": "起跳的三個 coupling 動作——抬頭、繞臂、後腿踢",
       "tags": {
         "category": [
@@ -14304,7 +14604,7 @@
       "id": "starts-turns.tech.44",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[168]",
+      "path": "points[183]",
       "title": "自由式 Breakout 七要點——浮上水面時最容易丟掉起跳優勢",
       "tags": {
         "category": [
@@ -14324,7 +14624,7 @@
       "id": "starts-turns.tech.45",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[205]",
+      "path": "points[220]",
       "title": "水下速度是起跳時間的最強預測因子——勝過離台時間與飛行距離",
       "tags": {
         "category": [
@@ -14344,7 +14644,7 @@
       "id": "starts-turns.tech.46",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[206]",
+      "path": "points[221]",
       "title": "Paralympic 級別決定 SR/SL 最佳組合——SR 主導 vs SL 主導視級別而定",
       "tags": {
         "category": [
@@ -14364,10 +14664,61 @@
       "outgoing_ids": []
     },
     {
+      "id": "starts-turns.tech.47",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[173]",
+      "title": "超流線的「脊椎些微伸展」與「hollow body」互相矛盾，必須擇一",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "starts-turns.tech.42",
+        "udk.tech.24"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.48",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[174]",
+      "title": "超流線的「肩屈曲 170–180 度」是肩複合體角度，不是肩關節角度——查錯層級會找錯限制",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "fly.tech.25",
+        "free.tech.36",
+        "starts-turns.tech.47"
+      ]
+    },
+    {
       "id": "starts-turns.tech.5",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[169]",
+      "path": "points[184]",
       "title": "Track Start 零位姿勢：臀高於肩的物理邏輯",
       "tags": {
         "category": [
@@ -14390,7 +14741,7 @@
       "id": "starts-turns.tech.6",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[170]",
+      "path": "points[185]",
       "title": "Track Start 推蹬方向與水平速度最大化",
       "tags": {
         "category": [
@@ -14415,7 +14766,7 @@
       "id": "starts-turns.tech.7",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[171]",
+      "path": "points[186]",
       "title": "Kick Start 前後腳 GRF 功能分工",
       "tags": {
         "category": [
@@ -14437,7 +14788,7 @@
       "id": "starts-turns.tech.8",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[172]",
+      "path": "points[187]",
       "title": "Kick Start 慣用腳位置",
       "tags": {
         "category": [
@@ -14460,7 +14811,7 @@
       "id": "starts-turns.tech.9",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[173]",
+      "path": "points[188]",
       "title": "Kick Start 重心策略：中立或後重心優於前重心",
       "tags": {
         "category": [
@@ -14905,8 +15256,8 @@
         ]
       },
       "source_ids": [
-        "src.aiac-ijkss-v-6n-1p-25",
-        "src.pmc9724109"
+        "src.pmc9724109",
+        "src.stress-fractures-in-swimmers-systematic-revi"
       ],
       "outgoing_ids": [
         "swimmer-low-bone-density"
@@ -14945,13 +15296,12 @@
         ],
         "certainty": [
           "🔵",
-          "🟠",
+          "🟡",
           "🟢"
         ]
       },
       "source_ids": [
-        "src.stress-fractures-in-swimmers-systematic-revi",
-        "src.swimming-injury-imaging-review-1-radiologyke"
+        "src.trikha-2022-collegiate-swimmer-health-events"
       ],
       "outgoing_ids": []
     },
@@ -15009,12 +15359,13 @@
           "A-shoulder-upper"
         ],
         "certainty": [
-          "🔵",
-          "🟠"
+          "🟡",
+          "🟢"
         ]
       },
       "source_ids": [
-        "src.clinical-coach-report-no-epidemiology"
+        "src.pmc10372189",
+        "src.wolf-2009-ncaa-swimming-injury-patterns"
       ],
       "outgoing_ids": []
     },
@@ -15447,7 +15798,7 @@
       "id": "udk.tech.1",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[130]",
+      "path": "points[137]",
       "title": "水下速度高於水面速度",
       "tags": {
         "category": [
@@ -15467,7 +15818,7 @@
       "id": "udk.tech.10",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[139]",
+      "path": "points[146]",
       "title": "上踢是 UDK 速度的關鍵預測變數",
       "tags": {
         "category": [
@@ -15489,7 +15840,7 @@
       "id": "udk.tech.11",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[140]",
+      "path": "points[147]",
       "title": "UDK 上踢 vs 水面蝶式上踢的根本差異",
       "tags": {
         "category": [
@@ -15509,7 +15860,7 @@
       "id": "udk.tech.12",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[141]",
+      "path": "points[148]",
       "title": "踢腿對稱性（Sagittal Kick Symmetry）",
       "tags": {
         "category": [
@@ -15531,7 +15882,7 @@
       "id": "udk.tech.13",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[142]",
+      "path": "points[149]",
       "title": "強迫提高踢頻不提升速度，振幅自動補償",
       "tags": {
         "category": [
@@ -15553,7 +15904,7 @@
       "id": "udk.tech.14",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[143]",
+      "path": "points[150]",
       "title": "踝關節蹠屈柔韌性是 UDK 速度的硬體上限",
       "tags": {
         "category": [
@@ -15578,7 +15929,7 @@
       "id": "udk.tech.15",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[144]",
+      "path": "points[151]",
       "title": "踝關節柔韌性不足的代償模式：上踢膝蓋彎曲增加",
       "tags": {
         "category": [
@@ -15600,7 +15951,7 @@
       "id": "udk.tech.16",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[145]",
+      "path": "points[152]",
       "title": "踝關節柔韌性與力量缺一不可",
       "tags": {
         "category": [
@@ -15620,7 +15971,7 @@
       "id": "udk.tech.17",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[146]",
+      "path": "points[153]",
       "title": "UDK 起踢規則——滑到個人滑行／海豚踢交叉速度就開始踢",
       "tags": {
         "category": [
@@ -15645,7 +15996,7 @@
       "id": "udk.tech.18",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[147]",
+      "path": "points[154]",
       "title": "最優水下距離由個人速度衰減曲線決定",
       "tags": {
         "category": [
@@ -15668,7 +16019,7 @@
       "id": "udk.tech.19",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[148]",
+      "path": "points[155]",
       "title": "長水下距離的代謝代價：乳酸超過兩倍但速度無差異",
       "tags": {
         "category": [
@@ -15691,7 +16042,7 @@
       "id": "udk.tech.2",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[131]",
+      "path": "points[138]",
       "title": "最優水下深度範圍 0.4–0.6 m",
       "tags": {
         "category": [
@@ -15716,7 +16067,7 @@
       "id": "udk.tech.20",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[149]",
+      "path": "points[156]",
       "title": "速度穩定性優先於速度峰值",
       "tags": {
         "category": [
@@ -15736,7 +16087,7 @@
       "id": "udk.tech.21",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[150]",
+      "path": "points[157]",
       "title": "短水道短距離的水下策略有不同代謝邏輯",
       "tags": {
         "category": [
@@ -15756,7 +16107,7 @@
       "id": "udk.tech.22",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[151]",
+      "path": "points[158]",
       "title": "仰式 UDK 效率高於俯式的物理原因",
       "tags": {
         "category": [
@@ -15779,7 +16130,7 @@
       "id": "udk.tech.23",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[152]",
+      "path": "points[159]",
       "title": "各泳式水下距離策略差異",
       "tags": {
         "category": [
@@ -15799,7 +16150,7 @@
       "id": "udk.tech.24",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[153]",
+      "path": "points[160]",
       "title": "流線型品質是 UDK 速度的底板",
       "tags": {
         "category": [
@@ -15821,7 +16172,7 @@
       "id": "udk.tech.25",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[154]",
+      "path": "points[161]",
       "title": "Monofin 訓練暴露上踢弱點並建立上踢推進感知",
       "tags": {
         "category": [
@@ -15843,7 +16194,7 @@
       "id": "udk.tech.26",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[155]",
+      "path": "points[162]",
       "title": "UDK 訓練 4 個月介入可顯著提升速度",
       "tags": {
         "category": [
@@ -15865,7 +16216,7 @@
       "id": "udk.tech.27",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[156]",
+      "path": "points[163]",
       "title": "節拍器訓練目標是節奏穩定，不是強迫提速",
       "tags": {
         "category": [
@@ -15887,7 +16238,7 @@
       "id": "udk.tech.28",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[157]",
+      "path": "points[164]",
       "title": "踝關節柔韌性訓練方法",
       "tags": {
         "category": [
@@ -15909,7 +16260,7 @@
       "id": "udk.tech.29",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[158]",
+      "path": "points[165]",
       "title": "出發與轉身的起踢時機差異",
       "tags": {
         "category": [
@@ -15929,7 +16280,7 @@
       "id": "udk.tech.3",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[132]",
+      "path": "points[139]",
       "title": "精英選手水下速度顯著高於低層級選手",
       "tags": {
         "category": [
@@ -15948,10 +16299,36 @@
       "outgoing_ids": []
     },
     {
+      "id": "udk.tech.30",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[167]",
+      "title": "水下海豚打腿的關節命名隨體位翻轉——仰躺時「下踢」在解剖學上是髖伸展",
+      "tags": {
+        "category": [
+          "joint"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "back.tech.30",
+        "free.tech.36",
+        "udk.tech.22"
+      ]
+    },
+    {
       "id": "udk.tech.4",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[133]",
+      "path": "points[140]",
       "title": "UDK 是全身波動，不是腿部踢水",
       "tags": {
         "category": [
@@ -15974,7 +16351,7 @@
       "id": "udk.tech.5",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[134]",
+      "path": "points[141]",
       "title": "核心肌群在踢腿週期中輪替激活",
       "tags": {
         "category": [
@@ -15994,7 +16371,7 @@
       "id": "udk.tech.6",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[135]",
+      "path": "points[142]",
       "title": "下踢末段渦流噴射機制",
       "tags": {
         "category": [
@@ -16016,7 +16393,7 @@
       "id": "udk.tech.7",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[136]",
+      "path": "points[143]",
       "title": "下踢→上踢過渡的渦流回收（Vortex Recapture）",
       "tags": {
         "category": [
@@ -16038,7 +16415,7 @@
       "id": "udk.tech.8",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[137]",
+      "path": "points[144]",
       "title": "Strouhal 數與人類 UDK 推進效率",
       "tags": {
         "category": [
@@ -16061,7 +16438,7 @@
       "id": "udk.tech.9",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[138]",
+      "path": "points[145]",
       "title": "下踢力學序列與膝蓋彎曲的核心矛盾",
       "tags": {
         "category": [
