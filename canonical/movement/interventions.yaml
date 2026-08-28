@@ -30,4 +30,149 @@ description: 依限制型態整理訓練、活動度／伸展、進退階、劑�
 # diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
 # public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
 
-interventions: []
+interventions:
+  - id: movement.intervention.shoulder-elevation.active-control
+    limitation_type: 主動控制不足（肩胛上旋肌群力量或耐力不足，超流線末端無法主動保持）
+    action_ids:
+      - movement.action.shoulder-complex.elevation
+    demand_ids:
+      - movement.demand.starts-turns.underwater-glide.shoulder-elevation
+    affirmative_conclusion: >
+      當評估顯示被動 ROM 充足但主動末端維持能力不足時，針對肩胛上旋肌群
+      與旋轉肌袖的容量訓練（capacity training）可改善主動控制。不同類型
+      的肌力訓練在特定條件下均可正向轉移至游泳成績，不限於單一方法。
+    works_when:
+      - 被動上舉角度已達超流線需求，但主動維持時姿勢塌陷或末端角度流失
+      - 肩胛骨動態觀察顯示上旋不足或翼狀肩胛（serratus anterior 為主的弱點）
+      - 無急性傷、關節不穩或夾擠症狀的禁忌條件
+    fails_when:
+      - 被動 ROM 本身即不足（此時容量訓練不能替代活動度提升）
+      - 存在急性夾擠、肌腱撕裂或明顯不穩，需先處理急性問題
+      - 疼痛保護性受限（強行訓練會加劇而非改善）
+      - 過度活動（hypermobility）主導時，穩定容量訓練方向正確但進退階需更謹慎
+    how_to_identify: >
+      分流標準：先確認被動 ROM 充足（主動不足但被動正常 → 控制問題）；
+      肩胛動態評估觀察上旋與穩定性；排除急性或結構性問題後再進入容量訓練。
+      具體量測方法屬診斷層。
+    action: >
+      初階：肩胛骨主動控制訓練（如 wall slides、Y-T-W exercises、
+      serratus anterior activation）；從低負荷、短弧度開始建立神經肌肉協調。
+      進階：抗阻上舉訓練（cable / resistance band shoulder elevation）；
+      逐步增加末端維持時間。
+      游泳特定：水上流線型姿勢靜態維持練習，從岸上俯臥滑行姿勢過渡到
+      水中短距離超流線滑行。
+      退階：若主動訓練仍誘發症狀，降回被動輔助動作範圍或降低負荷。
+    remaining_boundary: >
+      目前訓練轉移研究以競技泳者為主，不同族群（兒童、鐵人三項、成人初學）
+      的最佳劑量與進退階時程尚無充分資料。各研究所用訓練類型異質性高，
+      無法指定單一最佳方法。水中重測的最佳時機與判讀方式缺乏標準。
+    mobility_decision: not-routine
+    dosage_source_ids:
+      - src.fone-2022
+      - src.muniz-pardos-2019
+    safety_stop_conditions:
+      - 訓練中出現新發或加劇的肩部疼痛立即停止
+      - 出現麻木、刺痛或無力感
+      - 關節出現明顯不穩定感
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: intervention
+    source_ids:
+      - src.fone-2022
+      - src.muniz-pardos-2019
+    public:
+      name_zh: 主動末端控制與容量取向訓練
+      description: >
+        若肩膀活動度足夠但超流線位維持不住（塌陷或不對稱），問題可能在
+        肌肉的「主動控制能力」——肩胛上旋肌群和旋轉肌袖需要足夠的耐力與
+        協調，才能在高速滑行中維持姿勢。此介入透過漸進式容量訓練
+        建立這個能力。
+      works_when_summary: >
+        被動活動度已足夠，但主動維持時姿勢崩潰，且無急性傷或夾擠禁忌。
+      fails_when_summary: >
+        被動角度本身不夠，或有急性疼痛、結構性問題，應先處理根本原因。
+      training_options: >
+        從岸上肩胛骨主動控制練習開始（wall slides、Y-T-W 系列），
+        進階到阻力帶上舉與水中流線型靜態維持。
+      safety_note: >
+        若訓練中出現疼痛加劇、麻木、刺痛或不穩定感，立即停止，不要強撐。
+    diagnostic:
+      decision_tree_note: >
+        被動 ROM vs 主動 ROM 的分離評估、肩胛動態分析、個別肌群測試
+        屬診斷層，決定是否優先處理柔韌度、控制或兩者並行。
+
+  - id: movement.intervention.shoulder-elevation.conditional-soft-tissue
+    limitation_type: 確認被動上舉角度不足且已排除禁忌，肩後囊或闊背肌被動限制為主要因素
+    action_ids:
+      - movement.action.shoulder-complex.elevation
+    demand_ids:
+      - movement.demand.starts-turns.underwater-glide.shoulder-elevation
+    affirmative_conclusion: >
+      當評估確認存在被動上舉角度不足且主要限制為被動軟組織（肩後囊緊縮
+      或闊背肌柔韌性不足），且已排除關節不穩、急性炎症及過度活動等禁忌
+      時，條件式軟組織介入（如肩後囊伸展）可作為輔助工具。此介入從預設
+      工具降為條件式選項：活動度正常或過度者優先不使用。
+    works_when:
+      - 被動上舉角度量測顯示明確不足，且與主動角度之間有顯著差距
+      - 臨床分流確認主要限制在被動軟組織（而非主動控制不足）
+      - 無關節不穩、急性炎症、全層肌腱撕裂等禁忌
+      - 活動度處於正常範圍以下（不適用於正常或過度活動者）
+    fails_when:
+      - 被動 ROM 已達正常範圍或過度活動（hypermobility）—— 此時伸展無益且可能有害
+      - 主動控制不足是主要因素（應優先處理容量，不是伸展）
+      - 存在急性炎症、全層撕裂或關節不穩的禁忌
+      - 疼痛因肩後囊緊縮以外的原因（如夾擠、肌腱病變）引起，伸展可能加劇
+    how_to_identify: >
+      需先完成被動 ROM 與主動 ROM 分離評估，確認被動不足且主動控制非主因；
+      臨床端點測試（如仰臥交叉內收測試輔助判斷後囊張力）；排除禁忌。
+      具體量測協議屬診斷層。
+    action: >
+      肩後囊伸展（sleeper stretch）：側臥患側，患側手臂屈肘 90° 內旋方向
+      輕壓，在不引發疼痛的張力感下維持。具體維持時間與頻率目前無游泳族群
+      劑量來源，本條不給定數字。
+      闊背肌伸展：仰臥雙臂上舉貼耳維持，腰部保持中立，感受背部延伸而非
+      腰椎過伸。
+      進退階原則：從低強度輕微感覺張力開始；若伸展後症狀加重，立即退階
+      或停止；不追求「拉到有點痛」的程度。
+    remaining_boundary: >
+      本條的介入建議是由解剖作用線與臨床慣例推導，尚無游泳族群的直接介入
+      試驗支撐，證據等級屬綜述推論而非介入研究。
+      sleeper stretch 的現有研究以投擲選手（特別是棒球投手）為主，直接
+      轉移到游泳族群（尤其兒童、自由潛水）的證據有限。最佳劑量（頻率、
+      強度、維持時間）尚無游泳族群專屬資料。伸展是否真能改變泳者的水下
+      超流線品質，目前尚無直接介入試驗。
+    mobility_decision: conditional
+    dosage_source_ids: []
+    safety_stop_conditions:
+      - 伸展過程中出現疼痛（不是「感覺張力」而是明確疼痛）立即停止
+      - 出現麻木、刺痛或無力感
+      - 伸展後症狀加重
+      - 有關節不穩或急性傷者禁止使用
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 條件式軟組織介入（肩後囊與闊背肌）
+      description: >
+        若評估確認肩膀活動度本身不足（被動角度達不到超流線需求），
+        且主要原因是軟組織限制（肩後囊緊繃或闊背肌較緊），可以考慮針對
+        性伸展作為輔助。但這是「條件式」的——活動度已正常或過度活動的人，
+        不應常規使用此介入，因為對他們沒有幫助甚至可能增加不穩定。
+      works_when_summary: >
+        被動活動度確認不足，已排除禁忌，且臨床分流顯示被動軟組織是主要限制。
+      fails_when_summary: >
+        活動度正常或過度、主動控制才是主因、有急性傷或關節不穩時不適用。
+      approach_note: >
+        肩後囊伸展（sleeper stretch）和闊背肌伸展是常見的輔助工具，
+        從輕微張力感開始，不應追求「拉到痛」。
+      safety_note: >
+        伸展中若出現疼痛（不只是張力感）、麻木、刺痛或不穩定感，立即停止。
+        有關節不穩或急性傷者禁止使用。
+    diagnostic:
+      decision_tree_note: >
+        被動 ROM 量測（如仰臥上舉角度）、主動被動差異評估、後囊張力
+        端點測試屬診斷層，用以確認是否符合此介入的適用條件。

@@ -24,4 +24,144 @@ description: 肌群名稱、同義詞、跨關節特性與可承擔的角色；�
 # diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
 # public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
 
-muscle_groups: []
+muscle_groups:
+  - id: movement.muscle.scapular-upward-rotators
+    name: 肩胛上旋肌群
+    aliases:
+      - 肩胛骨上旋肌群
+      - scapular upward rotators
+      - 上旋肌群
+    joint_regions:
+      - shoulder-arm
+    cross_joint_characteristics: >
+      本肌群由前鋸肌（下束）與斜方肌（下束及上束）共同組成力偶
+      （force couple），協調驅動肩胛骨在胸廓上旋轉，使關節盂面在上舉時
+      朝向肱骨頭。斜方肌上束與下束、前鋸肌下束三者的力矩向量在肩胛骨
+      中央形成旋轉力偶，而非單肌獨立作用。
+    general_capabilities: >
+      肩胛上旋：推動肩胛骨關節盂角朝上旋轉，是肩複合體上舉的必要同步動作。
+      穩定肩胛於胸廓：在上肢承載負荷時維持肩胸關節的穩定接觸。
+      協調盂肱空間：上旋使肩峰下空間在上舉弧度中保持相對通暢。
+    roles:
+      - name: 肩上舉中的肩胛上旋
+        boundary: >
+          此角色在解剖條件正常時成立；具體在何種游泳動作中被多少程度地
+          招募，需泳者 EMG 資料支持，不得由解剖作用線直接外推。
+    publication_status: draft
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 肩胛上旋肌群
+      description: >
+        當手臂向上抬起時，肩胛骨需要同步上旋，讓肩關節窩的方向跟著手臂走。
+        負責這個動作的是「肩胛上旋力偶」——前鋸肌下束和斜方肌（上束、下束）
+        協同作用，就像齒輪組一樣把肩胛骨旋轉到對的角度。三條肌肉缺一不可，
+        任何一條無力或過緊都會影響這個協調。
+      safety_note: >
+        若感到肩膀夾擠、不穩或疼痛，不要嘗試強制抬高手臂。
+    diagnostic:
+      assessment_note: >
+        前鋸肌與斜方肌各束的個別肌力評估屬診斷層，需透過徒手肌力測試與
+        肩胛骨動態觀察進行分流，不在公開教育層描述。
+
+  - id: movement.muscle.rotator-cuff
+    name: 旋轉肌袖
+    aliases:
+      - 肩旋轉肌群
+      - rotator cuff
+      - 旋轉袖肌群
+    joint_regions:
+      - shoulder-arm
+    cross_joint_characteristics: >
+      旋轉肌袖由棘上肌、棘下肌、小圓肌與肩胛下肌四條肌肉組成，共同包覆
+      肱骨頭，形成動態穩定系統。四者在整個上舉弧度中協同作用，使肱骨頭
+      維持對關節盂的向心壓緊，防止肱骨頭在上舉時向上移位撞擊肩峰。
+      棘下肌與小圓肌同時具有肱骨外旋能力，肩胛下肌具有內旋能力。
+    general_capabilities: >
+      肱骨頭動態穩定：在主動運動全弧度中將肱骨頭壓向關節盂中心。
+      肱骨旋轉：棘下肌與小圓肌執行外旋，肩胛下肌執行內旋。
+      輔助上舉：棘上肌在上舉初始弧度（約 0–30°）貢獻外展力矩。
+    roles:
+      - name: 盂肱關節動態穩定
+        boundary: >
+          此穩定角色在解剖層級有充分支持；在游泳各泳式的哪個相位以何種
+          程度被招募，屬泳者 EMG 層的問題，不得由解剖條件直接推論。
+      - name: 肱骨旋轉貢獻
+        boundary: >
+          旋轉方向與肌肉作用線為解剖事實；水中動作中的旋轉量與時序需
+          泳者運動學與 EMG 研究支持。
+    publication_status: draft
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 旋轉肌袖
+      description: >
+        旋轉肌袖是環繞肩關節的四條深層肌肉，功能像是一個「動態袖套」——
+        在手臂移動的整個過程中，持續把肱骨頭壓向關節盂，防止它往上滑動
+        或錯位。旋轉肌袖的協調狀態會影響肱骨頭在上舉過程中的位置，這是
+        肩峰下空間大小的解剖決定因素之一。至於「協調不良是否導致夾擠症狀」
+        屬臨床病理研究問題，本條不作主張。
+      safety_note: >
+        若肩部有急性疼痛、夾擠感、明顯無力或麻木，不要繼續強行完成上舉，
+        應停止並評估。
+    diagnostic:
+      assessment_note: >
+        旋轉肌袖各肌肉的個別功能評估包含肌力分離測試與 ROM 量測，屬診斷層。
+        夾擠症狀的分流（主要撞擊位置、棘上肌腱病變vs全層撕裂）需臨床量測。
+
+  - id: movement.muscle.latissimus-dorsi
+    name: 闊背肌
+    aliases:
+      - 背闊肌
+      - latissimus dorsi
+      - lats
+    joint_regions:
+      - shoulder-arm
+      - spine-neck
+    cross_joint_characteristics: >
+      闊背肌是肩複合體最大的單一肌肉，起點廣大（胸腰筋膜、下位胸椎棘突、
+      腰椎棘突、髂嵴、下位肋骨），止點於肱骨小結節嵴。跨越肩關節時產生
+      肱骨伸展、內收與內旋的複合力矩。由於止點靠近肱骨頭旋轉中心，
+      在特定角度下對肱骨頭也有向下壓緊的分量。
+      在流線型姿勢（雙臂前舉過頭）下，闊背肌被拉伸至較大長度，若柔韌性
+      不足或靜止張力偏高，會限制肩複合體達到完整上舉，是超流線位常見的
+      潛在張力來源之一。此判斷屬臨床假設，需個案評估。
+    general_capabilities: >
+      肱骨伸展：將手臂從上舉位拉回至側身，是肩複合體伸展的主要動力肌之一。
+      此為解剖作用線，具體在哪個泳式相位被招募多少屬游泳 EMG 研究範疇，本條不作主張。
+      肱骨內收：水平面從外展位拉向身體。
+      肱骨內旋：在特定關節角度下貢獻內旋力矩。
+      脊椎穩定：透過胸腰筋膜連結協助軀幹穩定（間接作用）。
+    roles:
+      - name: 超流線姿勢下的柔韌度限制因子
+        boundary: >
+          此角色是依解剖作用線與臨床觀察提出的假設，「闊背肌緊繃即是限制
+          主因」不能作為通則斷言，需逐案被動與主動 ROM 評估才能確認。
+          招募程度在不同泳式中的差異屬游泳 EMG 研究問題。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 闊背肌
+      description: >
+        闊背肌是背部最大的肌肉，負責把手臂從頭頂拉回側身（如拉水動作），
+        也參與手臂向內收。因為它連接著背部與手臂，當雙臂前舉過頭做流線型
+        姿勢時，闊背肌需要足夠的柔韌性才能讓手臂完全貼耳。若它的靜止張力
+        偏高或柔韌性不足，可能會限制超流線位。但「闊背肌緊是限制所在」是需
+        要逐案確認的假設，不是所有人都適用。
+      safety_note: >
+        若在雙臂上舉或流線型姿勢時肩部出現疼痛或夾擠感，不要強行撐開，
+        應停止評估原因。
+    diagnostic:
+      assessment_note: >
+        闊背肌柔韌性的評估包含被動 ROM 測試（如仰臥手臂上舉角度量測）
+        與主動末端控制評估，用以區分被動限制與主動控制不足，屬診斷層。

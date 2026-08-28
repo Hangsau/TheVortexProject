@@ -2,8 +2,8 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 21,
-    "unlinked_records": 491
+    "unused_taxonomy_values": 11,
+    "unlinked_records": 498
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -12,24 +12,8 @@
       "value": "do-not-prescribe"
     },
     {
-      "field": "action_status",
-      "value": "provisional"
-    },
-    {
-      "field": "action_status",
-      "value": "ready"
-    },
-    {
       "field": "claim_status",
       "value": "disputed"
-    },
-    {
-      "field": "claim_status",
-      "value": "partially-supported"
-    },
-    {
-      "field": "claim_status",
-      "value": "supported"
     },
     {
       "field": "claim_status",
@@ -38,14 +22,6 @@
     {
       "field": "development_stage",
       "value": "fun"
-    },
-    {
-      "field": "evidence_profile",
-      "value": "anatomy"
-    },
-    {
-      "field": "evidence_profile",
-      "value": "intervention"
     },
     {
       "field": "evidence_profile",
@@ -60,24 +36,8 @@
       "value": "swimming-kinematics"
     },
     {
-      "field": "evidence_profile",
-      "value": "synthesis-inference"
-    },
-    {
-      "field": "mobility_decision",
-      "value": "conditional"
-    },
-    {
       "field": "mobility_decision",
       "value": "evidence-gap"
-    },
-    {
-      "field": "mobility_decision",
-      "value": "not-routine"
-    },
-    {
-      "field": "publication_status",
-      "value": "draft"
     },
     {
       "field": "publication_status",
@@ -1507,6 +1467,41 @@
       "id": "iron-deficiency-swimmer",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[32]"
+    },
+    {
+      "id": "movement.action.shoulder-complex.elevation",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[0]"
+    },
+    {
+      "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[0]"
+    },
+    {
+      "id": "movement.intervention.shoulder-elevation.active-control",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[0]"
+    },
+    {
+      "id": "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[1]"
+    },
+    {
+      "id": "movement.muscle.latissimus-dorsi",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[2]"
+    },
+    {
+      "id": "movement.muscle.rotator-cuff",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[1]"
+    },
+    {
+      "id": "movement.muscle.scapular-upward-rotators",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[0]"
     },
     {
       "id": "open-water-marine-biological-hazards",

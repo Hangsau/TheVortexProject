@@ -25,4 +25,53 @@ description: 泳式 × 相位 × 體位 × 池畔方向 × 解剖動作，連到
 # diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
 # public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
 
-demands: []
+demands:
+  - id: movement.demand.starts-turns.underwater-glide.shoulder-elevation
+    stroke: starts-turns
+    phase_model: descriptive
+    phase: underwater-glide
+    body_position: prone
+    action_ids:
+      - movement.action.shoulder-complex.elevation
+    muscle_roles:
+      - muscle_id: movement.muscle.scapular-upward-rotators
+        role: >
+          在超流線位維持肩胛骨上旋，支撐雙臂貼耳的靜態姿勢。
+          水中實際招募程度屬 EMG 研究範疇，各研究間存在異質性。
+      - muscle_id: movement.muscle.rotator-cuff
+        role: >
+          在上舉末端動態穩定盂肱關節，防止肱骨頭在水中阻力下向後移位。
+          招募型態在游泳群體間存在個體差異，不宜固定化描述。
+      - muscle_id: movement.muscle.latissimus-dorsi
+        role: >
+          在超流線位被動拉伸狀態；闊背肌柔韌性不足時可能限制完整上舉。
+          此為解剖推論，不代表游泳時闊背肌一定是限制主因——需逐案評估。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.martens-2015
+    public:
+      name_zh: 水下滑行超流線位的肩上舉需求
+      description: >
+        出發入水或轉身推蹬後的水下滑行，要求雙臂完全前舉過頭並夾緊雙耳，
+        形成超流線（streamline）姿勢以降低阻力。這個姿勢要求肩複合體
+        達到最大或接近最大的上舉角度，肩胛骨同步上旋，肱骨頭在關節盂中
+        保持穩定。
+        游泳群體的肌肉招募型態存在個體差異（游泳 EMG 研究一致顯示各研究
+        間有顯著異質性），因此「特定肌肉一定以何種程度啟動」的描述需謹慎。
+      limitation_context: >
+        做不到完整超流線位的原因不只一種，而且不同原因的處理方向完全相反，
+        不能靠單一動作或單一伸展套用到所有人，需要個別評估後才知道該往哪走。
+      safety_note: >
+        若在超流線姿勢中出現肩部疼痛、夾擠感或麻木，不應強撐維持姿勢，
+        應停止並評估。
+    diagnostic:
+      assessment_note: >
+        超流線角度的被動與主動差異評估、肩胛骨動態觀察、個別肌群肌力測試
+        屬診斷層，用以分流限制來源（被動 vs 主動控制 vs 疼痛保護）。
+      limitation_differential: >
+        無法達到完整超流線位的潛在原因包括：盂肱關節被動活動度不足、
+        肩胛上旋肌群主動控制不足、闊背肌或肩後囊柔韌性限制、以及疼痛
+        或夾擠引起的保護性受限。不同原因的介入方向完全不同，需分流評估。

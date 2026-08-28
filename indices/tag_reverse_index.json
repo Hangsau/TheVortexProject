@@ -3,8 +3,17 @@
   "fields": {
     "action_status": {
       "do-not-prescribe": [],
-      "provisional": [],
-      "ready": []
+      "provisional": [
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.intervention.shoulder-elevation.active-control",
+        "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+        "movement.muscle.latissimus-dorsi"
+      ],
+      "ready": [
+        "movement.action.shoulder-complex.elevation",
+        "movement.muscle.rotator-cuff",
+        "movement.muscle.scapular-upward-rotators"
+      ]
     },
     "category": {
       "A-shoulder-upper": [
@@ -1416,8 +1425,17 @@
     },
     "claim_status": {
       "disputed": [],
-      "partially-supported": [],
-      "supported": [],
+      "partially-supported": [
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.intervention.shoulder-elevation.active-control",
+        "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+        "movement.muscle.latissimus-dorsi"
+      ],
+      "supported": [
+        "movement.action.shoulder-complex.elevation",
+        "movement.muscle.rotator-cuff",
+        "movement.muscle.scapular-upward-rotators"
+      ],
       "unverified": []
     },
     "development_stage": {
@@ -1470,12 +1488,22 @@
       ]
     },
     "evidence_profile": {
-      "anatomy": [],
-      "intervention": [],
+      "anatomy": [
+        "movement.action.shoulder-complex.elevation",
+        "movement.muscle.latissimus-dorsi",
+        "movement.muscle.rotator-cuff",
+        "movement.muscle.scapular-upward-rotators"
+      ],
+      "intervention": [
+        "movement.intervention.shoulder-elevation.active-control"
+      ],
       "practice-observation": [],
       "swimming-emg": [],
       "swimming-kinematics": [],
-      "synthesis-inference": []
+      "synthesis-inference": [
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.intervention.shoulder-elevation.conditional-soft-tissue"
+      ]
     },
     "joint_region": {
       "ankle-foot": [
@@ -1492,6 +1520,7 @@
         "fly.tech.37",
         "free.tech.36",
         "free.tech.37",
+        "movement.action.shoulder-complex.elevation",
         "starts-turns.tech.48"
       ],
       "spine-neck": [
@@ -1868,9 +1897,13 @@
       ]
     },
     "mobility_decision": {
-      "conditional": [],
+      "conditional": [
+        "movement.intervention.shoulder-elevation.conditional-soft-tissue"
+      ],
       "evidence-gap": [],
-      "not-routine": []
+      "not-routine": [
+        "movement.intervention.shoulder-elevation.active-control"
+      ]
     },
     "pillar": {
       "life": [
@@ -1899,7 +1932,15 @@
       ]
     },
     "publication_status": {
-      "draft": [],
+      "draft": [
+        "movement.action.shoulder-complex.elevation",
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.intervention.shoulder-elevation.active-control",
+        "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+        "movement.muscle.latissimus-dorsi",
+        "movement.muscle.rotator-cuff",
+        "movement.muscle.scapular-upward-rotators"
+      ],
       "published": [],
       "reviewed": [],
       "withheld": []
@@ -2282,6 +2323,7 @@
         "free.tech.9"
       ],
       "starts-turns": [
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "starts-turns.err1",
         "starts-turns.err10",
         "starts-turns.err11",

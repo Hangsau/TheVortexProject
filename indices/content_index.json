@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 802,
+  "record_count": 809,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -10976,6 +10976,197 @@
       },
       "source_ids": [
         "src.sim-2019"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.elevation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[0]",
+      "title": "肩複合體上舉",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.aliaj-2021",
+        "src.fernandez-matias-2025",
+        "src.ludewig-2009",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[0]",
+      "title": "水下滑行超流線位的肩上舉需求",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.martens-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.shoulder-elevation.active-control",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[0]",
+      "title": "主動末端控制與容量取向訓練",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "intervention"
+        ],
+        "mobility_decision": [
+          "not-routine"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.fone-2022",
+        "src.muniz-pardos-2019"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[1]",
+      "title": "條件式軟組織介入（肩後囊與闊背肌）",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "mobility_decision": [
+          "conditional"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.latissimus-dorsi",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[2]",
+      "title": "闊背肌",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.rotator-cuff",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[1]",
+      "title": "旋轉肌袖",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.scapular-upward-rotators",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[0]",
+      "title": "肩胛上旋肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },

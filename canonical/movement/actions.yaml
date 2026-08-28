@@ -26,4 +26,59 @@ description: 關節／節段動作定義、平面與軸、可觀察邊界、一�
 # diagnostic: 被動／主動 ROM 測量、力量耐力測試、如何分類限制、教練決策樹與個別水中重測判讀。
 # public 安全要求: 疼痛、急性傷、明顯不穩、麻木無力等「不要強拉」安全訊息必須留在 public；具體診斷推理仍不公開。
 
-actions: []
+actions:
+  - id: movement.action.shoulder-complex.elevation
+    name: 肩複合體上舉
+    aliases:
+      - 肩上舉
+      - 手臂上舉
+      - shoulder elevation
+      - arm elevation
+    joint_region: shoulder-arm
+    definition: >
+      肩複合體上舉是上肢在矢狀面、冠狀面或肩胛面向上抬起的複合動作，
+      同時涉及盂肱關節（GHJ）的肱骨相對關節盂上轉，以及肩胸關節（STJ）
+      的肩胛骨在胸廓上的上旋。兩個關節的動作並非恆定比例的固定配合，
+      個體差異與平面差異均已被記錄。
+    plane:
+      - sagittal
+      - coronal
+      - scapular
+    axis:
+      - 矢狀面：冠狀軸
+      - 冠狀面：矢狀軸
+      - 肩胛面：肩胛面垂直軸
+    observable_boundaries: >
+      起點為解剖零位（手臂自然垂放於側）；終點為最大主動或被動上舉角度，
+      受個體關節活動度、肌肉柔韌性與疼痛影響。觀察時僅能從外部看到整體
+      上舉角度，無法直接區分盂肱與肩胸貢獻。
+    general_anatomical_capacity: >
+      肩複合體在解剖正常條件下可在多個平面完成完整或接近完整的上舉。
+      盂肱關節貢獻上舉弧度的大部分，肩胛骨同步上旋使關節盂面朝向肱骨頭，
+      維持關節接觸面。兩關節的協調比例存在個體差異與平面差異，教學上常用的
+      「盂肱 120°、肩胛 60°」是近似值，不是固定比例。
+      真實盂肱軸向旋轉量無法以手掌方向或 Euler 表觀角度可靠反推。
+    publication_status: draft
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+      - src.ludewig-2009
+      - src.fernandez-matias-2025
+      - src.aliaj-2021
+    public:
+      name_zh: 肩複合體上舉
+      description: >
+        手臂向上抬起時，肩膀不是只有一個關節在動——盂肱關節（上臂骨在肩窩內
+        轉動）與肩胸關節（肩胛骨在背部滑動上旋）同時參與。兩者的分工比例因人
+        而異，也因抬臂的方向而略有不同。教學上常說「盂肱出 2/3、肩胛出 1/3」
+        是方便的近似，不是每個人都固定如此。
+      safety_note: >
+        若上舉時出現疼痛、夾擠感、明顯不穩或麻木感，應立即停止，不要強行
+        拉到更大角度。
+    diagnostic:
+      assessment_note: >
+        盂肱與肩胸分工的實際比例需透過被動 ROM 量測與主動 ROM 量測分別
+        評估，並結合徒手分離測試才能初步判斷限制所在。真實盂肱軸向旋轉量
+        的量測需超越 Euler/Cardan 分析框架（Aliaj 2021）。
