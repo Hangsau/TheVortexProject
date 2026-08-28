@@ -18,9 +18,19 @@
   - `derived_from_ids`：demand 是 movement 與既有 `instructional` 記錄唯一的接點，原本這層對應只存在於 `plans/movement_coverage_denominator.yaml`（125 處 `record_id` + 佐證引文），資料層看不到。方向固定 movement → instructional，只動新網域不改約六百筆既有條目。W014 加外部橋分支、W015 對 published demand 列必填。**W4 寫約百筆 demand 前必須先定案，否則是百筆返工**，故在 gate 就做掉。
   - `evidence-gap` 保留不刪，改為有代價：新增 **W016** 要求它必須配 `action_status: do-not-prescribe` 且 `dosage_source_ids` 為空。刪掉會逼作者把「不知道」寫成 `not-routine`（＝不該做），憑空多出一個否定結論。
 
+- **Step 14 蒐證 — 已完成並驗收**（`35db61b`）：`plans/證據包_C類_shoulder-arm.md`，14 條區塊齊、`裁決：` 全空（codex 未自行裁決）、`canonical/` 零異動。另抽驗 3 條逐字引文對原檔行號，全部吻合。
+- **Step 14 裁決 — 已完成**：14 條全部裁定，並補上跨條目的結構性根因與 W4 輸入清單。結果：支持／部分支持 8、修正 5、整條不採用 1（BF-25），**零條原封不動通過**。
+
+#### 蒐證第 1 批的實質發現
+
+- **6 個結構性根因**（寫在證據包文末，後續三批要拿來當篩子先過一遍）：①效益句自由代換 4/14（最嚴重是 BR-18——教材講的效益是**划頻**，原文寫成**划距**，取捨的相反端）；②量化／比較主張缺對照或座標定義；③負荷描述冒充流行病學（BK-10）；④由掌心朝向反推前臂旋轉（BF-05、BF-25 的 ⚠︎ 缺陷 3 註記**經查證全部成立**）；⑤命名未溯源；⑥**新發現**：腕位／掌向憑解剖中立直覺填空 3/14，且**三條全部寫反**——原文填「腕伸直、掌心朝下」，教材實際是「屈腕、拇指朝下、掌心朝後」。
+- **BK-29 是唯一差點被錯殺的條目**：蒐證階段標出「教材把 late rotation 列為錯誤」看似與主張對撞，逐句比對後發現教材的 `late rotation`（整體旋轉遲到）與主張的「推進段不轉」是**撞名不是矛盾**，教材 `40_Figure_3.4.md:25` 其實與主張同向。此即協議 §3 警告的「把回答不同問題的東西當矛盾去裁決」。**蒐證階段標出的「教材對撞」一律不得直接採信**。
+- **BK-26 確認是 W4 blocker**：四段式分期不是標準也不是學界分歧，是三套各自自洽的操作定義（Fernandes 四 sweep + recovery／Chollet 與 Race Club 六相／SoSF 的 Catch-Midpull-Finish-Rotation）。依型 1 不選邊，但 `canonical/movement/` 的相位 ID 必須帶「出自哪套分期」欄位；仰式若採四 sweep，**移臂段會整段無 ID**。
+- **可直接產出 demand 的只有 3 條**：FR-13②（腕屈伸肌共收縮，直接游泳 EMG，本批證據最強）、FR-17（高肘構型）、BF-22①（蝶式移臂無 body roll 協助）。明確不得落成 demand／intervention：FR-09、BK-10（僅能 `evidence-gap` + `do-not-prescribe`）、BK-29、BF-25。
+
 #### 進行中
 
-- **Step 14（codex 執行中）**：C 類 34 條的第 1 批 shoulder-arm 14 條蒐證，產物 `plans/證據包_C類_shoulder-arm.md`。codex 只蒐證不裁決（`裁決：` 欄留空），裁決一律回主 session 做。
+- **Step 15 待派（卡配額）**：codex 5H 視窗在 Step 14 單次跑完後由 37% 升到 **85%**（543,298 tokens），逾 80% 門檻故未派下一批，依規則排到下一視窗。
 
 #### 派工分配（實測後定案）
 
@@ -60,9 +70,8 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **驗收 Step 14 產物**：`rg -c "^## " plans/證據包_C類_shoulder-arm.md` 須回 14，且 `rg -n "裁決：.+"` 須**零命中**（codex 不得自行裁決）。`git diff --stat -- canonical/` 須為空。
-2. **裁決 shoulder-arm 14 條**（主 session，不外包）：BK-26 優先——它是 `canonical/movement/` 相位詞彙的直接輸入，會擋住 W4。已知它的四段式分期採自單一教學網站，蒐證重點是「游泳文獻裡實際並存哪幾套仰式分期命名」，不是證明四段式對錯。
-3. **Step 15／16 續三批**（codex，串行不平行）：ankle-foot 3、hip-knee 5、spine-neck 12。`BR-30` 依既有旗標須與 `BR-23` 併裁。
+1. **Step 15／16 續三批**（codex，串行不平行，等 codex 視窗重置後再派）：ankle-foot 3、hip-knee 5、spine-neck 12。`BR-30` 依既有旗標須與 `BR-23` 併裁。派工 prompt 須加一段：**先用證據包文末 6 個結構性根因當篩子過一遍**，並明確禁止把「教材對撞」寫成結論（只記錄逐字原文與所指差異，裁決回主 session）。
+2. **把 shoulder-arm 裁決結果落回 canonical**（主 session）：目前裁決只存在於證據包，`canonical/` 尚未依裁決修改。落地時 FR-09 與 BF-25 依協議 §5 **保留原文但降 `unverified`**，不刪除。
 4. **注意本地文獻集的覆蓋缺口**：`swimming-kinetic-chain` 43 篇裡**蛙式、蝶式、踝、body roll 各 0 篇**，這幾類「第 2 層查無」不具推論力，必須走游泳書與線上文獻，不得據此下結論。
 5. **W4 四區圖譜填充**（codex）：shoulder-arm → ankle-foot → hip-knee → spine-neck，一區一 gate。新寫的 demand 一律從 `plans/movement_coverage_denominator.yaml` 帶 `derived_from_ids`。須處理 `gap.free.up-kick`。
 6. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
