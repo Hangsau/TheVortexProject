@@ -4,9 +4,29 @@
 
 ---
 
-## 當前狀態（2026-08-27，最新）
+## 當前狀態（2026-08-29，最新）
 
-### ⏸️ 骨關節命名章語意稽核完成；動作—肌群—訓練—活動度圖譜已完成 plan-check，尚未實作
+### ▶️ 動作—肌群—訓練—活動度圖譜實作中：W0–W2 完成、W3 pilot gate 已核准，C 類蒐證第 1 批進行中
+
+分支 `feat/movement-atlas`。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
+
+#### 已完成
+
+- **W1 既有內容修復**：13 張命名校正卡、`dryland.yaml` 三處衝突、my-site joint 頁顯示 `mechanism.source_ids`。
+- **W2 兩條 pilot 切片**（`c654868`／`efcb298`／`c14e7ec`）：超流線肩上舉 7 筆、踝蹠屈與水下打腿 7 筆，落在 `canonical/movement/` 四個內容檔。
+- **W3 Step 13 人工 gate — 已核准**（`682f143`）。兩條切片逐欄審查：肩切片 6 處證據越界（多數是拿解剖推論冒充泳姿事實）已逐筆手改，踝切片 0 處。連帶把兩個 gate 待決落地：
+  - `derived_from_ids`：demand 是 movement 與既有 `instructional` 記錄唯一的接點，原本這層對應只存在於 `plans/movement_coverage_denominator.yaml`（125 處 `record_id` + 佐證引文），資料層看不到。方向固定 movement → instructional，只動新網域不改約六百筆既有條目。W014 加外部橋分支、W015 對 published demand 列必填。**W4 寫約百筆 demand 前必須先定案，否則是百筆返工**，故在 gate 就做掉。
+  - `evidence-gap` 保留不刪，改為有代價：新增 **W016** 要求它必須配 `action_status: do-not-prescribe` 且 `dosage_source_ids` 為空。刪掉會逼作者把「不知道」寫成 `not-routine`（＝不該做），憑空多出一個否定結論。
+
+#### 進行中
+
+- **Step 14（codex 執行中）**：C 類 34 條的第 1 批 shoulder-arm 14 條蒐證，產物 `plans/證據包_C類_shoulder-arm.md`。codex 只蒐證不裁決（`裁決：` 欄留空），裁決一律回主 session 做。
+
+#### 派工分配（實測後定案）
+
+Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換視窗；要換視窗只有 codex（訂閱制獨立池）。Step 12b-2 拿來當對照實測：同一份 spec，**codex 0 處證據越界 vs Sonnet 6 處**，且 codex 未經提示就自己選對 `evidence_profile: synthesis-inference`（正是 Sonnet 那批我得手改的六處之一）。據此 **Step 14–20 全數走 codex**，主 session 只做裁決與驗收。
+
+注意：`codex exec` 會出現「只輸出計畫就 exit 0、零檔案異動」，派工 prompt 開頭必須加「立即執行、不要等確認、沒寫檔就是失敗」指令區塊；驗收一律看 `git diff` 與實際產物，不看 exit code。
 
 **使用者需求**：檢視 my-site「骨關節動作 · 命名校正」是否有錯，並規劃延伸到各泳姿動作使用的肌群、相應訓練與拉伸／活動度內容；本輪要求把計畫書與交接單保存進 Vortex。
 
@@ -40,13 +60,14 @@
 
 ### 下一步建議
 
-1. **等待使用者確認**：說「開始」後才進 implementation；若要調整範圍，先改 plan，不邊做邊漂移。
-2. **W0 基線與覆蓋分母**：feature branch、完整測試基線、凍結六式相位 coverage；不明工作樹修改先隔離。
-3. **W1 先修既有內容**：13 卡語意、dryland 三處衝突與 joint 頁來源顯示，不等新圖譜才修。
-4. **W2 兩條 pilot**：只做「超流線肩上舉」與「踝蹠屈／UDK、flutter kick」完整鏈；人工核准 schema 後才擴全身。
-5. **W3/W4 雙 lane**：C 類 34 條逐條走游泳書／本地文獻／NCBI；圖譜按 shoulder-arm → ankle-foot → hip-knee → spine-neck 完成，一區一 gate。
+1. **驗收 Step 14 產物**：`rg -c "^## " plans/證據包_C類_shoulder-arm.md` 須回 14，且 `rg -n "裁決：.+"` 須**零命中**（codex 不得自行裁決）。`git diff --stat -- canonical/` 須為空。
+2. **裁決 shoulder-arm 14 條**（主 session，不外包）：BK-26 優先——它是 `canonical/movement/` 相位詞彙的直接輸入，會擋住 W4。已知它的四段式分期採自單一教學網站，蒐證重點是「游泳文獻裡實際並存哪幾套仰式分期命名」，不是證明四段式對錯。
+3. **Step 15／16 續三批**（codex，串行不平行）：ankle-foot 3、hip-knee 5、spine-neck 12。`BR-30` 依既有旗標須與 `BR-23` 併裁。
+4. **注意本地文獻集的覆蓋缺口**：`swimming-kinetic-chain` 43 篇裡**蛙式、蝶式、踝、body roll 各 0 篇**，這幾類「第 2 層查無」不具推論力，必須走游泳書與線上文獻，不得據此下結論。
+5. **W4 四區圖譜填充**（codex）：shoulder-arm → ankle-foot → hip-knee → spine-neck，一區一 gate。新寫的 demand 一律從 `plans/movement_coverage_denominator.yaml` 帶 `derived_from_ids`。須處理 `gap.free.up-kick`。
 6. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
-7. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+7. **Step 21 決定 W013 是否升級成 E004 級**：等 W4 內容量到位再判，pilot 兩條切片的樣本量不足以支撐。
+8. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
 
 ---
 
