@@ -1,0 +1,583 @@
+schema_version: 1
+generated_by: codex
+generated_date: "2026-08-28"
+purpose: movement atlas coverage denominator (frozen before content authoring)
+note: 相位詞彙為既有內容歸納結果，尚未成為受控詞彙，待人工裁決
+
+strokes:
+  - stroke: free
+    phases:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水期"
+        evidence:
+          - record_id: free.tech.27
+            quote: "入水瞬間"
+          - record_id: free.tech.28
+            quote: "入水期"
+        joint_regions: [shoulder-arm]
+      - key: lift
+        phase_model: race-club-6phase
+        label_zh: "升力相"
+        evidence:
+          - record_id: free.tech.8
+            quote: "升力相"
+          - record_id: free.tech.4
+            quote: "延遲升力相啟動"
+        joint_regions: [shoulder-arm]
+      - key: catch
+        phase_model: descriptive
+        label_zh: "抓水期"
+        evidence:
+          - record_id: free.tech.28
+            quote: "抓水期"
+          - record_id: free.tech.9
+            quote: "高肘捕水"
+        joint_regions: [shoulder-arm]
+      - key: front-quadrant-propulsion
+        phase_model: race-club-6phase
+        label_zh: "前象限推進"
+        evidence:
+          - record_id: free.tech.8
+            quote: "前象限推進"
+          - record_id: free.tech.4
+            quote: "早期推進相"
+        joint_regions: [shoulder-arm]
+      - key: pull
+        phase_model: kudo-power-phase
+        label_zh: "拉水相"
+        evidence:
+          - record_id: free.tech.2
+            quote: "拉水相"
+          - record_id: free.tech.16
+            quote: "拉水相由肩內收主導"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: rear-quadrant-propulsion
+        phase_model: race-club-6phase
+        label_zh: "後象限推進"
+        evidence:
+          - record_id: free.tech.8
+            quote: "後象限推進"
+          - record_id: free.tech.6
+            quote: "已進入後象限"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck]
+      - key: push
+        phase_model: kudo-power-phase
+        label_zh: "推水相"
+        evidence:
+          - record_id: free.tech.2
+            quote: "推水相"
+          - record_id: free.tech.16
+            quote: "推水相則由胸廓旋轉"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: release
+        phase_model: race-club-6phase
+        label_zh: "釋放相"
+        evidence:
+          - record_id: free.tech.8
+            quote: "釋放相"
+          - record_id: free.tech.4
+            quote: "出手釋放瞬間"
+        joint_regions: [shoulder-arm, hip-knee]
+      - key: early-recovery
+        phase_model: race-club-6phase
+        label_zh: "早期回臂"
+        evidence:
+          - record_id: free.tech.8
+            quote: "早期回臂"
+        joint_regions: [shoulder-arm]
+      - key: late-recovery
+        phase_model: race-club-6phase
+        label_zh: "晚期回臂"
+        evidence:
+          - record_id: free.tech.8
+            quote: "晚期回臂"
+          - record_id: free.tech.16
+            quote: "晚期回臂下落"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢"
+        evidence:
+          - record_id: free.tech.6
+            quote: "強力下踢"
+          - record_id: free.tech.11
+            quote: "左腳主踢下"
+        joint_regions: [hip-knee, ankle-foot]
+  - stroke: back
+    phases:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+        evidence:
+          - record_id: back.tech.8
+            quote: "小指側先行入水"
+          - record_id: back.tech.29
+            quote: "仰式入水位置"
+        joint_regions: [shoulder-arm]
+      - key: catch
+        phase_model: descriptive
+        label_zh: "捕水"
+        evidence:
+          - record_id: back.tech.10
+            quote: "高肘捕水"
+          - record_id: back.tech.24
+            quote: "捕水深度下降"
+        joint_regions: [shoulder-arm]
+      - key: pull
+        phase_model: descriptive
+        label_zh: "拉水"
+        evidence:
+          - record_id: back.tech.11
+            quote: "拉水：橢圓曲線路徑"
+          - record_id: back.tech.19
+            quote: "拉水相位"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: push
+        phase_model: descriptive
+        label_zh: "推水"
+        evidence:
+          - record_id: back.tech.12
+            quote: "推水相為阻力推進主導"
+          - record_id: back.tech.14
+            quote: "直線推水"
+        joint_regions: [shoulder-arm]
+      - key: recovery
+        phase_model: descriptive
+        label_zh: "回臂"
+        evidence:
+          - record_id: back.tech.13
+            quote: "回臂為非推進相"
+          - record_id: back.tech.28
+            quote: "仰式回臂"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: up-kick
+        phase_model: descriptive
+        label_zh: "上踢"
+        evidence:
+          - record_id: back.tech.15
+            quote: "仰式上踢"
+          - record_id: back.tech.19
+            quote: "對側腳上踢"
+        joint_regions: [hip-knee, ankle-foot]
+      - key: down-kick
+        phase_model: descriptive
+        evidence_note: "無專屬條目；唯一佐證 back.tech.30 的主體是仰式命名欄位問題，下踢僅出現在解釋上踢的對照括號中"
+        label_zh: "下踢"
+        evidence:
+          - record_id: back.tech.30
+            quote: "下踢（沉向池底）"
+        joint_regions: [hip-knee]
+
+  - stroke: breast
+    phases:
+      - key: arm-outsweep
+        phase_model: descriptive
+        label_zh: "外划"
+        evidence:
+          - record_id: breast.tech.3
+            quote: "外划階段"
+          - record_id: breast.tech.24
+            quote: "外划過寬"
+        joint_regions: [shoulder-arm]
+      - key: arm-catch
+        phase_model: descriptive
+        label_zh: "捕水"
+        evidence:
+          - record_id: breast.tech.4
+            quote: "捕水是肘開始下彎"
+          - record_id: breast.tech.24
+            quote: "捕水位置"
+        joint_regions: [shoulder-arm]
+      - key: arm-insweep
+        phase_model: descriptive
+        label_zh: "內划"
+        evidence:
+          - record_id: breast.tech.5
+            quote: "內划（Insweep）"
+          - record_id: breast.tech.8
+            quote: "insweep 啟動時"
+        joint_regions: [shoulder-arm]
+      - key: arm-recovery
+        phase_model: descriptive
+        label_zh: "回臂"
+        evidence:
+          - record_id: breast.tech.6
+            quote: "回臂階段"
+        joint_regions: [shoulder-arm]
+      - key: glide
+        phase_model: descriptive
+        label_zh: "流線型滑行"
+        evidence:
+          - record_id: breast.tech.7
+            quote: "流線型滑行"
+          - record_id: breast.tech.28
+            quote: "最優滑行長度"
+          - record_id: breast.tech.29
+            quote: "每個週期必有滑行"
+        joint_regions: [shoulder-arm, ankle-foot]
+      - key: leg-recovery
+        phase_model: descriptive
+        label_zh: "收腿"
+        evidence:
+          - record_id: breast.tech.10
+            quote: "收腿是整個踢腿週期"
+          - record_id: breast.tech.37
+            quote: "蛙式收腿期"
+        joint_regions: [hip-knee]
+      - key: foot-flip
+        phase_model: descriptive
+        label_zh: "翻腳期"
+        evidence:
+          - record_id: breast.tech.11
+            quote: "腳掌翻轉"
+          - record_id: breast.tech.36
+            quote: "蛙式翻腳期"
+        joint_regions: [hip-knee, ankle-foot]
+      - key: leg-outsweep
+        phase_model: descriptive
+        label_zh: "外划（Outsweep）"
+        evidence:
+          - record_id: breast.tech.9
+            quote: "outsweep 階段"
+          - record_id: breast.tech.25
+            quote: "outsweep 推進力"
+        joint_regions: [hip-knee, ankle-foot]
+      - key: leg-insweep
+        phase_model: descriptive
+        label_zh: "內划（Insweep）"
+        evidence:
+          - record_id: breast.tech.9
+            quote: "insweep 階段"
+          - record_id: breast.tech.12
+            quote: "insweep 階段腳速"
+        joint_regions: [hip-knee, ankle-foot]
+
+  - stroke: fly
+    phases:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+        evidence:
+          - record_id: fly.tech.10
+            quote: "低頭入水"
+          - record_id: fly.tech.21
+            quote: "入水瞬間"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: entry-pause
+        phase_model: descriptive
+        label_zh: "入水停頓"
+        evidence:
+          - record_id: fly.tech.21
+            quote: "入水停頓"
+        joint_regions: [shoulder-arm, spine-neck]
+      - key: first-kick
+        phase_model: descriptive
+        label_zh: "第一踢"
+        evidence:
+          - record_id: fly.tech.7
+            quote: "第一踢"
+          - record_id: fly.tech.4
+            quote: "第一踢接入水"
+        joint_regions: [spine-neck, hip-knee, ankle-foot]
+      - key: arm-outsweep
+        phase_model: descriptive
+        label_zh: "外划"
+        evidence:
+          - record_id: fly.tech.12
+            quote: "外划"
+          - record_id: fly.tech.13
+            quote: "定位（外划）"
+        joint_regions: [shoulder-arm]
+      - key: arm-catch
+        phase_model: descriptive
+        label_zh: "捕水"
+        evidence:
+          - record_id: fly.tech.13
+            quote: "捕水EVF"
+          - record_id: fly.tech.14
+            quote: "捕水時"
+        joint_regions: [shoulder-arm]
+      - key: arm-insweep
+        phase_model: descriptive
+        label_zh: "內划"
+        evidence:
+          - record_id: fly.tech.11
+            quote: "Insweep 最大"
+          - record_id: fly.tech.13
+            quote: "內划（Insweep）"
+        joint_regions: [shoulder-arm]
+      - key: arm-upsweep
+        phase_model: descriptive
+        label_zh: "上划"
+        evidence:
+          - record_id: fly.tech.8
+            quote: "與 Upsweep 同步"
+          - record_id: fly.tech.13
+            quote: "上划+第二踢"
+        joint_regions: [shoulder-arm, hip-knee, ankle-foot]
+      - key: exit
+        phase_model: descriptive
+        label_zh: "出水"
+        evidence:
+          - record_id: fly.tech.10
+            quote: "出水"
+          - record_id: fly.tech.20
+            quote: "出水順序"
+        joint_regions: [shoulder-arm, spine-neck, hip-knee, ankle-foot]
+      - key: second-kick
+        phase_model: descriptive
+        label_zh: "第二踢"
+        evidence:
+          - record_id: fly.tech.8
+            quote: "第二踢"
+          - record_id: fly.tech.4
+            quote: "第二踢接推水"
+        joint_regions: [shoulder-arm, spine-neck, hip-knee, ankle-foot]
+      - key: aerial-recovery
+        phase_model: descriptive
+        label_zh: "空中恢復"
+        evidence:
+          - record_id: fly.tech.10
+            quote: "空中恢復"
+          - record_id: fly.tech.20
+            quote: "空中恢復（Recovery）"
+        joint_regions: [shoulder-arm]
+      - key: breathing-window
+        phase_model: event-window
+        anchored_between: [exit, aerial-recovery]
+        anchor_note: "fly.tech.18 將呼吸視窗定義在手臂出水（Exit）到 Recovery 起始之間，是掛在相位邊界的時機窗，非獨立區段"
+        label_zh: "呼吸視窗"
+        evidence:
+          - record_id: fly.tech.18
+            quote: "正確呼吸視窗"
+          - record_id: fly.tech.16
+            quote: "呼吸時"
+        joint_regions: [shoulder-arm, spine-neck]
+
+  - stroke: udk
+    phases:
+      - key: streamlined-glide
+        phase_model: descriptive
+        label_zh: "流線滑行"
+        evidence:
+          - record_id: udk.tech.17
+            quote: "流線滑行"
+          - record_id: udk.tech.24
+            quote: "緊縮流線型中開始"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: kick-initiation
+        phase_model: descriptive
+        label_zh: "起踢"
+        evidence:
+          - record_id: udk.tech.17
+            quote: "直接起踢"
+          - record_id: udk.tech.29
+            quote: "起踢時機"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢相"
+        evidence:
+          - record_id: udk.tech.5
+            quote: "下踢相"
+          - record_id: udk.tech.9
+            quote: "下踢由髖屈曲啟動"
+        joint_regions: [hip-knee, spine-neck, ankle-foot]
+      - key: terminal-down-kick
+        phase_model: descriptive
+        label_zh: "下踢末段"
+        evidence:
+          - record_id: udk.tech.6
+            quote: "下踢末段"
+          - record_id: udk.tech.9
+            quote: "下踢末段髖外旋"
+        joint_regions: [hip-knee, ankle-foot]
+      - key: down-to-up-transition
+        phase_model: descriptive
+        label_zh: "下踢→上踢過渡"
+        evidence:
+          - record_id: udk.tech.7
+            quote: "下踢→上踢過渡"
+          - record_id: udk.tech.10
+            quote: "快速切換觸發渦流回收"
+        joint_regions: [hip-knee, ankle-foot]
+      - key: up-kick
+        phase_model: descriptive
+        label_zh: "上踢相"
+        evidence:
+          - record_id: udk.tech.10
+            quote: "上踢三重貢獻"
+          - record_id: udk.tech.11
+            quote: "UDK 的上踢是推進動作之一"
+          - record_id: udk.tech.15
+            quote: "上踢相"
+        joint_regions: [hip-knee, ankle-foot]
+      - key: breakout
+        phase_model: descriptive
+        label_zh: "出水划手"
+        evidence:
+          - record_id: udk.tech.17
+            quote: "出水划手"
+          - record_id: udk.tech.3
+            quote: "出水瞬間"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+
+  - stroke: starts-turns
+    phases:
+      - key: set-position
+        phase_model: descriptive
+        scene: start
+        label_zh: "零位姿勢"
+        evidence:
+          - record_id: starts-turns.tech.3
+            quote: "Set Position"
+          - record_id: starts-turns.tech.5
+            quote: "Track Start 零位姿勢"
+        joint_regions: [hip-knee, spine-neck]
+      - key: takeoff
+        phase_model: descriptive
+        scene: start
+        label_zh: "起跳"
+        evidence:
+          - record_id: starts-turns.tech.6
+            quote: "起跳角度"
+          - record_id: starts-turns.tech.16
+            quote: "仰式起跳"
+          - record_id: starts-turns.tech.43
+            quote: "起跳的推進主力"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: flight
+        phase_model: descriptive
+        scene: start
+        label_zh: "飛行階段"
+        evidence:
+          - record_id: starts-turns.tech.10
+            quote: "飛行階段"
+          - record_id: starts-turns.tech.15
+            quote: "飛行弧線"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: entry
+        phase_model: descriptive
+        scene: start
+        label_zh: "入水"
+        evidence:
+          - record_id: starts-turns.tech.11
+            quote: "入水時"
+          - record_id: starts-turns.tech.42
+            quote: "高速入水時"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: underwater-glide
+        phase_model: descriptive
+        scene: underwater
+        label_zh: "水下滑行"
+        evidence:
+          - record_id: starts-turns.tech.27
+            quote: "水下滑行"
+          - record_id: starts-turns.tech.34
+            quote: "入水後先滑行再起踢"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: underwater-dolphin-kick
+        phase_model: descriptive
+        scene: underwater
+        label_zh: "海豚踢"
+        evidence:
+          - record_id: starts-turns.tech.44
+            quote: "海豚踢若干下"
+          - record_id: starts-turns.tech.45
+            quote: "第一下海豚踢時機"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: breaststroke-pullout
+        phase_model: descriptive
+        scene: underwater
+        label_zh: "蛙式 Pullout"
+        evidence:
+          - record_id: starts-turns.tech.26
+            quote: "三種 Pullout 技術"
+          - record_id: starts-turns.tech.35
+            quote: "改為 pullout"
+        joint_regions: [shoulder-arm, hip-knee, ankle-foot]
+      - key: breakout
+        phase_model: descriptive
+        scene: underwater
+        label_zh: "出水過渡期"
+        evidence:
+          - record_id: starts-turns.tech.34
+            quote: "出水過渡期"
+          - record_id: starts-turns.tech.44
+            quote: "浮上水面那一段"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: turn-approach
+        phase_model: descriptive
+        scene: turn
+        label_zh: "進牆"
+        evidence:
+          - record_id: starts-turns.tech.17
+            quote: "進牆速度"
+          - record_id: starts-turns.tech.19
+            quote: "進牆速度保護"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+      - key: flip
+        phase_model: descriptive
+        scene: turn
+        label_zh: "翻滾"
+        evidence:
+          - record_id: starts-turns.tech.20
+            quote: "自由式翻滾"
+          - record_id: starts-turns.tech.24
+            quote: "翻滾動作"
+          - record_id: starts-turns.tech.38
+            quote: "翻滾啟動時機"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck]
+      - key: wall-contact
+        phase_model: descriptive
+        scene: turn
+        label_zh: "觸牆"
+        evidence:
+          - record_id: starts-turns.tech.21
+            quote: "翻滾觸牆時"
+          - record_id: starts-turns.tech.25
+            quote: "腳觸牆深度"
+          - record_id: starts-turns.tech.29
+            quote: "觸牆時"
+        joint_regions: [shoulder-arm, hip-knee, ankle-foot]
+      - key: wall-rotation
+        phase_model: descriptive
+        scene: turn
+        label_zh: "旋轉在牆上完成"
+        evidence:
+          - record_id: starts-turns.tech.29
+            quote: "旋轉在牆上完成"
+          - record_id: starts-turns.tech.37
+            quote: "觸牆後才啟動旋轉"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck]
+      - key: wall-push-off
+        phase_model: descriptive
+        scene: turn
+        label_zh: "推蹬"
+        evidence:
+          - record_id: starts-turns.tech.22
+            quote: "轉身推蹬"
+          - record_id: starts-turns.tech.18
+            quote: "推蹬力"
+          - record_id: starts-turns.tech.17
+            quote: "推蹬方向"
+        joint_regions: [shoulder-arm, hip-knee, spine-neck, ankle-foot]
+
+known_gaps:
+  - id: gap.free.up-kick
+    description: "自由式上踢（up-kick）沒有任何獨立條目。全域搜尋僅兩處提及，且都是仰式條目的對照句（back.tech.30、teaching-errors.yaml 的仰式誤區段），不足以成立相位。"
+    kind: content-missing
+    action: "動作圖譜填充階段須補自由式上踢內容，或明確標示為證據缺口"
+  - id: gap.udk.tech.5-self-contradiction
+    description: "udk.tech.5（certainty 🔴）同一句中「上踢→下踢過渡」出現兩次卻配不同肌群（第一次腹肌+腹斜肌，第二次腹斜肌+豎脊肌），原文自身不一致。"
+    kind: source-content-error
+    action: "需回原文修正後才能作為 udk 過渡相位的證據"
+  - id: gap.starts-turns.three-scenes
+    description: "starts-turns 單一 stroke 值承載出發／水下／轉身三個場景，且多條為泳式專屬變體（starts-turns.tech.27 蛙式滑行深度、tech.26 蛙式 pullout、tech.44 自由式 breakout、tech.35 明載蛙式不用 UDK）。原文無任何條目把三場景串成單一序列。"
+    kind: structural
+    action: "動作圖譜的 stroke-demand 須同時帶 scene 與泳式變體標記，不可當成單一線性相位序列"
+  - id: gap.free.three-phase-models
+    description: "自由式同時存在三套相位模型：Race Club 六階段時鐘模型（free.tech.8）、Kudo 功率二相（free.tech.2/16）、零散描述詞。三者時間切分互相重疊，free.tech.8 模型內不含 catch/pull/push。"
+    kind: structural
+    action: "stroke-demand 必須指明採用哪一套 phase_model，不得跨模型混用相位"
