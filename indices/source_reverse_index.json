@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 532,
+  "source_count": 541,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -105,6 +105,18 @@
       "display": "【查無此文獻】原記為「Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述）」，PubMed 檢索不到對應文獻",
       "verification_status": "unverified",
       "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.aliaj-2021",
+      "display": "Aliaj K, Foreman KB, Chalmers PN, Henninger HB. (2021). Beyond Euler/Cardan analysis: True glenohumeral axial rotation during arm elevation and rotation. Gait Posture 88:28-36.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33989999",
+        "pmcid": "PMC8316370",
+        "doi": "10.1016/j.gaitpost.2021.05.004"
+      },
       "usage_count": 0,
       "usages": []
     },
@@ -465,6 +477,18 @@
           "path": "energy_systems_primer.training_protocols[2]"
         }
       ]
+    },
+    {
+      "id": "src.brockett-2016",
+      "display": "Brockett CL, Chapman GJ. (2016). Biomechanics of the ankle. Orthop Trauma 30(3):232-238.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "27594929",
+        "pmcid": "PMC4994968",
+        "doi": "10.1016/j.mporth.2016.04.015"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.building-the-perfect-turn-push-off-strength",
@@ -1191,6 +1215,18 @@
       ]
     },
     {
+      "id": "src.fernandez-matias-2025",
+      "display": "Fernández-Matías R, Ballesteros-Frutos J, Gallardo-Zamora P, Requejo-Salinas N, Caballero-Pozo I, Ludewig P, Lluch-Girbés E. (2025). Scapular kinematics variability in individuals with and without rotator cuff-related shoulder pain: A systematic review with multilevel meta-regression. Braz J Phys Ther 29(6):101261.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "40845626",
+        "pmcid": "PMC12398250",
+        "doi": "10.1016/j.bjpt.2025.101261"
+      },
+      "usage_count": 0,
+      "usages": []
+    },
+    {
       "id": "src.fina-sw64-usas-usms",
       "display": "FINA/World Aquatics SW 6.4; USA Swimming; USMS",
       "verification_status": "unverified",
@@ -1236,6 +1272,18 @@
           "path": "drills[6]"
         }
       ]
+    },
+    {
+      "id": "src.fone-2022",
+      "display": "Fone L, van den Tillaar R. (2022). Effect of Different Types of Strength Training on Swimming Performance in Competitive Swimmers: A Systematic Review. Sports Med Open 8(1):19.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35099631",
+        "pmcid": "PMC8804114",
+        "doi": "10.1186/s40798-022-00410-5"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.fphys-2024-1406518",
@@ -2243,6 +2291,17 @@
       ]
     },
     {
+      "id": "src.lee-2008",
+      "display": "Lee JB, Mellifont RB, Winstanley J, Burkett B. (2008). Body roll in simulated freestyle swimming. Int J Sports Med 29(7):569-573.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "18027307",
+        "doi": "10.1055/s-2007-989285"
+      },
+      "usage_count": 0,
+      "usages": []
+    },
+    {
       "id": "src.lee-2017-taiwan-hip-fracture-1yr-mortality",
       "display": "Lee TC, Ho PS, Lin HT, Ho ML, Huang HT, Chang JK. (2017). One-Year Readmission Risk and Mortality after Hip Fracture Surgery: A National Population-Based Study in Taiwan. Aging Dis 8(4):402–409.",
       "verification_status": "verified",
@@ -2300,6 +2359,18 @@
         "doi": "10.1186/s13102-025-01366-1",
         "pmid": "41219810",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41219810/"
+      },
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.ludewig-2009",
+      "display": "Ludewig PM, Phadke V, Braman JP, Hassett DR, Cieminski CJ, LaPrade RF. (2009). Motion of the Shoulder Complex During Multiplanar Humeral Elevation. J Bone Joint Surg Am 91(2):378-389.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19181982",
+        "pmcid": "PMC2657311",
+        "doi": "10.2106/JBJS.G.01483"
       },
       "usage_count": 0,
       "usages": []
@@ -2547,6 +2618,17 @@
           "path": "errors[6].public.physical_reason"
         }
       ]
+    },
+    {
+      "id": "src.martens-2015",
+      "display": "Martens J, Figueiredo P, Daly D. (2015). Electromyography in the four competitive swimming strokes: a systematic review. J Electromyogr Kinesiol 25(2):273-291.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25556010",
+        "doi": "10.1016/j.jelekin.2014.12.003"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mason-1992-a",
@@ -2889,6 +2971,17 @@
           "path": "injuries[2].epidemiology"
         }
       ]
+    },
+    {
+      "id": "src.muniz-pardos-2019",
+      "display": "Muniz-Pardos B, Gomez-Bruton A, Matute-Llorente A, Gonzalez-Aguero A, Gomez-Cabello A, Gonzalo-Skok O, Casajus J, Vicente-Rodriguez G. (2019). Swim-Specific Resistance Training: A Systematic Review. J Strength Cond Res 33(10):2875-2881.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31343554",
+        "doi": "10.1519/JSC.0000000000003256"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.myers-2021",
@@ -10007,6 +10100,18 @@
           "path": "buteyko"
         }
       ]
+    },
+    {
+      "id": "src.yamakawa-2022",
+      "display": "Yamakawa KK, Shimojo H, Takagi H, Sengoku Y. (2022). Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming. Front Sports Act Living 4:829618.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35498520",
+        "pmcid": "PMC9051435",
+        "doi": "10.3389/fspor.2022.829618"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yamakawa-2024",

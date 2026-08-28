@@ -5422,3 +5422,172 @@ sources:
       以內側為主的滑膜炎、或髕股軟骨流失與蛙式選手膝痛併存。
       因此「蛙泳膝的主要病理是 MCL 還是髕股／皺襞」不是資料不足的暫時分歧，
       而是**結構層面至今無定論**——引用時不得寫成任一子型已被確立。標 🟡。
+
+  - id: src.ludewig-2009
+    display: "Ludewig PM, Phadke V, Braman JP, Hassett DR, Cieminski CJ, LaPrade RF. (2009). Motion of the Shoulder Complex During Multiplanar Humeral Elevation. J Bone Joint Surg Am 91(2):378-389."
+    title: "Motion of the Shoulder Complex During Multiplanar Humeral Elevation"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ludewig PM", "Phadke V", "Braman JP", "Hassett DR", "Cieminski CJ", "LaPrade RF"]
+    year: 2009
+    container: "The Journal of Bone and Joint Surgery. American Volume"
+    identifier:
+      pmid: "19181982"
+      pmcid: "PMC2657311"
+      doi: "10.2106/JBJS.G.01483"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      三維運動學研究，量測肩複合體（盂肱、胸鎖、肩鎖）在矢狀面、肩胛面、冠狀面三平面上臂抬舉時的運動。
+      讀取層級：全文（PMC）。
+      適用範圍：肩胛骨三維運動型態、各平面抬臂時骨動學差異。
+      不可用於：蝶式肩部風險排序（本文未針對游泳或特定運動情境做風險排序）。
+
+  - id: src.fernandez-matias-2025
+    display: "Fernández-Matías R, Ballesteros-Frutos J, Gallardo-Zamora P, Requejo-Salinas N, Caballero-Pozo I, Ludewig P, Lluch-Girbés E. (2025). Scapular kinematics variability in individuals with and without rotator cuff-related shoulder pain: A systematic review with multilevel meta-regression. Braz J Phys Ther 29(6):101261."
+    title: "Scapular kinematics variability in individuals with and without rotator cuff-related shoulder pain: A systematic review with multilevel meta-regression"
+    type: journal-article
+    verification_status: verified
+    authors: ["Fernández-Matías R", "Ballesteros-Frutos J", "Gallardo-Zamora P", "Requejo-Salinas N", "Caballero-Pozo I", "Ludewig P", "Lluch-Girbés E"]
+    year: 2025
+    container: "Brazilian Journal of Physical Therapy"
+    identifier:
+      pmid: "40845626"
+      pmcid: "PMC12398250"
+      doi: "10.1016/j.bjpt.2025.101261"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧含多層 meta-regression，比較有無旋轉肌袖相關肩痛者的肩胛運動學變異性。
+      讀取層級：僅 PubMed 摘要（正文需訂閱）。
+      適用範圍：支持肩胛運動學存在個體變異與平面變異的結論。
+      不可用於：將 120+60 的肩肱節律視為固定數值（本回顧的核心結論之一即指出此比例並非恆定）。
+
+  - id: src.aliaj-2021
+    display: "Aliaj K, Foreman KB, Chalmers PN, Henninger HB. (2021). Beyond Euler/Cardan analysis: True glenohumeral axial rotation during arm elevation and rotation. Gait Posture 88:28-36."
+    title: "Beyond Euler/Cardan analysis: True glenohumeral axial rotation during arm elevation and rotation"
+    type: journal-article
+    verification_status: verified
+    authors: ["Aliaj K", "Foreman KB", "Chalmers PN", "Henninger HB"]
+    year: 2021
+    container: "Gait & Posture"
+    identifier:
+      pmid: "33989999"
+      pmcid: "PMC8316370"
+      doi: "10.1016/j.gaitpost.2021.05.004"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      方法學研究，提出以 helical axis 方法量測真實盂肱軸向旋轉，超越 Euler/Cardan 角分解的限制。
+      讀取層級：全文（PMC）。
+      適用範圍：盂肱軸向旋轉量測方法論的驗證研究。
+      不可用於：以手掌方向或 Euler 表觀旋轉角度反推真實盂肱軸向旋轉量（本文核心貢獻即指出此類外推的限制）。
+
+  - id: src.brockett-2016
+    display: "Brockett CL, Chapman GJ. (2016). Biomechanics of the ankle. Orthop Trauma 30(3):232-238."
+    title: "Biomechanics of the ankle"
+    type: journal-article
+    verification_status: verified
+    authors: ["Brockett CL", "Chapman GJ"]
+    year: 2016
+    container: "Orthopaedics and Trauma"
+    identifier:
+      pmid: "27594929"
+      pmcid: "PMC4994968"
+      doi: "10.1016/j.mporth.2016.04.015"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      踝關節生物力學回顧，涵蓋韌帶、骨骼結構與功能性運動。
+      讀取層級：全文（PMC）。
+      適用範圍：支持「踝關節以蹠屈／背屈為主軸，但存在耦合運動（如內外翻與旋轉）」的結論。
+      不可用於：游泳特定情境的踝關節研究（本文以陸上步行與一般臨床情境為主要背景）。
+
+  - id: src.lee-2008
+    display: "Lee JB, Mellifont RB, Winstanley J, Burkett B. (2008). Body roll in simulated freestyle swimming. Int J Sports Med 29(7):569-573."
+    title: "Body roll in simulated freestyle swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Lee JB", "Mellifont RB", "Winstanley J", "Burkett B"]
+    year: 2008
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "18027307"
+      doi: "10.1055/s-2007-989285"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      三維運動學研究，以游泳台架分析 11 名精英自由式泳者頭、胸、髖 roll 時序與推進期的關係，
+      並檢驗性別與換氣的影響。
+      讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
+      適用範圍：支持「頭、胸、髖 roll 可分節段量測，且時序因性別與換氣而異」。
+      不可用於：推算或分配脊椎各節間的旋轉角度（摘要未報告節間數據，全文未讀）。
+
+  - id: src.yamakawa-2022
+    display: "Yamakawa KK, Shimojo H, Takagi H, Sengoku Y. (2022). Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming. Front Sports Act Living 4:829618."
+    title: "Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Yamakawa KK", "Shimojo H", "Takagi H", "Sengoku Y"]
+    year: 2022
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: "35498520"
+      pmcid: "PMC9051435"
+      doi: "10.3389/fspor.2022.829618"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      實驗研究，量測水中蝶泳打水（UDK）在不同速度下的運動學與肌肉活化變化。
+      讀取層級：全文（PMC）。
+      適用範圍：UDK 在本研究特定體位、速度範圍與測試 protocol 下的肌群招募與運動學描述。
+      不可用於：超出本研究體位、速度條件或 protocol 的外推（例如用於不同速度範圍或訓練情境的一般化結論）。
+
+  - id: src.martens-2015
+    display: "Martens J, Figueiredo P, Daly D. (2015). Electromyography in the four competitive swimming strokes: a systematic review. J Electromyogr Kinesiol 25(2):273-291."
+    title: "Electromyography in the four competitive swimming strokes: a systematic review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Martens J", "Figueiredo P", "Daly D"]
+    year: 2015
+    container: "Journal of Electromyography and Kinesiology"
+    identifier:
+      pmid: "25556010"
+      doi: "10.1016/j.jelekin.2014.12.003"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧，整合四種競技泳式的表面 EMG 研究，分析各泳式神經肌肉招募型態。
+      讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
+      適用範圍：支持各泳式 EMG 招募型態存在異質性的結論。
+      不可用於：建立單一固定肌肉招募模式（本回顧明確指出各研究間存在顯著異質性）。
+
+  - id: src.fone-2022
+    display: "Fone L, van den Tillaar R. (2022). Effect of Different Types of Strength Training on Swimming Performance in Competitive Swimmers: A Systematic Review. Sports Med Open 8(1):19."
+    title: "Effect of Different Types of Strength Training on Swimming Performance in Competitive Swimmers: A Systematic Review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Fone L", "van den Tillaar R"]
+    year: 2022
+    container: "Sports Medicine - Open"
+    identifier:
+      pmid: "35099631"
+      pmcid: "PMC8804114"
+      doi: "10.1186/s40798-022-00410-5"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧，比較不同類型肌力訓練（水中特定阻力、陸上仿游泳動作、陸上非特定肌力）對競技泳者成績的影響。
+      讀取層級：僅 PubMed 摘要（全文雖開放取用，本次僅讀 PubMed 摘要層）。
+      適用範圍：支持「不同類型肌力訓練在特定條件下均可正向轉移至游泳成績」的條件式結論。
+      不可用於：指定唯一最佳訓練方法（本回顧結論強調效果因條件而異，不支持單一方法優越性）。
+
+  - id: src.muniz-pardos-2019
+    display: "Muniz-Pardos B, Gomez-Bruton A, Matute-Llorente A, Gonzalez-Aguero A, Gomez-Cabello A, Gonzalo-Skok O, Casajus J, Vicente-Rodriguez G. (2019). Swim-Specific Resistance Training: A Systematic Review. J Strength Cond Res 33(10):2875-2881."
+    title: "Swim-Specific Resistance Training: A Systematic Review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Muniz-Pardos B", "Gomez-Bruton A", "Matute-Llorente A", "Gonzalez-Aguero A", "Gomez-Cabello A", "Gonzalo-Skok O", "Casajus J", "Vicente-Rodriguez G"]
+    year: 2019
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "31343554"
+      doi: "10.1519/JSC.0000000000003256"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧，評估游泳特定阻力訓練（水中阻力、牽引式、彈力帶等）對游泳成績及力量測試的影響。
+      讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
+      適用範圍：支持「游泳特定阻力訓練在特定條件下可正向轉移至游泳成績」的條件式結論。
+      不可用於：指定唯一最佳訓練方法（本回顧結論強調效果因訓練類型與條件而異）。

@@ -767,26 +767,35 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 18 筆**
+**WARN，共 27 筆**
 
   source_id='src.adductor-loading-return-to-sport-practice-co' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.aiac-ijkss-v-6n-1p-25' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.akkurt-2017' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.aliaj-2021' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.breath-hold-training' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.brockett-2016' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.bushman-2006' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.clinical-coach-report-no-epidemiology' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.falls-and-hip-fracture-mortality-pmid' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.fernandez-matias-2025' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.fone-2022' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.ioc-iron-in-sport-doi-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.jellyfish-envenomation-first-aid' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.ludewig-2009' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.martens-2015' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.military-swim-training-sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.mountjoy-ioc-consensus-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.muniz-pardos-2019' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.nordin-frankel-2012' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.shallow-water-blackout-prevention-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimming-injury-imaging-review-1-radiologyke' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.yamakawa-2022' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 
