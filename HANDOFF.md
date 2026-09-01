@@ -4,9 +4,9 @@
 
 ---
 
-## 當前狀態（2026-08-29，最新）
+## 當前狀態（2026-09-02，最新）
 
-### ▶️ 動作—肌群—訓練—活動度圖譜實作中：W0–W2 完成、W3 pilot gate 已核准，C 類蒐證第 1 批進行中
+### ▶️ 動作—肌群—訓練—活動度圖譜實作中：W3 pilot gate 已核准，C 類第 2 批完成，Step 16 待執行
 
 分支 `feat/movement-atlas`。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
 
@@ -20,6 +20,7 @@
 
 - **Step 14 蒐證 — 已完成並驗收**（`35db61b`）：`plans/證據包_C類_shoulder-arm.md`，14 條區塊齊、`裁決：` 全空（codex 未自行裁決）、`canonical/` 零異動。另抽驗 3 條逐字引文對原檔行號，全部吻合。
 - **Step 14 裁決 — 已完成**：14 條全部裁定，並補上跨條目的結構性根因與 W4 輸入清單。結果：支持／部分支持 8、修正 5、整條不採用 1（BF-25），**零條原封不動通過**。
+- **Step 15 ankle-foot 蒐證＋裁決 — 已完成**：`plans/證據包_C類_ankle-foot.md`，FR-41／BR-35／ST-19 均完成游泳書→本地文獻→線上一手研究三層查證；三份泳式裁決檔已同步，`canonical/` 零異動。
 
 #### 蒐證第 1 批的實質發現
 
@@ -28,11 +29,17 @@
 - **BK-26 確認是 W4 blocker**：四段式分期不是標準也不是學界分歧，是三套各自自洽的操作定義（Fernandes 四 sweep + recovery／Chollet 與 Race Club 六相／SoSF 的 Catch-Midpull-Finish-Rotation）。依型 1 不選邊，但 `canonical/movement/` 的相位 ID 必須帶「出自哪套分期」欄位；仰式若採四 sweep，**移臂段會整段無 ID**。
 - **可直接產出 demand 的只有 3 條**：FR-13②（腕屈伸肌共收縮，直接游泳 EMG，本批證據最強）、FR-17（高肘構型）、BF-22①（蝶式移臂無 body roll 協助）。明確不得落成 demand／intervention：FR-09、BK-10（僅能 `evidence-gap` + `do-not-prescribe`）、BK-29、BF-25。
 
-#### 進行中
+#### 蒐證第 2 批的實質發現
 
-- **Step 15 待派（卡配額）**：codex 5H 視窗在 Step 14 單次跑完後由 37% 升到 **85%**（543,298 tokens），逾 80% 門檻故未派下一批，依規則排到下一視窗。**派工規格已寫好備妥**：`plans/證據包_蒐證派工規格.md`（第 2–4 批共用，自足，含執行指令／git 禁令／三層路徑與覆蓋缺口／六根因篩子／禁寫「教材對撞」／輸出格式／每批 ID／驗收 5 條），視窗一開直接派，不需重新組 prompt。
+- **FR-41 修正**：自由式跨人研究只支持踝蹠屈與 22.86 m flutter-kick 速度的中度相關；沒有「效率」終點、因果或通用角度。UUS 的限制—正常有差，但正常—急性增加無顯著差，故只能寫「受限可能不利」，不能寫「越大越好」。
+- **BR-35 部分支持＋時序修正**：雙腳併攏可作 kick→glide 事件邊界，但踝蹠屈／腳尖後指在雙腿仍靠近時已開始；主要推進也不能歸給最後夾腿。
+- **ST-19 整條不採用**：腳趾最高垂直座標是 down-kick 起點，不是「水面」；最大蹠屈稍後出現。背屈角速度與脛前肌活動有控制角色，但無「頂點背屈 ROM→咬水」證據。不得據此建活動度 demand 或介入。
+- **新增結構性根因 7「相位交界壓成單點」**：BR-35、ST-19 都把前一相位末段、可見座標事件與下一相位關節轉向折成一個「尾聲／頂點」。W4 必須拆列 phase、event、joint state 與 outcome。
 
-- **Step 16.5（插入）已完成**：解除 BK-26 擋 W4 的相位詞彙 blocker（`8e7380d`）。`phase_model` 登錄為受控詞彙（`descriptive`／`race-club-6phase`／`kudo-power-phase`／`event-window`）；相位鍵因合法範圍隨泳式而異，不放扁平 `fields`，另立 `_taxonomy.yaml#movement_phase_registry`（6 泳式 58 相位，由 denominator 程式歸納，已比對零分歧）；新增 **W017** 強制 `(stroke, phase, phase_model)` 與登錄表一致，兩條分支都做過反向測試確認會亮。**仰式裁決：維持 `descriptive`（含 recovery），不改採 Fernandes 四 sweep**——四 sweep 只涵蓋水下路徑，移臂需求會無處可掛；這是分期選擇不是否證，理由寫在 `backstroke_decision`。Step 17 的前置條件到此清空。
+#### 下一個執行點
+
+- **Step 16**：依同一規格串行完成 hip-knee 5 條與 spine-neck／軀幹 12 條；BR-30 不重做既有裁決，只查兩派量測方法是否真正可比。
+- **Step 16.5（插入）已完成**：相位詞彙 blocker 已解除（`8e7380d`）；`phase_model`、6 泳式 58 相位 registry 與 W017 均已落地。Step 17 的相位前置條件已清空。
 
 #### 派工分配（實測後定案）
 
@@ -47,7 +54,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 #### 稽核結論
 
 - 現有公開章仍是 **13 張命名校正卡**，不是完整動作圖譜；它由 `technical-analysis.yaml` 單一資料源供頂層 joint 頁與六式頁共用。
-- Vortex 底稿有 **183 條關節主張**（A 解剖 136、B ROM 8、C 泳姿特定 39）。A、B 已裁決；C 類完成 5 條高風險項目，**其餘 34 條仍須游泳一手文獻**，不得以 Neumann／Nordin 補成泳姿事實。
+- Vortex 底稿有 **183 條關節主張**（A 解剖 136、B ROM 8、C 泳姿特定 39）。A、B 已裁決；C 類已完成高風險 5 條、shoulder-arm 14 條與 ankle-foot 3 條，共 **22/39**；餘 17 條依 Step 16 處理，不得以 Neumann／Nordin 補成泳姿事實。
 - 13 卡語意處置：**5 條必修**（`free.tech.38`、`free.tech.39`、`udk.tech.30`、`fly.tech.37`、`starts-turns.tech.48`）；**7 條須把解剖事實／泳姿推論／教學應用分層**（`free.tech.36/40/41`、`back.tech.30`、`breast.tech.36/37`、`starts-turns.tech.47`）；`free.tech.37` 核心可保留並補量測邊界。
 - my-site `vortex-joints.html` 目前有顯示 certainty 與 optional evidence，卻**沒有解析並顯示 `mechanism.source_ids`**；讀者看得到色圓，看不到來源。
 - `periodization/dryland.yaml#flexibility_mobility` 有三個直接相關衝突：①蛙式以「髖內旋讓腳掌外翻」概括全相位，與 `breast.tech.36` 的髖外旋描述互撞；②蹠屈不足預設腓腸肌伸展，方向不對；③ sleeper stretch／後囊鬆動被寫得過度接近預設處方。
@@ -72,13 +79,13 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **Step 15／16 續三批**（codex，串行不平行，等 codex 視窗重置後再派）：ankle-foot 3、hip-knee 5、spine-neck 12。**直接用 `plans/證據包_蒐證派工規格.md`**，它已含六根因篩子、禁寫「教材對撞」、三層覆蓋缺口與每批 ID，不需再組 prompt。其中 `BR-30` 是特例：它與 `BR-23` **都已在 `plans/關節主張裁決_蛙式.md` 有裁決**（BR-23 判「修正」`:315`；BR-30 型 5 保留爭議附錄 `:426`），不重新蒐證；該條唯一要查的是**爭議兩派原始文獻各自的測量方法**（體表標記反推 vs 分節段三維量測），方法層對不上就不構成真矛盾。
+1. **Step 16 續兩批**（串行）：hip-knee 5、spine-neck／軀幹 12。**直接用 `plans/證據包_蒐證派工規格.md`**；該檔已把 ankle-foot 新增的根因 7「相位交界壓成單點」併入七根因篩子。其中 `BR-30` 是特例：它與 `BR-23` 已在 `plans/關節主張裁決_蛙式.md` 有裁決，不重新下判；只查爭議兩派原始文獻的量測方法（體表標記反推 vs 分節段三維量測），方法層對不上就不構成真矛盾。
 2. **shoulder-arm 裁決的落點是 W4，不是 canonical 修改**（已查證）：14 條 C 類 ID（FR-09／FR-13／BK-17／BK-26／BR-18／BF-22 等）在 `canonical/` **零命中**，只存在於 `plans/`，所以沒有「把裁決落回 canonical」這件事。裁決的實際用途有兩個方向：① 可直接產出 movement demand 的只有 **FR-13②（腕穩定成單一整體）、FR-17（High Elbow 姿勢層）、BF-22①（蝶式無 body roll 協助）**；② **明確不得成為 demand** 的是 FR-09、BK-10、BK-29、BF-25。協議 §5 的「錯誤版本不刪除」在 `plans/` 內已滿足。
-4. **注意本地文獻集的覆蓋缺口**：`swimming-kinetic-chain` 43 篇裡**蛙式、蝶式、踝、body roll 各 0 篇**，這幾類「第 2 層查無」不具推論力，必須走游泳書與線上文獻，不得據此下結論。
-5. **W4 四區圖譜填充**（codex）：shoulder-arm → ankle-foot → hip-knee → spine-neck，一區一 gate。新寫的 demand 一律從 `plans/movement_coverage_denominator.yaml` 帶 `derived_from_ids`。須處理 `gap.free.up-kick`。**相位欄位已受控**：`phase` 只能用 `_taxonomy.yaml#movement_phase_registry.strokes.<stroke>` 登錄的鍵，`phase_model` 須與登錄表一致，違反出 W017——要新增相位先改登錄表，不得在 demand 端就地發明。
-6. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
-7. **Step 21 決定 W013 是否升級成 E004 級**：等 W4 內容量到位再判，pilot 兩條切片的樣本量不足以支撐。
-8. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+3. **注意本地文獻集的覆蓋缺口**：`swimming-kinetic-chain` 43 篇裡**蛙式、蝶式、踝、body roll 各 0 篇**，這幾類「第 2 層查無」不具推論力，必須走游泳書與線上文獻，不得據此下結論。
+4. **W4 四區圖譜填充**（codex）：shoulder-arm → ankle-foot → hip-knee → spine-neck，一區一 gate。新寫的 demand 一律從 `plans/movement_coverage_denominator.yaml` 帶 `derived_from_ids`。須處理 `gap.free.up-kick`。**相位欄位已受控**：`phase` 只能用 `_taxonomy.yaml#movement_phase_registry.strokes.<stroke>` 登錄的鍵，`phase_model` 須與登錄表一致，違反出 W017——要新增相位先改登錄表，不得在 demand 端就地發明。
+5. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
+6. **Step 21 決定 W013 是否升級成 E004 級**：等 W4 內容量到位再判，pilot 兩條切片的樣本量不足以支撐。
+7. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
 
 ---
 

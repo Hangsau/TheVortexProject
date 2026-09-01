@@ -180,10 +180,12 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 ## 規劃文件
 - `RESEARCH_PLAN.md` — 四層研究架構完整說明
 - `FUTURE_RESEARCH.md` — 前沿假設庫（渦流、頻率、感受器等）
-- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **待執行（2026-08-27）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜 + my-site rollout gates
+- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **實作中（2026-09-02；Step 15 完成，Step 16 待執行）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜 + my-site rollout gates
+- `plans/證據包_C類_shoulder-arm.md` — C 類第 1 批 14 條三層蒐證、裁決、結構性根因與 W4 輸入
+- `plans/證據包_C類_ankle-foot.md` — C 類第 2 批 FR-41／BR-35／ST-19 三層蒐證與裁決；新增「相位交界壓成單點」根因
 - `CLAUDE.md` — 協作規則、證據契約與強制收尾流程
 - `HANDOFF.md` — 當前狀態、下一步與歷史交接
 
 ---
 
-*最後更新：2026-08-27（新增骨關節動作—肌群—訓練—活動度圖譜 plan-check 與 HANDOFF 入口；本批只保存計畫，未動 canonical 或下游）*
+*最後更新：2026-09-02（C 類 ankle-foot 第 2 批完成；同步證據包、泳式裁決與 HANDOFF，未動 canonical 或下游）*
