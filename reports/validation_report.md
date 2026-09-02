@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-02
-> 驗證條目數：663，Drills ID 數：176
+> 驗證條目數：680，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 468 筆**
+**WARN，共 459 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -430,23 +430,13 @@
   file=canonical\instructional\technical-analysis.yaml id='free.tech.39'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.40'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.41'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.28'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.29'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.2'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.3'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.4'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.5'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.6'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.7'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.8'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.9'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.10'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.11'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.12'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.13'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.14'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.15'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.18'
@@ -590,6 +580,7 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.40'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.scapular-retractors'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'

@@ -468,3 +468,230 @@ muscle_groups:
         膝伸力量、主動控制與可用範圍須在固定並記錄的髖部、骨盆及起始膝部
         位置下分項量測，且只比較相同髖部條件的結果。若要判定水中角色，還需
         把膝部運動學與肌電時序同步，不能由單一動作外觀指定招募來源。
+
+  - id: movement.muscle.shoulder-internal-rotator-extensors
+    name: 肩內旋伸展肌群
+    aliases:
+      - 肩內旋與伸展肌群
+      - 肱骨內旋伸展肌群
+      - shoulder internal rotator-extensors
+    joint_regions:
+      - shoulder-arm
+    cross_joint_characteristics: >
+      本群在本圖譜包含闊背肌、大圓肌、胸大肌胸骨部與肩胛下肌。這些成員
+      的作用線可同時帶有肩內旋、伸展與內收分量，但各分量會隨肱骨與肩胛
+      位置改變。解剖教科書以游泳推進期為例，說明許多肩內旋肌也具有強的
+      伸展與內收能力；這個例子支持的是動作能力並存，不是水中招募程度。
+    general_capabilities: >
+      肩內旋伸展肌群可依關節位置產生肱骨內旋、伸展與內收方向的力矩，也可
+      在外力下協助維持或控制肱骨位置。教科書提及游泳推進期，是用來說明
+      這組肌肉具備多方向功能，並非量測它們在游泳中的招募時序、收縮型態
+      或貢獻大小，因此不能寫成游泳推進期由本群主導發力。
+    roles:
+      - name: 肩內旋、伸展與內收方向的作用能力
+        boundary: >
+          肌肉作用線支持肩內旋、伸展與內收方向；特定水中相位是否採用這些
+          能力、採用到什麼程度，仍需泳者運動學與相位化肌電資料支持。僅見
+          動作外觀不能判定收縮型態，也不能等同肌力、關節力矩或推進貢獻。
+    publication_status: published
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 肩內旋伸展肌群
+      description: >
+        這組肌肉包含闊背肌、大圓肌、胸大肌胸骨部與肩胛下肌。依上臂位置
+        不同，它們的作用線可支持肩內旋、伸展與內收，也能協助控制上臂位置。
+        這些是一般解剖能力；即使教科書用游泳推進期舉例，也不表示水中必然
+        由這組肌肉主導，或每位泳者都以相同方式使用它們。
+      safety_note: >
+        肩部內旋、往後或往身側用力時若出現疼痛、夾擠感、麻木、明顯無力
+        或不穩，應停止，不要用更大阻力硬撐。
+    diagnostic:
+      assessment_note: >
+        肩內旋、伸展與內收能力須在固定並記錄的肩胛位置、肱骨上舉平面與
+        軀幹姿勢下分項量測。若要判定水中角色，需同步取得分節運動學與
+        相位化肌電，不能由手臂路徑或單一方向力量指定哪個成員正在作用。
+
+  - id: movement.muscle.elbow-flexors
+    name: 肘屈肌群
+    aliases:
+      - 屈肘肌群
+      - 肘關節屈肌群
+      - elbow flexors
+    joint_regions:
+      - shoulder-arm
+    cross_joint_characteristics: >
+      本群由肱二頭肌、肱肌與肱橈肌組成。肱二頭肌跨過肩與肘，且參與前臂
+      旋後；肱橈肌的力學條件也隨前臂旋轉改變。因此肩部位置與前臂旋轉位置
+      都會改變整群的可用長度與工作條件，不同位置下量到的肘屈力量不能
+      直接互相比較。
+    general_capabilities: >
+      肘屈肌群可產生肘屈曲力矩，把前臂相對上臂帶向彎曲方向，也可在肘部
+      不需繼續移動時協助維持位置，或在肘朝伸展方向移動時提供離心控制。
+      各成員另有不同的肩部或前臂旋轉角色，不能把整群視為功能完全相同。
+    roles:
+      - name: 肘屈曲與前臂位置控制
+        boundary: >
+          肌肉作用線支持肘屈曲及前臂相對上臂的位置控制；特定水中相位是否
+          採用這些能力、採用到什麼程度，仍需泳者運動學與相位化肌電資料
+          支持。僅見動作外觀不能判定收縮型態，也不能等同肌力、關節力矩
+          或推進貢獻。
+    publication_status: published
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 肘屈肌群
+      description: >
+        肘屈肌群包括肱二頭肌、肱肌與肱橈肌，能把前臂相對上臂帶向彎曲方向，
+        也能協助維持或控制肘部位置。肱二頭肌還跨過肩部並參與前臂旋後，
+        所以肩部與手掌朝向不同時，整組肌肉所處的長度條件並不相同。
+      safety_note: >
+        彎肘或抗阻用力時若出現肩部、肘部或前臂疼痛、麻木、明顯無力或
+        不穩，應停止，不要用更大阻力硬撐。
+    diagnostic:
+      assessment_note: >
+        肘屈力量與控制須在固定並記錄的肩部位置、前臂旋轉及起始肘位下
+        分項量測，且只比較相同條件的結果。水中角色需以肘部運動學配合
+        相位化肌電判定，不能由屈肘外觀指定個別肌肉的招募來源。
+
+  - id: movement.muscle.elbow-extensors
+    name: 肘伸肌群
+    aliases:
+      - 伸肘肌群
+      - 肘關節伸肌群
+      - elbow extensors
+    joint_regions:
+      - shoulder-arm
+    cross_joint_characteristics: >
+      本群由肱三頭肌與肘肌組成。肱三頭肌長頭同時跨過肩與肘，其可用長度
+      與工作條件會隨肩部位置改變；肱三頭肌其他頭與肘肌不以相同方式跨過
+      肩部。因此不同肩部位置下量到的肘伸力量不能直接互相比較。
+    general_capabilities: >
+      肘伸肌群可產生肘伸展力矩，把前臂相對上臂帶向較直方向，也可在肘部
+      不需繼續移動時協助維持位置，或在肘朝屈曲方向移動時提供離心控制。
+      這些是一般解剖能力，不宣稱任何泳式中的招募時序或招募程度。
+    roles:
+      - name: 肘伸展與前臂位置控制
+        boundary: >
+          肌肉作用線支持肘伸展及前臂相對上臂的位置控制；特定水中相位是否
+          採用這些能力、採用到什麼程度，仍需泳者運動學與相位化肌電資料
+          支持。僅見動作外觀不能判定收縮型態，也不能等同肌力、關節力矩
+          或推進貢獻。
+    publication_status: published
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 肘伸肌群
+      description: >
+        肘伸肌群包括肱三頭肌與肘肌，能把前臂相對上臂由彎曲帶向較直方向，
+        也能協助維持或控制肘部位置。肱三頭肌長頭還跨過肩部，所以手臂相對
+        軀幹的位置會改變它可用的長度，不能把不同肩位下的表現直接相比。
+      safety_note: >
+        伸肘或抗阻用力時若出現肩部或肘部疼痛、卡住、麻木、明顯無力或
+        不穩，應停止，不要強行壓向終末位置。
+    diagnostic:
+      assessment_note: >
+        肘伸力量與控制須在固定並記錄的肩部位置、前臂旋轉及起始肘位下
+        分項量測，並留意肱三頭肌長頭的跨關節長度條件。水中角色需把肘部
+        運動學與相位化肌電同步，不能由接近伸直的外觀推定收縮型態。
+
+  - id: movement.muscle.scapular-retractors
+    name: 肩胛後縮肌群
+    aliases:
+      - 肩胛骨後縮肌群
+      - 肩胛內收肌群
+      - scapular retractors
+    joint_regions:
+      - shoulder-arm
+    cross_joint_characteristics: >
+      本群由菱形肌與中斜方肌組成。菱形肌可同時產生肩胛下迴旋與後縮分量；
+      肩胛骨的上提下壓、前伸後縮及上下迴旋分屬三組彼此獨立的軸，所以只
+      描述其中一軸的後縮，不代表另外兩軸位於中立，也不能把菱形肌與中斜
+      方肌視為所有方向分量都相同。
+    general_capabilities: >
+      肩胛後縮肌群可把肩胛骨相對胸廓帶向後縮方向，也可在外力下協助維持
+      肩胛位置。菱形肌另有下迴旋分量，中斜方肌的方向組合不同；描述後縮
+      能力時仍須保留各軸可同時發生其他運動的可能。
+    roles:
+      - name: 肩胛後縮與肩帶位置控制
+        boundary: >
+          肌肉作用線支持肩胛後縮及肩帶相對胸廓的位置控制；特定水中相位
+          是否採用這些能力、採用到什麼程度，仍需泳者運動學與相位化肌電
+          資料支持。僅見動作外觀不能判定收縮型態，也不能等同肌力、關節
+          力矩或推進貢獻。
+    publication_status: published
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 肩胛後縮肌群
+      description: >
+        肩胛後縮肌群包含菱形肌與中斜方肌，能把肩胛骨相對胸廓往脊柱方向
+        帶動，也能協助維持肩帶位置。肩胛骨可同時在不同軸上移動；看到後縮
+        不表示上提下壓或上下迴旋一定保持中立，兩個成員的其他方向分量也
+        不完全相同。
+      safety_note: >
+        肩胛後縮或肩帶抗阻用力時若出現肩部、肩胛間或頸部疼痛、麻木、
+        明顯無力或不穩，應停止，不要用更大阻力硬撐。
+    diagnostic:
+      assessment_note: >
+        肩胛後縮能力須在固定並記錄的肱骨、胸廓與軀幹位置下觀察，並把
+        前伸後縮、上提下壓及上下迴旋三組軸分開記錄。判定水中角色還需
+        同步肩胛運動學與相位化肌電，不能由單一體表方向指定收縮型態。
+
+  - id: movement.muscle.hip-extensors
+    name: 髖伸肌群
+    aliases:
+      - 伸髖肌群
+      - 髖關節伸肌群
+      - hip extensors
+    joint_regions:
+      - hip-knee
+    cross_joint_characteristics: >
+      本群由臀大肌與腿後肌群組成；腿後肌群在此包含半腱肌、半膜肌與股二
+      頭肌長頭。這三條腿後肌同時跨過髖與膝，膝部位置會改變它們的可用
+      長度與工作條件，因此不同膝部角度下量到的髖伸力量不能直接互相比較；
+      臀大肌不以相同方式跨過膝部。
+    general_capabilities: >
+      髖伸肌群可產生髖伸展力矩，把股骨相對骨盆帶向後方，也可在大腿位置
+      不需繼續改變時協助維持位置，或在髖朝屈曲方向移動時提供離心控制。
+      各成員的跨關節條件不同，不能由整體腿部路徑指定單一肌肉的作用。
+    roles:
+      - name: 髖伸展與大腿位置控制
+        boundary: >
+          肌肉作用線支持髖伸展及大腿相對骨盆的位置控制；特定水中相位是否
+          採用這些能力、採用到什麼程度，仍需泳者運動學與相位化肌電資料
+          支持。僅見動作外觀不能判定收縮型態，也不能等同肌力、關節力矩
+          或推進貢獻。
+    publication_status: published
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 髖伸肌群
+      description: >
+        髖伸肌群包含臀大肌，以及半腱肌、半膜肌與股二頭肌長頭組成的腿後
+        肌群，能把大腿骨相對骨盆往後帶，也能協助維持或控制大腿位置。
+        腿後肌群同時跨過髖與膝，膝部彎曲或伸直會改變它們可用的長度，
+        因此不同膝部位置下的表現不能直接相比。
+      safety_note: >
+        大腿往後或抗阻伸髖時若出現髖部、腿後側、膝部或腰背疼痛、麻木、
+        明顯無力或不穩，應停止，不要以骨盆或腰椎代償硬撐。
+    diagnostic:
+      assessment_note: >
+        髖伸力量與控制須在固定並記錄的骨盆、腰椎、膝部及股骨旋轉條件下
+        分項量測，且只比較相同膝位的結果。若要判定水中角色，需同步髖膝
+        運動學與相位化肌電，不能由腿部外觀指定臀大肌或腿後肌群的招募。
