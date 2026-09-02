@@ -73,6 +73,7 @@
 - **覆蓋率實測與 C 類證據供給耗盡（2026-09-02）**：拿 `plans/movement_coverage_denominator.yaml` 的 58 個相位比對 16 筆 demand，**覆蓋 13／58**（free 4/11、breast 4/9、fly 3/11、udk 1/7、starts-turns 1/13、**back 0/7**）。**這不是漏做**——四份 C 類證據包的「可直接產出 demand」清單已全數落地，剩下 45 個相位沒有任何 C 類裁決授權產出內容，硬填就是憑空發明。要再往前推只有兩條路：跑新一輪 C 類蒐證，或接受現有覆蓋率先上線。
   - 另兩項實測：`free.early-pull-through`（`heinlein-2010-phases`）有 demand 但**不在分母裡**——是分母的登錄缺口，不是 demand 錯（W017 過關，registry 在 `_taxonomy.yaml`）；`gap.free.up-kick` 經比對確認為真實內容缺口（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，不在 canonical 造記錄。
 - **Step 19（my-site movement 同步層）已完成（2026-09-02）**：my-site commit `c3cd91c` ＋ `169ece1`，CI run `33604385127` success。`sync_movement()`＋`_atomic_write_yaml()`＋`tools/test_sync_movement.py`（該 repo 第一支測試，純 python，8/8）。**實測出站 0/37**——canonical 37 筆全 `draft`，規格即 draft/withheld 不出站，屬預期狀態。刻意未寫 `data/movement/`：Step 21 的順序是先推 my-site 相容 sync、再合併 canonical。
+- **Step 20 派工規格已交付（2026-09-02，`e643c5e`）**：`plans/Step20_movement版型派工規格.md`。三個設計決策在規格裡定死，執行者不得自行更改：① 版型先假定資料為空；② `phase` 一律綁 `phase_model` 成對顯示，**不給跨模型的中文相位對照表**（BK-26 裁決：跨模型相位名不可互換不可換算，給了對照表等於默許換算）；③ interventions 的 `safety_stop_conditions` 置頂不可收合、demands 的 `measurement_conditions` 不得收合（抽掉量測條件＝把有條件的結論講成無條件）。`limitation_type` 是整句敘述不是分類鍵，故 interventions 平鋪不分組。
 
 #### 派工分配（實測後定案）
 
@@ -112,7 +113,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **Step 20 是下一個執行點：my-site movement 版型**（`layouts/vortex/vortex-movement.html` ＋ `static/css/vortex-movement.css` ＋ `content/vortex/movement/_index.md` ＋ sidebar 拆兩入口）。**派 codex**（實作清單原定、量體大、結構明確），視覺由主 session 對照 `resources/notes/DESIGN_SYSTEM.md` 鐵則過閘。派工前先確認 codex 5H 已重置——2026-09-02 排 Step 19 時它在 93%，才改由主 session 自寫。
+1. **Step 20 已備妥待觸發：規格 `plans/Step20_movement版型派工規格.md` 已寫完，派工排在 2026-09-02 16:58**（shotclock job `shotclock-20260902-1658-w36e`，= codex 5H 重置 16:48 後 +10 分）。規格自足（含四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照、10 條退件條件），執行者不需讀 plan-check 或實作清單。排程任務只做「派 codex → 機械驗收 → commit **不 push**」；**視覺仍由主 session 對照 `resources/notes/DESIGN_SYSTEM.md` 鐵則 A–I 過閘後才上線**。若排程沒觸發或 codex 交件退件，手動重派的指令在規格 §0。
    - **硬前提：版型必須先假定資料為空**。`sync_movement()` 實測出站 0/37（全 draft），頁面要有「尚未發布」狀態，不能只寫有資料時的分支。
    - class 前綴獨立（`vx-mv-*`），不 import `vortex-joints.css` / `vortex-injuries.css` 借樣式——那兩份檔名綁章節，跨頁引用會讓「這條規則歸誰維護」變模糊。
    - 標籤與節點清單一律 range 資料生成，不在 layout 硬編：Hugo 的 `index` 查不到 key 回空字串且不報錯，硬編副本會讓 canonical 新增項目在頁面上**無聲消失**（my-site CLAUDE.md 已記兩起實例）。
