@@ -6,19 +6,19 @@
 
 ## 當前狀態（2026-09-03，最新）
 
-### ▶️ 動作圖譜 (B) 組規格輪：**兩欄核對＋W10／W11／W12 三份派工規格全部到齊，等發包**。覆蓋維持 34/59
+### ▶️ 動作圖譜 (B) 組完成：**規格撰寫＋W10／W11／W12 串行發包全部驗收落地**。覆蓋 34/59 → **44/59**
 
-2026-09-03 接續 (A) 組完成後的下一步。這一輪**沒有動任何 canonical 內容**（除了補一筆缺的動作），產出全是規格與裁決文件——(B) 組 10 個相位的執行條件已經全部清空。
+2026-09-03 接續 (A) 組完成後的下一步，**規格與執行在同一輪內走完**。(B) 組 10 個相位全部落地，`starts-turns` 從長期只有 1/13 變成 **9/13**。
 
 | 產出 | commit | 內容 |
 |---|---|---|
 | `plans/B組_池畔可見方向與解剖學動作兩欄核對.md` | `dd1a362`／`c57f3c0` | 13 個相位逐一兩欄核對，(B) 13 → **10 可派工**，2 移 (C)、1 移新開的 (D) |
 | `canonical/movement/actions.yaml` +1 | `dd1a362` | `shoulder-complex.scapular-protraction`（肩胛前伸），actions 30 → **31** |
-| `plans/W10_起跳段覆蓋派工規格.md` | `84bbd19` | `set-position`／`takeoff`／`flight`／`entry`（4 筆 demand） |
-| `plans/W11_牆段覆蓋派工規格.md` | `8410b3c` | `turn-approach`／`wall-contact`／`wall-push-off`（3 筆） |
-| `plans/W12_出水段與蝶式入水停頓覆蓋派工規格.md` | `d0397f3` | `starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3 筆） |
+| `plans/W10_起跳段覆蓋派工規格.md` | 規格 `84bbd19`／落地 `a3dd580` | `set-position`／`takeoff`／`flight`／`entry`（4 筆 demand），覆蓋 34→38 |
+| `plans/W11_牆段覆蓋派工規格.md` | 規格 `8410b3c`／落地 `05518ed` | `turn-approach`／`wall-contact`／`wall-push-off`（3 筆），覆蓋 38→41 |
+| `plans/W12_出水段與蝶式入水停頓覆蓋派工規格.md` | 規格 `d0397f3`／落地 `8ec8485` | `starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3 筆），覆蓋 41→44 |
 
-**三份規格都是零新增 `actions`／`muscle-groups`**，執行者只寫敘述文字；所有受控欄位、來源鍵、相位鍵、`derived_from_ids` 都在規格裡釘死，且**逐一驗證過存在性（三份合計 MISS 0）**。10 筆落地後覆蓋為 **44/59**。
+**三批都是零新增 `actions`／`muscle-groups`**（actions 維持 31、muscle-groups 維持 22），執行者只寫敘述文字；所有受控欄位、來源鍵、相位鍵、`derived_from_ids` 都在規格裡釘死並逐一驗證過存在性（合計 MISS 0）。demands **41 → 51**，`validate.py` 三批都是 0 ERROR、W013–W019 全 0，條目數 725 → 735、孤兒條目 438 → 412。三次 push 的 `notify-mysite` 都已觸發。
 
 **這一輪最值得記的三件事**：
 
@@ -28,7 +28,17 @@
 
 **錯誤 4（第一次發包當場暴露、已修）**：W10／W11 的前置條件 2 原本寫「grep `tech.42`，確認 `sub-luxation`／`hyperextension`／`腰椎反弓` **不再出現**，仍出現代表修正未落地」——**錯**。`dd45e88` 的實際修法是**保留教練原話再當場更正**（「來源把『把肩往前推』說成『肩關節做 sub-luxation 或 hyperextension』，這兩個名字在解剖命名下都不成立」），保留原話是為了讓聽過這句口令的人找得到。所以那三個字串本來就該還在，我卻把判準寫成了與實際修法相反的方向。codex 第一次發包照規格 grep、判定「前置未落地」後**零檔案異動就停手，這是正確行為**。前置條件已改成 grep「命名更正（教練原話 vs 解剖命名）」與「肩胛前突」**是否出現**，並加註那三個字串仍在是刻意的、不得順手刪除。**可推廣的一條**：本庫的更正慣例是「原話留著＋當場更正」，所以任何「修正是否落地」的檢查都不能寫成「錯字消失」，只能寫成「更正段落出現」。
 
-**下一步**：W10 → W11 → W12 **串行發包**（W11／W12 的硬性前置要 grep 前一批是否落地，平行會讓前置檢查失效），驗收看 `git diff` 與 `validate.py` 不看 exit code。
+**串行發包是必要的，不是保守**：W11 的前置要 grep W10 的 D4 是否已存在（它的 D3 必須指向那一筆並避開它寫過的內容），W12 的前置要 grep 三筆既有 demand。平行發包會讓這些前置檢查全部落空，兩筆記錄互抄也不會被擋下。三批 codex 的產出都通過逐欄比對：`poolside_direction`／`derived_from_ids`／`action_ids`／`muscle_roles` 與規格釘死值完全一致，擁有權分工沒有一處被重述，`udk/breakout` 的 `starts-turns.` 前綴也沒有被「順手修正」。
+
+**下一步**：剩餘 15 個未覆蓋相位分三類，性質完全不同，不要當成同一批工作——
+
+| 類別 | 相位 | 狀態 |
+|---|---|---|
+| (C) 需先蒐證 | 自由式 6（lift／rear-quadrant-propulsion／push／release／early-recovery／late-recovery）、udk 3（kick-initiation／terminal-down-kick／down-to-up-transition）、`fly.breathing-window`、`breast.leg-outsweep`、`starts-turns.underwater-dolphin-kick` | 12 個，缺裁決或缺素材，**不得憑空補** |
+| (D) 結構決策 | `starts-turns.breaststroke-pullout` | 庫內缺關節層素材，要先決定是蒐證還是永久除名 |
+| (E) 框架不適用 | `starts-turns.flip`、`starts-turns.wall-rotation` | 剛體空間重定向在 `joint-local` 下沒有對應動作，**要先做結構決策（是否引入新的 reference frame），不是撰寫工作** |
+
+`breast.leg-outsweep` 另有一個獨立問題：裁決檔把 outsweep 與 insweep 併成單一「蹬夾期」，拆不拆是結構決策。`gap.free.up-kick` 仍留在 `known_gaps`。
 
 ---
 
