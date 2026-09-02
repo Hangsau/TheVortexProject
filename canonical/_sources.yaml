@@ -5713,3 +5713,91 @@ sources:
       modern wave-kick 泳者，不同波幅會改變 insweep 與收腿時序」這一模型差異
       說明。
       不可用於：否定雙腳會靠攏此一現象、任何角度或劑量主張。
+
+  - id: src.chollet-2006
+    display: "Chollet et al. (2006). Arm to leg coordination in elite butterfly swimmers. Int J Sports Med."
+    title: "Arm to leg coordination in elite butterfly swimmers"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Chollet D"]
+    year: 2006
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "16572376"
+      doi: "10.1055/s-2005-865658"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 BF-32／BF-33 裁決登錄。識別碼於蒐證階段實際解析，完整作者
+      清單未逐字轉錄，標 unverified。14 名菁英男性、四種比賽配速，以影片辨識
+      手臂與腿相位；T1＝手入水與第一波動高轉折點的時間差，T2＝手開始向後與
+      第一波動低轉折點，T3＝手到肩垂直面與第二波動高轉折點，T4＝手離水與
+      第二波動低轉折點。
+      適用範圍：支持「兩次下踢各自落在特定手臂事件的時間窗內」這一時序描述，
+      且必須連同其轉折點定義一起寫。
+      不可用於：踢的力量大小比較（轉折點是時間編碼事件，不是力值）；女性、
+      較低技術層級外推；把轉折點換算成其他分期模型的相位邊界。
+
+  - id: src.seifert-2008
+    display: "Seifert et al. (2008). Differences in spatial-temporal parameters and arm-leg coordination in butterfly stroke as a function of race pace, skill and gender. Hum Mov Sci."
+    title: "Differences in spatial-temporal parameters and arm-leg coordination in butterfly stroke as a function of race pace, skill and gender"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Seifert L"]
+    year: 2008
+    container: "Human Movement Science"
+    identifier:
+      pmid: "17935810"
+      doi: "10.1016/j.humov.2007.08.001"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 BF-32／BF-33 裁決登錄。識別碼於蒐證階段實際解析，完整作者
+      清單未逐字轉錄，標 unverified。40 名泳者（菁英與較低技術、男女各組）在
+      四種配速下錄影；T1 配對手臂 catch 起點與第一腿 down phase 起點，T2 配對
+      arm pull 與第一腿 up phase，T3 配對 arm push 起點與第二腿 down phase 起點，
+      T4 配對 arm recovery 與第二腿 up phase。
+      適用範圍：支持兩次下踢的時序歸屬，且其相位錨點與 Chollet 2006 不同，
+      兩套不得互換或換算。
+      不可用於：力量大小、推進貢獻或任何角度主張。
+
+  - id: src.barbosa-2008
+    display: "Barbosa et al. (2008). Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study."
+    title: "Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Barbosa TM"]
+    year: 2008
+    identifier:
+      pmid: "24149450"
+      pmcid: "PMC3761458"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 BF-32／BF-33 裁決登錄。識別碼於蒐證階段實際解析，完整作者
+      清單未逐字轉錄，標 unverified。作者自述為 pilot：4 名國際級泳者的漸增
+      200 m 與 7 名國家／國際級男性的最大 25 m；四視角重建手的三維速度、足的
+      二維速度與質心速度變異。高速條件下第二 downbeat 的平均足垂直速度高於
+      第一 downbeat。
+      適用範圍：支持「第二次下踢的足垂直速度在高速條件下不低於第一次」，
+      因此可推翻「第一踢較大力、第二踢較小力」這組敘述的方向。
+      不可用於：踢力量測（本研究量的是足速與估算質心，不是力）；臀部高度
+      終點（原文談的是質心）；小樣本 pilot 的迴歸不得寫成通則或因果。
+
+  - id: src.narita-2018
+    display: "Narita, Nakashima & Takagi (2018). Effect of leg kick on active drag in front-crawl swimming. J Biomech."
+    title: "Effect of leg kick on active drag in front-crawl swimming: Comparison of whole stroke and arms-only stroke during front-crawl and the streamlined position"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Narita", "Nakashima", "Takagi"]
+    year: 2018
+    container: "Journal of Biomechanics"
+    identifier:
+      pmid: "29921521"
+      doi: "10.1016/j.jbiomech.2018.05.027"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 FR-40 裁決登錄。識別碼於蒐證階段實際解析，作者僅有姓氏可
+      逐字轉錄（無 initials），標 unverified。7 名男性競技選手在水槽以 1.1、
+      1.3 m/s 完成全泳與只用手兩條件，以連接泳者的 load cells 量主動阻力。
+      適用範圍：只用來說明「現有主動阻力研究操弄的是有無打水，不是打水寬度」
+      這個證據邊界。
+      不可用於：打水寬度與阻力的任何量化因果；髖外展／內收角度主張；女性或
+      非競技族群外推。
