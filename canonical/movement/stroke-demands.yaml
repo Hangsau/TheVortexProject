@@ -517,3 +517,161 @@ demands:
         協助由教材直接描述；肩胛穩定需求則由此相位條件結合一般解剖角色推論。
         肌電資料只支撐前鋸肌的負荷描述，不支撐需求本體或跨泳式排序，因此
         evidence_profile 為 synthesis-inference，主張僅為部分支持。
+
+  - id: movement.demand.fly.second-kick.timing-with-arm-push
+    stroke: fly
+    phase_model: descriptive
+    phase: second-kick
+    body_position: prone
+    action_reference_frame: body-fixed
+    derived_from_ids:
+      - fly.tech.8
+      - fly.tech.4
+    action_ids:
+      - movement.action.hip.flexion
+      - movement.action.knee.extension
+    muscle_roles:
+      - muscle_id: movement.muscle.hip-flexors
+        role: >
+          作為調整大腿相對骨盆位置並銜接第二次下踢構型的候選角色。本批
+          來源未提供蝶式此相位的肌電，因此不固定實際招募、收縮型態或貢獻大小。
+      - muscle_id: movement.muscle.knee-extensors
+        role: >
+          作為膝伸展與小腿方向控制的候選角色。本批來源未提供蝶式此相位的
+          肌電，因此不固定實際招募、收縮型態或推進貢獻。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.chollet-2006
+      - src.seifert-2008
+      - src.barbosa-2008
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    public:
+      name_zh: 蝶式第二踢與推水的時序需求
+      description: >
+        蝶式第二次下踢的起始落在手臂推水與上掃的時間窗；這一踢的推進
+        峰值則接近雙手出水至回復臂入水的區間。起始與峰值是接續的不同
+        事件，不應壓成同一瞬間。這項需求用來對齊手臂與腿部節律，不表示
+        其中某個外觀事件可以單獨解釋整體推進。
+      limitation_context: >
+        運動學研究分別採用手臂越過肩部、手離水、推水開始與回臂等事件作
+        相位錨點，各套操作定義應並列保存，不能互相換算成唯一瞬間。教材
+        分別描述下踢起始與推進峰值，兩者處理的是不同事件層級，可以並列
+        理解而不構成矛盾；現有資料也不支持排列兩次踢的用力高低，或把
+        臀部位置寫成這一踢的單一因果效果。
+      safety_note: >
+        配合推水練習下踢時若出現腰背、髖部或膝部疼痛、麻木、明顯無力
+        或不穩，應停止，不要為了追求同步而強行加大動作。
+    diagnostic:
+      assessment_note: >
+        本筆 phase_model 採專案的 descriptive。Chollet 操作定義中的 T3
+        配對手越過肩部垂直面與第二波動高轉折點，T4 配對手離水與第二波動
+        低轉折點；Seifert 操作定義中的 T3 配對推水起點與第二腿下踢起點，
+        T4 配對回臂與第二腿上踢。兩套事件各自保存，不互換相位邊界。
+        Science of Swimming Faster 描述的是上掃期的下踢起始，Fundamentals
+        of Fast Swimming 描述的是接近手出水至回復臂入水的推進峰值，前者
+        是事件起點、後者是結果峰值，兩者處理的是不同事件層級。
+        action_reference_frame
+        採 body-fixed，action_ids 只作身體固定時序下的定性動作連結，不宣稱
+        關節角度大小。肌肉角色皆為候選，因本批未提供蝶式相位化肌電。
+
+  - id: movement.demand.fly.first-kick.timing-and-wave-reception
+    stroke: fly
+    phase_model: descriptive
+    phase: first-kick
+    body_position: prone
+    action_reference_frame: body-fixed
+    derived_from_ids:
+      - fly.tech.7
+      - fly.tech.4
+    action_ids:
+      - movement.action.hip.flexion
+      - movement.action.knee.extension
+    muscle_roles:
+      - muscle_id: movement.muscle.hip-flexors
+        role: >
+          作為調整大腿相對骨盆位置並承接體波傳遞的候選角色。本批來源未
+          提供蝶式此相位的肌電，因此不固定實際招募、收縮型態或貢獻大小。
+      - muscle_id: movement.muscle.knee-extensors
+        role: >
+          作為膝伸展與小腿方向控制的候選角色。本批來源未提供蝶式此相位的
+          肌電，因此不固定實際招募、收縮型態或推進貢獻。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.chollet-2006
+      - src.seifert-2008
+      - src.riewald-rodeo-2015
+    public:
+      name_zh: 蝶式第一踢的時序與體波承接需求
+      description: >
+        蝶式第一次下踢位在手臂入水與捕水到拉水前段的時間窗。它接住由
+        上身鐘擺動作經髖部傳向足部的體波，順著這股傳遞協助身體前轉。
+        這一踢是體波的承接端，腿不是體波的起點；教材將它描述為耗能低，
+        不需要以大力完成。
+      limitation_context: >
+        手入水、捕水與拉水是界定時間窗的不同事件，不能把入水、外掃、
+        壓胸與推進合併成同一瞬間。不同研究各自採用手臂事件與腿部轉折
+        作錨點，應保留各自的操作定義。現有資料未提供兩次踢的同協議
+        力量比較，因此不能排列兩次踢的用力高低。
+      safety_note: >
+        配合入水練習下踢時若出現腰背、髖部或膝部疼痛、麻木、明顯無力
+        或不穩，應停止，不要為了追求節律而強行加大動作。
+    diagnostic:
+      assessment_note: >
+        本筆 phase_model 採專案的 descriptive。Science of Swimming Faster
+        以回復臂入水附近的俯衝與第一下踢作教材錨點；Chollet 操作定義中的
+        T1 配對手入水與第一波動高轉折點，T2 配對手開始向後與第一波動低
+        轉折點；Seifert 操作定義中的 T1 配對捕水起點與第一腿下踢起點，
+        T2 配對拉水與第一腿上踢。三套事件並列保存，不互換相位邊界。
+        教材原意是能量由上身經髖傳到足，第一踢利用已傳到下肢的體波，
+        因而不得把腿寫成能量傳遞的起點。action_reference_frame 採 body-fixed，
+        action_ids 只作身體固定時序下的定性動作連結，不宣稱關節角度大小。
+        肌肉角色皆為候選，因本批未提供蝶式相位化肌電。
+
+  - id: movement.demand.free.down-kick.narrow-channel-alignment
+    stroke: free
+    phase_model: descriptive
+    phase: down-kick
+    body_position: prone
+    action_reference_frame: body-fixed
+    derived_from_ids:
+      - free.tech.6
+      - free.tech.11
+    action_ids: []
+    muscle_roles: []
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: practice-observation
+    source_ids:
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+      - src.narita-2018
+    public:
+      name_zh: 自由式下踢的窄通道對齊需求
+      description: >
+        自由式下踢時，腿與足以泳者的身體軸線為基準維持窄通道。身體滾轉
+        時，打水路徑從池畔看起來呈斜向是正常情形，不是動作缺陷；窄通道
+        並不等於雙腳必須留在池畔固定的垂直平面內。刻意把腳限制在該垂直
+        平面內反而有反效果，會妨礙隨身體滾轉形成的自然路徑。
+      limitation_context: >
+        這是教材支持的姿勢提示，不能由腿部通道外觀反推髖外展或內收的
+        關節動作。現有主動阻力研究比較的是打水與只用手的條件，並未操弄
+        打水寬度，因此不能據此建立通道寬度與主動阻力之間的量化因果。
+      safety_note: >
+        維持打水通道時若出現腰背、髖部、膝部或踝部疼痛、麻木、明顯無力
+        或不穩，應停止，不要為了追求窄的外觀而強行夾腿或固定腳的路徑。
+    diagnostic:
+      assessment_note: >
+        action_ids 與 muscle_roles 刻意留空。可見的腿足通道是相對身體軸線
+        的整體空間描述，且身體軸線會隨滾轉改變；單一視角不能把通道寬度
+        指定為髖外展、髖內收或任何單一肌群作用。action_reference_frame
+        因此採 body-fixed，而不是把斜向路徑校正到池畔垂直面。Narita 的
+        主動阻力研究操弄有無打水，並未操弄打水寬度，只能界定證據邊界，
+        不能支撐寬度與阻力的量化因果。

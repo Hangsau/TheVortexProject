@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 547,
+  "source_count": 554,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -273,6 +273,23 @@
           "id": "breathing.training.buteyko",
           "file": "canonical/breathing/training.yaml",
           "path": "buteyko"
+        }
+      ]
+    },
+    {
+      "id": "src.barbosa-2008",
+      "display": "Barbosa et al. (2008). Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "24149450",
+        "pmcid": "PMC3761458"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
         }
       ]
     },
@@ -816,6 +833,28 @@
       ]
     },
     {
+      "id": "src.chollet-2006",
+      "display": "Chollet et al. (2006). Arm to leg coordination in elite butterfly swimmers. Int J Sports Med.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "16572376",
+        "doi": "10.1055/s-2005-865658"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
+        }
+      ]
+    },
+    {
       "id": "src.chuang-2019-vibrio-vulnificus-mortality-meta",
       "display": "Chuang PY, Yang TY, Huang TW, Tsai YH, Huang KC, Weng HH. (2019). Hepatic disease and the risk of mortality of Vibrio vulnificus necrotizing skin and soft tissue infections: A systematic review and meta-analysis. PLoS One 14(10):e0223513.",
       "verification_status": "verified",
@@ -988,6 +1027,18 @@
           "path": "drills[1]"
         }
       ]
+    },
+    {
+      "id": "src.cortesi-gatta-2015",
+      "display": "Cortesi & Gatta (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "26839604",
+        "pmcid": "PMC4723180",
+        "doi": "10.1515/hukin-2015-0106"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.cossor-2001",
@@ -1863,7 +1914,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 9,
+      "usage_count": 11,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -1896,9 +1947,19 @@
           "path": "demands[5]"
         },
         {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
+        },
+        {
           "id": "movement.demand.free.down-kick.ankle-plantarflexion",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[2]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[10]"
         },
         {
           "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
@@ -2309,6 +2370,17 @@
           "path": "points[113].public.evidence[1]"
         }
       ]
+    },
+    {
+      "id": "src.kudo-2021",
+      "display": "Kudo et al. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "33641596",
+        "doi": "10.1080/02640414.2021.1892266"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.kudo-yanai-matsuda-2025",
@@ -3180,13 +3252,30 @@
       ]
     },
     {
+      "id": "src.narita-2018",
+      "display": "Narita, Nakashima & Takagi (2018). Effect of leg kick on active drag in front-crawl swimming. J Biomech.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "29921521",
+        "doi": "10.1016/j.jbiomech.2018.05.027"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[10]"
+        }
+      ]
+    },
+    {
       "id": "src.neumann-2017",
       "display": "Neumann DA. (2017). Kinesiology of the Musculoskeletal System: Foundations for Rehabilitation. 3rd ed. St. Louis: Elsevier.",
       "verification_status": "verified",
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 34,
+      "usage_count": 38,
       "usages": [
         {
           "id": "back.tech.30",
@@ -3269,6 +3358,16 @@
           "path": "actions[1]"
         },
         {
+          "id": "movement.action.hip.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[4]"
+        },
+        {
+          "id": "movement.action.knee.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[5]"
+        },
+        {
           "id": "movement.action.shoulder-complex.elevation",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[0]"
@@ -3307,6 +3406,16 @@
           "id": "movement.muscle.ankle-plantarflexors",
           "file": "canonical/movement/muscle-groups.yaml",
           "path": "muscle_groups[3]"
+        },
+        {
+          "id": "movement.muscle.hip-flexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[7]"
+        },
+        {
+          "id": "movement.muscle.knee-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[8]"
         },
         {
           "id": "movement.muscle.latissimus-dorsi",
@@ -3634,6 +3743,17 @@
           "path": "injuries[42].epidemiology"
         }
       ]
+    },
+    {
+      "id": "src.oxford-2017",
+      "display": "Oxford et al. (2017). Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim. J Sports Sci.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "27636684",
+        "doi": "10.1080/02640414.2016.1229012"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pair-pacing-in-adjacent-lanes",
@@ -7254,7 +7374,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 6,
+      "usage_count": 9,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -7282,9 +7402,24 @@
           "path": "demands[7]"
         },
         {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
+        },
+        {
           "id": "movement.demand.free.down-kick.ankle-plantarflexion",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[2]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[10]"
         }
       ]
     },
@@ -7593,6 +7728,28 @@
           "id": "free.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[0].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.seifert-2008",
+      "display": "Seifert et al. (2008). Differences in spatial-temporal parameters and arm-leg coordination in butterfly stroke as a function of race pace, skill and gender. Hum Mov Sci.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "17935810",
+        "doi": "10.1016/j.humov.2007.08.001"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
         }
       ]
     },

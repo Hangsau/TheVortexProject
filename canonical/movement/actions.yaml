@@ -239,3 +239,93 @@ actions:
         評估時應分別記錄主動與被動腕伸展，並固定及記錄相同的前臂與手部條件。
         橈腕關節、腕中關節及伴隨的橈偏或尺偏需分層判讀，不能由外觀合成角度
         直接指定限制來源；本條不設定具體度數門檻。
+
+  - id: movement.action.hip.flexion
+    name: 髖屈曲
+    aliases:
+      - 屈髖
+      - 髖關節屈曲
+      - hip flexion
+    joint_region: hip-knee
+    definition: >
+      髖屈曲是股骨相對骨盆朝前方轉動的矢狀面動作，使大腿前側朝軀幹靠近。
+      股骨固定時，骨盆相對股骨的前向轉動也會改變相同的外觀夾角，但移動的
+      節段與量測基準不同，描述時不能把兩者直接視為同一動作。
+    plane:
+      - sagittal
+    axis:
+      - 髖屈伸的內外側軸
+    observable_boundaries: >
+      起點為股骨與骨盆處於解剖中立對齊，終點為個體可達的最大主動或被動
+      髖屈曲位置。從體表看到大腿與軀幹靠近時，可能同時包含股骨相對骨盆的
+      髖屈曲、骨盆前傾與軀幹姿勢變化；單一視角無法拆分各節段的貢獻。
+    general_anatomical_capacity: >
+      在一般解剖條件下，髖可由中立位置向前完成主動與被動屈曲。實際可用
+      範圍會隨骨盆固定方式、膝部位置、主動或被動量測及症狀而變，本條不以
+      單一角度作能力門檻，也不由一般解剖容量推論特定泳姿的髖部位置。
+    publication_status: draft
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 髖屈曲
+      description: >
+        髖屈曲就是大腿相對骨盆往前抬。體表看到大腿靠近軀幹時，骨盆前傾
+        也可能造成相似外觀，因此肉眼或單一角度的影片無法分清各節段分別
+        移動了多少。描述這個動作時，需要說清楚是在看大腿相對骨盆移動，
+        還是在看骨盆與軀幹一起改變位置。
+      safety_note: >
+        抬腿或屈髖時若出現髖部或鼠蹊疼痛、麻木、明顯無力或不穩，應立即
+        停止，不要強行壓向更深的位置。
+    diagnostic:
+      assessment_note: >
+        評估時應分別記錄主動與被動髖屈曲，固定並記錄骨盆、軀幹與膝部位置。
+        若骨盆前傾或軀幹姿勢改變，需另行記錄，不能由體表合成角度直接指定
+        為股骨相對骨盆的髖屈曲；本條不設定具體度數門檻。
+
+  - id: movement.action.knee.extension
+    name: 膝伸展
+    aliases:
+      - 伸膝
+      - 膝關節伸展
+      - knee extension
+    joint_region: hip-knee
+    definition: >
+      膝伸展是脛骨相對股骨由屈曲位置朝較直方向轉動的矢狀面動作。承重時
+      也可由股骨相對固定脛骨移動而形成膝伸展；兩種情況的移動節段不同，
+      描述與量測時需明確指出採用哪一個節段作為基準。
+    plane:
+      - sagittal
+    axis:
+      - 膝屈伸的內外側軸
+    observable_boundaries: >
+      起點為當下的屈膝位置，終點為個體可達的最大主動或被動伸膝位置。
+      膝在屈曲位置時，脛骨也可相對股骨發生軸向旋轉；單一視角只能看到
+      小腿的合成路徑，無法把矢狀面的伸展與伴隨旋轉各自拆分。
+    general_anatomical_capacity: >
+      在一般解剖條件下，膝可由屈曲位置主動或被動朝伸展方向移動。實際
+      可用範圍會隨起始屈曲位置、髖與踝的位置、承重條件及症狀而變，本條
+      不以單一角度作能力門檻，也不由一般解剖容量推論特定泳姿的膝部時序。
+    publication_status: draft
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 膝伸展
+      description: >
+        膝伸展就是膝蓋由彎曲朝較直的方向移動。屈膝時，小腿還可能伴隨
+        旋轉，所以肉眼或單一角度的影片看到的是合成路徑，不能只憑外觀
+        分出伸展與旋轉各占多少。描述時也要說清楚是在看小腿相對大腿移動，
+        還是在承重下看大腿相對小腿移動。
+      safety_note: >
+        伸膝時若出現膝部疼痛、卡住、麻木、明顯無力或不穩，應立即停止，
+        不要強行推向更直的位置。
+    diagnostic:
+      assessment_note: >
+        評估時應分別記錄主動與被動膝伸展，固定並記錄起始屈膝、髖部、
+        踝部與承重條件。脛骨旋轉及移動節段需另行辨識，不能由單一視角的
+        小腿軌跡直接指定限制來源；本條不設定具體度數門檻。

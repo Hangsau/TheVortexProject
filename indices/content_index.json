@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 825,
+  "record_count": 832,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -11009,6 +11009,62 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.action.hip.flexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[4]",
+      "title": "髖屈曲",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.knee.extension",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[5]",
+      "title": "膝伸展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.action.shoulder-complex.elevation",
       "domain": "movement",
       "file": "canonical/movement/actions.yaml",
@@ -11204,6 +11260,80 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[9]",
+      "title": "蝶式第一踢的時序與體波承接需求",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.chollet-2006",
+        "src.riewald-rodeo-2015",
+        "src.seifert-2008"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[8]",
+      "title": "蝶式第二踢與推水的時序需求",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.barbosa-2008",
+        "src.chollet-2006",
+        "src.hall-murphy-2020",
+        "src.riewald-rodeo-2015",
+        "src.seifert-2008"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.demand.free.down-kick.ankle-plantarflexion",
       "domain": "movement",
       "file": "canonical/movement/stroke-demands.yaml",
@@ -11236,6 +11366,42 @@
         "src.hall-murphy-2020",
         "src.mccullough-2009-a",
         "src.pmc9402090-b",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[10]",
+      "title": "自由式下踢的窄通道對齊需求",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "practice-observation"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.narita-2018",
         "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": []
@@ -11529,6 +11695,56 @@
       "file": "canonical/movement/muscle-groups.yaml",
       "path": "muscle_groups[3]",
       "title": "踝蹠屈肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.hip-flexors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[7]",
+      "title": "髖屈肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.knee-extensors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[8]",
+      "title": "膝伸肌群",
       "tags": {
         "action_status": [
           "ready"

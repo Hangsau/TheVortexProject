@@ -5,6 +5,9 @@
       "body-fixed": [
         "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push",
+        "movement.demand.free.down-kick.narrow-channel-alignment",
         "movement.demand.free.early-pull-through.high-elbow-configuration"
       ],
       "joint-local": [
@@ -22,7 +25,10 @@
         "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push",
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.down-kick.narrow-channel-alignment",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -35,11 +41,15 @@
       ],
       "ready": [
         "movement.action.ankle-foot.plantarflexion",
+        "movement.action.hip.flexion",
+        "movement.action.knee.extension",
         "movement.action.shoulder-complex.elevation",
         "movement.action.wrist-hand.extension",
         "movement.action.wrist-hand.flexion",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
+        "movement.muscle.hip-flexors",
+        "movement.muscle.knee-extensors",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators",
         "movement.muscle.wrist-extensors",
@@ -1460,7 +1470,10 @@
         "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push",
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.down-kick.narrow-channel-alignment",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -1473,11 +1486,15 @@
       ],
       "supported": [
         "movement.action.ankle-foot.plantarflexion",
+        "movement.action.hip.flexion",
+        "movement.action.knee.extension",
         "movement.action.shoulder-complex.elevation",
         "movement.action.wrist-hand.extension",
         "movement.action.wrist-hand.flexion",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
+        "movement.muscle.hip-flexors",
+        "movement.muscle.knee-extensors",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators",
         "movement.muscle.wrist-extensors",
@@ -1537,11 +1554,15 @@
     "evidence_profile": {
       "anatomy": [
         "movement.action.ankle-foot.plantarflexion",
+        "movement.action.hip.flexion",
+        "movement.action.knee.extension",
         "movement.action.shoulder-complex.elevation",
         "movement.action.wrist-hand.extension",
         "movement.action.wrist-hand.flexion",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
+        "movement.muscle.hip-flexors",
+        "movement.muscle.knee-extensors",
         "movement.muscle.latissimus-dorsi",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators",
@@ -1551,12 +1572,16 @@
       "intervention": [
         "movement.intervention.shoulder-elevation.active-control"
       ],
-      "practice-observation": [],
+      "practice-observation": [
+        "movement.demand.free.down-kick.narrow-channel-alignment"
+      ],
       "swimming-emg": [
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability"
       ],
       "swimming-kinematics": [
         "movement.demand.breast.leg-insweep.foot-orientation-control",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push",
         "movement.demand.free.early-pull-through.high-elbow-configuration"
       ],
       "synthesis-inference": [
@@ -1580,6 +1605,8 @@
         "back.tech.30",
         "breast.tech.37",
         "free.tech.41",
+        "movement.action.hip.flexion",
+        "movement.action.knee.extension",
         "udk.tech.30"
       ],
       "shoulder-arm": [
@@ -1980,7 +2007,10 @@
         "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push",
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.down-kick.narrow-channel-alignment",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion"
       ],
@@ -2022,13 +2052,18 @@
     "publication_status": {
       "draft": [
         "movement.action.ankle-foot.plantarflexion",
+        "movement.action.hip.flexion",
+        "movement.action.knee.extension",
         "movement.action.shoulder-complex.elevation",
         "movement.action.wrist-hand.extension",
         "movement.action.wrist-hand.flexion",
         "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push",
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.down-kick.narrow-channel-alignment",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -2039,6 +2074,8 @@
         "movement.intervention.shoulder-elevation.conditional-soft-tissue",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
+        "movement.muscle.hip-flexors",
+        "movement.muscle.knee-extensors",
         "movement.muscle.latissimus-dorsi",
         "movement.muscle.rotator-cuff",
         "movement.muscle.scapular-upward-rotators",
@@ -2340,7 +2377,9 @@
         "fly.tech.7",
         "fly.tech.8",
         "fly.tech.9",
-        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll"
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.fly.first-kick.timing-and-wave-reception",
+        "movement.demand.fly.second-kick.timing-with-arm-push"
       ],
       "free": [
         "free.L0",
@@ -2429,6 +2468,7 @@
         "free.tech.8",
         "free.tech.9",
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.down-kick.narrow-channel-alignment",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability"
       ],

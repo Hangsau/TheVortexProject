@@ -2,8 +2,8 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 12,
-    "unlinked_records": 514
+    "unused_taxonomy_values": 11,
+    "unlinked_records": 521
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -26,10 +26,6 @@
     {
       "field": "development_stage",
       "value": "fun"
-    },
-    {
-      "field": "evidence_profile",
-      "value": "practice-observation"
     },
     {
       "field": "mobility_decision",
@@ -1478,6 +1474,16 @@
       "path": "actions[1]"
     },
     {
+      "id": "movement.action.hip.flexion",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[4]"
+    },
+    {
+      "id": "movement.action.knee.extension",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[5]"
+    },
+    {
       "id": "movement.action.shoulder-complex.elevation",
       "file": "canonical/movement/actions.yaml",
       "path": "actions[0]"
@@ -1508,9 +1514,24 @@
       "path": "demands[7]"
     },
     {
+      "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[9]"
+    },
+    {
+      "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[8]"
+    },
+    {
       "id": "movement.demand.free.down-kick.ankle-plantarflexion",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[2]"
+    },
+    {
+      "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[10]"
     },
     {
       "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
@@ -1561,6 +1582,16 @@
       "id": "movement.muscle.ankle-plantarflexors",
       "file": "canonical/movement/muscle-groups.yaml",
       "path": "muscle_groups[3]"
+    },
+    {
+      "id": "movement.muscle.hip-flexors",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[7]"
+    },
+    {
+      "id": "movement.muscle.knee-extensors",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[8]"
     },
     {
       "id": "movement.muscle.latissimus-dorsi",
