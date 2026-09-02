@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-03
-> 驗證條目數：725，Drills ID 數：176
+> 驗證條目數：729，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 438 筆**
+**WARN，共 420 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -513,28 +513,12 @@
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.36'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.38'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.47'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.48'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.35'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.2'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.4'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.41'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.42'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.43'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.44'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.5'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.6'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.7'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.8'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.9'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.10'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.11'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.12'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.13'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.14'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.15'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.18'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.19'
@@ -556,10 +540,8 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.37'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.38'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.39'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.40'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
-  file=canonical\movement\actions.yaml id='movement.action.shoulder-complex.scapular-protraction'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'

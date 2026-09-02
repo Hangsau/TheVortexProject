@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 99 | actions 31 / muscle-groups 22 / demands 41 / interventions 5；相位覆蓋 34/59 |
+| `movement` | 103 | actions 31 / muscle-groups 22 / demands 45 / interventions 5；相位覆蓋 38/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**34/59**）
+### 相位覆蓋（**38/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -806,7 +806,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
 | 蝶式 | 9/11 | descriptive, event-window | entry-pause（入水停頓）, breathing-window（呼吸視窗） |
 | 水下蝶腳 | 3/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, breakout（出水划手） |
-| 起跳轉身 | 1/13 | descriptive | set-position（零位姿勢）, takeoff（起跳）, flight（飛行階段）, entry（入水）, underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, turn-approach（進牆）, flip（翻滾）, wall-contact（觸牆）, wall-rotation（旋轉在牆上完成）, wall-push-off（推蹬） |
+| 起跳轉身 | 5/13 | descriptive | underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, turn-approach（進牆）, flip（翻滾）, wall-contact（觸牆）, wall-rotation（旋轉在牆上完成）, wall-push-off（推蹬） |
 
 ### `actions.yaml` — 解剖動作（**31 條目**）
 
@@ -871,7 +871,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**41 條目**）
+### `stroke-demands.yaml` — 泳式需求（**45 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -927,12 +927,16 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.fly.arm-upsweep.extension-with-sustained-internal-rotation | arm-upsweep | descriptive | 蝶式上划的肩伸展、內旋維持與肘腕伸展 | partially-supported | provisional |
 | movement.demand.fly.exit.extension-position-with-blank-rotation-field | exit | descriptive | 蝶式出水的肩伸展位，與留白的旋轉欄位 | partially-supported | provisional |
 
-#### 起跳轉身 (2)
+#### 起跳轉身 (6)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
 | movement.demand.starts-turns.underwater-glide.shoulder-elevation | underwater-glide | descriptive | 水下滑行超流線位的肩上舉需求 | partially-supported | provisional |
 | movement.demand.starts-turns.underwater-glide.head-position-drag | underwater-glide | descriptive | 水下滑行期的頭部位置與被動阻力 | partially-supported | provisional |
+| movement.demand.starts-turns.set-position.coexisting-setups-not-a-single-posture | set-position | descriptive | 起跳零位的並存設置——這裡是姿勢不是動作 | disputed | provisional |
+| movement.demand.starts-turns.takeoff.rear-leg-direction-reversal-and-joint-sequencing | takeoff | descriptive | 起跳的後腿方向反轉、繞臂差在肘不在肩，與關節間時序 | partially-supported | provisional |
+| movement.demand.starts-turns.flight.posture-attainment-without-trajectory-change | flight | descriptive | 飛行期的姿勢達成——關節動作不改變重心軌跡 | partially-supported | provisional |
+| movement.demand.starts-turns.entry.hyperstreamline-layering-and-unresolved-lumbar-choice | entry | descriptive | 乾淨入水的超流線分層，與尚未解決的腰椎擇一 | disputed | provisional |
 
 #### 水下蝶腳 (7)
 
