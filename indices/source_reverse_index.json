@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 532,
+  "source_count": 555,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -107,6 +107,24 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.aliaj-2021",
+      "display": "Aliaj K, Foreman KB, Chalmers PN, Henninger HB. (2021). Beyond Euler/Cardan analysis: True glenohumeral axial rotation during arm elevation and rotation. Gait Posture 88:28-36.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33989999",
+        "pmcid": "PMC8316370",
+        "doi": "10.1016/j.gaitpost.2021.05.004"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.action.shoulder-complex.elevation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[0]"
+        }
+      ]
     },
     {
       "id": "src.andersen-2020",
@@ -255,6 +273,23 @@
           "id": "breathing.training.buteyko",
           "file": "canonical/breathing/training.yaml",
           "path": "buteyko"
+        }
+      ]
+    },
+    {
+      "id": "src.barbosa-2008",
+      "display": "Barbosa et al. (2008). Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "24149450",
+        "pmcid": "PMC3761458"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
         }
       ]
     },
@@ -467,6 +502,24 @@
       ]
     },
     {
+      "id": "src.brockett-2016",
+      "display": "Brockett CL, Chapman GJ. (2016). Biomechanics of the ankle. Orthop Trauma 30(3):232-238.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "27594929",
+        "pmcid": "PMC4994968",
+        "doi": "10.1016/j.mporth.2016.04.015"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.action.ankle-foot.plantarflexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[1]"
+        }
+      ]
+    },
+    {
       "id": "src.building-the-perfect-turn-push-off-strength",
       "display": "Building the Perfect Turn: Push Off Strength, Tritonwear / SwimSwam",
       "verification_status": "unverified",
@@ -487,6 +540,23 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.caty-2007",
+      "display": "Caty et al. (2007). Wrist stabilisation and forearm muscle coactivation during freestyle swimming. J Electromyogr Kinesiol.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "16677829",
+        "doi": "10.1016/j.jelekin.2006.02.005"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[3]"
+        }
+      ]
     },
     {
       "id": "src.cdc-mmwr-2003-2007",
@@ -763,6 +833,28 @@
       ]
     },
     {
+      "id": "src.chollet-2006",
+      "display": "Chollet et al. (2006). Arm to leg coordination in elite butterfly swimmers. Int J Sports Med.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "16572376",
+        "doi": "10.1055/s-2005-865658"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
+        }
+      ]
+    },
+    {
       "id": "src.chuang-2019-vibrio-vulnificus-mortality-meta",
       "display": "Chuang PY, Yang TY, Huang TW, Tsai YH, Huang KC, Weng HH. (2019). Hepatic disease and the risk of mortality of Vibrio vulnificus necrotizing skin and soft tissue infections: A systematic review and meta-analysis. PLoS One 14(10):e0223513.",
       "verification_status": "verified",
@@ -933,6 +1025,24 @@
           "id": "UDK2",
           "file": "Drills/drills_udk.yaml",
           "path": "drills[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.cortesi-gatta-2015",
+      "display": "Cortesi & Gatta (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "26839604",
+        "pmcid": "PMC4723180",
+        "doi": "10.1515/hukin-2015-0106"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[12]"
         }
       ]
     },
@@ -1191,6 +1301,24 @@
       ]
     },
     {
+      "id": "src.fernandez-matias-2025",
+      "display": "Fernández-Matías R, Ballesteros-Frutos J, Gallardo-Zamora P, Requejo-Salinas N, Caballero-Pozo I, Ludewig P, Lluch-Girbés E. (2025). Scapular kinematics variability in individuals with and without rotator cuff-related shoulder pain: A systematic review with multilevel meta-regression. Braz J Phys Ther 29(6):101261.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "40845626",
+        "pmcid": "PMC12398250",
+        "doi": "10.1016/j.bjpt.2025.101261"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.action.shoulder-complex.elevation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[0]"
+        }
+      ]
+    },
+    {
       "id": "src.fina-sw64-usas-usms",
       "display": "FINA/World Aquatics SW 6.4; USA Swimming; USMS",
       "verification_status": "unverified",
@@ -1234,6 +1362,29 @@
           "id": "UDKLow1",
           "file": "Drills/drills_udk.yaml",
           "path": "drills[6]"
+        }
+      ]
+    },
+    {
+      "id": "src.fone-2022",
+      "display": "Fone L, van den Tillaar R. (2022). Effect of Different Types of Strength Training on Swimming Performance in Competitive Swimmers: A Systematic Review. Sports Med Open 8(1):19.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35099631",
+        "pmcid": "PMC8804114",
+        "doi": "10.1186/s40798-022-00410-5"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        },
+        {
+          "id": "movement.intervention.shoulder-elevation.active-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[0]"
         }
       ]
     },
@@ -1587,6 +1738,24 @@
       ]
     },
     {
+      "id": "src.gonjo-2021-body-roll",
+      "display": "Gonjo et al. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "33436944",
+        "pmcid": "PMC7804020",
+        "doi": "10.1038/s41598-020-80711-5"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
+        }
+      ]
+    },
+    {
       "id": "src.gonjo-2021-c",
       "display": "Gonjo et al. 2021",
       "verification_status": "unverified",
@@ -1769,7 +1938,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 4,
+      "usage_count": 18,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -1790,6 +1959,76 @@
           "id": "free.tech.16",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[17].public.mechanism"
+        },
+        {
+          "id": "movement.demand.breast.arm-insweep.breath-event-separation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[14]"
+        },
+        {
+          "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[13]"
+        },
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
+        },
+        {
+          "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
+        },
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[10]"
+        },
+        {
+          "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[4]"
+        },
+        {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
+        },
+        {
+          "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[3]"
+        },
+        {
+          "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[11]"
+        },
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[12]"
+        },
+        {
+          "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[4]"
         }
       ]
     },
@@ -2192,6 +2431,23 @@
       ]
     },
     {
+      "id": "src.kudo-2021",
+      "display": "Kudo et al. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "33641596",
+        "doi": "10.1080/02640414.2021.1892266"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[11]"
+        }
+      ]
+    },
+    {
       "id": "src.kudo-yanai-matsuda-2025",
       "display": "Kudo, Yanai & Matsuda 2025, front-crawl stroke power",
       "verification_status": "verified",
@@ -2241,6 +2497,17 @@
           "path": "injuries[33].epidemiology"
         }
       ]
+    },
+    {
+      "id": "src.lee-2008",
+      "display": "Lee JB, Mellifont RB, Winstanley J, Burkett B. (2008). Body roll in simulated freestyle swimming. Int J Sports Med 29(7):569-573.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "18027307",
+        "doi": "10.1055/s-2007-989285"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.lee-2017-taiwan-hip-fracture-1yr-mortality",
@@ -2303,6 +2570,24 @@
       },
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.ludewig-2009",
+      "display": "Ludewig PM, Phadke V, Braman JP, Hassett DR, Cieminski CJ, LaPrade RF. (2009). Motion of the Shoulder Complex During Multiplanar Humeral Elevation. J Bone Joint Surg Am 91(2):378-389.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19181982",
+        "pmcid": "PMC2657311",
+        "doi": "10.2106/JBJS.G.01483"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.action.shoulder-complex.elevation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[0]"
+        }
+      ]
     },
     {
       "id": "src.lyttle",
@@ -2549,6 +2834,23 @@
       ]
     },
     {
+      "id": "src.martens-2015",
+      "display": "Martens J, Figueiredo P, Daly D. (2015). Electromyography in the four competitive swimming strokes: a systematic review. J Electromyogr Kinesiol 25(2):273-291.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25556010",
+        "doi": "10.1016/j.jelekin.2014.12.003"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[0]"
+        }
+      ]
+    },
+    {
       "id": "src.mason-1992-a",
       "display": "Mason 1992",
       "verification_status": "unverified",
@@ -2587,6 +2889,22 @@
       ]
     },
     {
+      "id": "src.matheson-2011",
+      "display": "Matheson et al. (2011). Three-dimensional lower limb kinematics of the breaststroke kick. ISBS Conference Proceedings.",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://ojs.ub.uni-konstanz.de/cpa/article/view/4840"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
+        }
+      ]
+    },
+    {
       "id": "src.matt-donovan-usms",
       "display": "Matt Donovan, USMS",
       "verification_status": "unverified",
@@ -2603,6 +2921,24 @@
       ]
     },
     {
+      "id": "src.mccabe-2022",
+      "display": "McCabe et al. (2022). Breaststroke underwater pullout analysis of elite swimmers. Front Sports Act Living.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "36081618",
+        "pmcid": "PMC9445308",
+        "doi": "10.3389/fspor.2022.963578"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
+        }
+      ]
+    },
+    {
       "id": "src.mccullough-2009-a",
       "display": "McCullough 2009",
       "verification_status": "verified",
@@ -2611,7 +2947,7 @@
         "doi": "10.1519/JSC.0b013e31819ab977",
         "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
         {
           "id": "fly.tech.24",
@@ -2627,6 +2963,11 @@
           "id": "free.L2.kick",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[7].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
         }
       ]
     },
@@ -2891,6 +3232,28 @@
       ]
     },
     {
+      "id": "src.muniz-pardos-2019",
+      "display": "Muniz-Pardos B, Gomez-Bruton A, Matute-Llorente A, Gonzalez-Aguero A, Gomez-Cabello A, Gonzalo-Skok O, Casajus J, Vicente-Rodriguez G. (2019). Swim-Specific Resistance Training: A Systematic Review. J Strength Cond Res 33(10):2875-2881.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31343554",
+        "doi": "10.1519/JSC.0000000000003256"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        },
+        {
+          "id": "movement.intervention.shoulder-elevation.active-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[0]"
+        }
+      ]
+    },
+    {
       "id": "src.myers-2021",
       "display": "Myers, Anatomy Trains, 4th ed., 2021",
       "verification_status": "verified",
@@ -2954,13 +3317,30 @@
       ]
     },
     {
+      "id": "src.narita-2018",
+      "display": "Narita, Nakashima & Takagi (2018). Effect of leg kick on active drag in front-crawl swimming. J Biomech.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "29921521",
+        "doi": "10.1016/j.jbiomech.2018.05.027"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[10]"
+        }
+      ]
+    },
+    {
       "id": "src.neumann-2017",
       "display": "Neumann DA. (2017). Kinesiology of the Musculoskeletal System: Foundations for Rehabilitation. 3rd ed. St. Louis: Elsevier.",
       "verification_status": "verified",
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 13,
+      "usage_count": 39,
       "usages": [
         {
           "id": "back.tech.30",
@@ -2970,7 +3350,17 @@
         {
           "id": "breast.tech.36",
           "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[168].public.evidence[0]"
+        },
+        {
+          "id": "breast.tech.36",
+          "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[168].public.mechanism"
+        },
+        {
+          "id": "breast.tech.37",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[169].public.evidence[0]"
         },
         {
           "id": "breast.tech.37",
@@ -3000,7 +3390,17 @@
         {
           "id": "free.tech.39",
           "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[38].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.39",
+          "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[38].public.mechanism"
+        },
+        {
+          "id": "free.tech.40",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[39].public.evidence[0]"
         },
         {
           "id": "free.tech.40",
@@ -3010,12 +3410,122 @@
         {
           "id": "free.tech.41",
           "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[40].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.41",
+          "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[40].public.mechanism"
+        },
+        {
+          "id": "movement.action.ankle-foot.plantarflexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[1]"
+        },
+        {
+          "id": "movement.action.hip.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[4]"
+        },
+        {
+          "id": "movement.action.knee.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[5]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.elevation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[0]"
+        },
+        {
+          "id": "movement.action.trunk.axial-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[6]"
+        },
+        {
+          "id": "movement.action.wrist-hand.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[3]"
+        },
+        {
+          "id": "movement.action.wrist-hand.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[2]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[2]"
+        },
+        {
+          "id": "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[1]"
+        },
+        {
+          "id": "movement.muscle.ankle-dorsiflexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[4]"
+        },
+        {
+          "id": "movement.muscle.ankle-plantarflexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[3]"
+        },
+        {
+          "id": "movement.muscle.hip-flexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[7]"
+        },
+        {
+          "id": "movement.muscle.knee-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[8]"
+        },
+        {
+          "id": "movement.muscle.latissimus-dorsi",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[2]"
+        },
+        {
+          "id": "movement.muscle.rotator-cuff",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[1]"
+        },
+        {
+          "id": "movement.muscle.scapular-upward-rotators",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[0]"
+        },
+        {
+          "id": "movement.muscle.wrist-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[6]"
+        },
+        {
+          "id": "movement.muscle.wrist-flexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[5]"
+        },
+        {
+          "id": "periodization.dryland.flexibility",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "flexibility_mobility"
         },
         {
           "id": "starts-turns.tech.47",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[173].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.48",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[174].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.48",
@@ -3242,6 +3752,22 @@
       ]
     },
     {
+      "id": "src.nuber-1986",
+      "display": "Nuber et al. (1986). Fine wire electromyography analysis of muscles of the shoulder during swimming. Am J Sports Med.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "3752349"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[7]"
+        }
+      ]
+    },
+    {
       "id": "src.olbrecht-2000",
       "display": "Olbrecht 2000《The Science of Winning》(書摘/訪談重建); Scientific Triathlon EP#198 訪談; TMR Coaching / lactate.com / INSCYD 二手摘要",
       "verification_status": "unverified",
@@ -3252,6 +3778,22 @@
           "id": "periodization.zones.olbrecht_model",
           "file": "canonical/periodization/zones.yaml",
           "path": "olbrecht_model"
+        }
+      ]
+    },
+    {
+      "id": "src.olstad-2014",
+      "display": "Olstad et al. (2014). Automatic 3D tracking of the breaststroke kick. BMS record 4032654.",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://bms.sport-iat.de/bms/Record/4032654"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
         }
       ]
     },
@@ -3269,6 +3811,23 @@
           "id": "osgood-schlatter",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[42].epidemiology"
+        }
+      ]
+    },
+    {
+      "id": "src.oxford-2017",
+      "display": "Oxford et al. (2017). Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim. J Sports Sci.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "27636684",
+        "doi": "10.1080/02640414.2016.1229012"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[13]"
         }
       ]
     },
@@ -3929,12 +4488,17 @@
         "pmid": "23015983",
         "doi": "10.1177/1941738110377611"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[3].public.evidence[1]"
+        },
+        {
+          "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[4]"
         }
       ]
     },
@@ -4735,8 +5299,23 @@
         "pmid": "36032263",
         "doi": "10.3389/fspor.2022.948034"
       },
-      "usage_count": 1,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
+        },
+        {
+          "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[1]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[2]"
+        },
         {
           "id": "udk.tech.14",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -6871,7 +7450,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 2,
+      "usage_count": 15,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -6882,6 +7461,71 @@
           "id": "fly.tech.1",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[102].public.mechanism"
+        },
+        {
+          "id": "movement.demand.breast.arm-insweep.breath-event-separation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[14]"
+        },
+        {
+          "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[13]"
+        },
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
+        },
+        {
+          "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
+        },
+        {
+          "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[7]"
+        },
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.narrow-channel-alignment",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[10]"
+        },
+        {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
+        },
+        {
+          "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[11]"
+        },
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[12]"
+        },
+        {
+          "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[4]"
         }
       ]
     },
@@ -7009,12 +7653,17 @@
         "doi": "10.1016/0021-9290(95)80002-6",
         "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "fly.L3.undulation-integration",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[30].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
         }
       ]
     },
@@ -7190,6 +7839,28 @@
           "id": "free.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[0].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.seifert-2008",
+      "display": "Seifert et al. (2008). Differences in spatial-temporal parameters and arm-leg coordination in butterfly stroke as a function of race pace, skill and gender. Hum Mov Sci.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "17935810",
+        "doi": "10.1016/j.humov.2007.08.001"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
+        },
+        {
+          "id": "movement.demand.fly.second-kick.timing-with-arm-push",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[8]"
         }
       ]
     },
@@ -7595,6 +8266,23 @@
           "id": "fly.tech.7",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[108].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.suito-2017",
+      "display": "Suito, Nunome & Ikegami (2017). A quantitative evaluation of the high elbow technique in front crawl. J Sports Sci.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "27540768",
+        "doi": "10.1080/02640414.2016.1221517"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[4]"
         }
       ]
     },
@@ -9506,7 +10194,7 @@
         "pmcid": "PMC9566274",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9566274/"
       },
-      "usage_count": 5,
+      "usage_count": 6,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -9522,6 +10210,11 @@
           "id": "fly.tech.4",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[105].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[1]"
         },
         {
           "id": "udk.err1",
@@ -9970,6 +10663,29 @@
           "id": "breathing.training.buteyko",
           "file": "canonical/breathing/training.yaml",
           "path": "buteyko"
+        }
+      ]
+    },
+    {
+      "id": "src.yamakawa-2022",
+      "display": "Yamakawa KK, Shimojo H, Takagi H, Sengoku Y. (2022). Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming. Front Sports Act Living 4:829618.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35498520",
+        "pmcid": "PMC9051435",
+        "doi": "10.3389/fspor.2022.829618"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[1]"
+        },
+        {
+          "id": "movement.intervention.ankle-plantarflexion.capacity-control",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[3]"
         }
       ]
     },

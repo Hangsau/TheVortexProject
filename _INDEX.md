@@ -180,10 +180,18 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 ## 規劃文件
 - `RESEARCH_PLAN.md` — 四層研究架構完整說明
 - `FUTURE_RESEARCH.md` — 前沿假設庫（渦流、頻率、感受器等）
-- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **待執行（2026-08-27）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜 + my-site rollout gates
+- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **實作中（2026-09-02；Step 17／18 四區填充與 Step 19 my-site 同步層皆完成，下一步 Step 20 my-site movement 版型）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜 + my-site rollout gates
+- `plans/W4_圖譜填充派工規格.md` — Step 17／18 四區填充的自足派工規格：受控欄位、相位登錄表對照、負面詞清單與逐欄驗收條款
+- `plans/Step20_movement版型派工規格.md` — Step 20 my-site 動作圖譜版型的自足派工規格：四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照（含 fallback 鐵則）、12 條退件條件；定位是「列舉式圖譜不是裁定書」，版型須同時處理 `data/movement/` 已同步與尚未同步兩條分支
+- `plans/movement_coverage_denominator.yaml` — 6 泳式 58 相位的覆蓋分母與 `known_gaps`；**demand 覆蓋現況 13/58**（back 0/7），未覆蓋相位無 C 類裁決授權，不得憑空補
+- `plans/證據包_蒐證派工規格.md` — C 類蒐證的自足派工規格：三層檢索路徑、讀法紀律、十條結構性根因篩子、六項驗收條款
+- `plans/證據包_C類_shoulder-arm.md` — C 類第 1 批 14 條三層蒐證、裁決、結構性根因與 W4 輸入
+- `plans/證據包_C類_ankle-foot.md` — C 類第 2 批 FR-41／BR-35／ST-19 三層蒐證與裁決；新增「相位交界壓成單點」根因
+- `plans/證據包_C類_hip-knee.md` — C 類第 3 批 5 條蒐證與裁決；新增根因 8（未過三問就標學界分歧）與 9（因果方向顛倒）
+- `plans/證據包_C類_spine-neck.md` — C 類第 4 批 12 條軀幹旋轉蒐證與裁決；新增根因 10（漏掉外力項），根因 4 補反向形式
 - `CLAUDE.md` — 協作規則、證據契約與強制收尾流程
 - `HANDOFF.md` — 當前狀態、下一步與歷史交接
 
 ---
 
-*最後更新：2026-08-27（新增骨關節動作—肌群—訓練—活動度圖譜 plan-check 與 HANDOFF 入口；本批只保存計畫，未動 canonical 或下游）*
+*最後更新：2026-09-02（C 類第 3、4 批完成，39 條蒐證與裁決全數結案；同步證據包、派工規格與 HANDOFF，未動 canonical 或下游）*

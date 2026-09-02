@@ -59,6 +59,19 @@ exit code：
   W011  certainty 為 orange（教練觀測）但缺 observation_basis：
         教練觀測是第一手實務證據，不需要 source_ids，但必須說出
         觀察基礎與外推邊界，否則與「沒有依據」無法區分（S6）
+  W012  movement ID 的檔案命名空間或分段格式違規
+  W013  movement 受控值不在 _taxonomy.yaml 對應欄位
+  W014  movement 跨檔引用無法解析，或連到存在但命名空間錯誤的 ID
+  W015  published movement 條目缺少狀態、證據或介入決策必填欄位
+  W016  mobility_decision 為 evidence-gap，但該介入仍寫成可執行處方
+        （action_status 不是 do-not-prescribe，或帶了劑量來源）
+  W017  demand 的 (stroke, phase) 未登錄於 movement_phase_registry，
+        或 phase_model 與登錄表不符（相位跨分期系統搬運）
+  W018  demand 缺 action_reference_frame，或標 joint-local 卻無分節段量測
+        支撐（source_ids 空且未標 do-not-prescribe）：由池畔可見的空間量
+        反推關節動作，是 C 類蒐證命中最多次的結構性根因
+  W019  demand 文字出現量化主張但缺 measurement_conditions，或該欄的必填
+        子鍵缺漏／source_id 無法解析：數值不得裸奔進 demand
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -143,6 +156,47 @@ DRILLS_DIR = ROOT / "Drills"
 TAXONOMY_FILE = CANONICAL_DIR / "_taxonomy.yaml"
 SOURCES_FILE = CANONICAL_DIR / "_sources.yaml"
 REPORTS_DIR = ROOT / "reports"
+MOVEMENT_DIR = CANONICAL_DIR / "movement"
+
+# movement 驗證只掃這四個內容檔；_index.yaml 是 _ 前綴 meta 檔，不在範圍內。
+MOVEMENT_FILE_RULES = {
+    "actions.yaml": ("actions", "movement.action."),
+    "muscle-groups.yaml": ("muscle_groups", "movement.muscle."),
+    "stroke-demands.yaml": ("demands", "movement.demand."),
+    "interventions.yaml": ("interventions", "movement.intervention."),
+}
+
+MOVEMENT_TAXONOMY_FIELDS = (
+    "publication_status",
+    "claim_status",
+    "action_status",
+    "evidence_profile",
+    "mobility_decision",
+    "phase_model",
+    "action_reference_frame",
+)
+
+MEASUREMENT_CONDITION_SUBKEYS = (
+    "source_id",
+    "quantity",
+    "value",
+    "conditions",
+    "endpoint",
+    "extrapolation_boundary",
+)
+
+MOVEMENT_REFERENCE_FIELDS = {
+    "action_ids": "movement.action.",
+    "muscle_ids": "movement.muscle.",
+    "demand_ids": "movement.demand.",
+    "intervention_ids": "movement.intervention.",
+}
+
+# movement → 既有網域的反向橋。這些欄位指向 movement 以外的 canonical ID，
+# 所以不能套 MOVEMENT_REFERENCE_FIELDS 的「必須是 movement.*」規則，改為
+# 「必須存在於 canonical，且必須不是 movement.*」——後者用來擋把 demand_ids
+# 該做的事寫進 derived_from_ids。
+MOVEMENT_EXTERNAL_REFERENCE_FIELDS = ("derived_from_ids",)
 
 # 本專案慣例：詞彙定義表用 key（不需要 id），內容條目用 id。
 # VOCAB_LIST_KEYS 列出「詞彙定義表陣列鍵」——這些鍵下的元素是詞彙定義，
@@ -203,11 +257,23 @@ LINKS_IDS_KEYS = {k + "_ids" for k in LINKS_FREE_TEXT_KEYS}
 # psych.self_talk.trainable_skill 這類形態），最後一段不限定為純數字，
 # 否則 back.err2 / starts-turns.err10 這類會漏抽。
 import re as _re
+_MOVEMENT_ID_SEGMENT_RE = _re.compile(r"^[a-z][a-z0-9-]*$")
 _CANDIDATE_ID_RE = _re.compile(
     r"(?<![0-9A-Za-z_.-])(?:"
     r"[a-z][a-z0-9_-]*(?:\.[a-z0-9_-]+)+"   # 命名空間格式：free.tech.10 / back.err2
     r"|[A-Z][a-z][A-Z]?[a-z]*\d+"            # Drill 編號格式：FrBr3 / Fr1 / Bk22
     r")"
+)
+
+# W019：判定「本筆文字出現量化主張」的形狀。四批 C 類蒐證裡真正出事的數值
+# 就是這四類——百分比（Cortesi 的 4–5.2% vs 10.4–10.9%）、角度（FoFS 的
+# 25–30°）、秒數（0.12 s）、統計量（Strzała 的 r=0.35）。刻意不含裸數字，
+# 否則 n=15、L0–L6、2D／3D 這類非主張數字會淹掉訊號。
+MEASUREMENT_CLAIM_PATTERNS = (
+    _re.compile(r"\d+(?:[.,]\d+)?\s*(?:[–~-]|至)?\s*\d*(?:[.,]\d+)?\s*%"),
+    _re.compile(r"\d+(?:[.,]\d+)?\s*(?:[–~-]|至)?\s*\d*(?:[.,]\d+)?\s*°"),
+    _re.compile(r"\d+(?:[.,]\d+)?\s*(?:ms|s)\b"),
+    _re.compile(r"\b[rdp]\s*=\s*[-.\d]"),
 )
 
 
@@ -418,6 +484,25 @@ def load_taxonomy() -> dict[str, set[str]]:
             keys.add(item["key"])
         result[field] = keys
     return result
+
+
+def load_phase_registry() -> dict[str, dict[str, str]]:
+    """回傳 {stroke: {phase_key: phase_model}}，供 W017 比對。
+
+    相位鍵的合法範圍隨泳式而異（free 有 lift，breast 沒有），所以它不能像
+    其他受控欄位那樣放進扁平的 fields，登錄在 movement_phase_registry。
+    登錄表缺漏視為空集合——fail-closed，不預設放行。
+    """
+    data = load_yaml(TAXONOMY_FILE)
+    strokes = (data.get("movement_phase_registry") or {}).get("strokes") or {}
+    return {
+        stroke: {
+            phase["key"]: phase.get("phase_model")
+            for phase in (phases or [])
+            if isinstance(phase, dict) and isinstance(phase.get("key"), str)
+        }
+        for stroke, phases in strokes.items()
+    }
 
 
 def load_category_scope() -> dict[str, set[str]]:
@@ -798,6 +883,15 @@ DIAGNOSTIC_KEYS = frozenset({
     "diagnostic_protocols",
     "manipulation",
     "contrast_question",
+    # movement 網域的被動／主動 ROM 測量、力量耐力測試、限制分類、教練決策樹與個別水中重測判讀必須擋在 public 外，避免診斷推理被公開站整包搬走。
+    "passive_rom",
+    "active_rom",
+    "rom_measurement",
+    "strength_endurance_test",
+    "limitation_classification",
+    "coach_decision_tree",
+    "in_water_retest",
+    "retest_reading",
 })
 
 
@@ -831,7 +925,8 @@ def check_public_layer_leak(rel: str, data: object, errors: dict):
     sync_vortex.py 對每個檔案都做 `rec.update(pub)`——白名單，整包搬 public。
     所以新增一個 diagnostic 同層鍵不會洩漏（不在白名單內就是不搬），
     真正會洩漏的只有一種寫法：把診斷判讀語寫進 public 裡面。
-    這個檢查把那條路徑關掉。
+    黑名單也涵蓋 movement 的 ROM／力量耐力量測、限制分類、教練決策樹與
+    個別水中重測判讀鍵名；這個檢查把所有這類洩漏路徑關掉。
     """
     def walk(node, path, in_public):
         if isinstance(node, dict):
@@ -849,6 +944,453 @@ def check_public_layer_leak(rel: str, data: object, errors: dict):
                 walk(item, f"{path}[{i}]", in_public)
 
     walk(data, "", False)
+
+
+# ── Movement 網域契約（W012–W015）────────────────────────────────────────────
+
+def check_movement_id_names(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    expected_prefix: str,
+    warnings: dict,
+):
+    """W012：movement 條目 ID 須符合檔案命名空間與穩定分段格式。
+
+    每段只允許小寫字母起頭及小寫字母、數字、連字號；純數字段也禁止，
+    避免把角度數字、證據等級或可變文案編進 ID，造成內容修正時被迫換 ID。
+    """
+    for index, entry in entries:
+        eid = entry.get("id")
+        loc = f"{entry_key}[{index}]"
+
+        if not isinstance(eid, str) or not eid:
+            warnings["W012"].append(
+                f"  file={rel} id={eid!r} at={loc} movement ID 段格式違規："
+                "ID 必須是非空字串"
+            )
+            continue
+
+        if not eid.startswith(expected_prefix):
+            warnings["W012"].append(
+                f"  file={rel} id={eid!r} at={loc} movement ID 命名空間違規："
+                f"預期前綴 {expected_prefix!r}"
+            )
+
+        invalid_segments = [
+            segment for segment in eid.split(".")
+            if segment.isdigit() or not _MOVEMENT_ID_SEGMENT_RE.fullmatch(segment)
+        ]
+        if invalid_segments:
+            warnings["W012"].append(
+                f"  file={rel} id={eid!r} at={loc} movement ID 段格式違規："
+                f"不合法段={invalid_segments!r}（每段須符合 "
+                "^[a-z][a-z0-9-]*$，且不得為純數字）"
+            )
+
+
+def check_movement_taxonomy(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    taxonomy: dict[str, set[str]],
+    warnings: dict,
+):
+    """W013：movement 任意層的五個受控欄位都必須存在於 taxonomy。
+
+    這一條刻意維持 WARN：等 Step 12 pilot 內容穩定後，Step 21 才會考慮
+    是否升級成 E004 等級。
+    """
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        entry_loc = f"{entry_key}[{index}]"
+        for loc, _nearest_id, block in iter_blocks(entry, entry_loc, str(eid)):
+            for field in MOVEMENT_TAXONOMY_FIELDS:
+                if field not in block:
+                    continue
+                value = block.get(field)
+                allowed = taxonomy.get(field, set())
+                if not isinstance(value, str) or value not in allowed:
+                    warnings["W013"].append(
+                        f"  file={rel} id={eid!r} at={loc}.{field} "
+                        f"{field}={value!r} 不在 taxonomy.{field}"
+                    )
+
+
+def check_movement_references(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    movement_id_set: set[str],
+    canonical_id_set: set[str],
+    warnings: dict,
+):
+    """W014：movement 跨檔引用須存在，且落在欄位指定的命名空間。
+
+    先判斷目標是否存在；存在但前綴不符時另報「命名空間錯」，以區分
+    一般斷鏈與「確實連到東西、但連錯 movement 層」的較隱蔽錯誤。
+    derived_from_ids 是反向橋，判定條件相反：必須解析到 movement 以外的
+    canonical ID。
+    """
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        entry_loc = f"{entry_key}[{index}]"
+        for loc, _nearest_id, block in iter_blocks(entry, entry_loc, str(eid)):
+            for field, expected_prefix in MOVEMENT_REFERENCE_FIELDS.items():
+                if field not in block:
+                    continue
+                raw_targets = block.get(field)
+                if isinstance(raw_targets, str):
+                    targets = [raw_targets]
+                elif isinstance(raw_targets, list):
+                    targets = [v for v in raw_targets if isinstance(v, str)]
+                else:
+                    continue
+
+                for target in targets:
+                    if target not in movement_id_set:
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 無法解析："
+                            "目標 ID 不存在於 movement 檔案"
+                        )
+                    elif not target.startswith(expected_prefix):
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 命名空間錯：目標存在，但本欄位"
+                            f"必須指向 {expected_prefix + '*'!r}"
+                        )
+
+            for field in MOVEMENT_EXTERNAL_REFERENCE_FIELDS:
+                if field not in block:
+                    continue
+                raw_targets = block.get(field)
+                if isinstance(raw_targets, str):
+                    targets = [raw_targets]
+                elif isinstance(raw_targets, list):
+                    targets = [v for v in raw_targets if isinstance(v, str)]
+                else:
+                    continue
+
+                for target in targets:
+                    if target.startswith("movement."):
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 方向錯：本欄位是 movement 對"
+                            "既有網域的來源橋，movement 內部連結請用 "
+                            "action_ids／muscle_ids／demand_ids／intervention_ids"
+                        )
+                    elif target not in canonical_id_set:
+                        warnings["W014"].append(
+                            f"  file={rel} id={eid!r} at={loc}.{field} "
+                            f"{field}={target!r} 無法解析："
+                            "目標 ID 不存在於 canonical"
+                        )
+
+
+def check_movement_published_completeness(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W015：published movement 條目須具備可發布的狀態與決策欄位。"""
+    common_required = (
+        "claim_status",
+        "action_status",
+        "evidence_profile",
+    )
+    # demand 是 movement 與既有 instructional 記錄唯一的接點：published 的
+    # demand 若不指出它是從哪一筆技術記錄推出來的，這個網域就沒有回溯路徑。
+    demand_required = ("derived_from_ids",)
+    intervention_required = (
+        "affirmative_conclusion",
+        "works_when",
+        "fails_when",
+        "how_to_identify",
+        "action",
+        "remaining_boundary",
+        "mobility_decision",
+    )
+
+    for index, entry in entries:
+        if entry.get("publication_status") != "published":
+            continue
+
+        required = common_required
+        if entry_key == "demands":
+            required += demand_required
+        if entry_key == "interventions":
+            required += intervention_required
+
+        missing = []
+        for field in required:
+            value = entry.get(field)
+            filled = (
+                isinstance(value, str) and bool(value.strip())
+            ) or (
+                isinstance(value, list) and bool(value)
+            )
+            if not filled:
+                missing.append(field)
+
+        # plan 尚未提供可機器判定「活動度記錄」的欄位，所以目前把
+        # interventions.yaml 中所有 published 條目都視為必填 mobility_decision；
+        # evidence-gap 永遠是誠實可用的值，不會逼作者編造。Step 13 pilot
+        # 審查後重新檢討。
+        if missing:
+            eid = entry.get("id", "(no id)")
+            warnings["W015"].append(
+                f"  file={rel} id={eid!r} at={entry_key}[{index}] "
+                "publication_status='published' 完整性不足："
+                f"缺必填欄位 {', '.join(missing)}"
+            )
+
+
+def check_mobility_evidence_gap(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W016：evidence-gap 必須真的沒有處方，不能只是換個標籤。
+
+    evidence-gap 存在的理由是「不知道」與「不該做」是兩件事：not-routine 是
+    一個主張（正常活動度或缺轉移證據，所以不常規拉伸），evidence-gap 是
+    承認資料不足。但這個承認很容易被當成免責標籤——標了 evidence-gap，
+    底下照樣寫出可照做的劑量。本檢查把兩個矛盾組合擋掉。
+    """
+    if entry_key != "interventions":
+        return
+
+    for index, entry in entries:
+        if entry.get("mobility_decision") != "evidence-gap":
+            continue
+
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+
+        action_status = entry.get("action_status")
+        if action_status != "do-not-prescribe":
+            warnings["W016"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"mobility_decision='evidence-gap' 但 action_status="
+                f"{action_status!r}：資料不足就不能標成可據以行動，"
+                "應為 'do-not-prescribe'"
+            )
+
+        dosage = entry.get("dosage_source_ids")
+        if isinstance(dosage, list) and dosage:
+            warnings["W016"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                "mobility_decision='evidence-gap' 但 dosage_source_ids 非空："
+                "有劑量來源就不是證據空白，請改標 conditional 或 not-routine"
+            )
+
+
+def check_movement_phase(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    phase_registry: dict[str, dict[str, str]],
+    warnings: dict,
+):
+    """W017：demand 的 (stroke, phase) 須已登錄，且 phase_model 須與登錄一致。
+
+    分期不是單一真相（BK-26 裁決：型 1 座標系衝突），數套分期各有來源並存。
+    因此這裡擋的不是「用錯分期」，而是兩件會讓並存變成混亂的事：
+    就地發明相位名，以及把同一個相位掛到另一套分期底下——後者會讓
+    race-club-6phase 的 front-quadrant-propulsion 與 kudo-power-phase 的 pull
+    看起來可以互換，而它們既不是同一段也不是同一個量。
+    要新增相位一律先改 movement_phase_registry。
+    """
+    if entry_key != "demands":
+        return
+
+    for index, entry in entries:
+        if "phase" not in entry:
+            continue
+
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+        stroke = entry.get("stroke")
+        phase = entry.get("phase")
+
+        known_phases = phase_registry.get(stroke) if isinstance(stroke, str) else None
+        if known_phases is None:
+            warnings["W017"].append(
+                f"  file={rel} id={eid!r} at={loc} stroke={stroke!r} "
+                "未登錄於 movement_phase_registry.strokes，無法判定相位合法性"
+            )
+            continue
+
+        if phase not in known_phases:
+            warnings["W017"].append(
+                f"  file={rel} id={eid!r} at={loc} phase={phase!r} "
+                f"不在 movement_phase_registry.strokes.{stroke}："
+                "請先在登錄表新增相位，不要在 demand 端就地發明"
+            )
+            continue
+
+        registered_model = known_phases[phase]
+        declared_model = entry.get("phase_model")
+        if declared_model != registered_model:
+            warnings["W017"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"phase={phase!r} 登錄於 {registered_model!r}，"
+                f"但本筆寫 phase_model={declared_model!r}："
+                "相位不可跨分期系統搬運"
+            )
+
+
+def check_action_reference_frame(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W018：demand 必須宣告 action_ids 的歸屬基準，且 joint-local 有自證義務。
+
+    C 類 39 條蒐證裡命中最多次的結構性根因是「由可見空間量反推關節動作」
+    （FR-40 的髖外展／內收、FR-44 的頸椎伸展、BF-36 的反向形式）。
+    這些主張在 YAML 上與有量測的關節需求長得一模一樣，差別只在證據，
+    所以必須讓基準顯性化才擋得住。
+
+    joint-local 的代價是 source_ids 非空；唯一豁免是已標
+    action_status: do-not-prescribe——那等於誠實宣告「這是待驗證候選」，
+    與 W016 對 evidence-gap 的處理是同一個邏輯：不禁止承認不知道，
+    只禁止不知道卻寫成可照做的需求。
+
+    取值合法性由 W013 負責（本欄位已列入 MOVEMENT_TAXONOMY_FIELDS），
+    這裡只管缺漏與自證義務。
+    """
+    if entry_key != "demands":
+        return
+
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+        frame = entry.get("action_reference_frame")
+
+        if frame is None:
+            warnings["W018"].append(
+                f"  file={rel} id={eid!r} at={loc} 缺 action_reference_frame："
+                "demand 必須宣告 action_ids 是以關節、身體軸線還是池畔座標成立"
+            )
+            continue
+
+        if frame != "joint-local":
+            continue
+
+        source_ids = entry.get("source_ids")
+        has_source = isinstance(source_ids, list) and len(source_ids) > 0
+        if has_source:
+            continue
+
+        if entry.get("action_status") == "do-not-prescribe":
+            continue
+
+        warnings["W018"].append(
+            f"  file={rel} id={eid!r} at={loc} "
+            "action_reference_frame='joint-local' 但 source_ids 為空："
+            "關節動作需求要有分節段量測支撐，否則改標 body-fixed／"
+            "poolside-fixed，或標 action_status: do-not-prescribe"
+        )
+
+
+def _iter_prose_strings(block: object):
+    """遞迴取出區塊內所有字串值，供 W019 掃量化主張。"""
+    if isinstance(block, str):
+        yield block
+    elif isinstance(block, dict):
+        for value in block.values():
+            yield from _iter_prose_strings(value)
+    elif isinstance(block, list):
+        for value in block:
+            yield from _iter_prose_strings(value)
+
+
+def check_measurement_conditions(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    source_id_set: set,
+    warnings: dict,
+):
+    """W019：demand 文字出現量化主張時，必須帶完整的 measurement_conditions。
+
+    直接依據是 FR-44：同一個頭位操弄，手臂體側時 4–5.2%、雙臂過頭時
+    10.4–10.9%，差距超過兩倍。決定量級的條件不在數字裡，在數字旁邊——
+    靠行文自律留不住，所以改成結構欄位。
+
+    掃描範圍刻意排除 measurement_conditions 本身（否則它自帶的 value 會
+    觸發它自己）與 source_ids／id 這類機器鍵。
+    """
+    if entry_key != "demands":
+        return
+
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+
+        scanned = {
+            key: value for key, value in entry.items()
+            if key not in ("measurement_conditions", "source_ids", "id")
+        }
+        matched = None
+        for text in _iter_prose_strings(scanned):
+            for pattern in MEASUREMENT_CLAIM_PATTERNS:
+                found = pattern.search(text)
+                if found:
+                    matched = found.group(0).strip()
+                    break
+            if matched:
+                break
+
+        raw = entry.get("measurement_conditions")
+
+        if matched and not isinstance(raw, list):
+            warnings["W019"].append(
+                f"  file={rel} id={eid!r} at={loc} 文字含量化主張 {matched!r} "
+                "但缺 measurement_conditions：數值必須連同量測條件、終點與"
+                "外推邊界一起寫，否則讀者會取到錯的量級"
+            )
+            continue
+
+        if not isinstance(raw, list):
+            continue
+
+        if matched and not raw:
+            warnings["W019"].append(
+                f"  file={rel} id={eid!r} at={loc} 文字含量化主張 {matched!r} "
+                "但 measurement_conditions 為空 list"
+            )
+
+        for cond_index, cond in enumerate(raw):
+            cond_loc = f"{loc}.measurement_conditions[{cond_index}]"
+            if not isinstance(cond, dict):
+                warnings["W019"].append(
+                    f"  file={rel} id={eid!r} at={cond_loc} "
+                    "元素必須是 dict"
+                )
+                continue
+
+            missing = [
+                key for key in MEASUREMENT_CONDITION_SUBKEYS
+                if not isinstance(cond.get(key), str) or not cond.get(key).strip()
+            ]
+            if missing:
+                warnings["W019"].append(
+                    f"  file={rel} id={eid!r} at={cond_loc} "
+                    f"必填子鍵缺漏或為空：{missing!r}"
+                )
+
+            sid = cond.get("source_id")
+            if isinstance(sid, str) and sid and sid not in source_id_set:
+                warnings["W019"].append(
+                    f"  file={rel} id={eid!r} at={cond_loc} "
+                    f"source_id={sid!r} 不存在於 _sources.yaml"
+                )
 
 
 def check_evidence_from(
@@ -926,6 +1468,7 @@ def run_validation():
     # ── 載入 taxonomy 與 sources ──
     try:
         taxonomy = load_taxonomy()
+        phase_registry = load_phase_registry()
         category_scope = load_category_scope()
     except Exception as e:
         print(f"[ERROR] Cannot load _taxonomy.yaml: {e}")
@@ -944,7 +1487,7 @@ def run_validation():
     validate_files = [p for p in all_canonical_files if not is_excluded(p)]
 
     # ── 建立全域 ID 集合（含 Drills，用於 E003 / E006 參照）──
-    all_id_set, _canonical_id_set, drills_id_set = build_global_id_set()
+    all_id_set, canonical_id_set, drills_id_set = build_global_id_set()
 
     # ── 收集驗證範圍內的條目 ──
     # {id: [(rel_path, entry)]}
@@ -972,8 +1515,56 @@ def run_validation():
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
-        "W011": []
+        "W011": [], "W012": [], "W013": [], "W014": [], "W015": [],
+        "W016": [], "W017": [], "W018": [], "W019": []
     }
+
+    # ── W012–W019: movement 網域契約（只掃四個明列內容檔）──
+    movement_documents: list[
+        tuple[str, str, str, list[tuple[int, dict]]]
+    ] = []
+    movement_id_set: set[str] = set()
+    for filename, (entry_key, expected_prefix) in MOVEMENT_FILE_RULES.items():
+        path = MOVEMENT_DIR / filename
+        try:
+            data = load_yaml(path)
+        except Exception as e:
+            sys.stderr.write(f"[WARN] load error {path}: {e}\n")
+            continue
+
+        rel = str(path.relative_to(ROOT))
+        raw_entries = data.get(entry_key) if isinstance(data, dict) else None
+        entries = [
+            (index, entry)
+            for index, entry in enumerate(raw_entries)
+            if isinstance(entry, dict)
+        ] if isinstance(raw_entries, list) else []
+        movement_documents.append((rel, entry_key, expected_prefix, entries))
+        movement_id_set.update(
+            entry["id"]
+            for _index, entry in entries
+            if isinstance(entry.get("id"), str)
+        )
+
+    for rel, entry_key, expected_prefix, entries in movement_documents:
+        check_movement_id_names(
+            rel, entry_key, entries, expected_prefix, warnings
+        )
+        check_movement_taxonomy(rel, entry_key, entries, taxonomy, warnings)
+        check_movement_references(
+            rel, entry_key, entries, movement_id_set, canonical_id_set, warnings
+        )
+        check_movement_published_completeness(
+            rel, entry_key, entries, warnings
+        )
+        check_mobility_evidence_gap(rel, entry_key, entries, warnings)
+        check_movement_phase(
+            rel, entry_key, entries, phase_registry, warnings
+        )
+        check_action_reference_frame(rel, entry_key, entries, warnings)
+        check_measurement_conditions(
+            rel, entry_key, entries, allowed_source_ids, warnings
+        )
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
     for path in validate_files:
@@ -1304,7 +1895,7 @@ def _write_report(
         ),
         "E010": (
             "ERROR",
-            "診斷層洩漏：診斷型鍵名出現在 `public` 子樹內"
+            "診斷層洩漏：既有與 movement 診斷型鍵名出現在 `public` 子樹內"
             "（`sync_vortex.py` 白名單會整包搬 public 上公開站）",
         ),
         "E011": (
@@ -1359,6 +1950,38 @@ def _write_report(
             "WARN",
             "`certainty` orange（教練觀測）但缺 `observation_basis`"
             "（未交代觀察基礎與外推邊界）→ S6 範圍",
+        ),
+        "W012": (
+            "WARN",
+            "movement 條目 ID 的檔案命名空間或分段格式違規",
+        ),
+        "W013": (
+            "WARN",
+            "movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合",
+        ),
+        "W014": (
+            "WARN",
+            "movement 跨檔引用無法解析，或目標存在但命名空間錯誤",
+        ),
+        "W015": (
+            "WARN",
+            "`published` movement 條目缺少狀態、證據或介入決策必填欄位",
+        ),
+        "W016": (
+            "WARN",
+            "`mobility_decision: evidence-gap` 的介入仍寫成可執行處方",
+        ),
+        "W017": (
+            "WARN",
+            "demand 的相位未登錄，或 phase_model 與 movement_phase_registry 不符",
+        ),
+        "W018": (
+            "WARN",
+            "demand 缺 `action_reference_frame`，或 `joint-local` 無分節段量測支撐",
+        ),
+        "W019": (
+            "WARN",
+            "demand 文字含量化主張但 `measurement_conditions` 缺漏或不完整",
         ),
     }
 

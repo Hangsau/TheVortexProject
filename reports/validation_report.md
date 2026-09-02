@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-08-28
-> 驗證條目數：626，Drills ID 數：176
+> 生成日期：2026-09-02
+> 驗證條目數：663，Drills ID 數：176
 
 ---
 
@@ -77,7 +77,7 @@
 
 ---
 
-## E010 — 診斷層洩漏：診斷型鍵名出現在 `public` 子樹內（`sync_vortex.py` 白名單會整包搬 public 上公開站）
+## E010 — 診斷層洩漏：既有與 movement 診斷型鍵名出現在 `public` 子樹內（`sync_vortex.py` 白名單會整包搬 public 上公開站）
 
 **ERROR，共 0 筆**
 
@@ -235,7 +235,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 491 筆**
+**WARN，共 528 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -605,6 +605,43 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.40'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
+  file=canonical\movement\actions.yaml id='movement.action.shoulder-complex.elevation'
+  file=canonical\movement\actions.yaml id='movement.action.ankle-foot.plantarflexion'
+  file=canonical\movement\actions.yaml id='movement.action.wrist-hand.flexion'
+  file=canonical\movement\actions.yaml id='movement.action.wrist-hand.extension'
+  file=canonical\movement\actions.yaml id='movement.action.hip.flexion'
+  file=canonical\movement\actions.yaml id='movement.action.knee.extension'
+  file=canonical\movement\actions.yaml id='movement.action.trunk.axial-rotation'
+  file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.active-control'
+  file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.conditional-soft-tissue'
+  file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.conditional-mobility'
+  file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.capacity-control'
+  file=canonical\movement\interventions.yaml id='movement.intervention.breaststroke-breathing.arm-driven-torso-lift'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.scapular-upward-rotators'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.rotator-cuff'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.latissimus-dorsi'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-plantarflexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-dorsiflexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.wrist-flexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.wrist-extensors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.hip-flexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.knee-extensors'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.shoulder-elevation'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.udk.down-kick.ankle-plantarflexion'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.ankle-plantarflexion'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.early-pull-through.high-elbow-configuration'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.leg-insweep.foot-orientation-control'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.glide.plantarflexed-streamline-finish'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.second-kick.timing-with-arm-push'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.first-kick.timing-and-wave-reception'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.narrow-channel-alignment'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.pull.upper-trunk-rotation-hand-velocity'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.head-position-drag'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.arm-recovery.pull-to-kick-interval'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.arm-insweep.breath-event-separation'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.entry.shoulder-line-roll-peak'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'
@@ -767,7 +804,7 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 18 筆**
+**WARN，共 19 筆**
 
   source_id='src.adductor-loading-return-to-sport-practice-co' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.aiac-ijkss-v-6n-1p-25' 已登錄於 _sources.yaml 但無任何條目引用
@@ -779,6 +816,7 @@
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.ioc-iron-in-sport-doi-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.jellyfish-envenomation-first-aid' 已登錄於 _sources.yaml 但無任何條目引用
+  source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.military-swim-training-sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.mountjoy-ioc-consensus-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
@@ -874,5 +912,69 @@
   file=canonical\psychology\psychology.yaml id='psych.flow.izof_individual_zones' at=themes[7].concepts[9].public.hardware_boundary certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\technica\l-indicators.yaml id='free.L3.kick-rhythm' at=indicators[10].public.evidence[0] certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\technica\l-indicators.yaml id='fly.L3.undulation-integration' at=indicators[30].public.evidence[1] certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+
+---
+
+## W012 — movement 條目 ID 的檔案命名空間或分段格式違規
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W013 — movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W014 — movement 跨檔引用無法解析，或目標存在但命名空間錯誤
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W015 — `published` movement 條目缺少狀態、證據或介入決策必填欄位
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W016 — `mobility_decision: evidence-gap` 的介入仍寫成可執行處方
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W017 — demand 的相位未登錄，或 phase_model 與 movement_phase_registry 不符
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W018 — demand 缺 `action_reference_frame`，或 `joint-local` 無分節段量測支撐
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W019 — demand 文字含量化主張但 `measurement_conditions` 缺漏或不完整
+
+**WARN，共 0 筆**
+
+（無）
 
 ---

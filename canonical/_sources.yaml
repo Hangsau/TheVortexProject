@@ -5422,3 +5422,475 @@ sources:
       以內側為主的滑膜炎、或髕股軟骨流失與蛙式選手膝痛併存。
       因此「蛙泳膝的主要病理是 MCL 還是髕股／皺襞」不是資料不足的暫時分歧，
       而是**結構層面至今無定論**——引用時不得寫成任一子型已被確立。標 🟡。
+
+  - id: src.ludewig-2009
+    display: "Ludewig PM, Phadke V, Braman JP, Hassett DR, Cieminski CJ, LaPrade RF. (2009). Motion of the Shoulder Complex During Multiplanar Humeral Elevation. J Bone Joint Surg Am 91(2):378-389."
+    title: "Motion of the Shoulder Complex During Multiplanar Humeral Elevation"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ludewig PM", "Phadke V", "Braman JP", "Hassett DR", "Cieminski CJ", "LaPrade RF"]
+    year: 2009
+    container: "The Journal of Bone and Joint Surgery. American Volume"
+    identifier:
+      pmid: "19181982"
+      pmcid: "PMC2657311"
+      doi: "10.2106/JBJS.G.01483"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      三維運動學研究，量測肩複合體（盂肱、胸鎖、肩鎖）在矢狀面、肩胛面、冠狀面三平面上臂抬舉時的運動。
+      讀取層級：全文（PMC）。
+      適用範圍：肩胛骨三維運動型態、各平面抬臂時骨動學差異。
+      不可用於：蝶式肩部風險排序（本文未針對游泳或特定運動情境做風險排序）。
+
+  - id: src.fernandez-matias-2025
+    display: "Fernández-Matías R, Ballesteros-Frutos J, Gallardo-Zamora P, Requejo-Salinas N, Caballero-Pozo I, Ludewig P, Lluch-Girbés E. (2025). Scapular kinematics variability in individuals with and without rotator cuff-related shoulder pain: A systematic review with multilevel meta-regression. Braz J Phys Ther 29(6):101261."
+    title: "Scapular kinematics variability in individuals with and without rotator cuff-related shoulder pain: A systematic review with multilevel meta-regression"
+    type: journal-article
+    verification_status: verified
+    authors: ["Fernández-Matías R", "Ballesteros-Frutos J", "Gallardo-Zamora P", "Requejo-Salinas N", "Caballero-Pozo I", "Ludewig P", "Lluch-Girbés E"]
+    year: 2025
+    container: "Brazilian Journal of Physical Therapy"
+    identifier:
+      pmid: "40845626"
+      pmcid: "PMC12398250"
+      doi: "10.1016/j.bjpt.2025.101261"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧含多層 meta-regression，比較有無旋轉肌袖相關肩痛者的肩胛運動學變異性。
+      讀取層級：僅 PubMed 摘要（正文需訂閱）。
+      適用範圍：支持肩胛運動學存在個體變異與平面變異的結論。
+      不可用於：將 120+60 的肩肱節律視為固定數值（本回顧的核心結論之一即指出此比例並非恆定）。
+
+  - id: src.aliaj-2021
+    display: "Aliaj K, Foreman KB, Chalmers PN, Henninger HB. (2021). Beyond Euler/Cardan analysis: True glenohumeral axial rotation during arm elevation and rotation. Gait Posture 88:28-36."
+    title: "Beyond Euler/Cardan analysis: True glenohumeral axial rotation during arm elevation and rotation"
+    type: journal-article
+    verification_status: verified
+    authors: ["Aliaj K", "Foreman KB", "Chalmers PN", "Henninger HB"]
+    year: 2021
+    container: "Gait & Posture"
+    identifier:
+      pmid: "33989999"
+      pmcid: "PMC8316370"
+      doi: "10.1016/j.gaitpost.2021.05.004"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      方法學研究，提出以 helical axis 方法量測真實盂肱軸向旋轉，超越 Euler/Cardan 角分解的限制。
+      讀取層級：全文（PMC）。
+      適用範圍：盂肱軸向旋轉量測方法論的驗證研究。
+      不可用於：以手掌方向或 Euler 表觀旋轉角度反推真實盂肱軸向旋轉量（本文核心貢獻即指出此類外推的限制）。
+
+  - id: src.brockett-2016
+    display: "Brockett CL, Chapman GJ. (2016). Biomechanics of the ankle. Orthop Trauma 30(3):232-238."
+    title: "Biomechanics of the ankle"
+    type: journal-article
+    verification_status: verified
+    authors: ["Brockett CL", "Chapman GJ"]
+    year: 2016
+    container: "Orthopaedics and Trauma"
+    identifier:
+      pmid: "27594929"
+      pmcid: "PMC4994968"
+      doi: "10.1016/j.mporth.2016.04.015"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      踝關節生物力學回顧，涵蓋韌帶、骨骼結構與功能性運動。
+      讀取層級：全文（PMC）。
+      適用範圍：支持「踝關節以蹠屈／背屈為主軸，但存在耦合運動（如內外翻與旋轉）」的結論。
+      不可用於：游泳特定情境的踝關節研究（本文以陸上步行與一般臨床情境為主要背景）。
+
+  - id: src.lee-2008
+    display: "Lee JB, Mellifont RB, Winstanley J, Burkett B. (2008). Body roll in simulated freestyle swimming. Int J Sports Med 29(7):569-573."
+    title: "Body roll in simulated freestyle swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Lee JB", "Mellifont RB", "Winstanley J", "Burkett B"]
+    year: 2008
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "18027307"
+      doi: "10.1055/s-2007-989285"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      三維運動學研究，以游泳台架分析 11 名精英自由式泳者頭、胸、髖 roll 時序與推進期的關係，
+      並檢驗性別與換氣的影響。
+      讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
+      適用範圍：支持「頭、胸、髖 roll 可分節段量測，且時序因性別與換氣而異」。
+      不可用於：推算或分配脊椎各節間的旋轉角度（摘要未報告節間數據，全文未讀）。
+
+  - id: src.yamakawa-2022
+    display: "Yamakawa KK, Shimojo H, Takagi H, Sengoku Y. (2022). Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming. Front Sports Act Living 4:829618."
+    title: "Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Yamakawa KK", "Shimojo H", "Takagi H", "Sengoku Y"]
+    year: 2022
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: "35498520"
+      pmcid: "PMC9051435"
+      doi: "10.3389/fspor.2022.829618"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      實驗研究，量測水中蝶泳打水（UDK）在不同速度下的運動學與肌肉活化變化。
+      讀取層級：全文（PMC）。
+      適用範圍：UDK 在本研究特定體位、速度範圍與測試 protocol 下的肌群招募與運動學描述。
+      不可用於：超出本研究體位、速度條件或 protocol 的外推（例如用於不同速度範圍或訓練情境的一般化結論）。
+
+  - id: src.martens-2015
+    display: "Martens J, Figueiredo P, Daly D. (2015). Electromyography in the four competitive swimming strokes: a systematic review. J Electromyogr Kinesiol 25(2):273-291."
+    title: "Electromyography in the four competitive swimming strokes: a systematic review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Martens J", "Figueiredo P", "Daly D"]
+    year: 2015
+    container: "Journal of Electromyography and Kinesiology"
+    identifier:
+      pmid: "25556010"
+      doi: "10.1016/j.jelekin.2014.12.003"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧，整合四種競技泳式的表面 EMG 研究，分析各泳式神經肌肉招募型態。
+      讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
+      適用範圍：支持各泳式 EMG 招募型態存在異質性的結論。
+      不可用於：建立單一固定肌肉招募模式（本回顧明確指出各研究間存在顯著異質性）。
+
+  - id: src.fone-2022
+    display: "Fone L, van den Tillaar R. (2022). Effect of Different Types of Strength Training on Swimming Performance in Competitive Swimmers: A Systematic Review. Sports Med Open 8(1):19."
+    title: "Effect of Different Types of Strength Training on Swimming Performance in Competitive Swimmers: A Systematic Review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Fone L", "van den Tillaar R"]
+    year: 2022
+    container: "Sports Medicine - Open"
+    identifier:
+      pmid: "35099631"
+      pmcid: "PMC8804114"
+      doi: "10.1186/s40798-022-00410-5"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧，比較不同類型肌力訓練（水中特定阻力、陸上仿游泳動作、陸上非特定肌力）對競技泳者成績的影響。
+      讀取層級：僅 PubMed 摘要（全文雖開放取用，本次僅讀 PubMed 摘要層）。
+      適用範圍：支持「不同類型肌力訓練在特定條件下均可正向轉移至游泳成績」的條件式結論。
+      不可用於：指定唯一最佳訓練方法（本回顧結論強調效果因條件而異，不支持單一方法優越性）。
+
+  - id: src.muniz-pardos-2019
+    display: "Muniz-Pardos B, Gomez-Bruton A, Matute-Llorente A, Gonzalez-Aguero A, Gomez-Cabello A, Gonzalo-Skok O, Casajus J, Vicente-Rodriguez G. (2019). Swim-Specific Resistance Training: A Systematic Review. J Strength Cond Res 33(10):2875-2881."
+    title: "Swim-Specific Resistance Training: A Systematic Review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Muniz-Pardos B", "Gomez-Bruton A", "Matute-Llorente A", "Gonzalez-Aguero A", "Gomez-Cabello A", "Gonzalo-Skok O", "Casajus J", "Vicente-Rodriguez G"]
+    year: 2019
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "31343554"
+      doi: "10.1519/JSC.0000000000003256"
+    retrieved_on: "2026-08-28"
+    notes: >-
+      系統性回顧，評估游泳特定阻力訓練（水中阻力、牽引式、彈力帶等）對游泳成績及力量測試的影響。
+      讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
+      適用範圍：支持「游泳特定阻力訓練在特定條件下可正向轉移至游泳成績」的條件式結論。
+      不可用於：指定唯一最佳訓練方法（本回顧結論強調效果因訓練類型與條件而異）。
+
+  - id: src.caty-2007
+    display: "Caty et al. (2007). Wrist stabilisation and forearm muscle coactivation during freestyle swimming. J Electromyogr Kinesiol."
+    title: "Wrist stabilisation and forearm muscle coactivation during freestyle swimming"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Caty V"]
+    year: 2007
+    container: "Journal of Electromyography and Kinesiology"
+    identifier:
+      pmid: "16677829"
+      doi: "10.1016/j.jelekin.2006.02.005"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17 為 FR-13 裁決登錄。識別碼已於蒐證階段以 Europe PMC REST 實際
+      dereference（過程與逐字摘要見 plans/證據包_C類_shoulder-arm.md FR-13 第 3 層），
+      但作者清單未逐字轉錄，只保留第一作者，故 verification_status 保守標 unverified。
+      樣本 7 名男性國際級選手，最大 semi-tethered power test，EMG 取 FCU／ECU，
+      影像只取腕矢狀面角度，分 insweep／outsweep。
+      適用範圍：支持「早期推進段腕被主動穩定、屈伸肌高度共收縮」。
+      不可用於：任何抓水腕角度值、有效掌面面積、推力或效率主張；其 insweep 分段
+      與本專案 free 的 race-club-6phase／descriptive 相位不可互相換算。
+
+  - id: src.suito-2017
+    display: "Suito, Nunome & Ikegami (2017). A quantitative evaluation of the high elbow technique in front crawl. J Sports Sci."
+    title: "A quantitative evaluation of the high elbow technique in front crawl"
+    type: journal-article
+    verification_status: verified
+    authors: ["Suito H", "Nunome H", "Ikegami Y"]
+    year: 2017
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "27540768"
+      doi: "10.1080/02640414.2016.1221517"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17 為 FR-17 裁決登錄。以肩／肘／腕三維座標建 high-elbow index，
+      明定於 pull phase 評估；16 名 highly skilled 與 6 名 novice 男性，
+      最大努力 25 m front crawl，60 Hz 三維攝影。
+      適用範圍：說明「高肘」有正式的三關節構型操作定義，且該指標與 pull 段速度相關。
+      不可用於：因果句（本研究是相關設計，非姿勢介入試驗）；女性與長距離外推；
+      本專案未採用其門檻值，故不得引用為角度標準。
+
+  - id: src.nuber-1986
+    display: "Nuber et al. (1986). Fine wire electromyography analysis of muscles of the shoulder during swimming. Am J Sports Med."
+    title: "Fine wire electromyography analysis of muscles of the shoulder during swimming"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Nuber GW"]
+    year: 1986
+    container: "The American Journal of Sports Medicine"
+    identifier:
+      pmid: "3752349"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17 為 BF-22 裁決登錄。識別碼已於蒐證階段以 PubMed efetch 實際取得摘要
+      （逐字引文見 plans/證據包_C類_shoulder-arm.md BF-22 第 3 層），作者清單未逐字
+      轉錄，故保守標 unverified。共 11 名游泳者（5 dry-land、7 aquatic，1 人兩者皆做），
+      分析 freestyle／breaststroke／butterfly 共 8 肌；摘要未報泳式間統計。
+      適用範圍：支持「前鋸肌在各泳式划水中皆接近最大肌肉測試值」這一負荷描述。
+      不可用於：任何泳式間的比較級（原文用 each stroke，不支持蝶式大於自由式）；
+      菱形肌主張（本研究未量菱形肌）。
+
+  - id: src.matheson-2011
+    display: "Matheson et al. (2011). Three-dimensional lower limb kinematics of the breaststroke kick. ISBS Conference Proceedings."
+    type: other
+    verification_status: unverified
+    authors: ["Matheson"]
+    year: 2011
+    container: "ISBS Conference Proceedings Archive"
+    identifier:
+      url: "https://ojs.ub.uni-konstanz.de/cpa/article/view/4840"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17b 為 BR-35 裁決登錄。蒐證階段取得 ISBS 正式頁與 4 頁論文 PDF
+      （定位見 plans/證據包_C類_ankle-foot.md BR-35 第 3 層），但標題與完整
+      作者清單未逐字轉錄，故標 unverified，title 留空不猜。
+      內容：12 名 NCAA Division I 女性泳者，三台水下攝影機建下肢三維模型；
+      推進相操作定義為「膝伸展開始」到「雙腿完成內收」。
+      適用範圍：支持踝的最大動作與蹠屈角速度出現在推進相早期、尾端動作最少；
+      支持踝總角位移與髖前進速度無顯著關聯。
+      不可用於：末端角位移越大越好、把「雙腿完成內收」當推力證明、男性或
+      非大學競技族群外推。
+
+  - id: src.mccabe-2022
+    display: "McCabe et al. (2022). Breaststroke underwater pullout analysis of elite swimmers. Front Sports Act Living."
+    type: journal-article
+    verification_status: unverified
+    authors: ["McCabe"]
+    year: 2022
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: "36081618"
+      pmcid: "PMC9445308"
+      doi: "10.3389/fspor.2022.963578"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17b 為 BR-35 裁決登錄。識別碼於蒐證階段實際解析取得，標題與完整
+      作者清單未逐字轉錄，故標 unverified，title 留空不猜。
+      內容：60 名菁英泳者、150 筆世界大賽／奧運比賽影像；研究對象是蛙式水下
+      pullout。propulsive kick 定義為雙腳第一次後移至「雙腳靠攏、結束向內側
+      移動」，第三段 glide 自雙腳併攏開始。
+      適用範圍：支持「雙腳併攏是 kick→glide 的事件邊界」這一分期定義。
+      不可用於：踝蹠屈角度值（本研究未量）、水面蛙式整週期外推、把此分期當
+      所有蛙式技術的唯一模型。
+
+  - id: src.olstad-2014
+    display: "Olstad et al. (2014). Automatic 3D tracking of the breaststroke kick. BMS record 4032654."
+    type: other
+    verification_status: unverified
+    authors: ["Olstad BH"]
+    year: 2014
+    identifier:
+      url: "https://bms.sport-iat.de/bms/Record/4032654"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17b 為 BR-35 裁決登錄。僅取得 BMS 文獻紀錄頁，標題與完整作者清單
+      未逐字轉錄，故標 unverified，title 留空不猜。
+      適用範圍：支持「傳統『雙腳主動併攏即 kick 結束』模型無法準確切分所有
+      modern wave-kick 泳者，不同波幅會改變 insweep 與收腿時序」這一模型差異
+      說明。
+      不可用於：否定雙腳會靠攏此一現象、任何角度或劑量主張。
+
+  - id: src.chollet-2006
+    display: "Chollet et al. (2006). Arm to leg coordination in elite butterfly swimmers. Int J Sports Med."
+    title: "Arm to leg coordination in elite butterfly swimmers"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Chollet D"]
+    year: 2006
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "16572376"
+      doi: "10.1055/s-2005-865658"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 BF-32／BF-33 裁決登錄。識別碼於蒐證階段實際解析，完整作者
+      清單未逐字轉錄，標 unverified。14 名菁英男性、四種比賽配速，以影片辨識
+      手臂與腿相位；T1＝手入水與第一波動高轉折點的時間差，T2＝手開始向後與
+      第一波動低轉折點，T3＝手到肩垂直面與第二波動高轉折點，T4＝手離水與
+      第二波動低轉折點。
+      適用範圍：支持「兩次下踢各自落在特定手臂事件的時間窗內」這一時序描述，
+      且必須連同其轉折點定義一起寫。
+      不可用於：踢的力量大小比較（轉折點是時間編碼事件，不是力值）；女性、
+      較低技術層級外推；把轉折點換算成其他分期模型的相位邊界。
+
+  - id: src.seifert-2008
+    display: "Seifert et al. (2008). Differences in spatial-temporal parameters and arm-leg coordination in butterfly stroke as a function of race pace, skill and gender. Hum Mov Sci."
+    title: "Differences in spatial-temporal parameters and arm-leg coordination in butterfly stroke as a function of race pace, skill and gender"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Seifert L"]
+    year: 2008
+    container: "Human Movement Science"
+    identifier:
+      pmid: "17935810"
+      doi: "10.1016/j.humov.2007.08.001"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 BF-32／BF-33 裁決登錄。識別碼於蒐證階段實際解析，完整作者
+      清單未逐字轉錄，標 unverified。40 名泳者（菁英與較低技術、男女各組）在
+      四種配速下錄影；T1 配對手臂 catch 起點與第一腿 down phase 起點，T2 配對
+      arm pull 與第一腿 up phase，T3 配對 arm push 起點與第二腿 down phase 起點，
+      T4 配對 arm recovery 與第二腿 up phase。
+      適用範圍：支持兩次下踢的時序歸屬，且其相位錨點與 Chollet 2006 不同，
+      兩套不得互換或換算。
+      不可用於：力量大小、推進貢獻或任何角度主張。
+
+  - id: src.barbosa-2008
+    display: "Barbosa et al. (2008). Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study."
+    title: "Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Barbosa TM"]
+    year: 2008
+    identifier:
+      pmid: "24149450"
+      pmcid: "PMC3761458"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 BF-32／BF-33 裁決登錄。識別碼於蒐證階段實際解析，完整作者
+      清單未逐字轉錄，標 unverified。作者自述為 pilot：4 名國際級泳者的漸增
+      200 m 與 7 名國家／國際級男性的最大 25 m；四視角重建手的三維速度、足的
+      二維速度與質心速度變異。高速條件下第二 downbeat 的平均足垂直速度高於
+      第一 downbeat。
+      適用範圍：支持「第二次下踢的足垂直速度在高速條件下不低於第一次」，
+      因此可推翻「第一踢較大力、第二踢較小力」這組敘述的方向。
+      不可用於：踢力量測（本研究量的是足速與估算質心，不是力）；臀部高度
+      終點（原文談的是質心）；小樣本 pilot 的迴歸不得寫成通則或因果。
+
+  - id: src.narita-2018
+    display: "Narita, Nakashima & Takagi (2018). Effect of leg kick on active drag in front-crawl swimming. J Biomech."
+    title: "Effect of leg kick on active drag in front-crawl swimming: Comparison of whole stroke and arms-only stroke during front-crawl and the streamlined position"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Narita", "Nakashima", "Takagi"]
+    year: 2018
+    container: "Journal of Biomechanics"
+    identifier:
+      pmid: "29921521"
+      doi: "10.1016/j.jbiomech.2018.05.027"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17c 為 FR-40 裁決登錄。識別碼於蒐證階段實際解析，作者僅有姓氏可
+      逐字轉錄（無 initials），標 unverified。7 名男性競技選手在水槽以 1.1、
+      1.3 m/s 完成全泳與只用手兩條件，以連接泳者的 load cells 量主動阻力。
+      適用範圍：只用來說明「現有主動阻力研究操弄的是有無打水，不是打水寬度」
+      這個證據邊界。
+      不可用於：打水寬度與阻力的任何量化因果；髖外展／內收角度主張；女性或
+      非競技族群外推。
+
+  - id: src.kudo-2021
+    display: "Kudo et al. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci."
+    title: "Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Kudo"]
+    year: 2021
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "33641596"
+      doi: "10.1080/02640414.2021.1892266"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 FR-31 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未逐字
+      轉錄，標 unverified。15 名泳者以反光標記動作捕捉，將軀幹的 roll-pitch-yaw
+      分解後估計各分量對手部前後向速度的貢獻，量到上軀幹旋轉貢獻 28% 與 19%
+      的手後向速度。
+      適用範圍：只支持「上軀幹旋轉對手的後向速度有可量化的貢獻」，且必須同時
+      寫出相位與量測方式。
+      不可用於：划距（stroke length）終點；力量或力量傳導鏈主張（本研究量的是
+      速度不是力）；任何最佳旋轉角度或訓練劑量。
+
+  - id: src.cortesi-gatta-2015
+    display: "Cortesi & Gatta (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet."
+    title: "Effect of The Swimmer's Head Position on Passive Drag"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Cortesi", "Gatta"]
+    year: 2015
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "26839604"
+      pmcid: "PMC4723180"
+      doi: "10.1515/hukin-2015-0106"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 FR-44 裁決登錄。識別碼於蒐證階段實際解析，作者僅有姓氏可逐字
+      轉錄，標 unverified。10 名男性區域級泳者，水下 60 cm、1.5／1.7／1.9 m/s
+      被動拖曳，操弄三種「頭相對身體水平線」的位置（head-up／aligned／head-down）
+      與兩種手臂姿勢，量被動阻力。
+      適用範圍：支持「頭相對身體水平線的位置會改變被動阻力」，且引用效果量時
+      必須同時寫出手臂姿勢條件——手臂體側為 4–5.2%，雙臂過頭為 10.4–10.9%。
+      不可用於：把 head-up 分類等同於任何頸椎伸展角度（本研究沒有量頸椎角）；
+      由水下被動拖曳外推到水面主動自由式或換氣動作；女性或非競技族群外推。
+
+  - id: src.oxford-2017
+    display: "Oxford et al. (2017). Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim. J Sports Sci."
+    title: "Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Oxford"]
+    year: 2017
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "27636684"
+      doi: "10.1080/02640414.2016.1229012"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 BR-43 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未逐字
+      轉錄，標 unverified。26 名蛙式專項泳者，三台 50 Hz 水下攝影機，分析 100 m
+      四趟各自末三個週期；其 coordination phase 2 定義為 arm-pull 結束至 leg-kick
+      開始的時間間隔。
+      適用範圍：只支持「arm-pull 結束到 leg-kick 開始的時間間隔是可量測的協調
+      指標」。
+      不可用於：把「呼氣時」當作事件錨點（本研究沒有量頭、頸或呼吸）；body line
+      ／racing streamline／hyperstreamline 之間的互換；fast 與 delayed recovery
+      兩套教材策略的優劣判定。
+
+  - id: src.gonjo-2021-body-roll
+    display: "Gonjo et al. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep."
+    title: "Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Gonjo"]
+    year: 2021
+    container: "Scientific Reports"
+    identifier:
+      pmid: "33436944"
+      pmcid: "PMC7804020"
+      doi: "10.1038/s41598-020-80711-5"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 FR-10 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未
+      逐字轉錄，標 unverified。10 名男性、四種游泳強度，19 個體表 landmark，
+      四台水下與兩台水上攝影機重建；shoulder roll 定義為左右肩關節中心連線
+      在橫斷面的投影角，峰值落在 entry 到後續 pull 的交界。
+      適用範圍：只支持「肩線 roll 峰值落在入水期到拉手期的交界」這個時點
+      描述，且必須寫明肩線是體表 landmark 連線的投影角。
+      不可用於：把肩線 roll 寫成脊椎旋轉或脊椎分節角；把峰值時點寫成整段
+      入水期或「前伸滑行期」的狀態；任何未附參考系與正負向的「同側／對側」句。
+      注意：本條與 src.gonjo-2021（Sports Biomechanics，浮力轉動效應與軀幹
+      運動學，DOI 10.1080/14763141.2021.1921835）是同年不同篇，不得互相替代。

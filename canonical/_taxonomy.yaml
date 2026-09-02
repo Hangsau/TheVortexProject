@@ -228,6 +228,451 @@ fields:
       - key: L6
         note: "感知自動化完成"
 
+  # ── Movement 網域契約詞彙 ──
+  # 不重用現有 status（目前唯一值為 complete）承載證據或發布狀態；
+  # 證據狀態、決策狀態、發布狀態是三個獨立軸，壓進單一 status 會無法分辨。
+
+  publication_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      發布狀態。published 只代表可對讀者發布，不等於所有主張因果確定。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: draft
+      - key: reviewed
+      - key: published
+      - key: withheld
+
+  claim_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      主張的證據支持度。unverified 在這裡指主張未經查證，與
+      canonical/_sources.yaml 裡來源 metadata 的 verification_status 是兩回事，
+      不可互相冒用。本欄位不維護 count；實際使用數以
+      indices/tag_reverse_index.json 為準。
+    values:
+      - key: supported
+      - key: partially-supported
+      - key: disputed
+      - key: unverified
+
+  action_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      可否據以行動。do-not-prescribe 表示不得寫成處方。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: ready
+      - key: provisional
+      - key: do-not-prescribe
+
+  evidence_profile:
+    controlled: true
+    review_status: reviewed
+    note: >
+      該筆記錄的證據性質屬哪一類，用來擋跨用（例如解剖教科書不能證明泳姿時序、
+      EMG 振幅不能等同肌力）。本欄位不維護 count；實際使用數以
+      indices/tag_reverse_index.json 為準。
+    values:
+      - key: anatomy
+      - key: swimming-kinematics
+      - key: swimming-emg
+      - key: intervention
+      - key: practice-observation
+      - key: synthesis-inference
+
+  phase_model:
+    controlled: true
+    review_status: reviewed
+    note: >
+      該筆 movement 需求的相位鍵出自哪一套分期。登錄這個欄位的理由來自
+      plans/證據包_C類_shoulder-arm.md 的 BK-26 裁決：泳姿分期不是單一真相，
+      而是數套各有來源的操作型定義並存（型 1 座標系衝突），所以不選邊，
+      改成讓「這個相位名出自哪一套」在欄位上顯性化。
+      因此跨模型的相位名不得互相冒用或互相換算——race-club-6phase 的
+      front-quadrant-propulsion 與 kudo-power-phase 的 pull 不是同一段，
+      也不是同一個量；要對照兩套分期必須兩套都寫出來，不可合併成一個相位。
+      合法相位鍵不列在本欄位，另見檔尾 movement_phase_registry（依泳式分組）。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: descriptive
+        note: >
+          從 Vortex 既有 instructional 記錄歸納出的描述性分期，不主張對應
+          任何已發表的分期系統。它是多數相位的實際取值，但不是「未查證」的
+          同義詞：採用它等於宣告本相位不引用外部分期權威，因此不得拿它去
+          支撐「某某研究把這一段稱為 X」這類歸屬主張。
+      - key: race-club-6phase
+        note: >
+          The Race Club 六相分期（lift／front-quadrant-propulsion／
+          rear-quadrant-propulsion／release／early-recovery／late-recovery）。
+      - key: kudo-power-phase
+        note: >
+          以拉水／推水劃分的動力相分期，粒度比六相粗；同一段水下路徑在兩套
+          底下的邊界不同，不可互換。
+      - key: event-window
+        note: >
+          不是划水分期，而是跨在數個相位之上的事件視窗（如蝶式呼吸視窗）。
+          與其他三套不在同一軸上，不得與相位並列比較先後或當成互斥階段。
+      - key: heinlein-2010-phases
+        note: >
+          Heinlein & Cosgarea 2010（src.pmc3438875）在肩部生物力學回顧中採用的
+          自由式分段，本表只登錄其中界線被原文明寫的一段：early pull-through，
+          定義為滑行結束至肱骨約在身體前方 90°。登錄它的理由是 FR-17 裁決——
+          「拉水期維持高肘」的相位歸屬只有這一套給得出可核的邊界，而 free 既有的
+          pull 屬 kudo-power-phase、front-quadrant-propulsion 屬 race-club-6phase，
+          把 Heinlein 的界線掛到那兩套底下就是 BK-26 明令禁止的跨模型換算。
+          本模型不涵蓋移臂與其餘水下段，不得用來標其他相位。
+
+  mobility_decision:
+    controlled: true
+    review_status: reviewed
+    note: >
+      活動度決策。conditional：確認被動限制且無禁忌時使用；not-routine：正常活動度、
+      主動控制不足、過度活動或沒有轉移證據時不常規拉伸；evidence-gap：目前沒有足夠
+      資料給特定處方，保留評估與重測，不捏造動作。
+      not-routine 與 evidence-gap 的分界：not-routine 是一個主張（有理由認為不該
+      常規做），evidence-gap 是承認不知道。兩者不可互相冒用——把不知道寫成
+      not-routine 等於憑空多出一個否定結論。
+      evidence-gap 不是免責標籤：標了它就不得同時給出可照做的處方，因此
+      action_status 必須是 do-not-prescribe 且 dosage_source_ids 必須為空，
+      由 tools/validate.py 的 W016 強制。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: conditional
+      - key: not-routine
+      - key: evidence-gap
+
+  action_reference_frame:
+    controlled: true
+    review_status: reviewed
+    note: >
+      本筆 demand 的 action_ids 是以哪個基準成立的。登錄這個欄位的理由來自
+      plans/證據包_C類_hip-knee.md 的 FR-40 裁決（結構性根因 4 的一般形式）：
+      「腿足維持在窄通道」與「髖幾乎不做外展／內收」看似同一件事，前者是池畔
+      可見的空間位置，後者是股骨相對骨盆的額狀面關節角，兩者沒有任何一層資料
+      同時量過。而且自由式與仰式全程在滾轉，**參考系本身在轉**——同一條腿路徑
+      在池畔系與隨體系有完全不同的關節解釋，這在這兩式是預設狀態而非例外。
+      沒有這個欄位，「由可見空間量反推關節動作」在 canonical 內不可分辨。
+      本欄位宣告的是 action_ids 的歸屬基準，不是本筆有沒有池畔描述；
+      poolside_direction 是輔助觀察欄，三種取值都可以並存帶它。
+      joint-local 的自證義務由 tools/validate.py 的 W018 強制。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: joint-local
+        note: >
+          宣稱近端節段相對的關節動作（股骨相對骨盆、脛骨相對股骨、肱骨相對肩胛）。
+          這是唯一可以寫關節角度需求的取值，代價是必須有分節段量測支撐：
+          source_ids 不得為空，除非本筆已標 action_status: do-not-prescribe
+          （即誠實宣告「這是待驗證候選，不可據以行動」）。
+      - key: body-fixed
+        note: >
+          以泳者身體長軸與體平面為基準的節段朝向，隨滾轉一起轉。
+          自由式滾轉下的斜向打水通道屬此類——它是常態而非缺陷，
+          把它讀成「腿不該往兩側動」會產生與教材相反的指令（FR-40）。
+      - key: poolside-fixed
+        note: >
+          只以池畔固定座標（水面／池底、泳道行進方向、垂直面）描述的可見空間需求。
+          採用它等於宣告**本筆不宣稱關節角度大小**；要談關節角必須另立
+          joint-local 條目並自帶量測，不得在同一筆裡由空間描述滑過去。
+
+# ─────────────────────────────────────────────────────────────────────
+# Movement 參照契約
+# 同樣不是受控詞彙，是「哪個欄位可以指向哪一群 ID」的登錄。
+# 驗證器（tools/validate.py，W014）是本契約的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+movement_reference_contract:
+  internal:
+    note: >
+      movement 網域內部連結。目標必須存在於 movement 四個內容檔，且必須落在
+      欄位指定的命名空間；「連到存在但層別錯的 ID」與一般斷鏈分開報。
+    fields:
+      - field: action_ids
+        resolves_to: "movement.action.*"
+      - field: muscle_ids
+        resolves_to: "movement.muscle.*"
+      - field: demand_ids
+        resolves_to: "movement.demand.*"
+      - field: intervention_ids
+        resolves_to: "movement.intervention.*"
+  external:
+    note: >
+      movement 對既有網域的回溯橋，方向固定為 movement → 既有記錄。目標必須
+      存在於 canonical 全集且必須不是 movement.*，藉此擋掉「該用 demand_ids
+      卻寫進 derived_from_ids」。反方向（既有記錄 → movement）不落成欄位，
+      避免為了雙向連結去改動約六百筆既有條目，改由索引產生。
+    fields:
+      - field: derived_from_ids
+        type: "list[str]"
+        applies_to: "canonical/movement/stroke-demands.yaml#demands[]"
+        resolves_to: "canonical 全集內的非 movement ID（如 free.tech.6）"
+        source_of_truth: "plans/movement_coverage_denominator.yaml 的 phases[].evidence[].record_id"
+        note: >
+          published 的 demand 必填（W015）。空 list [] 表示已查 denominator
+          並確認該相位沒有對應技術記錄，不是未處理。
+
+# ─────────────────────────────────────────────────────────────────────
+# Movement 量測條件契約
+# 不是受控詞彙，是「條目文字一旦出現數值，必須同時交代什麼」的結構登錄。
+# 驗證器（tools/validate.py，W019）是本契約的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+movement_measurement_contract:
+  note: >
+    C 類蒐證四批累積出的規則是「數值不得裸奔進 demand」。直接依據是
+    plans/證據包_C類_spine-neck.md 的 FR-44 裁決：同一個頭位操弄，Cortesi &
+    Gatta 2015 在**手臂置於體側**時量到 4–5.2% 的被動阻力差，在**雙臂過頭**
+    時是 10.4–10.9%——差距超過兩倍。任一數字單獨引用，讀者就取到錯的量級。
+    同一個問題在 Strzała 的 r=0.35、Jagomägi 的 11.1%、FoFS 的 25–30°／0.12 s
+    都成立，因此改成結構欄位而不是靠行文自律。
+    本契約也是「傷害終點與效能終點不得互相引用」（ST-09 裁決）的落點：
+    endpoint 是必填欄，兩種終點寫在同一筆會當場可見。
+  field: measurement_conditions
+  type: "list[dict]"
+  applies_to: "canonical/movement/stroke-demands.yaml#demands[]"
+  required_when: >
+    本筆的 public 或 diagnostic 文字出現任何量化主張（百分比、角度、秒數、
+    相關係數 r、效果量 d）。沒有數值的條目不需要本欄；有數值卻沒有本欄
+    是 W019。
+  required_subkeys:
+    - key: source_id
+      type: str
+      resolves_to: "canonical/_sources.yaml#sources[].id"
+      note: "單一來源鍵。一筆數值只能歸一個來源；兩個來源給兩個數就寫兩筆。"
+    - key: quantity
+      type: str
+      note: "量的是什麼，含對照組。「4–5.2%」不是量，「head-down／aligned 相對 head-up 的被動阻力差」才是。"
+    - key: value
+      type: str
+      note: "數值本身，含單位與區間。保留原文寫法，不自行換算或取中點。"
+    - key: conditions
+      type: str
+      note: >
+        量測當下的操作條件：手臂姿勢、速度、水深、被動或主動、族群與 n。
+        FR-44 的兩倍差距就藏在這一欄，缺它等於數字沒有意義。
+    - key: endpoint
+      type: str
+      note: >
+        終點性質（如 passive-drag／swim-velocity／joint-angle／injury-incidence）。
+        傷害終點與效能終點分屬不同條目，不得互相引用。
+    - key: extrapolation_boundary
+      type: str
+      note: >
+        這個數字**不能**外推到哪裡。水下被動 glide 的百分比不外推到水面主動
+        自由式；單一泳式、單一速度、單一 protocol 的結果不外推到其他條件。
+
+# ─────────────────────────────────────────────────────────────────────
+# Movement 相位登錄表
+# 受控詞彙，但因為相位鍵的合法範圍隨泳式而異（free 的 lift 在 breast 不成立），
+# 不放進上面的扁平 fields，改成依泳式分組登錄。
+# 驗證器（tools/validate.py，W017）是本登錄表的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+movement_phase_registry:
+  note: >
+    canonical/movement/stroke-demands.yaml 的 demands[] 只能使用本表登錄的
+    (stroke, phase) 組合，且該筆的 phase_model 必須與本表對該 phase 的登錄一致。
+    這是為了擋掉 W4 大量填圖時各自造相位名，或把同一段路徑在不同筆記成不同
+    分期系統。要新增相位一律先改本表，不得在 demand 端就地發明。
+  provenance: >
+    2026-08-29 由 plans/movement_coverage_denominator.yaml 的 strokes[].phases[]
+    一次性歸納，該檔是 W4 前凍結的涵蓋分母，本表與它的相位集合必須一致；
+    往後以本表為 canonical，denominator 只保留當時的證據引文出處。
+  backstroke_decision: >
+    仰式維持 descriptive（entry／catch／pull／push／recovery），不改採
+    Fernandes 2022 的四 sweep。理由見 BK-26 裁決：四 sweep 只涵蓋水下路徑，
+    移臂整段沒有對應相位鍵，改採之後 back 的 recovery 需求會無處可掛。
+    這是分期選擇，不是對四 sweep 的否證——要引用四 sweep 的文獻結論時
+    另立 phase_model，不得把它的相位名塞進 descriptive。
+  strokes:
+    free:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水期"
+      - key: lift
+        phase_model: race-club-6phase
+        label_zh: "升力相"
+      - key: catch
+        phase_model: descriptive
+        label_zh: "抓水期"
+      - key: front-quadrant-propulsion
+        phase_model: race-club-6phase
+        label_zh: "前象限推進"
+      - key: pull
+        phase_model: kudo-power-phase
+        label_zh: "拉水相"
+      - key: early-pull-through
+        phase_model: heinlein-2010-phases
+        label_zh: "早期拉水段"
+        note: >
+          Step 17 新增（FR-17 裁決）。邊界取 src.pmc3438875 原文：滑行結束至
+          肱骨約在身體前方 90°。它與 pull、front-quadrant-propulsion 有時間重疊，
+          但三者的界線定義各不相同，不得互相換算或並列比先後。
+      - key: rear-quadrant-propulsion
+        phase_model: race-club-6phase
+        label_zh: "後象限推進"
+      - key: push
+        phase_model: kudo-power-phase
+        label_zh: "推水相"
+      - key: release
+        phase_model: race-club-6phase
+        label_zh: "釋放相"
+      - key: early-recovery
+        phase_model: race-club-6phase
+        label_zh: "早期回臂"
+      - key: late-recovery
+        phase_model: race-club-6phase
+        label_zh: "晚期回臂"
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢"
+    back:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+      - key: catch
+        phase_model: descriptive
+        label_zh: "捕水"
+      - key: pull
+        phase_model: descriptive
+        label_zh: "拉水"
+      - key: push
+        phase_model: descriptive
+        label_zh: "推水"
+      - key: recovery
+        phase_model: descriptive
+        label_zh: "回臂"
+      - key: up-kick
+        phase_model: descriptive
+        label_zh: "上踢"
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢"
+    breast:
+      - key: arm-outsweep
+        phase_model: descriptive
+        label_zh: "外划"
+      - key: arm-catch
+        phase_model: descriptive
+        label_zh: "捕水"
+      - key: arm-insweep
+        phase_model: descriptive
+        label_zh: "內划"
+      - key: arm-recovery
+        phase_model: descriptive
+        label_zh: "回臂"
+      - key: glide
+        phase_model: descriptive
+        label_zh: "流線型滑行"
+      - key: leg-recovery
+        phase_model: descriptive
+        label_zh: "收腿"
+      - key: foot-flip
+        phase_model: descriptive
+        label_zh: "翻腳期"
+      - key: leg-outsweep
+        phase_model: descriptive
+        label_zh: "外划（Outsweep）"
+      - key: leg-insweep
+        phase_model: descriptive
+        label_zh: "內划（Insweep）"
+    fly:
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+      - key: entry-pause
+        phase_model: descriptive
+        label_zh: "入水停頓"
+      - key: first-kick
+        phase_model: descriptive
+        label_zh: "第一踢"
+      - key: arm-outsweep
+        phase_model: descriptive
+        label_zh: "外划"
+      - key: arm-catch
+        phase_model: descriptive
+        label_zh: "捕水"
+      - key: arm-insweep
+        phase_model: descriptive
+        label_zh: "內划"
+      - key: arm-upsweep
+        phase_model: descriptive
+        label_zh: "上划"
+      - key: exit
+        phase_model: descriptive
+        label_zh: "出水"
+      - key: second-kick
+        phase_model: descriptive
+        label_zh: "第二踢"
+      - key: aerial-recovery
+        phase_model: descriptive
+        label_zh: "空中恢復"
+      - key: breathing-window
+        phase_model: event-window
+        label_zh: "呼吸視窗"
+    udk:
+      - key: streamlined-glide
+        phase_model: descriptive
+        label_zh: "流線滑行"
+      - key: kick-initiation
+        phase_model: descriptive
+        label_zh: "起踢"
+      - key: down-kick
+        phase_model: descriptive
+        label_zh: "下踢相"
+      - key: terminal-down-kick
+        phase_model: descriptive
+        label_zh: "下踢末段"
+      - key: down-to-up-transition
+        phase_model: descriptive
+        label_zh: "下踢→上踢過渡"
+      - key: up-kick
+        phase_model: descriptive
+        label_zh: "上踢相"
+      - key: breakout
+        phase_model: descriptive
+        label_zh: "出水划手"
+    starts-turns:
+      - key: set-position
+        phase_model: descriptive
+        label_zh: "零位姿勢"
+      - key: takeoff
+        phase_model: descriptive
+        label_zh: "起跳"
+      - key: flight
+        phase_model: descriptive
+        label_zh: "飛行階段"
+      - key: entry
+        phase_model: descriptive
+        label_zh: "入水"
+      - key: underwater-glide
+        phase_model: descriptive
+        label_zh: "水下滑行"
+      - key: underwater-dolphin-kick
+        phase_model: descriptive
+        label_zh: "海豚踢"
+      - key: breaststroke-pullout
+        phase_model: descriptive
+        label_zh: "蛙式 Pullout"
+      - key: breakout
+        phase_model: descriptive
+        label_zh: "出水過渡期"
+      - key: turn-approach
+        phase_model: descriptive
+        label_zh: "進牆"
+      - key: flip
+        phase_model: descriptive
+        label_zh: "翻滾"
+      - key: wall-contact
+        phase_model: descriptive
+        label_zh: "觸牆"
+      - key: wall-rotation
+        phase_model: descriptive
+        label_zh: "旋轉在牆上完成"
+      - key: wall-push-off
+        phase_model: descriptive
+        label_zh: "推蹬"
+
 # ─────────────────────────────────────────────────────────────────────
 # 證據承載契約（S3b）
 # 這一段不是受控詞彙，是「哪些欄位算證據、算到什麼程度」的欄位語意登錄。

@@ -4,6 +4,11 @@
 > 行為規範見 `CLAUDE.md`；進度/待辦見 `HANDOFF.md`。
 >
 > `last_verified: 2026-07-29`
+>
+> 2026-08-29 **局部**更新：補 `canonical/movement/`、`_taxonomy.yaml`、`tools/validate.py`
+> 與 `plans/` 裁決檔（§2 索引、§3 表、雷 §4.8–4.10），該範圍已逐項對照實檔查證。
+> 其餘章節未重新查證，故 `last_verified` 不上調；`python C:/claudehome/tools/check_map_freshness.py`
+> 另列 15 個未在 MAP 提到的檔（多為 my-site 版型與一次性腳本），待 Step 22 收尾處理。
 
 ---
 
@@ -29,6 +34,10 @@
 | 找 drill 分布 / 空白格 | `python tools/tag_coverage_report.py`（9 軸交叉表 + 碰撞分析） |
 | 改 diagnostic（A/B/C 型診斷、失敗訊號）——**只給教練/swim-coach** | canonical YAML 的 `diagnostic{}` 區塊；**絕不會進 my-site** |
 | 加研究主題/假設 | `research/{感知科學,物理現象,週期化}/`，狀態碼見下方 §4 |
+| 改動作—肌群—訓練—活動度圖譜（movement） | `canonical/movement/{actions,muscle-groups,stroke-demands,interventions}.yaml`（**建置中，全部 `draft`**，見雷 §4.8） |
+| 加 movement demand 的相位 | **先改 `canonical/_taxonomy.yaml#movement_phase_registry`**，不可在 demand 端就地發明相位名（W017 會擋，見雷 §4.9） |
+| 驗證資料契約（改完 canonical 必跑） | `python tools/validate.py` → `reports/validation_report.md`；E001–E011 為 ERROR、W001–W017 為 WARN，錯誤碼定義見 `tools/validate.py` 檔頭圖例 |
+| 查某條關節主張的裁決結論 | `plans/關節主張裁決_*.md` 與 `plans/證據包_C類_*.md`；裁決方法論見 `plans/關節主張驗證協議.md`（見雷 §4.10） |
 | 重生機器索引／查看資料缺口 | `python tools/build_indices.py` → `indices/*.json` |
 | 盤點／批次查驗來源 | `python tools/audit_sources.py` 分流；有 identifier 用 `python tools/verify_source_identifiers.py`，只有作者＋年份用 `python tools/search_source_bibliography.py` 產候選；review 後才用 `python tools/apply_verified_sources.py --apply` |
 
@@ -47,6 +56,12 @@
 | `technica/water-sense-levels.yaml` | 1616 | 26 個感知級別 | public + diagnostic{type_*} |
 | `periodization/{structure,taper,zones,_index}.yaml` | 297/134/223/67 | 週期化（Bompa + 游泳文獻） | 每節點 cert+source+plain_zh+swim_application |
 | `perception/free.yaml` | 172 | 自由式感知映射（**stub，多為骨架**） | 待擴充 |
+| `movement/actions.yaml` | 147 | 解剖動作需求（2 筆） | public + diagnostic |
+| `movement/muscle-groups.yaml` | 274 | 肌群與可承擔角色（5 筆） | public + diagnostic |
+| `movement/stroke-demands.yaml` | 188 | 泳式×相位×動作需求（3 筆），帶 `derived_from_ids` 回連 instructional | public + diagnostic |
+| `movement/interventions.yaml` | 351 | 訓練／活動度介入（4 筆），帶 `mobility_decision` | public + diagnostic |
+| `_taxonomy.yaml` | 639 | 受控詞彙 + `movement_phase_registry`（58 相位）+ 參照契約 + 證據契約 | — |
+| `_sources.yaml` | — | 來源註冊表（`src.<slug>`），唯一的機器可讀來源鍵 | — |
 
 ### 研究/散文底稿（餵 canonical，本身不被下游讀）
 - `instructional/*.md`（12 檔，280–711 行）— 四式 + 起跳轉身 + 水下蝶腳的技術分析 & 誤區深探
@@ -76,6 +91,9 @@
 5. **canonical/ 目錄結構是下游硬依賴**：`sync_vortex.py` 與 `build_knowledge_index.py` 寫死預期 `canonical/<domain>/*.yaml` 路徑。在這裡 rename 目錄/檔名 = 不動下游碼就會炸下游 build。改名要同步通知 my-site + swim-coach。
 6. **Talos 產出是 WIP**：`research/物理現象/教學競技框架_v1.md`（branch `talos-teaching-v1`）標「初稿待自測 + 小樣本驗證」，merge 狀態未定，別當定稿引用。
 7. **YAML 內容必過「三關校正」才收**（符合研究 + 反問 + 反推），沒過列入 `三關校正_沒過清單`。對應記憶 `feedback_vortex_content_three_check_verification`。
+8. **`canonical/movement/` 是建置中網域，14 筆全部 `draft`**：它目前**不會出現在 my-site**，但原因不是狀態過濾——是下游 `my-site/tools/sync_vortex.py` **完全沒有 movement 處理碼**（`grep movement` 零命中，屬待辦 Step 19）。看到它內容稀少不是資料遺失，是 W4 尚未填充。它也不用 `certainty` 那套五色標記，改用四條互相獨立的軸：`claim_status`（證據支持度）／`action_status`（可否據以行動）／`evidence_profile`（證據性質）／`publication_status`。把 `certainty` 寫進 movement 是誤用。
+9. **movement 的相位不是自由字串**：`phase` 只能取 `_taxonomy.yaml#movement_phase_registry.strokes.<stroke>` 已登錄的鍵，且 `phase_model` 必須與登錄表一致，否則出 W017。背後理由是泳姿分期**沒有單一真相**——四 sweep／六相／拉推兩相各有來源並存，所以資料層不選邊，改成強制標明「這個相位名出自哪一套」；跨分期的相位名不可互相換算。仰式已裁決維持 `descriptive`（含 `recovery`），不採四 sweep（四 sweep 不涵蓋移臂）。
+10. **關節主張的裁決結論只存在於 `plans/`，不在 `canonical/`**：C 類主張 ID（`FR-*`／`BK-*`／`BR-*`／`BF-*`／`ST-*`，如 `BK-26`）在 `canonical/` **零命中**——它們是待審主張的編號，不是內容條目 ID。所以看到裁決寫「修正」不要去 `canonical/` 找對應條目改；裁決的落點是 W4 撰寫 movement demand 時的輸入。協議 §5 另有硬規則：**錯誤版本不刪除**，保留在 `plans/` 以免三個月後有人重寫同一個錯。
 
 ---
 

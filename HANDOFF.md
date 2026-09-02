@@ -4,9 +4,85 @@
 
 ---
 
-## 當前狀態（2026-08-27，最新）
+## 當前狀態（2026-09-02，最新）
 
-### ⏸️ 骨關節命名章語意稽核完成；動作—肌群—訓練—活動度圖譜已完成 plan-check，尚未實作
+### ▶️ 動作—肌群—訓練—活動度圖譜實作中：**Step 17／18（W4 四區填充）與 Step 19（my-site 同步層）皆已完成**，下一步是 Step 20（my-site movement 版型，派 codex）
+
+分支 `feat/movement-atlas`。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
+
+#### 已完成
+
+- **W1 既有內容修復**：13 張命名校正卡、`dryland.yaml` 三處衝突、my-site joint 頁顯示 `mechanism.source_ids`。
+- **W2 兩條 pilot 切片**（`c654868`／`efcb298`／`c14e7ec`）：超流線肩上舉 7 筆、踝蹠屈與水下打腿 7 筆，落在 `canonical/movement/` 四個內容檔。
+- **W3 Step 13 人工 gate — 已核准**（`682f143`）。兩條切片逐欄審查：肩切片 6 處證據越界（多數是拿解剖推論冒充泳姿事實）已逐筆手改，踝切片 0 處。連帶把兩個 gate 待決落地：
+  - `derived_from_ids`：demand 是 movement 與既有 `instructional` 記錄唯一的接點，原本這層對應只存在於 `plans/movement_coverage_denominator.yaml`（125 處 `record_id` + 佐證引文），資料層看不到。方向固定 movement → instructional，只動新網域不改約六百筆既有條目。W014 加外部橋分支、W015 對 published demand 列必填。**W4 寫約百筆 demand 前必須先定案，否則是百筆返工**，故在 gate 就做掉。
+  - `evidence-gap` 保留不刪，改為有代價：新增 **W016** 要求它必須配 `action_status: do-not-prescribe` 且 `dosage_source_ids` 為空。刪掉會逼作者把「不知道」寫成 `not-routine`（＝不該做），憑空多出一個否定結論。
+
+- **Step 14 蒐證 — 已完成並驗收**（`35db61b`）：`plans/證據包_C類_shoulder-arm.md`，14 條區塊齊、`裁決：` 全空（codex 未自行裁決）、`canonical/` 零異動。另抽驗 3 條逐字引文對原檔行號，全部吻合。
+- **Step 14 裁決 — 已完成**：14 條全部裁定，並補上跨條目的結構性根因與 W4 輸入清單。結果：支持／部分支持 8、修正 5、整條不採用 1（BF-25），**零條原封不動通過**。
+- **Step 15 ankle-foot 蒐證＋裁決 — 已完成**：`plans/證據包_C類_ankle-foot.md`，FR-41／BR-35／ST-19 均完成游泳書→本地文獻→線上一手研究三層查證；三份泳式裁決檔已同步，`canonical/` 零異動。
+
+#### 蒐證第 1 批的實質發現
+
+- **6 個結構性根因**（寫在證據包文末，後續三批要拿來當篩子先過一遍）：①效益句自由代換 4/14（最嚴重是 BR-18——教材講的效益是**划頻**，原文寫成**划距**，取捨的相反端）；②量化／比較主張缺對照或座標定義；③負荷描述冒充流行病學（BK-10）；④由掌心朝向反推前臂旋轉（BF-05、BF-25 的 ⚠︎ 缺陷 3 註記**經查證全部成立**）；⑤命名未溯源；⑥**新發現**：腕位／掌向憑解剖中立直覺填空 3/14，且**三條全部寫反**——原文填「腕伸直、掌心朝下」，教材實際是「屈腕、拇指朝下、掌心朝後」。
+- **BK-29 是唯一差點被錯殺的條目**：蒐證階段標出「教材把 late rotation 列為錯誤」看似與主張對撞，逐句比對後發現教材的 `late rotation`（整體旋轉遲到）與主張的「推進段不轉」是**撞名不是矛盾**，教材 `40_Figure_3.4.md:25` 其實與主張同向。此即協議 §3 警告的「把回答不同問題的東西當矛盾去裁決」。**蒐證階段標出的「教材對撞」一律不得直接採信**。
+- **BK-26 確認是 W4 blocker**：四段式分期不是標準也不是學界分歧，是三套各自自洽的操作定義（Fernandes 四 sweep + recovery／Chollet 與 Race Club 六相／SoSF 的 Catch-Midpull-Finish-Rotation）。依型 1 不選邊，但 `canonical/movement/` 的相位 ID 必須帶「出自哪套分期」欄位；仰式若採四 sweep，**移臂段會整段無 ID**。
+- **可直接產出 demand 的只有 3 條**：FR-13②（腕屈伸肌共收縮，直接游泳 EMG，本批證據最強）、FR-17（高肘構型）、BF-22①（蝶式移臂無 body roll 協助）。明確不得落成 demand／intervention：FR-09、BK-10（僅能 `evidence-gap` + `do-not-prescribe`）、BK-29、BF-25。
+
+#### 蒐證第 2 批的實質發現
+
+- **FR-41 修正**：自由式跨人研究只支持踝蹠屈與 22.86 m flutter-kick 速度的中度相關；沒有「效率」終點、因果或通用角度。UUS 的限制—正常有差，但正常—急性增加無顯著差，故只能寫「受限可能不利」，不能寫「越大越好」。
+- **BR-35 部分支持＋時序修正**：雙腳併攏可作 kick→glide 事件邊界，但踝蹠屈／腳尖後指在雙腿仍靠近時已開始；主要推進也不能歸給最後夾腿。
+- **ST-19 整條不採用**：腳趾最高垂直座標是 down-kick 起點，不是「水面」；最大蹠屈稍後出現。背屈角速度與脛前肌活動有控制角色，但無「頂點背屈 ROM→咬水」證據。不得據此建活動度 demand 或介入。
+- **新增結構性根因 7「相位交界壓成單點」**：BR-35、ST-19 都把前一相位末段、可見座標事件與下一相位關節轉向折成一個「尾聲／頂點」。W4 必須拆列 phase、event、joint state 與 outcome。
+
+#### 蒐證第 3 批（Step 16a，hip-knee 5 條）的實質發現
+
+`plans/證據包_C類_hip-knee.md`（`3b19300` 蒐證／`8213604` 裁決）。**5 條全部修正，零條原封不動通過。**
+
+- **蝶式兩次踢的大／小力指派是反的**（BF-32／BF-33），且 BF-32 的「腿啟動身體波動」因果顛倒——原文的體波是上身→髖→足傳下去的。此即**新增根因 9（因果方向顛倒）**，與 2026-06-19 已修正的 A-1 自由式髖部驅動同型，是本庫第二次。
+- **BR-30 的「學界爭議」其實是研究空白**。附錄 `plans/關節主張裁決_蛙式.md:451` 已預先寫死「方法層對不上就不構成真正的矛盾」；查證後發現兩派連量測研究都算不上——一端是無測量方法的復健教材敘述，唯一有方法的 Kippenhan 2001 講的是**下掃期**而非翻腳期。依附錄自己的條件改判，BR-23 既有裁決維持不動。由此立**新增根因 8**（「來源說法不同」未過同相位／同量／同方法三問就標成學界分歧）。
+- **FR-40 暴露 movement demand 缺「觀察參考系」欄位**：「窄通道」是相對身體軸線的空間描述，而身體在滾轉；同一條腿路徑在池畔固定系與隨體系有完全不同的關節解釋。
+- 待查未結：Kippenhan 2001 的 Methods 逐字引文因 `ojs.ub.uni-konstanz.de` 連續兩次 ECONNREFUSED 未取得；已在該條裁決內明列，2001/2002 兩篇的膝旋轉方向疑似不一致**在取得原文前不得下任何結論**。
+
+#### 蒐證第 4 批（Step 16b，spine-neck／軀幹旋轉 12 條）的實質發現
+
+`plans/證據包_C類_spine-neck.md`（`f8c253f` 蒐證＋裁決／`3489f5f` 規格更新）。**12 條全部需要修改，零條原封不動通過**（11 修正、1 需補條件）。
+
+- **「肩帶動核心」不成立，而且錯得有結構**（FR-30）。Yanai 2004 以全身角動量與慣性矩積分，直接把 body roll 的主要生成來源量到**浮力矩**；Andersen 2023 測得軀幹肌 EMG 與 torso twist 峰值互相關**落後 400–775 ms**，作者歸為穩定／姿勢控制。roll 的動力來源在身體之外，軀幹肌是在後面追著穩定。同型錯誤本批出現三次（FR-30、FR-43 括號鏈、BR-42「隨肩胛帶上提」），立為**新增根因 10**（把體節間共變寫成近端驅動遠端，漏掉外力項）。其最有效的檢查是第三問「**原作者自己怎麼歸因**」——三次全部靠這一步抓到，因為教材早已寫明另一個機制，只是轉寫時被換掉。
+- **「零值宣稱」是本分區的系統性措辭風險**（BR-40、BF-35）。兩條都把「非主要技術機制」寫成「沒有」。BR-40 的 Sanders 2015 原文是「rotate about their longitudinal axis ... **albeit not deliberately**」；BF-35 的 SoSF 原文根本是條件句（「**if** the hands produce similar force ... torques cancel out」），條件在轉寫時被刪掉。→ **canonical 不得出現「沒有／零」的絕對運動學宣稱。**
+- **根因 8 三問四次全部擋下假分歧，零次判為型 5**（FR-31、FR-33、BR-43、ST-09）。全部是不同量、不同終點或不同策略。這把第 3 批 BR-30 的教訓推成一般結論：**「來源說法不同」的預設判定應為「不同所指」，要標成學界分歧必須舉證。**
+- **根因 4 抓到反向形式**：BF-36 把 FoFS 的「胸部下壓時最大**髖屈曲角** 25–30°」讀成「髖部跟隨**下壓**」，而 SoSF `45:7` 明寫同一時刻「While the shoulders are moving down, the hips are moving **up**」。**關節角與空間位移在同一時刻可以方向相反**——本庫第一次抓到這個方向的錯誤。
+- **ST-09 是終點錯掛**：「避免腰椎過度前凸」是傷害預防建議，卻掛在水動力標題下；教材三處（FoFS `26:198` hyperstreamline、`24:20` 蝶式拉手、`14:58` 水平放鬆時的重力效應）都說腰椎伸展在水中是常態或功能需求。三層均無「過度」的角度門檻，該主張在資料層不可操作。
+- **新增欄位需求（本批第二個）**：demand 若引用阻力／效果百分比，必須帶「量測條件」欄。依據是 FR-44——同一個頭位操弄，手臂體側時 4–5.2%、雙臂過頭時 10.4–10.9%，差距超過兩倍。與第 3 批的「觀察參考系」欄一併在 Step 21 評估。
+- **規格已同步更新**（`3489f5f`）：根因表擴充至 10 條（新增 10，擴充 2／3／4，根因 8 補上四次驗證結果），驗收條款新增第 6 條「跨層去重」（FR-43 的 Rinonapoli 2023 ＝ 第 2 層 Masters 篇，同一研究被兩層各計一次）。
+
+#### 下一個執行點
+
+- **Step 16 已全部完成**：C 類 39 條蒐證與裁決收尾。累計 **39/39**（高風險 5 ＋ shoulder-arm 14 ＋ ankle-foot 3 ＋ hip-knee 5 ＋ spine-neck 12），**四批合計零條原封不動通過**。
+- **Step 16.5（插入）已完成**：相位詞彙 blocker 已解除（`8e7380d`）；`phase_model`、6 泳式 58 相位 registry 與 W017 均已落地。Step 17 的相位前置條件已清空。
+- **Step 17 前置欄位已定案並落地（2026-09-02）**：`action_reference_frame`（W018）與 `measurement_conditions`（W019）已寫進 `_taxonomy.yaml` 契約、驗證器與測試；三筆既有 demand 已回填；順帶補上 `phase_model` 漏收進 `build_indices.py` 的既存漏洞。**W4 現在可以直接開始填，欄位結構不會再變。**
+- **Step 17 與 Step 18（W4 四區圖譜填充）已全部完成（2026-09-02）**：實作清單的 Step 17 是 shoulder-arm 一區、Step 18 是其餘三區——**兩步都已隨四區落地完成**。四區一區一 gate、無平行，每區通過 `python tools/validate.py`＋負面詞清單 grep＋逐欄 `git diff` 才進下一區。四區合計 **content records 811 → 839**，`canonical/movement/` 現有 actions 7、muscle-groups 9、demands 16、interventions 5。四區都是 **0 ERROR、W013–W019 全 0**。
+  - ⚠ **更正本檔先前兩處錯誤**：①原寫「下一步是 Step 18（覆蓋補洞與 `gap.free.up-kick`）」——**錯**，Step 18 就是四區填充的後三區，已完成，且實作清單裡沒有「覆蓋補洞」這一步；②原寫「muscle-groups 6」——**錯**，實測 9。
+  - 17a shoulder-arm（`d3219d6`，codex）：FR-13／FR-17／BF-22 三則裁決落地。
+  - 17b ankle-foot（`a0deeee`，主 session）：FR-41 升級、BR-35 拆成相鄰兩筆、ST-19 不動。
+  - 17c hip-knee（前置 `8783b4f`，交付 commit 已推）：FR-40／BF-32／BF-33 落地，新增 `movement.action.hip.flexion`、`movement.action.knee.extension` 與對應肌群（股直肌的跨關節特性寫在 `cross_joint_characteristics`）。
+  - 17d spine-neck（前置 `c83432b`）：FR-31／FR-44／BR-43／BR-42／FR-10 五則各落一筆 demand，新增 `movement.action.trunk.axial-rotation`，BR-42 另落一筆 intervention，並把 **BF-36 併入既有的 `movement.demand.fly.first-kick.timing-and-wave-reception`**（與 BF-32 同一則體波規範，依 Step 16 的併案指示）。
+- **spine-neck 落地時攔到一處來源誤認（已更正）**：原規劃寫「`src.gonjo-2021` 已存在且 verified」，實際登錄的是同年另一篇（Sports Biomechanics，浮力與軀幹運動學，DOI `10.1080/14763141.2021.1921835`），**不是** FR-10 的證據（Scientific Reports，PMID 33436944／PMC7804020）。已另建 `src.gonjo-2021-body-roll` 並在 notes 標明兩篇不得互相替代。`_sources.yaml` 554 → 555。
+- **零值與缺口的落地方式**：FR-31 的「划距」「力量傳導」、FR-44 的「頸椎伸展角」、BR-42 的「肩胛帶上提」、BR-43 的「呼氣時」全部只以**否定句**進 `limitation_context`／`remaining_boundary`，不另開 do-not-prescribe 條目；FR-31 的 `muscle_roles` 與 FR-44／BR-42／BR-43／FR-10 的 `action_ids` 一律留空並在 `diagnostic` 寫明留空理由（避免把體表代理指標寫成關節動作、把穩定肌寫成驅動端）。
+- **覆蓋率實測與 C 類證據供給耗盡（2026-09-02）**：拿 `plans/movement_coverage_denominator.yaml` 的 58 個相位比對 16 筆 demand，**覆蓋 13／58**（free 4/11、breast 4/9、fly 3/11、udk 1/7、starts-turns 1/13、**back 0/7**）。**這不是漏做**——四份 C 類證據包的「可直接產出 demand」清單已全數落地，剩下 45 個相位沒有任何 C 類裁決授權產出內容，硬填就是憑空發明。要再往前推只有兩條路：跑新一輪 C 類蒐證，或接受現有覆蓋率先上線。
+  - 另兩項實測：`free.early-pull-through`（`heinlein-2010-phases`）有 demand 但**不在分母裡**——是分母的登錄缺口，不是 demand 錯（W017 過關，registry 在 `_taxonomy.yaml`）；`gap.free.up-kick` 經比對確認為真實內容缺口（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，不在 canonical 造記錄。
+- **Step 19（my-site movement 同步層）已完成（2026-09-02）**：my-site commit `c3cd91c` ＋ `169ece1`，CI run `33604385127` success。`sync_movement()`＋`_atomic_write_yaml()`＋`tools/test_sync_movement.py`（該 repo 第一支測試，純 python，8/8）。當時實測出站 0/37（37 筆全 `draft`，規格即 draft/withheld 不出站）；**發布狀態已於同日改判，現為 37/37 出站、diagnostic 命中 0**（見下方「發布狀態」一則）。刻意未寫 `data/movement/`：Step 21 的順序是先推 my-site 相容 sync、再合併 canonical。
+- **Step 20 派工規格已交付（2026-09-02，`e643c5e`）**：`plans/Step20_movement版型派工規格.md`。三個設計決策在規格裡定死，執行者不得自行更改：① 版型先假定資料為空；② `phase` 一律綁 `phase_model` 成對顯示，**不給跨模型的中文相位對照表**（BK-26 裁決：跨模型相位名不可互換不可換算，給了對照表等於默許換算）；③ interventions 的 `safety_stop_conditions` 置頂不可收合、demands 的 `measurement_conditions` 不得收合（抽掉量測條件＝把有條件的結論講成無條件）。`limitation_type` 是整句敘述不是分類鍵，故 interventions 平鋪不分組。
+
+- **發布狀態：37 筆 `draft` → `published`（2026-09-02）**。這題原本被寫成「要使用者拍板」，是**我把標準搞錯**：`_taxonomy.yaml:232–239` 明寫證據狀態／決策狀態／發布狀態是三個獨立軸，`publication_status: published`「只代表可對讀者發布，不等於所有主張因果確定」。`claim_status` 與 `action_status` 是**跟著記錄一起出站的誠實標籤，不是發布閘**（`sync_vortex.py` 的 `MOVEMENT_COMMON_FIELDS` 已含這兩欄）。拿「證據等級不夠」擋發布等於自己發明一道契約裡沒有的門檻，所以直接改，`claim_status`／`action_status` 一律不動。改後 `tools/validate.py` **0 ERROR、W013–W019 全 0**（W015 published demand 的 `derived_from_ids`、W017 published 完整性都過），`tools/test_sync_movement.py` **8/8**，真實 canonical **37/37 出站、diagnostic 命中 0**。
+- **圖譜定位已由使用者定案：列舉式，不是裁定書**。使用者明確排除三件事——① 不做「某相位各肌群各出多少力、誰主導」；② 不判定某個泳者被哪個結構限制；③ 不規定「該練什麼、拉到什麼角度」才算達標。**有就標，或把可能的狀況都標示出來即可**。實查 16 筆 demand 的 `public` 敘述，內容本身早已是列舉且自我設限的寫法，偏差只在標籤與框架文案，故不動內容。此定位已寫進 Step 20 規格 §2 並列為退件條件（文案不得出現上述三類斷言，例如不得寫「找出限制你的那塊肌肉」）。
+
+#### 派工分配（實測後定案）
+
+Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換視窗；要換視窗只有 codex（訂閱制獨立池）。Step 12b-2 拿來當對照實測：同一份 spec，**codex 0 處證據越界 vs Sonnet 6 處**，且 codex 未經提示就自己選對 `evidence_profile: synthesis-inference`（正是 Sonnet 那批我得手改的六處之一）。據此 **Step 14–20 全數走 codex**，主 session 只做裁決與驗收。
+
+注意：`codex exec` 會出現「只輸出計畫就 exit 0、零檔案異動」，派工 prompt 開頭必須加「立即執行、不要等確認、沒寫檔就是失敗」指令區塊；驗收一律看 `git diff` 與實際產物，不看 exit code。
 
 **使用者需求**：檢視 my-site「骨關節動作 · 命名校正」是否有錯，並規劃延伸到各泳姿動作使用的肌群、相應訓練與拉伸／活動度內容；本輪要求把計畫書與交接單保存進 Vortex。
 
@@ -15,7 +91,7 @@
 #### 稽核結論
 
 - 現有公開章仍是 **13 張命名校正卡**，不是完整動作圖譜；它由 `technical-analysis.yaml` 單一資料源供頂層 joint 頁與六式頁共用。
-- Vortex 底稿有 **183 條關節主張**（A 解剖 136、B ROM 8、C 泳姿特定 39）。A、B 已裁決；C 類完成 5 條高風險項目，**其餘 34 條仍須游泳一手文獻**，不得以 Neumann／Nordin 補成泳姿事實。
+- Vortex 底稿有 **183 條關節主張**（A 解剖 136、B ROM 8、C 泳姿特定 39）。A、B 已裁決；C 類已完成高風險 5 條、shoulder-arm 14 條與 ankle-foot 3 條，共 **22/39**；餘 17 條依 Step 16 處理，不得以 Neumann／Nordin 補成泳姿事實。
 - 13 卡語意處置：**5 條必修**（`free.tech.38`、`free.tech.39`、`udk.tech.30`、`fly.tech.37`、`starts-turns.tech.48`）；**7 條須把解剖事實／泳姿推論／教學應用分層**（`free.tech.36/40/41`、`back.tech.30`、`breast.tech.36/37`、`starts-turns.tech.47`）；`free.tech.37` 核心可保留並補量測邊界。
 - my-site `vortex-joints.html` 目前有顯示 certainty 與 optional evidence，卻**沒有解析並顯示 `mechanism.source_ids`**；讀者看得到色圓，看不到來源。
 - `periodization/dryland.yaml#flexibility_mobility` 有三個直接相關衝突：①蛙式以「髖內旋讓腳掌外翻」概括全相位，與 `breast.tech.36` 的髖外旋描述互撞；②蹠屈不足預設腓腸肌伸展，方向不對；③ sleeper stretch／後囊鬆動被寫得過度接近預設處方。
@@ -40,13 +116,19 @@
 
 ### 下一步建議
 
-1. **等待使用者確認**：說「開始」後才進 implementation；若要調整範圍，先改 plan，不邊做邊漂移。
-2. **W0 基線與覆蓋分母**：feature branch、完整測試基線、凍結六式相位 coverage；不明工作樹修改先隔離。
-3. **W1 先修既有內容**：13 卡語意、dryland 三處衝突與 joint 頁來源顯示，不等新圖譜才修。
-4. **W2 兩條 pilot**：只做「超流線肩上舉」與「踝蹠屈／UDK、flutter kick」完整鏈；人工核准 schema 後才擴全身。
-5. **W3/W4 雙 lane**：C 類 34 條逐條走游泳書／本地文獻／NCBI；圖譜按 shoulder-arm → ankle-foot → hip-knee → spine-neck 完成，一區一 gate。
-6. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
-7. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+1. **Step 20 已備妥待觸發：規格 `plans/Step20_movement版型派工規格.md` 已寫完，派工排在 2026-09-02 16:58**（shotclock job `shotclock-20260902-1658-w36e`，= codex 5H 重置 16:48 後 +10 分）。規格自足（含四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照、10 條退件條件），執行者不需讀 plan-check 或實作清單。排程任務只做「派 codex → 機械驗收 → commit **不 push**」；**視覺仍由主 session 對照 `resources/notes/DESIGN_SYSTEM.md` 鐵則 A–I 過閘後才上線**。若排程沒觸發或 codex 交件退件，手動重派的指令在規格 §0。
+   - **硬前提已更新（規格已同步改寫）**：canonical 現在 37/37 出站，但 my-site 的 `data/movement/` 要到 Step 21 才會生成，所以版型**兩條分支都要寫**——有資料時渲染完整，`data/movement/` 尚不存在時顯示「資料尚未同步」（不是「尚未發布」，那個措辭已錯）。
+   - **overview 必須寫明覆蓋範圍**：13/58 相位，且 back 0/7。空白代表「這批還沒蒐證到」，不是「判定不存在」——不寫這句，讀者會把缺相位讀成否定結論。
+   - class 前綴獨立（`vx-mv-*`），不 import `vortex-joints.css` / `vortex-injuries.css` 借樣式——那兩份檔名綁章節，跨頁引用會讓「這條規則歸誰維護」變模糊。
+   - 標籤與節點清單一律 range 資料生成，不在 layout 硬編：Hugo 的 `index` 查不到 key 回空字串且不報錯，硬編副本會讓 canonical 新增項目在頁面上**無聲消失**（my-site CLAUDE.md 已記兩起實例）。
+2. **發布狀態已解決（見上）**，剩下的是**驗收時要盯文案語氣**：圖譜是列舉式的，`published` 也不代表主張確定。Step 20 交件驗收時逐段讀 overview 與區段說明，出現「誰主導／各出多少力」「找出限制你的那塊肌肉」「該練到幾度」任一類斷言即退件——記錄本身刻意避開的話，不能被版型文案加回去。
+3. **movement 的 demand 覆蓋率停在 13/58，且已無 C 類證據可用**：四份證據包的「可直接產出 demand」清單全數落地。要提高覆蓋只能跑新一輪 C 類蒐證（照 `plans/證據包_蒐證派工規格.md`），**不得由任何執行者對沒有裁決的相位自行補內容**。優先順序建議：back 0/7 是唯一整式空白，且仰式 A 類裁決有 52 條可作蒐證起點。
+4. **movement 目前整層是 W003 孤兒（528 筆裡佔 34 筆）**：`cross_ref` 還沒接上既有 `instructional`／`technica` 條目。`derived_from_ids` 是單向橋（movement → instructional），不會讓 movement 脫離孤兒狀態。反向接點要不要做、做在哪一層，是 Step 21 的決策，不是 bug。
+5. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
+6. **W4 期間累積的三條寫作紀律，後續沿用**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`。
+7. **Step 21 rollout 順序**（my-site 同步碼已就位，是這條的前半）：`gh run list` 確認無進行中 workflow → my-site 相容 sync 已推（`c3cd91c`）→ 再合併 Vortex canonical 到 master → 15 分鐘內確認 sync 與 deploy。同一步決定 W013 是否升級成 E004 級——movement 已有 37 筆條目，樣本量夠了，可以判。
+8. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+9. **配額實況（2026-09-02 收工時）**：codex 5H 93%（7D 65%）、Claude 5H 68%（7D 13%）。Step 20 派 codex 前先刷新讀數——deskboard 的 `read_chatgpt()` 是最後一次 session 殘留快照，判斷前發一個最小 `codex exec` 再讀 `~/.codex/sessions/**/*.jsonl` 的 `rate_limits.primary`。
 
 ---
 
@@ -1106,6 +1188,38 @@
 ---
 
 ## 下一步建議
+
+### 最高優先——Step 17：W4 四區圖譜填充（2026-09-02 起）
+
+C 類 39 條蒐證與裁決已全部完成，W4 的前置條件（相位 registry、`derived_from_ids` 橋、`evidence-gap` 代價）也都清空。Step 17 是**把四份證據包的裁決結論寫成 `canonical/movement/` 條目**，不是重新研究。
+
+**執行順序（一區一個 gate，不並行）**：shoulder-arm（14 條，證據包最厚）→ ankle-foot（3 條，已有 W2 pilot 切片可比對）→ hip-knee（5 條）→ spine-neck（12 條）。每區寫完先跑 `python tools/validate.py` 與人工 gate，通過才進下一區。
+
+**每份證據包文末的「對 W4 的直接輸入」段落是唯一派工依據**，它已列好三份清單：可直接產出 demand、不得落成 demand／intervention、數值處理規則。寫的人不需要回頭讀三層檢索過程。
+
+**四批累計的跨區硬規則（寫 demand 前必須內化）**：
+
+1. **零條原封不動通過**——39 條 C 類主張沒有一條可以照抄進 canonical。預設動作是改寫，不是引用。
+2. **數值一律不進 demand**，只能以定性條件式存在，且必須連同量測方式與終點一起寫（Strzała 的 r=0.35、Jagomägi 的 11.1%、FoFS 的 25–30°／0.12 s 都適用）。
+3. **canonical 不得出現「沒有／零」的絕對運動學宣稱**，一律改寫為「非主要機制」＋條件（BR-40、BF-35）。
+4. **不得出現未附正負向與參考系的「同側／對側」**（FR-10）。
+5. **`body line`／`racing streamline`／`hyperstreamline` 三詞不得互換**（BR-43、ST-09）。
+6. **凡引用相位一律綁 `phase_model`**（W017），同一條目內不得混用兩套分期；蛙式與蝶式在 SoSF 與 FoFS 各有一套。
+7. **`evidence-gap` 條目必須配 `action_status: do-not-prescribe` 且 `dosage_source_ids` 為空**（W016）。
+8. **傷害終點與效能終點分屬不同條目，不得互相引用**（ST-09 的教訓）。
+
+**兩個待決欄位已於 2026-09-02 定案並落地（Step 17 前置，原規劃在 Step 21，理由同 W3 gate 提前定案 `derived_from_ids`：欄位晚於填充定案就是百筆返工）**：
+
+- **`action_reference_frame`**（受控，`joint-local`／`body-fixed`／`poolside-fixed`）——第 3 批 FR-40 的產出。宣告本筆 `action_ids` 是以哪個基準成立的。`joint-local` 是唯一可寫關節角度需求的取值，代價是 `source_ids` 非空，豁免只有 `action_status: do-not-prescribe`（誠實宣告待驗證候選，與 W016 對 evidence-gap 同邏輯）。`poolside_direction` 降為輔助觀察欄，三種取值都可並存帶它。**demands[] 必填**，由 W018 強制。
+- **`measurement_conditions`**（list，六個必填子鍵：`source_id`／`quantity`／`value`／`conditions`／`endpoint`／`extrapolation_boundary`）——第 4 批 FR-44 的產出。條目文字一旦出現量化主張（百分比／角度／秒數／r／d）就必填，由 W019 強制；正則刻意排除裸數字，`n=15`、`L0–L6`、`2D／3D` 不觸發。`endpoint` 同時是「傷害終點與效能終點不得互相引用」（ST-09）的落點。
+
+契約寫在 `canonical/_taxonomy.yaml#fields.action_reference_frame` 與 `#movement_measurement_contract`，執行者是 `tools/validate.py` 的 W018／W019，兩邊必須同時改。三筆既有 demand 已回填（皆 `joint-local`），`tests/test_movement_atlas.py` 加 19 條測試涵蓋正反案例，211 tests OK、validator 0 ERROR。
+
+**順帶修掉的既存漏洞**：`phase_model` 在 Step 16.5 登錄 taxonomy 時漏收進 `tools/build_indices.py` 的 `TAG_FIELD_ALIASES`，導致它在 `indices/tag_reverse_index.json` 永遠是空 list——即該欄位註記寫的「使用數以反向索引為準」是假的。已與 `action_reference_frame` 一併補上，兩欄現在都正確反查到 3 筆 demand。
+
+**併案項**：BF-32（第 3 批）與 BF-36（第 4 批）是同一個蝶式體波的兩種錯誤寫法，W4 應併為同一則體波規範條目。
+
+**派工**：Step 17 起仍走 codex（訂閱制獨立池，Sonnet sub-agent 與主 session 吃同一個 5H 配額）。但 W4 是**寫 canonical**，不是產出 plans/ 文件——`git diff` 驗收範圍與前四批相反，須逐欄檢查 `evidence_profile`、`certainty`、`action_status`、`phase_model`、`derived_from_ids`，以及 public／diagnostic 分層（E010 是 ERROR 級）。
 
 ### 呼吸章的後續（2026-08-11 起）
 

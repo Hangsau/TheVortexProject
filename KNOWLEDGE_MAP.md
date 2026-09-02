@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-08-28 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-09-02 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -626,7 +626,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.dryland.needs_analysis | 🟡 | 陸訓處方從比賽掉速段反推：先定位出發、轉身、水下或水面段，再測最可能限制該段的力量、爆發力、活動度、軀幹控制與左右差，最後選能直接改變該限制的訓練。 |
 | periodization.dryland.injury | 🟢 | 有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。 |
 | periodization.dryland.youth | 🟢 | 約7、8歲、能守指令就能從自體重量開始；PHV前以徒手為主，成熟後再逐步負重。成人初學先學動作，masters 加長恢復並看關節反應，para 依可用肢段與輔具設定；完成品質穩定再 |
-| periodization.dryland.flexibility | 🟢 | 活動度決定泳者能使用哪些技術路徑：肩屈曲／旋轉不足會限制流線與回臂，髖內旋不足會迫使蛙腿加寬，踝蹠屈不足會縮小自由式與蝶腳的有效推進面。處方先分成被動角度不足、主動控制不足與疼痛三 |
+| periodization.dryland.flexibility | 🟢 | 活動度決定泳者能使用哪些技術路徑：過頭活動度不足會限制流線與回臂，蛙式翻腳的角度同時來自髖、膝與足部三處而不是單一關節，踝蹠屈不足會縮小自由式與蝶式踢腿的有效推進面。處方先分成被動 |
 | periodization.dryland.caveats | 🟡 | 陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式只保留給出發和轉身。每4–6週照三層結果換法。 |
 
 ### `_index.yaml` （**0 節點**）
