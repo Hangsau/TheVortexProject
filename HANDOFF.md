@@ -174,8 +174,12 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
    - **48 筆 starts-turns 素材裡 27 筆（逾半數）關節詞彙命中 0**，只有 2 筆是 `category: joint`。「素材已在庫內」對起跳段與牆段成立，對進牆／pullout 幾乎不成立。
 
    **派工前的前置工作（按順序，前兩項是 blocker）**：
-   1. **修 `technical-analysis.yaml` 的 `tech.42` 兩處命名錯誤（主 session 裁決，不派工）**：① 「肩關節要做出 sub-luxation 或 hyperextension 把肩往前推」——hyperextension 是手臂往身體**後方**、與「把肩往前推」方向相反，sub-luxation 是**病理狀態不是動作名**（寫成教學指令等於叫泳者主動製造半脫位）；正解是肩胛前突＋上迴旋＋肩複合體上舉，發生在肩胛胸廓層，即 `tech.48` 已裁決過的分層。② 「腰椎反弓」（＝腰椎伸展）與 `tech.47` 的裁決直接衝突——`tech.47` 已判「脊椎些微伸展」與「hollow body」互斥、必須擇一並寫明，且其 `public.cross_ref_ids` 已指向 `tech.42`，代表當時看到關聯但沒回頭改。**demand 的 `derived_from_ids` 會指向這兩筆，讀者追過去就讀到錯的命名，所以必須先修再寫。**
-   2. **`actions.yaml` 新增三筆**（可派工，verbatim spec）：`neck.extension`／`neck.flexion`（庫內**完全沒有頸部動作**，但抬頭／下巴貼胸散布在 `tech.4/20/42/43/44`；不得用 `trunk.*` 頂替——`tech.47` 全文在區分頸椎／胸椎／腰椎三段，合成一個 `trunk` 等於抹掉該條裁決）、`shoulder-complex.scapular-protraction`（只有 retraction 缺對向，是上述錯誤甲的正解）。`ankle-foot.supination` 與 `hip.internal-rotation` 雖同樣缺對向，**本輪不新增**——沒有條目要用就不造。
+   1. ✅ **已完成（`dd45e88`）**。**修 `technical-analysis.yaml` 的 `tech.42` 兩處命名錯誤（主 session 裁決，不派工）**：① 「肩關節要做出 sub-luxation 或 hyperextension 把肩往前推」——hyperextension 是手臂往身體**後方**、與「把肩往前推」方向相反，sub-luxation 是**病理狀態不是動作名**（寫成教學指令等於叫泳者主動製造半脫位）；正解是肩胛前突＋上迴旋＋肩複合體上舉，發生在肩胛胸廓層，即 `tech.48` 已裁決過的分層。② 「腰椎反弓」（＝腰椎伸展）與 `tech.47` 的裁決直接衝突——`tech.47` 已判「脊椎些微伸展」與「hollow body」互斥、必須擇一並寫明，且其 `public.cross_ref_ids` 已指向 `tech.42`，代表當時看到關聯但沒回頭改。**demand 的 `derived_from_ids` 會指向這兩筆，讀者追過去就讀到錯的命名，所以必須先修再寫。**
+   2. ✅ **已完成（`dd1a362`）：`actions.yaml` 只新增一筆，30→31。**
+
+      **⚠ 錯誤 3：本項原寫「新增三筆……`neck.extension`／`neck.flexion`（庫內完全沒有頸部動作）……不得用 `trunk.*` 頂替」——錯。** 實作前讀 `actions.yaml:1287` 發現 `movement.action.trunk.extension` 的 `joint_region` 就是 `spine-neck`，`aliases` 含「脊椎伸展／腰椎伸展」，定義本身寫著「脊柱伸展會加深頸椎與腰椎的前凸，同時減少胸椎後凸；因此同一個『伸展』在不同節段對應相反的曲度變化，**不標節段就無法驗證**」。庫內既有設計不是「漏掉頸部」，是「一筆脊柱矢狀面動作 ＋ 強制標節段」。另開 `neck.*` 會讓同一個動作有兩個 ID，比命名不直觀更糟；`tech.47` 要的是條目內標明節段，那筆記錄自己就在要求這件事。
+
+      **更正後結論**：抬頭／下巴貼胸一律寫 `trunk.extension`／`trunk.flexion`，**並在 `observable_boundaries` 或敘述中標明節段為頸椎**。這條要進派工負面清單的正面對應項。實際新增只有 `shoulder-complex.scapular-protraction`（肩胛前伸，只有 retraction 缺對向，是上述錯誤甲的正解），`observable_boundaries` 已寫入界線句：手臂上舉到頭頂後把肩往前送記的是本條加肩胛上迴旋，不是盂肱關節伸展或過度伸展（後者方向相反）。`ankle-foot.supination` 與 `hip.internal-rotation` 雖同樣缺對向，**本輪不新增**——沒有條目要用就不造。
    3. 9 個相位分三批派工（起跳段 4／牆段 3／出水段 2），沿用 W6–W9 八段式格式。**負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得順手補 `flip`／`wall-rotation`／`breaststroke-pullout`、**兩欄不一致處不得只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。
 
    **核對最值得記的一筆**：`tech.43` 的後腿踢——池畔看到「後腿往上踢到接近垂直」，直覺對到「抬腿＝髖屈曲」，但起跳時軀幹前傾下潛，腿往上＝大腿往軀幹**後方**去＝**髖伸展**。與 BK-30（仰式上踢是髖屈曲）同一類、方向恰好相反。這就是兩欄核對存在的理由。
