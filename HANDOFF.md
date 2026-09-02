@@ -6,9 +6,11 @@
 
 ## 當前狀態（2026-09-02，最新）
 
-### ▶️ 動作—肌群—訓練—活動度圖譜實作中：**Step 17／18（W4 四區填充）與 Step 19（my-site 同步層）皆已完成**，下一步是 Step 20（my-site movement 版型，派 codex）
+### ▶️ 動作—肌群—訓練—活動度圖譜：**Step 17–21 全數完成，動作圖譜已上線**。下一步是覆蓋率（back 0/7）與 W013／W003 兩個決策
 
-分支 `feat/movement-atlas`。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
+`feat/movement-atlas` 已合併回 `master`（merge commit `f6dfd60`，37 個 commit）。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
+
+線上位址：<https://hangsau.github.io/cortex/vortex/movement/>（左欄「動作圖譜 · 動作與肌群」）。
 
 #### 已完成
 
@@ -78,6 +80,12 @@
 - **發布狀態：37 筆 `draft` → `published`（2026-09-02）**。這題原本被寫成「要使用者拍板」，是**我把標準搞錯**：`_taxonomy.yaml:232–239` 明寫證據狀態／決策狀態／發布狀態是三個獨立軸，`publication_status: published`「只代表可對讀者發布，不等於所有主張因果確定」。`claim_status` 與 `action_status` 是**跟著記錄一起出站的誠實標籤，不是發布閘**（`sync_vortex.py` 的 `MOVEMENT_COMMON_FIELDS` 已含這兩欄）。拿「證據等級不夠」擋發布等於自己發明一道契約裡沒有的門檻，所以直接改，`claim_status`／`action_status` 一律不動。改後 `tools/validate.py` **0 ERROR、W013–W019 全 0**（W015 published demand 的 `derived_from_ids`、W017 published 完整性都過），`tools/test_sync_movement.py` **8/8**，真實 canonical **37/37 出站、diagnostic 命中 0**。
 - **圖譜定位已由使用者定案：列舉式，不是裁定書**。使用者明確排除三件事——① 不做「某相位各肌群各出多少力、誰主導」；② 不判定某個泳者被哪個結構限制；③ 不規定「該練什麼、拉到什麼角度」才算達標。**有就標，或把可能的狀況都標示出來即可**。實查 16 筆 demand 的 `public` 敘述，內容本身早已是列舉且自我設限的寫法，偏差只在標籤與框架文案，故不動內容。此定位已寫進 Step 20 規格 §2 並列為退件條件（文案不得出現上述三類斷言，例如不得寫「找出限制你的那塊肌肉」）。
 
+- **Step 20（my-site movement 版型）已完成並上線（2026-09-02）**：codex 交件 `layouts/vortex/vortex-movement.html`＋`static/css/vortex-movement.css`（`vx-mv-*` 自足前綴）＋`content/vortex/movement/_index.md`＋側欄一條，my-site commit `97a76e6`；修繕輪 `f394a87`。驗收退回三件事，全由主 session 手改（微 diff 不重派）：
+  - **codex 對著改版前的規格施工**：16:58 shotclock 觸發時我的規格改寫還沒落地，交件的空狀態寫成「尚未發布／目前仍是草稿狀態」、且缺覆蓋率聲明。已改成「資料尚未同步」並補 13/58（back 0/7）與「空白＝還沒蒐證到，不是判定不存在」。**教訓：規格改寫與排程派工之間要對時，shotclock job 的 prompt 內容變動後必 cancel 重排**。
+  - **`measurement_conditions` 的形狀被規格寫錯**：規格把它當字串，實際是 `list[dict]`（`quantity`／`value`／`conditions`／`extrapolation_boundary`／`endpoint`／`source_id`，全庫 11 個區塊）。頁面直接印出 Go map dump。已改寫成逐區塊展開＋每區塊自帶來源行＋`endpoint` 中文對照。**教訓：規格給欄位值域時要附真實 YAML 片段，不能只寫欄位名**。
+  - **交叉參照印原始 ID**（`movement.action.shoulder-complex.elevation`）：已建 `$nameById` 查表，查不到才 fallback 回 ID（同 my-site CLAUDE.md 那條「Hugo `index` 查不到回空字串且不報錯」的鐵則）。`body_position` 同樣補中文對照。相位名**維持原文不轉中文**（BK-26：相位名綁 `phase_model`，跨模型不可換算）。
+- **Step 21（rollout）已完成（2026-09-02）**：順序照 `sync-from-vortex.yml` 的定義走——該 workflow checkout Vortex 的是 **`master`**，所以必須先推 my-site 版型、再合併 canonical 到 master。實際執行：my-site `97a76e6` 推 → Vortex 合併 `f6dfd60` → `notify-mysite` 觸發 → cortex sync commit → deploy，四段全 `success`。線上實測：13/58 與「列舉式的圖譜」在頁上、`資料尚未同步` 已消失（資料已同步）、44 個 `vx-mv-entry`、`map[`／`<nil>`／`%!`／`ZgotmplZ` 各 0、**可見的原始 ID 0 個**，且 `perception_probe`／`discriminators`／`type_diagnosis`／`signal_structure`／`manipulation`／`contrast_question`／`diagnostic` 七個診斷鍵**線上命中全 0**。
+
 #### 派工分配（實測後定案）
 
 Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換視窗；要換視窗只有 codex（訂閱制獨立池）。Step 12b-2 拿來當對照實測：同一份 spec，**codex 0 處證據越界 vs Sonnet 6 處**，且 codex 未經提示就自己選對 `evidence_profile: synthesis-inference`（正是 Sonnet 那批我得手改的六處之一）。據此 **Step 14–20 全數走 codex**，主 session 只做裁決與驗收。
@@ -116,19 +124,15 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **Step 20 已備妥待觸發：規格 `plans/Step20_movement版型派工規格.md` 已寫完，派工排在 2026-09-02 16:58**（shotclock job `shotclock-20260902-1658-w36e`，= codex 5H 重置 16:48 後 +10 分）。規格自足（含四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照、10 條退件條件），執行者不需讀 plan-check 或實作清單。排程任務只做「派 codex → 機械驗收 → commit **不 push**」；**視覺仍由主 session 對照 `resources/notes/DESIGN_SYSTEM.md` 鐵則 A–I 過閘後才上線**。若排程沒觸發或 codex 交件退件，手動重派的指令在規格 §0。
-   - **硬前提已更新（規格已同步改寫）**：canonical 現在 37/37 出站，但 my-site 的 `data/movement/` 要到 Step 21 才會生成，所以版型**兩條分支都要寫**——有資料時渲染完整，`data/movement/` 尚不存在時顯示「資料尚未同步」（不是「尚未發布」，那個措辭已錯）。
-   - **overview 必須寫明覆蓋範圍**：13/58 相位，且 back 0/7。空白代表「這批還沒蒐證到」，不是「判定不存在」——不寫這句，讀者會把缺相位讀成否定結論。
-   - class 前綴獨立（`vx-mv-*`），不 import `vortex-joints.css` / `vortex-injuries.css` 借樣式——那兩份檔名綁章節，跨頁引用會讓「這條規則歸誰維護」變模糊。
-   - 標籤與節點清單一律 range 資料生成，不在 layout 硬編：Hugo 的 `index` 查不到 key 回空字串且不報錯，硬編副本會讓 canonical 新增項目在頁面上**無聲消失**（my-site CLAUDE.md 已記兩起實例）。
-2. **發布狀態已解決（見上）**，剩下的是**驗收時要盯文案語氣**：圖譜是列舉式的，`published` 也不代表主張確定。Step 20 交件驗收時逐段讀 overview 與區段說明，出現「誰主導／各出多少力」「找出限制你的那塊肌肉」「該練到幾度」任一類斷言即退件——記錄本身刻意避開的話，不能被版型文案加回去。
-3. **movement 的 demand 覆蓋率停在 13/58，且已無 C 類證據可用**：四份證據包的「可直接產出 demand」清單全數落地。要提高覆蓋只能跑新一輪 C 類蒐證（照 `plans/證據包_蒐證派工規格.md`），**不得由任何執行者對沒有裁決的相位自行補內容**。優先順序建議：back 0/7 是唯一整式空白，且仰式 A 類裁決有 52 條可作蒐證起點。
-4. **movement 目前整層是 W003 孤兒（528 筆裡佔 34 筆）**：`cross_ref` 還沒接上既有 `instructional`／`technica` 條目。`derived_from_ids` 是單向橋（movement → instructional），不會讓 movement 脫離孤兒狀態。反向接點要不要做、做在哪一層，是 Step 21 的決策，不是 bug。
-5. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
-6. **W4 期間累積的三條寫作紀律，後續沿用**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`。
-7. **Step 21 rollout 順序**（my-site 同步碼已就位，是這條的前半）：`gh run list` 確認無進行中 workflow → my-site 相容 sync 已推（`c3cd91c`）→ 再合併 Vortex canonical 到 master → 15 分鐘內確認 sync 與 deploy。同一步決定 W013 是否升級成 E004 級——movement 已有 37 筆條目，樣本量夠了，可以判。
+1. **覆蓋率是唯一的內容缺口：demand 停在 13/58，且已無 C 類證據可用**。四份證據包的「可直接產出 demand」清單全數落地。要提高覆蓋只能跑新一輪 C 類蒐證（照 `plans/證據包_蒐證派工規格.md`），**不得由任何執行者對沒有裁決的相位自行補內容**。優先做 **back 0/7**：那是唯一整式空白，線上頁面已明寫這件事，且仰式 A 類裁決有 52 條可作蒐證起點。
+2. **W013 是否升級成 E004 級，現在可以判**：movement 已有 37 筆條目、線上跑過一輪，樣本量夠了。這是 Step 21 原本掛著、但 rollout 沒順帶做掉的決策。
+3. **movement 整層仍是 W003 孤兒（528 筆裡佔 34 筆）**：`cross_ref` 還沒接上既有 `instructional`／`technica` 條目。`derived_from_ids` 是單向橋（movement → instructional），不會讓 movement 脫離孤兒狀態。反向接點要不要做、做在哪一層，仍未決——是決策不是 bug。
+4. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
+5. **W4 期間累積的三條寫作紀律，後續沿用**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`。
+6. **新增 movement 條目後不必再動 my-site**：版型已全面 range 資料生成，`data/movement/` 由 `sync-from-vortex.yml` 從 **master** 拉。所以「合併到 master」才是上線動作，推到 feature 分支不會出現在網站上。
+7. **後續文案驗收仍盯列舉式語氣**：`published` 不代表主張確定。任何新增的 overview／區段說明出現「誰主導／各出多少力」「找出限制你的那塊肌肉」「該練到幾度」任一類斷言即退件——記錄本身刻意避開的話，不能被版型文案加回去。
 8. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
-9. **配額實況（2026-09-02 收工時）**：codex 5H 93%（7D 65%）、Claude 5H 68%（7D 13%）。Step 20 派 codex 前先刷新讀數——deskboard 的 `read_chatgpt()` 是最後一次 session 殘留快照，判斷前發一個最小 `codex exec` 再讀 `~/.codex/sessions/**/*.jsonl` 的 `rate_limits.primary`。
+9. **派工對時紀律（Step 20 實付代價）**：shotclock 排定的 codex 派工，其 prompt／規格內容一旦變動就必須 cancel 重排。Step 20 因為規格改寫晚於觸發時間，交件是對著舊規格做的，退件三處裡有兩處源自此。
 
 ---
 

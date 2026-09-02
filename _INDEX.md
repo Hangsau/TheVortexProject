@@ -180,9 +180,9 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 ## 規劃文件
 - `RESEARCH_PLAN.md` — 四層研究架構完整說明
 - `FUTURE_RESEARCH.md` — 前沿假設庫（渦流、頻率、感受器等）
-- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **實作中（2026-09-02；Step 17／18 四區填充與 Step 19 my-site 同步層皆完成，下一步 Step 20 my-site movement 版型）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜 + my-site rollout gates
+- `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **Step 17–21 全數完成、動作圖譜已上線（2026-09-02，`feat/movement-atlas` 併回 master `f6dfd60`）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜（37 筆，全 `published`）+ my-site rollout gates。剩餘為覆蓋率（demand 13/58、仰式 0/7）與 W013／W003 兩個決策
 - `plans/W4_圖譜填充派工規格.md` — Step 17／18 四區填充的自足派工規格：受控欄位、相位登錄表對照、負面詞清單與逐欄驗收條款
-- `plans/Step20_movement版型派工規格.md` — Step 20 my-site 動作圖譜版型的自足派工規格：四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照（含 fallback 鐵則）、12 條退件條件；定位是「列舉式圖譜不是裁定書」，版型須同時處理 `data/movement/` 已同步與尚未同步兩條分支
+- `plans/Step20_movement版型派工規格.md` — **已執行完畢（2026-09-02）**，保留作派工規格範本 · Step 20 my-site 動作圖譜版型的自足派工規格：四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照（含 fallback 鐵則）、12 條退件條件；定位是「列舉式圖譜不是裁定書」。**已知規格缺陷（交件時付了代價）**：`measurement_conditions` 被寫成字串，實為 `list[dict]`——之後寫規格時值域要附真實 YAML 片段
 - `plans/movement_coverage_denominator.yaml` — 6 泳式 58 相位的覆蓋分母與 `known_gaps`；**demand 覆蓋現況 13/58**（back 0/7），未覆蓋相位無 C 類裁決授權，不得憑空補
 - `plans/證據包_蒐證派工規格.md` — C 類蒐證的自足派工規格：三層檢索路徑、讀法紀律、十條結構性根因篩子、六項驗收條款
 - `plans/證據包_C類_shoulder-arm.md` — C 類第 1 批 14 條三層蒐證、裁決、結構性根因與 W4 輸入
