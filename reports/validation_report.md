@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-03
-> 驗證條目數：729，Drills ID 數：176
+> 驗證條目數：732，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 420 筆**
+**WARN，共 414 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -520,14 +520,8 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.14'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.15'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.17'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.18'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.19'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.20'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.21'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.22'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.23'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.24'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.26'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.28'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.29'
