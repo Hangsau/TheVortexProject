@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-03
-> 驗證條目數：696，Drills ID 數：176
+> 驗證條目數：704，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 450 筆**
+**WARN，共 442 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -470,11 +470,6 @@
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.5'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.6'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.9'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.11'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.12'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.13'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.14'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.15'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.18'
@@ -523,8 +518,6 @@
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.36'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.38'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.37'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.38'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.47'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.48'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.35'
@@ -571,7 +564,6 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.40'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.scapular-retractors'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'

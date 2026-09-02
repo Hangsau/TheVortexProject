@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 70 | actions 20 / muscle-groups 18 / demands 27 / interventions 5；相位覆蓋 25/59 |
+| `movement` | 78 | actions 22 / muscle-groups 18 / demands 33 / interventions 5；相位覆蓋 31/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**25/59**）
+### 相位覆蓋（**31/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -804,11 +804,11 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 自由式 | 5/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | lift（升力相）, catch（抓水期）, rear-quadrant-propulsion（後象限推進）, push（推水相）, release（釋放相）, early-recovery（早期回臂）, late-recovery（晚期回臂） |
 | 仰式 | 7/7 | descriptive | — |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
-| 蝶式 | 3/11 | descriptive, event-window | entry（入水）, entry-pause（入水停頓）, arm-outsweep（外划）, arm-catch（捕水）, arm-insweep（內划）, arm-upsweep（上划）, exit（出水）, breathing-window（呼吸視窗） |
+| 蝶式 | 9/11 | descriptive, event-window | entry-pause（入水停頓）, breathing-window（呼吸視窗） |
 | 水下蝶腳 | 1/7 | descriptive | streamlined-glide（流線滑行）, kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, up-kick（上踢相）, breakout（出水划手） |
 | 起跳轉身 | 1/13 | descriptive | set-position（零位姿勢）, takeoff（起跳）, flight（飛行階段）, entry（入水）, underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, turn-approach（進牆）, flip（翻滾）, wall-contact（觸牆）, wall-rotation（旋轉在牆上完成）, wall-push-off（推蹬） |
 
-### `actions.yaml` — 解剖動作（**20 條目**）
+### `actions.yaml` — 解剖動作（**22 條目**）
 
 | ID | 名稱 | 部位 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -832,6 +832,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.action.knee.axial-rotation | 膝軸向旋轉 | hip-knee | supported | ready |
 | movement.action.ankle-foot.dorsiflexion | 踝背屈 | ankle-foot | supported | ready |
 | movement.action.ankle-foot.pronation | 距下／橫跗關節旋前 | ankle-foot | supported | ready |
+| movement.action.shoulder-complex.adduction | 肩內收 | shoulder-arm | supported | ready |
+| movement.action.shoulder-complex.scapular-retraction | 肩胛後縮 | shoulder-arm | supported | ready |
 
 ### `muscle-groups.yaml` — 肌群（**18 條目**）
 
@@ -856,7 +858,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.knee-flexors | 膝屈肌群 | hip-knee | supported | ready |
 | movement.muscle.foot-evertors | 足外翻肌群 | ankle-foot | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**27 條目**）
+### `stroke-demands.yaml` — 泳式需求（**33 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -896,13 +898,19 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion | leg-recovery | descriptive | 蛙式收腿的髖屈曲外展、膝屈曲與踝背屈，以及可見現象的歸屬 | partially-supported | provisional |
 | movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out | foot-flip | descriptive | 蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節 | partially-supported | provisional |
 
-#### 蝶式 (3)
+#### 蝶式 (9)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
 | movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll | aerial-recovery | descriptive | 蝶式空中移臂的肩胛穩定需求 | partially-supported | provisional |
 | movement.demand.fly.second-kick.timing-with-arm-push | second-kick | descriptive | 蝶式第二踢與推水的時序需求 | partially-supported | provisional |
 | movement.demand.fly.first-kick.timing-and-wave-reception | first-kick | descriptive | 蝶式第一踢的時序與體波承接需求 | partially-supported | provisional |
+| movement.demand.fly.entry.elevation-plane-and-contested-rotation-direction | entry | descriptive | 蝶式入水的上舉平面、旋轉基準，與旋轉方向的來源分歧 | disputed | provisional |
+| movement.demand.fly.arm-outsweep.elevation-plane-with-obligatory-external-rotation | arm-outsweep | descriptive | 蝶式外掃的上舉平面命名與必然外旋 | partially-supported | provisional |
+| movement.demand.fly.arm-catch.elbow-flexion-with-rotation-reversal | arm-catch | descriptive | 蝶式抓水的肘屈曲加深與旋轉方向反轉 | supported | provisional |
+| movement.demand.fly.arm-insweep.dual-axis-adduction-with-scapular-retraction | arm-insweep | descriptive | 蝶式內掃的雙軸內收、軸向內旋與肩胛後縮 | partially-supported | provisional |
+| movement.demand.fly.arm-upsweep.extension-with-sustained-internal-rotation | arm-upsweep | descriptive | 蝶式上划的肩伸展、內旋維持與肘腕伸展 | partially-supported | provisional |
+| movement.demand.fly.exit.extension-position-with-blank-rotation-field | exit | descriptive | 蝶式出水的肩伸展位，與留白的旋轉欄位 | partially-supported | provisional |
 
 #### 起跳轉身 (2)
 
