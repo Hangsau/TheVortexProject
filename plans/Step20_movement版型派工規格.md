@@ -35,20 +35,47 @@ prompt 開頭必須附這段：
 
 ---
 
-## 2. 硬前提：資料現在是空的，而且可能完全不存在
+## 2. 這章的定位（決定所有文案怎麼寫，先讀懂再動手）
 
-`data/movement/` **目前不存在**。上游 canonical 的 37 筆記錄全部是 `publication_status: draft`，
-同步腳本 `sync_movement()` 實測輸出 **0/37**。發布決策還沒做。
+**這是一份列舉式的圖譜，不是裁定書。** 它回答的是「這個動作涉及哪些關節、哪些肌群」
+「做不到時可能是哪幾種情況」。它**不回答**、也不得寫成回答：
 
-因此：
+- ❌ 游這一式這個相位時，哪塊肌肉主導、各出多少力
+- ❌ 某個泳者做不到，是哪一塊肌肉的問題
+- ❌ 該練什麼、拉什麼、練到什麼角度
 
-- `index hugo.Data "movement" "actions"` 會回 nil。**頁面必須照樣建得起來**，
+記錄本身已經是照這個定位寫的，逐筆結尾都在明講自己不做什麼（例：「本條不給目標角度，
+也不作為伸展或肌力處方的依據」「兩套都是教材技術主張，目前都沒有實證比較，因此本筆
+並列保存，不指定其中一套」）。**版型的文案必須延續這個語氣，不要在 overview 或區段
+說明裡加上記錄本身刻意避開的斷言**，例如不要寫「找出限制你的那塊肌肉」。
+
+overview 的自介建議照這個意思寫：列出涉及什麼、以及可能有哪些情況；哪一種成立要個別
+評估，本章不替任何人判定。
+
+## 2b. 資料狀態與 build 安全
+
+canonical 的 37 筆已於 2026-09-02 全數改為 `publication_status: published`，
+`sync_movement()` 實測輸出 **37/37**（actions 7、muscle_groups 9、demands 16、
+interventions 5）。**但 my-site 的 `data/movement/` 目前仍不存在**——真正的資料要等
+Step 21 的 rollout 順序才由同步腳本生成。
+
+因此兩種情況都要處理：
+
+- `index hugo.Data "movement" "actions"` 在資料未同步時會回 nil。**頁面必須照樣建得起來**，
   `hugo --quiet` 不得有任何 error。
-- overview 面板必須有一個「**尚未發布**」狀態區塊：說明這章的資料在 canonical 已經寫好，
-  但尚未通過發布審查，所以目前不顯示條目。**不要**寫成「內容準備中」「敬請期待」這類空話，
-  要寫清楚是**發布狀態**造成的，不是內容不存在。
-- 四個區段各自為空時，該區段整段不渲染（連標題都不出現），只留 overview 的告示。
-- **禁止只寫有資料時的分支**。每一層都要 `with` / `if` 護。
+- 資料不存在時，overview 面板顯示一個「**資料尚未同步**」區塊，說明內容在上游 canonical
+  已發布、等同步後顯示。**不要**寫成「內容準備中」「敬請期待」這類空話。
+- 四個區段各自為空時，該區段整段不渲染（連標題都不出現）。
+- **禁止只寫有資料時的分支**，也禁止只寫空資料的分支。每一層都要 `with` / `if` 護，
+  兩種情況都要用 §9 的兩段驗證實際跑過。
+
+## 2c. 覆蓋範圍必須寫在 overview（否則空白會被誤讀）
+
+demand 目前覆蓋 **13/58 個相位**：自由式 6 筆、蛙式 4 筆、蝶式 3 筆、起跳轉身 2 筆、
+水下海豚腿 1 筆、**仰式 0 筆**。
+
+overview 必須明寫這件事，並講清楚**空白代表「這批還沒蒐證到」，不是「判定不存在」**。
+沒有這句話，讀者翻到仰式一片空白會讀成內容判斷。
 
 ---
 
@@ -252,7 +279,8 @@ action_reference_frame:
 三個標記各自代表什麼、為什麼要標。**`action_status: do-not-prescribe` 的意思是
 「這條不得當成處方使用」，必須在圖例裡講明白。**
 
-資料為空時，這裡再加一塊「尚未發布」告示（見 §2）。
+資料尚未同步時，這裡再加一塊「資料尚未同步」告示（見 §2b）。覆蓋範圍那段（§2c）
+則是**兩種情況都要出現**，不隨資料有無而消失。
 
 **`#actions`** — 按 `joint_region` 分組，每筆一個 `vx-panel`：
 標題 `name_zh`（缺則 `name`）→ 誠實標記列 → `description` → `definition` →
@@ -343,7 +371,7 @@ slug: "movement"
   `vx-panels` `vx-panel` `vx-sec-no` `vx-overview` `vx-premise` `vx-read-howto`
   `vx-block-label` `vx-howto` `vx-boundary` `vx-cite` `vx-src-unverified` `vx-flow` `vx-empty`
 - 只為本章特有的東西寫新樣式：誠實標記列、相位行、安全停止條件區塊、量測條件區塊、
-  尚未發布告示、錨點交互參照。
+  資料尚未同步告示、覆蓋範圍說明、錨點交互參照。
 - 沿用站上既有設計語言：**無陰影、無圓角、無 hover 位移**，方角規則線。
 - **不寫 inline style，不用 `!important`。**
 
@@ -358,21 +386,23 @@ cd C:/claudehome/projects/my-site
 hugo --quiet
 ```
 
-必須零 error。`public/vortex/movement/index.html` 要存在，且內含「尚未發布」告示。
+必須零 error。`public/vortex/movement/index.html` 要存在，且內含「資料尚未同步」告示
+與 §2c 的覆蓋範圍說明。
 
 ### 9.2 有資料（預覽用，驗完必須刪掉）
 
-跑這段產生**臨時**預覽資料（把 draft 當成已發布跑一次同步邏輯）：
+跑這段產生**臨時**預覽資料（只跑 movement，不要跑整支 `sync_vortex.py`——那會動到
+其他章節的 `data/`）：
 
 ```bash
 cd C:/claudehome/projects/my-site && python -c "
 import sys, yaml, pathlib
 sys.path.insert(0, 'tools')
-from sync_vortex import MOVEMENT_FILES, MOVEMENT_SRC_DIR, MOVEMENT_DST_DIR, movement_public_record
+from sync_vortex import MOVEMENT_FILES, MOVEMENT_SRC_DIR, MOVEMENT_DST_DIR, movement_public_records
 MOVEMENT_DST_DIR.mkdir(parents=True, exist_ok=True)
 for name, key, fields in MOVEMENT_FILES:
     d = yaml.safe_load((MOVEMENT_SRC_DIR / (name + '.yaml')).read_text(encoding='utf-8')) or {}
-    recs = [movement_public_record(r, fields) for r in (d.get(key) or [])]
+    recs = movement_public_records(d.get(key) or [], fields)
     (MOVEMENT_DST_DIR / (name + '.yaml')).write_text(
         yaml.safe_dump({'domain': d.get('domain'), 'sub': d.get('sub'),
                         'description': d.get('description'), key: recs},
@@ -405,7 +435,9 @@ rm -rf C:/claudehome/projects/my-site/data/movement
 ## 10. 退件條件（任一成立即需重做）
 
 1. `data/movement/` 留在 repo 裡
-2. 空資料時 `hugo --quiet` 報 error，或頁面沒有「尚未發布」告示
+2. 空資料時 `hugo --quiet` 報 error，或頁面沒有「資料尚未同步」告示；或有資料時反而爆掉
+2b. overview 沒寫覆蓋範圍 13/58（仰式 0 筆）與「空白＝尚未蒐證、非判定不存在」
+2c. 文案出現 §2 明列的三種禁止斷言（誰主導／是哪塊肌肉的問題／該練什麼）
 3. template 裡硬編了 `joint_region` / `stroke` 名單，沒有 range 資料
 4. 標籤 dict 查不到時印空白（沒有 fallback 印原 key）
 5. 單獨印 `phase` 而沒有綁 `phase_model`

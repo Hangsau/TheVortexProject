@@ -58,7 +58,7 @@ actions:
       維持關節接觸面。兩關節的協調比例存在個體差異與平面差異，教學上常用的
       「盂肱 120°、肩胛 60°」是近似值，不是固定比例。
       真實盂肱軸向旋轉量無法以手掌方向或 Euler 表觀角度可靠反推。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -119,7 +119,7 @@ actions:
       張力下降，附屬活動度隨之增加。這是關節層的解剖事實，說明蹠屈末端的
       骨性穩定度低於中立位；但由此推論任何游泳動作的擺動幅度、推進或風險，
       都超出解剖層能支撐的範圍，本條不作此推論。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -171,7 +171,7 @@ actions:
       在一般解剖條件下，腕可由解剖零位向掌側完成主動與被動屈曲。實際可用
       範圍會隨個體活動度、量測方式與症狀而變，本條不採用任何單一角度作為
       能力門檻，也不由一般解剖容量推論特定泳姿的腕部位置。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -218,7 +218,7 @@ actions:
       在一般解剖條件下，腕可由解剖零位向背側完成主動與被動伸展。實際可用
       範圍會隨個體活動度、量測方式與症狀而變，本條不採用任何單一角度作為
       能力門檻，也不由一般解剖容量推論特定泳姿的腕部位置。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -263,7 +263,7 @@ actions:
       在一般解剖條件下，髖可由中立位置向前完成主動與被動屈曲。實際可用
       範圍會隨骨盆固定方式、膝部位置、主動或被動量測及症狀而變，本條不以
       單一角度作能力門檻，也不由一般解剖容量推論特定泳姿的髖部位置。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -308,7 +308,7 @@ actions:
       在一般解剖條件下，膝可由屈曲位置主動或被動朝伸展方向移動。實際
       可用範圍會隨起始屈曲位置、髖與踝的位置、承重條件及症狀而變，本條
       不以單一角度作能力門檻，也不由一般解剖容量推論特定泳姿的膝部時序。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -356,7 +356,7 @@ actions:
       的可用範圍分布不同。實際可用範圍會隨骨盆固定方式、起始姿勢、主動或
       被動量測及症狀而變，本條不以單一角度作能力門檻，也不由一般解剖容量
       推論任何泳姿的滾轉幅度或時機。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy

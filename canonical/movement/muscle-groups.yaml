@@ -47,7 +47,7 @@ muscle_groups:
         boundary: >
           此角色在解剖條件正常時成立；具體在何種游泳動作中被多少程度地
           招募，需泳者 EMG 資料支持，不得由解剖作用線直接外推。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -93,7 +93,7 @@ muscle_groups:
         boundary: >
           旋轉方向與肌肉作用線為解剖事實；水中動作中的旋轉量與時序需
           泳者運動學與 EMG 研究支持。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -144,7 +144,7 @@ muscle_groups:
           此角色是依解剖作用線與臨床觀察提出的假設，「闊背肌緊繃即是限制
           主因」不能作為通則斷言，需逐案被動與主動 ROM 評估才能確認。
           招募程度在不同泳式中的差異屬游泳 EMG 研究問題。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: anatomy
@@ -198,7 +198,7 @@ muscle_groups:
         boundary: >
           肌群具備在踝被帶向背屈時離心制動的能力；某段打腿是否實際採用
           此收縮型態，不能只看關節方向或表面 EMG 振幅推定。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -250,7 +250,7 @@ muscle_groups:
         boundary: >
           一般功能中，背屈肌群可離心控制足部進入蹠屈；僅見肌電活動不能
           單獨判定收縮為離心，也不能等同肌力、關節力矩或推進貢獻。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -300,7 +300,7 @@ muscle_groups:
           可與腕伸肌群共收縮以等長穩定腕關節。共收縮是穩定機制，不等於
           任一群正在出力完成屈曲或伸展動作；特定泳式的實際招募另由 demand
           層的游泳證據裁決。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -351,7 +351,7 @@ muscle_groups:
           可與腕屈肌群共收縮以等長穩定腕關節。共收縮是穩定機制，不等於
           任一群正在出力完成伸展或屈曲動作；特定泳式的實際招募另由 demand
           層的游泳證據裁決。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -400,7 +400,7 @@ muscle_groups:
         boundary: >
           一般功能中可在髖朝伸展方向移動時提供離心控制；僅見動作外觀不能
           判定實際收縮型態，也不能等同肌力、關節力矩或推進貢獻。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy
@@ -447,7 +447,7 @@ muscle_groups:
         boundary: >
           一般功能中可在膝朝屈曲方向移動時提供離心控制；僅見動作外觀不能
           判定實際收縮型態，也不能等同肌力、關節力矩或推進貢獻。
-    publication_status: draft
+    publication_status: published
     claim_status: supported
     action_status: ready
     evidence_profile: anatomy

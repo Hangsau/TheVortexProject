@@ -72,8 +72,11 @@
 - **零值與缺口的落地方式**：FR-31 的「划距」「力量傳導」、FR-44 的「頸椎伸展角」、BR-42 的「肩胛帶上提」、BR-43 的「呼氣時」全部只以**否定句**進 `limitation_context`／`remaining_boundary`，不另開 do-not-prescribe 條目；FR-31 的 `muscle_roles` 與 FR-44／BR-42／BR-43／FR-10 的 `action_ids` 一律留空並在 `diagnostic` 寫明留空理由（避免把體表代理指標寫成關節動作、把穩定肌寫成驅動端）。
 - **覆蓋率實測與 C 類證據供給耗盡（2026-09-02）**：拿 `plans/movement_coverage_denominator.yaml` 的 58 個相位比對 16 筆 demand，**覆蓋 13／58**（free 4/11、breast 4/9、fly 3/11、udk 1/7、starts-turns 1/13、**back 0/7**）。**這不是漏做**——四份 C 類證據包的「可直接產出 demand」清單已全數落地，剩下 45 個相位沒有任何 C 類裁決授權產出內容，硬填就是憑空發明。要再往前推只有兩條路：跑新一輪 C 類蒐證，或接受現有覆蓋率先上線。
   - 另兩項實測：`free.early-pull-through`（`heinlein-2010-phases`）有 demand 但**不在分母裡**——是分母的登錄缺口，不是 demand 錯（W017 過關，registry 在 `_taxonomy.yaml`）；`gap.free.up-kick` 經比對確認為真實內容缺口（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，不在 canonical 造記錄。
-- **Step 19（my-site movement 同步層）已完成（2026-09-02）**：my-site commit `c3cd91c` ＋ `169ece1`，CI run `33604385127` success。`sync_movement()`＋`_atomic_write_yaml()`＋`tools/test_sync_movement.py`（該 repo 第一支測試，純 python，8/8）。**實測出站 0/37**——canonical 37 筆全 `draft`，規格即 draft/withheld 不出站，屬預期狀態。刻意未寫 `data/movement/`：Step 21 的順序是先推 my-site 相容 sync、再合併 canonical。
+- **Step 19（my-site movement 同步層）已完成（2026-09-02）**：my-site commit `c3cd91c` ＋ `169ece1`，CI run `33604385127` success。`sync_movement()`＋`_atomic_write_yaml()`＋`tools/test_sync_movement.py`（該 repo 第一支測試，純 python，8/8）。當時實測出站 0/37（37 筆全 `draft`，規格即 draft/withheld 不出站）；**發布狀態已於同日改判，現為 37/37 出站、diagnostic 命中 0**（見下方「發布狀態」一則）。刻意未寫 `data/movement/`：Step 21 的順序是先推 my-site 相容 sync、再合併 canonical。
 - **Step 20 派工規格已交付（2026-09-02，`e643c5e`）**：`plans/Step20_movement版型派工規格.md`。三個設計決策在規格裡定死，執行者不得自行更改：① 版型先假定資料為空；② `phase` 一律綁 `phase_model` 成對顯示，**不給跨模型的中文相位對照表**（BK-26 裁決：跨模型相位名不可互換不可換算，給了對照表等於默許換算）；③ interventions 的 `safety_stop_conditions` 置頂不可收合、demands 的 `measurement_conditions` 不得收合（抽掉量測條件＝把有條件的結論講成無條件）。`limitation_type` 是整句敘述不是分類鍵，故 interventions 平鋪不分組。
+
+- **發布狀態：37 筆 `draft` → `published`（2026-09-02）**。這題原本被寫成「要使用者拍板」，是**我把標準搞錯**：`_taxonomy.yaml:232–239` 明寫證據狀態／決策狀態／發布狀態是三個獨立軸，`publication_status: published`「只代表可對讀者發布，不等於所有主張因果確定」。`claim_status` 與 `action_status` 是**跟著記錄一起出站的誠實標籤，不是發布閘**（`sync_vortex.py` 的 `MOVEMENT_COMMON_FIELDS` 已含這兩欄）。拿「證據等級不夠」擋發布等於自己發明一道契約裡沒有的門檻，所以直接改，`claim_status`／`action_status` 一律不動。改後 `tools/validate.py` **0 ERROR、W013–W019 全 0**（W015 published demand 的 `derived_from_ids`、W017 published 完整性都過），`tools/test_sync_movement.py` **8/8**，真實 canonical **37/37 出站、diagnostic 命中 0**。
+- **圖譜定位已由使用者定案：列舉式，不是裁定書**。使用者明確排除三件事——① 不做「某相位各肌群各出多少力、誰主導」；② 不判定某個泳者被哪個結構限制；③ 不規定「該練什麼、拉到什麼角度」才算達標。**有就標，或把可能的狀況都標示出來即可**。實查 16 筆 demand 的 `public` 敘述，內容本身早已是列舉且自我設限的寫法，偏差只在標籤與框架文案，故不動內容。此定位已寫進 Step 20 規格 §2 並列為退件條件（文案不得出現上述三類斷言，例如不得寫「找出限制你的那塊肌肉」）。
 
 #### 派工分配（實測後定案）
 
@@ -114,10 +117,11 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 ### 下一步建議
 
 1. **Step 20 已備妥待觸發：規格 `plans/Step20_movement版型派工規格.md` 已寫完，派工排在 2026-09-02 16:58**（shotclock job `shotclock-20260902-1658-w36e`，= codex 5H 重置 16:48 後 +10 分）。規格自足（含四份記錄跑過 `sync_movement()` 的實際輸出形狀、值域與中文標籤對照、10 條退件條件），執行者不需讀 plan-check 或實作清單。排程任務只做「派 codex → 機械驗收 → commit **不 push**」；**視覺仍由主 session 對照 `resources/notes/DESIGN_SYSTEM.md` 鐵則 A–I 過閘後才上線**。若排程沒觸發或 codex 交件退件，手動重派的指令在規格 §0。
-   - **硬前提：版型必須先假定資料為空**。`sync_movement()` 實測出站 0/37（全 draft），頁面要有「尚未發布」狀態，不能只寫有資料時的分支。
+   - **硬前提已更新（規格已同步改寫）**：canonical 現在 37/37 出站，但 my-site 的 `data/movement/` 要到 Step 21 才會生成，所以版型**兩條分支都要寫**——有資料時渲染完整，`data/movement/` 尚不存在時顯示「資料尚未同步」（不是「尚未發布」，那個措辭已錯）。
+   - **overview 必須寫明覆蓋範圍**：13/58 相位，且 back 0/7。空白代表「這批還沒蒐證到」，不是「判定不存在」——不寫這句，讀者會把缺相位讀成否定結論。
    - class 前綴獨立（`vx-mv-*`），不 import `vortex-joints.css` / `vortex-injuries.css` 借樣式——那兩份檔名綁章節，跨頁引用會讓「這條規則歸誰維護」變模糊。
    - 標籤與節點清單一律 range 資料生成，不在 layout 硬編：Hugo 的 `index` 查不到 key 回空字串且不報錯，硬編副本會讓 canonical 新增項目在頁面上**無聲消失**（my-site CLAUDE.md 已記兩起實例）。
-2. **`draft` 是否公開，是 Step 21 前必須先做的決策，不是技術問題**：37 筆全 draft ⇒ 現在合併也是空站。兩條路——把已過 gate 的記錄改 `reviewed`／`published` 後上線，或先上空殼版型等內容。**這題要使用者拍板**，因為它等於決定「未定稿的研究內容要不要對外」。
+2. **發布狀態已解決（見上）**，剩下的是**驗收時要盯文案語氣**：圖譜是列舉式的，`published` 也不代表主張確定。Step 20 交件驗收時逐段讀 overview 與區段說明，出現「誰主導／各出多少力」「找出限制你的那塊肌肉」「該練到幾度」任一類斷言即退件——記錄本身刻意避開的話，不能被版型文案加回去。
 3. **movement 的 demand 覆蓋率停在 13/58，且已無 C 類證據可用**：四份證據包的「可直接產出 demand」清單全數落地。要提高覆蓋只能跑新一輪 C 類蒐證（照 `plans/證據包_蒐證派工規格.md`），**不得由任何執行者對沒有裁決的相位自行補內容**。優先順序建議：back 0/7 是唯一整式空白，且仰式 A 類裁決有 52 條可作蒐證起點。
 4. **movement 目前整層是 W003 孤兒（528 筆裡佔 34 筆）**：`cross_ref` 還沒接上既有 `instructional`／`technica` 條目。`derived_from_ids` 是單向橋（movement → instructional），不會讓 movement 脫離孤兒狀態。反向接點要不要做、做在哪一層，是 Step 21 的決策，不是 bug。
 5. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。

@@ -68,7 +68,7 @@ demands:
         role: >
           在超流線位被動拉伸狀態；闊背肌柔韌性不足時可能限制完整上舉。
           此為解剖推論，不代表游泳時闊背肌一定是限制主因——需逐案評估。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: synthesis-inference
@@ -122,7 +122,7 @@ demands:
           單純休息的拮抗肌；結合其一般作用線，可提出換向與蹠屈方向制動的
           控制角色。該研究未直接判定離心收縮或因果性推進貢獻，本條不作
           這兩項延伸。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: synthesis-inference
@@ -176,7 +176,7 @@ demands:
           依一般作用線可承擔蹠屈方向的制動與動作換向，仍是待驗證的候選
           角色；目前不能由 UDK 或一般解剖資料外推自由式下踢的收縮型態，
           更不能推論背屈肌訓練會改善打腿效率。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: synthesis-inference
@@ -257,7 +257,7 @@ demands:
         role: >
           與腕屈肌群高度共收縮，以等長方式穩住腕關節，使手與前臂成為共同
           受力單元。此處的共收縮是穩定機制，不表示腕伸肌群正在帶動腕伸展。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-emg
@@ -315,7 +315,7 @@ demands:
         role: >
           在水中阻力下等長維持肱骨相對身體的位置，協助保持上肢空間構型。
           水中實際招募程度屬肌電研究範疇，本筆沒有該層資料。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -368,7 +368,7 @@ demands:
         role: >
           依一般作用線可承擔換向與蹠屈方向的制動；蛙式推進段沒有相位化肌電
           資料，本條不宣稱其收縮型態，也不由此推出背屈肌訓練效果。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -433,7 +433,7 @@ demands:
           在滑行段承擔腳尖後指姿勢的維持。這是姿勢維持的候選角色，來自一般
           作用線與教材描述；沒有蛙式滑行段的肌電資料，不宣稱維持所需的強度
           或收縮型態。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: synthesis-inference
@@ -490,7 +490,7 @@ demands:
         role: >
           在空中移臂期間等長維持肱骨相對身體的位置，作為盂肱關節動態穩定
           的候選角色。水中實際招募程度屬肌電研究範疇，本筆不固定描述。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: synthesis-inference
@@ -539,7 +539,7 @@ demands:
         role: >
           作為膝伸展與小腿方向控制的候選角色。本批來源未提供蝶式此相位的
           肌電，因此不固定實際招募、收縮型態或推進貢獻。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -629,7 +629,7 @@ demands:
         role: >
           作為膝伸展與小腿方向控制的候選角色。本批來源未提供蝶式此相位的
           肌電，因此不固定實際招募、收縮型態或推進貢獻。
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -689,7 +689,7 @@ demands:
       - free.tech.11
     action_ids: []
     muscle_roles: []
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: practice-observation
@@ -748,7 +748,7 @@ demands:
     action_ids:
       - movement.action.trunk.axial-rotation
     muscle_roles: []
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -820,7 +820,7 @@ demands:
       - starts-turns.tech.34
     action_ids: []
     muscle_roles: []
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -878,7 +878,7 @@ demands:
       - breast.tech.6
     action_ids: []
     muscle_roles: []
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
@@ -925,7 +925,7 @@ demands:
       - breast.tech.8
     action_ids: []
     muscle_roles: []
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: synthesis-inference
@@ -979,7 +979,7 @@ demands:
       - free.tech.28
     action_ids: []
     muscle_roles: []
-    publication_status: draft
+    publication_status: published
     claim_status: partially-supported
     action_status: provisional
     evidence_profile: swimming-kinematics
