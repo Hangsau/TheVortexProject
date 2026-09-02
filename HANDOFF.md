@@ -6,7 +6,7 @@
 
 ## 當前狀態（2026-09-02，最新）
 
-### ▶️ 動作—肌群—訓練—活動度圖譜：**Step 17–21 全數完成，動作圖譜已上線**。下一步是覆蓋率（back 0/7）與 W013／W003 兩個決策
+### ▶️ 動作—肌群—訓練—活動度圖譜：**Step 17–22 全數完成，動作圖譜已上線**。仰式覆蓋已補齊（back 7/7，總計 20/58）
 
 `feat/movement-atlas` 已合併回 `master`（merge commit `f6dfd60`，37 個 commit）。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
 
@@ -89,6 +89,16 @@
   - **「movement 是 W003 孤兒層」這個判讀本身是錯的，根因在檢查器不在內容**。`collect_outbound_ids()` 只認 `links.*`，而 movement 四個檔**一個 `links` 都沒有**——它用 `action_ids`／`demand_ids`／`derived_from_ids`／`muscle_roles[].muscle_id` 表達關聯。已把這組欄位同時補進出邊與入邊。實測 W003 **528 → 468**：清掉的 60 筆 = movement 全部 **37** 筆（先前記的「34 筆」是舊數字，已過期）＋ `technical-analysis.yaml` **23** 筆——後者代表 `derived_from_ids` 這座橋一直在生效、把那些技術卡接出了孤兒狀態，只是 W003 看不見。**所以「要不要補反向 cross_ref」這題不成立**，不需要為了消警告去加關係。
 - **Step 21（rollout）已完成（2026-09-02）**：順序照 `sync-from-vortex.yml` 的定義走——該 workflow checkout Vortex 的是 **`master`**，所以必須先推 my-site 版型、再合併 canonical 到 master。實際執行：my-site `97a76e6` 推 → Vortex 合併 `f6dfd60` → `notify-mysite` 觸發 → cortex sync commit → deploy，四段全 `success`。線上實測：13/58 與「列舉式的圖譜」在頁上、`資料尚未同步` 已消失（資料已同步）、44 個 `vx-mv-entry`、`map[`／`<nil>`／`%!`／`ZgotmplZ` 各 0、**可見的原始 ID 0 個**，且 `perception_probe`／`discriminators`／`type_diagnosis`／`signal_structure`／`manipulation`／`contrast_question`／`diagnostic` 七個診斷鍵**線上命中全 0**。
 
+- **Step 22（仰式覆蓋）已完成（2026-09-02，`19d0c22`）**：派工規格 `plans/W5_仰式覆蓋派工規格.md`（`827ae7e`＋`bff9bd9`），執行者 codex，主 session 驗收。**覆蓋率 13/58 → 20/58，back 0/7 → 7/7**（demand 記錄 16 → 23）。新增 actions 5、muscle-groups 5、demands 7，三檔尾端 append-only。
+  - ⚠ **更正上一輪的範圍判斷**：原規劃寫「跑新一輪 C 類蒐證，照 `plans/證據包_蒐證派工規格.md` 的批次 5」——**錯**。清點仰式 A 類裁決檔得 26＋2＋5＋4 ＝ 37 ＝ 全部 BK 主張，**沒有任何未蒐證的 C 類條目**，所以不存在「批次 5」。本輪的正確性質是**撰寫輪**（拿已裁決的 A 類直接落 demand），不是蒐證輪。
+  - **BK-26 差點被違反**：A 類裁決通篇用四段式（第一下掃／第一上掃／第二下掃）詞彙，若把它們映射到 `descriptive` 的 `pull` 相位，等於主張兩套分期的**邊界對齊**——這正是 BK-26 禁止的換算。改由 `back.tech.11`／`back.tech.14` 的原生 descriptive 證據供給 `pull`，**不用任何 BK 裁決**。
+  - **負面清單 11 條**：BK-01/02/03（出水期）、BK-11（前伸期）、BK-12/13/14＋BK-18/19/20＋BK-22（四段式）、BK-27（脊椎旋轉）。措辭要點：**這些不是被否決，是等一套能承載它們的相位鍵**，候選是另行登錄 `fernandes-2022-sweep`（前例：`early-pull-through` 就是為了 FR-17 而登錄進 `heinlein-2010-phases` 的）。
+  - **BK-30 錨點落地**：仰躺時「朝水面」＝腹側＝前側，故 **up-kick ＝髖屈曲、down-kick ＝髖伸展，與自由式相反**。C6／C7 用 `poolside_direction` 分出「池畔可見方向」與「解剖學動作」兩欄——大量既有文件把這兩者寫混，根因就是缺這道分欄。
+  - **`action_status` 七筆全 `provisional`**：Neumann 裁決的是「命名」，沒有任何一層量過水中角度或時序，標 `ready` 會超額宣稱。`claim_status` 六筆 anatomy／一筆 `swimming-kinematics`（C3 pull，來源 `src.maglischo-2003-b`＋`src.gonjo-2020-c`）。
+  - **數值紀律硬過閘**：`back.tech.11` 的肘角 90–100° 出自教學模型而非量測，故七筆 demand 散文**一律不出現數字**，改用定性語言——**沒有為了滿足 W019 去編造六欄 `measurement_conditions`**。這是「誠實優先於過閘」的一次實例。
+  - 驗收（看 `git diff` 不看 exit code）：0 ERROR、W014/W016/W017/W018/W019 全 0；17 筆 ID 逐字相符；釘死欄位零違規；新增散文無 `°`／`%`／`r=`；`canonical/movement/` 無下掃／上掃（555/574 行是既有蝶式條目）；「主導／徵召」4 處全為**否定句**。W003 孤兒 **468 → 459**，9 筆 `back.tech` 因 `derived_from` 被指入。
+  - **codex 第一次派工零產出（exit 0）**，根因不是 prompt 太弱而是**技能層攔截**：codex 自動載入 `~/.codex/skills/plan-check/SKILL.md`，該檔明寫「輸出六步後停下等使用者確認」，我原本的「不要輸出計畫」壓不過技能層指令。規格加上「**不得呼叫 plan-check，也不得呼叫任何會要求使用者確認後才繼續的技能**」後重派即正常執行。
+
 #### 派工分配（實測後定案）
 
 Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換視窗；要換視窗只有 codex（訂閱制獨立池）。Step 12b-2 拿來當對照實測：同一份 spec，**codex 0 處證據越界 vs Sonnet 6 處**，且 codex 未經提示就自己選對 `evidence_profile: synthesis-inference`（正是 Sonnet 那批我得手改的六處之一）。據此 **Step 14–20 全數走 codex**，主 session 只做裁決與驗收。
@@ -127,13 +137,17 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **覆蓋率是唯一剩下的內容缺口：demand 停在 13/58，且已無 C 類證據可用**。四份證據包的「可直接產出 demand」清單全數落地。要提高覆蓋只能跑新一輪 C 類蒐證（照 `plans/證據包_蒐證派工規格.md`），**不得由任何執行者對沒有裁決的相位自行補內容**。優先做 **back 0/7**：那是唯一整式空白，線上頁面已明寫這件事，且仰式 A 類裁決有 52 條可作蒐證起點。
-2. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
-3. **W4 期間累積的三條寫作紀律，後續沿用**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`。
-4. **新增 movement 條目後不必再動 my-site**：版型已全面 range 資料生成，`data/movement/` 由 `sync-from-vortex.yml` 從 **master** 拉。所以「合併到 master」才是上線動作，推到 feature 分支不會出現在網站上。
-5. **後續文案驗收仍盯列舉式語氣**：`published` 不代表主張確定。任何新增的 overview／區段說明出現「誰主導／各出多少力」「找出限制你的那塊肌肉」「該練到幾度」任一類斷言即退件——記錄本身刻意避開的話，不能被版型文案加回去。
-6. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
-7. **派工對時紀律（Step 20 實付代價）**：shotclock 排定的 codex 派工，其 prompt／規格內容一旦變動就必須 cancel 重排。Step 20 因為規格改寫晚於觸發時間，交件是對著舊規格做的，退件三處裡有兩處源自此。
+1. **覆蓋率現為 20/58，back 已滿（7/7）。剩下的 38 個相位分兩類，不可混為一談**：
+   - **已有 A 類裁決、缺的是撰寫**（同 Step 22 的性質）：先清點各式 A 類裁決檔（`plans/關節主張裁決_*.md`）還剩多少條未落地，能直接落 demand 就照 Step 22 的規格樣板再開一輪，**不必再跑蒐證**。Step 22 已證明「還要蒐證」這個假設可能是錯的，開工前先清點再判性質。
+   - **真的沒有裁決授權**：`gap.free.up-kick` 屬此類（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，**不在 canonical 造記錄**。**不得由任何執行者對沒有裁決的相位自行補內容。**
+2. **四段式相位鍵（`fernandes-2022-sweep`）是下一個結構決策**。Step 22 把 11 條 BK 裁決放上負面清單等相位鍵，其中 7 條是四段式主張。要不要登錄這套 `phase_model` 進 `_taxonomy.yaml#movement_phase_registry`，是一個獨立的裁決題：登錄後這 11 條就能落地，但同時要面對「同一泳式兩套分期並存」在版型上怎麼呈現（BK-26 已定死**不給跨模型對照表**）。前例是 `early-pull-through` 之於 `heinlein-2010-phases`。
+3. **`KNOWLEDGE_MAP.md` 完全沒有涵蓋 movement 層**（實測 grep `movement`／`stroke-demands` 零命中）。`build_knowledge_map.py` 每層都有專屬 `extract_*` 函式，加 movement 需新寫一個，不是一行設定。這是既有缺口、非 Step 22 造成，但「地圖是查內容／找缺口的單一入口」這條規則目前對 movement 層是失效的——**下次動 movement 前先補這個 extractor**，否則「加新條目前先讀地圖確認沒有近似條目」的流程在這層跑不起來。
+4. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
+5. **寫作紀律（W4 起累積，Step 22 再加一條）**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`；④ **來源的數字若出自教學模型而非量測，就整條不寫數字**，不得為了讓 W019 過閘而編造六欄 `measurement_conditions`——過閘不是目的，`measurement_conditions` 存在的意義是承載真實量測條件。
+6. **⚠ 更正本檔先前的「不必再動 my-site」**：版型的**條目區**確實全 range 資料生成，但**覆蓋率那句是寫死的**——`layouts/vortex/vortex-movement.html:217` 硬編「13 / 58 … 仰式 0/7」。Step 22 已一併手改成 20/58、仰式 7/7。**結論修正為：新增 movement 條目後，條目區不必動，但覆蓋率句必須同步手改**，否則頁面會用舊數字否認剛上線的內容。長期解是讓 sync 產出覆蓋率再由版型 range，但那要先有機器可讀的分母（目前分母只在 `plans/movement_coverage_denominator.yaml`，不出站）。
+7. **後續文案驗收仍盯列舉式語氣**：`published` 不代表主張確定。任何新增的 overview／區段說明出現「誰主導／各出多少力」「找出限制你的那塊肌肉」「該練到幾度」任一類斷言即退件——記錄本身刻意避開的話，不能被版型文案加回去。
+8. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+9. **派工紀律（Step 20＋22 實付代價）**：① shotclock 排定的 codex 派工，prompt／規格內容一旦變動就必須 cancel 重排；② **派工規格開頭必須明文禁用 `plan-check` 及任何「等使用者確認」型技能**——codex 會自動載入該技能並停在計畫階段、零檔案異動卻 exit 0，光寫「不要輸出計畫」壓不過技能層指令。
 
 ---
 
