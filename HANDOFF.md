@@ -179,7 +179,22 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
    - `gap.free.up-kick` 另計（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，**不在 canonical 造記錄**。
 
    **派工順序：(A) 13 個先出（W6 蛙式已派、W7 蝶式、W8 自由式＋udk），接著 (B) 13 個走命名核對後出，(C) 12 個等結構決策。** 不得由任何執行者對 (C) 自行補內容，也不得跳過 (B) 的兩欄核對直接寫。
-2. **四段式相位鍵（`fernandes-2022-sweep`）是下一個結構決策**。Step 22 把 11 條 BK 裁決放上負面清單等相位鍵，其中 7 條是四段式主張。要不要登錄這套 `phase_model` 進 `_taxonomy.yaml#movement_phase_registry`，是一個獨立的裁決題：登錄後這 11 條就能落地，但同時要面對「同一泳式兩套分期並存」在版型上怎麼呈現（BK-26 已定死**不給跨模型對照表**）。前例是 `early-pull-through` 之於 `heinlein-2010-phases`。
+2. **✅ 已決策（2026-09-03）：四段式相位鍵（`fernandes-2022-sweep`）本輪不登錄，改列「條件式候選」。** 討論全文在 `plans/討論_仰式四段式相位鍵.md`（codex 產出，主 session 已抽驗其可查宣稱）。
+
+   ⚠ **順帶更正本項先前寫的「11 條 BK 裁決」——錯，實際是 12 個 ID**：BK-01/02/03（出水）＋BK-11（前伸）＋BK-12/13/14/18/19/20/22（四掃語言 7 條）＋BK-27（軀幹），見 `plans/W5_仰式覆蓋派工規格.md:85-92`。這個數字錯會連帶算錯覆蓋分子，因為**主張數不等於相位數**：這 12 個 ID 最多只落在 6 個內容位置（出水／前伸／第一下掃／第一上掃／第二下掃／全週期軀幹）。
+
+   **不登錄的理由**（不是四段式有錯，是這批內容不同質）：
+   - **同名不同切點**。原始素材出自 enjoy-swimming.com 的**八段式**，Fernandes 2022 是**四 sweep＋recovery 的影格事件定義**，兩者至少兩處直接對不上：八段式把「肘逐漸屈曲」放第一下掃，Fernandes 把「開始屈肘」當**第一上掃的起點**；八段式第二上掃是手臂移向髖部，Fernandes 的第二上掃**從手已停在大腿旁開始**。直接搬名字正是 BK-26 禁止的跨模型換算。
+   - **12 個 ID 至少需要三類承載**：出水／前伸是**邊界事件**，四掃是**水下路徑相位**，BK-27 是**全週期特徵**。登錄一套手臂分期接不住其中兩類。
+   - **兩條另有相位以外的問題**：BK-14 的缺陷是「由掌心朝向反推前臂旋前」（缺分節量測，給了相位鍵也不能寫）；BK-27 混了「整體 body roll」與「脊椎節間旋轉」兩種量，現有仰式研究量的是肩線／髖線／整體 roll，不是節間旋轉。
+   - **版型還接不住**。`vortex-movement.html:342-364` 目前只按泳式分組、卡片上只掛一個模型小標籤，沒有說明各模型的切點與「不可串成一條時間線」。自由式已經出現這個問題：線上六張卡橫跨 descriptive／race-club-6phase／kudo-power-phase 三套，讀者最自然的誤讀是把 `front-quadrant-propulsion`→`early-pull-through`→`pull` 讀成同一條時間線的先後三段。仰式再疊一套會放大。
+   - 備選來源強度也不足：`src.enjoy-swimming-com` 在 `_sources.yaml:961` 仍是 `verification_status: unverified`。
+
+   **解除條件（六項須同時成立才登錄）**：① 每筆按 Fernandes 影格邊界**重新抽取**而非同名搬運；② 逐筆分開標示「研究量到什麼／解剖書只支持什麼／專案推論什麼」；③ BK-13 這類**邊界事件**寫成邊界，不壓成整段屬性；④ BK-14 取得前臂分節量測後才寫；⑤ 版型已能**按模型分區**並明寫「不同視角、不可拼成共同時間線」；⑥ 覆蓋率由 canonical 相位全集自動算出，線上與本機不再各自手寫。
+
+   **代價（明白記著）**：7 條 sweep 解剖主張暫不進網站；且**「仰式 7/7」不得再單獨讀成「仰式已完成」，正確說法是「descriptive 七相 7/7」**。
+
+   **覆蓋率計數規則（本次一併定死）**：計數單位是唯一的 `(stroke, phase, phase_model)` 三元組。分母＝已登錄的全部三元組，分子＝其中至少有一筆 `published` demand 者。同一相位三筆 demand 仍只算 1；**同名相位跨模型不得互抵**（descriptive 的 `push` 不能替 Fernandes 的 `second-up-sweep` 算已覆蓋）。新增模型造成比率暫降是「研究範圍擴大」，不是內容退步，**不得靠少登錄空白相位維持好看比例**。
 3. **✅ 已完成（2026-09-02，commit `78a0019`）：`KNOWLEDGE_MAP.md` 補上動作圖譜章節**。`build_knowledge_map.py` 新增 `extract_movement`（四個 movement 檔共用，各檔欄位不同故只取交集欄位）與 `movement_coverage`。**覆蓋率的分母刻意取 `canonical/_taxonomy.yaml#movement_phase_registry` 而非 `plans/movement_coverage_denominator.yaml`**——規劃檔第 10 行自己寫明「兩邊相位集合若分歧，以登錄表為準」，且它缺 `free.early-pull-through`。這個設計選擇第一次跑就抓到我先前算錯的 20/58。往後改分母只改登錄表，規劃檔不再是覆蓋率真相源。
 4. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
 5. **寫作紀律（W4 起累積，Step 22 再加一條）**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`；④ **來源的數字若出自教學模型而非量測，就整條不寫數字**，不得為了讓 W019 過閘而編造六欄 `measurement_conditions`——過閘不是目的，`measurement_conditions` 存在的意義是承載真實量測條件。
