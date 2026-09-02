@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 98 | actions 30 / muscle-groups 22 / demands 41 / interventions 5；相位覆蓋 34/59 |
+| `movement` | 99 | actions 31 / muscle-groups 22 / demands 41 / interventions 5；相位覆蓋 34/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -808,7 +808,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 水下蝶腳 | 3/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, breakout（出水划手） |
 | 起跳轉身 | 1/13 | descriptive | set-position（零位姿勢）, takeoff（起跳）, flight（飛行階段）, entry（入水）, underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, turn-approach（進牆）, flip（翻滾）, wall-contact（觸牆）, wall-rotation（旋轉在牆上完成）, wall-push-off（推蹬） |
 
-### `actions.yaml` — 解剖動作（**30 條目**）
+### `actions.yaml` — 解剖動作（**31 條目**）
 
 | ID | 名稱 | 部位 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -833,6 +833,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.action.ankle-foot.dorsiflexion | 踝背屈 | ankle-foot | supported | ready |
 | movement.action.ankle-foot.pronation | 距下／橫跗關節旋前 | ankle-foot | supported | ready |
 | movement.action.shoulder-complex.adduction | 肩內收 | shoulder-arm | supported | ready |
+| movement.action.shoulder-complex.scapular-protraction | 肩胛前伸 | shoulder-arm | supported | ready |
 | movement.action.shoulder-complex.scapular-retraction | 肩胛後縮 | shoulder-arm | supported | ready |
 | movement.action.shoulder-complex.scapular-upward-rotation | 肩胛骨上迴旋 | shoulder-arm | supported | ready |
 | movement.action.shoulder-complex.scapular-posterior-tilt | 肩胛骨後傾 | shoulder-arm | supported | ready |
