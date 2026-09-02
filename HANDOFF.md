@@ -6,7 +6,31 @@
 
 ## 當前狀態（2026-09-03，最新）
 
-### ▶️ 動作圖譜 (A) 組撰寫輪：**W6 蛙式、W7 蝶式、W8 水下海豚腳已落地**。覆蓋 21/59 → 34/59
+### ▶️ 動作圖譜 (B) 組規格輪：**兩欄核對＋W10／W11／W12 三份派工規格全部到齊，等發包**。覆蓋維持 34/59
+
+2026-09-03 接續 (A) 組完成後的下一步。這一輪**沒有動任何 canonical 內容**（除了補一筆缺的動作），產出全是規格與裁決文件——(B) 組 10 個相位的執行條件已經全部清空。
+
+| 產出 | commit | 內容 |
+|---|---|---|
+| `plans/B組_池畔可見方向與解剖學動作兩欄核對.md` | `dd1a362`／`c57f3c0` | 13 個相位逐一兩欄核對，(B) 13 → **10 可派工**，2 移 (C)、1 移新開的 (D) |
+| `canonical/movement/actions.yaml` +1 | `dd1a362` | `shoulder-complex.scapular-protraction`（肩胛前伸），actions 30 → **31** |
+| `plans/W10_起跳段覆蓋派工規格.md` | `84bbd19` | `set-position`／`takeoff`／`flight`／`entry`（4 筆 demand） |
+| `plans/W11_牆段覆蓋派工規格.md` | `8410b3c` | `turn-approach`／`wall-contact`／`wall-push-off`（3 筆） |
+| `plans/W12_出水段與蝶式入水停頓覆蓋派工規格.md` | `d0397f3` | `starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3 筆） |
+
+**三份規格都是零新增 `actions`／`muscle-groups`**，執行者只寫敘述文字；所有受控欄位、來源鍵、相位鍵、`derived_from_ids` 都在規格裡釘死，且**逐一驗證過存在性（三份合計 MISS 0）**。10 筆落地後覆蓋為 **44/59**。
+
+**這一輪最值得記的三件事**：
+
+- **兩欄核對抓到的最強一筆是 `tech.43` 的後腿踢**：池畔看到「後腿往上踢到接近垂直」，直覺對到「抬腿＝髖屈曲」；但起跳時軀幹前傾下潛，腿往上＝大腿往軀幹**後方**去＝**髖伸展**。與 BK-30（仰式上踢是髖屈曲）同型而方向相反——**差別完全來自軀幹的空間朝向**。W12 的俯臥海豚下踢（往下＝髖屈曲）是同一條的第三個實例。
+- **(B) 組的內容性質與 (A) 組完全不同**：(A) 是「把已裁決的關節主張寫下來」，(B) 有大量素材**根本不是關節內容**。因此三份規格都內建了三型分類（甲 方向相反／乙 不是關節動作／丙 是維持或不做而非產生），並明令**內容薄是素材性質的忠實反映，把策略、時序、空間量改寫成關節語言充數即退件**。`turn-approach` 的正確結果就是只有一句話。
+- **跨規格擁有權分工是這輪的主要設計工作**：同一批素材被兩個相位共用時，若不先分工，兩筆記錄會互抄。`tech.47`／`tech.48` 分給 W10 D4 入水與 W11 D3 推蹬；`tech.44` 七要點分給 W12 D1（③④⑤⑥）與 W12 D2（①②），要點⑦（呼吸決策）兩筆都不寫。分工表寫進規格，**重述即退件**。
+
+**下一步**：W10 → W11 → W12 **串行發包**（W11／W12 的硬性前置要 grep 前一批是否落地，平行會讓前置檢查失效），驗收看 `git diff` 與 `validate.py` 不看 exit code。
+
+---
+
+### 上一輪：動作圖譜 (A) 組撰寫輪：**W6 蛙式、W7 蝶式、W8 水下海豚腳已落地**。覆蓋 21/59 → 34/59
 
 2026-09-03 這一輪把「已完成裁決、只差撰寫」的 (A) 組 13 個相位分批派給 codex 執行、主 session 逐筆驗收。**沒有做任何新蒐證**——所有內容都出自既有的 `plans/關節主張裁決_*.md`。
 
@@ -181,7 +205,21 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
       **更正後結論**：抬頭／下巴貼胸一律寫 `trunk.extension`／`trunk.flexion`，**並在 `observable_boundaries` 或敘述中標明節段為頸椎**。這條要進派工負面清單的正面對應項。實際新增只有 `shoulder-complex.scapular-protraction`（肩胛前伸，只有 retraction 缺對向，是上述錯誤甲的正解），`observable_boundaries` 已寫入界線句：手臂上舉到頭頂後把肩往前送記的是本條加肩胛上迴旋，不是盂肱關節伸展或過度伸展（後者方向相反）。`ankle-foot.supination` 與 `hip.internal-rotation` 雖同樣缺對向，**本輪不新增**——沒有條目要用就不造。
    3. ✅ **已完成（2026-09-03）**：驗證 `fly.entry-pause` 素材存在性 → 進 (B)（見上一節）。
-   4. **10 個相位分三批派工**，沿用 W6–W9 八段式格式：**W10 起跳段** `set-position`／`takeoff`／`flight`／`entry`（4）、**W11 牆段** `wall-contact`／`wall-push-off`／`turn-approach`（3）、**W12 出水段＋蝶式** `starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3）。**負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得順手補 `flip`／`wall-rotation`／`breaststroke-pullout`、不得由空間朝向（45° 切入、掌心朝向）反推關節旋轉、**兩欄不一致處不得只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。**正面要求必含**：頸部動作寫 `trunk.extension`／`trunk.flexion` 並標明節段為頸椎。
+   4. ✅ **已完成（2026-09-03）：三份派工規格全部寫完並推上 GitHub。**
+
+      | 規格 | 相位 | commit | 釘死 ID 驗證 |
+      |---|---|---|---|
+      | `plans/W10_起跳段覆蓋派工規格.md` | `set-position`／`takeoff`／`flight`／`entry`（4） | `84bbd19` | 5 來源＋18 動作＋9 肌群＋4 相位鍵＋26 derived_from，MISS 0 |
+      | `plans/W11_牆段覆蓋派工規格.md` | `turn-approach`／`wall-contact`／`wall-push-off`（3） | `8410b3c` | 4 來源＋10 動作＋7 肌群＋8 derived_from＋3 相位鍵，MISS 0 |
+      | `plans/W12_出水段與蝶式入水停頓覆蓋派工規格.md` | `starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3） | `d0397f3` | 2 來源＋14 動作＋9 肌群＋4 derived_from＋3 相位鍵＋3 前置記錄，MISS 0 |
+
+      **三份都是零新增 `actions` 與 `muscle-groups`**（前置 2 已補齊唯一缺的 `scapular-protraction`），執行者只寫敘述文字。**跨規格擁有權分工**（同一批素材被兩相位共用時誰寫什麼，重述即退件）：`tech.47`／`tech.48` 由 W10 D4 入水（命名更正、腰椎擇一）與 W11 D3 推蹬（合計角度、流線時序）各持一半；`tech.44` 七要點由 W12 D1（③④⑤⑥ 維持與延後）與 W12 D2（①② 時序）各持一半，要點⑦呼吸決策兩筆都不寫。
+
+      **負面清單三份都含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得順手補 `flip`／`wall-rotation`／`breaststroke-pullout`、不得由空間朝向（45° 切入、掌心朝向）反推關節旋轉、**兩欄不一致處不得只寫解剖名而不寫池畔說法**。**正面要求三份都含**：頸部動作寫 `trunk.extension`／`trunk.flexion` 並標明節段為頸椎（W12 D3 另加胸椎節段）。
+
+      **W12 有一個容易被執行者「好心改壞」的點，已寫進硬規則**：`udk.breakout` 那一筆的 `derived_from_ids` 前綴是 `starts-turns.`（`tech.34`／`tech.44` 的 `stroke` 欄本來就是 `starts-turns`），**全庫沒有 `udk.tech.44`**，改成 `udk.` 會把正確引用改成不存在的引用並炸 W014。
+
+   5. **⬜ 下一步：發包執行。** 順序 **W10 → W11 → W12，串行不平行**——W11 的硬性前置要 grep W10 的 D4 是否落地，W12 的硬性前置要 grep 三筆既有記錄，平行發包會讓前置檢查失效。驗收看 `git diff` 與 `validate.py` 實際輸出，**不看 exit code**；每批驗收完立刻 commit。10 筆全部落地後：重跑 `build_knowledge_map.py` → 覆蓋數字 34／59 改 **44／59** → 同步 `my-site/layouts/vortex/vortex-movement.html` 的硬編數字 → 收尾流程。
 
    **核對最值得記的一筆**：`tech.43` 的後腿踢——池畔看到「後腿往上踢到接近垂直」，直覺對到「抬腿＝髖屈曲」，但起跳時軀幹前傾下潛，腿往上＝大腿往軀幹**後方**去＝**髖伸展**。與 BK-30（仰式上踢是髖屈曲）同一類、方向恰好相反。這就是兩欄核對存在的理由。
 

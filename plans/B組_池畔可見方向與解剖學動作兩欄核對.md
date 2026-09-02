@@ -272,12 +272,37 @@
 1. ✅ **已完成（`dd45e88`）**。**修 `canonical/instructional/technical-analysis.yaml` 的 `tech.42`**：① 把「肩關節要做出 sub-luxation 或 hyperextension 把肩往前推」改成肩胛前突＋上迴旋＋肩複合體上舉的分層寫法（引 `tech.48`）；② 把「腰椎反弓」依 `tech.47` 的裁決處理——`tech.47` 要求擇一並寫明選哪個，本處直接沿用該裁決的結論框架，不自行另擇。**這是主 session 的裁決工作，不派工。**
 2. ✅ **已完成（`dd1a362`），但只新增一筆不是三筆**。詳見 §1 的「⚠ 錯誤 1」：頸部動作庫內已由 `trunk.extension`／`trunk.flexion`（`joint_region: spine-neck`）涵蓋，另開 `neck.*` 會造成同一動作兩個 ID。實際新增 `shoulder-complex.scapular-protraction` 一筆（帶 `plane`／`axis`／`src.neumann-2017`），actions 30→31。
 3. ✅ **已完成（2026-09-03）**。**讀 `plans/關節主張裁決_蝶式.md` 的 BF-01～04** → `fly.entry-pause` 進 **(B)**，但素材是 `fly.tech.21` 不是 BF 系列，詳見 §2.13 的「⚠ 錯誤 2」。
-4. **依 W6–W9 的八段式格式寫派工規格**，10 個相位分 3 批：
-   - **W10 起跳段**：`set-position`／`takeoff`／`flight`／`entry`（4）
-   - **W11 牆段**：`wall-contact`／`wall-push-off`／`turn-approach`（3）
-   - **W12 出水段＋蝶式**：`starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3）
-5. **每份規格的負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得把 `flip`／`wall-rotation`／`breaststroke-pullout` 順手補上、不得由空間朝向（45° 切入、掌心朝向）反推關節旋轉（缺陷 3，BF-05／BF-25 已有前例）、**不得在兩欄不一致處只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。
-6. **每份規格的正面要求必含**：頸部動作一律寫 `trunk.extension`／`trunk.flexion` 並在敘述中標明節段為頸椎（`trunk.extension` 的定義本身就要求「不標節段就無法驗證」）。
+4. ✅ **已完成（2026-09-03）**。**依 W6–W9 的八段式格式寫派工規格**，10 個相位分 3 批，三份規格的釘死 ID 都通過驗證（MISS 0）：
+   - **W10 起跳段**：`set-position`／`takeoff`／`flight`／`entry`（4）→ `plans/W10_起跳段覆蓋派工規格.md`（`84bbd19`）
+   - **W11 牆段**：`turn-approach`／`wall-contact`／`wall-push-off`（3）→ `plans/W11_牆段覆蓋派工規格.md`（`8410b3c`）
+   - **W12 出水段＋蝶式**：`starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3）→ `plans/W12_出水段與蝶式入水停頓覆蓋派工規格.md`（`d0397f3`）
+
+   **三份規格全部零新增 `actions` 與 `muscle-groups`**（前置條件 2 已補齊唯一缺的 `scapular-protraction`）。**跨規格的擁有權分工**（同一批素材被兩個相位共用時誰寫什麼）逐條寫進各檔的分工表，重述即退件：
+
+   | 共用素材 | 擁有者 A | 擁有者 B |
+   |---|---|---|
+   | `tech.47`／`tech.48` | W10 D4 入水：「把肩往前推」命名更正、腰椎擇一 | W11 D3 推蹬：肩複合體合計角度、流線先於蹬伸的時序 |
+   | `tech.44` 七要點 | W12 D1 `starts-turns.breakout`：要點③④⑤⑥（維持與延後） | W12 D2 `udk.breakout`：要點①②（時序）；要點⑦呼吸決策兩筆都不寫 |
+5. ✅ **三份規格均已滿足。每份規格的負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得把 `flip`／`wall-rotation`／`breaststroke-pullout` 順手補上、不得由空間朝向（45° 切入、掌心朝向）反推關節旋轉（缺陷 3，BF-05／BF-25 已有前例）、**不得在兩欄不一致處只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。
+6. ✅ **三份規格均已滿足。每份規格的正面要求必含**：頸部動作一律寫 `trunk.extension`／`trunk.flexion` 並在敘述中標明節段為頸椎（`trunk.extension` 的定義本身就要求「不標節段就無法驗證」）。W12 D3 另加胸椎節段的同一要求。
+
+---
+
+### 4b. 前置工作清單全部完成後的下一步（2026-09-03 起）
+
+前置 1–6 已全部 ✅，**(B) 組進入執行階段**。剩餘工作：
+
+| 步驟 | 內容 | 狀態 |
+|---|---|---|
+| 1 | 決定 W10／W11／W12 的派工管道並發包 | ⬜ 待辦 |
+| 2 | 驗收：看 `git diff` 與 `validate.py` 實際輸出，**不看 exit code**；每批驗收完立刻 commit | ⬜ 待辦 |
+| 3 | 10 筆落地後重跑 `python tools/build_knowledge_map.py` | ⬜ 待辦 |
+| 4 | 覆蓋數字 34／59 → **44／59**，同步 `my-site/layouts/vortex/vortex-movement.html` 的硬編數字 | ⬜ 待辦 |
+| 5 | 收尾流程：HANDOFF → `_INDEX.md` → commit → push → 確認 `notify-mysite` 觸發 | ⬜ 待辦 |
+
+**發包順序**：W10 → W11 → W12，**串行不平行**。W11 的硬性前置條件要 grep
+W10 的 D4 是否落地，W12 的硬性前置條件要 grep 三筆既有記錄——
+平行發包會讓前置檢查失效。
 
 ---
 
