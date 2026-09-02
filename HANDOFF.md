@@ -6,7 +6,7 @@
 
 ## 當前狀態（2026-09-02，最新）
 
-### ▶️ 動作—肌群—訓練—活動度圖譜：**Step 17–22 全數完成，動作圖譜已上線**。仰式覆蓋已補齊（back 7/7，總計 20/58）
+### ▶️ 動作—肌群—訓練—活動度圖譜：**Step 17–22 全數完成，動作圖譜已上線**。仰式覆蓋已補齊（back 7/7，總計 21/59）
 
 `feat/movement-atlas` 已合併回 `master`（merge commit `f6dfd60`，37 個 commit）。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
 
@@ -89,7 +89,8 @@
   - **「movement 是 W003 孤兒層」這個判讀本身是錯的，根因在檢查器不在內容**。`collect_outbound_ids()` 只認 `links.*`，而 movement 四個檔**一個 `links` 都沒有**——它用 `action_ids`／`demand_ids`／`derived_from_ids`／`muscle_roles[].muscle_id` 表達關聯。已把這組欄位同時補進出邊與入邊。實測 W003 **528 → 468**：清掉的 60 筆 = movement 全部 **37** 筆（先前記的「34 筆」是舊數字，已過期）＋ `technical-analysis.yaml` **23** 筆——後者代表 `derived_from_ids` 這座橋一直在生效、把那些技術卡接出了孤兒狀態，只是 W003 看不見。**所以「要不要補反向 cross_ref」這題不成立**，不需要為了消警告去加關係。
 - **Step 21（rollout）已完成（2026-09-02）**：順序照 `sync-from-vortex.yml` 的定義走——該 workflow checkout Vortex 的是 **`master`**，所以必須先推 my-site 版型、再合併 canonical 到 master。實際執行：my-site `97a76e6` 推 → Vortex 合併 `f6dfd60` → `notify-mysite` 觸發 → cortex sync commit → deploy，四段全 `success`。線上實測：13/58 與「列舉式的圖譜」在頁上、`資料尚未同步` 已消失（資料已同步）、44 個 `vx-mv-entry`、`map[`／`<nil>`／`%!`／`ZgotmplZ` 各 0、**可見的原始 ID 0 個**，且 `perception_probe`／`discriminators`／`type_diagnosis`／`signal_structure`／`manipulation`／`contrast_question`／`diagnostic` 七個診斷鍵**線上命中全 0**。
 
-- **Step 22（仰式覆蓋）已完成（2026-09-02，`19d0c22`）**：派工規格 `plans/W5_仰式覆蓋派工規格.md`（`827ae7e`＋`bff9bd9`），執行者 codex，主 session 驗收。**覆蓋率 13/58 → 20/58，back 0/7 → 7/7**（demand 記錄 16 → 23）。新增 actions 5、muscle-groups 5、demands 7，三檔尾端 append-only。
+- **Step 22（仰式覆蓋）已完成（2026-09-02，`19d0c22`）**：派工規格 `plans/W5_仰式覆蓋派工規格.md`（`827ae7e`＋`bff9bd9`），執行者 codex，主 session 驗收。**覆蓋率 14/59 → 21/59，back 0/7 → 7/7**（demand 記錄 16 → 23）。新增 actions 5、muscle-groups 5、demands 7，三檔尾端 append-only。
+  - ⚠ **更正我當天稍早報的「13/58 → 20/58」——分母用錯了**。我拿 `plans/movement_coverage_denominator.yaml` 當分母，但**該檔第 10 行自己寫明「兩邊相位集合若分歧，以登錄表為準」**，而登錄表（`_taxonomy.yaml#movement_phase_registry`）是 59 個相位不是 58——差的那個是 `free.early-pull-through`，它有 demand 也有登錄，只是規劃檔沒收。所以自由式是 **5/12** 不是 4/11，總數是 **21/59** 不是 20/58。錯誤數字一度上線，已隨本輪修正。**規劃檔不是分母真相源，canonical 的 registry 才是。**
   - ⚠ **更正上一輪的範圍判斷**：原規劃寫「跑新一輪 C 類蒐證，照 `plans/證據包_蒐證派工規格.md` 的批次 5」——**錯**。清點仰式 A 類裁決檔得 26＋2＋5＋4 ＝ 37 ＝ 全部 BK 主張，**沒有任何未蒐證的 C 類條目**，所以不存在「批次 5」。本輪的正確性質是**撰寫輪**（拿已裁決的 A 類直接落 demand），不是蒐證輪。
   - **BK-26 差點被違反**：A 類裁決通篇用四段式（第一下掃／第一上掃／第二下掃）詞彙，若把它們映射到 `descriptive` 的 `pull` 相位，等於主張兩套分期的**邊界對齊**——這正是 BK-26 禁止的換算。改由 `back.tech.11`／`back.tech.14` 的原生 descriptive 證據供給 `pull`，**不用任何 BK 裁決**。
   - **負面清單 11 條**：BK-01/02/03（出水期）、BK-11（前伸期）、BK-12/13/14＋BK-18/19/20＋BK-22（四段式）、BK-27（脊椎旋轉）。措辭要點：**這些不是被否決，是等一套能承載它們的相位鍵**，候選是另行登錄 `fernandes-2022-sweep`（前例：`early-pull-through` 就是為了 FR-17 而登錄進 `heinlein-2010-phases` 的）。
@@ -137,7 +138,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **覆蓋率現為 20/58，back 已滿（7/7）。剩下的 38 個相位分兩類，不可混為一談**：
+1. **覆蓋率現為 21/59，back 已滿（7/7）。剩下的 38 個相位分兩類，不可混為一談**：
    - **已有 A 類裁決、缺的是撰寫**（同 Step 22 的性質）：先清點各式 A 類裁決檔（`plans/關節主張裁決_*.md`）還剩多少條未落地，能直接落 demand 就照 Step 22 的規格樣板再開一輪，**不必再跑蒐證**。Step 22 已證明「還要蒐證」這個假設可能是錯的，開工前先清點再判性質。
    - **真的沒有裁決授權**：`gap.free.up-kick` 屬此類（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，**不在 canonical 造記錄**。**不得由任何執行者對沒有裁決的相位自行補內容。**
 2. **四段式相位鍵（`fernandes-2022-sweep`）是下一個結構決策**。Step 22 把 11 條 BK 裁決放上負面清單等相位鍵，其中 7 條是四段式主張。要不要登錄這套 `phase_model` 進 `_taxonomy.yaml#movement_phase_registry`，是一個獨立的裁決題：登錄後這 11 條就能落地，但同時要面對「同一泳式兩套分期並存」在版型上怎麼呈現（BK-26 已定死**不給跨模型對照表**）。前例是 `early-pull-through` 之於 `heinlein-2010-phases`。

@@ -196,6 +196,50 @@ def extract_injuries_built(path: Path):
             })
     return rows
 
+def extract_movement(path: Path, list_key: str):
+    """canonical/movement/ 四個檔共用。各檔欄位不同，共通的只有 id / name / 三個狀態欄。"""
+    data = yaml.safe_load(path.read_text(encoding="utf-8"))
+    rows = []
+    for r in data.get(list_key, []) or []:
+        pub = r.get("public") or {}
+        rows.append({
+            "id": r.get("id", "?"),
+            "name": r.get("name") or pub.get("name_zh", ""),
+            "name_zh": pub.get("name_zh", ""),
+            "joint_region": r.get("joint_region") or ", ".join(r.get("joint_regions") or []),
+            "stroke": r.get("stroke", ""),
+            "phase": r.get("phase", ""),
+            "phase_model": r.get("phase_model", ""),
+            "limitation_type": r.get("limitation_type", ""),
+            "claim_status": r.get("claim_status", ""),
+            "action_status": r.get("action_status", ""),
+            "evidence_profile": r.get("evidence_profile", ""),
+            "publication_status": r.get("publication_status", ""),
+            "desc": (pub.get("description") or "").strip().replace("\n", " ")[:70],
+        })
+    return rows
+
+
+def movement_coverage(taxonomy_path: Path, demands: list[dict]):
+    """相位覆蓋率。分母取 _taxonomy.yaml 的 registry（canonical），
+    不取 plans/movement_coverage_denominator.yaml——後者是規劃檔且已知落後
+    （free.early-pull-through 有 demand 卻沒登錄進去）。以 registry 為準才會
+    讓分母落差自己浮出來。"""
+    reg = yaml.safe_load(taxonomy_path.read_text(encoding="utf-8"))["movement_phase_registry"]["strokes"]
+    covered = {(d["stroke"], d["phase"]) for d in demands}
+    rows = []
+    for stroke, phases in reg.items():
+        miss = [p for p in phases if (stroke, p["key"]) not in covered]
+        rows.append({
+            "stroke": STROKE_ZH.get(stroke, stroke),
+            "covered": f"{len(phases) - len(miss)}/{len(phases)}",
+            "models": ", ".join(sorted({p["phase_model"] for p in phases})),
+            "missing": ", ".join(f'{p["key"]}（{p["label_zh"]}）' for p in miss) or "—",
+        })
+    total = sum(len(p) for p in reg.values())
+    return rows, total - sum(int(r["covered"].split("/")[0]) for r in rows), total
+
+
 def extract_drills(path: Path):
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     rows = []
@@ -415,6 +459,70 @@ def main():
     lines.extend(render_table(psy, [("id", "ID"), ("name_zh", "主題"), ("status", "狀態"),
                                     ("concept_count", "概念數"), ("l_band", "L 範圍"), ("when_zh", "使用情境")]))
     lines.append("")
+
+    # === 動作圖譜 movement ===
+    mv_dir = ROOT / "canonical/movement"
+    if mv_dir.exists():
+        lines.append("---")
+        lines.append("")
+        lines.append("## 動作圖譜 `canonical/movement/`")
+        lines.append("")
+        lines.append("列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，"
+                     "不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。")
+        lines.append("")
+
+        acts = extract_movement(mv_dir / "actions.yaml", "actions")
+        musc = extract_movement(mv_dir / "muscle-groups.yaml", "muscle_groups")
+        dems = extract_movement(mv_dir / "stroke-demands.yaml", "demands")
+        itvs = extract_movement(mv_dir / "interventions.yaml", "interventions")
+
+        cov_rows, n_missing, n_total = movement_coverage(ROOT / "canonical/_taxonomy.yaml", dems)
+        n_cov = n_total - n_missing
+        summary_rows.append(("movement", len(acts) + len(musc) + len(dems) + len(itvs),
+                             f"actions {len(acts)} / muscle-groups {len(musc)} / "
+                             f"demands {len(dems)} / interventions {len(itvs)}；相位覆蓋 {n_cov}/{n_total}"))
+
+        lines.append(f"### 相位覆蓋（**{n_cov}/{n_total}**）")
+        lines.append("")
+        lines.append("未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與"
+                     "**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。")
+        lines.append("")
+        lines.extend(render_table(cov_rows, [("stroke", "泳式"), ("covered", "覆蓋"),
+                                             ("models", "分期系統"), ("missing", "未覆蓋相位")]))
+        lines.append("")
+
+        lines.append(f"### `actions.yaml` — 解剖動作（**{len(acts)} 條目**）")
+        lines.append("")
+        lines.extend(render_table(acts, [("id", "ID"), ("name", "名稱"), ("joint_region", "部位"),
+                                         ("claim_status", "主張狀態"), ("action_status", "行動狀態")]))
+        lines.append("")
+
+        lines.append(f"### `muscle-groups.yaml` — 肌群（**{len(musc)} 條目**）")
+        lines.append("")
+        lines.extend(render_table(musc, [("id", "ID"), ("name", "名稱"), ("joint_region", "部位"),
+                                         ("claim_status", "主張狀態"), ("action_status", "行動狀態")]))
+        lines.append("")
+
+        lines.append(f"### `stroke-demands.yaml` — 泳式需求（**{len(dems)} 條目**）")
+        lines.append("")
+        lines.append("**相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。")
+        lines.append("")
+        for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", ""]:
+            rows = [r for r in dems if r["stroke"] == stroke]
+            if not rows:
+                continue
+            lines.append(f"#### {STROKE_ZH.get(stroke, stroke or '（未分類）')} ({len(rows)})")
+            lines.append("")
+            lines.extend(render_table(rows, [("id", "ID"), ("phase", "相位"), ("phase_model", "分期系統"),
+                                             ("name_zh", "名稱"), ("claim_status", "主張狀態"),
+                                             ("action_status", "行動狀態")]))
+            lines.append("")
+
+        lines.append(f"### `interventions.yaml` — 條件式訓練與活動度（**{len(itvs)} 條目**）")
+        lines.append("")
+        lines.extend(render_table(itvs, [("id", "ID"), ("name_zh", "名稱"), ("limitation_type", "限制類型"),
+                                         ("claim_status", "主張狀態"), ("action_status", "行動狀態")]))
+        lines.append("")
 
     # === 練習 Drills ===
     lines.append("---")
