@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 95 | actions 29 / muscle-groups 22 / demands 39 / interventions 5；相位覆蓋 33/59 |
+| `movement` | 98 | actions 30 / muscle-groups 22 / demands 41 / interventions 5；相位覆蓋 34/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,20 +795,20 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**33/59**）
+### 相位覆蓋（**34/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
 | 泳式 | 覆蓋 | 分期系統 | 未覆蓋相位 |
 |---|---|---|---|
-| 自由式 | 5/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | lift（升力相）, catch（抓水期）, rear-quadrant-propulsion（後象限推進）, push（推水相）, release（釋放相）, early-recovery（早期回臂）, late-recovery（晚期回臂） |
+| 自由式 | 6/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | lift（升力相）, rear-quadrant-propulsion（後象限推進）, push（推水相）, release（釋放相）, early-recovery（早期回臂）, late-recovery（晚期回臂） |
 | 仰式 | 7/7 | descriptive | — |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
 | 蝶式 | 9/11 | descriptive, event-window | entry-pause（入水停頓）, breathing-window（呼吸視窗） |
 | 水下蝶腳 | 3/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, breakout（出水划手） |
 | 起跳轉身 | 1/13 | descriptive | set-position（零位姿勢）, takeoff（起跳）, flight（飛行階段）, entry（入水）, underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, turn-approach（進牆）, flip（翻滾）, wall-contact（觸牆）, wall-rotation（旋轉在牆上完成）, wall-push-off（推蹬） |
 
-### `actions.yaml` — 解剖動作（**29 條目**）
+### `actions.yaml` — 解剖動作（**30 條目**）
 
 | ID | 名稱 | 部位 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -841,6 +841,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.action.forearm.supination | 前臂旋後 | shoulder-arm | supported | ready |
 | movement.action.trunk.extension | 軀幹伸展 | spine-neck | supported | ready |
 | movement.action.trunk.flexion | 軀幹屈曲 | spine-neck | supported | ready |
+| movement.action.shoulder-complex.horizontal-abduction | 肩水平外展 | shoulder-arm | supported | ready |
 
 ### `muscle-groups.yaml` — 肌群（**22 條目**）
 
@@ -869,11 +870,11 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**39 條目**）
+### `stroke-demands.yaml` — 泳式需求（**41 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
-#### 自由式 (6)
+#### 自由式 (8)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -883,6 +884,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.free.down-kick.narrow-channel-alignment | down-kick | descriptive | 自由式下踢的窄通道對齊需求 | partially-supported | provisional |
 | movement.demand.free.pull.upper-trunk-rotation-hand-velocity | pull | kudo-power-phase | 自由式拉水期的上軀幹旋轉對手部後向速度的貢獻 | partially-supported | provisional |
 | movement.demand.free.entry.shoulder-line-roll-peak | entry | descriptive | 自由式入水期的肩線滾轉峰值時點 | partially-supported | provisional |
+| movement.demand.free.catch.elevation-plane-shift-with-rotation-onset | catch | descriptive | 自由式抓水期的上舉平面移動與旋轉起始 | partially-supported | provisional |
+| movement.demand.free.catch.palm-orientation-three-source-decomposition | catch | descriptive | 掌心空間朝向與前臂關節位置是兩個欄位 | partially-supported | provisional |
 
 #### 仰式 (7)
 

@@ -1366,3 +1366,50 @@ actions:
       assessment_note: >
         評估時須分別標記頸、胸、腰節段及骨盆位置；看到下背貼平只能指出
         腰椎曲度朝屈曲側改變，不能由外觀分配各節段的貢獻。
+
+  - id: movement.action.shoulder-complex.horizontal-abduction
+    name: 肩水平外展
+    aliases:
+      - 肩水平伸展
+      - horizontal abduction
+      - horizontal extension
+    joint_region: shoulder-arm
+    definition: >
+      肩水平外展是定義在上舉一半的起始位置上的第四組盂肱關節動作，肱骨
+      在該高度所在的水平面內向後方移動。它與
+      movement.action.shoulder-complex.horizontal-adduction 互為反向，
+      兩者共用同一個起始位置定義。
+    plane:
+      - transverse
+    axis:
+      - 通過盂肱關節的垂直軸
+    observable_boundaries: >
+      可辨識的起訖是肱骨在該水平面內由前方朝後方移動。若起始位置不在
+      上舉一半附近，該動作應改用外展或伸展等其他命名，不得沿用水平外展。
+      肩胛骨在胸廓上的後縮也會造成相同的池畔外觀，單看手的位置無法區分
+      盂肱關節動作與肩胛動作。
+    general_anatomical_capacity: >
+      在一般解剖條件下，肱骨由上舉一半附近的起始位置向水平面後方與前方
+      都有可用範圍；實際可用範圍會隨肩胛位置、肱骨軸向旋轉、上舉高度、
+      主動或被動條件及症狀而變。本條不以單一角度作能力門檻。
+    publication_status: published
+    claim_status: supported
+    action_status: ready
+    evidence_profile: anatomy
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 肩水平外展
+      description: >
+        肩水平外展的名稱綁定在手臂已到上舉一半附近的起始位置，指上臂骨
+        在該高度的水平面內向後方移動，與肩水平內收互為反向。若起始上舉
+        高度不同，池畔看到手向外分開時可能要改用外展或伸展等其他名稱；
+        肩胛骨後縮也能造成相同外觀，因此不能只看手的位置判定。
+      safety_note: >
+        手臂在水平面移動時若出現疼痛、卡住、麻木、明顯無力或不穩，
+        應停止，不要以外力強行增加移動範圍。
+    diagnostic:
+      assessment_note: >
+        評估時須先記錄起始上舉高度、肱骨軸向旋轉及肩胛與軀幹位置，再直接
+        量測肱骨相對軀幹在水平面內的移動。若起始位置不在上舉一半附近，
+        不得套用水平外展命名；手部外觀也不能用來分配盂肱與肩胛的貢獻。
