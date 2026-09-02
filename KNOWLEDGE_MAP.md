@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 78 | actions 22 / muscle-groups 18 / demands 33 / interventions 5；相位覆蓋 31/59 |
+| `movement` | 95 | actions 29 / muscle-groups 22 / demands 39 / interventions 5；相位覆蓋 33/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**31/59**）
+### 相位覆蓋（**33/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -805,10 +805,10 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 仰式 | 7/7 | descriptive | — |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
 | 蝶式 | 9/11 | descriptive, event-window | entry-pause（入水停頓）, breathing-window（呼吸視窗） |
-| 水下蝶腳 | 1/7 | descriptive | streamlined-glide（流線滑行）, kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, up-kick（上踢相）, breakout（出水划手） |
+| 水下蝶腳 | 3/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, breakout（出水划手） |
 | 起跳轉身 | 1/13 | descriptive | set-position（零位姿勢）, takeoff（起跳）, flight（飛行階段）, entry（入水）, underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, turn-approach（進牆）, flip（翻滾）, wall-contact（觸牆）, wall-rotation（旋轉在牆上完成）, wall-push-off（推蹬） |
 
-### `actions.yaml` — 解剖動作（**22 條目**）
+### `actions.yaml` — 解剖動作（**29 條目**）
 
 | ID | 名稱 | 部位 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -834,8 +834,15 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.action.ankle-foot.pronation | 距下／橫跗關節旋前 | ankle-foot | supported | ready |
 | movement.action.shoulder-complex.adduction | 肩內收 | shoulder-arm | supported | ready |
 | movement.action.shoulder-complex.scapular-retraction | 肩胛後縮 | shoulder-arm | supported | ready |
+| movement.action.shoulder-complex.scapular-upward-rotation | 肩胛骨上迴旋 | shoulder-arm | supported | ready |
+| movement.action.shoulder-complex.scapular-posterior-tilt | 肩胛骨後傾 | shoulder-arm | supported | ready |
+| movement.action.shoulder-complex.scapular-elevation | 肩胛骨上提 | shoulder-arm | supported | ready |
+| movement.action.forearm.pronation | 前臂旋前 | shoulder-arm | supported | ready |
+| movement.action.forearm.supination | 前臂旋後 | shoulder-arm | supported | ready |
+| movement.action.trunk.extension | 軀幹伸展 | spine-neck | supported | ready |
+| movement.action.trunk.flexion | 軀幹屈曲 | spine-neck | supported | ready |
 
-### `muscle-groups.yaml` — 肌群（**18 條目**）
+### `muscle-groups.yaml` — 肌群（**22 條目**）
 
 | ID | 名稱 | 部位 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -857,8 +864,12 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.hip-external-rotators | 髖外旋肌群 | hip-knee | supported | ready |
 | movement.muscle.knee-flexors | 膝屈肌群 | hip-knee | supported | ready |
 | movement.muscle.foot-evertors | 足外翻肌群 | ankle-foot | supported | ready |
+| movement.muscle.scapular-elevators | 肩胛上提肌群 | shoulder-arm | supported | ready |
+| movement.muscle.forearm-pronators | 前臂旋前肌群 | shoulder-arm | supported | ready |
+| movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
+| movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**33 條目**）
+### `stroke-demands.yaml` — 泳式需求（**39 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -919,11 +930,17 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.starts-turns.underwater-glide.shoulder-elevation | underwater-glide | descriptive | 水下滑行超流線位的肩上舉需求 | partially-supported | provisional |
 | movement.demand.starts-turns.underwater-glide.head-position-drag | underwater-glide | descriptive | 水下滑行期的頭部位置與被動阻力 | partially-supported | provisional |
 
-#### 水下蝶腳 (1)
+#### 水下蝶腳 (7)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
 | movement.demand.udk.down-kick.ankle-plantarflexion | down-kick | descriptive | 水下蝶式打腿下踢的踝蹠屈需求 | partially-supported | provisional |
+| movement.demand.udk.streamlined-glide.scapulohumeral-dual-clearance | streamlined-glide | descriptive | 流線滑行的肩部避讓機制與肩胛三軸必然性差異 | partially-supported | provisional |
+| movement.demand.udk.streamlined-glide.forearm-rotation-column-gap | streamlined-glide | descriptive | 流線滑行的肘腕位置與被手部擺法遮蔽的前臂旋轉 | partially-supported | provisional |
+| movement.demand.udk.streamlined-glide.lower-chain-neutral-and-terminal-extension | streamlined-glide | descriptive | 流線滑行的髖中立、膝完全伸展與踝蹠屈 | partially-supported | provisional |
+| movement.demand.udk.streamlined-glide.lumbar-baseline-two-readings | streamlined-glide | descriptive | 流線滑行的腰椎基準——「中立或些微伸展」與「空心姿」指向相反側 | disputed | provisional |
+| movement.demand.udk.up-kick.hip-extension-prone | up-kick | descriptive | 俯臥水下海豚腳上踢的髖伸展與可用幅度不對稱 | partially-supported | provisional |
+| movement.demand.udk.up-kick.hip-flexion-supine | up-kick | descriptive | 仰躺水下海豚腳上踢——同一個池畔動作對應的是髖屈曲 | partially-supported | provisional |
 
 ### `interventions.yaml` — 條件式訓練與活動度（**5 條目**）
 

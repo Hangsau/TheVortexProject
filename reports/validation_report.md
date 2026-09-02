@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-03
-> 驗證條目數：704，Drills ID 數：176
+> 驗證條目數：721，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 442 筆**
+**WARN，共 438 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -495,12 +495,9 @@
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.6'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.7'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.8'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.10'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.11'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.12'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.13'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.14'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.15'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.18'
@@ -509,7 +506,6 @@
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.21'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.22'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.24'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.26'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.27'
