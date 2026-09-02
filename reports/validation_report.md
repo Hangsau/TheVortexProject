@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-09-02
-> 驗證條目數：680，Drills ID 數：176
+> 生成日期：2026-09-03
+> 驗證條目數：696，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 459 筆**
+**WARN，共 450 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -450,11 +450,6 @@
   file=canonical\instructional\technical-analysis.yaml id='back.tech.26'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.27'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.2'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.4'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.10'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.11'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.13'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.14'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.15'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.16'
@@ -465,8 +460,6 @@
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.21'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.22'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.24'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.26'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.27'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.29'
@@ -529,8 +522,6 @@
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.29'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.36'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.30'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.36'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.37'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.38'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.37'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.38'
@@ -743,7 +734,7 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 19 筆**
+**WARN，共 18 筆**
 
   source_id='src.adductor-loading-return-to-sport-practice-co' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.aiac-ijkss-v-6n-1p-25' 已登錄於 _sources.yaml 但無任何條目引用
@@ -759,7 +750,6 @@
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.military-swim-training-sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.mountjoy-ioc-consensus-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.nordin-frankel-2012' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.shallow-water-blackout-prevention-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用
