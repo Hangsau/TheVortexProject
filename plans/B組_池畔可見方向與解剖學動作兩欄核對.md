@@ -222,11 +222,24 @@
 
 **裁決：可寫，但必須與 `starts-turns.breakout` 分清楚誰擁有什麼。** 建議：`udk.breakout` 寫「最後一踢與第一划的銜接」（`tech.34`／`tech.44` 要點①②），`starts-turns.breakout` 寫「出水期的流線維持與抬頭延後」（要點③④⑤⑥）。**兩者不得互抄，也不得用 `cross_ref` 假裝已經分開。**
 
-### 2.13 `fly.entry-pause` 蝶式入水停頓 — ⚠ 需先確認素材真的存在
+### 2.13 `fly.entry-pause` 蝶式入水停頓 — ✅ 已驗證（2026-09-03），素材存在但來源不是 BF-01～04
 
-`HANDOFF` 第 200 行寫「BF-01～04 的入水段敘述已含停頓描述，只差把它與 `fly.entry` 分開命名」。**本次核對未驗證這句話**——BF 系列的裁決在 `plans/關節主張裁決_蝶式.md`（本輪未讀）。
+**⚠ 錯誤 2：`HANDOFF` 原寫「BF-01～04 的入水段敘述已含停頓描述」——錯。** 實際讀完 `plans/關節主張裁決_蝶式.md`：BF-01（肩屈曲為主）、BF-02（肩些微外展傾向）、BF-03（肩些微內旋傾向）、BF-04（腕輕度屈曲）四條全部在講**入水那一瞬間的關節位置**，全檔 grep「停頓」命中 0。BF 系列不是停頓的素材。
 
-**裁決：暫掛。** 派工前必須先做一件事：讀 BF-01～04 原文，確認「停頓」在素材裡是**一個被描述的相位**（有起訖、有姿勢內容），還是只是敘述中的一個修飾詞。若是後者，這一相位就與 2.8 同類——缺的是素材本身，應移入 (C4)（同 `fly.breathing-window`）。**不得因為 `HANDOFF` 寫了「已含」就直接派工。**
+**真正的素材是 `fly.tech.21`「入水停頓機制：水平動量轉換為垂直動量」**——一筆 `category: timing` 的獨立記錄，這也正是 `plans/movement_coverage_denominator.yaml:272` 當初把 `entry-pause` 立為相位時引的證據（`quote: "入水停頓"`）。它有起訖（入水瞬間 → 第一踢啟動）也有姿勢內容（拇指 45° 切入後受控停頓、胸部下壓）。
+
+**裁決：進 (B)，可派工。** 兩欄核對如下：
+
+| 池畔看得見 | 解剖學動作 | 兩欄是否一致 |
+|---|---|---|
+| 手臂入水後不再往前衝，維持前伸 | 肩維持屈曲／上舉位（BF-01、BF-02 已裁決的「上舉平面」問題在此沿用，不重裁） | 一致 |
+| 手腕微微向下折 | `wrist-hand.flexion`（BF-04 已裁決：支持、無缺陷） | 一致 |
+| 胸口往下壓 | `trunk.flexion`，**節段標胸椎** | 一致 |
+| 「拇指先 45° 切入」 | ❌ **這是空間朝向不是關節角度** | **不一致，且不得反推** |
+
+最後一列是本相位唯一的陷阱：45° 是手相對水面的姿態（`poolside-fixed`），把它反推成肩內旋或前臂旋前，就是 BF-05／BF-25 已被判為「缺陷 3：由空間朝向反推關節旋轉」的同一個錯。派工規格要把這一列明列為禁止事項。
+
+**另一件必須在記錄裡寫清楚的事**：`fly.tech.1`（三式速度波動對比）寫「蝶式為**連續波無停頓**」，字面上與 `fly.tech.21` 的「入水**停頓**」正面衝突。兩者其實不是同一件事——`tech.1` 講的是整個週期的速度結構沒有蛙式那種滑行低谷，`tech.21` 講的是入水那一瞬間的受控減速緩衝。**但讀者順著 `cross_ref` 走過去只會看到兩個相反的詞**，所以這一筆 demand 必須在敘述中點明「此處的停頓指入水瞬間的動量轉換緩衝，不是週期層級的滑行段」。這是命名衝突，不是內容矛盾，因此**不需要裁決誰對**，只需要寫明白。
 
 ---
 
@@ -246,26 +259,31 @@
 | (B) | `breaststroke-pullout` | ❌ 庫內零關節層素材 | **→ (D) 新類：素材缺關節層** |
 | (B) | `flip` | ❌ 剛體旋轉，`joint-local` 表達不了 | **→ (C) 結構決策** |
 | (B) | `wall-rotation` | ❌ 同上 | **→ (C) 結構決策** |
-| (B) | `fly.entry-pause` | ⚠ 素材存在性未驗證 | **暫掛，先讀 BF-01～04** |
+| (B) | `fly.entry-pause` | ✅ 過關，素材是 `fly.tech.21` 不是 BF-01～04 | **(B) 可派工** |
 
 **(D) 是本次核對新開的一類**：素材在庫內、相位有登錄、也不卡結構決策，但庫內那幾筆素材**回答的是別的問題**（技術選擇、最優深度、規則），沒有任何關節層描述可供核對。(D) 與 (C) 的差別是：(C) 缺的是裁決，(D) 缺的是內容；(D) 的解法是去寫關節層素材（或從鄰近 stroke 借用並標明），不是等決策。
 
-**數字結算**：(B) 從 13 個縮到 **9 個可派工** + 1 個暫掛 + 2 個移 (C) + 1 個移 (D)。
+**數字結算**：(B) 從 13 個縮到 **10 個可派工** + 2 個移 (C) + 1 個移 (D)。（原寫「9 個可派工 + 1 個暫掛」，暫掛的 `fly.entry-pause` 已於 2026-09-03 驗證通過並歸入可派工。）
 
 ---
 
 ## 4. 派工前的前置工作清單（按順序）
 
-1. **修 `canonical/instructional/technical-analysis.yaml` 的 `tech.42`**：① 把「肩關節要做出 sub-luxation 或 hyperextension 把肩往前推」改成肩胛前突＋上迴旋＋肩複合體上舉的分層寫法（引 `tech.48`）；② 把「腰椎反弓」依 `tech.47` 的裁決處理——`tech.47` 要求擇一並寫明選哪個，本處直接沿用該裁決的結論框架，不自行另擇。**這是主 session 的裁決工作，不派工。**
-2. **在 `canonical/movement/actions.yaml` 新增三筆**：`neck.extension`／`neck.flexion`／`shoulder-complex.scapular-protraction`，帶 `plane`／`axis`／`src.neumann-2017`。可派工（verbatim spec）。
-3. **讀 `plans/關節主張裁決_蝶式.md` 的 BF-01～04**，決定 `fly.entry-pause` 進 (B) 還是 (C4)。
-4. **依 W6–W9 的八段式格式寫派工規格**，9 個相位分 2–3 批（建議：起跳段 `set-position`／`takeoff`／`flight`／`entry` 一批；牆段 `wall-contact`／`wall-push-off`／`turn-approach` 一批；出水段 `breakout`／`udk.breakout` 一批）。
-5. **每份規格的負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得把 `flip`／`wall-rotation`／`breaststroke-pullout` 順手補上、**不得在兩欄不一致處只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。
+1. ✅ **已完成（`dd45e88`）**。**修 `canonical/instructional/technical-analysis.yaml` 的 `tech.42`**：① 把「肩關節要做出 sub-luxation 或 hyperextension 把肩往前推」改成肩胛前突＋上迴旋＋肩複合體上舉的分層寫法（引 `tech.48`）；② 把「腰椎反弓」依 `tech.47` 的裁決處理——`tech.47` 要求擇一並寫明選哪個，本處直接沿用該裁決的結論框架，不自行另擇。**這是主 session 的裁決工作，不派工。**
+2. ✅ **已完成（`dd1a362`），但只新增一筆不是三筆**。詳見 §1 的「⚠ 錯誤 1」：頸部動作庫內已由 `trunk.extension`／`trunk.flexion`（`joint_region: spine-neck`）涵蓋，另開 `neck.*` 會造成同一動作兩個 ID。實際新增 `shoulder-complex.scapular-protraction` 一筆（帶 `plane`／`axis`／`src.neumann-2017`），actions 30→31。
+3. ✅ **已完成（2026-09-03）**。**讀 `plans/關節主張裁決_蝶式.md` 的 BF-01～04** → `fly.entry-pause` 進 **(B)**，但素材是 `fly.tech.21` 不是 BF 系列，詳見 §2.13 的「⚠ 錯誤 2」。
+4. **依 W6–W9 的八段式格式寫派工規格**，10 個相位分 3 批：
+   - **W10 起跳段**：`set-position`／`takeoff`／`flight`／`entry`（4）
+   - **W11 牆段**：`wall-contact`／`wall-push-off`／`turn-approach`（3）
+   - **W12 出水段＋蝶式**：`starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3）
+5. **每份規格的負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得把 `flip`／`wall-rotation`／`breaststroke-pullout` 順手補上、不得由空間朝向（45° 切入、掌心朝向）反推關節旋轉（缺陷 3，BF-05／BF-25 已有前例）、**不得在兩欄不一致處只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。
+6. **每份規格的正面要求必含**：頸部動作一律寫 `trunk.extension`／`trunk.flexion` 並在敘述中標明節段為頸椎（`trunk.extension` 的定義本身就要求「不標節段就無法驗證」）。
 
 ---
 
 ## 5. 本文件抓到而 `HANDOFF` 需更正的三句話
 
-- **「(B) 13 個素材已在庫內，只差解剖命名核對」** → 9 個成立，`breaststroke-pullout` 不成立（缺關節層素材），`flip`／`wall-rotation` 不成立（缺結構決策），`fly.entry-pause` 未驗證。
+- **「(B) 13 個素材已在庫內，只差解剖命名核對」** → 10 個成立，`breaststroke-pullout` 不成立（缺關節層素材），`flip`／`wall-rotation` 不成立（缺結構決策）。
+- **「`fly.entry-pause`：BF-01～04 的入水段敘述已含停頓描述」** → 錯。BF-01～04 全在講入水瞬間的關節位置，全檔無「停頓」；真正的素材是 `fly.tech.21`（`category: timing`），詳見 §2.13。
 - **「這 11 個相位每一個都有對應條目」的逐相位對映漏了 `tech.47`／`tech.48`** → 而這兩筆是全庫 starts-turns 唯二的 `category: joint`，且 `tech.48` 是庫內唯一一筆已經自己做完兩欄核對的條目。對映應補：`wall-push-off ← tech.6/18/22/47/48`。
 - **「breakout ← tech.44」寫成 `udk.tech.44`** → 實際 id 是 `starts-turns.tech.44`，全庫沒有 `udk.tech.44`。

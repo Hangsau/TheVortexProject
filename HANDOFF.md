@@ -167,10 +167,10 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 0. **✅ (B) 組兩欄核對已於 2026-09-03 完成**，全文在 `plans/B組_池畔可見方向與解剖學動作兩欄核對.md`（主 session 自做，未派工）。**核對推翻了本檔先前對 (B) 的三句描述**，結論如下：
 
-   - **(B) 從 13 縮到 9 個可派工**：`set-position`／`takeoff`／`flight`／`entry`／`wall-contact`／`wall-push-off`／`turn-approach`／`starts-turns.breakout`／`udk.breakout`。
+   - **(B) 從 13 縮到 10 個可派工**：`set-position`／`takeoff`／`flight`／`entry`／`wall-contact`／`wall-push-off`／`turn-approach`／`starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（末者於 2026-09-03 驗證後歸入，見下）。
    - **`flip` 與 `wall-rotation` 移入 (C)**：翻滾與牆上旋轉是**整體剛體空間重定向，不是關節動作**——各關節在過程中主要維持相對姿勢。`joint-local` 框架無對應動作名，把「翻滾」寫成 `hip.flexion` 會讓讀者以為屈髖等於翻滾。卡在 `action_reference_frame` 的結構決策，不卡在解剖命名。
    - **`breaststroke-pullout` 移入新開的 (D) 類「素材缺關節層」**：素材 `tech.26/27/35` 全部在講技術選擇比較、最優深度與規則，關節詞彙掃過 `public` 全文命中 0。**缺的不是 ③（核對），是 ① 本身在庫內就沒有。** (D) 與 (C) 的差別：(C) 缺裁決，(D) 缺內容。
-   - **`fly.entry-pause` 暫掛**：本檔先前寫「BF-01～04 已含停頓描述」，核對時**未驗證這句話**。派工前必須先讀 `plans/關節主張裁決_蝶式.md` 的 BF-01～04，確認「停頓」是被描述的相位（有起訖、有姿勢內容）還是敘述中的修飾詞；若是後者則同 (C4)。**不得因為本檔寫了「已含」就直接派工。**
+   - **`fly.entry-pause` ✅ 已驗證（2026-09-03），進 (B) 可派工**。**⚠ 錯誤 2：本檔原寫「BF-01～04 已含停頓描述」——錯。** BF-01（肩屈曲為主）／BF-02（肩外展傾向）／BF-03（肩內旋傾向）／BF-04（腕輕度屈曲）四條全在講入水瞬間的關節位置，`plans/關節主張裁決_蝶式.md` 全檔 grep「停頓」命中 0。真正的素材是 **`fly.tech.21`「入水停頓機制：水平動量轉換為垂直動量」**（`category: timing`，也是 `movement_coverage_denominator.yaml:272` 立此相位時引的證據），有起訖也有姿勢內容。派工時兩件事必寫進規格：①「拇指 45° 切入」是空間朝向**不得反推成關節旋轉**（缺陷 3，BF-05／BF-25 前例）；② `fly.tech.1` 寫「蝶式為連續波無停頓」與本相位字面衝突，實為週期速度結構 vs 入水瞬間緩衝兩件事，**記錄裡要寫明白但不必裁決誰對**。
    - **48 筆 starts-turns 素材裡 27 筆（逾半數）關節詞彙命中 0**，只有 2 筆是 `category: joint`。「素材已在庫內」對起跳段與牆段成立，對進牆／pullout 幾乎不成立。
 
    **派工前的前置工作（按順序，前兩項是 blocker）**：
@@ -180,7 +180,8 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
       **⚠ 錯誤 3：本項原寫「新增三筆……`neck.extension`／`neck.flexion`（庫內完全沒有頸部動作）……不得用 `trunk.*` 頂替」——錯。** 實作前讀 `actions.yaml:1287` 發現 `movement.action.trunk.extension` 的 `joint_region` 就是 `spine-neck`，`aliases` 含「脊椎伸展／腰椎伸展」，定義本身寫著「脊柱伸展會加深頸椎與腰椎的前凸，同時減少胸椎後凸；因此同一個『伸展』在不同節段對應相反的曲度變化，**不標節段就無法驗證**」。庫內既有設計不是「漏掉頸部」，是「一筆脊柱矢狀面動作 ＋ 強制標節段」。另開 `neck.*` 會讓同一個動作有兩個 ID，比命名不直觀更糟；`tech.47` 要的是條目內標明節段，那筆記錄自己就在要求這件事。
 
       **更正後結論**：抬頭／下巴貼胸一律寫 `trunk.extension`／`trunk.flexion`，**並在 `observable_boundaries` 或敘述中標明節段為頸椎**。這條要進派工負面清單的正面對應項。實際新增只有 `shoulder-complex.scapular-protraction`（肩胛前伸，只有 retraction 缺對向，是上述錯誤甲的正解），`observable_boundaries` 已寫入界線句：手臂上舉到頭頂後把肩往前送記的是本條加肩胛上迴旋，不是盂肱關節伸展或過度伸展（後者方向相反）。`ankle-foot.supination` 與 `hip.internal-rotation` 雖同樣缺對向，**本輪不新增**——沒有條目要用就不造。
-   3. 9 個相位分三批派工（起跳段 4／牆段 3／出水段 2），沿用 W6–W9 八段式格式。**負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得順手補 `flip`／`wall-rotation`／`breaststroke-pullout`、**兩欄不一致處不得只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。
+   3. ✅ **已完成（2026-09-03）**：驗證 `fly.entry-pause` 素材存在性 → 進 (B)（見上一節）。
+   4. **10 個相位分三批派工**，沿用 W6–W9 八段式格式：**W10 起跳段** `set-position`／`takeoff`／`flight`／`entry`（4）、**W11 牆段** `wall-contact`／`wall-push-off`／`turn-approach`（3）、**W12 出水段＋蝶式** `starts-turns.breakout`／`udk.breakout`／`fly.entry-pause`（3）。**負面清單必含**：不得裁決哪種設置策略較好、不得把計步／時機／規則改寫成關節語言充數、不得順手補 `flip`／`wall-rotation`／`breaststroke-pullout`、不得由空間朝向（45° 切入、掌心朝向）反推關節旋轉、**兩欄不一致處不得只寫解剖名而不寫池畔說法**（讀者要能從自己聽過的那句話找到這條記錄）。**正面要求必含**：頸部動作寫 `trunk.extension`／`trunk.flexion` 並標明節段為頸椎。
 
    **核對最值得記的一筆**：`tech.43` 的後腿踢——池畔看到「後腿往上踢到接近垂直」，直覺對到「抬腿＝髖屈曲」，但起跳時軀幹前傾下潛，腿往上＝大腿往軀幹**後方**去＝**髖伸展**。與 BK-30（仰式上踢是髖屈曲）同一類、方向恰好相反。這就是兩欄核對存在的理由。
 
@@ -214,7 +215,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
    **(B) 素材已在庫內，只差解剖命名核對 — 13 個**（**不必找新來源、不必再蒐證**；核對是工作量不是資料相依）：
    - **starts-turns 11 個**：set-position／takeoff／flight／entry／breaststroke-pullout／breakout／turn-approach／flip／wall-contact／wall-rotation／wall-push-off。素材＝`canonical/instructional/technical-analysis.yaml` 的 48 筆 starts-turns 條目（逐相位對映見上方更正欄）。registry 全為 `descriptive`，無跨模型障礙。
    - `udk.breakout` 出水划手：tech.44。
-   - `fly.entry-pause` 入水停頓：BF-01～04 的入水段敘述已含停頓描述，只差把它與 `fly.entry` 分開命名。
+   - `fly.entry-pause` 入水停頓：~~BF-01～04 的入水段敘述已含停頓描述~~ **← 錯，見上方更正欄的「錯誤 2」。素材是 `fly.tech.21`。**
    - **核對方法（強制）**：每個相位先做「**池畔可見方向**／**解剖學動作**」兩欄對照，再寫 demand。這正是 BK-30 的根因（編碼在 `udk.tech.30`）——仰式上踢在池畔看是「往上」，解剖上是髖**屈曲**；蛙式腳尖外八在池畔看像「踝外翻」，實際是髖外旋＋膝軸旋＋距下旋前＋跗橫關節的向量和。**兩欄不一致而未標明，一律退件。**
 
    **(C) 真正卡住 — 12 個**（卡的**不是解剖也不是動作長相**，是分期定義或裁決粒度）：
@@ -226,7 +227,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
    **✅ (A) 13 個已於 2026-09-03 全數落地**：W6 蛙式 4、W7 蝶式 6、W8 UDK 2、W9 自由式 1。四份派工規格保留在 `plans/W6_`～`plans/W9_`，是 (B) 組派工的格式範本（硬性前置條件／執行指令／git 禁令／檔案範圍／負面清單／釘死欄位／六條硬規則／回報格式八段式）。
 
-   **⚠ 上方 (B)／(C) 的分組已被 2026-09-03 的兩欄核對修正**：(B) 13 → **9 個可派工**，`flip`／`wall-rotation` 移 (C)、`breaststroke-pullout` 移新開的 (D)「素材缺關節層」、`fly.entry-pause` 暫掛待驗證。(C) 12 → 14。**以「下一步建議」第 0 項與 `plans/B組_池畔可見方向與解剖學動作兩欄核對.md` 為準。** 另更正兩處對映錯誤：`wall-push-off` 的素材應補 `tech.47`／`tech.48`（全庫 starts-turns 唯二的 `category: joint`，且 `tech.48` 是庫內唯一一筆已自己做完兩欄核對的條目）；`breakout ← tech.44` 的實際 id 是 `starts-turns.tech.44`，**全庫沒有 `udk.tech.44`**。
+   **⚠ 上方 (B)／(C) 的分組已被 2026-09-03 的兩欄核對修正**：(B) 13 → **10 個可派工**，`flip`／`wall-rotation` 移 (C)、`breaststroke-pullout` 移新開的 (D)「素材缺關節層」；`fly.entry-pause` 已於 2026-09-03 驗證留在 (B)。(C) 12 → 14。**以「下一步建議」第 0 項與 `plans/B組_池畔可見方向與解剖學動作兩欄核對.md` 為準。** 另更正兩處對映錯誤：`wall-push-off` 的素材應補 `tech.47`／`tech.48`（全庫 starts-turns 唯二的 `category: joint`，且 `tech.48` 是庫內唯一一筆已自己做完兩欄核對的條目）；`breakout ← tech.44` 的實際 id 是 `starts-turns.tech.44`，**全庫沒有 `udk.tech.44`**。
 
    不得由任何執行者對 (C)／(D) 自行補內容，也不得跳過兩欄核對直接寫。
 2. **✅ 已決策（2026-09-03）：四段式相位鍵（`fernandes-2022-sweep`）本輪不登錄，改列「條件式候選」。** 討論全文在 `plans/討論_仰式四段式相位鍵.md`（codex 產出，主 session 已抽驗其可查宣稱）。
