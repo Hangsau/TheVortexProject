@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 106 | actions 31 / muscle-groups 22 / demands 48 / interventions 5；相位覆蓋 41/59 |
+| `movement` | 109 | actions 31 / muscle-groups 22 / demands 51 / interventions 5；相位覆蓋 44/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**41/59**）
+### 相位覆蓋（**44/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -804,9 +804,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 自由式 | 6/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | lift（升力相）, rear-quadrant-propulsion（後象限推進）, push（推水相）, release（釋放相）, early-recovery（早期回臂）, late-recovery（晚期回臂） |
 | 仰式 | 7/7 | descriptive | — |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
-| 蝶式 | 9/11 | descriptive, event-window | entry-pause（入水停頓）, breathing-window（呼吸視窗） |
-| 水下蝶腳 | 3/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡）, breakout（出水划手） |
-| 起跳轉身 | 8/13 | descriptive | underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, breakout（出水過渡期）, flip（翻滾）, wall-rotation（旋轉在牆上完成） |
+| 蝶式 | 10/11 | descriptive, event-window | breathing-window（呼吸視窗） |
+| 水下蝶腳 | 4/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡） |
+| 起跳轉身 | 9/13 | descriptive | underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, flip（翻滾）, wall-rotation（旋轉在牆上完成） |
 
 ### `actions.yaml` — 解剖動作（**31 條目**）
 
@@ -871,7 +871,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**48 條目**）
+### `stroke-demands.yaml` — 泳式需求（**51 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -913,7 +913,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion | leg-recovery | descriptive | 蛙式收腿的髖屈曲外展、膝屈曲與踝背屈，以及可見現象的歸屬 | partially-supported | provisional |
 | movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out | foot-flip | descriptive | 蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節 | partially-supported | provisional |
 
-#### 蝶式 (9)
+#### 蝶式 (10)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -926,8 +926,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.fly.arm-insweep.dual-axis-adduction-with-scapular-retraction | arm-insweep | descriptive | 蝶式內掃的雙軸內收、軸向內旋與肩胛後縮 | partially-supported | provisional |
 | movement.demand.fly.arm-upsweep.extension-with-sustained-internal-rotation | arm-upsweep | descriptive | 蝶式上划的肩伸展、內旋維持與肘腕伸展 | partially-supported | provisional |
 | movement.demand.fly.exit.extension-position-with-blank-rotation-field | exit | descriptive | 蝶式出水的肩伸展位，與留白的旋轉欄位 | partially-supported | provisional |
+| movement.demand.fly.entry-pause.position-maintenance-and-pause-naming-conflict | entry-pause | descriptive | 入水停頓期的位置維持，與「停頓」一詞的命名衝突 | partially-supported | provisional |
 
-#### 起跳轉身 (9)
+#### 起跳轉身 (10)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -940,8 +941,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary | turn-approach | descriptive | 進牆期的頸椎維持不伸展，與本層的覆蓋邊界 | partially-supported | provisional |
 | movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action | wall-contact | descriptive | 觸牆的膝屈曲位，與「觸牆深度不是關節動作」 | partially-supported | provisional |
 | movement.demand.starts-turns.wall-push-off.shoulder-complex-composite-angle-and-streamline-precedence | wall-push-off | descriptive | 推蹬的肩複合體合計角度分層，與流線先於蹬伸的時序 | partially-supported | provisional |
+| movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift | breakout | descriptive | 出水過渡期的流線維持與頸椎伸展延後 | partially-supported | provisional |
 
-#### 水下蝶腳 (7)
+#### 水下蝶腳 (8)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -952,6 +954,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.udk.streamlined-glide.lumbar-baseline-two-readings | streamlined-glide | descriptive | 流線滑行的腰椎基準——「中立或些微伸展」與「空心姿」指向相反側 | disputed | provisional |
 | movement.demand.udk.up-kick.hip-extension-prone | up-kick | descriptive | 俯臥水下海豚腳上踢的髖伸展與可用幅度不對稱 | partially-supported | provisional |
 | movement.demand.udk.up-kick.hip-flexion-supine | up-kick | descriptive | 仰躺水下海豚腳上踢——同一個池畔動作對應的是髖屈曲 | partially-supported | provisional |
+| movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction | breakout | descriptive | 出水划手期的最後一次下踢，與「銜接」不是一個關節動作 | partially-supported | provisional |
 
 ### `interventions.yaml` — 條件式訓練與活動度（**5 條目**）
 
