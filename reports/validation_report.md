@@ -93,6 +93,14 @@
 
 ---
 
+## E012 — movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合（原 W013，2026-09-02 升級：`publication_status` 等欄位拼錯會fail-open，`sync_vortex.py` 只擋 `draft`/`withheld` 字面值）
+
+**ERROR，共 0 筆**
+
+（無）
+
+---
+
 ## W001 — `cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`
 
 **WARN，共 1 筆**
@@ -235,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 528 筆**
+**WARN，共 468 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -391,21 +399,14 @@
   file=canonical\instructional\teaching-errors.yaml id='starts-turns.err13'
   file=canonical\instructional\teaching-errors.yaml id='starts-turns.err14'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.4'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.5'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.6'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.7'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.8'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.27'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.28'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.9'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.10'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.11'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.12'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.13'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.14'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.15'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.29'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.18'
@@ -461,14 +462,8 @@
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.2'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.3'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.4'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.5'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.6'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.7'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.8'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.9'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.10'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.11'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.12'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.13'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.14'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.15'
@@ -484,19 +479,14 @@
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.26'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.27'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.28'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.29'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.31'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.2'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.4'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.5'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.6'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.7'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.8'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.9'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.10'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.11'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.12'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.13'
@@ -506,7 +496,6 @@
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.18'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.19'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.20'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.21'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.22'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.23'
@@ -525,11 +514,9 @@
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.2'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.3'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.4'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.5'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.6'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.7'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.8'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.9'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.10'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.11'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.12'
@@ -589,14 +576,12 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.24'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.26'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.27'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.28'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.29'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.31'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.32'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.33'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.34'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.35'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.36'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.37'
@@ -605,43 +590,6 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.40'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
-  file=canonical\movement\actions.yaml id='movement.action.shoulder-complex.elevation'
-  file=canonical\movement\actions.yaml id='movement.action.ankle-foot.plantarflexion'
-  file=canonical\movement\actions.yaml id='movement.action.wrist-hand.flexion'
-  file=canonical\movement\actions.yaml id='movement.action.wrist-hand.extension'
-  file=canonical\movement\actions.yaml id='movement.action.hip.flexion'
-  file=canonical\movement\actions.yaml id='movement.action.knee.extension'
-  file=canonical\movement\actions.yaml id='movement.action.trunk.axial-rotation'
-  file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.active-control'
-  file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.conditional-soft-tissue'
-  file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.conditional-mobility'
-  file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.capacity-control'
-  file=canonical\movement\interventions.yaml id='movement.intervention.breaststroke-breathing.arm-driven-torso-lift'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.scapular-upward-rotators'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.rotator-cuff'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.latissimus-dorsi'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-plantarflexors'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-dorsiflexors'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.wrist-flexors'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.wrist-extensors'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.hip-flexors'
-  file=canonical\movement\muscle-groups.yaml id='movement.muscle.knee-extensors'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.shoulder-elevation'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.udk.down-kick.ankle-plantarflexion'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.ankle-plantarflexion'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.early-pull-through.high-elbow-configuration'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.leg-insweep.foot-orientation-control'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.glide.plantarflexed-streamline-finish'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.second-kick.timing-with-arm-push'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.first-kick.timing-and-wave-reception'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.narrow-channel-alignment'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.pull.upper-trunk-rotation-hand-velocity'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.head-position-drag'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.arm-recovery.pull-to-kick-interval'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.arm-insweep.breath-event-separation'
-  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.entry.shoulder-line-roll-peak'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'
@@ -916,14 +864,6 @@
 ---
 
 ## W012 — movement 條目 ID 的檔案命名空間或分段格式違規
-
-**WARN，共 0 筆**
-
-（無）
-
----
-
-## W013 — movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合
 
 **WARN，共 0 筆**
 

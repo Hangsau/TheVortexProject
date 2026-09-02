@@ -39,6 +39,10 @@ exit code：
   E011  evidence_from 內含無法解析的 ID。evidence_from 是 W009 的豁免路徑
         （「本句證據由所列子條目承擔」），不驗證它指得到東西的話，寫一個
         不存在的 ID 也能消警告——這條檢查是那個豁免的代價（S3b）
+  E012  movement 受控值不在 _taxonomy.yaml 對應欄位（原 W013，2026-09-02
+        升級）。這組欄位打錯字會 **fail-open**：sync_vortex.py 只擋
+        `draft`/`withheld` 兩個字面值，`publication_status` 拼錯即上站；
+        `action_status` 拼錯會讓 do-not-prescribe 與 W016 閘一起穿透
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
@@ -60,7 +64,6 @@ exit code：
         教練觀測是第一手實務證據，不需要 source_ids，但必須說出
         觀察基礎與外推邊界，否則與「沒有依據」無法區分（S6）
   W012  movement ID 的檔案命名空間或分段格式違規
-  W013  movement 受控值不在 _taxonomy.yaml 對應欄位
   W014  movement 跨檔引用無法解析，或連到存在但命名空間錯誤的 ID
   W015  published movement 條目缺少狀態、證據或介入決策必填欄位
   W016  mobility_decision 為 evidence-gap，但該介入仍寫成可執行處方
@@ -625,7 +628,16 @@ CERTAINTY_NEEDS_SOURCE = {"\U0001F7E2", "\U0001F7E1"}
 # ── 孤兒偵測輔助 ──────────────────────────────────────────────────────────────
 
 def collect_outbound_ids(entry: dict) -> set[str]:
-    """收集條目 links.* 裡所有指出的 ID（string 型）。"""
+    """收集條目所有指出的 ID（供 W003 孤兒偵測用）。
+
+    兩個來源：既有網域的 `links.*`，以及 movement 網域的關聯欄位。
+
+    movement 那組是 2026-09-02 補的。原本 W003 只認 `links.*`，而
+    movement 四個檔一個 `links` 都沒有——它用 `action_ids`／`demand_ids`／
+    `derived_from_ids`／`muscle_roles[].muscle_id` 表達關聯。結果是 37 筆
+    彼此密集互連的記錄被整層報成孤兒（528 筆裡的 34 筆），而「movement 是
+    孤兒層、要補 cross_ref」這個結論其實是檢查器的視野缺口，不是內容缺口。
+    """
     out: set[str] = set()
     links = entry.get("links")
     if isinstance(links, dict):
@@ -636,6 +648,26 @@ def collect_outbound_ids(entry: dict) -> set[str]:
                         out.add(item)
             elif isinstance(v, str) and v:
                 out.add(v)
+    out |= collect_movement_relation_ids(entry)
+    return out
+
+
+def collect_movement_relation_ids(entry: dict) -> set[str]:
+    """收集 movement 條目的關聯目標 ID。
+
+    `muscle_roles` 是 list[dict]，關聯鍵在 `muscle_id`；其餘三個是 list[str]。
+    這些欄位的可解析性由 W014 負責，這裡只管「有沒有指出去」。
+    """
+    out: set[str] = set()
+    for field in ("action_ids", "demand_ids", "derived_from_ids"):
+        value = entry.get(field)
+        if isinstance(value, list):
+            out.update(item for item in value if isinstance(item, str))
+    roles = entry.get("muscle_roles")
+    if isinstance(roles, list):
+        for role in roles:
+            if isinstance(role, dict) and isinstance(role.get("muscle_id"), str):
+                out.add(role["muscle_id"])
     return out
 
 
@@ -994,12 +1026,17 @@ def check_movement_taxonomy(
     entry_key: str,
     entries: list[tuple[int, dict]],
     taxonomy: dict[str, set[str]],
-    warnings: dict,
+    errors: dict,
 ):
-    """W013：movement 任意層的五個受控欄位都必須存在於 taxonomy。
+    """E012：movement 任意層的七個受控欄位都必須存在於 taxonomy。
 
-    這一條刻意維持 WARN：等 Step 12 pilot 內容穩定後，Step 21 才會考慮
-    是否升級成 E004 等級。
+    原為 W013（WARN），2026-09-02 依 Step 21 決策升級成 ERROR。理由是
+    這一組欄位**打錯字會 fail-open**，不是單純標籤漂移：
+    `sync_vortex.py` 的 `MOVEMENT_HIDDEN_STATUS` 只擋 `draft`/`withheld`
+    這兩個字面值，所以 `publication_status: publised` 不在擋單上，草稿
+    直接上公開站。同理 `action_status` 打錯會讓 `do-not-prescribe` 失效、
+    W016 的 evidence-gap 閘一起穿透。這與 E010（診斷層洩漏）同一個風險
+    類別，維持 WARN 等於留一條靜默的發布漏洞。
     """
     for index, entry in entries:
         eid = entry.get("id", "(no id)")
@@ -1011,7 +1048,7 @@ def check_movement_taxonomy(
                 value = block.get(field)
                 allowed = taxonomy.get(field, set())
                 if not isinstance(value, str) or value not in allowed:
-                    warnings["W013"].append(
+                    errors["E012"].append(
                         f"  file={rel} id={eid!r} at={loc}.{field} "
                         f"{field}={value!r} 不在 taxonomy.{field}"
                     )
@@ -1261,7 +1298,7 @@ def check_action_reference_frame(
     與 W016 對 evidence-gap 的處理是同一個邏輯：不禁止承認不知道，
     只禁止不知道卻寫成可照做的需求。
 
-    取值合法性由 W013 負責（本欄位已列入 MOVEMENT_TAXONOMY_FIELDS），
+    取值合法性由 E012 負責（本欄位已列入 MOVEMENT_TAXONOMY_FIELDS），
     這裡只管缺漏與自證義務。
     """
     if entry_key != "demands":
@@ -1510,12 +1547,12 @@ def run_validation():
     errors: dict[str, list[str]] = {
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
-        "E011": []
+        "E011": [], "E012": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
-        "W011": [], "W012": [], "W013": [], "W014": [], "W015": [],
+        "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": []
     }
 
@@ -1550,7 +1587,7 @@ def run_validation():
         check_movement_id_names(
             rel, entry_key, entries, expected_prefix, warnings
         )
-        check_movement_taxonomy(rel, entry_key, entries, taxonomy, warnings)
+        check_movement_taxonomy(rel, entry_key, entries, taxonomy, errors)
         check_movement_references(
             rel, entry_key, entries, movement_id_set, canonical_id_set, warnings
         )
@@ -1642,6 +1679,13 @@ def run_validation():
     # ── 逐條目檢查 ──
     for rel, entry in all_entries:
         eid = entry.get("id", "(no id)")
+
+        # ── movement 關聯欄位的入邊（W003 用）──
+        # 與 links.* 分開累計：movement 不使用 links，斷鏈由 W014 管，
+        # 這裡只要目標存在就算一次指入。
+        for target in collect_movement_relation_ids(entry):
+            if target in all_id_set:
+                inbound_ids[target] += 1
 
         # ── E003: links.* ID 參照類斷鏈 ──
         # ── E004 (詞彙參照類): links.* 詞彙值不在 taxonomy ──
@@ -1903,6 +1947,12 @@ def _write_report(
             "`evidence_from` 含無法解析的 ID"
             "（它是 W009 的豁免路徑，不驗證就變成零成本免罪符）",
         ),
+        "E012": (
+            "ERROR",
+            "movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合"
+            "（原 W013，2026-09-02 升級：`publication_status` 等欄位拼錯會"
+            "fail-open，`sync_vortex.py` 只擋 `draft`/`withheld` 字面值）",
+        ),
         "W001": (
             "WARN",
             "`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`",
@@ -1954,10 +2004,6 @@ def _write_report(
         "W012": (
             "WARN",
             "movement 條目 ID 的檔案命名空間或分段格式違規",
-        ),
-        "W013": (
-            "WARN",
-            "movement 受控欄位值不在 `_taxonomy.yaml` 對應詞彙集合",
         ),
         "W014": (
             "WARN",
