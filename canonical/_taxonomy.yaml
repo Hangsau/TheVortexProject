@@ -316,6 +316,15 @@ fields:
         note: >
           不是划水分期，而是跨在數個相位之上的事件視窗（如蝶式呼吸視窗）。
           與其他三套不在同一軸上，不得與相位並列比較先後或當成互斥階段。
+      - key: heinlein-2010-phases
+        note: >
+          Heinlein & Cosgarea 2010（src.pmc3438875）在肩部生物力學回顧中採用的
+          自由式分段，本表只登錄其中界線被原文明寫的一段：early pull-through，
+          定義為滑行結束至肱骨約在身體前方 90°。登錄它的理由是 FR-17 裁決——
+          「拉水期維持高肘」的相位歸屬只有這一套給得出可核的邊界，而 free 既有的
+          pull 屬 kudo-power-phase、front-quadrant-propulsion 屬 race-club-6phase，
+          把 Heinlein 的界線掛到那兩套底下就是 BK-26 明令禁止的跨模型換算。
+          本模型不涵蓋移臂與其餘水下段，不得用來標其他相位。
 
   mobility_decision:
     controlled: true
@@ -492,6 +501,13 @@ movement_phase_registry:
       - key: pull
         phase_model: kudo-power-phase
         label_zh: "拉水相"
+      - key: early-pull-through
+        phase_model: heinlein-2010-phases
+        label_zh: "早期拉水段"
+        note: >
+          Step 17 新增（FR-17 裁決）。邊界取 src.pmc3438875 原文：滑行結束至
+          肱骨約在身體前方 90°。它與 pull、front-quadrant-propulsion 有時間重疊，
+          但三者的界線定義各不相同，不得互相換算或並列比先後。
       - key: rear-quadrant-propulsion
         phase_model: race-club-6phase
         label_zh: "後象限推進"

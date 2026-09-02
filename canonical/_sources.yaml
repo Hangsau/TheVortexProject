@@ -5591,3 +5591,65 @@ sources:
       讀取層級：僅 PubMed 摘要（本文無 PMC 全文）。
       適用範圍：支持「游泳特定阻力訓練在特定條件下可正向轉移至游泳成績」的條件式結論。
       不可用於：指定唯一最佳訓練方法（本回顧結論強調效果因訓練類型與條件而異）。
+
+  - id: src.caty-2007
+    display: "Caty et al. (2007). Wrist stabilisation and forearm muscle coactivation during freestyle swimming. J Electromyogr Kinesiol."
+    title: "Wrist stabilisation and forearm muscle coactivation during freestyle swimming"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Caty V"]
+    year: 2007
+    container: "Journal of Electromyography and Kinesiology"
+    identifier:
+      pmid: "16677829"
+      doi: "10.1016/j.jelekin.2006.02.005"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17 為 FR-13 裁決登錄。識別碼已於蒐證階段以 Europe PMC REST 實際
+      dereference（過程與逐字摘要見 plans/證據包_C類_shoulder-arm.md FR-13 第 3 層），
+      但作者清單未逐字轉錄，只保留第一作者，故 verification_status 保守標 unverified。
+      樣本 7 名男性國際級選手，最大 semi-tethered power test，EMG 取 FCU／ECU，
+      影像只取腕矢狀面角度，分 insweep／outsweep。
+      適用範圍：支持「早期推進段腕被主動穩定、屈伸肌高度共收縮」。
+      不可用於：任何抓水腕角度值、有效掌面面積、推力或效率主張；其 insweep 分段
+      與本專案 free 的 race-club-6phase／descriptive 相位不可互相換算。
+
+  - id: src.suito-2017
+    display: "Suito, Nunome & Ikegami (2017). A quantitative evaluation of the high elbow technique in front crawl. J Sports Sci."
+    title: "A quantitative evaluation of the high elbow technique in front crawl"
+    type: journal-article
+    verification_status: verified
+    authors: ["Suito H", "Nunome H", "Ikegami Y"]
+    year: 2017
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "27540768"
+      doi: "10.1080/02640414.2016.1221517"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17 為 FR-17 裁決登錄。以肩／肘／腕三維座標建 high-elbow index，
+      明定於 pull phase 評估；16 名 highly skilled 與 6 名 novice 男性，
+      最大努力 25 m front crawl，60 Hz 三維攝影。
+      適用範圍：說明「高肘」有正式的三關節構型操作定義，且該指標與 pull 段速度相關。
+      不可用於：因果句（本研究是相關設計，非姿勢介入試驗）；女性與長距離外推；
+      本專案未採用其門檻值，故不得引用為角度標準。
+
+  - id: src.nuber-1986
+    display: "Nuber et al. (1986). Fine wire electromyography analysis of muscles of the shoulder during swimming. Am J Sports Med."
+    title: "Fine wire electromyography analysis of muscles of the shoulder during swimming"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Nuber GW"]
+    year: 1986
+    container: "The American Journal of Sports Medicine"
+    identifier:
+      pmid: "3752349"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17 為 BF-22 裁決登錄。識別碼已於蒐證階段以 PubMed efetch 實際取得摘要
+      （逐字引文見 plans/證據包_C類_shoulder-arm.md BF-22 第 3 層），作者清單未逐字
+      轉錄，故保守標 unverified。共 11 名游泳者（5 dry-land、7 aquatic，1 人兩者皆做），
+      分析 freestyle／breaststroke／butterfly 共 8 肌；摘要未報泳式間統計。
+      適用範圍：支持「前鋸肌在各泳式划水中皆接近最大肌肉測試值」這一負荷描述。
+      不可用於：任何泳式間的比較級（原文用 each stroke，不支持蝶式大於自由式）；
+      菱形肌主張（本研究未量菱形肌）。
