@@ -5801,3 +5801,71 @@ sources:
       這個證據邊界。
       不可用於：打水寬度與阻力的任何量化因果；髖外展／內收角度主張；女性或
       非競技族群外推。
+
+  - id: src.kudo-2021
+    display: "Kudo et al. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci."
+    title: "Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Kudo"]
+    year: 2021
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "33641596"
+      doi: "10.1080/02640414.2021.1892266"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 FR-31 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未逐字
+      轉錄，標 unverified。15 名泳者以反光標記動作捕捉，將軀幹的 roll-pitch-yaw
+      分解後估計各分量對手部前後向速度的貢獻，量到上軀幹旋轉貢獻 28% 與 19%
+      的手後向速度。
+      適用範圍：只支持「上軀幹旋轉對手的後向速度有可量化的貢獻」，且必須同時
+      寫出相位與量測方式。
+      不可用於：划距（stroke length）終點；力量或力量傳導鏈主張（本研究量的是
+      速度不是力）；任何最佳旋轉角度或訓練劑量。
+
+  - id: src.cortesi-gatta-2015
+    display: "Cortesi & Gatta (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet."
+    title: "Effect of The Swimmer's Head Position on Passive Drag"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Cortesi", "Gatta"]
+    year: 2015
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "26839604"
+      pmcid: "PMC4723180"
+      doi: "10.1515/hukin-2015-0106"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 FR-44 裁決登錄。識別碼於蒐證階段實際解析，作者僅有姓氏可逐字
+      轉錄，標 unverified。10 名男性區域級泳者，水下 60 cm、1.5／1.7／1.9 m/s
+      被動拖曳，操弄三種「頭相對身體水平線」的位置（head-up／aligned／head-down）
+      與兩種手臂姿勢，量被動阻力。
+      適用範圍：支持「頭相對身體水平線的位置會改變被動阻力」，且引用效果量時
+      必須同時寫出手臂姿勢條件——手臂體側為 4–5.2%，雙臂過頭為 10.4–10.9%。
+      不可用於：把 head-up 分類等同於任何頸椎伸展角度（本研究沒有量頸椎角）；
+      由水下被動拖曳外推到水面主動自由式或換氣動作；女性或非競技族群外推。
+
+  - id: src.oxford-2017
+    display: "Oxford et al. (2017). Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim. J Sports Sci."
+    title: "Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Oxford"]
+    year: 2017
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "27636684"
+      doi: "10.1080/02640414.2016.1229012"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 BR-43 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未逐字
+      轉錄，標 unverified。26 名蛙式專項泳者，三台 50 Hz 水下攝影機，分析 100 m
+      四趟各自末三個週期；其 coordination phase 2 定義為 arm-pull 結束至 leg-kick
+      開始的時間間隔。
+      適用範圍：只支持「arm-pull 結束到 leg-kick 開始的時間間隔是可量測的協調
+      指標」。
+      不可用於：把「呼氣時」當作事件錨點（本研究沒有量頭、頸或呼吸）；body line
+      ／racing streamline／hyperstreamline 之間的互換；fast 與 delayed recovery
+      兩套教材策略的優劣判定。
