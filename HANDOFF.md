@@ -140,13 +140,18 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 1. **覆蓋率現為 21/59，back 已滿（7/7）。剩下的 38 個相位已完成裁決盤點（2026-09-02），分三類**——盤點方法是把 7 份 `plans/關節主張裁決_*.md` 的總表列全抽出來（164 列），用「原文主張」欄冒號前的相位前綴回推歸屬。**注意：這份盤點是人工核對過的，不要拿子代理的摘要當依據**——第一版 Haiku 盤點把蛙式整組錯位一格（BR-01～03 是「滑行」卻被歸成「外划」），全表重做才發現。
 
-   **(A) 裁決已完成、只差撰寫 — 15 個**（相位名與裁決檔前綴直接對得上，性質同 Step 22，**不必再蒐證**）：
+   ⚠ **更正本項先前兩處錯誤（2026-09-03，使用者質疑「不需要書裡有啊，只要知道動作長什麼樣子不就知道了」而發現）：**
+
+   - **錯誤 1：把 starts-turns 那 11 個相位寫成「完全無裁決依據／兩本解剖教科書根本沒有起跳轉身內容」——錯。** `canonical/instructional/technical-analysis.yaml` 現有 **starts-turns 48 筆、udk 30 筆**，這 11 個相位每一個都有對應條目（set-position ← tech.3/4/5/9/41；takeoff ← tech.6/7/8/16/43；flight ← tech.10/42；entry ← tech.11/12/13；breaststroke-pullout ← tech.26/35；breakout ← tech.44；turn-approach ← tech.19/20/23/38；flip ← tech.20/24/38；wall-contact ← tech.21/25/37；wall-rotation ← tech.29/30/31；wall-push-off ← tech.6/18/22）。我把「**沒人對這些跑過解剖命名核對**」誤寫成「**沒有資料**」。**寫一筆 demand 需要三樣東西：①動作長什麼樣子（庫裡已有）②關節動作的正確解剖名（`_taxonomy.yaml` 已登錄、帶解剖來源）③把①對到②的核對。缺的只有 ③，而 ③ 是工作量，不是資料相依。** 另：這 13 個 starts-turns registry 相位**全部是 `descriptive`**，跨模型問題在這一區完全不存在。命名核對之所以必要（而不是之所以做不到），是因為它一直抓到反直覺錯誤——仰式上踢是髖**屈曲**、腳尖外八不是踝關節外翻。
+   - **錯誤 2：把 `free.early-recovery`／`free.late-recovery` 放進「可以直接寫」——錯。** 這兩個在 registry 是 **`race-club-6phase`**，而 FR-23～27 是 descriptive 切法的移臂裁決；把它們對過去正是 BK-26 明文禁止的跨模型換算。兩者移入 (C)。
+
+   修正後分佈：**(A) 13 ／ (B) 13 ／ (C) 12**，合計 38。
+
+   **(A) 裁決已完成、只差撰寫 — 13 個**（相位名與裁決檔前綴直接對得上，性質同 Step 22，**不必再蒐證**）：
 
    | 相位 | 裁決條目 |
    |---|---|
    | free.catch 抓水期 | FR-11, 12, 14 |
-   | free.early-recovery 早期回臂 | FR-23, 24 |
-   | free.late-recovery 晚期回臂 | FR-25, 26, 27 |
    | breast.arm-outsweep 外划 | BR-04, 05, 07, 08 |
    | breast.arm-catch 捕水 | BR-09, 10, 11 |
    | breast.leg-recovery 收腿 | BR-21, 22, 23, 25, 26＋BR-24(B類) |
@@ -160,15 +165,20 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
    | udk.streamlined-glide 流線滑行 | ST-02～12＋ST-01(B類) |
    | udk.up-kick 上踢相 | ST-16, 17, 18 |
 
-   **(B) 有素材但相位切法對不上，要先做結構決策 — 9 個**（**不可由執行者自行對映**）：
-   - `free.lift` 升力相、`free.rear-quadrant-propulsion` 後象限推進、`free.release` 釋放相（三者屬 `race-club-6phase`）、`free.push` 推水相（屬 `kudo-power-phase`）：裁決檔用的是 descriptive 切法（抓水／拉水／推水／移臂），素材在 FR-15, 18, 19, 20, 21, 22。**把 descriptive 的裁決搬進另一套 phase_model 就是跨模型換算，BK-26 明文禁止**——這四個要嘛等該模型自己的裁決，要嘛不寫。
-   - `breast.leg-outsweep` 外划（腿）：裁決檔把 outsweep＋insweep 併成單一「蹬夾」（BR-31～34），拆不拆是裁決題。
-   - `udk.kick-initiation` 起踢、`udk.terminal-down-kick` 下踢末段、`udk.down-to-up-transition` 過渡：ST-13, 14, 15 只有一個合併的「下踢」，同上。
-   - `starts-turns.underwater-dolphin-kick` 海豚踢：內容等同 udk 的 ST-13～18，但那是**另一個 stroke 的裁決**，要不要允許跨 stroke 借用是獨立決策。
+   **(B) 素材已在庫內，只差解剖命名核對 — 13 個**（**不必找新來源、不必再蒐證**；核對是工作量不是資料相依）：
+   - **starts-turns 11 個**：set-position／takeoff／flight／entry／breaststroke-pullout／breakout／turn-approach／flip／wall-contact／wall-rotation／wall-push-off。素材＝`canonical/instructional/technical-analysis.yaml` 的 48 筆 starts-turns 條目（逐相位對映見上方更正欄）。registry 全為 `descriptive`，無跨模型障礙。
+   - `udk.breakout` 出水划手：tech.44。
+   - `fly.entry-pause` 入水停頓：BF-01～04 的入水段敘述已含停頓描述，只差把它與 `fly.entry` 分開命名。
+   - **核對方法（強制）**：每個相位先做「**池畔可見方向**／**解剖學動作**」兩欄對照，再寫 demand。這正是 BK-30 的根因（編碼在 `udk.tech.30`）——仰式上踢在池畔看是「往上」，解剖上是髖**屈曲**；蛙式腳尖外八在池畔看像「踝外翻」，實際是髖外旋＋膝軸旋＋距下旋前＋跗橫關節的向量和。**兩欄不一致而未標明，一律退件。**
 
-   **(C) 完全無裁決依據 — 14 個**：`fly.entry-pause` 入水停頓、`fly.breathing-window` 呼吸視窗、`udk.breakout` 出水划手，加上 **starts-turns 的 11 個**（set-position／takeoff／flight／entry／breaststroke-pullout／breakout／turn-approach／flip／wall-contact／wall-rotation／wall-push-off）。starts-turns 這 11 個不是漏抄，是**兩本解剖教科書根本沒有起跳轉身內容**，整類落在現行 A 類裁決框架之外，要補得先另立來源集合。`gap.free.up-kick` 也屬此類（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，**不在 canonical 造記錄**。
+   **(C) 真正卡住 — 12 個**（卡的**不是解剖也不是動作長相**，是分期定義或裁決粒度）：
+   - **C1 該分期模型自己的相位邊界定義缺席 — 6 個**：`free.lift` 升力相、`free.rear-quadrant-propulsion` 後象限推進、`free.release` 釋放相、`free.early-recovery` 早期回臂、`free.late-recovery` 晚期回臂（五者屬 `race-club-6phase`）、`free.push` 推水相（屬 `kudo-power-phase`）。**實測 registry：`race-club-6phase` 與 `kudo-power-phase` 的條目全部沒有 `definition`**——整個 registry 只有 `free.early-pull-through` 帶邊界定義（出自 `src.pmc3438875`）。素材（FR-15, 18～27）是 descriptive 切法，搬過去＝BK-26 禁止的跨模型換算。**要解的是去找這兩套模型自己的相位邊界定義，不是找解剖。**
+   - **C2 裁決把相鄰相位併成一段 — 4 個**：`breast.leg-outsweep`（BR-31～34 併成單一「蹬夾」）、`udk.kick-initiation`／`udk.terminal-down-kick`／`udk.down-to-up-transition`（ST-13, 14, 15 只有一個合併的「下踢」）。拆不拆是裁決題，不是撰寫題。
+   - **C3 跨 stroke 借用是獨立決策 — 1 個**：`starts-turns.underwater-dolphin-kick`，內容等同 udk 的 ST-13～18，但那是另一個 stroke 的裁決。
+   - **C4 庫內確實沒有 — 1 個**：`fly.breathing-window` 呼吸視窗。
+   - `gap.free.up-kick` 另計（分母裡連 `free.up-kick` 相位都沒有），維持記錄在分母的 `known_gaps`，**不在 canonical 造記錄**。
 
-   **下一輪派工只能出 (A) 的 15 個**，(B) 等結構決策，(C) 不動。**不得由任何執行者對沒有裁決的相位自行補內容。**
+   **派工順序：(A) 13 個先出（W6 蛙式已派、W7 蝶式、W8 自由式＋udk），接著 (B) 13 個走命名核對後出，(C) 12 個等結構決策。** 不得由任何執行者對 (C) 自行補內容，也不得跳過 (B) 的兩欄核對直接寫。
 2. **四段式相位鍵（`fernandes-2022-sweep`）是下一個結構決策**。Step 22 把 11 條 BK 裁決放上負面清單等相位鍵，其中 7 條是四段式主張。要不要登錄這套 `phase_model` 進 `_taxonomy.yaml#movement_phase_registry`，是一個獨立的裁決題：登錄後這 11 條就能落地，但同時要面對「同一泳式兩套分期並存」在版型上怎麼呈現（BK-26 已定死**不給跨模型對照表**）。前例是 `early-pull-through` 之於 `heinlein-2010-phases`。
 3. **✅ 已完成（2026-09-02，commit `78a0019`）：`KNOWLEDGE_MAP.md` 補上動作圖譜章節**。`build_knowledge_map.py` 新增 `extract_movement`（四個 movement 檔共用，各檔欄位不同故只取交集欄位）與 `movement_coverage`。**覆蓋率的分母刻意取 `canonical/_taxonomy.yaml#movement_phase_registry` 而非 `plans/movement_coverage_denominator.yaml`**——規劃檔第 10 行自己寫明「兩邊相位集合若分歧，以登錄表為準」，且它缺 `free.early-pull-through`。這個設計選擇第一次跑就抓到我先前算錯的 20/58。往後改分母只改登錄表，規劃檔不再是覆蓋率真相源。
 4. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
