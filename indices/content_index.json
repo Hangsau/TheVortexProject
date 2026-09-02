@@ -11046,6 +11046,9 @@
       "path": "demands[2]",
       "title": "自由式打腿下踢的踝蹠屈需求",
       "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
         "action_status": [
           "do-not-prescribe"
         ],
@@ -11054,6 +11057,9 @@
         ],
         "evidence_profile": [
           "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
         ],
         "publication_status": [
           "draft"
@@ -11072,6 +11078,9 @@
       "path": "demands[0]",
       "title": "水下滑行超流線位的肩上舉需求",
       "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
         "action_status": [
           "provisional"
         ],
@@ -11080,6 +11089,9 @@
         ],
         "evidence_profile": [
           "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
         ],
         "publication_status": [
           "draft"
@@ -11100,6 +11112,9 @@
       "path": "demands[1]",
       "title": "水下蝶式打腿下踢的踝蹠屈需求",
       "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
         "action_status": [
           "provisional"
         ],
@@ -11108,6 +11123,9 @@
         ],
         "evidence_profile": [
           "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
         ],
         "publication_status": [
           "draft"

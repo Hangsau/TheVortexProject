@@ -43,6 +43,11 @@ TAG_FIELD_ALIASES = {
     "action_status": ("action_status",),
     "evidence_profile": ("evidence_profile",),
     "mobility_decision": ("mobility_decision",),
+    # 這兩個 movement 受控欄位的 taxonomy 註記都寫「使用數以
+    # indices/tag_reverse_index.json 為準」，漏收在這裡會讓那句話變成假的：
+    # 欄位有值，反向索引卻永遠是空 list。phase_model 在 Step 16.5 登錄時漏收。
+    "phase_model": ("phase_model",),
+    "action_reference_frame": ("action_reference_frame",),
 }
 
 TITLE_FIELDS = (

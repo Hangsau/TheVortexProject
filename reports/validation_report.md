@@ -1,6 +1,6 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-08-29
+> 生成日期：2026-09-02
 > 驗證條目數：640，Drills ID 數：176
 
 ---
@@ -933,6 +933,22 @@
 ---
 
 ## W017 — demand 的相位未登錄，或 phase_model 與 movement_phase_registry 不符
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W018 — demand 缺 `action_reference_frame`，或 `joint-local` 無分節段量測支撐
+
+**WARN，共 0 筆**
+
+（無）
+
+---
+
+## W019 — demand 文字含量化主張但 `measurement_conditions` 缺漏或不完整
 
 **WARN，共 0 筆**
 

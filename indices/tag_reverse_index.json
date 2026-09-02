@@ -1,6 +1,15 @@
 {
   "schema_version": 1,
   "fields": {
+    "action_reference_frame": {
+      "body-fixed": [],
+      "joint-local": [
+        "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.demand.udk.down-kick.ankle-plantarflexion"
+      ],
+      "poolside-fixed": []
+    },
     "action_status": {
       "do-not-prescribe": [
         "movement.demand.free.down-kick.ankle-plantarflexion"
@@ -1930,6 +1939,16 @@
         "movement.intervention.ankle-plantarflexion.capacity-control",
         "movement.intervention.shoulder-elevation.active-control"
       ]
+    },
+    "phase_model": {
+      "descriptive": [
+        "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
+        "movement.demand.udk.down-kick.ankle-plantarflexion"
+      ],
+      "event-window": [],
+      "kudo-power-phase": [],
+      "race-club-6phase": []
     },
     "pillar": {
       "life": [

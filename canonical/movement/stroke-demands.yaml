@@ -13,7 +13,17 @@ description: 泳式 × 相位 × 體位 × 池畔方向 × 解剖動作，連到
 #   _taxonomy.yaml#movement_phase_registry.strokes.<stroke>；要新增相位先改登錄表，
 #   不得在本檔就地發明。(stroke, phase, phase_model) 三者一致性由 W017 強制。
 # body_position: 動作需求成立時的身體位置。
-# poolside_direction: 從池畔觀察所使用的方向基準。
+# poolside_direction: 從池畔觀察所使用的方向基準。這是輔助觀察欄，三種
+#   action_reference_frame 都可以並存帶它；它本身不宣告 action_ids 的基準。
+# action_reference_frame: 本筆 action_ids 是以哪個基準成立的，受控詞彙見
+#   _taxonomy.yaml#fields.action_reference_frame。joint-local 是唯一可以寫
+#   關節角度需求的取值，代價是必須有分節段量測（source_ids 非空），除非
+#   已標 action_status: do-not-prescribe。由池畔可見的空間量反推關節動作
+#   是 C 類蒐證命中最多次的根因（FR-40 裁決），W018 是這條的執行者。
+# measurement_conditions: 本筆文字若出現量化主張（百分比／角度／秒數／r／d），
+#   必填；結構與必填子鍵見 _taxonomy.yaml#movement_measurement_contract。
+#   同一個頭位操弄在手臂體側與雙臂過頭下效果量差超過兩倍（FR-44），
+#   所以數字不得脫離量測條件、終點與外推邊界單獨存在。W019 強制。
 # derived_from_ids: 本需求是從哪幾筆既有 instructional 技術記錄推出來的；
 #   目標為非 movement 的 canonical ID，來源是 plans/movement_coverage_denominator.yaml
 #   的 phases[].evidence[].record_id。published 條目必填（W015）；
@@ -39,6 +49,7 @@ demands:
     phase_model: descriptive
     phase: underwater-glide
     body_position: prone
+    action_reference_frame: joint-local
     derived_from_ids:
       - starts-turns.tech.27
       - starts-turns.tech.34
@@ -93,6 +104,7 @@ demands:
     phase: down-kick
     body_position: prone
     poolside_direction: 足部由水面側向池底側移動
+    action_reference_frame: joint-local
     derived_from_ids:
       - udk.tech.5
       - udk.tech.9
@@ -146,6 +158,7 @@ demands:
     phase: down-kick
     body_position: prone
     poolside_direction: 足部由水面側向池底側移動
+    action_reference_frame: joint-local
     derived_from_ids:
       - free.tech.6
       - free.tech.11

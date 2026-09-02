@@ -35,6 +35,7 @@ MOVEMENT_TAXONOMY = {
     "action_status": {"actionable"},
     "evidence_profile": {"direct"},
     "mobility_decision": {"evidence-gap", "not-routine"},
+    "action_reference_frame": {"joint-local", "body-fixed", "poolside-fixed"},
 }
 
 MOVEMENT_IDS = {
@@ -48,7 +49,12 @@ MOVEMENT_IDS = {
 CANONICAL_IDS = {"free.tech.6", "starts-turns.tech.27"}
 
 def make_warnings():
-    return {code: [] for code in ("W012", "W013", "W014", "W015", "W016")}
+    return {
+        code: []
+        for code in (
+            "W012", "W013", "W014", "W015", "W016", "W017", "W018", "W019"
+        )
+    }
 
 
 def make_errors():
@@ -96,6 +102,9 @@ def make_published_entry(
     }
     if demand:
         entry["derived_from_ids"] = sorted(CANONICAL_IDS)[:1]
+        # poolside-fixed 是不需要分節段量測的取值，讓通用 fixture 不必
+        # 為了通過 W018 而假造 source_ids。
+        entry["action_reference_frame"] = "poolside-fixed"
     if intervention:
         entry.update(
             {
@@ -152,6 +161,12 @@ def run_movement_checks(documents):
         )
         validate_mod.check_mobility_evidence_gap(
             rel, entry_key, entries, warnings
+        )
+        validate_mod.check_action_reference_frame(
+            rel, entry_key, entries, warnings
+        )
+        validate_mod.check_measurement_conditions(
+            rel, entry_key, entries, {"src.example"}, warnings
         )
 
     return warnings
@@ -257,10 +272,7 @@ class TestMovementPositive(unittest.TestCase):
             }
         )
 
-        self.assertEqual(
-            warnings,
-            {"W012": [], "W013": [], "W014": [], "W015": [], "W016": []},
-        )
+        self.assertEqual(warnings, make_warnings())
 
 
 class TestW012MovementIdNames(unittest.TestCase):
@@ -626,6 +638,215 @@ class TestW015PublishedCompleteness(unittest.TestCase):
             "action_status": "actionable",
             "evidence_profile": "direct",
         }
+        self.assertEqual(self._check(entry, "actions"), [])
+
+
+class TestW018ActionReferenceFrame(unittest.TestCase):
+    """W018：demand 必須宣告 action_ids 的歸屬基準，joint-local 有自證義務。
+
+    來源是 FR-40 裁決：「腿足維持在窄通道」（池畔可見）與「髖幾乎不做
+    外展／內收」（關節角）在 YAML 上長得一樣，差別只在證據。
+    """
+
+    DEMANDS = "canonical/movement/stroke-demands.yaml"
+
+    def _check(self, entry, entry_key="demands"):
+        warnings = make_warnings()
+        validate_mod.check_action_reference_frame(
+            self.DEMANDS, entry_key, [(0, entry)], warnings
+        )
+        return warnings["W018"]
+
+    def _demand(self, **overrides):
+        entry = {
+            "id": "movement.demand.free.down-kick.hip-abduction",
+            "stroke": "free",
+            "action_ids": ["movement.action.hip.abduction"],
+            "source_ids": ["src.example"],
+            "action_status": "provisional",
+        }
+        entry.update(overrides)
+        return entry
+
+    def test_missing_frame_warns(self):
+        messages = self._check(self._demand())
+        self.assertEqual(len(messages), 1)
+        self.assertIn("action_reference_frame", messages[0])
+
+    def test_joint_local_without_sources_warns(self):
+        messages = self._check(
+            self._demand(action_reference_frame="joint-local", source_ids=[])
+        )
+        self.assertEqual(len(messages), 1)
+        self.assertIn("joint-local", messages[0])
+
+    def test_joint_local_with_sources_does_not_warn(self):
+        self.assertEqual(
+            self._check(self._demand(action_reference_frame="joint-local")), []
+        )
+
+    def test_do_not_prescribe_exempts_empty_sources(self):
+        """誠實宣告「待驗證候選」不該被擋，與 W016 對 evidence-gap 同邏輯。"""
+        self.assertEqual(
+            self._check(
+                self._demand(
+                    action_reference_frame="joint-local",
+                    source_ids=[],
+                    action_status="do-not-prescribe",
+                )
+            ),
+            [],
+        )
+
+    def test_poolside_fixed_without_sources_does_not_warn(self):
+        """池畔可見描述本來就不宣稱關節角，不需要分節段量測。"""
+        self.assertEqual(
+            self._check(
+                self._demand(
+                    action_reference_frame="poolside-fixed", source_ids=[]
+                )
+            ),
+            [],
+        )
+
+    def test_body_fixed_without_sources_does_not_warn(self):
+        self.assertEqual(
+            self._check(
+                self._demand(
+                    action_reference_frame="body-fixed", source_ids=[]
+                )
+            ),
+            [],
+        )
+
+    def test_check_ignores_non_demands(self):
+        entry = {"id": "movement.action.test"}
+        self.assertEqual(self._check(entry, "actions"), [])
+
+
+class TestW019MeasurementConditions(unittest.TestCase):
+    """W019：demand 文字出現量化主張時必須帶完整的 measurement_conditions。
+
+    來源是 FR-44：同一個頭位操弄，手臂體側 4–5.2%、雙臂過頭 10.4–10.9%。
+    """
+
+    DEMANDS = "canonical/movement/stroke-demands.yaml"
+    SOURCES = {"src.cortesi-2015"}
+
+    def _check(self, entry, entry_key="demands"):
+        warnings = make_warnings()
+        validate_mod.check_measurement_conditions(
+            self.DEMANDS, entry_key, [(0, entry)], self.SOURCES, warnings
+        )
+        return warnings["W019"]
+
+    def _condition(self, **overrides):
+        cond = {
+            "source_id": "src.cortesi-2015",
+            "quantity": "head-down／aligned 相對 head-up 的被動阻力差",
+            "value": "4–5.2%",
+            "conditions": "手臂置於體側；水下 60 cm；被動拖曳；n=10",
+            "endpoint": "passive-drag",
+            "extrapolation_boundary": "不外推至水面主動自由式",
+        }
+        cond.update(overrides)
+        return cond
+
+    def _demand(self, text, **overrides):
+        entry = {
+            "id": "movement.demand.free.breathing.head-position",
+            "public": {"description": text},
+        }
+        entry.update(overrides)
+        return entry
+
+    def test_percentage_without_field_warns(self):
+        messages = self._check(self._demand("被動阻力下降 4–5.2%。"))
+        self.assertEqual(len(messages), 1)
+        self.assertIn("measurement_conditions", messages[0])
+
+    def test_angle_without_field_warns(self):
+        messages = self._check(self._demand("軀幹旋轉約 25–30°。"))
+        self.assertEqual(len(messages), 1)
+
+    def test_seconds_without_field_warns(self):
+        messages = self._check(self._demand("持續約 0.12 s。"))
+        self.assertEqual(len(messages), 1)
+
+    def test_correlation_without_field_warns(self):
+        messages = self._check(self._demand("與泳速相關 r = 0.35。"))
+        self.assertEqual(len(messages), 1)
+
+    def test_non_claim_numbers_do_not_warn(self):
+        """n=15、L0–L6、2D／3D 是非主張數字，不應觸發。"""
+        self.assertEqual(
+            self._check(
+                self._demand("以 2D 與 3D 影像分析 15 名泳者，對應 L0–L6 框架。")
+            ),
+            [],
+        )
+
+    def test_quantified_claim_with_complete_conditions_does_not_warn(self):
+        self.assertEqual(
+            self._check(
+                self._demand(
+                    "被動阻力下降 4–5.2%。",
+                    measurement_conditions=[self._condition()],
+                )
+            ),
+            [],
+        )
+
+    def test_empty_list_with_quantified_claim_warns(self):
+        messages = self._check(
+            self._demand("被動阻力下降 4–5.2%。", measurement_conditions=[])
+        )
+        self.assertEqual(len(messages), 1)
+        self.assertIn("空 list", messages[0])
+
+    def test_missing_subkey_warns(self):
+        cond = self._condition()
+        cond.pop("extrapolation_boundary")
+        messages = self._check(
+            self._demand("被動阻力下降 4–5.2%。", measurement_conditions=[cond])
+        )
+        self.assertEqual(len(messages), 1)
+        self.assertIn("extrapolation_boundary", messages[0])
+
+    def test_blank_subkey_warns(self):
+        messages = self._check(
+            self._demand(
+                "被動阻力下降 4–5.2%。",
+                measurement_conditions=[self._condition(conditions="   ")],
+            )
+        )
+        self.assertEqual(len(messages), 1)
+        self.assertIn("conditions", messages[0])
+
+    def test_unresolvable_source_id_warns(self):
+        messages = self._check(
+            self._demand(
+                "被動阻力下降 4–5.2%。",
+                measurement_conditions=[self._condition(source_id="src.nope")],
+            )
+        )
+        self.assertEqual(len(messages), 1)
+        self.assertIn("_sources.yaml", messages[0])
+
+    def test_conditions_own_value_does_not_self_trigger(self):
+        """measurement_conditions 自帶的 value 不得觸發它自己。"""
+        self.assertEqual(
+            self._check(
+                self._demand(
+                    "本筆不含量化主張。",
+                    measurement_conditions=[self._condition()],
+                )
+            ),
+            [],
+        )
+
+    def test_check_ignores_non_demands(self):
+        entry = {"id": "movement.action.test", "public": {"d": "增加 4%。"}}
         self.assertEqual(self._check(entry, "actions"), [])
 
 

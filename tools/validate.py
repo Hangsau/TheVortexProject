@@ -67,6 +67,11 @@ exit code：
         （action_status 不是 do-not-prescribe，或帶了劑量來源）
   W017  demand 的 (stroke, phase) 未登錄於 movement_phase_registry，
         或 phase_model 與登錄表不符（相位跨分期系統搬運）
+  W018  demand 缺 action_reference_frame，或標 joint-local 卻無分節段量測
+        支撐（source_ids 空且未標 do-not-prescribe）：由池畔可見的空間量
+        反推關節動作，是 C 類蒐證命中最多次的結構性根因
+  W019  demand 文字出現量化主張但缺 measurement_conditions，或該欄的必填
+        子鍵缺漏／source_id 無法解析：數值不得裸奔進 demand
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -168,6 +173,16 @@ MOVEMENT_TAXONOMY_FIELDS = (
     "evidence_profile",
     "mobility_decision",
     "phase_model",
+    "action_reference_frame",
+)
+
+MEASUREMENT_CONDITION_SUBKEYS = (
+    "source_id",
+    "quantity",
+    "value",
+    "conditions",
+    "endpoint",
+    "extrapolation_boundary",
 )
 
 MOVEMENT_REFERENCE_FIELDS = {
@@ -248,6 +263,17 @@ _CANDIDATE_ID_RE = _re.compile(
     r"[a-z][a-z0-9_-]*(?:\.[a-z0-9_-]+)+"   # 命名空間格式：free.tech.10 / back.err2
     r"|[A-Z][a-z][A-Z]?[a-z]*\d+"            # Drill 編號格式：FrBr3 / Fr1 / Bk22
     r")"
+)
+
+# W019：判定「本筆文字出現量化主張」的形狀。四批 C 類蒐證裡真正出事的數值
+# 就是這四類——百分比（Cortesi 的 4–5.2% vs 10.4–10.9%）、角度（FoFS 的
+# 25–30°）、秒數（0.12 s）、統計量（Strzała 的 r=0.35）。刻意不含裸數字，
+# 否則 n=15、L0–L6、2D／3D 這類非主張數字會淹掉訊號。
+MEASUREMENT_CLAIM_PATTERNS = (
+    _re.compile(r"\d+(?:[.,]\d+)?\s*(?:[–~-]|至)?\s*\d*(?:[.,]\d+)?\s*%"),
+    _re.compile(r"\d+(?:[.,]\d+)?\s*(?:[–~-]|至)?\s*\d*(?:[.,]\d+)?\s*°"),
+    _re.compile(r"\d+(?:[.,]\d+)?\s*(?:ms|s)\b"),
+    _re.compile(r"\b[rdp]\s*=\s*[-.\d]"),
 )
 
 
@@ -1217,6 +1243,156 @@ def check_movement_phase(
             )
 
 
+def check_action_reference_frame(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W018：demand 必須宣告 action_ids 的歸屬基準，且 joint-local 有自證義務。
+
+    C 類 39 條蒐證裡命中最多次的結構性根因是「由可見空間量反推關節動作」
+    （FR-40 的髖外展／內收、FR-44 的頸椎伸展、BF-36 的反向形式）。
+    這些主張在 YAML 上與有量測的關節需求長得一模一樣，差別只在證據，
+    所以必須讓基準顯性化才擋得住。
+
+    joint-local 的代價是 source_ids 非空；唯一豁免是已標
+    action_status: do-not-prescribe——那等於誠實宣告「這是待驗證候選」，
+    與 W016 對 evidence-gap 的處理是同一個邏輯：不禁止承認不知道，
+    只禁止不知道卻寫成可照做的需求。
+
+    取值合法性由 W013 負責（本欄位已列入 MOVEMENT_TAXONOMY_FIELDS），
+    這裡只管缺漏與自證義務。
+    """
+    if entry_key != "demands":
+        return
+
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+        frame = entry.get("action_reference_frame")
+
+        if frame is None:
+            warnings["W018"].append(
+                f"  file={rel} id={eid!r} at={loc} 缺 action_reference_frame："
+                "demand 必須宣告 action_ids 是以關節、身體軸線還是池畔座標成立"
+            )
+            continue
+
+        if frame != "joint-local":
+            continue
+
+        source_ids = entry.get("source_ids")
+        has_source = isinstance(source_ids, list) and len(source_ids) > 0
+        if has_source:
+            continue
+
+        if entry.get("action_status") == "do-not-prescribe":
+            continue
+
+        warnings["W018"].append(
+            f"  file={rel} id={eid!r} at={loc} "
+            "action_reference_frame='joint-local' 但 source_ids 為空："
+            "關節動作需求要有分節段量測支撐，否則改標 body-fixed／"
+            "poolside-fixed，或標 action_status: do-not-prescribe"
+        )
+
+
+def _iter_prose_strings(block: object):
+    """遞迴取出區塊內所有字串值，供 W019 掃量化主張。"""
+    if isinstance(block, str):
+        yield block
+    elif isinstance(block, dict):
+        for value in block.values():
+            yield from _iter_prose_strings(value)
+    elif isinstance(block, list):
+        for value in block:
+            yield from _iter_prose_strings(value)
+
+
+def check_measurement_conditions(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    source_id_set: set,
+    warnings: dict,
+):
+    """W019：demand 文字出現量化主張時，必須帶完整的 measurement_conditions。
+
+    直接依據是 FR-44：同一個頭位操弄，手臂體側時 4–5.2%、雙臂過頭時
+    10.4–10.9%，差距超過兩倍。決定量級的條件不在數字裡，在數字旁邊——
+    靠行文自律留不住，所以改成結構欄位。
+
+    掃描範圍刻意排除 measurement_conditions 本身（否則它自帶的 value 會
+    觸發它自己）與 source_ids／id 這類機器鍵。
+    """
+    if entry_key != "demands":
+        return
+
+    for index, entry in entries:
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+
+        scanned = {
+            key: value for key, value in entry.items()
+            if key not in ("measurement_conditions", "source_ids", "id")
+        }
+        matched = None
+        for text in _iter_prose_strings(scanned):
+            for pattern in MEASUREMENT_CLAIM_PATTERNS:
+                found = pattern.search(text)
+                if found:
+                    matched = found.group(0).strip()
+                    break
+            if matched:
+                break
+
+        raw = entry.get("measurement_conditions")
+
+        if matched and not isinstance(raw, list):
+            warnings["W019"].append(
+                f"  file={rel} id={eid!r} at={loc} 文字含量化主張 {matched!r} "
+                "但缺 measurement_conditions：數值必須連同量測條件、終點與"
+                "外推邊界一起寫，否則讀者會取到錯的量級"
+            )
+            continue
+
+        if not isinstance(raw, list):
+            continue
+
+        if matched and not raw:
+            warnings["W019"].append(
+                f"  file={rel} id={eid!r} at={loc} 文字含量化主張 {matched!r} "
+                "但 measurement_conditions 為空 list"
+            )
+
+        for cond_index, cond in enumerate(raw):
+            cond_loc = f"{loc}.measurement_conditions[{cond_index}]"
+            if not isinstance(cond, dict):
+                warnings["W019"].append(
+                    f"  file={rel} id={eid!r} at={cond_loc} "
+                    "元素必須是 dict"
+                )
+                continue
+
+            missing = [
+                key for key in MEASUREMENT_CONDITION_SUBKEYS
+                if not isinstance(cond.get(key), str) or not cond.get(key).strip()
+            ]
+            if missing:
+                warnings["W019"].append(
+                    f"  file={rel} id={eid!r} at={cond_loc} "
+                    f"必填子鍵缺漏或為空：{missing!r}"
+                )
+
+            sid = cond.get("source_id")
+            if isinstance(sid, str) and sid and sid not in source_id_set:
+                warnings["W019"].append(
+                    f"  file={rel} id={eid!r} at={cond_loc} "
+                    f"source_id={sid!r} 不存在於 _sources.yaml"
+                )
+
+
 def check_evidence_from(
     rel: str, data: object, all_id_set: set, errors: dict
 ):
@@ -1340,10 +1516,10 @@ def run_validation():
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W013": [], "W014": [], "W015": [],
-        "W016": [], "W017": []
+        "W016": [], "W017": [], "W018": [], "W019": []
     }
 
-    # ── W012–W015: movement 網域契約（只掃四個明列內容檔）──
+    # ── W012–W019: movement 網域契約（只掃四個明列內容檔）──
     movement_documents: list[
         tuple[str, str, str, list[tuple[int, dict]]]
     ] = []
@@ -1384,6 +1560,10 @@ def run_validation():
         check_mobility_evidence_gap(rel, entry_key, entries, warnings)
         check_movement_phase(
             rel, entry_key, entries, phase_registry, warnings
+        )
+        check_action_reference_frame(rel, entry_key, entries, warnings)
+        check_measurement_conditions(
+            rel, entry_key, entries, allowed_source_ids, warnings
         )
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
@@ -1794,6 +1974,14 @@ def _write_report(
         "W017": (
             "WARN",
             "demand 的相位未登錄，或 phase_model 與 movement_phase_registry 不符",
+        ),
+        "W018": (
+            "WARN",
+            "demand 缺 `action_reference_frame`，或 `joint-local` 無分節段量測支撐",
+        ),
+        "W019": (
+            "WARN",
+            "demand 文字含量化主張但 `measurement_conditions` 缺漏或不完整",
         ),
     }
 

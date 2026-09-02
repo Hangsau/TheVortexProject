@@ -2,11 +2,19 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 9,
+    "unused_taxonomy_values": 14,
     "unlinked_records": 505
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
+    {
+      "field": "action_reference_frame",
+      "value": "body-fixed"
+    },
+    {
+      "field": "action_reference_frame",
+      "value": "poolside-fixed"
+    },
     {
       "field": "claim_status",
       "value": "disputed"
@@ -30,6 +38,18 @@
     {
       "field": "mobility_decision",
       "value": "evidence-gap"
+    },
+    {
+      "field": "phase_model",
+      "value": "event-window"
+    },
+    {
+      "field": "phase_model",
+      "value": "kudo-power-phase"
+    },
+    {
+      "field": "phase_model",
+      "value": "race-club-6phase"
     },
     {
       "field": "publication_status",

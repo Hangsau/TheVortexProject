@@ -6,7 +6,7 @@
 
 ## 當前狀態（2026-09-02，最新）
 
-### ▶️ 動作—肌群—訓練—活動度圖譜實作中：W3 pilot gate 已核准，**C 類 39 條蒐證與裁決全數完成**，下一步 Step 17（W4 圖譜填充）
+### ▶️ 動作—肌群—訓練—活動度圖譜實作中：**C 類 39 條蒐證與裁決全數完成，Step 17 的兩個前置欄位已定案並落地**，下一步是 W4 四區填充本身
 
 分支 `feat/movement-atlas`。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
 
@@ -61,7 +61,8 @@
 
 - **Step 16 已全部完成**：C 類 39 條蒐證與裁決收尾。累計 **39/39**（高風險 5 ＋ shoulder-arm 14 ＋ ankle-foot 3 ＋ hip-knee 5 ＋ spine-neck 12），**四批合計零條原封不動通過**。
 - **Step 16.5（插入）已完成**：相位詞彙 blocker 已解除（`8e7380d`）；`phase_model`、6 泳式 58 相位 registry 與 W017 均已落地。Step 17 的相位前置條件已清空。
-- **下一步是 Step 17（W4 四區圖譜填充）**：四個證據包的「對 W4 的直接輸入」段落已列好可落 demand／不得落 demand 兩份清單，一區一個 gate。詳見下方「下一步建議」。
+- **Step 17 前置欄位已定案並落地（2026-09-02）**：`action_reference_frame`（W018）與 `measurement_conditions`（W019）已寫進 `_taxonomy.yaml` 契約、驗證器與測試；三筆既有 demand 已回填；順帶補上 `phase_model` 漏收進 `build_indices.py` 的既存漏洞。**W4 現在可以直接開始填，欄位結構不會再變。**
+- **下一步是 Step 17（W4 四區圖譜填充）本身**：四個證據包的「對 W4 的直接輸入」段落已列好可落 demand／不得落 demand 兩份清單，一區一個 gate。詳見下方「下一步建議」。
 
 #### 派工分配（實測後定案）
 
@@ -1187,12 +1188,14 @@ C 類 39 條蒐證與裁決已全部完成，W4 的前置條件（相位 registr
 7. **`evidence-gap` 條目必須配 `action_status: do-not-prescribe` 且 `dosage_source_ids` 為空**（W016）。
 8. **傷害終點與效能終點分屬不同條目，不得互相引用**（ST-09 的教訓）。
 
-**兩個待決欄位（建議在 Step 17 開始前一併定案，否則是返工）**：
+**兩個待決欄位已於 2026-09-02 定案並落地（Step 17 前置，原規劃在 Step 21，理由同 W3 gate 提前定案 `derived_from_ids`：欄位晚於填充定案就是百筆返工）**：
 
-- **「觀察參考系」欄**（池畔固定 vs 隨體）——第 3 批 FR-40 的產出。自由式與仰式全程在滾轉，參考系問題在這兩式是預設狀態而非例外。
-- **「量測條件」欄**（手臂姿勢／速度／水深／被動或主動）——第 4 批 FR-44 的產出。同一個頭位操弄，效果量在不同手臂姿勢下差超過兩倍（4–5.2% vs 10.4–10.9%），沒有這欄就無法在同一條目內共存。
+- **`action_reference_frame`**（受控，`joint-local`／`body-fixed`／`poolside-fixed`）——第 3 批 FR-40 的產出。宣告本筆 `action_ids` 是以哪個基準成立的。`joint-local` 是唯一可寫關節角度需求的取值，代價是 `source_ids` 非空，豁免只有 `action_status: do-not-prescribe`（誠實宣告待驗證候選，與 W016 對 evidence-gap 同邏輯）。`poolside_direction` 降為輔助觀察欄，三種取值都可並存帶它。**demands[] 必填**，由 W018 強制。
+- **`measurement_conditions`**（list，六個必填子鍵：`source_id`／`quantity`／`value`／`conditions`／`endpoint`／`extrapolation_boundary`）——第 4 批 FR-44 的產出。條目文字一旦出現量化主張（百分比／角度／秒數／r／d）就必填，由 W019 強制；正則刻意排除裸數字，`n=15`、`L0–L6`、`2D／3D` 不觸發。`endpoint` 同時是「傷害終點與效能終點不得互相引用」（ST-09）的落點。
 
-原規劃是 Step 21 才評估這兩欄（連同 W013 是否升級）。但兩者都會影響 demand 的欄位結構，**W4 要寫約百筆 demand，欄位定案晚於填充就是百筆返工**——與 W3 gate 當時把 `derived_from_ids` 提前定案是同一個理由。建議提前。
+契約寫在 `canonical/_taxonomy.yaml#fields.action_reference_frame` 與 `#movement_measurement_contract`，執行者是 `tools/validate.py` 的 W018／W019，兩邊必須同時改。三筆既有 demand 已回填（皆 `joint-local`），`tests/test_movement_atlas.py` 加 19 條測試涵蓋正反案例，211 tests OK、validator 0 ERROR。
+
+**順帶修掉的既存漏洞**：`phase_model` 在 Step 16.5 登錄 taxonomy 時漏收進 `tools/build_indices.py` 的 `TAG_FIELD_ALIASES`，導致它在 `indices/tag_reverse_index.json` 永遠是空 list——即該欄位註記寫的「使用數以反向索引為準」是假的。已與 `action_reference_frame` 一併補上，兩欄現在都正確反查到 3 筆 demand。
 
 **併案項**：BF-32（第 3 批）與 BF-36（第 4 批）是同一個蝶式體波的兩種錯誤寫法，W4 應併為同一則體波規範條目。
 

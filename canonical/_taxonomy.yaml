@@ -336,6 +336,39 @@ fields:
       - key: not-routine
       - key: evidence-gap
 
+  action_reference_frame:
+    controlled: true
+    review_status: reviewed
+    note: >
+      本筆 demand 的 action_ids 是以哪個基準成立的。登錄這個欄位的理由來自
+      plans/證據包_C類_hip-knee.md 的 FR-40 裁決（結構性根因 4 的一般形式）：
+      「腿足維持在窄通道」與「髖幾乎不做外展／內收」看似同一件事，前者是池畔
+      可見的空間位置，後者是股骨相對骨盆的額狀面關節角，兩者沒有任何一層資料
+      同時量過。而且自由式與仰式全程在滾轉，**參考系本身在轉**——同一條腿路徑
+      在池畔系與隨體系有完全不同的關節解釋，這在這兩式是預設狀態而非例外。
+      沒有這個欄位，「由可見空間量反推關節動作」在 canonical 內不可分辨。
+      本欄位宣告的是 action_ids 的歸屬基準，不是本筆有沒有池畔描述；
+      poolside_direction 是輔助觀察欄，三種取值都可以並存帶它。
+      joint-local 的自證義務由 tools/validate.py 的 W018 強制。
+      本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
+    values:
+      - key: joint-local
+        note: >
+          宣稱近端節段相對的關節動作（股骨相對骨盆、脛骨相對股骨、肱骨相對肩胛）。
+          這是唯一可以寫關節角度需求的取值，代價是必須有分節段量測支撐：
+          source_ids 不得為空，除非本筆已標 action_status: do-not-prescribe
+          （即誠實宣告「這是待驗證候選，不可據以行動」）。
+      - key: body-fixed
+        note: >
+          以泳者身體長軸與體平面為基準的節段朝向，隨滾轉一起轉。
+          自由式滾轉下的斜向打水通道屬此類——它是常態而非缺陷，
+          把它讀成「腿不該往兩側動」會產生與教材相反的指令（FR-40）。
+      - key: poolside-fixed
+        note: >
+          只以池畔固定座標（水面／池底、泳道行進方向、垂直面）描述的可見空間需求。
+          採用它等於宣告**本筆不宣稱關節角度大小**；要談關節角必須另立
+          joint-local 條目並自帶量測，不得在同一筆裡由空間描述滑過去。
+
 # ─────────────────────────────────────────────────────────────────────
 # Movement 參照契約
 # 同樣不是受控詞彙，是「哪個欄位可以指向哪一群 ID」的登錄。
@@ -370,6 +403,55 @@ movement_reference_contract:
         note: >
           published 的 demand 必填（W015）。空 list [] 表示已查 denominator
           並確認該相位沒有對應技術記錄，不是未處理。
+
+# ─────────────────────────────────────────────────────────────────────
+# Movement 量測條件契約
+# 不是受控詞彙，是「條目文字一旦出現數值，必須同時交代什麼」的結構登錄。
+# 驗證器（tools/validate.py，W019）是本契約的執行者，兩邊必須同時改。
+# ─────────────────────────────────────────────────────────────────────
+movement_measurement_contract:
+  note: >
+    C 類蒐證四批累積出的規則是「數值不得裸奔進 demand」。直接依據是
+    plans/證據包_C類_spine-neck.md 的 FR-44 裁決：同一個頭位操弄，Cortesi &
+    Gatta 2015 在**手臂置於體側**時量到 4–5.2% 的被動阻力差，在**雙臂過頭**
+    時是 10.4–10.9%——差距超過兩倍。任一數字單獨引用，讀者就取到錯的量級。
+    同一個問題在 Strzała 的 r=0.35、Jagomägi 的 11.1%、FoFS 的 25–30°／0.12 s
+    都成立，因此改成結構欄位而不是靠行文自律。
+    本契約也是「傷害終點與效能終點不得互相引用」（ST-09 裁決）的落點：
+    endpoint 是必填欄，兩種終點寫在同一筆會當場可見。
+  field: measurement_conditions
+  type: "list[dict]"
+  applies_to: "canonical/movement/stroke-demands.yaml#demands[]"
+  required_when: >
+    本筆的 public 或 diagnostic 文字出現任何量化主張（百分比、角度、秒數、
+    相關係數 r、效果量 d）。沒有數值的條目不需要本欄；有數值卻沒有本欄
+    是 W019。
+  required_subkeys:
+    - key: source_id
+      type: str
+      resolves_to: "canonical/_sources.yaml#sources[].id"
+      note: "單一來源鍵。一筆數值只能歸一個來源；兩個來源給兩個數就寫兩筆。"
+    - key: quantity
+      type: str
+      note: "量的是什麼，含對照組。「4–5.2%」不是量，「head-down／aligned 相對 head-up 的被動阻力差」才是。"
+    - key: value
+      type: str
+      note: "數值本身，含單位與區間。保留原文寫法，不自行換算或取中點。"
+    - key: conditions
+      type: str
+      note: >
+        量測當下的操作條件：手臂姿勢、速度、水深、被動或主動、族群與 n。
+        FR-44 的兩倍差距就藏在這一欄，缺它等於數字沒有意義。
+    - key: endpoint
+      type: str
+      note: >
+        終點性質（如 passive-drag／swim-velocity／joint-angle／injury-incidence）。
+        傷害終點與效能終點分屬不同條目，不得互相引用。
+    - key: extrapolation_boundary
+      type: str
+      note: >
+        這個數字**不能**外推到哪裡。水下被動 glide 的百分比不外推到水面主動
+        自由式；單一泳式、單一速度、單一 protocol 的結果不外推到其他條件。
 
 # ─────────────────────────────────────────────────────────────────────
 # Movement 相位登錄表
