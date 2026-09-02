@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 554,
+  "source_count": 555,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1037,8 +1037,14 @@
         "pmcid": "PMC4723180",
         "doi": "10.1515/hukin-2015-0106"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[12]"
+        }
+      ]
     },
     {
       "id": "src.cossor-2001",
@@ -1732,6 +1738,24 @@
       ]
     },
     {
+      "id": "src.gonjo-2021-body-roll",
+      "display": "Gonjo et al. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "33436944",
+        "pmcid": "PMC7804020",
+        "doi": "10.1038/s41598-020-80711-5"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
+        }
+      ]
+    },
+    {
       "id": "src.gonjo-2021-c",
       "display": "Gonjo et al. 2021",
       "verification_status": "unverified",
@@ -1914,7 +1938,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 11,
+      "usage_count": 18,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -1937,6 +1961,16 @@
           "path": "points[17].public.mechanism"
         },
         {
+          "id": "movement.demand.breast.arm-insweep.breath-event-separation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[14]"
+        },
+        {
+          "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[13]"
+        },
+        {
           "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[6]"
@@ -1945,6 +1979,11 @@
           "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[5]"
+        },
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
         },
         {
           "id": "movement.demand.fly.second-kick.timing-with-arm-push",
@@ -1967,9 +2006,29 @@
           "path": "demands[4]"
         },
         {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
+        },
+        {
           "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[3]"
+        },
+        {
+          "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[11]"
+        },
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[12]"
+        },
+        {
+          "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[4]"
         }
       ]
     },
@@ -2379,8 +2438,14 @@
         "pmid": "33641596",
         "doi": "10.1080/02640414.2021.1892266"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[11]"
+        }
+      ]
     },
     {
       "id": "src.kudo-yanai-matsuda-2025",
@@ -3275,7 +3340,7 @@
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 38,
+      "usage_count": 39,
       "usages": [
         {
           "id": "back.tech.30",
@@ -3371,6 +3436,11 @@
           "id": "movement.action.shoulder-complex.elevation",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[0]"
+        },
+        {
+          "id": "movement.action.trunk.axial-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[6]"
         },
         {
           "id": "movement.action.wrist-hand.extension",
@@ -3752,8 +3822,14 @@
         "pmid": "27636684",
         "doi": "10.1080/02640414.2016.1229012"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[13]"
+        }
+      ]
     },
     {
       "id": "src.pair-pacing-in-adjacent-lanes",
@@ -7374,7 +7450,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 9,
+      "usage_count": 15,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -7385,6 +7461,16 @@
           "id": "fly.tech.1",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[102].public.mechanism"
+        },
+        {
+          "id": "movement.demand.breast.arm-insweep.breath-event-separation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[14]"
+        },
+        {
+          "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[13]"
         },
         {
           "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
@@ -7420,6 +7506,26 @@
           "id": "movement.demand.free.down-kick.narrow-channel-alignment",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[10]"
+        },
+        {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
+        },
+        {
+          "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[11]"
+        },
+        {
+          "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[12]"
+        },
+        {
+          "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[4]"
         }
       ]
     },
@@ -7547,12 +7653,17 @@
         "doi": "10.1016/0021-9290(95)80002-6",
         "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "fly.L3.undulation-integration",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[30].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[9]"
         }
       ]
     },

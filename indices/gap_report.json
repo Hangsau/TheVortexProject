@@ -2,15 +2,11 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 11,
-    "unlinked_records": 521
+    "unused_taxonomy_values": 9,
+    "unlinked_records": 528
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
-    {
-      "field": "action_reference_frame",
-      "value": "poolside-fixed"
-    },
     {
       "field": "action_status",
       "value": "do-not-prescribe"
@@ -34,10 +30,6 @@
     {
       "field": "phase_model",
       "value": "event-window"
-    },
-    {
-      "field": "phase_model",
-      "value": "kudo-power-phase"
     },
     {
       "field": "publication_status",
@@ -1489,6 +1481,11 @@
       "path": "actions[0]"
     },
     {
+      "id": "movement.action.trunk.axial-rotation",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[6]"
+    },
+    {
       "id": "movement.action.wrist-hand.extension",
       "file": "canonical/movement/actions.yaml",
       "path": "actions[3]"
@@ -1497,6 +1494,16 @@
       "id": "movement.action.wrist-hand.flexion",
       "file": "canonical/movement/actions.yaml",
       "path": "actions[2]"
+    },
+    {
+      "id": "movement.demand.breast.arm-insweep.breath-event-separation",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[14]"
+    },
+    {
+      "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[13]"
     },
     {
       "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
@@ -1539,9 +1546,24 @@
       "path": "demands[4]"
     },
     {
+      "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[15]"
+    },
+    {
       "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[3]"
+    },
+    {
+      "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[11]"
+    },
+    {
+      "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[12]"
     },
     {
       "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -1562,6 +1584,11 @@
       "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
       "file": "canonical/movement/interventions.yaml",
       "path": "interventions[2]"
+    },
+    {
+      "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[4]"
     },
     {
       "id": "movement.intervention.shoulder-elevation.active-control",

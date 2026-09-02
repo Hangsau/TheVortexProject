@@ -6,7 +6,7 @@
 
 ## 當前狀態（2026-09-02，最新）
 
-### ▶️ 動作—肌群—訓練—活動度圖譜實作中：**C 類 39 條蒐證與裁決全數完成，Step 17 的兩個前置欄位已定案並落地**，下一步是 W4 四區填充本身
+### ▶️ 動作—肌群—訓練—活動度圖譜實作中：**Step 17（W4 四區圖譜填充）四區全部完成並通過 gate**，下一步是 Step 18（覆蓋補洞與 `gap.free.up-kick`）
 
 分支 `feat/movement-atlas`。實作清單在 `.implementation_joint-movement-muscle-atlas.md`（gitignore，共 22 步）；plan 真相源仍是 `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md`。
 
@@ -62,7 +62,13 @@
 - **Step 16 已全部完成**：C 類 39 條蒐證與裁決收尾。累計 **39/39**（高風險 5 ＋ shoulder-arm 14 ＋ ankle-foot 3 ＋ hip-knee 5 ＋ spine-neck 12），**四批合計零條原封不動通過**。
 - **Step 16.5（插入）已完成**：相位詞彙 blocker 已解除（`8e7380d`）；`phase_model`、6 泳式 58 相位 registry 與 W017 均已落地。Step 17 的相位前置條件已清空。
 - **Step 17 前置欄位已定案並落地（2026-09-02）**：`action_reference_frame`（W018）與 `measurement_conditions`（W019）已寫進 `_taxonomy.yaml` 契約、驗證器與測試；三筆既有 demand 已回填；順帶補上 `phase_model` 漏收進 `build_indices.py` 的既存漏洞。**W4 現在可以直接開始填，欄位結構不會再變。**
-- **下一步是 Step 17（W4 四區圖譜填充）本身**：四個證據包的「對 W4 的直接輸入」段落已列好可落 demand／不得落 demand 兩份清單，一區一個 gate。詳見下方「下一步建議」。
+- **Step 17（W4 四區圖譜填充）已全部完成（2026-09-02）**：四區一區一 gate、無平行，每區通過 `python tools/validate.py`＋負面詞清單 grep＋逐欄 `git diff` 才進下一區。四區合計 **content records 811 → 839**，`canonical/movement/` 現有 actions 7、muscle-groups 6、demands 16、interventions 5。四區都是 **0 ERROR、W013–W019 全 0**。
+  - 17a shoulder-arm（`d3219d6`，codex）：FR-13／FR-17／BF-22 三則裁決落地。
+  - 17b ankle-foot（`a0deeee`，主 session）：FR-41 升級、BR-35 拆成相鄰兩筆、ST-19 不動。
+  - 17c hip-knee（前置 `8783b4f`，交付 commit 已推）：FR-40／BF-32／BF-33 落地，新增 `movement.action.hip.flexion`、`movement.action.knee.extension` 與對應肌群（股直肌的跨關節特性寫在 `cross_joint_characteristics`）。
+  - 17d spine-neck（前置 `c83432b`）：FR-31／FR-44／BR-43／BR-42／FR-10 五則各落一筆 demand，新增 `movement.action.trunk.axial-rotation`，BR-42 另落一筆 intervention，並把 **BF-36 併入既有的 `movement.demand.fly.first-kick.timing-and-wave-reception`**（與 BF-32 同一則體波規範，依 Step 16 的併案指示）。
+- **spine-neck 落地時攔到一處來源誤認（已更正）**：原規劃寫「`src.gonjo-2021` 已存在且 verified」，實際登錄的是同年另一篇（Sports Biomechanics，浮力與軀幹運動學，DOI `10.1080/14763141.2021.1921835`），**不是** FR-10 的證據（Scientific Reports，PMID 33436944／PMC7804020）。已另建 `src.gonjo-2021-body-roll` 並在 notes 標明兩篇不得互相替代。`_sources.yaml` 554 → 555。
+- **零值與缺口的落地方式**：FR-31 的「划距」「力量傳導」、FR-44 的「頸椎伸展角」、BR-42 的「肩胛帶上提」、BR-43 的「呼氣時」全部只以**否定句**進 `limitation_context`／`remaining_boundary`，不另開 do-not-prescribe 條目；FR-31 的 `muscle_roles` 與 FR-44／BR-42／BR-43／FR-10 的 `action_ids` 一律留空並在 `diagnostic` 寫明留空理由（避免把體表代理指標寫成關節動作、把穩定肌寫成驅動端）。
 
 #### 派工分配（實測後定案）
 
@@ -102,13 +108,14 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ### 下一步建議
 
-1. **Step 16 續兩批**（串行）：hip-knee 5、spine-neck／軀幹 12。**直接用 `plans/證據包_蒐證派工規格.md`**；該檔已把 ankle-foot 新增的根因 7「相位交界壓成單點」併入七根因篩子。其中 `BR-30` 是特例：它與 `BR-23` 已在 `plans/關節主張裁決_蛙式.md` 有裁決，不重新下判；只查爭議兩派原始文獻的量測方法（體表標記反推 vs 分節段三維量測），方法層對不上就不構成真矛盾。
-2. **shoulder-arm 裁決的落點是 W4，不是 canonical 修改**（已查證）：14 條 C 類 ID（FR-09／FR-13／BK-17／BK-26／BR-18／BF-22 等）在 `canonical/` **零命中**，只存在於 `plans/`，所以沒有「把裁決落回 canonical」這件事。裁決的實際用途有兩個方向：① 可直接產出 movement demand 的只有 **FR-13②（腕穩定成單一整體）、FR-17（High Elbow 姿勢層）、BF-22①（蝶式無 body roll 協助）**；② **明確不得成為 demand** 的是 FR-09、BK-10、BK-29、BF-25。協議 §5 的「錯誤版本不刪除」在 `plans/` 內已滿足。
-3. **注意本地文獻集的覆蓋缺口**：`swimming-kinetic-chain` 43 篇裡**蛙式、蝶式、踝、body roll 各 0 篇**，這幾類「第 2 層查無」不具推論力，必須走游泳書與線上文獻，不得據此下結論。
-4. **W4 四區圖譜填充**（codex）：shoulder-arm → ankle-foot → hip-knee → spine-neck，一區一 gate。新寫的 demand 一律從 `plans/movement_coverage_denominator.yaml` 帶 `derived_from_ids`。須處理 `gap.free.up-kick`。**相位欄位已受控**：`phase` 只能用 `_taxonomy.yaml#movement_phase_registry.strokes.<stroke>` 登錄的鍵，`phase_model` 須與登錄表一致，違反出 W017——要新增相位先改登錄表，不得在 demand 端就地發明。
-5. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。
-6. **Step 21 決定 W013 是否升級成 E004 級**：等 W4 內容量到位再判，pilot 兩條切片的樣本量不足以支撐。
+1. **Step 18 覆蓋補洞（下一個執行點）**：W4 四區只寫了「39 條 C 類裁決有結論的那些相位」，`plans/movement_coverage_denominator.yaml` 的其餘相位仍無 demand。先跑一次覆蓋對照（denominator 的 `phases[]` vs `canonical/movement/stroke-demands.yaml` 現有 16 筆），列出未覆蓋清單再排序，**不要憑印象補**。已知必處理的是 `gap.free.up-kick`。
+2. **movement 目前整層是 W003 孤兒（528 筆裡佔 34 筆）**：`cross_ref` 還沒接上既有 `instructional`／`technica` 條目。`derived_from_ids` 是單向橋（movement → instructional），不會讓 movement 脫離孤兒狀態。反向接點要不要做、做在哪一層，是 Step 19/20 的決策，不是 bug。
+3. **`_sources.yaml` 的同作者同年來源要先查全文標題再引用**：spine-neck 這批就踩到一次（Gonjo 2021 兩篇）。新增來源前先用 `id` 去 `_sources.yaml` 撈現有條目的 `identifier`／`notes` 對照 DOI 或 PMID，不要憑 slug 名字認人。
+4. **W4 期間累積的三條寫作紀律，Step 18 之後沿用**：① 數值一律只進 `measurement_conditions`，`public` 敘述維持定性；② 「沒有／零」的絕對運動學宣稱不進 canonical，改寫成「非主要機制」＋條件；③ 兩套教材命名系統（SoSF vs FoFS）並列即可，過不了根因 8 三問就不得寫成學界分歧，引用一律綁 `phase_model`。
+5. **W5 rollout 順序**：my-site 先部署能安全忽略缺少 movement 目錄的同步碼與版型，再合併 Vortex canonical，避免 notify workflow 用舊 sync 靜默漏資料。movement 全層目前 `publication_status: draft`，上站前要先決定 draft 是否對外顯示。
+6. **Step 21 決定 W013 是否升級成 E004 級**：現在 movement 已有 34 筆條目，樣本量夠了，可以判。
 7. **swim-coach 本階段只做相容性測試**：不加 FTS parser、不更新 vendor pin 或課表規則；未來若要消費 movement 另開計畫。
+8. **配額**：Step 17 前三區用掉 codex 較多（zone 1／3 派 codex，zone 2／4 主 session 自寫）。Step 18 的覆蓋對照是機械比對，適合 codex；補寫 demand 仍須裁決依據，沒有裁決的相位不得由 codex 自行補內容。
 
 ---
 

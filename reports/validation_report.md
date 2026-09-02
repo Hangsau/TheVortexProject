@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-02
-> 驗證條目數：656，Drills ID 數：176
+> 驗證條目數：663，Drills ID 數：176
 
 ---
 
@@ -235,7 +235,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 521 筆**
+**WARN，共 528 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -611,10 +611,12 @@
   file=canonical\movement\actions.yaml id='movement.action.wrist-hand.extension'
   file=canonical\movement\actions.yaml id='movement.action.hip.flexion'
   file=canonical\movement\actions.yaml id='movement.action.knee.extension'
+  file=canonical\movement\actions.yaml id='movement.action.trunk.axial-rotation'
   file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.active-control'
   file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.conditional-soft-tissue'
   file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.conditional-mobility'
   file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.capacity-control'
+  file=canonical\movement\interventions.yaml id='movement.intervention.breaststroke-breathing.arm-driven-torso-lift'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.scapular-upward-rotators'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.rotator-cuff'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.latissimus-dorsi'
@@ -635,6 +637,11 @@
   file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.second-kick.timing-with-arm-push'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.first-kick.timing-and-wave-reception'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.narrow-channel-alignment'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.pull.upper-trunk-rotation-hand-velocity'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.head-position-drag'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.arm-recovery.pull-to-kick-interval'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.arm-insweep.breath-event-separation'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.entry.shoulder-line-roll-peak'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'
@@ -797,7 +804,7 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
 
-**WARN，共 22 筆**
+**WARN，共 19 筆**
 
   source_id='src.adductor-loading-return-to-sport-practice-co' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.aiac-ijkss-v-6n-1p-25' 已登錄於 _sources.yaml 但無任何條目引用
@@ -805,18 +812,15 @@
   source_id='src.breath-hold-training' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.bushman-2006' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.clinical-coach-report-no-epidemiology' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.cortesi-gatta-2015' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.falls-and-hip-fracture-mortality-pmid' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.ioc-iron-in-sport-doi-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.jellyfish-envenomation-first-aid' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.kudo-2021' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.military-swim-training-sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.mountjoy-ioc-consensus-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.nordin-frankel-2012' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.oxford-2017' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.shallow-water-blackout-prevention-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用

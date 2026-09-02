@@ -5869,3 +5869,28 @@ sources:
       不可用於：把「呼氣時」當作事件錨點（本研究沒有量頭、頸或呼吸）；body line
       ／racing streamline／hyperstreamline 之間的互換；fast 與 delayed recovery
       兩套教材策略的優劣判定。
+
+  - id: src.gonjo-2021-body-roll
+    display: "Gonjo et al. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep."
+    title: "Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Gonjo"]
+    year: 2021
+    container: "Scientific Reports"
+    identifier:
+      pmid: "33436944"
+      pmcid: "PMC7804020"
+      doi: "10.1038/s41598-020-80711-5"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17d 為 FR-10 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未
+      逐字轉錄，標 unverified。10 名男性、四種游泳強度，19 個體表 landmark，
+      四台水下與兩台水上攝影機重建；shoulder roll 定義為左右肩關節中心連線
+      在橫斷面的投影角，峰值落在 entry 到後續 pull 的交界。
+      適用範圍：只支持「肩線 roll 峰值落在入水期到拉手期的交界」這個時點
+      描述，且必須寫明肩線是體表 landmark 連線的投影角。
+      不可用於：把肩線 roll 寫成脊椎旋轉或脊椎分節角；把峰值時點寫成整段
+      入水期或「前伸滑行期」的狀態；任何未附參考系與正負向的「同側／對側」句。
+      注意：本條與 src.gonjo-2021（Sports Biomechanics，浮力轉動效應與軀幹
+      運動學，DOI 10.1080/14763141.2021.1921835）是同年不同篇，不得互相替代。

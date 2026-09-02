@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 832,
+  "record_count": 839,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -11096,6 +11096,34 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.action.trunk.axial-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[6]",
+      "title": "軀幹軸向旋轉",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "spine-neck"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.action.wrist-hand.extension",
       "domain": "movement",
       "file": "canonical/movement/actions.yaml",
@@ -11148,6 +11176,77 @@
       },
       "source_ids": [
         "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.arm-insweep.breath-event-separation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[14]",
+      "title": "蛙式換氣的三個事件分離",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[13]",
+      "title": "蛙式收手期的拉手到踢腿間隔",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.oxford-2017",
+        "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": []
     },
@@ -11290,7 +11389,9 @@
       },
       "source_ids": [
         "src.chollet-2006",
+        "src.hall-murphy-2020",
         "src.riewald-rodeo-2015",
+        "src.sanders-1995-a",
         "src.seifert-2008"
       ],
       "outgoing_ids": []
@@ -11443,6 +11544,42 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[15]",
+      "title": "自由式入水期的肩線滾轉峰值時點",
+      "tags": {
+        "action_reference_frame": [
+          "poolside-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.gonjo-2021-body-roll",
+        "src.hall-murphy-2020",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
       "domain": "movement",
       "file": "canonical/movement/stroke-demands.yaml",
@@ -11474,6 +11611,78 @@
       "source_ids": [
         "src.caty-2007",
         "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[11]",
+      "title": "自由式拉水期的上軀幹旋轉對手部後向速度的貢獻",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "kudo-power-phase"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.kudo-2021",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[12]",
+      "title": "水下滑行期的頭部位置與被動阻力",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.cortesi-gatta-2015",
+        "src.hall-murphy-2020",
+        "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": []
     },
@@ -11604,6 +11813,35 @@
       "source_ids": [
         "src.neumann-2017",
         "src.pmc9402090-b"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[4]",
+      "title": "蛙式換氣：把抬起的驅動交還給手臂",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "mobility_decision": [
+          "not-routine"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": []
     },

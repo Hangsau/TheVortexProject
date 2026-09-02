@@ -584,6 +584,36 @@ demands:
     phase: first-kick
     body_position: prone
     action_reference_frame: body-fixed
+    measurement_conditions:
+      - source_id: src.sanders-1995-a
+        quantity: >
+          頭頂、肩、髖、膝、踝五個體表點垂直位移的傅立葉相位；量的是體波
+          沿身體由頭端向尾端傳遞的連續相位差，不是幾個離散的啟動時點
+        value: 原文以各點的相位角報告傳遞順序；本專案未轉錄其角度值與統計量
+        conditions: >
+          8 名男性與 8 名女性菁英蝶式泳者；以各體表點垂直位移的傅立葉分解
+          取相位，描述整條體波的傳遞，未對單次踢的力量作比較。
+        endpoint: body-wave-phase
+        extrapolation_boundary: >
+          只支持體波為由頭端向尾端連續傳遞的相位波。不支持把它拆成頭、肩、
+          髖、膝四個離散啟動事件，不支持任何時序門檻或劑量，也不支持排列
+          兩次踢的用力高低。
+      - source_id: src.hall-murphy-2020
+        quantity: >
+          教材單一測試例中，最大屈髖角的角度值與其相對手入水的時間延遲；
+          教材同段另描述屈膝開始時出現明顯減速
+        value: >
+          最大屈髖約 25 至 30 度，出現在手入水後約 0.12 秒（教材測試例，
+          未報樣本數與統計）
+        conditions: >
+          教材以其自有分析描述一個測試例，該瞬間胸部下壓、肩位於最深處；
+          未報告樣本數、統計量、族群與速度條件。
+        endpoint: joint-angle
+        extrapolation_boundary: >
+          只作教材測試例的定性條件描述，不是姿勢目標、不是可訓練門檻，也
+          不能推出族群通則。此數值是關節角，不能讀成髖部在空間中的升降
+          方向；同段教材另量到屈膝開始時的明顯減速，因此不得把屈膝寫成
+          蓄力。
     derived_from_ids:
       - fly.tech.7
       - fly.tech.4
@@ -607,18 +637,26 @@ demands:
       - src.chollet-2006
       - src.seifert-2008
       - src.riewald-rodeo-2015
+      - src.sanders-1995-a
+      - src.hall-murphy-2020
     public:
       name_zh: 蝶式第一踢的時序與體波承接需求
       description: >
         蝶式第一次下踢位在手臂入水與捕水到拉水前段的時間窗。它接住由
         上身鐘擺動作經髖部傳向足部的體波，順著這股傳遞協助身體前轉。
         這一踢是體波的承接端，腿不是體波的起點；教材將它描述為耗能低，
-        不需要以大力完成。
+        不需要以大力完成。量測顯示這股體波是由頭端向尾端連續傳遞的相位
+        波，各體表點依序達到各自的位移轉折，而不是幾個分開啟動的動作。
+        空間方向上要特別注意：肩部下沉的同時，髖部是往上走的。
       limitation_context: >
         手入水、捕水與拉水是界定時間窗的不同事件，不能把入水、外掃、
         壓胸與推進合併成同一瞬間。不同研究各自採用手臂事件與腿部轉折
         作錨點，應保留各自的操作定義。現有資料未提供兩次踢的同協議
-        力量比較，因此不能排列兩次踢的用力高低。
+        力量比較，因此不能排列兩次踢的用力高低。以下四種寫法都不成立：
+        把髖部寫成跟著肩部一起下壓（教材原文是肩下沉時髖上升）；把屈膝
+        寫成蓄力（教材在屈膝開始處量到的是明顯減速）；宣稱腳踝鞭動到
+        出水面（沒有任何踝角度或水面穿越的量測）；把連續傳遞的相位波
+        壓成頭、肩、髖、膝四個離散啟動時點。
       safety_note: >
         配合入水練習下踢時若出現腰背、髖部或膝部疼痛、麻木、明顯無力
         或不穩，應停止，不要為了追求節律而強行加大動作。
@@ -632,7 +670,13 @@ demands:
         教材原意是能量由上身經髖傳到足，第一踢利用已傳到下肢的體波，
         因而不得把腿寫成能量傳遞的起點。action_reference_frame 採 body-fixed，
         action_ids 只作身體固定時序下的定性動作連結，不宣稱關節角度大小。
-        肌肉角色皆為候選，因本批未提供蝶式相位化肌電。
+        肌肉角色皆為候選，因本批未提供蝶式相位化肌電。本筆已併入原屬另一
+        條的體波裁決：教材測試例中最大屈髖角與肩最深、胸下壓同時出現，
+        而同一瞬間髖部在空間中是向上移動的——把關節角讀成空間位移方向，
+        正是「髖部跟隨下壓」這個錯誤的來源，兩者必須分開判讀。體波的
+        傳遞形式由傅立葉相位分析界定為連續波，任何把它切成離散啟動事件
+        的敘述都不成立。教材的兩個數值只作測試例的定性條件，不進 public
+        敘述、不作門檻。
 
   - id: movement.demand.free.down-kick.narrow-channel-alignment
     stroke: free
@@ -675,3 +719,294 @@ demands:
         因此採 body-fixed，而不是把斜向路徑校正到池畔垂直面。Narita 的
         主動阻力研究操弄有無打水，並未操弄打水寬度，只能界定證據邊界，
         不能支撐寬度與阻力的量化因果。
+
+  - id: movement.demand.free.pull.upper-trunk-rotation-hand-velocity
+    stroke: free
+    phase_model: kudo-power-phase
+    phase: pull
+    body_position: prone
+    poolside_direction: 由池畔觀察，身體繞長軸轉動，水下的手同時向後移動
+    action_reference_frame: body-fixed
+    measurement_conditions:
+      - source_id: src.kudo-2021
+        quantity: >
+          以 roll-pitch-yaw 分解計算，上軀幹旋轉對手部後向速度的貢獻比例；
+          原文為單一組內的運動學分解，未設對照組或介入條件
+        value: 28% 與 19%（原文報告的兩個貢獻比例；本專案未轉錄兩數各自對應的條件）
+        conditions: >
+          15 名熟練泳者，反光標記動作捕捉，前爬泳；貢獻量由身體三軸旋轉分解
+          求得，不是操弄旋轉幅度後量到的變化。
+        endpoint: hand-velocity
+        extrapolation_boundary: >
+          只支持「上軀幹旋轉對手的後向速度有可量化貢獻」。不支持划距、
+          distance per stroke、力量傳導、推進力或競賽速度等任何其他終點，
+          不支持任何最佳旋轉角度或訓練劑量，也不得反過來寫成增加旋轉就會
+          提高手速。
+    derived_from_ids:
+      - free.tech.2
+      - free.tech.16
+    action_ids:
+      - movement.action.trunk.axial-rotation
+    muscle_roles: []
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.kudo-2021
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    public:
+      name_zh: 自由式拉水期的上軀幹旋轉對手部後向速度的貢獻
+      description: >
+        依 Kudo 的動力相位模型，自由式拉水期中，身體繞長軸的上軀幹旋轉對
+        手在水下向後移動的速度有可量化的貢獻。教材也把身體滾轉描述成整個
+        動作的節律基準。這裡成立的終點只有手的速度一項——現有資料量的是
+        旋轉分解出多少手速，不是旋轉能帶來多長的划距或多大的力量。
+      limitation_context: >
+        「滾轉可以增加划距」與「滾轉可以傳導力量」目前都沒有對應的量測：
+        沒有任何研究以滾轉為操弄變項、以划距或力值為終點。教材談 stroke
+        length 的段落是多變項關聯，而且論證方向相反——是配速決定了還有沒有
+        時間滾轉。因此本筆不對滾轉幅度、角度或時機給任何指示，也不得由
+        手速的貢獻比例推出划距或力量的結論。教材談側身姿勢與流線的兩種
+        說法指的是不同的量（體節對線與迎流阻力），不是彼此矛盾。
+      safety_note: >
+        練習軀幹轉動時若出現背部、腰部或頸部疼痛、麻木、下肢放射症狀、
+        明顯無力或不穩，應停止，不要為了加大轉動而強行扭轉軀幹。
+    diagnostic:
+      assessment_note: >
+        muscle_roles 刻意留空。現有可用資料顯示軀幹肌群的肌電與軀幹扭轉
+        之間存在數百毫秒級的延遲，其角色被解讀為姿勢與穩定控制，不是產生
+        扭轉的驅動端；若在此掛上「軀幹旋轉肌群」作為產生者，等於把體節間
+        共變寫成近端驅動遠端。action_reference_frame 採 body-fixed，因為
+        暴露量是軀幹繞自身長軸的方位；但終點（手的後向速度）是相對前進
+        方向表示的，兩者參考系不同，判讀時不可混用。本筆的證據只有單一
+        運動學研究，未經重複驗證，故為部分支持。
+
+  - id: movement.demand.starts-turns.underwater-glide.head-position-drag
+    stroke: starts-turns
+    phase_model: descriptive
+    phase: underwater-glide
+    body_position: prone
+    poolside_direction: 由池畔觀察，頭相對身體水平線偏高、對齊或偏低
+    action_reference_frame: body-fixed
+    measurement_conditions:
+      - source_id: src.cortesi-gatta-2015
+        quantity: >
+          頭下壓或對齊相對頭上抬的平均被動阻力差，分別在手臂置於體側與
+          雙臂過頭兩種條件下量測
+        value: 手臂置於體側時 4–5.2%；雙臂過頭時 10.4–10.9%
+        conditions: >
+          10 名男性區域級泳者，水下 60 cm 被動拖曳，速度 1.5、1.7 與 1.9 m/s，
+          三種頭部位置乘以兩種手臂位置；操弄變項是頭部的空間位置分類，
+          不是頸椎節段角度。
+        endpoint: passive-drag
+        extrapolation_boundary: >
+          不得脫離手臂姿勢單獨引用任一數字——同一個頭位操弄在兩種手臂條件
+          下差距超過兩倍。不得外推到水面主動自由式、換氣動作或女性與非
+          競技族群，不得換算成任何頸椎角度，也不得作為個人姿勢門檻。
+      - source_id: src.hall-murphy-2020
+        quantity: 教材自有阻力量測裝置量到的頭前傾（教材標註為 neck extended）相對其基準姿勢的阻力增加
+        value: 增加 4%（教材自有量測）
+        conditions: >
+          教材以其自有的推進阻力量測裝置量測並分類姿勢，未報告樣本數、
+          統計、手臂姿勢與速度條件。
+        endpoint: passive-drag
+        extrapolation_boundary: >
+          不得與被動拖曳研究的百分比並列比較、相減或相加，不得作為任何
+          相位的門檻，也不得因為教材寫了 neck extended 就當作頸椎角度量測。
+    derived_from_ids:
+      - starts-turns.tech.27
+      - starts-turns.tech.34
+    action_ids: []
+    muscle_roles: []
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.cortesi-gatta-2015
+      - src.hall-murphy-2020
+      - src.riewald-rodeo-2015
+    public:
+      name_zh: 水下滑行期的頭部位置與被動阻力
+      description: >
+        水下滑行時，頭相對身體水平線的位置會改變被動阻力。可用的量測都是
+        操弄頭部的空間位置——偏高、對齊或偏低——而不是量頸椎轉了幾度。
+        效果量高度依賴手臂在哪裡：手臂置於體側與雙臂過頭兩種條件下，同一個
+        頭位操弄的阻力差距超過兩倍。因此任何百分比都必須連同手臂姿勢、
+        速度與被動或主動條件一起讀。
+      limitation_context: >
+        這些數字來自水下被動拖曳，不能外推到水面主動游進或換氣動作；水面
+        換氣時向後抬頭增加阻力並干擾體線是教材描述，屬於另一個情境，與
+        本筆的百分比不共用條件。本筆不以頸椎伸展角作為暴露量，也不對頸椎
+        給任何角度目標。
+      safety_note: >
+        調整滑行頭位時若出現頸部疼痛、麻木、上肢放射症狀、明顯無力或不穩，
+        應停止，不要為了壓低頭而強行下壓下巴或維持不適姿勢。
+    diagnostic:
+      assessment_note: >
+        action_ids 與 muscle_roles 刻意留空。所有可用資料的操作變項都是頭部
+        相對身體的空間位置分類，沒有任何一筆量到頸椎節段角度；把它掛到
+        頸椎關節動作等於由外觀反推關節動作。另有二維穩態計算流體力學模型
+        比較三種頭位，只能作機制佐證，不列為實測證據，故不進
+        measurement_conditions。兩筆數值來自不同量測系統與不同條件，只能
+        各自帶條件保存，不可合併或互相驗證，因此本筆為部分支持。
+
+  - id: movement.demand.breast.arm-recovery.pull-to-kick-interval
+    stroke: breast
+    phase_model: descriptive
+    phase: arm-recovery
+    body_position: prone
+    poolside_direction: 由池畔觀察，雙手結束拉水後向前伸出，雙腿收起後向後蹬出
+    action_reference_frame: body-fixed
+    measurement_conditions:
+      - source_id: src.oxford-2017
+        quantity: >
+          協調指標 phase 2，定義為手臂拉水結束到腿部踢水開始之間的時間間隔；
+          原文比較 100 m 四趟之間的變化
+        value: 原文以時間間隔報告該協調指標；本專案未轉錄其數值與統計量
+        conditions: >
+          26 名蛙式專項泳者，三台 50 Hz 水下攝影機，取 100 m 每一趟末三個
+          週期分析；量的是手臂與腿部的事件時間差，沒有量頭、頸或呼吸流量。
+        endpoint: limb-coordination-timing
+        extrapolation_boundary: >
+          只界定手臂拉水結束到腿部踢水開始的間隔是可量的協調指標。
+          不支持任何最佳間隔值，不能判定快速或延遲收手何者較好，也不能
+          當作頭頸位置、呼氣時機或流線姿勢的錨點。
+    derived_from_ids:
+      - breast.tech.6
+    action_ids: []
+    muscle_roles: []
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.oxford-2017
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    public:
+      name_zh: 蛙式收手期的拉手到踢腿間隔
+      description: >
+        蛙式收手前伸與腿部蹬出之間存在可量的時間間隔，量測上定義為手臂
+        拉水結束到腿部踢水開始之間的時間差。教材對這段時序並存兩套策略：
+        一套讓手臂先進入比賽流線姿勢再等踢腿推進達到峰值，另一套讓手臂
+        延遲到踢腿推進峰值之後才入線。兩套都是教材技術主張，目前都沒有
+        實證比較，因此本筆並列保存，不指定其中一套。
+      limitation_context: >
+        呼氣不能作為這些動作的時間錨點——沒有任何一層資料量測呼吸流量或
+        呼氣起訖。軀幹回到中立、頸部回到中立、手臂前伸、腿部蹬出是四個
+        各自獨立的事件，不能壓成同一瞬間。教材使用的三個姿勢名詞也不是
+        同義詞：週期起訖回到的是 body line，手臂前伸後進入的是比賽流線
+        姿勢，出發與轉身用的超流線又是另一個姿勢，彼此不可互換。本筆不
+        對頸椎中立給任何角度。
+      safety_note: >
+        調整收手與蹬腿時序時若出現腰背、頸部、髖部或膝部疼痛、麻木、
+        明顯無力或不穩，應停止，不要為了追求時序而強行加快或憋住呼吸。
+    diagnostic:
+      assessment_note: >
+        action_ids 與 muscle_roles 刻意留空：可量到的是兩個肢段事件之間的
+        時間差，不是任何單一關節動作或肌群作用。快速與延遲收手屬於兩套
+        並存且皆未實證的教材策略，過根因 8 三問後不列為學界分歧，
+        action_status 因此不得升為可處方。教材各句分屬不同分期命名系統，
+        引用時必須綁 phase_model，不可混用相位名。本筆唯一的量測只到肢段
+        協調時間差，故為部分支持。
+
+  - id: movement.demand.breast.arm-insweep.breath-event-separation
+    stroke: breast
+    phase_model: descriptive
+    phase: arm-insweep
+    body_position: prone
+    poolside_direction: 由池畔觀察，雙手由外側向中線內掃，頭與上身朝上方傾斜
+    action_reference_frame: body-fixed
+    derived_from_ids:
+      - breast.tech.5
+      - breast.tech.8
+    action_ids: []
+    muscle_roles: []
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    public:
+      name_zh: 蛙式換氣的三個事件分離
+      description: >
+        蛙式換氣不是一個瞬間，而是三個分開的事件：頭開始上升、臉破出水面、
+        以及吸氣。教材把頭開始上升放在有深度的拉手段，把臉破水另外放在
+        內掃相並強調不會比這更早發生，吸氣又是第三個事件。上身被抬起來的
+        動力來源是手臂的運動，不是主動抬頭，也不是主動拱背。
+      limitation_context: >
+        本筆不指名任何肩胛骨層級的動作。教材寫的是體表可見的肩部整體上升，
+        沒有任何一層資料量測肩胛骨相對胸廓的位置，因此肩胛帶上提屬於證據
+        缺口，不得寫入。兩本教材使用不同的分期命名系統，這是兩套命名而
+        不是學界分歧；引用任何一句都必須說明採用哪一套分期。
+      safety_note: >
+        練習換氣時序時若出現頸部或腰背疼痛、麻木、上肢放射症狀、明顯無力
+        或不穩，應停止，不要為了換到氣而用力抬頭或拱腰。
+    diagnostic:
+      assessment_note: >
+        action_ids 與 muscle_roles 刻意留空：可寫入的內容是事件先後與動力
+        來源歸屬，不是任何單一關節動作或肌群作用。evidence_profile 標
+        synthesis-inference，因為三個事件的分離來自兩本教材的相位描述綜合，
+        沒有對應的量測研究；線上可得的蛙式換氣運動學只量到頭部空間幅度，
+        沒有肩胛骨與頸椎相對胸廓角，不能轉寫成本筆的主張，故未列為來源。
+        本筆不得與任何肩胛帶動作指名合併。
+
+  - id: movement.demand.free.entry.shoulder-line-roll-peak
+    stroke: free
+    phase_model: descriptive
+    phase: entry
+    body_position: prone
+    poolside_direction: 由池畔觀察，兩肩連線相對水平面的傾斜角在此處達到最大
+    action_reference_frame: poolside-fixed
+    measurement_conditions:
+      - source_id: src.gonjo-2021-body-roll
+        quantity: 肩線滾轉角度峰值出現的相位位置；肩線是左右肩關節中心連線在橫斷面的投影角
+        value: 峰值落在入水期到接續拉手期的交界（原文為時點定位，非角度門檻）
+        conditions: >
+          10 名男性泳者，四種游泳強度，19 個體表標記，四台水下與兩台水上
+          攝影機重建；量的是體表肩線的投影角，不是脊椎分節旋轉。
+        endpoint: roll-timing
+        extrapolation_boundary: >
+          只定位峰值的時點，不支持把峰值寫成整段入水期的狀態，不支持任何
+          滾轉幅度目標或角度門檻，也不得換寫成脊椎或骨盆的分節旋轉。
+    derived_from_ids:
+      - free.tech.27
+      - free.tech.28
+    action_ids: []
+    muscle_roles: []
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.gonjo-2021-body-roll
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    public:
+      name_zh: 自由式入水期的肩線滾轉峰值時點
+      description: >
+        身體繞長軸的滾轉是自由式的節律基準，教材明說圖上用的是肩部滾轉
+        曲線作為身體滾轉的替代指標。量測顯示肩線滾轉的峰值落在入水期與
+        接續拉手期的交界——它是一個交界事件，不是整段入水期都維持的狀態。
+      limitation_context: >
+        肩線滾轉是左右肩關節中心連線在橫斷面的投影角，不是脊椎旋轉；
+        不得把它寫成軀幹分節轉了幾度。描述轉向時，若沒有先講清楚參考系
+        與正負向約定，同側或對側兩種說法都能成立，這種句子無法被證實也
+        無法被推翻，因此本筆不使用。目前已有把慣性感測器貼在棘突上的
+        分節量測管道，可作日後升級錨點，但尚未以本筆的相位時序為終點。
+      safety_note: >
+        練習滾轉節律時若出現肩部、背部或頸部疼痛、麻木、明顯無力或不穩，
+        應停止，不要為了加大滾轉而強行扭轉身體。
+    diagnostic:
+      assessment_note: >
+        action_reference_frame 採 poolside-fixed，因為肩線角是相對水平面
+        量測的投影角，不是相對身體自身軸線的量。action_ids 與 muscle_roles
+        刻意留空：體表肩線不是關節動作，掛到軀幹軸向旋轉會把代理指標寫成
+        被代理的量。phase 用已登錄的 entry 並註明峰值在 entry 與 pull 的
+        交界，不使用未登錄的前伸滑行期。本筆只有單一運動學研究定位時點，
+        未經重複驗證，故為部分支持。
