@@ -2,15 +2,11 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 14,
-    "unlinked_records": 505
+    "unused_taxonomy_values": 10,
+    "unlinked_records": 512
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
-    {
-      "field": "action_reference_frame",
-      "value": "body-fixed"
-    },
     {
       "field": "action_reference_frame",
       "value": "poolside-fixed"
@@ -28,14 +24,6 @@
       "value": "practice-observation"
     },
     {
-      "field": "evidence_profile",
-      "value": "swimming-emg"
-    },
-    {
-      "field": "evidence_profile",
-      "value": "swimming-kinematics"
-    },
-    {
       "field": "mobility_decision",
       "value": "evidence-gap"
     },
@@ -46,10 +34,6 @@
     {
       "field": "phase_model",
       "value": "kudo-power-phase"
-    },
-    {
-      "field": "phase_model",
-      "value": "race-club-6phase"
     },
     {
       "field": "publication_status",
@@ -1491,9 +1475,34 @@
       "path": "actions[0]"
     },
     {
+      "id": "movement.action.wrist-hand.extension",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[3]"
+    },
+    {
+      "id": "movement.action.wrist-hand.flexion",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[2]"
+    },
+    {
+      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[5]"
+    },
+    {
       "id": "movement.demand.free.down-kick.ankle-plantarflexion",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[2]"
+    },
+    {
+      "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[4]"
+    },
+    {
+      "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[3]"
     },
     {
       "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -1549,6 +1558,16 @@
       "id": "movement.muscle.scapular-upward-rotators",
       "file": "canonical/movement/muscle-groups.yaml",
       "path": "muscle_groups[0]"
+    },
+    {
+      "id": "movement.muscle.wrist-extensors",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[6]"
+    },
+    {
+      "id": "movement.muscle.wrist-flexors",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[5]"
     },
     {
       "id": "open-water-marine-biological-hazards",

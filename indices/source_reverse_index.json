@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 541,
+  "source_count": 544,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -523,6 +523,23 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.caty-2007",
+      "display": "Caty et al. (2007). Wrist stabilisation and forearm muscle coactivation during freestyle swimming. J Electromyogr Kinesiol.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "16677829",
+        "doi": "10.1016/j.jelekin.2006.02.005"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[3]"
+        }
+      ]
     },
     {
       "id": "src.cdc-mmwr-2003-2007",
@@ -1846,7 +1863,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 4,
+      "usage_count": 6,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -1867,6 +1884,16 @@
           "id": "free.tech.16",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[17].public.mechanism"
+        },
+        {
+          "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[4]"
+        },
+        {
+          "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[3]"
         }
       ]
     },
@@ -3105,7 +3132,7 @@
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 30,
+      "usage_count": 34,
       "usages": [
         {
           "id": "back.tech.30",
@@ -3193,6 +3220,16 @@
           "path": "actions[0]"
         },
         {
+          "id": "movement.action.wrist-hand.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[3]"
+        },
+        {
+          "id": "movement.action.wrist-hand.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[2]"
+        },
+        {
           "id": "movement.intervention.ankle-plantarflexion.capacity-control",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[3]"
@@ -3231,6 +3268,16 @@
           "id": "movement.muscle.scapular-upward-rotators",
           "file": "canonical/movement/muscle-groups.yaml",
           "path": "muscle_groups[0]"
+        },
+        {
+          "id": "movement.muscle.wrist-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[6]"
+        },
+        {
+          "id": "movement.muscle.wrist-flexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[5]"
         },
         {
           "id": "periodization.dryland.flexibility",
@@ -3468,6 +3515,22 @@
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[81].public.physical_reason"
+        }
+      ]
+    },
+    {
+      "id": "src.nuber-1986",
+      "display": "Nuber et al. (1986). Fine wire electromyography analysis of muscles of the shoulder during swimming. Am J Sports Med.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "3752349"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
         }
       ]
     },
@@ -4159,12 +4222,17 @@
         "pmid": "23015983",
         "doi": "10.1177/1941738110377611"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[3].public.evidence[1]"
+        },
+        {
+          "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[4]"
         }
       ]
     },
@@ -7111,7 +7179,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -7122,6 +7190,11 @@
           "id": "fly.tech.1",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[102].public.mechanism"
+        },
+        {
+          "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
         }
       ]
     },
@@ -7835,6 +7908,23 @@
           "id": "fly.tech.7",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[108].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.suito-2017",
+      "display": "Suito, Nunome & Ikegami (2017). A quantitative evaluation of the high elbow technique in front crawl. J Sports Sci.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "27540768",
+        "doi": "10.1080/02640414.2016.1221517"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[4]"
         }
       ]
     },

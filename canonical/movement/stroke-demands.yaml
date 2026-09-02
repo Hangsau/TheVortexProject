@@ -199,3 +199,162 @@ demands:
         脛前肌等肌電與相位同步，才能確認本需求。現階段若個別評估，仍須
         分開記錄固定膝位的被動與主動蹠屈、症狀、控制能力及同任務水中表現，
         不把 UDK 結果直接當作自由式判讀標準。
+
+  - id: movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability
+    stroke: free
+    phase_model: race-club-6phase
+    phase: front-quadrant-propulsion
+    body_position: prone
+    action_reference_frame: joint-local
+    derived_from_ids:
+      - free.tech.8
+      - free.tech.4
+    action_ids:
+      - movement.action.wrist-hand.flexion
+      - movement.action.wrist-hand.extension
+    muscle_roles:
+      - muscle_id: movement.muscle.wrist-flexors
+        role: >
+          與腕伸肌群高度共收縮，以等長方式穩住腕關節，使手與前臂成為共同
+          受力單元。此處的共收縮是穩定機制，不表示腕屈肌群正在帶動腕屈曲。
+      - muscle_id: movement.muscle.wrist-extensors
+        role: >
+          與腕屈肌群高度共收縮，以等長方式穩住腕關節，使手與前臂成為共同
+          受力單元。此處的共收縮是穩定機制，不表示腕伸肌群正在帶動腕伸展。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-emg
+    source_ids:
+      - src.caty-2007
+      - src.hall-murphy-2020
+    public:
+      name_zh: 自由式前象限推進的腕關節等長穩定需求
+      description: >
+        依六相教材模型，抓水至早期推進期需要維持腕部穩定，讓手與前臂共同
+        成為受力單元。教材描述手、腕與前臂對齊；另有一手肌電研究在其所用的
+        內掃相觀察到腕部穩定與屈伸肌高度拮抗共收縮。兩者使用的分期不同，
+        內掃相不能換算成六相模型的前象限推進期，因此研究只支持穩定機制，
+        不建立這個相位的腕角度標準或效能結論。
+      limitation_context: >
+        水中看到手與前臂維持在一起，不能據此判定應把手腕擺到哪個角度；
+        目前證據也未比較不同腕角配置，個別限制仍須另外評估。
+      safety_note: >
+        維持腕部位置時若出現疼痛、麻木、刺痛或明顯不穩，應停止，不要為了
+        固定外觀而強行鎖住手腕。
+    diagnostic:
+      assessment_note: >
+        教材的手腕對齊模型與一手肌電觀察方向一致，但 Caty 研究採用內掃相，
+        與本筆的六相分期不同，不能寫成研究直接驗證前象限推進期。現有資料
+        也未提供腕角度分布或效能終點，因此本筆僅為部分支持；個別評估須把
+        主動穩定能力、症狀與同任務水中表現分開記錄。
+
+  - id: movement.demand.free.early-pull-through.high-elbow-configuration
+    stroke: free
+    phase_model: heinlein-2010-phases
+    phase: early-pull-through
+    body_position: prone
+    poolside_direction: 由池畔觀察，肘位於手掌與水面之間
+    action_reference_frame: body-fixed
+    measurement_conditions:
+      - source_id: src.pmc3438875
+        quantity: 界定 early pull-through 終點所用的肱骨相對身體前方角度；原文未設對照組
+        value: 約 90°（原文為描述性界定，未給區間）
+        conditions: 原文未報告量測協議、族群與樣本數；為肩部生物力學回顧中的分期描述
+        endpoint: joint-angle
+        extrapolation_boundary: >
+          只作相位邊界的粗略界定，不是姿勢目標、不是可訓練門檻，也不得與
+          src.suito-2017 的 high-elbow index 互相換算。
+    derived_from_ids:
+      - free.tech.2
+      - free.tech.16
+    action_ids:
+      - movement.action.shoulder-complex.elevation
+    muscle_roles:
+      - muscle_id: movement.muscle.rotator-cuff
+        role: >
+          在水中阻力下等長維持肱骨相對身體的位置。水中實際招募程度屬肌電
+          研究範疇，本筆沒有該層資料，不固定描述招募程度。
+      - muscle_id: movement.muscle.scapular-upward-rotators
+        role: >
+          在水中阻力下等長維持肱骨相對身體的位置，協助保持上肢空間構型。
+          水中實際招募程度屬肌電研究範疇，本筆沒有該層資料。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.pmc3438875
+      - src.suito-2017
+      - src.hall-murphy-2020
+    public:
+      name_zh: 自由式早期拉水的高肘構型需求
+      description: >
+        自由式早期拉水期維持高肘構型，從池畔可簡化描述為肘位於手掌與水面
+        之間。這是方便教學的粗粒度說法；正式研究以肩、肘、腕三個標記點的
+        座標構型建立 high-elbow index，本專案不採用該指標的門檻值。這項需求
+        描述的是上肢相對身體的空間構型，不是盂肱關節角度要求。
+      limitation_context: >
+        池畔看到的肘與手掌相對位置，不能直接換算成肱骨相對肩胛的關節角度，
+        也不應由單一視角外觀設定個人角度目標。
+      safety_note: >
+        維持拉水構型時若出現肩部疼痛、夾擠感、麻木、明顯無力或不穩，應停止，
+        不要為了追求外觀而強行固定手臂位置。
+    diagnostic:
+      assessment_note: >
+        action_reference_frame 採 body-fixed，因為高肘是池畔可見的空間構型，
+        Suito 的指標也是肩、肘、腕三個座標點的構型，不是肱骨相對肩胛的
+        關節角；現有資料未量測此相位的盂肱關節角度。Heinlein 將 early
+        pull-through 的終點描述為肱骨位於身體前方約 90°，此數值只用於
+        粗略相位邊界，不是姿勢目標，亦不能與 high-elbow index 換算。姿勢層
+        有運動學支持，但相關資料不能建立因果效益，且樣本外推受限，因此
+        本筆為部分支持。
+
+  - id: movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll
+    stroke: fly
+    phase_model: descriptive
+    phase: aerial-recovery
+    body_position: prone
+    action_reference_frame: body-fixed
+    derived_from_ids:
+      - fly.tech.10
+      - fly.tech.20
+    action_ids:
+      - movement.action.shoulder-complex.elevation
+    muscle_roles:
+      - muscle_id: movement.muscle.scapular-upward-rotators
+        role: >
+          在縱軸 body roll 無法協助的移臂空間條件下，承擔肩胛穩定與上旋的
+          候選角色。Nuber 研究指出前鋸肌在各泳式划水中皆接近最大肌肉測試值；
+          這項結果是負荷描述，不是泳式間比較，且水中樣本有限、摘要未報泳式間統計。
+      - muscle_id: movement.muscle.rotator-cuff
+        role: >
+          在空中移臂期間等長維持肱骨相對身體的位置，作為盂肱關節動態穩定
+          的候選角色。水中實際招募程度屬肌電研究範疇，本筆不固定描述。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.riewald-rodeo-2015
+      - src.nuber-1986
+    public:
+      name_zh: 蝶式空中移臂的肩胛穩定需求
+      description: >
+        蝶式空中移臂的高度受肩部結構限制，而且不像自由式移臂可以由身體縱軸
+        body roll 協助。肩胛與盂肱穩定因此需要在這項身體固定的空間條件下
+        維持上肢構型。這是相位條件結合一般解剖角色的推論，不表示肩胛穩定
+        只在蝶式需要，也不建立不同泳式之間的負荷排序。
+      limitation_context: >
+        空中移臂外觀受肩部結構、可用活動度與主動控制等多項條件影響，不能
+        只憑單一視角判定限制來源，也不能由本筆設定跨泳式的負荷高低。
+      safety_note: >
+        空中移臂時若出現肩部疼痛、夾擠感、麻木、明顯無力或不穩，應停止，
+        不要強行抬高手臂或追求更高的移臂路徑。
+    diagnostic:
+      assessment_note: >
+        action_reference_frame 採 body-fixed，因為本筆描述的是相對身體長軸的
+        移臂條件與 body roll 協助，而不是盂肱關節角度。縱軸 body roll 無法
+        協助由教材直接描述；肩胛穩定需求則由此相位條件結合一般解剖角色推論。
+        肌電資料只支撐前鋸肌的負荷描述，不支撐需求本體或跨泳式排序，因此
+        evidence_profile 為 synthesis-inference，主張僅為部分支持。

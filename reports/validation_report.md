@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-02
-> 驗證條目數：640，Drills ID 數：176
+> 驗證條目數：647，Drills ID 數：176
 
 ---
 
@@ -235,7 +235,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 505 筆**
+**WARN，共 512 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -607,6 +607,8 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
   file=canonical\movement\actions.yaml id='movement.action.shoulder-complex.elevation'
   file=canonical\movement\actions.yaml id='movement.action.ankle-foot.plantarflexion'
+  file=canonical\movement\actions.yaml id='movement.action.wrist-hand.flexion'
+  file=canonical\movement\actions.yaml id='movement.action.wrist-hand.extension'
   file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.active-control'
   file=canonical\movement\interventions.yaml id='movement.intervention.shoulder-elevation.conditional-soft-tissue'
   file=canonical\movement\interventions.yaml id='movement.intervention.ankle-plantarflexion.conditional-mobility'
@@ -616,9 +618,14 @@
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.latissimus-dorsi'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-plantarflexors'
   file=canonical\movement\muscle-groups.yaml id='movement.muscle.ankle-dorsiflexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.wrist-flexors'
+  file=canonical\movement\muscle-groups.yaml id='movement.muscle.wrist-extensors'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.starts-turns.underwater-glide.shoulder-elevation'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.udk.down-kick.ankle-plantarflexion'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.ankle-plantarflexion'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.free.early-pull-through.high-elbow-configuration'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'

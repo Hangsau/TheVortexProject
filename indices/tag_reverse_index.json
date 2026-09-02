@@ -2,9 +2,13 @@
   "schema_version": 1,
   "fields": {
     "action_reference_frame": {
-      "body-fixed": [],
+      "body-fixed": [
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.free.early-pull-through.high-elbow-configuration"
+      ],
       "joint-local": [
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion"
       ],
@@ -15,6 +19,9 @@
         "movement.demand.free.down-kick.ankle-plantarflexion"
       ],
       "provisional": [
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.free.early-pull-through.high-elbow-configuration",
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion",
         "movement.intervention.ankle-plantarflexion.capacity-control",
@@ -26,10 +33,14 @@
       "ready": [
         "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.action.wrist-hand.extension",
+        "movement.action.wrist-hand.flexion",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
         "movement.muscle.rotator-cuff",
-        "movement.muscle.scapular-upward-rotators"
+        "movement.muscle.scapular-upward-rotators",
+        "movement.muscle.wrist-extensors",
+        "movement.muscle.wrist-flexors"
       ]
     },
     "category": {
@@ -1443,6 +1454,9 @@
     "claim_status": {
       "disputed": [],
       "partially-supported": [
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.free.early-pull-through.high-elbow-configuration",
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion",
         "movement.intervention.ankle-plantarflexion.capacity-control",
@@ -1454,10 +1468,14 @@
       "supported": [
         "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.action.wrist-hand.extension",
+        "movement.action.wrist-hand.flexion",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
         "movement.muscle.rotator-cuff",
-        "movement.muscle.scapular-upward-rotators"
+        "movement.muscle.scapular-upward-rotators",
+        "movement.muscle.wrist-extensors",
+        "movement.muscle.wrist-flexors"
       ],
       "unverified": [
         "movement.demand.free.down-kick.ankle-plantarflexion"
@@ -1516,19 +1534,28 @@
       "anatomy": [
         "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.action.wrist-hand.extension",
+        "movement.action.wrist-hand.flexion",
         "movement.muscle.ankle-dorsiflexors",
         "movement.muscle.ankle-plantarflexors",
         "movement.muscle.latissimus-dorsi",
         "movement.muscle.rotator-cuff",
-        "movement.muscle.scapular-upward-rotators"
+        "movement.muscle.scapular-upward-rotators",
+        "movement.muscle.wrist-extensors",
+        "movement.muscle.wrist-flexors"
       ],
       "intervention": [
         "movement.intervention.shoulder-elevation.active-control"
       ],
       "practice-observation": [],
-      "swimming-emg": [],
-      "swimming-kinematics": [],
+      "swimming-emg": [
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability"
+      ],
+      "swimming-kinematics": [
+        "movement.demand.free.early-pull-through.high-elbow-configuration"
+      ],
       "synthesis-inference": [
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion",
@@ -1554,6 +1581,8 @@
         "free.tech.36",
         "free.tech.37",
         "movement.action.shoulder-complex.elevation",
+        "movement.action.wrist-hand.extension",
+        "movement.action.wrist-hand.flexion",
         "starts-turns.tech.48"
       ],
       "spine-neck": [
@@ -1942,13 +1971,19 @@
     },
     "phase_model": {
       "descriptive": [
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion"
       ],
       "event-window": [],
+      "heinlein-2010-phases": [
+        "movement.demand.free.early-pull-through.high-elbow-configuration"
+      ],
       "kudo-power-phase": [],
-      "race-club-6phase": []
+      "race-club-6phase": [
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability"
+      ]
     },
     "pillar": {
       "life": [
@@ -1980,7 +2015,12 @@
       "draft": [
         "movement.action.ankle-foot.plantarflexion",
         "movement.action.shoulder-complex.elevation",
+        "movement.action.wrist-hand.extension",
+        "movement.action.wrist-hand.flexion",
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.early-pull-through.high-elbow-configuration",
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
         "movement.demand.udk.down-kick.ankle-plantarflexion",
         "movement.intervention.ankle-plantarflexion.capacity-control",
@@ -1991,7 +2031,9 @@
         "movement.muscle.ankle-plantarflexors",
         "movement.muscle.latissimus-dorsi",
         "movement.muscle.rotator-cuff",
-        "movement.muscle.scapular-upward-rotators"
+        "movement.muscle.scapular-upward-rotators",
+        "movement.muscle.wrist-extensors",
+        "movement.muscle.wrist-flexors"
       ],
       "published": [],
       "reviewed": [],
@@ -2285,7 +2327,8 @@
         "fly.tech.6",
         "fly.tech.7",
         "fly.tech.8",
-        "fly.tech.9"
+        "fly.tech.9",
+        "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll"
       ],
       "free": [
         "free.L0",
@@ -2373,7 +2416,9 @@
         "free.tech.7",
         "free.tech.8",
         "free.tech.9",
-        "movement.demand.free.down-kick.ankle-plantarflexion"
+        "movement.demand.free.down-kick.ankle-plantarflexion",
+        "movement.demand.free.early-pull-through.high-elbow-configuration",
+        "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability"
       ],
       "starts-turns": [
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",

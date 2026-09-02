@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 816,
+  "record_count": 823,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -11040,6 +11040,97 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.action.wrist-hand.extension",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[3]",
+      "title": "腕伸展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.wrist-hand.flexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[2]",
+      "title": "腕屈曲",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[5]",
+      "title": "蝶式空中移臂的肩胛穩定需求",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.nuber-1986",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.demand.free.down-kick.ankle-plantarflexion",
       "domain": "movement",
       "file": "canonical/movement/stroke-demands.yaml",
@@ -11069,6 +11160,77 @@
         ]
       },
       "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[4]",
+      "title": "自由式早期拉水的高肘構型需求",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "heinlein-2010-phases"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.pmc3438875",
+        "src.suito-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[3]",
+      "title": "自由式前象限推進的腕關節等長穩定需求",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-emg"
+        ],
+        "phase_model": [
+          "race-club-6phase"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.caty-2007",
+        "src.hall-murphy-2020"
+      ],
       "outgoing_ids": []
     },
     {
@@ -11364,6 +11526,56 @@
       "file": "canonical/movement/muscle-groups.yaml",
       "path": "muscle_groups[0]",
       "title": "肩胛上旋肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.wrist-extensors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[6]",
+      "title": "腕伸肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "draft"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.wrist-flexors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[5]",
+      "title": "腕屈肌群",
       "tags": {
         "action_status": [
           "ready"
