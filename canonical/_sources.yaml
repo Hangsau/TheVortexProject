@@ -5653,3 +5653,63 @@ sources:
       適用範圍：支持「前鋸肌在各泳式划水中皆接近最大肌肉測試值」這一負荷描述。
       不可用於：任何泳式間的比較級（原文用 each stroke，不支持蝶式大於自由式）；
       菱形肌主張（本研究未量菱形肌）。
+
+  - id: src.matheson-2011
+    display: "Matheson et al. (2011). Three-dimensional lower limb kinematics of the breaststroke kick. ISBS Conference Proceedings."
+    type: other
+    verification_status: unverified
+    authors: ["Matheson"]
+    year: 2011
+    container: "ISBS Conference Proceedings Archive"
+    identifier:
+      url: "https://ojs.ub.uni-konstanz.de/cpa/article/view/4840"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17b 為 BR-35 裁決登錄。蒐證階段取得 ISBS 正式頁與 4 頁論文 PDF
+      （定位見 plans/證據包_C類_ankle-foot.md BR-35 第 3 層），但標題與完整
+      作者清單未逐字轉錄，故標 unverified，title 留空不猜。
+      內容：12 名 NCAA Division I 女性泳者，三台水下攝影機建下肢三維模型；
+      推進相操作定義為「膝伸展開始」到「雙腿完成內收」。
+      適用範圍：支持踝的最大動作與蹠屈角速度出現在推進相早期、尾端動作最少；
+      支持踝總角位移與髖前進速度無顯著關聯。
+      不可用於：末端角位移越大越好、把「雙腿完成內收」當推力證明、男性或
+      非大學競技族群外推。
+
+  - id: src.mccabe-2022
+    display: "McCabe et al. (2022). Breaststroke underwater pullout analysis of elite swimmers. Front Sports Act Living."
+    type: journal-article
+    verification_status: unverified
+    authors: ["McCabe"]
+    year: 2022
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: "36081618"
+      pmcid: "PMC9445308"
+      doi: "10.3389/fspor.2022.963578"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17b 為 BR-35 裁決登錄。識別碼於蒐證階段實際解析取得，標題與完整
+      作者清單未逐字轉錄，故標 unverified，title 留空不猜。
+      內容：60 名菁英泳者、150 筆世界大賽／奧運比賽影像；研究對象是蛙式水下
+      pullout。propulsive kick 定義為雙腳第一次後移至「雙腳靠攏、結束向內側
+      移動」，第三段 glide 自雙腳併攏開始。
+      適用範圍：支持「雙腳併攏是 kick→glide 的事件邊界」這一分期定義。
+      不可用於：踝蹠屈角度值（本研究未量）、水面蛙式整週期外推、把此分期當
+      所有蛙式技術的唯一模型。
+
+  - id: src.olstad-2014
+    display: "Olstad et al. (2014). Automatic 3D tracking of the breaststroke kick. BMS record 4032654."
+    type: other
+    verification_status: unverified
+    authors: ["Olstad BH"]
+    year: 2014
+    identifier:
+      url: "https://bms.sport-iat.de/bms/Record/4032654"
+    retrieved_on: "2026-09-02"
+    notes: >-
+      Step 17b 為 BR-35 裁決登錄。僅取得 BMS 文獻紀錄頁，標題與完整作者清單
+      未逐字轉錄，故標 unverified，title 留空不猜。
+      適用範圍：支持「傳統『雙腳主動併攏即 kick 結束』模型無法準確切分所有
+      modern wave-kick 泳者，不同波幅會改變 insweep 與收腿時序」這一模型差異
+      說明。
+      不可用於：否定雙腳會靠攏此一現象、任何角度或劑量主張。

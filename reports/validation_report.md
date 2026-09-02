@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-02
-> 驗證條目數：647，Drills ID 數：176
+> 驗證條目數：649，Drills ID 數：176
 
 ---
 
@@ -235,7 +235,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 512 筆**
+**WARN，共 514 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -625,6 +625,8 @@
   file=canonical\movement\stroke-demands.yaml id='movement.demand.free.down-kick.ankle-plantarflexion'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.free.early-pull-through.high-elbow-configuration'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.leg-insweep.foot-orientation-control'
+  file=canonical\movement\stroke-demands.yaml id='movement.demand.breast.glide.plantarflexed-streamline-finish'
   file=canonical\movement\stroke-demands.yaml id='movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'

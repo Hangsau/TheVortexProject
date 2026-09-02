@@ -167,26 +167,61 @@ demands:
     muscle_roles:
       - muscle_id: movement.muscle.ankle-plantarflexors
         role: >
-          依一般作用線可承擔蹠屈與末端姿勢維持，是本筆待驗證的候選角色。
-          本批允許來源沒有自由式下踢的踝運動學或相位化 EMG，故不宣稱
-          此肌群在該相位必然以特定時序或程度招募。
+          依一般作用線可承擔蹠屈與末端姿勢維持。自由式打腿的可用蹠屈範圍
+          與短距離打腿速度有跨人相關，但該相關由陸上量測與整段計時建立，
+          沒有相位化的踝運動學或肌電，故不宣稱此肌群在下踢相以特定時序或
+          程度招募。
       - muscle_id: movement.muscle.ankle-dorsiflexors
         role: >
-          依一般作用線可承擔蹠屈方向的制動與動作換向，也是待驗證的候選
+          依一般作用線可承擔蹠屈方向的制動與動作換向，仍是待驗證的候選
           角色；目前不能由 UDK 或一般解剖資料外推自由式下踢的收縮型態，
           更不能推論背屈肌訓練會改善打腿效率。
     publication_status: draft
-    claim_status: unverified
-    action_status: do-not-prescribe
+    claim_status: partially-supported
+    action_status: provisional
     evidence_profile: synthesis-inference
-    source_ids: []
+    source_ids:
+      - src.mccullough-2009-a
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+      - src.pmc9402090-b
+    measurement_conditions:
+      - source_id: src.mccullough-2009-a
+        quantity: 陸上量測的踝蹠屈可用範圍，與 22.86 m flutter kick 計時速度的跨人相關
+        value: r = 0.509（中度相關；原文為橫斷相關設計，未報個人內效果量）
+        conditions: >
+          10 名 NCAA Division I 女性泳者與 10 名休閒女性泳者；踝蹠屈與內翻在
+          陸上量測，打腿速度以 22.86 m 計時取得，另測 50 m 自由式時間。
+        endpoint: kick-speed
+        extrapolation_boundary: >
+          只支持「跨人之間，可用蹠屈範圍與短距離打腿速度同向變動」。不支持
+          因果、不支持個人增加角度後速度會提高、不支持任何最佳角度或門檻，
+          也不得換寫成效率。全為女性樣本與短距離任務，男性、長距離與比賽
+          配速外推皆無依據。
+      - source_id: src.pmc9402090-b
+        quantity: 貼紮限制與急性伸展改變蹠屈後的水下海豚踢速度與 kick efficiency
+        value: >
+          限制蹠屈約 10.42% 時速度與效率低於正常；急性增加蹠屈約 6.87% 後，
+          增加條件與正常條件之間速度與效率無顯著差異
+        conditions: >
+          10 名訓練良好成人泳者（5 男／5 女），隨機比較正常、貼紮限制與急性
+          伸展三條件，節拍器控制打腿頻率；任務是水下海豚踢，不是自由式打腿。
+        endpoint: uus-speed-and-efficiency
+        extrapolation_boundary: >
+          只用來說明「可用範圍被壓縮時可能不利，而正常範圍以上再增加未見額外
+          好處」這個形狀。任務是水下海豚踢，不得當成自由式打腿的介入效果；
+          急性伸展也不是訓練效果，不得作為柔軟度處方依據。
     public:
       name_zh: 自由式打腿下踢的踝蹠屈需求
       description: >
-        本圖譜的既有覆蓋分母把自由式下踢連到踝足區域，本筆因此先把踝蹠屈
-        建成待驗證的動作需求，讓同一解剖動作可連到第二個泳式相位。但本批
-        允許來源中沒有自由式下踢的踝關節運動學，不能確認蹠屈角度、時序或
-        肌肉招募；這筆草稿不是角度標準，也不得作為伸展或肌力處方依據。
+        自由式打腿的下踢相需要可用的踝蹠屈範圍。泳者資料顯示，跨人之間可用
+        蹠屈範圍較大者，短距離打腿速度也偏快；限制踝關節活動的實驗則顯示
+        範圍被壓縮時打腿表現變差，但把範圍再往上加並沒有帶來額外好處。這些
+        結果的形狀是「不足可能限制表現」，不是「角度越大越有效率」。
+        單一泳者的個案量測還顯示，起始蹠屈較大的踢次未必推進較好——足部是否
+        仍浸在水裡、以及踢的時序，都會改變結果，不能只看腳背角度。
+        目前沒有自由式下踢相的踝關節運動學或肌電，因此本條不給目標角度，
+        也不作為伸展或肌力處方的依據。
       limitation_context: >
         若觀察到腳背姿勢不同，不能直接判定原因或處理方向；在取得自由式
         專屬運動學與肌電證據前，介入只能依個別評估與重測暫定。
@@ -195,10 +230,11 @@ demands:
         強壓腳尖，不要為了符合外觀而追求更大角度。
     diagnostic:
       assessment_note: >
-        後續需取得自由式泳者下踢相的踝關節分節段運動學，並把腓腸肌、
-        脛前肌等肌電與相位同步，才能確認本需求。現階段若個別評估，仍須
-        分開記錄固定膝位的被動與主動蹠屈、症狀、控制能力及同任務水中表現，
-        不把 UDK 結果直接當作自由式判讀標準。
+        後續仍需自由式泳者下踢相的踝關節分節段運動學，並把腓腸肌、脛前肌
+        等肌電與相位同步，才能把本需求由部分支持推進到支持。現階段個別評估
+        須分開記錄固定膝位的被動與主動蹠屈、症狀、控制能力及同任務水中表現；
+        水中判讀要一併看足部是否浸水與踢的時序，不要把外觀角度單獨當指標，
+        也不把 UDK 或貼紮限制研究的結果直接當自由式判讀標準。
 
   - id: movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability
     stroke: free
@@ -309,6 +345,129 @@ demands:
         粗略相位邊界，不是姿勢目標，亦不能與 high-elbow index 換算。姿勢層
         有運動學支持，但相關資料不能建立因果效益，且樣本外推受限，因此
         本筆為部分支持。
+
+  - id: movement.demand.breast.leg-insweep.foot-orientation-control
+    stroke: breast
+    phase_model: descriptive
+    phase: leg-insweep
+    body_position: prone
+    poolside_direction: 雙腳由身體外側向中線移動，同時雙腿向後伸展
+    action_reference_frame: joint-local
+    derived_from_ids:
+      - breast.tech.9
+      - breast.tech.12
+    action_ids:
+      - movement.action.ankle-foot.plantarflexion
+    muscle_roles:
+      - muscle_id: movement.muscle.ankle-plantarflexors
+        role: >
+          在推進段承擔踝的蹠屈方向運動與角速度。三維運動學量到踝的最大動作與
+          蹠屈角速度出現在推進相早期，但該研究沒有同步肌電，因此不能把角速度
+          直接讀成特定肌群的招募程度或收縮型態。
+      - muscle_id: movement.muscle.ankle-dorsiflexors
+        role: >
+          依一般作用線可承擔換向與蹠屈方向的制動；蛙式推進段沒有相位化肌電
+          資料，本條不宣稱其收縮型態，也不由此推出背屈肌訓練效果。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: swimming-kinematics
+    source_ids:
+      - src.matheson-2011
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    measurement_conditions:
+      - source_id: src.matheson-2011
+        quantity: 踝總角位移與髖前進速度的關聯；踝最大動作與蹠屈角速度在推進相內的出現時點
+        value: >
+          該樣本未觀察到踝總角位移與髖前進速度的顯著關聯；踝的最大動作與蹠屈
+          角速度出現在推進相早期，推進相尾端的踝動作最少（原文未報效果量區間）
+        conditions: >
+          12 名 NCAA Division I 女性泳者，三台水下攝影機建立下肢三維模型；
+          推進相操作定義為「膝伸展開始」到「雙腿完成內收」。
+        endpoint: hip-forward-velocity
+        extrapolation_boundary: >
+          「未觀察到顯著關聯」是這一個樣本、這一種相位切法下的結果，不是
+          「踝角位移不影響推進」的通則。男性、非大學競技族群、以及採用不同
+          推進相定義的分期都不在外推範圍內。本條也不由時點資訊推出任何
+          角速度目標或訓練劑量。
+    public:
+      name_zh: 蛙式蹬夾推進段的足部方向控制需求
+      description: >
+        蛙式蹬腿的推進段，雙腳一邊向後伸展一邊向中線靠近。這段的推進主要來自
+        小腿與足內側把水向後推，因此需要的是足部朝向與踝的動作速度，而不是
+        等到最後把兩腳夾在一起。三維運動學顯示，踝的最大動作與蹠屈速度出現在
+        這一段的早期，越到尾端踝的動作反而越少；在該研究樣本裡，踝的總角度
+        變化量與身體前進速度之間也沒有量到顯著關聯。
+        換句話說，這段要處理的是「什麼時候動、往哪個方向動」，把它讀成
+        「角度變化越大越好」並沒有依據。
+      limitation_context: >
+        水中單一視角看到的「腳掌轉出去」可能同時來自髖的旋轉、屈膝位下的
+        脛骨旋轉與足部其他關節，不能單獨歸給踝；判斷限制落在哪一層要靠
+        分層評估，不能由外觀反推。
+      safety_note: >
+        蹬夾推進段若出現膝關節內側疼痛，不應以加大外翻或加快夾腿來處理，
+        應先停止該段的強度累加並個別評估。
+    diagnostic:
+      assessment_note: >
+        評估時把足部朝向、踝的動作時點與腿伸展分開記錄，並確認可見的腳掌
+        朝外是來自哪一層（髖旋轉／脛骨旋轉／足部關節）。目前沒有蛙式推進段
+        的相位化肌電，控制缺口與被動限制的分流須靠陸上分層測試加同任務水中
+        影片的重測判讀。
+
+  - id: movement.demand.breast.glide.plantarflexed-streamline-finish
+    stroke: breast
+    phase_model: descriptive
+    phase: glide
+    body_position: prone
+    poolside_direction: 雙腿在身體後方伸直併攏，腳尖指向後方
+    action_reference_frame: body-fixed
+    derived_from_ids:
+      - breast.tech.7
+      - breast.tech.28
+    action_ids:
+      - movement.action.ankle-foot.plantarflexion
+    muscle_roles:
+      - muscle_id: movement.muscle.ankle-plantarflexors
+        role: >
+          在滑行段承擔腳尖後指姿勢的維持。這是姿勢維持的候選角色，來自一般
+          作用線與教材描述；沒有蛙式滑行段的肌電資料，不宣稱維持所需的強度
+          或收縮型態。
+    publication_status: draft
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.mccabe-2022
+      - src.olstad-2014
+      - src.riewald-rodeo-2015
+      - src.hall-murphy-2020
+    public:
+      name_zh: 蛙式蹬腿收尾進入滑行的蹠屈流線姿勢需求
+      description: >
+        蹬腿的最後，雙腿在身體後方伸直、雙腳完成靠攏、腳尖指向後方，接著進入
+        滑行。這個姿勢的作用是降低下一段滑行的正面阻力，不是靠「把兩腳夾在
+        一起」產生主要推進。
+        時序上也要注意：腳尖後指與踝的蹠屈在雙腿還在互相靠近的途中就已經
+        開始，不是等到兩腳併攏之後才做。
+        另外，「雙腳併攏」在部分研究裡被當成蹬腿與滑行之間的事件邊界，但三維
+        追蹤顯示這條界線切不乾淨——不同波幅風格的泳者，內夾與收腿的時序並不
+        一致，所以它是一個方便的分界，不是所有蛙式技術共用的標準。
+      limitation_context: >
+        看到腳尖沒有指向後方時，原因可能是可用蹠屈範圍不足、姿勢維持的控制
+        不足，或這名泳者採用的是不同的收腿時序；三者處理方向不同，不能只看
+        外觀就決定。
+      safety_note: >
+        滑行段刻意壓腳尖時若出現踝部疼痛、抽筋或麻木，應停止延長該姿勢的
+        時間，不要為了外觀而追求更大角度。
+    diagnostic:
+      assessment_note: >
+        判讀時把三件事分開：蹬腿末段的靠攏時序、進入滑行時的腳尖朝向、以及
+        滑行姿勢能維持多久。事件邊界依 McCabe 的 pullout 定義只適用於該分期
+        模型，遇到波幅較大的泳者要先確認其收腿時序，再決定「併攏」這個界線
+        能不能用。
+        參考系為 body-fixed：本條描述的是由池畔可見的身體相對姿勢，不是量到的
+        踝關節角度，不得反推成關節角度目標。
 
   - id: movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll
     stroke: fly

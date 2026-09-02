@@ -3,10 +3,12 @@
   "fields": {
     "action_reference_frame": {
       "body-fixed": [
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.early-pull-through.high-elbow-configuration"
       ],
       "joint-local": [
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -15,11 +17,12 @@
       "poolside-fixed": []
     },
     "action_status": {
-      "do-not-prescribe": [
-        "movement.demand.free.down-kick.ankle-plantarflexion"
-      ],
+      "do-not-prescribe": [],
       "provisional": [
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -1454,7 +1457,10 @@
     "claim_status": {
       "disputed": [],
       "partially-supported": [
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+        "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -1477,9 +1483,7 @@
         "movement.muscle.wrist-extensors",
         "movement.muscle.wrist-flexors"
       ],
-      "unverified": [
-        "movement.demand.free.down-kick.ankle-plantarflexion"
-      ]
+      "unverified": []
     },
     "development_stage": {
       "fun": [],
@@ -1552,9 +1556,11 @@
         "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability"
       ],
       "swimming-kinematics": [
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.free.early-pull-through.high-elbow-configuration"
       ],
       "synthesis-inference": [
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -1971,6 +1977,8 @@
     },
     "phase_model": {
       "descriptive": [
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
@@ -2017,6 +2025,8 @@
         "movement.action.shoulder-complex.elevation",
         "movement.action.wrist-hand.extension",
         "movement.action.wrist-hand.flexion",
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
         "movement.demand.free.down-kick.ankle-plantarflexion",
         "movement.demand.free.early-pull-through.high-elbow-configuration",
@@ -2247,7 +2257,9 @@
         "breast.tech.6",
         "breast.tech.7",
         "breast.tech.8",
-        "breast.tech.9"
+        "breast.tech.9",
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
+        "movement.demand.breast.leg-insweep.foot-orientation-control"
       ],
       "common": [
         "common.L2.propulsion",

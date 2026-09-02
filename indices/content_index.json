@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 823,
+  "record_count": 825,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -11096,10 +11096,83 @@
       "outgoing_ids": []
     },
     {
-      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+      "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[6]",
+      "title": "蛙式蹬腿收尾進入滑行的蹠屈流線姿勢需求",
+      "tags": {
+        "action_reference_frame": [
+          "body-fixed"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.mccabe-2022",
+        "src.olstad-2014",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
       "domain": "movement",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[5]",
+      "title": "蛙式蹬夾推進段的足部方向控制需求",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "draft"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.matheson-2011",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[7]",
       "title": "蝶式空中移臂的肩胛穩定需求",
       "tags": {
         "action_reference_frame": [
@@ -11141,10 +11214,10 @@
           "joint-local"
         ],
         "action_status": [
-          "do-not-prescribe"
+          "provisional"
         ],
         "claim_status": [
-          "unverified"
+          "partially-supported"
         ],
         "evidence_profile": [
           "synthesis-inference"
@@ -11159,7 +11232,12 @@
           "free"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.mccullough-2009-a",
+        "src.pmc9402090-b",
+        "src.riewald-rodeo-2015"
+      ],
       "outgoing_ids": []
     },
     {

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 544,
+  "source_count": 547,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1863,7 +1863,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 6,
+      "usage_count": 9,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -1884,6 +1884,21 @@
           "id": "free.tech.16",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[17].public.mechanism"
+        },
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
+        },
+        {
+          "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
         },
         {
           "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
@@ -2737,6 +2752,22 @@
       ]
     },
     {
+      "id": "src.matheson-2011",
+      "display": "Matheson et al. (2011). Three-dimensional lower limb kinematics of the breaststroke kick. ISBS Conference Proceedings.",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://ojs.ub.uni-konstanz.de/cpa/article/view/4840"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[5]"
+        }
+      ]
+    },
+    {
       "id": "src.matt-donovan-usms",
       "display": "Matt Donovan, USMS",
       "verification_status": "unverified",
@@ -2753,6 +2784,24 @@
       ]
     },
     {
+      "id": "src.mccabe-2022",
+      "display": "McCabe et al. (2022). Breaststroke underwater pullout analysis of elite swimmers. Front Sports Act Living.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "36081618",
+        "pmcid": "PMC9445308",
+        "doi": "10.3389/fspor.2022.963578"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
+        }
+      ]
+    },
+    {
       "id": "src.mccullough-2009-a",
       "display": "McCullough 2009",
       "verification_status": "verified",
@@ -2761,7 +2810,7 @@
         "doi": "10.1519/JSC.0b013e31819ab977",
         "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
         {
           "id": "fly.tech.24",
@@ -2777,6 +2826,11 @@
           "id": "free.L2.kick",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[7].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
         }
       ]
     },
@@ -3530,7 +3584,7 @@
         {
           "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
           "file": "canonical/movement/stroke-demands.yaml",
-          "path": "demands[5]"
+          "path": "demands[7]"
         }
       ]
     },
@@ -3545,6 +3599,22 @@
           "id": "periodization.zones.olbrecht_model",
           "file": "canonical/periodization/zones.yaml",
           "path": "olbrecht_model"
+        }
+      ]
+    },
+    {
+      "id": "src.olstad-2014",
+      "display": "Olstad et al. (2014). Automatic 3D tracking of the breaststroke kick. BMS record 4032654.",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://bms.sport-iat.de/bms/Record/4032654"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
         }
       ]
     },
@@ -5033,8 +5103,13 @@
         "pmid": "36032263",
         "doi": "10.3389/fspor.2022.948034"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
+        },
         {
           "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
           "file": "canonical/movement/stroke-demands.yaml",
@@ -7179,7 +7254,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 3,
+      "usage_count": 6,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -7192,9 +7267,24 @@
           "path": "points[102].public.mechanism"
         },
         {
-          "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+          "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[6]"
+        },
+        {
+          "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[5]"
+        },
+        {
+          "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[7]"
+        },
+        {
+          "id": "movement.demand.free.down-kick.ankle-plantarflexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[2]"
         }
       ]
     },

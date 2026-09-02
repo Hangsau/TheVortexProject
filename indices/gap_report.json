@@ -2,8 +2,8 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 10,
-    "unlinked_records": 512
+    "unused_taxonomy_values": 12,
+    "unlinked_records": 514
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -12,8 +12,16 @@
       "value": "poolside-fixed"
     },
     {
+      "field": "action_status",
+      "value": "do-not-prescribe"
+    },
+    {
       "field": "claim_status",
       "value": "disputed"
+    },
+    {
+      "field": "claim_status",
+      "value": "unverified"
     },
     {
       "field": "development_stage",
@@ -1485,9 +1493,19 @@
       "path": "actions[2]"
     },
     {
-      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+      "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[6]"
+    },
+    {
+      "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[5]"
+    },
+    {
+      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[7]"
     },
     {
       "id": "movement.demand.free.down-kick.ankle-plantarflexion",
