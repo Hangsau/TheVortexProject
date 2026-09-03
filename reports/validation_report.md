@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 406 筆**
+**WARN，共 405 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -527,7 +527,6 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
   file=canonical\movement\actions.yaml id='movement.action.hip.adduction'
-  file=canonical\movement\actions.yaml id='movement.action.hip.internal-rotation'
   file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'
@@ -731,7 +730,7 @@
 
 ## W011 — `certainty` orange（教練觀測）但缺 `observation_basis`（未交代觀察基礎與外推邊界）→ S6 範圍
 
-**WARN，共 64 筆**
+**WARN，共 63 筆**
 
   file=canonical\instructional\teaching-errors.yaml id='free.err3' at=errors[2].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\teaching-errors.yaml id='free.err9' at=errors[8].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
@@ -768,7 +767,6 @@
   file=canonical\instructional\technical-analysis.yaml id='back.tech.29' at=points[42].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='back.tech.6' at=points[49].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='back.tech.7' at=points[50].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.15' at=points[85].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.16' at=points[86].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.4' at=points[105].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.5' at=points[106].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）

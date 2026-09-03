@@ -52,7 +52,8 @@ def make_warnings():
     return {
         code: []
         for code in (
-            "W012", "W013", "W014", "W015", "W016", "W017", "W018", "W019"
+            "W012", "W013", "W014", "W015", "W016", "W017", "W018", "W019",
+            "E012",
         )
     }
 
@@ -240,7 +241,7 @@ class MovementFixtureTestBase(unittest.TestCase):
 
     def assert_movement_counts(self, output: str, expected=None):
         expected = expected or {}
-        for code in ("W012", "W013", "W014", "W015"):
+        for code in ("W012", "E012", "W014", "W015"):
             self.assert_code_count(output, code, expected.get(code, 0))
 
 
@@ -316,7 +317,7 @@ class TestW012MovementIdNames(unittest.TestCase):
                 self.assertEqual(self._check(eid), [])
 
 
-class TestW013MovementTaxonomy(unittest.TestCase):
+class TestE012MovementTaxonomy(unittest.TestCase):
     def _check(self, entry):
         warnings = make_warnings()
         validate_mod.check_movement_taxonomy(
@@ -326,7 +327,7 @@ class TestW013MovementTaxonomy(unittest.TestCase):
             MOVEMENT_TAXONOMY,
             warnings,
         )
-        return warnings["W013"]
+        return warnings["E012"]
 
     def _assert_invalid_field_warns(self, field):
         messages = self._check(
@@ -1031,8 +1032,10 @@ class TestMovementBoundaries(MovementFixtureTestBase):
 
         exit_code, output, _stderr = self._run_validation()
 
-        self.assertEqual(exit_code, 0)
-        self.assert_movement_counts(output, {"W013": 1})
+        # claim_status 不在 taxonomy 於 2026-09-02 從 W013 升為 E012，
+        # 因此這裡預期 FAIL 退出碼，不是 PASS。
+        self.assertEqual(exit_code, 1)
+        self.assert_movement_counts(output, {"E012": 1})
 
 
 if __name__ == "__main__":

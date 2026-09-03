@@ -919,7 +919,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.breast.arm-outsweep.elevation-plane-with-obligatory-external-rotation | arm-outsweep | descriptive | 蛙式外划的上舉平面、必然外旋與肘腕輕度屈曲 | partially-supported | provisional |
 | movement.demand.breast.arm-catch.horizontal-adduction-with-rotation-reversal | arm-catch | descriptive | 蛙式捕水的水平內收命名與旋轉方向反轉 | partially-supported | provisional |
 | movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion | leg-recovery | descriptive | 蛙式收腿的髖屈曲外展、膝屈曲與踝背屈，以及可見現象的歸屬 | partially-supported | provisional |
-| movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out | foot-flip | descriptive | 蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節 | partially-supported | provisional |
+| movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out | foot-flip | descriptive | 蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節；髖的旋轉方向兩向並列 | partially-supported | provisional |
 
 #### 蝶式 (11)
 
