@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 119 | actions 31 / muscle-groups 22 / demands 59 / interventions 7；相位覆蓋 52/59 |
+| `movement` | 121 | actions 33 / muscle-groups 22 / demands 59 / interventions 7；相位覆蓋 52/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -808,7 +808,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 水下蝶腳 | 5/7 | descriptive | kick-initiation（起踢）, down-to-up-transition（下踢→上踢過渡） |
 | 起跳轉身 | 9/13 | descriptive | underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, flip（翻滾）, wall-rotation（旋轉在牆上完成） |
 
-### `actions.yaml` — 解剖動作（**31 條目**）
+### `actions.yaml` — 解剖動作（**33 條目**）
 
 | ID | 名稱 | 部位 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -843,6 +843,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.action.trunk.extension | 軀幹伸展 | spine-neck | supported | ready |
 | movement.action.trunk.flexion | 軀幹屈曲 | spine-neck | supported | ready |
 | movement.action.shoulder-complex.horizontal-abduction | 肩水平外展 | shoulder-arm | supported | ready |
+| movement.action.hip.adduction | 髖內收 | hip-knee | supported | ready |
+| movement.action.hip.internal-rotation | 髖內旋 | hip-knee | supported | ready |
 
 ### `muscle-groups.yaml` — 肌群（**22 條目**）
 
@@ -962,7 +964,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.udk.up-kick.hip-extension-prone | up-kick | descriptive | 俯臥水下海豚腳上踢的髖伸展與可用幅度不對稱 | partially-supported | provisional |
 | movement.demand.udk.up-kick.hip-flexion-supine | up-kick | descriptive | 仰躺水下海豚腳上踢——同一個池畔動作對應的是髖屈曲 | partially-supported | provisional |
 | movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction | breakout | descriptive | 出水划手期的最後一次下踢，與「銜接」不是一個關節動作 | partially-supported | provisional |
-| movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term | terminal-down-kick | descriptive | 下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」缺少的動作詞 | partially-supported | provisional |
+| movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term | terminal-down-kick | descriptive | 下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」的成分歸屬 | partially-supported | provisional |
 
 ### `interventions.yaml` — 條件式訓練與活動度（**7 條目**）
 

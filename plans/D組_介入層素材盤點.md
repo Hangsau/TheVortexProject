@@ -61,7 +61,7 @@ breast.tech.16 的三分支決策樹留在 `technical-analysis.yaml` 原處即�
 |---|---|
 | free.tech.13、back.tech.16、breast.tech.14、fly.tech.24、udk.tech.14、udk.tech.16、udk.tech.28（踝蹠屈，7 點） | 素材集中度極高——16 個 hardware 點有 7 點在講同一個動作，而該動作**已有兩筆介入**，且既有記錄的保守度高於這些素材。 |
 | udk.tech.28（單獨標記） | ⚠ **與既有記錄直接衝突**。udk.tech.28 宣稱「柔韌性訓練可改善蹠屈範圍，進而提升 UDK 表現」（src.pmid-24984154）；但 `.conditional-mobility` 的 `remaining_boundary` 明寫「沒有能支撐本處方的長期伸展介入試驗；既有急性伸展操作不是訓練試驗」。而 pmid-24984154 在 udk.tech.14 被引用時是**限制活動度 30%→速度降 19%** 的反向限制實驗——限制實驗支持「關聯」，不支持「拉鬆會變快」。**不把 udk.tech.28 的宣稱推進介入層；反而是 udk.tech.28 的措辭該修。**（列入待處理，本批不動） |
-| breast.tech.15（髖內旋） | ❌ **詞彙表缺口**：31 個動作裡沒有 `hip.internal-rotation`（有 `hip.abduction`、`hip.external-rotation`，沒有內旋也沒有內收）。沒有動作就掛不上 `action_ids`。且證據只到 🟠 教練觀測，「每增加一度 +5% 推進力」原文自己註明非學術控制數字。taxonomy 改動，不夾在內容批次裡。 |
+| breast.tech.15（髖內旋） | ❌ 不寫。**理由已於 W17 更正，見下方「錯誤 7」——本格原寫的「詞彙表缺口擋住它」是錯的。** 真正的理由：證據只到 🟠 教練觀測（「每增加一度 +5% 推進力」原文自己註明非學術控制數字），而庫內有兩筆 published 需求依兩本解剖教科書把同一現象歸給髖**外**旋。這是**方向衝突**，補詞不會讓它可寫。 |
 | starts-turns.tech.3、starts-turns.tech.40（膝角度） | 這兩點的結論是「無跨選手通用最優值」——這是**反處方，不是限制型態**。`limitation_type` 欄位填不出東西。留在 technical-analysis 是對的位置。 |
 | free.tech.38、free.tech.39、free.tech.40、breast.tech.36、breast.tech.37、starts-turns.tech.48（joint 類 6 點） | 六點全部明文寫「本條不對介入方式下結論」。它們是**評估分層前提**（踝要分距小腿／距下／橫跗；頸要分上下段；肩要分盂肱／肩胛胸廓），不是介入。硬塞進 interventions.yaml 就是 (C) 組錯誤 5 的反向版——把不屬於這層的素材填進來充數。 |
 | fly.tech.25（肩活動度） | 🔵 推導，**無 source_ids、無 evidence 區塊**。且 `shoulder-complex.elevation` 已有兩筆介入涵蓋被動／主動分流，這點加不了新分支。 |
@@ -82,5 +82,25 @@ breast.tech.16 的三分支決策樹留在 `technical-analysis.yaml` 原處即�
 | W16 | D2 跨側核心容量介入（新記錄 1 筆） | codex 發包 |
 | — | 2.2 的 ankle 兩筆 `how_to_identify` 補句 | 手改（微 diff，不發包） |
 | — | `hip.internal-rotation` 詞彙缺口、udk.tech.28 措辭衝突 | 寫入 HANDOFF 待處理，不在本批 |
+| W17 | `hip.adduction` + `hip.internal-rotation` 兩個動作詞（新記錄 2 筆） | codex 發包（已完成） |
 
 W15 驗收通過並 commit 後才派 W16（串行，沿用 W13→W14 紀律）。
+
+---
+
+## 5. 錯誤 7：本盤點對「髖內旋詞彙缺口」的理由寫錯了
+
+**錯誤 7：§2.3 原寫「`breast.tech.15` 因為詞彙表沒有 `hip.internal-rotation` 才掛不上」— 錯。**
+
+W17 動手前逐筆核對庫內現況，發現實情不是這樣：
+
+- `breast.tech.15` 主張蛙腿腳趾外翻**需要髖內旋**，證據是單一 🟠 教練觀測（`src.the-race-club`），數字原文自承非學術控制。
+- 但庫內有**兩筆 published 需求**把同一個可見現象（腳尖朝外／足部靠攏）歸給髖**外**旋，依據是兩本已查證的解剖教科書（`src.neumann-2017`、`src.nordin-frankel-2012`）：
+  - `movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out`
+  - `movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term`
+
+所以這是**來源之間的方向衝突**，不是詞彙表擋路。把 `hip.internal-rotation` 登錄進去，`breast.tech.15` 一樣不能寫成介入——缺的是裁決與證據，不是詞。原本的理由把一個**證據問題**誤診成**結構問題**，如果照著做完補詞就以為解鎖，下一步會直接踩進未裁決的方向衝突。
+
+**W17 實際採用的理由（結構性，與 `breast.tech.15` 無關）**：一個關節能命名某個方向卻不能命名它的反向，就無法表達「這個方向在這裡不發生」——而這正是本圖譜反覆使用的句型（`terminal-down-kick` 那筆就是為了避免被讀成外展，才刻意不列外展）。單邊詞彙表讓「刻意不列」與「沒有詞可列」無法區分。
+
+**連帶**：W17 派工規格第 10 項明文禁止 codex 在動作層對這個方向衝突站邊，已驗收通過（兩筆新記錄零觸犯）。方向衝突本身仍**未裁決**，留在待處理。
