@@ -422,7 +422,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 397（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 602。** 除 W003 外全部先於本輪存在。**W003 走了五步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）**397**。下表的三類分佈凍結在 347 那個時點，數量未重算——要動手前先重跑一次分類。**（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位）
+- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 397（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 602。** 除 W003 外全部先於本輪存在。**W003 走了五步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）**397**。下表分類已於 2026-09-04 重跑，以 W003=397 為準。**（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位）
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。
@@ -432,9 +432,23 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
   | 類 | 數量 | 形狀 | 該怎麼處理 |
   |---|---|---|---|
-  | ①`links` 欄位在、但子鍵全空 | **41** | **不是同一種東西，要拆兩堆**：`health/injuries.yaml` **28**（`mechanism_link`／`technical_link`／`perception_link` 三鍵皆 `None`）＋`development/matrix.yaml` **12**（ADM 四鍵皆 `[]`）＋`periodization/structure.yaml` **1** | 只有 injuries 那 28 筆該接（見錯誤 17）；matrix 那 12 格**不該接、接不了** |
-  | ②有 `cross_ref` 自由文字、但 `cross_ref_ids` 空 | **32** | 幾乎全是 `teaching-errors.yaml`，文字寫的是**章節號**（「技術分析 §3.1」「§柒」）而不是穩定 ID，所以 W001 抓不到、W006 也抓不到（鍵存在只是空陣列） | 要人工把章節號對回實際條目 ID。**這 32 筆是「語意上有連、機器上沒連」，最容易被誤讀成內容缺失** |
-  | ③完全沒有任何關聯欄位 | **274** | technical-analysis 88／psychology 70／teaching-errors 52／water-sense-levels 26／l-indicators 13／injuries 11／taper 9／zones 3／actions 1／perception.free 1 | 這才是真的孤立。**但先別急著補連結**——先確認這些條目是不是本來就該獨立，不要為了讓數字好看而造關聯。**唯一已確認該接的是 water-sense-levels 那 26 筆**（injuries 的 `perception_link` 文字已在點名它們，只是沒填 ids） |
+  | ①`links` 欄位在、但子鍵全空 | **38** | `health/injuries.yaml` **25**（`mechanism_link`／`technical_link`／`perception_link` 三鍵皆 `None`）＋`development/matrix.yaml` **12**（ADM 四鍵皆 `[]`）＋`periodization/structure.yaml` **1** | injuries 那 25 筆依錯誤 20 已判為「不該接、無散文依據」；matrix 那 12 格**不該接、接不了** |
+  | ②有 `cross_ref` 自由文字、但 `cross_ref_ids` 空 | **32** | 全部是 `teaching-errors.yaml`，文字寫的是**章節號**（「技術分析 §3.1」「§柒」）而不是穩定 ID，所以 W001 抓不到、W006 也抓不到（鍵存在只是空陣列） | 要人工把章節號對回實際條目 ID。**這 32 筆是「語意上有連、機器上沒連」，最容易被誤讀成內容缺失** |
+  | ③完全沒有任何關聯欄位 | **327** | technical-analysis 88／psychology 70／teaching-errors 52／water-sense-levels 26／injuries 15／l-indicators 13／zones 12／taper 10／dryland 9／structure 9／breathing 21（regulation 6＋physiology 5＋training 5＋framework 3＋safety 2）／actions 1／perception.free 1 | 這才是真的孤立。**但先別急著補連結**——先確認這些條目是不是本來就該獨立，不要為了讓數字好看而造關聯。**唯一已確認該接的是 water-sense-levels 那 26 筆**（injuries 的 `perception_link` 文字已在點名它們，只是沒填 ids） |
+
+  **本輪重跑的意外發現：injuries.yaml 的 40 個 W003 孤兒不是同一種東西，要拆四堆看**（動手前必須分清，否則會把不該接的當成待辦）：
+
+  | 分堆 | 數量 | 性質 | 該怎麼處理 |
+  |---|---|---|---|
+  | all-None injuries 條目 | **25** | 三個 prose 鍵全 `None`，落 Class 1 | 依錯誤 20 已判「不該接」，補連結等於發明臨床主張 |
+  | 分類骨架（categories＋meta） | **8** | `A-shoulder-upper`／`B-lower-spine-strokespecific`／`C-nonMSK-medical`／`D-endocrine`／`D-systemic-acute`／`E-acute-trauma`／`F-pediatric-growth`＋`_asian-epidemiology-supplement`；它們用 `category` 欄位被引用而不是引用別人，落 Class 3 但性質不同 | 本來就不該有出邊——它們的角色是被引用，跟 water-sense-levels L 級同型。**這是「入邊被非 `links.*` 的方式表達」，如果要清出 W003 就得再加一個對稱面**：讓 `category:` 欄位計為對 category 條目的入邊 |
+  | perception-only prose | **4** | `cold-water-shock`／`drowning`／`shallow-water-blackout`／`sipe`——都只有 `perception_link` 散文，`perception_link_ids: []` | 按 `water-sense-levels.yaml` 沒有 stroke-agnostic L 級實體的事實，`perception_link_ids` 一律不填。**永遠留在 W003，不算債** |
+  | 無 `links` 塊的 injury draft | **3** | `iron-deficiency-swimmer`／`oral-contraceptives-performance`／`sci-hip-flexor-contracture`——draft 檔沒寫 `links:` 欄位，build 產物就是 `links: None`（不是 `links: {sub: None}`），因此落 Class 3 而不是 Class 1 | 這是 draft 模板不一致而非缺連結。要清出 W003 有兩條路：（a）draft 補 `links:` 空塊、rebuild；（b）承認這 3 筆與 all-None 25 筆同性質，不接。**兩條都不改變事實：這些 injuries 都是內容獨立的、不需要對外連結** |
+
+  **錯誤 21（本輪重跑時抓到）：用戶交接單預測「第①類 41 是低估的」（意思是重跑後會更多）——實測是 38，比 41 低不是高。**
+
+  - **預測與實測方向相反**：預測是「錯誤 18 讓 injuries 7 筆散文孤兒落入 Class 1」，但實際上散文只讓它們**離開孤兒名單**（在 fail-open 期）、不讓它們**進入 Class 1**。錯誤 18 修正後，散文不再算邊，這 7 筆變成新孤兒；但它們的 `links` 子鍵不是全空（`perception_link` 有值），所以落 Class 3 而不是 Class 1。Class 1 的定義是「子鍵全空」，只受「新接了 3 筆 injuries」影響（-3），因此 41→38。
+  - **這一則不是我犯的錯，是用戶預測跟實測不合，我把它記下來說明分類邏輯的細節**：Class 1／Class 3 的邊界在「子鍵是否全空」不在「有無出邊」。散文 + 空 ids = Class 3，不是 Class 1。
 
   **錯誤 17（上一版這張表寫完就發現，已更正）：把第①類寫成「幾乎全是 ADM 格」「設計時就打算連、後來沒接上的空殼，接線目標明確，是四類裡最該先做的」——兩句都錯。**
 
