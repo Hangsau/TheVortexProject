@@ -696,6 +696,134 @@ def collect_movement_relation_ids(entry: dict) -> set[str]:
     return out
 
 
+# ── links 子鍵分派 / taxonomy 欄位值（自 validate() 主迴圈抽出）────────────────
+#
+# 2026-09-03 抽出。這兩段原本寫死在 validate() 主迴圈裡，而
+# tests/test_validate.py 的 harness 為了跑同樣的檢查**逐行複製了一份**。
+# 複製版一路落後：`joint_region` 沒跟上（產品端五個欄位，測試端四個）、
+# `also_strokes` 三條規則整段沒有。結果是這些檢查在測試裡零覆蓋，而全部
+# 測試仍然是綠的——「改對了，但測試證明不了它改對了」。
+# 抽成函式之後兩邊呼叫同一份，harness 不再有第二份可以落後。
+
+def check_links_block(
+    rel: str,
+    eid: str,
+    links: dict,
+    all_id_set: set[str],
+    taxonomy: dict,
+    inbound_ids: dict,
+    errors: dict,
+    warnings: dict,
+) -> None:
+    """檢查 `links` 區塊：E003 斷鏈、E004 詞彙違規、W005 未知子鍵。
+
+    同時把 ID 參照類的入邊累進 `inbound_ids`（W003 用）。自由文字顯示鍵與
+    其機器鍵不在這裡判，統一交給 `check_link_ids()`（E007/W004/W007）。
+    """
+    for link_type, targets in links.items():
+        if link_type in LINKS_VOCAB_REF_KEYS:
+            # 詞彙參照類：比對 taxonomy 指定欄位
+            tax_field = LINKS_VOCAB_REF_KEYS[link_type]
+            allowed_vocab = taxonomy.get(tax_field, set())
+            candidates: list[str] = []
+            if isinstance(targets, list):
+                candidates = [t for t in targets if isinstance(t, str) and t]
+            elif isinstance(targets, str) and targets:
+                candidates = [targets]
+            for target in candidates:
+                if target not in allowed_vocab:
+                    errors["E004"].append(
+                        f"  file={rel} id={eid!r} "
+                        f"links.{link_type}={target!r} "
+                        f"（不在 taxonomy.{tax_field}）"
+                    )
+        elif link_type in LINKS_ID_REF_KEYS:
+            # ID 參照類：比對全域 ID 集合
+            candidates = []
+            if isinstance(targets, list):
+                candidates = [t for t in targets if isinstance(t, str)]
+            elif isinstance(targets, str) and targets:
+                candidates = [targets]
+            for target in candidates:
+                if target not in all_id_set:
+                    errors["E003"].append(
+                        f"  file={rel} id={eid!r} "
+                        f"links.{link_type}={target!r}"
+                    )
+                else:
+                    inbound_ids[target] += 1
+        elif link_type in LINKS_FREE_TEXT_KEYS:
+            # 自由文字顯示鍵：契約由 check_link_ids() 統一檢查
+            pass
+        elif link_type in LINKS_IDS_KEYS:
+            # 機器鍵：契約由 check_link_ids() 統一檢查
+            pass
+        else:
+            # 未知子鍵（W005 fail-closed）：
+            # 不在 ID 參照類、詞彙參照類或已知自由文字類中
+            val_preview = ""
+            if isinstance(targets, str):
+                val_preview = targets[:120]
+            elif isinstance(targets, list):
+                val_preview = str(targets)[:120]
+            warnings["W005"].append(
+                f"  file={rel} id={eid!r} "
+                f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
+            )
+
+    # ── E007 / W004 / W007: *_link 與 *_link_ids 契約 ──
+    check_link_ids(rel, eid, links, all_id_set, errors, warnings)
+
+
+# 條目頂層受 taxonomy 管的單值欄位。加欄位只改這裡，測試端自動跟上。
+TAXONOMY_SCALAR_FIELDS = (
+    "category", "stroke", "certainty", "status", "joint_region",
+)
+
+
+def check_taxonomy_fields(
+    rel: str,
+    eid: str,
+    entry: dict,
+    taxonomy: dict,
+    errors: dict,
+) -> None:
+    """E004：條目頂層受控欄位值 + `also_strokes` 宣告。
+
+    `also_strokes` 的三條規則：須為 list、每個值須是已登錄泳式、不得列出自身
+    泳式。最後一條是版面問題——一張卡只有一份內容、一個歸屬泳式，自列本式
+    會讓該式頁畫出兩張同樣的卡。
+    """
+    for field in TAXONOMY_SCALAR_FIELDS:
+        val = entry.get(field)
+        if val is not None and isinstance(val, str):
+            allowed = taxonomy.get(field, set())
+            if val not in allowed:
+                errors["E004"].append(
+                    f"  file={rel} id={eid!r} {field}={val!r}"
+                )
+
+    also = entry.get("also_strokes")
+    if also is None:
+        return
+    allowed = taxonomy.get("stroke", set())
+    if not isinstance(also, list):
+        errors["E004"].append(
+            f"  file={rel} id={eid!r} also_strokes 須為 list，"
+            f"實際 {type(also).__name__}"
+        )
+        return
+    for v in also:
+        if v not in allowed:
+            errors["E004"].append(
+                f"  file={rel} id={eid!r} also_strokes 含未登錄泳式 {v!r}"
+            )
+        elif v == entry.get("stroke"):
+            errors["E004"].append(
+                f"  file={rel} id={eid!r} also_strokes 重複列出自身泳式 {v!r}"
+            )
+
+
 # ── 機器鍵（*_ids）共用檢查 ───────────────────────────────────────────────────
 
 def collect_declared_ids(
@@ -1724,99 +1852,13 @@ def run_validation():
         # check_link_ids() 檢查（E007 / W004 / W007）。
         links = entry.get("links")
         if isinstance(links, dict):
-            for link_type, targets in links.items():
-                if link_type in LINKS_VOCAB_REF_KEYS:
-                    # 詞彙參照類：比對 taxonomy 指定欄位
-                    tax_field = LINKS_VOCAB_REF_KEYS[link_type]
-                    allowed_vocab = taxonomy.get(tax_field, set())
-                    if isinstance(targets, list):
-                        for target in targets:
-                            if isinstance(target, str) and target:
-                                if target not in allowed_vocab:
-                                    errors["E004"].append(
-                                        f"  file={rel} id={eid!r} "
-                                        f"links.{link_type}={target!r} "
-                                        f"（不在 taxonomy.{tax_field}）"
-                                    )
-                    elif isinstance(targets, str) and targets:
-                        if targets not in allowed_vocab:
-                            errors["E004"].append(
-                                f"  file={rel} id={eid!r} "
-                                f"links.{link_type}={targets!r} "
-                                f"（不在 taxonomy.{tax_field}）"
-                            )
-                elif link_type in LINKS_ID_REF_KEYS:
-                    # ID 參照類：比對全域 ID 集合
-                    if isinstance(targets, list):
-                        for target in targets:
-                            if isinstance(target, str):
-                                if target not in all_id_set:
-                                    errors["E003"].append(
-                                        f"  file={rel} id={eid!r} "
-                                        f"links.{link_type}={target!r}"
-                                    )
-                                else:
-                                    inbound_ids[target] += 1
-                    elif isinstance(targets, str) and targets:
-                        if targets not in all_id_set:
-                            errors["E003"].append(
-                                f"  file={rel} id={eid!r} "
-                                f"links.{link_type}={targets!r}"
-                            )
-                        else:
-                            inbound_ids[targets] += 1
-                elif link_type in LINKS_FREE_TEXT_KEYS:
-                    # 自由文字顯示鍵：契約由 check_link_ids() 統一檢查
-                    pass
-                elif link_type in LINKS_IDS_KEYS:
-                    # 機器鍵：契約由 check_link_ids() 統一檢查
-                    pass
-                else:
-                    # 未知子鍵（W005 fail-closed）：
-                    # 不在 ID 參照類、詞彙參照類或已知自由文字類中
-                    val_preview = ""
-                    if isinstance(targets, str):
-                        val_preview = targets[:120]
-                    elif isinstance(targets, list):
-                        val_preview = str(targets)[:120]
-                    warnings["W005"].append(
-                        f"  file={rel} id={eid!r} "
-                        f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
-                    )
+            check_links_block(
+                rel, eid, links, all_id_set, taxonomy,
+                inbound_ids, errors, warnings,
+            )
 
-            # ── E007 / W004 / W007: *_link 與 *_link_ids 契約 ──
-            check_link_ids(rel, eid, links, all_id_set, errors, warnings)
-
-        # ── E004: taxonomy 不存在的值 ──
-        for field in ("category", "stroke", "certainty", "status", "joint_region"):
-            val = entry.get(field)
-            if val is not None and isinstance(val, str):
-                allowed = taxonomy.get(field, set())
-                if val not in allowed:
-                    errors["E004"].append(
-                        f"  file={rel} id={eid!r} {field}={val!r}"
-                    )
-
-        # ── E004: also_strokes（跨式適用宣告）逐值檢查 ──
-        # 一張卡只有一份內容、一個歸屬泳式（stroke）；also_strokes 宣告它在哪些
-        # 別式同樣成立，各式頁據此顯示同一張卡。自列本式會讓該頁畫出兩張。
-        also = entry.get("also_strokes")
-        if also is not None:
-            allowed = taxonomy.get("stroke", set())
-            if not isinstance(also, list):
-                errors["E004"].append(
-                    f"  file={rel} id={eid!r} also_strokes 須為 list，實際 {type(also).__name__}"
-                )
-            else:
-                for v in also:
-                    if v not in allowed:
-                        errors["E004"].append(
-                            f"  file={rel} id={eid!r} also_strokes 含未登錄泳式 {v!r}"
-                        )
-                    elif v == entry.get("stroke"):
-                        errors["E004"].append(
-                            f"  file={rel} id={eid!r} also_strokes 重複列出自身泳式 {v!r}"
-                        )
+        # ── E004: taxonomy 受控欄位值 + also_strokes 宣告 ──
+        check_taxonomy_fields(rel, eid, entry, taxonomy, errors)
 
         # ── E008: category 跨網域誤用 ──
         check_category_scope(

@@ -167,78 +167,25 @@ class FixtureTestBase(unittest.TestCase):
                 if target in all_id_set:
                     inbound_ids[target] += 1
 
-            # E003 / E004（links 子鍵分三類，與 validate_mod 邏輯一致）
+            # E003 / E004 / W005 / E007 / W004 / W007：links 子鍵分派
+            # 2026-09-03：這裡原本是產品端主迴圈的逐行複製，而複製版一路落後
+            # （見下方 E004 欄位那段的說明）。已抽成 check_links_block()，
+            # 兩邊呼叫同一份。
             links = entry.get("links")
             if isinstance(links, dict):
-                for link_type, targets in links.items():
-                    if link_type in validate_mod.LINKS_VOCAB_REF_KEYS:
-                        # 詞彙參照類 → 比對 taxonomy，違規報 E004
-                        tax_field = validate_mod.LINKS_VOCAB_REF_KEYS[link_type]
-                        allowed_vocab = taxonomy.get(tax_field, set())
-                        if isinstance(targets, list):
-                            for target in targets:
-                                if isinstance(target, str) and target:
-                                    if target not in allowed_vocab:
-                                        errors["E004"].append(
-                                            f"  {rel} {eid!r} "
-                                            f"links.{link_type}={target!r}"
-                                        )
-                        elif isinstance(targets, str) and targets:
-                            if targets not in allowed_vocab:
-                                errors["E004"].append(
-                                    f"  {rel} {eid!r} "
-                                    f"links.{link_type}={targets!r}"
-                                )
-                    elif link_type in validate_mod.LINKS_ID_REF_KEYS:
-                        # ID 參照類 → 比對全域 ID 集合，違規報 E003
-                        if isinstance(targets, list):
-                            for target in targets:
-                                if isinstance(target, str):
-                                    if target not in all_id_set:
-                                        errors["E003"].append(
-                                            f"  {rel} {eid!r} links.{link_type}={target!r}"
-                                        )
-                                    else:
-                                        inbound_ids[target] += 1
-                        elif isinstance(targets, str) and targets:
-                            if targets not in all_id_set:
-                                errors["E003"].append(
-                                    f"  {rel} {eid!r} links.{link_type}={targets!r}"
-                                )
-                            else:
-                                inbound_ids[targets] += 1
-                    elif link_type in validate_mod.LINKS_FREE_TEXT_KEYS:
-                        # 自由文字顯示鍵 → 交給 check_link_ids()
-                        pass
-                    elif link_type in validate_mod.LINKS_IDS_KEYS:
-                        # 機器鍵 → 交給 check_link_ids()
-                        pass
-                    else:
-                        # 未知子鍵 → W005
-                        val_preview = ""
-                        if isinstance(targets, str):
-                            val_preview = targets[:120]
-                        elif isinstance(targets, list):
-                            val_preview = str(targets)[:120]
-                        warnings["W005"].append(
-                            f"  {rel} {eid!r} "
-                            f"links.{link_type} 未歸類，值前120字: {val_preview!r}"
-                        )
-
-                # E007 / W004 / W007：直接呼叫產品程式碼的 *_link 契約檢查
-                validate_mod.check_link_ids(
-                    rel, eid, links, all_id_set, errors, warnings
+                validate_mod.check_links_block(
+                    rel, eid, links, all_id_set, taxonomy,
+                    inbound_ids, errors, warnings,
                 )
 
-            # E004（欄位值 taxonomy 驗證，與 links 無關）
-            for field in ("category", "stroke", "certainty", "status"):
-                val = entry.get(field)
-                if val is not None and isinstance(val, str):
-                    allowed = taxonomy.get(field, set())
-                    if val not in allowed:
-                        errors["E004"].append(
-                            f"  {rel} {eid!r} {field}={val!r}"
-                        )
+            # E004：taxonomy 受控欄位值 + also_strokes 宣告
+            # 2026-09-03：複製版只檢查 category/stroke/certainty/status 四個欄位
+            # ——產品端第五個 `joint_region` 沒跟上，`also_strokes` 的三條規則
+            # （須為 list／值須登錄／不得自列本式）整段不存在。這些檢查因此在
+            # 測試裡零覆蓋，而全部測試仍然是綠的。現統一走產品端函式。
+            validate_mod.check_taxonomy_fields(
+                rel, eid, entry, taxonomy, errors
+            )
 
             # E005 / W002 / W009：由 check_source_blocks() 逐檔遞迴處理
             # （見下方），這裡不重複一份條目層邏輯
@@ -416,6 +363,86 @@ class TestE004TaxonomyViolation(FixtureTestBase):
         )
         errors, _, _ = self._run()
         self.assertEqual(len(errors["E004"]), 0, "合法 taxonomy 值不應觸發 E004")
+
+
+class TestE004FieldsMissedByOldHarness(FixtureTestBase):
+    """釘住 2026-09-03 之前 harness 完全沒覆蓋到的兩組 E004 規則。
+
+    harness 原本自己重寫了產品端的欄位迴圈，只列 category/stroke/certainty/
+    status 四個；產品端第五個 `joint_region` 沒跟上，`also_strokes` 的三條規則
+    整段不存在。兩者因此零覆蓋——而全部測試仍然是綠的。抽出
+    `check_taxonomy_fields()` 讓兩邊共用之後，補這組測試把它釘死。
+    """
+
+    def _taxonomy_with_joint_region(self):
+        self._write_yaml(
+            self.canonical_dir / "_taxonomy.yaml",
+            make_taxonomy({"joint_region": [{"key": "shoulder"}, {"key": "knee"}]}),
+        )
+
+    def test_invalid_joint_region_triggers_e004(self):
+        self._taxonomy_with_joint_region()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{"id": "entry-1", "joint_region": "NOT_A_JOINT"}]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E004"]), 1,
+            "未登錄的 joint_region 應觸發 E004（舊 harness 漏掉這個欄位）",
+        )
+
+    def test_valid_joint_region_no_e004(self):
+        self._taxonomy_with_joint_region()
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{"id": "entry-1", "joint_region": "shoulder"}]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E004"]), 0)
+
+    def test_also_strokes_unregistered_value_triggers_e004(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{
+                "id": "entry-1", "stroke": "free",
+                "also_strokes": ["back", "NOT_A_STROKE"],
+            }]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E004"]), 1)
+
+    def test_also_strokes_repeating_own_stroke_triggers_e004(self):
+        """自列本式會讓該式頁畫出兩張同樣的卡，所以是錯不是冗餘。"""
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{
+                "id": "entry-1", "stroke": "free", "also_strokes": ["free"],
+            }]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E004"]), 1)
+
+    def test_also_strokes_non_list_triggers_e004(self):
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{
+                "id": "entry-1", "stroke": "free", "also_strokes": "back",
+            }]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E004"]), 1)
+
+    def test_valid_also_strokes_no_e004(self):
+        """可證偽用：合法宣告必須乾淨，否則上面四條可能只是「總是報錯」。"""
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{
+                "id": "entry-1", "stroke": "free", "also_strokes": ["back"],
+            }]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E004"]), 0)
 
 
 class TestW002CertaintyNoSource(FixtureTestBase):

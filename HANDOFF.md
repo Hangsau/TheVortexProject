@@ -440,7 +440,20 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
   W002／W008 是一體兩面（顯示字串沒遷 `source_ids` → 註冊表那頭就沒人引用 → 報孤兒來源），**應該一起做而不是分兩輪**。W011 是 🟠 條目缺 `observation_basis`，屬內容補寫不是工具問題。
 
-- **D. 測試 harness 的複製迴圈是結構性風險，本輪抓到兩處、都已補，但幾乎可以確定還有第三處。** `tests/test_validate.py` 自己重寫了 `validate.py` 主迴圈而不是呼叫它。第一處：加 `diagnostic` 層時產品端改對了、測試端沒跟上（**新層在測試裡零覆蓋而全部測試仍然綠燈**）。第二處：`inbound_ids` 只累計 `links.*`，W003 有一半邏輯從未被覆蓋。兩處都已改成呼叫產品端 helper 並加註解釘住。**下一步應該系統性掃一遍**：把 harness 裡每一段「自己寫的邏輯」對照產品端，凡是產品端有對應函式的一律改成呼叫。這是「commit + tests pass ≠ 實際生效」的反向版本：**改對了，但測試證明不了它改對了。**
+- **D. ✅ 測試 harness 的複製迴圈已系統性掃完（2026-09-03）。共四處，全部處理。** `tests/test_validate.py` 的 `_run()` 自己重寫了 `validate.py` 主迴圈而不是呼叫它。第一、二處先前已補：加 `diagnostic` 層時產品端改對了、測試端沒跟上；`inbound_ids` 只累計 `links.*`，W003 有一半邏輯從未被覆蓋。
+
+  **掃完後找到的第三、第四處比前兩處嚴重——不是「邏輯落後」，是「產品端有、測試端整段沒有」：**
+
+  | # | 位置 | 漂移內容 |
+  |---|---|---|
+  | ③ | E004 受控欄位迴圈 | 產品端查五個欄位，harness 只列四個——**`joint_region` 零覆蓋** |
+  | ④ | `also_strokes` 宣告檢查 | 產品端三條規則（須為 list／值須登錄／**不得自列本式**），harness **整段不存在** |
+
+  **修法是抽函式，不是把漏的補進 harness**——補進去只會產生第三份可以再落後的複本。已在 `validate.py` 抽出 `check_links_block()` 與 `check_taxonomy_fields()`（含 `TAXONOMY_SCALAR_FIELDS` 常數，**日後加受控欄位只改這一個 tuple，測試端自動跟上**），產品端主迴圈約 90 行直接換成兩次呼叫，harness 換成同樣兩次呼叫。**驗證器逐行輸出比對完全相同**（`C:/tmp/val.txt` vs `val2.txt`，SAME），確認是純抽取不是行為變更。
+
+  新增 `TestE004FieldsMissedByOldHarness` 六條，釘住 `joint_region` 與 `also_strokes` 三規則，另含兩條「合法輸入必須乾淨」讓整組可證偽。**已實測：把 `joint_region` 從 tuple 拿掉、把 `also_strokes` 短路掉，六條裡四條立刻變紅**。全套 **213 → 219 passed／8 subtests**。
+
+  **這是「commit + tests pass ≠ 實際生效」的反向版本：改對了，但測試證明不了它改對了。**四處全都是綠燈狀態下的零覆蓋，沒有任何一處會被測試結果暴露出來——只能靠逐行對照產品端才看得到。
 
 - **E. 同步 my-site**：`my-site/layouts/vortex/vortex-movement.html` 的硬編覆蓋數字要改成 **59/59**（原 57/59），並補上第四、第五次推翻的自我更正段落，與既有三段同一語氣。
 
