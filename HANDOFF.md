@@ -444,6 +444,15 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
   **真正該接的是 injuries 那 28 筆**：同檔另有 **16** 筆的 `mechanism_link`／`technical_link`／`perception_link` 是填著的（如 `swimmers-shoulder` → `free.tech.10`、`breaststrokers-knee` → `breast.tech.36/37`），代表這個接法在本檔內已成立且有現成範例，那 28 筆是真的漏了。**順帶查到一條沒接上的線**：即使是填著的那 16 筆，`perception_link` 的文字都在點名 L 級（「L4–L6 手感與全身張力」「L0 呼吸感知」），但 `perception_link_ids` **全部是空陣列**——而 `water-sense-levels.yaml` 的 26 筆（`free.L4`、`back.L2`…）正好整批落在第③類孤兒裡。**第①類的 injuries 與第③類的 water-sense-levels 是同一條斷線的兩端，該一起做。**
 
+  **錯誤 20（接完三筆之後、要接下一批時抓到）：上面那句「真正該接的是 injuries 那 28 筆」——**錯**。那 28 筆不是「漏填 ids」，是**從來沒寫過那個關聯**，而且其中大多數不該由接線來補。**
+
+  做法是把 48 個 draft 的六個 links 欄位一次全掃出來看形狀（不是抽樣、不是憑 HANDOFF 記憶），結果：
+  - **有散文的只有 16 筆**（正好就是上面說的那 16），其餘 **32 筆六個欄位全是 `None`**。沒有散文就沒有任何依據可以決定要指向誰——**替它們補連結等於當場發明一條臨床主張，那是寫內容不是接線**，不能算在「接線債」裡。
+  - **`mechanism_link` 的實際契約跟我以為的不同。** 七筆已填的 `mechanism_link_ids`，它的 `mechanism_link` 散文**就是目標 ID 本身**（`exercise-amenorrhea` → 散文 `female-athlete-triad`、ids `['female-athlete-triad']`；`scheuermann-kyphosis` → `extension-low-back-pain`…）。也就是說這個鍵是**傷害條目 → 傷害條目**的機制上游關係，不是指向技術／感知層。
+  - **於是那兩筆「有散文但 ids 空」的 `mechanism_link` 不是待辦，是誤用同一個鍵**：`breaststrokers-knee` 寫的是「踢腿外翻負荷與髖旋轉活動度可接『硬體邊界 vs 感知缺陷』判斷」、`swimmers-shoulder` 寫的是「前鋸肌耐力是 EVF 的硬體前提」——兩句點名的都是**框架概念**（CLAUDE.md 的核心概念），不是任何條目。硬要填就得指一個不存在的實體。**保持空的是對的。**
+  - **結論：injuries 的接線債實際上已經清完了**，就是本輪這三筆。剩下的是兩件性質完全不同的事：①`mechanism_link` 鍵語意分裂（同一個鍵被當成「指另一條傷害」與「指框架概念」兩種用），要決定是拆鍵還是把後者搬去別的欄位；②那 32 筆無散文條目要不要補機制關係，那是內容工作、要有來源，不是接線。
+  - **這一則跟錯誤 17 是同一型的第二次犯**：錯誤 17 是「看到鍵在值空就推論打算做但沒做」，這一則是「看到已填筆數 16 就推論其餘同型待辦」。兩次都是**從欄位形狀反推意圖，而沒有去讀那個鍵實際裝什麼**。差別只在錯誤 17 我是查目標檔才發現，這次是查同鍵的既有填法才發現——**「同一個鍵的既有值長什麼樣」跟「目標檔裡有什麼」一樣，都要先看過才准判斷一格空白**。
+
   **錯誤 18（動手接 injuries 的線時抓到，已修，W003 因此 347 → 403）：`collect_outbound_ids()` 把 `links` 底下**任何**非空值都當成一條出邊——這是 fail-open，藏掉 56 筆真孤兒。**
 
   - **兩半，都不是條目對條目的邊**：①**49 筆**靠 `links.development_stages` 撐著（`breathing/` 全部＋`periodization/` 大半）。那個鍵走 `LINKS_VOCAB_REF_KEYS`，值是 **taxonomy 詞彙**（`t2t` 這種），不是條目 ID——指向詞彙表不等於跟任何條目連上。②**7 筆**靠 injuries 的 `mechanism_link`／`technical_link`／`perception_link` **散文顯示字串**撐著，而它們配對的 `*_link_ids` 全是空陣列。那三個鍵是 S4b 凍結的自由文字（my-site 就當純字串印），**拿人讀的句子當機器邊**正是這一輪一路在抓的同一型錯。
