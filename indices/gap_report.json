@@ -2,18 +2,14 @@
   "schema_version": 1,
   "summary": {
     "high_certainty_without_source": 0,
-    "unused_taxonomy_values": 9,
-    "unlinked_records": 528
+    "unused_taxonomy_values": 7,
+    "unlinked_records": 399
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
     {
       "field": "action_status",
       "value": "do-not-prescribe"
-    },
-    {
-      "field": "claim_status",
-      "value": "disputed"
     },
     {
       "field": "claim_status",
@@ -28,12 +24,8 @@
       "value": "evidence-gap"
     },
     {
-      "field": "phase_model",
-      "value": "event-window"
-    },
-    {
       "field": "publication_status",
-      "value": "published"
+      "value": "draft"
     },
     {
       "field": "publication_status",
@@ -136,19 +128,9 @@
       "path": "levels[13]"
     },
     {
-      "id": "back.err1",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[25]"
-    },
-    {
       "id": "back.err10",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[34]"
-    },
-    {
-      "id": "back.err11",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[35]"
     },
     {
       "id": "back.err12",
@@ -156,19 +138,9 @@
       "path": "errors[36]"
     },
     {
-      "id": "back.err13",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[37]"
-    },
-    {
       "id": "back.err14",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[38]"
-    },
-    {
-      "id": "back.err15",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[39]"
     },
     {
       "id": "back.err16",
@@ -176,34 +148,9 @@
       "path": "errors[40]"
     },
     {
-      "id": "back.err17",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[41]"
-    },
-    {
-      "id": "back.err2",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[26]"
-    },
-    {
-      "id": "back.err3",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[27]"
-    },
-    {
       "id": "back.err4",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[28]"
-    },
-    {
-      "id": "back.err5",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[29]"
-    },
-    {
-      "id": "back.err6",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[30]"
     },
     {
       "id": "back.err7",
@@ -211,49 +158,9 @@
       "path": "errors[31]"
     },
     {
-      "id": "back.err8",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[32]"
-    },
-    {
-      "id": "back.err9",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[33]"
-    },
-    {
       "id": "back.pre.orientation",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[18]"
-    },
-    {
-      "id": "back.tech.10",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[53]"
-    },
-    {
-      "id": "back.tech.11",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[54]"
-    },
-    {
-      "id": "back.tech.12",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[55]"
-    },
-    {
-      "id": "back.tech.13",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[56]"
-    },
-    {
-      "id": "back.tech.14",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[57]"
-    },
-    {
-      "id": "back.tech.15",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[58]"
     },
     {
       "id": "back.tech.16",
@@ -321,24 +228,9 @@
       "path": "points[70]"
     },
     {
-      "id": "back.tech.28",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[41]"
-    },
-    {
-      "id": "back.tech.29",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[42]"
-    },
-    {
       "id": "back.tech.3",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[46]"
-    },
-    {
-      "id": "back.tech.30",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[44]"
     },
     {
       "id": "back.tech.4",
@@ -359,11 +251,6 @@
       "id": "back.tech.7",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[50]"
-    },
-    {
-      "id": "back.tech.8",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[51]"
     },
     {
       "id": "back.tech.9",
@@ -431,21 +318,6 @@
       "path": "errors[55]"
     },
     {
-      "id": "breast.err15",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[56]"
-    },
-    {
-      "id": "breast.err16",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[57]"
-    },
-    {
-      "id": "breast.err17",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[58]"
-    },
-    {
       "id": "breast.err2",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[43]"
@@ -496,36 +368,6 @@
       "path": "indicators[37]"
     },
     {
-      "id": "breast.tech.10",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[80]"
-    },
-    {
-      "id": "breast.tech.11",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[81]"
-    },
-    {
-      "id": "breast.tech.12",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[82]"
-    },
-    {
-      "id": "breast.tech.13",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[83]"
-    },
-    {
-      "id": "breast.tech.14",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[84]"
-    },
-    {
-      "id": "breast.tech.15",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[85]"
-    },
-    {
       "id": "breast.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[86]"
@@ -571,16 +413,6 @@
       "path": "points[93]"
     },
     {
-      "id": "breast.tech.24",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[94]"
-    },
-    {
-      "id": "breast.tech.25",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[95]"
-    },
-    {
       "id": "breast.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[96]"
@@ -591,19 +423,9 @@
       "path": "points[97]"
     },
     {
-      "id": "breast.tech.28",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[98]"
-    },
-    {
       "id": "breast.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[99]"
-    },
-    {
-      "id": "breast.tech.3",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[73]"
     },
     {
       "id": "breast.tech.30",
@@ -616,59 +438,119 @@
       "path": "points[101]"
     },
     {
-      "id": "breast.tech.35",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[175]"
+      "id": "breathing.framework.boundaries",
+      "file": "canonical/breathing/framework.yaml",
+      "path": "boundaries"
     },
     {
-      "id": "breast.tech.36",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[168]"
+      "id": "breathing.framework.grading",
+      "file": "canonical/breathing/framework.yaml",
+      "path": "grading"
     },
     {
-      "id": "breast.tech.37",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[169]"
+      "id": "breathing.framework.overview",
+      "file": "canonical/breathing/framework.yaml",
+      "path": "overview"
     },
     {
-      "id": "breast.tech.38",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[170]"
+      "id": "breathing.physiology.autonomic_coupling",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "autonomic_coupling"
     },
     {
-      "id": "breast.tech.4",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[74]"
+      "id": "breathing.physiology.baroreflex_resonance",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "baroreflex_resonance"
     },
     {
-      "id": "breast.tech.5",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[75]"
+      "id": "breathing.physiology.chemoreceptors",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "chemoreceptors"
     },
     {
-      "id": "breast.tech.6",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[76]"
+      "id": "breathing.physiology.muscles",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "muscles"
     },
     {
-      "id": "breast.tech.7",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[77]"
+      "id": "breathing.physiology.neural_control",
+      "file": "canonical/breathing/physiology.yaml",
+      "path": "neural_control"
     },
     {
-      "id": "breast.tech.8",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[78]"
+      "id": "breathing.regulation.box_breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "box_breathing"
     },
     {
-      "id": "breast.tech.9",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[79]"
+      "id": "breathing.regulation.claims_gap",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "claims_gap"
+    },
+    {
+      "id": "breathing.regulation.physiological_sigh",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "physiological_sigh"
+    },
+    {
+      "id": "breathing.regulation.principle",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "principle"
+    },
+    {
+      "id": "breathing.regulation.resonance_breathing",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "resonance_breathing"
+    },
+    {
+      "id": "breathing.regulation.wim_hof",
+      "file": "canonical/breathing/regulation.yaml",
+      "path": "wim_hof"
+    },
+    {
+      "id": "breathing.safety.hypocapnia_mechanism",
+      "file": "canonical/breathing/safety.yaml",
+      "path": "hypocapnia_mechanism"
+    },
+    {
+      "id": "breathing.safety.hypoxic_blackout",
+      "file": "canonical/breathing/safety.yaml",
+      "path": "hypoxic_blackout"
+    },
+    {
+      "id": "breathing.training.bolt_test",
+      "file": "canonical/breathing/training.yaml",
+      "path": "bolt_test"
+    },
+    {
+      "id": "breathing.training.buteyko",
+      "file": "canonical/breathing/training.yaml",
+      "path": "buteyko"
+    },
+    {
+      "id": "breathing.training.co2_tolerance",
+      "file": "canonical/breathing/training.yaml",
+      "path": "co2_tolerance"
+    },
+    {
+      "id": "breathing.training.imt",
+      "file": "canonical/breathing/training.yaml",
+      "path": "imt"
+    },
+    {
+      "id": "breathing.training.self_tracking",
+      "file": "canonical/breathing/training.yaml",
+      "path": "self_tracking"
     },
     {
       "id": "chlorine-eye-irritation",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[14]"
+    },
+    {
+      "id": "cold-water-shock",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[23]"
     },
     {
       "id": "common.pre.resistance",
@@ -741,19 +623,24 @@
       "path": "cells[3]"
     },
     {
+      "id": "drowning",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[25]"
+    },
+    {
       "id": "exertional-sudden-cardiac-death",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[26]"
     },
     {
-      "id": "extension-low-back-pain",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[8]"
-    },
-    {
       "id": "femoroacetabular-impingement",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[9]"
+    },
+    {
+      "id": "flip-turn-wall-push",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[38]"
     },
     {
       "id": "fly.L2",
@@ -881,69 +768,9 @@
       "path": "indicators[27]"
     },
     {
-      "id": "fly.tech.10",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[111]"
-    },
-    {
-      "id": "fly.tech.11",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[112]"
-    },
-    {
-      "id": "fly.tech.12",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[113]"
-    },
-    {
-      "id": "fly.tech.13",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[114]"
-    },
-    {
-      "id": "fly.tech.14",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[115]"
-    },
-    {
-      "id": "fly.tech.15",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[116]"
-    },
-    {
-      "id": "fly.tech.16",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[117]"
-    },
-    {
-      "id": "fly.tech.17",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[118]"
-    },
-    {
-      "id": "fly.tech.18",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[119]"
-    },
-    {
       "id": "fly.tech.19",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[120]"
-    },
-    {
-      "id": "fly.tech.2",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[103]"
-    },
-    {
-      "id": "fly.tech.20",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[121]"
-    },
-    {
-      "id": "fly.tech.21",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[122]"
     },
     {
       "id": "fly.tech.22",
@@ -956,24 +783,9 @@
       "path": "points[124]"
     },
     {
-      "id": "fly.tech.24",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[125]"
-    },
-    {
-      "id": "fly.tech.25",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[126]"
-    },
-    {
       "id": "fly.tech.26",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[127]"
-    },
-    {
-      "id": "fly.tech.27",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[128]"
     },
     {
       "id": "fly.tech.28",
@@ -991,11 +803,6 @@
       "path": "points[104]"
     },
     {
-      "id": "fly.tech.30",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[131]"
-    },
-    {
       "id": "fly.tech.31",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[132]"
@@ -1011,34 +818,9 @@
       "path": "points[134]"
     },
     {
-      "id": "fly.tech.34",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[135]"
-    },
-    {
       "id": "fly.tech.35",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[136]"
-    },
-    {
-      "id": "fly.tech.36",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[166]"
-    },
-    {
-      "id": "fly.tech.37",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[171]"
-    },
-    {
-      "id": "fly.tech.38",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[172]"
-    },
-    {
-      "id": "fly.tech.4",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[105]"
     },
     {
       "id": "fly.tech.5",
@@ -1049,16 +831,6 @@
       "id": "fly.tech.6",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[107]"
-    },
-    {
-      "id": "fly.tech.7",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[108]"
-    },
-    {
-      "id": "fly.tech.8",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[109]"
     },
     {
       "id": "fly.tech.9",
@@ -1201,16 +973,6 @@
       "path": "errors[22]"
     },
     {
-      "id": "free.err24",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[23]"
-    },
-    {
-      "id": "free.err25",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[24]"
-    },
-    {
       "id": "free.err3",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[2]"
@@ -1251,39 +1013,14 @@
       "path": "indicators[6]"
     },
     {
-      "id": "free.tech.10",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[11]"
-    },
-    {
-      "id": "free.tech.11",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[12]"
-    },
-    {
       "id": "free.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[13]"
     },
     {
-      "id": "free.tech.13",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[14]"
-    },
-    {
       "id": "free.tech.14",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[15]"
-    },
-    {
-      "id": "free.tech.15",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[16]"
-    },
-    {
-      "id": "free.tech.16",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[17]"
     },
     {
       "id": "free.tech.17",
@@ -1331,31 +1068,6 @@
       "path": "points[27]"
     },
     {
-      "id": "free.tech.26",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[28]"
-    },
-    {
-      "id": "free.tech.27",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[8]"
-    },
-    {
-      "id": "free.tech.28",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[9]"
-    },
-    {
-      "id": "free.tech.29",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[18]"
-    },
-    {
-      "id": "free.tech.3",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[2]"
-    },
-    {
       "id": "free.tech.30",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[31]"
@@ -1366,84 +1078,9 @@
       "path": "points[32]"
     },
     {
-      "id": "free.tech.32",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[29]"
-    },
-    {
-      "id": "free.tech.33",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[30]"
-    },
-    {
-      "id": "free.tech.34",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[33]"
-    },
-    {
-      "id": "free.tech.35",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[34]"
-    },
-    {
-      "id": "free.tech.36",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[35]"
-    },
-    {
-      "id": "free.tech.37",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[36]"
-    },
-    {
-      "id": "free.tech.38",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[37]"
-    },
-    {
-      "id": "free.tech.39",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[38]"
-    },
-    {
-      "id": "free.tech.4",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[3]"
-    },
-    {
-      "id": "free.tech.40",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[39]"
-    },
-    {
       "id": "free.tech.41",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[40]"
-    },
-    {
-      "id": "free.tech.5",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[4]"
-    },
-    {
-      "id": "free.tech.6",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[5]"
-    },
-    {
-      "id": "free.tech.7",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[6]"
-    },
-    {
-      "id": "free.tech.8",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[7]"
-    },
-    {
-      "id": "free.tech.9",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[10]"
     },
     {
       "id": "groin-adductor-strain",
@@ -1461,189 +1098,9 @@
       "path": "injuries[32]"
     },
     {
-      "id": "movement.action.ankle-foot.plantarflexion",
+      "id": "movement.action.hip.adduction",
       "file": "canonical/movement/actions.yaml",
-      "path": "actions[1]"
-    },
-    {
-      "id": "movement.action.hip.flexion",
-      "file": "canonical/movement/actions.yaml",
-      "path": "actions[4]"
-    },
-    {
-      "id": "movement.action.knee.extension",
-      "file": "canonical/movement/actions.yaml",
-      "path": "actions[5]"
-    },
-    {
-      "id": "movement.action.shoulder-complex.elevation",
-      "file": "canonical/movement/actions.yaml",
-      "path": "actions[0]"
-    },
-    {
-      "id": "movement.action.trunk.axial-rotation",
-      "file": "canonical/movement/actions.yaml",
-      "path": "actions[6]"
-    },
-    {
-      "id": "movement.action.wrist-hand.extension",
-      "file": "canonical/movement/actions.yaml",
-      "path": "actions[3]"
-    },
-    {
-      "id": "movement.action.wrist-hand.flexion",
-      "file": "canonical/movement/actions.yaml",
-      "path": "actions[2]"
-    },
-    {
-      "id": "movement.demand.breast.arm-insweep.breath-event-separation",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[14]"
-    },
-    {
-      "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[13]"
-    },
-    {
-      "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[6]"
-    },
-    {
-      "id": "movement.demand.breast.leg-insweep.foot-orientation-control",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[5]"
-    },
-    {
-      "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[7]"
-    },
-    {
-      "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[9]"
-    },
-    {
-      "id": "movement.demand.fly.second-kick.timing-with-arm-push",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[8]"
-    },
-    {
-      "id": "movement.demand.free.down-kick.ankle-plantarflexion",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[2]"
-    },
-    {
-      "id": "movement.demand.free.down-kick.narrow-channel-alignment",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[10]"
-    },
-    {
-      "id": "movement.demand.free.early-pull-through.high-elbow-configuration",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[4]"
-    },
-    {
-      "id": "movement.demand.free.entry.shoulder-line-roll-peak",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[15]"
-    },
-    {
-      "id": "movement.demand.free.front-quadrant-propulsion.wrist-isometric-stability",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[3]"
-    },
-    {
-      "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[11]"
-    },
-    {
-      "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[12]"
-    },
-    {
-      "id": "movement.demand.starts-turns.underwater-glide.shoulder-elevation",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[0]"
-    },
-    {
-      "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
-      "file": "canonical/movement/stroke-demands.yaml",
-      "path": "demands[1]"
-    },
-    {
-      "id": "movement.intervention.ankle-plantarflexion.capacity-control",
-      "file": "canonical/movement/interventions.yaml",
-      "path": "interventions[3]"
-    },
-    {
-      "id": "movement.intervention.ankle-plantarflexion.conditional-mobility",
-      "file": "canonical/movement/interventions.yaml",
-      "path": "interventions[2]"
-    },
-    {
-      "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
-      "file": "canonical/movement/interventions.yaml",
-      "path": "interventions[4]"
-    },
-    {
-      "id": "movement.intervention.shoulder-elevation.active-control",
-      "file": "canonical/movement/interventions.yaml",
-      "path": "interventions[0]"
-    },
-    {
-      "id": "movement.intervention.shoulder-elevation.conditional-soft-tissue",
-      "file": "canonical/movement/interventions.yaml",
-      "path": "interventions[1]"
-    },
-    {
-      "id": "movement.muscle.ankle-dorsiflexors",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[4]"
-    },
-    {
-      "id": "movement.muscle.ankle-plantarflexors",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[3]"
-    },
-    {
-      "id": "movement.muscle.hip-flexors",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[7]"
-    },
-    {
-      "id": "movement.muscle.knee-extensors",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[8]"
-    },
-    {
-      "id": "movement.muscle.latissimus-dorsi",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[2]"
-    },
-    {
-      "id": "movement.muscle.rotator-cuff",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[1]"
-    },
-    {
-      "id": "movement.muscle.scapular-upward-rotators",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[0]"
-    },
-    {
-      "id": "movement.muscle.wrist-extensors",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[6]"
-    },
-    {
-      "id": "movement.muscle.wrist-flexors",
-      "file": "canonical/movement/muscle-groups.yaml",
-      "path": "muscle_groups[5]"
+      "path": "actions[31]"
     },
     {
       "id": "open-water-marine-biological-hazards",
@@ -1661,9 +1118,99 @@
       "path": "injuries[42]"
     },
     {
+      "id": "periodization.dryland.caveats",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "null_caveats"
+    },
+    {
+      "id": "periodization.dryland.concurrent",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "concurrent_scheduling"
+    },
+    {
+      "id": "periodization.dryland.flexibility",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "flexibility_mobility"
+    },
+    {
+      "id": "periodization.dryland.injury",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "injury_prevention"
+    },
+    {
+      "id": "periodization.dryland.methods",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "methods"
+    },
+    {
+      "id": "periodization.dryland.needs_analysis",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "needs_analysis"
+    },
+    {
+      "id": "periodization.dryland.overview",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "overview"
+    },
+    {
+      "id": "periodization.dryland.transfer",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "transfer_evidence"
+    },
+    {
+      "id": "periodization.dryland.youth",
+      "file": "canonical/periodization/dryland.yaml",
+      "path": "youth_safety"
+    },
+    {
+      "id": "periodization.structure.annual.bicycle",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "annual_plan_types[1]"
+    },
+    {
+      "id": "periodization.structure.annual.monocycle",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "annual_plan_types[0]"
+    },
+    {
       "id": "periodization.structure.annual.multipeak",
       "file": "canonical/periodization/structure.yaml",
       "path": "annual_plan_types[3]"
+    },
+    {
+      "id": "periodization.structure.annual.tricycle",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "annual_plan_types[2]"
+    },
+    {
+      "id": "periodization.structure.detraining",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "detraining"
+    },
+    {
+      "id": "periodization.structure.perception_periodization_bridge",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "perception_periodization_bridge"
+    },
+    {
+      "id": "periodization.structure.school_block",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "school_block"
+    },
+    {
+      "id": "periodization.structure.schools_overview",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "schools_overview"
+    },
+    {
+      "id": "periodization.structure.swim_annual",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "swim_annual_structure"
+    },
+    {
+      "id": "periodization.structure.swim_youth_ltad",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "swim_youth_ltad"
     },
     {
       "id": "periodization.taper.definition",
@@ -1691,6 +1238,11 @@
       "path": "peak"
     },
     {
+      "id": "periodization.taper.swim",
+      "file": "canonical/periodization/taper.yaml",
+      "path": "swim_application"
+    },
+    {
       "id": "periodization.taper.type.fast_exponential",
       "file": "canonical/periodization/taper.yaml",
       "path": "taper_types[2]"
@@ -1709,6 +1261,51 @@
       "id": "periodization.taper.volume",
       "file": "canonical/periodization/taper.yaml",
       "path": "variables[0]"
+    },
+    {
+      "id": "periodization.zones.endurance_phases",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "endurance_periodization"
+    },
+    {
+      "id": "periodization.zones.energy_systems_primer",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "energy_systems_primer"
+    },
+    {
+      "id": "periodization.zones.olbrecht_model",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "olbrecht_model"
+    },
+    {
+      "id": "periodization.zones.school_polarized",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "school_polarized"
+    },
+    {
+      "id": "periodization.zones.swim",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "swim_application"
+    },
+    {
+      "id": "periodization.zones.swim_energy_by_distance",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "swim_energy_by_distance"
+    },
+    {
+      "id": "periodization.zones.swim_maglischo",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "swim_zones_maglischo"
+    },
+    {
+      "id": "periodization.zones.swim_three_zone",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "swim_zones_three"
+    },
+    {
+      "id": "periodization.zones.swim_tid",
+      "file": "canonical/periodization/zones.yaml",
+      "path": "swim_tid"
     },
     {
       "id": "periodization.zones.table_11_1",
@@ -2091,16 +1688,6 @@
       "path": "injuries[15]"
     },
     {
-      "id": "red-s",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[34]"
-    },
-    {
-      "id": "rotator-cuff-tendinopathy",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[1]"
-    },
-    {
       "id": "sci-hip-flexor-contracture",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[16]"
@@ -2111,9 +1698,19 @@
       "path": "injuries[45]"
     },
     {
+      "id": "shallow-water-blackout",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[28]"
+    },
+    {
       "id": "shoulder-multidirectional-instability",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[2]"
+    },
+    {
+      "id": "sipe",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[29]"
     },
     {
       "id": "slap-lesion",
@@ -2126,14 +1723,14 @@
       "path": "injuries[11]"
     },
     {
+      "id": "starting-block-impact",
+      "file": "canonical/health/injuries.yaml",
+      "path": "injuries[41]"
+    },
+    {
       "id": "starts-turns.err1",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[88]"
-    },
-    {
-      "id": "starts-turns.err10",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[97]"
     },
     {
       "id": "starts-turns.err11",
@@ -2149,11 +1746,6 @@
       "id": "starts-turns.err13",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[100]"
-    },
-    {
-      "id": "starts-turns.err14",
-      "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[101]"
     },
     {
       "id": "starts-turns.err2",
@@ -2196,24 +1788,9 @@
       "path": "errors[96]"
     },
     {
-      "id": "starts-turns.tech.10",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[189]"
-    },
-    {
-      "id": "starts-turns.tech.11",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[190]"
-    },
-    {
       "id": "starts-turns.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[191]"
-    },
-    {
-      "id": "starts-turns.tech.13",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[192]"
     },
     {
       "id": "starts-turns.tech.14",
@@ -2226,44 +1803,9 @@
       "path": "points[194]"
     },
     {
-      "id": "starts-turns.tech.16",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[195]"
-    },
-    {
       "id": "starts-turns.tech.17",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[196]"
-    },
-    {
-      "id": "starts-turns.tech.18",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[197]"
-    },
-    {
-      "id": "starts-turns.tech.19",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[198]"
-    },
-    {
-      "id": "starts-turns.tech.2",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[177]"
-    },
-    {
-      "id": "starts-turns.tech.20",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[199]"
-    },
-    {
-      "id": "starts-turns.tech.21",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[200]"
-    },
-    {
-      "id": "starts-turns.tech.22",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[201]"
     },
     {
       "id": "starts-turns.tech.23",
@@ -2271,49 +1813,9 @@
       "path": "points[202]"
     },
     {
-      "id": "starts-turns.tech.24",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[203]"
-    },
-    {
-      "id": "starts-turns.tech.25",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[204]"
-    },
-    {
-      "id": "starts-turns.tech.26",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[205]"
-    },
-    {
-      "id": "starts-turns.tech.27",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[206]"
-    },
-    {
       "id": "starts-turns.tech.28",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[207]"
-    },
-    {
-      "id": "starts-turns.tech.29",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[208]"
-    },
-    {
-      "id": "starts-turns.tech.3",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[178]"
-    },
-    {
-      "id": "starts-turns.tech.30",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[209]"
-    },
-    {
-      "id": "starts-turns.tech.31",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[210]"
     },
     {
       "id": "starts-turns.tech.32",
@@ -2326,64 +1828,14 @@
       "path": "points[212]"
     },
     {
-      "id": "starts-turns.tech.34",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[213]"
-    },
-    {
-      "id": "starts-turns.tech.35",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[214]"
-    },
-    {
       "id": "starts-turns.tech.36",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[215]"
     },
     {
-      "id": "starts-turns.tech.37",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[216]"
-    },
-    {
-      "id": "starts-turns.tech.38",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[217]"
-    },
-    {
       "id": "starts-turns.tech.39",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[218]"
-    },
-    {
-      "id": "starts-turns.tech.4",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[179]"
-    },
-    {
-      "id": "starts-turns.tech.40",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[219]"
-    },
-    {
-      "id": "starts-turns.tech.41",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[180]"
-    },
-    {
-      "id": "starts-turns.tech.42",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[181]"
-    },
-    {
-      "id": "starts-turns.tech.43",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[182]"
-    },
-    {
-      "id": "starts-turns.tech.44",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[183]"
     },
     {
       "id": "starts-turns.tech.45",
@@ -2394,41 +1846,6 @@
       "id": "starts-turns.tech.46",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[221]"
-    },
-    {
-      "id": "starts-turns.tech.47",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[173]"
-    },
-    {
-      "id": "starts-turns.tech.48",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[174]"
-    },
-    {
-      "id": "starts-turns.tech.5",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[184]"
-    },
-    {
-      "id": "starts-turns.tech.6",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[185]"
-    },
-    {
-      "id": "starts-turns.tech.7",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[186]"
-    },
-    {
-      "id": "starts-turns.tech.8",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[187]"
-    },
-    {
-      "id": "starts-turns.tech.9",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[188]"
     },
     {
       "id": "surfers-ear-exostosis",
@@ -2536,16 +1953,6 @@
       "path": "errors[83]"
     },
     {
-      "id": "udk.tech.10",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[146]"
-    },
-    {
-      "id": "udk.tech.11",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[147]"
-    },
-    {
       "id": "udk.tech.12",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[148]"
@@ -2556,29 +1963,9 @@
       "path": "points[149]"
     },
     {
-      "id": "udk.tech.14",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[150]"
-    },
-    {
-      "id": "udk.tech.15",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[151]"
-    },
-    {
       "id": "udk.tech.16",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[152]"
-    },
-    {
-      "id": "udk.tech.17",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[153]"
-    },
-    {
-      "id": "udk.tech.18",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[154]"
     },
     {
       "id": "udk.tech.19",
@@ -2601,19 +1988,9 @@
       "path": "points[157]"
     },
     {
-      "id": "udk.tech.22",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[158]"
-    },
-    {
       "id": "udk.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[159]"
-    },
-    {
-      "id": "udk.tech.24",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[160]"
     },
     {
       "id": "udk.tech.25",
@@ -2631,11 +2008,6 @@
       "path": "points[163]"
     },
     {
-      "id": "udk.tech.28",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[164]"
-    },
-    {
       "id": "udk.tech.29",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[165]"
@@ -2646,39 +2018,14 @@
       "path": "points[139]"
     },
     {
-      "id": "udk.tech.30",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[167]"
-    },
-    {
       "id": "udk.tech.4",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[140]"
     },
     {
-      "id": "udk.tech.5",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[141]"
-    },
-    {
-      "id": "udk.tech.6",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[142]"
-    },
-    {
-      "id": "udk.tech.7",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[143]"
-    },
-    {
       "id": "udk.tech.8",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[144]"
-    },
-    {
-      "id": "udk.tech.9",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[145]"
     },
     {
       "id": "uv-photo-damage",

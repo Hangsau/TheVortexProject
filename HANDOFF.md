@@ -422,7 +422,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 347（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 552。** 這些全部先於本輪存在。**W003 已查過並修掉 45 筆誤報（見錯誤 16）；剩下的 347 也已全數分類過，不是第三個檢查器缺口，是三種形狀不同的內容債**（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位）：
+- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 399（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 604。** 除 W003 外全部先於本輪存在。**W003 本輪走了四步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）**399**。下表的三類分佈凍結在 347 那個時點，數量未重算——要動手前先重跑一次分類。**（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位）
 
   | 類 | 數量 | 形狀 | 該怎麼處理 |
   |---|---|---|---|
@@ -438,6 +438,20 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
   **真正該接的是 injuries 那 28 筆**：同檔另有 **16** 筆的 `mechanism_link`／`technical_link`／`perception_link` 是填著的（如 `swimmers-shoulder` → `free.tech.10`、`breaststrokers-knee` → `breast.tech.36/37`），代表這個接法在本檔內已成立且有現成範例，那 28 筆是真的漏了。**順帶查到一條沒接上的線**：即使是填著的那 16 筆，`perception_link` 的文字都在點名 L 級（「L4–L6 手感與全身張力」「L0 呼吸感知」），但 `perception_link_ids` **全部是空陣列**——而 `water-sense-levels.yaml` 的 26 筆（`free.L4`、`back.L2`…）正好整批落在第③類孤兒裡。**第①類的 injuries 與第③類的 water-sense-levels 是同一條斷線的兩端，該一起做。**
 
+  **錯誤 18（動手接 injuries 的線時抓到，已修，W003 因此 347 → 403）：`collect_outbound_ids()` 把 `links` 底下**任何**非空值都當成一條出邊——這是 fail-open，藏掉 56 筆真孤兒。**
+
+  - **兩半，都不是條目對條目的邊**：①**49 筆**靠 `links.development_stages` 撐著（`breathing/` 全部＋`periodization/` 大半）。那個鍵走 `LINKS_VOCAB_REF_KEYS`，值是 **taxonomy 詞彙**（`t2t` 這種），不是條目 ID——指向詞彙表不等於跟任何條目連上。②**7 筆**靠 injuries 的 `mechanism_link`／`technical_link`／`perception_link` **散文顯示字串**撐著，而它們配對的 `*_link_ids` 全是空陣列。那三個鍵是 S4b 凍結的自由文字（my-site 就當純字串印），**拿人讀的句子當機器邊**正是這一輪一路在抓的同一型錯。
+  - **這句話推翻了錯誤 16 那段的收尾**。當時寫「已新增 `collect_cross_ref_ids()`，**出邊入邊都接上**」，語氣是「W003 的視野缺口清完了」。**沒有清完**：`cross_ref_ids` 是補上一個該算而沒算的欄位（誤報，減 45），這次是拿掉三類不該算卻算了的欄位（漏報，加 56）。**同一個函式同時有漏看與亂看兩種病，我只查了前一種就宣告收工。**
+  - **修法**：`collect_outbound_ids()` 改成先按鍵類過濾，只認 `LINKS_ID_REF_KEYS` 與 `LINKS_IDS_KEYS`（＋既有的 movement 關聯欄位與 `cross_ref_ids`），docstring 裡把兩類 fail-open 都寫明。新回歸測試 `test_prose_and_vocab_links_are_not_w003_edges` 用三筆 fixture 釘住：散文＋空 `_ids` 不算邊、`development_stages` 不算邊（該筆**必須**被報成孤兒）、`technical_analysis` 算邊。
+  - **WARN 上升是正確結果，不是退步。** 檢查器停止 fail-open，帳面一定變難看；照 2026-09-02「WARN 從 610 升到 612，我沒有假裝達標」的先例辦。**上表那三類分佈是 347 那個時點的，第①類 41 筆現在必然低估**（injuries 那 7 筆散文孤兒會落進來），動手前先重跑一次分類。
+
+  **錯誤 19（寫錯誤 18 的收尾時抓到，已修，W003 403 → 399）：`build_indices.py` 是同一個複製迴圈的第三份——而且它的 docstring 就寫著 `"Mirror validate.py W003"`。**
+
+  - **怎麼抓到的**：我原本要在本檔寫一句「`unlinked_records` 557 與 W003 403 是兩套定義，不要互相對帳」，寫之前去讀 `unlinked_records()` 想確認差在哪，才發現**它根本不是另一套定義，是同一套的過期複本**——它的入邊只認 `links.*`，`collect_movement_relation_ids()` 與 `collect_cross_ref_ids()` 兩組全漏，所以孤兒虛報成 557。**「兩者定義不同」這句話如果照原樣寫下去，就會把一個 bug 封裝成規格，往後誰去對帳都會被這句話擋回來。**
+  - **順帶暴露出入邊不對稱**：驗證器主迴圈的入邊只認 `LINKS_ID_REF_KEYS`，出邊卻認到 `LINKS_IDS_KEYS`。於是 `perception_link_ids: [free.L4]` 能讓來源端脫離孤兒、**卻不替 `free.L4` 記一次指入**——同一個鍵在兩個方向有兩種語意。這正好會咬到下一件事：injuries 的 `perception_link_ids` 填完後，`water-sense-levels` 那 26 筆照樣掛在孤兒名單上。**已改成對稱**：出邊入邊共用 `collect_outbound_ids()` 一份定義，W003 403 → **399**（少的 4 筆是既有 `*_link_ids` 已指到的 injuries 條目）。
+  - **修法一致：刪複本，不修複本。** `build_indices.py` 的私有入邊迴圈刪掉改呼叫 `collect_outbound_ids()`；`validate.py` 主迴圈的兩段入邊累計也刪掉、改呼叫同一個函式；`check_links_block()` 不再兼管入邊（少一個參數）。現在**全庫只有一處定義「什麼算一條邊」**，`indices/gap_report.json` 的 `unlinked_records` 與 W003 因此必然相等（實測皆 399），對不上就是有人又分岔了。
+  - **⚠ 這一輪暴露出 harness 型測試的能力邊界，要記住**：我先試著把主迴圈改回舊寫法驗證新測試會不會變紅——**全綠**。因為 `_run()` 是主迴圈的重寫版，測試走的是 harness 那條路，**產品端主迴圈退化它偵測不到**。真正有效的證偽是去破共用的 `collect_outbound_ids()`（實測立刻變紅）。**所以測試只釘得住共用函式，主迴圈有沒有真的呼叫它得靠別的手段**——目前是驗證器逐行輸出比對（`C:/tmp/val.txt` vs `val2.txt`，SAME）。這是「commit + tests pass ≠ 實際生效」在本專案的具體形狀。
+
   W002／W008 是一體兩面（顯示字串沒遷 `source_ids` → 註冊表那頭就沒人引用 → 報孤兒來源），**應該一起做而不是分兩輪**。W011 是 🟠 條目缺 `observation_basis`，屬內容補寫不是工具問題。
 
 - **D. ✅ 測試 harness 的複製迴圈已系統性掃完（2026-09-03）。共四處，全部處理。** `tests/test_validate.py` 的 `_run()` 自己重寫了 `validate.py` 主迴圈而不是呼叫它。第一、二處先前已補：加 `diagnostic` 層時產品端改對了、測試端沒跟上；`inbound_ids` 只累計 `links.*`，W003 有一半邏輯從未被覆蓋。
@@ -451,9 +465,15 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
   **修法是抽函式，不是把漏的補進 harness**——補進去只會產生第三份可以再落後的複本。已在 `validate.py` 抽出 `check_links_block()` 與 `check_taxonomy_fields()`（含 `TAXONOMY_SCALAR_FIELDS` 常數，**日後加受控欄位只改這一個 tuple，測試端自動跟上**），產品端主迴圈約 90 行直接換成兩次呼叫，harness 換成同樣兩次呼叫。**驗證器逐行輸出比對完全相同**（`C:/tmp/val.txt` vs `val2.txt`，SAME），確認是純抽取不是行為變更。
 
-  新增 `TestE004FieldsMissedByOldHarness` 六條，釘住 `joint_region` 與 `also_strokes` 三規則，另含兩條「合法輸入必須乾淨」讓整組可證偽。**已實測：把 `joint_region` 從 tuple 拿掉、把 `also_strokes` 短路掉，六條裡四條立刻變紅**。全套 **213 → 219 passed／8 subtests**。
+  新增 `TestE004FieldsMissedByOldHarness` 六條，釘住 `joint_region` 與 `also_strokes` 三規則，另含兩條「合法輸入必須乾淨」讓整組可證偽。**已實測：把 `joint_region` 從 tuple 拿掉、把 `also_strokes` 短路掉，六條裡四條立刻變紅**。全套 **213 → 219 passed／8 subtests**（本輪最終 **222**，錯誤 18、19 各再加一條回歸測試）。
+
+  **⚠ 掃「四處」時漏了一個地方：`tools/` 底下的其他工具也可能有複本。** 錯誤 19 就是 `build_indices.py` 的第三份複製迴圈，而我當時只掃了 `tests/`。**下次要掃複製迴圈，範圍是所有 import `validate` 的檔，不只測試檔。**
 
   **這是「commit + tests pass ≠ 實際生效」的反向版本：改對了，但測試證明不了它改對了。**四處全都是綠燈狀態下的零覆蓋，沒有任何一處會被測試結果暴露出來——只能靠逐行對照產品端才看得到。
+
+- **F. ✅ `indices/` 陳舊已修，並已堵住複發路徑（2026-09-03）。** 重生 `tools/build_indices.py` 後 `record_count` **839 → 930**、`unlinked_records` **528 → 557**、`unused_taxonomy_values` **9 → 7**。上一次重生停在 `02b86a6`，此後**有 24 個動到 `canonical/` 的 commit**（總計 64 個）——也就是四個 JSON 已經落後將近整條 W4 的內容產出。
+  - **根因是流程漏登錄不是工具壞掉**：`CLAUDE.md` 的收尾規則第 1 條只寫「動到 canonical 就重生 `KNOWLEDGE_MAP.md`」，`build_indices.py` 只出現在 S5 的完成紀錄裡，從來沒進固定流程。**它又是 committed 產物**，所以既不會被 `.gitignore` 忽略、也不會有人因為 diff 髒而想起來要跑——它就只是安靜地舊著。已把 `build_indices.py` 併進 `CLAUDE.md` 收尾規則第 1 條。
+  - **重生後 `unlinked_records` 一度是 557、與驗證器的 W003 對不上——那個差額就是錯誤 19（見 C 項）。** 現在兩邊都是 **399**，而且是同一個函式算出來的。**這兩個數字從此可以互相對帳：對不上就代表有人又把邊定義分岔了。**
 
 - **E. 同步 my-site**：`my-site/layouts/vortex/vortex-movement.html` 的硬編覆蓋數字要改成 **59/59**（原 57/59），並補上第四、第五次推翻的自我更正段落，與既有三段同一語氣。
 

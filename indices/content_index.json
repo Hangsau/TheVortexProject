@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 839,
+  "record_count": 930,
   "records": [
     {
       "id": "A-shoulder-upper",
@@ -5780,7 +5780,9 @@
         "src.coach-observation",
         "src.the-race-club"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out"
+      ]
     },
     {
       "id": "breast.tech.16",
@@ -10980,6 +10982,34 @@
       "outgoing_ids": []
     },
     {
+      "id": "movement.action.ankle-foot.dorsiflexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[18]",
+      "title": "踝背屈",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "ankle-foot"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "movement.action.ankle-foot.plantarflexion",
       "domain": "movement",
       "file": "canonical/movement/actions.yaml",
@@ -10999,11 +11029,264 @@
           "ankle-foot"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
         "src.brockett-2016",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.ankle-foot.pronation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[19]",
+      "title": "距下／橫跗關節旋前",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "ankle-foot"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.nordin-frankel-2012"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.elbow.extension",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[10]",
+      "title": "肘伸展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.elbow.flexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[9]",
+      "title": "肘屈曲",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.forearm.pronation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[26]",
+      "title": "前臂旋前",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.forearm.supination",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[27]",
+      "title": "前臂旋後",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.hip.abduction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[14]",
+      "title": "髖外展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.hip.adduction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[31]",
+      "title": "髖內收",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.hip.extension",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[11]",
+      "title": "髖伸展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.hip.external-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[15]",
+      "title": "髖外旋",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
         "src.neumann-2017"
       ],
       "outgoing_ids": []
@@ -11028,7 +11311,63 @@
           "hip-knee"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.hip.internal-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[32]",
+      "title": "髖內旋",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.knee.axial-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[17]",
+      "title": "膝軸向旋轉",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -11056,7 +11395,63 @@
           "hip-knee"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.knee.flexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[16]",
+      "title": "膝屈曲",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "hip-knee"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.adduction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[20]",
+      "title": "肩內收",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -11084,13 +11479,293 @@
           "shoulder-arm"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
         "src.aliaj-2021",
         "src.fernandez-matias-2025",
         "src.ludewig-2009",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.extension",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[7]",
+      "title": "肩伸展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.external-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[12]",
+      "title": "肩外旋",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.horizontal-abduction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[30]",
+      "title": "肩水平外展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.horizontal-adduction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[13]",
+      "title": "肩水平內收",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.internal-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[8]",
+      "title": "肩內旋",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.scapular-elevation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[25]",
+      "title": "肩胛骨上提",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.scapular-posterior-tilt",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[24]",
+      "title": "肩胛骨後傾",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.scapular-protraction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[21]",
+      "title": "肩胛前伸",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.scapular-retraction",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[22]",
+      "title": "肩胛後縮",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.shoulder-complex.scapular-upward-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[23]",
+      "title": "肩胛骨上迴旋",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "shoulder-arm"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
         "src.neumann-2017"
       ],
       "outgoing_ids": []
@@ -11115,7 +11790,63 @@
           "spine-neck"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.trunk.extension",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[28]",
+      "title": "軀幹伸展",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "spine-neck"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.action.trunk.flexion",
+      "domain": "movement",
+      "file": "canonical/movement/actions.yaml",
+      "path": "actions[29]",
+      "title": "軀幹屈曲",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "joint_region": [
+          "spine-neck"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -11143,7 +11874,7 @@
           "shoulder-arm"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -11171,7 +11902,281 @@
           "shoulder-arm"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.catch.shoulder-rotation-reversal",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[17]",
+      "title": "仰式捕水期的肩軸向旋轉方向反轉需求",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.schleihauf-1979"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.down-kick.hip-extension-with-knee-sequence",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[22]",
+      "title": "仰式下踢的髖伸展與膝屈伸序列",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.entry.shoulder-elevation-plane",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[16]",
+      "title": "仰式入水期的肩上舉平面與肱骨外旋需求",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.pull.forearm-orientation-over-path-shape",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[18]",
+      "title": "仰式拉水期的前臂朝向優先於路徑形狀",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.gonjo-2020-c",
+        "src.maglischo-2003-b"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.push.shoulder-extension-internal-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[19]",
+      "title": "仰式推水期的肩伸展、內旋與肘伸展需求",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.recovery.elevation-path-with-obligatory-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[20]",
+      "title": "仰式回臂期的上舉平面軌跡與必要外旋",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.back.up-kick.hip-flexion-with-knee-extension",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[21]",
+      "title": "仰式上踢的髖屈曲、膝接近伸展與踝蹠屈",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.arm-catch.horizontal-adduction-with-rotation-reversal",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[24]",
+      "title": "蛙式捕水的水平內收命名與旋轉方向反轉",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "breast"
         ]
       },
       "source_ids": [
@@ -11202,7 +12207,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "breast"
@@ -11211,6 +12216,40 @@
       "source_ids": [
         "src.hall-murphy-2020",
         "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.arm-outsweep.elevation-plane-with-obligatory-external-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[23]",
+      "title": "蛙式外划的上舉平面、必然外旋與肘腕輕度屈曲",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11237,7 +12276,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "breast"
@@ -11247,6 +12286,41 @@
         "src.hall-murphy-2020",
         "src.oxford-2017",
         "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[26]",
+      "title": "蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節；髖的旋轉方向兩向並列",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.nordin-frankel-2012"
       ],
       "outgoing_ids": []
     },
@@ -11273,7 +12347,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "breast"
@@ -11310,7 +12384,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "breast"
@@ -11320,6 +12394,81 @@
         "src.hall-murphy-2020",
         "src.matheson-2011",
         "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[65]",
+      "title": "蹬腿外划：相位名稱是「外划」，關節內容卻是「伸展」",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.hayashi-2025",
+        "src.neumann-2017",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": [
+        "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out",
+        "movement.demand.breast.glide.plantarflexed-streamline-finish",
+        "movement.demand.breast.leg-insweep.foot-orientation-control",
+        "movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion"
+      ]
+    },
+    {
+      "id": "movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[25]",
+      "title": "蛙式收腿的髖屈曲外展、膝屈曲與踝背屈，以及可見現象的歸屬",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11346,7 +12495,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "fly"
@@ -11355,6 +12504,280 @@
       "source_ids": [
         "src.nuber-1986",
         "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.arm-catch.elbow-flexion-with-rotation-reversal",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[29]",
+      "title": "蝶式抓水的肘屈曲加深與旋轉方向反轉",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.arm-insweep.dual-axis-adduction-with-scapular-retraction",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[30]",
+      "title": "蝶式內掃的雙軸內收、軸向內旋與肩胛後縮",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.arm-outsweep.elevation-plane-with-obligatory-external-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[28]",
+      "title": "蝶式外掃的上舉平面命名與必然外旋",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.arm-upsweep.extension-with-sustained-internal-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[31]",
+      "title": "蝶式上划的肩伸展、內旋維持與肘腕伸展",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.breathing-window.cervical-extension-avoidance-in-an-event-window",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[61]",
+      "title": "呼吸視窗的頸椎伸展避免與回復，以及事件視窗這個分期性質",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "event-window"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.entry-pause.position-maintenance-and-pause-naming-conflict",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[53]",
+      "title": "入水停頓期的位置維持，與「停頓」一詞的命名衝突",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.entry.elevation-plane-and-contested-rotation-direction",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[27]",
+      "title": "蝶式入水的上舉平面、旋轉基準，與旋轉方向的來源分歧",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "disputed"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.pink-1993"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.fly.exit.extension-position-with-blank-rotation-field",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[32]",
+      "title": "蝶式出水的肩伸展位，與留白的旋轉欄位",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11381,7 +12804,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "fly"
@@ -11419,7 +12842,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "fly"
@@ -11431,6 +12854,74 @@
         "src.hall-murphy-2020",
         "src.riewald-rodeo-2015",
         "src.seifert-2008"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.catch.elevation-plane-shift-with-rotation-onset",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[39]",
+      "title": "自由式抓水期的上舉平面移動與旋轉起始",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.catch.palm-orientation-three-source-decomposition",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[40]",
+      "title": "掌心空間朝向與前臂關節位置是兩個欄位",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11457,7 +12948,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "free"
@@ -11494,7 +12985,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "free"
@@ -11530,7 +13021,7 @@
           "heinlein-2010-phases"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "free"
@@ -11540,6 +13031,41 @@
         "src.hall-murphy-2020",
         "src.pmc3438875",
         "src.suito-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.early-recovery.scapular-upward-rotation-with-wrist-neutral",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[58]",
+      "title": "早期回臂的肩胛上旋、肘屈曲光譜與腕中立",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "race-club-6phase"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11566,7 +13092,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "free"
@@ -11602,7 +13128,7 @@
           "race-club-6phase"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "free"
@@ -11611,6 +13137,76 @@
       "source_ids": [
         "src.caty-2007",
         "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.late-recovery.entry-drive-and-rotation-are-one-linkage",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[59]",
+      "title": "晚期回臂的上舉與肘伸展，以及「砸水」與「轉體」不是兩個指令",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "race-club-6phase"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.lift.deferred-descent-and-style-time-difference",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[54]",
+      "title": "升力相的上舉維持與下壓延後，以及風格差異的時間性質",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "race-club-6phase"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11637,7 +13233,7 @@
           "kudo-power-phase"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "free"
@@ -11649,6 +13245,443 @@
         "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.push.three-component-power-contribution",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[56]",
+      "title": "推水相由胸廓旋轉、肩內收與肘伸展三個成分共同構成",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "swimming-kinematics"
+        ],
+        "phase_model": [
+          "kudo-power-phase"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.kudo-yanai-matsuda-2025"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.rear-quadrant-propulsion.hip-snap-is-trunk-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[55]",
+      "title": "後象限推進的肩伸展與肘伸展，以及「髖部往後甩」的解剖歸屬",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "race-club-6phase"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.free.release.little-finger-orientation-is-not-a-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[57]",
+      "title": "釋放相的離水動作，與「小指朝上」不能反推關節旋轉",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "race-club-6phase"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[50]",
+      "title": "出水過渡期的流線維持與頸椎伸展延後",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[51]",
+      "title": "蛙式 Pullout：三種變體差在順序不差在關節，胸與腰在同一時刻朝相反方向",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017",
+        "src.pmc8960438-d",
+        "src.pmc9445308"
+      ],
+      "outgoing_ids": [
+        "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out",
+        "movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift",
+        "movement.demand.starts-turns.set-position.coexisting-setups-not-a-single-posture",
+        "movement.demand.udk.streamlined-glide.forearm-rotation-column-gap"
+      ]
+    },
+    {
+      "id": "movement.demand.starts-turns.entry.hyperstreamline-layering-and-unresolved-lumbar-choice",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[44]",
+      "title": "乾淨入水的超流線分層，與尚未解決的腰椎擇一",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "disputed"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.race-club-pdm-data"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.flight.posture-attainment-without-trajectory-change",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[43]",
+      "title": "飛行期的姿勢達成——關節動作不改變重心軌跡",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[46]",
+      "title": "翻滾的團身關節組成，以及「翻轉本身不是關節動作」",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.pmc5260528"
+      ],
+      "outgoing_ids": [
+        "movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary",
+        "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action"
+      ]
+    },
+    {
+      "id": "movement.demand.starts-turns.set-position.coexisting-setups-not-a-single-posture",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[41]",
+      "title": "起跳零位的並存設置——這裡是姿勢不是動作",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "disputed"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.blanksby-2002",
+        "src.neumann-2017",
+        "src.yeadon-et-al-mdpi-2024"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.takeoff.rear-leg-direction-reversal-and-joint-sequencing",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[42]",
+      "title": "起跳的後腿方向反轉、繞臂差在肘不在肩，與關節間時序",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.the-race-club-vm-b"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[45]",
+      "title": "進牆期的頸椎維持不伸展，與本層的覆蓋邊界",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.pmc5260528"
+      ],
+      "outgoing_ids": [
+        "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action"
+      ]
+    },
+    {
+      "id": "movement.demand.starts-turns.underwater-dolphin-kick.body-orientation-selects-which-naming-applies",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[63]",
+      "title": "起跳轉身後的水下海豚踢：體位決定同一句「上踢／下踢」對到哪一組關節動作",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+        "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action",
+        "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+        "movement.demand.udk.up-kick.hip-extension-prone",
+        "movement.demand.udk.up-kick.hip-flexion-supine"
+      ]
     },
     {
       "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
@@ -11673,7 +13706,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "starts-turns"
@@ -11709,7 +13742,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "starts-turns"
@@ -11717,6 +13750,148 @@
       },
       "source_ids": [
         "src.martens-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[48]",
+      "title": "觸牆的膝屈曲位，與「觸牆深度不是關節動作」",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017",
+        "src.pmc6409673-b",
+        "src.pmc8960438-d"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.wall-push-off.shoulder-complex-composite-angle-and-streamline-precedence",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[49]",
+      "title": "推蹬的肩複合體合計角度分層，與流線先於蹬伸的時序",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[47]",
+      "title": "規則裡的「肩部旋轉 ≥90°」是身體方位，不是肩關節動作",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.fina-sw64-usas-usms",
+        "src.neumann-2017",
+        "src.pmc7918682"
+      ],
+      "outgoing_ids": [
+        "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action"
+      ]
+    },
+    {
+      "id": "movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[52]",
+      "title": "出水划手期的最後一次下踢，與「銜接」不是一個關節動作",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11743,7 +13918,7 @@
           "descriptive"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ],
         "stroke": [
           "udk"
@@ -11753,6 +13928,325 @@
         "src.pmc9402090-b",
         "src.veiga-2022",
         "src.yamakawa-2022"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.down-to-up-transition.hip-flexion-and-whether-plantarflexion-is-held",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[62]",
+      "title": "下踢→上踢過渡：可辨識的是髖有沒有拱起、腳有沒有掛下來",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": [
+        "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
+        "movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term"
+      ]
+    },
+    {
+      "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[64]",
+      "title": "起踢：可辨識的是第一踢的膝彎多大，不是「什麼時候踢」",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.lyttle-2000",
+        "src.neumann-2017",
+        "src.the-race-club-velocity-meter-a"
+      ],
+      "outgoing_ids": [
+        "movement.demand.starts-turns.underwater-dolphin-kick.body-orientation-selects-which-naming-applies",
+        "movement.demand.udk.down-kick.ankle-plantarflexion",
+        "movement.demand.udk.down-to-up-transition.hip-flexion-and-whether-plantarflexion-is-held",
+        "movement.demand.udk.streamlined-glide.lower-chain-neutral-and-terminal-extension"
+      ]
+    },
+    {
+      "id": "movement.demand.udk.streamlined-glide.forearm-rotation-column-gap",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[34]",
+      "title": "流線滑行的肘腕位置與被手部擺法遮蔽的前臂旋轉",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.streamlined-glide.lower-chain-neutral-and-terminal-extension",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[35]",
+      "title": "流線滑行的髖中立、膝完全伸展與踝蹠屈",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.streamlined-glide.lumbar-baseline-two-readings",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[36]",
+      "title": "流線滑行的腰椎基準——「中立或些微伸展」與「空心姿」指向相反側",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "disputed"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.streamlined-glide.scapulohumeral-dual-clearance",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[33]",
+      "title": "流線滑行的肩部避讓機制與肩胛三軸必然性差異",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[60]",
+      "title": "下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」的成分歸屬",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.up-kick.hip-extension-prone",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[37]",
+      "title": "俯臥水下海豚腳上踢的髖伸展與可用幅度不對稱",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.demand.udk.up-kick.hip-flexion-supine",
+      "domain": "movement",
+      "file": "canonical/movement/stroke-demands.yaml",
+      "path": "demands[38]",
+      "title": "仰躺水下海豚腳上踢——同一個池畔動作對應的是髖屈曲",
+      "tags": {
+        "action_reference_frame": [
+          "joint-local"
+        ],
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "phase_model": [
+          "descriptive"
+        ],
+        "publication_status": [
+          "published"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
       ],
       "outgoing_ids": []
     },
@@ -11776,7 +14270,7 @@
           "not-routine"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -11807,7 +14301,7 @@
           "conditional"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -11836,12 +14330,42 @@
           "not-routine"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
         "src.hall-murphy-2020",
         "src.riewald-rodeo-2015"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.scapular-upward-rotation.serratus-endurance",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[5]",
+      "title": "前鋸肌耐力與反覆穩定控制",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "synthesis-inference"
+        ],
+        "mobility_decision": [
+          "not-routine"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.pink-1991-b",
+        "src.pink-1993",
+        "src.statpearls-2023"
       ],
       "outgoing_ids": []
     },
@@ -11865,7 +14389,7 @@
           "not-routine"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -11894,11 +14418,41 @@
           "conditional"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
         "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
+      "domain": "movement",
+      "file": "canonical/movement/interventions.yaml",
+      "path": "interventions[6]",
+      "title": "跨側核心容量與抗旋轉控制",
+      "tags": {
+        "action_status": [
+          "provisional"
+        ],
+        "claim_status": [
+          "partially-supported"
+        ],
+        "evidence_profile": [
+          "intervention"
+        ],
+        "mobility_decision": [
+          "not-routine"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.karpinski-2020",
+        "src.myers-2021",
+        "src.psycharakis-2010"
       ],
       "outgoing_ids": []
     },
@@ -11919,7 +14473,7 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -11944,7 +14498,207 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.elbow-extensors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[11]",
+      "title": "肘伸肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.elbow-flexors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[10]",
+      "title": "肘屈肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.foot-evertors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[17]",
+      "title": "足外翻肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.forearm-pronators",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[19]",
+      "title": "前臂旋前肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.forearm-supinators",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[20]",
+      "title": "前臂旋後肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.hip-abductors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[14]",
+      "title": "髖外展肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.hip-extensors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[13]",
+      "title": "髖伸肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.hip-external-rotators",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[15]",
+      "title": "髖外旋肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -11969,7 +14723,7 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -11994,7 +14748,32 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.knee-flexors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[16]",
+      "title": "膝屈肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -12019,7 +14798,7 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -12044,7 +14823,57 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.scapular-elevators",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[18]",
+      "title": "肩胛上提肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.scapular-retractors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[12]",
+      "title": "肩胛後縮肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -12069,7 +14898,57 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.shoulder-internal-rotator-extensors",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[9]",
+      "title": "肩內旋伸展肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
+        ]
+      },
+      "source_ids": [
+        "src.neumann-2017"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "movement.muscle.trunk-sagittal-controllers",
+      "domain": "movement",
+      "file": "canonical/movement/muscle-groups.yaml",
+      "path": "muscle_groups[21]",
+      "title": "軀幹矢狀面控制肌群",
+      "tags": {
+        "action_status": [
+          "ready"
+        ],
+        "claim_status": [
+          "supported"
+        ],
+        "evidence_profile": [
+          "anatomy"
+        ],
+        "publication_status": [
+          "published"
         ]
       },
       "source_ids": [
@@ -12094,7 +14973,7 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -12119,7 +14998,7 @@
           "anatomy"
         ],
         "publication_status": [
-          "draft"
+          "published"
         ]
       },
       "source_ids": [
@@ -15759,7 +18638,10 @@
       "source_ids": [
         "src.race-club-pdm-data"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.47",
+        "starts-turns.tech.48"
+      ]
     },
     {
       "id": "starts-turns.tech.43",
@@ -17110,22 +19992,24 @@
       },
       "source_ids": [
         "src.pmc9402090-b",
-        "src.pmid-24984154",
-        "src.sciencedirect-2014"
+        "src.pmid-24984154"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "movement.intervention.ankle-plantarflexion.conditional-mobility"
+      ]
     },
     {
       "id": "udk.tech.15",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[151]",
-      "title": "踝關節柔韌性不足的代償模式：上踢膝蓋彎曲增加",
+      "title": "踝關節柔韌性不足的代償模式：膝蓋彎曲增加",
       "tags": {
         "category": [
           "hardware"
         ],
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "stroke": [
@@ -17133,9 +20017,12 @@
         ]
       },
       "source_ids": [
-        "src.pmc9402090-a"
+        "src.pmc9402090-b",
+        "src.pmid-24984154"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "movement.intervention.ankle-plantarflexion.conditional-mobility"
+      ]
     },
     {
       "id": "udk.tech.16",
@@ -17429,12 +20316,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[164]",
-      "title": "踝關節柔韌性訓練方法",
+      "title": "踝關節蹠屈柔韌性：限制實驗支持關聯，伸展訓練效果沒有試驗支持",
       "tags": {
         "category": [
           "kick"
         ],
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "stroke": [
@@ -17444,7 +20332,9 @@
       "source_ids": [
         "src.pmid-24984154"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "movement.intervention.ankle-plantarflexion.conditional-mobility"
+      ]
     },
     {
       "id": "udk.tech.29",

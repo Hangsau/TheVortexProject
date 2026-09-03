@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 555,
+  "source_count": 553,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -348,8 +348,13 @@
       "display": "Blanksby et al. 2002",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.set-position.coexisting-setups-not-a-single-posture",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[41]"
+        },
         {
           "id": "starts-turns.tech.3",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -1323,8 +1328,13 @@
       "display": "FINA/World Aquatics SW 6.4; USA Swimming; USMS",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[47]"
+        },
         {
           "id": "starts-turns.tech.29",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -1638,7 +1648,7 @@
       "display": "Gonjo et al. 2020",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 7,
+      "usage_count": 8,
       "usages": [
         {
           "id": "back.tech.1",
@@ -1674,6 +1684,11 @@
           "id": "back.tech.5",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[48].public.mechanism"
+        },
+        {
+          "id": "movement.demand.back.pull.forearm-orientation-over-path-shape",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[18]"
         }
       ]
     },
@@ -1938,7 +1953,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 18,
+      "usage_count": 28,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -2006,6 +2021,11 @@
           "path": "demands[4]"
         },
         {
+          "id": "movement.demand.free.early-recovery.scapular-upward-rotation-with-wrist-neutral",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[58]"
+        },
+        {
           "id": "movement.demand.free.entry.shoulder-line-roll-peak",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[15]"
@@ -2016,14 +2036,59 @@
           "path": "demands[3]"
         },
         {
+          "id": "movement.demand.free.late-recovery.entry-drive-and-rotation-are-one-linkage",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[59]"
+        },
+        {
+          "id": "movement.demand.free.lift.deferred-descent-and-style-time-difference",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[54]"
+        },
+        {
           "id": "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[11]"
         },
         {
+          "id": "movement.demand.free.push.three-component-power-contribution",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[56]"
+        },
+        {
+          "id": "movement.demand.free.rear-quadrant-propulsion.hip-snap-is-trunk-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[55]"
+        },
+        {
+          "id": "movement.demand.free.release.little-finger-orientation-is-not-a-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[57]"
+        },
+        {
+          "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[51]"
+        },
+        {
+          "id": "movement.demand.starts-turns.underwater-dolphin-kick.body-orientation-selects-which-naming-applies",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[63]"
+        },
+        {
           "id": "movement.demand.starts-turns.underwater-glide.head-position-drag",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[12]"
+        },
+        {
+          "id": "movement.demand.udk.down-to-up-transition.hip-flexion-and-whether-plantarflexion-is-held",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[62]"
+        },
+        {
+          "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[64]"
         },
         {
           "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
@@ -2100,7 +2165,7 @@
       "display": "Hayashi et al. 2025",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 6,
+      "usage_count": 7,
       "usages": [
         {
           "id": "breast.tech.12",
@@ -2131,6 +2196,11 @@
           "id": "breast.tech.9",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[79].public.mechanism"
+        },
+        {
+          "id": "movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[65]"
         }
       ]
     },
@@ -2391,12 +2461,17 @@
         "pmcid": "PMC7458297",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7458297/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.tech.33",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[30].public.evidence[1]"
+        },
+        {
+          "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[6]"
         }
       ]
     },
@@ -2456,7 +2531,7 @@
         "pmid": "41076906",
         "url": "https://pubmed.ncbi.nlm.nih.gov/41076906/"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
         {
           "id": "free.tech.16",
@@ -2477,6 +2552,11 @@
           "id": "free.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[1].public.mechanism"
+        },
+        {
+          "id": "movement.demand.free.push.three-component-power-contribution",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[56]"
         }
       ]
     },
@@ -2635,8 +2715,13 @@
         "doi": "10.1080/026404100419856",
         "url": "https://doi.org/10.1080/026404100419856"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[64]"
+        },
         {
           "id": "udk.tech.17",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -2668,7 +2753,7 @@
       "display": "Maglischo 2003",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 6,
+      "usage_count": 7,
       "usages": [
         {
           "id": "back.L2.up-kick",
@@ -2699,6 +2784,11 @@
           "id": "fly.tech.7",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[108].public.mechanism"
+        },
+        {
+          "id": "movement.demand.back.pull.forearm-orientation-over-path-shape",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[18]"
         }
       ]
     },
@@ -3260,12 +3350,17 @@
       "identifier": {
         "isbn": "9780702078132"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.tech.33",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[30].public.evidence[0]"
+        },
+        {
+          "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[6]"
         }
       ]
     },
@@ -3340,7 +3435,7 @@
       "identifier": {
         "isbn": "9780323287531"
       },
-      "usage_count": 39,
+      "usage_count": 126,
       "usages": [
         {
           "id": "back.tech.30",
@@ -3418,9 +3513,59 @@
           "path": "points[40].public.mechanism"
         },
         {
+          "id": "movement.action.ankle-foot.dorsiflexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[18]"
+        },
+        {
           "id": "movement.action.ankle-foot.plantarflexion",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[1]"
+        },
+        {
+          "id": "movement.action.ankle-foot.pronation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[19]"
+        },
+        {
+          "id": "movement.action.elbow.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[10]"
+        },
+        {
+          "id": "movement.action.elbow.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[9]"
+        },
+        {
+          "id": "movement.action.forearm.pronation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[26]"
+        },
+        {
+          "id": "movement.action.forearm.supination",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[27]"
+        },
+        {
+          "id": "movement.action.hip.abduction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[14]"
+        },
+        {
+          "id": "movement.action.hip.adduction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[31]"
+        },
+        {
+          "id": "movement.action.hip.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[11]"
+        },
+        {
+          "id": "movement.action.hip.external-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[15]"
         },
         {
           "id": "movement.action.hip.flexion",
@@ -3428,9 +3573,29 @@
           "path": "actions[4]"
         },
         {
+          "id": "movement.action.hip.internal-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[32]"
+        },
+        {
+          "id": "movement.action.knee.axial-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[17]"
+        },
+        {
           "id": "movement.action.knee.extension",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[5]"
+        },
+        {
+          "id": "movement.action.knee.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[16]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.adduction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[20]"
         },
         {
           "id": "movement.action.shoulder-complex.elevation",
@@ -3438,9 +3603,69 @@
           "path": "actions[0]"
         },
         {
+          "id": "movement.action.shoulder-complex.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[7]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.external-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[12]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.horizontal-abduction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[30]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.horizontal-adduction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[13]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.internal-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[8]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.scapular-elevation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[25]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.scapular-posterior-tilt",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[24]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.scapular-protraction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[21]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.scapular-retraction",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[22]"
+        },
+        {
+          "id": "movement.action.shoulder-complex.scapular-upward-rotation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[23]"
+        },
+        {
           "id": "movement.action.trunk.axial-rotation",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[6]"
+        },
+        {
+          "id": "movement.action.trunk.extension",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[28]"
+        },
+        {
+          "id": "movement.action.trunk.flexion",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[29]"
         },
         {
           "id": "movement.action.wrist-hand.extension",
@@ -3451,6 +3676,246 @@
           "id": "movement.action.wrist-hand.flexion",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[2]"
+        },
+        {
+          "id": "movement.demand.back.catch.shoulder-rotation-reversal",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[17]"
+        },
+        {
+          "id": "movement.demand.back.down-kick.hip-extension-with-knee-sequence",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[22]"
+        },
+        {
+          "id": "movement.demand.back.entry.shoulder-elevation-plane",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[16]"
+        },
+        {
+          "id": "movement.demand.back.push.shoulder-extension-internal-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[19]"
+        },
+        {
+          "id": "movement.demand.back.recovery.elevation-path-with-obligatory-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[20]"
+        },
+        {
+          "id": "movement.demand.back.up-kick.hip-flexion-with-knee-extension",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[21]"
+        },
+        {
+          "id": "movement.demand.breast.arm-catch.horizontal-adduction-with-rotation-reversal",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[24]"
+        },
+        {
+          "id": "movement.demand.breast.arm-outsweep.elevation-plane-with-obligatory-external-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[23]"
+        },
+        {
+          "id": "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[26]"
+        },
+        {
+          "id": "movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[65]"
+        },
+        {
+          "id": "movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[25]"
+        },
+        {
+          "id": "movement.demand.fly.arm-catch.elbow-flexion-with-rotation-reversal",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[29]"
+        },
+        {
+          "id": "movement.demand.fly.arm-insweep.dual-axis-adduction-with-scapular-retraction",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[30]"
+        },
+        {
+          "id": "movement.demand.fly.arm-outsweep.elevation-plane-with-obligatory-external-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[28]"
+        },
+        {
+          "id": "movement.demand.fly.arm-upsweep.extension-with-sustained-internal-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[31]"
+        },
+        {
+          "id": "movement.demand.fly.breathing-window.cervical-extension-avoidance-in-an-event-window",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[61]"
+        },
+        {
+          "id": "movement.demand.fly.entry-pause.position-maintenance-and-pause-naming-conflict",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[53]"
+        },
+        {
+          "id": "movement.demand.fly.entry.elevation-plane-and-contested-rotation-direction",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[27]"
+        },
+        {
+          "id": "movement.demand.fly.exit.extension-position-with-blank-rotation-field",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[32]"
+        },
+        {
+          "id": "movement.demand.free.catch.elevation-plane-shift-with-rotation-onset",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[39]"
+        },
+        {
+          "id": "movement.demand.free.catch.palm-orientation-three-source-decomposition",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[40]"
+        },
+        {
+          "id": "movement.demand.free.early-recovery.scapular-upward-rotation-with-wrist-neutral",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[58]"
+        },
+        {
+          "id": "movement.demand.free.late-recovery.entry-drive-and-rotation-are-one-linkage",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[59]"
+        },
+        {
+          "id": "movement.demand.free.lift.deferred-descent-and-style-time-difference",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[54]"
+        },
+        {
+          "id": "movement.demand.free.rear-quadrant-propulsion.hip-snap-is-trunk-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[55]"
+        },
+        {
+          "id": "movement.demand.free.release.little-finger-orientation-is-not-a-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[57]"
+        },
+        {
+          "id": "movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[50]"
+        },
+        {
+          "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[51]"
+        },
+        {
+          "id": "movement.demand.starts-turns.entry.hyperstreamline-layering-and-unresolved-lumbar-choice",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[44]"
+        },
+        {
+          "id": "movement.demand.starts-turns.flight.posture-attainment-without-trajectory-change",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[43]"
+        },
+        {
+          "id": "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[46]"
+        },
+        {
+          "id": "movement.demand.starts-turns.set-position.coexisting-setups-not-a-single-posture",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[41]"
+        },
+        {
+          "id": "movement.demand.starts-turns.takeoff.rear-leg-direction-reversal-and-joint-sequencing",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[42]"
+        },
+        {
+          "id": "movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[45]"
+        },
+        {
+          "id": "movement.demand.starts-turns.underwater-dolphin-kick.body-orientation-selects-which-naming-applies",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[63]"
+        },
+        {
+          "id": "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[48]"
+        },
+        {
+          "id": "movement.demand.starts-turns.wall-push-off.shoulder-complex-composite-angle-and-streamline-precedence",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[49]"
+        },
+        {
+          "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[47]"
+        },
+        {
+          "id": "movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[52]"
+        },
+        {
+          "id": "movement.demand.udk.down-to-up-transition.hip-flexion-and-whether-plantarflexion-is-held",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[62]"
+        },
+        {
+          "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[64]"
+        },
+        {
+          "id": "movement.demand.udk.streamlined-glide.forearm-rotation-column-gap",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[34]"
+        },
+        {
+          "id": "movement.demand.udk.streamlined-glide.lower-chain-neutral-and-terminal-extension",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[35]"
+        },
+        {
+          "id": "movement.demand.udk.streamlined-glide.lumbar-baseline-two-readings",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[36]"
+        },
+        {
+          "id": "movement.demand.udk.streamlined-glide.scapulohumeral-dual-clearance",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[33]"
+        },
+        {
+          "id": "movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[60]"
+        },
+        {
+          "id": "movement.demand.udk.up-kick.hip-extension-prone",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[37]"
+        },
+        {
+          "id": "movement.demand.udk.up-kick.hip-flexion-supine",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[38]"
         },
         {
           "id": "movement.intervention.ankle-plantarflexion.capacity-control",
@@ -3478,6 +3943,46 @@
           "path": "muscle_groups[3]"
         },
         {
+          "id": "movement.muscle.elbow-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[11]"
+        },
+        {
+          "id": "movement.muscle.elbow-flexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[10]"
+        },
+        {
+          "id": "movement.muscle.foot-evertors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[17]"
+        },
+        {
+          "id": "movement.muscle.forearm-pronators",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[19]"
+        },
+        {
+          "id": "movement.muscle.forearm-supinators",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[20]"
+        },
+        {
+          "id": "movement.muscle.hip-abductors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[14]"
+        },
+        {
+          "id": "movement.muscle.hip-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[13]"
+        },
+        {
+          "id": "movement.muscle.hip-external-rotators",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[15]"
+        },
+        {
           "id": "movement.muscle.hip-flexors",
           "file": "canonical/movement/muscle-groups.yaml",
           "path": "muscle_groups[7]"
@@ -3486,6 +3991,11 @@
           "id": "movement.muscle.knee-extensors",
           "file": "canonical/movement/muscle-groups.yaml",
           "path": "muscle_groups[8]"
+        },
+        {
+          "id": "movement.muscle.knee-flexors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[16]"
         },
         {
           "id": "movement.muscle.latissimus-dorsi",
@@ -3498,9 +4008,29 @@
           "path": "muscle_groups[1]"
         },
         {
+          "id": "movement.muscle.scapular-elevators",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[18]"
+        },
+        {
+          "id": "movement.muscle.scapular-retractors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[12]"
+        },
+        {
           "id": "movement.muscle.scapular-upward-rotators",
           "file": "canonical/movement/muscle-groups.yaml",
           "path": "muscle_groups[0]"
+        },
+        {
+          "id": "movement.muscle.shoulder-internal-rotator-extensors",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[9]"
+        },
+        {
+          "id": "movement.muscle.trunk-sagittal-controllers",
+          "file": "canonical/movement/muscle-groups.yaml",
+          "path": "muscle_groups[21]"
         },
         {
           "id": "movement.muscle.wrist-extensors",
@@ -3715,8 +4245,19 @@
       "identifier": {
         "isbn": "9781609133351"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "movement.action.ankle-foot.pronation",
+          "file": "canonical/movement/actions.yaml",
+          "path": "actions[19]"
+        },
+        {
+          "id": "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[26]"
+        }
+      ]
     },
     {
       "id": "src.novais-2012-a",
@@ -3932,7 +4473,7 @@
       "display": "Pink, Perry et al. 1991",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 6,
+      "usage_count": 7,
       "usages": [
         {
           "id": "free.tech.10",
@@ -3963,6 +4504,11 @@
           "id": "free.tech.24",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[26].public.mechanism"
+        },
+        {
+          "id": "movement.intervention.scapular-upward-rotation.serratus-endurance",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[5]"
         }
       ]
     },
@@ -3973,7 +4519,7 @@
       "identifier": {
         "pmid": "8458154"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
         {
           "id": "fly.tech.27",
@@ -3984,6 +4530,16 @@
           "id": "fly.tech.38",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[172].public.mechanism"
+        },
+        {
+          "id": "movement.demand.fly.entry.elevation-plane-and-contested-rotation-direction",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[27]"
+        },
+        {
+          "id": "movement.intervention.scapular-upward-rotation.serratus-endurance",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[5]"
         }
       ]
     },
@@ -4656,8 +5212,18 @@
       "identifier": {
         "pmcid": "PMC5260528"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[46]"
+        },
+        {
+          "id": "movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[45]"
+        },
         {
           "id": "starts-turns.tech.20",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -4771,8 +5337,13 @@
         "pmid": "30696072",
         "doi": "10.3390/sports7020032"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[48]"
+        },
         {
           "id": "starts-turns.tech.17",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -4990,8 +5561,13 @@
         "pmid": "33672908",
         "doi": "10.3390/ijerph18041858"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[47]"
+        },
         {
           "id": "starts-turns.tech.30",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -5226,8 +5802,18 @@
         "pmid": "35359502",
         "doi": "10.3389/fspor.2022.802967"
       },
-      "usage_count": 4,
+      "usage_count": 6,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[51]"
+        },
+        {
+          "id": "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[48]"
+        },
         {
           "id": "starts-turns.tech.25",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -5269,28 +5855,6 @@
       ]
     },
     {
-      "id": "src.pmc9402090-a",
-      "display": "PMC9402090 2022; PubMed 24984154",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmid": "24984154",
-        "pmcid": "PMC9402090"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "udk.tech.15",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[151].public.evidence[0]"
-        },
-        {
-          "id": "udk.tech.15",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[151].public.mechanism"
-        }
-      ]
-    },
-    {
       "id": "src.pmc9402090-b",
       "display": "PMC9402090, 2022",
       "verification_status": "verified",
@@ -5299,7 +5863,7 @@
         "pmid": "36032263",
         "doi": "10.3389/fspor.2022.948034"
       },
-      "usage_count": 4,
+      "usage_count": 6,
       "usages": [
         {
           "id": "movement.demand.free.down-kick.ankle-plantarflexion",
@@ -5319,7 +5883,17 @@
         {
           "id": "udk.tech.14",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[150].public.evidence[2]"
+          "path": "points[150].public.evidence[1]"
+        },
+        {
+          "id": "udk.tech.15",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[151].public.evidence[0]"
+        },
+        {
+          "id": "udk.tech.15",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[151].public.mechanism"
         }
       ]
     },
@@ -5366,8 +5940,13 @@
         "pmid": "36081618",
         "doi": "10.3389/fspor.2022.963578"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[51]"
+        },
         {
           "id": "starts-turns.tech.26",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -5570,7 +6149,7 @@
         "pmid": "24984154",
         "doi": "10.1016/j.humov.2014.05.004"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
         {
           "id": "udk.tech.14",
@@ -5578,14 +6157,19 @@
           "path": "points[150].public.evidence[0]"
         },
         {
-          "id": "udk.tech.28",
+          "id": "udk.tech.15",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[164].public.evidence[0]"
+          "path": "points[151].public.evidence[0]"
+        },
+        {
+          "id": "udk.tech.15",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[151].public.mechanism"
         },
         {
           "id": "udk.tech.28",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[164].public.mechanism"
+          "path": "points[164].public.evidence[0]"
         }
       ]
     },
@@ -5964,7 +6548,7 @@
       "display": "Psycharakis & Sanders 2010",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "back.tech.24",
@@ -5975,6 +6559,11 @@
           "id": "back.tech.24",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[67].public.mechanism"
+        },
+        {
+          "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[6]"
         }
       ]
     },
@@ -6169,12 +6758,17 @@
       "display": "The Race Club PDM 量測資料",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
         {
           "id": "free.tech.27",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[8].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.starts-turns.entry.hyperstreamline-layering-and-unresolved-lumbar-choice",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[44]"
         },
         {
           "id": "starts-turns.tech.42",
@@ -7450,7 +8044,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 15,
+      "usage_count": 17,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -7483,9 +8077,19 @@
           "path": "demands[5]"
         },
         {
+          "id": "movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[65]"
+        },
+        {
           "id": "movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[7]"
+        },
+        {
+          "id": "movement.demand.fly.entry-pause.position-maintenance-and-pause-naming-conflict",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[53]"
         },
         {
           "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
@@ -7779,26 +8383,17 @@
       "display": "Schleihauf 1979（歷史依據，非當前定論）",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "back.tech.10",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[53].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.sciencedirect-2014",
-      "display": "ScienceDirect 2014",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 1,
-      "usages": [
+        },
         {
-          "id": "udk.tech.14",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[150].public.evidence[1]"
+          "id": "movement.demand.back.catch.shoulder-rotation-reversal",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[17]"
         }
       ]
     },
@@ -7995,7 +8590,7 @@
       "display": "StatPearls 2023",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
         {
           "id": "free.L5.serratus",
@@ -8011,6 +8606,11 @@
           "id": "free.tech.10",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[11].public.mechanism"
+        },
+        {
+          "id": "movement.intervention.scapular-upward-rotation.serratus-endurance",
+          "file": "canonical/movement/interventions.yaml",
+          "path": "interventions[5]"
         }
       ]
     },
@@ -8921,8 +9521,13 @@
       "display": "The Race Club velocity meter 實測",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[64]"
+        },
         {
           "id": "udk.tech.17",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -8982,8 +9587,13 @@
       "display": "The Race Club VM 量測資料",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.takeoff.rear-leg-direction-reversal-and-joint-sequencing",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[42]"
+        },
         {
           "id": "starts-turns.tech.43",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -10713,8 +11323,13 @@
       "display": "Yeadon et al. / MDPI 2024",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "movement.demand.starts-turns.set-position.coexisting-setups-not-a-single-posture",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[41]"
+        },
         {
           "id": "starts-turns.tech.5",
           "file": "canonical/instructional/technical-analysis.yaml",

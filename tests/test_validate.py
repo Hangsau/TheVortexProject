@@ -157,13 +157,12 @@ class FixtureTestBase(unittest.TestCase):
         for rel, entry in all_entries:
             eid = entry.get("id", "(no id)")
 
-            # W003 入邊：非 links 的關聯欄位一律走產品端 helper，不在這裡重寫。
+            # W003 入邊：走產品端唯一的邊定義，不在這裡重寫任何一部分。
             # 2026-09-03：harness 原本只累計 links.* 的入邊，movement 關聯欄位
             # 與 cross_ref_ids 都沒算，等於 W003 的一半邏輯在測試裡沒被覆蓋。
-            for target in validate_mod.collect_movement_relation_ids(entry):
-                if target in all_id_set:
-                    inbound_ids[target] += 1
-            for target in validate_mod.collect_cross_ref_ids(entry):
+            # 同日稍後（錯誤 19）：連「分兩段各自累計」都撤掉——出邊入邊共用
+            # collect_outbound_ids()，因為 build_indices.py 正是敗在自己重寫入邊。
+            for target in validate_mod.collect_outbound_ids(entry):
                 if target in all_id_set:
                     inbound_ids[target] += 1
 
@@ -175,7 +174,7 @@ class FixtureTestBase(unittest.TestCase):
             if isinstance(links, dict):
                 validate_mod.check_links_block(
                     rel, eid, links, all_id_set, taxonomy,
-                    inbound_ids, errors, warnings,
+                    errors, warnings,
                 )
 
             # E004：taxonomy 受控欄位值 + also_strokes 宣告
@@ -1981,6 +1980,90 @@ class TestE006CrossRefIds(FixtureTestBase):
         self.assertIn(
             "free.tech.99", orphans,
             "完全沒有進出邊的條目仍應被報成孤兒（否則這個測試無法證偽）",
+        )
+
+    def test_prose_and_vocab_links_are_not_w003_edges(self):
+        # 2026-09-03：collect_outbound_ids() 原本把 links 底下**任何**非空值都
+        # 當成出邊，於是兩類非條目邊也在擋孤兒警告（fail-open，實測擋掉 56 筆）：
+        #   ① technical_link 等散文顯示字串——句子不是 ID，機器邊在 *_link_ids
+        #   ② development_stages——指的是 taxonomy 詞彙，不是條目
+        # 兩者都無法讓任何人在條目之間跳轉，正是 W003 該報的狀態。
+        self._write_yaml(
+            self.canonical_dir / "_taxonomy.yaml",
+            make_taxonomy({"development_stage": [{"key": "t2t"}]}),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "inj.prose-only",
+                        "links": {
+                            "technical_link": "翻滾轉身技術——時序影響受傷風險",
+                            "technical_link_ids": [],
+                        },
+                    },
+                    {
+                        "id": "per.vocab-only",
+                        "links": {"development_stages": ["t2t"]},
+                    },
+                    {
+                        "id": "per.real-edge",
+                        "links": {"technical_analysis": ["inj.prose-only"]},
+                    },
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        orphans = "\n".join(warnings["W003"])
+        self.assertIn(
+            "per.vocab-only", orphans,
+            "只有 development_stages 詞彙關聯的條目在條目層仍是孤兒",
+        )
+        self.assertNotIn(
+            "per.real-edge", orphans,
+            "有真實 ID 參照類出邊的條目不該是孤兒（否則本測試無法證偽）",
+        )
+        self.assertNotIn(
+            "inj.prose-only", orphans,
+            "被真實 ID 參照鍵指入的條目不該是孤兒——它的孤兒狀態只能由入邊解除，"
+            "不能由自己那句散文解除",
+        )
+
+    def test_link_ids_key_counts_as_edge_in_both_directions(self):
+        # 錯誤 19（2026-09-03）：入邊原本只認 LINKS_ID_REF_KEYS，所以
+        # `perception_link_ids: [X]` 能讓來源端脫離孤兒、卻不替 X 記一次指入
+        # ——同一個鍵在兩個方向有兩種語意。改成出入邊共用
+        # collect_outbound_ids() 後兩端都該脫離孤兒。
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {
+                        "id": "inj.source",
+                        "links": {
+                            "perception_link": "L4–L6 手感與全身張力",
+                            "perception_link_ids": ["per.target"],
+                        },
+                    },
+                    {"id": "per.target"},
+                    {"id": "per.untouched"},
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        orphans = "\n".join(warnings["W003"])
+        self.assertNotIn(
+            "inj.source", orphans,
+            "填了 *_link_ids 的來源端有出邊，不是孤兒",
+        )
+        self.assertNotIn(
+            "per.target", orphans,
+            "被 *_link_ids 指到的目標端也必須記入邊，否則同一個鍵兩個方向語意不一致",
+        )
+        self.assertIn(
+            "per.untouched", orphans,
+            "完全沒有進出邊的條目仍須被報出（讓本測試可證偽）",
         )
 
     def test_unresolvable_cross_ref_id_in_diagnostic_triggers_e006(self):

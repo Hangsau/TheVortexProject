@@ -325,18 +325,20 @@ def high_certainty_without_source(root: Path) -> list[dict]:
 
 
 def unlinked_records(records: list[dict], entry_by_id: dict[str, dict]) -> list[dict]:
-    """Mirror validate.py W003, including its deliberately narrow link scope."""
+    """Mirror validate.py W003.
+
+    出邊入邊都走 `validate.collect_outbound_ids()`。這裡曾經自己重寫入邊
+    （只認 `links.*`，漏掉 movement 關聯欄位與 `cross_ref_ids`），孤兒因此
+    虛報成 557 而非 403——**而 docstring 當時就寫著 Mirror**。不要再在這裡
+    重寫任何一個方向。
+    """
     canonical_records = [r for r in records if r["domain"] != "drills"]
     all_ids = {record["id"] for record in records}
     inbound: dict[str, int] = defaultdict(int)
     for record in canonical_records:
-        links = entry_by_id[record["id"]].get("links")
-        if not isinstance(links, dict):
-            continue
-        for key in validate.LINKS_ID_REF_KEYS:
-            for target in scalar_values(links.get(key)):
-                if target in all_ids:
-                    inbound[target] += 1
+        for target in validate.collect_outbound_ids(entry_by_id[record["id"]]):
+            if target in all_ids:
+                inbound[target] += 1
 
     gaps = []
     for record in canonical_records:

@@ -110,7 +110,7 @@ Observations/    → 觀察層：教學案例
 ## AI 收尾規則（強制）
 
 每次對話結束前，若本次做了任何實質修改（新增文件、更新內容、格式整理等），**必須**：
-1. **凡動到 canonical/ 或 Drills/ 的內容**：先跑 `python tools/build_knowledge_map.py` 重生 `KNOWLEDGE_MAP.md`，再 commit。地圖是查內容/找缺口/評估更新優先序的單一入口，不能落後於實際內容
+1. **凡動到 canonical/ 或 Drills/ 的內容**：先跑 `python tools/build_knowledge_map.py` **與 `python tools/build_indices.py`**，重生 `KNOWLEDGE_MAP.md` 與 `indices/*.json`，再 commit。兩者都是 committed 產物、都不能落後於實際內容——地圖是人讀入口，`indices/` 是機器索引（內容／tag 反向／來源反向／缺口報告）。**`indices/` 先前只寫在 S5 完成紀錄裡沒進本流程，結果整整 24 個動到 canonical 的 commit 沒重生（record_count 停在 839，實際 930）**
 2. 更新 `HANDOFF.md` 的「當前狀態」與「下一步建議」兩個區塊
 3. 更新 `_INDEX.md` 的對應文件狀態（如有變動）
 4. 若 Research/ 層有新文件完成：同步 `RESEARCH_PLAN.md`（Layer 完成標記）+ `FUTURE_RESEARCH.md`（原題目畢業標記）

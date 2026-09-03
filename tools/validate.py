@@ -628,7 +628,13 @@ CERTAINTY_NEEDS_SOURCE = {"\U0001F7E2", "\U0001F7E1"}
 # ── 孤兒偵測輔助 ──────────────────────────────────────────────────────────────
 
 def collect_outbound_ids(entry: dict) -> set[str]:
-    """收集條目所有指出的 ID（供 W003 孤兒偵測用）。
+    """收集條目所有指出的 ID —— **W003 唯一的邊定義，出邊入邊共用**。
+
+    出邊 = 本條目呼叫本函式的結果；入邊 = 別的條目呼叫本函式時命中本條目。
+    `validate.py` 主迴圈與 `build_indices.py:unlinked_records()` 都只走這裡。
+    **不要在別處另寫一份入邊累計**（錯誤 19：`build_indices.py` 曾自己只認
+    `links.*`，漏掉 movement 關聯欄位與 `cross_ref_ids`，孤兒虛報成 557；
+    它的 docstring 還寫著「Mirror validate.py W003」）。
 
     兩個來源：既有網域的 `links.*`，以及 movement 網域的關聯欄位。
 
@@ -637,11 +643,36 @@ def collect_outbound_ids(entry: dict) -> set[str]:
     `derived_from_ids`／`muscle_roles[].muscle_id` 表達關聯。結果是 37 筆
     彼此密集互連的記錄被整層報成孤兒（528 筆裡的 34 筆），而「movement 是
     孤兒層、要補 cross_ref」這個結論其實是檢查器的視野缺口，不是內容缺口。
+
+    **2026-09-03：`links` 改成只認條目參照類的兩組鍵**（`LINKS_ID_REF_KEYS`
+    與 `LINKS_IDS_KEYS`）。原本是把 `links` 底下**任何**非空值都當成一條出邊，
+    於是兩類根本不是條目邊的東西也在擋孤兒警告——這是 fail-open：
+
+      ①`LINKS_FREE_TEXT_KEYS` 的散文顯示字串。`technical_link:
+        '翻滾轉身技術——時序與足位精準度直接影響受傷風險'` 是給人讀的句子，
+        機器邊在同名 `_ids` 鍵。這 7 筆的 `_ids` 全是空的或不存在，也就是
+        **實際指不到任何條目，卻因為那句話非空而不被報成孤兒**。
+      ②`LINKS_VOCAB_REF_KEYS`（`development_stages`）指的是 taxonomy 詞彙
+        （`l2t`／`t2t`…），不是條目 ID。它是真的關聯，但**不是條目對條目的邊**：
+        沒有人能從別的條目走到這裡，也不能從這裡走到別的條目。breathing 全域
+        與大半 periodization（合計 49 筆）就是靠這個鍵一直沒被報出來——而
+        「這兩個網域在條目層與其他 canonical 完全沒連上」正是 W003 該講的事。
+
+    未歸類的子鍵一樣不算邊（它們由 W005 fail-closed 另行報出）。此改動使
+    W003 由 347 升到 403；**數字上升是檢查器停止 fail-open 的正確結果**，
+    不是內容變差。
+
+    **同日稍後（錯誤 19）：入邊改成共用本函式，因此 `LINKS_IDS_KEYS` 現在
+    兩個方向都算。** 先前入邊只認 `LINKS_ID_REF_KEYS`，於是 `perception_link_ids:
+    [free.L4]` 能讓來源端脫離孤兒、卻不替 `free.L4` 記一次指入——同一個鍵
+    在兩個方向有兩種語意，無法自圓其說。改成對稱後 W003 403 → 399。
     """
     out: set[str] = set()
     links = entry.get("links")
     if isinstance(links, dict):
-        for v in links.values():
+        for key, v in links.items():
+            if key not in LINKS_ID_REF_KEYS and key not in LINKS_IDS_KEYS:
+                continue
             if isinstance(v, list):
                 for item in v:
                     if isinstance(item, str):
@@ -711,14 +742,14 @@ def check_links_block(
     links: dict,
     all_id_set: set[str],
     taxonomy: dict,
-    inbound_ids: dict,
     errors: dict,
     warnings: dict,
 ) -> None:
     """檢查 `links` 區塊：E003 斷鏈、E004 詞彙違規、W005 未知子鍵。
 
-    同時把 ID 參照類的入邊累進 `inbound_ids`（W003 用）。自由文字顯示鍵與
-    其機器鍵不在這裡判，統一交給 `check_link_ids()`（E007/W004/W007）。
+    自由文字顯示鍵與其機器鍵不在這裡判，統一交給 `check_link_ids()`
+    （E007/W004/W007）。**這裡不再累計 W003 入邊**——入邊與出邊共用
+    `collect_outbound_ids()` 一份定義，見該函式 docstring。
     """
     for link_type, targets in links.items():
         if link_type in LINKS_VOCAB_REF_KEYS:
@@ -750,8 +781,6 @@ def check_links_block(
                         f"  file={rel} id={eid!r} "
                         f"links.{link_type}={target!r}"
                     )
-                else:
-                    inbound_ids[target] += 1
         elif link_type in LINKS_FREE_TEXT_KEYS:
             # 自由文字顯示鍵：契約由 check_link_ids() 統一檢查
             pass
@@ -1833,16 +1862,12 @@ def run_validation():
     for rel, entry in all_entries:
         eid = entry.get("id", "(no id)")
 
-        # ── movement 關聯欄位的入邊（W003 用）──
-        # 與 links.* 分開累計：movement 不使用 links，斷鏈由 W014 管，
-        # 這裡只要目標存在就算一次指入。
-        for target in collect_movement_relation_ids(entry):
-            if target in all_id_set:
-                inbound_ids[target] += 1
-
-        # ── cross_ref_ids 的入邊（W003 用）──
-        # 斷鏈由 E006 管，這裡只要目標存在就算一次指入。
-        for target in collect_cross_ref_ids(entry):
+        # ── W003 入邊：與出邊共用同一份邊定義 ──
+        # 一條邊只有一個定義，方向不同而已；分成兩份寫就會漂移
+        # （錯誤 19：`build_indices.py` 的入邊只認 links.*，漏了 movement
+        # 關聯欄位與 cross_ref_ids，孤兒數因此虛報成 557）。
+        # 斷鏈各由 E003/E006/E007/W014 管，這裡只要目標存在就算一次指入。
+        for target in collect_outbound_ids(entry):
             if target in all_id_set:
                 inbound_ids[target] += 1
 
@@ -1854,7 +1879,7 @@ def run_validation():
         if isinstance(links, dict):
             check_links_block(
                 rel, eid, links, all_id_set, taxonomy,
-                inbound_ids, errors, warnings,
+                errors, warnings,
             )
 
         # ── E004: taxonomy 受控欄位值 + also_strokes 宣告 ──

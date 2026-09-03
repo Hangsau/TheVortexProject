@@ -42,6 +42,25 @@ class TestGapDetection(unittest.TestCase):
         gaps = build_indices.find_high_certainty_without_source("fixture.yaml", data)
         self.assertEqual(["missing"], [gap["id"] for gap in gaps])
 
+    def test_unlinked_records_uses_the_validator_edge_definition(self):
+        # 錯誤 19（2026-09-03）：這裡曾自己重寫入邊、只認 links.*，漏掉 movement
+        # 關聯欄位與 cross_ref_ids，孤兒虛報成 557（驗證器同時是 403）——而
+        # docstring 當時就寫著 "Mirror validate.py W003"。這個測試釘住「入邊也
+        # 走 validate.collect_outbound_ids()」：兩筆只靠 cross_ref_ids 相連的
+        # 條目，在舊寫法下會雙雙被報成孤兒。
+        records = [
+            {"id": "a", "domain": "canonical", "file": "f.yaml", "path": "$"},
+            {"id": "b", "domain": "canonical", "file": "f.yaml", "path": "$"},
+            {"id": "lonely", "domain": "canonical", "file": "f.yaml", "path": "$"},
+        ]
+        entry_by_id = {
+            "a": {"id": "a", "cross_ref_ids": ["b"]},
+            "b": {"id": "b"},
+            "lonely": {"id": "lonely"},
+        }
+        gaps = build_indices.unlinked_records(records, entry_by_id)
+        self.assertEqual(["lonely"], [gap["id"] for gap in gaps])
+
 
 class TestGeneratedViews(unittest.TestCase):
     @classmethod
