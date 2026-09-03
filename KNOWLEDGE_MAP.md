@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 102, '🟢': 75, '🟠': 34, '🟡': 10, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 103, '🟢': 74, '🟠': 34, '🟡': 10, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -291,7 +291,7 @@
 | udk.tech.25 | kick |  | 🟢 |
 | udk.tech.26 | kick |  | 🟢 |
 | udk.tech.27 | tempo |  | 🟢 |
-| udk.tech.28 | kick |  | 🟢 |
+| udk.tech.28 | kick |  | 🔵 |
 | udk.tech.29 | streamline |  | 🔵 |
 | udk.tech.30 | joint |  | 🔵 |
 

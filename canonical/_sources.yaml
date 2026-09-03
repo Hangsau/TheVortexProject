@@ -3003,16 +3003,6 @@ sources:
     retrieved_on: "2026-07-27"
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
-  - id: src.pmc9402090-a
-    display: "PMC9402090 2022; PubMed 24984154"
-    type: other
-    verification_status: unverified
-    year: 2022
-    identifier:
-      pmid: "24984154"
-      pmcid: "PMC9402090"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc9402090-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc9402090-b 共用 pmcid PMC9402090，疑似同一文獻，待 S3c 查證。 與 src.pmid-24984154 共用 pmid 24984154，疑似同一文獻，待 S3c 查證。"
-
   - id: src.pmc9402090-b
     display: "PMC9402090, 2022"
     title: "Ankle joint flexibility affects undulatory underwater swimming speed."
@@ -3026,7 +3016,7 @@ sources:
       pmid: "36032263"
       doi: "10.3389/fspor.2022.948034"
     retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc9402090-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc9402090-a 共用 pmcid PMC9402090，疑似同一文獻，待 S3c 查證。"
+    notes: "S3c 已裁決（2026-09-03）：原 src.pmc9402090-a 不是一筆文獻，而是把兩篇並排的顯示字串「PMC9402090 2022; PubMed 24984154」，且它的 identifier 把 pmid 24984154 錯掛到 pmcid PMC9402090 上——本筆已查證的 pmid 是 36032263，24984154 屬另一篇（Willems 2014，src.pmid-24984154）。-a 已刪除，其兩個引用點拆成本筆與 src.pmid-24984154 兩個機器鍵。"
 
   - id: src.pmc9424421-a
     display: "Frontiers Physiology 2025 網絡統合分析 (DOI 10.3389/fphys.2025.1636595); 水上運動增強式 SR (PMC9424421, n=618); 前爬式 S&C 生物力學 SR (PMC8488830)"
@@ -3161,7 +3151,7 @@ sources:
       pmid: "24984154"
       doi: "10.1016/j.humov.2014.05.004"
     retrieved_on: "2026-07-27"
-    notes: "與 src.pmc9402090-a 共用 pmid 24984154，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    notes: "S3c 已裁決（2026-09-03）：① 原本與 src.pmc9402090-a 的 pmid 重疊不是重複登錄，而是 -a 那筆把本篇的 pmid 錯掛在 PMC9402090 之下；-a 已刪除，本筆是 24984154 的唯一登錄。② 原 src.sciencedirect-2014（無識別碼、unverified）經查證即本篇——Human Movement Science 是 Elsevier／ScienceDirect 期刊，2014，DOI 10.1016/j.humov.2014.05.004，主題正是踝肌力與柔韌性對海豚踢表現的影響，與該筆的引用內容（蹠屈＋內旋受限顯著降低 UDK 表現）一致；該筆已刪除並併入本筆。③ 「限制蹠屈 30% → 游速下降 19.5%」確為本篇數字，由 Kuhn & Legerlotz 2022 全文引述並明標出處為 Willems et al. 2014；庫內原寫「19%」已更正為 19.5%。查證後 year 已補 2014（舊註記「year 留空」已不適用）。"
 
   - id: src.pmid-25443755
     display: "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)"
@@ -4100,13 +4090,6 @@ sources:
     verification_status: unverified
     authors: ["Schleihauf"]
     year: 1979
-
-  - id: src.sciencedirect-2014
-    display: "ScienceDirect 2014"
-    type: other
-    verification_status: unverified
-    year: 2014
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.sciencedirect-wave-drag-study
     display: "ScienceDirect 波浪阻力研究"
