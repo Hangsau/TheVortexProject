@@ -538,3 +538,99 @@ interventions:
         就維持不住而非疲勞後才失守時，分流至
         movement.intervention.shoulder-elevation.active-control。具體負荷、量測
         協議與分類判讀均留在診斷層。
+
+  - id: movement.intervention.trunk-axial-rotation.cross-side-core-capacity
+    limitation_type: 跨側軀幹抗旋轉容量不足
+    action_ids:
+      - movement.action.trunk.axial-rotation
+    demand_ids:
+      - movement.demand.free.pull.upper-trunk-rotation-hand-velocity
+      - movement.demand.free.rear-quadrant-propulsion.hip-snap-is-trunk-rotation
+      - movement.demand.free.push.three-component-power-contribution
+    affirmative_conclusion: >
+      Karpiński 2020 的介入試驗顯示，國家級男子泳者接受 6 週、每週
+      2–3 次核心訓練後，轉身後 5m 改善 0.1 秒，50m 自由式改善 0.3 秒；
+      這支持在該族群採用有實際劑量來源的核心容量介入。當陸上單側
+      deadbug、bird-dog 或 carry 明顯左右不對稱，水中同側也出現旋轉或
+      踢腿延遲時，可暫時把缺口分到跨側軀幹抗旋轉容量，再以完整泳姿重測。
+      這是容量與控制問題，不是活動度問題，因此不把活動度訓練列為常規
+      介入。Myers 2021 的螺旋線只作為串連對側肩胛、腹斜肌、骨盆與腳部的
+      解剖閱讀框架，不代表已確立的力傳遞機制。
+    works_when:
+      - 陸上單側 deadbug、bird-dog 或 carry 明顯左右不對稱，水中同側也出現旋轉或踢腿延遲
+      - 沿跨側路徑檢查後，缺口指向軀幹抗旋轉容量，且能以完整泳姿重測是否轉移
+      - 無肩、腰或髖疼痛，亦無麻木、刺痛或無力等安全停止條件
+    fails_when:
+      - 陸上左右控制接近，只有提高划頻後才失同步；此時能力較可能足夠，主問題在水中相位而非陸上容量
+      - 伴隨肩、腰或髖疼痛；此時先進入疼痛與負荷管理流程，不用水中速度判定是否加量
+      - 跨側核心訓練後陸上缺口或完整泳姿沒有可重複的有利改變，需重新分流
+    how_to_identify: >
+      先把陸上能力與水中時序分開：比較單側 deadbug、bird-dog 或 carry 的
+      左右控制，再觀察水中同側是否同時出現旋轉或踢腿延遲。陸上不對稱且
+      水中同側延遲，才分到容量限制；陸上左右接近、只有提高划頻才失同步，
+      則分到水中相位限制。疲勞判讀可參考 Psycharakis 2010 的仰式觀察：
+      第一指標是髖旋轉是否顯著增加，不是肩旋轉是否縮小；這只能作為跨式
+      線索，不能當作自由式實測或單獨確診依據。具體量測協議、左右不對稱
+      門檻與分類判讀屬診斷層。
+    action: >
+      容量分支：安排 6 週、每週 2–3 次跨側核心訓練，針對陸上與水中均
+      顯示缺口的一側補足容量，期末重測完整泳姿；來源未提供組數、次數或
+      每組秒數，本條不自行增加。時序分支：不以陸上容量訓練作為主介入，
+      改用低次數、高品質的 25m，逐步提高划頻（SR），並維持肩峰—對側踢
+      的順序。疼痛分支：先進入疼痛與負荷管理流程，目標是恢復容量，疼痛
+      期間不用水中速度決定是否加量。螺旋線僅用來依序閱讀胸廓旋轉、軀幹
+      抗旋轉、髖部控制與踝腳輸出，不把它當作介入起效的因果機制。
+    remaining_boundary: >
+      Karpiński 2020 的受試者是國家級男子泳者，改善量為轉身後 5m
+      0.1 秒與 50m 自由式 0.3 秒，未涵蓋女性、兒童、青少年、鐵人三項
+      或成人初學，也不能據此指定其他族群的效果。Psycharakis 2010 只直接
+      量到仰式疲勞時肩旋轉維持、髖旋轉增加；back.tech.24 所列後三階段是
+      推導延伸，本記錄不能把四階段整串視為實測，也不能直接套到自由式。
+      Myers 2021 的螺旋線路徑是解剖閱讀框架；跨側訓練是否透過該路徑
+      起作用，現有素材沒有直接證據。
+    mobility_decision: not-routine
+    dosage_source_ids:
+      - src.karpinski-2020
+    safety_stop_conditions:
+      - 練習中肩、腰或髖出現新發或加劇的疼痛
+      - 出現麻木、刺痛或明顯無力
+      - 疼痛期間不以水中速度判定是否加量，先進入疼痛與負荷管理流程
+    publication_status: published
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: intervention
+    source_ids:
+      - src.karpinski-2020
+      - src.psycharakis-2010
+      - src.myers-2021
+    public:
+      name_zh: 跨側核心容量與抗旋轉控制
+      description: >
+        當陸上單側核心控制明顯不對稱，水中同側也出現旋轉或踢腿延遲時，
+        可把訓練焦點放在跨側軀幹抗旋轉容量。這是容量與控制問題，不是
+        活動度問題。螺旋線在此只是一個閱讀對側肩胛、腹斜肌、骨盆與腳部
+        的解剖框架，不表示力量已被證明會沿這條路徑傳遞。
+      works_when_summary: >
+        陸上單側 deadbug、bird-dog 或 carry 有左右不對稱，水中同側也有
+        旋轉或踢腿延遲，且沒有疼痛或神經症狀時適用。
+      fails_when_summary: >
+        陸上左右控制接近、只有提高划頻才失同步時，主問題較符合水中相位；
+        伴隨肩、腰或髖疼痛時則先處理疼痛與負荷，不進入本介入。
+      training_options: >
+        容量分支採 6 週、每週 2–3 次跨側核心訓練，之後重測完整泳姿；
+        來源未提供組數、次數或每組秒數。若屬水中相位分支，改用低次數、
+        高品質的 25m，逐步提高划頻並維持肩峰—對側踢的順序。
+      safety_note: >
+        肩、腰或髖若出現新發或加劇的疼痛，或有麻木、刺痛、明顯無力，
+        立即停止。疼痛期間先進入疼痛與負荷管理流程，不以水中速度判定
+        是否加量。
+    diagnostic:
+      decision_tree_note: >
+        量測時分開記錄陸上單側 deadbug、bird-dog 或 carry 的左右控制，
+        以及水中同側的旋轉、踢腿延遲與提高划頻後的時序；左右不對稱的
+        判定門檻須在評估前固定，素材未提供數值，本條不自行設定。陸上
+        不對稱加水中同側延遲分到容量路徑；陸上接近、僅高划頻失同步分到
+        水中相位路徑。可沿螺旋線解剖閱讀框架依序檢查胸廓旋轉、軀幹抗
+        旋轉、髖部控制與踝腳輸出，但不得當作因果機制。疲勞時髖旋轉增加
+        而肩旋轉維持是仰式觀察，只能作跨式線索；疼痛分支直接停止能力
+        分類並轉入疼痛與負荷管理，不以水中速度決定加量。
