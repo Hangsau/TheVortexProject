@@ -6,7 +6,33 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
+### ▶️ W003=349 三類分佈重跑：Class ① 38、Class ② **0**、Class ③ **311**（其中純 258、局部 53）。C 項表與預測一致，未動任何 canonical，數字前後無變化
+
+| 產出 | 前值（W003=397 表） | 現值（W003=349 表） |
+|---|---|---|
+| Class ①（`links` 全空） | 38 | **38**（不動：Class ② 填 ids 不影響 links 形狀） |
+| Class ②（`cross_ref` 散文＋ids 空） | 32 | **0**（上一輪 commit `73daa3d` 已清空） |
+| Class ③（無關聯欄位／有 links 但非 ID 邊） | 327 | **311**（−16，technical-analysis 因新入邊離開孤兒名單） |
+| 合計 | 397 | **349**（−48：Class ② 33 筆填出邊 + 該 33 筆對應 66 條 target 之中 16 條原本落在 C3） |
+
+**這一輪只做重跑對表，沒動 canonical**：`validate.py`／`build_indices.py`／`build_knowledge_map.py` 都不必重跑（0 ERROR、WARN=554、W003=349、`gap_report.unlinked_records`=349 全與上一輪落地一致，因為只有 HANDOFF 和一個新的一次性工具檔異動）。
+
+**Class ③ 內部拆兩層看有價值**（都是孤兒，但形狀不同）：
+
+- **純孤兒 258 筆**：條目根本沒寫 `links:` 區塊，也沒 `cross_ref` 散文。要處理只能是「本來就該獨立」或「補內容工作」。
+  - technical-analysis 72（前 88，−16）／psychology 70／teaching-errors 52／water-sense-levels 26／l-indicators 13／injuries 11（category 骨架 8＋無 `links` 塊的 3 筆 draft）／taper 9／zones 3／actions 1／perception.free 1。
+- **局部孤兒 53 筆**：`links` 塊有寫，但填的都不是條目 ID——不是詞彙表值（`development_stages`）就是散文（`perception_link`）。**沒被算成邊是對的**（錯誤 18 已把 fail-open 兩類拿掉），但也提醒：它們**不是「什麼都沒連」**，只是連的東西不算條目 ID。
+  - breathing 21（framework 3／physiology 5／regulation 6／safety 2／training 5，全 `links.development_stages: [...]`）／periodization/dryland 9／periodization/structure 9／periodization/zones 9／periodization/taper 1／health/injuries 4（`perception_link` 散文：`cold-water-shock`／`drowning`／`shallow-water-blackout`／`sipe`）。
+
+**沒犯錯，但一件跟上一輪的敘述要對回來**：上一輪 HANDOFF 的「Class ③ ~311」預測是拍腦袋的（原文自己也標「未實跑」），這一輪實跑確認就是 311。**這是「預測 vs 實測相符」的第一次紀錄**，不是新錯——但**同樣一次都算，如果先前每次都做這個對表，錯誤 21（預測 41 實測 38）就會早一輪抓到**。
+
+**下一個佇列項目**：Class ② 已清，Class ① 依錯誤 20 判斷已不能接（injuries 25 筆 all-None 補連結＝發明臨床主張；ADM 12 格四鍵目標檔無合法目標；periodization/structure 1 筆同理），Class ③ 補連結是內容題不是接線題。**接線債本階段清完**，下一段該做 W002＋W008（顯示字串未遷 `source_ids` 與孤兒來源，一體兩面）或 `action_status` 升級（依 `assessment_note` 判定）。兩件都要動 canonical，會觸發完整收尾（build_injuries／validate／build_indices／build_knowledge_map／tests／sync）。
+
+**分類器留在 `tools/classify_w003_orphans.py`**：一次性工具，讀 `reports/validation_report.md` 的 W003 名單，回過頭去對每一條開 YAML 看 `links` 形狀與 `cross_ref` 有無。**若下輪要再對一次表，改跑這個腳本即可**，不用重寫。
+
+---
+
+### ▶️ 上一輪：Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
 
 | 產出 | 數字 |
 |---|---|
@@ -456,7 +482,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 397（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 602。** 除 W003 外全部先於本輪存在。**W003 走了五步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）**397**。下表分類已於 2026-09-04 重跑，以 W003=397 為準。**（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位）
+- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 554。** 除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。
