@@ -649,6 +649,31 @@ def collect_outbound_ids(entry: dict) -> set[str]:
             elif isinstance(v, str) and v:
                 out.add(v)
     out |= collect_movement_relation_ids(entry)
+    out |= collect_cross_ref_ids(entry)
+    return out
+
+
+def collect_cross_ref_ids(entry: dict) -> set[str]:
+    """收集條目三層 `cross_ref_ids` 的目標（供 W003 孤兒偵測用）。
+
+    2026-09-03 補。`cross_ref_ids` 是 S4c 定義的機器鍵，語意就是「這條指向
+    那條」，但 W003 原本只認 `links.*` 與 movement 關聯欄位，於是被
+    cross_ref 串起來的條目照樣被報成孤兒。這與 2026-09-02 補 movement 欄位
+    是同一個視野缺口：孤兒名單長，不代表內容真的沒連起來，可能只是檢查器
+    沒看那個欄位。
+
+    層別清單與 validate() 主迴圈的 cross_ref 契約檢查一致，改一邊要改兩邊。
+    """
+    out: set[str] = set()
+    containers = [entry]
+    for layer in ("public", "diagnostic"):
+        sub = entry.get(layer)
+        if isinstance(sub, dict):
+            containers.append(sub)
+    for container in containers:
+        value = container.get("cross_ref_ids")
+        if isinstance(value, list):
+            out.update(item for item in value if isinstance(item, str))
     return out
 
 
@@ -1684,6 +1709,12 @@ def run_validation():
         # 與 links.* 分開累計：movement 不使用 links，斷鏈由 W014 管，
         # 這裡只要目標存在就算一次指入。
         for target in collect_movement_relation_ids(entry):
+            if target in all_id_set:
+                inbound_ids[target] += 1
+
+        # ── cross_ref_ids 的入邊（W003 用）──
+        # 斷鏈由 E006 管，這裡只要目標存在就算一次指入。
+        for target in collect_cross_ref_ids(entry):
             if target in all_id_set:
                 inbound_ids[target] += 1
 

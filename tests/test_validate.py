@@ -157,6 +157,16 @@ class FixtureTestBase(unittest.TestCase):
         for rel, entry in all_entries:
             eid = entry.get("id", "(no id)")
 
+            # W003 入邊：非 links 的關聯欄位一律走產品端 helper，不在這裡重寫。
+            # 2026-09-03：harness 原本只累計 links.* 的入邊，movement 關聯欄位
+            # 與 cross_ref_ids 都沒算，等於 W003 的一半邏輯在測試裡沒被覆蓋。
+            for target in validate_mod.collect_movement_relation_ids(entry):
+                if target in all_id_set:
+                    inbound_ids[target] += 1
+            for target in validate_mod.collect_cross_ref_ids(entry):
+                if target in all_id_set:
+                    inbound_ids[target] += 1
+
             # E003 / E004（links 子鍵分三類，與 validate_mod 邏輯一致）
             links = entry.get("links")
             if isinstance(links, dict):
@@ -1911,6 +1921,39 @@ class TestE006CrossRefIds(FixtureTestBase):
         self.assertEqual(
             len(errors["E006"]), 0,
             "全部可解析的 cross_ref_ids 不應觸發 E006"
+        )
+
+    def test_cross_ref_ids_counts_as_edge_for_w003(self):
+        # 2026-09-03：W003 原本只認 links.* 與 movement 關聯欄位，不認
+        # cross_ref_ids，於是被 cross_ref 串起來的條目照樣被報成孤兒（實測
+        # 修完少 45 筆）。這個測試同時釘住出邊與入邊，且指向的層是 diagnostic
+        # ——三層都要算，只認 entry 頂層會漏掉最常用的那一層。
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {
+                        "id": "free.err24",
+                        "diagnostic": {"cross_ref_ids": ["free.tech.7"]},
+                    },
+                    {"id": "free.tech.99"},
+                ]
+            },
+        )
+        _, warnings, _ = self._run()
+        orphans = "\n".join(warnings["W003"])
+        self.assertNotIn(
+            "free.err24", orphans,
+            "有 diagnostic.cross_ref_ids 出邊的條目不該被報成孤兒",
+        )
+        self.assertNotIn(
+            "free.tech.7", orphans,
+            "被 diagnostic.cross_ref_ids 指到的條目不該被報成孤兒",
+        )
+        self.assertIn(
+            "free.tech.99", orphans,
+            "完全沒有進出邊的條目仍應被報成孤兒（否則這個測試無法證偽）",
         )
 
     def test_unresolvable_cross_ref_id_in_diagnostic_triggers_e006(self):
