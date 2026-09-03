@@ -53,7 +53,7 @@ def make_warnings():
         code: []
         for code in (
             "W012", "W013", "W014", "W015", "W016", "W017", "W018", "W019",
-            "E012",
+            "W020", "E012",
         )
     }
 
@@ -173,6 +173,9 @@ def run_movement_checks(documents):
         )
         validate_mod.check_measurement_conditions(
             rel, entry_key, entries, {"src.example"}, warnings
+        )
+        validate_mod.check_action_status_readiness(
+            rel, entry_key, entries, warnings
         )
 
     return warnings
@@ -854,6 +857,93 @@ class TestW019MeasurementConditions(unittest.TestCase):
     def test_check_ignores_non_demands(self):
         entry = {"id": "movement.action.test", "public": {"d": "增加 4%。"}}
         self.assertEqual(self._check(entry, "actions"), [])
+
+
+class TestW020ActionStatusReadiness(unittest.TestCase):
+    """W020：`action_status: ready` 的兩個必要條件。
+
+    擋的是「把 provisional 當成待補空格機械式翻成 ready」。實資料裡
+    action_status 幾乎是 claim_status 的鏡像（54 筆 ready 全是 supported），
+    唯一做過獨立判斷的 4 筆 demand 是 supported 但維持 provisional，
+    理由只寫在 assessment_note 散文裡——本檢查把那個判斷變成機器鍵。
+    """
+
+    DEMANDS = "canonical/movement/stroke-demands.yaml"
+    ACTIONS = "canonical/movement/actions.yaml"
+
+    def _check(self, entry, entry_key="demands", rel=None):
+        warnings = make_warnings()
+        validate_mod.check_action_status_readiness(
+            rel or self.DEMANDS, entry_key, [(0, entry)], warnings
+        )
+        return warnings["W020"]
+
+    def _demand(self, **overrides):
+        entry = {
+            "id": "movement.demand.free.catch.example",
+            "action_status": "ready",
+            "claim_status": "supported",
+            "measurement_conditions": [{"source_id": "src.example"}],
+        }
+        entry.update(overrides)
+        return entry
+
+    def test_ready_demand_with_measurement_and_supported_passes(self):
+        self.assertEqual(self._check(self._demand()), [])
+
+    def test_ready_on_partially_supported_claim_is_flagged(self):
+        found = self._check(
+            self._demand(claim_status="partially-supported")
+        )
+        self.assertEqual(len(found), 1)
+        self.assertIn("claim_status", found[0])
+
+    def test_ready_on_disputed_claim_is_flagged(self):
+        self.assertEqual(len(self._check(self._demand(claim_status="disputed"))), 1)
+
+    def test_ready_demand_without_measurement_conditions_is_flagged(self):
+        found = self._check(self._demand(measurement_conditions=[]))
+        self.assertEqual(len(found), 1)
+        self.assertIn("measurement_conditions", found[0])
+
+    def test_ready_demand_missing_measurement_key_is_flagged(self):
+        entry = self._demand()
+        del entry["measurement_conditions"]
+        self.assertEqual(len(self._check(entry)), 1)
+
+    def test_both_conditions_failing_reports_both(self):
+        found = self._check(
+            self._demand(claim_status="disputed", measurement_conditions=[])
+        )
+        self.assertEqual(len(found), 2)
+
+    def test_supported_but_provisional_is_not_flagged(self):
+        """反向刻意不檢查：這正是那 4 筆做對了的狀態。
+
+        把它報成異常等於逼人去消滅唯一做過獨立判斷的記錄。
+        """
+        found = self._check(
+            self._demand(action_status="provisional", measurement_conditions=[])
+        )
+        self.assertEqual(found, [])
+
+    def test_definitional_record_ready_without_measurement_passes(self):
+        """actions／muscle-groups 的可行動內容就是定義本身，不要求量測。"""
+        entry = {
+            "id": "movement.action.hip.flexion",
+            "action_status": "ready",
+            "claim_status": "supported",
+        }
+        self.assertEqual(self._check(entry, "actions", self.ACTIONS), [])
+
+    def test_definitional_record_still_needs_supported_claim(self):
+        """(a) 條是全層的：定義層也不得在證據未定的宣稱上開處方。"""
+        entry = {
+            "id": "movement.action.hip.flexion",
+            "action_status": "ready",
+            "claim_status": "partially-supported",
+        }
+        self.assertEqual(len(self._check(entry, "actions", self.ACTIONS)), 1)
 
 
 class TestE010MovementDiagnosticLeak(unittest.TestCase):

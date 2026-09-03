@@ -279,11 +279,41 @@ fields:
     review_status: reviewed
     note: >
       可否據以行動。do-not-prescribe 表示不得寫成處方。
+      **本欄位與 claim_status 是兩條不同的軸，不得互相推導**：claim_status 問
+      「這個宣稱有沒有證據」，action_status 問「能不能照著開處方」。
+      證據充分卻不可處方是正常狀態（解剖來源足以支持關節命名，但撐不起
+      「該做幾度、哪一拍」），因此 supported 不蘊涵 ready。
+      反向則成立：ready 必須是 supported——不得在證據未定的宣稱上開處方。
+      這個單向蘊涵由 tools/validate.py 的 W020 強制，兩邊必須同時改。
+      判準逐值寫在下方 values[].criterion（同 certainty 的作法）。
+      **W020 只檢查必要條件，不檢查充分條件**：通過 W020 不代表 ready 站得住，
+      criterion 才是判準，機器擋不住的部分由審查者負責。
       本欄位不維護 count；實際使用數以 indices/tag_reverse_index.json 為準。
     values:
       - key: ready
+        criterion: >
+          可據以開處方。demand 層要到這一格，需要**該泳式、該相位的專項量測**
+          （相位化運動學／肌電／推進力），足以支撐「多少、哪個角度、哪一拍」
+          這類處方層決定；並須以 measurement_conditions 自證，由 W020 強制。
+          definitional 記錄（movement.action.* 的關節動作定義、
+          movement.muscle.* 的肌群定義）不受此限：它們的可行動內容就是
+          「這個動作／肌群如此定義」，解剖來源即已足夠。
       - key: provisional
+        criterion: >
+          宣稱本身可能已充分支持，但缺處方層依據，因此只能用於評估與判讀，
+          不能寫成照做的指令。**demand 層的預設值就是這一格**——
+          2026-09-04 盤點時 66 筆 demand 全在此。
+          典型形狀（取自四筆已寫明理由的記錄）：解剖來源支持關節命名與
+          一般可用能力，但沒有該泳式的相位化運動學或推進力量測，
+          於是 claim_status 是 supported 而 action_status 仍是 provisional。
+          要升級請補該相位的專項量測，不是改標記——
+          每筆的 diagnostic.assessment_note 末段已寫明缺什麼。
       - key: do-not-prescribe
+        criterion: >
+          明令不得寫成處方，比 provisional 更強：provisional 是「還不夠」，
+          do-not-prescribe 是「就算有人覺得夠也不准開」。
+          兩個既有閘會強制落到這一格：mobility_decision: evidence-gap（W016）、
+          joint-local 但無分節段量測支撐（W018 的唯一豁免）。
 
   evidence_profile:
     controlled: true

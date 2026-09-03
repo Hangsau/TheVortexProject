@@ -6,7 +6,43 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ W008 收尾 **4 → 3**：逐筆讀完四筆孤兒的真身。只有 1 筆該轉墓碑，1 筆是**會被照抄的錯誤歸因**（已補正），另 2 筆是真文獻但**接不上去的理由是登錄層缺口，不是沒人去寫**。WARN 454 → **453**，0 ERROR、226 tests OK
+### ▶️ `action_status` 這條軸開工前先盤點，結果是**不能開始升級**：這欄位目前幾乎不帶獨立資訊（54 筆 `ready` 全是 `claim_status: supported`），真正的判斷只活在 4 段散文裡。已補上逐值 `criterion` ＋ **W020** 擋住機械式翻牌。453 WARN、0 ERROR、226 → **235 tests**
+
+**盤點結果（74 筆 `provisional`）**：`stroke-demands.yaml` 66、`interventions.yaml` 7、`muscle-groups.yaml` 1。但真正該看的是**交叉表**：
+
+| 檔案 | action_status | claim_status | 筆數 |
+|---|---|---|---|
+| `actions.yaml` | ready | supported | 33 |
+| `muscle-groups.yaml` | ready | supported | 21 |
+| `muscle-groups.yaml` | provisional | partially-supported | 1 |
+| `interventions.yaml` | provisional | partially-supported／disputed | 7 |
+| `stroke-demands.yaml` | provisional | partially-supported／disputed | 62 |
+| **`stroke-demands.yaml`** | **provisional** | **supported** | **4 ← 只有這裡有獨立判斷** |
+
+**`ready` ⟺ `claim_status: supported`，128 筆裡只有 4 筆例外。** 也就是說 `action_status` 現在基本上是 `claim_status` 的鏡像複本。**如果照原訂計畫直接開始「升級 provisional」，最省事、最說得通、而且完全錯誤的做法就是把它對齊 `claim_status`——翻掉那 4 筆，於是全庫唯一做過獨立行動判斷的記錄被抹掉。** 這是接手時最容易踩的一腳，所以先擋起來再說。
+
+**那 4 筆例外把判準寫出來了**（`back.catch.shoulder-rotation-reversal`、`back.pull.forearm-orientation-over-path-shape`、`back.up-kick.hip-flexion-with-knee-extension`、`fly.arm-catch.elbow-flexion-with-rotation-reversal`），四段 note 講的是同一件事：
+
+> 解剖來源支持**關節命名與一般可用能力**（所以 `claim_status: supported`），
+> 但沒有**該泳式的相位化運動學／肌電／推進力量測**（所以不得據此開處方，`action_status` 維持 `provisional`）。
+
+兩條軸因此是分開的：`claim_status` 問「這個宣稱有沒有證據」，`action_status` 問「能不能照著開處方」。**`supported` 不蘊涵 `ready`；反向才成立。**
+
+**已做的三件事：**
+
+1. **`_taxonomy.yaml#action_status` 補逐值 `criterion`**（比照 `certainty` 的作法）。原本整個欄位只有一句「可否據以行動」，`ready` 與 `provisional` 的分界沒有任何成文判準——任何人要升級都只能自己重新逆推那 4 段散文。同時寫明 `demand` 層的預設值就是 `provisional`，以及 definitional 記錄（`movement.action.*`／`movement.muscle.*`）為何不受相位量測要求限制：它們的可行動內容就是定義本身。
+2. **新增 W020**，兩條都是**必要條件**：(a) 全層 `ready` ⟹ `claim_status: supported`（不得在證據未定的宣稱上開處方）；(b) demand 專屬 `ready` ⟹ `measurement_conditions` 非空（升 ready 須有該相位的專項量測自證，**只改標記不算升級**）。實資料 0 筆——這是防未來漂移的閘，不是揪出了什麼，不誇大。
+3. **刻意不檢查反向**（`supported` 卻 `provisional`）。專門寫了 `test_supported_but_provisional_is_not_flagged` 把這個決定釘住：報它等於逼人去消滅那 4 筆唯一做對的判斷。
+
+**證偽做過了**：把 (a) 的判斷式短路成 `if False` → 3 條紅；把 (b) 短路 → 3 條紅。9 條新測試，總數 226 → **235**。
+
+**這是本次連續第三次遇到同一個形狀的病**：W002 狀態在顯示字串、W008 作廢狀態在 `display`、W020 行動判斷在 `assessment_note`——**判斷做過了，但只留在人讀文字裡，下一輪就被當成待補的空格填掉**。前兩次是事後補救，這次是動手前先攔下來。
+
+**所以 `action_status` 升級軸的真正下一步不是改標記，是查文獻**：66 筆 demand 每筆的 `diagnostic.assessment_note` 末段已寫明缺什麼（多半是「該泳式該相位的分節段運動學」或「相位化肌電」）。那是研究待辦清單，一筆一筆補量測 → 補 `measurement_conditions` → 才輪到動 `action_status`。**W020 (b) 現在會擋住跳過中間步驟的做法。**
+
+---
+
+### ▶️ 上一輪：W008 收尾 **4 → 3**：逐筆讀完四筆孤兒的真身。只有 1 筆該轉墓碑，1 筆是**會被照抄的錯誤歸因**（已補正），另 2 筆是真文獻但**接不上去的理由是登錄層缺口，不是沒人去寫**。WARN 454 → **453**，0 ERROR、226 tests OK
 
 **W008 不會歸零，也不該歸零。** 剩的 3 筆全是真實已驗證文獻，狀態是「等著被掛上主張」——把它們硬接到不對的條目上只會製造錯誤歸因，比留著警告糟得多。
 
@@ -564,7 +600,9 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 **⚠ 以下第 0～4 項是 2026-09-03 覆蓋率補滿後重寫的當前建議；再下方的第 0～N 項是達成 59/59 過程中的歷史稽核軌跡，保留供追溯，不再是待辦。**
 
-- **A.（← 這是接手後的第一件事）覆蓋率這條軸已經走完，不要再拿它當進度指標。** 59/59 是「每個登錄相位都有一筆記錄」，不是「每一筆都夠好」。**下一條軸是 `action_status`**：全層仍有大量 `provisional`，每一筆的 `diagnostic.assessment_note` 末段都已寫明「要推上去缺什麼」（多半是關節角度—時間曲線或樣本交代）。**優先讀那些末段，它們是現成的研究待辦清單，不必重新盤點。**
+- **A. 覆蓋率這條軸已經走完，不要再拿它當進度指標。** 59/59 是「每個登錄相位都有一筆記錄」，不是「每一筆都夠好」。**下一條軸是 `action_status`**：全層仍有大量 `provisional`（2026-09-04 實測 74 筆），每一筆的 `diagnostic.assessment_note` 末段都已寫明「要推上去缺什麼」（多半是關節角度—時間曲線或樣本交代）。**優先讀那些末段，它們是現成的研究待辦清單，不必重新盤點。**
+
+  **⚠ 2026-09-04 補充（開工前已盤點過，先讀本檔最上方那一節再動手）：這是查文獻的工作，不是改標記的工作。** 盤點發現 `action_status` 幾乎是 `claim_status` 的鏡像（54 筆 `ready` 全是 `supported`，128 筆裡只有 4 筆做過獨立判斷）。**最順手的做法——把 `action_status` 對齊 `claim_status`——會抹掉那 4 筆全庫唯一正確的行動判斷。** 判準已補進 `_taxonomy.yaml#action_status.values[].criterion`，並由 **W020** 強制：demand 要升 `ready` 必須有非空 `measurement_conditions`，**只改標記不算升級**。正確順序是：讀 `assessment_note` 末段 → 去補該相位的專項量測文獻 → 寫 `measurement_conditions` → 最後才動 `action_status`。
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 

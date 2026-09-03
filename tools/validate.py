@@ -79,6 +79,10 @@ exit code：
         反推關節動作，是 C 類蒐證命中最多次的結構性根因
   W019  demand 文字出現量化主張但缺 measurement_conditions，或該欄的必填
         子鍵缺漏／source_id 無法解析：數值不得裸奔進 demand
+  W020  action_status: ready 的必要條件未滿足——claim_status 不是 supported
+        （在證據未定的宣稱上開處方），或 demand 缺 measurement_conditions
+        （升 ready 卻沒有該相位的專項量測自證）。擋的是「把 provisional
+        當成待補空格機械式翻成 ready」
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -1560,6 +1564,69 @@ def check_action_reference_frame(
         )
 
 
+def check_action_status_readiness(
+    rel: str,
+    entry_key: str,
+    entries: list[tuple[int, dict]],
+    warnings: dict,
+):
+    """W020：`action_status: ready` 的兩個必要條件。
+
+    `action_status` 與 `claim_status` 是兩條不同的軸，但 2026-09-04 盤點
+    發現實資料裡幾乎完全重合（54 筆 ready 全是 supported），只有 4 筆
+    demand 做過獨立判斷（supported 但維持 provisional）。那 4 筆的
+    `assessment_note` 把理由寫成散文——「沒有該泳式的相位化運動學，
+    故不得據此開處方」——**但沒有任何機器鍵記錄這個判斷**。
+    這與 W002（狀態在顯示字串）、W008（作廢狀態在 display）是同一個形狀：
+    判斷只活在人讀文字裡，下一輪就會被當成待補的空格機械式填掉。
+
+    本檢查擋住那個機械式翻牌，兩條都是**必要條件**：
+
+    (a) 全層：ready ⟹ claim_status == supported。
+        不得在證據未定（partially-supported／disputed）的宣稱上開處方。
+        反向不成立且刻意不檢查——supported 卻 provisional 正是那 4 筆的
+        正確狀態，把它當異常報出來，等於逼人去消滅唯一做對的判斷。
+
+    (b) demand 專屬：ready ⟹ measurement_conditions 非空。
+        taxonomy 的 criterion 要求 demand 升 ready 須有該相位的專項量測；
+        這是它唯一能機器自證的形式。W019 只在「文字出現量化主張」時要求
+        此欄，本條是無條件要求，兩者互補不重疊。
+        definitional 記錄（actions／muscle-groups）不適用——它們的可行動
+        內容就是定義本身，解剖來源已足夠，所以本條只掃 demands。
+
+    通過 W020 不代表 ready 站得住：充分條件（量測是否真的撐得起該相位的
+    處方決定）機器判不了，由 taxonomy 的 criterion 與審查者負責。
+    取值合法性由 E012 負責。
+    """
+    for index, entry in entries:
+        if entry.get("action_status") != "ready":
+            continue
+
+        eid = entry.get("id", "(no id)")
+        loc = f"{entry_key}[{index}]"
+
+        claim = entry.get("claim_status")
+        if claim != "supported":
+            warnings["W020"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"action_status='ready' 但 claim_status={claim!r}："
+                "不得在證據未定的宣稱上開處方（改標 provisional，"
+                "或先把 claim_status 推到 supported）"
+            )
+
+        if entry_key != "demands":
+            continue
+
+        conditions = entry.get("measurement_conditions")
+        if not isinstance(conditions, list) or not conditions:
+            warnings["W020"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                "action_status='ready' 但 measurement_conditions 為空："
+                "demand 升 ready 須有該泳式該相位的專項量測自證，"
+                "只改標記不算升級"
+            )
+
+
 def _iter_prose_strings(block: object):
     """遞迴取出區塊內所有字串值，供 W019 掃量化主張。"""
     if isinstance(block, str):
@@ -1784,10 +1851,10 @@ def run_validation():
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
-        "W016": [], "W017": [], "W018": [], "W019": []
+        "W016": [], "W017": [], "W018": [], "W019": [], "W020": []
     }
 
-    # ── W012–W019: movement 網域契約（只掃四個明列內容檔）──
+    # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
     movement_documents: list[
         tuple[str, str, str, list[tuple[int, dict]]]
     ] = []
@@ -1833,6 +1900,7 @@ def run_validation():
         check_measurement_conditions(
             rel, entry_key, entries, allowed_source_ids, warnings
         )
+        check_action_status_readiness(rel, entry_key, entries, warnings)
 
     # ── E001: 在已知條目陣列鍵中發現缺 id 的元素 ──
     for path in validate_files:
@@ -2189,6 +2257,11 @@ def _write_report(
         "W019": (
             "WARN",
             "demand 文字含量化主張但 `measurement_conditions` 缺漏或不完整",
+        ),
+        "W020": (
+            "WARN",
+            "`action_status: ready` 的必要條件未滿足（`claim_status` 不是 "
+            "`supported`，或 demand 缺 `measurement_conditions`）",
         ),
     }
 

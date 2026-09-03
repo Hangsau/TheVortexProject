@@ -704,3 +704,11 @@
 （無）
 
 ---
+
+## W020 — `action_status: ready` 的必要條件未滿足（`claim_status` 不是 `supported`，或 demand 缺 `measurement_conditions`）
+
+**WARN，共 0 筆**
+
+（無）
+
+---
