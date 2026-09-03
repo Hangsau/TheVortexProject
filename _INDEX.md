@@ -165,7 +165,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 | movement/muscle-groups.yaml | **完成** · 肌群 **22 筆**。`demand.muscle_roles[].muscle_id` 的值域。**`muscle_roles` 不與 `action_ids` 一對一，可整段省略**——庫內沒登錄軀幹軸向旋轉肌群，`wall-rotation` 那筆因此不寫，借用矢狀面控制肌群會是錯誤歸因 |
 | movement/stroke-demands.yaml | **完成（2026-09-03）** · 泳姿需求 **61 筆**，相位覆蓋 **54/59**。每筆必填 `action_reference_frame`（W018）；文字一旦出現量化主張即必填 `measurement_conditions` 六子鍵（W019）。**`action_reference_frame` 宣告的是所列 `action_ids` 的基底，不是相位的性質**——剛體空間重定向（翻滾、牆上轉體）根本不進 `action_ids`，因此不需要 `joint-local` 以外的框架。本層是**列舉性的**：方向衝突兩向並列，不裁定何者為真 |
 | movement/interventions.yaml | **完成** · 條件式訓練與活動度介入 **7 筆**，覆蓋 5 個動作。**門檻不是「有沒有劑量來源」**（7 筆裡多筆 `dosage_source_ids: []`），是能否寫出可分流的 `limitation_type` ＋ `works_when`／`fails_when` ＋ `how_to_identify` ＋ 有進退階的 `action` ＋ `mobility_decision`。`demand_ids` 是本層的承重連結，不曾為空 |
-| 註（movement） | | 覆蓋率真相源是 `KNOWLEDGE_MAP.md`（由 `_taxonomy.yaml` 的 59 相位登錄表算出），不是 `plans/movement_coverage_denominator.yaml`。剩餘 5 缺口分三類：三個缺相位化三維關節運動學（`udk.kick-initiation`／`udk.down-to-up-transition`／`starts-turns.breaststroke-pullout`，屬研究工作不可發包）、一個內容已被既有記錄擁有（`breast.leg-outsweep`）、一個是分母重複（`starts-turns.underwater-dolphin-kick` 與 udk 分期重疊，應除名為 58 並改公開文案） |
+| 註（movement） | | 覆蓋率真相源是 `KNOWLEDGE_MAP.md`（由 `_taxonomy.yaml` 的 59 相位登錄表算出），不是 `plans/movement_coverage_denominator.yaml`。剩餘 5 缺口分兩類：**四個缺相位化三維關節運動學**（`udk.kick-initiation`／`udk.down-to-up-transition`／`starts-turns.breaststroke-pullout`／`starts-turns.underwater-dolphin-kick`，屬研究工作不可發包）、一個內容已被既有記錄擁有（`breast.leg-outsweep`）。**分母維持 59，不除名**：`underwater-dolphin-kick` 先前被判為「與 udk 分期完全重複」是誤分類，庫內先例是 `starts-turns.underwater-glide` 與 `udk.streamlined-glide` 同姿勢同情境**各自成筆**——跨分期模型的平行相位不視為重複，判準是素材來源不同而非姿勢相同 |
 
 ### Drills/
 | 文件 | 狀態 | 備註 |
