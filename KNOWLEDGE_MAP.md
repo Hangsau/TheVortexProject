@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 109 | actions 31 / muscle-groups 22 / demands 51 / interventions 5；相位覆蓋 44/59 |
+| `movement` | 115 | actions 31 / muscle-groups 22 / demands 57 / interventions 5；相位覆蓋 50/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,13 +795,13 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**44/59**）
+### 相位覆蓋（**50/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
 | 泳式 | 覆蓋 | 分期系統 | 未覆蓋相位 |
 |---|---|---|---|
-| 自由式 | 6/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | lift（升力相）, rear-quadrant-propulsion（後象限推進）, push（推水相）, release（釋放相）, early-recovery（早期回臂）, late-recovery（晚期回臂） |
+| 自由式 | 12/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | — |
 | 仰式 | 7/7 | descriptive | — |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
 | 蝶式 | 10/11 | descriptive, event-window | breathing-window（呼吸視窗） |
@@ -871,11 +871,11 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**51 條目**）
+### `stroke-demands.yaml` — 泳式需求（**57 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
-#### 自由式 (8)
+#### 自由式 (14)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -887,6 +887,12 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.free.entry.shoulder-line-roll-peak | entry | descriptive | 自由式入水期的肩線滾轉峰值時點 | partially-supported | provisional |
 | movement.demand.free.catch.elevation-plane-shift-with-rotation-onset | catch | descriptive | 自由式抓水期的上舉平面移動與旋轉起始 | partially-supported | provisional |
 | movement.demand.free.catch.palm-orientation-three-source-decomposition | catch | descriptive | 掌心空間朝向與前臂關節位置是兩個欄位 | partially-supported | provisional |
+| movement.demand.free.lift.deferred-descent-and-style-time-difference | lift | race-club-6phase | 升力相的上舉維持與下壓延後，以及風格差異的時間性質 | partially-supported | provisional |
+| movement.demand.free.rear-quadrant-propulsion.hip-snap-is-trunk-rotation | rear-quadrant-propulsion | race-club-6phase | 後象限推進的肩伸展與肘伸展，以及「髖部往後甩」的解剖歸屬 | partially-supported | provisional |
+| movement.demand.free.push.three-component-power-contribution | push | kudo-power-phase | 推水相由胸廓旋轉、肩內收與肘伸展三個成分共同構成 | partially-supported | provisional |
+| movement.demand.free.release.little-finger-orientation-is-not-a-rotation | release | race-club-6phase | 釋放相的離水動作，與「小指朝上」不能反推關節旋轉 | partially-supported | provisional |
+| movement.demand.free.early-recovery.scapular-upward-rotation-with-wrist-neutral | early-recovery | race-club-6phase | 早期回臂的肩胛上旋、肘屈曲光譜與腕中立 | partially-supported | provisional |
+| movement.demand.free.late-recovery.entry-drive-and-rotation-are-one-linkage | late-recovery | race-club-6phase | 晚期回臂的上舉與肘伸展，以及「砸水」與「轉體」不是兩個指令 | partially-supported | provisional |
 
 #### 仰式 (7)
 

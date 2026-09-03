@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-03
-> 驗證條目數：735，Drills ID 數：176
+> 驗證條目數：741，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 412 筆**
+**WARN，共 408 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -399,14 +399,12 @@
   file=canonical\instructional\teaching-errors.yaml id='starts-turns.err13'
   file=canonical\instructional\teaching-errors.yaml id='starts-turns.err14'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.5'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.7'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.10'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.12'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.13'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.14'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.15'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.29'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.18'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.19'
@@ -417,14 +415,12 @@
   file=canonical\instructional\technical-analysis.yaml id='free.tech.24'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.26'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.32'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.33'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.31'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.34'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.35'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.36'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.37'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.38'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.39'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.40'
