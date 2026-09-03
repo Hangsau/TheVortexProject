@@ -66,7 +66,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Chloramines and ocular irritation in swimming pools, PMC6137694", certainty: 🟢, verified: true }
+  - { citation: "Chloramines and ocular irritation in swimming pools, PMC6137694", certainty: 🟢, verified: true, source_ids: [src.pmc6137694] }
 
 flags:
   pending_verification:

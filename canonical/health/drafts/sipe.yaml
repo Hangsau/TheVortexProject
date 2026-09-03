@@ -92,9 +92,9 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Spencer S, Dickinson J, Forbes L. (2018). Occurrence, Risk Factors, Prognosis and Prevention of Swimming-Induced Pulmonary Oedema: a Systematic Review. Sports Med Open 4(1):43. PMID 30238206", certainty: 🟢, verified: true }
-  - { citation: "Hårdstedt M, et al. (2021). Incidence of Swimming-Induced Pulmonary Edema: A Cohort Study Based on 47,600 Open-Water Swimming Distances. Chest 160(5):1789–1798. PMID 34186036", certainty: 🟢, verified: true }
-  - { citation: "Volk C, et al. (2021). Incidence and Impact of Swimming-Induced Pulmonary Edema on Navy SEAL Candidates. Chest 159(5):1934–1941. PMID 33245874", certainty: 🟢, verified: true }
+  - { citation: "Spencer S, Dickinson J, Forbes L. (2018). Occurrence, Risk Factors, Prognosis and Prevention of Swimming-Induced Pulmonary Oedema: a Systematic Review. Sports Med Open 4(1):43. PMID 30238206", certainty: 🟢, verified: true, source_ids: [src.spencer-2018-sipe-systematic-review] }
+  - { citation: "Hårdstedt M, et al. (2021). Incidence of Swimming-Induced Pulmonary Edema: A Cohort Study Based on 47,600 Open-Water Swimming Distances. Chest 160(5):1789–1798. PMID 34186036", certainty: 🟢, verified: true, source_ids: [src.hardstedt-2021-sipe-incidence-cohort] }
+  - { citation: "Volk C, et al. (2021). Incidence and Impact of Swimming-Induced Pulmonary Edema on Navy SEAL Candidates. Chest 159(5):1934–1941. PMID 33245874", certainty: 🟢, verified: true, source_ids: [src.volk-2021-sipe-navy-seal] }
 
 flags:
   pending_verification:

@@ -69,8 +69,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Menstrual dysfunction in competitive swimmers, PMC9658102", certainty: 🟢, verified: true }
-  - { citation: "Swimmers as a distinct menstrual entity (hyperandrogenism), PMID 7673417", certainty: 🟢, verified: true }
+  - { citation: "Menstrual dysfunction in competitive swimmers, PMC9658102", certainty: 🟢, verified: true, source_ids: [src.pmc9658102] }
+  - { citation: "Swimmers as a distinct menstrual entity (hyperandrogenism), PMID 7673417", certainty: 🟢, verified: true, source_ids: [src.pmid-7673417] }
 
 flags:
   pending_verification:

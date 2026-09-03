@@ -75,8 +75,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Low back pain in swimmers by stroke, PMC11531034", certainty: 🟢, verified: true }
-  - { citation: "Spine degeneration in competitive swimmers, PMC3435931", certainty: 🟢, verified: true }
+  - { citation: "Low back pain in swimmers by stroke, PMC11531034", certainty: 🟢, verified: true, source_ids: [src.pmc11531034] }
+  - { citation: "Spine degeneration in competitive swimmers, PMC3435931", certainty: 🟢, verified: true, source_ids: [src.pmc3435931] }
 
 flags:
   pending_verification:

@@ -74,8 +74,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Cam morphology in aquatic (water polo/synchro) athletes, PMC7605769", certainty: 🟢, verified: true }
-  - { citation: "FAI surgical rehabilitation and return to sport, PMC11642080", certainty: 🟢, verified: true }
+  - { citation: "Cam morphology in aquatic (water polo/synchro) athletes, PMC7605769", certainty: 🟢, verified: true, source_ids: [src.pmc7605769] }
+  - { citation: "FAI surgical rehabilitation and return to sport, PMC11642080", certainty: 🟢, verified: true, source_ids: [src.pmc11642080] }
 
 flags:
   pending_verification:

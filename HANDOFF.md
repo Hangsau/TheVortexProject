@@ -6,7 +6,33 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ W003=349 三類分佈重跑：Class ① 38、Class ② **0**、Class ③ **311**（其中純 258、局部 53）。C 項表與預測一致，未動任何 canonical，數字前後無變化
+### ▶️ W002 顯示字串 → `source_ids` 遷移：**123 → 37（−86）**，全數落在 `health/drafts/*.yaml` 的 `references[].citation`。0 ERROR、WARN 554 → **468**、222 tests OK
+
+| 產出 | 前值 | 現值 |
+|---|---|---|
+| W002（有來源顯示字串但缺 `source_ids`） | 123 | **37**（−86） |
+| W008（`_sources.yaml` 孤兒來源） | 18 | **18**（未動，見錯誤 22） |
+| W001 ／ W003 ／ W011 | 1 ／ 349 ／ 63 | 1 ／ **349** ／ 63（皆不變） |
+| WARN 合計 | 554 | **468** |
+| `gap_report.json` `unlinked_records` | 349 | **349**（＝W003，未分岔） |
+
+**做法是識別碼比對，不是字面相似度**：對每一條 `citation` 顯示字串抽 PMC／PMID／DOI，去 `_sources.yaml` 的三個反向索引（`bypmc`／`bypmid`／`bydoi`）解析成 `src.<slug>`。**86 筆全部唯一命中，零多重命中**（`filled 86 multi 0 missed 37`）。其中 27 筆的 slug 是人名式命名（不是 `src.pmcNNNN` 這種自解釋型），這 27 筆**逐筆開 `_sources.yaml` 對標題確認**過才寫入——slug 名對不上不代表錯，但也不能靠 slug 名判對。
+
+**寫入格式安全**：這 123 行全部是單行 inline flow map（`- { citation: "...", certainty: 🟢, verified: true }`），所以插入位置固定取該行最後一個 `}` 之前，格式與註解不會被 YAML round-trip 重排。改的是 `drafts/`，`canonical/health/injuries.yaml` 由 `build_injuries.py` 重生。
+
+**剩下的 37 筆是什麼**（清單在 `C:/tmp/miss.txt`，下輪要重跑就重跑那支 heredoc）：兩類——① 顯示字串裡根本沒寫可解析識別碼（只有作者＋期刊＋年份，例如「Prevention of spinal cord injuries in swimming pools, PubMed 9267915」這種舊 PMID 沒進註冊表的）；② 有識別碼但 `_sources.yaml` 裡沒登錄。**②要先註冊來源才能接，①要先查到識別碼**——都不是機械遷移，是查證工作。
+
+#### 錯誤 22：把「W002 與 W008 是一體兩面、一起做兩個數字會同時掉」當成已知事實 — **錯**
+
+交接單 C 項（line 544）寫「W002／W008 是一體兩面（顯示字串沒遷 `source_ids` → 註冊表那頭就沒人引用 → 報孤兒來源），**應該一起做而不是分兩輪**」。這句的**前半（因果機制）是對的，後半（推論這批會同時掉）是錯的**——實際填完 86 筆之後 **W008 紋風不動，還是 18**。
+
+原因：86 筆命中的來源**本來就已經有別的條目在引用**（所以不在孤兒名單上）；而那 18 筆孤兒來源**沒有任何一條 W002 顯示字串指向它們**。兩個集合是不相交的。
+
+**這是假說被推翻，不是執行失誤**——但錯在我把它當成「已知」而不是「待驗」，所以在動手前沒設任何檢查點。**下輪 W008 要當獨立題目處理**：先開那 18 筆看它們是誰、當初為什麼被註冊卻沒人引用（可能是內容被刪但來源沒清、也可能是註冊了還沒寫進條目），再決定是補引用還是下架。
+
+---
+
+### ▶️ 上一輪：W003=349 三類分佈重跑：Class ① 38、Class ② **0**、Class ③ **311**（其中純 258、局部 53）。C 項表與預測一致，未動任何 canonical，數字前後無變化
 
 | 產出 | 前值（W003=397 表） | 現值（W003=349 表） |
 |---|---|---|
@@ -26,13 +52,15 @@
 
 **沒犯錯，但一件跟上一輪的敘述要對回來**：上一輪 HANDOFF 的「Class ③ ~311」預測是拍腦袋的（原文自己也標「未實跑」），這一輪實跑確認就是 311。**這是「預測 vs 實測相符」的第一次紀錄**，不是新錯——但**同樣一次都算，如果先前每次都做這個對表，錯誤 21（預測 41 實測 38）就會早一輪抓到**。
 
-**下一個佇列項目**：Class ② 已清，Class ① 依錯誤 20 判斷已不能接（injuries 25 筆 all-None 補連結＝發明臨床主張；ADM 12 格四鍵目標檔無合法目標；periodization/structure 1 筆同理），Class ③ 補連結是內容題不是接線題。**接線債本階段清完**，下一段該做 W002＋W008（顯示字串未遷 `source_ids` 與孤兒來源，一體兩面）或 `action_status` 升級（依 `assessment_note` 判定）。兩件都要動 canonical，會觸發完整收尾（build_injuries／validate／build_indices／build_knowledge_map／tests／sync）。
+**下一個佇列項目（2026-09-04 更新）**：W002 大宗已遷（123 → 37），剩 37 筆屬查證題。**接著做 W008 18 筆孤兒來源（獨立題目，不再假設與 W002 連動——見錯誤 22）**，或 `action_status` 從 `provisional` 升級（依各筆 `diagnostic.assessment_note` 末段判定）。
+
+**（以下為 2026-09-04 早前的判斷，接線債部分仍成立）**：Class ② 已清，Class ① 依錯誤 20 判斷已不能接（injuries 25 筆 all-None 補連結＝發明臨床主張；ADM 12 格四鍵目標檔無合法目標；periodization/structure 1 筆同理），Class ③ 補連結是內容題不是接線題。**接線債本階段清完**，下一段該做 W002＋W008（顯示字串未遷 `source_ids` 與孤兒來源，一體兩面）或 `action_status` 升級（依 `assessment_note` 判定）。兩件都要動 canonical，會觸發完整收尾（build_injuries／validate／build_indices／build_knowledge_map／tests／sync）。
 
 **分類器留在 `tools/classify_w003_orphans.py`**：一次性工具，讀 `reports/validation_report.md` 的 W003 名單，回過頭去對每一條開 YAML 看 `links` 形狀與 `cross_ref` 有無。**若下輪要再對一次表，改跑這個腳本即可**，不用重寫。
 
 ---
 
-### ▶️ 上一輪：Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
+### ▶️ 再上一輪：Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
 
 | 產出 | 數字 |
 |---|---|
@@ -482,7 +510,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W002 123（顯示字串未遷 `source_ids`）、W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 554。** 除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
+- **C. WARN 債務：W002 37（顯示字串未遷 `source_ids`）、W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 468。** W002 已於 2026-09-04 從 123 遷掉 86 筆（識別碼比對，見本檔最上方）；**剩的 37 筆不是機械遷移而是查證工作**（清單在 `C:/tmp/miss.txt`）。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。
@@ -541,7 +569,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
   - **修法一致：刪複本，不修複本。** `build_indices.py` 的私有入邊迴圈刪掉改呼叫 `collect_outbound_ids()`；`validate.py` 主迴圈的兩段入邊累計也刪掉、改呼叫同一個函式；`check_links_block()` 不再兼管入邊（少一個參數）。現在**全庫只有一處定義「什麼算一條邊」**，`indices/gap_report.json` 的 `unlinked_records` 與 W003 因此必然相等（實測皆 399），對不上就是有人又分岔了。
   - **⚠ 這一輪暴露出 harness 型測試的能力邊界，要記住**：我先試著把主迴圈改回舊寫法驗證新測試會不會變紅——**全綠**。因為 `_run()` 是主迴圈的重寫版，測試走的是 harness 那條路，**產品端主迴圈退化它偵測不到**。真正有效的證偽是去破共用的 `collect_outbound_ids()`（實測立刻變紅）。**所以測試只釘得住共用函式，主迴圈有沒有真的呼叫它得靠別的手段**——目前是驗證器逐行輸出比對（`C:/tmp/val.txt` vs `val2.txt`，SAME）。這是「commit + tests pass ≠ 實際生效」在本專案的具體形狀。
 
-  W002／W008 是一體兩面（顯示字串沒遷 `source_ids` → 註冊表那頭就沒人引用 → 報孤兒來源），**應該一起做而不是分兩輪**。W011 是 🟠 條目缺 `observation_basis`，屬內容補寫不是工具問題。
+  ~~W002／W008 是一體兩面（顯示字串沒遷 `source_ids` → 註冊表那頭就沒人引用 → 報孤兒來源），**應該一起做而不是分兩輪**。~~ **← 這句的推論部分已被 2026-09-04 實測推翻，見本檔最上方「錯誤 22」。** 因果機制敘述沒錯，但那 86 筆命中的來源本來就有別人引用，與 W008 那 18 筆孤兒不相交——填完 W002 之後 W008 一筆沒掉。**W008 要當獨立題目做。** W011 是 🟠 條目缺 `observation_basis`，屬內容補寫不是工具問題。
 
 - **D. ✅ 測試 harness 的複製迴圈已系統性掃完（2026-09-03）。共四處，全部處理。** `tests/test_validate.py` 的 `_run()` 自己重寫了 `validate.py` 主迴圈而不是呼叫它。第一、二處先前已補：加 `diagnostic` 層時產品端改對了、測試端沒跟上；`inbound_ids` 只累計 `links.*`，W003 有一半邏輯從未被覆蓋。
 

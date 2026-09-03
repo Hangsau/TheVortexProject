@@ -81,8 +81,8 @@ links:
 
 references:
   - { citation: "Prevention of spinal cord injuries in swimming pools, PubMed 9267915", certainty: 🟢, verified: true }
-  - { citation: "Cervical spine injuries 34 patients, PMC2899837", certainty: 🟢, verified: true }
-  - { citation: "Overview of Spinal Injuries Aegean Coast(24h decompression), PMC8192199", certainty: 🟢, verified: true }
+  - { citation: "Cervical spine injuries 34 patients, PMC2899837", certainty: 🟢, verified: true, source_ids: [src.pmc2899837] }
+  - { citation: "Overview of Spinal Injuries Aegean Coast(24h decompression), PMC8192199", certainty: 🟢, verified: true, source_ids: [src.pmc8192199] }
   - { citation: "Spinal Cord Injury With Tetraplegia, SAGE 2021, PubMed 32909818", certainty: 🟢, verified: true }
   - { citation: "World Aquatics 1.35m diving depth rule(STA technical notice 2023)", certainty: 🟢, verified: true }
 

@@ -81,7 +81,7 @@ links:
 
 references:
   - { citation: "Multidirectional instability of the shoulder, StatPearls NBK557726", certainty: 🟢, verified: true }
-  - { citation: "Bishop ME, Ode GE, Hurwit DJ, et al. (2022). Multidirectional instability of the shoulder（敘事型回顧，女性運動員視角，無統合統計）. Ann Joint 7:10. PMID 38529164, doi:10.21037/aoj-20-33", certainty: 🟢, verified: true }
+  - { citation: "Bishop ME, Ode GE, Hurwit DJ, et al. (2022). Multidirectional instability of the shoulder（敘事型回顧，女性運動員視角，無統合統計）. Ann Joint 7:10. PMID 38529164, doi:10.21037/aoj-20-33", certainty: 🟢, verified: true, source_ids: [src.mdi-management-review-annals-of-joint] }
   - { citation: "Arthroscopic vs open MDI repair outcomes, PMC5611704", certainty: 🟢, verified: true }
 
 flags:

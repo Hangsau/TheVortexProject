@@ -7430,7 +7430,8 @@
       "source_ids": [
         "src.ecg-scd-3-6-0-4-10-89-url",
         "src.pmc10356869",
-        "src.pmc11985649"
+        "src.pmc11985649",
+        "src.pmc12234767"
       ],
       "outgoing_ids": []
     },
@@ -17378,6 +17379,7 @@
       },
       "source_ids": [
         "src.pmc11297363-a",
+        "src.pmc11297363-b",
         "src.pmc7824457"
       ],
       "outgoing_ids": []
@@ -19608,6 +19610,9 @@
       },
       "source_ids": [
         "src.mckenzie-2023-a",
+        "src.mckenzie-2023-b",
+        "src.pink-1993",
+        "src.pmc7824457",
         "src.statpearls-swimmer-s-shoulder-ncbi-bookshelf"
       ],
       "outgoing_ids": [

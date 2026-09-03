@@ -71,9 +71,9 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Point prevalence non-melanoma/melanoma skin cancers Australian surfers and swimmers SE Queensland/N NSW, PMC9057286", certainty: 🟢, verified: true }
-  - { citation: "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes — Narrative Review, Cancers 2023, PMC10339925", certainty: 🟢, verified: true }
-  - { citation: "Occupational Solar Radiation at Different Latitudes and Pterygium systematic review, PMC5800136", certainty: 🟢, verified: true }
+  - { citation: "Point prevalence non-melanoma/melanoma skin cancers Australian surfers and swimmers SE Queensland/N NSW, PMC9057286", certainty: 🟢, verified: true, source_ids: [src.pmc9057286] }
+  - { citation: "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes — Narrative Review, Cancers 2023, PMC10339925", certainty: 🟢, verified: true, source_ids: [src.pmc10339925] }
+  - { citation: "Occupational Solar Radiation at Different Latitudes and Pterygium systematic review, PMC5800136", certainty: 🟢, verified: true, source_ids: [src.pmc5800136] }
   - { citation: "Ultraviolet Light and Skin Cancer in Athletes, PMC3445124", certainty: 🟢, verified: true }
 
 flags:

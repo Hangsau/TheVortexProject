@@ -79,7 +79,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Breaststroke groin injury (Grote 2004), AJSM PMID 14754731", certainty: 🟡, verified: false }
+  - { citation: "Breaststroke groin injury (Grote 2004), AJSM PMID 14754731", certainty: 🟡, verified: false, source_ids: [src.grote-2004] }
   - { citation: "Adductor strengthening / load management (Coast Sport)", certainty: 🟠, verified: true }
 
 flags:

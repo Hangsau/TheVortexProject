@@ -85,9 +85,9 @@ links:
 references:
   - { citation: "ANSI/NFSI B101.1 Test Method for Measuring Wet SCOF of Common Hard-Surface Floor Materials（濕態 SCOF ≥0.60 / 0.40–0.60 / <0.40 三級）", certainty: 🟡, verified: true }
   - { citation: "ASTM F2508-23 Standard Practice for Validation of Walkway Tribometry Using Research-based Reference Materials（校驗規範，不含門檻值）", certainty: 🟡, verified: true }
-  - { citation: "Wang CB, et al. (2013). Excess mortality after hip fracture among the elderly in Taiwan: a nationwide population-based cohort study. Bone 56(1):147–153. PMID 23727435", certainty: 🟡, verified: true }
-  - { citation: "Lee TC, et al. (2017). One-Year Readmission Risk and Mortality after Hip Fracture Surgery: A National Population-Based Study in Taiwan. Aging Dis 8(4):402–409. PMID 28840055", certainty: 🟡, verified: true }
-  - { citation: "Harvey LA, et al. (2024). Variation in mortality following hip fracture across the Asia Pacific region: Systematic review and proportional meta-analysis. Arch Gerontol Geriatr 126:105519. PMID 38941947", certainty: 🟢, verified: true }
+  - { citation: "Wang CB, et al. (2013). Excess mortality after hip fracture among the elderly in Taiwan: a nationwide population-based cohort study. Bone 56(1):147–153. PMID 23727435", certainty: 🟡, verified: true, source_ids: [src.wang-2013-taiwan-hip-fracture-mortality] }
+  - { citation: "Lee TC, et al. (2017). One-Year Readmission Risk and Mortality after Hip Fracture Surgery: A National Population-Based Study in Taiwan. Aging Dis 8(4):402–409. PMID 28840055", certainty: 🟡, verified: true, source_ids: [src.lee-2017-taiwan-hip-fracture-1yr-mortality] }
+  - { citation: "Harvey LA, et al. (2024). Variation in mortality following hip fracture across the Asia Pacific region: Systematic review and proportional meta-analysis. Arch Gerontol Geriatr 126:105519. PMID 38941947", certainty: 🟢, verified: true, source_ids: [src.harvey-2024-asia-pacific-hip-fracture-mortality] }
 
 flags:
   pending_verification:

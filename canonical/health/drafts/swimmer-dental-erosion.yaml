@@ -71,8 +71,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Dental erosion among competitive swimmers (Poland), PMC3579418", certainty: 🟢, verified: true }
-  - { citation: "Dental erosion in competitive swimmers vs rowers (Egypt), PMC10713671", certainty: 🟢, verified: true }
+  - { citation: "Dental erosion among competitive swimmers (Poland), PMC3579418", certainty: 🟢, verified: true, source_ids: [src.pmc3579418] }
+  - { citation: "Dental erosion in competitive swimmers vs rowers (Egypt), PMC10713671", certainty: 🟢, verified: true, source_ids: [src.pmc10713671] }
   - { citation: "Mouthguard fluoride/CPP-ACP in vitro protection, PMC11425598", certainty: 🟢, verified: true }
 
 flags:

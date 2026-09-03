@@ -70,8 +70,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "External Auditory Exostoses, StatPearls, PMID 30521295", certainty: 🟡, verified: true }
-  - { citation: "Prevalence of exostoses in warm-water surfers, PMC7077213", certainty: 🟢, verified: true }
+  - { citation: "External Auditory Exostoses, StatPearls, PMID 30521295", certainty: 🟡, verified: true, source_ids: [src.pmid-30521295] }
+  - { citation: "Prevalence of exostoses in warm-water surfers, PMC7077213", certainty: 🟢, verified: true, source_ids: [src.pmc7077213] }
 
 flags:
   pending_verification:

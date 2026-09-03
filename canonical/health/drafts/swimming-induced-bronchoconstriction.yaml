@@ -70,9 +70,9 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Exercise-induced bronchoconstriction in swimmers, PMC6092370", certainty: 🟢, verified: true }
-  - { citation: "Childhood swimming pool attendance and asthma (Brussels), PMC1626429", certainty: 🟢, verified: true }
-  - { citation: "Nitrogen trichloride exposure and lung function, PMC3488741", certainty: 🟢, verified: true }
+  - { citation: "Exercise-induced bronchoconstriction in swimmers, PMC6092370", certainty: 🟢, verified: true, source_ids: [src.pmc6092370] }
+  - { citation: "Childhood swimming pool attendance and asthma (Brussels), PMC1626429", certainty: 🟢, verified: true, source_ids: [src.pmc1626429] }
+  - { citation: "Nitrogen trichloride exposure and lung function, PMC3488741", certainty: 🟢, verified: true, source_ids: [src.pmc3488741] }
 
 flags:
   pending_verification:

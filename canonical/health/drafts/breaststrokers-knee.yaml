@@ -79,9 +79,9 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Vizsolyi P, Taunton J, Robertson G, et al. (1987). Breaststroker's knee. An analysis of epidemiological and biomechanical factors. Am J Sports Med 15(1):63–71. PMID 3812862", certainty: 🟡, verified: true }
-  - { citation: "Rovere GD, Nichols AW. (1985). Frequency, associated factors, and treatment of breaststroker's knee in competitive swimmers. Am J Sports Med 13(2):99–104. PMID 3985267", certainty: 🟡, verified: true }
-  - { citation: "Cheng KY, Chambers H, Dwek JR. (2022). Magnetic resonance imaging appearance of breaststroker's knee. Pediatr Radiol 52(13):2645–2647. PMID 35672477", certainty: 🟡, verified: true }
+  - { citation: "Vizsolyi P, Taunton J, Robertson G, et al. (1987). Breaststroker's knee. An analysis of epidemiological and biomechanical factors. Am J Sports Med 15(1):63–71. PMID 3812862", certainty: 🟡, verified: true, source_ids: [src.vizsolyi-1987] }
+  - { citation: "Rovere GD, Nichols AW. (1985). Frequency, associated factors, and treatment of breaststroker's knee in competitive swimmers. Am J Sports Med 13(2):99–104. PMID 3985267", certainty: 🟡, verified: true, source_ids: [src.rovere-nichols] }
+  - { citation: "Cheng KY, Chambers H, Dwek JR. (2022). Magnetic resonance imaging appearance of breaststroker's knee. Pediatr Radiol 52(13):2645–2647. PMID 35672477", certainty: 🟡, verified: true, source_ids: [src.cheng-2022-breaststrokers-knee-mri] }
 
 flags:
   pending_verification:

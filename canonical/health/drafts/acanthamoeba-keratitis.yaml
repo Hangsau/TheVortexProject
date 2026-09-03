@@ -69,7 +69,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Global incidence and prevalence of Acanthamoeba keratitis, PMC11424229", certainty: 🟢, verified: true }
+  - { citation: "Global incidence and prevalence of Acanthamoeba keratitis, PMC11424229", certainty: 🟢, verified: true, source_ids: [src.pmc11424229] }
 
 flags:
   pending_verification:

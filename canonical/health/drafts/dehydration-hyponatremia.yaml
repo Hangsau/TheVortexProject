@@ -73,9 +73,9 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060", certainty: 🟢, verified: true }
-  - { citation: "EAH encephalopathy in an endurance open water swimmer, PubMed 25443755", certainty: 🟢, verified: true }
-  - { citation: "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173", certainty: 🟢, verified: true }
+  - { citation: "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060", certainty: 🟢, verified: true, source_ids: [src.pmc9699060] }
+  - { citation: "EAH encephalopathy in an endurance open water swimmer, PubMed 25443755", certainty: 🟢, verified: true, source_ids: [src.pmid-25443755] }
+  - { citation: "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173", certainty: 🟢, verified: true, source_ids: [src.pmc12847173] }
   - { citation: "Rehydration during Endurance Exercise (IMMDA drink-to-thirst), PMC8001428", certainty: 🟢, verified: true }
 
 flags:

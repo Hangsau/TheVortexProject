@@ -80,7 +80,7 @@ links:
 
 references:
   - { citation: "Stress fractures in swimmers (systematic review), IJKSS", certainty: 🟢, verified: true }
-  - { citation: "RED-S and bone stress injury, PMC9724109", certainty: 🟢, verified: true }
+  - { citation: "RED-S and bone stress injury, PMC9724109", certainty: 🟢, verified: true, source_ids: [src.pmc9724109] }
 
 flags:
   pending_verification:

@@ -75,8 +75,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Shoulder pathology in masters swimmers (ultrasound), PMC7824457", certainty: 🟢, verified: true }
-  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true }
+  - { citation: "Shoulder pathology in masters swimmers (ultrasound), PMC7824457", certainty: 🟢, verified: true, source_ids: [src.pmc7824457] }
+  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true, source_ids: [src.pmc11297363-b] }
   - { citation: "Youth swimmer shoulder prevalence, PMC6961642", certainty: 🟢, verified: true }
   - { citation: "Shoulder strengthening programme protective effect, PMC11899141", certainty: 🟢, verified: true }
 

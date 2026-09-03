@@ -69,7 +69,7 @@ links:
 
 references:
   - { citation: "Osgood-Schlatter disease, StatPearls NBK441995", certainty: 🟢, verified: true }
-  - { citation: "OSD incidence in general practice, PMC8869186", certainty: 🟢, verified: true }
+  - { citation: "OSD incidence in general practice, PMC8869186", certainty: 🟢, verified: true, source_ids: [src.pmc8869186] }
 
 flags:
   pending_verification: []

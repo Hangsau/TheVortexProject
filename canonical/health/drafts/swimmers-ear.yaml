@@ -77,8 +77,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Otitis Externa, StatPearls (Medina-Blasini & Sharman), PMID 32310515", certainty: 🟢, verified: true }
-  - { citation: "CDC (2011). Estimated Burden of Acute Otitis Externa — United States, 2003-2007. MMWR Morb Mortal Wkly Rep 60(19):605-9. PMID 21597452", certainty: 🟢, verified: true }
+  - { citation: "Otitis Externa, StatPearls (Medina-Blasini & Sharman), PMID 32310515", certainty: 🟢, verified: true, source_ids: [src.pmid-32310515] }
+  - { citation: "CDC (2011). Estimated Burden of Acute Otitis Externa — United States, 2003-2007. MMWR Morb Mortal Wkly Rep 60(19):605-9. PMID 21597452", certainty: 🟢, verified: true, source_ids: [src.cdc-mmwr-2003-2007] }
 
 flags:
   pending_verification:

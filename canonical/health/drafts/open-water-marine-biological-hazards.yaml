@@ -114,11 +114,11 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Chuang PY, Yang TY, Huang TW, Tsai YH, Huang KC, Weng HH (2019). Hepatic disease and the risk of mortality of Vibrio vulnificus necrotizing skin and soft tissue infections: A systematic review and meta-analysis. PLoS One 14(10):e0223513. PMID 31652263", certainty: 🟢, verified: true }
-  - { citation: "Tsai CT, Lin JN, Lee CH, et al. (2020). The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014. Zoonoses Public Health 67(2):156-166. PMID 31916706", certainty: 🟢, verified: true }
-  - { citation: "McGee RG, Webster AC, Lewis SR, Welsford M (2023). Interventions for the symptoms and signs resulting from jellyfish stings. Cochrane Database Syst Rev 6(6):CD009688. PMID 37272501", certainty: 🟢, verified: true }
-  - { citation: "Lin IC, Hussain B, Hsu BM, et al. (2021). Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan. Antibiotics 10(5):505. PMID 33946739（僅支撐「創傷弧菌存在於台灣水域環境」）", certainty: 🟢, verified: true }
-  - { citation: "Leptospirosis outbreak associated with triathlon/open water swimming, PMC2858141（德國賽事群聚）", certainty: 🟢, verified: true }
+  - { citation: "Chuang PY, Yang TY, Huang TW, Tsai YH, Huang KC, Weng HH (2019). Hepatic disease and the risk of mortality of Vibrio vulnificus necrotizing skin and soft tissue infections: A systematic review and meta-analysis. PLoS One 14(10):e0223513. PMID 31652263", certainty: 🟢, verified: true, source_ids: [src.chuang-2019-vibrio-vulnificus-mortality-meta] }
+  - { citation: "Tsai CT, Lin JN, Lee CH, et al. (2020). The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014. Zoonoses Public Health 67(2):156-166. PMID 31916706", certainty: 🟢, verified: true, source_ids: [src.tsai-2020-taiwan-leptospirosis-nationwide] }
+  - { citation: "McGee RG, Webster AC, Lewis SR, Welsford M (2023). Interventions for the symptoms and signs resulting from jellyfish stings. Cochrane Database Syst Rev 6(6):CD009688. PMID 37272501", certainty: 🟢, verified: true, source_ids: [src.cochrane-2023-jellyfish-interventions] }
+  - { citation: "Lin IC, Hussain B, Hsu BM, et al. (2021). Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan. Antibiotics 10(5):505. PMID 33946739（僅支撐「創傷弧菌存在於台灣水域環境」）", certainty: 🟢, verified: true, source_ids: [src.pmc8147101] }
+  - { citation: "Leptospirosis outbreak associated with triathlon/open water swimming, PMC2858141（德國賽事群聚）", certainty: 🟢, verified: true, source_ids: [src.pmc2858141] }
 
 flags:
   pending_verification:

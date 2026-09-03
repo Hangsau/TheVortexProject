@@ -570,12 +570,17 @@
       "identifier": {
         "pmid": "21597452"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmers-ear",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[20].epidemiology"
+        },
+        {
+          "id": "swimmers-ear",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[20].references[1]"
         }
       ]
     },
@@ -812,12 +817,17 @@
         "pmid": "35672477",
         "pmcid": "PMC9701648"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "breaststrokers-knee",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[7].epidemiology"
+        },
+        {
+          "id": "breaststrokers-knee",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[7].references[2]"
         }
       ]
     },
@@ -868,12 +878,17 @@
         "doi": "10.1371/journal.pone.0223513",
         "pmcid": "PMC6814278"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].epidemiology"
+        },
+        {
+          "id": "open-water-marine-biological-hazards",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[39].references[0]"
         }
       ]
     },
@@ -967,12 +982,17 @@
         "doi": "10.1002/14651858.CD009688.pub3",
         "pmcid": "PMC10240560"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].epidemiology"
+        },
+        {
+          "id": "open-water-marine-biological-hazards",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[39].references[2]"
         }
       ]
     },
@@ -1170,12 +1190,17 @@
         "pmid": "17018804",
         "doi": "10.1001/jama.296.13.1593"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "exertional-sudden-cardiac-death",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[26].epidemiology"
+        },
+        {
+          "id": "exertional-sudden-cardiac-death",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[26].references[4]"
         }
       ]
     },
@@ -1921,12 +1946,17 @@
         "pmid": "14754731",
         "doi": "10.1177/0363546503258905"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "groin-adductor-strain",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[10].epidemiology"
+        },
+        {
+          "id": "groin-adductor-strain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[10].references[0]"
         }
       ]
     },
@@ -2120,12 +2150,17 @@
         "doi": "10.1016/j.chest.2021.06.034",
         "pmcid": "PMC8628172"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "sipe",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[29].epidemiology"
+        },
+        {
+          "id": "sipe",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[29].references[1]"
         }
       ]
     },
@@ -2137,12 +2172,17 @@
         "pmid": "38941947",
         "doi": "10.1016/j.archger.2024.105519"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "poolside-slip-fall",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[40].epidemiology"
+        },
+        {
+          "id": "poolside-slip-fall",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[40].references[4]"
         }
       ]
     },
@@ -2598,12 +2638,17 @@
         "doi": "10.14336/AD.2016.1228",
         "pmcid": "PMC5524803"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "poolside-slip-fall",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[40].epidemiology"
+        },
+        {
+          "id": "poolside-slip-fall",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[40].references[3]"
         }
       ]
     },
@@ -2630,12 +2675,17 @@
         "doi": "10.28920/dhm53.3.210-217",
         "pmcid": "PMC10751292"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "shallow-water-blackout",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[28].epidemiology"
+        },
+        {
+          "id": "shallow-water-blackout",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[28].references[1]"
         }
       ]
     },
@@ -3175,12 +3225,17 @@
         "doi": "10.1111/sms.14454",
         "pmcid": "PMC10679734"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "periodization.dryland.injury",
           "file": "canonical/periodization/dryland.yaml",
           "path": "injury_prevention"
+        },
+        {
+          "id": "swimmers-shoulder",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[5].references[1]"
         }
       ]
     },
@@ -3193,12 +3248,17 @@
         "pmcid": "PMC10929405",
         "doi": "10.21037/aoj-20-33"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "shoulder-multidirectional-instability",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[2].epidemiology"
+        },
+        {
+          "id": "shoulder-multidirectional-instability",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[2].references[1]"
         }
       ]
     },
@@ -4077,12 +4137,17 @@
         "pmid": "37923648",
         "doi": "10.1016/j.jsams.2023.10.015"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "starting-block-impact",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[41].epidemiology"
+        },
+        {
+          "id": "starting-block-impact",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[41].references[2]"
         }
       ]
     },
@@ -4519,7 +4584,7 @@
       "identifier": {
         "pmid": "8458154"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
         {
           "id": "fly.tech.27",
@@ -4540,6 +4605,11 @@
           "id": "movement.intervention.scapular-upward-rotation.serratus-endurance",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[5]"
+        },
+        {
+          "id": "swimmers-shoulder",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[5].references[3]"
         }
       ]
     },
@@ -4590,12 +4660,17 @@
         "pmid": "37444391",
         "doi": "10.3390/cancers15133281"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "uv-photo-damage",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[22].epidemiology"
+        },
+        {
+          "id": "uv-photo-damage",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[22].references[1]"
         }
       ]
     },
@@ -4608,12 +4683,17 @@
         "pmid": "37382827",
         "doi": "10.1007/s40279-023-01873-6"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "exertional-sudden-cardiac-death",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[26].epidemiology"
+        },
+        {
+          "id": "exertional-sudden-cardiac-death",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[26].references[2]"
         }
       ]
     },
@@ -4644,7 +4724,7 @@
         "pmid": "36715985",
         "doi": "10.1097/JSM.0000000000001121"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
         {
           "id": "starting-block-impact",
@@ -4652,9 +4732,19 @@
           "path": "injuries[41].epidemiology"
         },
         {
+          "id": "starting-block-impact",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[41].references[0]"
+        },
+        {
           "id": "swimmer-elbow-wrist-overuse",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[4].epidemiology"
+        },
+        {
+          "id": "swimmer-elbow-wrist-overuse",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[4].references[0]"
         }
       ]
     },
@@ -4667,8 +4757,13 @@
         "pmcid": "PMC10689961",
         "doi": "10.46234/ccdcw2023.198"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "_asian-epidemiology-supplement",
+          "file": "canonical/health/injuries.yaml",
+          "path": "meta_references[0].references[2]"
+        },
         {
           "id": "_asian-epidemiology-supplement",
           "file": "canonical/health/injuries.yaml",
@@ -4685,12 +4780,17 @@
         "pmid": "37924355",
         "doi": "10.1007/s00784-023-05367-7"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-dental-erosion",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[18].epidemiology"
+        },
+        {
+          "id": "swimmer-dental-erosion",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[18].references[1]"
         }
       ]
     },
@@ -4745,12 +4845,17 @@
         "pmid": "39048118",
         "doi": "10.4085/1062-6050-0138.22"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "thoracic-outlet-syndrome",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[6].epidemiology"
+        },
+        {
+          "id": "thoracic-outlet-syndrome",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[6].references[1]"
         }
       ]
     },
@@ -4781,12 +4886,22 @@
         "pmcid": "PMC11297363",
         "doi": "10.26603/001c.121114"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "rotator-cuff-tendinopathy",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[1].references[1]"
+        },
         {
           "id": "youth-swimmer-apophysitis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[46].epidemiology"
+        },
+        {
+          "id": "youth-swimmer-apophysitis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[46].references[0]"
         }
       ]
     },
@@ -4799,12 +4914,17 @@
         "pmid": "39328676",
         "doi": "10.7759/cureus.67803"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "acanthamoeba-keratitis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[13].epidemiology"
+        },
+        {
+          "id": "acanthamoeba-keratitis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[13].references[0]"
         }
       ]
     },
@@ -4817,7 +4937,7 @@
         "pmid": "38262981",
         "doi": "10.1177/19417381231225213"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
         {
           "id": "extension-low-back-pain",
@@ -4825,9 +4945,19 @@
           "path": "injuries[8].epidemiology"
         },
         {
+          "id": "extension-low-back-pain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[8].references[0]"
+        },
+        {
           "id": "spondylolysis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[11].epidemiology"
+        },
+        {
+          "id": "spondylolysis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[11].references[0]"
         }
       ]
     },
@@ -4840,12 +4970,17 @@
         "pmid": "39685760",
         "doi": "10.3390/jcm13237302"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "femoroacetabular-impingement",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[9].epidemiology"
+        },
+        {
+          "id": "femoroacetabular-impingement",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[9].references[1]"
         }
       ]
     },
@@ -4858,12 +4993,17 @@
         "pmcid": "PMC11744971",
         "doi": "10.1186/s12891-025-08316-5"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-low-bone-density",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[36].epidemiology"
+        },
+        {
+          "id": "swimmer-low-bone-density",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[36].references[1]"
         }
       ]
     },
@@ -4876,12 +5016,17 @@
         "pmid": "40158004",
         "doi": "10.1038/s41598-025-95486-w"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "drowning",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[25].epidemiology"
+        },
+        {
+          "id": "drowning",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[25].references[1]"
         }
       ]
     },
@@ -4894,12 +5039,17 @@
         "pmid": "39752044",
         "doi": "10.1007/s40279-024-02163-5"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "exertional-sudden-cardiac-death",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[26].epidemiology"
+        },
+        {
+          "id": "exertional-sudden-cardiac-death",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[26].references[0]"
         }
       ]
     },
@@ -4912,12 +5062,22 @@
         "pmid": "40624837",
         "doi": "10.14814/phy2.70430"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
         {
           "id": "cold-water-shock",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[23].epidemiology"
+        },
+        {
+          "id": "cold-water-shock",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[23].references[2]"
+        },
+        {
+          "id": "exertional-sudden-cardiac-death",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[26].references[5]"
         }
       ]
     },
@@ -4930,12 +5090,17 @@
         "pmid": "40913680",
         "doi": "10.1007/s40618-025-02673-7"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "dehydration-hyponatremia",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[24].epidemiology"
+        },
+        {
+          "id": "dehydration-hyponatremia",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[24].references[2]"
         }
       ]
     },
@@ -4948,12 +5113,17 @@
         "pmid": "15117691",
         "doi": "10.2105/ajph.94.5.738"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-dermatoses",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[19].epidemiology"
+        },
+        {
+          "id": "swimmer-dermatoses",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[19].references[1]"
         }
       ]
     },
@@ -4966,12 +5136,17 @@
         "pmid": "17035144",
         "doi": "10.1289/ehp.8461"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimming-induced-bronchoconstriction",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[21].epidemiology"
+        },
+        {
+          "id": "swimming-induced-bronchoconstriction",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[21].references[1]"
         }
       ]
     },
@@ -4984,12 +5159,17 @@
         "pmid": "20380736",
         "doi": "10.1186/1471-2334-10-91"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].epidemiology"
+        },
+        {
+          "id": "open-water-marine-biological-hazards",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[39].references[4]"
         }
       ]
     },
@@ -5002,12 +5182,17 @@
         "pmid": "19956985",
         "doi": "10.1007/s00586-009-1230-3"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "diving-cervical-injury",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[37].epidemiology"
+        },
+        {
+          "id": "diving-cervical-injury",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[37].references[1]"
         }
       ]
     },
@@ -5020,7 +5205,7 @@
         "pmid": "23016094",
         "doi": "10.1177/1941738112442132"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
         {
           "id": "extension-low-back-pain",
@@ -5028,9 +5213,19 @@
           "path": "injuries[8].epidemiology"
         },
         {
+          "id": "extension-low-back-pain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[8].references[1]"
+        },
+        {
           "id": "spondylolysis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[11].epidemiology"
+        },
+        {
+          "id": "spondylolysis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[11].references[1]"
         }
       ]
     },
@@ -5067,12 +5262,17 @@
         "pmid": "23048058",
         "doi": "10.1136/bmjopen-2012-000973"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimming-induced-bronchoconstriction",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[21].epidemiology"
+        },
+        {
+          "id": "swimming-induced-bronchoconstriction",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[21].references[2]"
         }
       ]
     },
@@ -5085,12 +5285,17 @@
         "pmid": "22476450",
         "doi": "10.1007/s00784-012-0720-6"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-dental-erosion",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[18].epidemiology"
+        },
+        {
+          "id": "swimmer-dental-erosion",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[18].references[0]"
         }
       ]
     },
@@ -5102,12 +5307,17 @@
         "pmcid": "PMC3811737",
         "pmid": "24175139"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "slap-lesion",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[3].epidemiology"
+        },
+        {
+          "id": "slap-lesion",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[3].references[0]"
         }
       ]
     },
@@ -5162,12 +5372,17 @@
         "pmid": "25408141",
         "doi": "10.1186/1471-2474-15-377"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "biceps-tendinopathy",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[0].epidemiology"
+        },
+        {
+          "id": "biceps-tendinopathy",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[0].references[1]"
         }
       ]
     },
@@ -5196,12 +5411,17 @@
         "pmid": "26288538",
         "doi": "10.4103/0973-6042.161444"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "slap-lesion",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[3].epidemiology"
+        },
+        {
+          "id": "slap-lesion",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[3].references[1]"
         }
       ]
     },
@@ -5245,12 +5465,17 @@
         "pmid": "28216728",
         "doi": "10.4103/0019-5154.198052"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-dermatoses",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[19].epidemiology"
+        },
+        {
+          "id": "swimmer-dermatoses",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[19].references[0]"
         }
       ]
     },
@@ -5263,12 +5488,17 @@
         "pmid": "29278403",
         "doi": "10.3390/ijerph15010037"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "uv-photo-damage",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[22].epidemiology"
+        },
+        {
+          "id": "uv-photo-damage",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[22].references[2]"
         }
       ]
     },
@@ -5281,12 +5511,17 @@
         "pmid": "30108224",
         "doi": "10.1038/s41533-018-0098-2"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimming-induced-bronchoconstriction",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[21].epidemiology"
+        },
+        {
+          "id": "swimming-induced-bronchoconstriction",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[21].references[0]"
         }
       ]
     },
@@ -5299,12 +5534,17 @@
         "pmid": "30224888",
         "doi": "10.1016/j.sjopt.2017.10.009"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "chlorine-eye-irritation",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[14].epidemiology"
+        },
+        {
+          "id": "chlorine-eye-irritation",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[14].references[0]"
         }
       ]
     },
@@ -5375,12 +5615,17 @@
         "pmid": "30696072",
         "doi": "10.3390/sports7020032"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "flip-turn-wall-push",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[38].epidemiology"
+        },
+        {
+          "id": "flip-turn-wall-push",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[38].references[0]"
         }
       ]
     },
@@ -5393,8 +5638,13 @@
         "pmcid": "PMC6464216",
         "doi": "10.1371/journal.pone.0215352"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "_asian-epidemiology-supplement",
+          "file": "canonical/health/injuries.yaml",
+          "path": "meta_references[0].references[1]"
+        },
         {
           "id": "_asian-epidemiology-supplement",
           "file": "canonical/health/injuries.yaml",
@@ -5411,12 +5661,17 @@
         "pmid": "31246941",
         "doi": "10.15585/mmwr.mm6825a3"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "recreational-water-cryptosporidium",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[15].epidemiology"
+        },
+        {
+          "id": "recreational-water-cryptosporidium",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[15].references[0]"
         }
       ]
     },
@@ -5429,8 +5684,13 @@
         "pmcid": "PMC6863674",
         "doi": "10.1136/bmjsem-2019-000615"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "_asian-epidemiology-supplement",
+          "file": "canonical/health/injuries.yaml",
+          "path": "meta_references[0].references[0]"
+        },
         {
           "id": "_asian-epidemiology-supplement",
           "file": "canonical/health/injuries.yaml",
@@ -5447,12 +5707,17 @@
         "pmid": "32148613",
         "doi": "10.70252/RKTD5438"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-low-bone-density",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[36].epidemiology"
+        },
+        {
+          "id": "swimmer-low-bone-density",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[36].references[0]"
         }
       ]
     },
@@ -5465,12 +5730,17 @@
         "pmid": "32033062",
         "doi": "10.3390/sports8020017"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "surfers-ear-exostosis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[17].epidemiology"
+        },
+        {
+          "id": "surfers-ear-exostosis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[17].references[1]"
         }
       ]
     },
@@ -5483,12 +5753,17 @@
         "pmid": "32514995",
         "doi": "10.1007/s12178-020-09643-x"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "thoracic-outlet-syndrome",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[6].epidemiology"
+        },
+        {
+          "id": "thoracic-outlet-syndrome",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[6].references[0]"
         }
       ]
     },
@@ -5501,12 +5776,17 @@
         "pmid": "33123436",
         "doi": "10.7759/cureus.10623"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-dermatoses",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[19].epidemiology"
+        },
+        {
+          "id": "swimmer-dermatoses",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[19].references[2]"
         }
       ]
     },
@@ -5519,12 +5799,17 @@
         "pmid": "33163207",
         "doi": "10.1093/jhps/hnaa009"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "femoroacetabular-impingement",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[9].epidemiology"
+        },
+        {
+          "id": "femoroacetabular-impingement",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[9].references[0]"
         }
       ]
     },
@@ -5537,7 +5822,7 @@
         "pmid": "33396219",
         "doi": "10.3390/medicina57010029"
       },
-      "usage_count": 2,
+      "usage_count": 5,
       "usages": [
         {
           "id": "biceps-tendinopathy",
@@ -5545,9 +5830,24 @@
           "path": "injuries[0].epidemiology"
         },
         {
+          "id": "biceps-tendinopathy",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[0].references[0]"
+        },
+        {
           "id": "rotator-cuff-tendinopathy",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[1].epidemiology"
+        },
+        {
+          "id": "rotator-cuff-tendinopathy",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[1].references[0]"
+        },
+        {
+          "id": "swimmers-shoulder",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[5].references[2]"
         }
       ]
     },
@@ -5584,12 +5884,17 @@
         "pmid": "34014907",
         "doi": "10.15585/mmwr.mm7020a1"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "recreational-water-cryptosporidium",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[15].epidemiology"
+        },
+        {
+          "id": "recreational-water-cryptosporidium",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[15].references[1]"
         }
       ]
     },
@@ -5602,12 +5907,17 @@
         "pmid": "33946739",
         "doi": "10.3390/antibiotics10050505"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].epidemiology"
+        },
+        {
+          "id": "open-water-marine-biological-hazards",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[39].references[3]"
         }
       ]
     },
@@ -5620,12 +5930,17 @@
         "pmid": "34188959",
         "doi": "10.1155/2021/9937730"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "diving-cervical-injury",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[37].epidemiology"
+        },
+        {
+          "id": "diving-cervical-injury",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[37].references[2]"
         }
       ]
     },
@@ -5710,12 +6025,17 @@
         "pmcid": "PMC8827183",
         "doi": "10.1186/s13018-022-02979-9"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "sever-disease",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[45].epidemiology"
+        },
+        {
+          "id": "sever-disease",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[45].references[1]"
         }
       ]
     },
@@ -5728,12 +6048,17 @@
         "pmcid": "PMC8869186",
         "doi": "10.3399/BJGP.2021.0386"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "osgood-schlatter",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[42].epidemiology"
+        },
+        {
+          "id": "osgood-schlatter",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[42].references[1]"
         }
       ]
     },
@@ -5845,12 +6170,17 @@
         "pmid": "35505675",
         "doi": "10.7717/peerj.13243"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "uv-photo-damage",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[22].epidemiology"
+        },
+        {
+          "id": "uv-photo-damage",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[22].references[0]"
         }
       ]
     },
@@ -5968,12 +6298,17 @@
         "pmcid": "PMC9658102",
         "doi": "10.3390/ijerph192114243"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "exercise-amenorrhea",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[30].epidemiology"
+        },
+        {
+          "id": "exercise-amenorrhea",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[30].references[0]"
         }
       ]
     },
@@ -5986,12 +6321,17 @@
         "pmid": "36431252",
         "doi": "10.3390/jcm11226775"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "dehydration-hyponatremia",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[24].epidemiology"
+        },
+        {
+          "id": "dehydration-hyponatremia",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[24].references[0]"
         }
       ]
     },
@@ -6004,12 +6344,17 @@
         "pmcid": "PMC9724109",
         "doi": "10.5960/dzsm.2022.546"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "stress-fracture-swimmer",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[35].epidemiology"
+        },
+        {
+          "id": "stress-fracture-swimmer",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[35].references[1]"
         }
       ]
     },
@@ -6181,12 +6526,17 @@
         "pmid": "25443755",
         "doi": "10.1016/j.wem.2014.07.010"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "dehydration-hyponatremia",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[24].epidemiology"
+        },
+        {
+          "id": "dehydration-hyponatremia",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[24].references[1]"
         }
       ]
     },
@@ -6309,12 +6659,17 @@
       "identifier": {
         "pmid": "30521295"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "surfers-ear-exostosis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[17].epidemiology"
+        },
+        {
+          "id": "surfers-ear-exostosis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[17].references[0]"
         }
       ]
     },
@@ -6346,12 +6701,17 @@
       "identifier": {
         "pmid": "32310515"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmers-ear",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[20].epidemiology"
+        },
+        {
+          "id": "swimmers-ear",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[20].references[0]"
         }
       ]
     },
@@ -6363,12 +6723,17 @@
         "pmid": "33010194",
         "doi": "10.1002/pmrj.12503"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "flip-turn-wall-push",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[38].epidemiology"
+        },
+        {
+          "id": "flip-turn-wall-push",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[38].references[1]"
         }
       ]
     },
@@ -6450,12 +6815,17 @@
         "pmid": "39500300",
         "doi": "10.1123/ijspp.2024-0240"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "hypothermia-swimmers",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[27].epidemiology"
+        },
+        {
+          "id": "hypothermia-swimmers",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[27].references[2]"
         }
       ]
     },
@@ -6517,12 +6887,17 @@
         "pmid": "40783351",
         "doi": "10.1016/j.jsams.2025.07.004"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "hypothermia-swimmers",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[27].epidemiology"
+        },
+        {
+          "id": "hypothermia-swimmers",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[27].references[1]"
         }
       ]
     },
@@ -6534,12 +6909,17 @@
         "pmid": "7673417",
         "doi": "10.1210/jcem.80.9.7673417"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "exercise-amenorrhea",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[30].epidemiology"
+        },
+        {
+          "id": "exercise-amenorrhea",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[30].references[1]"
         }
       ]
     },
@@ -8195,12 +8575,17 @@
         "doi": "10.1177/036354658501300204",
         "pmid": "3985267"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "breaststrokers-knee",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[7].epidemiology"
+        },
+        {
+          "id": "breaststrokers-knee",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[7].references[1]"
         }
       ]
     },
@@ -8562,12 +8947,17 @@
         "doi": "10.1186/s40798-018-0158-8",
         "pmcid": "PMC6146959"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "sipe",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[29].epidemiology"
+        },
+        {
+          "id": "sipe",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[29].references[0]"
         }
       ]
     },
@@ -8639,12 +9029,17 @@
         "pmid": "32119507",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "shallow-water-blackout",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[28].epidemiology"
+        },
+        {
+          "id": "shallow-water-blackout",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[28].references[0]"
         }
       ]
     },
@@ -10259,12 +10654,17 @@
         "pmid": "14698111",
         "doi": "10.1016/s0140-6736(03)15057-x"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "cold-water-shock",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[23].epidemiology"
+        },
+        {
+          "id": "cold-water-shock",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[23].references[0]"
         }
       ]
     },
@@ -10378,12 +10778,17 @@
         "pmcid": "PMC8988675",
         "doi": "10.1177/23259671221083588"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-ankle-foot-overuse",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[12].epidemiology"
+        },
+        {
+          "id": "swimmer-ankle-foot-overuse",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[12].references[0]"
         }
       ]
     },
@@ -10411,12 +10816,17 @@
         "pmid": "31916706",
         "doi": "10.1111/zph.12667"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].epidemiology"
+        },
+        {
+          "id": "open-water-marine-biological-hazards",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[39].references[1]"
         }
       ]
     },
@@ -10885,12 +11295,17 @@
         "doi": "10.1177/036354658701500109",
         "pmid": "3812862"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "breaststrokers-knee",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[7].epidemiology"
+        },
+        {
+          "id": "breaststrokers-knee",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[7].references[0]"
         }
       ]
     },
@@ -10902,12 +11317,17 @@
         "pmid": "33245874",
         "doi": "10.1016/j.chest.2020.11.019"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "sipe",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[29].epidemiology"
+        },
+        {
+          "id": "sipe",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[29].references[2]"
         }
       ]
     },
@@ -11060,12 +11480,17 @@
         "pmid": "23727435",
         "doi": "10.1016/j.bone.2013.05.015"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "poolside-slip-fall",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[40].epidemiology"
+        },
+        {
+          "id": "poolside-slip-fall",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[40].references[2]"
         }
       ]
     },
@@ -11251,12 +11676,17 @@
         "pmid": "19633232",
         "doi": "10.1177/0363546509339364"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "swimmer-elbow-wrist-overuse",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[4].epidemiology"
+        },
+        {
+          "id": "swimmer-elbow-wrist-overuse",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[4].references[1]"
         }
       ]
     },

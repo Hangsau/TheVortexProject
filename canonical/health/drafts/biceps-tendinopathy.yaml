@@ -72,8 +72,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Shoulder pathology in masters swimmers, PMC7824457", certainty: 🟢, verified: true }
-  - { citation: "LHB tendon and rotator cuff coexistence, PMC4247626", certainty: 🟢, verified: true }
+  - { citation: "Shoulder pathology in masters swimmers, PMC7824457", certainty: 🟢, verified: true, source_ids: [src.pmc7824457] }
+  - { citation: "LHB tendon and rotator cuff coexistence, PMC4247626", certainty: 🟢, verified: true, source_ids: [src.pmc4247626] }
 
 flags:
   pending_verification:

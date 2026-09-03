@@ -71,9 +71,9 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Aquatic dermatoses, PMC5286756", certainty: 🟢, verified: true }
-  - { citation: "Cercarial dermatitis epidemiology (Douglas Lake), PMC1448328", certainty: 🟢, verified: true }
-  - { citation: "Hot tub (Pseudomonas) folliculitis, PMC7584313", certainty: 🟢, verified: true }
+  - { citation: "Aquatic dermatoses, PMC5286756", certainty: 🟢, verified: true, source_ids: [src.pmc5286756] }
+  - { citation: "Cercarial dermatitis epidemiology (Douglas Lake), PMC1448328", certainty: 🟢, verified: true, source_ids: [src.pmc1448328] }
+  - { citation: "Hot tub (Pseudomonas) folliculitis, PMC7584313", certainty: 🟢, verified: true, source_ids: [src.pmc7584313] }
 
 flags:
   pending_verification:

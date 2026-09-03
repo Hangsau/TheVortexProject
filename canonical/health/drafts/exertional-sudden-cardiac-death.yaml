@@ -84,12 +84,12 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Sex Differences in the Incidence of SCA/Death in Competitive Athletes: systematic review and meta-analysis, PMC11985649", certainty: 🟢, verified: true }
+  - { citation: "Sex Differences in the Incidence of SCA/Death in Competitive Athletes: systematic review and meta-analysis, PMC11985649", certainty: 🟢, verified: true, source_ids: [src.pmc11985649] }
   - { citation: "Athletic Activity for Patients with Hypertrophic Cardiomyopathy, JACC 2022", certainty: 🟢, verified: true }
-  - { citation: "Commotio Cordis in 2023, PMC10356869", certainty: 🟢, verified: true }
+  - { citation: "Commotio Cordis in 2023, PMC10356869", certainty: 🟢, verified: true, source_ids: [src.pmc10356869] }
   - { citation: "Meta-analysis on ECG Screening for SCD in Young Athletes, PMC10478328", certainty: 🟢, verified: true }
-  - { citation: "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601. PMID 17018804（義大利 Veneto 單區、全體競技運動員、非游泳專項）", certainty: 🟢, verified: true }
-  - { citation: "Lundström et al. diving reflex arrhythmia 2025, PMC12234767", certainty: 🟢, verified: true }
+  - { citation: "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601. PMID 17018804（義大利 Veneto 單區、全體競技運動員、非游泳專項）", certainty: 🟢, verified: true, source_ids: [src.ecg-scd-3-6-0-4-10-89-url] }
+  - { citation: "Lundström et al. diving reflex arrhythmia 2025, PMC12234767", certainty: 🟢, verified: true, source_ids: [src.pmc12234767] }
 
 flags:
   pending_verification:

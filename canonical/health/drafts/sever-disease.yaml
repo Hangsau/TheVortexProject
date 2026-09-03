@@ -71,7 +71,7 @@ links:
 
 references:
   - { citation: "Sever's disease, StatPearls NBK441928", certainty: 🟢, verified: true }
-  - { citation: "Calcaneal apophysitis in youth football, PMC8827183", certainty: 🟢, verified: true }
+  - { citation: "Calcaneal apophysitis in youth football, PMC8827183", certainty: 🟢, verified: true, source_ids: [src.pmc8827183] }
 
 flags:
   pending_verification: []

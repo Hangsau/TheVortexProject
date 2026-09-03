@@ -71,7 +71,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true }
+  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true, source_ids: [src.pmc11297363-b] }
 
 flags:
   pending_verification:

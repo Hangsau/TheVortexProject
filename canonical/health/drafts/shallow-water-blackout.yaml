@@ -82,8 +82,8 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Bart RM, Murray BP, Lau H. Shallow Water Blackout. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK554620. PMID 32119507", certainty: 🟢, verified: true }
-  - { citation: "Lippmann J (2023). Snorkelling and breath-hold diving fatalities in Australian waters, 2014 to 2018. Diving Hyperb Med 53(3):210-217. PMID 37718294", certainty: 🟢, verified: true }
+  - { citation: "Bart RM, Murray BP, Lau H. Shallow Water Blackout. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK554620. PMID 32119507", certainty: 🟢, verified: true, source_ids: [src.statpearls-shallow-water-blackout-nbk554620] }
+  - { citation: "Lippmann J (2023). Snorkelling and breath-hold diving fatalities in Australian waters, 2014 to 2018. Diving Hyperb Med 53(3):210-217. PMID 37718294", certainty: 🟢, verified: true, source_ids: [src.lippmann-2023-australia-breathhold-fatalities] }
   - { citation: "ILCOR/AHA 溺水復甦演算法（通氣優先），具體版本待查", certainty: 🔴, verified: false }
 
 flags:

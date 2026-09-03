@@ -70,8 +70,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Cryptosporidiosis Outbreaks United States 2009–2017, PMC6597118", certainty: 🟢, verified: true }
-  - { citation: "Outbreaks Associated with Treated Recreational Water 2015–2019, PMC8136425", certainty: 🟢, verified: true }
+  - { citation: "Cryptosporidiosis Outbreaks United States 2009–2017, PMC6597118", certainty: 🟢, verified: true, source_ids: [src.pmc6597118] }
+  - { citation: "Outbreaks Associated with Treated Recreational Water 2015–2019, PMC8136425", certainty: 🟢, verified: true, source_ids: [src.pmc8136425] }
 
 flags:
   pending_verification:

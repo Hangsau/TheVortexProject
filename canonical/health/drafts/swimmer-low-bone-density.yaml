@@ -71,8 +71,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Site-specific bone density in female swimmers, PMC7039474", certainty: 🟢, verified: true }
-  - { citation: "Bone density intervention in low-impact athletes, PMC11744971", certainty: 🟢, verified: true }
+  - { citation: "Site-specific bone density in female swimmers, PMC7039474", certainty: 🟢, verified: true, source_ids: [src.pmc7039474] }
+  - { citation: "Bone density intervention in low-impact athletes, PMC11744971", certainty: 🟢, verified: true, source_ids: [src.pmc11744971] }
 
 flags:
   pending_verification:

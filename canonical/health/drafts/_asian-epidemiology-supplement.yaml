@@ -61,9 +61,9 @@ sections:
     - "腰椎優先+女性傷害率較高為東亞模式，需更多本地研究確認"
 
 references:
-  - { citation: "Japan national swim team injury survey, PMC6863674 (PMID 31798949)", certainty: 🟢, verified: true }
-  - { citation: "Japanese university female swimmers injury, PMC6464216 (PMID 30986226)", certainty: 🟢, verified: true }
-  - { citation: "China drowning deaths in minors, PMC10689961 (PMID 38047245)", certainty: 🟢, verified: true }
+  - { citation: "Japan national swim team injury survey, PMC6863674 (PMID 31798949)", certainty: 🟢, verified: true, source_ids: [src.pmc6863674] }
+  - { citation: "Japanese university female swimmers injury, PMC6464216 (PMID 30986226)", certainty: 🟢, verified: true, source_ids: [src.pmc6464216] }
+  - { citation: "China drowning deaths in minors, PMC10689961 (PMID 38047245)", certainty: 🟢, verified: true, source_ids: [src.pmc10689961] }
 
 flags:
   pending_verification:
