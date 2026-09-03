@@ -10,7 +10,7 @@
 
 | 產出 | commit | 內容 |
 |---|---|---|
-| `starts-turns.breaststroke-pullout` 新需求一筆 | 見下方 commit | 三種變體差在順序不差在關節；胸椎與腰椎在同一時刻朝相反方向 |
+| `starts-turns.breaststroke-pullout` 新需求一筆 | `6157237` | 三種變體差在順序不差在關節；胸椎與腰椎在同一時刻朝相反方向 |
 
 **錯誤 11：`starts-turns.breaststroke-pullout` 先前被標成「缺相位化三維關節運動學」——錯。** 它缺的是**翻書**。`src.hall-murphy-2020`（Fundamentals of Fast Swimming）Ch 17 的 The Breaststroke Pullout 一整節本來就是用關節語言寫的：腰椎伸展、胸椎屈曲、髖屈、膝屈上限、踝蹠屈、肩伸展、肘先屈後伸、肩胛前伸。這節在庫裡躺了很久，先前四次盤點都沒翻到，而**「我沒翻到」被寫成了「資料不存在」**。這是本輪唯一真正的教訓，比記錄本身重要。
 
