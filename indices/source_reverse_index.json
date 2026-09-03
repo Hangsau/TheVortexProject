@@ -1055,8 +1055,8 @@
     },
     {
       "id": "src.cortesi-gatta-2015",
-      "display": "Cortesi & Gatta (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet.",
-      "verification_status": "unverified",
+      "display": "Cortesi M, Gatta G. (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet 49:37-45. PMID 26839604",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "26839604",
         "pmcid": "PMC4723180",
@@ -2547,8 +2547,8 @@
     },
     {
       "id": "src.kudo-2021",
-      "display": "Kudo et al. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci.",
-      "verification_status": "unverified",
+      "display": "Kudo S, Mastuda Y, Yanai T, Sakurai Y. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci 39(15):1669-1676. PMID 33641596",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "33641596",
         "doi": "10.1080/02640414.2021.1892266"

@@ -5805,33 +5805,37 @@ sources:
       非競技族群外推。
 
   - id: src.kudo-2021
-    display: "Kudo et al. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci."
+    display: "Kudo S, Mastuda Y, Yanai T, Sakurai Y. (2021). Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency. J Sports Sci 39(15):1669-1676. PMID 33641596"
     title: "Forwards-backwards hand velocity induced by the upper trunk rotation in front crawl strokes and its association with the stroke frequency"
     type: journal-article
-    verification_status: unverified
-    authors: ["Kudo"]
+    verification_status: verified
+    authors: ["Kudo S", "Mastuda Y", "Yanai T", "Sakurai Y"]
     year: 2021
     container: "Journal of Sports Sciences"
     identifier:
       pmid: "33641596"
       doi: "10.1080/02640414.2021.1892266"
-    retrieved_on: "2026-09-02"
+    retrieved_on: "2026-09-04"
     notes: >-
-      Step 17d 為 FR-31 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未逐字
-      轉錄，標 unverified。15 名泳者以反光標記動作捕捉，將軀幹的 roll-pitch-yaw
-      分解後估計各分量對手部前後向速度的貢獻，量到上軀幹旋轉貢獻 28% 與 19%
-      的手後向速度。
+      Step 17d 為 FR-31 裁決登錄。2026-09-04 以 efetch 取回原文摘要，補齊完整
+      作者清單（Kudo S, Mastuda Y, Yanai T, Sakurai Y——Mastuda 是原文刊出拼法）
+      與卷期頁碼，升 verified。
+      15 名熟練泳者以反光標記動作捕捉，將軀幹的 roll-pitch-yaw 分解後估計各分量
+      對手部前後向速度的貢獻。**三個數字分屬三個相位，引用時必須連相位一起寫**：
+      拉水相 28%、推水相 19%（兩者皆為手的**後向**速度），回臂相 19%（手的
+      **前向**速度）。兩個 19% 的終點方向不同，混用不會被發現。
+      另報告上軀幹旋轉貢獻的前後向手速與划頻相關（r = 0.56, p < 0.05）。
       適用範圍：只支持「上軀幹旋轉對手的後向速度有可量化的貢獻」，且必須同時
       寫出相位與量測方式。
       不可用於：划距（stroke length）終點；力量或力量傳導鏈主張（本研究量的是
       速度不是力）；任何最佳旋轉角度或訓練劑量。
 
   - id: src.cortesi-gatta-2015
-    display: "Cortesi & Gatta (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet."
+    display: "Cortesi M, Gatta G. (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet 49:37-45. PMID 26839604"
     title: "Effect of The Swimmer's Head Position on Passive Drag"
     type: journal-article
-    verification_status: unverified
-    authors: ["Cortesi", "Gatta"]
+    verification_status: verified
+    authors: ["Cortesi M", "Gatta G"]
     year: 2015
     container: "Journal of Human Kinetics"
     identifier:
@@ -5840,8 +5844,8 @@ sources:
       doi: "10.1515/hukin-2015-0106"
     retrieved_on: "2026-09-02"
     notes: >-
-      Step 17d 為 FR-44 裁決登錄。識別碼於蒐證階段實際解析，作者僅有姓氏可逐字
-      轉錄，標 unverified。10 名男性區域級泳者，水下 60 cm、1.5／1.7／1.9 m/s
+      Step 17d 為 FR-44 裁決登錄。2026-09-04 以 efetch 取回原文摘要，補齊作者
+      縮寫與卷期頁碼，升 verified。10 名男性區域級泳者，水下 60 cm、1.5／1.7／1.9 m/s
       被動拖曳，操弄三種「頭相對身體水平線」的位置（head-up／aligned／head-down）
       與兩種手臂姿勢，量被動阻力。
       適用範圍：支持「頭相對身體水平線的位置會改變被動阻力」，且引用效果量時
