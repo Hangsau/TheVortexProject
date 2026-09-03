@@ -426,9 +426,17 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
   | 類 | 數量 | 形狀 | 該怎麼處理 |
   |---|---|---|---|
-  | ①`links` 欄位在、但四個子鍵全空 | **41** | 幾乎全是 `development/matrix.yaml` 的 ADM 格（`standards`／`drills`／`technical_analysis`／`l_indicators` 四個鍵都宣告了卻沒填） | 這是**設計時就打算連、後來沒接上**的空殼，接線目標明確，是四類裡最該先做的 |
+  | ①`links` 欄位在、但子鍵全空 | **41** | **不是同一種東西，要拆兩堆**：`health/injuries.yaml` **28**（`mechanism_link`／`technical_link`／`perception_link` 三鍵皆 `None`）＋`development/matrix.yaml` **12**（ADM 四鍵皆 `[]`）＋`periodization/structure.yaml` **1** | 只有 injuries 那 28 筆該接（見錯誤 17）；matrix 那 12 格**不該接、接不了** |
   | ②有 `cross_ref` 自由文字、但 `cross_ref_ids` 空 | **32** | 幾乎全是 `teaching-errors.yaml`，文字寫的是**章節號**（「技術分析 §3.1」「§柒」）而不是穩定 ID，所以 W001 抓不到、W006 也抓不到（鍵存在只是空陣列） | 要人工把章節號對回實際條目 ID。**這 32 筆是「語意上有連、機器上沒連」，最容易被誤讀成內容缺失** |
-  | ③完全沒有任何關聯欄位 | **274** | 散在 technical-analysis 88／teaching-errors 84／psychology 70／injuries 39／water-sense-levels 26… | 這才是真的孤立。**但先別急著補連結**——先確認這些條目是不是本來就該獨立（`injuries.yaml` 的流行病學補充條目可能天生無需互連），不要為了讓數字好看而造關聯 |
+  | ③完全沒有任何關聯欄位 | **274** | technical-analysis 88／psychology 70／teaching-errors 52／water-sense-levels 26／l-indicators 13／injuries 11／taper 9／zones 3／actions 1／perception.free 1 | 這才是真的孤立。**但先別急著補連結**——先確認這些條目是不是本來就該獨立，不要為了讓數字好看而造關聯。**唯一已確認該接的是 water-sense-levels 那 26 筆**（injuries 的 `perception_link` 文字已在點名它們，只是沒填 ids） |
+
+  **錯誤 17（上一版這張表寫完就發現，已更正）：把第①類寫成「幾乎全是 ADM 格」「設計時就打算連、後來沒接上的空殼，接線目標明確，是四類裡最該先做的」——兩句都錯。**
+
+  - **錯在數字歸屬**：41 筆裡 ADM 只佔 **12**，`injuries.yaml` 才是大宗（**28**），另有 `periodization/structure.yaml` 1 筆。我把一個總數整包掛給了看起來最像的那個檔。
+  - **錯在「接線目標明確」**：ADM 那 12 格是 `physical`／`mental`／`life` 三支柱 × 四階段的**全部**，`technical` 四格則四個鍵都填著（`standards` 各 22、`drills` 2–9、`l_indicators` 2–4）。去讀四個 links 子鍵的目標檔才發現：`development/technical-standards.yaml` 全部 22 筆是 `std.{free,back,fly,breast,start,turn}.*`、`Drills/` 七個檔全是入水泳姿練習、`technical_analysis` 是 `{stroke}.tech.N`、`l_indicators` 是 `{stroke}.{level}.{aspect}`——**四個目標檔裡沒有任何一筆體能／心理／生活技能內容**。非技術支柱的空 links 是**每格都寫滿四個鍵的結構對稱**，不是未完成的接線；那 12 格根本沒有合法目標可指。
+  - **這正是本輪已經記了五次的同一個動作**：我看到「鍵在、值空」就推論「打算做但沒做」，沒去查那個鍵有沒有東西可指。**判斷一格空白之前必須先打開目標檔看它裝什麼**，不能從欄位名反推意圖。
+
+  **真正該接的是 injuries 那 28 筆**：同檔另有 **16** 筆的 `mechanism_link`／`technical_link`／`perception_link` 是填著的（如 `swimmers-shoulder` → `free.tech.10`、`breaststrokers-knee` → `breast.tech.36/37`），代表這個接法在本檔內已成立且有現成範例，那 28 筆是真的漏了。**順帶查到一條沒接上的線**：即使是填著的那 16 筆，`perception_link` 的文字都在點名 L 級（「L4–L6 手感與全身張力」「L0 呼吸感知」），但 `perception_link_ids` **全部是空陣列**——而 `water-sense-levels.yaml` 的 26 筆（`free.L4`、`back.L2`…）正好整批落在第③類孤兒裡。**第①類的 injuries 與第③類的 water-sense-levels 是同一條斷線的兩端，該一起做。**
 
   W002／W008 是一體兩面（顯示字串沒遷 `source_ids` → 註冊表那頭就沒人引用 → 報孤兒來源），**應該一起做而不是分兩輪**。W011 是 🟠 條目缺 `observation_basis`，屬內容補寫不是工具問題。
 
