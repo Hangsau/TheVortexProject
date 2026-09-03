@@ -4,7 +4,41 @@
 
 ---
 
-## 當前狀態（2026-09-03，最新）
+## 當前狀態（2026-09-04，最新）
+
+### ▶️ Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
+
+| 產出 | 數字 |
+|---|---|
+| `teaching-errors.yaml` 有 `cross_ref` 散文但 `cross_ref_ids` 空的 33 筆全部填上 | free 9 ／ back 1 ／ breast 3 ／ fly 10 ／ udk 1 ／ starts-turns 9 |
+| W003（孤兒條目） | 397 → **349**（−48） |
+| WARN 總數 | 602 → **554** |
+| `indices/gap_report.json#unlinked_records` | 397 → **349**（與 W003 相等，同函式，未再分岔） |
+| 測試 | **222 passed／8 subtests** |
+| technical-analysis.yaml 剩餘孤兒 | 88 → **72**（−16，因獲得入邊） |
+| teaching-errors.yaml 剩餘孤兒 | ~84 → **52**（Class ② 33 出邊完成；Class ③ 52 未動） |
+
+**接法**：讀每一筆 `err.public.misconception` 與 `correct_concept`，比對 `technical-analysis.yaml` 的 `points[].title` 挑對應機制條目，不靠章節號字面相似度。這批 33 筆全部指向 `{stroke}.tech.N`（未借用其他 err 或 drill），因為原散文寫的都是「技術分析 §…」。**已驗證每個 target ID 存在**（33 × 1–4 個 target = 66 條 ids，全 hit）。**接完後仍有 45−12−33=0 筆 cross_ref 散文缺 ids**——這批 Class ② 已清空。
+
+**個別對應理由（挑要點）**：
+
+- `free.err1`（高肘回臂是唯一正確）→ `free.tech.32`（三層能量光譜）＋ `free.tech.4/5/6`（Hip / Shoulder / Hybrid 三種驅動風格）；散文寫「三種風格對應三種回臂策略」，兩層都對得上。
+- `free.err15`（主動轉髖）→ `free.tech.15`（肩胛肌群啟動旋轉——菱形肌是主動發動者、髖被動跟隨）；正解直接推翻誤區。
+- `starts-turns.err7`（仰式旗幟計步）→ `starts-turns.tech.23`（**仰式**轉身計步需分速度標定），**刻意不掛 `tech.20`**（那是自由式翻滾計步，同 err 20：機器鍵不多講一件事的原則）。
+- `starts-turns.err9`（推牆力道越大越好）→ `tech.17`（速度損失最小化）＋ `tech.18`（流線型觸牆前完成）＋ `tech.22`（力向量對齊重心）；正解列了三個優先順序，三個都掛。
+- `starts-turns.err4`（仰式起跳拱背）→ `tech.14`（髖部高度是核心）＋ `tech.16`（臀部先出水再蹬腿）；**刻意不掛 `tech.15`**（Backstroke Ledge，那是器材效益不是拱背議題）。
+- `fly.err8`（流線型海豚踢＝蝶腿訓練）→ `fly.tech.6/7/8`（兩踢功能不對稱＋第一踢＋第二踢）；正解點名「兩踢時機結構」，三筆一起掛才完整。
+
+**沒犯錯，但兩件跟提示不一致要記著**：
+
+- **佇列項目 1（health/drafts 剩餘 links）本輪動手前已是空集合**。掃 48 個 draft 的六個 link 欄位：技術 link 有 prose 且 ids 空的一筆都沒有——三筆 starts-turns 已於上一輪接完，其餘要嘛 prose 是 `~`／全 None、要嘛 mechanism_link 指向框架概念（`breaststrokers-knee`／`swimmers-shoulder`）依錯誤 20 判「該保持空」、要嘛 perception_link 點名 L 級但 `water-sense-levels.yaml` 沒有 stroke-agnostic L 級實體依規定不填。**跳過並記錄**：接線債本輪已無可做。
+- **佇列項目 2（重跑三類孤兒分佈）在 commit `4e72608` 已做完**，HANDOFF C 項的表已是 W003=397 時點的分佈（Class 1=38、Class 3=327），非提示所寫的 W003=347 舊時點。**佇列項目 3 才是最上面實際還沒做完的**，本輪動的就是它。
+
+**W003 剩下的分佈預期**（未實跑，供下一輪動手前先重跑對表）：Class ①（links 全空）38 未動；Class ②（cross_ref 散文＋ids 空）32→**0**；Class ③（無關聯欄位）327 → 327 − 16（technical-analysis 因入邊減少）= **~311**。**下輪動手前先真跑一次，別憑這個推測。**
+
+---
+
+## 上一階段狀態（2026-09-03）
 
 ### ▶️ 五個相位補上，**動作需求層相位覆蓋 54/59 → 59/59 全滿**，需求 61 → **66**。**「這一格寫不出來」的理由一天內被推翻五次，五次都是缺查找（錯誤 11、12、14、15）**
 

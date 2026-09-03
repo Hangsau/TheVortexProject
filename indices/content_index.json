@@ -3861,7 +3861,11 @@
         "src.gonjo-2021-b",
         "src.race-club-gary-hall-jr"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.1",
+        "back.tech.5",
+        "back.tech.6"
+      ]
     },
     {
       "id": "back.err10",
@@ -5270,7 +5274,10 @@
         "src.swimming-world-magazine",
         "src.u-s-masters-swimming"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.35",
+        "breast.tech.8"
+      ]
     },
     {
       "id": "breast.err12",
@@ -5469,7 +5476,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.10",
+        "breast.tech.13"
+      ]
     },
     {
       "id": "breast.err5",
@@ -5494,7 +5504,10 @@
         "src.swimming-world-magazine",
         "src.usms-wayne-mccauley"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.3",
+        "breast.tech.5"
+      ]
     },
     {
       "id": "breast.err6",
@@ -7815,7 +7828,11 @@
         "src.swimswam-a",
         "src.waterford-crystal-swimming-club"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.13",
+        "fly.tech.14"
+      ]
     },
     {
       "id": "fly.err10",
@@ -7839,7 +7856,10 @@
         "src.swim-teach-com",
         "src.train-daly"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.30",
+        "fly.tech.5"
+      ]
     },
     {
       "id": "fly.err11",
@@ -7865,7 +7885,10 @@
         "src.sanders-1995-c",
         "src.usms"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.16",
+        "fly.tech.4"
+      ]
     },
     {
       "id": "fly.err12",
@@ -7889,7 +7912,11 @@
         "src.brent-rushall-sdsu",
         "src.usms-masters-teaching-article"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.17",
+        "fly.tech.18",
+        "fly.tech.22"
+      ]
     },
     {
       "id": "fly.err13",
@@ -7936,7 +7963,9 @@
       "source_ids": [
         "src.enjoy-swimming-com"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.30"
+      ]
     },
     {
       "id": "fly.err15",
@@ -8046,7 +8075,10 @@
         "src.melton-swimming",
         "src.swim-smart"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.20",
+        "fly.tech.22"
+      ]
     },
     {
       "id": "fly.err5",
@@ -8092,7 +8124,10 @@
         "src.swim-teach-com",
         "src.swimming-science-livio-cocozza"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.3",
+        "fly.tech.4"
+      ]
     },
     {
       "id": "fly.err7",
@@ -8116,7 +8151,9 @@
         "src.eatsleepswimcoach",
         "src.train-daly"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.24"
+      ]
     },
     {
       "id": "fly.err8",
@@ -8139,7 +8176,11 @@
       "source_ids": [
         "src.swimcoachingblog-com"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.6",
+        "fly.tech.7",
+        "fly.tech.8"
+      ]
     },
     {
       "id": "fly.err9",
@@ -8162,7 +8203,10 @@
       "source_ids": [
         "src.swim-like-a-fish"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.10",
+        "fly.tech.8"
+      ]
     },
     {
       "id": "fly.pre",
@@ -9410,7 +9454,12 @@
         "src.scott-bay-usms-level-5-coach",
         "src.tritonwear"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.32",
+        "free.tech.4",
+        "free.tech.5",
+        "free.tech.6"
+      ]
     },
     {
       "id": "free.err10",
@@ -9435,7 +9484,9 @@
         "src.historical-background-unattributed",
         "src.rocketswim"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.7"
+      ]
     },
     {
       "id": "free.err11",
@@ -9481,7 +9532,10 @@
       "source_ids": [
         "src.coach-observation"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.11",
+        "free.tech.12"
+      ]
     },
     {
       "id": "free.err13",
@@ -9550,7 +9604,9 @@
       "source_ids": [
         "src.pink"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.15"
+      ]
     },
     {
       "id": "free.err16",
@@ -9596,7 +9652,10 @@
       "source_ids": [
         "src.the-race-club-velocity-meter-pressure-meter"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.16",
+        "free.tech.29"
+      ]
     },
     {
       "id": "free.err18",
@@ -9619,7 +9678,10 @@
       "source_ids": [
         "src.the-race-club"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.17",
+        "free.tech.18"
+      ]
     },
     {
       "id": "free.err19",
@@ -9688,7 +9750,11 @@
       "source_ids": [
         "src.staunton-2025-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.19",
+        "free.tech.24",
+        "free.tech.3"
+      ]
     },
     {
       "id": "free.err21",
@@ -9711,7 +9777,10 @@
       "source_ids": [
         "src.coach-observation"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.8",
+        "free.tech.9"
+      ]
     },
     {
       "id": "free.err22",
@@ -9878,7 +9947,10 @@
       "source_ids": [
         "src.tri-coaching"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.29",
+        "free.tech.32"
+      ]
     },
     {
       "id": "free.err6",
@@ -17540,7 +17612,10 @@
       "source_ids": [
         "src.benjanuvatra-2007-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.39",
+        "starts-turns.tech.6"
+      ]
     },
     {
       "id": "starts-turns.err10",
@@ -17673,7 +17748,10 @@
       "source_ids": [
         "src.takai"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.7",
+        "starts-turns.tech.8"
+      ]
     },
     {
       "id": "starts-turns.err3",
@@ -17696,7 +17774,10 @@
       "source_ids": [
         "src.journal-pone-0241345-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.11",
+        "starts-turns.tech.12"
+      ]
     },
     {
       "id": "starts-turns.err4",
@@ -17719,7 +17800,10 @@
       "source_ids": [
         "src.pmc4234766-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.14",
+        "starts-turns.tech.16"
+      ]
     },
     {
       "id": "starts-turns.err5",
@@ -17744,7 +17828,9 @@
         "src.myswimpro-2022-coachsci-sdsu-edu-2022",
         "src.pmc8960438-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.19"
+      ]
     },
     {
       "id": "starts-turns.err6",
@@ -17764,7 +17850,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.18"
+      ]
     },
     {
       "id": "starts-turns.err7",
@@ -17787,7 +17875,9 @@
       "source_ids": [
         "src.how-to-use-backstroke-flags-in-swimming-u-s"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.23"
+      ]
     },
     {
       "id": "starts-turns.err8",
@@ -17813,7 +17903,9 @@
         "src.pmc8960438-b",
         "src.swimswam-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.25"
+      ]
     },
     {
       "id": "starts-turns.err9",
@@ -17839,7 +17931,11 @@
         "src.pmc6409673-a",
         "src.pmid-40252339-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.17",
+        "starts-turns.tech.18",
+        "starts-turns.tech.22"
+      ]
     },
     {
       "id": "starts-turns.tech.1",
@@ -19799,7 +19895,9 @@
         "src.researchgate-3d-analysis-2018",
         "src.swimcoachingblog-com"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.11"
+      ]
     },
     {
       "id": "udk.err7",
