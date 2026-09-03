@@ -1605,7 +1605,7 @@
     },
     {
       "id": "src.gonjo-2018",
-      "display": "Gonjo et al. 2018",
+      "display": "Nicol E, Ball K, Tor E. (2021). The biomechanics of freestyle and butterfly turn technique in elite swimmers. Sports Biomech 20(4):444-457. PMID 30694108",
       "verification_status": "verified",
       "identifier": {
         "pmid": "30694108",
@@ -9402,8 +9402,8 @@
     },
     {
       "id": "src.swimmers-knee-epidemiology-sr",
-      "display": "游泳膝傷流病系統綜述（待 WebFetch 核實）",
-      "verification_status": "unverified",
+      "display": "【佔位字串，非可引用來源】游泳膝傷流病系統綜述",
+      "verification_status": "retracted",
       "identifier": {},
       "usage_count": 0,
       "usages": []

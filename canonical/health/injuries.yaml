@@ -1019,7 +1019,7 @@ injuries:
   flags:
     pending_verification:
     - 三篇來源皆僅取得 PubMed 摘要層級，未取全文；子型分布的細部數字仍不可引用
-    - 「游泳膝傷流病系統綜述」(src.swimmers-knee-epidemiology-sr) 至今未能定位到實際文獻，維持 unverified，不得引用其存在
+    - 「游泳膝傷流病系統綜述」(src.swimmers-knee-epidemiology-sr) 2026-09-04 判定為佔位字串（無作者／年份／識別碼，不指向任何單一文獻），已轉 retracted 墓碑，不得引用其存在。膝傷盛行率若要寫，須另找真實文獻登錄新 slug
     contested:
     - claim: 蛙泳膝主要病理是 MCL 應力還是髕股/內側皺襞
       consensus_source: 臨床定位一致指向內側結構——Vizsolyi 1987 指出內側副韌帶與髕骨內下緣受累；Rovere 1985 在每週膝痛者中有 47% 觸及壓痛增厚的內側滑膜皺襞

@@ -1108,7 +1108,7 @@ sources:
     notes: "S3c 依原字串明列的 PMID 28605694 確認作者應為 Yamakawa et al.，正文引用已更正。與 src.pmid-28605694 確認為同一文獻；暫留穩定 alias，待專門合併批次處理。"
 
   - id: src.gonjo-2018
-    display: "Gonjo et al. 2018"
+    display: "Nicol E, Ball K, Tor E. (2021). The biomechanics of freestyle and butterfly turn technique in elite swimmers. Sports Biomech 20(4):444-457. PMID 30694108"
     title: "The biomechanics of freestyle and butterfly turn technique in elite swimmers."
     type: journal-article
     verification_status: verified
@@ -1119,8 +1119,15 @@ sources:
       pmid: "30694108"
       url: "https://pubmed.ncbi.nlm.nih.gov/30694108/"
       doi: "10.1080/14763141.2018.1561930"
-    retrieved_on: "2026-07-28"
-    notes: "S3c 確認原掛 PMID 30694108 實為 Nicol、Ball & Tor 的自由式／蝶式轉身研究；該識別碼不支持原 IM 轉身主張，正文已改連 src.born-2022-im。"
+    retrieved_on: "2026-09-04"
+    notes: >-
+      S3c 確認原掛 PMID 30694108 實為 Nicol、Ball & Tor 的自由式／蝶式轉身研究；
+      該識別碼不支持原 IM 轉身主張，正文已改連 src.born-2022-im。
+      2026-09-04 補正 display：原字串寫「Gonjo et al. 2018」，
+      與 authors／year／title 三個欄位同時矛盾，是**會被照抄成錯誤歸因的活性風險**
+      （任何人讀顯示層都會把這篇引成 Gonjo 2018）。已改為 efetch 核對後的真實引用。
+      **id 的 gonjo-2018 字面保留**：它是穩定鍵不是事實宣稱，改 ID 屬待辦的合併批次，
+      且目前無條目引用本筆。本筆是真實已驗證文獻，不轉墓碑。
 
   - id: src.gonjo-2020-a
     display: "Gonjo 2020"
@@ -4442,10 +4449,22 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.swimmers-knee-epidemiology-sr
-    display: "游泳膝傷流病系統綜述（待 WebFetch 核實）"
+    display: "【佔位字串，非可引用來源】游泳膝傷流病系統綜述"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-04"
+    notes: >-
+      2026-09-04 判定為佔位字串，轉墓碑。顯示字串只有一句中文類別描述，
+      **無作者、無年份、無識別碼**，不指向任何單一文獻；因此不是「查不到的文獻」，
+      而是「從來沒有指涉對象的登錄」。
+      本次以 PubMed esearch 三組關鍵字重查（不接受前人「搜不到」當結論），
+      候選 PMID 41342747／33010194／21893484／35291633／30787648／27409075 逐篇讀摘要。
+      其中 PMID 41342747（Li & Liu, J Sports Med Phys Fitness 2026;66(1):82-91，
+      45 年游泳肌骨傷害系統綜述＋統合分析，n=10,973，膝傷見於 34/94 篇＝36.1%）
+      確實是一篇涵蓋膝傷的游泳流病系統綜述，但**沒有任何依據能證明它就是本佔位字串所指**——
+      掛上去等於憑空造出歸因。若日後真要引用該篇，另行以其真實身分登錄新 slug，
+      不得回填本墓碑。
+      墓碑保留是為了擋住同一個空字串被重新登錄。
 
   - id: src.swimming-injury-imaging-review-1-radiologyke
     display: "【非可引用來源，已解除】Swimming injury imaging review (踝部約 1%), radiologykey"
