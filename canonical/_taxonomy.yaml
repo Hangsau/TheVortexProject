@@ -244,6 +244,22 @@ fields:
       - key: published
       - key: withheld
 
+  source_verification_status:
+    controlled: true
+    review_status: reviewed
+    note: >
+      canonical/_sources.yaml 每筆來源 metadata 的 verification_status 取值。
+      與 claim_status 是兩回事（那個講「主張」，這個講「這筆登錄本身」），
+      不可互相冒用。執行者是 tools/validate.py 的 E013 與
+      SOURCE_VERIFICATION_STATUSES，兩邊必須同時改。
+      retracted 是墓碑：已判定不可引用（查無此文獻／佔位字串／重複登錄／
+      非文獻），留在註冊表是為了擋住同一筆被重新登錄，因此 W008 不把它
+      算成孤兒來源。
+    values:
+      - key: verified
+      - key: unverified
+      - key: retracted
+
   claim_status:
     controlled: true
     review_status: reviewed

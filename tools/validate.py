@@ -43,6 +43,9 @@ exit code：
         升級）。這組欄位打錯字會 **fail-open**：sync_vortex.py 只擋
         `draft`/`withheld` 兩個字面值，`publication_status` 拼錯即上站；
         `action_status` 拼錯會讓 do-not-prescribe 與 W016 閘一起穿透
+  E013  _sources.yaml 的 verification_status 不是 verified/unverified/
+        retracted 三值之一。同樣是 fail-open 欄位：retracted 拼錯，那筆
+        已判定不可引用的墓碑會靜默回到 W008 名單被當成「該接的來源」
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
@@ -54,7 +57,8 @@ exit code：
   W006  cross_ref 有值但完全沒有 cross_ref_ids 欄位（連空陣列都沒有）
   W007  links.*_link 有非空字串但完全沒有對應的 *_link_ids 欄位
         （連空陣列都沒有）
-  W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用
+  W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用。
+        verification_status: retracted 的墓碑不算孤兒（它本來就不該有人引用）
   W009  certainty 為 green/yellow 且**完全沒有**任何來源資訊
         （既無 source/sources/citation 顯示字串，也無 source_ids，
         祖先區塊也沒有，且未以 evidence_from 宣告證據由子條目承擔）
@@ -610,13 +614,52 @@ def check_file_categories(
 
 # ── Sources 載入 ──────────────────────────────────────────────────────────────
 
+SOURCE_VERIFICATION_STATUSES = frozenset({"verified", "unverified", "retracted"})
+
+
+def load_source_records() -> list[dict]:
+    """回傳 _sources.yaml 中所有帶 id 的來源記錄。"""
+    data = load_yaml(SOURCES_FILE)
+    return [
+        s for s in (data.get("sources") or [])
+        if isinstance(s, dict) and "id" in s
+    ]
+
+
 def load_source_ids() -> set[str]:
     """回傳 _sources.yaml 中所有已登錄的 id。"""
-    data = load_yaml(SOURCES_FILE)
+    return {s["id"] for s in load_source_records()}
+
+
+def retracted_source_ids(records: list[dict]) -> set[str]:
+    """`verification_status: retracted` 的來源 id。
+
+    retracted 表示這筆登錄已判定不可引用（查無此文獻／佔位字串／重複登錄／
+    非文獻），保留在註冊表當墓碑是為了擋住同一筆被重新登錄。**它沒有人引用
+    是正確狀態**，所以 W008 要跳過它們——否則墓碑會永遠佔著孤兒名單，把
+    真正該接的孤兒來源淹掉。
+    """
     return {
-        s["id"] for s in (data.get("sources") or [])
-        if isinstance(s, dict) and "id" in s
+        s["id"] for s in records
+        if s.get("verification_status") == "retracted"
     }
+
+
+def check_source_verification_status(records: list[dict], errors: dict):
+    """E013：`verification_status` 必須是三個合法值之一。
+
+    列 ERROR 不列 WARN，理由與 E012 同型：這個欄位**打錯字會 fail-open**。
+    `retracted` 拼成 `retract` 不會有人發現，那筆墓碑會靜默回到 W008 名單
+    （噪音），更糟的是有人看到它在名單上以為「該接來源」而去引用一筆已判定
+    查無此文獻的東西。
+    """
+    for s in records:
+        status = s.get("verification_status")
+        if status not in SOURCE_VERIFICATION_STATUSES:
+            errors["E013"].append(
+                f"  source_id={s['id']!r} verification_status={status!r} "
+                f"不在 {sorted(SOURCE_VERIFICATION_STATUSES)}"
+            )
 
 
 # ── 確定性：需要來源的等級 ─────────────────────────────────────────────────────
@@ -1648,9 +1691,13 @@ def check_orphan_sources(
     allowed_source_ids: set,
     referenced_source_ids: set,
     warnings: dict,
+    retracted_ids: set = frozenset(),
 ):
-    """W008：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用。"""
-    for sid in sorted(allowed_source_ids - referenced_source_ids):
+    """W008：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用。
+
+    `retracted` 的墓碑排除在外——見 `retracted_source_ids()`。
+    """
+    for sid in sorted(allowed_source_ids - referenced_source_ids - retracted_ids):
         warnings["W008"].append(
             f"  source_id={sid!r} 已登錄於 _sources.yaml 但無任何條目引用"
         )
@@ -1694,7 +1741,9 @@ def run_validation():
         sys.exit(1)
 
     try:
-        allowed_source_ids = load_source_ids()
+        source_records = load_source_records()
+        allowed_source_ids = {s["id"] for s in source_records}
+        retracted_ids = retracted_source_ids(source_records)
     except Exception as e:
         print(f"[ERROR] Cannot load _sources.yaml: {e}")
         sys.exit(1)
@@ -1729,7 +1778,7 @@ def run_validation():
     errors: dict[str, list[str]] = {
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
-        "E011": [], "E012": []
+        "E011": [], "E012": [], "E013": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
@@ -1932,7 +1981,10 @@ def run_validation():
         check_evidence_from(rel, data, all_id_set, errors)
 
     # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
-    check_orphan_sources(allowed_source_ids, referenced_source_ids, warnings)
+    check_orphan_sources(
+        allowed_source_ids, referenced_source_ids, warnings, retracted_ids
+    )
+    check_source_verification_status(source_records, errors)
 
     # ── W003: 孤兒條目 ──
     for rel, entry in all_entries:
@@ -2055,6 +2107,12 @@ def _write_report(
             "（原 W013，2026-09-02 升級：`publication_status` 等欄位拼錯會"
             "fail-open，`sync_vortex.py` 只擋 `draft`/`withheld` 字面值）",
         ),
+        "E013": (
+            "ERROR",
+            "`_sources.yaml` 的 `verification_status` 不是 "
+            "`verified`／`unverified`／`retracted` 三值之一"
+            "（拼錯會讓 retracted 墓碑靜默回到 W008 名單）",
+        ),
         "W001": (
             "WARN",
             "`cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`",
@@ -2086,7 +2144,8 @@ def _write_report(
         ),
         "W008": (
             "WARN",
-            "孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用",
+            "孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用"
+            "（`verification_status: retracted` 的墓碑除外）",
         ),
         "W009": (
             "WARN",

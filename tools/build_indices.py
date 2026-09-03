@@ -251,10 +251,17 @@ def build_content_index(records: list[dict]) -> dict:
     }
 
 
+# _taxonomy.yaml 裡不是「條目標籤」的受控欄位。它們登錄在同一份 taxonomy
+# 是為了保有單一詞彙真相源，但值出現在別的檔（source metadata），不會被任何
+# 條目 tag 引用——列進 tag 反向索引會讓 gap_report 永遠多報幾筆假死標籤。
+NON_ENTRY_TAXONOMY_FIELDS = frozenset({"source_verification_status"})
+
+
 def build_tag_reverse_index(records: list[dict], taxonomy: dict[str, set[str]]) -> dict:
     reverse: dict[str, dict[str, list[str]]] = {
         field: {value: [] for value in sorted(values)}
         for field, values in sorted(taxonomy.items())
+        if field not in NON_ENTRY_TAXONOMY_FIELDS
     }
     for record in records:
         for field, values in record["tags"].items():

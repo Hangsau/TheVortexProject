@@ -101,6 +101,14 @@
 
 ---
 
+## E013 — `_sources.yaml` 的 `verification_status` 不是 `verified`／`unverified`／`retracted` 三值之一（拼錯會讓 retracted 墓碑靜默回到 W008 名單）
+
+**ERROR，共 0 筆**
+
+（無）
+
+---
+
 ## W001 — `cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`
 
 **WARN，共 1 筆**
@@ -545,28 +553,14 @@
 
 ---
 
-## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用
+## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用（`verification_status: retracted` 的墓碑除外）
 
-**WARN，共 18 筆**
+**WARN，共 4 筆**
 
-  source_id='src.adductor-loading-return-to-sport-practice-co' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.aiac-ijkss-v-6n-1p-25' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.akkurt-2017' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.breath-hold-training' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.bushman-2006' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.clinical-coach-report-no-epidemiology' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.falls-and-hip-fracture-mortality-pmid' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.ioc-iron-in-sport-doi-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.jellyfish-envenomation-first-aid' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.military-swim-training-sipe' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.mountjoy-ioc-consensus-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.shallow-water-blackout-prevention-webfetch' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.sipe' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.swimmers-knee-epidemiology-sr' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.swimming-injury-imaging-review-1-radiologyke' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 

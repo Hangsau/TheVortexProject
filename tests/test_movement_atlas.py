@@ -84,7 +84,12 @@ def make_sources(source_ids=None):
         "schema_version": 1,
         "domain": "_meta",
         "description": "movement atlas test sources",
-        "sources": [{"id": sid} for sid in (source_ids or [])],
+        # verification_status 是 E013 的必填欄位，工廠預設給合法值，
+        # 讓 movement 測試不必逐筆重複宣告
+        "sources": [
+            {"id": sid, "verification_status": "verified"}
+            for sid in (source_ids or [])
+        ],
     }
 
 

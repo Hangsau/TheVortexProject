@@ -389,7 +389,7 @@ sources:
   - id: src.adductor-loading-return-to-sport-practice-co
     display: "【佔位字串，非真實文獻】原記為「Adductor loading/return-to-sport practice (Coast Sport, 已驗證)」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為佔位字串並解除引用。顯示字串標「已驗證」但無作者、無年份、無識別碼，
       指向的是一家運動傷害診所（Coast Sport）的實務做法而非可重取的文獻。
@@ -401,7 +401,7 @@ sources:
     display: "【重複登錄，已解除】與 src.stress-fractures-in-swimmers-systematic-revi 為同一篇（Vasiliadis 2018, IJKSS）"
     title: "Swimmers Are At Risk For Stress Fractures? A Systematic Review"
     type: review
-    verification_status: unverified
+    verification_status: retracted
     year: 2018
     container: "International Journal of Kinesiology and Sports Science"
     identifier:
@@ -417,7 +417,7 @@ sources:
   - id: src.akkurt-2017
     display: "【查無此文獻】原記為「Akkurt et al. 2017, J Phys Ther Sci（SCI 髖屈攣縮綜述）」，PubMed 檢索不到對應文獻"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     authors: ["Akkurt"]
     et_al: true
     year: 2017
@@ -603,7 +603,7 @@ sources:
   - id: src.breath-hold-training
     display: "【佔位字串，非真實文獻】原記為「美軍/海軍 breath-hold training 安全準則（具體文件待查）」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為佔位字串並解除引用。查證後未能定位到任何具名的美軍／海軍閉氣訓練安全準則文件；
       條目原本掛在本 id 下的預防建議（禁止潛前過度換氣、禁止單獨閉氣、1:1 直接看護）
@@ -637,7 +637,7 @@ sources:
   - id: src.bushman-2006
     display: "【查無此文獻】原記為「Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）」，該期刊無此作者文獻"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     authors: ["Bushman"]
     et_al: true
     year: 2006
@@ -789,7 +789,7 @@ sources:
   - id: src.clinical-coach-report-no-epidemiology
     display: "【非文獻，是證據狀態描述】原記為「臨床/教練回報(無系統性流行病學研究)」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定並解除引用。這個字串**根本不是來源**——它描述的是「沒有來源」這件事本身，
       卻被登錄成 source_id 掛在條目上，讀起來像有引用。
@@ -966,7 +966,7 @@ sources:
   - id: src.falls-and-hip-fracture-mortality-pmid
     display: "【佔位字串，非真實文獻】原記為「Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）」——顯示字串本身就寫著「待補 PMID」，從未指向任何一篇可解析文獻"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為**佔位字串**並解除全部引用。它唯一支撐的是 `poolside-slip-fall` 的
       「高齡髖骨折後一年死亡率 20–30%」。改以真實文獻查證後發現**該數字對本專案的讀者族群偏高約 1.5–2 倍**：
@@ -1302,7 +1302,7 @@ sources:
   - id: src.ioc-iron-in-sport-doi-webfetch
     display: "【查無此文獻，已解除】IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     retrieved_on: "2026-08-18"
     notes: >-
       2026-08-18 解除引用。**IOC 從未發表過以鐵（iron）為主題的共識聲明**——
@@ -1353,7 +1353,7 @@ sources:
   - id: src.jellyfish-envenomation-first-aid
     display: "【佔位字串，非真實文獻】原記為「Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為佔位字串並解除引用。真正該引的是 Cochrane 回顧
       src.cochrane-2023-jellyfish-interventions（PMID 37272501）。
@@ -1730,7 +1730,7 @@ sources:
   - id: src.military-swim-training-sipe
     display: "【佔位字串，非真實文獻】原記為「軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為佔位字串並解除引用。真實對應文獻已查得並登錄為
       src.volk-2021-sipe-navy-seal（PMID 33245874，美國海軍 SEAL 儲訓生 2,117 人、SIPE 發生率 5.0%）。
@@ -1748,7 +1748,7 @@ sources:
   - id: src.mountjoy-ioc-consensus-webfetch
     display: "【重複登錄，已解除】Mountjoy 等 IOC consensus（作者/年份/期刊待 WebFetch 核實）"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     retrieved_on: "2026-08-18"
     notes: >-
       2026-08-18 解除引用。這個字串指的就是 IOC RED-S／REDs 共識聲明，
@@ -4137,7 +4137,7 @@ sources:
   - id: src.shallow-water-blackout-prevention-webfetch
     display: "【佔位字串，非真實文獻】原記為「Shallow Water Blackout Prevention 衛教文獻（來源待 WebFetch 核實）」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為佔位字串並解除引用。真正該引的是 StatPearls 章節
       src.statpearls-shallow-water-blackout-nbk554620（PMID 32119507）與
@@ -4209,7 +4209,7 @@ sources:
   - id: src.sipe
     display: "【佔位字串，非真實文獻】原記為「SIPE 病理生理與鐵人三項案例系列（作者/年份待查）」"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     notes: >-
       2026-08-17 判定為佔位字串並解除引用。已改以兩篇真實文獻取代：
       src.spencer-2018-sipe-systematic-review（PMID 30238206，系統回顧）與
@@ -4450,7 +4450,7 @@ sources:
   - id: src.swimming-injury-imaging-review-1-radiologyke
     display: "【非可引用來源，已解除】Swimming injury imaging review (踝部約 1%), radiologykey"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     retrieved_on: "2026-08-18"
     notes: >-
       2026-08-18 解除引用。radiologykey.com 是**未經授權重製放射學教科書章節的網站**，

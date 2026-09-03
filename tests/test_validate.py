@@ -104,7 +104,9 @@ class FixtureTestBase(unittest.TestCase):
     def _run(self):
         """執行驗證，回傳 (errors_dict, warnings_dict, entry_count)。"""
         taxonomy = validate_mod.load_taxonomy()
-        allowed_source_ids = validate_mod.load_source_ids()
+        source_records = validate_mod.load_source_records()
+        allowed_source_ids = {r["id"] for r in source_records}
+        retracted_ids = validate_mod.retracted_source_ids(source_records)
 
         all_canonical_files = sorted(self.canonical_dir.rglob("*.yaml"))
         validate_files = [
@@ -133,7 +135,7 @@ class FixtureTestBase(unittest.TestCase):
 
         errors = {
             "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
-            "E006": [], "E007": [], "E010": [], "E011": [],
+            "E006": [], "E007": [], "E010": [], "E011": [], "E013": [],
         }
         warnings = {
             "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
@@ -223,8 +225,9 @@ class FixtureTestBase(unittest.TestCase):
 
         # W008：直接呼叫產品程式碼的孤兒來源檢查
         validate_mod.check_orphan_sources(
-            allowed_source_ids, referenced_source_ids, warnings
+            allowed_source_ids, referenced_source_ids, warnings, retracted_ids
         )
+        validate_mod.check_source_verification_status(source_records, errors)
 
         # W003
         for rel, entry in all_entries:
@@ -1120,6 +1123,65 @@ class TestW008OrphanSources(FixtureTestBase):
         self.assertIn("src.real-2020", warnings["W008"][0])
 
 
+class TestRetractedSources(FixtureTestBase):
+    """`verification_status: retracted` 的墓碑不算孤兒來源（W008），
+    但取值本身必須合法（E013）——拼錯會讓墓碑靜默回到 W008 名單。"""
+
+    def _sources(self, status_for_tombstone):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([
+                {"id": "src.tombstone", "type": "other",
+                 "verification_status": status_for_tombstone,
+                 "display": "【查無此文獻】原記為 Bogus 2001"},
+                {"id": "src.live-orphan", "type": "other",
+                 "verification_status": "unverified",
+                 "display": "Real But Uncited 2020"},
+            ]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{"id": "e-retract", "category": "kick",
+                         "stroke": "free"}]},
+        )
+
+    def test_retracted_source_is_not_an_orphan(self):
+        self._sources("retracted")
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(errors["E013"]), 0)
+        # 只剩真孤兒，墓碑不在名單上
+        self.assertEqual(len(warnings["W008"]), 1)
+        self.assertIn("src.live-orphan", warnings["W008"][0])
+
+    def test_unverified_tombstone_still_counts_as_orphan(self):
+        """證偽對照：同一筆改回 unverified 就必須重新算孤兒。"""
+        self._sources("unverified")
+        _, warnings, _ = self._run()
+        self.assertEqual(len(warnings["W008"]), 2)
+
+    def test_misspelled_status_is_e013_and_fails_open_to_w008(self):
+        """`retract` 少一個 ed：E013 抓到，且該筆確實掉回 W008。"""
+        self._sources("retract")
+        errors, warnings, _ = self._run()
+        self.assertEqual(len(errors["E013"]), 1)
+        self.assertIn("src.tombstone", errors["E013"][0])
+        self.assertEqual(len(warnings["W008"]), 2)
+
+    def test_missing_status_is_e013(self):
+        self._write_yaml(
+            self.canonical_dir / "_sources.yaml",
+            make_sources([{"id": "src.no-status", "type": "other",
+                           "display": "No Status"}]),
+        )
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {"points": [{"id": "e-nostatus", "category": "kick",
+                         "stroke": "free"}]},
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(len(errors["E013"]), 1)
+
+
 class TestCleanDataNoFalsePositive(FixtureTestBase):
     """正常資料不觸發任何錯誤或警告。"""
 
@@ -1128,6 +1190,7 @@ class TestCleanDataNoFalsePositive(FixtureTestBase):
         self._write_yaml(
             self.canonical_dir / "_sources.yaml",
             make_sources([{"id": "src.clean-2020", "type": "review",
+                           "verification_status": "verified",
                            "title": "Clean Source", "authors": ["B"],
                            "year": 2020, "identifier": {"pmid": "12345"},
                            "retrieved_on": "2026-01-01"}]),

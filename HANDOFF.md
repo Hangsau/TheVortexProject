@@ -6,7 +6,37 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ W002 顯示字串 → `source_ids` 遷移：**123 → 37（−86）**，全數落在 `health/drafts/*.yaml` 的 `references[].citation`。0 ERROR、WARN 554 → **468**、222 tests OK
+### ▶️ W008 孤兒來源 **18 → 4**：14 筆是故意不該有人引用的墓碑，改用機器鍵 `verification_status: retracted` 表示，並新增 **E013** 守住這個 fail-open 欄位。WARN 468 → **454**，0 ERROR、226 tests OK
+
+**問題不是「這 18 筆漏接來源」，是「已作廢」這個狀態只寫在人讀字串裡。** 打開 `_sources.yaml` 看，18 筆裡有 14 筆的 `display` 開頭就是【查無此文獻】／【佔位字串，非真實文獻】／【重複登錄，已解除】／【非可引用來源，已解除】——先前有人查證過、判定不可引用、把它們從條目上拆下來，但**沒有任何機器鍵記錄這件事**，於是驗證器每次都把墓碑當成「該接的孤兒來源」報一次。這正是本專案的老毛病（`W002` 是同一形狀：狀態在顯示字串、機器鍵沒跟上）。
+
+- **墓碑不刪、要留**：它們的作用是擋住同一筆假來源被重新登錄。刪掉等於把查證結果丟了。
+- **`verification_status` 原本是隱性二值 enum**（553 筆全有此欄，`verified` 183／`unverified` 370），從未登錄進 `_taxonomy.yaml`、也沒有任何檢查器守。**加第三值 `retracted`，同時把整個欄位補登錄成受控詞彙**（`_taxonomy.yaml#fields.source_verification_status`），W008 跳過 retracted。
+- **配 E013（ERROR 不是 WARN）**：理由與 E012 同型——這欄位**打錯字會 fail-open**。`retracted` 少一個 `ed`，那筆墓碑會靜默回到 W008 名單，被下一個人當成「該接的來源」而去引用一筆已判定查無此文獻的東西。缺欄位也算 E013（實測揪出兩個 fixture 從來沒寫這欄）。
+
+| 產出 | 前值 | 現值 |
+|---|---|---|
+| W008 | 18 | **4** |
+| WARN 合計 | 468 | **454** |
+| ERROR | 0 | **0**（E013 新增，實資料 0 筆） |
+| tests | 222 | **226** |
+
+**剩的 4 筆是真孤兒，不是墓碑**，且各自要不同處理（下一段的工作）：
+
+| source_id | 狀態 | 該怎麼處理 |
+|---|---|---|
+| `src.lee-2008` | 真文獻（PMID 18027307，Lee 2008 *Body roll in simulated freestyle swimming*） | 找 technical-analysis 裡談 body roll 角度而缺來源的主張接上 |
+| `src.liu-2025-core-meta` | 真文獻（PMID 41219810，青少年泳者核心訓練 meta） | 對 periodization/dryland 的核心訓練主張 |
+| `src.gonjo-2018` | ⚠ **metadata 內部矛盾，先別引用** | `display` 寫「Gonjo et al. 2018」，但同筆的 `title`／`authors`／`year` 是 **Nicol E, Ball K, Tor E (2021) *The biomechanics of freestyle and butterfly turn technique in elite swimmers*，PMID 30694108**。人讀名與識別碼指向兩篇不同論文，**先查清楚原本要引的是哪一篇**再決定改 metadata 還是拆成兩筆 |
+| `src.swimmers-knee-epidemiology-sr` | 佔位字串但**沒**被查證過（`display` 只寫「待 WebFetch 核實」，無識別碼） | **不可比照那 14 筆標 retracted**——那 14 筆是查過才判死的，這筆沒查過。要嘛查證後升 verified，要嘛查無後才標 retracted |
+
+**順手修掉一個自己造成的假訊號**：把 `source_verification_status` 登錄進 `_taxonomy.yaml` 之後，`build_indices.py` 的 `unused-taxonomy-values` 從 7 跳到 **10**——因為 tag 反向索引會把 taxonomy 每個欄位都建成條目標籤欄位，而這三個值出現在 `_sources.yaml` 不在條目 tag 上，於是永遠是空的假死標籤。加了 `NON_ENTRY_TAXONOMY_FIELDS`（目前只有這一個欄位）排除，回到 **7**。**這是「新增檢查時要一起看它對別的報表做了什麼」的實例**——如果只看 W008 掉了就收工，會留下三筆永久假缺口。
+
+**證偽做過了**（本專案「commit + tests pass ≠ 實際生效」的固定動作）：把 `retracted_source_ids()` 改成回傳空集合 → `test_retracted_source_is_not_an_orphan` 立刻紅；把 E013 的判斷式短路成 `if False` → 另外兩條立刻紅。測試端 `_run()` 的呼叫點也已同步改成傳 `retracted_ids` 並呼叫 `check_source_verification_status`，**沒有再造第五份複本**。
+
+---
+
+### ▶️ 上一輪：W002 顯示字串 → `source_ids` 遷移：**123 → 37（−86）**，全數落在 `health/drafts/*.yaml` 的 `references[].citation`。0 ERROR、WARN 554 → **468**、222 tests OK
 
 | 產出 | 前值 | 現值 |
 |---|---|---|
@@ -32,7 +62,7 @@
 
 ---
 
-### ▶️ 上一輪：W003=349 三類分佈重跑：Class ① 38、Class ② **0**、Class ③ **311**（其中純 258、局部 53）。C 項表與預測一致，未動任何 canonical，數字前後無變化
+### ▶️ 更早：W003=349 三類分佈重跑：Class ① 38、Class ② **0**、Class ③ **311**（其中純 258、局部 53）。C 項表與預測一致，未動任何 canonical，數字前後無變化
 
 | 產出 | 前值（W003=397 表） | 現值（W003=349 表） |
 |---|---|---|
@@ -52,7 +82,7 @@
 
 **沒犯錯，但一件跟上一輪的敘述要對回來**：上一輪 HANDOFF 的「Class ③ ~311」預測是拍腦袋的（原文自己也標「未實跑」），這一輪實跑確認就是 311。**這是「預測 vs 實測相符」的第一次紀錄**，不是新錯——但**同樣一次都算，如果先前每次都做這個對表，錯誤 21（預測 41 實測 38）就會早一輪抓到**。
 
-**下一個佇列項目（2026-09-04 更新）**：W002 大宗已遷（123 → 37），剩 37 筆屬查證題。**接著做 W008 18 筆孤兒來源（獨立題目，不再假設與 W002 連動——見錯誤 22）**，或 `action_status` 從 `provisional` 升級（依各筆 `diagnostic.assessment_note` 末段判定）。
+**下一個佇列項目（2026-09-04 更新）**：W002 大宗已遷（123 → 37），剩 37 筆屬查證題。W008 已從 18 降到 **4**（14 筆墓碑改標 `retracted`）。**剩的四筆各要不同處理，逐筆說明見本檔最上方那張表**——尤其 `src.gonjo-2018` 的人讀名與識別碼指向兩篇不同論文，先查清楚再動。之後是 `action_status` 從 `provisional` 升級（依各筆 `diagnostic.assessment_note` 末段判定）。
 
 **（以下為 2026-09-04 早前的判斷，接線債部分仍成立）**：Class ② 已清，Class ① 依錯誤 20 判斷已不能接（injuries 25 筆 all-None 補連結＝發明臨床主張；ADM 12 格四鍵目標檔無合法目標；periodization/structure 1 筆同理），Class ③ 補連結是內容題不是接線題。**接線債本階段清完**，下一段該做 W002＋W008（顯示字串未遷 `source_ids` 與孤兒來源，一體兩面）或 `action_status` 升級（依 `assessment_note` 判定）。兩件都要動 canonical，會觸發完整收尾（build_injuries／validate／build_indices／build_knowledge_map／tests／sync）。
 
@@ -60,7 +90,7 @@
 
 ---
 
-### ▶️ 再上一輪：Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
+### ▶️ 更早：Class ② 清空：teaching-errors 33 筆章節號 → `cross_ref_ids` 對應完成，**W003 397 → 349（−48）**，`indices/gap_report.json` 的 `unlinked_records` 同步為 **349**。0 ERROR、WARN 602 → **554**、222 tests OK
 
 | 產出 | 數字 |
 |---|---|
@@ -510,7 +540,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W002 37（顯示字串未遷 `source_ids`）、W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 18（孤兒來源）、W001 1，合計 468。** W002 已於 2026-09-04 從 123 遷掉 86 筆（識別碼比對，見本檔最上方）；**剩的 37 筆不是機械遷移而是查證工作**（清單在 `C:/tmp/miss.txt`）。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
+- **C. WARN 債務：W002 37（顯示字串未遷 `source_ids`）、W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 4（孤兒來源）、W001 1，合計 454。** W002 已於 2026-09-04 從 123 遷掉 86 筆（識別碼比對，見本檔最上方）；**剩的 37 筆不是機械遷移而是查證工作**（清單在 `C:/tmp/miss.txt`）。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。
