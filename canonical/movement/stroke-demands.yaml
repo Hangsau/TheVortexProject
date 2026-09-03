@@ -3984,3 +3984,152 @@ demands:
         與 free.tech.32 的 source_ids 全部是空的，確定性標記是教練觀測；本筆的關節
         命名靠解剖來源成立，相位現象本身沒有文獻登錄。由於沒有晚期回臂的相位化三維
         關節運動學量測，不足以升為 ready，action_status 維持 provisional。
+
+  - id: movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term
+    stroke: udk
+    phase_model: descriptive
+    phase: terminal-down-kick
+    body_position: prone
+    poolside_direction: 由池畔或水下窗觀察，海豚踢往下打到接近最低點時，兩隻腳往中間靠、腳尖幾乎併在一起，膝蓋這時已經打直（教學語稱「腳尖夾起來」「最後把水擠出去」）
+    action_reference_frame: joint-local
+    derived_from_ids:
+      - udk.tech.6
+      - udk.tech.9
+    action_ids:
+      - movement.action.hip.external-rotation
+      - movement.action.knee.extension
+    muscle_roles:
+      - muscle_id: movement.muscle.hip-external-rotators
+        role: >
+          髖外旋肌群的作用線在解剖上可參與髖外旋方向的移動與位置控制；本筆不由雙腳
+          聚攏或腳尖靠近的外觀判定實際招募時序、程度或推進貢獻。
+      - muscle_id: movement.muscle.knee-extensors
+        role: >
+          膝伸肌群的作用線在解剖上可參與膝伸展方向的移動與位置控制；本筆不由膝蓋
+          已經打直的外觀判定實際招募時序、程度或推進貢獻。
+    publication_status: published
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」缺少的動作詞
+      description: >
+        池畔所說「兩隻腳往中間靠」「腳尖聚攏」直覺上會被叫成內收或夾腿，素材卻把
+        這個現象歸給髖外旋，兩欄的方向並不相同。素材描述的是大腿繞自身長軸向外轉，
+        小腿與足因而被帶到相對靠內的位置；看起來像夾，素材實際命名的卻是轉。池畔的
+        「靠攏」是足部在空間中的位置變化，髖外旋則是大腿繞長軸的旋轉，兩者不是同一個
+        量，因此不能由足部位置反推髖旋轉的程度。
+
+        足部靠攏這個可見現象除了髖外旋之外，還可能包含髖內收成分，但本專案的動作
+        詞彙表沒有登錄髖內收，因此該成分在這一層無法被列舉。action_ids 刻意不列
+        髖外展來反向表示聚攏；列出髖外展會被讀成這個相位要做外展，意思正好相反。
+        這是動作詞彙表的缺口，不是本筆的疏漏，本筆只如實標示而不要求補詞。
+
+        池畔看到「膝蓋這時已經打直」與膝伸展的解剖命名一致，對到
+        movement.action.knee.extension，不需要轉譯。下踢前段的膝屈曲屬下踢相位本身，
+        庫內已有記錄，本筆不重述。踝蹠屈也已由下踢相位的既有記錄承載，因此 action_ids
+        刻意不列踝蹠屈；這不是表示本相位沒有踝的參與，而是相關通則已記錄在別處，
+        重複列出會使兩筆內容互相覆蓋。
+
+        池畔所說「踢完會甩出一團水」與「最後把水擠出去」描述的是水流結構，也就是
+        關節動作在水中造成的流體力學結果，不是一個可以被命名或下指令的關節動作，
+        因此本層不承載這項結果。
+
+        素材所說「髖啟動→膝踢出→末段聚攏」描述的是事件在時間上的相對位置，屬於
+        時序；在 joint-local 框架下，沒有任何單一關節動作可以承載這個序列。序列開頭
+        的髖屈曲屬下踢相位，庫內已有記錄，本筆不重述；本層也不把這串時序改寫成訓練
+        順序或動作門檻。
+      limitation_context: >
+        髖外旋與膝伸展是兩個獨立成分，足部在空間中的靠攏程度是另一個不屬於關節層的
+        觀察值，而它的內收成分在本專案的動作詞彙表裡沒有對應項目；池畔看到的「腳尖
+        夾得很好」是這些成分的合成，不能指出限制位於哪一個關節，也不能由腳尖位置
+        判定髖外旋是否到位。渦流結構、推進力、踢腿速度與出水銜接都不在本筆。
+      safety_note: >
+        做下踢末段的腿部轉動與伸展時若出現髖部、鼠蹊、膝部、腰背或踝部疼痛、麻木、
+        明顯無力或不穩應停止，不要為了把腳尖夾得更緊而強行轉動大腿或把膝蓋鎖到底。
+    diagnostic:
+      assessment_note: >
+        要推進這一筆，缺的是下踢末段的三維髖旋轉與足部空間位置的同步量測；只有分開
+        量到兩者，才能判斷可見的「聚攏」有多少來自髖外旋、有多少來自其他成分。
+        兩筆素材記錄所掛的來源在來源註冊表裡都是未查證狀態，其中兩個連識別碼都沒有
+        登錄，所以本筆的 source_ids 只掛已查證的解剖來源；它支持關節命名，不支持
+        素材裡的渦流與推進結論。髖內收未登錄於動作詞彙表，是本筆無法完整列舉的直接
+        原因；這是 taxonomy 層的待決事項，記錄在此不代表本層有權補。由於缺少同步
+        量測、相位現象的來源尚未查證，且詞彙缺口仍在，action_status 維持 provisional。
+
+  - id: movement.demand.fly.breathing-window.cervical-extension-avoidance-in-an-event-window
+    stroke: fly
+    phase_model: event-window
+    phase: breathing-window
+    body_position: prone
+    poolside_direction: 由池畔觀察，蝶式泳者換氣時下巴沿著水面往前推出去吸氣，臉幾乎是擦著水面出來的，不是把頭仰起來看前方；吸完之後頭很快回到原位（教學語稱「下巴向前不要向上」「吸完馬上把頭放回去」）
+    action_reference_frame: joint-local
+    derived_from_ids:
+      - fly.tech.16
+      - fly.tech.17
+      - fly.tech.18
+    action_ids:
+      - movement.action.trunk.extension
+      - movement.action.trunk.flexion
+    muscle_roles:
+      - muscle_id: movement.muscle.trunk-sagittal-controllers
+        role: >
+          軀幹矢狀面控制肌群的作用線在解剖上可參與頸椎節段在伸展與屈曲方向的位置
+          控制與維持；本筆不由下巴向前或頭部回位的外觀判定實際招募時序、程度或推進
+          貢獻。
+    publication_status: published
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.neumann-2017
+    public:
+      name_zh: 呼吸視窗的頸椎伸展避免與回復，以及事件視窗這個分期性質
+      description: >
+        呼吸視窗不是從划手週期切出的連續段落，而是全登錄表唯一使用事件視窗分期模型
+        的相位。它描述在特定時間區間開啟、可以使用也可以不使用的機會窗，不是每個
+        週期都必然經過的一段動作。因此本筆列出的動作不是「這個相位要做的動作」，
+        而是「這個視窗被使用時，頸椎會發生什麼」。
+
+        池畔所說「下巴往前推出去」描述的是下巴在空間中的位移，不是關節動作。下巴的
+        空間位置是頸椎角度、胸椎角度與整個身體在波動中姿態的合成，單看下巴推到
+        哪裡，推不出頸椎伸展的程度。因此 action_ids 沒有也不可能有一個叫「向前」的
+        動作；關節動作詞彙描述的是體節相對體節的角度變化，不是體節在空間中的位移。
+
+        池畔所說「不要抬頭」是頸椎伸展的避免。action_ids 所列的
+        movement.action.trunk.extension 在此明確指頸椎節段；列出這個 id 是為了記錄
+        視窗使用時要避開頸椎伸展，不是要求做出伸展。這項列舉不主張伸展的力學後果，
+        也不裁決呼吸方式的優劣。
+
+        池畔所說「吸完馬上把頭放回去」是頸椎屈曲方向的回復。action_ids 所列的
+        movement.action.trunk.flexion 在此明確指頸椎節段；它表示回到視窗開啟前已有
+        的位置，不是在視窗裡產生新的屈曲。同一關節區域的相反動作同時出現在
+        action_ids，一個是避免，一個是回復，並不矛盾，而是這個視窗的實際結構。
+
+        池畔所說「出水到移臂之間那個空檔吸氣」描述的是時序，也是本相位的主體，
+        不是關節動作。素材所列的整串時間節點是在標示事件的相對位置；joint-local
+        框架下沒有任何一個關節動作能承載它，本筆列出的頸椎伸展避免與頸椎屈曲回復
+        不足以描述整個相位，這是相位性質而不是遺漏。本層不把時序改寫成訓練順序、
+        呼吸長短或換氣頻率策略。手臂的出水與空中移臂在時間上與視窗重疊，庫內另有
+        記錄，本筆只作指路而不重述。胸椎下壓由蝶式入水停頓的既有記錄承載，本筆不寫
+        其內容。頭部在不換氣時作為波動起始的角色屬划手週期，不屬本視窗，本筆不寫。
+      limitation_context: >
+        頸椎伸展的避免與頸椎屈曲的回復是兩個成分，視窗的開啟時機與持續長度則是另一個
+        時間維度，而本層沒有欄位可以承載它；池畔看到的「下巴貼著水面出來」是這些的
+        合成，不能指出限制位於哪一個節段，也不能由下巴的位置判定頸椎處於什麼角度。
+        手臂動作、胸椎姿態、呼吸頻率策略與阻力後果都不在本筆。
+      safety_note: >
+        換氣時若出現頸部疼痛、僵硬、頭暈、上肢麻木或放射症狀、明顯無力或不穩應停止，
+        不要為了把下巴推得更前面而強行仰頭、把頸部往後壓或憋氣硬撐。
+    diagnostic:
+      assessment_note: >
+        要推進這一筆，缺的是呼吸視窗期間的頸椎分段角度量測與視窗持續時間量測；現有
+        素材說明呼吸的方向原則與時間節點，但沒有量測換氣時頸椎處於什麼角度或維持
+        多久。素材所掛的來源在來源註冊表裡是未查證狀態，連年份都未登錄；其餘素材
+        沒有掛來源，確定性標記來自推導。因此本筆的 source_ids 只掛已查證的解剖來源；
+        它支持關節命名與節段區分，不支持素材裡的阻力與尾流結論。本相位以事件視窗
+        立項，主體是時序，因此關節內容天生就薄；這是相位性質而不是遺漏。由於缺少
+        頸椎分段與視窗時間的量測，且相位現象的來源尚未查證，action_status 維持
+        provisional。

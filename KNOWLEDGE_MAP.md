@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 115 | actions 31 / muscle-groups 22 / demands 57 / interventions 5；相位覆蓋 50/59 |
+| `movement` | 117 | actions 31 / muscle-groups 22 / demands 59 / interventions 5；相位覆蓋 52/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**50/59**）
+### 相位覆蓋（**52/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -804,8 +804,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 自由式 | 12/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | — |
 | 仰式 | 7/7 | descriptive | — |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
-| 蝶式 | 10/11 | descriptive, event-window | breathing-window（呼吸視窗） |
-| 水下蝶腳 | 4/7 | descriptive | kick-initiation（起踢）, terminal-down-kick（下踢末段）, down-to-up-transition（下踢→上踢過渡） |
+| 蝶式 | 11/11 | descriptive, event-window | — |
+| 水下蝶腳 | 5/7 | descriptive | kick-initiation（起踢）, down-to-up-transition（下踢→上踢過渡） |
 | 起跳轉身 | 9/13 | descriptive | underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout）, flip（翻滾）, wall-rotation（旋轉在牆上完成） |
 
 ### `actions.yaml` — 解剖動作（**31 條目**）
@@ -871,7 +871,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**57 條目**）
+### `stroke-demands.yaml` — 泳式需求（**59 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -919,7 +919,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion | leg-recovery | descriptive | 蛙式收腿的髖屈曲外展、膝屈曲與踝背屈，以及可見現象的歸屬 | partially-supported | provisional |
 | movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out | foot-flip | descriptive | 蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節 | partially-supported | provisional |
 
-#### 蝶式 (10)
+#### 蝶式 (11)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -933,6 +933,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.fly.arm-upsweep.extension-with-sustained-internal-rotation | arm-upsweep | descriptive | 蝶式上划的肩伸展、內旋維持與肘腕伸展 | partially-supported | provisional |
 | movement.demand.fly.exit.extension-position-with-blank-rotation-field | exit | descriptive | 蝶式出水的肩伸展位，與留白的旋轉欄位 | partially-supported | provisional |
 | movement.demand.fly.entry-pause.position-maintenance-and-pause-naming-conflict | entry-pause | descriptive | 入水停頓期的位置維持，與「停頓」一詞的命名衝突 | partially-supported | provisional |
+| movement.demand.fly.breathing-window.cervical-extension-avoidance-in-an-event-window | breathing-window | event-window | 呼吸視窗的頸椎伸展避免與回復，以及事件視窗這個分期性質 | partially-supported | provisional |
 
 #### 起跳轉身 (10)
 
@@ -949,7 +950,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.starts-turns.wall-push-off.shoulder-complex-composite-angle-and-streamline-precedence | wall-push-off | descriptive | 推蹬的肩複合體合計角度分層，與流線先於蹬伸的時序 | partially-supported | provisional |
 | movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift | breakout | descriptive | 出水過渡期的流線維持與頸椎伸展延後 | partially-supported | provisional |
 
-#### 水下蝶腳 (8)
+#### 水下蝶腳 (9)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -961,6 +962,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.udk.up-kick.hip-extension-prone | up-kick | descriptive | 俯臥水下海豚腳上踢的髖伸展與可用幅度不對稱 | partially-supported | provisional |
 | movement.demand.udk.up-kick.hip-flexion-supine | up-kick | descriptive | 仰躺水下海豚腳上踢——同一個池畔動作對應的是髖屈曲 | partially-supported | provisional |
 | movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction | breakout | descriptive | 出水划手期的最後一次下踢，與「銜接」不是一個關節動作 | partially-supported | provisional |
+| movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term | terminal-down-kick | descriptive | 下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」缺少的動作詞 | partially-supported | provisional |
 
 ### `interventions.yaml` — 條件式訓練與活動度（**5 條目**）
 
