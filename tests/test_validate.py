@@ -234,14 +234,17 @@ class FixtureTestBase(unittest.TestCase):
             # （見下方），這裡不重複一份條目層邏輯
 
             # E006 / W001 / W006：直接呼叫產品程式碼的 cross_ref 契約檢查
+            # 這幾行是產品端 validate.py 主迴圈的鏡像，層別清單必須跟它一致；
+            # 產品端加層而這裡沒跟上，新增的層就會在測試裡永遠沒被覆蓋到。
             validate_mod.check_cross_ref(
                 rel, eid, entry, "entry", all_id_set, errors, warnings
             )
-            pub = entry.get("public", {})
-            if isinstance(pub, dict):
-                validate_mod.check_cross_ref(
-                    rel, eid, pub, "public", all_id_set, errors, warnings
-                )
+            for layer in ("public", "diagnostic"):
+                sub = entry.get(layer)
+                if isinstance(sub, dict):
+                    validate_mod.check_cross_ref(
+                        rel, eid, sub, layer, all_id_set, errors, warnings
+                    )
 
         # E005 / W002 / W009：直接呼叫產品程式碼的 source 契約檢查
         # （遞迴走訪整棵樹，不只條目層；掃描範圍與產品端一致，含 Drills）
@@ -1909,6 +1912,32 @@ class TestE006CrossRefIds(FixtureTestBase):
             len(errors["E006"]), 0,
             "全部可解析的 cross_ref_ids 不應觸發 E006"
         )
+
+    def test_unresolvable_cross_ref_id_in_diagnostic_triggers_e006(self):
+        # 2026-09-03：契約檢查原本只跑 entry 頂層與 public，diagnostic 層完全沒看。
+        # stroke-demands 有一筆把 ID 陣列寫進 diagnostic.cross_ref 而驗證器沉默通過，
+        # 才發現這個盲區。這個測試釘住「diagnostic 層也在契約範圍內」。
+        self._write_yaml(
+            self.canonical_dir / "entries.yaml",
+            {
+                "points": [
+                    {"id": "free.tech.7"},
+                    {
+                        "id": "free.err24",
+                        "diagnostic": {
+                            "cross_ref_ids": ["free.tech.7", "free.tech.999"],
+                        },
+                    },
+                ]
+            },
+        )
+        errors, _, _ = self._run()
+        self.assertEqual(
+            len(errors["E006"]), 1,
+            "diagnostic.cross_ref_ids 內不存在的 ID 應觸發 E006"
+        )
+        self.assertIn("free.tech.999", errors["E006"][0])
+        self.assertIn("diagnostic", errors["E006"][0])
 
     def test_drill_id_in_cross_ref_ids_no_e006(self):
         # Drill ID（Drills/*.yaml，不含點號）也是合法解析目標

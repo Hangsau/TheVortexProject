@@ -50,7 +50,7 @@
 
 **錯誤 13（本輪自查抓到，已修）：`udk.down-to-up-transition` 那筆的 `diagnostic` 層我寫成了 `cross_ref:` 而不是 `cross_ref_ids:`——錯。** 依 S4c 分工，`cross_ref` 是**顯示層自由文字**、`cross_ref_ids` 才是機器鍵；我在自由文字欄位裡放了一個 ID 陣列。它沒有被驗證器擋下來，因為 **E006／W001／W006 只檢查 entry 頂層與 `public` 層，不檢查 `diagnostic` 層**（`validate.py:1799`）——也就是說 `diagnostic.cross_ref_ids` 的斷鏈目前**完全沒有人檢查**，這個檔裡另外 4 筆也一樣。已改回 `cross_ref_ids` 與其餘 4 筆一致，並手動驗證三個目標 ID 都解析得到。**待辦：把 cross_ref 契約檢查擴到 `diagnostic` 層**（目前是驗證盲區，不是已知豁免）。
 
-**驗證**：0 ERROR、WARN 604 → 602 → 601 → **599**（W003 孤兒條目 −2，新筆的 `cross_ref_ids` 接回兩筆原孤兒）、W019 維持 0、**211 passed／8 subtests**、`KNOWLEDGE_MAP.md` 已重生成。
+**驗證**：0 ERROR、WARN 604 → 602 → 601 → **599**（W003 孤兒條目 −2，新筆的 `cross_ref_ids` 接回兩筆原孤兒）、W019 維持 0、**212 passed／8 subtests**、`KNOWLEDGE_MAP.md` 已重生成。**驗證器本身也改了一處**：`cross_ref` 契約檢查擴到 `diagnostic` 層（原本只跑 entry 頂層與 `public`），補上 6 個區塊的零覆蓋；擴完 WARN／ERROR 皆不變，代表是補洞不是清債。
 
 **⚠️ 覆蓋率分母陷阱（本輪又踩一次）**：`plans/movement_coverage_denominator.yaml` 是**凍結快照，只有 58 相位**（缺 `free.early-pull-through`）。拿它算會得到 55/58 並誤判自由式為 11/11，看起來像「先前公布的 59 是錯的」——**不是**。該檔第 10 行自己寫明分歧時以 `_taxonomy.yaml#movement_phase_registry` 為準，登錄表是 **59 相位、自由式 12 相**，先前公布的數字正確。`plans/討論_仰式四段式相位鍵.md` §5.1 早已裁決過這一點。**算覆蓋率一律讀 taxonomy 登錄表，不讀凍結檔。**
 
@@ -1566,7 +1566,9 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 **判別法（本專案已用四次，中間三次都用錯）**：問「這個相位裡有哪些關節在動」——素材答得出關節名就是問法或**查找**的問題，只答得出距離、速度、時機、策略才是量測問題。**錯誤 11、12 顯示這條要配一個強制前置動作才有用：判定「答不出關節名」之前，必須實質檢索 `resources/books/` 一次，不能只憑既有 canonical 素材下判斷。** 同一個錯誤在同一天被抓到三次，代表它不是偶發——**往後任何一格要標成量測缺口之前，先翻書，並在該格的理由欄寫明翻過哪一本哪一章；沒寫來源的「缺量測」一律視為未查。**
 
-**第二條待辦（錯誤 13 帶出來的）：把 `cross_ref` 契約檢查擴到 `diagnostic` 層。** `validate.py:1799` 目前只對 entry 頂層與 `public` 層跑 E006／W001／W006，因此 `diagnostic.cross_ref_ids` 的斷鏈**完全沒有人檢查**（此檔有 5 筆用到）。這不是已知豁免，是驗證盲區——本輪是靠手動 grep 才確認目標 ID 都存在。
+**~~第二條待辦（錯誤 13 帶出來的）：把 `cross_ref` 契約檢查擴到 `diagnostic` 層。~~ 已完成（同日）。** `validate.py` 的主迴圈原本只對 entry 頂層與 `public` 跑 E006／W001／W006，`diagnostic.cross_ref_ids` 的斷鏈完全沒有人檢查；本輪是靠手動 grep 才確認目標存在。現已改成對 `("public", "diagnostic")` 兩層迴圈檢查。**全庫實測：6 個 `diagnostic.cross_ref_ids` 區塊納入檢查後全部可解析，0 個 `diagnostic.cross_ref` 自由文字，WARN 維持 599、ERROR 維持 0** ——盲區補上但沒有既存債務。
+
+**補這條時挖出第二個盲區：`tests/test_validate.py` 的測試框架自己重寫了一份 driver 迴圈，不是呼叫產品端那份。** 第一次跑新增的迴歸測試是紅的，產品端已經改對了、測試框架仍只跑 entry 與 `public`。也就是說**產品端加一層而框架沒跟上時，那一層在測試裡永遠是零覆蓋，而且測試全綠**。兩邊都已補上層別清單，並在框架該處寫明它是產品主迴圈的鏡像。新增迴歸測試 `test_unresolvable_cross_ref_id_in_diagnostic_triggers_e006` 釘住這件事（tests 211 → **212 passed**）。這是「commit + tests pass ≠ 實際生效」的又一個實例，只是這次反過來：**改對了，但測試證明不了它改對了。**
 
 **可推廣的一條**：**當一項待辦被標成「需要外部資料才能定案」時，先問這筆內容是否真的需要那個精度、以及那個資料是否其實已經在手上。** a 卡在「要幾度」、b 卡在「哪個方向對」、flip 卡在「要不要換框架」、pullout／down-to-up-transition／underwater-dolphin-kick 卡在「以為要新量測」——六者的共同結構是**把可寫的內容誤設成待取得的資料**。六個都在改問法或翻書之後當場可寫。
 

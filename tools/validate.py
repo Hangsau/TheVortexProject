@@ -1796,13 +1796,17 @@ def run_validation():
         # 已移到下方「逐區塊檢查」的遞迴走訪（source_ids 可出現在任意深度，
         # 只掃條目頂層會漏掉 evidence[] 上的 201 筆機器鍵）。
 
-        # ── E006 / W001 / W006: cross_ref 契約（entry 頂層與 public 層）──
+        # ── E006 / W001 / W006: cross_ref 契約（entry 頂層、public、diagnostic）──
+        # diagnostic 層原本沒跑：2026-09-03 發現 stroke-demands 有一筆把 ID 陣列寫進
+        # diagnostic.cross_ref（顯示用自由文字）而非 cross_ref_ids，驗證器完全看不到。
+        # 診斷層的斷鏈不會外洩到公開站，但它同樣是給人跳轉用的鍵，一樣要能解析。
         check_cross_ref(rel, eid, entry, "entry", all_id_set, errors, warnings)
-        pub = entry.get("public", {})
-        if isinstance(pub, dict):
-            check_cross_ref(
-                rel, eid, pub, "public", all_id_set, errors, warnings
-            )
+        for layer in ("public", "diagnostic"):
+            sub = entry.get(layer)
+            if isinstance(sub, dict):
+                check_cross_ref(
+                    rel, eid, sub, layer, all_id_set, errors, warnings
+                )
 
     # ── 逐區塊檢查（E005 / W002 / W009）：遞迴走訪任意深度 ──
     # certainty 與 source/source_ids 多數不在條目頂層，而在 evidence[]、
