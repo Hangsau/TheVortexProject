@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-03
-> 驗證條目數：750，Drills ID 數：176
+> 驗證條目數：751，Drills ID 數：176
 
 ---
 
@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 397 筆**
+**WARN，共 396 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -483,7 +483,6 @@
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.2'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.3'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.4'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.7'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.8'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.12'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.13'
