@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 117 | actions 31 / muscle-groups 22 / demands 59 / interventions 5；相位覆蓋 52/59 |
+| `movement` | 119 | actions 31 / muscle-groups 22 / demands 59 / interventions 7；相位覆蓋 52/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -964,7 +964,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction | breakout | descriptive | 出水划手期的最後一次下踢，與「銜接」不是一個關節動作 | partially-supported | provisional |
 | movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term | terminal-down-kick | descriptive | 下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」缺少的動作詞 | partially-supported | provisional |
 
-### `interventions.yaml` — 條件式訓練與活動度（**5 條目**）
+### `interventions.yaml` — 條件式訓練與活動度（**7 條目**）
 
 | ID | 名稱 | 限制類型 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|
@@ -973,6 +973,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.intervention.ankle-plantarflexion.conditional-mobility | 條件式踝蹠屈活動度介入 | 確認被動踝蹠屈受限且已排除疼痛、關節不穩與不適合強拉的結構性阻擋 | partially-supported | provisional |
 | movement.intervention.ankle-plantarflexion.capacity-control | 踝蹠屈容量與主動控制訓練 | 被動蹠屈可用範圍充足，但主動末端維持、換向或反覆控制能力不足 | partially-supported | provisional |
 | movement.intervention.breaststroke-breathing.arm-driven-torso-lift | 蛙式換氣：把抬起的驅動交還給手臂 | 換氣時以主動抬頭或拱背當作上身抬起的驅動來源，把動力來源歸錯位置 | partially-supported | provisional |
+| movement.intervention.scapular-upward-rotation.serratus-endurance | 前鋸肌耐力與反覆穩定控制 | 前鋸肌耐力／反覆負荷下維持不住肩胛上旋與前引穩定 | partially-supported | provisional |
+| movement.intervention.trunk-axial-rotation.cross-side-core-capacity | 跨側核心容量與抗旋轉控制 | 跨側軀幹抗旋轉容量不足 | partially-supported | provisional |
 
 ---
 

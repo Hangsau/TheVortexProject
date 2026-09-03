@@ -6,7 +6,36 @@
 
 ## 當前狀態（2026-09-03，最新）
 
-### ▶️ 動作圖譜 (C) 組完成：**素材重新盤點＋W13／W14 串行發包驗收落地**。覆蓋 44/59 → **52/59**
+### ▶️ 動作圖譜 (D) 組完成：**介入層素材盤點＋W15／W16 串行發包驗收落地**。介入 5 → **7 筆**，覆蓋動作 2 → **5 個**
+
+| 產出 | commit | 內容 |
+|---|---|---|
+| `plans/D組_介入層素材盤點.md` | `6a7560e` | 全 canonical 掃 12 個限制類關鍵詞，讀素材本身判可寫性；裁決為可寫 2、補既有 2、判定不寫 7 類、taxonomy 決定 1 |
+| `plans/W15_前鋸肌耐力介入派工規格.md` | 規格＋落地 `6a7560e` | `movement.intervention.scapular-upward-rotation.serratus-endurance`，覆蓋 `scapular-upward-rotation`＋`scapular-protraction` |
+| 踝蹠屈兩筆 `how_to_identify` 補句 | `925d975` | 手改（微 diff 不發包）：補上「上踢相膝屈曲偏大」作為進入踝分流的**觸發訊號**，明寫不是蹠屈受限的判定 |
+| `plans/W16_跨側核心容量介入派工規格.md` | 規格＋落地 `23ff2ea` | `movement.intervention.trunk-axial-rotation.cross-side-core-capacity`，覆蓋 `trunk.axial-rotation` |
+
+兩批 `validate.py` 都是 0 ERROR、610 WARN（與基線相同）、W012–W019 全 0；欄位順序、`public` 六鍵、`diagnostic` 一鍵逐筆驗過。零新增受控詞彙。
+
+**誠實的產出量是 2 筆新記錄，不是 29 筆。** 剩下 26 個動作沒有介入不是待辦缺口，是**庫內沒有符合門檻的素材**——大部分動作的既有素材停在「這個相位用到這個關節」的列舉層，沒有到「這個關節受限時怎麼分流、怎麼介入」。16 個 `category: hardware` 點裡有 **7 點在講同一個動作（踝蹠屈）**，而該動作已有兩筆介入，且既有記錄的保守度**高於**這些原始素材。
+
+**這一輪值得記的四件事**：
+
+- **門檻不是「有沒有劑量來源」**。既有 5 筆裡有 3 筆 `dosage_source_ids: []`（`.conditional-soft-tissue`、兩筆 ankle）。真正的門檻是：能不能寫出可分流的 `limitation_type` ＋ `works_when`／`fails_when` ＋ `how_to_identify` ＋ 有進退階的 `action` ＋ `mobility_decision`。W16 是本檔**第一筆也是唯一一筆**有實際劑量來源的記錄（Karpiński 2020，6 週、每週 2–3 次），`evidence_profile` 因此是 `intervention`。
+- **錯誤 6（本輪自查發現、已更正）**：盤點初版把 D3（`trunk.extension` 蛙式風格分流）列為可寫——**錯**。我查了「哪些需求用 `trunk.extension`」但沒查「哪些是蛙式」。實查：**8 筆蛙式需求沒有任何一筆使用 `trunk.extension`**，用它的 7 筆分屬 udk／starts-turns／fly。而既有 5 筆介入**全部**靠 `demand_ids` 連回需求層（第 5 筆 `action_ids` 可以是空的，`demand_ids` 不曾是空的）——`demand_ids` 才是這一層的承重連結。把蛙式風格分流掛到 udk 或起跳轉身的軀幹伸展需求上，是假連結。第二個獨立理由：D3 的 `action` 會變成「改採較平的路徑」，那是**技術路徑選擇不是訓練步驟**，不在本檔定位內。素材留在 `technical-analysis.yaml` 原處即可，沒有損失。
+- **W15 的實質內容是一個反直覺歸屬**：前鋸肌的限制是**耐力不足不是力量不足**。Pink 1991／1993 兩份 EMG 顯示全划手週期只有前鋸肌與肩胛下肌持續高激活，其餘肌群分段休息。所以 `action` 的進退階軸是**維持時間與反覆次數，不是阻力**；`how_to_identify` 的核心是疲勞前後對比，並明寫**單次靜態評估偵測不到耐力缺口**。把它當力量項目練就是練錯方向，這條寫進 `fails_when` 並以 ID 分流回兩筆既有肩上舉介入。
+- **W16 的三條邊界都要留在記錄裡**：(a) Karpiński 是國家級男子泳者、改善量 0.1／0.3 秒等級，未涵蓋女性、兒童、青少年、鐵人三項、成人初學；(b) Psycharakis 2010 只直接量到**仰式**疲勞時肩旋轉維持、髖旋轉增加，`back.tech.24` 後三階段是推導延伸，且不得直接套到自由式（本記錄 `demand_ids` 全是自由式）；(c) Anatomy Trains 螺旋線是**解剖閱讀框架不是已確立的力傳遞機制**，跨側訓練是否透過該路徑起作用沒有直接證據。
+
+**兩件刻意不在本批處理的待辦**：
+
+| 項目 | 內容 | 為什麼不在本批 |
+|---|---|---|
+| `hip.internal-rotation` 詞彙缺口 | 31 個動作裡沒有髖內旋（有 `hip.abduction`、`hip.external-rotation`，沒有內旋也沒有內收）。`breast.tech.15`（髖內旋）因此掛不上 `action_ids`，且其「每增加一度 +5% 推進力」原文自註非學術控制數字 | taxonomy 改動不夾在內容批次裡做。`hip.adduction` 缺口是 (C) 組 W14 已記錄的同型問題 |
+| `udk.tech.28` 措辭與既有介入衝突 | `udk.tech.28` 宣稱「柔韌性訓練可改善蹠屈範圍，進而提升 UDK 表現」（`src.pmid-24984154`）；但 `.conditional-mobility` 的 `remaining_boundary` 明寫「沒有能支撐本處方的長期伸展介入試驗」。而 pmid-24984154 在 `udk.tech.14` 被引用時是**限制活動度 30%→速度降 19%** 的反向限制實驗——限制實驗支持「關聯」，不支持「拉鬆會變快」 | **該修的是 `udk.tech.28` 的措辭，不是把它的宣稱推進介入層**。另附來源衛生問題：`src.pmc9402090-a` 是 `unverified` 且顯示字串是複合的（"PMC9402090 2022; PubMed 24984154"），很可能與已查證的 `src.pmc9402090-b`（Kuhn & Legerlotz 2022）是同一篇；本批未引入 `-a` |
+
+---
+
+### 上一輪：動作圖譜 (C) 組完成：**素材重新盤點＋W13／W14 串行發包驗收落地**。覆蓋 44/59 → **52/59**
 
 | 產出 | commit | 內容 |
 |---|---|---|
@@ -1399,7 +1428,22 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 ## 下一步建議
 
-### 最高優先——Step 17：W4 四區圖譜填充（2026-09-02 起）
+### 最高優先——動作圖譜 (A)–(D) 四組已走完，下一步全部是決策不是撰寫
+
+(A)(B)(C) 三組把相位覆蓋推到 **52/59**、(D) 組把介入層推到 **7 筆**。兩條線現在都碰到同一種天花板：**再往上不是「多派一批」，是要先做決定或先補量測。** 沒有任何一項可以直接發包。
+
+**四個待決事項，按建議處理順序**：
+
+1. **taxonomy 缺口（兩個，可一次處理）**——`hip.internal-rotation` 與 `hip.adduction` 都不在 31 個動作裡。前者卡住 `breast.tech.15`（髖內旋）進不了介入層，後者卡住「雙腳聚攏」的內收成分只能標缺口。**兩者都是加 action 條目**，屬同型改動，適合一次做完再回頭補受影響的記錄。做之前要先確認：加了之後有沒有既有記錄該回填（grep 現有 demand 的 `assessment_note` 找標了缺口的那幾筆）。
+2. **`udk.tech.28` 措辭修正**——它與 `.conditional-mobility` 的 `remaining_boundary` 直接衝突，且引用的是一個**限制實驗**（限制 ROM 30%→速度降 19%）卻寫成「拉鬆會變快」。這是微 diff，手改不發包。順帶處理 `src.pmc9402090-a`／`-b` 疑似重複來源。
+3. **相位覆蓋的三個 (D) 類缺口需要補量測**（`udk.kick-initiation`／`udk.down-to-up-transition`／`starts-turns.breaststroke-pullout`）——庫內沒有關節層素材，要寫必須先蒐證。這是研究工作不是填充工作。
+4. **相位覆蓋的 (E)(F) 需要結構決策**——`starts-turns.flip`／`wall-rotation` 是剛體空間重定向，不改變體節間角度，要覆蓋得引入新參考系或新需求類型；`starts-turns.underwater-dolphin-kick` 與 udk 七相完全重複，**除名會把分母 59→58 而分母已印在 my-site 公開頁上**，改分母要連帶改公開文案。
+
+**不建議的做法**：為了把介入層數字做大而降低門檻。(D) 組的判定不寫清單（`joint` 類 6 點明文寫「本條不對介入方式下結論」、starts-turns 膝角度兩點的結論是反處方、fly.tech.25 無來源無 evidence 區塊）都是**素材本身就沒有到介入層**，硬塞就是 (C) 組錯誤 5 的反向版。
+
+---
+
+### 上一輪的規劃記錄——Step 17：W4 四區圖譜填充（2026-09-02 起，已由 (A)–(D) 四組執行完畢）
 
 C 類 39 條蒐證與裁決已全部完成，W4 的前置條件（相位 registry、`derived_from_ids` 橋、`evidence-gap` 代價）也都清空。Step 17 是**把四份證據包的裁決結論寫成 `canonical/movement/` 條目**，不是重新研究。
 
