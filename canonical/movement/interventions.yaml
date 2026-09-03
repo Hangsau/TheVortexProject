@@ -439,3 +439,95 @@ interventions:
         再判讀頭部上升是否早於內掃、三個換氣事件是否被壓成一點。若頸部
         或腰背有症狀，先停止並評估，不進本路徑。「肩胛帶上提」為證據
         缺口，不得作為分類依據或訓練目標；本條也不對頸椎中立給角度。
+
+  - id: movement.intervention.scapular-upward-rotation.serratus-endurance
+    limitation_type: 前鋸肌耐力／反覆負荷下維持不住肩胛上旋與前引穩定
+    action_ids:
+      - movement.action.shoulder-complex.scapular-upward-rotation
+      - movement.action.shoulder-complex.scapular-protraction
+    demand_ids:
+      - movement.demand.free.early-recovery.scapular-upward-rotation-with-wrist-neutral
+      - movement.demand.fly.aerial-recovery.scapular-stability-without-body-roll
+      - movement.demand.free.early-pull-through.high-elbow-configuration
+    affirmative_conclusion: >
+      Pink 1991／1993 的描述性肌電資料顯示，前鋸肌在划手週期承受持續活化
+      需求；疲勞後活化下降並伴隨菱形肌代償、肩胛骨去穩定，可支持把「休息
+      時做得到、反覆負荷後才失守」辨識為耐力容量缺口。與此缺口相符的暫行
+      方向是訓練持續低強度活化與肩胛穩定，而不是追求爆發力或最大力量。
+      這是容量問題，不是活動度問題；拉伸不是本條的工具。
+    works_when:
+      - 休息狀態可維持肩胛上旋與前引穩定，反覆划手或一組結束後才出現品質下降
+      - 疲勞後可重複看到翼狀肩胛、肩胛骨去穩定、高肘配置或捕水品質崩潰
+      - 被動 ROM 充足且第一趟能維持，缺口隨持續負荷才出現
+      - 無急性傷、新發或加劇的肩部疼痛、神經症狀或明顯不穩
+    fails_when:
+      - 被動 ROM 本身不足時不屬本條，轉向 movement.intervention.shoulder-elevation.conditional-soft-tissue
+      - 第一趟就維持不住、不是疲勞後才失守時，轉向 movement.intervention.shoulder-elevation.active-control
+      - 疲勞前後沒有可重複的姿勢或動作品質差異，無法辨識本條所針對的耐力缺口
+      - 存在急性傷、肩部疼痛、麻木、刺痛、無力或明顯不穩，需先停止並評估
+    how_to_identify: >
+      核心分流是疲勞前後對比：同一姿勢在休息狀態看一次，再於一組結束後
+      看一次，比較肩胛上旋與前引穩定、高肘配置及捕水品質是否隨負荷流失。
+      單次靜態評估看不出耐力缺口，這是本條與
+      movement.intervention.shoulder-elevation.active-control 在方法上的差別。
+      具體測試協議、負荷設定與分類判讀屬診斷層。
+    action: >
+      初階：在無痛且能維持肩胛上旋與前引品質的低強度條件下，練習前鋸肌
+      持續活化；先在休息狀態可控制的姿勢建立穩定，再帶入相關划手姿勢。
+      進階：先延長品質不下降的維持時間，再增加可維持同等品質的反覆次數；
+      進階軸是維持時間與反覆次數，不是增加阻力。之後回到原本的自由式或
+      蝶式任務，確認肩胛穩定、高肘配置或捕水品質能否在反覆負荷下保留。
+      退階：若出現翼狀肩胛、肩胛去穩定、高肘或捕水品質流失，縮短維持時間、
+      減少反覆量並回到休息時可穩定控制的姿勢；若出現症狀則立即停止。
+      本條沒有游泳族群的前鋸肌耐力劑量來源，因此不給定秒數、次數、組數
+      或週頻率。
+    remaining_boundary: >
+      Pink 1991／1993 是描述性肌電研究，不是前鋸肌耐力訓練介入試驗，不能
+      證明本條練習會改善划手品質或運動表現。游泳肩發生率 35–91% 是流行
+      病學數字，不能反推「練前鋸肌耐力可降低發生率」。研究族群是競技
+      泳者，未涵蓋兒童、青少年、鐵人三項與成人初學等本專案涵蓋的全光譜
+      受眾。最佳方法、劑量、進退階時程與水中轉移仍缺乏直接試驗支持。
+    mobility_decision: not-routine
+    dosage_source_ids: []
+    safety_stop_conditions:
+      - 練習中出現新發或加劇的肩部疼痛
+      - 出現麻木、刺痛或明顯無力
+      - 肩關節或肩胛帶出現明顯不穩定感
+      - 急性傷期間不得以增加負荷測試能力
+    publication_status: published
+    claim_status: partially-supported
+    action_status: provisional
+    evidence_profile: synthesis-inference
+    source_ids:
+      - src.pink-1991-b
+      - src.pink-1993
+      - src.statpearls-2023
+    public:
+      name_zh: 前鋸肌耐力與反覆穩定控制
+      description: >
+        前鋸肌在游泳划手週期有持續活化需求。若休息時能維持肩胛穩定，
+        反覆划手後才出現肩胛上旋與前引失穩、高肘或捕水品質崩潰，問題較
+        符合持續工作的耐力容量，而不是爆發力、最大力量或活動度不足。
+        拉伸不處理這類容量缺口，因此不是本條的工具。
+      works_when_summary: >
+        休息時姿勢能維持，反覆負荷後才出現肩胛失穩、高肘或捕水品質流失，
+        且沒有疼痛、急性傷、神經症狀或明顯不穩。
+      fails_when_summary: >
+        肩膀可用活動度本身不足、從第一趟就維持不住，或疲勞前後沒有可重複
+        差異時不適用；出現疼痛或不穩時也不應繼續。
+      training_options: >
+        從低強度的肩胛上旋與前引持續控制開始，先延長能維持品質的時間，
+        再增加能保持相同品質的反覆量，不以增加阻力作為進階。品質流失時
+        就縮短維持、減少反覆量或退回較容易控制的姿勢。本條沒有來源可
+        支撐統一劑量，因此不提供數字。
+      safety_note: >
+        若出現新發或加劇的肩部疼痛、麻木、刺痛、明顯無力或不穩定感，
+        立即停止；急性傷期間不要用增加負荷的方式測試能力。
+    diagnostic:
+      decision_tree_note: >
+        在同一姿勢比較休息狀態與一組結束後的肩胛穩定及動作品質；單次
+        靜態評估不能辨識耐力缺口。被動 ROM 本身不足時分流至
+        movement.intervention.shoulder-elevation.conditional-soft-tissue；第一趟
+        就維持不住而非疲勞後才失守時，分流至
+        movement.intervention.shoulder-elevation.active-control。具體負荷、量測
+        協議與分類判讀均留在診斷層。
