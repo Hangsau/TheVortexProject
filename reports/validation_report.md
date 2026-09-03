@@ -243,7 +243,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 399 筆**
+**WARN，共 397 筆**
 
   file=canonical\breathing\framework.yaml id='breathing.framework.overview'
   file=canonical\breathing\framework.yaml id='breathing.framework.grading'
@@ -314,10 +314,8 @@
   file=canonical\health\injuries.yaml id='sipe'
   file=canonical\health\injuries.yaml id='iron-deficiency-swimmer'
   file=canonical\health\injuries.yaml id='oral-contraceptives-performance'
-  file=canonical\health\injuries.yaml id='flip-turn-wall-push'
   file=canonical\health\injuries.yaml id='open-water-marine-biological-hazards'
   file=canonical\health\injuries.yaml id='poolside-slip-fall'
-  file=canonical\health\injuries.yaml id='starting-block-impact'
   file=canonical\health\injuries.yaml id='osgood-schlatter'
   file=canonical\health\injuries.yaml id='sever-disease'
   file=canonical\instructional\teaching-errors.yaml id='free.err1'

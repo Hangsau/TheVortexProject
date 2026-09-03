@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 399
+    "unlinked_records": 397
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -636,11 +636,6 @@
       "id": "femoroacetabular-impingement",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[9]"
-    },
-    {
-      "id": "flip-turn-wall-push",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[38]"
     },
     {
       "id": "fly.L2",
@@ -1721,11 +1716,6 @@
       "id": "spondylolysis",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[11]"
-    },
-    {
-      "id": "starting-block-impact",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[41]"
     },
     {
       "id": "starts-turns.err1",

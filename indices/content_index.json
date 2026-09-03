@@ -7351,7 +7351,10 @@
         "src.pmc8192199",
         "src.quebec-44-year-diving-sci-study-sciencedirec"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.13",
+        "starts-turns.tech.42"
+      ]
     },
     {
       "id": "drowning",
@@ -7502,7 +7505,11 @@
         "src.pmc6409673-c",
         "src.pmid-33010194"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.21",
+        "starts-turns.tech.22",
+        "starts-turns.tech.38"
+      ]
     },
     {
       "id": "fly.L2",
@@ -17507,7 +17514,10 @@
         "src.neurobehavioral-consequences-of-repetitive-h",
         "src.pmc10372189"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.13",
+        "starts-turns.tech.42"
+      ]
     },
     {
       "id": "starts-turns.err1",
