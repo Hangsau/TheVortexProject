@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 126 | actions 33 / muscle-groups 22 / demands 64 / interventions 7；相位覆蓋 57/59 |
+| `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**57/59**）
+### 相位覆蓋（**59/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -803,9 +803,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 |---|---|---|---|
 | 自由式 | 12/12 | descriptive, heinlein-2010-phases, kudo-power-phase, race-club-6phase | — |
 | 仰式 | 7/7 | descriptive | — |
-| 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
+| 蛙式 | 9/9 | descriptive | — |
 | 蝶式 | 11/11 | descriptive, event-window | — |
-| 水下蝶腳 | 6/7 | descriptive | kick-initiation（起踢） |
+| 水下蝶腳 | 7/7 | descriptive | — |
 | 起跳轉身 | 13/13 | descriptive | — |
 
 ### `actions.yaml` — 解剖動作（**33 條目**）
@@ -873,7 +873,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**64 條目**）
+### `stroke-demands.yaml` — 泳式需求（**66 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -908,7 +908,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.back.up-kick.hip-flexion-with-knee-extension | up-kick | descriptive | 仰式上踢的髖屈曲、膝接近伸展與踝蹠屈 | supported | provisional |
 | movement.demand.back.down-kick.hip-extension-with-knee-sequence | down-kick | descriptive | 仰式下踢的髖伸展與膝屈伸序列 | partially-supported | provisional |
 
-#### 蛙式 (8)
+#### 蛙式 (9)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -920,6 +920,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.breast.arm-catch.horizontal-adduction-with-rotation-reversal | arm-catch | descriptive | 蛙式捕水的水平內收命名與旋轉方向反轉 | partially-supported | provisional |
 | movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion | leg-recovery | descriptive | 蛙式收腿的髖屈曲外展、膝屈曲與踝背屈，以及可見現象的歸屬 | partially-supported | provisional |
 | movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out | foot-flip | descriptive | 蛙式翻腳的「腳尖朝外」是多關節合成，外翻不發生在距小腿關節；髖的旋轉方向兩向並列 | partially-supported | provisional |
+| movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held | leg-outsweep | descriptive | 蹬腿外划：相位名稱是「外划」，關節內容卻是「伸展」 | partially-supported | provisional |
 
 #### 蝶式 (11)
 
@@ -956,7 +957,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not | breaststroke-pullout | descriptive | 蛙式 Pullout：三種變體差在順序不差在關節，胸與腰在同一時刻朝相反方向 | partially-supported | provisional |
 | movement.demand.starts-turns.underwater-dolphin-kick.body-orientation-selects-which-naming-applies | underwater-dolphin-kick | descriptive | 起跳轉身後的水下海豚踢：體位決定同一句「上踢／下踢」對到哪一組關節動作 | partially-supported | provisional |
 
-#### 水下蝶腳 (10)
+#### 水下蝶腳 (11)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -970,6 +971,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.udk.breakout.terminal-down-kick-and-first-pull-junction | breakout | descriptive | 出水划手期的最後一次下踢，與「銜接」不是一個關節動作 | partially-supported | provisional |
 | movement.demand.udk.terminal-down-kick.hip-external-rotation-and-missing-adduction-term | terminal-down-kick | descriptive | 下踢末段的髖外旋與膝伸展，以及「雙腳聚攏」的成分歸屬 | partially-supported | provisional |
 | movement.demand.udk.down-to-up-transition.hip-flexion-and-whether-plantarflexion-is-held | down-to-up-transition | descriptive | 下踢→上踢過渡：可辨識的是髖有沒有拱起、腳有沒有掛下來 | partially-supported | provisional |
+| movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay | kick-initiation | descriptive | 起踢：可辨識的是第一踢的膝彎多大，不是「什麼時候踢」 | partially-supported | provisional |
 
 ### `interventions.yaml` — 條件式訓練與活動度（**7 條目**）
 
