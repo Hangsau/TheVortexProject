@@ -32,7 +32,7 @@
 | `breathing/regulation` | 6 | 各節點 |
 | `health/injuries (built)` | 47 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
-| `movement` | 123 | actions 33 / muscle-groups 22 / demands 61 / interventions 7；相位覆蓋 54/59 |
+| `movement` | 124 | actions 33 / muscle-groups 22 / demands 62 / interventions 7；相位覆蓋 55/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
 
 ---
@@ -795,7 +795,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 列舉式圖譜：列出「這個相位牽涉到什麼」與「可能的狀況有哪些」，不判定誰主導、不判定某泳者被什麼限制、不規定練到幾度。
 
-### 相位覆蓋（**54/59**）
+### 相位覆蓋（**55/59**）
 
 未覆蓋的相位分兩類：**已有裁決待撰寫**（照既有規格可直接落 demand）與**無裁決授權**（不得憑空補）。動手前先去 `plans/關節主張裁決_*.md` 判性質。
 
@@ -806,7 +806,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | 蛙式 | 8/9 | descriptive | leg-outsweep（外划（Outsweep）） |
 | 蝶式 | 11/11 | descriptive, event-window | — |
 | 水下蝶腳 | 5/7 | descriptive | kick-initiation（起踢）, down-to-up-transition（下踢→上踢過渡） |
-| 起跳轉身 | 11/13 | descriptive | underwater-dolphin-kick（海豚踢）, breaststroke-pullout（蛙式 Pullout） |
+| 起跳轉身 | 12/13 | descriptive | underwater-dolphin-kick（海豚踢） |
 
 ### `actions.yaml` — 解剖動作（**33 條目**）
 
@@ -873,7 +873,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.muscle.forearm-supinators | 前臂旋後肌群 | shoulder-arm | supported | ready |
 | movement.muscle.trunk-sagittal-controllers | 軀幹矢狀面控制肌群 | spine-neck | supported | ready |
 
-### `stroke-demands.yaml` — 泳式需求（**61 條目**）
+### `stroke-demands.yaml` — 泳式需求（**62 條目**）
 
 **相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。
 
@@ -937,7 +937,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.fly.entry-pause.position-maintenance-and-pause-naming-conflict | entry-pause | descriptive | 入水停頓期的位置維持，與「停頓」一詞的命名衝突 | partially-supported | provisional |
 | movement.demand.fly.breathing-window.cervical-extension-avoidance-in-an-event-window | breathing-window | event-window | 呼吸視窗的頸椎伸展避免與回復，以及事件視窗這個分期性質 | partially-supported | provisional |
 
-#### 起跳轉身 (12)
+#### 起跳轉身 (13)
 
 | ID | 相位 | 分期系統 | 名稱 | 主張狀態 | 行動狀態 |
 |---|---|---|---|---|---|
@@ -953,6 +953,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action | wall-contact | descriptive | 觸牆的膝屈曲位，與「觸牆深度不是關節動作」 | partially-supported | provisional |
 | movement.demand.starts-turns.wall-push-off.shoulder-complex-composite-angle-and-streamline-precedence | wall-push-off | descriptive | 推蹬的肩複合體合計角度分層，與流線先於蹬伸的時序 | partially-supported | provisional |
 | movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift | breakout | descriptive | 出水過渡期的流線維持與頸椎伸展延後 | partially-supported | provisional |
+| movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not | breaststroke-pullout | descriptive | 蛙式 Pullout：三種變體差在順序不差在關節，胸與腰在同一時刻朝相反方向 | partially-supported | provisional |
 
 #### 水下蝶腳 (9)
 
