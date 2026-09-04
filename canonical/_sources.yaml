@@ -6493,3 +6493,59 @@ sources:
     notes: 2026-09-04 efetch 核對。單一作者的臨床概念綜述，涵蓋急性內收肌拉傷、內收肌斷裂與長期內收肌相關腹股溝疼痛的運動與負荷管理，含一級／二級／三級預防策略。**本條用以取代原顯示字串「Adductor
       strengthening / load management (Coast Sport)」**——該字串指向一個物理治療診所網頁、無 URL 無作者無年份、不可重取，屬不合格來源；2026-09-04
       改掛本篇同主題的同儕審查綜述。**使用邊界**：① 綜述而非原始研究，具體數字須追到其引用的原研究；② 族群為一般運動員（文獻基礎以足球等陸上變向運動為主），非泳者專屬。
+
+  - id: src.liu-2025-core-stability-youth-swimmers
+    display: 'Liu S, Dai J, Gou P, Lin M. (2025). The effects of core stability training on swimming performance
+      in youth swimmers: a systematic review and meta-analysis. BMC Sports Sci Med Rehabil 17(1):327. PMID
+      41219810 / PMC12606982 / doi:10.1186/s13102-025-01366-1（另有 2026-02-18 更正啟事 PMID 41709241 / doi:10.1186/s13102-026-01588-x）'
+    title: 'The effects of core stability training on swimming performance in youth swimmers: a systematic
+      review and meta-analysis'
+    type: review
+    verification_status: verified
+    authors:
+    - Liu S
+    - Dai J
+    - Gou P
+    - Lin M
+    year: 2025
+    container: BMC Sports Science, Medicine and Rehabilitation
+    identifier:
+      pmid: '41219810'
+      pmcid: PMC12606982
+      doi: 10.1186/s13102-025-01366-1
+      erratum_pmid: '41709241'
+      erratum_doi: 10.1186/s13102-026-01588-x
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對。**本條是補登錄，不是新增內容**——`free.tech.33` 的 mechanism 早就寫著「青年泳者統合結果顯示核心穩定訓練對短距離、尤其
+      50 m 與仰式效果最明顯」，卻沒有對應的 evidence 也沒有任何來源；實查後這句逐字對得上本篇的 subgroup analysis，屬漏登錄而非捏造。數據：八個資料庫檢索、16 篇對照試驗（n=438）、PEDro
+      評分、隨機效果模型；排除兩篇高異質性研究後，核心穩定訓練對游泳表現有中等且顯著的效果（**SMD = −0.71, 95% CI −0.91 至 −0.51, p < 0.00001, I² =
+      21%**）；次群組分析顯示對 **50 m 衝刺與仰式**最有效；最有效的訓練參數為 **8 週、每週 ≤3 次、每次 >30–60 分鐘**；男性泳者的改善幅度略大於女性。**使用邊界**：①
+      族群是**青年泳者**，作者結論明言「需要更多成人族群與長期介入的研究來確認持續效益」，不得外推到成人或 masters；② SMD 為負值代表成績時間縮短，引用時不要把負號讀成效果相反；③ 「對
+      50 m 與仰式最有效」是**次群組分析**結果，次群組本就檢定力較低，不宜當成泳式間效果差異的定論；④ **本篇另有 2026-02-18 的更正啟事**（PMID 41709241），2026-09-04
+      嘗試取回更正內容失敗（BMC 轉址 Springer 後回 303），**因此更正了什麼、是否影響效果量，本專案尚未核對**；引用本篇數字時須連帶意識到這一點。
+  - id: src.difernand-2025-french-swimmer-dropout
+    display: 'Difernand A, Mallet A, De Larochelambert Q, Pla R, Marc A, Barlier K, Antero J, Toussaint JF, Sedeaud A. (2025). A survival analysis of dropout among French swimmers. Front Sports Act Living 7:1509306. PMID 40110418 / PMC11919869 / doi:10.3389/fspor.2025.1509306'
+    type: journal-article
+    verification_status: verified
+    year: 2025
+    authors: ["Difernand A", "Mallet A", "De Larochelambert Q", "Pla R", "Marc A", "Barlier K", "Antero J", "Toussaint JF", "Sedeaud A"]
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: '40110418'
+      pmcid: PMC11919869
+      doi: 10.3389/fspor.2025.1509306
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對。**補登錄**——`psych.motivation.population_engines` 早就把 PMID 與 n=160,861 寫進正文，卻沒有任何來源欄位。實際數據：法國 21 歲以下泳者 160,861 人，Kaplan-Meier 存活分析；**退出高峰女孩 13.16 歲、男孩 17.50 歲**；13 歲時前 10% 女性退出率 8.7%（男 9.9%）、後 10% 女性 78.1%（男 69.3%）；17 歲時前 10% 女性 39.6%（男 28.6%）、後 10% 女性 91.7%（男 83.4%）。**使用邊界**：① 條目原文寫的「後 10% 退出率 78–91%」是**女性數值**，男性對應區間是 69.3–83.4%，引用時必須標性別；② 這是單一國家（法國）的註冊資料，泳會制度與競賽結構不同的國家不可直接套用；③ 存活分析描述的是相關不是因果，「表現差導致退出」與「準備退出所以不再進步」在此資料中無法分離。
+  - id: src.monteiro-2017-swimming-dropout-review
+    display: 'Monteiro D, Cid L, Marinho DA, Moutão J, Vitorino A, Bento T. (2017). Determinants and Reasons for Dropout in Swimming — Systematic Review. Sports (Basel) 5(3):50. PMID 29910410 / PMC5968952 / doi:10.3390/sports5030050'
+    type: review
+    verification_status: verified
+    year: 2017
+    authors: ["Monteiro D", "Cid L", "Marinho DA", "Moutão J", "Vitorino A", "Bento T"]
+    container: "Sports (Basel)"
+    identifier:
+      pmid: '29910410'
+      pmcid: PMC5968952
+      doi: 10.3390/sports5030050
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對，**同時抓到一則歸因錯誤**。`psych.motivation.population_engines` 原文寫「青少年自主支持的訓練情境比訓練量更能預測續留（系統回顧 PMID 29910410）」——**本篇沒有這個比較**。本篇實際內容：檢索 Web of Knowledge 與 PsycInfo（2015-02-02 至 2015-07-29），找到 15 篇、完整回顧 6 篇；多數研究在加拿大與美國，一篇在西班牙；受試 65.74% 為女性；退出主因為「與教練衝突」「有其他事要做」「勝任感未見進步」「來自父母、伴侶或教練的壓力」「缺乏樂趣」「感到無聊」。作者結論是此主題仍需更多研究並驗證測量工具。**使用邊界**：① 僅 6 篇入選、地區高度集中，不是強證據；② 檢索截止於 2015 年，2015 後文獻未涵蓋；③ 「自主支持 vs 訓練量」的預測力比較須另尋來源，不得掛在本篇。

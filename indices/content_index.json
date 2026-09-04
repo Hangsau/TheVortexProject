@@ -4826,7 +4826,7 @@
           "rotation"
         ],
         "certainty": [
-          "🟠"
+          "🔵"
         ],
         "stroke": [
           "back"
@@ -5808,6 +5808,7 @@
           "hardware"
         ],
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "stroke": [
@@ -9082,6 +9083,7 @@
           "kick"
         ],
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "stroke": [
@@ -10598,7 +10600,7 @@
           "rotation"
         ],
         "certainty": [
-          "🟠"
+          "🔵"
         ],
         "stroke": [
           "free"
@@ -10672,6 +10674,7 @@
       },
       "source_ids": [
         "src.karpinski-2020",
+        "src.liu-2025-core-stability-youth-swimmers",
         "src.myers-2021"
       ],
       "outgoing_ids": [
@@ -10959,7 +10962,7 @@
           "stroke-cycle"
         ],
         "certainty": [
-          "🟠"
+          "🔵"
         ],
         "stroke": [
           "free"
@@ -17152,6 +17155,8 @@
         ]
       },
       "source_ids": [
+        "src.difernand-2025-french-swimmer-dropout",
+        "src.monteiro-2017-swimming-dropout-review",
         "src.research-psych-04-d",
         "src.research-psych-04-f"
       ],
@@ -18300,12 +18305,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[202]",
-      "title": "仰式轉身計步：无跨選手通用數字，需分速度標定",
+      "title": "仰式轉身計步：無跨選手通用數字，需分速度標定",
       "tags": {
         "category": [
           "watersense"
         ],
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "stroke": [
@@ -18570,7 +18576,7 @@
           "kick"
         ],
         "certainty": [
-          "🟠"
+          "🔵"
         ],
         "stroke": [
           "starts-turns"
@@ -18610,6 +18616,7 @@
           "errors"
         ],
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "stroke": [
@@ -18652,6 +18659,7 @@
           "errors"
         ],
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "stroke": [
@@ -20175,7 +20183,7 @@
           "hardware"
         ],
         "certainty": [
-          "🟠"
+          "🔵"
         ],
         "stroke": [
           "udk"
@@ -20374,6 +20382,7 @@
           "streamline"
         ],
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "stroke": [

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 579,
+  "source_count": 582,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1334,6 +1334,24 @@
       ]
     },
     {
+      "id": "src.difernand-2025-french-swimmer-dropout",
+      "display": "Difernand A, Mallet A, De Larochelambert Q, Pla R, Marc A, Barlier K, Antero J, Toussaint JF, Sedeaud A. (2025). A survival analysis of dropout among French swimmers. Front Sports Act Living 7:1509306. PMID 40110418 / PMC11919869 / doi:10.3389/fspor.2025.1509306",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "40110418",
+        "pmcid": "PMC11919869",
+        "doi": "10.3389/fspor.2025.1509306"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.population_engines",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[8].public.phenomenon"
+        }
+      ]
+    },
+    {
       "id": "src.dow-2019",
       "display": "Dow J, Giesbrecht GG, Danzl DF, Brugger H, Sagalyn EB, Walpoth B, Auerbach PS, McIntosh SE et al.. (2019). Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update. Wilderness Environ Med 30(4S):S47-S69. PMID 31740369",
       "verification_status": "verified",
@@ -2241,7 +2259,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 28,
+      "usage_count": 29,
       "usages": [
         {
           "id": "breast.tech.16",
@@ -2252,6 +2270,11 @@
           "id": "fly.tech.4",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[105].public.evidence[1]"
+        },
+        {
+          "id": "fly.tech.4",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[105].public.mechanism"
         },
         {
           "id": "free.tech.16",
@@ -2800,12 +2823,17 @@
         "pmcid": "PMC7458297",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC7458297/"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "free.tech.33",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[30].public.evidence[1]"
+        },
+        {
+          "id": "free.tech.33",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[30].public.mechanism"
         },
         {
           "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
@@ -3017,6 +3045,31 @@
       },
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.liu-2025-core-stability-youth-swimmers",
+      "display": "Liu S, Dai J, Gou P, Lin M. (2025). The effects of core stability training on swimming performance in youth swimmers: a systematic review and meta-analysis. BMC Sports Sci Med Rehabil 17(1):327. PMID 41219810 / PMC12606982 / doi:10.1186/s13102-025-01366-1（另有 2026-02-18 更正啟事 PMID 41709241 / doi:10.1186/s13102-026-01588-x）",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "41219810",
+        "pmcid": "PMC12606982",
+        "doi": "10.1186/s13102-025-01366-1",
+        "erratum_pmid": "41709241",
+        "erratum_doi": "10.1186/s13102-026-01588-x"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "free.tech.33",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[30].public.evidence[2]"
+        },
+        {
+          "id": "free.tech.33",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[30].public.mechanism"
+        }
+      ]
     },
     {
       "id": "src.ludewig-2009",
@@ -3639,6 +3692,24 @@
       "usages": []
     },
     {
+      "id": "src.monteiro-2017-swimming-dropout-review",
+      "display": "Monteiro D, Cid L, Marinho DA, Moutão J, Vitorino A, Bento T. (2017). Determinants and Reasons for Dropout in Swimming — Systematic Review. Sports (Basel) 5(3):50. PMID 29910410 / PMC5968952 / doi:10.3390/sports5030050",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "29910410",
+        "pmcid": "PMC5968952",
+        "doi": "10.3390/sports5030050"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.population_engines",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[8].public.phenomenon"
+        }
+      ]
+    },
+    {
       "id": "src.morais-2019",
       "display": "Morais et al. 2019",
       "verification_status": "unverified",
@@ -3750,12 +3821,17 @@
       "identifier": {
         "isbn": "9780702078132"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "free.tech.33",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[30].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.33",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[30].public.mechanism"
         },
         {
           "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
@@ -11726,7 +11802,7 @@
         "pmcid": "PMC9566274",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9566274/"
       },
-      "usage_count": 6,
+      "usage_count": 7,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -11742,6 +11818,11 @@
           "id": "fly.tech.4",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[105].public.evidence[0]"
+        },
+        {
+          "id": "fly.tech.4",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[105].public.mechanism"
         },
         {
           "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
