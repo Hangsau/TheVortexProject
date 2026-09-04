@@ -6570,7 +6570,15 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "FrBr1",
+        "FrBr2",
+        "FrBr3",
+        "FrBr4",
+        "breathing.regulation.physiological_sigh",
+        "breathing.regulation.resonance_breathing",
+        "breathing.safety.hypoxic_blackout"
+      ]
     },
     {
       "id": "breathing.framework.overview",
@@ -6584,7 +6592,12 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "FrBr1",
+        "FrBr2",
+        "FrBr3",
+        "FrBr4"
+      ]
     },
     {
       "id": "breathing.physiology.autonomic_coupling",
@@ -6614,7 +6627,10 @@
       "source_ids": [
         "src.vaschillo-2002-baroreflex"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.physiology.neural_control",
+        "breathing.regulation.resonance_breathing"
+      ]
     },
     {
       "id": "breathing.physiology.chemoreceptors",
@@ -6630,7 +6646,10 @@
       "source_ids": [
         "src.pmid-32119507"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.training.buteyko",
+        "breathing.training.co2_tolerance"
+      ]
     },
     {
       "id": "breathing.physiology.muscles",
@@ -6679,7 +6698,11 @@
       "source_ids": [
         "src.pmid-36630953"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.regulation.physiological_sigh",
+        "breathing.regulation.principle",
+        "breathing.training.buteyko"
+      ]
     },
     {
       "id": "breathing.regulation.claims_gap",
@@ -6693,7 +6716,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.regulation.principle"
+      ]
     },
     {
       "id": "breathing.regulation.physiological_sigh",
@@ -6710,7 +6735,12 @@
         "src.pmid-26855425",
         "src.pmid-36630953"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.physiology.neural_control",
+        "breathing.regulation.principle",
+        "breathing.regulation.wim_hof",
+        "breathing.safety.hypoxic_blackout"
+      ]
     },
     {
       "id": "breathing.regulation.principle",
@@ -6724,7 +6754,13 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.framework.boundaries",
+        "breathing.physiology.autonomic_coupling",
+        "breathing.physiology.baroreflex_resonance",
+        "breathing.regulation.wim_hof",
+        "breathing.safety.hypoxic_blackout"
+      ]
     },
     {
       "id": "breathing.regulation.resonance_breathing",
@@ -6741,7 +6777,11 @@
         "src.pmid-36917418",
         "src.vaschillo-2002-baroreflex"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.framework.grading",
+        "breathing.physiology.baroreflex_resonance",
+        "breathing.physiology.neural_control"
+      ]
     },
     {
       "id": "breathing.regulation.wim_hof",
@@ -6760,7 +6800,11 @@
         "src.pmid-26194270",
         "src.pmid-35213875"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.physiology.chemoreceptors",
+        "breathing.regulation.claims_gap",
+        "breathing.safety.hypoxic_blackout"
+      ]
     },
     {
       "id": "breathing.safety.hypocapnia_mechanism",
@@ -6777,7 +6821,9 @@
         "src.jap-hyperventilation-cerebral-2013",
         "src.statpearls-bohr-effect"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.safety.hypoxic_blackout"
+      ]
     },
     {
       "id": "breathing.safety.hypoxic_blackout",
@@ -6793,7 +6839,9 @@
       "source_ids": [
         "src.pmid-32119507"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.framework.overview"
+      ]
     },
     {
       "id": "breathing.training.bolt_test",
@@ -6826,7 +6874,9 @@
         "src.au-natural-therapies-buteyko-2024",
         "src.wu-2026-buteyko-meta"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.physiology.chemoreceptors"
+      ]
     },
     {
       "id": "breathing.training.co2_tolerance",
@@ -6842,7 +6892,10 @@
       "source_ids": [
         "src.pmid-24421735"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.physiology.chemoreceptors",
+        "breathing.safety.hypoxic_blackout"
+      ]
     },
     {
       "id": "breathing.training.imt",
@@ -6858,7 +6911,10 @@
       "source_ids": [
         "src.pmid-39351143"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.framework.overview",
+        "breathing.physiology.muscles"
+      ]
     },
     {
       "id": "breathing.training.self_tracking",
@@ -6872,7 +6928,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.training.bolt_test"
+      ]
     },
     {
       "id": "chlorine-eye-irritation",
@@ -16130,7 +16188,17 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "Fr10",
+        "Fr16",
+        "Fr17",
+        "free.L3",
+        "free.L4",
+        "free.err1",
+        "free.err2",
+        "free.tech.10",
+        "free.tech.9"
+      ]
     },
     {
       "id": "psych.arousal",

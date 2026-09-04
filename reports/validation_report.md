@@ -129,28 +129,8 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 241 筆**
+**WARN，共 220 筆**
 
-  file=canonical\breathing\framework.yaml id='breathing.framework.overview'
-  file=canonical\breathing\framework.yaml id='breathing.framework.grading'
-  file=canonical\breathing\framework.yaml id='breathing.framework.boundaries'
-  file=canonical\breathing\physiology.yaml id='breathing.physiology.muscles'
-  file=canonical\breathing\physiology.yaml id='breathing.physiology.neural_control'
-  file=canonical\breathing\physiology.yaml id='breathing.physiology.autonomic_coupling'
-  file=canonical\breathing\physiology.yaml id='breathing.physiology.baroreflex_resonance'
-  file=canonical\breathing\regulation.yaml id='breathing.regulation.principle'
-  file=canonical\breathing\regulation.yaml id='breathing.regulation.physiological_sigh'
-  file=canonical\breathing\regulation.yaml id='breathing.regulation.resonance_breathing'
-  file=canonical\breathing\regulation.yaml id='breathing.regulation.box_breathing'
-  file=canonical\breathing\regulation.yaml id='breathing.regulation.wim_hof'
-  file=canonical\breathing\regulation.yaml id='breathing.regulation.claims_gap'
-  file=canonical\breathing\safety.yaml id='breathing.safety.hypoxic_blackout'
-  file=canonical\breathing\safety.yaml id='breathing.safety.hypocapnia_mechanism'
-  file=canonical\breathing\training.yaml id='breathing.training.imt'
-  file=canonical\breathing\training.yaml id='breathing.training.co2_tolerance'
-  file=canonical\breathing\training.yaml id='breathing.training.buteyko'
-  file=canonical\breathing\training.yaml id='breathing.training.bolt_test'
-  file=canonical\breathing\training.yaml id='breathing.training.self_tracking'
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2c'
@@ -258,7 +238,6 @@
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
   file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
   file=canonical\movement\actions.yaml id='movement.action.hip.adduction'
-  file=canonical\perception\free.yaml id='protocol.free.evf'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.overview'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.transfer'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.methods'

@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 241
+    "unlinked_records": 220
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -221,106 +221,6 @@
       "id": "breast.tech.31",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[101]"
-    },
-    {
-      "id": "breathing.framework.boundaries",
-      "file": "canonical/breathing/framework.yaml",
-      "path": "boundaries"
-    },
-    {
-      "id": "breathing.framework.grading",
-      "file": "canonical/breathing/framework.yaml",
-      "path": "grading"
-    },
-    {
-      "id": "breathing.framework.overview",
-      "file": "canonical/breathing/framework.yaml",
-      "path": "overview"
-    },
-    {
-      "id": "breathing.physiology.autonomic_coupling",
-      "file": "canonical/breathing/physiology.yaml",
-      "path": "autonomic_coupling"
-    },
-    {
-      "id": "breathing.physiology.baroreflex_resonance",
-      "file": "canonical/breathing/physiology.yaml",
-      "path": "baroreflex_resonance"
-    },
-    {
-      "id": "breathing.physiology.muscles",
-      "file": "canonical/breathing/physiology.yaml",
-      "path": "muscles"
-    },
-    {
-      "id": "breathing.physiology.neural_control",
-      "file": "canonical/breathing/physiology.yaml",
-      "path": "neural_control"
-    },
-    {
-      "id": "breathing.regulation.box_breathing",
-      "file": "canonical/breathing/regulation.yaml",
-      "path": "box_breathing"
-    },
-    {
-      "id": "breathing.regulation.claims_gap",
-      "file": "canonical/breathing/regulation.yaml",
-      "path": "claims_gap"
-    },
-    {
-      "id": "breathing.regulation.physiological_sigh",
-      "file": "canonical/breathing/regulation.yaml",
-      "path": "physiological_sigh"
-    },
-    {
-      "id": "breathing.regulation.principle",
-      "file": "canonical/breathing/regulation.yaml",
-      "path": "principle"
-    },
-    {
-      "id": "breathing.regulation.resonance_breathing",
-      "file": "canonical/breathing/regulation.yaml",
-      "path": "resonance_breathing"
-    },
-    {
-      "id": "breathing.regulation.wim_hof",
-      "file": "canonical/breathing/regulation.yaml",
-      "path": "wim_hof"
-    },
-    {
-      "id": "breathing.safety.hypocapnia_mechanism",
-      "file": "canonical/breathing/safety.yaml",
-      "path": "hypocapnia_mechanism"
-    },
-    {
-      "id": "breathing.safety.hypoxic_blackout",
-      "file": "canonical/breathing/safety.yaml",
-      "path": "hypoxic_blackout"
-    },
-    {
-      "id": "breathing.training.bolt_test",
-      "file": "canonical/breathing/training.yaml",
-      "path": "bolt_test"
-    },
-    {
-      "id": "breathing.training.buteyko",
-      "file": "canonical/breathing/training.yaml",
-      "path": "buteyko"
-    },
-    {
-      "id": "breathing.training.co2_tolerance",
-      "file": "canonical/breathing/training.yaml",
-      "path": "co2_tolerance"
-    },
-    {
-      "id": "breathing.training.imt",
-      "file": "canonical/breathing/training.yaml",
-      "path": "imt"
-    },
-    {
-      "id": "breathing.training.self_tracking",
-      "file": "canonical/breathing/training.yaml",
-      "path": "self_tracking"
     },
     {
       "id": "chlorine-eye-irritation",
@@ -736,11 +636,6 @@
       "id": "poolside-slip-fall",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[40]"
-    },
-    {
-      "id": "protocol.free.evf",
-      "file": "canonical/perception/free.yaml",
-      "path": "diagnostic_protocols[0]"
     },
     {
       "id": "psych.arousal",

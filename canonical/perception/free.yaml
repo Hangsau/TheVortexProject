@@ -41,13 +41,17 @@ diagnostic_protocols:
     abc_type: A
     abc_note: EVF 崩潰、只靠手掌蠻力划水 = A 型（手感缺失）的主要訊號。
 
-    public_layer_pointers:
-      # 「物理是什麼 / 為什麼這樣 / 對應 drill / 對應誤區 / L 層位置」這些公開層內容
-      # 不重複寫在這——指向已有的 canonical 條目。
+    # 「物理是什麼 / 為什麼這樣 / 對應 drill / 對應誤區 / L 層位置」這些公開層內容
+    # 不重複寫在這——指向已有的 canonical 條目。原本寫成 public_layer_pointers，
+    # 那是本檔獨有的鍵，任何檢查器都讀不到（W005 未歸類、W003 仍判孤兒）；
+    # 2026-09-04 改用有宣告語意的機器鍵表達同一組指標，內容未變。
+    links:
       technical_analysis: [free.tech.9, free.tech.10]   # EVF 機制 + 前鋸肌硬體邊界
       drills: [Fr16, Fr10, Fr17]                         # 握拳→張開、帆船、三點觸碰
-      teaching_errors: [free.err1, free.err2]            # 對應的常見錯誤口令
-      l_levels: [L3, L4]
+    # teaching_errors 與 l_levels 沒有對應的 links 鍵（`related` 的宣告語意限同 domain），
+    # 改走不限 domain 的 cross_ref；原本裸寫的 L3/L4 依本條目 stroke=free 補全前綴。
+    cross_ref: 高肘回臂是唯一正確方式、模仿菁英選手的動作就是正確、水感出現但不穩定、壓力下維持不住
+    cross_ref_ids: [free.err1, free.err2, free.L3, free.L4]
 
     perception_probe:
       certainty: 🟠   # 教練觀測層（非實證），是經驗累積的判讀法
