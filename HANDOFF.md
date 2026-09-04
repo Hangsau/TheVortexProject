@@ -63,7 +63,17 @@
 
 **已修並上線**（my-site `edfb009`）：概念標題後加一枚 L 段落 chip（沿用章節 `l_band` 既有的 mono ＋方框語言，不新造視覺），`l_note` 收進既有的「想深一點」展開層、標籤「落在哪一段水感發展」，讀頁預設收合的密度不變。**37 筆 `l_levels` 已先驗證全部是連續遞增區間**（11 種形態，無跳號）才敢用「首–末」呈現，單一級只印一個。建置後實測：37 枚 chip、0 枚空字串、39 個 note 區塊。
 
-### 🔎 **同一把尺往全站掃：「已同步但沒有 layout 讀」的鍵有一批**，其中查出 **15 筆 `deficiency_fixes` 填錯欄位**（已修）
+### 🔎 **同一把稽核尺再往下查，抓到 12 筆內容線上是空白列**（已修）
+
+`dimension`／`experience` 這兩個各 12 筆的鍵沒有任何 layout 讀——**但這次不是「寫了沒渲染」，是「渲染了但印出空白」**。`water-sense-levels.yaml` 的 `indicators` 有**兩種 schema**：47 筆是 `{type, text}`，仰式 **L3／L4／L5 的 12 筆**是 `{dimension, measure, experience, training}`（四欄，是更細的版本）。my-site 兩個 layout 都只寫 `{{ .type }}{{ .text }}`，於是那 12 筆各渲染成一個**完全空的 `<div class="vx-ind">`**。線上 `/vortex/levels/` 12 條、`/vortex/backstroke/` 12 條，四欄內容（含泳者原話「有時划手感覺有推到什麼，下一趟又感覺手划過去了」）**從來沒出現在頁面上過**。
+
+**兩頁同時中，是因為 `vortex-levels.html` 和 `vortex-stroke.html` 各抄了一份同樣的一行渲染**——和 my-site `CLAUDE.md` 那條「分類標籤禁止在 layout 硬編」是同一種病：Hugo 對取不到的鍵回空字串且不報錯，抄一份就會各自漏。已抽成 `layouts/partials/vortex/indicator.html` 由兩頁共用，canonical 之後再加欄位只需改一處。修在 my-site `49fcc60`（rebase 後 `f3babd2`），欄位順序照 canonical 不重排。
+
+**⚠️ 過程中我自己報錯過一次，記下來**：第一次查 stroke 頁時我 curl 的是 `/vortex/stroke/back/`，回 **404**，我把「0 筆空白」當成「stroke 頁沒問題」。實際路徑是 `/vortex/backstroke/`，重驗後 12 筆全在。**curl 驗線上頁面必須先確認 HTTP 狀態碼**，`grep` 對一份 404 頁面回 0 和對一份正常頁面回 0 長得一模一樣——這和 my-site `CLAUDE.md` 已記的「minify 後屬性沒引號」是同一類假陰性，都是「grep 回 0 不等於沒問題」。
+
+**這條和 `abc_type` 的差別要分清楚**：`dimension`／`experience` 明確在 `public:` 之下、且已經有一個「觀察指標」區塊在渲染它的同儕，所以這純粹是渲染 bug，修就對了；`abc_type` 沒有分層宣告，先渲染就是替使用者做分層決定（見下一段）。
+
+### ▶️ 上一輪：**同一把尺往全站掃：「已同步但沒有 layout 讀」的鍵有一批**，其中查出 **15 筆 `deficiency_fixes` 填錯欄位**（已修）
 
 心理層那個缺口的形狀是「canonical 寫了 → sync 送出去了 → 沒有 layout 讀」。這是可以機械掃的：把 `data/vortex`／`data/breathing`／`data/adm`／`data/movement`／`data/periodization` 出現過的所有鍵名（**1144 個**）拿去比對 `layouts/` 全文，**638 個從未被任何 layout 提及**。多數是本來就不該渲染的機器鍵（`cross_ref_ids`、`*_link_ids`、`schema_version`、來源註冊表的 `doi`／`pmid`／`identifier`——後者由 Python 先算成 `link` 再給 template），**但清單頂端有兩個各 176 筆的鍵值得查**：`abc_type` 與 `deficiency_fixes`。
 
@@ -79,7 +89,7 @@
 
 **所以框架層實體那個登錄表決策，現在沒有理由開**——它原本唯一的動機是「讓 `l_levels` 有東西可指」，而讀者實際需要的（這個概念落在哪一段、為什麼）已經由 `l_note` 直接回答且已上線。**要開之前得先出現一個新的、`l_note` 回答不了的使用情境**，不是為了 W003 的 70。
 
-### ▶️ 上一輪：**W003：injuries 26 筆離開孤兒名單**（152 → **126**）——14 筆真邊 + 7 筆本來就不該被當成條目
+### ◀️ 更早：**W003：injuries 26 筆離開孤兒名單**（152 → **126**）——14 筆真邊 + 7 筆本來就不該被當成條目
 
 傷害章 47 筆條目裡有 40 筆掛在孤兒名單上。**但先分桶才發現這 40 筆不是同一種東西**：
 
