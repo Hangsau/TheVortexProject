@@ -6,7 +6,17 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ **W003：breathing 全域 20 筆孤兒清空 + perception 一筆改用機器鍵**（241 → **220**）——只認「散文自己點名目標節點」的那一種
+### ▶️ **W003：periodization 22 筆接回**（220 → **198**）——掃描器的盲點：YAML 鍵名 ≠ 條目 id，用 id 短名掃會整批漏掉
+
+第一輪用「id 短名」掃 periodization 的散文，只掃出十來條。但這一章的 **YAML 區塊鍵名跟條目 id 大量不同名**——`liee_methods` 的 id 是 `zones.table_11_1`、`intensity_zones` 的 id 是 `zones.table_7_1`、`injury_prevention` 的 id 是 `dryland.injury`、`hr_vo2_ergogenesis` 的 id 是 `zones.table_11_2`（18 個鍵名如此）。**而散文引用一律寫鍵名，不寫 id**（「見 liee_methods」「走上方 injury_prevention 的疼痛分流」「用 hr_vo2_ergogenesis 對照表」）。第一輪因此把這些全部漏掉，還把「見 liee_methods」誤配到 `dryland.methods`（短名 `methods` 的子字串命中）。**第二輪改用鍵名重掃才補齊**——這個盲點對往後每個 domain 都成立，先掃 id 短名、再掃鍵名，兩輪都要做。
+
+**掃描噪音也比 breathing 高一個量級，逐條剔除**：`taper.swim`／`zones.swim` 的短名 `swim` 命中 `swim-coach`、`swim_energy`；`taper.type.linear` 命中 `nonlinear`；`zones.table_11_1` 命中它自己 `source` 字串裡的 `methods`／`intensity`。這些全是子字串巧合，不是指標，一律不採。
+
+實際落地 14 筆出邊。其中 `zones.table_7_1` 與 `taper.intensity` **原本連 `links` 區塊都沒有**，另外補一個。`structure.perception_periodization_bridge`（那筆自陳「週期化跟水感知像兩套平行系統」的橋接條目）接上 `structure.school_block`（它自己寫「板塊週期化的 transmutation 塊本就定義為 specific technical motor skills 習得」）與 `taper.frequency`（它引的「降頻會掉 motor sensation 與技術熟練度」正是那一筆的 `rule_zh`）。
+
+**剩 19 筆不接，因為散文裡真的沒有點名任何節點**：taper 的 `variables[]`／`taper_types[]` 共 7 筆是純組成關係的兄弟（父子包含刻意不算邊，見錯誤 18）；dryland 7 筆是自足的子章節；`structure.annual.tricycle`／`multipeak` 只是彼此對照週數長短，從不點名對方。**這批要接必須先寫內容（例如四種年計畫之間的選擇條件），不是補連結。**
+
+### ▶️ 更早（同日）：**W003：breathing 全域 20 筆孤兒清空 + perception 一筆改用機器鍵**（241 → **220**）——只認「散文自己點名目標節點」的那一種
 
 呼吸章 21 筆條目裡有 20 筆孤兒。但這一章的 `_index.yaml` 開頭就寫著它的架構規則：**「physiology.yaml 是三條線共用的機制層；各節點的機制一律指回它，不重寫。」**——也就是說，「指回去」這件事是這一章的設計前提，散文裡到處都在做，只是從來沒有寫成邊。既有的 `links` 只有 `development_stages` 一個鍵（那是詞彙引用，不是條目引用，本來就不算邊）。
 
@@ -130,7 +140,7 @@ W002 是「有 `citation`／`source`／`sources` 顯示字串但沒有 `source_i
 
 #### 收尾狀態
 
-`gap_report.json` 的 `unlinked_records` 220 與 W003 對齊，`unused_taxonomy_values` 維持 7。剩餘 224 WARN 全是內容工作，不是登錄債：**W003 220**（孤兒記錄，內部連結問題）、**W008 3**（不該歸零，`src.lee-2008` 卡在相位模型的登錄層決策＝錯誤 23）、**W001 1**。W011 已於同日歸零（見下）。
+`gap_report.json` 的 `unlinked_records` 198 與 W003 對齊，`unused_taxonomy_values` 維持 7。剩餘 202 WARN 全是內容工作，不是登錄債：**W003 198**（孤兒記錄，內部連結問題）、**W008 3**（不該歸零，`src.lee-2008` 卡在相位模型的登錄層決策＝錯誤 23）、**W001 1**。W011 已於同日歸零（見下）。
 
 ---
 
@@ -767,7 +777,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W003 220（孤兒條目）、W008 3（孤兒來源）、W001 1，合計 224；W002 與 W011 均已歸零。** W011 於 2026-09-04 走完 63 → 42 → 29 → **0**（教學誤區 21 筆、技術分析 33 筆、心理 6 筆、L 指標 2 筆、感知協議 1 筆）；產出是四筆錯誤（錯誤 29–32）與四筆來源補登錄，不是補欄位。 W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）349 →（technica 兩檔補 `links.l_indicators`，L 級 24 筆出邊＋指標 13 筆入邊）312 →（teaching-errors 52 筆孤兒誤區逐條配 `cross_ref_ids`，誤區 52 筆出邊＋技術分析 19 筆入邊）241 →（breathing 全域 16 筆出邊＋2 筆 `links.drills`，20 筆脫離孤兒；perception `public_layer_pointers` 自造鍵改機器鍵）**220**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
+- **C. WARN 債務：W003 198（孤兒條目）、W008 3（孤兒來源）、W001 1，合計 202；W002 與 W011 均已歸零。** W011 於 2026-09-04 走完 63 → 42 → 29 → **0**（教學誤區 21 筆、技術分析 33 筆、心理 6 筆、L 指標 2 筆、感知協議 1 筆）；產出是四筆錯誤（錯誤 29–32）與四筆來源補登錄，不是補欄位。 W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）349 →（technica 兩檔補 `links.l_indicators`，L 級 24 筆出邊＋指標 13 筆入邊）312 →（teaching-errors 52 筆孤兒誤區逐條配 `cross_ref_ids`，誤區 52 筆出邊＋技術分析 19 筆入邊）241 →（breathing 全域 16 筆出邊＋2 筆 `links.drills`，20 筆脫離孤兒；perception `public_layer_pointers` 自造鍵改機器鍵）220 →（periodization 14 筆出邊，第二輪改用 YAML 鍵名重掃才補齊）**198**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。

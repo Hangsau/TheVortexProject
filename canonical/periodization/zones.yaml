@@ -65,6 +65,8 @@ intensity_zones:
   note_zh: "比賽配速 = zone 2；Bompa 建議每週至少 50% 訓練時間落在比賽配速強度。高於賽配速由無氧供能主導，低於賽配速由有氧供能主導"
   tid_dialogue_zh: "🔵 對話（極化派 Seiler）：Bompa『每週 ≥50% 落在比賽配速』與 Seiler『80% 低強度＋20% 高強度、避開中間區』表面上直接衝突，但兩套系統的『區』定義不同，不能直接數字對比——Bompa zone 2（賽配速，80–90% 最大表現）對應的可能是 Seiler 的 Z3（高強度）邊界而非『中間區』。若 Bompa 賽配速＝Seiler Z3，則『50% 在賽配速』比『80/20』要求更多高強度（方向相反）；若＝Seiler Z2，則 Bompa 等於主張大量閾值，與極化派『避中間』直接衝突。這個張力本身就是要呈現的辯論，不強行統一（見 school_polarized）。"
   plain_zh: "Bompa 把訓練強度分成 6 區，用『佔最大表現的百分比』定義。zone 1 最吃力（90–100%），zone 5 最輕（<50%），recovery 是不下水。比賽配速落在 zone 2。一個好記的原則：每週至少一半的訓練時間要落在比賽配速強度。注意這條原則有爭議——極化派（下面 school_polarized）主張剛好相反：大部分量應該是輕鬆的、少碰中間強度。"
+  links:
+    related: [periodization.zones.school_polarized]
 
 # ── 心率／VO2max／能量系統對照（Table 11.2）──
 # 把生理負荷（HR/VO2）對映到主導能量系統與訓練目標（ergogenesis）
@@ -112,7 +114,9 @@ endurance_periodization:
     - {key: specific_endurance, name_zh: 專項耐力, when_zh: "準備期晚期 + 競賽期", focus_zh: "對映比賽能量系統的專項耐力"}
   olbrecht_dialogue_zh: "🟡 對話（Olbrecht）：Bompa 在這個有氧建構階段的主力工具是『閾值配速大量堆量』，Olbrecht 直接質疑——他稱『在最大乳酸穩態速度訓練就能提升耐力』是『魔法子彈謬誤』，主張閾值訓練既非有氧能力的最佳刺激、也非有效的無氧刺激。他的替代：大量輕鬆有氧量＋嵌入短暫（~30–35 秒、超 VO2max）衝刺，並在基礎期刻意排除長間歇閾值組（見 olbrecht_model）。"
   plain_zh: "耐力是分階段堆起來的：先用廣度有氧打底（過渡期＋準備期早期），再疊上專項代謝需求，最後練對準比賽的專項耐力。順序不能顛倒——沒打好有氧底就直接衝專項，後面會撐不住。不過『有氧底＝大量練閾值』這點 Olbrecht 反對（下面 olbrecht_model），他主張改用輕鬆量＋短衝刺。"
-  links: {development_stages: [t2t, t2c, t2w]}
+  links:
+    development_stages: [t2t, t2c, t2w]
+    related: [periodization.zones.olbrecht_model]
 
 # ── 游泳分區系統：Maglischo 六分區（外部文獻，🟢）──
 # Maglischo《Training Zones Revisited》以血乳酸 + 訓練目的定義游泳專用分區
@@ -214,7 +218,9 @@ energy_systems_primer:
       source_ids: [src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012]
   protocol_caveat_zh: "🔴 等級限制：上述磷酸原與糖酵解協議多為**教練指南／共識層（🟠）**，非 RCT 驗證的最適處方——具體距離/休息/量是現場慣用值不是實驗最佳化結果。引用時講方向與量級即可，別當精確定論；RCT 級協議比較仍是研究空白。"
   plain_zh: "身體有三套供能系統，差別在『撐多久、靠什麼、怎麼累』：① 磷酸原（ATP-PCr）——前 10 秒的爆發力來源，用肌肉裡現成的能量，不產乳酸，但很快用完，休 3–5 分鐘才回補；對應 25m 衝刺、出發轉身。② 糖酵解——10 秒到 2 分鐘的主力，燒肝糖但會堆乳酸讓你發酸撐不住；對應 100、200。③ 有氧——2 分鐘以上越來越主導，燒糖和脂肪、可持續，還負責你運動後的恢復；對應 400 以上。三套不是開關切換，而是隨時都在跑、只是誰當主角。怎麼練：磷酸原用超短衝刺＋長休，糖酵解用 30 秒–2 分鐘的硬組＋不完全休息，有氧用長慢游和節奏游。注意：連衝刺選手大部分訓練量也還是在有氧系統。"
-  links: {development_stages: [t2t, t2c, t2w]}
+  links:
+    development_stages: [t2t, t2c, t2w]
+    related: [periodization.zones.swim_energy_by_distance, periodization.zones.swim_maglischo, periodization.zones.swim_tid, periodization.zones.table_11_1]
 
 # ── 各距離項目能量系統供能比（外部文獻，🟢/🟡）──
 # 重要：跨研究數字是真實區間差異，不可合併取單一值（反幻覺）
@@ -263,7 +269,9 @@ swim_application:
   energy_system_zh: "🔵 swim-coach 生成單組課時，用 hr_vo2_ergogenesis 對照表標記該組主導能量系統，避免賽季階段與能量系統錯配（如競賽期仍堆 50% HR 主動恢復量）"
   author_mapping_note_zh: "🔵 誠實標記：這整個節點是『把 Bompa 通用框架推導到游泳』的自製映射（cert 🔵），不是游泳實證——Bompa 的『最大表現百分比』本來不是為游泳設計的。游泳教練實際開課用的是別的語言：Maglischo 用血乳酸六分區（swim_maglischo）；Sweetenham 用 BBM（最大心率以下幾拍，個體化、只需心率不需採血）並主張反向週期化（速度先行當全季校準錨，而非賽季末才碰）；Olbrecht 用個體乳酸測試（olbrecht_model）。要更貼實務，優先用這些游泳專項語言，本節僅作 Bompa 框架的對接橋樑。"
   plain_zh: "游泳怎麼套 Bompa 這套：組課強度用『比賽配速百分比』講——賽配速＝zone 2，比賽更快（衝刺/乳酸耐受）＝zone 1，閾值/節奏＝zone 3，有氧基礎＝zone 4，恢復游＝zone 5。但要老實說：這是把通用理論硬套到游泳的自製對照，不是游泳實證。游泳教練實際上更常用 Maglischo 的乳酸六分區、或 Sweetenham 的 BBM（最大心率以下幾拍）。要貼近現場，優先用那些游泳專用的語言。"
-  links: {development_stages: [t2t, t2c, t2w]}
+  links:
+    development_stages: [t2t, t2c, t2w]
+    related: [periodization.zones.olbrecht_model, periodization.zones.swim_maglischo, periodization.zones.table_11_2]
 
 # ── 極化分布（Seiler / TID，🟢）──
 # 與 Bompa 六分區對話的平行框架：Bompa 問『每區強度是什麼』，Seiler 問『每區各占多少比例』。
@@ -285,7 +293,9 @@ school_polarized:
   swim_caveat_zh: "🟢 游泳實證挑戰極化教條：González-Ravé 2021（PMID 33952709，9 研究 162 筆 TID）中金字塔型 89 例（多數）、極化型 65 例、閾值型 8 例——游泳金字塔型其實比極化型更常見。即便衝刺選手（Barbosa 2019）仍約 87–90% 量在 Z1，但型態更接近極化（Z3 比例高、Z2 壓縮）。長距離（400m+）偏金字塔、短距離偏極化；目前無單一型態可宣稱『所有泳者最佳』。"
   author_note_zh: "🔵 作者取用：值得吸收的是『大部分量該是輕鬆的、慎用中間閾值區』這個方向性原則（它也呼應 Hellard 2019 菁英游泳 86–90% 量在 ≤4mmol）；但別把『80/20 極化』當游泳鐵律——游泳金字塔型更常見，依距離與個體調整。"
   plain_zh: "極化派（Seiler）問的不是『每區強度多少』而是『每區各占幾成』。他觀察菁英耐力選手，發現他們自然形成『大量輕鬆＋少量超吃力、中間幾乎不練』的分布——大約 80% 低強度、20% 高強度（這個 80/20 算的是課次，不是時間）。為什麼避開中間（閾值）區？因為那強度『高不成低不就』：累積疲勞不少，但刺激又不如真正的高強度。唯一的 RCT（Stöggl 2014）支持極化最有效。但游泳要特別注意：游泳實證裡其實『金字塔型』比『極化型』更常見（González-Ravé 2021），所以別把 80/20 當鐵律——長距離偏金字塔、短距離偏極化，看項目和個人調整。"
-  links: {development_stages: [t2c, t2w]}
+  links:
+    development_stages: [t2c, t2w]
+    related: [periodization.zones.swim_three_zone]
 
 # ── Olbrecht 能量系統個體化（🟡）──
 # 與 Bompa『有氧最大化＋閾值堆量』對話：最適非最大、捨棄通用閾值、capacity/power 分期。

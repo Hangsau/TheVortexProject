@@ -15476,7 +15476,9 @@
         "src.mccullough-d",
         "src.neumann-2017"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.dryland.injury"
+      ]
     },
     {
       "id": "periodization.dryland.injury",
@@ -15590,7 +15592,9 @@
       "source_ids": [
         "src.ch5-table-5-1-ch8-fig-8-6-ch5-fig-5-11-200m"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.structure.annual.monocycle"
+      ]
     },
     {
       "id": "periodization.structure.annual.monocycle",
@@ -15689,7 +15693,9 @@
       "source_ids": [
         "src.ch7-planning-training-cycles"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.structure.school_block"
+      ]
     },
     {
       "id": "periodization.structure.microcycle",
@@ -15706,7 +15712,10 @@
       "source_ids": [
         "src.ch7-planning-training-cycles-table-7-1-zones"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.structure.macrocycle",
+        "periodization.zones.table_7_1"
+      ]
     },
     {
       "id": "periodization.structure.perception_periodization_bridge",
@@ -15722,7 +15731,10 @@
       "source_ids": [
         "src.vortex-l0-l6"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.structure.school_block",
+        "periodization.taper.frequency"
+      ]
     },
     {
       "id": "periodization.structure.school_block",
@@ -15756,7 +15768,11 @@
       "source_ids": [
         "src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.structure.school_block",
+        "periodization.zones.olbrecht_model",
+        "periodization.zones.school_polarized"
+      ]
     },
     {
       "id": "periodization.structure.swim_annual",
@@ -15852,7 +15868,9 @@
       "source_ids": [
         "src.ch9"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.structure.detraining"
+      ]
     },
     {
       "id": "periodization.taper.peak_window",
@@ -15965,7 +15983,9 @@
       "source_ids": [
         "src.ch5-endurance-periodization"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.zones.olbrecht_model"
+      ]
     },
     {
       "id": "periodization.zones.energy_systems_primer",
@@ -15989,7 +16009,12 @@
         "src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012",
         "src.pmc8607769"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.zones.swim_energy_by_distance",
+        "periodization.zones.swim_maglischo",
+        "periodization.zones.swim_tid",
+        "periodization.zones.table_11_1"
+      ]
     },
     {
       "id": "periodization.zones.olbrecht_model",
@@ -16021,7 +16046,9 @@
       "source_ids": [
         "src.seiler"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.zones.swim_three_zone"
+      ]
     },
     {
       "id": "periodization.zones.swim",
@@ -16037,7 +16064,11 @@
       "source_ids": [
         "src.ch7-table-7-1-ch11-table-11-2"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.zones.olbrecht_model",
+        "periodization.zones.swim_maglischo",
+        "periodization.zones.table_11_2"
+      ]
     },
     {
       "id": "periodization.zones.swim_energy_by_distance",
@@ -16150,7 +16181,9 @@
       "source_ids": [
         "src.ch7-table-7-1-intensity-zones-and-training-d"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "periodization.zones.school_polarized"
+      ]
     },
     {
       "id": "poolside-slip-fall",
