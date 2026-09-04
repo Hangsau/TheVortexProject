@@ -85,7 +85,7 @@ links:
 
 references:
   - { citation: "Trikha R, Schroeder GG, Greig DE, Kremen TJ Jr (2022). Characterizing Health Events and Return to Sport in Collegiate Swimmers. Orthop J Sports Med 10(4):23259671221083588. PMID 35400141", certainty: 🟢, verified: true, source_ids: [src.trikha-2022-collegiate-swimmer-health-events] }
-  - { citation: "Vasiliadis AV, et al. (2018). Stress fractures in swimmers: systematic review. Int J Kinesiol Sports Sci 6(3):25-31（主題為肋骨，非踝足；僅作對照）", certainty: 🟡, verified: true }
+  - { citation: "Vasiliadis AV, Lampridis V, Georgiannos D, Bisbinas I. (2018). Swimmers Are At Risk For Stress Fractures? A Systematic Review. Int J Kinesiol Sports Sci 6(3):25-31（主題為肋骨，非踝足；僅作對照。2026-09-04 更正標題：原寫「Stress fractures in swimmers: systematic review」為改寫非原題）", certainty: 🟡, verified: true, source_ids: [src.stress-fractures-in-swimmers-systematic-revi] }
 
 flags:
   pending_verification:

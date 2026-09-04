@@ -468,19 +468,25 @@ sources:
       引用時兩者不得互換。本來源只能用來支撐「摩擦係數量測需經校驗才可比較」這類方法學陳述。
 
   - id: src.ansi-nfsi-b101-1
-    display: "ANSI/NFSI B101.1, Test Method for Measuring Wet SCOF of Common Hard-Surface Floor Materials（2009 初版，2022 改版）"
-    title: "Test Method for Measuring Wet SCOF of Common Hard-Surface Floor Materials"
+    display: "NFSI B101.1-2022, Test Method for Measuring the Wet SCOF of Hard-Surface Walkways（沿革：ANSI/NFSI B101.1-2009 初版 → NFSI B101.1-2020 → NFSI B101.1-2022 現行版）"
+    title: "Test Method for Measuring the Wet SCOF of Hard-Surface Walkways"
     type: guideline
     verification_status: verified
     year: 2022
     identifier:
-      url: "https://webstore.ansi.org/standards/nfsi/ansinfsib1012022"
+      url: "https://webstore.ansi.org/standards/nfsi/nfsib1012022"
     notes: >-
       2026-08-17 新增，用以取代原先誤掛在 ASTM F2508 下的摩擦係數門檻。本標準把**濕態靜摩擦係數（wet SCOF）**分三級：
-      **≥ 0.60 高抓地力／0.40–0.60 中等／< 0.40 低抓地力**。
+      **≥ 0.60 高抓地力／0.40–0.59 中等（標示為 slip-resistant）／< 0.40 低抓地力**；2026-09-04 覆核 2022 版門檻未變。
+      **2026-09-04 更正三處**：① 現行版**不是 ANSI 標準**——NFSI 自 2006 至 2019 為 ANSI 認證的標準制定組織，
+      2020 年終止與 ANSI 的關係轉為獨立 SDO，故 2020 版起 designation 由「ANSI/NFSI B101.1」改為「NFSI B101.1」，
+      只有 2009 初版才是 American National Standard，本 id 的 slug 保留初版寫法只作機器鍵，不代表現行版性質；
+      ② 標題在改版時已更動——2009 版為 Common Hard-Surface Floor **Materials**，2020 版起改為 Hard-Surface **Walkways**，
+      原登錄把 2009 版標題掛在 2022 年份下；③ 沿革漏掉 2020 版，實為三版而非兩版。
       **使用邊界**：① 這三個數字全都是「濕態」值，不可拿來描述乾混凝土；
       ② 這是量測方法與分級標準，不是流行病學來源，不能用來支撐傷害發生率；
-      ③ NFSI 宣稱「wet SCOF ≥ 0.60 可使滑倒索賠減少達 90%」屬該機構自述的關聯性數據，非同儕審查文獻，本專案不引用該 90%。
+      ③ NFSI 宣稱「wet SCOF ≥ 0.60 可使滑倒索賠減少達 90%」屬該機構自述的關聯性數據，非同儕審查文獻，本專案不引用該 90%；
+      ④ 它已非 ANSI 標準，援引時不得以「美國國家標準」的權威層級表述。
 
   - id: src.atkison-2014-a
     display: "Atkison et al. 2014"
@@ -6380,3 +6386,92 @@ sources:
     retrieved_on: '2026-09-04'
     notes: '2026-09-04 直接取 NCBI Bookshelf 頁面證實存在。**原顯示字串寫「StatPearls: Drowning」，實際章名為「Drowning: Clinical
       Management」**。StatPearls 屬教科書層級證據，非原始研究。'
+
+  - id: src.buchanan-2025-female-athlete-triad-swimmers
+    display: 'Buchanan BK, Bergstein VE, Rothschild EF, Coslick A. (2025). The Female Athlete Triad in Swimmers:
+      a Review of Current Literature. J Womens Sports Med 5(1):30-38. doi:10.53646/ahq2qs39'
+    title: 'The Female Athlete Triad in Swimmers: a Review of Current Literature'
+    type: review
+    verification_status: verified
+    authors:
+    - Buchanan BK
+    - Bergstein VE
+    - Rothschild EF
+    - Coslick A
+    year: 2025
+    container: Journal of Women's Sports Medicine
+    identifier:
+      doi: 10.53646/ahq2qs39
+      url: https://jwomenssportsmed.org/index.php/jwsm/article/view/68
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 取回期刊頁面核對作者、年份、卷期頁與 DOI。**原顯示字串只寫「Female athlete triad prevalence in swimmers, JWSM
+      systematic review」**——刊名縮寫與「systematic review」是改寫，**原題為 a Review of Current Literature**；文內方法自述為系統性檢索（2023-11-08
+      於 PubMed 與 Google Scholar 檢索，259 篇篩至 17 篇），故證據層級標 review 尚可，但引用時不得以原題以外的名稱稱之。**使用邊界**：① 本文結論為「估計每
+      10 位女性泳者約 4 位具三聯症風險」，該數字是納入 17 篇異質研究的綜整估計，非單一族群盛行率，不可寫成「盛行率 40%」；② 作者明言游泳為非負重運動，三聯症在泳者身上如何作用尚不清楚，且納入研究數少、量化資料異質性大；③
+      本刊非 PubMed 收錄，無 PMID，引用時以 DOI 為機器鍵。
+  - id: src.sta-2023-world-aquatics-diving-depth
+    display: Safety Training Awards (STA). (2023-03-13). STA Technical Notice Regarding World Aquatics and
+      Change to Diving Depth Rules.
+    title: STA Technical Notice Regarding World Aquatics and Change to Diving Depth Rules
+    type: other
+    verification_status: verified
+    authors:
+    - Safety Training Awards
+    year: 2023
+    container: Safety Training Awards (The Swimming Teachers’ Association) technical notice
+    identifier:
+      url: https://www.safetytrainingawards.co.uk/news/2023/03/13/sta-technical-notice-regarding-world-aquatics-and-change-to-diving-depth-rules/
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 取回原文核對標題、日期與發布機構。**三個深度數字各有其適用情境，不可互相代換**：① **競賽出發台** — 最小水深 1.35 m，範圍自端牆 1 m 延伸至至少
+      6 m（由原本的 0.9 m 提高而來）；② 裝有出發台之泳池的**其他區域** — 最小水深 1 m；③ **教學跳水** — 最小水深 1.8 m 且前方淨空 7.6 m。另註：泳者須先由合格游泳教師評定其平淺入水式競賽出發動作穩定，才可在
+      1.35 m 最小深度執行競賽出發。**使用邊界**：本文件是 STA 對 World Aquatics 規則變更所發的技術通告（二手轉述），不是 World Aquatics 場館規則原文；若需引用規則條號須另取
+      World Aquatics Facilities Rules 原文。本來源只支撐規則門檻值，不支撐任何傷害發生率。
+  - id: src.haroy-2019-adductor-strengthening-programme
+    display: 'Harøy J, Clarsen B, Wiger EG, Øyen MG, Serner A, Thorborg K, Hölmich P, Andersen TE, Bahr
+      R. (2019). The Adductor Strengthening Programme prevents groin problems among male football players:
+      a cluster-randomised controlled trial. Br J Sports Med 53(3):150-157. PMID 29891614 / doi:10.1136/bjsports-2017-098937'
+    title: 'The Adductor Strengthening Programme prevents groin problems among male football players: a
+      cluster-randomised controlled trial'
+    type: journal-article
+    verification_status: verified
+    authors:
+    - Harøy J
+    - Clarsen B
+    - Wiger EG
+    - Øyen MG
+    - Serner A
+    - Thorborg K
+    - Hölmich P
+    - Andersen TE
+    - Bahr R
+    year: 2019
+    container: British Journal of Sports Medicine
+    identifier:
+      pmid: '29891614'
+      doi: 10.1136/bjsports-2017-098937
+      isrctn: ISRCTN98514933
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對。以 Copenhagen Adduction 單一動作構成的內收肌強化課程，35 支挪威半職業足球隊集群隨機（介入 18 隊 339 人／對照
+      17 隊 313 人）：賽季平均腹股溝問題盛行率 **13.5%（95% CI 12.3–14.7）vs 對照 21.3%（95% CI 20.0–22.6）**，回報腹股溝問題的風險低 **41%（OR
+      0.59, 95% CI 0.40–0.86, p=0.008）**。**使用邊界（重要）**：① 族群是**男性足球員**，不是泳者——蛙泳的內收肌負荷型態（水中閉鏈、無地面反作用力、無衝刺變向）與足球差異大，本結果只能作為機制層的類比支持，不得寫成蛙泳者的預防效果數字；②
+      終點是**自述的問題盛行率**（OSTRC 過度使用問卷），不是失去訓練日的傷害發生率，兩者不可代換；③ 介入劑量為賽前 6–8 週每週三次、賽季每週一次。
+  - id: src.thorborg-2023-adductor-exercise-load-management
+    display: 'Thorborg K. (2023). Current Clinical Concepts: Exercise and Load Management of Adductor Strains,
+      Adductor Ruptures, and Long-Standing Adductor-Related Groin Pain. J Athl Train 58(7-8):589-601. PMID
+      35834724 / PMC10569248 / doi:10.4085/1062-6050-0496.21'
+    title: 'Current Clinical Concepts: Exercise and Load Management of Adductor Strains, Adductor Ruptures,
+      and Long-Standing Adductor-Related Groin Pain'
+    type: review
+    verification_status: verified
+    authors:
+    - Thorborg K
+    year: 2023
+    container: Journal of Athletic Training
+    identifier:
+      pmid: '35834724'
+      pmcid: PMC10569248
+      doi: 10.4085/1062-6050-0496.21
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對。單一作者的臨床概念綜述，涵蓋急性內收肌拉傷、內收肌斷裂與長期內收肌相關腹股溝疼痛的運動與負荷管理，含一級／二級／三級預防策略。**本條用以取代原顯示字串「Adductor
+      strengthening / load management (Coast Sport)」**——該字串指向一個物理治療診所網頁、無 URL 無作者無年份、不可重取，屬不合格來源；2026-09-04
+      改掛本篇同主題的同儕審查綜述。**使用邊界**：① 綜述而非原始研究，具體數字須追到其引用的原研究；② 族群為一般運動員（文獻基礎以足球等陸上變向運動為主），非泳者專屬。

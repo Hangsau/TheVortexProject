@@ -86,7 +86,7 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "WHO 2024-12-13『Drowning deaths decline globally but the most vulnerable remain at risk』新聞稿", certainty: 🟢, verified: true }
+  - { citation: "World Health Organization. (2024-12-13). Drowning deaths decline globally, but the most vulnerable remain at risk [news release]. 隨《Global status report on drowning prevention 2024》發布（2026-09-04 補全標題逗號與副標）", certainty: 🟢, verified: true, source_ids: [src.who-2024-12-13-drowning-deaths-decline-globa-2024] }
   - { citation: "Global burden of drowning 204 countries 1990-2021, Sci Rep 2025, PMC11954903", certainty: 🟢, verified: true, source_ids: [src.pmc11954903] }
   - { citation: "Dezfulian C, et al. (2024). 2024 American Heart Association and American Academy of Pediatrics Focused Update on Special Circumstances: Resuscitation Following Drowning. Circulation 150(23):e501-e516. PMID 39530204 / doi:10.1161/CIR.0000000000001274", certainty: 🟢, verified: true, source_ids: [src.dezfulian-2024] }
   - { citation: "Davis CA, et al. (2024). Wilderness Medical Society Clinical Practice Guidelines for the Treatment and Prevention of Drowning: 2024 Update. Wilderness Environ Med 35(1_suppl):94S-111S. PMID 38379489", certainty: 🟢, verified: true, source_ids: [src.davis-2024-wms-drowning] }

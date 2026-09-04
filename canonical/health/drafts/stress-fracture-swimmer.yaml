@@ -79,7 +79,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Stress fractures in swimmers (systematic review), IJKSS", certainty: 🟢, verified: true }
+  - { citation: "Vasiliadis AV, Lampridis V, Georgiannos D, Bisbinas I. (2018). Swimmers Are At Risk For Stress Fractures? A Systematic Review. Int J Kinesiol Sports Sci 6(3):25-31", certainty: 🟢, verified: true, source_ids: [src.stress-fractures-in-swimmers-systematic-revi] }
   - { citation: "RED-S and bone stress injury, PMC9724109", certainty: 🟢, verified: true, source_ids: [src.pmc9724109] }
 
 flags:

@@ -80,7 +80,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Female athlete triad prevalence in swimmers, JWSM systematic review", certainty: 🟢, verified: true }
+  - { citation: "Buchanan BK, Bergstein VE, Rothschild EF, Coslick A. (2025). The Female Athlete Triad in Swimmers: a Review of Current Literature. J Womens Sports Med 5(1):30-38. doi:10.53646/ahq2qs39（2026-09-04 更正：原寫「JWSM systematic review」為改寫，原題為 a Review of Current Literature；結論「約 4/10 女性泳者具三聯症風險」是 17 篇異質研究的綜整估計，不是單一族群盛行率）", certainty: 🟢, verified: true, source_ids: [src.buchanan-2025-female-athlete-triad-swimmers] }
   - { citation: "De Souza MJ, Williams NI, Nattiv A, et al. (2014). Misunderstanding the female athlete triad: refuting the IOC consensus statement on Relative Energy Deficiency in Sport (RED-S). Br J Sports Med 48(20):1461-5. PMID 25037200（立場論戰文，非原始研究；作者共 34 人）", certainty: 🟡, verified: true, source_ids: [src.de-souza-2014] }
 
 flags:

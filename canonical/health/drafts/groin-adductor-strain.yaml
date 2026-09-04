@@ -37,7 +37,7 @@ risk_factors:
 
 prevention:
   - { text: "技術:縮小踢腿幅度、窄鞭踢", grade: B }
-  - { text: "Copenhagen 內收肌離心訓練(顯著提升肌力)", grade: B }
+  - { text: "Copenhagen 內收肌離心訓練(顯著提升肌力；唯一的預防試驗做在男性足球員身上——賽季腹股溝問題盛行率 13.5% vs 對照 21.3%、風險低 41%，泳者無同級證據)", grade: B }
   - { text: "充足熱身 ≥900 m", grade: B }
   - { text: "負荷漸進管理", grade: B }
 
@@ -80,7 +80,8 @@ links:
 
 references:
   - { citation: "Breaststroke groin injury (Grote 2004), AJSM PMID 14754731", certainty: 🟡, verified: false, source_ids: [src.grote-2004] }
-  - { citation: "Adductor strengthening / load management (Coast Sport)", certainty: 🟠, verified: true }
+  - { citation: "Thorborg K. (2023). Current Clinical Concepts: Exercise and Load Management of Adductor Strains, Adductor Ruptures, and Long-Standing Adductor-Related Groin Pain. J Athl Train 58(7-8):589-601. PMID 35834724 / PMC10569248（2026-09-04 取代原「Adductor strengthening / load management (Coast Sport)」——後者為診所網頁、無 URL 無作者無年份、不可重取）", certainty: 🟢, verified: true, source_ids: [src.thorborg-2023-adductor-exercise-load-management] }
+  - { citation: "Harøy J, Clarsen B, Wiger EG, et al. (2019). The Adductor Strengthening Programme prevents groin problems among male football players: a cluster-randomised controlled trial. Br J Sports Med 53(3):150-157. PMID 29891614（族群為男性足球員，非泳者；終點為 OSTRC 自述問題盛行率，非失訓傷害發生率）", certainty: 🟢, verified: true, source_ids: [src.haroy-2019-adductor-strengthening-programme] }
 
 flags:
   pending_verification:
@@ -88,7 +89,7 @@ flags:
   contested:
     - claim: "Copenhagen 是否足以預防蛙泳者傷害"
       consensus_source: "Copenhagen 顯著提升內收肌力"
-      dissent_source: "季節性傷害預防統計不顯著，依從性為關鍵(PMC12363431 2025 摘要)"
+      dissent_source: "季節性傷害預防統計不顯著，依從性為關鍵(PMC12363431 2025 摘要)。且唯一的高品質預防試驗(Harøy 2019, PMID 29891614)族群為男性足球員、終點為自述問題盛行率而非失訓傷害，蛙泳的水中閉鏈內收肌負荷型態與足球差異大，不得直接外推"
   vintage_warning: true
 
 audit: { last_reviewed: 2026-06-20, reviewer: opus, supersedes: ~ }

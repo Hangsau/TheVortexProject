@@ -38,7 +38,7 @@ risk_factors:
   - { text: "缺乏正式出發台訓練(競賽情境入水角度過陡)", grade: Expert }
 
 prevention:
-  - { text: "禁止在水深 <1.35m(競賽出發)/<2.74m(一般跳水，美紅十字)水域頭朝下入水", grade: A }
+  - { text: "禁止在水深 <1.35m(競賽出發，World Aquatics)/<1.8m(教學跳水，另需前方淨空 7.6m)/<2.74m(一般跳水，美紅十字)水域頭朝下入水——三個門檻對應三種情境，不可互相代換", grade: A }
   - { text: "陌生水域一律腳先入水", grade: A }
   - { text: "競賽出發台須接受正式指導(僅 21.7% 教練用機構制定的潛水進展協議)", grade: B }
   - { text: "禁止在私人/旅館泳池跳水(普遍 <1.5m)", grade: B }
@@ -84,7 +84,7 @@ references:
   - { citation: "Cervical spine injuries 34 patients, PMC2899837", certainty: 🟢, verified: true, source_ids: [src.pmc2899837] }
   - { citation: "Overview of Spinal Injuries Aegean Coast(24h decompression), PMC8192199", certainty: 🟢, verified: true, source_ids: [src.pmc8192199] }
   - { citation: "Ull C, et al. (2021). Spinal Cord Injury With Tetraplegia in Young Persons After Diving Into Shallow Water: What Has Changed in the Past 10 to 15 Years? Global Spine J 11(8):1238-1247. PMID 32909818（2026-09-04 更正：SAGE 是出版商，期刊為 Global Spine J）", certainty: 🟢, verified: true, source_ids: [src.ull-2021] }
-  - { citation: "World Aquatics 1.35m diving depth rule(STA technical notice 2023)", certainty: 🟢, verified: true }
+  - { citation: "Safety Training Awards (STA). (2023-03-13). STA Technical Notice Regarding World Aquatics and Change to Diving Depth Rules（競賽出發台最小水深由 0.9 m 提高至 1.35 m，自端牆 1 m 延伸至至少 6 m；教學跳水另為 1.8 m 且前方淨空 7.6 m。屬 STA 對 World Aquatics 規則變更的技術通告，非場館規則原文）", certainty: 🟢, verified: true, source_ids: [src.sta-2023-world-aquatics-diving-depth] }
 
 flags:
   pending_verification:

@@ -6,7 +6,66 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ `action_status` 升級路線的第一筆試點：去抓原文，結果**沒升成任何一筆，但抓出兩個實質資料錯誤**。453 WARN、0 ERROR、235 tests OK
+### ▶️ **W002 歸零**：37 → 0，全庫顯示字串全部接上機器鍵。但真正的產出是**十三筆歸因錯誤**——這批工作的性質是校正，不是補登錄。WARN 453 → **416**、0 ERROR、235 tests OK
+
+W002 是「有 `citation`／`source`／`sources` 顯示字串但沒有 `source_ids`」。剩下的 37 筆全在 `health/drafts/*.yaml` 的 `references[]`。做法是逐筆把顯示字串裡的識別碼抽出來、回 registry 或 NCBI 查，**查到什麼就照什麼寫，不照顯示字串寫**。
+
+**先講最重要的一件事：37 筆裡有 8 筆根本不缺來源，只是漏連機器鍵。** `src.ansi-nfsi-b101-1`、`src.astm-f2508`、`src.who-2024-12-13-drowning-deaths-decline-globa-2024`、`src.stress-fractures-in-swimmers-systematic-revi` 等都早已登錄且已驗證，同一條目的 `epidemiology.source_ids` 甚至已經在用它們，只有 `references[]` 那行漏掉。**把 W002 當成「缺來源、要去找文獻」來估工，方向就錯了**——第一步永遠是拿識別碼回查 registry，不是開瀏覽器。
+
+新登錄 26 筆來源（553 → **579**）：批一 13 筆、批二 9 筆、批三 4 筆。
+
+#### 錯誤 26：十筆顯示字串與原文不符 — **錯**（同一個病灶的十個實例）
+
+顯示字串是人手寫的縮寫，寫的時候多半沒有原文在旁邊。抓 `efetch` 逐字比對後：
+
+| 條目 | 原顯示字串 | 原文實際是 |
+|---|---|---|
+| `rotator-cuff-tendinopathy` | 「Youth swimmer shoulder prevalence」 | 跨生涯期**訓練量**系統性回顧（Feijen 2020），不是青少年盛行率研究 |
+| `rotator-cuff-tendinopathy` | 「Shoulder strengthening programme **protective effect**」 | 終點是**力矩與平衡**（Tavares 2025），沒測傷害發生率 |
+| `shoulder-multidirectional-instability` | 「**Arthroscopic vs open** MDI repair outcomes」 | 治療**綜述**（Ruiz Ibán 2017），不是術式比較 |
+| `swimmer-dental-erosion` | 「Mouthguard fluoride/CPP-ACP in vitro **protection**」 | **結論相反**：保護來自牙托本身，含氟與 CPP-ACP 各牙托組之間**無顯著差異** |
+| `starting-block-impact` | 「Epidemiology NCAA Swimming and Diving」 | 只涵蓋**男子**項目（Boltz 2021），族群邊界被抹掉 |
+| `diving-cervical-injury` | 「**SAGE** 2021」 | SAGE 是出版商，期刊為 **Global Spine J** |
+| `cold-water-shock` | 「Cold Water Immersion Syndrome」 | 完整題名含 **and Whitewater Recreation Fatalities**——族群是激流泛舟死亡個案，不是泳者 |
+| `exertional-sudden-cardiac-death` | 「Athletic Activity for Patients with **HCM**」 | 完整題名含 **and Other Inherited Cardiovascular Diseases**，涵蓋範圍不只 HCM |
+| `drowning` | 「StatPearls: **Drowning**」 | 章名是 **Drowning: Clinical Management** |
+| `female-athlete-triad` | 「JWSM **systematic review**」 | 原題為 **a Review of Current Literature**（Buchanan 2025） |
+
+**十筆裡有四筆改變的是可外推範圍**（激流泛舟 ≠ 泳者、男子 ≠ 全體、HCM ≠ 全體遺傳性心血管疾病、訓練量綜述 ≠ 青少年盛行率），一筆**方向完全相反**（牙托塗氟）。這一筆已連帶改掉 `swimmer-dental-erosion` 的 `prevention` 內容——原本寫成塗氟／CPP-ACP 的額外效益，實際上唯一那篇離體實驗的各牙托組間無顯著差異。**顯示字串錯了不會觸發任何檢查，只會被下一個人照抄。**
+
+#### 錯誤 27：`poolside-slip-fall` 全篇寫「ANSI/NFSI B101.1」、沿革記為「2009 初版 / 2022 改版」 — **兩者皆錯**
+
+追版本時才發現：**NFSI 於 2006–2019 年間是 ANSI 認證的標準制定組織，2020 年終止與 ANSI 的關係轉為獨立 SDO**。所以 2020 版起 designation 是「NFSI B101.1」，**現行 2022 版根本不是美國國家標準**——只有 2009 初版是。援引時借用 ANSI 的權威層級是實質誤導。連帶兩處：標題在改版時由 Common Hard-Surface Floor **Materials** 改為 Hard-Surface **Walkways**（原登錄把 2009 版標題掛在 2022 年份下），沿革漏掉 2020 版、實為三版。門檻值本身經覆核未變（中等級距原文為 0.40–**0.59**，原寫 0.40–0.60）。
+
+`src.ansi-nfsi-b101-1` 的 slug 保留初版寫法只作機器鍵（id 是穩定鍵不是主張），但 display／title／url／notes 全部改正。
+
+#### 錯誤 28：「溺水復甦先 5 次人工呼吸」掛在 ILCOR/AHA 名下 — **錯，那是 ERC 的數字**
+
+`shallow-water-blackout` 原本這筆是 🔴「具體版本待查」，`acute` 寫「溺水演算法：先 5 次人工呼吸再胸外按壓」。查下去發現兩大復甦機構**共識的部分是通氣優先**（CPR 須含人工呼吸而非僅胸外按壓），**分歧的是起始次數**：AHA／AAP 2024 是 **2 次人工呼吸接 30:2**（ABC 而非一般心停的 CAB），**5 次是 ERC**，理由是先克服水造成的呼吸道阻塞。
+
+過程中有個值得記的岔路：一份 AAP News 的二手摘要寫「five initial rescue breaths」，跟其餘三個獨立二手來源（AHA newsroom、ACLS 訓練通報、Red Cross guidelines database）矛盾。**原文全文在付費牆後**，`ahajournals.org`／`cpr.heart.org`／`publications.aap.org` 對 WebFetch 一律 403，只有 PubMed 摘要拿得到、而摘要不含序列數字。最後採多來源交叉一致的 2 次，**並把「未經原文逐字核對」寫進 `pending_verification`**，同時新增一條 `contested` 記錄 AHA／ERC 的分歧。這筆 🔴 → 🟢，但綠的是「通氣優先」這個主張，不是那個數字。
+
+#### 一筆不是誤讀、是來源不合格：`groin-adductor-strain` 的「Coast Sport」
+
+顯示字串「Adductor strengthening / load management (Coast Sport)」指向一個物理治療診所網頁，**無 URL、無作者、無年份、不可重取**，標 🟠 卻又沒有 `observation_basis`——兩種證據等級都不成立。搜同主題時直接撞到該掛的兩篇：Thorborg 2023 的 J Athl Train 臨床概念綜述（PMID 35834724）與 Harøy 2019 的集群隨機試驗（PMID 29891614）。已用這兩篇取代，這是這批唯一真正的**升級**。
+
+順帶把預防欄的「Copenhagen 內收肌離心訓練」補上族群邊界：**唯一的高品質預防試驗做在男性足球員身上**（盛行率 13.5% vs 對照 21.3%、風險低 41%），且終點是 OSTRC 自述問題盛行率而非失訓傷害。蛙泳是水中閉鏈、無地面反作用力、無衝刺變向，不得直接外推。
+
+#### 兩筆「指定」而非「比對」，已明寫於 notes
+
+`red-s` 的 IOC 共識與 `female-athlete-triad` 的 ACSM position stand，顯示字串都**沒標版本**。這兩份文件都有可枚舉的版本集合（IOC 2014／2018／2023；ACSM 1997 Otis 版 PMID 9140913／2007 Nattiv 版 PMID 17909417），版本不同結論也不同。處理方式是**指定為現行版**，但在 `notes` 裡明寫「這是依『現行版』所做的**指定**而非逐字比對出的匹配」——與識別碼比對出來的那批不是同一個確信等級。這條沿用 `src.swimmers-knee-epidemiology-sr` 墓碑當時定的規矩：**沒有對得上的欄位就把論文掛上去，是捏造歸因。**
+
+#### 順帶補的兩處內容
+
+`diving-cervical-injury` 的深度門檻原本只有兩個（1.35 m 競賽出發／2.74 m 一般跳水），STA 通告其實給了**三個**——漏掉的是**教學跳水 1.8 m 且前方淨空 7.6 m**，對這個專案是最貼近實務的那一個。已補上並標明三者對應三種情境。`swimmer-ankle-foot-overuse` 的 Vasiliadis 顯示字串也是改寫題名（「Stress fractures in swimmers: systematic review」），已換回原題。
+
+#### 收尾狀態
+
+`gap_report.json` 的 `unlinked_records` 349 與 W003 對齊，`unused_taxonomy_values` 維持 7。剩餘 416 WARN 全是內容工作，不是登錄債：**W003 349**（孤兒記錄，內部連結問題）、**W011 63**（🟠 缺 `observation_basis`）、**W008 3**（不該歸零，`src.lee-2008` 卡在相位模型的登錄層決策＝錯誤 23）、**W001 1**。
+
+---
+
+### ▶️ 上一輪：`action_status` 升級路線的第一筆試點：去抓原文，結果**沒升成任何一筆，但抓出兩個實質資料錯誤**。453 WARN、0 ERROR、235 tests OK
 
 上一段結論是「真正的下一步不是改標記，是查文獻」。這輪就實跑一筆，驗證這條路走不走得通。挑最接近升級門檻的 demand——它們的 `assessment_note` 都指向同一個阻礙（單一研究未經重複驗證，這個補不了），但其中兩筆另外自承了**轉錄缺口**（「本專案未轉錄兩數各自對應的條件」／「未逐字轉錄受試人數、量測協議與族群」），那是抓得到原文就能關掉的。
 
@@ -37,7 +96,7 @@ Kudo 等人的功率分解，單位是「手部受力 × 各**體節旋轉**所�
 
 ---
 
-### ▶️ 上一輪：`action_status` 這條軸開工前先盤點，結果是**不能開始升級**：這欄位目前幾乎不帶獨立資訊（54 筆 `ready` 全是 `claim_status: supported`），真正的判斷只活在 4 段散文裡。已補上逐值 `criterion` ＋ **W020** 擋住機械式翻牌。453 WARN、0 ERROR、226 → **235 tests**
+### ▶️ 更早一輪：`action_status` 這條軸開工前先盤點，結果是**不能開始升級**：這欄位目前幾乎不帶獨立資訊（54 筆 `ready` 全是 `claim_status: supported`），真正的判斷只活在 4 段散文裡。已補上逐值 `criterion` ＋ **W020** 擋住機械式翻牌。453 WARN、0 ERROR、226 → **235 tests**
 
 **盤點結果（74 筆 `provisional`）**：`stroke-demands.yaml` 66、`interventions.yaml` 7、`muscle-groups.yaml` 1。但真正該看的是**交叉表**：
 
@@ -73,7 +132,7 @@ Kudo 等人的功率分解，單位是「手部受力 × 各**體節旋轉**所�
 
 ---
 
-### ▶️ 更早一輪：W008 收尾 **4 → 3**：逐筆讀完四筆孤兒的真身。只有 1 筆該轉墓碑，1 筆是**會被照抄的錯誤歸因**（已補正），另 2 筆是真文獻但**接不上去的理由是登錄層缺口，不是沒人去寫**。WARN 454 → **453**，0 ERROR、226 tests OK
+### ▶️ 再更早：W008 收尾 **4 → 3**：逐筆讀完四筆孤兒的真身。只有 1 筆該轉墓碑，1 筆是**會被照抄的錯誤歸因**（已補正），另 2 筆是真文獻但**接不上去的理由是登錄層缺口，不是沒人去寫**。WARN 454 → **453**，0 ERROR、226 tests OK
 
 **W008 不會歸零，也不該歸零。** 剩的 3 筆全是真實已驗證文獻，狀態是「等著被掛上主張」——把它們硬接到不對的條目上只會製造錯誤歸因，比留著警告糟得多。
 
@@ -637,7 +696,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W002 37（顯示字串未遷 `source_ids`）、W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 3（孤兒來源）、W001 1，合計 453。** W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 已於 2026-09-04 從 123 遷掉 86 筆（識別碼比對，見本檔最上方）；**剩的 37 筆不是機械遷移而是查證工作**（清單在 `C:/tmp/miss.txt`）。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
+- **C. WARN 債務：W003 349（孤兒條目）、W011 63（🟠 缺 `observation_basis`）、W008 3（孤兒來源）、W001 1，合計 416；W002 已歸零。** W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）**349**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。

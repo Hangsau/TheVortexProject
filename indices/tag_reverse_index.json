@@ -840,7 +840,6 @@
         "breathing.training.co2_tolerance",
         "free.err14",
         "psych.arousal.inverted_u",
-        "shallow-water-blackout",
         "swimmers-shoulder",
         "udk.tech.5"
       ],
@@ -1172,7 +1171,6 @@
         "free.tech.7",
         "free.tech.8",
         "free.tech.9",
-        "groin-adductor-strain",
         "periodization.dryland.methods",
         "periodization.zones.energy_systems_primer",
         "protocol.free.evf",
@@ -1471,6 +1469,7 @@
         "free.tech.39",
         "free.tech.40",
         "free.tech.41",
+        "groin-adductor-strain",
         "hypothermia-swimmers",
         "open-water-marine-biological-hazards",
         "osgood-schlatter",

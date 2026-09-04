@@ -7367,6 +7367,7 @@
         "src.pmc2899837",
         "src.pmc8192199",
         "src.quebec-44-year-diving-sci-study-sciencedirec",
+        "src.sta-2023-world-aquatics-diving-depth",
         "src.ull-2021"
       ],
       "outgoing_ids": [
@@ -7482,6 +7483,7 @@
         ]
       },
       "source_ids": [
+        "src.buchanan-2025-female-athlete-triad-swimmers",
         "src.de-souza-2014",
         "src.female-athlete-triad-in-swimmers-systematic",
         "src.red-s-clinical-assessment-tool-framework-ioc"
@@ -11022,12 +11024,14 @@
           "B-lower-spine-strokespecific"
         ],
         "certainty": [
-          "🟠",
-          "🟡"
+          "🟡",
+          "🟢"
         ]
       },
       "source_ids": [
-        "src.grote-2004"
+        "src.grote-2004",
+        "src.haroy-2019-adductor-strengthening-programme",
+        "src.thorborg-2023-adductor-exercise-load-management"
       ],
       "outgoing_ids": []
     },
@@ -17490,11 +17494,11 @@
           "D-systemic-acute"
         ],
         "certainty": [
-          "🔴",
           "🟢"
         ]
       },
       "source_ids": [
+        "src.dezfulian-2024",
         "src.lippmann-2023-australia-breathhold-fatalities",
         "src.statpearls-shallow-water-blackout-nbk554620"
       ],
@@ -19500,6 +19504,7 @@
         ]
       },
       "source_ids": [
+        "src.stress-fractures-in-swimmers-systematic-revi",
         "src.trikha-2022-collegiate-swimmer-health-events"
       ],
       "outgoing_ids": []

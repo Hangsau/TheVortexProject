@@ -54,7 +54,7 @@ management:
     - "水下泳者靜止不動/沉底/吐氣泡停止 → 立即視為昏迷，馬上下水拉出"
     - "拉出後無反應/無正常呼吸 → 立即啟動 EMS + CPR(先給呼吸/通氣，溺水復甦以通氣優先)"
     - "曾水下短暫失神但自行恢復 → 仍須就醫評估，勿當沒事繼續下水"
-  acute: "離水→評估反應與呼吸→無呼吸即 CPR（溺水演算法：先 5 次人工呼吸再胸外按壓）→呼叫 EMS；恢復後仍須送醫觀察續發性溺水/吸入"
+  acute: "離水→評估反應與呼吸→無呼吸即 CPR，溺水復甦採先通氣的 ABC 順序而非一般心停的 CAB：受訓者先給 2 次人工呼吸再進入 30:2 循環（AHA／AAP 2024）；未受訓或不願施行人工呼吸者，僅做胸外按壓仍優於不做→呼叫 EMS；恢復後仍須送醫觀察續發性溺水/吸入。**注意「先 5 次人工呼吸」是歐洲復甦委員會（ERC）的做法，不是 AHA 的數字，兩者不可互相冒名（2026-09-04 更正）**"
   pain_rules: ~             # 非疼痛性傷害，不適用
   rehab: ~                 # 無復健軸；重點是行為與環境預防
   functional_progression_criteria: ~
@@ -84,13 +84,16 @@ links:
 references:
   - { citation: "Bart RM, Murray BP, Lau H. Shallow Water Blackout. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK554620. PMID 32119507", certainty: 🟢, verified: true, source_ids: [src.statpearls-shallow-water-blackout-nbk554620] }
   - { citation: "Lippmann J (2023). Snorkelling and breath-hold diving fatalities in Australian waters, 2014 to 2018. Diving Hyperb Med 53(3):210-217. PMID 37718294", certainty: 🟢, verified: true, source_ids: [src.lippmann-2023-australia-breathhold-fatalities] }
-  - { citation: "ILCOR/AHA 溺水復甦演算法（通氣優先），具體版本待查", certainty: 🔴, verified: false }
+  - { citation: "Dezfulian C, McCallin TE, Bierens J, et al. (2024). 2024 American Heart Association and American Academy of Pediatrics Focused Update on Special Circumstances: Resuscitation Following Drowning. Circulation 150(23):e501-e516. PMID 39530204 / doi:10.1161/CIR.0000000000001274（2026-09-04 定版：原登錄為「ILCOR/AHA 溺水復甦演算法，具體版本待查」，現指向 AHA／AAP 2024 聚焦更新，其證據基礎為 ILCOR 2021–2023 系統性回顧）", certainty: 🟢, verified: true, source_ids: [src.dezfulian-2024] }
 
 flags:
   pending_verification:
     - "無可靠發生率數字——public 層只放機制與預防，不放任何盛行率（已查證：這是文獻空白，非待查）"
-    - "CPR 溺水演算法『先 5 次人工呼吸』細節待對 ILCOR/AHA 最新版核實"
+    - "AHA／AAP 2024 聚焦更新的全文為付費牆，2 次人工呼吸的序列數字係由多個獨立二手摘要（AHA newsroom、ACLS 訓練通報、Red Cross guidelines database）交叉一致取得，未經原文逐字核對；引用該數字時保留此限制"
   contested:
+    - claim: "溺水 CPR 起始人工呼吸次數"
+      consensus_source: "兩大復甦機構一致同意溺水復甦以通氣優先、CPR 須含人工呼吸而非僅胸外按壓（AHA／AAP 2024；證據基礎為 ILCOR 2021–2023 系統性回顧）"
+      dissent_source: "起始次數不同：AHA 為 2 次人工呼吸接 30:2；ERC 為 5 次起始人工呼吸（理由是先克服水造成的呼吸道阻塞）。本檔原將 ERC 的 5 次寫成 ILCOR/AHA 的建議，2026-09-04 更正"
     - claim: "潛前過度換氣是否為唯一/主要機制"
       consensus_source: "主流安全衛教共識：過度換氣去除 CO₂ 警訊是核心可預防因子"
       dissent_source: "部分案例無明確過度換氣史，提示重複閉氣的累積缺氧亦可獨立致病"

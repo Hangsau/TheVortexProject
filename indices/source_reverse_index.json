@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 575,
+  "source_count": 579,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -145,17 +145,22 @@
     },
     {
       "id": "src.ansi-nfsi-b101-1",
-      "display": "ANSI/NFSI B101.1, Test Method for Measuring Wet SCOF of Common Hard-Surface Floor Materials（2009 初版，2022 改版）",
+      "display": "NFSI B101.1-2022, Test Method for Measuring the Wet SCOF of Hard-Surface Walkways（沿革：ANSI/NFSI B101.1-2009 初版 → NFSI B101.1-2020 → NFSI B101.1-2022 現行版）",
       "verification_status": "verified",
       "identifier": {
-        "url": "https://webstore.ansi.org/standards/nfsi/ansinfsib1012022"
+        "url": "https://webstore.ansi.org/standards/nfsi/nfsib1012022"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "poolside-slip-fall",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[40].epidemiology"
+        },
+        {
+          "id": "poolside-slip-fall",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[40].references[0]"
         }
       ]
     },
@@ -203,12 +208,17 @@
       "identifier": {
         "url": "https://store.astm.org/standards/f2508"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "poolside-slip-fall",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[40].epidemiology"
+        },
+        {
+          "id": "poolside-slip-fall",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[40].references[1]"
         }
       ]
     },
@@ -591,6 +601,23 @@
           "id": "movement.action.ankle-foot.plantarflexion",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.buchanan-2025-female-athlete-triad-swimmers",
+      "display": "Buchanan BK, Bergstein VE, Rothschild EF, Coslick A. (2025). The Female Athlete Triad in Swimmers: a Review of Current Literature. J Womens Sports Med 5(1):30-38. doi:10.53646/ahq2qs39",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.53646/ahq2qs39",
+        "url": "https://jwomenssportsmed.org/index.php/jwsm/article/view/68"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "female-athlete-triad",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[31].references[0]"
         }
       ]
     },
@@ -1292,12 +1319,17 @@
         "pmid": "39530204",
         "doi": "10.1161/CIR.0000000000001274"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "drowning",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[25].references[2]"
+        },
+        {
+          "id": "shallow-water-blackout",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[28].references[2]"
         }
       ]
     },
@@ -2387,6 +2419,24 @@
           "id": "sipe",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[29].references[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.haroy-2019-adductor-strengthening-programme",
+      "display": "Harøy J, Clarsen B, Wiger EG, Øyen MG, Serner A, Thorborg K, Hölmich P, Andersen TE, Bahr R. (2019). The Adductor Strengthening Programme prevents groin problems among male football players: a cluster-randomised controlled trial. Br J Sports Med 53(3):150-157. PMID 29891614 / doi:10.1136/bjsports-2017-098937",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "29891614",
+        "doi": "10.1136/bjsports-2017-098937",
+        "isrctn": "ISRCTN98514933"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "groin-adductor-strain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[10].references[2]"
         }
       ]
     },
@@ -9355,6 +9405,22 @@
       ]
     },
     {
+      "id": "src.sta-2023-world-aquatics-diving-depth",
+      "display": "Safety Training Awards (STA). (2023-03-13). STA Technical Notice Regarding World Aquatics and Change to Diving Depth Rules.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.safetytrainingawards.co.uk/news/2023/03/13/sta-technical-notice-regarding-world-aquatics-and-change-to-diving-depth-rules/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "diving-cervical-injury",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[37].references[4]"
+        }
+      ]
+    },
+    {
       "id": "src.statpearls-2023",
       "display": "StatPearls 2023",
       "verification_status": "unverified",
@@ -9548,12 +9614,22 @@
       "identifier": {
         "doi": "10.7575/aiac.ijkss.v.6n.1p.25"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
         {
           "id": "stress-fracture-swimmer",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[35].epidemiology"
+        },
+        {
+          "id": "stress-fracture-swimmer",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[35].references[0]"
+        },
+        {
+          "id": "swimmer-ankle-foot-overuse",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[12].references[1]"
         }
       ]
     },
@@ -11030,6 +11106,24 @@
       ]
     },
     {
+      "id": "src.thorborg-2023-adductor-exercise-load-management",
+      "display": "Thorborg K. (2023). Current Clinical Concepts: Exercise and Load Management of Adductor Strains, Adductor Ruptures, and Long-Standing Adductor-Related Groin Pain. J Athl Train 58(7-8):589-601. PMID 35834724 / PMC10569248 / doi:10.4085/1062-6050-0496.21",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35834724",
+        "pmcid": "PMC10569248",
+        "doi": "10.4085/1062-6050-0496.21"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "groin-adductor-strain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[10].references[1]"
+        }
+      ]
+    },
+    {
       "id": "src.tid-three-zone-model",
       "display": "游泳/耐力 TID 文獻通用三區模型（血乳酸界線）",
       "verification_status": "unverified",
@@ -12046,12 +12140,17 @@
       "display": "World Health Organization. (2024-12-13). Drowning deaths decline globally, but the most vulnerable remain at risk [news release]. Accompanying the Global status report on drowning prevention 2024.",
       "verification_status": "verified",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "drowning",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[25].epidemiology"
+        },
+        {
+          "id": "drowning",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[25].references[0]"
         }
       ]
     },
