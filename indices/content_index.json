@@ -4520,7 +4520,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.17"
+      ]
     },
     {
       "id": "back.tech.2",
@@ -4606,7 +4608,10 @@
         "src.gonzalez-rave-2025-b",
         "src.morais-2019"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.23",
+        "back.tech.25"
+      ]
     },
     {
       "id": "back.tech.23",
@@ -4626,7 +4631,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.22"
+      ]
     },
     {
       "id": "back.tech.24",
@@ -4648,7 +4655,10 @@
       "source_ids": [
         "src.psycharakis-2010"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.17",
+        "back.tech.19"
+      ]
     },
     {
       "id": "back.tech.25",
@@ -4670,7 +4680,11 @@
       "source_ids": [
         "src.gonzalez-rave-2025-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.22",
+        "starts-turns.tech.15",
+        "starts-turns.tech.24"
+      ]
     },
     {
       "id": "back.tech.26",
@@ -4695,7 +4709,10 @@
         "src.gonjo-2020-c",
         "src.maglischo-2003-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.24",
+        "fly.tech.22"
+      ]
     },
     {
       "id": "back.tech.27",
@@ -4717,7 +4734,10 @@
       "source_ids": [
         "src.gonzalez-rave-2025-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.22",
+        "back.tech.26"
+      ]
     },
     {
       "id": "back.tech.28",
@@ -4830,7 +4850,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.3"
+      ]
     },
     {
       "id": "back.tech.5",
@@ -4892,7 +4914,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.4"
+      ]
     },
     {
       "id": "back.tech.8",
@@ -5912,7 +5936,11 @@
       "source_ids": [
         "src.hall-murphy-2020"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.17",
+        "breast.tech.18",
+        "breast.tech.19"
+      ]
     },
     {
       "id": "breast.tech.17",
@@ -5935,7 +5963,9 @@
       "source_ids": [
         "src.colman-1998-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.2"
+      ]
     },
     {
       "id": "breast.tech.18",
@@ -5982,7 +6012,9 @@
         "src.colman-1998-b",
         "src.sanders-1998"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.18"
+      ]
     },
     {
       "id": "breast.tech.2",
@@ -6042,7 +6074,13 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.14",
+        "breast.tech.15",
+        "breast.tech.17",
+        "breast.tech.18",
+        "breast.tech.19"
+      ]
     },
     {
       "id": "breast.tech.22",
@@ -6064,7 +6102,9 @@
       "source_ids": [
         "src.gonjo-2023"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.27"
+      ]
     },
     {
       "id": "breast.tech.23",
@@ -6170,7 +6210,10 @@
       "source_ids": [
         "src.nicol-2022-c"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.22",
+        "breast.tech.31"
+      ]
     },
     {
       "id": "breast.tech.28",
@@ -6256,7 +6299,9 @@
       "source_ids": [
         "src.tanaka-2025"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.32"
+      ]
     },
     {
       "id": "breast.tech.31",
@@ -8547,7 +8592,9 @@
         "src.kudo-2014",
         "src.peyrebrune-2007"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.35"
+      ]
     },
     {
       "id": "fly.tech.13",
@@ -8693,7 +8740,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.16",
+        "fly.tech.17"
+      ]
     },
     {
       "id": "fly.tech.2",
@@ -8793,7 +8843,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.22"
+      ]
     },
     {
       "id": "fly.tech.24",
@@ -8858,7 +8910,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.4"
+      ]
     },
     {
       "id": "fly.tech.27",
@@ -8900,7 +8954,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.17",
+        "fly.tech.20"
+      ]
     },
     {
       "id": "fly.tech.29",
@@ -8920,7 +8978,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.26",
+        "fly.tech.3"
+      ]
     },
     {
       "id": "fly.tech.3",
@@ -8986,7 +9047,10 @@
       "source_ids": [
         "src.fernandes-2024"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.20"
+      ]
     },
     {
       "id": "fly.tech.32",
@@ -9071,7 +9135,13 @@
         "src.fernandes-2024",
         "src.strzala-2017"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.25",
+        "fly.tech.26",
+        "fly.tech.31",
+        "fly.tech.7"
+      ]
     },
     {
       "id": "fly.tech.36",
@@ -9286,7 +9356,12 @@
       "source_ids": [
         "src.swim-like-a-fish-2025"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.24",
+        "fly.tech.6",
+        "free.tech.11",
+        "free.tech.12"
+      ]
     },
     {
       "id": "free.L0",
@@ -10463,7 +10538,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.11"
+      ]
     },
     {
       "id": "free.tech.15",
@@ -10649,7 +10726,10 @@
       "source_ids": [
         "src.virag-2014"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.20",
+        "free.tech.23"
+      ]
     },
     {
       "id": "free.tech.22",
@@ -10669,7 +10749,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.9"
+      ]
     },
     {
       "id": "free.tech.23",
@@ -10691,7 +10773,11 @@
       "source_ids": [
         "src.virag-2014"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.18",
+        "free.tech.20",
+        "free.tech.21"
+      ]
     },
     {
       "id": "free.tech.24",
@@ -10866,7 +10952,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "Fr11",
+        "free.tech.20"
+      ]
     },
     {
       "id": "free.tech.31",
@@ -11094,6 +11183,7 @@
         "src.neumann-2017"
       ],
       "outgoing_ids": [
+        "back.tech.28",
         "free.tech.36"
       ]
     },
@@ -18433,7 +18523,9 @@
       "source_ids": [
         "src.pmid-28975846"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.12"
+      ]
     },
     {
       "id": "starts-turns.tech.16",
@@ -18743,7 +18835,9 @@
       "source_ids": [
         "src.born-2022-im"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.36"
+      ]
     },
     {
       "id": "starts-turns.tech.29",
@@ -18877,7 +18971,10 @@
       "source_ids": [
         "src.frontiers-2021"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.10",
+        "udk.tech.18"
+      ]
     },
     {
       "id": "starts-turns.tech.34",
@@ -19156,7 +19253,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.12",
+        "starts-turns.tech.39",
+        "udk.tech.17"
+      ]
     },
     {
       "id": "starts-turns.tech.46",
@@ -19179,7 +19280,10 @@
         "src.pereira-2018",
         "src.pmc10813451"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.3",
+        "free.tech.35"
+      ]
     },
     {
       "id": "starts-turns.tech.47",
@@ -20538,7 +20642,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.14"
+      ]
     },
     {
       "id": "udk.tech.17",
@@ -20674,7 +20780,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.19",
+        "udk.tech.20"
+      ]
     },
     {
       "id": "udk.tech.22",
@@ -20717,7 +20826,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.35",
+        "udk.tech.18",
+        "udk.tech.22"
+      ]
     },
     {
       "id": "udk.tech.24",
@@ -20762,7 +20875,9 @@
       "source_ids": [
         "src.yourswimlog-monofin"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.10"
+      ]
     },
     {
       "id": "udk.tech.26",
@@ -20873,7 +20988,9 @@
       "source_ids": [
         "src.pla-2021"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.1"
+      ]
     },
     {
       "id": "udk.tech.30",

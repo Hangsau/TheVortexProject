@@ -6,7 +6,30 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ **W003：periodization 22 筆接回**（220 → **198**）——掃描器的盲點：YAML 鍵名 ≠ 條目 id，用 id 短名掃會整批漏掉
+### ▶️ **W003：technical-analysis 46 筆接回**（198 → **152**）——真正的漏接不在掃描器，在「散文已宣告、機讀欄位沒收」
+
+technical-analysis 是 flat 的 `points:` 清單，**沒有 periodization 那種鍵名 ≠ id 的盲點**（兩輪掃描照跑，第二輪零新增）。這一章的漏接是另一種：**關聯早就寫在散文裡，只是沒有任何機讀鍵承載它**。三類：
+
+1. **`evidence_from` 帶真 ID 但不算邊。** `CLAUDE.md` 的證據分層契約明寫「結論的證據由子條目承擔時寫 `evidence_from: [子條目 ID]`」——這是登錄在契約裡的機讀鍵，卻不在 `collect_outbound_ids()` 的收集範圍。technical-analysis 有 3 處（`breast.tech.31` → 12/10/8/29、`udk.tech.27` → `udk.tech.13`、`starts-turns.tech.40` → `starts-turns.tech.21`/`.3`），全部補進 `cross_ref_ids`。
+2. **`cross_ref` 散文點名了 ID，`cross_ref_ids` 沒收。** 全庫掃一次只有一筆：`free.tech.39` 的散文寫「free.tech.36…、back.tech.28（仰式轉體幅度）」但 ids 只有前者。已補。
+3. **`cross_ref_ids: []` 空清單配著有內容的散文。** `fly.tech.12` 的 cross_ref 寫「2024–2025 外划幅度縮小趨勢已成為精英教學主流演進方向」——那正是 `fly.tech.35` 的標題，但 ids 是空的。補上後 **W001 也從 1 歸零**（W001 追的就是這種宣告了關聯卻沒有目標的空鍵）。
+
+**其餘 42 筆靠標題級術語點名。** 這一章的散文不寫 ID，寫的是節點自己的名字，且名字夠獨特可以一對一對上：`breast.tech.16`／`.21` 寫「flat、wave 或 undulating」＝ `breast.tech.17`／`.18`／`.19` 三條的標題；`breast.tech.21` 另寫「踝關節蹠屈柔韌性、髖關節內旋幅度」＝ `breast.tech.14`／`.15`；`back.tech.4` 寫「不只是幾何上的力臂…兩個機制相互強化」＝ `back.tech.3`；`back.tech.25` 寫「背靠牆起跳 vs OSB13 起跳架」「翻轉觸牆」＝ `starts-turns.tech.15`／`.24`；`udk.tech.23` 逐式點名「仰式 UDK 效率機制較優」「蛙式改為 pullout」＝ `udk.tech.22`／`starts-turns.tech.35`；`fly.tech.35` 的演進趨勢六項逐項對得上 `fly.tech.26`/`.7`/`.12`/`.25`/`.31`。**這批跨檔邊佔比高**（back→starts-turns、udk→starts-turns、fly→free、breast→starts-turns），是前幾批沒出現過的形態。
+
+**刻意留下的 10 筆孤兒，理由逐條記下**：`free.tech.31`（CP 選手 30 秒技術退化）、`breast.tech.23`（精英神經肌肉活化時序）、`fly.tech.32`（synergy 協調模式）、`udk.tech.26`（4 個月介入效果）四筆是**自足的單一研究發現**，散文從頭到尾沒有指向別的節點；`back.tech.9`（跨越中線）、`back.tech.16`（踝蹠屈）、`back.tech.18`（踢水深度 30–40 cm）、`back.tech.20`（膝蓋彎曲過大）四筆是**仰式踢水參數，各自獨立成立**——它們與自由式／UDK 的同名條目（`free.tech.20`、`udk.tech.14`／`.15`）主題相同但**沒有任何一方點名另一方**，硬接會製造「同一結論跨式成立」的假宣稱；`free.L0`／`back.L0` 是內容缺口不是連結缺口（`l-indicators` 對應列還沒寫）。**這 10 筆不要為了數字去接。**
+
+### ⚠️ 順帶抓到的內容矛盾（未修，需回原始來源裁決）
+
+`fly.tech.23`（四式疲勞崩潰模式對比）列的各式首環，與各式自己的疲勞條目**對不上兩處**：
+
+| `fly.tech.23` 說 | 該式自己的條目說 |
+|---|---|
+| 仰式最先崩潰**旋轉幅度** | `back.tech.24`：疲勞時**肩旋轉維持不變**，變的是髖旋轉增加（Psycharakis & Sanders 2010 實測） |
+| 蛙式最先崩潰**手腳時序** | `breast.tech.27`：第一崩潰是 **insweep 腳速下降**（r=0.89），時序不是首環 |
+
+所以 `fly.tech.23` 只接了 `fly.tech.22`（蝶式自己的五環序列），**沒有接 back／breast 的疲勞條目**——接了等於把矛盾焊死成關聯。要修必須回 `fly.tech.23` 的原始來源確認它的四式歸納是哪來的，這是內容工作不是連結工作。
+
+### ▶️ 上一輪：**W003：periodization 22 筆接回**（220 → **198**）——掃描器的盲點：YAML 鍵名 ≠ 條目 id，用 id 短名掃會整批漏掉
 
 第一輪用「id 短名」掃 periodization 的散文，只掃出十來條。但這一章的 **YAML 區塊鍵名跟條目 id 大量不同名**——`liee_methods` 的 id 是 `zones.table_11_1`、`intensity_zones` 的 id 是 `zones.table_7_1`、`injury_prevention` 的 id 是 `dryland.injury`、`hr_vo2_ergogenesis` 的 id 是 `zones.table_11_2`（18 個鍵名如此）。**而散文引用一律寫鍵名，不寫 id**（「見 liee_methods」「走上方 injury_prevention 的疼痛分流」「用 hr_vo2_ergogenesis 對照表」）。第一輪因此把這些全部漏掉，還把「見 liee_methods」誤配到 `dryland.methods`（短名 `methods` 的子字串命中）。**第二輪改用鍵名重掃才補齊**——這個盲點對往後每個 domain 都成立，先掃 id 短名、再掃鍵名，兩輪都要做。
 
@@ -140,7 +163,7 @@ W002 是「有 `citation`／`source`／`sources` 顯示字串但沒有 `source_i
 
 #### 收尾狀態
 
-`gap_report.json` 的 `unlinked_records` 198 與 W003 對齊，`unused_taxonomy_values` 維持 7。剩餘 202 WARN 全是內容工作，不是登錄債：**W003 198**（孤兒記錄，內部連結問題）、**W008 3**（不該歸零，`src.lee-2008` 卡在相位模型的登錄層決策＝錯誤 23）、**W001 1**。W011 已於同日歸零（見下）。
+`gap_report.json` 的 `unlinked_records` 152 與 W003 對齊，`unused_taxonomy_values` 維持 7。剩餘 155 WARN 全是內容工作，不是登錄債：**W003 152**（孤兒記錄，內部連結問題）、**W008 3**（不該歸零，`src.lee-2008` 卡在相位模型的登錄層決策＝錯誤 23）、**W001 0**（technical-analysis 那筆空 `cross_ref_ids` 補上後歸零）。W011 已於同日歸零（見下）。
 
 ---
 
@@ -777,7 +800,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W003 198（孤兒條目）、W008 3（孤兒來源）、W001 1，合計 202；W002 與 W011 均已歸零。** W011 於 2026-09-04 走完 63 → 42 → 29 → **0**（教學誤區 21 筆、技術分析 33 筆、心理 6 筆、L 指標 2 筆、感知協議 1 筆）；產出是四筆錯誤（錯誤 29–32）與四筆來源補登錄，不是補欄位。 W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）349 →（technica 兩檔補 `links.l_indicators`，L 級 24 筆出邊＋指標 13 筆入邊）312 →（teaching-errors 52 筆孤兒誤區逐條配 `cross_ref_ids`，誤區 52 筆出邊＋技術分析 19 筆入邊）241 →（breathing 全域 16 筆出邊＋2 筆 `links.drills`，20 筆脫離孤兒；perception `public_layer_pointers` 自造鍵改機器鍵）220 →（periodization 14 筆出邊，第二輪改用 YAML 鍵名重掃才補齊）**198**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
+- **C. WARN 債務：W003 152（孤兒條目）、W008 3（孤兒來源），合計 155；W001／W002／W011 均已歸零。** W011 於 2026-09-04 走完 63 → 42 → 29 → **0**（教學誤區 21 筆、技術分析 33 筆、心理 6 筆、L 指標 2 筆、感知協議 1 筆）；產出是四筆錯誤（錯誤 29–32）與四筆來源補登錄，不是補欄位。 W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）349 →（technica 兩檔補 `links.l_indicators`，L 級 24 筆出邊＋指標 13 筆入邊）312 →（teaching-errors 52 筆孤兒誤區逐條配 `cross_ref_ids`，誤區 52 筆出邊＋技術分析 19 筆入邊）241 →（breathing 全域 16 筆出邊＋2 筆 `links.drills`，20 筆脫離孤兒；perception `public_layer_pointers` 自造鍵改機器鍵）220 →（periodization 14 筆出邊，第二輪改用 YAML 鍵名重掃才補齊）198 →（technical-analysis 42 筆標題級點名出邊＋3 處 `evidence_from`／2 處 `cross_ref` 散文機讀鍵補收，46 筆脫離孤兒）**152**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。

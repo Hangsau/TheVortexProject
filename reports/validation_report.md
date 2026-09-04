@@ -111,9 +111,9 @@
 
 ## W001 — `cross_ref` 內的疑似穩定 ID 未列入同層 `cross_ref_ids`
 
-**WARN，共 1 筆**
+**WARN，共 0 筆**
 
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.39' public.cross_ref 內疑似穩定 ID ['back.tech.28'] 未列入 cross_ref_ids (120 chars): 'free.tech.36（同屬技術描述的欄位粒度問題）、back.tech.28（仰式轉體幅度）'
+（無）
 
 ---
 
@@ -129,7 +129,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 198 筆**
+**WARN，共 152 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -183,60 +183,14 @@
   file=canonical\health\injuries.yaml id='poolside-slip-fall'
   file=canonical\health\injuries.yaml id='osgood-schlatter'
   file=canonical\health\injuries.yaml id='sever-disease'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.14'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.21'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.22'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.30'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.31'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.4'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.7'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.9'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.16'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.17'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.18'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.19'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.20'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.22'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.24'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.25'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.26'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.27'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.2'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.16'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.17'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.18'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.19'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.21'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.22'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.27'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.30'
-  file=canonical\instructional\technical-analysis.yaml id='breast.tech.31'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.9'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.19'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.26'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.28'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.29'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.31'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.32'
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.35'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.3'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.16'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.20'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.21'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.23'
-  file=canonical\instructional\technical-analysis.yaml id='udk.tech.25'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.26'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.15'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.28'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.33'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.36'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.45'
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.46'
   file=canonical\movement\actions.yaml id='movement.action.hip.adduction'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.overview'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.transfer'
