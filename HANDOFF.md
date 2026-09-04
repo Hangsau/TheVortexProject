@@ -6,6 +6,22 @@
 
 ## 當前狀態（2026-09-04，最新）
 
+### ✅ **canonical 散文的 `**粗體**` 標記在網站上全部原樣印給讀者看，690 個；已修完上線。連帶抓出 16 個欄位的列點被壓成一整段，其中 2 個是 YAML 純量寫法造成的資料層破壞（已在 canonical 修）**
+
+canonical 的散文欄位一直用 `**粗體**` 做句內強調，這在資料層是對的——它是純文字欄位的既有慣例，不是誰寫錯。**問題出在呈現層從來沒有人轉換它**：my-site 的 vortex layout 全部用 `{{ . }}` 直印，於是讀者看到的是「\*\*核心原則\*\*：感覺先於效果」這種帶星號的句子。實測範圍：**11 個頁面、690 個字面標記、697 個粗體區間、橫跨 93 個 canonical 鍵**。不是零星漏網，是整條呈現路徑缺一個轉換。
+
+**已修（my-site commit `486ac7c` + `d37c81d`，CI 綠、線上實測 0 個字面標記）**，兩件事要記給 canonical 端：
+
+- **沒有用 `markdownify`**，改寫共用 partial（行內 `rich.html`／區塊 `richblock.html`）只認 `**粗體**` 一種標記，先 `htmlEscape` 再換。理由有二：① **這些欄位不是 markdown 文件**，丟給 Goldmark 會讓 `1.`／`#`／`---`／`_` 被重新解讀，等於憑空改寫 canonical 內容；② **Goldmark 對 CJK 的 `**` 閉合本身就有 bug**（右側前一字是全形標點、後一字是 CJK 時判定失敗），拿它來修這個 bug 修不掉。
+- **兩處真正該在來源修的已在來源修**：`my-site` 的 `content/vortex/technica/freestyle-water-sense.md` 與 `data/temperament/frameworks.yaml` 各有一句踩中上述 Goldmark CJK bug，照紀律把冒號／括號移到粗體外面，**不在 layout 補救**。
+
+**驗收截圖翻出第二層問題**：16 個 canonical 欄位（`correct_concept`／`mechanism.text`／`practical_implication`／L 級的 `four_problems` 等四個區塊）內嵌了 `- ` 列點，被印成一整段，讀者看到的是句子中間插著孤立的破折號。逐筆掃過 canonical，**根因分兩類、修在兩層**：
+
+- **14 筆換行完好**，純粹是呈現層沒處理區塊結構 → 新增 `richblock.html`（在粗體規則上多認空行分段與行首 `- `，自帶 `<p>`／`<ul>`）。呼叫端的 `<p class="vx-correct">` 一併改成 `<div>`，否則 `<ul>` 巢在 `<p>` 裡是非法結構（線上實測 `badnest=0`）。
+- **2 筆的換行在 YAML 解析階段就被吃掉**——`canonical/instructional/teaching-errors.yaml` 的兩處 `correct_concept`（回臂高度、蛙式風格）用了折疊純量 `>-`，**`>-` 會把換行折成空白**，列點結構在 layout 拿到字串之前就已經不存在，改 layout 救不回來。**已改成 `|-`，並用空行圍住列點區塊。**
+
+**這是 canonical 端要長期記住的一條規則**：**散文欄位只要內含列點或需要保留換行，純量寫法一律用 `|-` 不用 `>-`**。`>-` 只適合「原本就是一整段、單純在檔案裡折行好讀」的欄位；一旦內容自己有行結構，`>-` 就是**無聲的資料破壞**——它不報錯，只讓下游看起來像渲染 bug，實際上資料早就壞了。目前全庫只有這 2 筆踩到，下次加散文欄位時值得順手 grep 一次 `>-`。
+
 ### ▶️ **`action_status` 升級軸開工：真正的候選是 4 筆不是 51 筆，逐筆查完文獻後 0 筆可升**。實質改動 1 筆（把「還沒去找的文獻」改寫成「這份文獻不存在」）。0 ERROR、235 tests + 8 subtests OK、W003 仍 126、W020 仍 0
 
 **錯誤 33（本輪開工盤點當場抓到，是我上一輪寫進本檔的框架錯誤）：上一版把下一步寫成「A（`action_status` 升級，51 筆 demand 缺 `measurement_conditions`，是查文獻的工作）」——數字對，但當成工作佇列是錯的。** 51 只套了 W020 的 (b)（缺 `measurement_conditions`），沒有同時套 (a)（`ready` ⟹ `claim_status: supported`）。兩條都是**必要條件**，真正的候選是交集。實際跑交叉表：
