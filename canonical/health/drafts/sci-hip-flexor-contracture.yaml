@@ -64,3 +64,11 @@ management:
   return_to_train: "新近介入拉伸計畫 → 立即可訓練；不應因攣縮而停訓，但訓練量與技術期望需依攣縮程度調整"
   return_to_compete: ~
   prognosis: "早期介入 (傷後 < 6 月) 可有效預防嚴重攣縮；已有 > 60° 攣縮者保守治療效果有限，需手術才能顯著改善"
+
+links:
+  mechanism_link: ~
+  mechanism_link_ids: []
+  technical_link: "free.tech.34 流線體線——攣縮使下肢往後伸不直、正面阻力大，是硬體邊界讓基準姿態達不到，不是感知缺陷"
+  technical_link_ids: [free.tech.34]
+  perception_link: ~
+  perception_link_ids: []

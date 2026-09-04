@@ -61,9 +61,12 @@ population_notes:
   lifecycle: ~
 
 links:
-  mechanism_link: ~
+  mechanism_link: "紅旗條目直接指名：劇痛/畏光/角膜混濁需排除棘阿米巴角膜炎（隱形眼鏡泳者為高風險族群）"
+  mechanism_link_ids: [acanthamoeba-keratitis]
   technical_link: ~
+  technical_link_ids: []
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Chloramines and ocular irritation in swimming pools, PMC6137694", certainty: 🟢, verified: true, source_ids: [src.pmc6137694] }

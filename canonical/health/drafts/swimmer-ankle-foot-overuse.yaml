@@ -79,9 +79,12 @@ population_notes:
   lifecycle: ~
 
 links:
-  mechanism_link: ~
-  technical_link: ~
+  mechanism_link: "翻滾轉身腳板接觸不準與推蹬牆是同一組負荷來源，急性端見於轉身/蹬牆傷"
+  mechanism_link_ids: [flip-turn-wall-push]
+  technical_link: "starts-turns.tech.38 翻滾啟動時機、starts-turns.tech.21 觸牆膝屈 100–120°、starts-turns.tech.22 推蹬力向量對齊——對應風險因子「翻滾轉身技術不良」"
+  technical_link_ids: [starts-turns.tech.38, starts-turns.tech.21, starts-turns.tech.22]
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Trikha R, Schroeder GG, Greig DE, Kremen TJ Jr (2022). Characterizing Health Events and Return to Sport in Collegiate Swimmers. Orthop J Sports Med 10(4):23259671221083588. PMID 35400141", certainty: 🟢, verified: true, source_ids: [src.trikha-2022-collegiate-swimmer-health-events] }

@@ -81,9 +81,12 @@ population_notes:
   lifecycle: ~
 
 links:
-  mechanism_link: ~
-  technical_link: ~
+  mechanism_link: "手部麻木需先排除胸廓出口症候群（紅旗鑑別診斷，非共同機轉）"
+  mechanism_link_ids: [thoracic-outlet-syndrome]
+  technical_link: "fly.tech.34 EVF 四式共通概念（蝶/蛙「高肘划水」為誘發相）、free.tech.21 肘部下沉——對應風險因子「手肘下垂、過中線」"
+  technical_link_ids: [fly.tech.34, free.tech.21]
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434. PMID 36715985", certainty: 🟢, verified: true, source_ids: [src.pmc10372189] }

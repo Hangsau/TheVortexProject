@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-04
-> 驗證條目數：754，Drills ID 數：176
+> 驗證條目數：747，Drills ID 數：176
 
 ---
 
@@ -129,7 +129,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 152 筆**
+**WARN，共 126 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -143,40 +143,14 @@
   file=canonical\development\matrix.yaml id='dev.life.t2t'
   file=canonical\development\matrix.yaml id='dev.life.t2c'
   file=canonical\development\matrix.yaml id='dev.life.t2w'
-  file=canonical\health\injuries.yaml id='A-shoulder-upper'
-  file=canonical\health\injuries.yaml id='B-lower-spine-strokespecific'
-  file=canonical\health\injuries.yaml id='C-nonMSK-medical'
-  file=canonical\health\injuries.yaml id='D-systemic-acute'
-  file=canonical\health\injuries.yaml id='D-endocrine'
-  file=canonical\health\injuries.yaml id='E-acute-trauma'
-  file=canonical\health\injuries.yaml id='F-pediatric-growth'
   file=canonical\health\injuries.yaml id='_asian-epidemiology-supplement'
-  file=canonical\health\injuries.yaml id='biceps-tendinopathy'
   file=canonical\health\injuries.yaml id='shoulder-multidirectional-instability'
   file=canonical\health\injuries.yaml id='slap-lesion'
-  file=canonical\health\injuries.yaml id='swimmer-elbow-wrist-overuse'
-  file=canonical\health\injuries.yaml id='thoracic-outlet-syndrome'
-  file=canonical\health\injuries.yaml id='femoroacetabular-impingement'
-  file=canonical\health\injuries.yaml id='groin-adductor-strain'
-  file=canonical\health\injuries.yaml id='spondylolysis'
-  file=canonical\health\injuries.yaml id='swimmer-ankle-foot-overuse'
-  file=canonical\health\injuries.yaml id='acanthamoeba-keratitis'
-  file=canonical\health\injuries.yaml id='chlorine-eye-irritation'
   file=canonical\health\injuries.yaml id='recreational-water-cryptosporidium'
-  file=canonical\health\injuries.yaml id='sci-hip-flexor-contracture'
-  file=canonical\health\injuries.yaml id='surfers-ear-exostosis'
   file=canonical\health\injuries.yaml id='swimmer-dental-erosion'
   file=canonical\health\injuries.yaml id='swimmer-dermatoses'
-  file=canonical\health\injuries.yaml id='swimmers-ear'
   file=canonical\health\injuries.yaml id='swimming-induced-bronchoconstriction'
   file=canonical\health\injuries.yaml id='uv-photo-damage'
-  file=canonical\health\injuries.yaml id='cold-water-shock'
-  file=canonical\health\injuries.yaml id='dehydration-hyponatremia'
-  file=canonical\health\injuries.yaml id='drowning'
-  file=canonical\health\injuries.yaml id='exertional-sudden-cardiac-death'
-  file=canonical\health\injuries.yaml id='hypothermia-swimmers'
-  file=canonical\health\injuries.yaml id='shallow-water-blackout'
-  file=canonical\health\injuries.yaml id='sipe'
   file=canonical\health\injuries.yaml id='iron-deficiency-swimmer'
   file=canonical\health\injuries.yaml id='oral-contraceptives-performance'
   file=canonical\health\injuries.yaml id='open-water-marine-biological-hazards'

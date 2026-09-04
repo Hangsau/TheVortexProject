@@ -70,9 +70,12 @@ population_notes:
     open_water: "超距(海峽)泳者核心溫可降 3–4°C 持續數小時"
 
 links:
-  mechanism_link: ~
+  mechanism_link: "風險因子列有「脫水(降低循環效率)」——脫水/低鈉血症是本症的加成因子"
+  mechanism_link_ids: [dehydration-hyponatremia]
   technical_link: ~
+  technical_link_ids: []
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Brannigan D, Rogers IR, Jacobs I, et al. (2009). Hypothermia is a significant medical risk of mass participation long-distance open water swimming. Wilderness Environ Med 20(1):14-18. PMID 19364182", certainty: 🟢, verified: true, source_ids: [src.brannigan-2009] }

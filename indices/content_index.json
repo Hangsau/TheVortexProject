@@ -1,27 +1,7 @@
 {
   "schema_version": 1,
-  "record_count": 930,
+  "record_count": 923,
   "records": [
-    {
-      "id": "A-shoulder-upper",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[0]",
-      "title": "肩部與上肢",
-      "tags": {},
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "B-lower-spine-strokespecific",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[1]",
-      "title": "腰椎與泳式特異",
-      "tags": {},
-      "source_ids": [],
-      "outgoing_ids": []
-    },
     {
       "id": "Bk1",
       "domain": "drills",
@@ -1389,56 +1369,6 @@
       "source_ids": [
         "src.usa-swimming-foundations"
       ],
-      "outgoing_ids": []
-    },
-    {
-      "id": "C-nonMSK-medical",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[2]",
-      "title": "非肌骨醫療",
-      "tags": {},
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "D-endocrine",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[4]",
-      "title": "內分泌與骨骼",
-      "tags": {},
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "D-systemic-acute",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[3]",
-      "title": "全身急性",
-      "tags": {},
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "E-acute-trauma",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[5]",
-      "title": "急性外傷",
-      "tags": {},
-      "source_ids": [],
-      "outgoing_ids": []
-    },
-    {
-      "id": "F-pediatric-growth",
-      "domain": "health",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[6]",
-      "title": "兒童生長",
-      "tags": {},
-      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -4977,7 +4907,9 @@
         "src.pmc4247626",
         "src.pmc7824457"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "rotator-cuff-tendinopathy"
+      ]
     },
     {
       "id": "breast.L2",
@@ -6995,7 +6927,9 @@
       "source_ids": [
         "src.pmc6137694"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "acanthamoeba-keratitis"
+      ]
     },
     {
       "id": "cold-water-shock",
@@ -7019,7 +6953,9 @@
         "src.pmc12234767",
         "src.tipton-mj-et-al-cold-water-immersion-sudden-2003"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "drowning"
+      ]
     },
     {
       "id": "common.L2.propulsion",
@@ -7642,7 +7578,9 @@
         "src.pmc12234767",
         "src.semsarian-2022"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "cold-water-shock"
+      ]
     },
     {
       "id": "extension-low-back-pain",
@@ -7709,7 +7647,10 @@
         "src.pmc11642080",
         "src.pmc7605769"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.15",
+        "breast.tech.36"
+      ]
     },
     {
       "id": "flip-turn-wall-push",
@@ -11385,7 +11326,10 @@
         "src.haroy-2019-adductor-strengthening-programme",
         "src.thorborg-2023-adductor-exercise-load-management"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.13",
+        "breast.tech.15"
+      ]
     },
     {
       "id": "hypothermia-swimmers",
@@ -11409,7 +11353,9 @@
         "src.pmid-39500300",
         "src.pmid-40783351"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "dehydration-hyponatremia"
+      ]
     },
     {
       "id": "iron-deficiency-swimmer",
@@ -17858,7 +17804,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.34"
+      ]
     },
     {
       "id": "sever-disease",
@@ -17899,7 +17847,11 @@
         "src.lippmann-2023-australia-breathhold-fatalities",
         "src.statpearls-shallow-water-blackout-nbk554620"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breathing.safety.hypocapnia_mechanism",
+        "breathing.safety.hypoxic_blackout",
+        "drowning"
+      ]
     },
     {
       "id": "shoulder-multidirectional-instability",
@@ -17943,7 +17895,9 @@
         "src.spencer-2018-sipe-systematic-review",
         "src.volk-2021-sipe-navy-seal"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "drowning"
+      ]
     },
     {
       "id": "slap-lesion",
@@ -17986,7 +17940,10 @@
         "src.pmc11531034",
         "src.pmc3435931"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.26",
+        "fly.tech.29"
+      ]
     },
     {
       "id": "starting-block-impact",
@@ -19911,7 +19868,9 @@
         "src.pmc7077213",
         "src.pmid-30521295"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "swimmers-ear"
+      ]
     },
     {
       "id": "swimmer-ankle-foot-overuse",
@@ -19933,7 +19892,12 @@
         "src.stress-fractures-in-swimmers-systematic-revi",
         "src.trikha-2022-collegiate-swimmer-health-events"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "flip-turn-wall-push",
+        "starts-turns.tech.21",
+        "starts-turns.tech.22",
+        "starts-turns.tech.38"
+      ]
     },
     {
       "id": "swimmer-dental-erosion",
@@ -19998,7 +19962,11 @@
         "src.pmc10372189",
         "src.wolf-2009-ncaa-swimming-injury-patterns"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.34",
+        "free.tech.21",
+        "thoracic-outlet-syndrome"
+      ]
     },
     {
       "id": "swimmer-low-bone-density",

@@ -105,7 +105,10 @@ def main():
         "note": "Promoted artifact，由 tools/build_injuries.py 從 drafts/ 整合產生；勿手改，改 drafts/ 後重跑。",
         "certainty_legend": "🔵推導 🟢近期文獻 🟡舊文獻 🟠教練觀測 🔴待查",
         "evidence_grade_legend": "A=RCT/SR B=cohort C=case-series Expert=共識（與 certainty 點獨立）",
-        "categories": [{"id": c, "zh": z} for c, z in CATEGORY_ORDER],
+        # key/name_zh 而非 id/zh：categories 是篩選詞彙表不是知識條目，
+        # 帶 id 會被 validate 的 iter_entries 當成 7 筆永久孤兒（W003）。
+        # teaching-errors / technical-analysis / drills 三個詞彙表本來就用 key。
+        "categories": [{"key": c, "name_zh": z} for c, z in CATEGORY_ORDER],
         "meta_references": metas,
         "injuries": injuries,
     }

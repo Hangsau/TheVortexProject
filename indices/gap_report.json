@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 152
+    "unlinked_records": 126
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -38,49 +38,9 @@
   ],
   "unlinked_records": [
     {
-      "id": "A-shoulder-upper",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[0]"
-    },
-    {
-      "id": "B-lower-spine-strokespecific",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[1]"
-    },
-    {
-      "id": "C-nonMSK-medical",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[2]"
-    },
-    {
-      "id": "D-endocrine",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[4]"
-    },
-    {
-      "id": "D-systemic-acute",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[3]"
-    },
-    {
-      "id": "E-acute-trauma",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[5]"
-    },
-    {
-      "id": "F-pediatric-growth",
-      "file": "canonical/health/injuries.yaml",
-      "path": "categories[6]"
-    },
-    {
       "id": "_asian-epidemiology-supplement",
       "file": "canonical/health/injuries.yaml",
       "path": "meta_references[0]"
-    },
-    {
-      "id": "acanthamoeba-keratitis",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[13]"
     },
     {
       "id": "back.L0",
@@ -108,29 +68,9 @@
       "path": "points[52]"
     },
     {
-      "id": "biceps-tendinopathy",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[0]"
-    },
-    {
       "id": "breast.tech.23",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[93]"
-    },
-    {
-      "id": "chlorine-eye-irritation",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[14]"
-    },
-    {
-      "id": "cold-water-shock",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[23]"
-    },
-    {
-      "id": "dehydration-hyponatremia",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[24]"
     },
     {
       "id": "dev.life.l2t",
@@ -193,21 +133,6 @@
       "path": "cells[3]"
     },
     {
-      "id": "drowning",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[25]"
-    },
-    {
-      "id": "exertional-sudden-cardiac-death",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[26]"
-    },
-    {
-      "id": "femoroacetabular-impingement",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[9]"
-    },
-    {
       "id": "fly.tech.32",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[133]"
@@ -221,16 +146,6 @@
       "id": "free.tech.31",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[32]"
-    },
-    {
-      "id": "groin-adductor-strain",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[10]"
-    },
-    {
-      "id": "hypothermia-swimmers",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[27]"
     },
     {
       "id": "iron-deficiency-swimmer",
@@ -713,19 +628,9 @@
       "path": "injuries[15]"
     },
     {
-      "id": "sci-hip-flexor-contracture",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[16]"
-    },
-    {
       "id": "sever-disease",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[45]"
-    },
-    {
-      "id": "shallow-water-blackout",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[28]"
     },
     {
       "id": "shoulder-multidirectional-instability",
@@ -733,29 +638,9 @@
       "path": "injuries[2]"
     },
     {
-      "id": "sipe",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[29]"
-    },
-    {
       "id": "slap-lesion",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[3]"
-    },
-    {
-      "id": "spondylolysis",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[11]"
-    },
-    {
-      "id": "surfers-ear-exostosis",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[17]"
-    },
-    {
-      "id": "swimmer-ankle-foot-overuse",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[12]"
     },
     {
       "id": "swimmer-dental-erosion",
@@ -768,24 +653,9 @@
       "path": "injuries[19]"
     },
     {
-      "id": "swimmer-elbow-wrist-overuse",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[4]"
-    },
-    {
-      "id": "swimmers-ear",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[20]"
-    },
-    {
       "id": "swimming-induced-bronchoconstriction",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[21]"
-    },
-    {
-      "id": "thoracic-outlet-syndrome",
-      "file": "canonical/health/injuries.yaml",
-      "path": "injuries[6]"
     },
     {
       "id": "udk.tech.26",

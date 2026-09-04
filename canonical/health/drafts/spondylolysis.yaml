@@ -71,8 +71,11 @@ population_notes:
 
 links:
   mechanism_link: ~
-  technical_link: ~
+  mechanism_link_ids: []
+  technical_link: "fly.tech.29「腰部彎曲代替胸部起波」——該技術錯誤即本症的腰椎過伸機轉本身；fly.tech.26 胸椎活動度是波動觸發的解剖前提，胸椎不足時由腰椎代償"
+  technical_link_ids: [fly.tech.29, fly.tech.26]
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Low back pain in swimmers by stroke, PMC11531034", certainty: 🟢, verified: true, source_ids: [src.pmc11531034] }

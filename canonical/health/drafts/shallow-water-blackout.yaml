@@ -76,8 +76,10 @@ population_notes:
     freediving: "自由潛水是 SWB/BO 主場景；競技自由潛水有 surface protocol 與 buddy 規範"
 
 links:
-  mechanism_link: ~        # 與水感技術軸無機制交會
+  mechanism_link: "同一機轉在呼吸層的條目：breathing.safety.hypoxic_blackout（缺氧昏迷，本症舊稱 SWB）、breathing.safety.hypocapnia_mechanism（過度換氣造成的低碳酸血症）；水下失去意識後若無即時救援即為溺水"
+  mechanism_link_ids: [breathing.safety.hypoxic_blackout, breathing.safety.hypocapnia_mechanism, drowning]
   technical_link: ~
+  technical_link_ids: []
   perception_link: "可接 L0 呼吸感知層：閉氣與換氣衝動的生理意義屬呼吸感知教育素材"
   perception_link_ids: []
 

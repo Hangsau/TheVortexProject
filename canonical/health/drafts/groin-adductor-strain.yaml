@@ -75,8 +75,11 @@ population_notes:
 
 links:
   mechanism_link: ~
-  technical_link: ~
+  mechanism_link_ids: []
+  technical_link: "breast.tech.13 膝距窄的雙重效益（對應預防「縮小踢腿幅度、窄鞭踢」）、breast.tech.15 髖關節內旋（對應風險因子「髖內旋 ROM 不足(<40°)」）"
+  technical_link_ids: [breast.tech.13, breast.tech.15]
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Breaststroke groin injury (Grote 2004), AJSM PMID 14754731", certainty: 🟡, verified: false, source_ids: [src.grote-2004] }

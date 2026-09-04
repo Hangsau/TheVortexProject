@@ -79,9 +79,12 @@ population_notes:
     open_water: "鐵人三項游泳段多重自主神經壓力疊加，為最高 SCD 風險情境之一"
 
 links:
-  mechanism_link: ~
+  mechanism_link: "游泳特有的自主神經衝突（面浸潛水反射 × 運動交感激活）與冷水休克為同一機轉，風險因子亦列「冷水+面浸+屏氣」"
+  mechanism_link_ids: [cold-water-shock]
   technical_link: ~
+  technical_link_ids: []
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Sex Differences in the Incidence of SCA/Death in Competitive Athletes: systematic review and meta-analysis, PMC11985649", certainty: 🟢, verified: true, source_ids: [src.pmc11985649] }

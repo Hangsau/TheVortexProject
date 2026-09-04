@@ -6,7 +6,31 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ **W003：technical-analysis 46 筆接回**（198 → **152**）——真正的漏接不在掃描器，在「散文已宣告、機讀欄位沒收」
+### ▶️ **W003：injuries 26 筆離開孤兒名單**（152 → **126**）——14 筆真邊 + 7 筆本來就不該被當成條目
+
+傷害章 47 筆條目裡有 40 筆掛在孤兒名單上。**但先分桶才發現這 40 筆不是同一種東西**：
+
+**① 7 筆根本不是知識條目（schema 問題，不是連結問題）。** `injuries.yaml` 的 `categories:` 是篩選分類詞彙表（`A-shoulder-upper`／`B-lower-spine-strokespecific`…），七個分類各是一列。它用的欄位名是 `id` / `zh`，而 `validate.py` 的 `iter_entries()` **只認「這個 dict 有沒有 `id` 鍵」，不看它躺在哪個 list**——於是七列篩選標籤每次驗證都被當成七筆永久孤兒條目報一次。同性質的另外四份詞彙表（teaching-errors／technical-analysis／drills／breathing）全都用 `key` / `name_zh`，只有 injuries 這一份不一樣，這也正是只有它會產生幻影孤兒的原因。已對齊成 `key` / `name_zh`。
+
+這是**跨 repo 改動**，動手前把使用點數乾淨了才動：Vortex 側 `tools/build_injuries.py` 一行；my-site 側 `tools/sync_vortex.py`（console 統計）、`layouts/vortex/vortex-database.html:15`（`$injCatName` 字典）、`layouts/vortex/vortex-injuries.html`（左欄分類、分類地圖卡、各傷害面板標頭共 6 處）。`validate.py` 的 `check_file_categories()` 本來就寫成 `c.get("key") or c.get("id")` 兩者皆收，所以 E009／W010 不受影響。my-site 的 `CLAUDE.md` 原本明文記著「injuries.yaml 的欄位名是 `.id` / `.zh`，其餘是 `.key` / `.name_zh`」這條例外，已同步改掉。
+
+**② 14 筆是真的漏接，全部照「來源條目自己的散文點名目標」門檻收。** 這一章的點名方式和前幾批不同：不寫 ID，寫在 `risk_factors` / `prevention` / `red_flags` 的**條列項**裡，而那些條列項就是目標技術節點的標題。
+
+- `spondylolysis` → `fly.tech.29`（腰部彎曲代替胸部起波）、`fly.tech.26`（胸椎活動度）：**技術錯誤節點本身就是這個傷害的機轉**，不是「相關主題」。
+- `femoroacetabular-impingement` → `breast.tech.15`（髖內旋）、`breast.tech.36`（腳尖朝外是四關節合成）：風險因子直接寫「髖 ROM 不足（內旋 <40°）」。`groin-adductor-strain` 同一組解剖因子，另接 `breast.tech.13`（膝距窄）對上預防的「縮小踢腿幅度、窄鞭踢」。
+- `swimmer-ankle-foot-overuse` → `starts-turns.tech.38`／`.21`／`.22`：風險因子寫「翻滾轉身技術不良」，接的是 `flip-turn-wall-push` 已經在用的同一組三筆。
+- `swimmer-elbow-wrist-overuse` → `fly.tech.34`（EVF 四式共通）、`free.tech.21`（肘部下沉）：機轉寫「蝶式／蛙泳『高肘划水』特別易誘發」、風險因子寫「手肘下垂」。
+- `sci-hip-flexor-contracture` → `free.tech.34`（流線體線）：「下肢往後伸不直，造成正面阻力大」＝**硬體邊界讓基準姿態達不到**，正是 CLAUDE.md 說的那條前置判斷，不是感知缺陷。這一筆的草稿整檔沒有 `links:` 區塊，是補上的。
+- 章內互指五筆：`biceps-tendinopathy` →「棘上肌功能下降後 LHB 代償超載」＝ `rotator-cuff-tendinopathy`；`surfers-ear-exostosis` →「耳垢與水分積聚→反覆外耳道炎」＝ `swimmers-ear`；`chlorine-eye-irritation` 的紅旗**逐字寫著**「（見 acanthamoeba-keratitis）」；`exertional-sudden-cardiac-death` 與 `cold-water-shock` 兩邊都逐字寫「自主神經衝突」；`hypothermia-swimmers` 的風險因子列有「脫水（降低循環效率）」＝ `dehydration-hyponatremia`。
+- **跨 domain 三筆是這批最有價值的發現**：`shallow-water-blackout`、`cold-water-shock`、`sipe` 三筆的 `perception_link` 都寫著「可接 L0 呼吸感知」配空 ids，而心理層那一批已經確認**沒有跨式的 L0 條目可接**——所以先前判定是死路。實際上目標不在 technica 而在 `canonical/breathing/`：`breathing.safety.hypoxic_blackout` 的 `danger_zh` 逐字寫著「缺氧昏迷（hypoxic blackout，**舊稱淺水昏迷 SWB**）」，**跟傷害條目 `shallow-water-blackout` 是同一個東西，分住兩個 domain、零連結**。已接 `breathing.safety.hypoxic_blackout` + `breathing.safety.hypocapnia_mechanism` + `drowning`；`cold-water-shock`／`sipe` 各自散文寫「連強壯泳者也可數秒內溺水」「非吸入溺水」，接 `drowning`。三筆的 `perception_link` 散文原樣保留（它是人讀字串，不是機讀鍵）。
+
+**③ 剩 13 筆刻意不接，理由逐條記下。** 最該記的是 `osgood-schlatter` 與 `sever-disease`：它們的內容**本身就是**「觸發機制在游泳中幾乎不存在……游泳是低衝擊替代運動」——接任何一條泳姿技術節點都會**跟條目自己的結論打架**。`iron-deficiency-swimmer`／`oral-contraceptives-performance` 已回頭 grep 過 `red-s`／`female-athlete-triad`／`youth-swimmer-apophysitis` 三筆內分泌條目，**沒有任何一筆提到鐵或口服避孕藥**，接了就是我自己發明的因果。其餘 `shoulder-multidirectional-instability`、`slap-lesion`、`swimming-induced-bronchoconstriction`、`swimmer-dermatoses`、`recreational-water-cryptosporidium`、`swimmer-dental-erosion`、`uv-photo-damage`、`open-water-marine-biological-hazards`、`poolside-slip-fall` 是**環境／體質病因，與泳姿技術軸無機轉交會**。另 `_asian-epidemiology-supplement`（meta_reference）是真內容且真的沒人引用，是內容缺口不是接線缺口。**這 13 筆不要為了數字去接。**
+
+### ⚠️ 欠了兩輪的紀錄：psychology 的 `evidence_from` 不能拿來清孤兒
+
+`psychology.yaml` 的 `themes[2..6].premise.evidence_from` 帶著 15 個真實 ID，看起來是現成的 15 條邊。**但它們全部指向自己的子條目**——那是 parent→child 的包含關係，正是**錯誤 18 當初刻意從邊定義裡拿掉的東西**（`collect_outbound_ids()` 不收它是對的）。拿來用會讓 W003 掉 15 筆，同時把真正的發現蓋掉：**心理層與 canonical 其餘部分之間，實體層級的連結數是零**。心理層 70 筆孤兒的正解是內容工作（沒有跨式 L 級條目可接、`misconception_refs[].cue` 與 teaching-errors 是不同母體），不是換一個欄位去掃。
+
+### ▶️ 上一輪：**W003：technical-analysis 46 筆接回**（198 → **152**）——真正的漏接不在掃描器，在「散文已宣告、機讀欄位沒收」
 
 technical-analysis 是 flat 的 `points:` 清單，**沒有 periodization 那種鍵名 ≠ id 的盲點**（兩輪掃描照跑，第二輪零新增）。這一章的漏接是另一種：**關聯早就寫在散文裡，只是沒有任何機讀鍵承載它**。三類：
 
@@ -29,7 +53,7 @@ technical-analysis 是 flat 的 `points:` 清單，**沒有 periodization 那種
 
 所以 `fly.tech.23` 只接了 `fly.tech.22`（蝶式自己的五環序列），**沒有接 back／breast 的疲勞條目**——接了等於把矛盾焊死成關聯。要修必須回 `fly.tech.23` 的原始來源確認它的四式歸納是哪來的，這是內容工作不是連結工作。
 
-### ▶️ 上一輪：**W003：periodization 22 筆接回**（220 → **198**）——掃描器的盲點：YAML 鍵名 ≠ 條目 id，用 id 短名掃會整批漏掉
+### ▶️ 更早：**W003：periodization 22 筆接回**（220 → **198**）——掃描器的盲點：YAML 鍵名 ≠ 條目 id，用 id 短名掃會整批漏掉
 
 第一輪用「id 短名」掃 periodization 的散文，只掃出十來條。但這一章的 **YAML 區塊鍵名跟條目 id 大量不同名**——`liee_methods` 的 id 是 `zones.table_11_1`、`intensity_zones` 的 id 是 `zones.table_7_1`、`injury_prevention` 的 id 是 `dryland.injury`、`hr_vo2_ergogenesis` 的 id 是 `zones.table_11_2`（18 個鍵名如此）。**而散文引用一律寫鍵名，不寫 id**（「見 liee_methods」「走上方 injury_prevention 的疼痛分流」「用 hr_vo2_ergogenesis 對照表」）。第一輪因此把這些全部漏掉，還把「見 liee_methods」誤配到 `dryland.methods`（短名 `methods` 的子字串命中）。**第二輪改用鍵名重掃才補齊**——這個盲點對往後每個 domain 都成立，先掃 id 短名、再掃鍵名，兩輪都要做。
 
@@ -792,7 +816,9 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 **⚠ 以下第 0～4 項是 2026-09-03 覆蓋率補滿後重寫的當前建議；再下方的第 0～N 項是達成 59/59 過程中的歷史稽核軌跡，保留供追溯，不再是待辦。**
 
-**2026-09-04 W011 收工後的接手順序：先做 A（`action_status` 升級，51 筆 demand 缺 `measurement_conditions`，是查文獻的工作），再回頭處理 W003 的 water-sense-levels 26 筆（唯一已確認該接的一堆）。** W011 過程中另外累積了兩筆可延續的小事：① `src.2024-2025`、`src.coach-observation`、`src.the-race-club`、`src.swim-like-a-fish-2025` 四筆仍是 `unverified` 佔位，**這輪四次追查佔位來源，四次都追到真論文或真出處**，這四筆值得用同一套做法再走一次；② `src.liu-2025-core-stability-youth-swimmers` 的更正啟事（PMID 41709241）內容未取得——PMC 對 curl 只回樣板、BMC 轉址 Springer 後回 303，換管道（機構權限或 DOI 解析）才拿得到，在那之前引用該篇數字要連帶意識到更正未核對。
+**⚠ 2026-09-04 injuries 批收工後更新接手順序：W003 已從 392 走到 126，剩下的 126 筆裡沒有一筆是「掃描器漏抓」了。** 分佈是 psychology 70（內容工作，且 `evidence_from` 那條捷徑不能走——理由見本檔最上方）、injuries 14（13 筆刻意不接＋1 筆 `_asian-epidemiology-supplement` 是內容缺口）、matrix 12（四個 links 鍵**沒有合法目標**，錯誤 17 已查證）、periodization 19（需要新內容）、technical-analysis 8 與 water-sense-levels 2（`free.L0`／`back.L0` 是 `l-indicators` 的內容缺口）、actions 1。**接線這條軸到此為止，下一步該做 A（`action_status` 升級，51 筆 demand 缺 `measurement_conditions`，是查文獻的工作）。**
+
+（以下為 W011 收工當時寫的順序，water-sense-levels 那 26 筆已於同日接完，保留脈絡）：先做 A，再回頭處理 W003 的 water-sense-levels 26 筆。 W011 過程中另外累積了兩筆可延續的小事：① `src.2024-2025`、`src.coach-observation`、`src.the-race-club`、`src.swim-like-a-fish-2025` 四筆仍是 `unverified` 佔位，**這輪四次追查佔位來源，四次都追到真論文或真出處**，這四筆值得用同一套做法再走一次；② `src.liu-2025-core-stability-youth-swimmers` 的更正啟事（PMID 41709241）內容未取得——PMC 對 curl 只回樣板、BMC 轉址 Springer 後回 303，換管道（機構權限或 DOI 解析）才拿得到，在那之前引用該篇數字要連帶意識到更正未核對。
 
 - **A. 覆蓋率這條軸已經走完，不要再拿它當進度指標。** 59/59 是「每個登錄相位都有一筆記錄」，不是「每一筆都夠好」。**下一條軸是 `action_status`**：全層仍有大量 `provisional`（2026-09-04 實測 74 筆），每一筆的 `diagnostic.assessment_note` 末段都已寫明「要推上去缺什麼」（多半是關節角度—時間曲線或樣本交代）。**優先讀那些末段，它們是現成的研究待辦清單，不必重新盤點。**
 
@@ -800,7 +826,7 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 - **B. 兩個登錄表層級的缺口，不是覆蓋率缺口，不要混淆。** ①`gap.free.up-kick`——分母裡連相位鍵都沒有，維持記在 `movement_coverage_denominator.yaml` 的 `known_gaps`，**不在 canonical 造記錄**。②**udk 上踢結束到下一次下踢的交界沒有登錄鍵**，因此週期性的膝屈曲目前無人擁有（`kick-initiation` 那筆只擁有離牆後的一次性第一踢，刻意不吸收）。②是新發現的，**要不要為它開鍵是登錄表決策，不是撰寫題**，開之前先確認素材是否足以撐起一筆獨立記錄。
 
-- **C. WARN 債務：W003 152（孤兒條目）、W008 3（孤兒來源），合計 155；W001／W002／W011 均已歸零。** W011 於 2026-09-04 走完 63 → 42 → 29 → **0**（教學誤區 21 筆、技術分析 33 筆、心理 6 筆、L 指標 2 筆、感知協議 1 筆）；產出是四筆錯誤（錯誤 29–32）與四筆來源補登錄，不是補欄位。 W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）349 →（technica 兩檔補 `links.l_indicators`，L 級 24 筆出邊＋指標 13 筆入邊）312 →（teaching-errors 52 筆孤兒誤區逐條配 `cross_ref_ids`，誤區 52 筆出邊＋技術分析 19 筆入邊）241 →（breathing 全域 16 筆出邊＋2 筆 `links.drills`，20 筆脫離孤兒；perception `public_layer_pointers` 自造鍵改機器鍵）220 →（periodization 14 筆出邊，第二輪改用 YAML 鍵名重掃才補齊）198 →（technical-analysis 42 筆標題級點名出邊＋3 處 `evidence_from`／2 處 `cross_ref` 散文機讀鍵補收，46 筆脫離孤兒）**152**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
+- **C. WARN 債務：W003 126（孤兒條目）、W008 3（孤兒來源），合計 129；W001／W002／W011 均已歸零。** W011 於 2026-09-04 走完 63 → 42 → 29 → **0**（教學誤區 21 筆、技術分析 33 筆、心理 6 筆、L 指標 2 筆、感知協議 1 筆）；產出是四筆錯誤（錯誤 29–32）與四筆來源補登錄，不是補欄位。 W008 已於 2026-09-04 收尾至終端狀態——**剩的 3 筆是真實已驗證文獻等著被掛上主張，不該用「消警告」的方式歸零**（硬接會製造錯誤歸因）；其中 `src.lee-2008` 卡在相位模型登錄粒度（見本檔最上方錯誤 23）。 W002 於 2026-09-04 三輪走完 123 → 37 → **0**：前 86 筆是識別碼比對的機械遷移，**最後 37 筆裡有 8 筆同樣不缺來源、只是漏連機器鍵**（來源早就登錄在同一條目的別處欄位），真正需要查文獻的不到三分之一——把 W002 當成「缺來源、要去找文獻」來估工會高估數倍，第一步永遠是拿識別碼回查 registry。這輪的實際產出是**十三筆歸因錯誤**（錯誤 26–28，見本檔最上方），不是新登錄。除 W003 外全部先於本輪存在。**W003 走了六步：392 →（錯誤 16，補 `cross_ref_ids` 入邊）347 →（錯誤 18，拿掉散文與詞彙兩類假邊）403 →（錯誤 19，出入邊改對稱）399 →（starts-turns 三筆 injuries 接上 `technical_link_ids`）397 →（Class ② 33 筆章節號 → `cross_ref_ids`）349 →（technica 兩檔補 `links.l_indicators`，L 級 24 筆出邊＋指標 13 筆入邊）312 →（teaching-errors 52 筆孤兒誤區逐條配 `cross_ref_ids`，誤區 52 筆出邊＋技術分析 19 筆入邊）241 →（breathing 全域 16 筆出邊＋2 筆 `links.drills`，20 筆脫離孤兒；perception `public_layer_pointers` 自造鍵改機器鍵）220 →（periodization 14 筆出邊，第二輪改用 YAML 鍵名重掃才補齊）198 →（technical-analysis 42 筆標題級點名出邊＋3 處 `evidence_from`／2 處 `cross_ref` 散文機讀鍵補收，46 筆脫離孤兒）198 → 152 →（injuries 14 筆條列項點名出邊，含跨 domain 接 `canonical/breathing/`；另 7 筆 categories 詞彙表由 `id`／`zh` 改 `key`／`name_zh`，不再被 `iter_entries()` 誤判成條目）**126**。下表分類已於 2026-09-04 重跑，以 W003=349 為準（分類方法：對每一筆孤兒實際打開 YAML 看它有哪些關聯欄位；腳本存在 `tools/classify_w003_orphans.py`）。
 
   **已接第一批（2026-09-03）：`health/drafts/` 三筆 starts-turns 傷害的 `technical_link_ids`。** 接法是先讀 `links.technical_link` 那句人讀散文說了什麼，再去 `technical-analysis.yaml` 找**那句話點名的機制**，不是找標題像的條目：
   - `diving-cervical-injury` ＋ `starting-block-impact` → `starts-turns.tech.42`（髖屈 15° 是入水軌跡控制的關鍵——打太直＝角度太陡）＋ `starts-turns.tech.13`（入水深度最優 −0.92 m）。兩筆散文都只寫「水深／角度」，所以**刻意不加 `tech.20`**（計步判距、頭不抬）——雖然它對得上風險因子「高速衝刺末端視野受限」，但加進去會讓機器鍵比人讀鍵多講一件事，兩層就此脫鉤。
@@ -822,6 +848,8 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
   | 分類骨架（categories＋meta） | **8** | `A-shoulder-upper`／`B-lower-spine-strokespecific`／`C-nonMSK-medical`／`D-endocrine`／`D-systemic-acute`／`E-acute-trauma`／`F-pediatric-growth`＋`_asian-epidemiology-supplement`；它們用 `category` 欄位被引用而不是引用別人，落 Class 3 但性質不同 | 本來就不該有出邊——它們的角色是被引用，跟 water-sense-levels L 級同型。**這是「入邊被非 `links.*` 的方式表達」，如果要清出 W003 就得再加一個對稱面**：讓 `category:` 欄位計為對 category 條目的入邊 |
   | perception-only prose | **4** | `cold-water-shock`／`drowning`／`shallow-water-blackout`／`sipe`——都只有 `perception_link` 散文，`perception_link_ids: []` | 按 `water-sense-levels.yaml` 沒有 stroke-agnostic L 級實體的事實，`perception_link_ids` 一律不填。**永遠留在 W003，不算債** |
   | 無 `links` 塊的 injury draft | **3** | `iron-deficiency-swimmer`／`oral-contraceptives-performance`／`sci-hip-flexor-contracture`——draft 檔沒寫 `links:` 欄位，build 產物就是 `links: None`（不是 `links: {sub: None}`），因此落 Class 3 而不是 Class 1 | 這是 draft 模板不一致而非缺連結。要清出 W003 有兩條路：（a）draft 補 `links:` 空塊、rebuild；（b）承認這 3 筆與 all-None 25 筆同性質，不接。**兩條都不改變事實：這些 injuries 都是內容獨立的、不需要對外連結** |
+
+  **⚠ 上面這張四分堆表已於 2026-09-04 全部結案，結論見本檔最上方那一節；下面三段保留追溯脈絡，不再是待辦。** 逐堆對照：**all-None 25 筆**——錯誤 20 判「不該接」的**前提是「沒有散文依據」，這一點只成立一半**：這 25 筆的散文確實沒寫在 `links` 裡，但寫在 `risk_factors`／`prevention`／`red_flags` 的**條列項**裡，逐條讀完後有 12 筆點名了明確目標（`spondylolysis` → `fly.tech.29` 等），已接；剩 13 筆維持不接，理由逐條記在最上方。**分類骨架 8 筆**——不必如本表所寫「再加一個對稱面讓 `category:` 計為入邊」，那 7 筆 categories **根本不該帶 `id`**（改 `key`／`name_zh` 即可，與其餘四份詞彙表一致），剩下的 `_asian-epidemiology-supplement` 是真孤兒。**perception-only 4 筆**——本表寫「永遠留在 W003，不算債」是**錯的**：`water-sense-levels.yaml` 沒有 stroke-agnostic L 級實體這件事沒錯，但目標本來就不在 technica，在 `canonical/breathing/`；其中 3 筆已接（`drowning` 則靠入邊脫離）。**無 `links` 塊 3 筆**——`sci-hip-flexor-contracture` 走本表的路 (a)（draft 補 `links:` 並接 `free.tech.34`），另 2 筆走路 (b)。
 
   **錯誤 21（本輪重跑時抓到）：用戶交接單預測「第①類 41 是低估的」（意思是重跑後會更多）——實測是 38，比 41 低不是高。**
 

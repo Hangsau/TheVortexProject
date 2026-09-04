@@ -67,9 +67,12 @@ population_notes:
   lifecycle: ~
 
 links:
-  mechanism_link: ~
+  mechanism_link: "LHB 是在棘上肌功能下降後才代償超載——旋轉肌袖腱病常是本症的上游，風險因子亦列「棘上肌腱病共存」"
+  mechanism_link_ids: [rotator-cuff-tendinopathy]
   technical_link: ~
+  technical_link_ids: []
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "Shoulder pathology in masters swimmers, PMC7824457", certainty: 🟢, verified: true, source_ids: [src.pmc7824457] }

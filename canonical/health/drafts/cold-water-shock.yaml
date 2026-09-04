@@ -67,8 +67,10 @@ population_notes:
   lifecycle: ~
 
 links:
-  mechanism_link: ~
+  mechanism_link: "喘氣反射使深水中呼吸控制喪失易嗆水，「連強壯泳者也可數秒內溺水」即本條與溺水的接點"
+  mechanism_link_ids: [drowning]
   technical_link: ~
+  technical_link_ids: []
   perception_link: "可接 L0 呼吸感知(冷水喘氣反射的生理意義)"
   perception_link_ids: []
 

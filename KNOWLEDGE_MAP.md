@@ -30,7 +30,7 @@
 | `breathing/physiology` | 5 | 各節點 |
 | `breathing/training` | 5 | 各節點 |
 | `breathing/regulation` | 6 | 各節點 |
-| `health/injuries (built)` | 47 | 從 drafts/ build 出 |
+| `health/injuries (built)` | 0 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
 | `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
@@ -688,89 +688,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 ## 健康 `canonical/health/`
 
-### `injuries.yaml` — 已 build 之傷害條目（**47 條目**，來源 `drafts/`）
-
-#### 肩部與上肢 (A-shoulder-upper, 7)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| biceps-tendinopathy | 肱二頭肌長頭肌腱病 | Biceps (long head) tendinopathy | 🟡 |
-| rotator-cuff-tendinopathy | 旋轉肌袖肌腱病（棘上肌） | Rotator cuff (supraspinatus) tendinopathy | 🟡 |
-| shoulder-multidirectional-instability | 多向性肩關節不穩定（MDI） | Multidirectional shoulder instability | 🟠 |
-| slap-lesion | 上盂唇前後損傷（SLAP） | Superior labrum anterior-posterior (SLAP) lesion | 🟠 |
-| swimmer-elbow-wrist-overuse | 游泳者肘/腕過度使用傷 | Swimmer's elbow & wrist overuse | 🟢 |
-| swimmers-shoulder | 游泳肩 | Swimmer's shoulder | 🟡 |
-| thoracic-outlet-syndrome | 胸廓出口症候群（TOS） | Thoracic outlet syndrome in swimmers | 🔵 |
-
-#### 腰椎與泳式特異 (B-lower-spine-strokespecific, 6)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| breaststrokers-knee | 蛙泳膝 | Breaststroker's knee | 🟡 |
-| extension-low-back-pain | 伸展型下背痛（蝶泳） | Extension-type low back pain (butterfly) | 🟡 |
-| femoroacetabular-impingement | 股骨髖臼撞擊（FAI） | Femoroacetabular impingement in swimmers | 🟡 |
-| groin-adductor-strain | 腹股溝/內收肌損傷（蛙泳） | Groin / adductor strain (breaststroke) | 🟡 |
-| spondylolysis | 椎弓解離/脊椎滑脫 | Spondylolysis / spondylolisthesis | 🟡 |
-| swimmer-ankle-foot-overuse | 游泳者踝/足過度使用傷 | Swimmer's ankle & foot overuse | 🔵 |
-
-#### 非肌骨醫療 (C-nonMSK-medical, 10)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| acanthamoeba-keratitis | 棘阿米巴角膜炎（隱形眼鏡泳者） | Acanthamoeba keratitis in swimmers | 🟢 |
-| chlorine-eye-irritation | 氯 / 化學性結膜炎與角膜刺激 | Chlorine / chemical conjunctivitis & corneal irritation | 🟡 |
-| recreational-water-cryptosporidium | 隱孢子蟲 / 泳池水傳染腸道病 | Cryptosporidium & recreational water illness | 🟢 |
-| sci-hip-flexor-contracture | 脊髓損傷泳者的髖屈攣縮 | Hip flexor contracture in SCI swimmers | 🔵 |
-| surfers-ear-exostosis | 外耳道骨瘤 / 骨疣（衝浪耳） | Surfer's ear / external auditory exostosis | 🟡 |
-| swimmer-dental-erosion | 牙齒酸蝕（游泳者） | Swimmer's dental erosion | 🟡 |
-| swimmer-dermatoses | 泳者皮膚問題群 | Swimmer dermatoses (folliculitis / swimmer's itch / green hair / chlorine dermatitis) | 🟡 |
-| swimmers-ear | 游泳耳 / 外耳道炎 | Swimmer's ear / otitis externa | 🟡 |
-| swimming-induced-bronchoconstriction | 運動誘發支氣管收縮 / 游泳氣喘 | Exercise-induced bronchoconstriction in swimmers | 🟡 |
-| uv-photo-damage | 曬傷 / 光化性傷害（皮膚 + 眼睛） | UV / photo-damage — skin cancer & pterygium in outdoor swimmers | 🟡 |
-
-#### 全身急性 (D-systemic-acute, 7)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| cold-water-shock | 冷水休克 / 冷水衝擊反應 | Cold water shock / Cold shock response | 🟠 |
-| dehydration-hyponatremia | 運動性脫水 / 低鈉血症 | Exercise-associated dehydration / hyponatremia in swimmers | 🟡 |
-| drowning | 溺水 / 近乎溺水 | Drowning / Near-drowning | 🟢 |
-| exertional-sudden-cardiac-death | 運動性猝死（游泳 / 運動員） | Exertional sudden cardiac death — swimming / athletes | 🟢 |
-| hypothermia-swimmers | 游泳者低體溫（開放水域） | Hypothermia in swimmers / open-water hypothermia | 🟡 |
-| shallow-water-blackout | 淺水昏迷 | Shallow water blackout (SWB) | 🟢 |
-| sipe | 游泳誘發肺水腫 | Swimming-Induced Pulmonary Edema (SIPE) | 🟡 |
-
-#### 內分泌與骨骼 (D-endocrine, 7)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| exercise-amenorrhea | 運動性月經功能障礙 | Exercise-associated menstrual dysfunction | 🟡 |
-| female-athlete-triad | 女性運動員三聯症 | Female athlete triad | 🟡 |
-| iron-deficiency-swimmer | 泳者鐵質缺乏（含非貧血性鐵缺） | Iron deficiency in swimmers (including non-anemic iron deficiency) | 🟡 |
-| oral-contraceptives-performance | 口服避孕藥對運動表現的影響 | Oral contraceptives and athletic performance | 🟡 |
-| red-s | 相對能量不足（RED-S） | Relative Energy Deficiency in Sport (RED-S) | 🟡 |
-| stress-fracture-swimmer | 游泳員疲勞性骨折（肋骨為主） | Stress fracture in swimmers (rib-predominant) | 🟠 |
-| swimmer-low-bone-density | 游泳員低骨密度 | Low bone mineral density in swimmers | 🟡 |
-
-#### 急性外傷 (E-acute-trauma, 5)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| diving-cervical-injury | 跳水 / 入水頸椎與脊髓損傷 | Diving-related cervical spine and spinal cord injury | 🟢 |
-| flip-turn-wall-push | 轉身 / 蹬牆相關急性傷 | Flip-turn and wall-push acute injuries | 🟡 |
-| open-water-marine-biological-hazards | 開放水域海洋生物危害（螫刺 / 感染） | Open-water marine biological hazards — stings, punctures, infections | 🟢 |
-| poolside-slip-fall | 池畔濕滑跌倒傷 | Poolside slip-and-fall injuries | 🟡 |
-| starting-block-impact | 出發台 / 牆面 / 水面撞擊傷 | Starting block, wall, and water-surface impact injuries | 🟢 |
-
-#### 兒童生長 (F-pediatric-growth, 5)
-
-| ID | 中文名 | 英文名 | 流病確定性 |
-|---|---|---|---|
-| osgood-schlatter | Osgood-Schlatter 病 | Osgood-Schlatter disease | 🟢 |
-| salter-harris-physeal-fracture | Salter-Harris 生長板骨折 | Salter-Harris physeal fracture | 🟢 |
-| scheuermann-kyphosis | Scheuermann 病（青少年脊椎後凸） | Scheuermann's kyphosis | 🟢 |
-| sever-disease | Sever 病（跟骨骨突炎） | Sever's disease (calcaneal apophysitis) | 🟢 |
-| youth-swimmer-apophysitis | 年輕游泳員肩/肘骨骺與骨突損傷 | Youth swimmer shoulder/elbow physeal & apophyseal injury | 🟠 |
+### `injuries.yaml` — 已 build 之傷害條目（**0 條目**，來源 `drafts/`）
 
 ---
 

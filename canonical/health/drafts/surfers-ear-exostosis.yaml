@@ -65,9 +65,12 @@ population_notes:
     open_water: "冬泳/開放水域為新興風險族群，無獨立流病資料"
 
 links:
-  mechanism_link: ~
+  mechanism_link: "骨性增生阻塞耳道後耳垢與水分積聚→反覆外耳道炎，游泳耳是本症的下游併發"
+  mechanism_link_ids: [swimmers-ear]
   technical_link: ~
+  technical_link_ids: []
   perception_link: ~
+  perception_link_ids: []
 
 references:
   - { citation: "External Auditory Exostoses, StatPearls, PMID 30521295", certainty: 🟡, verified: true, source_ids: [src.pmid-30521295] }
