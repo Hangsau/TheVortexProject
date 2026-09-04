@@ -21,7 +21,7 @@ drills:
     perception_goal: "感覺水被腳背往兩個方向推，核心像鞭柄、腳背像鞭梢；不是只有膝蓋在踩。"
     success_signal: "頭能穩定維持在水面附近，前後兩個踢向都感覺到水壓。"
     failure_signal: "身體下沉、只靠膝蓋猛踩、單向（只有下踢）有力。"
-    deficiency_fixes: [B]
+    deficiency_fixes: []
     source: "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide"
     source_ids: [src.yourswimlog-com-vertical-kicking-u-s-masters]
     body_position: vertical
@@ -50,7 +50,7 @@ drills:
     perception_goal: "三個朝向的腳背推水感一致；波動由核心發起，不因翻面而散掉。"
     success_signal: "換面後仍維持推進與緊湊流線，速度不明顯掉。"
     failure_signal: "某個朝向（常是俯臥）波動變小或膝蓋代償；換面時流線鬆掉。"
-    deficiency_fixes: [B, C]
+    deficiency_fixes: []
     source: "Competitor Swim UDK drills；swimswam UDK sets"
     source_ids: [src.competitor-swim-udk-drills-swimswam-udk-sets]
     body_position: transitional
@@ -79,7 +79,7 @@ drills:
     perception_goal: "阻力下仍能感覺核心→腳背的完整波動傳遞，而非膝蓋孤立發力。"
     success_signal: "繩阻力下身體仍前移、波動完整。"
     failure_signal: "波動塌成純膝蓋踩、髖部不參與。"
-    deficiency_fixes: [B]
+    deficiency_fixes: []
     source: "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
     source_ids: [src.yourswimlog-com-4-5-tethered-60s-rest-2-3]
     body_position: underwater
@@ -108,7 +108,7 @@ drills:
     perception_goal: "在最佳頻率時，每一下都感覺腳背確實壓到水，波動不被頻率追著跑而變淺。"
     success_signal: "找到一個明顯比其他頻率快的個人節奏。"
     failure_signal: "一味追高頻率使幅度塌掉、推進反而變差。"
-    deficiency_fixes: [B]
+    deficiency_fixes: []
     source: "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
     source_ids: [src.yourswimlog-com-tempo-trainer-cone-15m]
     body_position: underwater
@@ -137,7 +137,7 @@ drills:
     perception_goal: "高強度下仍維持核心發起的波動與緊湊流線；breakout 時機在速度尚高時。"
     success_signal: "出水接划手沒有明顯減速、波動到最後一下仍完整。"
     failure_signal: "後段波動塌掉、太晚或太早出水、breakout 卡頓。"
-    deficiency_fixes: [B, C]
+    deficiency_fixes: []
     source: "yourswimlog.com（race-tempo underwater）；swimswam UDK sets"
     source_ids: [src.yourswimlog-com-race-tempo-underwater-swimsw]
     body_position: underwater
@@ -169,7 +169,7 @@ drills:
     perception_goal: "閉眼後身體軸線完全靠本體感維持；核心是真正的軸"
     success_signal: "20 秒內身體不偏離原點，頭仍接近水面"
     failure_signal: "立刻歪斜或下沉"
-    deficiency_fixes: [B, C]
+    deficiency_fixes: []
     source: "Vortex 整理（vertical kick × proprioception）"
     source_ids: [src.vortex-vertical-kick-proprioception]
     body_position: vertical

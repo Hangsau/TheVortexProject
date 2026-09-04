@@ -63,6 +63,20 @@
 
 **已修並上線**（my-site `edfb009`）：概念標題後加一枚 L 段落 chip（沿用章節 `l_band` 既有的 mono ＋方框語言，不新造視覺），`l_note` 收進既有的「想深一點」展開層、標籤「落在哪一段水感發展」，讀頁預設收合的密度不變。**37 筆 `l_levels` 已先驗證全部是連續遞增區間**（11 種形態，無跳號）才敢用「首–末」呈現，單一級只印一個。建置後實測：37 枚 chip、0 枚空字串、39 個 note 區塊。
 
+### 🔎 **同一把尺往全站掃：「已同步但沒有 layout 讀」的鍵有一批**，其中查出 **15 筆 `deficiency_fixes` 填錯欄位**（已修）
+
+心理層那個缺口的形狀是「canonical 寫了 → sync 送出去了 → 沒有 layout 讀」。這是可以機械掃的：把 `data/vortex`／`data/breathing`／`data/adm`／`data/movement`／`data/periodization` 出現過的所有鍵名（**1144 個**）拿去比對 `layouts/` 全文，**638 個從未被任何 layout 提及**。多數是本來就不該渲染的機器鍵（`cross_ref_ids`、`*_link_ids`、`schema_version`、來源註冊表的 `doi`／`pmid`／`identifier`——後者由 Python 先算成 `link` 再給 template），**但清單頂端有兩個各 176 筆的鍵值得查**：`abc_type` 與 `deficiency_fixes`。
+
+**查 `deficiency_fixes` 查出一個系統性的填錯欄位。** 它的語意在 `Drills/DRILL_INDEX.md:38` 寫得很清楚：「對應**書中 Common Stroke Deficiencies 編號**」，值域是整數。實際掃 176 筆，值裡混著整數 1–16 **和字母 `B`／`C`**（YAML 無引號的 `[C]` 會被解析成字串）。字母全部集中在兩個章節：`drills_starts-turns.yaml` **9/9 筆**、`drills_udk.yaml` **6/7 筆**，而這兩章**一筆整數編號都沒有**。原因很直白——**書中那份缺陷編號是四式的，起跳轉身與 UDK 本來就不在那個母體裡**，於是這個欄位被拿來塞該動作的 A／B／C 型別。
+
+**已修：這 15 筆改成 `[]`**（與本來就空的那 22 筆同一種狀態＝「書中沒有對應編號」）。**資訊沒有掉**——12 筆填的字母與該筆自己的 `abc_type` 完全相同（ST* 全是 `C`／`abc_type: 'C'`，UDK* 是 `B`／`abc_type: 'B'`），是重複不是新內容。改法是逐行正則只動這 15 行、其餘位元組不動（`git diff` 實測 15 增 15 刪，全部是 `deficiency_fixes:` 那一行）。
+
+**⚠️ 有一件事確實被這次清掉了，記在這裡不讓它靜默消失**：`UDK2`／`UDK5`／`UDKEC1` 三筆原本寫的是 `[B, C]`，而它們的 `abc_type` 是 `'B'`——那個多出來的 `C` 是「這個動作同時對到 C 型（全身張力）」的宣稱，**`abc_type` 依 schema 是單值（`DRILL_INDEX.md:32` 註明 A／B／C／null 四選一），裝不下第二型**。我沒有為了留住它就把 `abc_type` 改成 list——**要不要讓一個動作宣告多型是 schema 決策**，而且這個 `C` 本來就是寫在錯的欄位裡、可信度和其他 12 筆的重複值同一來源。現在它留在這一段與 git 歷史裡；真要恢復，正解是動 schema，不是把它塞回 `deficiency_fixes`。
+
+**`abc_type` 那 176 筆（118 筆非空）先不動，因為它是分層問題不是渲染問題。** 它現在**有被 `sync_vortex.py` 送進 `data/vortex/drills.yaml`、但沒有任何 layout 讀**。A／B／C 三型依 `CLAUDE.md` 是**診斷判讀**框架，而 Drills 檔整份沒有 `public`／`diagnostic` 分層（動作本身是公開內容）。所以問題是「動作的三型標記算公開還是診斷」——**這要先裁決，裁決之前既不該渲染它，也不該急著把它從同步裡拿掉**。這一條和 `l_note` 那條的差別要記住：`l_note` 明確在 `public` 之下、渲染就對了；`abc_type` 沒有分層宣告，先渲染就是替使用者做了分層決定。
+
+驗證：0 ERROR、W003 仍 126、W008 仍 3、**235 passed + 8 subtests**，`build_indices` 923 records／582 sources／unlinked 126（皆與改動前相同——這次動的是值不是關聯，數字不該動，也確實沒動）。
+
 **所以框架層實體那個登錄表決策，現在沒有理由開**——它原本唯一的動機是「讓 `l_levels` 有東西可指」，而讀者實際需要的（這個概念落在哪一段、為什麼）已經由 `l_note` 直接回答且已上線。**要開之前得先出現一個新的、`l_note` 回答不了的使用情境**，不是為了 W003 的 70。
 
 ### ▶️ 上一輪：**W003：injuries 26 筆離開孤兒名單**（152 → **126**）——14 筆真邊 + 7 筆本來就不該被當成條目
