@@ -2469,6 +2469,9 @@ demands:
     evidence_profile: anatomy
     source_ids:
       - src.neumann-2017
+      # 只承載 diagnostic 層「仰躺運動學文獻不存在」這項證據缺口宣稱，
+      # public 敘述仍全部出自解剖來源，故 evidence_profile 維持 anatomy。
+      - src.veiga-2022
     public:
       name_zh: 仰躺水下海豚腳上踢——同一個池畔動作對應的是髖屈曲
       description: >
@@ -2505,6 +2508,15 @@ demands:
         把俯臥的髖伸展命名直接搬入。現有來源只支持關節命名與一般解剖可用
         能力，沒有水下海豚腳專項運動學、相位化肌電或推進力量測，因此不足以
         升為 ready，action_status 維持 provisional。
+
+        升級路徑已查過，結果是查不到：Veiga 等人 2022 的水下蝶式打腿運動學
+        系統性回顧明文寫出，仰躺體位的打腿運動學決定因素沒有任何研究處理過，
+        該回顧納入的 25 篇有 23 篇只做俯臥。因此本筆缺的不是「還沒去找的文獻」，
+        而是尚未被執行的原始研究——在有人真的量之前，補 measurement_conditions
+        這條路對本筆是關閉的。該回顧轉引的兩篇俯臥／仰躺對照本身也不一致
+        （一篇報告兩體位的打腿參數無統計差異，另一篇報告仰躺的垂直振幅與
+        踝伸展較大），所以連「兩體位可否互相外推」都還沒有定論，更不能拿
+        俯臥數據回填本筆。
 
   - id: movement.demand.free.catch.elevation-plane-shift-with-rotation-onset
     stroke: free

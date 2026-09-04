@@ -6,7 +6,33 @@
 
 ## 當前狀態（2026-09-04，最新）
 
-### ▶️ **W003：injuries 26 筆離開孤兒名單**（152 → **126**）——14 筆真邊 + 7 筆本來就不該被當成條目
+### ▶️ **`action_status` 升級軸開工：真正的候選是 4 筆不是 51 筆，逐筆查完文獻後 0 筆可升**。實質改動 1 筆（把「還沒去找的文獻」改寫成「這份文獻不存在」）。0 ERROR、235 tests + 8 subtests OK、W003 仍 126、W020 仍 0
+
+**錯誤 33（本輪開工盤點當場抓到，是我上一輪寫進本檔的框架錯誤）：上一版把下一步寫成「A（`action_status` 升級，51 筆 demand 缺 `measurement_conditions`，是查文獻的工作）」——數字對，但當成工作佇列是錯的。** 51 只套了 W020 的 (b)（缺 `measurement_conditions`），沒有同時套 (a)（`ready` ⟹ `claim_status: supported`）。兩條都是**必要條件**，真正的候選是交集。實際跑交叉表：
+
+| | 有 `measurement_conditions` | 無 |
+|---|---|---|
+| `supported`（可過 (a)） | **0** | **4** |
+| `partially-supported` | 15 | 43 |
+| `disputed` | 0 | 4 |
+
+**66 筆 demand 全部是 `provisional`，而兩個必要條件在現有資料裡互斥**：有 `measurement_conditions` 的 15 筆全是 `partially-supported`（被 (a) 擋），能過 (a) 的 4 筆全都沒有 `measurement_conditions`（被 (b) 擋）。**同時滿足兩條的是 0 筆。** 另外 47 筆就算把 `measurement_conditions` 補滿也一筆都升不上去——它們卡在上游的 `claim_status`，那是證據軸不是行動軸。**這條軸的佇列長度是 4，不是 51**；把 51 當工作量會讓接手的人去補完全不會改變 `action_status` 的欄位。
+
+**四筆候選逐筆查完文獻，0 筆可升，其中三筆的 `assessment_note` 經外部查證確認寫得是對的**（沒有可修的東西，這本身是驗收結果）：
+
+- **`back.up-kick.hip-flexion-with-knee-extension`**、**`back.catch.shoulder-rotation-reversal`**、**`back.pull.forearm-orientation-over-path-shape`**：仰式專項的相位化關節角度查不到。唯一一份仰式 3D 運動學是 Edinburgh 博士論文（Ferreira Dias 2022，n=7／n=12 國家級，相位切成 entry／pull／push／release，有報告肘角與相位時長）——**但它的肩內外旋是等速肌力測試（陸上），不是水中肱骨軸向旋轉追蹤**，正好不承載 `back.catch` 要的那一項。它對 `back.pull` 的作用是**佐證而非升級**：支持划手路徑的個體差異，也就是支持該筆「不建立單一肘角門檻、不以固定曲線作處方」的立場——**佐證一個「不要開處方」的主張，不會讓它變成可開處方**。
+- **`fly.arm-catch.elbow-flexion-with-rotation-reversal`**：兩篇 2025 蝶式論文都不供給。Pinto 等 2025（*Bioengineering* 12(8):797，n=8）**完全沒量關節角度**，只有速度計、動作頻率與壓力槳推力。Morais 等 2025（*IJSSC*，n=10）比的是**內划期**「直臂 vs 屈臂」的速度，相位與本筆的抓水期不同，且全文在 Sage 付費牆後、無法確認肘角是實測還是只做分類——**因此不據以改動任何 canonical**。這篇留成線索不留成內容。
+  - ⚠️ 搜尋摘要裡出現過「抓水期肘由完全伸展屈到約 40°」，**沒有採用**：它來自一份臨床／教學 PDF 而非量測研究，照 CLAUDE.md「來源數字若出自教學模型而非量測就整條不寫數字」的紀律直接棄用。
+
+**唯一的實質改動：`udk.up-kick.hip-flexion-supine` 的 `diagnostic.assessment_note`**。原句「現有來源沒有水下海豚腳專項運動學……維持 provisional」**沒有錯**（「現有來源」指本筆引用的來源，不是世界文獻；細讀後確認不是誤述，**不列為錯誤**）。但它把本筆留在「待查文獻」狀態，而查證結果是**那份文獻根本不存在**：Veiga 等 2022 的水下蝶式打腿運動學系統性回顧明文寫「There are no studies examining the kinematic determinants of UUS in the dorsal body position」，納入的 25 篇有 23 篇只做俯臥。已寫進該筆，並補上該回顧轉引的兩篇俯臥／仰躺對照**彼此矛盾**（一篇報告兩體位打腿參數無統計差異、另一篇報告仰躺垂直振幅與踝伸展較大），所以連「能不能拿俯臥數據外推到仰躺」都沒有定論。**這筆因此從「待辦：去找文獻」變成「已封閉：等原始研究被執行」**，下一個人不必重跑同一次搜尋。
+
+`src.veiga-2022` 本來就 verified 且被四處引用，不需動來源登錄表。加進 `source_ids` 時附註解說明它**只承載 diagnostic 層的證據缺口宣稱**，`public` 敘述仍全部出自解剖來源，故 `evidence_profile` 維持 `anatomy`（已確認 `validate.py` 沒把 `evidence_profile` 與來源型別綁在一起——這是查過的判斷，不是繞過）。
+
+**順帶確認一件沒出錯的事**：udk 章已經有 `up-kick.hip-extension-prone` 與 `up-kick.hip-flexion-supine` 成對存在，體位翻轉處理正確；Veiga 的俯臥／仰躺差異**不構成對既有內容的反駁**，兩筆的 `limitation_context` 本來就明寫運動學與流體量測不在該層來源範圍。
+
+**這條軸的正確定性**：不是「補 51 個欄位」，是**「4 筆各自等一份特定的原始研究」**，其中至少 1 筆等的研究學界已明文說沒人做過。**上一輪試點的結論在本輪重現且更強**——查文獻的產出是校正與封閉，不是升級。**建議下一步不要再排 `action_status`**（4 筆已逐筆查完，短期不會有新文獻），改做仍有實料的 psychology 70 筆內容軸。
+
+### ▶️ 上一輪：**W003：injuries 26 筆離開孤兒名單**（152 → **126**）——14 筆真邊 + 7 筆本來就不該被當成條目
 
 傷害章 47 筆條目裡有 40 筆掛在孤兒名單上。**但先分桶才發現這 40 筆不是同一種東西**：
 
@@ -816,7 +842,9 @@ Sonnet sub-agent 與主 session 吃**同一個 Claude 5H 配額**，派它不換
 
 **⚠ 以下第 0～4 項是 2026-09-03 覆蓋率補滿後重寫的當前建議；再下方的第 0～N 項是達成 59/59 過程中的歷史稽核軌跡，保留供追溯，不再是待辦。**
 
-**⚠ 2026-09-04 injuries 批收工後更新接手順序：W003 已從 392 走到 126，剩下的 126 筆裡沒有一筆是「掃描器漏抓」了。** 分佈是 psychology 70（內容工作，且 `evidence_from` 那條捷徑不能走——理由見本檔最上方）、injuries 14（13 筆刻意不接＋1 筆 `_asian-epidemiology-supplement` 是內容缺口）、matrix 12（四個 links 鍵**沒有合法目標**，錯誤 17 已查證）、periodization 19（需要新內容）、technical-analysis 8 與 water-sense-levels 2（`free.L0`／`back.L0` 是 `l-indicators` 的內容缺口）、actions 1。**接線這條軸到此為止，下一步該做 A（`action_status` 升級，51 筆 demand 缺 `measurement_conditions`，是查文獻的工作）。**
+**⚠ 2026-09-04 injuries 批收工後更新接手順序：W003 已從 392 走到 126，剩下的 126 筆裡沒有一筆是「掃描器漏抓」了。** 分佈是 psychology 70（內容工作，且 `evidence_from` 那條捷徑不能走——理由見本檔最上方）、injuries 14（13 筆刻意不接＋1 筆 `_asian-epidemiology-supplement` 是內容缺口）、matrix 12（四個 links 鍵**沒有合法目標**，錯誤 17 已查證）、periodization 19（需要新內容）、technical-analysis 8 與 water-sense-levels 2（`free.L0`／`back.L0` 是 `l-indicators` 的內容缺口）、actions 1。**接線這條軸到此為止。**
+
+**⚠⚠ 2026-09-04 再更新（`action_status` 軸已開工並走完，見本檔最上方「錯誤 33」）：下面 A 項所寫的「51 筆／74 筆」與「這是查文獻的工作」已被實作結果取代，A 項保留供追溯，不要照著開工。** 真正的候選是 **4 筆**（W020 的 (a)(b) 兩個必要條件在現有資料裡互斥，交集為 0），四筆都已逐筆查完文獻、**0 筆可升**，其中一筆（udk 仰躺上踢）已查證到「該文獻學界明文說不存在」而封閉。**下一步改做 psychology 70 筆的內容軸**——那是本階段唯一還有大量實料可推進的地方。
 
 （以下為 W011 收工當時寫的順序，water-sense-levels 那 26 筆已於同日接完，保留脈絡）：先做 A，再回頭處理 W003 的 water-sense-levels 26 筆。 W011 過程中另外累積了兩筆可延續的小事：① `src.2024-2025`、`src.coach-observation`、`src.the-race-club`、`src.swim-like-a-fish-2025` 四筆仍是 `unverified` 佔位，**這輪四次追查佔位來源，四次都追到真論文或真出處**，這四筆值得用同一套做法再走一次；② `src.liu-2025-core-stability-youth-swimmers` 的更正啟事（PMID 41709241）內容未取得——PMC 對 curl 只回樣板、BMC 轉址 Springer 後回 303，換管道（機構權限或 DOI 解析）才拿得到，在那之前引用該篇數字要連帶意識到更正未核對。
 

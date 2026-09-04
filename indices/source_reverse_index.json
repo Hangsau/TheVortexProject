@@ -11802,7 +11802,7 @@
         "pmcid": "PMC9566274",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9566274/"
       },
-      "usage_count": 7,
+      "usage_count": 8,
       "usages": [
         {
           "id": "fly.tech.1",
@@ -11828,6 +11828,11 @@
           "id": "movement.demand.udk.down-kick.ankle-plantarflexion",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[1]"
+        },
+        {
+          "id": "movement.demand.udk.up-kick.hip-flexion-supine",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[38]"
         },
         {
           "id": "udk.err1",
