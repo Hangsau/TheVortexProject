@@ -114,7 +114,7 @@ Observations/    → 觀察層：教學案例
 2. 更新 `HANDOFF.md` 的「當前狀態」與「下一步建議」兩個區塊
 3. 更新 `_INDEX.md` 的對應文件狀態（如有變動）
 4. 若 Research/ 層有新文件完成：同步 `RESEARCH_PLAN.md`（Layer 完成標記）+ `FUTURE_RESEARCH.md`（原題目畢業標記）
-5. `git add` + `git commit` + `git push` 到 GitHub
+5. `git add` + `git commit` + `git push` 到 GitHub。**本 repo 的線上分支是 `master`，不是 `main`**——Claude Code 的 session context 會自稱「Main branch: main」，那是預設值不是實況；用 `git push origin HEAD:main` 會憑空建出一條沒人看的分支，且 `notify-mysite` 只監聽 `master`，等於推了卻不同步
 6. **此 repo 雖無 Hugo build CI，但 push 後 notify-mysite workflow 會通知 my-site 自動同步**——確認 `.github/workflows/notify-mysite.yml` 觸發後才算完整流程
 
 不需要等使用者提醒。這是固定流程。
