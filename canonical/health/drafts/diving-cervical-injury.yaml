@@ -80,10 +80,10 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Prevention of spinal cord injuries in swimming pools, PubMed 9267915", certainty: 🟢, verified: true }
+  - { citation: "DeVivo MJ, Sekar P. (1997). Prevention of spinal cord injuries that occur in swimming pools. Spinal Cord 35(8):509-15. PMID 9267915", certainty: 🟢, verified: true, source_ids: [src.devivo-1997] }
   - { citation: "Cervical spine injuries 34 patients, PMC2899837", certainty: 🟢, verified: true, source_ids: [src.pmc2899837] }
   - { citation: "Overview of Spinal Injuries Aegean Coast(24h decompression), PMC8192199", certainty: 🟢, verified: true, source_ids: [src.pmc8192199] }
-  - { citation: "Spinal Cord Injury With Tetraplegia, SAGE 2021, PubMed 32909818", certainty: 🟢, verified: true }
+  - { citation: "Ull C, et al. (2021). Spinal Cord Injury With Tetraplegia in Young Persons After Diving Into Shallow Water: What Has Changed in the Past 10 to 15 Years? Global Spine J 11(8):1238-1247. PMID 32909818（2026-09-04 更正：SAGE 是出版商，期刊為 Global Spine J）", certainty: 🟢, verified: true, source_ids: [src.ull-2021] }
   - { citation: "World Aquatics 1.35m diving depth rule(STA technical notice 2023)", certainty: 🟢, verified: true }
 
 flags:

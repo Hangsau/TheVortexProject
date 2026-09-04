@@ -6816,6 +6816,7 @@
         ]
       },
       "source_ids": [
+        "src.barwood-2024",
         "src.pmc12234767",
         "src.tipton-mj-et-al-cold-water-immersion-sudden-2003"
       ],
@@ -6961,6 +6962,7 @@
         ]
       },
       "source_ids": [
+        "src.armstrong-2021",
         "src.pmc12847173",
         "src.pmc9699060",
         "src.pmid-25443755"
@@ -7360,9 +7362,11 @@
         ]
       },
       "source_ids": [
+        "src.devivo-1997",
         "src.pmc2899837",
         "src.pmc8192199",
-        "src.quebec-44-year-diving-sci-study-sciencedirec"
+        "src.quebec-44-year-diving-sci-study-sciencedirec",
+        "src.ull-2021"
       ],
       "outgoing_ids": [
         "starts-turns.tech.13",
@@ -7429,6 +7433,7 @@
       },
       "source_ids": [
         "src.ecg-scd-3-6-0-4-10-89-url",
+        "src.goff-2023",
         "src.pmc10356869",
         "src.pmc11985649",
         "src.pmc12234767"
@@ -7472,6 +7477,7 @@
         ]
       },
       "source_ids": [
+        "src.de-souza-2014",
         "src.female-athlete-triad-in-swimmers-systematic",
         "src.red-s-clinical-assessment-tool-framework-ioc"
       ],
@@ -17378,9 +17384,11 @@
         ]
       },
       "source_ids": [
+        "src.feijen-2020",
         "src.pmc11297363-a",
         "src.pmc11297363-b",
-        "src.pmc7824457"
+        "src.pmc7824457",
+        "src.tavares-2025"
       ],
       "outgoing_ids": []
     },
@@ -17501,7 +17509,8 @@
       },
       "source_ids": [
         "src.mdi-management-review-annals-of-joint",
-        "src.multidirectional-instability-of-the-shoulder"
+        "src.multidirectional-instability-of-the-shoulder",
+        "src.ruiz-iban-2017"
       ],
       "outgoing_ids": []
     },
@@ -17543,6 +17552,7 @@
         ]
       },
       "source_ids": [
+        "src.michener-2018",
         "src.pmc3811737",
         "src.pmc4528289"
       ],
@@ -17585,6 +17595,7 @@
         ]
       },
       "source_ids": [
+        "src.boltz-2021",
         "src.neurobehavioral-consequences-of-repetitive-h",
         "src.pmc10372189"
       ],
@@ -19501,6 +19512,7 @@
         ]
       },
       "source_ids": [
+        "src.kitsahawong-2024",
         "src.pmc10713671",
         "src.pmc3579418"
       ],
@@ -20670,6 +20682,7 @@
         ]
       },
       "source_ids": [
+        "src.harrison-2009",
         "src.pmc10339925",
         "src.pmc5800136",
         "src.pmc9057286"

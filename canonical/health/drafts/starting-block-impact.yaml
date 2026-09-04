@@ -82,7 +82,7 @@ links:
 
 references:
   - { citation: "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434. PMID 36715985", certainty: 🟢, verified: true, source_ids: [src.pmc10372189] }
-  - { citation: "Epidemiology NCAA Swimming and Diving, PubMed 34280272", certainty: 🟢, verified: true }
+  - { citation: "Boltz AJ, Robison HJ, Morris SN, D'Alonzo BA, Collins CL, Chandran A. (2021). Epidemiology of Injuries in National Collegiate Athletic Association Men's Swimming and Diving: 2014-2015 Through 2018-2019. J Athl Train 56(7):719-726. PMID 34280272（2026-09-04 更正：只涵蓋男子項目，族群邊界不得擴及女子）", certainty: 🟢, verified: true, source_ids: [src.boltz-2021] }
   - { citation: "Helmich I, et al. (2024). Neurobehavioural consequences of repetitive head impacts in Para swimming（n=1 個案報告，肢體缺損組）. J Sci Med Sport 27(1):16-19. PMID 37923648", certainty: 🟡, verified: true, source_ids: [src.neurobehavioral-consequences-of-repetitive-h] }
 
 flags:

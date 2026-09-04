@@ -69,7 +69,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Salter-Harris fractures, StatPearls NBK430688", certainty: 🟢, verified: true }
+  - { citation: "Salter-Harris fractures, StatPearls NBK430688", certainty: 🟢, verified: true, source_ids: [src.salter-harris-fractures-statpearls-nbk430688] }
 
 flags:
   pending_verification: []

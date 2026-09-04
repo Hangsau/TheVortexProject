@@ -74,7 +74,7 @@ links:
 references:
   - { citation: "SLAP lesions: diagnosis and rehabilitation, PMC3811737", certainty: 🟢, verified: true, source_ids: [src.pmc3811737] }
   - { citation: "Arthroscopy in refractory swimmer's shoulder, PMC4528289", certainty: 🟢, verified: true, source_ids: [src.pmc4528289] }
-  - { citation: "NATA position on overhead athlete shoulder, PMC5894372", certainty: 🟢, verified: true }
+  - { citation: "Michener LA, Abrams JS, Bliven KCH, et al. (2018). National Athletic Trainers' Association Position Statement: Evaluation, Management, and Outcomes of and Return-to-Play Criteria for Overhead Athletes With Superior Labral Anterior-Posterior Injuries. J Athl Train 53(3):209-229. PMID 29624450 / PMC5894372", certainty: 🟢, verified: true, source_ids: [src.michener-2018] }
 
 flags:
   pending_verification:

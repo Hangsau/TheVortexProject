@@ -81,7 +81,7 @@ links:
 
 references:
   - { citation: "Female athlete triad prevalence in swimmers, JWSM systematic review", certainty: 🟢, verified: true }
-  - { citation: "De Souza et al, Misunderstanding the female athlete triad, PMID 25037200", certainty: 🟡, verified: false }
+  - { citation: "De Souza MJ, Williams NI, Nattiv A, et al. (2014). Misunderstanding the female athlete triad: refuting the IOC consensus statement on Relative Energy Deficiency in Sport (RED-S). Br J Sports Med 48(20):1461-5. PMID 25037200（立場論戰文，非原始研究；作者共 34 人）", certainty: 🟡, verified: true, source_ids: [src.de-souza-2014] }
 
 flags:
   pending_verification:

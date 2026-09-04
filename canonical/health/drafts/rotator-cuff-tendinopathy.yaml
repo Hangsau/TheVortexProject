@@ -77,8 +77,8 @@ links:
 references:
   - { citation: "Shoulder pathology in masters swimmers (ultrasound), PMC7824457", certainty: 🟢, verified: true, source_ids: [src.pmc7824457] }
   - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true, source_ids: [src.pmc11297363-b] }
-  - { citation: "Youth swimmer shoulder prevalence, PMC6961642", certainty: 🟢, verified: true }
-  - { citation: "Shoulder strengthening programme protective effect, PMC11899141", certainty: 🟢, verified: true }
+  - { citation: "Feijen S, Tate A, Kuppens K, Claes A, Struyf F. (2020). Swim-Training Volume and Shoulder Pain Across the Life Span of the Competitive Swimmer: A Systematic Review. J Athl Train 55(1):32-41. PMID 31935141 / PMC6961642（2026-09-04 更正：跨生涯期訓練量綜述，不是青少年盛行率研究）", certainty: 🟢, verified: true, source_ids: [src.feijen-2020] }
+  - { citation: "Tavares N, Vilas-Boas JP, Castro MA. (2025). Effect of Preventive Exercise Programs for Swimmer's Shoulder Injury on Rotator Cuff Torque and Balance in Competitive Swimmers: A Randomized Controlled Trial. Healthcare (Basel) 13(5):538. PMID 40077099 / PMC11899141（2026-09-04 更正：終點是力矩與平衡，不是傷害發生率，不得寫成已證實的保護效果）", certainty: 🟢, verified: true, source_ids: [src.tavares-2025] }
 
 flags:
   pending_verification:

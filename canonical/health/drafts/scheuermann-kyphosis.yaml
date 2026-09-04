@@ -68,7 +68,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Scheuermann disease, StatPearls NBK499966", certainty: 🟢, verified: true }
+  - { citation: "Scheuermann disease, StatPearls NBK499966", certainty: 🟢, verified: true, source_ids: [src.scheuermann-disease-statpearls-nbk499966] }
 
 flags:
   pending_verification:

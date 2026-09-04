@@ -32,7 +32,7 @@ risk_factors:
 
 prevention:
   - { text: "訓練前含氟漱口水(臨床共識，無游泳者 RCT)", grade: Expert }
-  - { text: "緊貼式防護牙托(內面塗氟/CPP-ACP)", grade: B }
+  - { text: "緊貼式防護牙托——保護來自牙托本身；內面塗氟/CPP-ACP 在唯一的離體實驗中各組間無顯著差異，不得當成額外效益宣稱(2026-09-04 更正)", grade: B }
   - { text: "游泳後等 30 分待再礦化後再刷牙", grade: Expert }
   - { text: "塗布氟化物塗劑(fluoride varnish)", grade: Expert }
   - { text: "泳池管理者控制 pH 7.2–7.8 並監測飽和指數", grade: Expert }
@@ -73,7 +73,7 @@ links:
 references:
   - { citation: "Dental erosion among competitive swimmers (Poland), PMC3579418", certainty: 🟢, verified: true, source_ids: [src.pmc3579418] }
   - { citation: "Dental erosion in competitive swimmers vs rowers (Egypt), PMC10713671", certainty: 🟢, verified: true, source_ids: [src.pmc10713671] }
-  - { citation: "Mouthguard fluoride/CPP-ACP in vitro protection, PMC11425598", certainty: 🟢, verified: true }
+  - { citation: "Kitsahawong K, Pitiphat W, Thongpaiboon P, Thongpaiboon S, Saengsuwannarot S. (2024). Evaluating the protective effects of mouthguards with neutralizing agents against chlorinated water-induced enamel erosion. Front Oral Health 5:1469228. PMID 39328893 / PMC11425598（2026-09-04 更正：離體實驗，保護來自牙托本身；含氟與 CPP-ACP 各牙托組之間無顯著差異）", certainty: 🟢, verified: true, source_ids: [src.kitsahawong-2024] }
 
 flags:
   pending_verification:

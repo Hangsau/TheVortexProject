@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 553,
+  "source_count": 566,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -179,6 +179,24 @@
       ]
     },
     {
+      "id": "src.armstrong-2021",
+      "display": "Armstrong LE (2021). Rehydration during Endurance Exercise: Challenges, Research, Options, Methods. Nutrients 13(3):887. PMID 33803421",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33803421",
+        "pmcid": "PMC8001428",
+        "doi": "10.3390/nu13030887"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "dehydration-hyponatremia",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[24].references[3]"
+        }
+      ]
+    },
+    {
       "id": "src.astm-f2508",
       "display": "ASTM F2508-23, Standard Practice for Validation of Walkway Tribometry Using Research-based Reference Materials（前版 F2508-16e1 題為 Validation, Calibration, and Certification of Walkway Tribometers Using Reference Surfaces）",
       "verification_status": "verified",
@@ -294,6 +312,23 @@
       ]
     },
     {
+      "id": "src.barwood-2024",
+      "display": "Barwood MJ, Eglin C, Hills SP, Johnston N, Massey H, McMorris T, Tipton MJ, Wakabayashi H, Webster L (2024). Habituation of the cold shock response: A systematic review and meta-analysis. J Therm Biol 119:103775. PMID 38211547",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "38211547",
+        "doi": "10.1016/j.jtherbio.2023.103775"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "cold-water-shock",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[23].references[1]"
+        }
+      ]
+    },
+    {
       "id": "src.benjanuvatra-2007-a",
       "display": "Benjanuvatra et al. 2007",
       "verification_status": "verified",
@@ -364,6 +399,24 @@
           "id": "starts-turns.tech.3",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[178].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.boltz-2021",
+      "display": "Boltz AJ, Robison HJ, Morris SN, D'Alonzo BA, Collins CL, Chandran A (2021). Epidemiology of Injuries in National Collegiate Athletic Association Men's Swimming and Diving: 2014-2015 Through 2018-2019. J Athl Train 56(7):719-726. PMID 34280272",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "34280272",
+        "pmcid": "PMC8293881",
+        "doi": "10.4085/1062-6050-703-20"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "starting-block-impact",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[41].references[1]"
         }
       ]
     },
@@ -1147,6 +1200,23 @@
       ]
     },
     {
+      "id": "src.de-souza-2014",
+      "display": "De Souza MJ, Williams NI, Nattiv A, Joy E, Misra M, Loucks AB, Matheson G, Olmsted MP, Barrack M, Mallinson RJ et al. (2014). Misunderstanding the female athlete triad: refuting the IOC consensus statement on Relative Energy Deficiency in Sport (RED-S). Br J Sports Med 48(20):1461-5. PMID 25037200",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25037200",
+        "doi": "10.1136/bjsports-2014-093958"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "female-athlete-triad",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[31].references[1]"
+        }
+      ]
+    },
+    {
       "id": "src.deschodt-1999",
       "display": "Deschodt, Arsac & Rouard 1999",
       "verification_status": "verified",
@@ -1160,6 +1230,23 @@
           "id": "free.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[1].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.devivo-1997",
+      "display": "DeVivo MJ, Sekar P (1997). Prevention of spinal cord injuries that occur in swimming pools. Spinal Cord 35(8):509-15. PMID 9267915",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "9267915",
+        "doi": "10.1038/sj.sc.3100430"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "diving-cervical-injury",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[37].references[0]"
         }
       ]
     },
@@ -1284,6 +1371,24 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.feijen-2020",
+      "display": "Feijen S, Tate A, Kuppens K, Claes A, Struyf F (2020). Swim-Training Volume and Shoulder Pain Across the Life Span of the Competitive Swimmer: A Systematic Review. J Athl Train 55(1):32-41. PMID 31935141",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31935141",
+        "pmcid": "PMC6961642",
+        "doi": "10.4085/1062-6050-439-18"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "rotator-cuff-tendinopathy",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[1].references[2]"
+        }
+      ]
     },
     {
       "id": "src.female-athlete-triad-in-swimmers-systematic",
@@ -1540,6 +1645,24 @@
           "id": "periodization.zones.energy_systems_primer",
           "file": "canonical/periodization/zones.yaml",
           "path": "energy_systems_primer.training_protocols[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.goff-2023",
+      "display": "Goff NK, Hutchinson A, Koek W, Kamat D (2023). Meta-analysis on the Effectiveness of ECG Screening for Conditions Related to Sudden Cardiac Death in Young Athletes. Clin Pediatr (Phila) 62(10):1158-1168. PMID 36797841",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "36797841",
+        "pmcid": "PMC10478328",
+        "doi": "10.1177/00099228231152857"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "exertional-sudden-cardiac-death",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[26].references[3]"
         }
       ]
     },
@@ -2165,6 +2288,24 @@
       ]
     },
     {
+      "id": "src.harrison-2009",
+      "display": "Harrison SC, Bergfeld WF (2009). Ultraviolet light and skin cancer in athletes. Sports Health 1(4):335-40. PMID 23015891",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "23015891",
+        "pmcid": "PMC3445124",
+        "doi": "10.1177/1941738109338923"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "uv-photo-damage",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[22].references[3]"
+        }
+      ]
+    },
+    {
       "id": "src.harvey-2024-asia-pacific-hip-fracture-mortality",
       "display": "Harvey LA, Payne NL, Tan A, et al. (2024). Variation in mortality following hip fracture across the Asia Pacific region: Systematic review and proportional meta-analysis. Arch Gerontol Geriatr 126:105519.",
       "verification_status": "verified",
@@ -2512,6 +2653,24 @@
           "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[6]"
+        }
+      ]
+    },
+    {
+      "id": "src.kitsahawong-2024",
+      "display": "Kitsahawong K, Pitiphat W, Thongpaiboon P, Thongpaiboon S, Saengsuwannarot S (2024). Evaluating the protective effects of mouthguards with neutralizing agents against chlorinated water-induced enamel erosion. Front Oral Health 5:1469228. PMID 39328893",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "39328893",
+        "pmcid": "PMC11425598",
+        "doi": "10.3389/froh.2024.1469228"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "swimmer-dental-erosion",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[18].references[2]"
         }
       ]
     },
@@ -3296,6 +3455,24 @@
       ]
     },
     {
+      "id": "src.michener-2018",
+      "display": "Michener LA, Abrams JS, Bliven KCH, Falsone S, Laudner KG, McFarland EG, Tibone JE, Thigpen CA, Uhl TL (2018). National Athletic Trainers' Association Position Statement: Evaluation, Management, and Outcomes of and Return-to- Play Criteria for Overhead Athletes With Superior Labral Anterior-Posterior Injuries. J Athl Train 53(3):209-229. PMID 29624450",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "29624450",
+        "pmcid": "PMC5894372",
+        "doi": "10.4085/1062-6050-59-16"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "slap-lesion",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[3].references[2]"
+        }
+      ]
+    },
+    {
       "id": "src.military-swim-training-sipe",
       "display": "【佔位字串，非真實文獻】原記為「軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）」",
       "verification_status": "retracted",
@@ -3372,12 +3549,17 @@
         "bookshelf": "NBK557726",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK557726/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "shoulder-multidirectional-instability",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[2].epidemiology"
+        },
+        {
+          "id": "shoulder-multidirectional-instability",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[2].references[0]"
         }
       ]
     },
@@ -4411,12 +4593,17 @@
         "bookshelf": "NBK441995",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK441995/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "osgood-schlatter",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[42].epidemiology"
+        },
+        {
+          "id": "osgood-schlatter",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[42].references[0]"
         }
       ]
     },
@@ -8590,6 +8777,24 @@
       ]
     },
     {
+      "id": "src.ruiz-iban-2017",
+      "display": "Ruiz Ibán MA, Díaz Heredia J, García Navlet M, Serrano F, Santos Oliete M (2017). Multidirectional Shoulder Instability: Treatment. Open Orthop J 11:812-825. PMID 28979595",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "28979595",
+        "pmcid": "PMC5611704",
+        "doi": "10.2174/1874325001711010812"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "shoulder-multidirectional-instability",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[2].references[2]"
+        }
+      ]
+    },
+    {
       "id": "src.ruiz-navarro-2024",
       "display": "Ruiz-Navarro et al. 2024",
       "verification_status": "unverified",
@@ -8625,12 +8830,17 @@
         "bookshelf": "NBK430688",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK430688/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "salter-harris-physeal-fracture",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[43].epidemiology"
+        },
+        {
+          "id": "salter-harris-physeal-fracture",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[43].references[0]"
         }
       ]
     },
@@ -8754,12 +8964,17 @@
         "bookshelf": "NBK499966",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK499966/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "scheuermann-kyphosis",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[44].epidemiology"
+        },
+        {
+          "id": "scheuermann-kyphosis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[44].references[0]"
         }
       ]
     },
@@ -8883,12 +9098,17 @@
         "bookshelf": "NBK441928",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK441928/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "sever-disease",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[45].epidemiology"
+        },
+        {
+          "id": "sever-disease",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[45].references[0]"
         }
       ]
     },
@@ -9729,6 +9949,24 @@
           "id": "breast.tech.30",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[100].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.tavares-2025",
+      "display": "Tavares N, Vilas-Boas JP, Castro MA (2025). Effect of Preventive Exercise Programs for Swimmer's Shoulder Injury on Rotator Cuff Torque and Balance in Competitive Swimmers: A Randomized Controlled Trial. Healthcare (Basel) 13(5):538. PMID 40077099",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "40077099",
+        "pmcid": "PMC11899141",
+        "doi": "10.3390/healthcare13050538"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "rotator-cuff-tendinopathy",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[1].references[3]"
         }
       ]
     },
@@ -10931,6 +11169,24 @@
           "id": "ST3",
           "file": "Drills/drills_starts-turns.yaml",
           "path": "drills[2]"
+        }
+      ]
+    },
+    {
+      "id": "src.ull-2021",
+      "display": "Ull C, Yilmaz E, Jansen O, Lotzien S, Schildhauer TA, Aach M, Königshausen M (2021). Spinal Cord Injury With Tetraplegia in Young Persons After Diving Into Shallow Water: What Has Changed in the Past 10 to 15 Years? Global Spine J 11(8):1238-1247. PMID 32909818",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "32909818",
+        "pmcid": "PMC8453686",
+        "doi": "10.1177/2192568220944124"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "diving-cervical-injury",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[37].references[3]"
         }
       ]
     },

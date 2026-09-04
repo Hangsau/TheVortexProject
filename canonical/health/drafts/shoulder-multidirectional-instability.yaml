@@ -80,9 +80,9 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Multidirectional instability of the shoulder, StatPearls NBK557726", certainty: 🟢, verified: true }
+  - { citation: "Multidirectional instability of the shoulder, StatPearls NBK557726", certainty: 🟢, verified: true, source_ids: [src.multidirectional-instability-of-the-shoulder] }
   - { citation: "Bishop ME, Ode GE, Hurwit DJ, et al. (2022). Multidirectional instability of the shoulder（敘事型回顧，女性運動員視角，無統合統計）. Ann Joint 7:10. PMID 38529164, doi:10.21037/aoj-20-33", certainty: 🟢, verified: true, source_ids: [src.mdi-management-review-annals-of-joint] }
-  - { citation: "Arthroscopic vs open MDI repair outcomes, PMC5611704", certainty: 🟢, verified: true }
+  - { citation: "Ruiz Ibán MA, Díaz Heredia J, García Navlet M, Serrano F, Santos Oliete M. (2017). Multidirectional Shoulder Instability: Treatment. Open Orthop J 11:812-825. PMID 28979595 / PMC5611704（2026-09-04 更正：治療綜述，不是關節鏡對開放手術的療效比較研究）", certainty: 🟢, verified: true, source_ids: [src.ruiz-iban-2017] }
 
 flags:
   pending_verification:
