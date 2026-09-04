@@ -119,25 +119,15 @@
 
 ## W002 — 區塊**有**來源顯示字串（`source`/`sources`）但缺 `source_ids`（機器鍵沒跟上顯示層）；S3a-2 起不看 `certainty`
 
-**WARN，共 19 筆**
+**WARN，共 9 筆**
 
 > **契約說明（S3a／S3a-2）**：`source`（單數字串）與 `sources`（複數清單）都是顯示層自由文字，下游 my-site 直接渲染，**不可改寫、改名或改成陣列**；可解析的來源鍵放同區塊的 `source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。W002 自 S3a-2 起**與 `certainty` 解耦**：一個區塊只要帶了來源顯示字串，不論有沒有標確定性，那個來源都該進註冊表、都該有`source_ids` 指過去。掃描範圍也含 `Drills/*.yaml`。W009 仍綁 `certainty`——它問的是「標了 🟢/🟡 卻拿不出任何來源」，語意本來就以確定性標記為前提。兩者差別在**有沒有來源顯示資訊**：W002 已經有字串，只差把它登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用佔位來源填掉 W009。
 
-  file=canonical\health\injuries.yaml id='swimmers-shoulder' at=injuries[5].references[0] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='groin-adductor-strain' at=injuries[10].references[1] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='swimmer-ankle-foot-overuse' at=injuries[12].references[1] 有 citation 顯示字串但無 source_ids（certainty=yellow）
-  file=canonical\health\injuries.yaml id='cold-water-shock' at=injuries[23].references[3] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='drowning' at=injuries[25].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='drowning' at=injuries[25].references[2] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='drowning' at=injuries[25].references[3] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='drowning' at=injuries[25].references[4] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='exertional-sudden-cardiac-death' at=injuries[26].references[1] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='hypothermia-swimmers' at=injuries[27].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='hypothermia-swimmers' at=injuries[27].references[3] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='shallow-water-blackout' at=injuries[28].references[2] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='female-athlete-triad' at=injuries[31].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
-  file=canonical\health\injuries.yaml id='red-s' at=injuries[34].references[0] 有 citation 顯示字串但無 source_ids（無 certainty）
-  file=canonical\health\injuries.yaml id='red-s' at=injuries[34].references[1] 有 citation 顯示字串但無 source_ids（無 certainty）
   file=canonical\health\injuries.yaml id='stress-fracture-swimmer' at=injuries[35].references[0] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='diving-cervical-injury' at=injuries[37].references[4] 有 citation 顯示字串但無 source_ids（certainty=green）
   file=canonical\health\injuries.yaml id='poolside-slip-fall' at=injuries[40].references[0] 有 citation 顯示字串但無 source_ids（certainty=yellow）

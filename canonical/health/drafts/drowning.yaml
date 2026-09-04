@@ -88,9 +88,9 @@ links:
 references:
   - { citation: "WHO 2024-12-13『Drowning deaths decline globally but the most vulnerable remain at risk』新聞稿", certainty: 🟢, verified: true }
   - { citation: "Global burden of drowning 204 countries 1990-2021, Sci Rep 2025, PMC11954903", certainty: 🟢, verified: true, source_ids: [src.pmc11954903] }
-  - { citation: "2024 AHA/AAP Focused Update: Resuscitation Following Drowning, Circulation, doi:10.1161/CIR.0000000000001274", certainty: 🟢, verified: true }
-  - { citation: "Wilderness Medical Society CPG for Drowning 2024 Update", certainty: 🟢, verified: true }
-  - { citation: "StatPearls: Drowning, NCBI NBK430833", certainty: 🟢, verified: true }
+  - { citation: "Dezfulian C, et al. (2024). 2024 American Heart Association and American Academy of Pediatrics Focused Update on Special Circumstances: Resuscitation Following Drowning. Circulation 150(23):e501-e516. PMID 39530204 / doi:10.1161/CIR.0000000000001274", certainty: 🟢, verified: true, source_ids: [src.dezfulian-2024] }
+  - { citation: "Davis CA, et al. (2024). Wilderness Medical Society Clinical Practice Guidelines for the Treatment and Prevention of Drowning: 2024 Update. Wilderness Environ Med 35(1_suppl):94S-111S. PMID 38379489", certainty: 🟢, verified: true, source_ids: [src.davis-2024-wms-drowning] }
+  - { citation: "Gianfrancesco H, Sternard BT. Drowning: Clinical Management. In: StatPearls. NCBI Bookshelf NBK430833（最後更新 2025-09-15；2026-09-04 更正：章名不是「Drowning」）", certainty: 🟢, verified: true, source_ids: [src.drowning-clinical-management-statpearls-nbk430833] }
 
 flags:
   pending_verification:

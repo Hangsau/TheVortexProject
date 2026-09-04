@@ -75,10 +75,10 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Brannigan et al., Hypothermia is a Significant Medical Risk of Mass Participation Long-Distance Open Water Swimming, Wilderness Environ Med 2009", certainty: 🟢, verified: true }
+  - { citation: "Brannigan D, Rogers IR, Jacobs I, et al. (2009). Hypothermia is a significant medical risk of mass participation long-distance open water swimming. Wilderness Environ Med 20(1):14-18. PMID 19364182", certainty: 🟢, verified: true, source_ids: [src.brannigan-2009] }
   - { citation: "Thermoregulatory responses open water and pool swimming, JSAMS 2025, PubMed 40783351", certainty: 🟢, verified: true, source_ids: [src.pmid-40783351] }
   - { citation: "Core-Temperature Responses 3-km World Aquatics Open-Water Masters Doha 2024, PubMed 39500300", certainty: 🟢, verified: true, source_ids: [src.pmid-39500300] }
-  - { citation: "WMS CPG Accidental Hypothermia 2019 Update", certainty: 🟢, verified: true }
+  - { citation: "Dow J, et al. (2019). Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and Treatment of Accidental Hypothermia: 2019 Update. Wilderness Environ Med 30(4S):S47-S69. PMID 31740369", certainty: 🟢, verified: true, source_ids: [src.dow-2019] }
 
 flags:
   pending_verification:

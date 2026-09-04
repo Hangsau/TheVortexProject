@@ -76,7 +76,7 @@ references:
   - { citation: "Tipton M. (2003). Cold water immersion: sudden death and prolonged survival. Lancet 362 Suppl:s12–13. PMID 14698111 / DOI 10.1016/s0140-6736(03)15057-x（2026-08-17 更正：單一作者，原記「Tipton MJ et al.」的共同作者不存在）", certainty: 🟡, verified: true, source_ids: [src.tipton-mj-et-al-cold-water-immersion-sudden-2003] }
   - { citation: "Habituation of the cold shock response: systematic review and meta-analysis, 2024, PubMed 38211547", certainty: 🟢, verified: true, source_ids: [src.barwood-2024] }
   - { citation: "Lundström et al., face immersion/body submersion ice-cold water adolescents, Physiol Rep 2025, PMC12234767", certainty: 🟢, verified: true, source_ids: [src.pmc12234767] }
-  - { citation: "Farstad & Dunn, Cold Water Immersion Syndrome, Wilderness Environ Med 2019", certainty: 🟢, verified: true }
+  - { citation: "Farstad DJ, Dunn JA. (2019). Cold Water Immersion Syndrome and Whitewater Recreation Fatalities. Wilderness Environ Med 30(3):321-327. PMID 31178366（2026-09-04 補全：族群是激流泛舟死亡個案，不是泳者）", certainty: 🟢, verified: true, source_ids: [src.farstad-2019] }
 
 flags:
   pending_verification:

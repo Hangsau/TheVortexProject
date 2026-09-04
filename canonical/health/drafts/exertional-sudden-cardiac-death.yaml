@@ -85,7 +85,7 @@ links:
 
 references:
   - { citation: "Sex Differences in the Incidence of SCA/Death in Competitive Athletes: systematic review and meta-analysis, PMC11985649", certainty: 🟢, verified: true, source_ids: [src.pmc11985649] }
-  - { citation: "Athletic Activity for Patients with Hypertrophic Cardiomyopathy, JACC 2022", certainty: 🟢, verified: true }
+  - { citation: "Semsarian C, et al. (2022). Athletic Activity for Patients With Hypertrophic Cardiomyopathy and Other Inherited Cardiovascular Diseases: JACC Focus Seminar 3/4. J Am Coll Cardiol 80(13):1268-1283. PMID 36075839（綜述，非原始研究；涵蓋範圍不只 HCM）", certainty: 🟢, verified: true, source_ids: [src.semsarian-2022] }
   - { citation: "Commotio Cordis in 2023, PMC10356869", certainty: 🟢, verified: true, source_ids: [src.pmc10356869] }
   - { citation: "Goff NK, Hutchinson A, Koek W, Kamat D. (2023). Meta-analysis on the Effectiveness of ECG Screening for Conditions Related to Sudden Cardiac Death in Young Athletes. Clin Pediatr (Phila) 62(10):1158-1168. PMID 36797841 / PMC10478328", certainty: 🟢, verified: true, source_ids: [src.goff-2023] }
   - { citation: "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601. PMID 17018804（義大利 Veneto 單區、全體競技運動員、非游泳專項）", certainty: 🟢, verified: true, source_ids: [src.ecg-scd-3-6-0-4-10-89-url] }

@@ -76,8 +76,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "IOC consensus statement on RED-S（2014 首版/後續更新，作者與 DOI 待 WebFetch 核實）", certainty: 🔴, verified: false }
-  - { citation: "女性運動員三聯症 ACSM position stand（年份/作者待查）", certainty: 🔴, verified: false }
+  - { citation: "Mountjoy M, Ackerman KE, Bailey DM, et al. (2023). 2023 IOC consensus statement on Relative Energy Deficiency in Sport (REDs). Br J Sports Med 57(17):1073-1097. PMID 37752011（2026-09-04 定版：原登錄未標版本，本條固定指向 2023 版；2014／2018 版結論不同，須另建條目）", certainty: 🟢, verified: true, source_ids: [src.ioc-red-s-2014-2018-2023-doi] }
+  - { citation: "Nattiv A, Loucks AB, Manore MM, Sanborn CF, Sundgot-Borgen J, Warren MP. (2007). American College of Sports Medicine position stand. The female athlete triad. Med Sci Sports Exerc 39(10):1867-82. PMID 17909417（2026-09-04 定版：原登錄未標年份，本條指定為 2007 現行版；1997 首版 PMID 9140913 為不同文獻）", certainty: 🟡, verified: true, source_ids: [src.nattiv-2007] }
 
 flags:
   pending_verification:

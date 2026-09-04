@@ -840,7 +840,6 @@
         "breathing.training.co2_tolerance",
         "free.err14",
         "psych.arousal.inverted_u",
-        "red-s",
         "shallow-water-blackout",
         "swimmers-shoulder",
         "udk.tech.5"
@@ -1534,6 +1533,7 @@
         "psych.self_talk.systematic_training",
         "psych.self_talk.trainable_skill",
         "recreational-water-cryptosporidium",
+        "red-s",
         "rotator-cuff-tendinopathy",
         "salter-harris-physeal-fracture",
         "scheuermann-kyphosis",
@@ -1586,6 +1586,7 @@
         "swimmer-elbow-wrist-overuse",
         "swimmer-low-bone-density",
         "swimmers-ear",
+        "swimmers-shoulder",
         "swimming-induced-bronchoconstriction",
         "thoracic-outlet-syndrome",
         "udk.err1",

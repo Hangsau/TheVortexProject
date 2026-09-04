@@ -6817,6 +6817,7 @@
       },
       "source_ids": [
         "src.barwood-2024",
+        "src.farstad-2019",
         "src.pmc12234767",
         "src.tipton-mj-et-al-cold-water-immersion-sudden-2003"
       ],
@@ -7388,6 +7389,9 @@
         ]
       },
       "source_ids": [
+        "src.davis-2024-wms-drowning",
+        "src.dezfulian-2024",
+        "src.drowning-clinical-management-statpearls-nbk430833",
         "src.pmc11115434",
         "src.pmc11954903",
         "src.who-2024-12-13-drowning-deaths-decline-globa-2024"
@@ -7436,7 +7440,8 @@
         "src.goff-2023",
         "src.pmc10356869",
         "src.pmc11985649",
-        "src.pmc12234767"
+        "src.pmc12234767",
+        "src.semsarian-2022"
       ],
       "outgoing_ids": []
     },
@@ -11042,7 +11047,9 @@
         ]
       },
       "source_ids": [
+        "src.brannigan-2009",
         "src.brannigan-et-al-hypothermia-mass-participati-2009",
+        "src.dow-2019",
         "src.pmid-39500300",
         "src.pmid-40783351"
       ],
@@ -17359,12 +17366,13 @@
           "D-endocrine"
         ],
         "certainty": [
-          "🔴",
-          "🟡"
+          "🟡",
+          "🟢"
         ]
       },
       "source_ids": [
-        "src.ioc-red-s-2014-2018-2023-doi"
+        "src.ioc-red-s-2014-2018-2023-doi",
+        "src.nattiv-2007"
       ],
       "outgoing_ids": []
     },
@@ -19617,7 +19625,8 @@
         ],
         "certainty": [
           "🔴",
-          "🟡"
+          "🟡",
+          "🟢"
         ]
       },
       "source_ids": [
@@ -19625,6 +19634,7 @@
         "src.mckenzie-2023-b",
         "src.pink-1993",
         "src.pmc7824457",
+        "src.sein-2010",
         "src.statpearls-swimmer-s-shoulder-ncbi-bookshelf"
       ],
       "outgoing_ids": [

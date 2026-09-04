@@ -6181,3 +6181,202 @@ sources:
       doi: 10.4085/1062-6050-703-20
     retrieved_on: '2026-09-04'
     notes: 2026-09-04 efetch 核對。**原顯示字串漏掉「Men's」**——本文只涵蓋 NCAA 男子游泳與跳水（2014-2015 至 2018-2019），族群邊界不得擴及女子項目。
+
+  - id: src.farstad-2019
+    display: Farstad DJ, Dunn JA. (2019). Cold Water Immersion Syndrome and Whitewater Recreation Fatalities.
+      Wilderness Environ Med 30(3):321-327. PMID 31178366
+    title: Cold Water Immersion Syndrome and Whitewater Recreation Fatalities.
+    type: journal-article
+    verification_status: verified
+    authors:
+    - Farstad DJ
+    - Dunn JA
+    year: 2019
+    container: Wilderness Environ Med
+    identifier:
+      pmid: '31178366'
+      doi: 10.1016/j.wem.2019.03.005
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對。**原顯示字串只寫「Cold Water Immersion Syndrome」，漏掉後半段「and Whitewater Recreation
+      Fatalities」**——本文的族群是激流泛舟死亡個案，不是泳者。冷休克生理機制可借，事故率與情境不得直接外推到游泳。
+  - id: src.dezfulian-2024
+    display: 'Dezfulian C, McCallin TE, Bierens J, Dunne CL, Idris AH, Kiragu A, Mahgoub M, Shenoi RP et
+      al.. (2024). 2024 American Heart Association and American Academy of Pediatrics Focused Update on
+      Special Circumstances: Resuscitation Following Drowning: An Update to the American Heart Association
+      Guidelines for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care. Circulation 150(23):e501-e516.
+      PMID 39530204'
+    title: '2024 American Heart Association and American Academy of Pediatrics Focused Update on Special
+      Circumstances: Resuscitation Following Drowning: An Update to the American Heart Association Guidelines
+      for Cardiopulmonary Resuscitation and Emergency Cardiovascular Care.'
+    type: guideline
+    verification_status: verified
+    authors:
+    - Dezfulian C
+    - McCallin TE
+    - Bierens J
+    - Dunne CL
+    - Idris AH
+    - Kiragu A
+    - Mahgoub M
+    - Shenoi RP
+    year: 2024
+    container: Circulation
+    identifier:
+      pmid: '39530204'
+      doi: 10.1161/CIR.0000000000001274
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 以 draft 顯示字串提供的 DOI 直接命中，標題／作者／年份／期刊相符。AHA／AAP 聚焦更新屬指引層級，其中數字須追到被引用的原研究。
+  - id: src.davis-2024-wms-drowning
+    display: 'Davis CA, Schmidt AC, Sempsrott JR, Hawkins SC, Arastu AS, Giesbrecht GG, Cushing TA. (2024).
+      Wilderness Medical Society Clinical Practice Guidelines for the Treatment and Prevention of Drowning:
+      2024 Update. Wilderness Environ Med 35(1_suppl):94S-111S. PMID 38379489'
+    title: 'Wilderness Medical Society Clinical Practice Guidelines for the Treatment and Prevention of
+      Drowning: 2024 Update.'
+    type: guideline
+    verification_status: verified
+    authors:
+    - Davis CA
+    - Schmidt AC
+    - Sempsrott JR
+    - Hawkins SC
+    - Arastu AS
+    - Giesbrecht GG
+    - Cushing TA
+    year: 2024
+    container: Wilderness Environ Med
+    identifier:
+      pmid: '38379489'
+      doi: 10.1177/10806032241227460
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對，標題／作者／年份／期刊相符（WMS 溺水臨床實務指引 2024 更新版）。前身為 Schmidt 等 2019 更新版（PMID 31668915）與
+      2016 首版（PMID 27061040），若主張出自舊版須另建條目。
+  - id: src.semsarian-2022
+    display: 'Semsarian C, Gray B, Haugaa KH, Lampert R, Sharma S, Kovacic JC. (2022). Athletic Activity
+      for Patients With Hypertrophic Cardiomyopathy and Other Inherited Cardiovascular Diseases: JACC Focus
+      Seminar 3/4. J Am Coll Cardiol 80(13):1268-1283. PMID 36075839'
+    title: 'Athletic Activity for Patients With Hypertrophic Cardiomyopathy and Other Inherited Cardiovascular
+      Diseases: JACC Focus Seminar 3/4.'
+    type: journal-article
+    verification_status: verified
+    authors:
+    - Semsarian C
+    - Gray B
+    - Haugaa KH
+    - Lampert R
+    - Sharma S
+    - Kovacic JC
+    year: 2022
+    container: J Am Coll Cardiol
+    identifier:
+      pmid: '36075839'
+      doi: 10.1016/j.jacc.2022.07.013
+    retrieved_on: '2026-09-04'
+    notes: '2026-09-04 efetch 核對。原顯示字串截短了標題，完整標題含「and Other Inherited Cardiovascular Diseases: JACC Focus
+      Seminar 3/4」——涵蓋範圍不只肥厚型心肌病。Focus Seminar 是綜述不是原始研究。'
+  - id: src.brannigan-2009
+    display: Brannigan D, Rogers IR, Jacobs I, Montgomery A, Williams A, Khangure N. (2009). Hypothermia
+      is a significant medical risk of mass participation long-distance open water swimming. Wilderness
+      Environ Med 20(1):14-8. PMID 19364182
+    title: Hypothermia is a significant medical risk of mass participation long-distance open water swimming.
+    type: journal-article
+    verification_status: verified
+    authors:
+    - Brannigan D
+    - Rogers IR
+    - Jacobs I
+    - Montgomery A
+    - Williams A
+    - Khangure N
+    year: 2009
+    container: Wilderness Environ Med
+    identifier:
+      pmid: '19364182'
+      doi: 10.1580/08-WEME-OR-214.1
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對，標題／作者／期刊相符；**原顯示字串未標年份，實為 2009**。族群是大型群眾參與的長距離公開水域游泳賽事。
+  - id: src.dow-2019
+    display: 'Dow J, Giesbrecht GG, Danzl DF, Brugger H, Sagalyn EB, Walpoth B, Auerbach PS, McIntosh SE
+      et al.. (2019). Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation
+      and Treatment of Accidental Hypothermia: 2019 Update. Wilderness Environ Med 30(4S):S47-S69. PMID
+      31740369'
+    title: 'Wilderness Medical Society Clinical Practice Guidelines for the Out-of-Hospital Evaluation and
+      Treatment of Accidental Hypothermia: 2019 Update.'
+    type: guideline
+    verification_status: verified
+    authors:
+    - Dow J
+    - Giesbrecht GG
+    - Danzl DF
+    - Brugger H
+    - Sagalyn EB
+    - Walpoth B
+    - Auerbach PS
+    - McIntosh SE
+    year: 2019
+    container: Wilderness Environ Med
+    identifier:
+      pmid: '31740369'
+      doi: 10.1016/j.wem.2019.10.002
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對，標題／作者／年份／期刊相符（WMS 意外低體溫院前評估與處置指引 2019 更新版）。
+  - id: src.sein-2010
+    display: 'Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell GA. (2010). Shoulder
+      pain in elite swimmers: primarily due to swim-volume-induced supraspinatus tendinopathy. Br J Sports
+      Med 44(2):105-13. PMID 18463295'
+    title: 'Shoulder pain in elite swimmers: primarily due to swim-volume-induced supraspinatus tendinopathy.'
+    type: journal-article
+    verification_status: verified
+    authors:
+    - Sein ML
+    - Walton J
+    - Linklater J
+    - Appleyard R
+    - Kirkbride B
+    - Kuah D
+    - Murrell GA
+    year: 2010
+    container: Br J Sports Med
+    identifier:
+      pmid: '18463295'
+      doi: 10.1136/bjsm.2008.047282
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 efetch 核對。標題／作者／年份／期刊相符；**頁碼原顯示字串寫 105-11，實為 105-13**。
+  - id: src.nattiv-2007
+    display: Nattiv A, Loucks AB, Manore MM, Sanborn CF, Sundgot-Borgen J, Warren MP; American College of
+      Sports Medicine. (2007). American College of Sports Medicine position stand. The female athlete triad.
+      Med Sci Sports Exerc 39(10):1867-82. PMID 17909417
+    title: American College of Sports Medicine position stand. The female athlete triad.
+    type: guideline
+    verification_status: verified
+    authors:
+    - Nattiv A
+    - Loucks AB
+    - Manore MM
+    - Sanborn CF
+    - Sundgot-Borgen J
+    - Warren MP; American College of Sports Medicine
+    year: 2007
+    container: Med Sci Sports Exerc
+    identifier:
+      pmid: '17909417'
+      doi: 10.1249/mss.0b013e318149f111
+    retrieved_on: '2026-09-04'
+    notes: 2026-09-04 定位。**原顯示字串只寫「女性運動員三聯症 ACSM position stand（年份/作者待查）」沒有版本**——ACSM 對此主題共兩版：1997 首版（Otis
+      等，PMID 9140913）與 2007 現行版（Nattiv 等）。本 id 固定指向 **2007 現行版**；若主張其實出自 1997 首版，必須另建條目，不可掛本 id。這是依「現行版」所做的**指定**而非逐字比對出的匹配，故明寫於此。
+  - id: src.drowning-clinical-management-statpearls-nbk430833
+    display: 'Gianfrancesco H, Sternard BT. Drowning: Clinical Management. In: StatPearls. Treasure Island
+      (FL): StatPearls Publishing. NCBI Bookshelf NBK430833（最後更新 2025-09-15）。'
+    title: 'Drowning: Clinical Management'
+    type: book-chapter
+    verification_status: verified
+    authors:
+    - Gianfrancesco H
+    - Sternard BT
+    year: 2025
+    identifier:
+      bookshelf: NBK430833
+      pmid: '28613583'
+      url: https://www.ncbi.nlm.nih.gov/books/NBK430833/
+    retrieved_on: '2026-09-04'
+    notes: '2026-09-04 直接取 NCBI Bookshelf 頁面證實存在。**原顯示字串寫「StatPearls: Drowning」，實際章名為「Drowning: Clinical
+      Management」**。StatPearls 屬教科書層級證據，非原始研究。'
