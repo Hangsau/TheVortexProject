@@ -3906,7 +3906,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.21"
+      ]
     },
     {
       "id": "back.err11",
@@ -3950,7 +3952,10 @@
       "source_ids": [
         "src.race-club-ch-14"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.11",
+        "back.tech.12"
+      ]
     },
     {
       "id": "back.err13",
@@ -3992,7 +3997,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.err7",
+        "back.tech.21"
+      ]
     },
     {
       "id": "back.err15",
@@ -4037,7 +4045,10 @@
       "source_ids": [
         "src.general-swim-medicine-consensus"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.13",
+        "back.tech.28"
+      ]
     },
     {
       "id": "back.err17",
@@ -4127,7 +4138,11 @@
       "source_ids": [
         "src.gonjo-2021-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.1",
+        "back.tech.2",
+        "back.tech.6"
+      ]
     },
     {
       "id": "back.err5",
@@ -4196,7 +4211,10 @@
       "source_ids": [
         "src.swim-teach-com-a3-performance-enjoy-swimming"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.tech.21",
+        "breathing.physiology.chemoreceptors"
+      ]
     },
     {
       "id": "back.err8",
@@ -5265,7 +5283,9 @@
         "src.tanaka-2024-b",
         "src.u-s-masters-swimming"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.9"
+      ]
     },
     {
       "id": "breast.err10",
@@ -5290,7 +5310,9 @@
         "src.nicol-2022-b",
         "src.u-s-masters-swimming"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.8"
+      ]
     },
     {
       "id": "breast.err11",
@@ -5341,7 +5363,11 @@
         "src.swim-like-a-fish",
         "src.wikipedia-breaststroke"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.28",
+        "breast.tech.29",
+        "breast.tech.7"
+      ]
     },
     {
       "id": "breast.err13",
@@ -5361,7 +5387,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.26",
+        "breast.tech.5"
+      ]
     },
     {
       "id": "breast.err14",
@@ -5381,7 +5410,9 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.10"
+      ]
     },
     {
       "id": "breast.err15",
@@ -5474,7 +5505,11 @@
         "src.swimoutlet",
         "src.u-s-masters-swimming"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.11",
+        "breast.tech.13",
+        "breast.tech.15"
+      ]
     },
     {
       "id": "breast.err3",
@@ -5496,7 +5531,10 @@
       "source_ids": [
         "src.360swim"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.11",
+        "breast.tech.9"
+      ]
     },
     {
       "id": "breast.err4",
@@ -5570,7 +5608,11 @@
       "source_ids": [
         "src.swimming-world-magazine"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.24",
+        "breast.tech.3",
+        "breast.tech.4"
+      ]
     },
     {
       "id": "breast.err7",
@@ -5594,7 +5636,10 @@
         "src.swimming-world-magazine-rod-havriluk-phd-bio",
         "src.swimoutlet"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.20",
+        "breast.tech.5"
+      ]
     },
     {
       "id": "breast.err8",
@@ -5617,7 +5662,10 @@
       "source_ids": [
         "src.360swim"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.5",
+        "breast.tech.8"
+      ]
     },
     {
       "id": "breast.err9",
@@ -5639,7 +5687,10 @@
       "source_ids": [
         "src.swimming-world-magazine-rod-havriluk"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.tech.3",
+        "breast.tech.5"
+      ]
     },
     {
       "id": "breast.pre",
@@ -8017,7 +8068,10 @@
         "src.brent-rushall-sdsu",
         "src.usms"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.16",
+        "fly.tech.17"
+      ]
     },
     {
       "id": "fly.err14",
@@ -8062,7 +8116,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.14",
+        "fly.tech.21"
+      ]
     },
     {
       "id": "fly.err16",
@@ -8082,7 +8139,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.21"
+      ]
     },
     {
       "id": "fly.err2",
@@ -8105,7 +8165,10 @@
       "source_ids": [
         "src.myswimpro"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.14"
+      ]
     },
     {
       "id": "fly.err3",
@@ -8128,7 +8191,11 @@
       "source_ids": [
         "src.swimswam-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.12",
+        "fly.tech.13",
+        "fly.tech.33"
+      ]
     },
     {
       "id": "fly.err4",
@@ -8175,7 +8242,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "fly.tech.10",
+        "fly.tech.20"
+      ]
     },
     {
       "id": "fly.err6",
@@ -9614,7 +9684,9 @@
       "source_ids": [
         "src.mccullough-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.13"
+      ]
     },
     {
       "id": "free.err12",
@@ -9663,7 +9735,10 @@
       "source_ids": [
         "src.the-race-club-vm-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.13",
+        "free.tech.41"
+      ]
     },
     {
       "id": "free.err14",
@@ -9686,7 +9761,9 @@
       "source_ids": [
         "src.mccullough-c"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.13"
+      ]
     },
     {
       "id": "free.err15",
@@ -9734,7 +9811,11 @@
       "source_ids": [
         "src.andersen-2020"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.39",
+        "free.tech.4",
+        "free.tech.5"
+      ]
     },
     {
       "id": "free.err17",
@@ -9809,7 +9890,10 @@
       "source_ids": [
         "src.coach-observation"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.17",
+        "free.tech.8"
+      ]
     },
     {
       "id": "free.err2",
@@ -9832,7 +9916,10 @@
       "source_ids": [
         "src.rod-havriluk-swimming-technology-research"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.1",
+        "free.tech.32"
+      ]
     },
     {
       "id": "free.err20",
@@ -9908,7 +9995,11 @@
       "source_ids": [
         "src.staunton-2025-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.19",
+        "free.tech.3",
+        "free.tech.35"
+      ]
     },
     {
       "id": "free.err23",
@@ -9931,7 +10022,10 @@
       "source_ids": [
         "src.specificity-of-practice-usrpt"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.24",
+        "free.tech.25"
+      ]
     },
     {
       "id": "free.err24",
@@ -10004,7 +10098,10 @@
         "src.coach-alan-tri-training-harder",
         "src.matt-donovan-usms"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.20",
+        "free.tech.32"
+      ]
     },
     {
       "id": "free.err4",
@@ -10029,7 +10126,10 @@
         "src.chilitri-com",
         "src.pmc3438875"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.32",
+        "free.tech.5"
+      ]
     },
     {
       "id": "free.err5",
@@ -10079,7 +10179,10 @@
         "src.the-race-club",
         "src.vortex-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.20",
+        "free.tech.27"
+      ]
     },
     {
       "id": "free.err7",
@@ -10102,7 +10205,10 @@
         "src.marinho-2010",
         "src.the-race-club"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.27",
+        "free.tech.28"
+      ]
     },
     {
       "id": "free.err8",
@@ -10125,7 +10231,10 @@
       "source_ids": [
         "src.swimming-world-magazine"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.27",
+        "free.tech.37"
+      ]
     },
     {
       "id": "free.err9",
@@ -10147,7 +10256,10 @@
       "source_ids": [
         "src.yourswimlog-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "free.tech.27",
+        "free.tech.29"
+      ]
     },
     {
       "id": "free.pre.resistance",
@@ -17778,7 +17890,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.17",
+        "starts-turns.tech.19",
+        "starts-turns.tech.38"
+      ]
     },
     {
       "id": "starts-turns.err12",
@@ -17800,7 +17916,11 @@
       "source_ids": [
         "src.general-swim-science-consensus"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.32",
+        "starts-turns.tech.44",
+        "udk.tech.18"
+      ]
     },
     {
       "id": "starts-turns.err13",
@@ -17820,7 +17940,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.26",
+        "udk.err8",
+        "udk.tech.17"
+      ]
     },
     {
       "id": "starts-turns.err14",
@@ -19810,7 +19934,10 @@
         "src.veiga-2022",
         "src.yourswimlog-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.13",
+        "udk.tech.4"
+      ]
     },
     {
       "id": "udk.err10",
@@ -19832,7 +19959,10 @@
       "source_ids": [
         "src.yourswimlog-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "starts-turns.tech.34",
+        "starts-turns.tech.44"
+      ]
     },
     {
       "id": "udk.err11",
@@ -19855,7 +19985,9 @@
       "source_ids": [
         "src.swimswam-wku-kinematic"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.22"
+      ]
     },
     {
       "id": "udk.err12",
@@ -19880,7 +20012,10 @@
         "src.rohr-2004",
         "src.usms-swimming-world-magazine-the-race-club"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.4",
+        "udk.tech.8"
+      ]
     },
     {
       "id": "udk.err13",
@@ -19905,7 +20040,9 @@
         "src.usms",
         "src.usms-body-alignment-guide-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.24"
+      ]
     },
     {
       "id": "udk.err2",
@@ -19929,7 +20066,10 @@
         "src.danswim",
         "src.the-race-club"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.4",
+        "udk.tech.9"
+      ]
     },
     {
       "id": "udk.err3",
@@ -19954,7 +20094,11 @@
         "src.atkison-2014-a",
         "src.yourswimlog-a"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.10",
+        "udk.tech.12",
+        "udk.tech.7"
+      ]
     },
     {
       "id": "udk.err4",
@@ -19976,7 +20120,10 @@
       "source_ids": [
         "src.pmid-28605694"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.13",
+        "udk.tech.27"
+      ]
     },
     {
       "id": "udk.err5",
@@ -20000,7 +20147,10 @@
         "src.usms",
         "src.usms-body-alignment-guide-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.24",
+        "udk.tech.4"
+      ]
     },
     {
       "id": "udk.err6",
@@ -20050,7 +20200,9 @@
         "src.novais-2012-b",
         "src.sciencedirect-wave-drag-study"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.2"
+      ]
     },
     {
       "id": "udk.err8",
@@ -20075,7 +20227,10 @@
         "src.the-race-club",
         "src.the-race-club-velocity-meter-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.17",
+        "udk.tech.29"
+      ]
     },
     {
       "id": "udk.err9",
@@ -20101,7 +20256,10 @@
         "src.the-race-club",
         "src.yourswimlog-b"
       ],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "udk.tech.18",
+        "udk.tech.19"
+      ]
     },
     {
       "id": "udk.tech.1",

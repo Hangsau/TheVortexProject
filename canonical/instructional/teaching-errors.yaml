@@ -101,6 +101,8 @@ errors:
           source: Rod Havriluk, Swimming Technology Research
           source_ids: [src.rod-havriluk-swimming-technology-research]
           url: https://chicagobluedolphins.com/article-freestyle-straight-arm-recovery/
+      cross_ref: 自由式無唯一最優技術、恢復臂能量光譜
+      cross_ref_ids: [free.tech.1, free.tech.32]
       correct_concept: >-
         影片分析要區分：「選手因為這個動作而快」vs「選手雖然有這個動作但還是快」。前者值得學，
         後者是體能補償，複製只是複製了缺陷。
@@ -139,6 +141,8 @@ errors:
           source: Matt Donovan, USMS
           source_ids: [src.matt-donovan-usms]
           url: https://www.usms.org/fitness-and-training/articles-and-videos/articles/the-right-and-wrong-time-to-have-high-elbows-on-freestyle
+      cross_ref: 恢復臂能量光譜、手入水跨越中線
+      cross_ref_ids: [free.tech.32, free.tech.20]
       correct_concept: >-
         Drill 是找感覺的工具，需明確說明它在訓練什麼感知，以及與正式游泳的差異。使用前告知目的，
         使用後確認學員是否誤以為 drill 路徑就是游泳路徑。
@@ -173,6 +177,8 @@ errors:
           source: Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875
           source_ids: [src.pmc3438875]
           url: https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3438875/
+      cross_ref: 恢復臂能量光譜、Shoulder-driven 肩部驅動風格
+      cross_ref_ids: [free.tech.32, free.tech.5]
       correct_concept: >-
         先問「這個學員為什麼用直臂？」再決定是否需要調整。直臂回臂不等於錯誤，高肘回臂也不等於安全。
 
@@ -233,6 +239,8 @@ errors:
             指尖朝前斜下切入，不跨越中線。
           source: Vortex 整理
           source_ids: [src.vortex-a]
+      cross_ref: 入水手部位置與小指朝下、手入水跨越中線
+      cross_ref_ids: [free.tech.27, free.tech.20]
       correct_concept: >-
         入水點在肩線前方、手臂接近伸展處，指尖朝前斜下切入，不跨中線。
       perception_impact: >-
@@ -268,6 +276,8 @@ errors:
           source: The Race Club
           source_ids: [src.the-race-club]
           url: https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/
+      cross_ref: 划水時手指微張製造紊流、入水手部位置與小指朝下
+      cross_ref_ids: [free.tech.28, free.tech.27]
       correct_concept: >-
         入水瞬間指尖領先、手形緊實；進入捕水後微微張開至約 10° 自然位。只教「全程夾緊」會限制抓水面積。
       perception_impact: >-
@@ -295,6 +305,8 @@ errors:
           source: Swimming World Magazine
           source_ids: [src.swimming-world-magazine]
           url: https://www.swimmingworldmagazine.com/news/science-of-performance-hand-entry/
+      cross_ref: 入水手部位置與小指朝下、手掌在水中朝哪裡，不能反推前臂旋前或旋後
+      cross_ref_ids: [free.tech.27, free.tech.37]
       correct_concept: >-
         目標是「指尖領先、乾淨切入」，達成此目標的腕部角度因回臂方式與個人解剖條件而異，不能硬套單一標準。
 
@@ -322,6 +334,8 @@ errors:
           source: YourSwimLog
           source_ids: [src.yourswimlog-a]
           url: https://www.yourswimlog.com/how-to-improve-freestyle-hand-entry/
+      cross_ref: 入水手部位置與小指朝下、手部砸水強度 = 肩旋轉速度
+      cross_ref_ids: [free.tech.27, free.tech.29]
       correct_concept: >-
         目標是「指尖領先、積極前伸切入」。以「安靜」為目標會減慢手臂在空中的最後加速，削減耦合的能量轉移。
       perception_impact: >-
@@ -387,6 +401,8 @@ errors:
           source: McCullough et al. 2009, J. Strength & Conditioning Research
           source_ids: [src.mccullough-a]
           url: https://pubmed.ncbi.nlm.nih.gov/19855342/
+      cross_ref: 踝關節柔韌性
+      cross_ref_ids: [free.tech.13]
       correct_concept: >-
         踝關節柔韌性訓練優先於力量。跑步背景選手需先評估蹠屈幅度確認硬體邊界，再決定踢水訓練方向。
       perception_impact: >-
@@ -445,6 +461,8 @@ errors:
             彎曲角度 55–75°（下踢峰值），低於 55° 推進不足，超過 75° 進入 bicycle kick。
           source: The Race Club VM 量化
           source_ids: [src.the-race-club-vm-a]
+      cross_ref: 教練說的「膝蓋鎖死」與教科書的 knee locking 意思相反、踝關節柔韌性
+      cross_ref_ids: [free.tech.41, free.tech.13]
       correct_concept: >-
         根本是發力序列：髖帶膝、膝帶踝、踝完成鞭打。「用腰帶腿」修正的是發力起點，不應解讀為消除膝蓋動作。
         推薦夾板踢水隔離腿部，感知髖-膝-踝連動。
@@ -472,6 +490,8 @@ errors:
           text: 原記錄的 6 週介入數字與具體陸上處方尚未定位到原始研究；McCullough 2009 是橫斷相關研究，不能支持此介入效果。
           source: 原始介入研究待查（不是 McCullough 2009）
           source_ids: [src.mccullough-c]
+      cross_ref: 踝關節柔韌性
+      cross_ref_ids: [free.tech.13]
       correct_concept: >-
         踝柔韌性是可訓練的硬體條件，不是不可改變的先天限制。診斷僵硬後應設計踝專項訓練，同時在水中用
         適合目前範圍的踢水訓練。只告知「天生腳踝硬」而不提供改善方案，是診斷與教學流程的雙重失職。
@@ -532,6 +552,8 @@ errors:
           source: Andersen et al. (2020) 方向；PMID 32500807
           source_ids: [src.andersen-2020]
           url: https://pubmed.ncbi.nlm.nih.gov/32500807/
+      cross_ref: Hip-driven 髖部驅動風格、Shoulder-driven 肩部驅動風格、脊椎節間旋轉與 body roll 是兩種量
+      cross_ref_ids: [free.tech.4, free.tech.5, free.tech.39]
       correct_concept: >-
         旋轉幅度目標是「讓划手推力峰值和旋轉速度峰值對齊」，不是越大越好。「打開肩膀」對長距離有意義，
         對短距離可能是干擾。先確認目標距離和划頻。
@@ -621,6 +643,8 @@ errors:
             精英不是為換氣而停等手臂，而是找到旋轉節律中換氣自然契合的時間窗口塞進去，不改變划手節律。
           source: 教練觀測
           source_ids: [src.coach-observation]
+      cross_ref: 頭部基礎位置與弓形波換氣、六階段划手週期
+      cross_ref_ids: [free.tech.17, free.tech.8]
       correct_concept: >-
         換氣不應讓划手節律停等它。讓嘴巴在旋轉瞬間進入弓形波凹陷，吸氣後立刻回位，整個換氣發生在旋轉的
         正常弧度裡。換氣是「找到身體自然給出空間的瞬間」，不是「要求身體停下來等你」。
@@ -713,6 +737,8 @@ errors:
             精英金牌相對於一般精英的優勢正在於「高 SR 下維持 SL 不下降」——兩者不是取捨，是同時最大化的目標。
           source: Staunton et al. (2025)
           source_ids: [src.staunton-2025-a]
+      cross_ref: SR–SL 動態關係、划手週期 timing、划頻是神經生理指標，划距是技術效率指標
+      cross_ref_ids: [free.tech.3, free.tech.35, free.tech.19]
       correct_concept: >-
         SR 與 SL 都要訓練但目標不同：SR 訓練神經快速徵召；SL 訓練在高 SR 下維持捕水效率和阻力控制。
         問題不是「選哪個」，而是「目前 SR 壓力下 SL 下降的原因是技術問題還是生理條件問題」。
@@ -743,6 +769,8 @@ errors:
             主張以短距離段落在比賽配速練習，建立比賽速度下的正確神經模式。
           source: Specificity of Practice；USRPT
           source_ids: [src.specificity-of-practice-usrpt]
+      cross_ref: 疲勞崩潰序列、水感的本質
+      cross_ref_ids: [free.tech.24, free.tech.25]
       correct_concept: >-
         訓練分界不是速度，而是「技術是否崩潰」。Drill 可加速度要求（只要技術不崩）；計時游也可是技術訓練
         （只要在不崩速度內）。教練核心是找到每個選手在每個階段的「不崩速度」，在那個邊界設計訓練。
@@ -978,6 +1006,8 @@ errors:
             但距離影響主導方式的選擇。
           source: "Gonjo et al. (2021)"
           source_ids: [src.gonjo-2021-b]
+      cross_ref: 精英仰式泳者肩旋轉與髖旋轉的現代運動學數據、仰式在不同速度下維持旋轉幅度（不像自由式縮小）、仰式旋轉的不對稱性
+      cross_ref_ids: [back.tech.1, back.tech.2, back.tech.6]
       correct_concept: >-
         滾轉主導方式應依選手踢水能力與比賽距離判斷，不強制單一模式。
         有效教學路徑：髖部主導從踢水訓練切入，讓腿打水節律帶動身體旋轉；
@@ -1083,6 +1113,8 @@ errors:
             並協助手腿協調與放鬆。兒童憋氣是教練需主動辨識並糾正的常見問題。
           source: "swim-teach.com、A3 Performance、enjoy-swimming 等背式呼吸教學指引（教學共識）"
           source_ids: [src.swim-teach-com-a3-performance-enjoy-swimming]
+      cross_ref: 頭部基礎位置、化學受器與呼吸驅動
+      cross_ref_ids: [back.tech.21, breathing.physiology.chemoreceptors]
       correct_concept: >-
         仰式仍需固定呼吸節律。感知目標是「吐氣與某一側划手綁定」形成自動節奏，
         而非用意識決定何時呼吸。節律穩定後，呼吸成為手腿時序的節拍器。
@@ -1182,6 +1214,8 @@ errors:
           任何抬頭看身體下半部的動作都會讓重心前移、臀部下沉、身體拱起，
           形成所謂「坐在水裡」的姿勢——而這正是想用抬頭口令矯正的問題本身。
           換句話說，這個口令把症狀當成了診斷工具，逼選手做出讓問題加劇的動作。
+      cross_ref: 頭部基礎位置
+      cross_ref_ids: [back.tech.21]
       correct_concept: >-
         身體位置不靠視覺確認，靠本體感覺與外部回饋（教練影片、額頭水線位置）。
         初學階段用 Bk22 泳鏡平衡 drill（額頭放泳鏡保持不掉）建立頭部靜止感，
@@ -1255,6 +1289,8 @@ errors:
             而非繼續拉到大腿底。
           source: "Race Club Ch 14；通用菁英影像觀察"
           source_ids: [src.race-club-ch-14]
+      cross_ref: 推水、拉水
+      cross_ref_ids: [back.tech.12, back.tech.11]
       correct_concept: >-
         拉水的目標是「通過臀部時釋放」，不是「拉到底」。
         感知目標是「手通過臀部時感覺水壓開始下降→立刻出水」，
@@ -1310,6 +1346,8 @@ errors:
           會讓選手在「該換氣的節律點」感到憋氣、在「不該換氣的節律點」感到不知道要不要呼吸。
           結果是核心張力上升、整體放鬆度下降，反而拖累技術。
           與自由式相反——自由式臉在水中需要建立節律，仰式臉在水面不需要也不該。
+      cross_ref: 頭部基礎位置、仰式臉在水面上，想呼吸就呼吸、不用管節律
+      cross_ref_ids: [back.tech.21, back.err7]
       correct_concept: >-
         仰式呼吸應該保持「自然、按需」——感覺需要時呼吸，不需要強迫節律。
         如果泳者因緊張而憋氣，介入點是放鬆而不是節律。
@@ -1379,6 +1417,8 @@ errors:
           text: 仰式選手肩痛盛行率約 70-80%，與重複負荷直接相關。
           source: 通用游泳醫學共識
           source_ids: [src.general-swim-medicine-consensus]
+      cross_ref: 回臂、仰式 recovery 能量光譜
+      cross_ref_ids: [back.tech.13, back.tech.28]
       correct_concept: >-
         回臂應該主動發力的只有「出水的瞬間」（從水中提起需肌肉收縮）+「入水前的最後加速」
         （coupling 動作）。中間過程應該放鬆讓手臂借重力擺動。
@@ -1452,6 +1492,8 @@ errors:
             CFD 研究確認：蛙腿的主推進機制是 outsweep→insweep 兩段渦流合併後向後噴射，而非旋轉拉力。
           source: "Tanaka et al. (2024). CFD study. Journal of Biomechanics"
           source_ids: [src.tanaka-2024-b]
+      cross_ref: 蛙腿推進機制
+      cross_ref_ids: [breast.tech.9]
       correct_concept: >-
         踢腳的目標是「直接向後推水」。旋轉感是動作設定和收腳帶來的副產品，不應被誇大為主要目標。
       perception_impact: >-
@@ -1490,6 +1532,8 @@ errors:
             不是膝蓋開角本身。
           source: "Strzała et al. (2013). Journal of Human Kinetics"
           source_ids: [src.strzala-2013-b]
+      cross_ref: 膝距窄的雙重效益、腳掌翻轉（Foot Flip）、髖關節內旋（Hip Internal Rotation）
+      cross_ref_ids: [breast.tech.13, breast.tech.11, breast.tech.15]
       correct_concept: >-
         踢腳寬度的前提是「腳能否外翻」，而非「膝蓋能開多寬」。最優寬度因解剖條件
         （髖關節活動度、踝關節柔韌性）不同而異，不應強求統一。
@@ -1522,6 +1566,8 @@ errors:
             兩者方向完全相反。
           source: 360swim
           source_ids: [src.360swim]
+      cross_ref: 蛙腿推進機制、腳掌翻轉（Foot Flip）
+      cross_ref_ids: [breast.tech.9, breast.tech.11]
       correct_concept: >-
         推進力來自小腿內側和腳踝的向後推壓。更精確的感知意象：「腳掌外翻後像刀片往後劈水」，
         而非「像青蛙那樣畫圓」。
@@ -1620,6 +1666,8 @@ errors:
             是在保持手肘伸直的前提下，讓手掌盡量移離肩胛骨，而不是純粹追求寬度。
           source: Swimming World Magazine
           source_ids: [src.swimming-world-magazine]
+      cross_ref: 外划（Outsweep）、外划過寬、捕水（Catch）
+      cross_ref_ids: [breast.tech.3, breast.tech.24, breast.tech.4]
       correct_concept: >-
         outsweep 的寬度應在自身肌力可控制的範圍內，不追求「越寬越好」。outsweep 的終點才是真正的
         捕水點（catch point），那才是發力的起點。
@@ -1656,6 +1704,8 @@ errors:
             是向前衝，不是向上抬。
           source: "Swimming World Magazine（Rod Havriluk, PhD biomechanist）"
           source_ids: [src.swimming-world-magazine-rod-havriluk-phd-bio]
+      cross_ref: 內划（Insweep）、波動的雙重功能
+      cross_ref_ids: [breast.tech.5, breast.tech.20]
       correct_concept: >-
         競技蛙式換氣應由 insweep 帶動的上胸前衝自然帶出，頭部隨脊柱移動而非獨立仰起。
         眼睛看向水面前方（約45度角），而非直視對岸。
@@ -1690,6 +1740,8 @@ errors:
             有支撐力的時候就開始吸氣，在手臂前伸時完成呼吸。
           source: 360swim
           source_ids: [src.360swim]
+      cross_ref: 內划（Insweep）、手腳時序
+      cross_ref_ids: [breast.tech.5, breast.tech.8]
       correct_concept: >-
         換氣應在 insweep 帶起上胸時自然發生（insweep 中段到後段），在手臂仍有支撐力的時候
         完成呼吸，並在手臂前伸時頭部跟著入水。
@@ -1722,6 +1774,8 @@ errors:
             讓身體前後兩段好像各自獨立運作；肩膀上升時臀部自然下沉，整體流暢度大幅下降。
           source: "Swimming World Magazine（Rod Havriluk）"
           source_ids: [src.swimming-world-magazine-rod-havriluk]
+      cross_ref: 外划（Outsweep）、內划（Insweep）
+      cross_ref_ids: [breast.tech.3, breast.tech.5]
       correct_concept: >-
         換氣應在 insweep 發動後再開始，讓上胸前衝自然帶動頭部出水。過早抬頭等同於把推進力從
         水平方向轉為垂直方向，浪費 insweep 的動能。
@@ -1759,6 +1813,8 @@ errors:
             「時機配合是蛙式效率最敏感變數」的直接證據。
           source: "Nicol et al. (2022). Systematic review. Sports Biomechanics"
           source_ids: [src.nicol-2022-b]
+      cross_ref: 手腳時序
+      cross_ref_ids: [breast.tech.8]
       correct_concept: >-
         蛙式的核心原則是「划手時腳保持流線、踢腳時手保持流線」——手腳的推進階段必須交替發生，
         不能重疊。
@@ -1831,6 +1887,8 @@ errors:
           text: 通常衝刺時滑行階段比長距離短；長距離游泳時滑行階段較長。
           source: Wikipedia Breaststroke
           source_ids: [src.wikipedia-breaststroke]
+      cross_ref: 流線型滑行（Glide）、最優滑行長度管理、蛙式的獨特性
+      cross_ref_ids: [breast.tech.7, breast.tech.28, breast.tech.29]
       correct_concept: >-
         初學教學使用明顯滑行幫助建立動作感覺是合理的，但若將其當成所有情境的標準，反而讓進階選手
         的速度受限。滑行長短的判斷標準是「不流失動能」，不是追求優美感。
@@ -1866,6 +1924,8 @@ errors:
           同時破壞 streamline、入水時要對抗向下分量、整個週期效率下降。
           菁英蛙式選手換氣時頭部抬升幅度通常只有眼睛剛出水面（甚至更低），
           靠下巴前送的姿勢吸氣，不靠抬高。
+      cross_ref: 內划（Insweep）、過度強調波動
+      cross_ref_ids: [breast.tech.5, breast.tech.26]
       correct_concept: >-
         換氣動作的感知目標是「跟著內划推力上來」，
         而不是「我要把頭抬多高」。
@@ -1903,6 +1963,8 @@ errors:
           菁英蛙式選手的收腿是「不主動加速、讓腿自然回收」的動作，
           速度遠慢於外划/內划/踢腿期——這個慢正是減阻策略。
           「快速收腿」的口令把蛙式時序最關鍵的「減速期」做反了。
+      cross_ref: 收腿
+      cross_ref_ids: [breast.tech.10]
       correct_concept: >-
         收腿動作目標是「最小阻力路徑回到踢腿準備位」，
         速度應該是整個 stroke cycle 中最慢的。
@@ -2089,6 +2151,8 @@ errors:
             手部入水應略寬於肩膀——想像把雙手放在時鐘的 11 點與 1 點位置。手部應平整入水，水花極少。
           source: MySwimPro
           source_ids: [src.myswimpro]
+      cross_ref: 外划（Outsweep）功能重建、EVF（早期垂直前臂）在蝶式的實現路徑
+      cross_ref_ids: [fly.tech.12, fly.tech.14]
       correct_concept: >-
         入水點約肩線寬度、手臂接近完全伸展，指尖朝前斜下切入。過窄入水會讓抓水失去力矩支撐，
         影響 EVF 品質。
@@ -2117,6 +2181,8 @@ errors:
           text: "如果他們太快完成動作，會把划手變成蛙式划水。"
           source: SwimSwam
           source_ids: [src.swimswam-a]
+      cross_ref: 外划（Outsweep）功能重建、五階段划水分析（外划→捕水→內划→上划→回臂）、蝶式 vs 蛙式
+      cross_ref_ids: [fly.tech.12, fly.tech.13, fly.tech.33]
       correct_concept: >-
         蝶式划手重點在於 EVF 建立後的直線加速後推，結合蝶腰起伏的驅動。「外划輕，內划爆」是正確的
         感知目標，而不是「外掃-內夾」的路徑追蹤。
@@ -2175,6 +2241,8 @@ errors:
           競賽規則要求的是雙臂「同時入水」，而非力道或幅度的完全一致。在生物力學層面，個別選手因
           慣用手差異、肩膀柔軟度差異，雙側略有不對稱是自然現象。強迫視覺對稱反而可能讓弱側肩膀
           過度補償而受傷。
+      cross_ref: 出水順序與空中恢復（Recovery）的物理目標、一個完整划手週期的閉環連動地圖
+      cross_ref_ids: [fly.tech.20, fly.tech.10]
       correct_concept: >-
         教學重點應放在節奏與入水時機，而非鏡像對稱的外觀。雙臂微小的功能不對稱在菁英選手中也
         廣泛存在，是正常現象而非需要矯正的錯誤。
@@ -2453,6 +2521,8 @@ errors:
           text: "側向換氣比傳統向前換氣更有效率：頭部幾乎不需要抬出水面，正面與波浪阻力大幅降低。"
           source: "Brent Rushall, SDSU"
           source_ids: [src.brent-rushall-sdsu]
+      cross_ref: 呼吸方向、頭部雙重角色
+      cross_ref_ids: [fly.tech.17, fly.tech.16]
       correct_concept: >-
         側向換氣是合法且在某些情境更節能的替代方案，特別適合肩頸柔軟度不足或疲勞管理需求較高的選手。
         不應被教練先入為主地否定或禁止。
@@ -2516,6 +2586,8 @@ errors:
           菁英蝶式選手入水時手腕保持中性、手掌與前臂在同一平面，
           入水後手腕、肘、肩線順勢進入 EVF 設定——這需要手腕從一開始就不折下。
           「乾淨入水」的目標應該透過「手掌成扁平面、平行入水」達成，不是「手指先入」。
+      cross_ref: EVF（早期垂直前臂）在蝶式的實現路徑、入水停頓機制
+      cross_ref_ids: [fly.tech.14, fly.tech.21]
       correct_concept: >-
         入水手腕保持中性（直），手掌平面與水面平行接觸——
         像把手放下接觸桌面，不是用手指戳水。
@@ -2552,6 +2624,8 @@ errors:
           ③ Insweep 的推進向量被身體姿勢偏離。
           菁英蝶式選手入水深度約 15-25 cm，不是「越深越好」。
           「起手輕鬆」是錯誤的感覺指標——應該感覺「水流順著手往後」，不是「水阻小」。
+      cross_ref: 入水停頓機制、外划（Outsweep）功能重建
+      cross_ref_ids: [fly.tech.21, fly.tech.12]
       correct_concept: >-
         入水深度目標約 15-25 cm，手掌入水後接續做 outsweep + catch，
         不是繼續往下深入。
@@ -2598,6 +2672,8 @@ errors:
             額外阻力——這是建立在極高的核心整合能力之上，不是通用法則。
           source: yourswimlog
           source_ids: [src.yourswimlog-b]
+      cross_ref: 強迫提高踢頻不提升速度，振幅自動補償、UDK 是全身波動，不是腿部踢水
+      cross_ref_ids: [udk.tech.13, udk.tech.4]
       correct_concept: >-
         踢幅以「保持在身體輪廓線內」為原則。有效推進力來自踝關節柔韌性與上踢速度，而非幅度大小。
       perception_impact: >-
@@ -2631,6 +2707,8 @@ errors:
             速度也會損失。
           source: DanSwim
           source_ids: [src.danswim]
+      cross_ref: UDK 是全身波動，不是腿部踢水、下踢力學序列與膝蓋彎曲的核心矛盾
+      cross_ref_ids: [udk.tech.4, udk.tech.9]
       correct_concept: >-
         UDK 的啟動點在髖部，核心肌群（腹肌、下背）提供穩定平台，力量通過波動傳遞到腳尖。
         「從髖部開始、腳踝鞭打結束」是正確的力量鏈描述。
@@ -2673,6 +2751,8 @@ errors:
             並提升整個踢腿循環的流動感。
           source: YourSwimLog
           source_ids: [src.yourswimlog-a]
+      cross_ref: 上踢是 UDK 速度的關鍵預測變數、踢腿對稱性（Sagittal Kick Symmetry）、下踢→上踢過渡的渦流回收（Vortex Recapture）
+      cross_ref_ids: [udk.tech.10, udk.tech.12, udk.tech.7]
       correct_concept: >-
         UDK 的目標是踢腿對稱性（sagittal kick symmetry）——上踢與下踢各自高效，而非只強化下踢。
         上踢速度是 UDK 效率的關鍵預測變數。
@@ -2704,6 +2784,8 @@ errors:
           source: Yamakawa et al. 2017
           source_ids: [src.pmid-28605694]
           url: https://pubmed.ncbi.nlm.nih.gov/28605694/
+      cross_ref: 強迫提高踢頻不提升速度，振幅自動補償、節拍器訓練目標是節奏穩定，不是強迫提速
+      cross_ref_ids: [udk.tech.13, udk.tech.27]
       correct_concept: >-
         不要強迫提高踢頻，而是提高踢腿效率——在同樣頻率下產生更多推進力，或在不犧牲振幅的前提下自然
         提升頻率。頻率的提升應是技術進步的結果，而非訓練手段。
@@ -2741,6 +2823,8 @@ errors:
             但如果能控制這個動作，就能把阻力降到最低。
           source: USMS
           source_ids: [src.usms]
+      cross_ref: UDK 是全身波動，不是腿部踢水、流線型品質是 UDK 速度的底板
+      cross_ref_ids: [udk.tech.4, udk.tech.24]
       correct_concept: >-
         頭部中立、緊貼手臂，雙臂夾耳維持流線型。波動從核心啟動，頭保持靜止不主動引導。
       perception_impact: >-
@@ -2817,6 +2901,8 @@ errors:
           text: 深度超過 0.75 m 無額外效益，反而增加上浮耗時。
           source: Novais et al. 2012, Journal of Human Kinetics
           source_ids: [src.novais-2012-b]
+      cross_ref: 最優水下深度範圍 0.4–0.6 m
+      cross_ref_ids: [udk.tech.2]
       correct_concept: >-
         實用深度約 0.4–0.6 m，超過 0.75 m 沒有追加效益。推牆後的流線型深度以此範圍為目標，
         不需要特別往深處去。
@@ -2868,6 +2954,8 @@ errors:
             樣本為 10 名菁英女性泳者、水槽 tethered 淨力量測，作者提出的是 conceptual model。
           source: "Takeda T, et al. (2026). Sports Biomech. PMID 41728809"
           source_ids: [src.sports-biomechanics-2026]
+      cross_ref: UDK 起踢規則、出發與轉身的起踢時機差異
+      cross_ref_ids: [udk.tech.17, udk.tech.29]
       correct_concept: >-
         轉身後，第一下上踢應在離牆後盡快啟動，而非等待滑行。目標是最小化從推牆到第一踢之間的速度損失窗口。
         注意：出發起跳後的水下情境略有不同，入水瞬間需要建立流線型姿勢，有一個短暫的身體整合窗口。
@@ -2908,6 +2996,8 @@ errors:
           text: 大多數選手的水下踢腿速度低於其水面游泳速度，延長水下距離是在拖慢自己。
           source: The Race Club
           source_ids: [src.the-race-club]
+      cross_ref: 最優水下距離由個人速度衰減曲線決定、長水下距離的代謝代價
+      cross_ref_ids: [udk.tech.18, udk.tech.19]
       correct_concept: >-
         水下踢腿的終止點應是速度交叉點，而非固定距離。提升水下踢腿速度（讓交叉點更遠）才是正確訓練方向，
         而非強迫延長距離。
@@ -2954,6 +3044,8 @@ errors:
             因為過早換成自由式踢腿等於踩了剎車，浪費出發或轉身後辛苦建立的速度。
           source: YourSwimLog
           source_ids: [src.yourswimlog-a]
+      cross_ref: UDK 動作要點、自由式 Breakout 七要點
+      cross_ref_ids: [starts-turns.tech.34, starts-turns.tech.44]
       correct_concept: >-
         最後一踢應與第一個抓水動作同步啟動——不踢完再抓水，也不在抓水前停踢。
         Breakout 的感知目標是「無縫接軌」，踢腿的動能直接轉入第一划。
@@ -2985,6 +3077,8 @@ errors:
             （維持更恆定的速度）。
           source: SwimSwam / Kinematic Comparison，WKU Digital Commons
           source_ids: [src.swimswam-wku-kinematic]
+      cross_ref: 仰式 UDK 效率高於俯式的物理原因
+      cross_ref_ids: [udk.tech.22]
       correct_concept: >-
         仰式 UDK 的技術指導應強調「對抗浮力的下踢感」和「速度穩定感」，
         而非套用俯式的「向下爆發感」口令。仰式 UDK 速度維持能力是生物力學上的結構優勢。
@@ -3019,6 +3113,8 @@ errors:
           text: 有效的 UDK 教學需要具體的技術語言，指向身體的特定部位和感知目標。
           source: USMS, Swimming World Magazine, The Race Club
           source_ids: [src.usms-swimming-world-magazine-the-race-club]
+      cross_ref: UDK 是全身波動，不是腿部踢水、Strouhal 數與人類 UDK 推進效率
+      cross_ref_ids: [udk.tech.4, udk.tech.8]
       correct_concept: >-
         以具體感知語言取代動物類比：「從肚臍啟動波動」「腳尖鞭打感」「上踢要快，快到沒有等待感」等。
         口令的目的是縮窄感知目標，而非喚起形象聯想。
@@ -3056,6 +3152,8 @@ errors:
           text: "頭部鬆散晃動的選手，無法製造出快速有力踢腿所需的穩定源頭。"
           source: USMS, Body Alignment Guide
           source_ids: [src.usms-body-alignment-guide-b]
+      cross_ref: 流線型品質是 UDK 速度的底板
+      cross_ref_ids: [udk.tech.24]
       correct_concept: >-
         UDK 訓練應以「流線型品質→踢腿時機→踢腿效率」的順序推進。流線型是 UDK 速度的先決條件，
         需要獨立訓練。
@@ -3443,6 +3541,8 @@ errors:
           推蹬位置與最佳位置可能偏離 30-50 公分，後續水下推進距離與方向都受影響。
           菁英選手在最後 5 公尺通常有「微減速 + 精確翻滾啟動」的模式，
           不是「全力衝牆 + 隨機翻滾」。
+      cross_ref: 進牆速度保護、翻滾啟動時機、轉身核心目標
+      cross_ref_ids: [starts-turns.tech.19, starts-turns.tech.38, starts-turns.tech.17]
       correct_concept: >-
         approach 訓練要同時涵蓋速度與精確度，不是只追求速度。
         Drill：在最後 5 公尺刻意調整 stroke count（例如固定 3 划接翻），
@@ -3477,6 +3577,8 @@ errors:
           text: 水下推進速度衰減模型 + 菁英選手出水時機影像分析。
           source: 通用游泳科學共識（Race Club / 多項游泳生物力學研究）
           source_ids: [src.general-swim-science-consensus]
+      cross_ref: 水下比水面快、自由式 Breakout 七要點、最優水下距離由個人速度衰減曲線決定
+      cross_ref_ids: [starts-turns.tech.32, starts-turns.tech.44, udk.tech.18]
       correct_concept: >-
         個別化測試最佳出水點——用秒錶與標記比較不同距離出水的 15m 總時間，
         找到個人最快的出水位置。多數選手最佳點在 5-10 公尺；超過 12 公尺通常已是淨損失區。
@@ -3507,6 +3609,8 @@ errors:
           這個時候啟動第一划水，加速度推進可以接續上殘留的水下速度，避免速度斷層。
           等到完全靜止才划，等於放棄了水下殘留動能，
           相當於每次轉身都要從零開始加速到蛙式游速——明顯效率低。
+      cross_ref: 蛙式 Pullout 三種技術、UDK 起踢規則、轉身後必須先滑行，等速度降下來再開始踢腿
+      cross_ref_ids: [starts-turns.tech.26, udk.tech.17, udk.err8]
       correct_concept: >-
         啟動時機判斷：感覺「水下速度開始低於游速」就是該動的訊號。
         不是視覺判斷（看不到自己），是身體對水流速度感的判斷。
