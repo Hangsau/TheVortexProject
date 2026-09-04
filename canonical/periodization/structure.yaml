@@ -151,6 +151,10 @@ annual_plan_types:
     cert: 🟡
     source: "Ch5 Table 5.1; Ch5 Selective Periodization; Ch8 (Fig 8.8)"
     source_ids: [src.ch5-table-5-1-ch5-selective-periodization-ch]
+    # 其餘三型的巔峰數是固定值（1/2/3），這型沒有——巔峰數本來就是「依賽程而定」。
+    # 但欄位留空會讓呈現層印出一個空格子，讀者看成資料漏掉；所以明寫「多」，即 name_zh／
+    # name_en 本身的字面意思，不外加原文沒有的數字。實際週期長度由下面的 per_cycle 承擔。
+    peaks_note_zh: "多"
     weeks: {per_cycle: {min: 11, max: 16}, preparatory: {min: 9, max: 12}, competitive: {min: 1, max: 2}, transition: {min: 1, max: 2}}
     structure_note_zh: "週數少、準備期明顯短；僅適合 4–6 年訓練底、高運動能力、能承受密集賽事者（如網球）"
     suited_for_zh: "資深運動員（4–6 年訓練背景）；不建議青少年（易多重傷害）"
