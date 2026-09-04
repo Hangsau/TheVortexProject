@@ -545,29 +545,8 @@
 
 ## W011 — `certainty` orange（教練觀測）但缺 `observation_basis`（未交代觀察基礎與外推邊界）→ S6 範圍
 
-**WARN，共 63 筆**
+**WARN，共 42 筆**
 
-  file=canonical\instructional\teaching-errors.yaml id='free.err3' at=errors[2].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='free.err9' at=errors[8].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err3' at=errors[27].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err6' at=errors[30].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err9' at=errors[33].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err11' at=errors[35].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err12' at=errors[36].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err15' at=errors[39].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='back.err17' at=errors[41].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='breast.err3' at=errors[44].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='breast.err9' at=errors[50].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='breast.err13' at=errors[54].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='breast.err14' at=errors[55].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='breast.err16' at=errors[57].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='breast.err17' at=errors[58].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='fly.err15' at=errors[73].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='fly.err16' at=errors[74].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='udk.err8' at=errors[82].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='udk.err10' at=errors[84].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err10' at=errors[97].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
-  file=canonical\instructional\teaching-errors.yaml id='starts-turns.err13' at=errors[100].public.physical_reason certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.4' at=points[3].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.5' at=points[4].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
   file=canonical\instructional\technical-analysis.yaml id='free.tech.6' at=points[5].public.mechanism certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）

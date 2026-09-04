@@ -9392,9 +9392,12 @@
     },
     {
       "id": "src.sports-biomechanics-2026",
-      "display": "Sports Biomechanics 2026",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Takeda T, Koga D, Tsunokawa T, Sengoku Y, Takagi H. (2026). Net force analysis during streamlined glide, dolphin kick, and front crawl at high velocities in competitive swimming: implications for optimal propulsion timing. Sports Biomech. Online ahead of print 2026-02-23. PMID 41728809 / doi:10.1080/14763141.2026.2627415",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "41728809",
+        "doi": "10.1080/14763141.2026.2627415"
+      },
       "usage_count": 1,
       "usages": [
         {

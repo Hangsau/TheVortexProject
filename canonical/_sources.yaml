@@ -4292,11 +4292,29 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.sports-biomechanics-2026
-    display: "Sports Biomechanics 2026"
-    type: other
-    verification_status: unverified
+    display: "Takeda T, Koga D, Tsunokawa T, Sengoku Y, Takagi H. (2026). Net force analysis during streamlined glide, dolphin kick, and front crawl at high velocities in competitive swimming: implications for optimal propulsion timing. Sports Biomech. Online ahead of print 2026-02-23. PMID 41728809 / doi:10.1080/14763141.2026.2627415"
+    title: "Net force analysis during streamlined glide, dolphin kick, and front crawl at high velocities in competitive swimming: implications for optimal propulsion timing"
+    type: journal-article
+    verification_status: verified
+    authors: ["Takeda T", "Koga D", "Tsunokawa T", "Sengoku Y", "Takagi H"]
     year: 2026
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    container: "Sports Biomechanics"
+    identifier:
+      pmid: "41728809"
+      doi: "10.1080/14763141.2026.2627415"
+    retrieved_on: "2026-09-04"
+    notes: >-
+      2026-09-04 efetch 核對。**原本只是一個佔位登錄**——顯示字串「Sports Biomechanics 2026」無作者無識別碼，
+      年份又落在 2026，正是專案 CLAUDE.md 點名的可疑引用形狀（跨年份、無識別碼）；實查後它是真論文，不是幻覺。
+      內容：十名菁英女性泳者做自由式與海豚踢，並在水槽 tethered 條件下重做同樣動作量測淨力，
+      以冪律擬合淨力對流速的關係，得到流線滑行（SL）／海豚踢（DK）／自由式（FC）三條曲線；
+      兩個交會速度 USL-DK 與 UDK-FC 即「該換下一個動作」的最佳時機，
+      **且對多數受試者而言這兩個交會速度高於他們各自的等速游泳速度 VDK_const 與 VFC_const**
+      ——這是「該提早換、不要等速度掉到游速才動」的力學依據。
+      **使用邊界**：① 樣本為 **10 名菁英女性**，非混合性別、非一般泳者，個體差異作者自己有明講；
+      ② 量測在**水槽 tethered 條件**下做，不是實賽的自由游進，是力學模型不是賽場觀測；
+      ③ 作者自述提出的是 conceptual model，**不宜寫成「研究確認」**這種定論語氣；
+      ④ 線上先行版（online ahead of print），無卷期頁，引用以 DOI／PMID 為機器鍵。
 
   - id: src.statpearls-2023
     display: "StatPearls 2023"
