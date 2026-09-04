@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 349
+    "unlinked_records": 312
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -88,46 +88,6 @@
       "path": "levels[7]"
     },
     {
-      "id": "back.L1",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[8]"
-    },
-    {
-      "id": "back.L2",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[9]"
-    },
-    {
-      "id": "back.L2.up-kick",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[19]"
-    },
-    {
-      "id": "back.L3",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[10]"
-    },
-    {
-      "id": "back.L4",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[11]"
-    },
-    {
-      "id": "back.L4.head-stillness",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[23]"
-    },
-    {
-      "id": "back.L5",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[12]"
-    },
-    {
-      "id": "back.L6",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[13]"
-    },
-    {
       "id": "back.err10",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[34]"
@@ -156,11 +116,6 @@
       "id": "back.err7",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[31]"
-    },
-    {
-      "id": "back.pre.orientation",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[18]"
     },
     {
       "id": "back.tech.16",
@@ -253,31 +208,6 @@
       "path": "injuries[0]"
     },
     {
-      "id": "breast.L2",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[15]"
-    },
-    {
-      "id": "breast.L3",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[16]"
-    },
-    {
-      "id": "breast.L4",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[17]"
-    },
-    {
-      "id": "breast.L5",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[18]"
-    },
-    {
-      "id": "breast.L6",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[19]"
-    },
-    {
       "id": "breast.err1",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[42]"
@@ -331,16 +261,6 @@
       "id": "breast.err9",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[50]"
-    },
-    {
-      "id": "breast.pre",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[14]"
-    },
-    {
-      "id": "breast.pre.resistance",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[37]"
     },
     {
       "id": "breast.tech.16",
@@ -528,11 +448,6 @@
       "path": "injuries[23]"
     },
     {
-      "id": "common.pre.resistance",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[0]"
-    },
-    {
       "id": "dehydration-hyponatremia",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[24]"
@@ -613,41 +528,6 @@
       "path": "injuries[9]"
     },
     {
-      "id": "fly.L2",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[21]"
-    },
-    {
-      "id": "fly.L2.kick",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[28]"
-    },
-    {
-      "id": "fly.L3",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[22]"
-    },
-    {
-      "id": "fly.L4",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[23]"
-    },
-    {
-      "id": "fly.L5",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[24]"
-    },
-    {
-      "id": "fly.L5.glide-elimination",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[35]"
-    },
-    {
-      "id": "fly.L6",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[25]"
-    },
-    {
       "id": "fly.err13",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[71]"
@@ -676,16 +556,6 @@
       "id": "fly.err5",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[63]"
-    },
-    {
-      "id": "fly.pre",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[20]"
-    },
-    {
-      "id": "fly.pre.undulation",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[27]"
     },
     {
       "id": "fly.tech.19",
@@ -741,56 +611,6 @@
       "id": "free.L0",
       "file": "canonical/technica/water-sense-levels.yaml",
       "path": "levels[0]"
-    },
-    {
-      "id": "free.L1",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[1]"
-    },
-    {
-      "id": "free.L2",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[2]"
-    },
-    {
-      "id": "free.L2.kick",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[7]"
-    },
-    {
-      "id": "free.L3",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[3]"
-    },
-    {
-      "id": "free.L3.kick-rhythm",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[10]"
-    },
-    {
-      "id": "free.L4",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[4]"
-    },
-    {
-      "id": "free.L5",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[5]"
-    },
-    {
-      "id": "free.L5.coupling-timing",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[14]"
-    },
-    {
-      "id": "free.L5.lift-phase-duration",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[15]"
-    },
-    {
-      "id": "free.L6",
-      "file": "canonical/technica/water-sense-levels.yaml",
-      "path": "levels[6]"
     },
     {
       "id": "free.err11",
@@ -861,11 +681,6 @@
       "id": "free.err9",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[8]"
-    },
-    {
-      "id": "free.pre.resistance",
-      "file": "canonical/technica/l-indicators.yaml",
-      "path": "indicators[6]"
     },
     {
       "id": "free.tech.14",

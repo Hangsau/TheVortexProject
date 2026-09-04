@@ -129,7 +129,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 349 筆**
+**WARN，共 312 筆**
 
   file=canonical\breathing\framework.yaml id='breathing.framework.overview'
   file=canonical\breathing\framework.yaml id='breathing.framework.grading'
@@ -441,45 +441,8 @@
   file=canonical\psychology\psychology.yaml id='psych.flow.flow_across_levels'
   file=canonical\psychology\psychology.yaml id='psych.flow.water_as_feedback'
   file=canonical\psychology\psychology.yaml id='psych.flow.izof_individual_zones'
-  file=canonical\technica\l-indicators.yaml id='common.pre.resistance'
-  file=canonical\technica\l-indicators.yaml id='free.pre.resistance'
-  file=canonical\technica\l-indicators.yaml id='free.L2.kick'
-  file=canonical\technica\l-indicators.yaml id='free.L3.kick-rhythm'
-  file=canonical\technica\l-indicators.yaml id='free.L5.coupling-timing'
-  file=canonical\technica\l-indicators.yaml id='free.L5.lift-phase-duration'
-  file=canonical\technica\l-indicators.yaml id='back.pre.orientation'
-  file=canonical\technica\l-indicators.yaml id='back.L2.up-kick'
-  file=canonical\technica\l-indicators.yaml id='back.L4.head-stillness'
-  file=canonical\technica\l-indicators.yaml id='fly.pre.undulation'
-  file=canonical\technica\l-indicators.yaml id='fly.L2.kick'
-  file=canonical\technica\l-indicators.yaml id='fly.L5.glide-elimination'
-  file=canonical\technica\l-indicators.yaml id='breast.pre.resistance'
   file=canonical\technica\water-sense-levels.yaml id='free.L0'
-  file=canonical\technica\water-sense-levels.yaml id='free.L1'
-  file=canonical\technica\water-sense-levels.yaml id='free.L2'
-  file=canonical\technica\water-sense-levels.yaml id='free.L3'
-  file=canonical\technica\water-sense-levels.yaml id='free.L4'
-  file=canonical\technica\water-sense-levels.yaml id='free.L5'
-  file=canonical\technica\water-sense-levels.yaml id='free.L6'
   file=canonical\technica\water-sense-levels.yaml id='back.L0'
-  file=canonical\technica\water-sense-levels.yaml id='back.L1'
-  file=canonical\technica\water-sense-levels.yaml id='back.L2'
-  file=canonical\technica\water-sense-levels.yaml id='back.L3'
-  file=canonical\technica\water-sense-levels.yaml id='back.L4'
-  file=canonical\technica\water-sense-levels.yaml id='back.L5'
-  file=canonical\technica\water-sense-levels.yaml id='back.L6'
-  file=canonical\technica\water-sense-levels.yaml id='breast.pre'
-  file=canonical\technica\water-sense-levels.yaml id='breast.L2'
-  file=canonical\technica\water-sense-levels.yaml id='breast.L3'
-  file=canonical\technica\water-sense-levels.yaml id='breast.L4'
-  file=canonical\technica\water-sense-levels.yaml id='breast.L5'
-  file=canonical\technica\water-sense-levels.yaml id='breast.L6'
-  file=canonical\technica\water-sense-levels.yaml id='fly.pre'
-  file=canonical\technica\water-sense-levels.yaml id='fly.L2'
-  file=canonical\technica\water-sense-levels.yaml id='fly.L3'
-  file=canonical\technica\water-sense-levels.yaml id='fly.L4'
-  file=canonical\technica\water-sense-levels.yaml id='fly.L5'
-  file=canonical\technica\water-sense-levels.yaml id='fly.L6'
 
 ---
 

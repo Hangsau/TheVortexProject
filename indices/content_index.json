@@ -3575,7 +3575,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.pre.orientation",
+        "common.pre.resistance"
+      ]
     },
     {
       "id": "back.L2",
@@ -3592,7 +3595,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.L2.up-kick",
+        "common.L2.propulsion"
+      ]
     },
     {
       "id": "back.L2.up-kick",
@@ -3631,7 +3637,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.L3.pull",
+        "back.L3.shoulder-roll",
+        "common.L3.watersense"
+      ]
     },
     {
       "id": "back.L3.pull",
@@ -3692,7 +3702,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.L4.head-stillness",
+        "back.L4.roll-stability",
+        "common.L4.under-pressure"
+      ]
     },
     {
       "id": "back.L4.head-stillness",
@@ -3753,7 +3767,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.L5.roll-invariant",
+        "back.L5.start-turn",
+        "common.L5.automation"
+      ]
     },
     {
       "id": "back.L5.roll-invariant",
@@ -3814,7 +3832,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "back.L6.stability",
+        "common.L6.stability"
+      ]
     },
     {
       "id": "back.L6.stability",
@@ -4931,7 +4952,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.L2.hand-support",
+        "breast.L2.leg-propulsion",
+        "common.L2.propulsion"
+      ]
     },
     {
       "id": "breast.L2.hand-support",
@@ -4992,7 +5017,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.L3.kick-vortex",
+        "breast.L3.recovery-drag",
+        "common.L3.watersense"
+      ]
     },
     {
       "id": "breast.L3.kick-vortex",
@@ -5053,7 +5082,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.L4.timing",
+        "breast.L4.undulation",
+        "common.L4.under-pressure"
+      ]
     },
     {
       "id": "breast.L4.timing",
@@ -5116,7 +5149,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.L5.late-kick",
+        "breast.L5.undulation-stability",
+        "common.L5.automation"
+      ]
     },
     {
       "id": "breast.L5.late-kick",
@@ -5178,7 +5215,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.L6.stability",
+        "common.L6.stability"
+      ]
     },
     {
       "id": "breast.L6.stability",
@@ -5616,7 +5656,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "breast.pre.resistance",
+        "common.pre.resistance"
+      ]
     },
     {
       "id": "breast.pre.resistance",
@@ -7554,7 +7597,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L2.propulsion",
+        "fly.L2.catch",
+        "fly.L2.kick"
+      ]
     },
     {
       "id": "fly.L2.catch",
@@ -7613,7 +7660,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L3.watersense",
+        "fly.L3.two-kick-timing",
+        "fly.L3.undulation-integration"
+      ]
     },
     {
       "id": "fly.L3.two-kick-timing",
@@ -7675,7 +7726,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L4.under-pressure",
+        "fly.L4.outsweep",
+        "fly.L4.second-kick"
+      ]
     },
     {
       "id": "fly.L4.outsweep",
@@ -7736,7 +7791,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L5.automation",
+        "fly.L5.glide-elimination",
+        "fly.L5.two-kick-differentiation"
+      ]
     },
     {
       "id": "fly.L5.glide-elimination",
@@ -7799,7 +7858,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L6.stability",
+        "fly.L6.chain-closure"
+      ]
     },
     {
       "id": "fly.L6.chain-closure",
@@ -8238,7 +8300,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.pre.resistance",
+        "fly.pre.undulation"
+      ]
     },
     {
       "id": "fly.pre.undulation",
@@ -9121,7 +9186,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.pre.resistance",
+        "free.pre.resistance"
+      ]
     },
     {
       "id": "free.L2",
@@ -9138,7 +9206,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L2.propulsion",
+        "free.L2.hand-pressure",
+        "free.L2.kick"
+      ]
     },
     {
       "id": "free.L2.hand-pressure",
@@ -9197,7 +9269,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L3.watersense",
+        "free.L3.evf",
+        "free.L3.kick-rhythm"
+      ]
     },
     {
       "id": "free.L3.evf",
@@ -9256,7 +9332,11 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L4.under-pressure",
+        "free.L4.roll-coupling",
+        "free.L4.sr-sl"
+      ]
     },
     {
       "id": "free.L4.roll-coupling",
@@ -9317,7 +9397,13 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L5.automation",
+        "free.L5.coupling-timing",
+        "free.L5.lift-phase-duration",
+        "free.L5.serratus",
+        "free.L5.sr-sl"
+      ]
     },
     {
       "id": "free.L5.coupling-timing",
@@ -9424,7 +9510,10 @@
         ]
       },
       "source_ids": [],
-      "outgoing_ids": []
+      "outgoing_ids": [
+        "common.L6.stability",
+        "free.L6.stability"
+      ]
     },
     {
       "id": "free.L6.stability",
