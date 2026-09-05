@@ -96,6 +96,9 @@ exit code：
   W022  evidence 的 text 就是它自己的來源顯示字串（「Mason 1992」），等於只
         宣告「有這篇文獻」而沒說它顯示了什麼。W021 抓不到——text 非空，
         只是內容為零。
+  W023  `_sources.yaml` 的 display 是本專案自己的檔案路徑
+        （`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源，
+        等於用未經查證的內部文字滿足 E005。且這串會原樣印上讀者頁面。
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -702,6 +705,44 @@ def check_observation_not_source(records: list[dict], errors: dict):
             errors["E014"].append(
                 f"  source_id={s['id']!r} display={s.get('display')!r} "
                 f"是觀察行為不是來源——改在引用它的區塊寫 observation_basis"
+            )
+
+
+# 專案自己的目錄名——display 以這些開頭，或含 `.md#` 錨點，就是在指自己的草稿。
+_INTERNAL_PATH_PREFIXES = ("Research/", "canonical/", "Drills/", "Observations/",
+                           "Instructional/", "Technica/", "Bridge/")
+
+
+def is_internal_path_display(display: object) -> bool:
+    """display 指向 repo 內部檔案 → 這不是來源，是本專案自己的草稿。"""
+    text = str(display or "").strip().replace("\\", "/")
+    if not text:
+        return False
+    return text.startswith(_INTERNAL_PATH_PREFIXES) or ".md#" in text
+
+
+def check_internal_path_sources(records: list[dict], warnings: dict):
+    """W023：來源登錄指向本專案自己的草稿檔。
+
+    與 E014（「教練觀測」登錄成來源）同一種病：一個長得像來源、實際上回不到
+    任何外部證據的東西，卻滿足 E005 與 W002／W009 的來源檢查——**自證**。
+    差別在規模與可見度：E014 那類是四個字，這類是
+    `Research/心理/03_水中恐懼與學習者心理.md#凍結反應`，會原樣印在讀者頁面
+    的「來源」欄（2026-09-05 實測 `/vortex/psychology-read/` 有 8 處）。
+
+    列 WARN 不列 ERROR：現況有 73 筆這樣的登錄、106 處引用，升 ERROR 會直接
+    讓 build 全紅，且真正的修法是**逐條回草稿把它引的文獻挖出來登錄**
+    （草稿裡通常有 DOI／PMID，例如 `#FWAQ` 那節是 Misimi et al. 2020,
+    PMID 32547447），不是把登錄刪掉了事。WARN 讓這筆技術債被機器數著，
+    一條條清。
+    """
+    for s in records:
+        if s.get("verification_status") == "retracted":
+            continue
+        if is_internal_path_display(s.get("display")):
+            warnings["W023"].append(
+                f"  source_id={s['id']!r} display={s.get('display')!r} "
+                f"是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄"
             )
 
 
@@ -2015,7 +2056,7 @@ def run_validation():
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
-        "W021": [], "W022": []
+        "W021": [], "W022": [], "W023": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2220,6 +2261,7 @@ def run_validation():
     )
     check_source_verification_status(source_records, errors)
     check_observation_not_source(source_records, errors)
+    check_internal_path_sources(source_records, warnings)
 
     # ── W003: 孤兒條目 ──
     for rel, entry in all_entries:
@@ -2364,6 +2406,12 @@ def _write_report(
             "WARN",
             "`text` 的內容就是它自己的來源名稱（「Mason 1992」）——"
             "只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）",
+        ),
+        "W023": (
+            "WARN",
+            "`_sources.yaml` 的 `display` 是本專案自己的草稿路徑"
+            "（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，"
+            "且這串會原樣印在讀者頁面的「來源」欄",
         ),
         "W001": (
             "WARN",
