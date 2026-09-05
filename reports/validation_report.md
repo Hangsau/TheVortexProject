@@ -149,7 +149,7 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 45 筆**
+**WARN，共 30 筆**
 
   file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -174,21 +174,6 @@
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 19059813' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.3390/ijerph181910259' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2020.01659' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 18769531' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 31578934' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1023/A:1014805132406,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 18769531' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fspor.2023.1236256,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1177/17479541251400621' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 31578934' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1177/17479541231174806,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2026.1771962' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2025.1574429,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 38242101' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2025.1667429,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 40110418' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 29910410' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 29910410' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC7063062' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 17566428' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.1007/s00426-025-02225-x' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -201,17 +186,8 @@
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 52 筆**
+**WARN，共 43 筆**
 
-  source_id='src.research-psych-04-a' display='Research/心理/04_動機與自我決定.md#HMIEM' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-b' display='Research/心理/04_動機與自我決定.md#SDT應用' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-c' display='Research/心理/04_動機與自我決定.md#動機氣候' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-d' display='Research/心理/04_動機與自我決定.md#族群特異性' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-e' display='Research/心理/04_動機與自我決定.md#核心理論' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-f' display='Research/心理/04_動機與自我決定.md#游泳特異研究' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-g' display='Research/心理/04_動機與自我決定.md#精熟氣候實驗研究' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-h' display='Research/心理/04_動機與自我決定.md#連結' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-04-i' display='Research/心理/04_動機與自我決定.md#需求受阻' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-05-a' display='Research/心理/05_意象與心理演練.md#1-功能等價functional-equivalence' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-05-b' display='Research/心理/05_意象與心理演練.md#2-pettlep-意象模型' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-05-c' display='Research/心理/05_意象與心理演練.md#3-意象的功能分類paivio-1985--hall-et-al-1998' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄

@@ -1014,8 +1014,8 @@ themes:
           需求滿足時產生內在動機、幸福感與持續參與；需求受阻時產生受控動機、倦怠與退出。
           三需求為：自主（行為出於自我意志而非外部壓力）、勝任（感受到有效應對挑戰的能力、有進步感）、
           連結（感受到被他人接納與關心、與群體有歸屬感）。游泳直接實證確認三需求在泳者中同樣作用：
-          Conroy & Coatsworth (2007, PMID 18769531) 在青少年休閒泳者中驗證教練自主支持→BPN 滿足；
-          Teixeira et al. (2020, PMID 31578934, n=799 精英泳者) 發現 BPN 滿足→享受→意圖持續的序列中介。
+          Conroy 與 Coatsworth（2007）在青少年休閒泳者中驗證教練自主支持→BPN 滿足；
+          Teixeira 等人（2020）在 799 名精英泳者中發現 BPN 滿足→享受→意圖持續的序列中介。
         plain_text: >-
           心理學有個很扎實的發現：人要持續投入一件事，有三個基本需求得被餵飽——
           自主（這是我自己想做的，不是被逼的）、勝任（我感覺得到自己在進步）、
@@ -1034,9 +1034,10 @@ themes:
         三需求全 L 範圍持續運作：L0 的連結感決定能否在水邊建立安全基礎；
         L2–L4 的勝任感回饋是每次感知躍升的內在獎勵；L5–L6 的自主感決定選手能否主動導引自己的感知探索。
       sources:
-      - Research/心理/04_動機與自我決定.md#核心理論
-      - Research/心理/04_動機與自我決定.md#游泳特異研究
-      source_ids: [src.research-psych-04-e, src.research-psych-04-f]
+      - Deci & Ryan 2000（Psychological Inquiry）
+      - Conroy & Coatsworth 2007（Psychology of Sport and Exercise）
+      - Teixeira et al. 2020（European Journal of Sport Science）
+      source_ids: [src.deci-ryan-2000-what-and-why, src.conroy-coatsworth-2007-ascq, src.teixeira-2020-persistent-swimmers]
     diagnostic:
       reading_signals:
       - 學員說「我想試試看我自己來」= 自主需求呼喚，給選擇空間
@@ -1056,7 +1057,7 @@ themes:
           SDT 的動機連續體把動機分為從左（外在/受控）到右（內在/自主）六個區間：
           無動機（amotivation）→ 外在調節 → 投射調節 → 認同調節 → 整合調節 → 內在動機。
           越右側預測長期堅持、享受與幸福感；越左側預測倦怠、退出與 amotivation。
-          游泳縱向直接實證（Pelletier et al. 2001, DOI 10.1023/A:1014805132406, n=369, 22 個月追蹤）：
+          游泳縱向直接實證（Pelletier 等人 2001，加拿大競技泳者 n=369，追蹤 22 個月）：
           內在動機是堅持最強的正向預測因子，無動機（amotivation）是退出最強的負向預測因子；
           教練的自主支持行為正向預測自主調節形式（即右移）。連續體本身並非游泳原創，但在游泳中有最直接的縱向驗證。
         plain_text: >-
@@ -1079,9 +1080,9 @@ themes:
         better: >-
           把課程設計成讓學員在過程中體驗能力進步（勝任感），而非把動機問題留給學員自己解決。
       sources:
-      - Research/心理/04_動機與自我決定.md#核心理論
-      - Research/心理/04_動機與自我決定.md#SDT應用
-      source_ids: [src.research-psych-04-e, src.research-psych-04-b]
+      - Ryan & Deci 2000（American Psychologist）
+      - Pelletier et al. 2001（Motivation and Emotion）
+      source_ids: [src.ryan-deci-2000-sdt-facilitation, src.pelletier-2001-swimmer-persistence]
     diagnostic:
       reading_signals:
       - 學員說「反正教練叫我來 / 媽媽要我學」= 外在調節，需主動建立內化橋梁（讓他說出自己為什麼想學）
@@ -1104,13 +1105,13 @@ themes:
         text: >-
           教練的自主支持行為（autonomy-supportive coaching）包含：提供選擇、接納負向情緒、
           給理由而非命令、關注選手意見、讚美自主行為。游泳直接實證：
-          Conroy & Coatsworth (2007, PMID 18769531) 在青少年休閒泳者（n=165）中驗證自主支持教練行為
+          Conroy 與 Coatsworth（2007）在青少年休閒泳者（n=165）中驗證自主支持教練行為
           正向預測 BPN 滿足與自主動機。
-          Minkels et al. (2023, DOI 10.3389/fspor.2023.1236256, n=128 節荷蘭游泳課) 發現
+          Minkels 等人（2023）觀察 128 堂荷蘭游泳課，發現
           現行游泳教學**嚴重壓制自主需求**，只有採用 SDT 設計課程的教師表現明顯更好。
           控制行為（controlling coaching）——壓力、威脅、條件式獎勵——預測需求受阻（need thwarting），
-          研究確認需求受阻更強烈地預測倦怠、抑鬱症狀（Bartholomew et al. 2011；Vansteenkiste & Ryan 2013）。
-          Liu et al. (2025, DOI 10.1177/17479541251400621) 的系統性回顧進一步確認：
+          需求受阻是與需求滿足獨立的維度（Bartholomew 等人 2011；Vansteenkiste 與 Ryan 2013）。
+          Liu 等人（2025）的系統性回顧與 meta 分析進一步確認：
           教練自身的動機品質也是關鍵變項（閉環：教練 BPN→選手 BPN→教練 BPN）。
         plain_text: >-
           教練講話的方式，其實是在替動機這片土壤施肥還是施毒。
@@ -1135,9 +1136,12 @@ themes:
         better: >-
           把進展框為「你注意到了什麼、身體說準備好了嗎」——以感知自評替代外部條件閘門。
       sources:
-      - Research/心理/04_動機與自我決定.md#SDT應用
-      - Research/心理/04_動機與自我決定.md#需求受阻
-      source_ids: [src.research-psych-04-b, src.research-psych-04-i]
+      - Conroy & Coatsworth 2007（Psychology of Sport and Exercise）
+      - Minkels et al. 2023（Frontiers in Sports and Active Living）
+      - Bartholomew et al. 2011（Journal of Sport and Exercise Psychology）
+      - Vansteenkiste & Ryan 2013（Journal of Psychotherapy Integration）
+      - Liu et al. 2025（International Journal of Sports Science & Coaching）
+      source_ids: [src.conroy-coatsworth-2007-ascq, src.minkels-2023-dutch-swim-lessons, src.bartholomew-2011-need-thwarting, src.vansteenkiste-ryan-2013-need-frustration, src.liu-2025-bpn-coach-athlete-meta]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -1158,14 +1162,15 @@ themes:
       phenomenon:
         certainty: 🟢
         text: >-
-          動機氣候（motivational climate，Ames 1992）分兩種：精熟氣候（mastery/task-involving）
+          動機氣候（motivational climate，Ames 1992）建立在 Nicholls（1984）的成就目標理論之上——
+          能力可以自我參照（任務導向）或他人參照（自我導向）——分兩種：精熟氣候（mastery/task-involving）
           強調個人進步、努力、學習與相互支持；表現氣候（performance/ego-involving）強調打敗他人、排名、
           才能評比。TARGET 六維度（任務多樣化、讓選手參與決策、認可所有人進步、合作分組、個人進步評估、允許足夠學習時間）
           是建構精熟氣候的操作工具。游泳直接實證：
-          Moulds et al. (2023, DOI 10.1177/17479541231174806, n=203 澳洲青少年泳者)：
+          Moulds 等人（2023）比較 203 名澳洲青少年泳者（續留 99、已退出 104，8–18 歲）：
           教練創造的精熟氣候評分**直接區分退出 vs 持續**。
-          Moulds et al. (2026, DOI 10.3389/fpsyg.2026.1771962)：游泳教練精熟氣候介入（混合方法RCT）
-          降低運動焦慮增幅、提升參與意願。Teixeira et al. (2020, PMID 31578934, n=799)：
+          Moulds、Abbott 與 Cobley（2026）：游泳教練動機微氣候介入（混合方法評估）
+          降低運動焦慮增幅、提升參與意願。Teixeira 等人（2020，n=799）：
           任務氣候→BPN 滿足+享受→意圖持續的序列中介。
           兩種氣候對感知探索的作用：精熟氣候把錯誤框為訊息（而非失敗），選手更願意停在不確定感覺中等待身體調整；
           表現氣候把錯誤解讀為能力不足，選手傾向重複有把握的感覺而非探索新感覺。
@@ -1192,10 +1197,12 @@ themes:
         better: >-
           改「注意你自己的手在水裡感覺到什麼」——感知目標語言天然是精熟氣候工具。
       sources:
-      - Research/心理/04_動機與自我決定.md#動機氣候
-      - Research/心理/04_動機與自我決定.md#游泳特異研究
-      - Research/心理/04_動機與自我決定.md#連結
-      source_ids: [src.research-psych-04-c, src.research-psych-04-f, src.research-psych-04-h]
+      - Nicholls 1984（Psychological Review）
+      - Ames 1992（Journal of Educational Psychology）
+      - Moulds et al. 2023（International Journal of Sports Science & Coaching）
+      - Moulds, Abbott & Cobley 2026（Frontiers in Psychology）
+      - Teixeira et al. 2020（European Journal of Sport Science）
+      source_ids: [src.nicholls-1984-achievement-motivation, src.ames-1992-classroom-goal-structures, src.moulds-2023-climate-dropout, src.moulds-2026-micro-climate-intervention, src.teixeira-2020-persistent-swimmers]
     diagnostic:
       reading_signals:
       - 學員游完一趟主動報「我這趟手感不一樣欸」= 感知探索意識開啟，精熟氣候正在運作
@@ -1236,9 +1243,8 @@ themes:
         影響全 L 範圍，但在 L4–L6 最關鍵——精細感知需要主動注意力；L0–L2 的動作形式模仿在
         amotivation 下還可維持表面完成，因此容易被教練誤判為「學得還好」。
       sources:
-      - Research/心理/04_動機與自我決定.md#連結
-      - Research/心理/04_動機與自我決定.md#SDT應用
-      source_ids: [src.research-psych-04-h, src.research-psych-04-b]
+      - Pelletier et al. 2001（Motivation and Emotion）
+      source_ids: [src.pelletier-2001-swimmer-persistence]
     diagnostic:
       reading_signals:
       - 學員每個 drill 都執行了、但問「有感覺到什麼嗎」一律答「沒有 / 還好」= amotivation 或外在調節，注意力沒有在裡面
@@ -1260,8 +1266,8 @@ themes:
         certainty: 🟢
         text: >-
           表現氣候（ego-involving climate）對選手的傷害程度受主觀勝任感調節：勝任感高時尚能承受
-          社會比較壓力，勝任感低時傷害最大。游泳直接實證：Masters swimmers study (2025,
-          DOI 10.3389/fpsyg.2025.1574429, n=566 美國 Masters 泳者，平均 54.82 歲)：
+          社會比較壓力，勝任感低時傷害最大。游泳直接實證：Wineinger、Fry、Long 與 Brown（2025）調查 566 名
+          美國 Masters 泳者（平均 54.82 歲）：
           自我氣候×低主觀勝任感→對承諾意願產生強烈負向交互效果。
           低知覺勝任感是所有初學族群的共同起點：兒童初學、成人初學、長期停游後回訓者。
           因此表現氣候對這幾群的課堂設計傷害最大；競技族群（青少年/兒童競技）勝任感較高，
@@ -1289,9 +1295,8 @@ themes:
           先用精熟氣候建立可量化的個人勝任感基礎（能感覺到進步），再考慮是否引入適量競爭框架，
           且競爭對象是自己上週的感知記錄，而非他人。
       sources:
-      - Research/心理/04_動機與自我決定.md#族群特異性
-      - Research/心理/04_動機與自我決定.md#連結
-      source_ids: [src.research-psych-04-d, src.research-psych-04-h]
+      - Wineinger et al. 2025（Frontiers in Psychology）
+      source_ids: [src.wineinger-2025-masters-ego-climate]
     diagnostic:
       reading_signals:
       - 學員試了新感知動作後立刻說「我做得不好 / 沒有人家好」= 社會比較被激活，勝任感低+表現氣候中
@@ -1308,9 +1313,9 @@ themes:
         certainty: 🔵
         text: >-
           精熟氣候 vs 表現氣候的差異不只是心理感受，也反映在生物指標上。跨運動外推實證：
-          Hogue et al. (2024, PMID 38242101, RCT 56 名男大學生，雜耍技能)：表現氣候組顯示
+          Hogue（2024）的實驗：56 名不會雜耍的男大學生隨機分配到 30 分鐘的關懷任務導向或自我導向教學情境，自我導向組顯示
           顯著高於基線的唾液 IL-6（發炎指標）＋威脅評估＋BPN 受阻；精熟氣候組對應更高需求滿足與正向情緒。
-          Hogue et al. (2025, DOI 10.3389/fpsyg.2025.1667429, 籃球罰球)：精熟氣候（關懷任務導向）
+          Hogue 等人（2025）的籃球罰球研究：關懷任務導向氣候
           在投籃生物力學、正向情緒、動機指標上均優於自我氣候；自我氣候組顯示心理社會壓力反應。
           這是首批以生物指標量化氣候傷害的實驗，從技術習得角度直接顯示精熟氣候促進動作學習。
           游泳專屬氣候生物指標尚無研究（研究空白 🔴03），以上均屬跨運動外推。
@@ -1331,8 +1336,9 @@ themes:
           均屬外推，不可直接套用數字。方向性結論（表現氣候→壓力反應→技術習得下降）的跨項目一致性
           目前有兩個不同技能任務（雜耍、籃球）支持，仍需游泳情境複製。
       sources:
-      - Research/心理/04_動機與自我決定.md#精熟氣候實驗研究
-      source_ids: [src.research-psych-04-g]
+      - Hogue 2024（Journal of Sport and Exercise Psychology）
+      - Hogue et al. 2025（Frontiers in Psychology）
+      source_ids: [src.hogue-2024-ego-climate-inflammation, src.hogue-2025-caring-climate-freethrow]
     diagnostic:
       reading_signals:
       - 學員在有排名或公開評比的課程後明顯疲勞感加重、動作精度下降 = 可能是表現氣候觸發壓力生理反應的行為表現
@@ -1383,8 +1389,8 @@ themes:
         技術停滯期的情境層動機下滑；鐵人三項泳者多數游泳情境層負向（「最弱的一段」），
         成功的開放水域感知體驗是情境層修復的最有力路徑（🔵）。
       sources:
-      - Research/心理/04_動機與自我決定.md#HMIEM
-      source_ids: [src.research-psych-04-a]
+      - Vallerand 1997（Advances in Experimental Social Psychology）
+      source_ids: [src.vallerand-1997-hmiem]
     diagnostic:
       reading_signals:
       - 學員說「我從來不覺得我適合游泳 / 我就是不擅長水」= 整體層負向自我認定，口頭說服無效，需創造可驗證的感知成功
@@ -1414,13 +1420,13 @@ themes:
           樂趣被表現壓力取代即快速流失（文獻默認族群，autonomy-support 研究主要在此族群）。
           青少年競技：從外在/內攝向內化動機逐步轉移（HMIEM）；
           參與在 ~11 歲前後達峰後遞減，機制=享受↓、功能性承諾↓、運動貶值↑，
-          退出存活分析（Difernand et al. 2025, PMID 40110418, n=160,861 法國泳者）
+          退出存活分析（Difernand 等人 2025，法國註冊泳者 n=160,861）
           顯示女孩 13.16 歲、男孩 17.50 歲為退出峰值；表現最差的後 10% 群體退出率，
           女性由 13 歲的 78.1% 升到 17 歲的 91.7%，男性同期為 69.3% 升到 83.4%
           （2026-09-04 更正原文「78–91%」——那是女性數值，原文未標性別）。
-          游泳退出的系統回顧（Monteiro et al. 2017, PMID 29910410，僅完整回顧 6 篇、檢索止於 2015）
+          游泳退出的系統回顧（Monteiro 等人 2017，僅完整回顧 6 篇、檢索止於 2015）
           列出的退出主因是與教練衝突、有其他事要做、勝任感未見進步、來自父母或教練的壓力、缺乏樂趣、感到無聊
-          （2026-09-04 更正原文「自主支持的訓練情境比訓練量更能預測續留（系統回顧 PMID 29910410）」——
+          （2026-09-04 更正原文「自主支持的訓練情境比訓練量更能預測續留」——
           該回顧沒有做這個比較，是歸因錯誤，見錯誤 32）。
           成人初學：目標導向（健康、克服恐懼、社交、陪小孩）＋自我參照勝任感脆弱；
           「學不夠快」的挫敗＋社會評價威脅是主要崩潰點；與恐懼主題（cluster 03）的成人恐懼簽名高度耦合。
@@ -1452,9 +1458,9 @@ themes:
           成人初學優先個人進步里程碑；鐵人三項優先開放水域情境熟悉度的可控感。
           各族群的動機語言（「你比上週進步了」vs「游泳段你可以掌控了」）需要分別設計。
       sources:
-      - Research/心理/04_動機與自我決定.md#族群特異性
-      - Research/心理/04_動機與自我決定.md#游泳特異研究
-      source_ids: [src.research-psych-04-d, src.research-psych-04-f]
+      - Difernand et al. 2025（法國泳者退出存活分析）
+      - Monteiro et al. 2017（游泳退出系統性回顧）
+      source_ids: [src.difernand-2025-french-swimmer-dropout, src.monteiro-2017-swimming-dropout-review]
     diagnostic:
       reading_signals:
       - 先問「你來游泳的主要原因是什麼」再定位族群，才能選對動機介入語言

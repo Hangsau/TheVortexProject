@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 632,
+  "source_count": 649,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -117,6 +117,22 @@
           "id": "movement.action.shoulder-complex.elevation",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.ames-1992-classroom-goal-structures",
+      "display": "Ames, C. (1992). Classrooms: Goals, structures, and student motivation.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1037/0022-0663.84.3.261"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.mastery_vs_performance_climate",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[3].public"
         }
       ]
     },
@@ -312,6 +328,22 @@
           "id": "movement.demand.fly.second-kick.timing-with-arm-push",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[8]"
+        }
+      ]
+    },
+    {
+      "id": "src.bartholomew-2011-need-thwarting",
+      "display": "Bartholomew, K. J., Ntoumanis, N., Ryan, R. M., & Thøgersen-Ntoumani, C. (2011). Psychological need thwarting in the sport context: Assessing the darker side of athletic experience.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/jsep.33.1.75"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.autonomy_support",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[2].public"
         }
       ]
     },
@@ -1173,6 +1205,29 @@
       ]
     },
     {
+      "id": "src.conroy-coatsworth-2007-ascq",
+      "display": "Conroy, D. E., & Coatsworth, J. D. (2007). Assessing autonomy-supportive coaching strategies in youth sport.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "18769531",
+        "pmcid": "PMC2390874",
+        "doi": "10.1016/j.psychsport.2006.12.001"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.motivation.autonomy_support",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[2].public"
+        },
+        {
+          "id": "psych.motivation.bpn_triad",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[0].public"
+        }
+      ]
+    },
+    {
       "id": "src.cortesi-gatta-2015",
       "display": "Cortesi M, Gatta G. (2015). Effect of The Swimmer's Head Position on Passive Drag. J Hum Kinet 49:37-45. PMID 26839604",
       "verification_status": "verified",
@@ -1316,6 +1371,22 @@
       ]
     },
     {
+      "id": "src.deci-ryan-2000-what-and-why",
+      "display": "Deci, E. L., & Ryan, R. M. (2000). The \"what\" and \"why\" of goal pursuits: Human needs and the self-determination of behavior.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1207/S15327965PLI1104_01"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.bpn_triad",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[0].public"
+        }
+      ]
+    },
+    {
       "id": "src.deschodt-1999",
       "display": "Deschodt, Arsac & Rouard 1999",
       "verification_status": "verified",
@@ -1380,8 +1451,13 @@
         "pmcid": "PMC11919869",
         "doi": "10.3389/fspor.2025.1509306"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "psych.motivation.population_engines",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[8].public"
+        },
         {
           "id": "psych.motivation.population_engines",
           "file": "canonical/psychology/psychology.yaml",
@@ -2794,6 +2870,39 @@
       ]
     },
     {
+      "id": "src.hogue-2024-ego-climate-inflammation",
+      "display": "Hogue, C. M. (2024). An ego-involving motivational climate can trigger inflammation, a threat appraisal, and basic psychological need frustration in an achievement context.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "38242101",
+        "doi": "10.1123/jsep.2023-0104"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.climate_biology",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[6].public"
+        }
+      ]
+    },
+    {
+      "id": "src.hogue-2025-caring-climate-freethrow",
+      "display": "Hogue, C. M., Cabarkapa, D., Fry, M. D., Fry, A. C., Wineinger, T. O., & Chamberlin, J. M. (2025). Caring task-involving climate leads to greater improvements in free-throw shooting biomechanics and motivational responses.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fpsyg.2025.1667429"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.climate_biology",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[6].public"
+        }
+      ]
+    },
+    {
       "id": "src.how-to-use-backstroke-flags-in-swimming-u-s",
       "display": "How to Use Backstroke Flags in Swimming, U.S. Masters Swimming",
       "verification_status": "unverified",
@@ -3307,6 +3416,22 @@
           "id": "shallow-water-blackout",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[28].references[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.liu-2025-bpn-coach-athlete-meta",
+      "display": "Liu, H. J., De Jonge, K., Den Hartigh, R. J. R., & Van Yperen, N. W. (2025). Basic psychological need support, need satisfaction, and autonomous motivation in coach-athlete relationships: A systematic review and meta-analysis.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1177/17479541251400621"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.autonomy_support",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[2].public"
         }
       ]
     },
@@ -4076,6 +4201,23 @@
       "usages": []
     },
     {
+      "id": "src.minkels-2023-dutch-swim-lessons",
+      "display": "Minkels, C., van der Kamp, J., & Beek, P. J. (2023). How intrinsically motivating are swimming instructors/lessons in the Netherlands? An observational study through the lens of self-determination theory.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmcid": "PMC10548366",
+        "doi": "10.3389/fspor.2023.1236256"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.autonomy_support",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[2].public"
+        }
+      ]
+    },
+    {
       "id": "src.misimi-2020-fwaq",
       "display": "Misimi, F., Kajtna, T., Misimi, S., & Kapus, J. (2020). Development and validity of the Fear of Water Assessment Questionnaire.",
       "verification_status": "verified",
@@ -4102,8 +4244,13 @@
         "pmcid": "PMC5968952",
         "doi": "10.3390/sports5030050"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "psych.motivation.population_engines",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[8].public"
+        },
         {
           "id": "psych.motivation.population_engines",
           "file": "canonical/psychology/psychology.yaml",
@@ -4162,6 +4309,38 @@
           "id": "free.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[1].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.moulds-2023-climate-dropout",
+      "display": "Moulds, K., Fraser, K. K., Karp, J., Kapocius, O., Heathcote, M., Appleton, P. R., & Cobley, S. (2023). Coach-created motivational climate ratings differentiate between dropout and continuation in Australian youth swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1177/17479541231174806"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.mastery_vs_performance_climate",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[3].public"
+        }
+      ]
+    },
+    {
+      "id": "src.moulds-2026-micro-climate-intervention",
+      "display": "Moulds, K., Abbott, S., & Cobley, S. (2026). The effect of a coach motivational micro-climate intervention in swimming: A mixed-method evaluation.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fpsyg.2026.1771962"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.mastery_vs_performance_climate",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[3].public"
         }
       ]
     },
@@ -5004,6 +5183,22 @@
       ]
     },
     {
+      "id": "src.nicholls-1984-achievement-motivation",
+      "display": "Nicholls, J. G. (1984). Achievement motivation: Conceptions of ability, subjective experience, task choice, and performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1037/0033-295X.91.3.328"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.mastery_vs_performance_climate",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[3].public"
+        }
+      ]
+    },
+    {
       "id": "src.nicol-2022-a",
       "display": "Nicol 2022",
       "verification_status": "unverified",
@@ -5353,6 +5548,27 @@
           "id": "psych.fear.diving_reflex_calm",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.pelletier-2001-swimmer-persistence",
+      "display": "Pelletier, L. G., Fortier, M. S., Vallerand, R. J., & Brière, N. M. (2001). Associations among perceived autonomy support, forms of self-regulation, and persistence: A prospective study.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1023/A:1014805132406"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.motivation.amotivation_trap",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[4].public"
+        },
+        {
+          "id": "psych.motivation.continuum",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[1].public"
         }
       ]
     },
@@ -8291,168 +8507,74 @@
     {
       "id": "src.research-psych-04-a",
       "display": "Research/心理/04_動機與自我決定.md#HMIEM",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.motivation.hmiem_bottomup",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[7].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-b",
       "display": "Research/心理/04_動機與自我決定.md#SDT應用",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "psych.motivation.amotivation_trap",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[4].public"
-        },
-        {
-          "id": "psych.motivation.autonomy_support",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[2].public"
-        },
-        {
-          "id": "psych.motivation.continuum",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-c",
       "display": "Research/心理/04_動機與自我決定.md#動機氣候",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.motivation.mastery_vs_performance_climate",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-d",
       "display": "Research/心理/04_動機與自我決定.md#族群特異性",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.motivation.competence_moderator",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[5].public"
-        },
-        {
-          "id": "psych.motivation.population_engines",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[8].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-e",
       "display": "Research/心理/04_動機與自我決定.md#核心理論",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.motivation.bpn_triad",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[0].public"
-        },
-        {
-          "id": "psych.motivation.continuum",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-f",
       "display": "Research/心理/04_動機與自我決定.md#游泳特異研究",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "psych.motivation.bpn_triad",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[0].public"
-        },
-        {
-          "id": "psych.motivation.mastery_vs_performance_climate",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[3].public"
-        },
-        {
-          "id": "psych.motivation.population_engines",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[8].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-g",
       "display": "Research/心理/04_動機與自我決定.md#精熟氣候實驗研究",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.motivation.climate_biology",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[6].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-h",
       "display": "Research/心理/04_動機與自我決定.md#連結",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "psych.motivation.amotivation_trap",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[4].public"
-        },
-        {
-          "id": "psych.motivation.competence_moderator",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[5].public"
-        },
-        {
-          "id": "psych.motivation.mastery_vs_performance_climate",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-i",
       "display": "Research/心理/04_動機與自我決定.md#需求受阻",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.motivation.autonomy_support",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[2].concepts[2].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-05-a",
@@ -9404,6 +9526,23 @@
           "id": "psych.arousal.izof",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[6].concepts[1].public"
+        }
+      ]
+    },
+    {
+      "id": "src.ryan-deci-2000-sdt-facilitation",
+      "display": "Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "11392867",
+        "doi": "10.1037/0003-066X.55.1.68"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.continuum",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[1].public"
         }
       ]
     },
@@ -10668,6 +10807,28 @@
           "id": "rotator-cuff-tendinopathy",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[1].references[3]"
+        }
+      ]
+    },
+    {
+      "id": "src.teixeira-2020-persistent-swimmers",
+      "display": "Teixeira, D. S., Pelletier, L. G., Monteiro, D., Rodrigues, F., Moutão, J., Marinho, D. A., & Cid, L. (2020). Motivational patterns in persistent swimmers: A serial mediation analysis.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31578934",
+        "doi": "10.1080/17461391.2019.1675768"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.motivation.bpn_triad",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[0].public"
+        },
+        {
+          "id": "psych.motivation.mastery_vs_performance_climate",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[3].public"
         }
       ]
     },
@@ -12244,6 +12405,38 @@
       ]
     },
     {
+      "id": "src.vallerand-1997-hmiem",
+      "display": "Vallerand, R. J. (1997). Toward a hierarchical model of intrinsic and extrinsic motivation.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/S0065-2601(08)60019-2"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.hmiem_bottomup",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[7].public"
+        }
+      ]
+    },
+    {
+      "id": "src.vansteenkiste-ryan-2013-need-frustration",
+      "display": "Vansteenkiste, M., & Ryan, R. M. (2013). On psychological growth and vulnerability: Basic psychological need satisfaction and need frustration as a unifying principle.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1037/a0032359"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.autonomy_support",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[2].public"
+        }
+      ]
+    },
+    {
       "id": "src.vaschillo-2002-baroreflex",
       "display": "壓力反射共振頻率實測：Vaschillo et al. 2002 (DOI 10.1023/A:1014587304314)",
       "verification_status": "unverified",
@@ -12791,6 +12984,22 @@
           "id": "psych.fear.population_faces",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[6].public"
+        }
+      ]
+    },
+    {
+      "id": "src.wineinger-2025-masters-ego-climate",
+      "display": "Wineinger, T. O., Fry, M. D., Long, H., & Brown, T. C. (2025). The influence of ego-involving climates on perceived competence and commitment for U.S. Masters swimmers.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fpsyg.2025.1574429"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.motivation.competence_moderator",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[5].public"
         }
       ]
     },

@@ -17344,8 +17344,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-b",
-        "src.research-psych-04-h"
+        "src.pelletier-2001-swimmer-persistence"
       ],
       "outgoing_ids": []
     },
@@ -17364,8 +17363,11 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-b",
-        "src.research-psych-04-i"
+        "src.bartholomew-2011-need-thwarting",
+        "src.conroy-coatsworth-2007-ascq",
+        "src.liu-2025-bpn-coach-athlete-meta",
+        "src.minkels-2023-dutch-swim-lessons",
+        "src.vansteenkiste-ryan-2013-need-frustration"
       ],
       "outgoing_ids": []
     },
@@ -17385,8 +17387,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-e",
-        "src.research-psych-04-f"
+        "src.conroy-coatsworth-2007-ascq",
+        "src.deci-ryan-2000-what-and-why",
+        "src.teixeira-2020-persistent-swimmers"
       ],
       "outgoing_ids": []
     },
@@ -17405,7 +17408,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-g"
+        "src.hogue-2024-ego-climate-inflammation",
+        "src.hogue-2025-caring-climate-freethrow"
       ],
       "outgoing_ids": []
     },
@@ -17424,8 +17428,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-d",
-        "src.research-psych-04-h"
+        "src.wineinger-2025-masters-ego-climate"
       ],
       "outgoing_ids": []
     },
@@ -17444,8 +17447,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-b",
-        "src.research-psych-04-e"
+        "src.pelletier-2001-swimmer-persistence",
+        "src.ryan-deci-2000-sdt-facilitation"
       ],
       "outgoing_ids": []
     },
@@ -17464,7 +17467,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-a"
+        "src.vallerand-1997-hmiem"
       ],
       "outgoing_ids": []
     },
@@ -17483,9 +17486,11 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-04-c",
-        "src.research-psych-04-f",
-        "src.research-psych-04-h"
+        "src.ames-1992-classroom-goal-structures",
+        "src.moulds-2023-climate-dropout",
+        "src.moulds-2026-micro-climate-intervention",
+        "src.nicholls-1984-achievement-motivation",
+        "src.teixeira-2020-persistent-swimmers"
       ],
       "outgoing_ids": []
     },
@@ -17505,9 +17510,7 @@
       },
       "source_ids": [
         "src.difernand-2025-french-swimmer-dropout",
-        "src.monteiro-2017-swimming-dropout-review",
-        "src.research-psych-04-d",
-        "src.research-psych-04-f"
+        "src.monteiro-2017-swimming-dropout-review"
       ],
       "outgoing_ids": []
     },

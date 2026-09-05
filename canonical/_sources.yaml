@@ -3617,56 +3617,56 @@ sources:
   - id: src.research-psych-04-a
     display: "Research/心理/04_動機與自我決定.md#HMIEM"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-b
     display: "Research/心理/04_動機與自我決定.md#SDT應用"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-c
     display: "Research/心理/04_動機與自我決定.md#動機氣候"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-d
     display: "Research/心理/04_動機與自我決定.md#族群特異性"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-e
     display: "Research/心理/04_動機與自我決定.md#核心理論"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-f
     display: "Research/心理/04_動機與自我決定.md#游泳特異研究"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-g、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-g
     display: "Research/心理/04_動機與自我決定.md#精熟氣候實驗研究"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-h、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-h
     display: "Research/心理/04_動機與自我決定.md#連結"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-i
     display: "Research/心理/04_動機與自我決定.md#需求受阻"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-04-a、src.research-psych-04-b、src.research-psych-04-c、src.research-psych-04-d、src.research-psych-04-e、src.research-psych-04-f、src.research-psych-04-g、src.research-psych-04-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/04_動機與自我決定.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-a
     display: "Research/心理/05_意象與心理演練.md#1-功能等價functional-equivalence"
@@ -7378,3 +7378,266 @@ sources:
       2026-09-05 Crossref 核對：23(1)。成人學游泳的質性研究（n=20），
       恐懼被受訪者列為最主要障礙。質性樣本 20 人，只能描述經驗結構，
       不能給盛行率或效果量。
+
+  - id: src.deci-ryan-2000-what-and-why
+    display: "Deci, E. L., & Ryan, R. M. (2000). The \"what\" and \"why\" of goal pursuits: Human needs and the self-determination of behavior."
+    type: journal_article
+    verification_status: verified
+    year: 2000
+    authors: ["Deci EL", "Ryan RM"]
+    container: "Psychological Inquiry"
+    identifier:
+      doi: 10.1207/S15327965PLI1104_01
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：11(4):227-268。SDT 三需求（自主／勝任／連結）的理論總述，
+      本庫引用它只到「三需求存在且滿足與否影響動機品質」這個層級。它是理論論文不是實證，
+      游泳中的驗證由 Conroy & Coatsworth（2007）與 Teixeira 等人（2020）承擔。
+
+  - id: src.ryan-deci-2000-sdt-facilitation
+    display: "Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being."
+    type: journal_article
+    verification_status: verified
+    year: 2000
+    authors: ["Ryan RM", "Deci EL"]
+    container: "American Psychologist"
+    identifier:
+      pmid: '11392867'
+      doi: 10.1037/0003-066X.55.1.68
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：55(1):68-78。動機連續體（無動機→外在調節→投射→認同→整合→內在動機）
+      的標準出處。同樣是理論綜述，連續體的縱向預測力在游泳中由 Pelletier 等人（2001）驗證。
+
+  - id: src.pelletier-2001-swimmer-persistence
+    display: "Pelletier, L. G., Fortier, M. S., Vallerand, R. J., & Brière, N. M. (2001). Associations among perceived autonomy support, forms of self-regulation, and persistence: A prospective study."
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Pelletier LG", "Fortier MS", "Vallerand RJ", "Briere NM"]
+    container: "Motivation and Emotion"
+    identifier:
+      doi: 10.1023/A:1014805132406
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：25(4):279-306。本庫在動機主題上最有份量的第一手游泳研究——
+      加拿大競技泳者 n=369、三波段追蹤 22 個月，內在動機正向預測堅持、無動機負向預測退出，
+      教練自主支持預測自主調節形式。是前瞻性相關研究不是介入實驗，能撐「動機類型預測去留」，
+      不能撐「改變動機就能留住人」。
+
+  - id: src.conroy-coatsworth-2007-ascq
+    display: "Conroy, D. E., & Coatsworth, J. D. (2007). Assessing autonomy-supportive coaching strategies in youth sport."
+    type: journal_article
+    verification_status: verified
+    year: 2007
+    authors: ["Conroy DE", "Coatsworth JD"]
+    container: "Psychology of Sport and Exercise"
+    identifier:
+      pmid: '18769531'
+      pmcid: PMC2390874
+      doi: 10.1016/j.psychsport.2006.12.001
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：8(5):671-684。ASCQ 量表的開發與驗證，樣本是夏季休閒游泳聯賽的
+      青少年泳者。它是量表研究，受試者是休閒而非競技泳者——外推到競技隊或成人初學都要降級。
+
+  - id: src.minkels-2023-dutch-swim-lessons
+    display: "Minkels, C., van der Kamp, J., & Beek, P. J. (2023). How intrinsically motivating are swimming instructors/lessons in the Netherlands? An observational study through the lens of self-determination theory."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Minkels C", "van der Kamp J", "Beek PJ"]
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmcid: PMC10548366
+      doi: 10.3389/fspor.2023.1236256
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：5:1236256。荷蘭 128 堂游泳課的觀察研究，指出現行游泳教學
+      普遍壓制自主需求。它描述現況、不做介入對照，所以只能說「現行教學這樣」，
+      不能說「改成 SDT 設計就會更好」——後半句在本庫是推導。
+
+  - id: src.teixeira-2020-persistent-swimmers
+    display: "Teixeira, D. S., Pelletier, L. G., Monteiro, D., Rodrigues, F., Moutão, J., Marinho, D. A., & Cid, L. (2020). Motivational patterns in persistent swimmers: A serial mediation analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Teixeira DS", "Pelletier LG", "Monteiro D", "Rodrigues F", "Moutao J", "Marinho DA", "Cid L"]
+    container: "European Journal of Sport Science"
+    identifier:
+      pmid: '31578934'
+      doi: 10.1080/17461391.2019.1675768
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：20(5):660-669。精英泳者 n=799（12–22 歲），
+      基本需求滿足與享受是任務氣候與持續意圖之間的序列中介。橫斷面中介分析，
+      測的是「意圖持續」不是實際續留，且樣本全是已經留下來的精英選手（生存者偏差）。
+
+  - id: src.nicholls-1984-achievement-motivation
+    display: "Nicholls, J. G. (1984). Achievement motivation: Conceptions of ability, subjective experience, task choice, and performance."
+    type: journal_article
+    verification_status: verified
+    year: 1984
+    authors: ["Nicholls JG"]
+    container: "Psychological Review"
+    identifier:
+      doi: 10.1037/0033-295X.91.3.328
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：91(3):328-346。成就目標理論的原始論文，
+      任務導向／自我導向的能力概念雙軌出自這裡。理論論文，不含運動樣本。
+
+  - id: src.ames-1992-classroom-goal-structures
+    display: "Ames, C. (1992). Classrooms: Goals, structures, and student motivation."
+    type: journal_article
+    verification_status: verified
+    year: 1992
+    authors: ["Ames C"]
+    container: "Journal of Educational Psychology"
+    identifier:
+      doi: 10.1037/0022-0663.84.3.261
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：84(3):261-271。精熟／表現氣候與 TARGET 六維度的來源。
+      原文是教室研究不是運動場，TARGET 移植到游泳教學是本庫的外推。
+
+  - id: src.vallerand-1997-hmiem
+    display: "Vallerand, R. J. (1997). Toward a hierarchical model of intrinsic and extrinsic motivation."
+    type: book_chapter
+    verification_status: verified
+    year: 1997
+    authors: ["Vallerand RJ"]
+    container: "Advances in Experimental Social Psychology"
+    identifier:
+      doi: 10.1016/S0065-2601(08)60019-2
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：29:271-360。動機層級模型（整體／情境／狀態三層，
+      含 top-down 與 bottom-up 雙向路徑）的原始章節。是理論架構論述——
+      「一次感知成功可由下而上修復整體層自我認定」是本庫在此架構內的推導（🔵），
+      修復所需次數與時間軸在游泳中無任何量化資料。
+
+  - id: src.moulds-2023-climate-dropout
+    display: "Moulds, K., Fraser, K. K., Karp, J., Kapocius, O., Heathcote, M., Appleton, P. R., & Cobley, S. (2023). Coach-created motivational climate ratings differentiate between dropout and continuation in Australian youth swimming."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Moulds K", "Fraser KK", "Karp J", "Kapocius O", "Heathcote M", "Appleton PR", "Cobley S"]
+    container: "International Journal of Sports Science & Coaching"
+    identifier:
+      doi: 10.1177/17479541231174806
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：18(5):1395-1404。草稿只記「Moulds et al.」，實際七位作者已補齊。
+      澳洲青少年泳者的氣候評分能區分退出與續留——是橫斷面區辨不是預測，
+      「氣候導致退出」的因果方向在本研究設計裡分不出來。
+
+  - id: src.moulds-2026-micro-climate-intervention
+    display: "Moulds, K., Abbott, S., & Cobley, S. (2026). The effect of a coach motivational micro-climate intervention in swimming: A mixed-method evaluation."
+    type: journal_article
+    verification_status: verified
+    year: 2026
+    authors: ["Moulds K", "Abbott S", "Cobley S"]
+    container: "Frontiers in Psychology"
+    identifier:
+      doi: 10.3389/fpsyg.2026.1771962
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：17:1771962（草稿記卷 16，實際 17）。
+      本庫少數真正「游泳情境的動機氣候介入」研究，混合方法評估：
+      精熟氣候介入降低運動焦慮增幅、提升參與意願。
+
+  - id: src.hogue-2024-ego-climate-inflammation
+    display: "Hogue, C. M. (2024). An ego-involving motivational climate can trigger inflammation, a threat appraisal, and basic psychological need frustration in an achievement context."
+    type: journal_article
+    verification_status: verified
+    year: 2024
+    authors: ["Hogue CM"]
+    container: "Journal of Sport and Exercise Psychology"
+    identifier:
+      pmid: '38242101'
+      doi: 10.1123/jsep.2023-0104
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：46(1):34-49。更正兩項：草稿的 DOI 寫成
+      10.1177/01461672241246678（那是 SAGE 的號段，與 JSEP 無關，解不到本文），
+      正確是 10.1123/jsep.2023-0104；草稿寫「Hogue, C. M. et al.」，實際是 Hogue 單一作者。
+      內容是雜耍技能的實驗室 RCT，用唾液 IL-6 量化表現氣候的發炎反應。
+      30 分鐘短期任務、男大學生樣本，外推到游泳長期訓練是本庫的推導（🔵）。
+
+  - id: src.hogue-2025-caring-climate-freethrow
+    display: "Hogue, C. M., Cabarkapa, D., Fry, M. D., Fry, A. C., Wineinger, T. O., & Chamberlin, J. M. (2025). Caring task-involving climate leads to greater improvements in free-throw shooting biomechanics and motivational responses."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Hogue CM", "Cabarkapa D", "Fry MD", "Fry AC", "Wineinger TO", "Chamberlin JM"]
+    container: "Frontiers in Psychology"
+    identifier:
+      doi: 10.3389/fpsyg.2025.1667429
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：16:1667429。籃球罰球情境：關懷任務導向氣候在投籃生物力學與
+      動機指標上優於自我導向氣候。與 src.hogue-2024-ego-climate-inflammation 同一研究線，
+      兩篇都不是游泳，本庫用它們只到「氣候會影響技能習得與壓力生理」的方向性主張。
+
+  - id: src.wineinger-2025-masters-ego-climate
+    display: "Wineinger, T. O., Fry, M. D., Long, H., & Brown, T. C. (2025). The influence of ego-involving climates on perceived competence and commitment for U.S. Masters swimmers."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Wineinger TO", "Fry MD", "Long H", "Brown TC"]
+    container: "Frontiers in Psychology"
+    identifier:
+      doi: 10.3389/fpsyg.2025.1574429
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：16:1574429。草稿只記「Masters swimmers study (2025)」沒有作者，
+      實際是 Wineinger、Fry、Long、Brown。美國 Masters 泳者 n=566（平均 54.82 歲），
+      自我導向氣候 × 低主觀勝任感對承諾產生最負向的交互效果。
+      這是本庫「勝任感是氣候傷害調節閥」唯一的成人非競技第一手數據；
+      橫斷面調查，不能讀成「降低 ego 氣候就會提高承諾」。
+
+  - id: src.liu-2025-bpn-coach-athlete-meta
+    display: "Liu, H. J., De Jonge, K., Den Hartigh, R. J. R., & Van Yperen, N. W. (2025). Basic psychological need support, need satisfaction, and autonomous motivation in coach-athlete relationships: A systematic review and meta-analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Liu HJ", "De Jonge KMM", "Den Hartigh RJR", "Van Yperen NW"]
+    container: "International Journal of Sports Science & Coaching"
+    identifier:
+      doi: 10.1177/17479541251400621
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：21(2):1178-1191。教練—選手關係中 BPN 支持的系統性回顧與
+      meta 分析，指出教練自身的動機品質也是關鍵變項（教練 BPN→選手 BPN 的閉環）。
+      注意與 src.liu-2025-core-meta、src.liu-2025-core-stability-youth-swimmers 是不同的 Liu，
+      那兩筆是核心穩定度的研究。
+
+  - id: src.bartholomew-2011-need-thwarting
+    display: "Bartholomew, K. J., Ntoumanis, N., Ryan, R. M., & Thøgersen-Ntoumani, C. (2011). Psychological need thwarting in the sport context: Assessing the darker side of athletic experience."
+    type: journal_article
+    verification_status: verified
+    year: 2011
+    authors: ["Bartholomew KJ", "Ntoumanis N", "Ryan RM", "Thogersen-Ntoumani C"]
+    container: "Journal of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1123/jsep.33.1.75
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：33(1):75-102。需求受阻（need thwarting）量表的開發，
+      確立受阻不是滿足的反面而是獨立維度。是量表研究，
+      「受阻預測倦怠與抑鬱」的縱向證據要看後續文獻，不出自本篇。
+
+  - id: src.vansteenkiste-ryan-2013-need-frustration
+    display: "Vansteenkiste, M., & Ryan, R. M. (2013). On psychological growth and vulnerability: Basic psychological need satisfaction and need frustration as a unifying principle."
+    type: journal_article
+    verification_status: verified
+    year: 2013
+    authors: ["Vansteenkiste M", "Ryan RM"]
+    container: "Journal of Psychotherapy Integration"
+    identifier:
+      doi: 10.1037/a0032359
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：23(3):263-280。需求滿足／受阻雙維度的理論整合，
+      臨床心理學脈絡（心理治療整合期刊），非運動樣本。
