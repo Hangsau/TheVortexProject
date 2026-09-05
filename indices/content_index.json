@@ -15471,14 +15471,14 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "null_caveats",
-      "title": "陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式只保留給出發和轉身。每4–6週照三層結果換法。",
+      "title": "陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式不轉移就降到維持量，改看出發與 5m、15m 分段有沒有在動。每4–6週照三層結果換法。",
       "tags": {
         "certainty": [
           "🟡"
         ]
       },
       "source_ids": [
-        "src.pmc9424421-b"
+        "src.ramirez-campillo-2022-plyo-water-sports"
       ],
       "outgoing_ids": []
     },
@@ -15551,7 +15551,9 @@
       },
       "source_ids": [
         "src.hermosilla-2021",
-        "src.pmc9424421-a"
+        "src.ramirez-campillo-2022-plyo-water-sports",
+        "src.wang-2025-training-nma",
+        "src.yu-kwok-2021-sc-front-crawl"
       ],
       "outgoing_ids": []
     },
@@ -15597,7 +15599,8 @@
         ]
       },
       "source_ids": [
-        "src.fphys-2024-1406518",
+        "src.amaro-2019-dryland-sr",
+        "src.jin-2024-resistance-front-crawl",
         "src.wang-2025-training-nma"
       ],
       "outgoing_ids": []
@@ -18254,7 +18257,8 @@
         ]
       },
       "source_ids": [
-        "src.pmc4234766-b"
+        "src.de-jesus-2013-backstroke-start-feet",
+        "src.pmc4234766-a"
       ],
       "outgoing_ids": [
         "starts-turns.tech.14",
@@ -18274,15 +18278,15 @@
         "certainty": [
           "🔵",
           "🟠",
-          "🟢"
+          "🟡"
         ],
         "stroke": [
           "starts-turns"
         ]
       },
       "source_ids": [
-        "src.myswimpro-2022-coachsci-sdsu-edu-2022",
-        "src.pmc8960438-a"
+        "src.blanksby-1998-breaststroke-turns",
+        "src.myswimpro-2022-coachsci-sdsu-edu-2022"
       ],
       "outgoing_ids": [
         "starts-turns.tech.19"
@@ -18580,6 +18584,7 @@
           "concept"
         ],
         "certainty": [
+          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -18587,8 +18592,8 @@
         ]
       },
       "source_ids": [
+        "src.blanksby-1998-breaststroke-turns",
         "src.pmc6409673-b",
-        "src.pmc8960438-c",
         "src.pmid-40252339-a"
       ],
       "outgoing_ids": []

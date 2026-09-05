@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 745,
+  "source_count": 751,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -131,6 +131,23 @@
           "id": "movement.action.shoulder-complex.elevation",
           "file": "canonical/movement/actions.yaml",
           "path": "actions[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.amaro-2019-dryland-sr",
+      "display": "Amaro, N. M., Morouço, P. G., Marques, M. C., Batalha, N., Neiva, H., & Marinho, D. A. (2019). A systematic review on dry-land strength and conditioning training on swimming performance. Science & Sports, 34(1), e1–e14.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/j.scispo.2018.07.003",
+        "url": "https://doi.org/10.1016/j.scispo.2018.07.003"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.transfer",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "transfer_evidence"
         }
       ]
     },
@@ -545,6 +562,33 @@
           "id": "psych.interaction.rpe_psychobiological",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[2].public"
+        }
+      ]
+    },
+    {
+      "id": "src.blanksby-1998-breaststroke-turns",
+      "display": "Blanksby, B. A., Simpson, J. R., Elliott, B. C., & McElroy, K. (1998). Biomechanical factors influencing breaststroke turns by age-group swimmers. Journal of Applied Biomechanics, 14(2), 180–189.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/jab.14.2.180",
+        "url": "https://doi.org/10.1123/jab.14.2.180"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "starts-turns.err5",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[92].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[196].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[196].public.mechanism"
         }
       ]
     },
@@ -1645,6 +1689,24 @@
       ]
     },
     {
+      "id": "src.de-jesus-2013-backstroke-start-feet",
+      "display": "de Jesus, K., de Jesus, K., Figueiredo, P., Gonçalves, P., Pereira, S. M., Vilas-Boas, J. P., & Fernandes, R. J. (2013). Backstroke start kinematic and kinetic changes due to different feet positioning. Journal of Sports Sciences, 31(15), 1665–1675.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "23688055",
+        "doi": "10.1080/02640414.2013.794298",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23688055/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "starts-turns.err4",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[91].public.evidence[0]"
+        }
+      ]
+    },
+    {
       "id": "src.de-souza-2014",
       "display": "De Souza MJ, Williams NI, Nattiv A, Joy E, Misra M, Loucks AB, Matheson G, Olmsted MP, Barrack M, Mallinson RJ et al. (2014). Misunderstanding the female athlete triad: refuting the IOC consensus statement on Relative Energy Deficiency in Sport (RED-S). Br J Sports Med 48(20):1461-5. PMID 25037200",
       "verification_status": "verified",
@@ -2225,19 +2287,11 @@
     },
     {
       "id": "src.fphys-2024-1406518",
-      "display": "Amaro et al. 系統回顧 (Science & Sports, S0765159718302363); 簡短回顧 (Redalyc 3010); Frontiers Physiology 2024 統合分析 (DOI 10.3389/fphys.2024.1406518)",
-      "verification_status": "unverified",
-      "identifier": {
-        "doi": "10.3389/fphys.2024.1406518"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.dryland.transfer",
-          "file": "canonical/periodization/dryland.yaml",
-          "path": "transfer_evidence"
-        }
-      ]
+      "display": "【複合來源鍵，已解除】已拆為 src.jin-2024-resistance-front-crawl、src.amaro-2019-dryland-sr（另一篇無法識別，已刪）",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.fractional-drill",
@@ -3741,6 +3795,24 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.jin-2024-resistance-front-crawl",
+      "display": "Jin, G., Jin, Y., Zhang, H., Fu, X., Yang, Y., & Lin, S.-C. (2024). The methodology of resistance training is crucial for improving short-medium distance front crawl performance in competitive swimmers: a systematic review and meta-analysis. Frontiers in Physiology, 15, 1406518.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "39129754",
+        "doi": "10.3389/fphys.2024.1406518",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39129754/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.transfer",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "transfer_evidence"
+        }
+      ]
     },
     {
       "id": "src.journal-pone-0241345-a",
@@ -7600,8 +7672,13 @@
         "pmid": "25414737",
         "doi": "10.2478/hukin-2014-0058"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "starts-turns.err4",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[91].public.evidence[1]"
+        },
         {
           "id": "starts-turns.tech.14",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -7616,21 +7693,11 @@
     },
     {
       "id": "src.pmc4234766-b",
-      "display": "The Backstroke Swimming Start: State of the Art, PMC4234766; PubMed 23688055",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmid": "23688055",
-        "pmcid": "PMC4234766",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err4",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[91].public.evidence[0]"
-        }
-      ]
+      "display": "【複合來源鍵，已解除】已拆為 src.pmc4234766-a、src.de-jesus-2013-backstroke-start-feet",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc4247626",
@@ -8322,19 +8389,11 @@
     },
     {
       "id": "src.pmc8960438-a",
-      "display": "Biomechanical Factors Influencing Breaststroke Turns, Journal of Applied Biomechanics 1998; PMC8960438",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmcid": "PMC8960438"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[92].public.evidence[0]"
-        }
-      ]
+      "display": "【誤標來源鍵，已解除】已拆為 src.blanksby-1998-breaststroke-turns",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc8960438-b",
@@ -8346,24 +8405,11 @@
     },
     {
       "id": "src.pmc8960438-c",
-      "display": "Journal of Applied Biomechanics 1998; PMC8960438",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmcid": "PMC8960438"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "starts-turns.tech.17",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[196].public.evidence[0]"
-        },
-        {
-          "id": "starts-turns.tech.17",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[196].public.mechanism"
-        }
-      ]
+      "display": "【誤標來源鍵，已解除】已拆為 src.blanksby-1998-breaststroke-turns",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc8960438-d",
@@ -8482,36 +8528,19 @@
     },
     {
       "id": "src.pmc9424421-a",
-      "display": "Frontiers Physiology 2025 網絡統合分析 (DOI 10.3389/fphys.2025.1636595); 水上運動增強式 SR (PMC9424421, n=618); 前爬式 S&C 生物力學 SR (PMC8488830)",
-      "verification_status": "unverified",
-      "identifier": {
-        "doi": "10.3389/fphys.2025.1636595",
-        "pmcid": "PMC9424421"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.dryland.methods",
-          "file": "canonical/periodization/dryland.yaml",
-          "path": "methods"
-        }
-      ]
+      "display": "【複合來源鍵，已解除】已拆為 src.wang-2025-training-nma、src.ramirez-campillo-2022-plyo-water-sports、src.yu-kwok-2021-sc-front-crawl",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc9424421-b",
-      "display": "簡短回顧 (Redalyc 3010); 增強式水上運動 SR (PMC9424421)",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmcid": "PMC9424421"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.dryland.caveats",
-          "file": "canonical/periodization/dryland.yaml",
-          "path": "null_caveats"
-        }
-      ]
+      "display": "【複合來源鍵，已解除】已拆為 src.ramirez-campillo-2022-plyo-water-sports（另一篇無法識別，已刪）",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc9445308",
@@ -9433,6 +9462,30 @@
           "id": "free.err25",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[24].public.physical_reason"
+        }
+      ]
+    },
+    {
+      "id": "src.ramirez-campillo-2022-plyo-water-sports",
+      "display": "Ramirez-Campillo, R., Perez-Castilla, A., Thapa, R. K., Afonso, J., Clemente, F. M., Colado, J. C., de Villarreal, E. S., & Chaabene, H. (2022). Effects of plyometric jump training on measures of physical fitness and sport-specific performance of water sports athletes: a systematic review with meta-analysis. Sports Medicine – Open, 8(1), 108.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "36036301",
+        "pmcid": "PMC9424421",
+        "doi": "10.1186/s40798-022-00502-2",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/36036301/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.dryland.caveats",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "null_caveats"
+        },
+        {
+          "id": "periodization.dryland.methods",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "methods"
         }
       ]
     },
@@ -13935,8 +13988,13 @@
         "pmid": "40951636",
         "url": "https://pubmed.ncbi.nlm.nih.gov/40951636/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.dryland.methods",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "methods"
+        },
         {
           "id": "periodization.dryland.transfer",
           "file": "canonical/periodization/dryland.yaml",
@@ -14477,6 +14535,25 @@
           "id": "udk.tech.4",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[140].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.yu-kwok-2021-sc-front-crawl",
+      "display": "Yu Kwok, W., So, B. C. L., Tse, D. H. T., & Ng, S. S. M. (2021). A systematic review and meta-analysis: biomechanical evaluation of the effectiveness of strength and conditioning training programs on front crawl swimming performance. Journal of Sports Science & Medicine, 20(4), 564–585.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35321128",
+        "pmcid": "PMC8488830",
+        "doi": "10.52082/jssm.2021.564",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/35321128/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.methods",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "methods"
         }
       ]
     },

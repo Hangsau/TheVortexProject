@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 116, '🟢': 74, '🟠': 21, '🟡': 10, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 116, '🟢': 73, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -233,7 +233,7 @@
 | starts-turns.tech.14 | stroke-cycle |  | 🟢 |
 | starts-turns.tech.15 | stroke-cycle |  | 🟢 |
 | starts-turns.tech.16 | stroke-cycle |  | 🔵 |
-| starts-turns.tech.17 | concept |  | 🟢 |
+| starts-turns.tech.17 | concept |  | 🟡 |
 | starts-turns.tech.18 | streamline |  | 🔵 |
 | starts-turns.tech.19 | tempo |  | 🔵 |
 | starts-turns.tech.20 | watersense |  | 🔵 |
@@ -628,7 +628,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.dryland.injury | 🟢 | 有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。要知道彈力帶那套目前只有小型試驗、 |
 | periodization.dryland.youth | 🟢 | 約7、8歲、能守指令就能從自體重量開始；PHV前以徒手為主，成熟後再逐步負重。成人初學先學動作，masters 加長恢復並看關節反應，para 依可用肢段與輔具設定；完成品質穩定再 |
 | periodization.dryland.flexibility | 🟢 | 活動度決定泳者能使用哪些技術路徑：過頭活動度不足會限制流線與回臂，蛙式翻腳的角度同時來自髖、膝與足部三處而不是單一關節，踝蹠屈不足會縮小自由式與蝶式踢腿的有效推進面。處方先分成被動 |
-| periodization.dryland.caveats | 🟡 | 陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式只保留給出發和轉身。每4–6週照三層結果換法。 |
+| periodization.dryland.caveats | 🟡 | 陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式不轉移就降到維持量，改看出發與 5m、15m 分段有沒有在動。每4–6週照三層結果 |
 
 ### `_index.yaml` （**0 節點**）
 

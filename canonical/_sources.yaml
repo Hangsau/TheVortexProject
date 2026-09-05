@@ -482,6 +482,67 @@ sources:
     identifier: {doi: "10.3390/ijerph18179340", pmcid: "PMC8431432", url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC8431432/"}
     retrieved_on: "2026-07-29"
 
+  - id: src.amaro-2019-dryland-sr
+    display: "Amaro, N. M., Morouço, P. G., Marques, M. C., Batalha, N., Neiva, H., & Marinho, D. A. (2019). A systematic review on dry-land strength and conditioning training on swimming performance. Science & Sports, 34(1), e1–e14."
+    title: "A systematic review on dry-land strength and conditioning training on swimming performance"
+    type: review
+    verification_status: verified
+    authors: ["Amaro NM", "Morouço PG", "Marques MC", "Batalha N", "Neiva H", "Marinho DA"]
+    year: 2019
+    container: "Science & Sports"
+    identifier:
+      doi: "10.1016/j.scispo.2018.07.003"
+      url: "https://doi.org/10.1016/j.scispo.2018.07.003"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 Crossref 核對後獨立登錄，來自拆解複合鍵 src.fphys-2024-1406518。原字串只給 ScienceDirect 的 PII「S0765159718302363」，那是出版社內部編號不是可重取識別，已改以 DOI 為機器鍵。注意年份：PII 帶 2018（線上先行），正式卷期是 2019 年第 34 卷第 1 期 e1–e14，本庫以卷期年為準。Science & Sports 未被 PubMed 收錄，故無 PMID。**尚未取得全文**：納入研究數、族群與效果量本專案尚未核對，引用具體數字前須補查。"
+
+  - id: src.jin-2024-resistance-front-crawl
+    display: "Jin, G., Jin, Y., Zhang, H., Fu, X., Yang, Y., & Lin, S.-C. (2024). The methodology of resistance training is crucial for improving short-medium distance front crawl performance in competitive swimmers: a systematic review and meta-analysis. Frontiers in Physiology, 15, 1406518."
+    title: "The methodology of resistance training is crucial for improving short-medium distance front crawl performance in competitive swimmers: a systematic review and meta-analysis"
+    type: review
+    verification_status: verified
+    authors: ["Jin Guoli", "Jin Yangqin", "Zhang Haoyang", "Fu Xueying", "Yang Yong", "Lin Shu-Cheng"]
+    year: 2024
+    container: "Frontiers in Physiology"
+    identifier:
+      pmid: "39129754"
+      doi: "10.3389/fphys.2024.1406518"
+      url: "https://pubmed.ncbi.nlm.nih.gov/39129754/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 Crossref 與 PubMed 核對後獨立登錄。本篇原本被登錄成 src.fphys-2024-1406518，但那個 id 的顯示字串把 Amaro 系統回顧擺在最前面——讀者看到的第一個作者名不是本篇作者。id 改用作者年份，舊 id 立為墓碑。**尚未取得全文**：納入研究數、族群與效果量本專案尚未核對，引用具體數字前須補查。"
+
+  - id: src.ramirez-campillo-2022-plyo-water-sports
+    display: "Ramirez-Campillo, R., Perez-Castilla, A., Thapa, R. K., Afonso, J., Clemente, F. M., Colado, J. C., de Villarreal, E. S., & Chaabene, H. (2022). Effects of plyometric jump training on measures of physical fitness and sport-specific performance of water sports athletes: a systematic review with meta-analysis. Sports Medicine – Open, 8(1), 108."
+    title: "Effects of Plyometric Jump Training on Measures of Physical Fitness and Sport-Specific Performance of Water Sports Athletes: A Systematic Review with Meta-analysis."
+    type: review
+    verification_status: verified
+    authors: ["Ramirez-Campillo R", "Perez-Castilla A", "Thapa RK", "Afonso J", "Clemente FM", "Colado JC", "de Villarreal ES", "Chaabene H"]
+    year: 2022
+    container: "Sports Medicine - Open"
+    identifier:
+      pmid: "36036301"
+      pmcid: "PMC9424421"
+      doi: "10.1186/s40798-022-00502-2"
+      url: "https://pubmed.ncbi.nlm.nih.gov/36036301/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 efetch 核對後獨立登錄，來自拆解複合鍵 src.pmc9424421-a／-b。內容：26 篇納入研究、618 名水上運動員（介入組 330／對照組 288），年齡 10–26 歲，介入 4–36 週，PEDro 中位數 5.5。結果分兩類：陸上體能指標有中至大效果（1RM 深蹲、立定跳遠、蹲跳、反向跳，ES 0.67–1.47）；**水中垂直跳與水中敏捷完全無效果**（ES −0.15 至 0.03，p 0.477–0.899）；**計時泳段速度有小幅但顯著的效果（ES 0.42, p = 0.005）**。GRADE 證據確定性 very low 到 moderate。**使用邊界（重要）**：① 族群是**水上運動員泛稱**，含游泳、鐵人三項、划船、水上芭蕾、水球，不是純游泳樣本；② 本篇**沒有量出發、轉身或蹬牆的分段時間**，不能用來支持「增強式主要幫助出發與轉身」——它量到的恰恰相反，水中跳躍與敏捷無效果、整段計時反而有小效果；③ 效果量小（0.42）且證據確定性最高只到 moderate，不宜寫成定論。"
+
+  - id: src.yu-kwok-2021-sc-front-crawl
+    display: "Yu Kwok, W., So, B. C. L., Tse, D. H. T., & Ng, S. S. M. (2021). A systematic review and meta-analysis: biomechanical evaluation of the effectiveness of strength and conditioning training programs on front crawl swimming performance. Journal of Sports Science & Medicine, 20(4), 564–585."
+    title: "A Systematic Review and Meta-Analysis: Biomechanical Evaluation of the Effectiveness of Strength and Conditioning Training Programs on Front Crawl Swimming Performance."
+    type: review
+    verification_status: verified
+    authors: ["Yu Kwok W", "So BCL", "Tse DHT", "Ng SSM"]
+    year: 2021
+    container: "Journal of Sports Science & Medicine"
+    identifier:
+      pmid: "35321128"
+      pmcid: "PMC8488830"
+      doi: "10.52082/jssm.2021.564"
+      url: "https://pubmed.ncbi.nlm.nih.gov/35321128/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 esummary 核對後獨立登錄，來自拆解複合鍵 src.pmc9424421-a。**尚未取得全文**：納入研究數、族群與效果量本專案尚未核對，引用具體數字前須補查；目前只用於支撐「陸上肌力訓練對前爬式表現的生物力學評估存在系統回顧」這一層。"
+
   - id: src.2024-2025
     display: "教練觀測 2024–2025"
     type: other
@@ -1130,13 +1191,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.fphys-2024-1406518
-    display: "Amaro et al. 系統回顧 (Science & Sports, S0765159718302363); 簡短回顧 (Redalyc 3010); Frontiers Physiology 2024 統合分析 (DOI 10.3389/fphys.2024.1406518)"
+    display: "【複合來源鍵，已解除】已拆為 src.jin-2024-resistance-front-crawl、src.amaro-2019-dryland-sr（另一篇無法識別，已刪）"
     type: other
-    verification_status: unverified
-    year: 2024
-    identifier:
-      doi: "10.3389/fphys.2024.1406518"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合來源鍵拆解：本 id 的顯示字串以分號串起三筆——Amaro et al. 系統回顧（ScienceDirect PII S0765159718302363＝Science & Sports 34(1):e1–e14, 2019）、「簡短回顧 (Redalyc 3010)」、以及本 id 自己的 DOI 所指的 Frontiers Physiology 2024 統合分析（Jin et al., Front Physiol 15:1406518）。**這個鍵的排序特別有害**：讀者看到的第一個作者名是 Amaro，但 id 的識別碼指的是 Jin 那篇，顯示層與機器層講的是兩篇不同的文獻。前兩者已分別獨立登錄與刪除，Frontiers 那篇改以作者年份登錄為 src.jin-2024-resistance-front-crawl。「Redalyc 3010」無法識別（3010 是期刊代號不是文章代號），已刪除不再引用。唯一引用處 `periodization.dryland.transfer` 已改掛三個 id。本 id 保留為墓碑、不得再使用。"
 
   - id: src.fractional-drill
     display: "通用蛙式教學（fractional drill 變體）"
@@ -2523,18 +2582,30 @@ sources:
       url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
       pmid: "25414737"
       doi: "10.2478/hukin-2014-0058"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc4234766-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc4234766-b 共用 pmcid PMC4234766，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解後校正：本筆是 de Jesus 等 2014 年的方法學回顧，彙整 23 份仰式出發文獻（2 份游泳專書、8 篇同儕審查期刊、3 篇 BMS 研討會、8 篇 ISBS 會議論文、1 篇生物力學研討會、1 篇博士論文）。原註記寫「疑似與 src.pmc4234766-b 為同一文獻待合併」與「顯示字串未給出單一明確年份，year 留空」，**兩句都不成立**：-b 是複合鍵不是重複登錄（已立墓碑），本筆的 year 欄位一直是 2014、沒有留空。**使用邊界**：本篇是回顧與方法學評估，不報告單一的角度—成績關聯；它自己的結論是各研究對分期定義沒有共識、出發計時終點從約 5 m 到 22.86 m 不等、部分研究的結論因規則改變已對應到不再使用的仰式出發技術。引用時只能用於「該領域的方法異質性與規則變動」這一層，不得從中取具體數值。"
 
   - id: src.pmc4234766-b
-    display: "The Backstroke Swimming Start: State of the Art, PMC4234766; PubMed 23688055"
+    display: "【複合來源鍵，已解除】已拆為 src.pmc4234766-a、src.de-jesus-2013-backstroke-start-feet"
     type: other
-    verification_status: unverified
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合來源鍵拆解：本 id 的顯示字串「The Backstroke Swimming Start: State of the Art, PMC4234766; PubMed 23688055」把兩篇不同文獻綁成一個機器鍵——PMC4234766 是 de Jesus 等 2014 年的方法學回顧（J Hum Kinet，已登錄為 src.pmc4234766-a），PMID 23688055 則是 de Jesus 等 2013 年的腳位比較實驗（J Sports Sci 31(15):1665–1675），已獨立登錄為 src.de-jesus-2013-backstroke-start-feet。原本兩筆都標「疑似同一文獻待合併」，那個判讀是錯的：兩者共用 PMCID 只因為本鍵的第一段就是那篇，合併會把 2013 那篇整個吞掉。唯一引用處 `starts-turns.err4` 的證據行已重寫並改掛正確 id。本 id 保留為墓碑、不得再使用。"
+
+  - id: src.de-jesus-2013-backstroke-start-feet
+    display: "de Jesus, K., de Jesus, K., Figueiredo, P., Gonçalves, P., Pereira, S. M., Vilas-Boas, J. P., & Fernandes, R. J. (2013). Backstroke start kinematic and kinetic changes due to different feet positioning. Journal of Sports Sciences, 31(15), 1665–1675."
+    title: "Backstroke start kinematic and kinetic changes due to different feet positioning."
+    type: journal-article
+    verification_status: verified
+    authors: ["de Jesus K", "de Jesus K", "Figueiredo P", "Gonçalves P", "Pereira SM", "Vilas-Boas JP", "Fernandes RJ"]
+    year: 2013
+    container: "Journal of Sports Sciences"
     identifier:
       pmid: "23688055"
-      pmcid: "PMC4234766"
-      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4234766/"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc4234766-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc4234766-a 共用 pmcid PMC4234766，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.1080/02640414.2013.794298"
+      url: "https://pubmed.ncbi.nlm.nih.gov/23688055/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 efetch 核對後獨立登錄，來自拆解複合鍵 src.pmc4234766-b。內容：6 名菁英泳者，各做兩組 4 趟 15 m 全力仰式出發，比較「雙腳完全沒入水面下」與「雙腳露出水面」兩種腳位；矢狀面雙攝影機跨介質二維運動學，加上水下測力板與裝有 load cell 的握把測動力學。結果：腳沒入水者的重心水平起始位置、hands-off 時的重心水平速度、**起跳角度**都較大；腳露出水面者的觸牆時間、離台時重心的水平與向下垂直速度、下肢水平衝量、飛行期向下垂直速度較大；兩者的**重心水平入水距離、背弓角度與 5 m 出發時間相當**。**使用邊界（重要）**：① 本篇是**腳位變項**的比較，不是起跳角度與成績的關聯研究；② 它量到的方向恰好相反——起跳角度較大的那個變項，5 m 時間**沒有比較差**（兩者相當）；因此不得用本篇支持「起跳角度越大成績越差」；③ n=6 全為菁英泳者，且該規則背景是 2005 年改制，早於後續出發台與扶手規則變動。"
 
   - id: src.pmc4247626
     display: "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)"
@@ -3019,13 +3090,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8960438-a
-    display: "Biomechanical Factors Influencing Breaststroke Turns, Journal of Applied Biomechanics 1998; PMC8960438"
+    display: "【誤標來源鍵，已解除】已拆為 src.blanksby-1998-breaststroke-turns"
     type: other
-    verification_status: unverified
-    year: 1998
-    identifier:
-      pmcid: "PMC8960438"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc8960438-b、src.pmc8960438-c、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-b、src.pmc8960438-c、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 誤標／複合來源鍵拆解：本 id 的顯示字串是「Biomechanical Factors Influencing Breaststroke Turns, Journal of Applied Biomechanics 1998; PMC8960438」——篇名與刊名指的是 Blanksby 等 1998 年那篇（J Appl Biomech 14(2):180–189，DOI 10.1123/jab.14.2.180），但後面掛的 PMC8960438 是 Chainok 等 2022 年仰式轉蛙式轉換技術那篇（src.pmc8960438-d）的識別碼，兩者毫無關係。**顯示層與機器層各指一篇不同文獻**，所以它在 W025 裡與 -c、-d 撞在一起，但它其實既不是 -d 的重複登錄、也不是真的有 PMCID。正確的那篇已獨立登錄為 src.blanksby-1998-breaststroke-turns（該刊未被 PubMed 收錄，本來就不會有 PMCID）。唯一引用處 `starts-turns.err5` 的證據行已重寫並改掛。本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc8960438-b
     display: "【重複登錄，已解除】與 src.pmc8960438-d 為同一篇文獻"
@@ -3036,13 +3105,25 @@ sources:
     notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc8960438-d` 指向同一篇文獻（同 PMID 35359502、同 PMC8960438、同 DOI 10.3389/fspor.2022.802967）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc8960438-d`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc8960438-c
-    display: "Journal of Applied Biomechanics 1998; PMC8960438"
+    display: "【誤標來源鍵，已解除】已拆為 src.blanksby-1998-breaststroke-turns"
     type: other
-    verification_status: unverified
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 誤標來源鍵拆解：本 id 的顯示字串只有「Journal of Applied Biomechanics 1998; PMC8960438」——連篇名都沒有，一個刊名加年份不指向任何一篇特定文獻，而後面掛的 PMC8960438 是 Chainok 等 2022 年那篇的識別碼。依引用它的兩處內容（蛙式轉身的進牆與離牆速度）與同族的 -a 顯示字串比對，它指的是 Blanksby 等 1998, J Appl Biomech 14(2):180–189，已獨立登錄為 src.blanksby-1998-breaststroke-turns。兩處引用（`starts-turns.tech.17` 的機制行與證據行）已重寫並改掛。本 id 保留為墓碑、不得再使用。"
+
+  - id: src.blanksby-1998-breaststroke-turns
+    display: "Blanksby, B. A., Simpson, J. R., Elliott, B. C., & McElroy, K. (1998). Biomechanical factors influencing breaststroke turns by age-group swimmers. Journal of Applied Biomechanics, 14(2), 180–189."
+    title: "Biomechanical Factors Influencing Breaststroke Turns by Age-Group Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Brian A. Blanksby", "Jennifer R. Simpson", "Bruce C. Elliott", "Keith McElroy"]
     year: 1998
+    container: "Journal of Applied Biomechanics"
     identifier:
-      pmcid: "PMC8960438"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。"
+      doi: "10.1123/jab.14.2.180"
+      url: "https://doi.org/10.1123/jab.14.2.180"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 Crossref（ISSN 1065-8483 + 書目查詢）核對後獨立登錄，來自拆解誤標鍵 src.pmc8960438-a／-c。**本刊未被 PubMed 收錄，故無 PMID／PMCID**——原本兩個舊 id 上掛的 PMC8960438 是 Chainok 等 2022 年那篇的識別碼，與本篇無關。內容：23 名分齡蛙式泳者，各做三趟 50 m 推牆出發全力游；結果變項是「進牆前 5 m 到離牆 5 m」的往返時間（5 m RTT），水下攝影加測力板。與 5 m RTT 顯著相關（p < .01）的有：2.5 m RTT、50 m 成績、平均單划速度、峰值反作用力、pivot time、衝量、離牆峰值水平速度、手臂與腿部恢復划水的距離、出水距離、出水時間與出水水平速度，以及受試者的身高與體重。逐步迴歸留下的預測式是 17.113 − 0.322×出水距離 − 0.036×身高 − 0.723×出水水平速度 + 0.723×pivot time − 0.65×離牆峰值水平速度。轉身有淨收益：5 m RTT 涵蓋 20% 的距離，只佔總游泳時間的 18.26%。**使用邊界（重要）**：① 迴歸模型留下的預測項**全部在離牆側**（出水距離、出水水平速度、pivot time、離牆峰值水平速度）加上身高，**沒有任何一項是進牆速度**；本篇不能用來支持「進牆速度是轉身成績的首要預測變數」或「進牆速度越高、推出速度越高」。② 族群是分齡（青少年）泳者、泳式限蛙式、情境是 25 m 池；不可外推成所有泳式的轉身通則。③ 1998 年舊文獻，確定性標 🟡 不標 🟢。"
 
   - id: src.pmc8960438-d
     display: "Chainok, P., de Jesus, K., Mourão, L., Fonseca, P. F. P., Zacca, R., Fernandes, R. J., & Vilas-Boas, J. P. (2022). Biomechanical features of backstroke to breaststroke transition techniques in age-group swimmers. Frontiers in Sports and Active Living, 4, 802967."
@@ -3058,7 +3139,7 @@ sources:
       pmid: "35359502"
       doi: "10.3389/fspor.2022.802967"
     retrieved_on: "2026-07-27"
-    notes: "2026-09-06 重複登錄合併：src.pmc8960438-b 已確認同篇並改掛本 id。src.pmc8960438-a／-c 不併——它們掛的是 1998 年 Journal of Applied Biomechanics 的另一篇，只是被誤填了本篇的 PMCID，另案處理。"
+    notes: "2026-09-06 重複登錄合併：src.pmc8960438-b 已確認同篇並改掛本 id。src.pmc8960438-a／-c 已查明**不是本篇的重複登錄**，而是 Blanksby 等 1998, J Appl Biomech 14(2):180–189 被誤填了本篇的 PMCID；那篇已獨立登錄為 src.blanksby-1998-breaststroke-turns，兩個舊 id 已立墓碑。本篇（Chainok et al. 2022）的主題是分齡泳者的仰式轉蛙式轉換技術，與蛙式轉身的進牆／離牆速度分析無關，兩者不可互相代用。"
 
   - id: src.pmc9057286
     display: "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)"
@@ -3091,22 +3172,18 @@ sources:
     notes: "S3c 已裁決（2026-09-03）：原 src.pmc9402090-a 不是一筆文獻，而是把兩篇並排的顯示字串「PMC9402090 2022; PubMed 24984154」，且它的 identifier 把 pmid 24984154 錯掛到 pmcid PMC9402090 上——本筆已查證的 pmid 是 36032263，24984154 屬另一篇（Willems 2014，src.pmid-24984154）。-a 已刪除，其兩個引用點拆成本筆與 src.pmid-24984154 兩個機器鍵。"
 
   - id: src.pmc9424421-a
-    display: "Frontiers Physiology 2025 網絡統合分析 (DOI 10.3389/fphys.2025.1636595); 水上運動增強式 SR (PMC9424421, n=618); 前爬式 S&C 生物力學 SR (PMC8488830)"
+    display: "【複合來源鍵，已解除】已拆為 src.wang-2025-training-nma、src.ramirez-campillo-2022-plyo-water-sports、src.yu-kwok-2021-sc-front-crawl"
     type: other
-    verification_status: unverified
-    year: 2025
-    identifier:
-      doi: "10.3389/fphys.2025.1636595"
-      pmcid: "PMC9424421"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc9424421-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc9424421-b 共用 pmcid PMC9424421，疑似同一文獻，待 S3c 查證。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合來源鍵拆解：本 id 的顯示字串以分號串起三篇不同文獻——Frontiers Physiology 2025 網絡統合分析（DOI 10.3389/fphys.2025.1636595，即 src.wang-2025-training-nma，早已獨立登錄）、水上運動增強式系統回顧（PMC9424421＝Ramirez-Campillo et al. 2022, Sports Med Open 8(1):108）、前爬式肌力與體能生物力學系統回顧（PMC8488830＝Yu Kwok et al. 2021, J Sports Sci Med 20(4):564–585）。本 id 的 identifier 同時掛了第一篇的 DOI 與第二篇的 PMCID，因此它在 W025 裡與 src.wang-2025-training-nma、src.pmc9424421-b 各撞一次——一個鍵綁多篇時，識別碼欄位本身就會互相矛盾。唯一引用處 `periodization.dryland.methods` 已改掛四個 id（含原有的 src.hermosilla-2021）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc9424421-b
-    display: "簡短回顧 (Redalyc 3010); 增強式水上運動 SR (PMC9424421)"
+    display: "【複合來源鍵，已解除】已拆為 src.ramirez-campillo-2022-plyo-water-sports（另一篇無法識別，已刪）"
     type: other
-    verification_status: unverified
-    identifier:
-      pmcid: "PMC9424421"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc9424421-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc9424421-a 共用 pmcid PMC9424421，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合來源鍵拆解：本 id 的顯示字串是「簡短回顧 (Redalyc 3010); 增強式水上運動 SR (PMC9424421)」。後者是 Ramirez-Campillo et al. 2022（Sports Med Open 8(1):108），已獨立登錄。前者**無法識別，已刪除不再引用**——Redalyc 的 3010 是該平台的**期刊代號**不是文章代號，它不指向任何一篇特定文獻；讀者拿到「Redalyc 3010」查不到東西，本專案也無從核對它說了什麼。這種字串不該補一個近似的文獻頂上去（那是製造來源），正確處置是承認它不成立並移除。唯一引用處 `periodization.dryland.caveats` 已改掛 src.ramirez-campillo-2022-plyo-water-sports。本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc9445308
     display: "【重複登錄，已解除】與 src.mccabe-2022 為同一篇文獻"
