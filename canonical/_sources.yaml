@@ -3773,89 +3773,89 @@ sources:
   - id: src.research-psych-07-a
     display: "Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-b
     display: "Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-c
     display: "Research/心理/07_心流與最佳表現.md#4-精英運動員心流研究jackson1995-1996"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     year: 1996
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-d
     display: "Research/心理/07_心流與最佳表現.md#5-swann-等人心流系統回顧2012"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-e
     display: "Research/心理/07_心流與最佳表現.md#6-flow-vs-clutch-statesswann-等人2017-2023"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     year: 2023
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-f
     display: "Research/心理/07_心流與最佳表現.md#7-理想表現狀態ips--the-zone"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-g
     display: "Research/心理/07_心流與最佳表現.md#8-心流-表現關係-meta-analysis"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-h
     display: "Research/心理/07_心流與最佳表現.md#9-心流的神經認知機制"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-i
     display: "Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-j
     display: "Research/心理/07_心流與最佳表現.md#flow-vs-reinvestment-對照"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-k
     display: "Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     year: 2008
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-l、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-l
     display: "Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-m、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-m
     display: "Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-n 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-n
     display: "Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-07-a、src.research-psych-07-b、src.research-psych-07-c、src.research-psych-07-d、src.research-psych-07-e、src.research-psych-07-f、src.research-psych-07-g、src.research-psych-07-h、src.research-psych-07-i、src.research-psych-07-j、src.research-psych-07-k、src.research-psych-07-l、src.research-psych-07-m 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/07_心流與最佳表現.md 逐節把該節實際引用的原始文獻挖出來，登錄成 20 筆帶 DOI／PMID／ISBN 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-a
     display: "Research/心理/08_心理感知生理交互.md#1.1"
@@ -8079,3 +8079,336 @@ sources:
       聚焦注意力、提供結構性安全感），以及 1998 年 10 位美國世錦賽泳者訪談中
       「個別方式不同但全員都有固定例行程序」的觀察。證據等級 🟠：教練教材與實務訪談，
       不是對照實驗；PPR 的效果量要看 Rupprecht 2021 與 Richard 2021。
+
+  - id: src.csikszentmihalyi-1990-flow
+    display: "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row."
+    type: book
+    verification_status: verified
+    year: 1990
+    authors: ["Csikszentmihalyi M"]
+    container: "Flow: The Psychology of Optimal Experience"
+    identifier:
+      isbn: '9780060920432'
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 OpenLibrary 核對書名、作者、初版年（1990, Harper & Row／Harper Perennial 重印）。
+      本庫取用：心流九維度的三層分組（前提／即時體驗／後效）、挑戰-技能平衡通道模型、
+      即時明確回饋作為前提條件、autotelic experience。
+      邊界：本書是跨領域理論專著，非運動實證研究；任何「游泳心流」的具體宣稱都不能只靠這一筆，
+      要配 Jackson 1995 的運動員訪談或游泳專屬研究。
+
+  - id: src.jackson-1995-flow-elite-athletes
+    display: "Jackson, S. A. (1995). Factors influencing the occurrence of flow state in elite athletes."
+    type: journal_article
+    verification_status: verified
+    year: 1995
+    authors: ["Jackson SA"]
+    container: "Journal of Applied Sport Psychology"
+    identifier:
+      doi: 10.1080/10413209508406962
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：7(2):138-166。28 名精英運動員質性訪談，樣本含游泳選手，
+      是本庫少數含游泳受試者的心流第一手研究。本庫取用：促進因素（賽前準備、自信、清晰焦點、
+      動作流暢感、最佳喚醒）與阻礙因素（環境干擾、身體狀態差、過度關注結果、人際衝突），
+      以及游泳選手把「水的感覺」講成心流即時回饋來源這一點。
+      JASP 屬 Taylor & Francis 刊物未被 PubMed 收錄，本筆無 PMID；
+      PMID 8735997 是 Jackson 1996 的 RQES 篇，不是本筆。
+
+  - id: src.jackson-1996-conceptual-flow
+    display: "Jackson, S. A. (1996). Toward a conceptual understanding of the flow experience in elite athletes."
+    type: journal_article
+    verification_status: verified
+    year: 1996
+    authors: ["Jackson SA"]
+    container: "Research Quarterly for Exercise and Sport"
+    identifier:
+      pmid: '8735997'
+      doi: 10.1080/02701367.1996.10607928
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：67(1):76-90, 1996 Mar。
+      1995 訪談資料的概念模型化版本，本庫取用其「心流是體驗而非表現指標」的界定。
+      與 src.jackson-1995-flow-elite-athletes 出自同一資料集，兩筆併用時不可當作獨立證據累加。
+
+  - id: src.engeser-rheinberg-2008-challenge-skill
+    display: "Engeser, S., & Rheinberg, F. (2008). Flow, performance and moderators of challenge-skill balance."
+    type: journal_article
+    verification_status: verified
+    year: 2008
+    authors: ["Engeser S", "Rheinberg F"]
+    container: "Motivation and Emotion"
+    identifier:
+      doi: 10.1007/s11031-008-9102-4
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：32(3):158-172。
+      本庫取用：挑戰-技能平衡不是單純相等即可，還受任務重要性與個人技能水平調節——
+      這是「匹配是相對於當前技能」而非絕對難度的依據。
+      邊界：樣本非游泳，外推至游泳技術情境在 canonical 內標 🔵。
+
+  - id: src.swann-2012-flow-systematic-review
+    display: "Swann, C., Keegan, R. J., Piggott, D., & Crust, L. (2012). A systematic review of the experience, occurrence, and controllability of flow states in elite sport."
+    type: journal_article
+    verification_status: verified
+    year: 2012
+    authors: ["Swann C", "Keegan RJ", "Piggott D", "Crust L"]
+    container: "Psychology of Sport and Exercise"
+    identifier:
+      doi: 10.1016/j.psychsport.2012.05.006
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：13(6):807-819。回顧 1992-2011 年精英運動心流實證研究。
+      本庫取用最關鍵的一條是「心流不能直接製造，只能間接佈置前提條件」——
+      這是 canonical 拒絕任何「保證進心流」教法的證據依據。
+
+  - id: src.harris-2021-flow-performance-meta
+    display: "Harris, D. J., Allen, K. L., Vine, S. J., & Wilson, M. R. (2021). A systematic review and meta-analysis of the relationship between flow states and performance."
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Harris DJ", "Allen KL", "Vine SJ", "Wilson MR"]
+    container: "International Review of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/1750984X.2021.1929402
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：16(1):693-721（2021 線上先行，收入 2023 年第 16 卷）。
+      本庫取用：心流與表現正相關但效應量分歧大，且多數研究是相關設計，
+      無法分辨「先進心流才表現好」或「表現好才回報心流」。
+      這一筆在 canonical 是用來設下限的——它反對而非支持「練心流以提升成績」的宣稱。
+      納入研究的游泳比例不明，外推至游泳標 🔵。
+
+  - id: src.swann-2017-flow-clutch-directions
+    display: "Swann, C., Crust, L., & Vella, S. A. (2017). New directions in the psychology of optimal performance in sport: Flow and clutch states."
+    type: journal_article
+    verification_status: verified
+    year: 2017
+    authors: ["Swann C", "Crust L", "Vella SA"]
+    container: "Current Opinion in Psychology"
+    identifier:
+      pmid: '28813354'
+      doi: 10.1016/j.copsyc.2017.03.032
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：16:48-53, 2017 Aug。
+      本庫取用 flow 與 clutch 的六項對照（感受質、注意力、意識控制、觸發情境、
+      享受的時間點、能量代謝）。
+      注意：草稿記的 DOI 10.1016/j.copsyc.2017.05.003 指向另一篇論文（Ryba 的文化運動心理學回顧），
+      頁碼 169-175 也不是本篇；以 PMID 28813354 為準。
+
+  - id: src.swann-2017-integrated-model
+    display: "Swann, C., Crust, L., Jackman, P., Vella, S. A., Allen, M. S., & Keegan, R. (2017). Psychological states underlying excellent performance in sport: Toward an integrated model of flow and clutch states."
+    type: journal_article
+    verification_status: verified
+    year: 2017
+    authors: ["Swann C", "Crust L", "Jackman P", "Vella SA", "Allen MS", "Keegan R"]
+    container: "Journal of Applied Sport Psychology"
+    identifier:
+      doi: 10.1080/10413200.2016.1272650
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：29(4):375-401，2017 年 1 月線上先行。
+      本庫取用：flow 與 clutch 不在同一時刻並存、但同一場比賽可先後出現。
+      「讓它發生（letting it happen）／逼它成功（making it happen）」的對比出自本模型系列的高爾夫訪談。
+
+  - id: src.swann-2022-flow-clutch-scale
+    display: "Swann, C., Driscoll, J., Goddard, S. G., Willis, R., Schweickle, M. J., Fernandes Ribeiro, I. A., Gatt, M., Jackman, P. C., & Vella, S. A. (2022). The Flow-Clutch Scale: Development and preliminary validation in sport and exercise."
+    type: journal_article
+    verification_status: verified
+    year: 2022
+    authors: ["Swann C", "Driscoll J", "Goddard SG", "Willis R", "Schweickle MJ", "Fernandes Ribeiro IA", "Gatt M", "Jackman PC", "Vella SA"]
+    container: "Psychology of Sport and Exercise"
+    identifier:
+      doi: 10.1016/j.psychsport.2021.102066
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：58:102066，2022 年 1 月號。
+      本庫只用它證明 flow／clutch 兩態在量表層可分離，不用它的常模。
+      樣本是廣義運動與休閒運動者，競技游泳的適用性未驗證，canonical 內標 🔵。
+      注意：草稿記的「2021, 57, 102001」在卷期頁與年份上都不對，
+      DOI 10.1016/j.psychsport.2021.102001 指向另一篇（Dineen 等的自我調節效能研究）。
+
+  - id: src.sanchez-vara-2023-brief-flow-clutch
+    display: "Sánchez Vara, A., Chamorro, J. L., Moreno Castellanos, R., & Alcaraz, S. (2023). Measuring optimal psychological states: Proposal of two brief versions to measure flow and clutch in athletes."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Sánchez Vara A", "Chamorro JL", "Moreno Castellanos R", "Alcaraz S"]
+    container: "Frontiers in Psychology"
+    identifier:
+      pmid: '36743254'
+      pmc: PMC9895101
+      doi: 10.3389/fpsyg.2023.1066494
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：14:1066494。flow／clutch 簡版量表。
+      本庫僅用它佐證雙態的測量可分離性。
+      注意：草稿把這筆記成「Gonzalez-García et al.」，作者群並非如此，以 PMC9895101 的實際署名為準。
+
+  - id: src.masters-1992-reinvestment
+    display: "Masters, R. S. W. (1992). Knowledge, knerves and know-how: The role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure."
+    type: journal_article
+    verification_status: verified
+    year: 1992
+    authors: ["Masters RSW"]
+    container: "British Journal of Psychology"
+    identifier:
+      doi: 10.1111/j.2044-8295.1992.tb02446.x
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：83(3):343-358。
+      本庫取用：壓力下重新叫回顯性規則知識會打斷已自動化的動作程序，
+      以及高／低再投資傾向的個體差異。原始實驗是高爾夫推桿，非游泳。
+
+  - id: src.masters-maxwell-2008-reinvestment-theory
+    display: "Masters, R., & Maxwell, J. (2008). The theory of reinvestment."
+    type: journal_article
+    verification_status: verified
+    year: 2008
+    authors: ["Masters R", "Maxwell J"]
+    container: "International Review of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/17509840802287218
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：1(2):160-183，確認是 IRSEP 期刊綜述而非書章
+      （草稿 v1 曾誤植為 Hirsch 主編書中的一章，草稿自己已更正，本筆再確認一次）。
+      本庫取用：再投資是意識監控干擾自動化動作的核心機制，
+      以及「去再投資」只適用於已建立足夠隱性程序知識的學習者這條邊界。
+
+  - id: src.beilock-carr-2001-choking
+    display: "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure?"
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Beilock SL", "Carr TH"]
+    container: "Journal of Experimental Psychology: General"
+    identifier:
+      doi: 10.1037/0096-3445.130.4.701
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：130(4):701-725。
+      本庫取用「明確監控假說」的關鍵不對稱：要求監控動作細節會讓高技能者變差、低技能者不受害甚至受益。
+      這是 canonical 主張「賽前動作清單指令對進階泳者有害、對初學者無害」的證據依據。
+      原始實驗是高爾夫推桿，游泳專屬驗證缺失。
+
+  - id: src.liao-masters-2001-analogy-learning
+    display: "Liao, C.-M., & Masters, R. S. W. (2001). Analogy learning: A means to implicit motor learning."
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Liao CM", "Masters RSW"]
+    container: "Journal of Sports Sciences"
+    identifier:
+      doi: 10.1080/02640410152006081
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：19(5):307-319。
+      原始研究是桌球正手上旋，用「直角三角形」比喻取代逐條顯性指令，壓力下表現較穩、外顯規則累積較少。
+      本庫取用的是機制（類比指導降低顯性規則累積），不是游泳實證。
+      注意：草稿 v1 曾把本筆描述成游泳研究並附 DOI 10.1080/026404101300149327、頁碼 369-375，
+      草稿自己已標記該版本疑為捏造；本筆以 Crossref 實際解析結果為準。
+
+  - id: src.dietrich-2004-hypofrontality
+    display: "Dietrich, A. (2004). Neurocognitive mechanisms underlying the experience of flow."
+    type: journal_article
+    verification_status: verified
+    year: 2004
+    authors: ["Dietrich A"]
+    container: "Consciousness and Cognition"
+    identifier:
+      pmid: '15522630'
+      doi: 10.1016/j.concog.2004.07.002
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：13(4):746-761, 2004 Dec。
+      暫時性前額葉低活化（transient hypofrontality）假說：心流時掌管自我監控與評估的前額葉活動下降。
+      本庫取用其作為「自我意識消退、時間感扭曲」的機制解釋，但這是假說不是心流的直接量測，
+      canonical 內把「神經機制→心流」的連結標為推導 🔵。
+      注意：草稿表格記的 PMID 15556389 指向一篇爬蟲胚胎鈣代謝論文，與本筆無關。
+
+  - id: src.gold-ciorciari-2020-flow-neuroscience
+    display: "Gold, J., & Ciorciari, J. (2020). A review on the role of the neuroscience of flow states in the modern world."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Gold J", "Ciorciari J"]
+    container: "Behavioral Sciences"
+    identifier:
+      pmid: '32916878'
+      pmc: PMC7551835
+      doi: 10.3390/bs10090137
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：10(9):137, 2020 Sep。
+      本庫取用：高度自動化動作的控制轉移到基底核、不再倚賴前額葉顯性工作記憶。
+      注意：草稿把這筆的刊物記成 Frontiers in Psychology，實為 Behavioral Sciences (Basel)。
+
+  - id: src.floyer-lea-matthews-2005-brain-networks
+    display: "Floyer-Lea, A., & Matthews, P. M. (2005). Distinguishable brain activation networks for short- and long-term motor skill learning."
+    type: journal_article
+    verification_status: verified
+    year: 2005
+    authors: ["Floyer-Lea A", "Matthews PM"]
+    container: "Journal of Neurophysiology"
+    identifier:
+      pmid: '15716371'
+      doi: 10.1152/jn.00717.2004
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：94(1):512-518, 2005 Jul。
+      本庫取用：練習驅動的自動化伴隨額-紋狀體網絡活動下降，與心流的輕鬆感一致。
+      這是動作自動化的神經影像證據，不是心流研究；兩者的連結在 canonical 內標為推導。
+      注意：草稿記的 PMID 15843592 指向一篇生物統計方法學論文，與本筆無關。
+
+  - id: src.poldrack-2005-motor-automaticity
+    display: "Poldrack, R. A., Sabb, F. W., Foerde, K., Tom, S. M., Asarnow, R. F., Bookheimer, S. Y., & Knowlton, B. J. (2005). The neural correlates of motor skill automaticity."
+    type: journal_article
+    verification_status: verified
+    year: 2005
+    authors: ["Poldrack RA", "Sabb FW", "Foerde K", "Tom SM", "Asarnow RF", "Bookheimer SY", "Knowlton BJ"]
+    container: "Journal of Neuroscience"
+    identifier:
+      pmid: '15930384'
+      pmc: PMC6725010
+      doi: 10.1523/JNEUROSCI.3880-04.2005
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：25(22):5356-5364, 2005 Jun。
+      本庫取用：自動化程度提高伴隨前額葉活動下降、控制轉向紋狀體。
+      注意：草稿把 PMC6725010 記成「Seidler et al., 2005」，實際第一作者是 Poldrack；
+      卷期頁碼（25(22):5356-5364）草稿記對了，作者記錯。
+
+  - id: src.hanin-2000-izof
+    display: "Hanin, Y. L. (2000). Individual Zones of Optimal Functioning (IZOF) model. In Y. L. Hanin (Ed.), Emotions in Sport (pp. 65-90). Human Kinetics."
+    type: book_chapter
+    verification_status: verified
+    year: 2000
+    authors: ["Hanin YL"]
+    container: "Emotions in Sport"
+    identifier:
+      doi: 10.5040/9781492596233.ch-003
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對章名與頁碼（65-90）。
+      本庫取用：最佳表現對應的是個人化的情緒／喚醒「區間」而非單一最佳點，且方向因人而異
+      （有人需高激活、有人需平靜）。Hanin 的研究樣本歷來包含游泳、划船、體操運動員。
+      證據等級 🟠→🟡：IZOF 主要以書籍與蘇聯時期研究流傳，
+      草稿引的「JSEP 2002, 24(2), 189-208」未能核實，不予登錄。
+
+  - id: src.hardy-jones-gould-1996-psych-preparation
+    display: "Hardy, L., Jones, G., & Gould, D. (1996). Understanding Psychological Preparation for Sport: Theory and Practice of Elite Performers. John Wiley & Sons."
+    type: book
+    verification_status: verified
+    year: 1996
+    authors: ["Hardy L", "Jones G", "Gould D"]
+    container: "Understanding Psychological Preparation for Sport"
+    identifier:
+      isbn: '9780471957874'
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 OpenLibrary 核對書名、作者、出版年與 ISBN。
+      本庫取用：理想表現狀態可能是跨認知／情緒／生理的多變數「配方」，
+      心流只是其中一種可能型態而非唯一——這是 canonical 不把心流等同於最佳表現的依據。
+      證據等級 🟠（教科書式整理，非原始實證）。

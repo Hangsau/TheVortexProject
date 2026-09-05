@@ -16792,9 +16792,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-a",
-        "src.research-psych-07-c",
-        "src.research-psych-07-m"
+        "src.bauman-2015-swimming-psychology",
+        "src.csikszentmihalyi-1990-flow",
+        "src.jackson-1995-flow-elite-athletes",
+        "src.jackson-1996-conceptual-flow"
       ],
       "outgoing_ids": []
     },
@@ -16814,9 +16815,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-b",
-        "src.research-psych-07-i",
-        "src.research-psych-07-l"
+        "src.csikszentmihalyi-1990-flow",
+        "src.engeser-rheinberg-2008-challenge-skill"
       ],
       "outgoing_ids": []
     },
@@ -16835,9 +16835,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-i",
-        "src.research-psych-07-k",
-        "src.research-psych-07-n"
+        "src.liao-masters-2001-analogy-learning",
+        "src.masters-maxwell-2008-reinvestment-theory"
       ],
       "outgoing_ids": []
     },
@@ -16856,8 +16855,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-b",
-        "src.research-psych-07-l"
+        "src.csikszentmihalyi-1990-flow",
+        "src.engeser-rheinberg-2008-challenge-skill"
       ],
       "outgoing_ids": []
     },
@@ -16876,7 +16875,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-e"
+        "src.sanchez-vara-2023-brief-flow-clutch",
+        "src.swann-2017-flow-clutch-directions",
+        "src.swann-2017-integrated-model",
+        "src.swann-2022-flow-clutch-scale"
       ],
       "outgoing_ids": []
     },
@@ -16896,7 +16898,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-h"
+        "src.dietrich-2004-hypofrontality",
+        "src.floyer-lea-matthews-2005-brain-networks",
+        "src.gold-ciorciari-2020-flow-neuroscience",
+        "src.poldrack-2005-motor-automaticity"
       ],
       "outgoing_ids": []
     },
@@ -16915,8 +16920,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-d",
-        "src.research-psych-07-g"
+        "src.harris-2021-flow-performance-meta",
+        "src.swann-2012-flow-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -16936,8 +16941,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-f",
-        "src.research-psych-07-m"
+        "src.hanin-2000-izof",
+        "src.hardy-jones-gould-1996-psych-preparation"
       ],
       "outgoing_ids": []
     },
@@ -16957,8 +16962,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-j",
-        "src.research-psych-07-k"
+        "src.beilock-carr-2001-choking",
+        "src.masters-1992-reinvestment",
+        "src.masters-maxwell-2008-reinvestment-theory"
       ],
       "outgoing_ids": []
     },
@@ -16977,9 +16983,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-07-a",
-        "src.research-psych-07-m",
-        "src.research-psych-07-n"
+        "src.bauman-2015-swimming-psychology",
+        "src.csikszentmihalyi-1990-flow",
+        "src.jackson-1995-flow-elite-athletes"
       ],
       "outgoing_ids": []
     },

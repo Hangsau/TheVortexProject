@@ -3297,10 +3297,11 @@ themes:
           賽前心像演練的焦點放在整體節律感、水的感覺、身體輕鬆的狀態，
           而不是動作清單逐步驗核。
       sources:
-      - Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度
-      - Research/心理/07_心流與最佳表現.md#4-精英運動員心流研究jackson1995-1996
-      - Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推
-      source_ids: [src.research-psych-07-a, src.research-psych-07-c, src.research-psych-07-m]
+      - "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row."
+      - "Jackson, S. A. (1995). Factors influencing the occurrence of flow state in elite athletes. Journal of Applied Sport Psychology, 7(2), 138-166."
+      - "Jackson, S. A. (1996). Toward a conceptual understanding of the flow experience in elite athletes. Research Quarterly for Exercise and Sport, 67(1), 76-90."
+      - "Bauman, J. (2015). Swimming psychology: merging mind and body. Science of Swimming Faster, Ch. 16."
+      source_ids: [src.csikszentmihalyi-1990-flow, src.jackson-1995-flow-elite-athletes, src.jackson-1996-conceptual-flow, src.bauman-2015-swimming-psychology]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3354,10 +3355,9 @@ themes:
           每次訓練設計時同時調整挑戰難度（任務難度、距離、限制條件）與評估學員的技能狀態，
           讓任務落在「剛好做得到但要專注」的帶寬內。
       sources:
-      - Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化
-      - Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用
-      - Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導
-      source_ids: [src.research-psych-07-b, src.research-psych-07-i, src.research-psych-07-l]
+      - "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row."
+      - "Engeser, S., & Rheinberg, F. (2008). Flow, performance and moderators of challenge-skill balance. Motivation and Emotion, 32(3), 158-172."
+      source_ids: [src.csikszentmihalyi-1990-flow, src.engeser-rheinberg-2008-challenge-skill]
     diagnostic:
       reading_signals:
       - 泳者說「這個好無聊，我都不用想就會了」= 挑戰低於技能，需提升任務難度才能進心流帶
@@ -3391,9 +3391,9 @@ themes:
         兒童初學在低技能層級就特別容易進入類心流的吸收狀態（遊戲性、低自我意識），
         這與精英運動員的心流機制是否相同，目前沒有直接比較研究。
       sources:
-      - Research/心理/07_心流與最佳表現.md#5-swann-等人心流系統回顧2012
-      - Research/心理/07_心流與最佳表現.md#8-心流-表現關係-meta-analysis
-      source_ids: [src.research-psych-07-d, src.research-psych-07-g]
+      - "Swann, C., Keegan, R. J., Piggott, D., & Crust, L. (2012). A systematic review of the experience, occurrence, and controllability of flow states in elite sport. Psychology of Sport and Exercise, 13(6), 807-819."
+      - "Harris, D. J., Allen, K. L., Vine, S. J., & Wilson, M. R. (2021). A systematic review and meta-analysis of the relationship between flow states and performance. International Review of Sport and Exercise Psychology, 16(1), 693-721."
+      source_ids: [src.swann-2012-flow-systematic-review, src.harris-2021-flow-performance-meta]
     diagnostic:
       reading_signals:
       - 泳者賽後說「那趟不知道怎麼了，感覺特別順」= 事後回報式心流，正常；收集前提條件（賽前狀態、難度感、睡眠等）
@@ -3431,8 +3431,11 @@ themes:
         競技游泳場景的適用性尚待游泳專屬研究確認（外推至游泳標 🔵）。
         對兒童競技與青少年競技：兩種狀態都可能出現，但比例和觸發條件的系統研究缺失。
       sources:
-      - Research/心理/07_心流與最佳表現.md#6-flow-vs-clutch-statesswann-等人2017-2023
-      source_ids: [src.research-psych-07-e]
+      - "Swann, C., Crust, L., & Vella, S. A. (2017). New directions in the psychology of optimal performance in sport: Flow and clutch states. Current Opinion in Psychology, 16, 48-53."
+      - "Swann, C., Crust, L., Jackman, P., Vella, S. A., Allen, M. S., & Keegan, R. (2017). Psychological states underlying excellent performance in sport: Toward an integrated model of flow and clutch states. Journal of Applied Sport Psychology, 29(4), 375-401."
+      - "Swann, C., et al. (2022). The Flow-Clutch Scale: Development and preliminary validation in sport and exercise. Psychology of Sport and Exercise, 58, 102066."
+      - "Sanchez Vara, A., Chamorro, J. L., Moreno Castellanos, R., & Alcaraz, S. (2023). Measuring optimal psychological states: Proposal of two brief versions to measure flow and clutch in athletes. Frontiers in Psychology, 14, 1066494."
+      source_ids: [src.swann-2017-flow-clutch-directions, src.swann-2017-integrated-model, src.swann-2022-flow-clutch-scale, src.sanchez-vara-2023-brief-flow-clutch]
     diagnostic:
       reading_signals:
       - 泳者賽後說「那趟感覺特別輕鬆，不知道時間怎麼過的」= flow 報告
@@ -3483,9 +3486,10 @@ themes:
           進階泳者賽前焦點應放在整體感覺（節律、輕鬆、水感）而不是動作清單；
           顯性技術檢查保留在練習中，賽前最後指令選一個感知焦點（如「感覺水幫你」）不選動作清單。
       sources:
-      - Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008
-      - Research/心理/07_心流與最佳表現.md#flow-vs-reinvestment-對照
-      source_ids: [src.research-psych-07-k, src.research-psych-07-j]
+      - "Masters, R. S. W. (1992). Knowledge, knerves and know-how. British Journal of Psychology, 83(3), 343-358."
+      - "Masters, R., & Maxwell, J. (2008). The theory of reinvestment. International Review of Sport and Exercise Psychology, 1(2), 160-183."
+      - "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure? Journal of Experimental Psychology: General, 130(4), 701-725."
+      source_ids: [src.masters-1992-reinvestment, src.masters-maxwell-2008-reinvestment-theory, src.beilock-carr-2001-choking]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3542,10 +3546,9 @@ themes:
           去再投資語言只用在 L4+ 且已有足夠自動化基礎的泳者；
           初學者需要清晰的顯性感知目標（「試試看，吐氣的時候感覺你的臉放鬆」），不是「不要想」。
       sources:
-      - Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用
-      - Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結
-      - Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008
-      source_ids: [src.research-psych-07-i, src.research-psych-07-n, src.research-psych-07-k]
+      - "Masters, R., & Maxwell, J. (2008). The theory of reinvestment. International Review of Sport and Exercise Psychology, 1(2), 160-183."
+      - "Liao, C.-M., & Masters, R. S. W. (2001). Analogy learning: A means to implicit motor learning. Journal of Sports Sciences, 19(5), 307-319."
+      source_ids: [src.masters-maxwell-2008-reinvestment-theory, src.liao-masters-2001-analogy-learning]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3600,8 +3603,11 @@ themes:
         外推至兒童游泳情境需特別謹慎。兒童的「流暢吸收狀態」可能通過不同的神經機制達成，
         不能直接套用成人前額葉假說。
       sources:
-      - Research/心理/07_心流與最佳表現.md#9-心流的神經認知機制
-      source_ids: [src.research-psych-07-h]
+      - "Dietrich, A. (2004). Neurocognitive mechanisms underlying the experience of flow. Consciousness and Cognition, 13(4), 746-761."
+      - "Gold, J., & Ciorciari, J. (2020). A review on the role of the neuroscience of flow states in the modern world. Behavioral Sciences, 10(9), 137."
+      - "Floyer-Lea, A., & Matthews, P. M. (2005). Distinguishable brain activation networks for short- and long-term motor skill learning. Journal of Neurophysiology, 94(1), 512-518."
+      - "Poldrack, R. A., et al. (2005). The neural correlates of motor skill automaticity. Journal of Neuroscience, 25(22), 5356-5364."
+      source_ids: [src.dietrich-2004-hypofrontality, src.gold-ciorciari-2020-flow-neuroscience, src.floyer-lea-matthews-2005-brain-networks, src.poldrack-2005-motor-automaticity]
     diagnostic:
       reading_signals:
       - 泳者說「那趟時間過很快，感覺一下子就游完了」= 時間扭曲，心流後效維度之一
@@ -3646,9 +3652,9 @@ themes:
         鐵人三項和青少年競技泳者的心流觸發點通常在 L3+ 以上，與初學端不同。
         各族群跨技能層級的心流量化比較研究在游泳項目中幾乎缺失（研究空白 🔴）。
       sources:
-      - Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導
-      - Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化
-      source_ids: [src.research-psych-07-l, src.research-psych-07-b]
+      - "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row."
+      - "Engeser, S., & Rheinberg, F. (2008). Flow, performance and moderators of challenge-skill balance. Motivation and Emotion, 32(3), 158-172."
+      source_ids: [src.csikszentmihalyi-1990-flow, src.engeser-rheinberg-2008-challenge-skill]
     diagnostic:
       reading_signals:
       - L0 初學者說「啊！我沒有沉！」且繼續自己重試 = autotelic 雛形，挑戰-技能匹配已發生，維持難度帶
@@ -3695,10 +3701,10 @@ themes:
         泳池有觸壁回饋、水道線參照、清澈水底；開放水域無觸壁、能見度低、有波浪。
         即時回饋訊號的稀釋或干擾是否影響心流發生率，目前無研究。
       sources:
-      - Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度
-      - Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推
-      - Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結
-      source_ids: [src.research-psych-07-a, src.research-psych-07-m, src.research-psych-07-n]
+      - "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row."
+      - "Jackson, S. A. (1995). Factors influencing the occurrence of flow state in elite athletes. Journal of Applied Sport Psychology, 7(2), 138-166."
+      - "Bauman, J. (2015). Swimming psychology: merging mind and body. Science of Swimming Faster, Ch. 16."
+      source_ids: [src.csikszentmihalyi-1990-flow, src.jackson-1995-flow-elite-athletes, src.bauman-2015-swimming-psychology]
     diagnostic:
       reading_signals:
       - 泳者說「我根本不知道我的手在做什麼，沒有感覺」= 即時回饋通道訊號太弱，心流前提條件不足，先回到水感建立
@@ -3757,9 +3763,9 @@ themes:
           了解每位選手的個人化最佳喚醒帶（透過系統記錄比賽前情緒狀態與表現的關係），
           再針對性調整賽前激活/冷靜策略，而不是一套走天下。
       sources:
-      - Research/心理/07_心流與最佳表現.md#7-理想表現狀態ips--the-zone
-      - Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推
-      source_ids: [src.research-psych-07-f, src.research-psych-07-m]
+      - "Hanin, Y. L. (2000). Individual Zones of Optimal Functioning (IZOF) model. In Emotions in Sport (pp. 65-90). Human Kinetics."
+      - "Hardy, L., Jones, G., & Gould, D. (1996). Understanding Psychological Preparation for Sport. John Wiley & Sons."
+      source_ids: [src.hanin-2000-izof, src.hardy-jones-gould-1996-psych-preparation]
     diagnostic:
       reading_signals:
       - 選手賽前說「我需要安靜一下，不想被打擾」= 個人最佳喚醒可能在低激活帶，給他空間

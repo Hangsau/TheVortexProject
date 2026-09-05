@@ -179,22 +179,8 @@
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 26 筆**
+**WARN，共 12 筆**
 
-  source_id='src.research-psych-07-a' display='Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-b' display='Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-c' display='Research/心理/07_心流與最佳表現.md#4-精英運動員心流研究jackson1995-1996' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-d' display='Research/心理/07_心流與最佳表現.md#5-swann-等人心流系統回顧2012' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-e' display='Research/心理/07_心流與最佳表現.md#6-flow-vs-clutch-statesswann-等人2017-2023' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-f' display='Research/心理/07_心流與最佳表現.md#7-理想表現狀態ips--the-zone' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-g' display='Research/心理/07_心流與最佳表現.md#8-心流-表現關係-meta-analysis' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-h' display='Research/心理/07_心流與最佳表現.md#9-心流的神經認知機制' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-i' display='Research/心理/07_心流與最佳表現.md#flow-reinvestment-軸線的水感應用' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-j' display='Research/心理/07_心流與最佳表現.md#flow-vs-reinvestment-對照' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-k' display='Research/心理/07_心流與最佳表現.md#reinvestment-理論masters-1992masters-maxwell-2008' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-l' display='Research/心理/07_心流與最佳表現.md#心流的發展軌跡flow-不是-l6-的專利推導' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-m' display='Research/心理/07_心流與最佳表現.md#游泳特異研究-vs-跨運動外推' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-07-n' display='Research/心理/07_心流與最佳表現.md#與水感框架-l5-l6-水我合一的連結' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-08-a' display='Research/心理/08_心理感知生理交互.md#1.1' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-08-b' display='Research/心理/08_心理感知生理交互.md#1.2' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-08-c' display='Research/心理/08_心理感知生理交互.md#1.3' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
