@@ -6,6 +6,20 @@
 
 ## 當前狀態（2026-09-05，最新）
 
+### ✅ **一個 URL 替 6 條無關主張背書，順帶查出一個線上的錯誤角度（30–40° → 55–75°）**
+
+`src.the-race-club` 的 display 是「The Race Club」（機構名），identifier 卻是**單篇文章** URL（自由式入水常見錯誤）。它被 9 個區塊引用，其中只有 3 條真的在講入水手型；另外 6 條是海豚踢膝屈曲、滑行減速、水下距離、蛙式髖旋轉、護目鏡換氣指標——**那個 URL 支撐不了任何一條**，但因為登錄看起來「有 identifier」，這 6 條在資料上長得像已查證。機構名 + 單篇 URL 的組合是最糟的：機構名讓它可以被任何主張引用，URL 讓它看起來有出處。
+
+查證時撞到更嚴重的東西：**`udk.tech.9` 寫「最優膝屈曲約 30–40°」，與它自己掛的來源相反。** 回讀 The Race Club 原文（*Getting the Freestyle Kick Right*），寫的是理想範圍 **55–75°**，且明講「低於 55° 無法在下踢產生足夠推進」。也就是說這條不只數字錯，方向還錯——它把讀者往「推進不足」那邊推。30–40° 追不到任何來源（另查了 UDK 運動學文獻也沒有支持）。該數字原本還標 🟢（近期文獻），但 theraceclub.com 的 aqua_note 是教練專欄不是文獻，一併改 🟠。更正寫在條目的 `caveat` 裡，沒有靜默改掉。
+
+拆法：
+- `src.the-race-club-freestyle-hand-entry`（原 URL，verified）→ free.err6、free.err7 ×2。這兩條本來就在 block 裡帶著同一個 `url:` 欄位，是唯一名副其實的使用者。
+- `src.the-race-club-dolphin-kick-deceleration`（*More on the Dolphin Kick*，verified）→ udk.err2、udk.tech.9 的減速那條。**讀原文確認過該文沒談滑行速度衰減、也沒談延長水下距離划不划算**，所以 udk.err8／udk.err9 刻意不掛這篇。
+- `src.the-race-club-freestyle-kick-knee-bend`（*Getting the Freestyle Kick Right*，verified）→ udk.tech.9 的角度那條。
+- `src.the-race-club` 留機構層、**刻意不帶 identifier**，剩下 4 條（free.err18、udk.err8、udk.err9、breast.tech.15）掛在這裡等逐條回原文脈絡重建。
+
+**下次做這類事的教訓**：機構層登錄不要掛單篇 identifier——寧可沒有 identifier（誠實地不可查證），也不要有一個錯的（看起來可查證）。前者會被 S3c 掃到，後者不會。
+
 ### ✅ **「教練觀測」被登錄成來源，同時騙過讀者與驗證器。已撤下（E014／E015）**
 
 `_sources.yaml` 裡有兩筆登錄，內容就是觀察行為本身：`src.coach-observation`（display 只有「教練觀測」四個字，被引用 4 處）與 `src.2024-2025`（「教練觀測 2024–2025」，2 處）。兩層傷害：

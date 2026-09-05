@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 582,
+  "source_count": 585,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -10259,12 +10259,10 @@
     },
     {
       "id": "src.the-race-club",
-      "display": "The Race Club",
+      "display": "The Race Club（機構層，未定位到單篇）",
       "verification_status": "unverified",
-      "identifier": {
-        "url": "https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/"
-      },
-      "usage_count": 9,
+      "identifier": {},
+      "usage_count": 4,
       "usages": [
         {
           "id": "breast.tech.15",
@@ -10276,6 +10274,48 @@
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[17].public.evidence[0]"
         },
+        {
+          "id": "udk.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[82].public.evidence[1]"
+        },
+        {
+          "id": "udk.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[83].public.evidence[2]"
+        }
+      ]
+    },
+    {
+      "id": "src.the-race-club-dolphin-kick-deceleration",
+      "display": "The Race Club — More on the Dolphin Kick",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/more-on-the-dolphin-kick/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "udk.err2",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[76].public.evidence[0]"
+        },
+        {
+          "id": "udk.tech.9",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[145].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.the-race-club-freestyle-hand-entry",
+      "display": "The Race Club — Common Mistakes from the Freestyle Hand Entry",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/"
+      },
+      "usage_count": 3,
+      "usages": [
         {
           "id": "free.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -10290,26 +10330,22 @@
           "id": "free.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[6].public.physical_reason"
-        },
-        {
-          "id": "udk.err2",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[76].public.evidence[0]"
-        },
-        {
-          "id": "udk.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[1]"
-        },
-        {
-          "id": "udk.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[83].public.evidence[2]"
-        },
+        }
+      ]
+    },
+    {
+      "id": "src.the-race-club-freestyle-kick-knee-bend",
+      "display": "The Race Club — Getting the Freestyle Kick Right（膝屈曲 55–75°）",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/getting-the-freestyle-kick-right/"
+      },
+      "usage_count": 1,
+      "usages": [
         {
           "id": "udk.tech.9",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[145].public.evidence[1]"
+          "path": "points[145].public.evidence[2]"
         }
       ]
     },

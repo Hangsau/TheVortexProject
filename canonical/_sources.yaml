@@ -4633,12 +4633,49 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.the-race-club
-    display: "The Race Club"
+    display: "The Race Club（機構層，未定位到單篇）"
     type: other
     verification_status: unverified
+    notes: >-
+      機構名不是文獻。2026-09-05 把原本掛在這裡的單篇文章 URL（自由式入水常見錯誤）
+      拆成 src.the-race-club-freestyle-hand-entry：那個 URL 只支撐得了入水手型那幾條，
+      卻替海豚踢、蛙式髖旋轉、換氣指標等 6 條完全無關的主張背書，是「一個 URL 當全機構
+      擋箭牌」。**本登錄刻意不帶 identifier**，避免同樣的事再發生一次。
+      仍掛在這裡的 4 條（free.err18 護目鏡換氣指標、udk.err8 滑行減速、udk.err9 水下
+      慢於水面、breast.tech.15 每度髖旋轉 5%）尚未定位到單篇，需逐條回原文脈絡重建。
+
+  - id: src.the-race-club-freestyle-hand-entry
+    display: "The Race Club — Common Mistakes from the Freestyle Hand Entry"
+    type: other
+    verification_status: verified
     identifier:
       url: "https://theraceclub.com/aqua_note/common-mistakes-from-the-freestyle-hand-entry/"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    retrieved_on: "2026-09-05"
+    notes: "自 src.the-race-club 拆出：這個 URL 原本掛在機構層登錄上，等於替 6 條無關主張背書。只供入水／抓水手型相關條目引用。"
+
+  - id: src.the-race-club-dolphin-kick-deceleration
+    display: "The Race Club — More on the Dolphin Kick"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/more-on-the-dolphin-kick/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：明確寫「腿向前收的速度與膝彎曲的程度，對減速量有巨大影響」，
+      支撐「下踢前膝屈曲是主要減速源」。**該文未談滑行速度衰減，也未談延長水下距離是否划算**——
+      udk.err8／udk.err9 不能引這篇。
+
+  - id: src.the-race-club-freestyle-kick-knee-bend
+    display: "The Race Club — Getting the Freestyle Kick Right（膝屈曲 55–75°）"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/getting-the-freestyle-kick-right/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：理想膝屈曲為「around 55-75 degrees」，低於 55° 推進不足、
+      高於 75° 弊大於利。用來更正 udk.tech.9 原本寫的「最優膝屈曲約 30–40°」——那個數字
+      與它自己掛的來源相反（見該條目的更正註記）。
 
   - id: src.the-race-club-fundamentals-of-fast-swimming-a
     display: "The Race Club — Fundamentals of Fast Swimming Ch 13, 16"

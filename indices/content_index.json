@@ -10244,7 +10244,7 @@
         ]
       },
       "source_ids": [
-        "src.the-race-club",
+        "src.the-race-club-freestyle-hand-entry",
         "src.vortex-a"
       ],
       "outgoing_ids": [
@@ -10271,7 +10271,7 @@
       },
       "source_ids": [
         "src.marinho-2010",
-        "src.the-race-club"
+        "src.the-race-club-freestyle-hand-entry"
       ],
       "outgoing_ids": [
         "free.tech.27",
@@ -20232,7 +20232,7 @@
       },
       "source_ids": [
         "src.danswim",
-        "src.the-race-club"
+        "src.the-race-club-dolphin-kick-deceleration"
       ],
       "outgoing_ids": [
         "udk.tech.4",
@@ -21106,6 +21106,7 @@
         ],
         "certainty": [
           "🔵",
+          "🟠",
           "🟢"
         ],
         "stroke": [
@@ -21114,7 +21115,8 @@
       },
       "source_ids": [
         "src.researchgate-kinematic-differences",
-        "src.the-race-club"
+        "src.the-race-club-dolphin-kick-deceleration",
+        "src.the-race-club-freestyle-kick-knee-bend"
       ],
       "outgoing_ids": []
     },
