@@ -149,7 +149,7 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 46 筆**
+**WARN，共 45 筆**
 
   file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -172,7 +172,6 @@
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 13658305' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 25181542' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 19059813' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC4495877' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.3390/ijerph181910259' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2020.01659' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 18769531' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -202,15 +201,8 @@
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 59 筆**
+**WARN，共 52 筆**
 
-  source_id='src.research-psych-03-a' display='Research/心理/03_水中恐懼與學習者心理.md#FWAQ' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-03-b' display='Research/心理/03_水中恐懼與學習者心理.md#凍結反應' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-03-c' display='Research/心理/03_水中恐懼與學習者心理.md#呼吸介入' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-03-d' display='Research/心理/03_水中恐懼與學習者心理.md#感知遮蔽機制' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-03-e' display='Research/心理/03_水中恐懼與學習者心理.md#族群特異性' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-03-f' display='Research/心理/03_水中恐懼與學習者心理.md#潛水反射' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-03-g' display='Research/心理/03_水中恐懼與學習者心理.md#社會安全感' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-04-a' display='Research/心理/04_動機與自我決定.md#HMIEM' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-04-b' display='Research/心理/04_動機與自我決定.md#SDT應用' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-04-c' display='Research/心理/04_動機與自我決定.md#動機氣候' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄

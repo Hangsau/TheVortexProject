@@ -16630,7 +16630,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-c"
+        "src.beck-1999-hypercapnic-hypoxic",
+        "src.kyriakoulis-2025-diving-response-co2"
       ],
       "outgoing_ids": []
     },
@@ -16651,7 +16652,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-a"
+        "src.misimi-2020-fwaq"
       ],
       "outgoing_ids": []
     },
@@ -16671,7 +16672,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-f"
+        "src.kyriakoulis-2021-diving-response-panic",
+        "src.kyriakoulis-2025-diving-response-co2",
+        "src.panneton-gan-2020-diving-response-neural"
       ],
       "outgoing_ids": []
     },
@@ -16691,7 +16694,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-b"
+        "src.kozlowska-2015-defense-cascade",
+        "src.roelofs-2017-freeze-for-action"
       ],
       "outgoing_ids": []
     },
@@ -16710,7 +16714,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-d"
+        "src.krusemark-li-2011-fear-perception",
+        "src.yoris-2015-interoceptive-panic"
       ],
       "outgoing_ids": []
     },
@@ -16729,7 +16734,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-e"
+        "src.coelho-2025-fear-aquatic-environment",
+        "src.wilson-2023-adults-learning-to-swim"
       ],
       "outgoing_ids": []
     },
@@ -16749,7 +16755,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-03-g"
+        "src.porges-2022-polyvagal-safety"
       ],
       "outgoing_ids": []
     },

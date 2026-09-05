@@ -125,8 +125,8 @@ themes:
         「失控」這個簽名在成人初學身上會被社會評價放大（「這年紀還不會」），
         介入要先卸評價威脅；族群差異見本主題「恐懼的不同臉孔」。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#FWAQ
-      source_ids: [src.research-psych-03-a]
+      - Misimi et al. 2020（Frontiers in Psychology）
+      source_ids: [src.misimi-2020-fwaq]
     diagnostic:
       abc_link: C
       abc_note: 失控型恐懼多以 C 型（全身張力）呈現——換氣或入水觸發全身防衛性收縮。
@@ -167,8 +167,9 @@ themes:
         why: 感知被恐懼遮蔽時動作根本學不進去；把順序顛倒了。
         better: 先降恐懼、打開感知頻寬，再教動作——感知是輸入，動作是輸出。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#感知遮蔽機制
-      source_ids: [src.research-psych-03-d]
+      - Krusemark & Li 2011（Journal of Neuroscience）
+      - Yoris et al. 2015（Behavioral and Brain Functions）
+      source_ids: [src.krusemark-li-2011-fear-perception, src.yoris-2015-interoceptive-panic]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -208,8 +209,9 @@ themes:
         why: 凍結是不自主的防衛反射，不是抗拒；催促等於加重威脅。
         better: 降低威脅、恢復安全信號（聲音、觸碰許可、可預測性），讓神經系統先離開凍結。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#凍結反應
-      source_ids: [src.research-psych-03-b]
+      - Roelofs 2017（Philosophical Transactions of the Royal Society B）
+      - Kozlowska et al. 2015（Harvard Review of Psychiatry）
+      source_ids: [src.roelofs-2017-freeze-for-action, src.kozlowska-2015-defense-cascade]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -252,8 +254,9 @@ themes:
         certainty: 🔵
         how_to: 建立固定的吸—轉頭—吐入水節律，規律本身就抑制 CO₂ 驟升。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#呼吸介入
-      source_ids: [src.research-psych-03-c]
+      - Beck et al. 1999（Journal of Abnormal Psychology）
+      - Kyriakoulis & Caballero 2025（Frontiers in Psychiatry）
+      source_ids: [src.beck-1999-hypercapnic-hypoxic, src.kyriakoulis-2025-diving-response-co2]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -287,8 +290,10 @@ themes:
         certainty: 🔵
         how_to: 引導學習者緩慢讓臉部接觸水，利用潛水反射的自然鎮靜——前提是先建立安全感，避免突然的冷水觸發驚嚇而轉成交感主導。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#潛水反射
-      source_ids: [src.research-psych-03-f]
+      - Panneton & Gan 2020（Frontiers in Neuroscience）
+      - Kyriakoulis et al. 2021（Frontiers in Psychiatry）
+      - Kyriakoulis & Caballero 2025（Frontiers in Psychiatry）
+      source_ids: [src.panneton-gan-2020-diving-response-neural, src.kyriakoulis-2021-diving-response-panic, src.kyriakoulis-2025-diving-response-co2]
     diagnostic:
       reading_signals:
       - 緩慢自願讓臉入水後心率/緊繃下降 = 潛水反射鎮靜路徑開啟，可作為暴露階梯的一階
@@ -331,8 +336,8 @@ themes:
         certainty: 🔵
         how_to: 每一步先說會發生什麼、徵得同意再做，把不可預測性降到最低。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#社會安全感
-      source_ids: [src.research-psych-03-g]
+      - Porges 2022（Frontiers in Integrative Neuroscience）
+      source_ids: [src.porges-2022-polyvagal-safety]
     diagnostic:
       reading_signals:
       - 學習者頻繁看教練臉、確認位置 = 在用社會信號維持安全感，此時教練的一致性比指令內容更關鍵
@@ -376,8 +381,9 @@ themes:
         why: 族群混淆——他們的恐懼不在 L0 水性，介入點完全不同。
         better: 成人先卸評價威脅再暴露；鐵人做開放水域情境減敏（群泳模擬、定位呼吸）；青少年往表現焦慮查。
       sources:
-      - Research/心理/03_水中恐懼與學習者心理.md#族群特異性
-      source_ids: [src.research-psych-03-e]
+      - Coelho et al. 2025（Education Sciences）
+      - Wilson et al. 2023（BMC Public Health）
+      source_ids: [src.coelho-2025-fear-aquatic-environment, src.wilson-2023-adults-learning-to-swim]
     diagnostic:
       reading_signals:
       - 先定位族群再選介入：同樣說「怕水」，成人多指社會評價、鐵人多指開放水域情境、青少年多指被看見的失敗
@@ -775,10 +781,10 @@ themes:
       phenomenon:
         certainty: 🟢
         text: >-
-          防衛反應存在分級瀑布（Bracha 2004；Harvard Review of Psychiatry 2015, PMC4495877）：
+          防衛反應存在分級瀑布（Kozlowska、Walker、McLean 與 Carrive 2015，《Harvard Review of Psychiatry》）：
           從定向、預警凍結（交感主導）、逃跑/戰鬥，到強直性不動、崩潰性不動（背側迷走主導）。
           凍結不是被動靜止，而是杏仁核→中腦導水管周圍灰質（PAG）路徑啟動的主動備戰狀態
-          （Roelofs et al. 2017, Phil Trans R Soc B 372:20160206）。
+          （Roelofs 2017，《Philosophical Transactions of the Royal Society B》）。
           此狀態下，前額葉的下行抑制（executive control）減弱，
           運動計畫與指令接收所需的前額葉功能暫時受阻。
         plain_text: >-

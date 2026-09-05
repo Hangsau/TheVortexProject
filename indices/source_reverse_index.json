@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 620,
+  "source_count": 632,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -329,6 +329,23 @@
           "id": "cold-water-shock",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[23].references[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.beck-1999-hypercapnic-hypoxic",
+      "display": "Beck, J. G., Ohtake, P. J., & Shipherd, J. C. (1999). Exaggerated anxiety is not unique to CO2 in panic disorder: A comparison of hypercapnic and hypoxic challenges.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "10466271",
+        "doi": "10.1037/0021-843X.108.3.473"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.co2_breath_panic",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[3].public"
         }
       ]
     },
@@ -1079,6 +1096,22 @@
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].references[2]"
+        }
+      ]
+    },
+    {
+      "id": "src.coelho-2025-fear-aquatic-environment",
+      "display": "Coelho, D., Eira, P., & Azevedo, A. (2025). Fear of the aquatic environment in learning swimming: Causes, effects, and learning methodologies.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3390/educsci15060760"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.population_faces",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[6].public"
         }
       ]
     },
@@ -3043,6 +3076,42 @@
       ]
     },
     {
+      "id": "src.kozlowska-2015-defense-cascade",
+      "display": "Kozlowska, K., Walker, P., McLean, L., & Carrive, P. (2015). Fear and the defense cascade: Clinical implications and management.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26062169",
+        "pmcid": "PMC4495877",
+        "doi": "10.1097/HRP.0000000000000065"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.freeze_reflex",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[2].public"
+        }
+      ]
+    },
+    {
+      "id": "src.krusemark-li-2011-fear-perception",
+      "display": "Krusemark, E. A., & Li, W. (2011). Do all threats work the same way? Divergent effects of fear and disgust on sensory perception and attention.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "21368054",
+        "pmcid": "PMC3077897",
+        "doi": "10.1523/JNEUROSCI.4394-10.2011"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.perception_masking",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[1].public"
+        }
+      ]
+    },
+    {
       "id": "src.kudo-2014",
       "display": "Kudo et al. 2014",
       "verification_status": "unverified",
@@ -3108,6 +3177,47 @@
           "id": "movement.demand.free.push.three-component-power-contribution",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[56]"
+        }
+      ]
+    },
+    {
+      "id": "src.kyriakoulis-2021-diving-response-panic",
+      "display": "Kyriakoulis, P., Kyrios, M., Nardi, A. E., Freire, R. C., & Schier, M. (2021). The implications of the diving response in reducing panic symptoms.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "34912254",
+        "pmcid": "PMC8667218",
+        "doi": "10.3389/fpsyt.2021.784884"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.diving_reflex_calm",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.kyriakoulis-2025-diving-response-co2",
+      "display": "Kyriakoulis, P., & Caballero, C. L. (2025). The implications of the diving response in altering carbon dioxide sensitivity in panic disorder patients.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "40530069",
+        "pmcid": "PMC12171375",
+        "doi": "10.3389/fpsyt.2025.1533019"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.fear.co2_breath_panic",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[3].public"
+        },
+        {
+          "id": "psych.fear.diving_reflex_calm",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[4].public"
         }
       ]
     },
@@ -3964,6 +4074,24 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.misimi-2020-fwaq",
+      "display": "Misimi, F., Kajtna, T., Misimi, S., & Kapus, J. (2020). Development and validity of the Fear of Water Assessment Questionnaire.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "32547447",
+        "pmcid": "PMC7274019",
+        "doi": "10.3389/fpsyg.2020.00969"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.control_loss",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[0].public"
+        }
+      ]
     },
     {
       "id": "src.monteiro-2017-swimming-dropout-review",
@@ -5209,6 +5337,22 @@
           "id": "FrP1",
           "file": "Drills/drills_freestyle.yaml",
           "path": "drills[31]"
+        }
+      ]
+    },
+    {
+      "id": "src.panneton-gan-2020-diving-response-neural",
+      "display": "Panneton, W. M., & Gan, Q. (2020). The mammalian diving response: Inroads to its neural control.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fnins.2020.00524"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.diving_reflex_calm",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[4].public"
         }
       ]
     },
@@ -7687,6 +7831,22 @@
       ]
     },
     {
+      "id": "src.porges-2022-polyvagal-safety",
+      "display": "Porges, S. W. (2022). Polyvagal theory: A science of safety.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fnint.2022.871227"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.safety_precondition",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[5].public"
+        }
+      ]
+    },
+    {
       "id": "src.psycharakis-2010",
       "display": "Psycharakis & Sanders 2010",
       "verification_status": "unverified",
@@ -8075,100 +8235,58 @@
     {
       "id": "src.research-psych-03-a",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#FWAQ",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.control_loss",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[0].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-03-b",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#凍結反應",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.freeze_reflex",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[2].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-03-c",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#呼吸介入",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.co2_breath_panic",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-03-d",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#感知遮蔽機制",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.perception_masking",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-03-e",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#族群特異性",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.population_faces",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[6].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-03-f",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#潛水反射",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.diving_reflex_calm",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[4].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-03-g",
       "display": "Research/心理/03_水中恐懼與學習者心理.md#社會安全感",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.fear.safety_precondition",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[0].concepts[5].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-04-a",
@@ -9176,6 +9294,24 @@
           "id": "free.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[1].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.roelofs-2017-freeze-for-action",
+      "display": "Roelofs, K. (2017). Freeze for action: Neurobiological mechanisms in animal and human freezing.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "28242739",
+        "pmcid": "PMC5332864",
+        "doi": "10.1098/rstb.2016.0206"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.freeze_reflex",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[2].public"
         }
       ]
     },
@@ -12643,6 +12779,22 @@
       ]
     },
     {
+      "id": "src.wilson-2023-adults-learning-to-swim",
+      "display": "Wilson, S., Miller, A., Casson, D., & Ramos, W. (2023). Finding your lane: Experiences and beyond for adults learning to swim.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1186/s12889-023-17320-0"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.population_faces",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[6].public"
+        }
+      ]
+    },
+    {
       "id": "src.wolf-2009-ncaa-swimming-injury-patterns",
       "display": "Wolf BR, Ebinger AE, Lawler MP, Britton CL. (2009). Injury patterns in Division I collegiate swimming. Am J Sports Med 37(10):2037-42.",
       "verification_status": "verified",
@@ -12792,6 +12944,24 @@
           "id": "psych.arousal.inverted_u",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[6].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.yoris-2015-interoceptive-panic",
+      "display": "Yoris, A., Esteves, S., Couto, B., Melloni, M., et al. (2015). The roles of interoceptive sensitivity and metacognitive interoception in panic.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25889157",
+        "pmcid": "PMC4422149",
+        "doi": "10.1186/s12993-015-0058-8"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.fear.perception_masking",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[0].concepts[1].public"
         }
       ]
     },

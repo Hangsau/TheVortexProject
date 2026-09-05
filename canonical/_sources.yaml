@@ -3575,44 +3575,44 @@ sources:
   - id: src.research-psych-03-a
     display: "Research/心理/03_水中恐懼與學習者心理.md#FWAQ"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-b、src.research-psych-03-c、src.research-psych-03-d、src.research-psych-03-e、src.research-psych-03-f、src.research-psych-03-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-b
     display: "Research/心理/03_水中恐懼與學習者心理.md#凍結反應"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-a、src.research-psych-03-c、src.research-psych-03-d、src.research-psych-03-e、src.research-psych-03-f、src.research-psych-03-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-c
     display: "Research/心理/03_水中恐懼與學習者心理.md#呼吸介入"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-a、src.research-psych-03-b、src.research-psych-03-d、src.research-psych-03-e、src.research-psych-03-f、src.research-psych-03-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-d
     display: "Research/心理/03_水中恐懼與學習者心理.md#感知遮蔽機制"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-a、src.research-psych-03-b、src.research-psych-03-c、src.research-psych-03-e、src.research-psych-03-f、src.research-psych-03-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-e
     display: "Research/心理/03_水中恐懼與學習者心理.md#族群特異性"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-a、src.research-psych-03-b、src.research-psych-03-c、src.research-psych-03-d、src.research-psych-03-f、src.research-psych-03-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-f
     display: "Research/心理/03_水中恐懼與學習者心理.md#潛水反射"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-a、src.research-psych-03-b、src.research-psych-03-c、src.research-psych-03-d、src.research-psych-03-e、src.research-psych-03-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-g
     display: "Research/心理/03_水中恐懼與學習者心理.md#社會安全感"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-03-a、src.research-psych-03-b、src.research-psych-03-c、src.research-psych-03-d、src.research-psych-03-e、src.research-psych-03-f 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/03_水中恐懼與學習者心理.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-04-a
     display: "Research/心理/04_動機與自我決定.md#HMIEM"
@@ -7171,3 +7171,210 @@ sources:
       2026-09-05 idconv + esummary 核對：14:1232929，年份是 2023 不是草稿標注位置
       暗示的 2024。橫斷面問卷研究（正念、韌性、知覺壓力、狀態-特質焦慮的中介模型），
       不是介入實驗——只能說「正念傾向與較低焦慮相關」，不能說「練正念可降低 choking」。
+
+  - id: src.misimi-2020-fwaq
+    display: "Misimi, F., Kajtna, T., Misimi, S., & Kapus, J. (2020). Development and validity of the Fear of Water Assessment Questionnaire."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Misimi F", "Kajtna T", "Misimi S", "Kapus J"]
+    container: "Frontiers in Psychology"
+    identifier:
+      pmid: '32547447'
+      pmcid: PMC7274019
+      doi: 10.3389/fpsyg.2020.00969
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：11:969。本庫少數真正「游泳情境第一手」的心理量表研究，
+      n=2,074，三因子（接觸水環境／水的自然力量／水中動作控制感），
+      「水中動作控制感缺失」是最強恐懼預測因子。它是量表建構與效度研究，
+      不是介入研究——可支持「怕水的核心是失控感」，不能支持任何介入的有效性。
+
+  - id: src.krusemark-li-2011-fear-perception
+    display: "Krusemark, E. A., & Li, W. (2011). Do all threats work the same way? Divergent effects of fear and disgust on sensory perception and attention."
+    type: journal_article
+    verification_status: verified
+    year: 2011
+    authors: ["Krusemark EA", "Li W"]
+    container: "Journal of Neuroscience"
+    identifier:
+      pmid: '21368054'
+      pmcid: PMC3077897
+      doi: 10.1523/JNEUROSCI.4394-10.2011
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esearch + esummary 核對：31(9):3429-3434。更正草稿的 DOI 打錯：
+      草稿寫 10.1523/JNEUROSCI.4457-10.2011，該字串在 Crossref 解不出東西，
+      正確是 4394-10。草稿也未記作者，實際是 Krusemark 與 Li 兩人。
+      內容是視覺／嗅覺實驗室研究：恐懼窄化並銳化感知，厭惡則相反——
+      「恐懼者只感知威脅而感覺不到水」是從這裡外推，不是這篇的結論。
+
+  - id: src.yoris-2015-interoceptive-panic
+    display: "Yoris, A., Esteves, S., Couto, B., Melloni, M., et al. (2015). The roles of interoceptive sensitivity and metacognitive interoception in panic."
+    type: journal_article
+    verification_status: verified
+    year: 2015
+    authors: ["Yoris A", "Esteves S", "Couto B", "Melloni M", "Sedeno L"]
+    container: "Behavioral and Brain Functions"
+    identifier:
+      pmid: '25889157'
+      pmcid: PMC4422149
+      doi: 10.1186/s12993-015-0058-8
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 idconv + esummary 核對：11:14。更正一項歸因錯誤：草稿寫
+      「Domschke K et al.」，實際第一作者是 Yoris，作者列裡根本沒有 Domschke
+      （Domschke 是另一位真實存在的恐慌症研究者，所以這個錯看起來很像真的）。
+      恐慌症患者的內感受敏感度與後設內感受研究，臨床樣本，外推到游泳恐懼須降級。
+
+  - id: src.roelofs-2017-freeze-for-action
+    display: "Roelofs, K. (2017). Freeze for action: Neurobiological mechanisms in animal and human freezing."
+    type: journal_article
+    verification_status: verified
+    year: 2017
+    authors: ["Roelofs K"]
+    container: "Philosophical Transactions of the Royal Society B"
+    identifier:
+      pmid: '28242739'
+      pmcid: PMC5332864
+      doi: 10.1098/rstb.2016.0206
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：372(1718)。凍結反應的神經機制回顧
+      （杏仁核→中腦導水管周圍灰質，區分警覺性凍結與崩潰性不動）。
+      是動物與人類實驗室研究的回顧，沒有任何水中資料——
+      「水中凍結」的行為描述可以借它解釋機制，不能宣稱已被驗證。
+
+  - id: src.kozlowska-2015-defense-cascade
+    display: "Kozlowska, K., Walker, P., McLean, L., & Carrive, P. (2015). Fear and the defense cascade: Clinical implications and management."
+    type: journal_article
+    verification_status: verified
+    year: 2015
+    authors: ["Kozlowska K", "Walker P", "McLean L", "Carrive P"]
+    container: "Harvard Review of Psychiatry"
+    identifier:
+      pmid: '26062169'
+      pmcid: PMC4495877
+      doi: 10.1097/HRP.0000000000000065
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 idconv + esummary 核對：23(4):263-287。更正一項歸因錯誤：
+      草稿寫「Bracha HS et al.」，實際作者是 Kozlowska、Walker、McLean、Carrive。
+      Bracha 確有一篇 2004 年談 freeze/flight/fight/fright/faint 的文章，
+      但那不是這一篇、也不在這個 PMC 編號下——是把兩個相近主題的作者接錯了。
+      防衛串聯五階段（prefreeze→freeze→flight→fight→tonic immobility）出自本文。
+
+  - id: src.kyriakoulis-2025-diving-response-co2
+    display: "Kyriakoulis, P., & Caballero, C. L. (2025). The implications of the diving response in altering carbon dioxide sensitivity in panic disorder patients."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Kyriakoulis P", "Caballero CL"]
+    container: "Frontiers in Psychiatry"
+    identifier:
+      pmid: '40530069'
+      pmcid: PMC12171375
+      doi: 10.3389/fpsyt.2025.1533019
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：16:1533019。結果要照原文的邊界說：冷水臉部浸入
+      降低的是恐慌的認知症狀，生理層的 CO2 敏感度並未改變。
+      受試者是恐慌症患者不是游泳學習者，「用潛水反射當游泳教學的鎮靜工具」
+      是本專案的外推（🔵），不是這篇證實的事。
+
+  - id: src.kyriakoulis-2021-diving-response-panic
+    display: "Kyriakoulis, P., Kyrios, M., Nardi, A. E., Freire, R. C., & Schier, M. (2021). The implications of the diving response in reducing panic symptoms."
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Kyriakoulis P", "Kyrios M", "Nardi AE", "Freire RC", "Schier M"]
+    container: "Frontiers in Psychiatry"
+    identifier:
+      pmid: '34912254'
+      pmcid: PMC8667218
+      doi: 10.3389/fpsyt.2021.784884
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：12:784884。草稿只寫「（同研究組）」沒列作者，
+      實際五位作者已補齊。潛水反射作為恐慌介入的概念性初步支持，
+      與 src.kyriakoulis-2025-diving-response-co2 是同一研究線的前作。
+
+  - id: src.beck-1999-hypercapnic-hypoxic
+    display: "Beck, J. G., Ohtake, P. J., & Shipherd, J. C. (1999). Exaggerated anxiety is not unique to CO2 in panic disorder: A comparison of hypercapnic and hypoxic challenges."
+    type: journal_article
+    verification_status: verified
+    year: 1999
+    authors: ["Beck JG", "Ohtake PJ", "Shipherd JC"]
+    container: "Journal of Abnormal Psychology"
+    identifier:
+      pmid: '10466271'
+      doi: 10.1037/0021-843X.108.3.473
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：108(3):473-482。更正兩項：草稿把作者寫成
+      「Perna G et al.」、期刊寫成《Archives of General Psychiatry》，
+      兩項都錯——正確是 Beck、Ohtake、Shipherd，刊於《Journal of Abnormal Psychology》。
+      Perna 確實是 CO2-恐慌領域的真實研究者，所以這個錯不會被「看起來合不合理」抓出來。
+      結論邊界：誇大的焦慮反應不是 CO2 專屬，缺氧挑戰同樣誘發——
+      支持「任何呼吸受限感都可能觸發」，不支持「CO2 有特殊地位」。
+
+  - id: src.panneton-gan-2020-diving-response-neural
+    display: "Panneton, W. M., & Gan, Q. (2020). The mammalian diving response: Inroads to its neural control."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Panneton WM", "Gan Q"]
+    container: "Frontiers in Neuroscience"
+    identifier:
+      doi: 10.3389/fnins.2020.00524
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：14:524。草稿只記「Frontiers Neuroscience」沒有作者，
+      已補上 Panneton 與 Gan。潛水反射的神經控制回顧：三叉神經感知、迷走神經產生心搏過緩，
+      臉部冷刺激是最強引發條件。這是生理路徑的來源，鎮靜應用效果不在其射程內。
+
+  - id: src.porges-2022-polyvagal-safety
+    display: "Porges, S. W. (2022). Polyvagal theory: A science of safety."
+    type: journal_article
+    verification_status: verified
+    year: 2022
+    authors: ["Porges SW"]
+    container: "Frontiers in Integrative Neuroscience"
+    identifier:
+      doi: 10.3389/fnint.2022.871227
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：16:871227。用途邊界要標死：這是理論綜述，
+      作者本人即理論提出者，非獨立驗證；多迷走理論在神經科學界仍有爭議，
+      且無任何游泳應用文獻。本庫引用它只到「安全感是學習前提」這個方向性主張，
+      canonical 對應條目已自標 🔵（框架外推）——不得升格成生理機制的實證。
+
+  - id: src.coelho-2025-fear-aquatic-environment
+    display: "Coelho, D., Eira, P., & Azevedo, A. (2025). Fear of the aquatic environment in learning swimming: Causes, effects, and learning methodologies."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Coelho D", "Eira P", "Azevedo A"]
+    container: "Education Sciences"
+    identifier:
+      doi: 10.3390/educsci15060760
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：15(6):760。游泳學習情境的恐懼回顧
+      （成因、效應、教學法），是本庫在「成人初學恐懼」上少數能指名的文獻。
+      回顧不是實證：它整理既有研究，不能當某個教學法有效的證據。
+
+  - id: src.wilson-2023-adults-learning-to-swim
+    display: "Wilson, S., Miller, A., Casson, D., & Ramos, W. (2023). Finding your lane: Experiences and beyond for adults learning to swim."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Wilson S", "Miller A", "Casson D", "Ramos W"]
+    container: "BMC Public Health"
+    identifier:
+      doi: 10.1186/s12889-023-17320-0
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：23(1)。成人學游泳的質性研究（n=20），
+      恐懼被受訪者列為最主要障礙。質性樣本 20 人，只能描述經驗結構，
+      不能給盛行率或效果量。
