@@ -5840,7 +5840,6 @@
         ]
       },
       "source_ids": [
-        "src.coach-observation",
         "src.the-race-club"
       ],
       "outgoing_ids": [
@@ -8966,9 +8965,7 @@
           "fly"
         ]
       },
-      "source_ids": [
-        "src.2024-2025"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -9783,9 +9780,7 @@
           "free"
         ]
       },
-      "source_ids": [
-        "src.coach-observation"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "free.tech.11",
         "free.tech.12"
@@ -9964,9 +9959,7 @@
           "free"
         ]
       },
-      "source_ids": [
-        "src.coach-observation"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "free.tech.17",
         "free.tech.8"
@@ -10043,9 +10036,7 @@
           "free"
         ]
       },
-      "source_ids": [
-        "src.coach-observation"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "free.tech.8",
         "free.tech.9"

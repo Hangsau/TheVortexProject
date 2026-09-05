@@ -155,6 +155,8 @@ Vortex 不套單一文獻門檻——那會讓感知層永遠不合格。改成*
 - **標 certainty 前先判斷證據性質，不預設標綠**：物理／解剖推導是 🔵（不需來源），教學實務觀察是 🟠（不需來源但要 `observation_basis`），只有真有文獻才標 🟢／🟡（必須有來源）。判準逐值寫在 taxonomy `certainty.values[].criterion`。W009 的正解通常是改標記，不是補一個空引用。
 - **文獻證據**：`source_ids`（可解析成 `_sources.yaml` 的 `src.<slug>`）是唯一機器鍵；`source`／`sources`／`citation` 三個顯示字串只給人讀，算「已有來源」但仍是待遷移狀態（W002 追蹤）。
 - **實務證據**：🟠 條目寫 `observation_basis`，內含誰觀察／什麼族群／外推邊界三項。它**不冒充文獻**——不得寫「研究顯示」；也不需要 `source_ids`。缺此欄位 → W011。
+  **「教練觀測」不得登錄成來源**（E014）：它是觀察本身，不是可回溯的東西。把它寫進 `_sources.yaml` 會兩頭出事——讀者看到一個長得像引用的東西、點進去只有四個字；W011 的來源逃生口被它滿足，於是「🟠 要交代觀察基礎」被一個內容就是「教練觀測」的登錄擋掉（循環自證）。正解是在引用它的區塊寫 `observation_basis`。判準是**整串相等**：「教練觀測 2024–2025」算（扣掉年份只剩觀察行為），「Aaron Peirsol／Ryan Murphy 水下影像分析（教練觀測）」不算（指名了對象與媒材）。
+- **墓碑不得被引用**（E015）：`retracted` 仍留在 `_sources.yaml`，所以它**仍在 E005 的合法集合裡**——引用一筆已判定不可引用的來源本來會完全靜默。撤下某來源時要同時處理它現有的引用，不能只改 `verification_status`。
 - **來源繼承**：祖先區塊帶來源時子區塊不重複要求，但繼承只在同一條目（最近的 `id`）子樹內成立，不跨兄弟條目。
 - **綜述行**：結論的證據由子條目承擔時寫 `evidence_from: [子條目 ID]`；空 list `[]` 不算宣告。
 - **公開／診斷分層是結構性的**：診斷判讀語（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`manipulation`／`contrast_question`…）只能放 `diagnostic` 子樹。`my-site/tools/sync_vortex.py` 對 `public` 整包 `rec.update(pub)`（白名單），所以新增 diagnostic 型兄弟鍵不會外洩，**唯一實際洩漏路徑是把診斷內容寫進 `public` 底下**——這條是 ERROR 級（E010），不是警告。

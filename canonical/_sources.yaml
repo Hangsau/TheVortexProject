@@ -358,8 +358,8 @@ sources:
   - id: src.2024-2025
     display: "教練觀測 2024–2025"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "非文獻：顯示字串扣掉年份就只剩「教練觀測」，沒有觀察者、沒有機構、沒有可回溯的對象。2026-09-05 撤下，原本的 2 處引用（fly.tech.30 的 mechanism 與 evidence）改寫成 observation_basis。留墓碑擋重新登錄——見 validate.py E014。"
 
   - id: src.360swim
     display: "360swim"
@@ -849,8 +849,8 @@ sources:
   - id: src.coach-observation
     display: "教練觀測"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "非文獻：display 就是觀察行為本身，沒有觀察者、族群或外推邊界，等於沒有依據。2026-09-05 撤下，原本的 4 處引用改寫成 observation_basis（自由式兩拍／六拍踢、換氣搭旋轉節律、入水後延伸，以及蛙式髖旋轉角）。留墓碑擋重新登錄——見 validate.py E014。"
 
   - id: src.colman-1998-a
     display: "Colman 1998"

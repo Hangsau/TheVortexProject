@@ -43,6 +43,12 @@ exit code：
         升級）。這組欄位打錯字會 **fail-open**：sync_vortex.py 只擋
         `draft`/`withheld` 兩個字面值，`publication_status` 拼錯即上站；
         `action_status` 拼錯會讓 do-not-prescribe 與 W016 閘一起穿透
+  E014  _sources.yaml 把「教練觀測」這類觀察行為登錄成來源。fail-open：
+        它會滿足 W011 的來源逃生口，於是「🟠 要交代觀察基礎」被一個內容
+        就是「教練觀測」的登錄擋掉（循環自證）。2026-09-05 撤下
+        src.coach-observation（4 處引用）與 src.2024-2025（2 處）。
+  E015  source_ids 指向 retracted 墓碑。墓碑仍在 allowed 集合裡，E005 會
+        放行——引用一筆已判定不可引用的來源會完全靜默。
   E013  _sources.yaml 的 verification_status 不是 verified/unverified/
         retracted 三值之一。同樣是 fail-open 欄位：retracted 拼錯，那筆
         已判定不可引用的墓碑會靜默回到 W008 名單被當成「該接的來源」
@@ -157,6 +163,7 @@ exit code：
 """
 from __future__ import annotations
 
+import re
 import sys
 import traceback
 from collections import defaultdict
@@ -653,6 +660,48 @@ def retracted_source_ids(records: list[dict]) -> set[str]:
     }
 
 
+# 「教練觀測」不是來源，是觀察本身。登錄成 `src.*` 會造成兩層傷害：讀者端看到一個
+# 長得像引用的東西，內容只有「教練觀測」四個字；驗證器端 W011 的 `has_source_info`
+# 逃生口會被它滿足，於是「🟠 必須交代觀察基礎」被一個內容就是「教練觀測」的登錄擋
+# 掉——循環自證。正解是在引用它的區塊寫 observation_basis。
+_OBSERVATION_PLACEHOLDERS = frozenset({
+    "教練觀測", "教練觀察", "教學觀察", "教學實務觀察", "實務觀察",
+    "個人觀察", "個人教學觀察", "現場觀察",
+    "coachobservation", "personalobservation", "fieldobservation",
+})
+
+# 年份／年份區間／標點——判斷「扣掉這些之後還剩什麼」用的。
+_DISPLAY_NOISE = re.compile(r"\d{4}(?:\s*[–—-]\s*\d{2,4})?|[\s,，.。()（）\[\]【】:：;；/-]")
+
+
+def is_observation_placeholder(display: object) -> bool:
+    """display 扣掉年份與標點後整串就是一個觀察詞 → 這不是來源。
+
+    只認**整串相等**。`Aaron Peirsol / Ryan Murphy 水下影像分析（教練觀測）`
+    不算：它指名了被觀察的對象與媒材，回得去。「教練觀測 2024–2025」算，
+    因為扣掉年份後只剩觀察行為本身，沒有任何可回溯的東西。
+    """
+    return _DISPLAY_NOISE.sub("", str(display or "")).lower() in _OBSERVATION_PLACEHOLDERS
+
+
+def check_observation_not_source(records: list[dict], errors: dict):
+    """E014：不得把「教練觀測」這類觀察行為登錄成來源（`retracted` 墓碑除外）。
+
+    列 ERROR 與 E013 同型理由——它 fail-open：這種登錄不會讓任何檢查變紅，
+    反而會讓 W011 變綠，問題因此看起來像已解決。2026-09-05 撤下的
+    `src.coach-observation`（4 處引用）與 `src.2024-2025`（2 處）就是這樣
+    活下來的。墓碑跳過，因為墓碑的用途正是擋住同一筆被重新登錄。
+    """
+    for s in records:
+        if s.get("verification_status") == "retracted":
+            continue
+        if is_observation_placeholder(s.get("display")):
+            errors["E014"].append(
+                f"  source_id={s['id']!r} display={s.get('display')!r} "
+                f"是觀察行為不是來源——改在引用它的區塊寫 observation_basis"
+            )
+
+
 def check_source_verification_status(records: list[dict], errors: dict):
     """E013：`verification_status` 必須是三個合法值之一。
 
@@ -1065,10 +1114,12 @@ def check_source_blocks(
     allowed_source_ids: set,
     errors: dict,
     warnings: dict,
+    retracted_ids: set = frozenset(),
 ) -> set[str]:
     """遞迴檢查單一檔案內所有區塊的 source 契約，回傳被引用到的 source_id。
 
     E005  source_ids 型別錯、含非字串元素、或指向 _sources.yaml 沒有的 ID
+    E015  source_ids 指向 retracted 墓碑
     W002  有 source/sources 顯示字串 + 缺 source_ids（**與 certainty 無關**）
     W009  certainty green/yellow + 完全沒有來源資訊
 
@@ -1093,6 +1144,15 @@ def check_source_blocks(
                             errors["E005"].append(
                                 f"  file={rel} id={eid!r} at={loc} "
                                 f"source_ids 包含不存在的 {sid!r}"
+                            )
+                        elif sid in retracted_ids:
+                            # 墓碑的用途是擋重新登錄，但它仍在 allowed 集合裡，
+                            # 所以 E005 放行——引用一筆已判定不可引用的東西會
+                            # 完全靜默。這是墓碑機制自己的 fail-open。
+                            errors["E015"].append(
+                                f"  file={rel} id={eid!r} at={loc} "
+                                f"source_ids 指向已撤下的墓碑 {sid!r}"
+                                f"（該登錄已判定不可引用，不是待補來源）"
                             )
                     else:
                         errors["E005"].append(
@@ -1175,8 +1235,12 @@ def check_practitioner_blocks(rel: str, data: object, warnings: dict):
         basis = block.get("observation_basis")
         if isinstance(basis, str) and basis.strip():
             continue
-        if has_source_info(block):
-            # 已經指了外部來源（例如引 Race Club 的影像觀察）→ 依據可追
+        if has_source_info(block) and not is_observation_placeholder(
+            block.get("source") or block.get("citation")
+        ):
+            # 已經指了外部來源（例如引 Race Club 的影像觀察）→ 依據可追。
+            # 但 `source: 教練觀測` 不是外部來源，是這個區塊自己——拿它當
+            # 逃生口等於用「我觀察到的」證明「我交代了觀察基礎」。
             continue
         warnings["W011"].append(
             f"  file={rel} id={eid!r} at={loc} "
@@ -1903,7 +1967,7 @@ def run_validation():
     errors: dict[str, list[str]] = {
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
-        "E011": [], "E012": [], "E013": []
+        "E011": [], "E012": [], "E013": [], "E014": [], "E015": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
@@ -2099,7 +2163,7 @@ def run_validation():
             continue
         rel = str(path.relative_to(ROOT))
         referenced_source_ids |= check_source_blocks(
-            rel, data, allowed_source_ids, errors, warnings
+            rel, data, allowed_source_ids, errors, warnings, retracted_ids
         )
         # W011 / E010 與來源契約同一輪走訪範圍（含 Drills）：教練觀測與
         # 診斷層鍵名在 Drills 也可能出現。
@@ -2113,6 +2177,7 @@ def run_validation():
         allowed_source_ids, referenced_source_ids, warnings, retracted_ids
     )
     check_source_verification_status(source_records, errors)
+    check_observation_not_source(source_records, errors)
 
     # ── W003: 孤兒條目 ──
     for rel, entry in all_entries:
@@ -2240,6 +2305,18 @@ def _write_report(
             "`_sources.yaml` 的 `verification_status` 不是 "
             "`verified`／`unverified`／`retracted` 三值之一"
             "（拼錯會讓 retracted 墓碑靜默回到 W008 名單）",
+        ),
+        "E014": (
+            "ERROR",
+            "`_sources.yaml` 把「教練觀測」這類觀察行為登錄成來源"
+            "（fail-open：它會滿足 W011 的來源逃生口，讓「🟠 要交代觀察基礎」"
+            "被一個內容就是「教練觀測」的登錄擋掉）",
+        ),
+        "E015": (
+            "ERROR",
+            "`source_ids` 指向 `retracted` 墓碑"
+            "（墓碑仍在 allowed 集合裡，E005 會放行，等於靜默引用一筆"
+            "已判定不可引用的來源）",
         ),
         "W001": (
             "WARN",

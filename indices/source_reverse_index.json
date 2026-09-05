@@ -5,16 +5,10 @@
     {
       "id": "src.2024-2025",
       "display": "教練觀測 2024–2025",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "fly.tech.30",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[131].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.360swim",
@@ -1044,31 +1038,10 @@
     {
       "id": "src.coach-observation",
       "display": "教練觀測",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 4,
-      "usages": [
-        {
-          "id": "breast.tech.15",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[85].public.evidence[1]"
-        },
-        {
-          "id": "free.err12",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[11].public.evidence[0]"
-        },
-        {
-          "id": "free.err19",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[18].public.evidence[0]"
-        },
-        {
-          "id": "free.err21",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[20].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.cochrane-2023-jellyfish-interventions",
