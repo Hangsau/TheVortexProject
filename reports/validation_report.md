@@ -179,17 +179,8 @@
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 35 筆**
+**WARN，共 26 筆**
 
-  source_id='src.research-psych-06-a' display='Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-b' display='Research/心理/06_自我對話與心理技能訓練.md#指導型-vs-激勵型自我對話' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-c' display='Research/心理/06_自我對話與心理技能訓練.md#核心概念' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-d' display='Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-e' display='Research/心理/06_自我對話與心理技能訓練.md#自我對話的作用機制' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-f' display='Research/心理/06_自我對話與心理技能訓練.md#自我對話的時態框架過去現在未來' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-g' display='Research/心理/06_自我對話與心理技能訓練.md#與水感框架指令層次注意力焦點的連結' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-h' display='Research/心理/06_自我對話與心理技能訓練.md#賽前例行程序' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-06-i' display='Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-07-a' display='Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-07-b' display='Research/心理/07_心流與最佳表現.md#2-挑戰-技能平衡challenge-skill-balance模型演化' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-07-c' display='Research/心理/07_心流與最佳表現.md#4-精英運動員心流研究jackson1995-1996' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄

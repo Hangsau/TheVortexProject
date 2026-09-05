@@ -3719,56 +3719,56 @@ sources:
   - id: src.research-psych-06-a
     display: "Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-b
     display: "Research/心理/06_自我對話與心理技能訓練.md#指導型-vs-激勵型自我對話"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-c
     display: "Research/心理/06_自我對話與心理技能訓練.md#核心概念"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-d
     display: "Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-e
     display: "Research/心理/06_自我對話與心理技能訓練.md#自我對話的作用機制"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-f
     display: "Research/心理/06_自我對話與心理技能訓練.md#自我對話的時態框架過去現在未來"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-g、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-g
     display: "Research/心理/06_自我對話與心理技能訓練.md#與水感框架指令層次注意力焦點的連結"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-h、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-h
     display: "Research/心理/06_自我對話與心理技能訓練.md#賽前例行程序"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-i
     display: "Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-06-a、src.research-psych-06-b、src.research-psych-06-c、src.research-psych-06-d、src.research-psych-06-e、src.research-psych-06-f、src.research-psych-06-g、src.research-psych-06-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/06_自我對話與心理技能訓練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 12 筆帶 DOI／ISBN 的 verified 來源（另重用既有的 src.freudenheim-2010-external-focus-swimming），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-07-a
     display: "Research/心理/07_心流與最佳表現.md#1-csikszentmihalyi-心流九大維度"
@@ -7883,3 +7883,199 @@ sources:
       2026-09-05 esummary 核對：24(3):261-271。質性訪談：受傷運動員主動用動覺意象
       「保住」動作感覺以防技術退化。是質性研究不是效果量研究，
       「能維持多久、退化速率降低多少」本文沒有量測；受訪者也不是泳者專屬。
+
+  - id: src.hatzigeorgiadis-2011-selftalk-meta
+    display: "Hatzigeorgiadis, A., Zourbanos, N., Galanis, E., & Theodorakis, Y. (2011). Self-talk and sports performance: A meta-analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2011
+    authors: ["Hatzigeorgiadis A", "Zourbanos N", "Galanis E", "Theodorakis Y"]
+    container: "Perspectives on Psychological Science"
+    identifier:
+      doi: 10.1177/1745691611413136
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：6(4):348-356。32 個研究、62 個效應值，整體 ES=0.48。
+      本庫用到三個分項結論：精細任務 IST 優於 MST、新學習任務效益大於已熟練任務、
+      受過訓練的自我對話優於即興使用。邊界：納入研究以非游泳項目為主，
+      游泳專屬效果量要看 Hatzigeorgiadis 2004／2014 兩篇。
+
+  - id: src.hatzigeorgiadis-2004-swimming-pool
+    display: "Hatzigeorgiadis, A., Theodorakis, Y., & Zourbanos, N. (2004). Self-talk in the swimming pool: The effects of self-talk on thought content and performance on water-polo tasks."
+    type: journal_article
+    verification_status: verified
+    year: 2004
+    authors: ["Hatzigeorgiadis A", "Theodorakis Y", "Zourbanos N"]
+    container: "Journal of Applied Sport Psychology"
+    identifier:
+      doi: 10.1080/10413200490437886
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：16(2):138-150。兩個實驗：精度任務 IST 優於 MST，
+      力量任務 MST 顯著改善，兩類自我對話都降低干擾性思維的報告量。
+      重要邊界：任務是泳池環境中的水球投擲／推進，不是自由式游進；
+      本庫的「干擾思維佔走水感頻寬」是從此研究再往工作記憶理論外推（🔵），不是本文結論。
+
+  - id: src.hatzigeorgiadis-2014-competitive-selftalk
+    display: "Hatzigeorgiadis, A., Galanis, E., Zourbanos, N., & Theodorakis, Y. (2014). Self-talk and competitive sport performance."
+    type: journal_article
+    verification_status: verified
+    year: 2014
+    authors: ["Hatzigeorgiadis A", "Galanis E", "Zourbanos N", "Theodorakis Y"]
+    container: "Journal of Applied Sport Psychology"
+    identifier:
+      doi: 10.1080/10413200.2013.790095
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：26(1):82-95（2013-11-18 線上先行）。草稿把第二作者記成
+      「Galanis V」，Crossref 顯示是 Evangelos Galanis（E 非 V）。
+      41 名競技青少年泳者（平均 14.6 歲）的 10 週自我對話訓練，介入組表現改善顯著優於控制組。
+      目前游泳直接實證最強的一篇，但受試是競技青少年，兒童初學與成人初學無直接資料。
+
+  - id: src.dematos-2020-mst-triathlete-swim
+    display: "de Matos, L. F., Bertollo, M., Stefanello, J. M. F., Pires, F. O., da Silva, C. K., Nakamura, F. Y., & Pereira, G. (2020). Motivational self-talk improves time-trial swimming endurance performance in amateur triathletes."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["de Matos LF", "Bertollo M", "Stefanello JMF", "Pires FO", "da Silva CK", "Nakamura FY", "Pereira G"]
+    container: "International Journal of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/1612197X.2020.1717576
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：19(3):446-459，共七位作者。草稿記成「Matos S, Bertollo M et al.」，
+      第一作者實際是 Lorena Fernanda de Matos（縮寫 de Matos LF，非 Matos S）。
+      MST 組游泳計時成績提升 2.8%、每 150m 配速加快，RPE 與對照組相同。
+      受試是業餘鐵人三項選手的游泳段，不是純競泳選手。
+
+  - id: src.zach-2024-selftalk-swimming
+    display: "Zach, O. (2024). Self-talk and its application to competitive swimming."
+    type: journal_article
+    verification_status: verified
+    year: 2024
+    authors: ["Zach O"]
+    container: "Studia Kinanthropologica"
+    identifier:
+      doi: 10.32725/sk.2024.004
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：24(2-3):67-75。捷克期刊，未被 PubMed 收錄，無 PMID 屬正常。
+      整合回顧（非原始實驗、非系統性 meta）：自我對話可改善競技泳者起跑反應、
+      本體感覺技能、肌力耐力與運動學指標，長期優於短期，並建議泳者自訂腳本與教練共同評估。
+      本庫只引用它的「自訂腳本」實務建議，不用它的效果量。
+
+  - id: src.rupprecht-2021-ppr-meta
+    display: "Rupprecht, A. G. O., Tran, U. S., & Gröpel, P. (2021). The effectiveness of pre-performance routines in sports: A meta-analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Rupprecht AGO", "Tran US", "Gröpel P"]
+    container: "International Review of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/1750984X.2021.1944271
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：17(1):39-64（2021-10-14 線上先行，紙本落在 2024 卷期）。
+      草稿只記 DOI 未記卷期，此處補齊。112 個效應值：前後測設計 SMC=0.31，
+      實驗設計在低壓條件 Hedges' g=0.64。IRSEP 是綜述刊物，未被 PubMed 收錄，無 PMID 屬正常。
+      納入研究跨多項運動，不是游泳專屬。
+
+  - id: src.gould-1999-olympic-teams
+    display: "Gould, D., Guinan, D., Greenleaf, C., Medbery, R., & Peterson, K. (1999). Factors affecting Olympic performance: Perceptions of athletes and coaches from more and less successful teams."
+    type: journal_article
+    verification_status: verified
+    year: 1999
+    authors: ["Gould D", "Guinan D", "Greenleaf C", "Medbery R", "Peterson K"]
+    container: "The Sport Psychologist"
+    identifier:
+      doi: 10.1123/tsp.13.4.371
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：13(4):371-394。1996 亞特蘭大奧運後對 8 支美國代表隊
+      （4 支達標、4 支未達標）的訪談研究：達標隊的差異之一是有已練習且在大賽中仍堅持執行的
+      身心準備計畫。這是回溯訪談不是實驗，不能推因果。Human Kinetics 刊物未被 PubMed 收錄，
+      無 PMID 屬正常。草稿 v1 曾把此結論誤植給 Gould & Dieffenbach 2002（該篇主題是
+      奧運冠軍心理特質，屬不同研究），2026-06-16 已在草稿內自行更正，此處確認歸屬。
+
+  - id: src.richard-2021-swimming-ppr
+    display: "Richard, V., Mason, J., Alvarez-Alvarado, S., Perry, I., Lussier, B., & Tenenbaum, G. (2021). Effect of preperformance routine on advanced swimmers' performance and motor efficiency, self-efficacy, and idiosyncratic emotions."
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Richard V", "Mason J", "Alvarez-Alvarado S", "Perry I", "Lussier B", "Tenenbaum G"]
+    container: "The Sport Psychologist"
+    identifier:
+      doi: 10.1123/tsp.2020-0023
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：35(2):97-107。46 名 NCAA D1 進階泳者，
+      學習型賽前例行程序介入 vs 直覺型對照。結果要照實說：速度、動作效能、自我效能皆不顯著，
+      只有情緒狀態顯著改善，質性資料顯示對注意／情緒控制、自信、動機有正向知覺。
+      草稿 v1 曾誤植作者為「Moraes 等人」並誇大成「均有正向效果」，2026-06-16 已更正。
+      本庫引用時必須維持「PPR 對客觀表現指標效果有限、主要作用在情緒與主觀層面」的說法。
+
+  - id: src.wulf-2013-attentional-focus-review
+    display: "Wulf, G. (2013). Attentional focus and motor learning: A review of 15 years."
+    type: journal_article
+    verification_status: verified
+    year: 2013
+    authors: ["Wulf G"]
+    container: "International Review of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/1750984X.2012.723728
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：6(1):77-104。受約束行動假說（Constrained Action Hypothesis）的
+      15 年回顧：外焦點促進自動化運動控制，內焦點造成有意識干預而破壞流暢執行。
+      是回顧不是原始實驗；游泳的直接證據要看 Freudenheim 2010 與 Stoate & Wulf 2011。
+
+  - id: src.lange-smith-2023-pst-review
+    display: "Lange-Smith, S., Cabot, J., Coffee, P., Gunnell, K., & Tod, D. (2023). The efficacy of psychological skills training for enhancing performance in sport: A review of reviews."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Lange-Smith S", "Cabot J", "Coffee P", "Gunnell K", "Tod D"]
+    container: "International Journal of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/1612197X.2023.2168725
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：22(4):1012-1029（2023-01-30 線上先行）。草稿只記標題與 DOI
+      未記作者，此處補齊。傘狀回顧：PST 對心理技能與運動表現均有效，長期或個人化 PST
+      優於短期標準化 PST，12 週改善可持續至 6 個月。作者自評納入回顧的方法學品質
+      普遍為 critically low，引用效果宣稱時必須一併帶出這個限制。
+
+  - id: src.bauman-2015-swimming-psychology
+    display: "Bauman, J. (2015). Swimming psychology: Merging mind and body. In S. A. Riewald & S. A. Rodeo (Eds.), Science of Swimming Faster (Ch. 16). Human Kinetics."
+    type: book_chapter
+    verification_status: verified
+    year: 2015
+    authors: ["Bauman J"]
+    container: "Science of Swimming Faster"
+    identifier:
+      isbn: '9780736095716'
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 以本地完整書檔核對章名與作者署名（James Bauman, PhD）。
+      本庫取用：自我對話的六項功能分類（自我平靜／教育／激勵／專注／獎勵／批評）、
+      「可信度優先於正向口號」、重力（gravity）時態隱喻、轉速計喚醒量表、>X̄ 目標策略。
+      證據等級 🟠：Bauman 在章首自述本章「基於 24 年應用經驗與既有概念的整合」，
+      不是原始實驗報告；書中未提供這些框架的實證檢驗，也完全沒有談水感。
+      引用時不得包裝成實證結論。
+
+  - id: src.riewald-2015-competition-day
+    display: "Riewald, S. (2015). Competition-day strategies. In S. A. Riewald & S. A. Rodeo (Eds.), Science of Swimming Faster (Ch. 11). Human Kinetics."
+    type: book_chapter
+    verification_status: verified
+    year: 2015
+    authors: ["Riewald S"]
+    container: "Science of Swimming Faster"
+    identifier:
+      isbn: '9780736095716'
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 以本地完整書檔核對章名與作者署名（Scott Riewald, PhD, CSCS）。
+      本庫取用：賽前例行程序的五項功能（進入理想競技狀態、提升自信、管理心理能量、
+      聚焦注意力、提供結構性安全感），以及 1998 年 10 位美國世錦賽泳者訪談中
+      「個別方式不同但全員都有固定例行程序」的觀察。證據等級 🟠：教練教材與實務訪談，
+      不是對照實驗；PPR 的效果量要看 Rupprecht 2021 與 Richard 2021。

@@ -17558,8 +17558,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-d",
-        "src.research-psych-06-g"
+        "src.freudenheim-2010-external-focus-swimming",
+        "src.wulf-2013-attentional-focus-review"
       ],
       "outgoing_ids": []
     },
@@ -17578,8 +17578,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-e",
-        "src.research-psych-06-g"
+        "src.hatzigeorgiadis-2004-swimming-pool"
       ],
       "outgoing_ids": []
     },
@@ -17598,8 +17597,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-b",
-        "src.research-psych-06-d"
+        "src.hatzigeorgiadis-2004-swimming-pool",
+        "src.hatzigeorgiadis-2011-selftalk-meta"
       ],
       "outgoing_ids": []
     },
@@ -17618,8 +17617,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-d",
-        "src.research-psych-06-i"
+        "src.dematos-2020-mst-triathlete-swim"
       ],
       "outgoing_ids": []
     },
@@ -17639,8 +17637,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-h",
-        "src.research-psych-06-i"
+        "src.gould-1999-olympic-teams",
+        "src.richard-2021-swimming-ppr",
+        "src.riewald-2015-competition-day",
+        "src.rupprecht-2021-ppr-meta"
       ],
       "outgoing_ids": []
     },
@@ -17659,8 +17659,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-a",
-        "src.research-psych-06-i"
+        "src.hatzigeorgiadis-2011-selftalk-meta",
+        "src.hatzigeorgiadis-2014-competitive-selftalk",
+        "src.lange-smith-2023-pst-review",
+        "src.zach-2024-selftalk-swimming"
       ],
       "outgoing_ids": []
     },
@@ -17679,7 +17681,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-f"
+        "src.bauman-2015-swimming-psychology"
       ],
       "outgoing_ids": []
     },
@@ -17698,8 +17700,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-06-c",
-        "src.research-psych-06-i"
+        "src.bauman-2015-swimming-psychology",
+        "src.hatzigeorgiadis-2011-selftalk-meta"
       ],
       "outgoing_ids": []
     },

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 664,
+  "source_count": 676,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -361,6 +361,27 @@
           "id": "cold-water-shock",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[23].references[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.bauman-2015-swimming-psychology",
+      "display": "Bauman, J. (2015). Swimming psychology: Merging mind and body. In S. A. Riewald & S. A. Rodeo (Eds.), Science of Swimming Faster (Ch. 16). Human Kinetics.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9780736095716"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.self_talk.tense_drift",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[4].public"
+        },
+        {
+          "id": "psych.self_talk.trainable_skill",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[0].public"
         }
       ]
     },
@@ -1387,6 +1408,22 @@
       ]
     },
     {
+      "id": "src.dematos-2020-mst-triathlete-swim",
+      "display": "de Matos, L. F., Bertollo, M., Stefanello, J. M. F., Pires, F. O., da Silva, C. K., Nakamura, F. Y., & Pereira, G. (2020). Motivational self-talk improves time-trial swimming endurance performance in amateur triathletes.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/1612197X.2020.1717576"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.mst_endurance_efficiency",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[5].public"
+        }
+      ]
+    },
+    {
       "id": "src.deschodt-1999",
       "display": "Deschodt, Arsac & Rouard 1999",
       "verification_status": "verified",
@@ -1884,12 +1921,17 @@
       "identifier": {
         "doi": "10.1260/1747-9541.5.4.533"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.attention.cah",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[1].public"
+        },
+        {
+          "id": "psych.self_talk.external_focus_ist",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[2].public"
         }
       ]
     },
@@ -2412,6 +2454,22 @@
       ]
     },
     {
+      "id": "src.gould-1999-olympic-teams",
+      "display": "Gould, D., Guinan, D., Greenleaf, C., Medbery, R., & Peterson, K. (1999). Factors affecting Olympic performance: Perceptions of athletes and coaches from more and less successful teams.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/tsp.13.4.371"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.pre_performance_routine",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[6].public"
+        }
+      ]
+    },
+    {
       "id": "src.grgic-mikulic-2021-focus-muscular-endurance",
       "display": "Grgic, J., & Mikulic, P. (2021). Effects of attentional focus on muscular endurance: A meta-analysis.",
       "verification_status": "verified",
@@ -2774,6 +2832,69 @@
           "id": "poolside-slip-fall",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[40].references[4]"
+        }
+      ]
+    },
+    {
+      "id": "src.hatzigeorgiadis-2004-swimming-pool",
+      "display": "Hatzigeorgiadis, A., Theodorakis, Y., & Zourbanos, N. (2004). Self-talk in the swimming pool: The effects of self-talk on thought content and performance on water-polo tasks.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/10413200490437886"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.self_talk.interfering_thoughts_bandwidth",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[3].public"
+        },
+        {
+          "id": "psych.self_talk.ist_mst_matching",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[1].public"
+        }
+      ]
+    },
+    {
+      "id": "src.hatzigeorgiadis-2011-selftalk-meta",
+      "display": "Hatzigeorgiadis, A., Zourbanos, N., Galanis, E., & Theodorakis, Y. (2011). Self-talk and sports performance: A meta-analysis.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1177/1745691611413136"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "psych.self_talk.ist_mst_matching",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[1].public"
+        },
+        {
+          "id": "psych.self_talk.systematic_training",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[7].public"
+        },
+        {
+          "id": "psych.self_talk.trainable_skill",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.hatzigeorgiadis-2014-competitive-selftalk",
+      "display": "Hatzigeorgiadis, A., Galanis, E., Zourbanos, N., & Theodorakis, Y. (2014). Self-talk and competitive sport performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/10413200.2013.790095"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.systematic_training",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[7].public"
         }
       ]
     },
@@ -3424,6 +3545,22 @@
           "id": "psych.fear.diving_reflex_calm",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.lange-smith-2023-pst-review",
+      "display": "Lange-Smith, S., Cabot, J., Coffee, P., Gunnell, K., & Tod, D. (2023). The efficacy of psychological skills training for enhancing performance in sport: A review of reviews.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/1612197X.2023.2168725"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.systematic_training",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[7].public"
         }
       ]
     },
@@ -8824,158 +8961,74 @@
     {
       "id": "src.research-psych-06-a",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.self_talk.systematic_training",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[7].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-b",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#指導型-vs-激勵型自我對話",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.self_talk.ist_mst_matching",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-c",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#核心概念",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.self_talk.trainable_skill",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[0].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-d",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#游泳特異研究-vs-跨運動外推",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "psych.self_talk.external_focus_ist",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[2].public"
-        },
-        {
-          "id": "psych.self_talk.ist_mst_matching",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[1].public"
-        },
-        {
-          "id": "psych.self_talk.mst_endurance_efficiency",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[5].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-e",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#自我對話的作用機制",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.self_talk.interfering_thoughts_bandwidth",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-f",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#自我對話的時態框架過去現在未來",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.self_talk.tense_drift",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[4].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-g",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#與水感框架指令層次注意力焦點的連結",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.self_talk.external_focus_ist",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[2].public"
-        },
-        {
-          "id": "psych.self_talk.interfering_thoughts_bandwidth",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-h",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#賽前例行程序",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.self_talk.pre_performance_routine",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[6].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-06-i",
       "display": "Research/心理/06_自我對話與心理技能訓練.md#關鍵文獻清單",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 4,
-      "usages": [
-        {
-          "id": "psych.self_talk.mst_endurance_efficiency",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[5].public"
-        },
-        {
-          "id": "psych.self_talk.pre_performance_routine",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[6].public"
-        },
-        {
-          "id": "psych.self_talk.systematic_training",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[7].public"
-        },
-        {
-          "id": "psych.self_talk.trainable_skill",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[5].concepts[0].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-07-a",
@@ -9425,6 +9478,38 @@
       ]
     },
     {
+      "id": "src.richard-2021-swimming-ppr",
+      "display": "Richard, V., Mason, J., Alvarez-Alvarado, S., Perry, I., Lussier, B., & Tenenbaum, G. (2021). Effect of preperformance routine on advanced swimmers' performance and motor efficiency, self-efficacy, and idiosyncratic emotions.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/tsp.2020-0023"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.pre_performance_routine",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[6].public"
+        }
+      ]
+    },
+    {
+      "id": "src.riewald-2015-competition-day",
+      "display": "Riewald, S. (2015). Competition-day strategies. In S. A. Riewald & S. A. Rodeo (Eds.), Science of Swimming Faster (Ch. 11). Human Kinetics.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9780736095716"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.pre_performance_routine",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[6].public"
+        }
+      ]
+    },
+    {
       "id": "src.riewald-rodeo-2015",
       "display": "Riewald & Rodeo (eds.), Science of Swimming Faster, 2015",
       "verification_status": "verified",
@@ -9659,6 +9744,22 @@
           "id": "psych.arousal.izof",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[6].concepts[1].public"
+        }
+      ]
+    },
+    {
+      "id": "src.rupprecht-2021-ppr-meta",
+      "display": "Rupprecht, A. G. O., Tran, U. S., & Gröpel, P. (2021). The effectiveness of pre-performance routines in sports: A meta-analysis.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/1750984X.2021.1944271"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.pre_performance_routine",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[6].public"
         }
       ]
     },
@@ -13226,6 +13327,22 @@
       ]
     },
     {
+      "id": "src.wulf-2013-attentional-focus-review",
+      "display": "Wulf, G. (2013). Attentional focus and motor learning: A review of 15 years.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/1750984X.2012.723728"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.external_focus_ist",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[2].public"
+        }
+      ]
+    },
+    {
       "id": "src.wulf-mcnevin-shea-2001-automaticity",
       "display": "Wulf, G., McNevin, N., & Shea, C. H. (2001). The automaticity of complex motor skill learning as a function of attentional focus.",
       "verification_status": "verified",
@@ -13515,6 +13632,22 @@
           "id": "udk.tech.4",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[140].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.zach-2024-selftalk-swimming",
+      "display": "Zach, O. (2024). Self-talk and its application to competitive swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.32725/sk.2024.004"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.self_talk.systematic_training",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[7].public"
         }
       ]
     },
