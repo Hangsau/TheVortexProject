@@ -18,6 +18,42 @@
 
 總 WARN 因此從 129 變 **144**。
 
+### ✅ **「The Race Club + 器材名」那一族模糊登錄全部清掉，順帶抓到一個錯的秒數和兩組查不到出處的數字**
+
+拆完機構層之後，同一個 repo 裡還有一整族長得一樣的東西：`velocity-meter-a`／`velocity-meter-b`／
+`vm-a`／`vm-b`／`velocity-meter-pressure-meter`，五個登錄的 display 都是「機構名 + 量測器材名」。
+**這種字串定位不到任何一篇**——velocity meter 是 The Race Club 幾十篇文章共用的器材，寫「The Race
+Club VM 量測資料」等於沒寫。逐條回原文查證後全部改指單篇，五個登錄改 `retracted` 墓碑
+（不刪除，因為要擋同型字串再長回來），**W008 維持 3**。
+
+查證過程抓到三件原本看不到的事：
+
+1. **一個來源在替它沒說過的模型背書**。`udk.tech.17` 的 mechanism 講「流線滑行／UDK／水面自由式
+   三條淨力—速度曲線的交點就是切換速度」，掛了 Takeda 2026 + Race Club 兩個來源。回讀 Race Club
+   原文，**該文從頭到尾沒有談 force–velocity curve 或 crossover speed**，它只做了「立刻起踢比滑行快
+   0.1／0.18 秒」的計時對照。移除，只留 Takeda。
+2. **一個線上的錯誤秒數**。`starts-turns.tech.43` 的 observation_basis 寫「抬頭比低頭遠 0.32 m 且
+   12 m 快 0.12 秒」。原文（Improving Your Starts: Head Lift）的表格是 5.41 vs 5.56，差 **0.15 秒**，
+   內文也寫 .15。距離值 2.96／2.64 相符，秒數錯。已更正。
+   （另記一筆：原文表格差值是 0.32 m，內文卻寫「.28 meters（11%）」，**原文自身不一致**。
+   本專案採表格值並把這件事寫進登錄，不替原文選一個。）
+3. **兩組人名 + 小數點的數字，公開頁面一個字都查不到**。同條的 Niko Obrovac（大圓 vs 小圓：
+   peak acceleration 30.14 vs 19.09 m/s²）與 Isabella Arcila（圓背 vs 平背：23.46 vs 22.48）。
+   站上談**同一個對照**的公開文章換的是**另一位選手** Zane Grothe（快 2%／0.1 秒），Obrovac 和
+   Arcila 都不在裡面。**沒有證據說這些數字是錯的**（可能出自 Hall & Murphy 那本書或會員牆後），
+   但「人名 + 小數點 + 無出處」正是本專案 CLAUDE.md 點名的高風險組合。
+   處置：降 🔴 保留、不刪除、不拿它支撐建議，`caveat` 寫明查了什麼、找到的是什麼；
+   `practical_implication` 裡依賴 Arcila 的「背要圓不要平（5%／3%）」那句撤掉。
+
+新增 4 個 verified 單篇登錄：`starts-head-lift`、`start-arm-swing`、`sensors-update`、
+`freestyle-kick-knee-bend`（既有，接手 vm-a 的引用）。
+
+**這一輪的方法可以重用**：模糊來源字串不是靠「看起來像不像文獻」判斷的，是靠**把它掛的每一條主張
+拿去原文找**。找得到就改指單篇，找不到就把「查了什麼、為什麼沒有」寫進登錄——後者才是這輪真正的
+產出，因為它讓下一個人不用重跑同樣的搜尋。
+
+驗證：0 ERROR，W008 = 3，總 WARN 144（無新增缺陷）。
+
 ### ✅ **機構層 `src.the-race-club` 剩下的 4 條，追回 3 條到單篇；第 4 條確認追不到，寫進登錄不補造**
 
 上一輪把 `src.the-race-club` 拆成不帶 identifier 的機構層登錄後，還有 4 條主張掛在上面。這輪逐條回原文查證：
