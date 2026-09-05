@@ -5081,7 +5081,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -5160,6 +5160,7 @@
       "title": "Wave style 俯衝角度可自評（胸口下壓時機穩定）；收腿阻力與滑行感配對",
       "tags": {
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "l_level": [
@@ -5170,7 +5171,6 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-a",
         "src.tanaka-2024-a"
       ],
       "outgoing_ids": []
@@ -5264,7 +5264,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-b",
+        "src.nicol-2022-breaststroke-systematic-review",
         "src.u-s-masters-swimming"
       ],
       "outgoing_ids": [
@@ -5535,7 +5535,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-b",
+        "src.nicol-2022-breaststroke-systematic-review",
         "src.swimming-world-magazine",
         "src.usms-wayne-mccauley"
       ],
@@ -6056,7 +6056,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6078,7 +6078,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6140,7 +6140,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": [
         "breast.tech.22",
@@ -6165,7 +6165,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6207,7 +6207,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6403,7 +6403,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6425,7 +6425,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6447,7 +6447,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c"
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": []
     },
@@ -6469,7 +6469,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-c",
+        "src.nicol-2022-breaststroke-systematic-review",
         "src.ward-2018"
       ],
       "outgoing_ids": []
@@ -8549,15 +8549,13 @@
           "stroke-cycle"
         ],
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "stroke": [
           "fly"
         ]
       },
-      "source_ids": [
-        "src.nicol-2022-c"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {

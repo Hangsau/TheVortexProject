@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 114, '🟢': 76, '🟠': 21, '🟡': 10, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 115, '🟢': 75, '🟠': 21, '🟡': 10, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -180,7 +180,7 @@
 | fly.tech.10 | stroke-cycle |  | 🔵 |
 | fly.tech.11 | stroke-cycle |  | 🟡 |
 | fly.tech.12 | stroke-cycle |  | 🔵 |
-| fly.tech.13 | stroke-cycle |  | 🟢 |
+| fly.tech.13 | stroke-cycle |  | 🔵 |
 | fly.tech.14 | stroke-cycle |  | 🔵 |
 | fly.tech.15 | stroke-cycle |  | 🔵 |
 | fly.tech.16 | head |  | 🔵 |

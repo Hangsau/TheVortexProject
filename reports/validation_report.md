@@ -127,7 +127,7 @@
 
 ## W022 — `text` 的內容就是它自己的來源名稱（「Mason 1992」）——只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）
 
-**WARN，共 15 筆**
+**WARN，共 14 筆**
 
   file=canonical\technica\l-indicators.yaml id='free.L2.kick' at=indicators[7].public.evidence[0] text 就是來源名稱 'McCullough 2009'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='free.L4.roll-coupling' at=indicators[11].public.evidence[0] text 就是來源名稱 'Gonjo 2020'（只說了有這篇，沒說它顯示什麼）
@@ -142,7 +142,6 @@
   file=canonical\technica\l-indicators.yaml id='fly.L5.two-kick-differentiation' at=indicators[34].public.evidence[0] text 就是來源名稱 'Mason 1992'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L5.two-kick-differentiation' at=indicators[34].public.evidence[1] text 就是來源名稱 'Swim Like A Fish 2025'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='breast.L4.undulation' at=indicators[43].public.evidence[0] text 就是來源名稱 'Colman 1998'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='breast.L5.undulation-stability' at=indicators[45].public.evidence[0] text 就是來源名稱 'Nicol 2022'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='breast.L5.undulation-stability' at=indicators[45].public.evidence[1] text 就是來源名稱 'Tanaka 2024'（只說了有這篇，沒說它顯示什麼）
 
 ---

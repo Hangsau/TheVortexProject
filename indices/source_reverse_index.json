@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 719,
+  "source_count": 720,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -6014,24 +6014,31 @@
     {
       "id": "src.nicol-2022-a",
       "display": "Nicol 2022",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "breast.L5.undulation-stability",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[45].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.nicol-2022-b",
       "display": "Nicol et al. (2022). Systematic review. Sports Biomechanics",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.nicol-2022-breaststroke-systematic-review",
+      "display": "Nicol, E., Pearson, S., Saxby, D., Minahan, C., & Tor, E. (2022). Stroke Kinematics, Temporal Patterns, Neuromuscular Activity, Pacing and Kinetics in Elite Breaststroke Swimming: A Systematic Review. Sports Medicine - Open, 8(1), 75.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 22,
       "usages": [
+        {
+          "id": "breast.L4.timing",
+          "file": "canonical/technica/l-indicators.yaml",
+          "path": "indicators[42].public.evidence[0]"
+        },
         {
           "id": "breast.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -6046,20 +6053,6 @@
           "id": "breast.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[46].public.physical_reason"
-        }
-      ]
-    },
-    {
-      "id": "src.nicol-2022-c",
-      "display": "Nicol et al. 2022",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 21,
-      "usages": [
-        {
-          "id": "breast.L4.timing",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[42].public.evidence[0]"
         },
         {
           "id": "breast.tech.23",
@@ -6150,18 +6143,16 @@
           "id": "breast.tech.8",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[78].public.mechanism"
-        },
-        {
-          "id": "fly.tech.13",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[114].public.evidence[0]"
-        },
-        {
-          "id": "fly.tech.13",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[114].public.mechanism"
         }
       ]
+    },
+    {
+      "id": "src.nicol-2022-c",
+      "display": "Nicol et al. 2022",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.nieuwenhuis-2024-inverted-u-revisited",

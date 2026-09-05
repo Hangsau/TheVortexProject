@@ -1856,28 +1856,28 @@ sources:
   - id: src.nicol-2022-a
     display: "Nicol 2022"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     authors: ["Nicol"]
     year: 2022
-    notes: "疑似與 src.nicol-2022-b、src.nicol-2022-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    notes: 2026-09-05 撤下：display 只有「Nicol 2022」／「Nicol et al. 2022」／期刊寫錯的「Systematic review. Sports Biomechanics」，三者定位不到任何一篇，且被登錄為三筆互不相干的 unverified 來源。已查證確認三者為同一篇：Nicol 等人（2022）Sports Medicine - Open 8(1):75，PMID 35674850。引用全部改指 src.nicol-2022-breaststroke-systematic-review。留墓碑擋住同型模糊字串再登錄。
 
   - id: src.nicol-2022-b
     display: "Nicol et al. (2022). Systematic review. Sports Biomechanics"
     type: review
-    verification_status: unverified
+    verification_status: retracted
     authors: ["Nicol"]
     et_al: true
     year: 2022
-    notes: "疑似與 src.nicol-2022-a、src.nicol-2022-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    notes: 2026-09-05 撤下：display 只有「Nicol 2022」／「Nicol et al. 2022」／期刊寫錯的「Systematic review. Sports Biomechanics」，三者定位不到任何一篇，且被登錄為三筆互不相干的 unverified 來源。已查證確認三者為同一篇：Nicol 等人（2022）Sports Medicine - Open 8(1):75，PMID 35674850。引用全部改指 src.nicol-2022-breaststroke-systematic-review。留墓碑擋住同型模糊字串再登錄。
 
   - id: src.nicol-2022-c
     display: "Nicol et al. 2022"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     authors: ["Nicol"]
     et_al: true
     year: 2022
-    notes: "疑似與 src.nicol-2022-a、src.nicol-2022-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    notes: 2026-09-05 撤下：display 只有「Nicol 2022」／「Nicol et al. 2022」／期刊寫錯的「Systematic review. Sports Biomechanics」，三者定位不到任何一篇，且被登錄為三筆互不相干的 unverified 來源。已查證確認三者為同一篇：Nicol 等人（2022）Sports Medicine - Open 8(1):75，PMID 35674850。引用全部改指 src.nicol-2022-breaststroke-systematic-review。留墓碑擋住同型模糊字串再登錄。
 
   - id: src.nordin-frankel-2012
     display: "Nordin M, Frankel VH (eds). (2012). Basic Biomechanics of the Musculoskeletal System. 4th ed. Baltimore: Lippincott Williams & Wilkins."
@@ -8781,3 +8781,25 @@ sources:
       pmid: '31141446'
       doi: 10.1123/jsr.2018-0262
     notes: 蝶泳下背痛的機制研究：下背痛泳者蝴蝶踢時腰椎伸展角度較大、髂腰肌較緊。本專案先前只記 PMID、標記為「摘要／二手待查」，2026-09-05 已完整解析（作者、期刊、卷期、DOI 皆確認），改列 verified 並正式引用。
+
+  - id: src.nicol-2022-breaststroke-systematic-review
+    display: "Nicol, E., Pearson, S., Saxby, D., Minahan, C., & Tor, E. (2022). Stroke Kinematics, Temporal Patterns, Neuromuscular Activity, Pacing and Kinetics in Elite Breaststroke Swimming: A Systematic Review. Sports Medicine - Open, 8(1), 75."
+    type: review
+    verification_status: verified
+    retrieved_on: '2026-09-05'
+    identifiers:
+      pmid: '35674850'
+      pmcid: 'PMC9177912'
+      doi: 10.1186/s40798-022-00467-2
+    notes: >-
+      收錄 38 篇研究的蛙式生物力學統合綜述，涵蓋 stroke kinematics、temporal patterns、
+      neuromuscular activity、pacing、kinetics 五個面向。取代原本三筆模糊登錄
+      src.nicol-2022-a／-b／-c（同一篇被登錄成三筆，其中 -b 的期刊誤記為 Sports Biomechanics，
+      實為 Sports Medicine - Open；Nicol 另有一篇確實在 Sports Biomechanics 的
+      "The temporal analysis of elite breaststroke swimming during competition"，
+      但那篇比較的是性別與距離、不是水準組別，本專案目前沒有條目對應到它，故不登錄以免製造孤兒）。
+      引用範圍限制（重要）：本綜述明確只收蛙式，全文提到蝶式僅一次且是說明「蛙式與蝶式不同」——
+      不得用來支撐任何蝶式主張。EMG 部分本綜述自己的整合結論是「高強度下 triceps brachii 活化提前
+      → 外划提前 → 滑行時間縮短」，是強度效應不是水準組別效應；本專案原先掛在此處的
+      「精英比國家選手更早啟動 insweep（biceps brachii + pectoralis major）」屬於個別收錄研究
+      （Olstad 等人 2017）的層次，不是本綜述的整合結論，且與 Olstad 原文亦有出入（見該筆登錄）。
