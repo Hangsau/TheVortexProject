@@ -149,7 +149,7 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 30 筆**
+**WARN，共 23 筆**
 
   file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -174,28 +174,13 @@
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 19059813' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.3390/ijerph181910259' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2020.01659' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC7063062' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 17566428' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1007/s00426-025-02225-x' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 29691389' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC12433939' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 40426460' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 16368636' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
 
 ---
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 43 筆**
+**WARN，共 35 筆**
 
-  source_id='src.research-psych-05-a' display='Research/心理/05_意象與心理演練.md#1-功能等價functional-equivalence' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-b' display='Research/心理/05_意象與心理演練.md#2-pettlep-意象模型' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-c' display='Research/心理/05_意象與心理演練.md#3-意象的功能分類paivio-1985--hall-et-al-1998' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-d' display='Research/心理/05_意象與心理演練.md#4-內部視角-vs-外部視角internal--external-imagery-perspective' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-e' display='Research/心理/05_意象與心理演練.md#5-運動意象與-feedforward-預測模型的關係' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-f' display='Research/心理/05_意象與心理演練.md#a-動覺意象能否預先建立或強化水感' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-g' display='Research/心理/05_意象與心理演練.md#c-動覺意象-vs-視覺意象的分離效應' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-05-h' display='Research/心理/05_意象與心理演練.md#視角與測量' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-06-a' display='Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-06-b' display='Research/心理/06_自我對話與心理技能訓練.md#指導型-vs-激勵型自我對話' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-06-c' display='Research/心理/06_自我對話與心理技能訓練.md#核心概念' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄

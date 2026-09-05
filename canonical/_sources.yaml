@@ -3671,50 +3671,50 @@ sources:
   - id: src.research-psych-05-a
     display: "Research/心理/05_意象與心理演練.md#1-功能等價functional-equivalence"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-b、src.research-psych-05-c、src.research-psych-05-d、src.research-psych-05-e、src.research-psych-05-f、src.research-psych-05-g、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-b
     display: "Research/心理/05_意象與心理演練.md#2-pettlep-意象模型"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-c、src.research-psych-05-d、src.research-psych-05-e、src.research-psych-05-f、src.research-psych-05-g、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-c
     display: "Research/心理/05_意象與心理演練.md#3-意象的功能分類paivio-1985--hall-et-al-1998"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-b、src.research-psych-05-d、src.research-psych-05-e、src.research-psych-05-f、src.research-psych-05-g、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-d
     display: "Research/心理/05_意象與心理演練.md#4-內部視角-vs-外部視角internal--external-imagery-perspective"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-b、src.research-psych-05-c、src.research-psych-05-e、src.research-psych-05-f、src.research-psych-05-g、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-e
     display: "Research/心理/05_意象與心理演練.md#5-運動意象與-feedforward-預測模型的關係"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-b、src.research-psych-05-c、src.research-psych-05-d、src.research-psych-05-f、src.research-psych-05-g、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-f
     display: "Research/心理/05_意象與心理演練.md#a-動覺意象能否預先建立或強化水感"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-b、src.research-psych-05-c、src.research-psych-05-d、src.research-psych-05-e、src.research-psych-05-g、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-g
     display: "Research/心理/05_意象與心理演練.md#c-動覺意象-vs-視覺意象的分離效應"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-b、src.research-psych-05-c、src.research-psych-05-d、src.research-psych-05-e、src.research-psych-05-f、src.research-psych-05-h 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-05-h
     display: "Research/心理/05_意象與心理演練.md#視角與測量"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-05-a、src.research-psych-05-b、src.research-psych-05-c、src.research-psych-05-d、src.research-psych-05-e、src.research-psych-05-f、src.research-psych-05-g 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/05_意象與心理演練.md 逐節把該節實際引用的原始文獻挖出來，登錄成 15 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-06-a
     display: "Research/心理/06_自我對話與心理技能訓練.md#心理技能訓練套裝計畫"
@@ -7641,3 +7641,245 @@ sources:
     notes: >-
       2026-09-05 Crossref 核對：23(3):263-280。需求滿足／受阻雙維度的理論整合，
       臨床心理學脈絡（心理治療整合期刊），非運動樣本。
+
+  - id: src.jeannerod-1994-representing-brain
+    display: "Jeannerod, M. (1994). The representing brain: Neural correlates of motor intention and imagery."
+    type: journal_article
+    verification_status: verified
+    year: 1994
+    authors: ["Jeannerod M"]
+    container: "Behavioral and Brain Sciences"
+    identifier:
+      doi: 10.1017/S0140525X00034026
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：17(2):187-202（草稿寫 187-245，那是含開放同儕評論的全篇範圍，
+      目標論文本身是 187-202，兩種引法都常見，不列為錯誤）。功能等價論的奠基文獻，
+      主張意象與實際執行共享運動表徵。1994 年的行為與神經影像證據等級，本庫用 🟡 標記；
+      「水感的神經表徵是否同樣被意象激活」不在本文範圍。
+
+  - id: src.moran-oshea-2020-mi-cognitive-processes
+    display: "Moran, A., & O'Shea, H. (2020). Motor imagery practice and cognitive processes."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Moran A", "O'Shea H"]
+    container: "Frontiers in Psychology"
+    identifier:
+      pmid: '32194491'
+      pmc: PMC7063062
+      doi: 10.3389/fpsyg.2020.00394
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：11:394。綜述型論文，整理意象如何誘發運動網絡可塑性與脊髓層面調節。
+      是綜述不是原始實驗，本庫引用時只用來支撐「意象具備神經可塑性基礎」這層通則，
+      不用來支撐任何游泳專屬的效果量。
+
+  - id: src.yin-2025-motor-expertise-imagery
+    display: "Yin, J., Yang, K., Zhou, C., & Dang, J. (2025). Motor expertise modulates cortical activation during imagery of simple and complex actions."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Yin J", "Yang K", "Zhou C", "Dang J"]
+    container: "Proceedings of the National Academy of Sciences"
+    identifier:
+      doi: 10.1073/pnas.2515027122
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：122(39)，2025-09-22 上線。草稿只記「PNAS 2025」無作者，此處補齊。
+      fNIRS 測足球員：專家想像簡單動作時皮質激活效率較高，想像複雜動作時激活較深。
+      受試是足球員，「高水平泳者對水感的意象更精準」是本庫的跨項外推（🔵），不是本文結論。
+
+  - id: src.holmes-collins-2001-pettlep
+    display: "Holmes, P. S., & Collins, D. J. (2001). The PETTLEP approach to motor imagery: A functional equivalence model for sport psychologists."
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Holmes PS", "Collins DJ"]
+    container: "Journal of Applied Sport Psychology"
+    identifier:
+      doi: 10.1080/10413200109339004
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：13(1):60-83。PETTLEP 七元素（Physical / Environment / Task /
+      Timing / Learning / Emotion / Perspective）的原始提出文獻，是把功能等價理論操作化的模型論文，
+      本身不是實驗。舊文獻（🟡），但後續 PETTLEP 干預研究皆回引本文。
+
+  - id: src.scott-2022-twenty-years-pettlep
+    display: "Scott, M. W., Wright, D. J., Smith, D., & Holmes, P. S. (2022). Twenty years of PETTLEP imagery: An update and new direction for simulation-based training."
+    type: journal_article
+    verification_status: verified
+    year: 2022
+    authors: ["Scott MW", "Wright DJ", "Smith D", "Holmes PS"]
+    container: "Asian Journal of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1016/j.ajsep.2022.07.002
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 標題檢索核對：2(2):70-79。草稿的 DOI 寫成 10.1016/j.ajsep.2022.xx
+      （尾碼是佔位符，解不到任何文獻），正確是 10.1016/j.ajsep.2022.07.002。
+      20 年回顧文章，提出把 PETTLEP 與動作觀察（action observation）整合的方向。
+
+  - id: src.lee-horino-2025-pettlep-multidimensional
+    display: "Lee, S.-M., & Horino, H. (2025). Exploring the incorporation of imagery based on PETTLEP."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Lee SM", "Horino H"]
+    container: "The Sport Psychologist"
+    identifier:
+      doi: 10.1123/tsp.2023-0170
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：39(4):260-270。草稿只記「The Sport Psychologist 39(4) 2025」
+      無作者無 DOI，此處補齊。日本大學生運動員兩研究（n=422、n=378）的驗證性因素分析：
+      Timing 可拆成 timing-real / timing-slow / timing-fast，第一與第三人稱視角是獨立元素，
+      共 10 元素模型。樣本是日本大學生競技運動員，非游泳專屬、非兒童或成人初學。
+
+  - id: src.namli-2025-vr-swimming-imagery
+    display: "Namli, S., Özdemir, K., Sen, I., & Bedir, D. (2025). Virtual reality-supported video modeling for enhancing motor skill acquisition in swimming."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Namli S", "Özdemir K", "Sen I", "Bedir D"]
+    container: "BMC Sports Science, Medicine and Rehabilitation"
+    identifier:
+      pmid: '40618142'
+      pmc: PMC12229036
+      doi: 10.1186/s13102-025-01241-z
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：17(1):182。VR 輔助影片示範結合 PETTLEP 結構化意象，
+      在划臂距離、心率、RPE 上優於傳統訓練。這是少數游泳情境的意象研究，
+      但操弄的是「VR + 影片示範」整包，無法把效果單獨歸給意象成分。
+
+  - id: src.spittle-morris-2007-imagery-perspective
+    display: "Spittle, M., & Morris, T. (2007). Internal and external imagery perspective measurement and use in imagining open and closed sports skills: An exploratory study."
+    type: journal_article
+    verification_status: verified
+    year: 2007
+    authors: ["Spittle M", "Morris T"]
+    container: "Perceptual and Motor Skills"
+    identifier:
+      pmid: '17566428'
+      doi: 10.2466/pms.104.2.387-404
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：104(2):387-404。感知主導的開放技能偏內部視角，
+      形式主導的封閉技能偏外部視角。本庫把游泳判為「封閉技能但含高度感知成分」
+      並據此推論動覺意象＋內視角，這一步是本庫的推導（🔵），不是本文的結論。
+
+  - id: src.dinan-2025-dopamine-motor-imagery
+    display: "Hejazi Dinan, P., Bahmani, M., Garmanjani, U., Nazemzadegan, G. H., & Fazeli, D. (2025). Dopamine, motor imagery, and proprioception: A neurochemical probe into the perception-imagery debate."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Hejazi Dinan P", "Bahmani M", "Garmanjani U", "Nazemzadegan GH", "Fazeli D"]
+    container: "Psychological Research"
+    identifier:
+      doi: 10.1007/s00426-025-02225-x
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：90(1)，2025-12-26 上線。草稿只記「Springer Psychological Research 2025」
+      無作者，此處補齊。摘要核對：雙盲安慰劑對照，42 名健康成人服用支鏈胺基酸（BCAA）
+      暫時降低多巴胺能，血清泌乳素確認操弄成功。多巴胺能下降損害整體與內部視覺意象，
+      本體感覺準確度（CE／VE）不受影響，提示兩者涉及部分獨立通路。
+      受試是健康成人不是運動員，這是神經藥理探針研究，
+      本庫用它支撐「動覺與視覺意象可分離」，不用來支撐任何訓練處方。
+
+  - id: src.kilteni-2018-imagery-sensory-prediction
+    display: "Kilteni, K., Andersson, B. J., Houborg, C., & Ehrsson, H. H. (2018). Motor imagery involves predicting the sensory consequences of the imagined movement."
+    type: journal_article
+    verification_status: verified
+    year: 2018
+    authors: ["Kilteni K", "Andersson BJ", "Houborg C", "Ehrsson HH"]
+    container: "Nature Communications"
+    identifier:
+      pmid: '29691389'
+      pmc: PMC5915435
+      doi: 10.1038/s41467-018-03989-0
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：9(1):1617。草稿只寫「Kilteni et al.」，四位作者於此補齊。
+      想像的自我觸碰產生與真實觸碰相同的觸覺衰減，且遵循相同時空原則——
+      證明意象調用前向模型預測感知後果。實驗是手指自我觸碰的心理物理典範，
+      與游泳的水壓感知之間隔著跨情境外推。
+
+  - id: src.solana-tramunt-2025-mi-lumbar-proprioception
+    display: "Solana-Tramunt, M., & Bofill-Ródenas, A. (2025). Motor imagery enhances core training effects on lumbar proprioception in elite swimmers: A randomized controlled trial."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Solana-Tramunt M", "Bofill-Ródenas A"]
+    container: "Frontiers in Physiology"
+    identifier:
+      pmid: '40959125'
+      pmc: PMC12433939
+      doi: 10.3389/fphys.2025.1667536
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：16:1667536。目前已知唯一在精英泳者身上驗證
+      「意象強化本體感覺精準度」的 RCT。依變數是腰椎本體感覺（core training 情境），
+      不是手掌／前臂的水壓感知——本庫的水感連結是外推（🔵），本文不能當直接證據。
+
+  - id: src.paivio-1985-imagery-functions
+    display: "Paivio, A. (1985). Cognitive and motivational functions of imagery in human performance. Canadian Journal of Applied Sport Sciences, 10, 22-28."
+    type: journal_article
+    verification_status: verified
+    year: 1985
+    authors: ["Paivio A"]
+    container: "Canadian Journal of Applied Sport Sciences"
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 查證：Crossref 與 PubMed 皆無收錄，CJASS 1985 年卷次未數位化建檔，
+      無 DOI／PMID 屬制度上不存在而非待查。卷期頁碼依原始引用 10:22-28。
+      提出意象的認知／動機雙功能 × 特定／一般兩層面分類，是後續 SIQ 五類法的上游。
+
+  - id: src.hall-1998-siq
+    display: "Hall, C. R., Mack, D. E., Paivio, A., & Hausenblas, H. A. (1998). Imagery use by athletes: Development of the Sport Imagery Questionnaire. International Journal of Sport Psychology, 29(1), 73-89."
+    type: journal_article
+    verification_status: verified
+    year: 1998
+    authors: ["Hall CR", "Mack DE", "Paivio A", "Hausenblas HA"]
+    container: "International Journal of Sport Psychology"
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 查證：IJSP 未被 PubMed／MEDLINE 收錄，原文亦無 Crossref DOI，
+      無 PMID 屬制度上不存在而非待查（草稿已於 2026-06-16 自行關閉此「待查」項，此處確認）。
+      量表本身另有 PsycTESTS 記錄 10.1037/t52953-000，那是測驗記錄不是本文。
+      把 Paivio 的分類擴為五類：CS／CG／MS／MG-A／MG-M。
+
+  - id: src.liu-2025-imagery-meta
+    display: "Liu, Y., Zhao, S., Zhang, X., Zhang, X., Liang, T., & Ning, Z. (2025). The effects of imagery practice on athletes' performance: A multilevel meta-analysis with systematic review."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Liu Y", "Zhao S", "Zhang X", "Zhang X", "Liang T", "Ning Z"]
+    container: "Behavioral Sciences"
+    identifier:
+      pmid: '40426460'
+      pmc: PMC12109254
+      doi: 10.3390/bs15050685
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：15(5):685。草稿的表格只記 PMID／PMC 未記期刊，此處補為
+      Behavioral Sciences (Basel)。86 個研究、3593 名運動員的多層次 meta；
+      意象與 1-2 種其他心理技巧合用效果最佳。注意與 src.liu-2025-core-meta、
+      src.liu-2025-core-stability-youth-swimmers、src.liu-2025-bpn-coach-athlete-meta
+      是完全不同的四組作者群，勿互相代換。
+
+  - id: src.driediger-2006-injured-athletes-imagery
+    display: "Driediger, M., Hall, C., & Callow, N. (2006). Imagery use by injured athletes: A qualitative analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2006
+    authors: ["Driediger M", "Hall C", "Callow N"]
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: '16368636'
+      doi: 10.1080/02640410500128221
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：24(3):261-271。質性訪談：受傷運動員主動用動覺意象
+      「保住」動作感覺以防技術退化。是質性研究不是效果量研究，
+      「能維持多久、退化速率降低多少」本文沒有量測；受訪者也不是泳者專屬。

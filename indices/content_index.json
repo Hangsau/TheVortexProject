@@ -17020,8 +17020,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-05-e",
-        "src.research-psych-05-f"
+        "src.kilteni-2018-imagery-sensory-prediction",
+        "src.solana-tramunt-2025-mi-lumbar-proprioception"
       ],
       "outgoing_ids": []
     },
@@ -17041,7 +17041,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-05-a"
+        "src.jeannerod-1994-representing-brain",
+        "src.moran-oshea-2020-mi-cognitive-processes",
+        "src.yin-2025-motor-expertise-imagery"
       ],
       "outgoing_ids": []
     },
@@ -17060,7 +17062,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-05-c"
+        "src.hall-1998-siq",
+        "src.liu-2025-imagery-meta",
+        "src.paivio-1985-imagery-functions"
       ],
       "outgoing_ids": []
     },
@@ -17080,8 +17084,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-05-d",
-        "src.research-psych-05-g"
+        "src.dinan-2025-dopamine-motor-imagery",
+        "src.spittle-morris-2007-imagery-perspective"
       ],
       "outgoing_ids": []
     },
@@ -17101,7 +17105,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-05-h"
+        "src.driediger-2006-injured-athletes-imagery"
       ],
       "outgoing_ids": []
     },
@@ -17121,7 +17125,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-05-b"
+        "src.holmes-collins-2001-pettlep",
+        "src.lee-horino-2025-pettlep-multidimensional",
+        "src.namli-2025-vr-swimming-imagery",
+        "src.scott-2022-twenty-years-pettlep"
       ],
       "outgoing_ids": []
     },
