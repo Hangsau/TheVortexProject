@@ -6,6 +6,14 @@
 
 ## 當前狀態（2026-09-05，最新）
 
+### ✅ **W021：標了 certainty 卻沒有任何內容欄位。現行資料 0 筆，這條是純攔截用**
+
+「有標題沒內容」在 my-site 那側是 layout 把標籤綁在**區塊存在**上而不是綁在會印出來的欄位上（已修四處）。同一個根因在 canonical 這側長成另一個樣子：**證據標記還在，內容不見了**。真實案例是 `beece5a`——刪一個多行 `text:` 鍵時只刪了鍵和第一行，續行被下一個鍵吸收，一次弄壞 20 條 `physical_reason`，因為證據欄位完好所以看起來完全正常，撐到四個月後才被肉眼發現。
+
+判定用**中繼欄位黑名單**不用內容鍵白名單：內容鍵在各網域名字都不一樣（`text`／`prevalence`／`summary`／`one_line`／`data`／`description`…），白名單一定會漏；中繼欄位（certainty、evidence_grade、source_ids、caveat、tags…）是有限且穩定的。`caveat` 歸中繼——它談的是這筆資料可不可信，不是這筆資料在講什麼。
+
+**已實測會叫**：塞一個只剩 `certainty + evidence_grade + caveat` 的探針檔進 `canonical/`，validate 回報 1 筆後移除。第一次探針取名 `_w021probe.yaml` 沒被抓到，因為 `is_excluded()` 會排除底線開頭的 meta 檔——**驗新規則時檔名不要用底線開頭**，不然會把「規則沒生效」誤判成「資料很乾淨」。
+
 ### ✅ **讀者看得到 13 處機器鍵（source_id slug、schema 欄位名）。改在 drafts/ 不是 injuries.yaml**
 
 線上稽核抓到 10 處未渲染的 markdown 反引號，全部是同一類問題：**內部機器鍵寫進了面向讀者的散文**。來源健檢紀錄本身是有價值的內容（解釋某個數字為什麼被撤除），但它用 source_id 的 slug 稱呼文獻——讀者看到的是一串 `src.` 開頭的 slug，不是「Akkurt et al. 2017」。另有一處把 schema 欄位名（`fatal_acute: true`）當成論述用語，和一個早已不存在的內部檔案路徑 `Technica/自由式水感框架.md`。一律改成人看得懂的指稱，結論與語意完全不動。

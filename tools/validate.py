@@ -83,6 +83,10 @@ exit code：
         （在證據未定的宣稱上開處方），或 demand 缺 measurement_conditions
         （升 ready 卻沒有該相位的專項量測自證）。擋的是「把 provisional
         當成待補空格機械式翻成 ready」
+  W021  區塊標了 certainty，但整個區塊只剩中繼欄位、沒有任何內容欄位。
+        擋的是「證據標記還在、內容不見了」——刪多行鍵時漏刪續行、或續行
+        被下一個鍵吸收（beece5a 一次弄壞 20 條 physical_reason，四個月後
+        才被肉眼發現）
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -1180,6 +1184,60 @@ def check_practitioner_blocks(rel: str, data: object, warnings: dict):
         )
 
 
+# W021：宣告了確定性、卻沒有任何內容可宣告。下面這組是**中繼欄位**——它們描述
+# 「這段內容的證據狀態是什麼」，本身不是內容。用黑名單而不是列舉內容鍵，是因為
+# 內容鍵在各網域名字都不一樣（text／prevalence／summary／one_line／data／
+# description…），白名單會漏，而中繼欄位是有限且穩定的。
+METADATA_ONLY_KEYS = frozenset({
+    "certainty", "evidence_grade", "grade",
+    "source_ids", "sources", "source", "citation",
+    "observation_basis", "evidence_from", "caveat",
+    "verification_status", "claim_status", "action_status",
+    "pending_verification", "last_checked",
+    "id", "tags", "cross_ref", "cross_ref_ids",
+    "stroke", "level", "audience", "risk", "type", "status",
+    "measurement_conditions", "phase_model", "action_reference_frame",
+})
+
+
+def _has_content_value(value: object) -> bool:
+    """空字串、空 list、空 dict 都不算內容——它們在網站上就是那個空容器。"""
+    if isinstance(value, str):
+        return bool(value.strip())
+    if isinstance(value, (list, dict)):
+        return len(value) > 0
+    return value is not None
+
+
+def check_content_presence(rel: str, data: object, warnings: dict):
+    """W021：區塊標了 certainty，但整個區塊只剩中繼欄位、沒有任何內容。
+
+    這是「有標題沒內容」在資料層的樣子。呈現層的版本（標籤綁在區塊存在上而不是
+    綁在會印出來的欄位上）已經在 my-site 的 layout 修掉了，但根因會從兩邊長出來：
+    layout 那邊是綁錯條件，canonical 這邊是內容真的不見了。
+
+    真實案例是 `beece5a`：刪一個多行 `text:` 鍵時只刪了鍵和第一行，續行被下一個
+    鍵吸收——一次弄壞 20 條 `physical_reason`，證據標記全都還在，所以看起來完全
+    正常，撐到四個月後才被肉眼發現。這條規則專門擋那種「證據還在、內容沒了」。
+
+    `caveat` 算中繼不算內容：它談的是這筆資料可不可信，不是這筆資料在講什麼；
+    一個只剩 caveat 的區塊，讀者看到的是一段免責聲明配一個空位。
+    """
+    for loc, eid, block in iter_blocks(data):
+        if "certainty" not in block:
+            continue
+        if any(
+            k not in METADATA_ONLY_KEYS and _has_content_value(v)
+            for k, v in block.items()
+        ):
+            continue
+        warnings["W021"].append(
+            f"  file={rel} id={eid!r} at={loc} "
+            f"標了 certainty 但無任何內容欄位（只剩中繼欄位："
+            f"{', '.join(sorted(block.keys()))}）"
+        )
+
+
 def check_public_layer_leak(rel: str, data: object, errors: dict):
     """E010：診斷型鍵名出現在 public 子樹內。
 
@@ -1851,7 +1909,8 @@ def run_validation():
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
-        "W016": [], "W017": [], "W018": [], "W019": [], "W020": []
+        "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
+        "W021": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2045,6 +2104,7 @@ def run_validation():
         # W011 / E010 與來源契約同一輪走訪範圍（含 Drills）：教練觀測與
         # 診斷層鍵名在 Drills 也可能出現。
         check_practitioner_blocks(rel, data, warnings)
+        check_content_presence(rel, data, warnings)
         check_public_layer_leak(rel, data, errors)
         check_evidence_from(rel, data, all_id_set, errors)
 
@@ -2262,6 +2322,10 @@ def _write_report(
             "WARN",
             "`action_status: ready` 的必要條件未滿足（`claim_status` 不是 "
             "`supported`，或 demand 缺 `measurement_conditions`）",
+        ),
+        "W021": (
+            "WARN",
+            "區塊標了 `certainty` 但沒有任何內容欄位（證據標記還在、內容不見了）",
         ),
     }
 
