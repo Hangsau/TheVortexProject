@@ -466,8 +466,8 @@ errors:
           text: >-
             bicycle kick 的問題在膝蓋彎曲過大且主導踢水（膝先動、髖後動），而非膝蓋彎曲本身。最佳膝蓋
             彎曲角度 55–75°（下踢峰值），低於 55° 推進不足，超過 75° 進入 bicycle kick。
-          source: The Race Club VM 量化
-          source_ids: [src.the-race-club-vm-a]
+          source: The Race Club — Getting the Freestyle Kick Right
+          source_ids: [src.the-race-club-freestyle-kick-knee-bend]
       cross_ref: 教練說的「膝蓋鎖死」與教科書的 knee locking 意思相反、踝關節柔韌性
       cross_ref_ids: [free.tech.41, free.tech.13]
       correct_concept: >-
@@ -586,9 +586,12 @@ errors:
       evidence:
         - certainty: 🟠
           text: >-
-            旋轉速度峰值發生在划手推力峰值的特定時間窗口內時速度提升顯著；窗口外旋轉不帶來速度增益。
-          source: The Race Club Velocity Meter + Pressure Meter
-          source_ids: [src.the-race-club-velocity-meter-pressure-meter]
+            壓力計加陀螺儀讓身體與手臂的旋轉角速度可以和划手推力**同時**量到，因此時機好不好第一次
+            變成看得見的東西；四式都要靠耦合動作與推進的時機對齊才游得快。原文停在這裡——它證明
+            時機可被量測、且時機重要，沒有給出「窗口幾毫秒」或「窗口外增益為零」這種量化門檻，
+            那部分是本條上方 mechanism 的推導，不是量測結果。
+          source: The Race Club — Update on Race Club Sensors
+          source_ids: [src.the-race-club-sensors-update]
       cross_ref: 技術分析 §伍（Coupling 能量）
       cross_ref_ids: [free.tech.16, free.tech.29]
       correct_concept: >-

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 588,
+  "source_count": 591,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -10357,8 +10357,13 @@
       "identifier": {
         "url": "https://theraceclub.com/aqua_note/getting-the-freestyle-kick-right/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "free.err13",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[12].public.evidence[0]"
+        },
         {
           "id": "udk.tech.9",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -10490,63 +10495,12 @@
       ]
     },
     {
-      "id": "src.the-race-club-turn-when-to-start-dolphin-kick",
-      "display": "The Race Club — Turn Techniques Part I: When to start the Dolphin Kick",
+      "id": "src.the-race-club-sensors-update",
+      "display": "The Race Club — Swimming Technique: Update on Race Club Sensors",
       "verification_status": "verified",
       "identifier": {
-        "url": "https://theraceclub.com/aqua_note/turn-techniques-part-i-when-to-start-the-dolphin-kick/"
+        "url": "https://theraceclub.com/aqua_note/swimming-technique-update-on-race-club-sensors/"
       },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "udk.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[0]"
-        },
-        {
-          "id": "udk.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[1]"
-        }
-      ]
-    },
-    {
-      "id": "src.the-race-club-velocity-meter-a",
-      "display": "The Race Club velocity meter 實測",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
-          "file": "canonical/movement/stroke-demands.yaml",
-          "path": "demands[64]"
-        },
-        {
-          "id": "udk.tech.17",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[153].public.evidence[0]"
-        },
-        {
-          "id": "udk.tech.17",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[153].public.mechanism"
-        }
-      ]
-    },
-    {
-      "id": "src.the-race-club-velocity-meter-b",
-      "display": "The Race Club，velocity meter 實測",
-      "verification_status": "retracted",
-      "identifier": {},
-      "usage_count": 0,
-      "usages": []
-    },
-    {
-      "id": "src.the-race-club-velocity-meter-pressure-meter",
-      "display": "The Race Club Velocity Meter + Pressure Meter",
-      "verification_status": "unverified",
-      "identifier": {},
       "usage_count": 1,
       "usages": [
         {
@@ -10557,24 +10511,33 @@
       ]
     },
     {
-      "id": "src.the-race-club-vm-a",
-      "display": "The Race Club VM 量化",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 1,
+      "id": "src.the-race-club-start-arm-swing",
+      "display": "The Race Club — The Coupling Motions of the Start: The Arm Swing",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/the-coupling-motions-of-the-start-the-arm-swing/"
+      },
+      "usage_count": 2,
       "usages": [
         {
-          "id": "free.err13",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[12].public.evidence[0]"
+          "id": "movement.demand.starts-turns.takeoff.rear-leg-direction-reversal-and-joint-sequencing",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[42]"
+        },
+        {
+          "id": "starts-turns.tech.43",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[182].public.evidence[1]"
         }
       ]
     },
     {
-      "id": "src.the-race-club-vm-b",
-      "display": "The Race Club VM 量測資料",
-      "verification_status": "unverified",
-      "identifier": {},
+      "id": "src.the-race-club-starts-head-lift",
+      "display": "The Race Club — Improving Your Starts: Head Lift",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/improving-your-starts-head-lift/"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -10588,6 +10551,77 @@
           "path": "points[182].public.evidence[0]"
         }
       ]
+    },
+    {
+      "id": "src.the-race-club-turn-when-to-start-dolphin-kick",
+      "display": "The Race Club — Turn Techniques Part I: When to start the Dolphin Kick",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/turn-techniques-part-i-when-to-start-the-dolphin-kick/"
+      },
+      "usage_count": 4,
+      "usages": [
+        {
+          "id": "movement.demand.udk.kick-initiation.first-kick-knee-flexion-scales-with-glide-delay",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[64]"
+        },
+        {
+          "id": "udk.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[82].public.evidence[0]"
+        },
+        {
+          "id": "udk.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[82].public.evidence[1]"
+        },
+        {
+          "id": "udk.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[153].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.the-race-club-velocity-meter-a",
+      "display": "The Race Club velocity meter 實測",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.the-race-club-velocity-meter-b",
+      "display": "The Race Club，velocity meter 實測",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.the-race-club-velocity-meter-pressure-meter",
+      "display": "The Race Club Velocity Meter + Pressure Meter",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.the-race-club-vm-a",
+      "display": "The Race Club VM 量化",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.the-race-club-vm-b",
+      "display": "The Race Club VM 量測資料",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.theres-a-drill-for-that",

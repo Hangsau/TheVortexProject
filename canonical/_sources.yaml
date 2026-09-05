@@ -4729,6 +4729,47 @@ sources:
       it's actually more than it seems」。**邊界**：原文是給泳者的指導語（you should），不是
       對精英選手的統計觀察；free.err18 的敘述已據此改寫，不再寫成「精英通常如此」。
 
+  - id: src.the-race-club-sensors-update
+    display: "The Race Club — Swimming Technique: Update on Race Club Sensors"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/swimming-technique-update-on-race-club-sensors/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：「For the first time, we can measure the body and arm's rotation
+      and rotational speed concurrently with the propulsion forces」「To swim fast, all four
+      strokes require excellent timing of the coupling motions with the propulsion」。
+      **邊界**：原文證明「時機可被同時量測、且時機重要」，**沒有**給出時間窗口寬度，也沒有說
+      窗口外增益為零——引用時不要把推導寫成量測結果。
+
+  - id: src.the-race-club-starts-head-lift
+    display: "The Race Club — Improving Your Starts: Head Lift"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/improving-your-starts-head-lift/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：Amanda Kendall 抬頭 vs 低頭，入水距離 2.96 vs 2.64 公尺、
+      到 12 公尺 5.41 vs 5.56 秒，與本專案 starts-turns 條目所記完全一致。
+      **原文自身有一處不一致**：表格差值是 0.32 m，內文卻寫「.28 meters further（11%）」。
+      本專案採用表格值並保留這個註記，不去替原文選一個。時間差 0.15 秒（原文寫 .15）——
+      本專案 mechanism 原本誤寫 0.12，2026-09-05 已更正。
+
+  - id: src.the-race-club-start-arm-swing
+    display: "The Race Club — The Coupling Motions of the Start: The Arm Swing"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/the-coupling-motions-of-the-start-the-arm-swing/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：大圓直臂 vs 小圓彎肘的機制說明（直臂使圓周運動動能變四倍）在此篇，
+      量測示範用的是 **Zane Grothe**，到 12 公尺快 2%（0.1 秒）。
+      **本篇沒有 Niko Obrovac，也沒有 30.14／19.09 m/s² 這組數字**——見
+      starts-turns.tech.43 evidence 的查證註記。
+
   - id: src.the-race-club-fundamentals-of-fast-swimming-a
     display: "The Race Club — Fundamentals of Fast Swimming Ch 13, 16"
     type: other
@@ -4774,8 +4815,16 @@ sources:
   - id: src.the-race-club-velocity-meter-a
     display: "The Race Club velocity meter 實測"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.the-race-club-velocity-meter-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下，理由同 src.the-race-club-velocity-meter-b：display 是
+      「機構名 + 器材名」，velocity meter 是站上幾十篇文章共用的器材，定位不到任何一篇。
+      原本 3 處引用的處理：technical-analysis 的 udk.tech.17 evidence 與 stroke-demands
+      的起踢相位，都是同一組 0.1／0.18 秒實測，已改指
+      src.the-race-club-turn-when-to-start-dolphin-kick；udk.tech.17 的 mechanism
+      則**直接移除**——那條講的是淨力—速度曲線交點模型，回讀原文確認該文根本沒有談
+      force–velocity curve 或 crossover speed，掛在那裡是替一個它沒說過的模型背書。
+      該 mechanism 只留 src.takeda-2026，那才是模型的出處。
 
   - id: src.the-race-club-velocity-meter-b
     display: "The Race Club，velocity meter 實測"
@@ -4792,20 +4841,31 @@ sources:
   - id: src.the-race-club-velocity-meter-pressure-meter
     display: "The Race Club Velocity Meter + Pressure Meter"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是兩個器材名，定位不到任何一篇。唯一引用（旋轉角速度與划手推力
+      同時量測、時機對齊）已改指 src.the-race-club-sensors-update。留墓碑擋同型字串再登錄。
 
   - id: src.the-race-club-vm-a
     display: "The Race Club VM 量化"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.the-race-club-vm-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：「VM 量化」不是文獻。唯一引用是膝屈曲 55–75°／bicycle kick 那條，
+      已定位到 src.the-race-club-freestyle-kick-knee-bend（同一組數字、原文可查）。
+      留墓碑擋同型字串再登錄。
 
   - id: src.the-race-club-vm-b
     display: "The Race Club VM 量測資料"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.the-race-club-vm-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：「VM 量測資料」不是文獻，而它掛的是**三名選手、八個小數點數字**——
+      這種模糊字串加具體數字的組合最危險。拆解後：Amanda Kendall 抬頭那組查到原文
+      （src.the-race-club-starts-head-lift，逐值相符）；大圓／小圓繞臂的機制查到原文
+      （src.the-race-club-start-arm-swing，但示範選手是 Zane Grothe）；
+      Niko Obrovac 與 Isabella Arcila 兩組**公開頁面完全查不到**，已在
+      starts-turns.tech.43 降為 🔴 並寫明查證過程。留墓碑擋同型字串再登錄。
 
   - id: src.theres-a-drill-for-that
     display: "There's a Drill for That"

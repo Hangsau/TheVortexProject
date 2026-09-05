@@ -9805,7 +9805,7 @@
         ]
       },
       "source_ids": [
-        "src.the-race-club-vm-a"
+        "src.the-race-club-freestyle-kick-knee-bend"
       ],
       "outgoing_ids": [
         "free.tech.13",
@@ -9908,7 +9908,7 @@
         ]
       },
       "source_ids": [
-        "src.the-race-club-velocity-meter-pressure-meter"
+        "src.the-race-club-sensors-update"
       ],
       "outgoing_ids": [
         "free.tech.16",
@@ -13990,7 +13990,8 @@
       },
       "source_ids": [
         "src.neumann-2017",
-        "src.the-race-club-vm-b"
+        "src.the-race-club-start-arm-swing",
+        "src.the-race-club-starts-head-lift"
       ],
       "outgoing_ids": []
     },
@@ -14392,7 +14393,7 @@
         "src.hall-murphy-2020",
         "src.lyttle-2000",
         "src.neumann-2017",
-        "src.the-race-club-velocity-meter-a"
+        "src.the-race-club-turn-when-to-start-dolphin-kick"
       ],
       "outgoing_ids": [
         "movement.demand.starts-turns.underwater-dolphin-kick.body-orientation-selects-which-naming-applies",
@@ -19156,6 +19157,7 @@
           "coupling"
         ],
         "certainty": [
+          "🔴",
           "🟠"
         ],
         "stroke": [
@@ -19163,7 +19165,8 @@
         ]
       },
       "source_ids": [
-        "src.the-race-club-vm-b"
+        "src.the-race-club-start-arm-swing",
+        "src.the-race-club-starts-head-lift"
       ],
       "outgoing_ids": []
     },
@@ -20629,7 +20632,7 @@
       "source_ids": [
         "src.lyttle-2000",
         "src.takeda-2026",
-        "src.the-race-club-velocity-meter-a"
+        "src.the-race-club-turn-when-to-start-dolphin-kick"
       ],
       "outgoing_ids": []
     },
