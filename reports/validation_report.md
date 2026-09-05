@@ -147,6 +147,70 @@
 
 ---
 
+## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
+
+**WARN，共 57 筆**
+
+  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 27824234' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 16596112' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\health\injuries.yaml field='caveat' source_id='src.pmc8147101' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\health\injuries.yaml field='caveat' source_id='src.pmc2858141' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 20490545' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1038/s41398-024-02933-9' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='population_note' PMID/PMC='PMC3261851' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC11723612' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 26878097' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1016/j.neulet.2017.02.033' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC11723612' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='population_note' PMID/PMC='PMC11723612' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 19131473' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC4263011' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 9140893' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 19224911' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 13658305' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 25181542' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 19059813' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC4495877' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.3390/ijerph181910259' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2020.01659' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 18769531' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 31578934' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1023/A:1014805132406,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 18769531' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fspor.2023.1236256,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1177/17479541251400621' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 31578934' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1177/17479541231174806,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2026.1771962' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2025.1574429,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 38242101' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.3389/fpsyg.2025.1667429,' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 40110418' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 29910410' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID 29910410' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC7063062' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 17566428' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1007/s00426-025-02225-x' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 29691389' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC12433939' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 40426460' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 16368636' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 39480294' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 33845276' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC12424610' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC10244639' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 39480294' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1080/17458927.2022.2135358' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 7932942' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1080/17509840802287218' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1111/j.1469-8986.1994.tb01039.x' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC10497761' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+  file=canonical\psychology\psychology.yaml field='text' DOI='10.1260/174795407780367177' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+
+---
+
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
 **WARN，共 73 筆**

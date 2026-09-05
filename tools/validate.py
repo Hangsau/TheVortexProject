@@ -99,6 +99,10 @@ exit code：
   W023  `_sources.yaml` 的 display 是本專案自己的檔案路徑
         （`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源，
         等於用未經查證的內部文字滿足 E005。且這串會原樣印上讀者頁面。
+  W024  機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位。散文欄位原樣上線，
+        讀者看到「（PMID: 39480294）」而不是「McKay 等人 2024」。
+        引用顯示欄位（`source`／`sources`／`citation`）不算——那裡帶識別碼
+        是學術慣例。
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -1383,6 +1387,58 @@ def check_text_is_citation(
                 break
 
 
+# 讀者散文欄位——這些會原樣上線。`source`／`sources`／`citation` 不在內：
+# 那三個本來就是引用顯示層，裡面帶 PMID 是學術慣例，不是外洩。
+_NARRATIVE_KEYS = frozenset({
+    "text", "plain_text", "caveat", "description", "observation_basis",
+    "why", "better", "l_note", "population_note", "practical_implication",
+    "prevalence", "summary",
+})
+
+_MACHINE_KEY_PATTERNS = (
+    ("PMID/PMC", re.compile(r"PMID[:：]?\s*\d{6,9}|PMC\d{6,9}")),
+    ("DOI", re.compile(r"\b10\.\d{4,9}/[^\s，。）)、；;]+")),
+    ("source_id", re.compile(r"\bsrc\.[a-z0-9][a-z0-9-]*")),
+)
+
+
+def check_machine_key_in_prose(rel: str, data: object, warnings: dict):
+    """W024：機器鍵寫進讀者看得到的散文欄位。
+
+    CLAUDE.md 的規定是「文字 citation 只能是閱讀顯示，不是資料鍵；反過來也成立
+    ——機器鍵不得出現在讀者看得到的散文裡」。`sync_vortex.py` 對 public 子樹整包
+    搬運，所以 `text: …（PMID: 39480294）…` 會**原字上線**，讀者看到的是一串數字，
+    而不是「McKay 等人 2024」。
+
+    只掃散文欄位。`source: "… PMID: 11765737"` 不算——引用顯示層帶識別碼是
+    學術慣例。判準是「這句話是寫給誰讀的」：散文寫給讀者，citation 欄位本來就是
+    書目。
+
+    `_taxonomy.yaml` 排除：它是詞彙／schema 定義檔不是內容檔，`note` 裡寫
+    「Heinlein & Cosgarea 2010（src.pmc3438875）」是給維護者看的對照，
+    而且人名年份已經在旁邊了。
+    """
+    if Path(rel).name == "_taxonomy.yaml":
+        return
+
+    def walk(node, key=None):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                walk(v, k)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v, key)
+        elif isinstance(node, str) and key in _NARRATIVE_KEYS:
+            for label, pat in _MACHINE_KEY_PATTERNS:
+                for m in pat.findall(node):
+                    warnings["W024"].append(
+                        f"  file={rel} field={key!r} {label}={m!r} "
+                        f"寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml"
+                    )
+
+    walk(data)
+
+
 def check_public_layer_leak(rel: str, data: object, errors: dict):
     """E010：診斷型鍵名出現在 public 子樹內。
 
@@ -2056,7 +2112,7 @@ def run_validation():
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
-        "W021": [], "W022": [], "W023": []
+        "W021": [], "W022": [], "W023": [], "W024": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2253,6 +2309,7 @@ def run_validation():
         check_content_presence(rel, data, warnings)
         check_text_is_citation(rel, data, source_displays, warnings)
         check_public_layer_leak(rel, data, errors)
+        check_machine_key_in_prose(rel, data, warnings)
         check_evidence_from(rel, data, all_id_set, errors)
 
     # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
@@ -2406,6 +2463,12 @@ def _write_report(
             "WARN",
             "`text` 的內容就是它自己的來源名稱（「Mason 1992」）——"
             "只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）",
+        ),
+        "W024": (
+            "WARN",
+            "機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位"
+            "（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，"
+            "讀者看到的是識別碼不是「作者 年份」",
         ),
         "W023": (
             "WARN",
