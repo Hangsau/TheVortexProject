@@ -6056,7 +6056,7 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-breaststroke-systematic-review"
+        "src.olstad-2017-world-champion-breaststroke"
       ],
       "outgoing_ids": []
     },
@@ -6396,6 +6396,7 @@
           "stroke-cycle"
         ],
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "stroke": [
@@ -6403,7 +6404,8 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-breaststroke-systematic-review"
+        "src.nicol-2022-breaststroke-systematic-review",
+        "src.olstad-2017-world-champion-breaststroke"
       ],
       "outgoing_ids": []
     },

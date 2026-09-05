@@ -6032,7 +6032,7 @@
       "display": "Nicol, E., Pearson, S., Saxby, D., Minahan, C., & Tor, E. (2022). Stroke Kinematics, Temporal Patterns, Neuromuscular Activity, Pacing and Kinetics in Elite Breaststroke Swimming: A Systematic Review. Sports Medicine - Open, 8(1), 75.",
       "verification_status": "verified",
       "identifier": {},
-      "usage_count": 22,
+      "usage_count": 19,
       "usages": [
         {
           "id": "breast.L4.timing",
@@ -6053,16 +6053,6 @@
           "id": "breast.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[46].public.physical_reason"
-        },
-        {
-          "id": "breast.tech.23",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[93].public.evidence[0]"
-        },
-        {
-          "id": "breast.tech.23",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[93].public.mechanism"
         },
         {
           "id": "breast.tech.24",
@@ -6107,12 +6097,7 @@
         {
           "id": "breast.tech.5",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[75].public.evidence[0]"
-        },
-        {
-          "id": "breast.tech.5",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[75].public.mechanism"
+          "path": "points[75].public.evidence[1]"
         },
         {
           "id": "breast.tech.6",
@@ -6296,8 +6281,23 @@
       "identifier": {
         "doi": "10.1123/ijspp.2015-0703"
       },
-      "usage_count": 1,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "breast.tech.23",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[93].public.evidence[0]"
+        },
+        {
+          "id": "breast.tech.23",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[93].public.mechanism"
+        },
+        {
+          "id": "breast.tech.5",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[75].public.evidence[0]"
+        },
         {
           "id": "psych.interaction.stress_hypertonia",
           "file": "canonical/psychology/psychology.yaml",
