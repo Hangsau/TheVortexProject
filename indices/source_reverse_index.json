@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 734,
+  "source_count": 738,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1112,6 +1112,23 @@
       "usages": []
     },
     {
+      "id": "src.chen-2026-rmt-swimmers-meta",
+      "display": "Chen, Y., Yi, Q., Meng, K., Tao, K., & Qin, S. (2026). Effects of respiratory muscle training on swimming performance, respiratory muscle function, and pulmonary function of competitive swimmers: a systematic review and meta-analysis. Frontiers in Physiology, 17, 1770925.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fphys.2026.1770925",
+        "url": "https://doi.org/10.3389/fphys.2026.1770925"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.imt",
+          "file": "canonical/breathing/training.yaml",
+          "path": "imt"
+        }
+      ]
+    },
+    {
       "id": "src.cheng-2022-breaststrokers-knee-mri",
       "display": "Cheng KY, Chambers H, Dwek JR. (2022). Magnetic resonance imaging appearance of breaststroker's knee. Pediatr Radiol 52(13):2645–2647.",
       "verification_status": "verified",
@@ -1552,6 +1569,24 @@
       ]
     },
     {
+      "id": "src.cunha-2019-imt-elite-swimmers-rct",
+      "display": "Cunha, M., Mendes, F., Paciência, I., Rodolfo, A., Carneiro-Leão, L., Rama, T., et al. (2019). The effect of inspiratory muscle training on swimming performance, inspiratory muscle strength, lung function, and perceived breathlessness in elite swimmers: a randomized controlled trial. Porto Biomedical Journal, 4(6), e49.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33501396",
+        "doi": "10.1097/j.pbj.0000000000000049",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33501396/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.imt",
+          "file": "canonical/breathing/training.yaml",
+          "path": "imt"
+        }
+      ]
+    },
+    {
       "id": "src.danswim",
       "display": "DanSwim",
       "verification_status": "unverified",
@@ -1579,6 +1614,23 @@
           "id": "drowning",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[25].references[3]"
+        }
+      ]
+    },
+    {
+      "id": "src.de-asis-fernandez-2022-apnoea-meta",
+      "display": "de Asís-Fernández, F., Sereno, D., Turner, A. P., González-Mohíno, F., & González-Ravé, J. M. (2022). Effects of apnoea training on aerobic and anaerobic performance: A systematic review and meta-analysis. Frontiers in Physiology, 13, 964144.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fphys.2022.964144",
+        "url": "https://doi.org/10.3389/fphys.2022.964144"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.co2_tolerance",
+          "file": "canonical/breathing/training.yaml",
+          "path": "co2_tolerance"
         }
       ]
     },
@@ -4203,6 +4255,23 @@
           "id": "psych.imagery.functional_types",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[3].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.liu-2025-rmt-swimming-meta",
+      "display": "Liu, S., Gou, P., & Lin, M. (2025). The effect of respiratory muscle training on swimming performance: a systematic review and meta-analysis. Frontiers in Physiology, 16, 1638739.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fphys.2025.1638739",
+        "url": "https://doi.org/10.3389/fphys.2025.1638739"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.training.imt",
+          "file": "canonical/breathing/training.yaml",
+          "path": "imt"
         }
       ]
     },
@@ -8583,11 +8652,11 @@
     },
     {
       "id": "src.pmid-24421735",
-      "display": "閉氣訓練統合分析 Frontiers Physiology 2022 (DOI 10.3389/fphys.2022.964144, 7 RCT n=126); 減少呼吸頻率訓練 RCT (PMID 24421735)",
-      "verification_status": "unverified",
+      "display": "Kapus, J., Ušaj, A., & Lomax, M. (2013). Adaptation of endurance training with a reduced breathing frequency. Journal of Sports Science & Medicine, 12(4), 744–752.",
+      "verification_status": "verified",
       "identifier": {
-        "doi": "10.3389/fphys.2022.964144",
-        "pmid": "24421735"
+        "pmid": "24421735",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24421735/"
       },
       "usage_count": 1,
       "usages": [
@@ -8930,11 +8999,12 @@
     },
     {
       "id": "src.pmid-39351143",
-      "display": "RMT 統合分析 Frontiers Physiology 2025 (DOI 10.3389/fphys.2025.1638739, 10 RCT n=230); 各距離分層統合分析 (DOI 10.3389/fphys.2026.1770925, 14 RCT n=375); 肺功能/MIP 統合分析 Frontiers Sports Act Living 2024 (PMID 39351143, 13 研究 n=277)",
-      "verification_status": "unverified",
+      "display": "Carvajal-Tello, N., Ortega, J. G., Caballero-Lozada, A. F., Devia-Quiñonez, M. J., González-Calzada, I., & Rojas-Hernández, D. (2024). Effects of inspiratory muscle training on lung function parameter in swimmers: a systematic review and meta-analysis. Frontiers in Sports and Active Living, 6, 1429902.",
+      "verification_status": "verified",
       "identifier": {
-        "doi": "10.3389/fphys.2025.1638739",
-        "pmid": "39351143"
+        "pmid": "39351143",
+        "doi": "10.3389/fspor.2024.1429902",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39351143/"
       },
       "usage_count": 1,
       "usages": [

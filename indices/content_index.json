@@ -6867,6 +6867,7 @@
         ]
       },
       "source_ids": [
+        "src.de-asis-fernandez-2022-apnoea-meta",
         "src.pmid-24421735"
       ],
       "outgoing_ids": [
@@ -6886,6 +6887,9 @@
         ]
       },
       "source_ids": [
+        "src.chen-2026-rmt-swimmers-meta",
+        "src.cunha-2019-imt-elite-swimmers-rct",
+        "src.liu-2025-rmt-swimming-meta",
         "src.pmid-39351143"
       ],
       "outgoing_ids": [

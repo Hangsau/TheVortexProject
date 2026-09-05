@@ -3257,14 +3257,18 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-24421735
-    display: "閉氣訓練統合分析 Frontiers Physiology 2022 (DOI 10.3389/fphys.2022.964144, 7 RCT n=126); 減少呼吸頻率訓練 RCT (PMID 24421735)"
-    type: other
-    verification_status: unverified
-    year: 2022
+    display: "Kapus, J., Ušaj, A., & Lomax, M. (2013). Adaptation of endurance training with a reduced breathing frequency. Journal of Sports Science & Medicine, 12(4), 744–752."
+    title: "Adaptation of endurance training with a reduced breathing frequency."
+    type: journal-article
+    verification_status: verified
+    authors: ["Kapus J", "Ušaj A", "Lomax M"]
+    year: 2013
+    container: "Journal of Sports Science & Medicine"
     identifier:
-      doi: "10.3389/fphys.2022.964144"
       pmid: "24421735"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
+      url: "https://pubmed.ncbi.nlm.nih.gov/24421735/"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 拆分：原登錄把本篇與 de Asís-Fernández 2022 閉氣統合分析綁在同一個鍵，且把該統合分析的 DOI 掛在本篇的 pmid 旁邊，等於一個鍵同時宣稱兩份文獻。統合分析已另立 src.de-asis-fernandez-2022-apnoea-meta，本鍵只留 Kapus 2013。摘要核對：12 名男性受試者分為實驗組與對照組（因此每組僅約 6 人），兩組都做每週三次自行車測功計間歇、共六週，實驗組以每分鐘 10 次呼吸執行。實驗組訓練後肺活量 +8±8%（p=0.02）、吸入 3% CO2 時的運動中通氣反應 −45±27%（p=0.03）。作者自己在 Key Points 註明：這種呼吸型態無法在較高強度下執行，因此不預期有氧耐力（峰值攝氧量）改善。"
 
   - id: src.pmid-24984154
     display: "Willems, T. M., Cornelis, J. A., De Deurwaerder, L. E., Roelandt, F., & De Mits, S. (2014). The effect of ankle muscle strength and flexibility on dolphin kick performance in competitive swimmers. Human Movement Science, 36, 167–176."
@@ -3397,13 +3401,77 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-39351143
-    display: "RMT 統合分析 Frontiers Physiology 2025 (DOI 10.3389/fphys.2025.1638739, 10 RCT n=230); 各距離分層統合分析 (DOI 10.3389/fphys.2026.1770925, 14 RCT n=375); 肺功能/MIP 統合分析 Frontiers Sports Act Living 2024 (PMID 39351143, 13 研究 n=277)"
-    type: other
-    verification_status: unverified
+    display: "Carvajal-Tello, N., Ortega, J. G., Caballero-Lozada, A. F., Devia-Quiñonez, M. J., González-Calzada, I., & Rojas-Hernández, D. (2024). Effects of inspiratory muscle training on lung function parameter in swimmers: a systematic review and meta-analysis. Frontiers in Sports and Active Living, 6, 1429902."
+    title: "Effects of inspiratory muscle training on lung function parameter in swimmers: a systematic review and meta-analysis."
+    type: journal-article
+    verification_status: verified
+    authors: ["Carvajal-Tello N", "Ortega JG", "Caballero-Lozada AF", "Devia-Quiñonez MJ", "González-Calzada I", "Rojas-Hernández D"]
+    year: 2024
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: "39351143"
+      doi: "10.3389/fspor.2024.1429902"
+      url: "https://pubmed.ncbi.nlm.nih.gov/39351143/"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 拆分：原登錄把三份統合分析綁在同一個鍵，且 identifier 底下的 doi 是 Liu 2025 那篇、pmid 是本篇，兩個識別碼指向不同文獻。另兩份已另立 src.liu-2025-rmt-swimming-meta 與 src.chen-2026-rmt-swimmers-meta，本鍵只留 Carvajal-Tello 2024。本篇是 IMT（純吸氣肌訓練）專屬的統合分析，這一點在與另兩份對照時很關鍵——Chen 2026 顯示 FEV1 只有在合併式 RMT 下才顯著、單純 IMT 不顯著，正好解釋本篇 FEV1 未達顯著（p=0.06）。"
+
+  - id: src.de-asis-fernandez-2022-apnoea-meta
+    display: "de Asís-Fernández, F., Sereno, D., Turner, A. P., González-Mohíno, F., & González-Ravé, J. M. (2022). Effects of apnoea training on aerobic and anaerobic performance: A systematic review and meta-analysis. Frontiers in Physiology, 13, 964144."
+    title: "Effects of apnoea training on aerobic and anaerobic performance: A systematic review and meta-analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["de Asís-Fernández F", "Sereno D", "Turner AP", "González-Mohíno F", "González-Ravé JM"]
+    year: 2022
+    container: "Frontiers in Physiology"
+    identifier:
+      doi: "10.3389/fphys.2022.964144"
+      url: "https://doi.org/10.3389/fphys.2022.964144"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 自 src.pmid-24421735 的複合登錄拆出。書目經 Crossref 核對（Frontiers in Physiology 13，2022-09-27）。本庫引用其「閉氣訓練不提升 VO2max、但峰值血乳酸顯著上升」的結論，作為 CO2 表外推到游泳的旁證上限。"
+
+  - id: src.liu-2025-rmt-swimming-meta
+    display: "Liu, S., Gou, P., & Lin, M. (2025). The effect of respiratory muscle training on swimming performance: a systematic review and meta-analysis. Frontiers in Physiology, 16, 1638739."
+    title: "The effect of respiratory muscle training on swimming performance: a systematic review and meta-analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["Liu S", "Gou P", "Lin M"]
+    year: 2025
+    container: "Frontiers in Physiology"
     identifier:
       doi: "10.3389/fphys.2025.1638739"
-      pmid: "39351143"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+      url: "https://doi.org/10.3389/fphys.2025.1638739"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 自 src.pmid-39351143 的複合登錄拆出。書目經 Crossref 核對（Frontiers in Physiology 16，2025-07-17）。10 篇研究 n=230，合併後游泳表現 SMD −0.49（95% CI −0.70 至 −0.28，p<0.00001）。注意本庫內另有四個不同的 Liu 2025：src.liu-2025-core-meta、src.liu-2025-core-stability-youth-swimmers、src.liu-2025-bpn-coach-athlete-meta、src.liu-2025-imagery-meta，皆為不同作者群、不同主題。"
+
+  - id: src.chen-2026-rmt-swimmers-meta
+    display: "Chen, Y., Yi, Q., Meng, K., Tao, K., & Qin, S. (2026). Effects of respiratory muscle training on swimming performance, respiratory muscle function, and pulmonary function of competitive swimmers: a systematic review and meta-analysis. Frontiers in Physiology, 17, 1770925."
+    title: "Effects of respiratory muscle training on swimming performance, respiratory muscle function, and pulmonary function of competitive swimmers: a systematic review and meta-analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["Chen Y", "Yi Q", "Meng K", "Tao K", "Qin S"]
+    year: 2026
+    container: "Frontiers in Physiology"
+    identifier:
+      doi: "10.3389/fphys.2026.1770925"
+      url: "https://doi.org/10.3389/fphys.2026.1770925"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 自 src.pmid-39351143 的複合登錄拆出，並以全文核對。14 篇研究、375 名競技泳者。顯著：MIP SMD 0.65（0.29–1.01, p=0.001）、FEV1 0.45（0.19–0.72, p=0.001）、FIV1 0.41（0.04–0.79, p=0.03）、有氧游泳表現 1.02（0.03–2.00, p=0.04，但 I²=70.48% 異質性高）。不顯著：MEP、FVC、MVV，以及 50m（SMD −0.38，95% CI −0.98 至 0.21，p=0.20）、100m（−0.17，−0.54 至 0.19，p=0.36）、200m（−0.07，−0.57 至 0.44，p=0.80）三個距離的自由式成績。次群組分析中只有介入型態顯著調節 FEV1（P_diff=0.03；合併式 RMT 0.78 [0.38–1.17] 顯著，單純 IMT 0.19 [−0.17–0.55] 不顯著）；競技水準、訓練期長、每週次數皆無調節作用。本篇的存在直接推翻本庫原本「目前沒有任何依距離分層的證據」這句話。"
+
+  - id: src.cunha-2019-imt-elite-swimmers-rct
+    display: "Cunha, M., Mendes, F., Paciência, I., Rodolfo, A., Carneiro-Leão, L., Rama, T., et al. (2019). The effect of inspiratory muscle training on swimming performance, inspiratory muscle strength, lung function, and perceived breathlessness in elite swimmers: a randomized controlled trial. Porto Biomedical Journal, 4(6), e49."
+    title: "The effect of inspiratory muscle training on swimming performance, inspiratory muscle strength, lung function, and perceived breathlessness in elite swimmers: a randomized controlled trial."
+    type: journal-article
+    verification_status: verified
+    authors: ["Cunha M", "Mendes F", "Paciência I", "Rodolfo A", "Carneiro-Leão L", "Rama T"]
+    et_al: true
+    year: 2019
+    container: "Porto Biomedical Journal"
+    identifier:
+      pmid: "33501396"
+      doi: "10.1097/j.pbj.0000000000000049"
+      url: "https://pubmed.ncbi.nlm.nih.gov/33501396/"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 補登錄：本篇在 breathing.training.imt 的 source 顯示字串與 null_zh 內文都具名引用，卻始終沒有對應的 source_id——是複合鍵掩蓋掉的第三種失效樣態（不是重複、不是誤植，是整篇沒被登錄）。PubMed 所列刊期為 2019 Nov-Dec，Porto Biomed J 4(6):e49。"
 
   - id: src.pmid-39500300
     display: "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)"
