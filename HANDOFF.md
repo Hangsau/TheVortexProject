@@ -18,6 +18,35 @@
 
 總 WARN 因此從 129 變 **144**。
 
+### ✅ **機構層 `src.the-race-club` 剩下的 4 條，追回 3 條到單篇；第 4 條確認追不到，寫進登錄不補造**
+
+上一輪把 `src.the-race-club` 拆成不帶 identifier 的機構層登錄後，還有 4 條主張掛在上面。這輪逐條回原文查證：
+
+| 條目 | 主張 | 結果 |
+|---|---|---|
+| `free.err18` | 換氣時一邊護目鏡留在水裡 | → `src.the-race-club-3-breathing-tips`（2018 專欄） |
+| `udk.err8` | 流線滑行速度掉很快、彎膝減速量與時間點無關 | → `src.the-race-club-turn-when-to-start-dolphin-kick` |
+| `udk.err9` | 多數選手踢腿速度低於游泳速度 | → `src.the-race-club-flip-turn-kick-count` |
+| `breast.tech.15` | 每度髖旋轉推進 +5% | **追不到**，維持掛機構層 |
+
+**順手併掉一個模糊字串**：`udk.err8` 上方那條 Aaron Greenberg 的 0.1／0.18 秒實測，原本掛
+`src.the-race-club-velocity-meter-b`（display 是「機構名 + 器材名」，定位不到任何一篇）。查證時發現
+它和 `udk.err8` 那兩句根本是**同一篇文章的相鄰段落**，一併改指同一個新登錄。`velocity-meter-b`
+改成 `retracted` 墓碑——不是刪除，因為 velocity-meter-a／vm-a／vm-b 還有一整批同型模糊字串，
+墓碑是用來擋這個方向再長回來的。**W008 因此維持 3，沒有因為孤兒登錄變 4。**
+
+**追不到就說追不到**：breast.tech.15 的 5% 數字，站上唯一談蛙式髖旋轉的公開文章
+（Building Better Breaststroke Tools: Hip Internal Rotation）正文在會員牆後，公開段落沒有這個數字，
+換三組關鍵字也沒有。該條已有 `observation_basis`，維持 🟠 掛機構層。登錄的 notes 直接寫下
+「查了什麼、為什麼查不到」，下一個人不必重跑一次同樣的搜尋。
+
+**順帶消掉一個自我懷疑**：上一輪把 udk.tech.9 的膝屈曲從 30–40° 更正成 55–75°，這輪搜尋時
+跳出另一篇說「膝彎超過 60 度」是問題寫法，一度看起來像我改錯。回讀原文確認：那篇講的是踝活動度
+不足時的代償，而 Getting the Freestyle Kick Right 明講 “freestyle **and dolphin kick**” 共用
+55–75° 這個區間——海豚踢條目引它成立，上一輪的更正不需要再更正。已寫進該登錄的 notes。
+
+驗證：0 ERROR，W008 = 3，總 WARN 144（與上一輪同，本輪沒有新增缺陷）。
+
 ### ✅ **一個 URL 替 6 條無關主張背書，順帶查出一個線上的錯誤角度（30–40° → 55–75°）**
 
 `src.the-race-club` 的 display 是「The Race Club」（機構名），identifier 卻是**單篇文章** URL（自由式入水常見錯誤）。它被 9 個區塊引用，其中只有 3 條真的在講入水手型；另外 6 條是海豚踢膝屈曲、滑行減速、水下距離、蛙式髖旋轉、護目鏡換氣指標——**那個 URL 支撐不了任何一條**，但因為登錄看起來「有 identifier」，這 6 條在資料上長得像已查證。機構名 + 單篇 URL 的組合是最糟的：機構名讓它可以被任何主張引用，URL 讓它看起來有出處。

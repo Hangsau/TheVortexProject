@@ -617,10 +617,10 @@ errors:
       evidence:
         - certainty: 🟠
           text: >-
-            精英換氣時護目鏡另一側鏡片通常沒完全離開水面——這是「最小旋轉換氣」的外部指標。
-            「嘴角剛好露出水面就足夠」，不需看天花板。
-          source: The Race Club
-          source_ids: [src.the-race-club]
+            換氣時讓一邊的護目鏡、一隻耳朵、一邊臉頰留在水裡——這是「最小旋轉換氣」可以當場自己
+            檢查的外部指標。只露出半張嘴看起來不夠，實際上比想像的多，足以吸到氣，不需看天花板。
+          source: The Race Club — 3 Breathing Tips for Freestyle Swimming
+          source_ids: [src.the-race-club-3-breathing-tips]
       cross_ref: 技術分析 §陸（頭部位置與弓形波）
       cross_ref_ids: [free.tech.17, free.tech.18]
       correct_concept: >-
@@ -2985,15 +2985,16 @@ errors:
         - certainty: 🟠
           text: >-
             以精英選手 Aaron Greenberg（自由式）測試：立刻起踢比短暫滑行快 0.1 秒，
-            比長時間滑行快 0.18 秒（5 公尺成績）。
-          source: The Race Club，velocity meter 實測
-          source_ids: [src.the-race-club-velocity-meter-b]
+            比長時間滑行快 0.18 秒（5 公尺成績）。同篇另測仰式選手 Amy Bilquist，
+            立刻下踢比短滑行快 0.1 秒、長滑行則慢 0.16 秒。
+          source: The Race Club — Turn Techniques Part I（velocity meter 實測）
+          source_ids: [src.the-race-club-turn-when-to-start-dolphin-kick]
         - certainty: 🟠
           text: >-
             選手在流線型滑行時速度下降得非常快。彎膝準備第一下踢的減速量，不管在什麼時間點發生都差不多。
             等越久，就只是在從更慢的速度開始加速而已。
-          source: The Race Club
-          source_ids: [src.the-race-club]
+          source: The Race Club — Turn Techniques Part I
+          source_ids: [src.the-race-club-turn-when-to-start-dolphin-kick]
         - certainty: 🟢
           text: >-
             以冪律擬合流線滑行（SL）／海豚踢（DK）／自由式（FC）三者的淨力–流速曲線，
@@ -3041,9 +3042,11 @@ errors:
           source: yourswimlog
           source_ids: [src.yourswimlog-b]
         - certainty: 🟠
-          text: 大多數選手的水下踢腿速度低於其水面游泳速度，延長水下距離是在拖慢自己。
-          source: The Race Club
-          source_ids: [src.the-race-club]
+          text: >-
+            大多數選手的踢腿速度明顯低於其游泳速度，因此應該用最少的海豚踢數到出水點；
+            延長水下距離是在拖慢自己。
+          source: "The Race Club — Freestyle Flip Turn: Number of Kicks"
+          source_ids: [src.the-race-club-flip-turn-kick-count]
       cross_ref: 最優水下距離由個人速度衰減曲線決定、長水下距離的代謝代價
       cross_ref_ids: [udk.tech.18, udk.tech.19]
       correct_concept: >-

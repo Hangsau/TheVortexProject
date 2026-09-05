@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 585,
+  "source_count": 588,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -10262,27 +10262,28 @@
       "display": "The Race Club（機構層，未定位到單篇）",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 4,
+      "usage_count": 1,
       "usages": [
         {
           "id": "breast.tech.15",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[85].public.evidence[0]"
-        },
+        }
+      ]
+    },
+    {
+      "id": "src.the-race-club-3-breathing-tips",
+      "display": "The Race Club — 3 Breathing Tips for Freestyle Swimming (2018)",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/2018/05/15/3-breathing-tips-for-freestyle-swimming/"
+      },
+      "usage_count": 1,
+      "usages": [
         {
           "id": "free.err18",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[17].public.evidence[0]"
-        },
-        {
-          "id": "udk.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[1]"
-        },
-        {
-          "id": "udk.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[83].public.evidence[2]"
         }
       ]
     },
@@ -10304,6 +10305,22 @@
           "id": "udk.tech.9",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[145].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.the-race-club-flip-turn-kick-count",
+      "display": "The Race Club — Freestyle Flip Turn: Streamline, Dolphin Kick Technique, Number of Kicks",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/freestyle-flip-turn-streamline-dolphin-kick-dolphin-kick-technique-number-of-kicks/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[83].public.evidence[2]"
         }
       ]
     },
@@ -10473,6 +10490,27 @@
       ]
     },
     {
+      "id": "src.the-race-club-turn-when-to-start-dolphin-kick",
+      "display": "The Race Club — Turn Techniques Part I: When to start the Dolphin Kick",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/turn-techniques-part-i-when-to-start-the-dolphin-kick/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "udk.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[82].public.evidence[0]"
+        },
+        {
+          "id": "udk.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[82].public.evidence[1]"
+        }
+      ]
+    },
+    {
       "id": "src.the-race-club-velocity-meter-a",
       "display": "The Race Club velocity meter 實測",
       "verification_status": "unverified",
@@ -10499,16 +10537,10 @@
     {
       "id": "src.the-race-club-velocity-meter-b",
       "display": "The Race Club，velocity meter 實測",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "udk.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.the-race-club-velocity-meter-pressure-meter",

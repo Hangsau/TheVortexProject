@@ -4641,8 +4641,14 @@ sources:
       拆成 src.the-race-club-freestyle-hand-entry：那個 URL 只支撐得了入水手型那幾條，
       卻替海豚踢、蛙式髖旋轉、換氣指標等 6 條完全無關的主張背書，是「一個 URL 當全機構
       擋箭牌」。**本登錄刻意不帶 identifier**，避免同樣的事再發生一次。
-      仍掛在這裡的 4 條（free.err18 護目鏡換氣指標、udk.err8 滑行減速、udk.err9 水下
-      慢於水面、breast.tech.15 每度髖旋轉 5%）尚未定位到單篇，需逐條回原文脈絡重建。
+      2026-09-05 續查，原本掛在這裡的 4 條已解決 3 條：free.err18 → src.the-race-club-3-breathing-tips、
+      udk.err8 → src.the-race-club-turn-when-to-start-dolphin-kick、
+      udk.err9 → src.the-race-club-flip-turn-kick-count。
+      **剩 breast.tech.15（每度髖旋轉推進 +5%）追不到**：站上談蛙式髖旋轉的公開文章是
+      Building Better Breaststroke Tools: Hip Internal Rotation，正文在會員牆後，
+      公開可讀的部分沒有這個數字；換三組關鍵字搜尋也沒有。該條已有 observation_basis，
+      維持 🟠 掛在機構層，不補造來源。另注意該文標題講的是**內旋**，而條目本身標記了
+      內旋／外旋的歸屬衝突（見 breast.tech.15 的 text），查證時不要拿標題當定案。
 
   - id: src.the-race-club-freestyle-hand-entry
     display: "The Race Club — Common Mistakes from the Freestyle Hand Entry"
@@ -4676,6 +4682,52 @@ sources:
       2026-09-05 讀原文查證：理想膝屈曲為「around 55-75 degrees」，低於 55° 推進不足、
       高於 75° 弊大於利。用來更正 udk.tech.9 原本寫的「最優膝屈曲約 30–40°」——那個數字
       與它自己掛的來源相反（見該條目的更正註記）。
+      2026-09-05 補記：另有一篇 More on the Dolphin Kick 提到「膝彎超過 60 度」是踝活動度
+      不足時的代償寫法，與本篇的 55–75° 不衝突——本篇明講「freestyle and dolphin kick」
+      共用同一區間，海豚踢條目（udk.tech.9）引本篇成立。
+
+  - id: src.the-race-club-turn-when-to-start-dolphin-kick
+    display: "The Race Club — Turn Techniques Part I: When to start the Dolphin Kick"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/turn-techniques-part-i-when-to-start-the-dolphin-kick/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證，三句都在這篇：①「how quickly the swimmer slows down in the
+      streamline position while gliding off the wall without kicking」②「Bending the knees
+      for the first down kick slows the swimmer down a similar amount regardless of when it
+      is taken」③ Aaron Greenberg 立刻起踢比短滑行快 0.1 秒、比長滑行快 0.18 秒（5 公尺）。
+      原本 ③ 掛 src.the-race-club-velocity-meter-b、①② 掛機構層 src.the-race-club，
+      兩條其實是同一篇的相鄰段落，一併改指本登錄。
+
+  - id: src.the-race-club-flip-turn-kick-count
+    display: "The Race Club — Freestyle Flip Turn: Streamline, Dolphin Kick Technique, Number of Kicks"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://theraceclub.com/aqua_note/freestyle-flip-turn-streamline-dolphin-kick-dolphin-kick-technique-number-of-kicks/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：「Since most swimmers have kick speeds considerably slower than
+      their swim speeds, they should be taking the minimum number of dolphin kicks to reach
+      the breakout」，支撐 udk.err9。同篇另有「too many coaches are advocating that their
+      swimmers stay underwater too long」。注意這是教練專欄的族群概括，沒有報告樣本或量測
+      方法，維持 🟠 不上綠。
+
+  - id: src.the-race-club-3-breathing-tips
+    display: "The Race Club — 3 Breathing Tips for Freestyle Swimming (2018)"
+    type: other
+    verification_status: verified
+    year: 2018
+    identifier:
+      url: "https://theraceclub.com/2018/05/15/3-breathing-tips-for-freestyle-swimming/"
+    retrieved_on: "2026-09-05"
+    notes: >-
+      2026-09-05 讀原文查證：「take your breath with one goggle, one ear, and one cheek still
+      present in the water」「only half of your mouth will be available for breathing, but
+      it's actually more than it seems」。**邊界**：原文是給泳者的指導語（you should），不是
+      對精英選手的統計觀察；free.err18 的敘述已據此改寫，不再寫成「精英通常如此」。
 
   - id: src.the-race-club-fundamentals-of-fast-swimming-a
     display: "The Race Club — Fundamentals of Fast Swimming Ch 13, 16"
@@ -4728,8 +4780,14 @@ sources:
   - id: src.the-race-club-velocity-meter-b
     display: "The Race Club，velocity meter 實測"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.the-race-club-velocity-meter-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下。這個 display 是「機構名 + 量測工具名」，定位不到任何一篇——
+      velocity meter 是 The Race Club 幾十篇文章共用的器材。它唯一的引用（Aaron Greenberg
+      5 公尺 0.1／0.18 秒）已查到出處並改指 src.the-race-club-turn-when-to-start-dolphin-kick。
+      留墓碑擋重新登錄：同一批文章還有 velocity-meter-a／vm-a／vm-b 等同型模糊字串，
+      不要再往這個方向加新的（見 validate.py E014／E015 的動機）。
+      注意 src.the-race-club-velocity-meter-a 仍有 4 處引用、尚未定位，不在本次處理範圍。
 
   - id: src.the-race-club-velocity-meter-pressure-meter
     display: "The Race Club Velocity Meter + Pressure Meter"

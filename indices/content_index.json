@@ -9934,7 +9934,7 @@
         ]
       },
       "source_ids": [
-        "src.the-race-club"
+        "src.the-race-club-3-breathing-tips"
       ],
       "outgoing_ids": [
         "free.tech.17",
@@ -20392,8 +20392,7 @@
       },
       "source_ids": [
         "src.sports-biomechanics-2026",
-        "src.the-race-club",
-        "src.the-race-club-velocity-meter-b"
+        "src.the-race-club-turn-when-to-start-dolphin-kick"
       ],
       "outgoing_ids": [
         "udk.tech.17",
@@ -20421,7 +20420,7 @@
       },
       "source_ids": [
         "src.pmc8442910-a",
-        "src.the-race-club",
+        "src.the-race-club-flip-turn-kick-count",
         "src.yourswimlog-b"
       ],
       "outgoing_ids": [
