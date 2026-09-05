@@ -143,7 +143,7 @@ Vortex 已有 `KNOWLEDGE_MAP.md`、穩定 ID、`cross_ref`、確定性與公開�
 
 - **canonical 是唯一真相來源**：標籤、來源、交叉參照與內容只在 `canonical/` 維護；`my-site/data/vortex/` 是同步產物，不得手改補標籤或來源。
 - **受控詞彙表**：新增可跨條目使用的分類、泳式、L 級、受眾、風險、內容類型或概念標籤前，先登錄於 canonical 的 taxonomy；條目只能引用既有 key。需要同義字時寫 alias，不另造近義 tag。
-- **來源註冊表**：任何 🟢／🟡 的外部事實、數字、療效或安全主張，都要以 `source_id` 指向可重取的來源登錄（DOI／PMID／ISBN／正式 URL、作者、年份、來源類型、查驗日）。文字 citation 只能是閱讀顯示，不是資料鍵。
+- **來源註冊表**：任何 🟢／🟡 的外部事實、數字、療效或安全主張，都要以 `source_id` 指向可重取的來源登錄（DOI／PMID／ISBN／正式 URL、作者、年份、來源類型、查驗日）。文字 citation 只能是閱讀顯示，不是資料鍵。**反過來也成立：機器鍵不得出現在讀者看得到的散文裡**——`caveat`／`prevalence`／`description` 這些欄位會原樣上線，寫 `src.akkurt-2017` 讀者只會看到一串 slug，要寫「Akkurt et al. 2017」；schema 欄位名（`fatal_acute: true`）與內部檔案路徑同理。稽核方式：線上頁面 grep 反引號，有反引號幾乎就是機器鍵外洩。
 - **可驗證關係**：`cross_ref` 必須指向存在的穩定 ID；條目新增、刪除或改 ID 後，重生地圖前先跑引用完整性、tag 合法性、來源存在性與孤兒條目檢查。
 - **索引輸出**：由 canonical 自動產生四個視圖：內容／概念索引、tag 反向索引、來源反向索引、缺口報告（無來源高風險主張、孤兒標籤、未連結條目）。`KNOWLEDGE_MAP.md` 是人讀入口，不取代這些機器索引。
 - **狀態分開**：`draft`、`indexed`、`source-linked`、`verified`、`disputed`／`unverified` 不可互相冒用；確定性標記也不能代替來源驗證狀態。
