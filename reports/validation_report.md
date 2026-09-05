@@ -149,7 +149,7 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 57 筆**
+**WARN，共 51 筆**
 
   file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -197,12 +197,6 @@
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC12433939' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 40426460' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 16368636' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 39480294' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 33845276' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC12424610' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC10244639' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 39480294' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1080/17458927.2022.2135358' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 7932942' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.1080/17509840802287218' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' DOI='10.1111/j.1469-8986.1994.tb01039.x' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -213,18 +207,8 @@
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 73 筆**
+**WARN，共 63 筆**
 
-  source_id='src.research-psych-01-a' display='Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-b' display='Research/心理/01_注意力焦點與動作學習.md#2-受限動作假說cah' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-c' display='Research/心理/01_注意力焦點與動作學習.md#4-距離效應distance-effect' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-d' display='Research/心理/01_注意力焦點與動作學習.md#5-聯結-vs-分離策略association-vs-dissociation' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-e' display='Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-f' display='Research/心理/01_注意力焦點與動作學習.md#外部焦點-vs-感覺水-的張力分析' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-g' display='Research/心理/01_注意力焦點與動作學習.md#游泳特異證據-vs-跨運動外推' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-h' display='Research/心理/01_注意力焦點與動作學習.md#游泳直接證據' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-i' display='Research/心理/01_注意力焦點與動作學習.md#研究空白' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-01-j' display='Research/心理/01_注意力焦點與動作學習.md#與水感框架的連結' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-02-a' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-02-b' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-02-c' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄

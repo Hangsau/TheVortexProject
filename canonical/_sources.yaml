@@ -3491,63 +3491,63 @@ sources:
   - id: src.research-psych-01-a
     display: "Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-b
     display: "Research/心理/01_注意力焦點與動作學習.md#2-受限動作假說cah"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-c
     display: "Research/心理/01_注意力焦點與動作學習.md#4-距離效應distance-effect"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-d
     display: "Research/心理/01_注意力焦點與動作學習.md#5-聯結-vs-分離策略association-vs-dissociation"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-e
     display: "Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-f
     display: "Research/心理/01_注意力焦點與動作學習.md#外部焦點-vs-感覺水-的張力分析"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-g
     display: "Research/心理/01_注意力焦點與動作學習.md#游泳特異證據-vs-跨運動外推"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-h、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-h
     display: "Research/心理/01_注意力焦點與動作學習.md#游泳直接證據"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-i、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-i
     display: "Research/心理/01_注意力焦點與動作學習.md#研究空白"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-j 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-01-j
     display: "Research/心理/01_注意力焦點與動作學習.md#與水感框架的連結"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-01-a、src.research-psych-01-b、src.research-psych-01-c、src.research-psych-01-d、src.research-psych-01-e、src.research-psych-01-f、src.research-psych-01-g、src.research-psych-01-h、src.research-psych-01-i 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    notes: >-
+      2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/01_注意力焦點與動作學習.md 逐節把該節實際引用的原始文獻挖出來，登錄成 17 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
   - id: src.research-psych-02-a
     display: "Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節"
     type: other
@@ -6704,3 +6704,261 @@ sources:
       doi: 10.3390/sports5030050
     retrieved_on: '2026-09-04'
     notes: 2026-09-04 efetch 核對，**同時抓到一則歸因錯誤**。`psych.motivation.population_engines` 原文寫「青少年自主支持的訓練情境比訓練量更能預測續留（系統回顧 PMID 29910410）」——**本篇沒有這個比較**。本篇實際內容：檢索 Web of Knowledge 與 PsycInfo（2015-02-02 至 2015-07-29），找到 15 篇、完整回顧 6 篇；多數研究在加拿大與美國，一篇在西班牙；受試 65.74% 為女性；退出主因為「與教練衝突」「有其他事要做」「勝任感未見進步」「來自父母、伴侶或教練的壓力」「缺乏樂趣」「感到無聊」。作者結論是此主題仍需更多研究並驗證測量工具。**使用邊界**：① 僅 6 篇入選、地區高度集中，不是強證據；② 檢索截止於 2015 年，2015 後文獻未涵蓋；③ 「自主支持 vs 訓練量」的預測力比較須另尋來源，不得掛在本篇。
+
+  - id: src.wulf-prinz-2001-directing-attention
+    display: "Wulf, G., & Prinz, W. (2001). Directing attention to movement effects enhances learning: A review."
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Wulf G", "Prinz W"]
+    container: "Psychonomic Bulletin & Review"
+    identifier:
+      doi: 10.3758/BF03196201
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：8(4):648–660，作者卷期頁碼相符。內部焦點／外部焦點
+      分類的系統性定義出處。取代 src.research-psych-01-a（原本掛的是本專案自己的
+      草稿檔錨點，不是文獻）。
+
+  - id: src.wulf-mcnevin-shea-2001-automaticity
+    display: "Wulf, G., McNevin, N., & Shea, C. H. (2001). The automaticity of complex motor skill learning as a function of attentional focus."
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Wulf G", "McNevin N", "Shea CH"]
+    container: "The Quarterly Journal of Experimental Psychology A"
+    identifier:
+      pmid: '11765737'
+      doi: 10.1080/713756012
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：54(4):1143–1154。受限動作假說（CAH）的
+      平衡板實驗出處。草稿只寫了 PMID 沒寫 DOI，這裡補上 10.1080/713756012。
+
+  - id: src.kal-2013-external-focus-automatization
+    display: "Kal, E. C., van der Kamp, J., & Houdijk, H. (2013). External attentional focus enhances movement automatization: A comprehensive test of the constrained action hypothesis."
+    type: journal_article
+    verification_status: verified
+    year: 2013
+    authors: ["Kal EC", "van der Kamp J", "Houdijk H"]
+    container: "Human Movement Science"
+    identifier:
+      doi: 10.1016/j.humov.2013.04.001
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 更正一筆歸因錯誤。草稿 Research/心理/01 把這篇寫成
+      「Becker, K. A., & Smith, P. J. (2015)，DOI: 10.1016/j.humov.2013.07.001」——
+      作者、年份、DOI 三項全錯。用該 DOI 實際解出來的是 Roos & Dingwell (2013)
+      《Using dynamic walking models to identify factors that contribute to increased
+      risk of falling in older adults》，與注意力焦點無關。以標題回查 Crossref 得真值：
+      Kal、van der Kamp、Houdijk，Human Movement Science 32(4):527–539，
+      DOI 10.1016/j.humov.2013.04.001（草稿的卷期 32(4) 對，頁碼 600–617 錯）。
+
+  - id: src.freudenheim-2010-external-focus-swimming
+    display: "Freudenheim, A. M., Wulf, G., Madureira, F., Pasetto, S. C., & Corrêa, U. C. (2010). An external focus of attention results in greater swimming speed."
+    type: journal_article
+    verification_status: verified
+    year: 2010
+    authors: ["Freudenheim AM", "Wulf G", "Madureira F", "Pasetto SC", "Corrêa UC"]
+    container: "International Journal of Sports Science & Coaching"
+    identifier:
+      doi: 10.1260/1747-9541.5.4.533
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：5(4):533–542，作者五人相符。游泳直接證據：
+      中等程度游泳者、自由式、一個池長，EF 指令（「把水往後推」）組泳速優於
+      IF 指令（「把手拉回來」）組與控制組。邊界：受試為中等程度成人，
+      非精英、非兒童；測的是單次表現不是長期保留。
+
+  - id: src.stoate-wulf-2011-swimmers-focus
+    display: "Stoate, I., & Wulf, G. (2011). Does the attentional focus adopted by swimmers affect their performance?"
+    type: journal_article
+    verification_status: verified
+    year: 2011
+    authors: ["Stoate I", "Wulf G"]
+    container: "International Journal of Sports Science & Coaching"
+    identifier:
+      doi: 10.1260/1747-9541.6.1.99
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：6(1):99–108，相符。游泳直接證據：精英游泳者
+      EF 組與控制組無差異、IF 組顯著慢於控制組——精英者「不需要」外部焦點，
+      但內部焦點仍有打擾力。
+
+  - id: src.maloney-gorman-2021-skilled-swimmers-focus
+    display: "Maloney, M. A., & Gorman, A. D. (2021). Skilled swimmers maintain performance stability under changing attentional focus constraints."
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Maloney MA", "Gorman AD"]
+    container: "Human Movement Science"
+    identifier:
+      pmid: '33845276'
+      doi: 10.1016/j.humov.2021.102789
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：77:102789。解掉草稿的一個 🔴：
+      Research/心理/01 的關鍵文獻表把這筆寫成「[Author 🔴] Skilled swimmers
+      HMS (2021)」，作者欄是空的；用 PMID 33845276 查出來是 Maloney 與 Gorman。
+      內容：精英游泳者起跳，EF 與 IF 在結果指標（相對峰功率、水平速度、5 公尺時間）
+      無顯著差異，但 EF 下動作事件序列提前。
+
+  - id: src.mckay-2024-reporting-bias-external-focus
+    display: "McKay, B., Corson, A. E., Seedu, J., De Faveri, C. S., et al. (2024). Reporting bias, not external focus: A robust Bayesian meta-analysis and systematic review of the external focus of attention literature."
+    type: journal_article
+    verification_status: verified
+    year: 2024
+    authors: ["McKay B", "Corson AE", "Seedu J", "De Faveri CS"]
+    container: "Psychological Bulletin"
+    identifier:
+      pmid: '39480294'
+      doi: 10.1037/bul0000451
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：150(11):1347–1362。這是本章最重要的反向證據：
+      修正發表偏誤後外部焦點優越性的平均效果量接近零，研究間異質性極高。
+      引用邊界：這不是說外部焦點無效，是說「任何情境下 EF 都優於 IF」的強版命題要放棄——
+      本專案所有涉及 EF/IF 的條目都必須帶著這個限定。
+
+  - id: src.zang-2025-focus-distance-meta
+    display: "Zang, L., Guo, W., & Wang, B. (2025). The farther, the better? The effect of attentional focus distance on motor performance: A systematic review and meta-analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Zang L", "Guo W", "Wang B"]
+    container: "PeerJ"
+    identifier:
+      pmid: '40949725'
+      pmcid: PMC12424610
+      doi: 10.7717/peerj.20012
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC→PMID 轉換（idconv）後 esummary 核對：PeerJ 13:e20012。
+      距離效應（distal EF 優於 proximal EF）的系統性回顧。邊界：納入研究以陸上運動為主，
+      游泳的 proximal／distal 直接比較研究幾乎空白，套到游泳上是外推不是實測。
+
+  - id: src.gottwald-2020-internal-focus-congruent
+    display: "Gottwald, V. M., Owen, R., Lawrence, G. P., & McNevin, N. (2020). An internal focus of attention is optimal when congruent with afferent proprioceptive task information."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Gottwald VM", "Owen R", "Lawrence GP", "McNevin N"]
+    container: "Psychology of Sport and Exercise"
+    identifier:
+      doi: 10.1016/j.psychsport.2019.101634
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 更正一筆 DOI 錯誤。草稿寫的 DOI 是 10.1016/j.psychsport.2019.101620
+      （草稿自己標了「待驗證」），實際解出來是 Murray, Coffee & Eklund (2020)
+      《Adaptive thinking…》，與本體感覺焦點無關。以標題回查 Crossref 得真值：
+      47:101634，差一號。內容：任務主要訊息來源是本體感覺時，與之相符的內部焦點表現最佳——
+      這是「感覺水可能不受 EF>IF 規則管轄」的關鍵支撐。
+
+  - id: src.gottwald-2023-two-sides-focus
+    display: "Gottwald, V., Davies, M., & Owen, R. (2023). Every story has two sides: Evaluating information processing and ecological dynamics perspectives of focus of attention in skill acquisition."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Gottwald V", "Davies M", "Owen R"]
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: '37293436'
+      pmcid: PMC10244639
+      doi: 10.3389/fspor.2023.1176635
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 idconv + esummary 核對：5:1176635。生態動力學視角對 EF/IF 二元框架的批評——
+      資訊處理框架不是唯一描述層。本專案「感知耦合是第三類」的理論定位主要靠這篇撐。
+      邊界：這是觀點評論／理論比較文，不是實驗數據。
+
+  - id: src.heath-2022-quality-of-water
+    display: "Heath, S. (2022). The quality of water: Perception and senses of fluid movement."
+    type: journal_article
+    verification_status: verified
+    year: 2022
+    authors: ["Heath S"]
+    container: "The Senses and Society"
+    identifier:
+      doi: 10.1080/17458927.2022.2135358
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：17(3):263–276。注意草稿標題不完整：草稿只寫
+      「Heath, S. (2022)」與 DOI，實際標題是《The quality of water: perception and
+      senses of fluid movement》。民族誌研究，競技青少年游泳者把「水的品質感知」
+      視為具身知識。邊界：質性民族誌、單一族群（競技青少年），不是量化因果證據。
+
+  - id: src.morgan-pollock-1977-elite-distance-runner
+    display: "Morgan, W. P., & Pollock, M. L. (1977). Psychologic characterization of the elite distance runner."
+    type: journal_article
+    verification_status: verified
+    year: 1977
+    authors: ["Morgan WP", "Pollock ML"]
+    container: "Annals of the New York Academy of Sciences"
+    identifier:
+      pmid: '270929'
+      doi: 10.1111/j.1749-6632.1977.tb38215.x
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：301:382–403。聯結／分離策略分類的歷史起源。
+      邊界：1977 年、受試是跑者、樣本小，只當歷史出處用，不拿它下當代結論——
+      Masters & Ogles (1998) 的 20 年回顧已指出後續結果並不一致。
+
+  - id: src.masters-ogles-1998-associative-dissociative
+    display: "Masters, K. S., & Ogles, B. M. (1998). Associative and dissociative cognitive strategies in exercise and running: 20 years later, what do we know?"
+    type: journal_article
+    verification_status: verified
+    year: 1998
+    authors: ["Masters KS", "Ogles BM"]
+    container: "The Sport Psychologist"
+    identifier:
+      doi: 10.1123/tsp.12.3.253
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：12(3):253–270。草稿把作者縮寫寫錯（寫成
+      「Masters, J. C.」，實際是 Kevin S. Masters）。另注意不要與 Richard Masters 混淆——
+      Reinvestment 理論（Masters 1992）是另一位 Masters，兩人在本專案心理層同時出現。
+
+  - id: src.couture-1999-swimming-cognitive-strategies
+    display: "Couture, R. T., Jerome, W., & Tihanyi, J. (1999). Can associative and dissociative strategies affect the swimming performance of recreational swimmers?"
+    type: journal_article
+    verification_status: verified
+    year: 1999
+    authors: ["Couture RT", "Jerome W", "Tihanyi J"]
+    container: "The Sport Psychologist"
+    identifier:
+      doi: 10.1123/tsp.13.3.334
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 標題回查：13(3):334–343。草稿只寫「TSP 1999 研究」沒有作者，
+      這裡補齊。游泳直接證據：休閒游泳者採聯結策略比控制組游得快。
+      邊界：受試是休閒游泳者，不可外推到精英或兒童。
+
+  - id: src.grgic-mikulic-2021-focus-muscular-endurance
+    display: "Grgic, J., & Mikulic, P. (2021). Effects of attentional focus on muscular endurance: A meta-analysis."
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Grgic J", "Mikulic P"]
+    container: "International Journal of Environmental Research and Public Health"
+    identifier:
+      pmid: '35010348'
+      pmcid: PMC8751186
+      doi: 10.3390/ijerph19010089
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 idconv + esummary 核對：19(1):89，線上刊期 2021-12-22
+      （草稿寫 2022，是紙本年份差異不是錯誤）。肌耐力情境下的注意力焦點元分析。
+
+  - id: src.vitali-2019-action-monitoring-endurance
+    display: "Vitali, F., Tarperi, C., Cristini, J., Rinaldi, A., et al. (2019). Action monitoring through external or internal focus of attention does not impair endurance performance."
+    type: journal_article
+    verification_status: verified
+    year: 2019
+    authors: ["Vitali F", "Tarperi C", "Cristini J", "Rinaldi A"]
+    container: "Frontiers in Psychology"
+    identifier:
+      pmid: '30930818'
+      pmcid: PMC6425868
+      doi: 10.3389/fpsyg.2019.00535
+    retrieved_on: '2026-09-05'
+    notes: 2026-09-05 idconv + esummary 核對：10:535。耐力表現中 EF／IF 對結果無差異，關鍵在「監控的層面」不同。

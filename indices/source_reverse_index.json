@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 591,
+  "source_count": 607,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1203,6 +1203,22 @@
       ]
     },
     {
+      "id": "src.couture-1999-swimming-cognitive-strategies",
+      "display": "Couture, R. T., Jerome, W., & Tihanyi, J. (1999). Can associative and dissociative strategies affect the swimming performance of recreational swimmers?",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/tsp.13.3.334"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.association_dissociation",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[5].public"
+        }
+      ]
+    },
+    {
       "id": "src.danswim",
       "display": "DanSwim",
       "verification_status": "unverified",
@@ -1704,6 +1720,22 @@
       ]
     },
     {
+      "id": "src.freudenheim-2010-external-focus-swimming",
+      "display": "Freudenheim, A. M., Wulf, G., Madureira, F., Pasetto, S. C., & Corrêa, U. C. (2010). An external focus of attention results in greater swimming speed.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1260/1747-9541.5.4.533"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.cah",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[1].public"
+        }
+      ]
+    },
+    {
       "id": "src.frontiers-2021",
       "display": "Frontiers 2021",
       "verification_status": "unverified",
@@ -2188,6 +2220,58 @@
       ]
     },
     {
+      "id": "src.gottwald-2020-internal-focus-congruent",
+      "display": "Gottwald, V. M., Owen, R., Lawrence, G. P., & McNevin, N. (2020). An internal focus of attention is optimal when congruent with afferent proprioceptive task information.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/j.psychsport.2019.101634"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.water_sense_third_category",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.gottwald-2023-two-sides-focus",
+      "display": "Gottwald, V., Davies, M., & Owen, R. (2023). Every story has two sides: Evaluating information processing and ecological dynamics perspectives of focus of attention in skill acquisition.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "37293436",
+        "pmcid": "PMC10244639",
+        "doi": "10.3389/fspor.2023.1176635"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.water_sense_third_category",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.grgic-mikulic-2021-focus-muscular-endurance",
+      "display": "Grgic, J., & Mikulic, P. (2021). Effects of attentional focus on muscular endurance: A meta-analysis.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "35010348",
+        "pmcid": "PMC8751186",
+        "doi": "10.3390/ijerph19010089"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.association_dissociation",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[5].public"
+        }
+      ]
+    },
+    {
       "id": "src.grote-2004",
       "display": "Grote K, Lincoln TL, Gamble JG. (2004). Hip adductor injury in competitive swimmers. Am J Sports Med 32(1):104-8.",
       "verification_status": "verified",
@@ -2535,6 +2619,22 @@
       ]
     },
     {
+      "id": "src.heath-2022-quality-of-water",
+      "display": "Heath, S. (2022). The quality of water: Perception and senses of fluid movement.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/17458927.2022.2135358"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.water_sense_third_category",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[4].public"
+        }
+      ]
+    },
+    {
       "id": "src.hellard",
       "display": "Hellard et al. 2019 (PMC6470949); González-Ravé et al. 2022 (PMID 36247944, n=1)",
       "verification_status": "unverified",
@@ -2767,6 +2867,22 @@
           "id": "free.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[1].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.kal-2013-external-focus-automatization",
+      "display": "Kal, E. C., van der Kamp, J., & Houdijk, H. (2013). External attentional focus enhances movement automatization: A comprehensive test of the constrained action hypothesis.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/j.humov.2013.04.001"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.cah",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[1].public"
         }
       ]
     },
@@ -3294,6 +3410,23 @@
       ]
     },
     {
+      "id": "src.maloney-gorman-2021-skilled-swimmers-focus",
+      "display": "Maloney, M. A., & Gorman, A. D. (2021). Skilled swimmers maintain performance stability under changing attentional focus constraints.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33845276",
+        "doi": "10.1016/j.humov.2021.102789"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.elite_resilience",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[2].public"
+        }
+      ]
+    },
+    {
       "id": "src.marinho-2010",
       "display": "Marinho et al. (2010), Journal of Applied Biomechanics",
       "verification_status": "verified",
@@ -3368,6 +3501,22 @@
           "id": "fly.tech.11",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[112].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.masters-ogles-1998-associative-dissociative",
+      "display": "Masters, K. S., & Ogles, B. M. (1998). Associative and dissociative cognitive strategies in exercise and running: 20 years later, what do we know?",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/tsp.12.3.253"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.association_dissociation",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[5].public"
         }
       ]
     },
@@ -3543,6 +3692,28 @@
       ]
     },
     {
+      "id": "src.mckay-2024-reporting-bias-external-focus",
+      "display": "McKay, B., Corson, A. E., Seedu, J., De Faveri, C. S., et al. (2024). Reporting bias, not external focus: A robust Bayesian meta-analysis and systematic review of the external focus of attention literature.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "39480294",
+        "doi": "10.1037/bul0000451"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.attention.cah",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[1].public"
+        },
+        {
+          "id": "psych.attention.water_sense_third_category",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[4].public"
+        }
+      ]
+    },
+    {
       "id": "src.mckenzie-2023-a",
       "display": "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）",
       "verification_status": "verified",
@@ -3698,6 +3869,23 @@
           "id": "back.tech.22",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[65].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.morgan-pollock-1977-elite-distance-runner",
+      "display": "Morgan, W. P., & Pollock, M. L. (1977). Psychologic characterization of the elite distance runner.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "270929",
+        "doi": "10.1111/j.1749-6632.1977.tb38215.x"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.association_dissociation",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[5].public"
         }
       ]
     },
@@ -7611,152 +7799,82 @@
     {
       "id": "src.research-psych-01-a",
       "display": "Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.ef_if_definition",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[0].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-b",
       "display": "Research/心理/01_注意力焦點與動作學習.md#2-受限動作假說cah",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.cah",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-c",
       "display": "Research/心理/01_注意力焦點與動作學習.md#4-距離效應distance-effect",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.distance_effect",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-d",
       "display": "Research/心理/01_注意力焦點與動作學習.md#5-聯結-vs-分離策略association-vs-dissociation",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.association_dissociation",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[5].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-e",
       "display": "Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.attention.cah",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[1].public"
-        },
-        {
-          "id": "psych.attention.water_sense_third_category",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[4].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-f",
       "display": "Research/心理/01_注意力焦點與動作學習.md#外部焦點-vs-感覺水-的張力分析",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.water_sense_third_category",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[4].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-g",
       "display": "Research/心理/01_注意力焦點與動作學習.md#游泳特異證據-vs-跨運動外推",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.association_dissociation",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[5].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-h",
       "display": "Research/心理/01_注意力焦點與動作學習.md#游泳直接證據",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.attention.cah",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[1].public"
-        },
-        {
-          "id": "psych.attention.elite_resilience",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[2].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-i",
       "display": "Research/心理/01_注意力焦點與動作學習.md#研究空白",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.distance_effect",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-01-j",
       "display": "Research/心理/01_注意力焦點與動作學習.md#與水感框架的連結",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.attention.water_sense_third_category",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[4].concepts[4].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-02-a",
@@ -9656,6 +9774,27 @@
           "id": "free.tech.3",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[2].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.stoate-wulf-2011-swimmers-focus",
+      "display": "Stoate, I., & Wulf, G. (2011). Does the attentional focus adopted by swimmers affect their performance?",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1260/1747-9541.6.1.99"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.attention.cah",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[1].public"
+        },
+        {
+          "id": "psych.attention.elite_resilience",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[2].public"
         }
       ]
     },
@@ -11961,6 +12100,24 @@
       ]
     },
     {
+      "id": "src.vitali-2019-action-monitoring-endurance",
+      "display": "Vitali, F., Tarperi, C., Cristini, J., Rinaldi, A., et al. (2019). Action monitoring through external or internal focus of attention does not impair endurance performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "30930818",
+        "pmcid": "PMC6425868",
+        "doi": "10.3389/fpsyg.2019.00535"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.association_dissociation",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[5].public"
+        }
+      ]
+    },
+    {
       "id": "src.vizsolyi-1987",
       "display": "Vizsolyi P, Taunton J, Robertson G, et al. (1987). Breaststroker's knee. An analysis of epidemiological and biomechanical factors. Am J Sports Med 15(1):63–71.",
       "verification_status": "verified",
@@ -12385,6 +12542,39 @@
       ]
     },
     {
+      "id": "src.wulf-mcnevin-shea-2001-automaticity",
+      "display": "Wulf, G., McNevin, N., & Shea, C. H. (2001). The automaticity of complex motor skill learning as a function of attentional focus.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "11765737",
+        "doi": "10.1080/713756012"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.cah",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[1].public"
+        }
+      ]
+    },
+    {
+      "id": "src.wulf-prinz-2001-directing-attention",
+      "display": "Wulf, G., & Prinz, W. (2001). Directing attention to movement effects enhances learning: A review.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3758/BF03196201"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.ef_if_definition",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[0].public"
+        }
+      ]
+    },
+    {
       "id": "src.yamakawa-2022",
       "display": "Yamakawa KK, Shimojo H, Takagi H, Sengoku Y. (2022). Changes in Kinematics and Muscle Activity With Increasing Velocity During Underwater Undulatory Swimming. Front Sports Act Living 4:829618.",
       "verification_status": "verified",
@@ -12600,6 +12790,24 @@
           "id": "udk.tech.8",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[144].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.zang-2025-focus-distance-meta",
+      "display": "Zang, L., Guo, W., & Wang, B. (2025). The farther, the better? The effect of attentional focus distance on motor performance: A systematic review and meta-analysis.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "40949725",
+        "pmcid": "PMC12424610",
+        "doi": "10.7717/peerj.20012"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.attention.distance_effect",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[3].public"
         }
       ]
     }

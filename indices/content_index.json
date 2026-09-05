@@ -16480,8 +16480,11 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-01-d",
-        "src.research-psych-01-g"
+        "src.couture-1999-swimming-cognitive-strategies",
+        "src.grgic-mikulic-2021-focus-muscular-endurance",
+        "src.masters-ogles-1998-associative-dissociative",
+        "src.morgan-pollock-1977-elite-distance-runner",
+        "src.vitali-2019-action-monitoring-endurance"
       ],
       "outgoing_ids": []
     },
@@ -16501,9 +16504,11 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-01-b",
-        "src.research-psych-01-e",
-        "src.research-psych-01-h"
+        "src.freudenheim-2010-external-focus-swimming",
+        "src.kal-2013-external-focus-automatization",
+        "src.mckay-2024-reporting-bias-external-focus",
+        "src.stoate-wulf-2011-swimmers-focus",
+        "src.wulf-mcnevin-shea-2001-automaticity"
       ],
       "outgoing_ids": []
     },
@@ -16523,8 +16528,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-01-c",
-        "src.research-psych-01-i"
+        "src.zang-2025-focus-distance-meta"
       ],
       "outgoing_ids": []
     },
@@ -16543,7 +16547,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-01-a"
+        "src.wulf-prinz-2001-directing-attention"
       ],
       "outgoing_ids": []
     },
@@ -16562,7 +16566,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-01-h"
+        "src.maloney-gorman-2021-skilled-swimmers-focus",
+        "src.stoate-wulf-2011-swimmers-focus"
       ],
       "outgoing_ids": []
     },
@@ -16582,9 +16587,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-01-e",
-        "src.research-psych-01-f",
-        "src.research-psych-01-j"
+        "src.gottwald-2020-internal-focus-congruent",
+        "src.gottwald-2023-two-sides-focus",
+        "src.heath-2022-quality-of-water",
+        "src.mckay-2024-reporting-bias-external-focus"
       ],
       "outgoing_ids": []
     },

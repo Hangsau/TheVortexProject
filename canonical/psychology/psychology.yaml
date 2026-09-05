@@ -1873,8 +1873,8 @@ themes:
         在初學階段可能比 distal EF 更適合，不應將精英/成人研究結論直接套用至兒童初學。
         鐵人三項、青少年競技、成人初學對此框架的反應差異均屬素材缺口，需分族群判斷。
       sources:
-      - Research/心理/01_注意力焦點與動作學習.md#1-內部焦點-vs-外部焦點定義
-      source_ids: [src.research-psych-01-a]
+      - Wulf & Prinz 2001（Psychonomic Bulletin & Review）
+      source_ids: [src.wulf-prinz-2001-directing-attention]
     diagnostic:
       reading_signals:
       - 泳者說「我知道手要怎麼動，但游起來還是亂」= 可能陷入過度 IF 的意識干擾
@@ -1912,7 +1912,7 @@ themes:
           CAH 的神經機制主張（有意識控制干擾皮質下迴路）是理論推導，
           直接的游泳神經影像測量仍是研究空白。游泳任務（持續開放技能）
           與 CAH 核心實驗（離散平衡板任務）性質不完全可比，外推需謹慎。
-          此外，2024 年一篇穩健貝葉斯元分析（PMID: 39480294）修正發表偏誤後，
+          此外，McKay 等人（2024）的穩健貝葉斯元分析修正發表偏誤後，
           外部焦點優越性的平均效果量接近零，且各研究異質性極高——
           「EF 永遠優於 IF」的強版命題需要放棄；效果因人、因任務、因情境而異。
       l_levels: [L3, L4, L5, L6]
@@ -1934,10 +1934,14 @@ themes:
         成人初學均缺乏直接游泳 CAH 資料。兒童初學可能需要不同的焦點引導策略，
         不應以成人中等/精英資料外推。
       sources:
-      - Research/心理/01_注意力焦點與動作學習.md#2-受限動作假說cah
-      - Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis
-      - Research/心理/01_注意力焦點與動作學習.md#游泳直接證據
-      source_ids: [src.research-psych-01-b, src.research-psych-01-e, src.research-psych-01-h]
+      - Wulf, McNevin & Shea 2001（平衡板實驗，CAH 出處）
+      - Kal, van der Kamp & Houdijk 2013（自動化程度的完整檢驗）
+      - Freudenheim et al. 2010（游泳直接證據）
+      - Stoate & Wulf 2011（精英游泳者）
+      - McKay et al. 2024（貝葉斯元分析，反向證據）
+      source_ids: [src.wulf-mcnevin-shea-2001-automaticity, src.kal-2013-external-focus-automatization,
+        src.freudenheim-2010-external-focus-swimming, src.stoate-wulf-2011-swimmers-focus,
+        src.mckay-2024-reporting-bias-external-focus]
     diagnostic:
       abc_link: A
       reading_signals:
@@ -1963,7 +1967,7 @@ themes:
           EF 組表現與控制組相同；IF 組泳速顯著慢於控制組。
           這說明精英者有強大的自動化保護機制，不需要外部焦點也能維持高水準——
           但內部焦點仍有足夠的打擾力使表現下降。
-          另一項精英游泳者起跳動作研究（HMS, 2021, PMID: 33845276）則顯示，
+          另一項精英游泳者起跳動作研究（Maloney & Gorman, 2021）則顯示，
           EF 下動作事件序列提前（更好的自組織），但結果指標（相對峰功率、5m 時間）
           無顯著差異——彈性維持，結果持平但動作品質提升。
         plain_text: >-
@@ -1989,8 +1993,9 @@ themes:
         兒童競技、青少年競技的精英群體，以及鐵人三項選手，
         在 EF/IF 干擾敏感度上缺乏直接研究，不應直接套用精英成人的容忍度預設。
       sources:
-      - Research/心理/01_注意力焦點與動作學習.md#游泳直接證據
-      source_ids: [src.research-psych-01-h]
+      - Stoate & Wulf 2011（精英游泳者 EF/IF 對照）
+      - Maloney & Gorman 2021（精英泳者起跳，彈性維持）
+      source_ids: [src.stoate-wulf-2011-swimmers-focus, src.maloney-gorman-2021-skilled-swimmers-focus]
     diagnostic:
       reading_signals:
       - 高競技水平泳者說「我有時候會在游的時候反覆想技術」= 需評估是否為 IF 干擾來源
@@ -2010,7 +2015,7 @@ themes:
           例子：注意靶心優於注意飛鏢路徑；注意終點線優於注意船的穩定性。
           機制：更遠的焦點使動作效果更易與身體動作本身區分，更清晰啟用「以效果為目標」的運動規劃；
           讓自動化系統有更多空間自組織，身體動作退為手段而非目的。
-          2025 年一篇系統性回顧與元分析（PMC12424610）整體支持此方向，
+          Zang 等人（2025）的系統性回顧與元分析整體支持此方向，
           但指出個人差異與技能水平調節此效果：高技能者從 distal 獲益更穩定；
           低技能者部分研究顯示 proximal EF 可能更合適（更近的回饋錨點）。
         plain_text: >-
@@ -2047,9 +2052,8 @@ themes:
         鐵人三項選手在開放水域可能需要利用真實的遠端地標（浮球、岸上目標）
         作為 distal EF 的物理錨點，這是有別於池泳的族群特異應用。
       sources:
-      - Research/心理/01_注意力焦點與動作學習.md#4-距離效應distance-effect
-      - Research/心理/01_注意力焦點與動作學習.md#研究空白
-      source_ids: [src.research-psych-01-c, src.research-psych-01-i]
+      - Zang, Guo & Wang 2025（距離效應系統性回顧與元分析）
+      source_ids: [src.zang-2025-focus-distance-meta]
     diagnostic:
       reading_signals:
       - 泳者說「我試著想水但還是不自覺又回到想手」= proximal/IF 切換困難，可嘗試 distal EF 錨點（水流路徑的末端）
@@ -2077,7 +2081,7 @@ themes:
           支持「感覺水 = 特殊 IF 或框架外」：水中感覺主要來自本體感覺與皮膚壓力受器，
           這是身體內部感知系統的輸出；Gottwald et al.（2020）提示當任務高度依賴
           本體感覺訊息時，與之相符的內部焦點表現反而可能最佳。
-          生態動力學視角（Frontiers, 2023, PMC10244639）則主張 EF/IF 二元框架
+          生態動力學視角（Gottwald, Davies & Owen, 2023）則主張 EF/IF 二元框架
           本身在水感情境下不充分——任務是運動者與環境的感知耦合，
           而非注意力落點的二元選擇。
           本專案的理論定位：「感覺水」最接近一種第三類別——感知耦合
@@ -2098,9 +2102,9 @@ themes:
       hardware_boundary:
         certainty: 🟢
         text: >-
-          Heath（2022, DOI: 10.1080/17458927.2022.2135358）的民族誌研究顯示，
+          Heath（2022）的民族誌研究顯示，
           競技游泳者將水質感知視為具身知識的核心，是「身體知識與技能動作共同產生的感知」，
-          而非外加的注意力焦點指令。2024 Bayesian meta-analysis（PMID: 39480294）
+          而非外加的注意力焦點指令。McKay 等人（2024）的貝葉斯元分析
           修正發表偏誤後外部焦點優越性效果接近零，支持「焦點效果因情境而異」的結論，
           也為「感覺水」作為特殊類別提供了理論空間。
           「感覺水作為獨立注意力策略的實驗研究」目前是研究空白（🔴）。
@@ -2131,10 +2135,12 @@ themes:
         兒童初學、鐵人三項、成人初學在「感知主導型水感培育」上均缺乏直接研究；
         生態動力學框架是理論外推，不同族群的感知耦合發展路徑可能有顯著差異。
       sources:
-      - Research/心理/01_注意力焦點與動作學習.md#外部焦點-vs-感覺水-的張力分析
-      - Research/心理/01_注意力焦點與動作學習.md#與水感框架的連結
-      - Research/心理/01_注意力焦點與動作學習.md#6-批判性補充bayesian-meta-analysis
-      source_ids: [src.research-psych-01-f, src.research-psych-01-j, src.research-psych-01-e]
+      - Gottwald et al. 2020（本體感覺相符時內部焦點最佳）
+      - Gottwald, Davies & Owen 2023（生態動力學對 EF/IF 二元框架的批評）
+      - Heath 2022（水質感知作為具身知識的民族誌）
+      - McKay et al. 2024（貝葉斯元分析）
+      source_ids: [src.gottwald-2020-internal-focus-congruent, src.gottwald-2023-two-sides-focus,
+        src.heath-2022-quality-of-water, src.mckay-2024-reporting-bias-external-focus]
     diagnostic:
       reading_signals:
       - 泳者說「我不知道我在感覺什麼，好像沒有水感」= 感知耦合尚未建立，非 IF/EF 問題
@@ -2163,7 +2169,7 @@ themes:
           外在刺激或無關思緒，以抑制不適感覺（聽音樂、數呼吸、看場景等）。
           Morgan & Pollock（1977）的經典研究顯示精英長跑者傾向聯結策略，
           業餘者傾向分離；但 Masters & Ogles（1998）20 年回顧指出兩者研究結果
-          並不一致，方法論差異大。游泳直接研究（TSP, 1999）顯示休閒游泳者
+          並不一致，方法論差異大。游泳直接研究（Couture, Jerome & Tihanyi, 1999）顯示休閒游泳者
           採聯結策略比控制組游得更快；另有研究提示長距離游泳中
           認知策略的「偏好適配程度」比策略類型本身更重要。
         plain_text: >-
@@ -2198,9 +2204,14 @@ themes:
         兒童泳者的聯結/分離能力受後設認知發展限制，不應套用成人策略框架。
         青少年競技泳者長距離訓練中的認知策略使用幾乎無直接研究。
       sources:
-      - Research/心理/01_注意力焦點與動作學習.md#5-聯結-vs-分離策略association-vs-dissociation
-      - Research/心理/01_注意力焦點與動作學習.md#游泳特異證據-vs-跨運動外推
-      source_ids: [src.research-psych-01-d, src.research-psych-01-g]
+      - Morgan & Pollock 1977（聯結／分離分類的歷史起源）
+      - Masters & Ogles 1998（20 年回顧：結果並不一致）
+      - Couture, Jerome & Tihanyi 1999（游泳直接研究，休閒泳者）
+      - Grgic & Mikulic 2021（肌耐力情境元分析）
+      - Vitali et al. 2019（耐力表現中 EF/IF 無差異）
+      source_ids: [src.morgan-pollock-1977-elite-distance-runner, src.masters-ogles-1998-associative-dissociative,
+        src.couture-1999-swimming-cognitive-strategies, src.grgic-mikulic-2021-focus-muscular-endurance,
+        src.vitali-2019-action-monitoring-endurance]
     diagnostic:
       reading_signals:
       - 泳者說「游到後段就什麼都不想了，只是在撐」= 無意識分離策略啟動，疲痛超過警戒線
