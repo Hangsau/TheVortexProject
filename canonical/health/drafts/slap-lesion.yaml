@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: C
   caveat: 游泳者 SLAP 無大型前瞻數據，現有比例全來自偏態手術樣本；跨研究手術結果變異極大(40–94%)
   sources:
-    - "SLAP lesions overview & rehab, PMC3811737 (已驗證)"
-    - "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)"
+    - "Wilk, K. E., Macrina, L. C., Cain, E. L., Dugas, J. R., & Andrews, J. R. (2013). The recognition and treatment of superior labral (slap) lesions in the overhead athlete. International Journal of Sports Physical Therapy."
+    - "Butler, D., Funk, L., Mackenzie, T. A., & Herrington, L. C. (2015). Sorting swimmers shoulders: An observational study on swimmers that presented to a shoulder surgeon. International Journal of Shoulder Surgery."
   source_ids: [src.pmc3811737, src.pmc4528289]
 
 risk_factors:

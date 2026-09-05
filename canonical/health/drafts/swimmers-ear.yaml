@@ -25,7 +25,7 @@ epidemiology:
     因此「游泳者風險為非游泳者約 5 倍」**不可能出自此來源**——該倍數目前為 StatPearls 轉述、原始研究待查，已移出本欄。
     另：缺最新全球系統回顧；開放水域 vs 室內泳池分層數據不足。
   sources:
-    - "StatPearls Otitis Externa, PMID 32310515 (已驗證)"
+    - "Medina-Blasini Y; Sharman T. Otitis Externa. In: StatPearls. Treasure Island (FL): StatPearls Publishing（2026 年版）。"
     - "CDC (2011). Estimated Burden of Acute Otitis Externa — United States, 2003-2007. MMWR 60(19):605-9. PMID 21597452"
   source_ids: [src.pmid-32310515, src.cdc-mmwr-2003-2007]
 

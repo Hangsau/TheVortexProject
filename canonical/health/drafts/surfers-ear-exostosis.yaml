@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: C
   caveat: 絕大多數研究針對衝浪者，競技(室內溫水)游泳者獨立盛行率幾乎不存在；女性樣本過少
   sources:
-    - "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)"
-    - "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)"
+    - "Bart RM; Lau H; Cooper JS. Surfer's Ear. In: StatPearls. Treasure Island (FL): StatPearls Publishing（2026 年版）。"
+    - "Simas, V., Hing, W., Furness, J., Walsh, J., & Climstein, M. (2020). The Prevalence and Severity of External Auditory Exostosis in Young to Quadragenarian-Aged Warm-Water Surfers: A Preliminary Study. Sports."
   source_ids: [src.pmid-30521295, src.pmc7077213]
 
 risk_factors:

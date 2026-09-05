@@ -19,8 +19,8 @@ epidemiology:
   evidence_grade: C
   caveat: 缺乏針對轉身機制的前瞻傷害登記；多為個案或生物力學研究外推
   sources:
-    - "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)"
-    - "Swimming injuries narrative review, PubMed 33010194 (已驗證)"
+    - "Weimar, W., Sumner, A., Romer, B., Fox, J., Rehm, J., Decoux, B., & Patel, J. (2019). Kinetic analysis of swimming flip-turn push-off techniques. Sports, 7(2), 32."
+    - "Trinidad, A., González-Garcia, H., & López-Valenciano, A. (2021). An Updated Review of the Epidemiology of Swimming Injuries. PM&R."
   source_ids: [src.pmc6409673-b, src.pmid-33010194]
 
 risk_factors:

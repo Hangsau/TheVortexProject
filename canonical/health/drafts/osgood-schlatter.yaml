@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 數據來自一般青少年/跑跳運動族群，非游泳特定；游泳機制上幾乎不致病，此條目主要意義為『游泳是友善替代運動』
   sources:
-    - "Osgood-Schlatter disease, StatPearls NBK441995 (已驗證)"
-    - "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)"
+    - "Smith JM. Osgood-Schlatter Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441995（最後更新 2023-08-04）。"
+    - "van Leeuwen, G. J., de Schepper, E. I., Rathleff, M. S., Bindels, P. J., Bierma-Zeinstra, S. M., & van Middelkoop, M. (2022). Incidence and management of Osgood-Schlatter disease in general practice: retrospective cohort study. British Journal of General Practice."
   source_ids: [src.osgood-schlatter-disease-statpearls-nbk44199, src.pmc8869186]
 
 risk_factors:

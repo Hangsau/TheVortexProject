@@ -24,8 +24,8 @@ epidemiology:
     存在選擇偏誤；其樣本以**私人／住家泳池的休閒式跳水**為主，
     **不是競賽出發台跳水**——本條目談出發台時不得直接套用其數字。資料涵蓋至 2004 年（🟡）。
   sources:
-    - "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)"
-    - "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"
+    - "Borius, P. Y., Gouader, I., Bousquet, P., Draper, L., & Roux, F. E. (2010). Cervical spine injuries resulting from diving accidents in swimming pools: outcome of 34 patients. European Spine Journal."
+    - "Yılmaz, M., Ikizoglu, E., Arslan, M., Ozgiray, E., Calıskan, K. E., & Erbayraktar, R. S. (2021). An Overview of Spinal Injuries due to Dive or Fall into Shallow Water: Our Long-Term, Double-Center Experience from the Aegean Coast. Emergency Medicine International."
     - "Barss P, et al. (2008). Risk factors and prevention for spinal cord injury from diving, Quebec 1963-2004. Accid Anal Prev 40(2):787-97. PMID 18329434"
   source_ids: [src.pmc2899837, src.pmc8192199, src.quebec-44-year-diving-sci-study-sciencedirec]
 

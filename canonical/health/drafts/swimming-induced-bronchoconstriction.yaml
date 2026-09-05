@@ -18,9 +18,9 @@ epidemiology:
   evidence_grade: B
   caveat: EIB 自我報告準確率低需客觀肺功能確診；多數研究偏競技泳者；因果方向(氣喘者選游泳 vs 游泳致氣喘)仍爭論
   sources:
-    - "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)"
-    - "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)"
-    - "Trichloramine and lung function, PMC3488741 (已驗證)"
+    - "Aggarwal, B., Mulgirigama, A., & Berend, N. (2018). Exercise-induced bronchoconstriction: prevalence, pathophysiology, patient impact, diagnosis and management. npj Primary Care Respiratory Medicine."
+    - "Bernard, A., Carbonnelle, S., de Burbure, C., Michel, O., & Nickmilder, M. (2006). Chlorinated pool attendance, atopy, and the risk of asthma during childhood. Environmental Health Perspectives."
+    - "Nordberg, G. F., Lundstrom, N. G., Forsberg, B., Hagenbjork-Gustafsson, A., Lagerkvist, B. J., Nilsson, J., Svensson, M., Blomberg, A., Nilsson, L., Bernard, A., Dumont, X., Bertilsson, H., & Eriksson, K. (2012). Lung function in volunteers before and after exposure to trichloramine in indoor pool environments and asthma in a cohort of pool workers. BMJ Open."
   source_ids: [src.pmc6092370, src.pmc1626429, src.pmc3488741]
 
 risk_factors:

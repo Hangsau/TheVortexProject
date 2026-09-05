@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 主要為 Masters 影像數據，年輕競技者資料較少；多與旋轉肌袖損傷共病，獨立歸因困難
   sources:
-    - "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
-    - "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)"
+    - "Suzuki, Y., Maeda, N., Sasadai, J., Kaneda, K., Shirakawa, T., & Urabe, Y. (2020). Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers. Medicina."
+    - "Redondo-Alonso, L., Chamorro-Moriana, G., Jiménez-Rejano, J. J., López-Tarrida, P., & Ridao-Fernández, C. (2014). Relationship between chronic pathologies of the supraspinatus tendon and the long head of the biceps tendon: systematic review. BMC Musculoskeletal Disorders."
   source_ids: [src.pmc7824457, src.pmc4247626]
 
 risk_factors:

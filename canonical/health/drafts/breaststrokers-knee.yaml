@@ -19,9 +19,9 @@ epidemiology:
   evidence_grade: B
   caveat: 「蛙泳膝」常被當單一診斷統計，未分子型→盛行率混雜不同病理。兩篇主要流病文獻皆為 1980 年代、樣本為競技族群、以自陳問卷為主，不可外推到成人初學或休閒族群。
   sources:
-    - "Vizsolyi P, Taunton J, Robertson G, et al. (1987). Breaststroker's knee. Am J Sports Med 15(1):63–71. (PMID 3812862，已驗證)"
-    - "Rovere GD, Nichols AW. (1985). Frequency, associated factors, and treatment of breaststroker's knee in competitive swimmers. Am J Sports Med 13(2):99–104. (PMID 3985267，已驗證)"
-    - "Cheng KY, Chambers H, Dwek JR. (2022). MRI appearance of breaststroker's knee. Pediatr Radiol 52(13):2645–2647. (PMID 35672477，已驗證；n=1 病例，僅供結構層無定論之佐證)"
+    - "Vizsolyi P, Taunton J, Robertson G, et al. (1987). Breaststroker's knee. American Journal of Sports Medicine, 15(1), 63–71."
+    - "Rovere GD, Nichols AW. (1985). Frequency, associated factors, and treatment of breaststroker's knee in competitive swimmers. American Journal of Sports Medicine, 13(2), 99–104."
+    - "Cheng KY, Chambers H, Dwek JR. (2022). MRI appearance of breaststroker's knee. Pediatric Radiology, 52(13), 2645–2647.（n=1 病例報告，僅供結構層無定論之佐證）"
   source_ids: [src.vizsolyi-1987, src.rovere-nichols, src.cheng-2022-breaststrokers-knee-mri]
 
 risk_factors:

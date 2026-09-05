@@ -18,7 +18,7 @@ epidemiology:
   evidence_grade: B
   caveat: 游泳與後凸關聯之 OR 值來自摘要轉述未驗證原文；蝶式因果方向不明(加重後凸 vs 後凸者選游泳)
   sources:
-    - "Scheuermann disease, StatPearls NBK499966 (已驗證)"
+    - "Mansfield JT. Scheuermann Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK499966（最後更新 2023-07-31）。"
   source_ids: [src.scheuermann-disease-statpearls-nbk499966]
 
 risk_factors:

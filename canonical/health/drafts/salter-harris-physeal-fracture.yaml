@@ -18,7 +18,7 @@ epidemiology:
   evidence_grade: B
   caveat: 游泳特定的生長板骨折分母缺；V 型急性期 X-ray 常正常易低估
   sources:
-    - "Salter-Harris fractures, StatPearls NBK430688 (已驗證)"
+    - "Levine RH. Salter-Harris Fracture. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK430688（最後更新 2023-08-10）。"
   source_ids: [src.salter-harris-fractures-statpearls-nbk430688]
 
 risk_factors:

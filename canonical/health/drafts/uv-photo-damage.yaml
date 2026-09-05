@@ -18,9 +18,9 @@ epidemiology:
   evidence_grade: B
   caveat: 皮膚癌流病多為澳洲研究外推需謹慎；翼狀胬肉 12%/76 倍/15000 J·m⁻² 等數字來自二次來源，原始論文作者待查
   sources:
-    - "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)"
-    - "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)"
-    - "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)"
+    - "Climstein, M., Doyle, B., Stapelberg, M., Rosic, N., Hertess, I., Furness, J., Simas, V., & Walsh, J. (2022). Point prevalence of non-melanoma and melanoma skin cancers in Australian surfers and swimmers in Southeast Queensland and Northern New South Wales. PeerJ."
+    - "Kliniec, K., Tota, M., Zalesińska, A., Łyko, M., & Jankowska-Konsur, A. (2023). Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes-A Narrative Review. Cancers."
+    - "Modenese, A., & Gobba, F. (2017). Occupational Exposure to Solar Radiation at Different Latitudes and Pterygium: A Systematic Review of the Last 10 Years of Scientific Literature. International Journal of Environmental Research and Public Health."
   source_ids: [src.pmc9057286, src.pmc10339925, src.pmc5800136]
 
 risk_factors:

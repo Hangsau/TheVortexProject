@@ -103,6 +103,9 @@ exit code：
         讀者看到「（PMID: 39480294）」而不是「McKay 等人 2024」。
         引用顯示欄位（`source`／`sources`／`citation`）不算——那裡帶識別碼
         是學術慣例。
+  W026  查驗狀態寫進讀者看得到的引用字串（「…, PMC6092370 (已驗證)」）。
+        狀態屬於 `verification_status`，不屬於書目；而且這種字串的主題詞
+        是當初手寫的、沒對過篇名，實測 49 筆裡有 12 筆對不上。
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -748,6 +751,70 @@ def check_internal_path_sources(records: list[dict], warnings: dict):
                 f"  source_id={s['id']!r} display={s.get('display')!r} "
                 f"是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄"
             )
+
+
+# 「(已驗證)」「（已查證 URL）」「，已驗證」這類**肯定式**的自我宣告查驗狀態。
+#
+# 只抓肯定式，不抓「待驗證／未查證」：後者在散文裡是正當敘述（「此欄保留為待驗證
+# 問題」「感知專屬層仍待驗證」），把它一起抓會製造假陽性，而真正會誤導讀者的是
+# 肯定式——它讓一個沒對過篇名的字串看起來已經查過了。
+_VERIFICATION_MARKER = re.compile(r"(?:已驗證|已查證)(?:\s*(?:URL|url|全文|doi|DOI))?")
+
+
+def check_verification_marker_in_display(records: list[dict], warnings: dict):
+    """W026（登錄端）：`_sources.yaml` 的 display 裡寫著自己的查驗狀態。
+
+    這是 S3a-2 遷入時留下的形態：display 寫成「主題詞, PMC6092370 (已驗證)」。
+    三個問題疊在一起，只有第一個是外觀問題：
+
+    1. **狀態不屬於書目**。`verification_status` 已經有這個欄位，寫在 display
+       裡等於同一件事兩個真相源，而且 display 這份不會被任何檢查更新。
+    2. **識別碼取代了書目**。整串沒有作者、沒有年份、沒有期刊，讀者頁面的
+       「來源」欄印出來是一個主題詞加一串號碼。
+    3. **主題詞沒對過篇名**——這才是真正的傷害。那段字是登錄當時手寫的印象，
+       不是從文獻抓的。2026-09-06 把這批 49 筆逐一對回 PubMed／Crossref，
+       **12 筆對不上**：`src.pmc6092370` 寫「EIB in competitive swimmers 回顧」
+       實際是不分項目的一般性 EIB 回顧；`src.pmc7340704` 寫
+       「systematic review (Frontiers 2022)」實際是 2020 年 *Curr Rev
+       Musculoskelet Med* 的建議型回顧，刊名、年份、體例三項全錯。
+       這種錯誤會直接變成引用端的範圍誤用，而 E005／W008 全綠。
+
+    列 WARN 不列 ERROR：清理要逐筆回查文獻，不是驗證器能自動改的。
+    """
+    for s in records:
+        if s.get("verification_status") == "retracted":
+            continue
+        disp = s.get("display")
+        if isinstance(disp, str) and _VERIFICATION_MARKER.search(disp):
+            warnings["W026"].append(
+                f"  source_id={s['id']!r} display={disp!r} "
+                f"把查驗狀態寫進書目——狀態放 verification_status，"
+                f"display 換成「作者（年）。篇名。期刊。」並對回真實篇名"
+            )
+
+
+def check_verification_marker_in_citation(rel: str, data: object, warnings: dict):
+    """W026（引用端）：內容檔的 `source`／`sources`／`citation` 帶查驗狀態。
+
+    登錄端改乾淨不夠——這些字串是當初從 display 複製過去的，各自獨立存在於
+    內容檔裡（2026-09-06 實測 121 條）。只改 `_sources.yaml` 的話，讀者頁面
+    照樣印著舊的主題詞與「(已驗證)」，因為頁面讀的是這一份。
+    """
+    def walk(node, key=None):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                walk(v, k)
+        elif isinstance(node, list):
+            for v in node:
+                walk(v, key)
+        elif isinstance(node, str) and key in ("source", "sources", "citation"):
+            if _VERIFICATION_MARKER.search(node):
+                warnings["W026"].append(
+                    f"  file={rel} field={key!r} {node[:60]!r} "
+                    f"帶查驗狀態——換成 _sources.yaml 裡查證過的書目字串"
+                )
+
+    walk(data)
 
 
 def check_source_verification_status(records: list[dict], errors: dict):
@@ -2178,7 +2245,8 @@ def run_validation():
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
-        "W021": [], "W022": [], "W023": [], "W024": [], "W025": []
+        "W021": [], "W022": [], "W023": [], "W024": [], "W025": [],
+        "W026": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2376,6 +2444,7 @@ def run_validation():
         check_text_is_citation(rel, data, source_displays, warnings)
         check_public_layer_leak(rel, data, errors)
         check_machine_key_in_prose(rel, data, warnings)
+        check_verification_marker_in_citation(rel, data, warnings)
         check_evidence_from(rel, data, all_id_set, errors)
 
     # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
@@ -2387,6 +2456,7 @@ def run_validation():
     check_duplicate_source_registrations(source_records, warnings)
     check_observation_not_source(source_records, errors)
     check_internal_path_sources(source_records, warnings)
+    check_verification_marker_in_display(source_records, warnings)
 
     # ── W003: 孤兒條目 ──
     for rel, entry in all_entries:
@@ -2555,6 +2625,12 @@ def _write_report(
             "`_sources.yaml` 的 `display` 是本專案自己的草稿路徑"
             "（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，"
             "且這串會原樣印在讀者頁面的「來源」欄",
+        ),
+        "W026": (
+            "WARN",
+            "查驗狀態寫進讀者看得到的引用字串（「主題詞, PMC… (已驗證)」）"
+            "——狀態屬於 `verification_status`；更糟的是那段主題詞是手寫印象、"
+            "沒對過篇名（2026-09-06 實測 49 筆有 12 筆與實際篇名不符）",
         ),
         "W001": (
             "WARN",

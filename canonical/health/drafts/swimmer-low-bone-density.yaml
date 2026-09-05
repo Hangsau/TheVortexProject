@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: meta-analysis 多引 2000–2015 研究；游泳員專屬 BMD 介入研究僅約 2 篇且樣本小；長期實際骨折增加缺大型前瞻性結果數據
   sources:
-    - "Site-specific BMD in female swimmers, PMC7039474 (已驗證)"
-    - "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)"
+    - "Miller, M., Kojetin, S., & Scibora, L. (2020). Site-Specific Effects of Swimming on Bone Density in Female Collegiate Swimmers. International Journal of Exercise Science."
+    - "Florvåg, A. G., Berg, Ø. A., Røksund, O. D., Jorem, G. T., & Bogen, B. E. (2025). Exercise interventions to improve bone mineral density in athletes participating in low-impact sports: a scoping review. BMC Musculoskeletal Disorders."
   source_ids: [src.pmc7039474, src.pmc11744971]
 
 risk_factors:

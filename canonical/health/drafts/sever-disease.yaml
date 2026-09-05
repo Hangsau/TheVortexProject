@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 數據來自跑跳運動(足球)族群，非游泳特定；游泳機制上幾乎不致病，主要意義為低衝擊替代運動
   sources:
-    - "Sever's disease (calcaneal apophysitis), StatPearls NBK441928 (已驗證)"
-    - "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)"
+    - "Smith JM. Sever Disease (Calcaneal Apophysitis). In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441928（最後更新 2024-01-11）。"
+    - "Belikan, P., Färber, L. C., Abel, F., Nowak, T. E., Drees, P., & Mattyasovszky, S. G. (2022). Incidence of calcaneal apophysitis (Sever's disease) and return-to-play in adolescent athletes of a German youth soccer academy: a retrospective study of 10 years. Journal of Orthopaedic Surgery and Research."
   source_ids: [src.sever-s-disease-calcaneal-apophysitis-statpe, src.pmc8827183]
 
 risk_factors:

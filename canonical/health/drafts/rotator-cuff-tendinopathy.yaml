@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 多為影像橫斷面；影像改變不等於臨床疾病(Masters 影像盛行率遠高於有症狀者)；訓練量倍率與部分 MRI 數字為二手綜述引用待追原始研究
   sources:
-    - "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
-    - "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)"
+    - "Suzuki, Y., Maeda, N., Sasadai, J., Kaneda, K., Shirakawa, T., & Urabe, Y. (2020). Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers. Medicina."
+    - "Stirling, B. D., Sum, J. C., Baek, L., Michener, L. A., Barrack, A. J., & Tate, A. R. (2024). Shoulder pain in competitive swimmers: a multi-site survey study. International Journal of Sports Physical Therapy, 19(8), 965–975."
   source_ids: [src.pmc7824457, src.pmc11297363-b]
 
 risk_factors:

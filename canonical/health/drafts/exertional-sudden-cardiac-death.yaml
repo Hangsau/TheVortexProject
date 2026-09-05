@@ -24,9 +24,9 @@ epidemiology:
     **不是游泳專項**；且 ECG 全面篩查的成本效益在 ACC／AHA 立場中仍有異議，
     引用此數字時須同時呈現該爭議（見 flags.contested）。
   sources:
-    - "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)"
+    - "Li, L., Le Douairon Lahaye, S., Ding, S., & Schnell, F. (2025). Sex Differences in the Incidence of Sudden Cardiac Arrest/Death in Competitive Athletes: A Systematic Review and Meta-analysis. Sports Medicine."
     - "Corrado D, Basso C, Pavei A, et al. (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601. PMID 17018804, doi:10.1001/jama.296.13.1593"
-    - "Commotio Cordis in 2023, PMC10356869 (已驗證)"
+    - "Peng, T., Derry, L. T., Yogeswaran, V., & Goldschlager, N. F. (2023). Commotio Cordis in 2023. Sports Medicine."
   source_ids: [src.pmc11985649, src.ecg-scd-3-6-0-4-10-89-url, src.pmc10356869]
 
 risk_factors:

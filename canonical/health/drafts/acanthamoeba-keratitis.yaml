@@ -18,7 +18,7 @@ epidemiology:
   evidence_grade: B
   caveat: 屬罕見但破壞性極強之眼科急症；發生率受隱形眼鏡使用率與通報品質影響，地區差異大；游泳特異性歸因比例缺精確分母
   sources:
-    - "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)"
+    - "Garg, D., & Daigavane, S. (2024). A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies. Cureus, 16(8), e67803."
   source_ids: [src.pmc11424229]
 
 risk_factors:

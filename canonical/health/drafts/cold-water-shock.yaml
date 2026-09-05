@@ -20,7 +20,7 @@ epidemiology:
   caveat: 被認為是意外落水後最常見的『立即』死因(低體溫需 >30 分才危及生命)；機制證據多為生理實驗，缺大型流病
   sources:
     - "Tipton M. (2003). Cold water immersion: sudden death and prolonged survival. Lancet 362 Suppl:s12–13. PMID 14698111（單一作者，兩頁短文性質為評論／概觀，非原始研究）"
-    - "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)"
+    - "Lundström, A., Karlsson, M., Rydberg, A., & Wiklund, U. (2025). Assessment of arrhythmias and heart rate response in healthy adolescents performing face immersion and body submersion in ice-cold water. Physiological Reports."
   source_ids: [src.tipton-mj-et-al-cold-water-immersion-sudden-2003, src.pmc12234767]
 
 risk_factors:

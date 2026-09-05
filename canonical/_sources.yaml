@@ -150,6 +150,10 @@ generated_date: "2026-07-29"
 #      這兩批字串本身就帶 DOI / PMID / PMCID）。字串裡出現的「(已驗證)」是
 #      **原作者寫在顯示字串裡的字**，不是本註冊表的查驗結論——逐字保留但
 #      不據此標 verified；沒有 dereference 就沒有 retrieved_on。
+#      → 2026-09-06 已結案：這批殘留 49 筆的 display 全數改寫成真書目（作者・年份・
+#        篇名・期刊），識別碼只留在 identifier 欄；canonical/ 內 121 條讀者可見的
+#        引用字串同步換掉。其中 12 筆的主題詞與實際篇名對不上，已在各自 notes 記
+#        下不符內容與使用邊界。本檔與 canonical/ 都不應再出現「(已驗證)」字樣。
 #   6. 55 筆是複合字串，待拆分。
 #   7. 73 筆是指向 Research/心理/*.md 錨點的**內部交叉參照**，不是外部文獻。
 #      它們仍須有 ID（否則引用端無法機器解析），但 S3c 要追到該節的原始文獻，
@@ -2159,7 +2163,7 @@ sources:
     notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.pmc10339925
-    display: "Skin Cancer Risk in Athletes narrative review, Cancers 2023, PMC10339925 (已驗證)"
+    display: "Kliniec, K., Tota, M., Zalesińska, A., Łyko, M., & Jankowska-Konsur, A. (2023). Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes-A Narrative Review. Cancers."
     title: "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes-A Narrative Review."
     type: journal-article
     verification_status: verified
@@ -2172,7 +2176,7 @@ sources:
       doi: "10.3390/cancers15133281"
     retrieved_on: "2026-07-27"
   - id: src.pmc10356869
-    display: "Commotio Cordis in 2023, PMC10356869 (已驗證)"
+    display: "Peng, T., Derry, L. T., Yogeswaran, V., & Goldschlager, N. F. (2023). Commotio Cordis in 2023. Sports Medicine."
     title: "Commotio Cordis in 2023."
     type: journal-article
     verification_status: verified
@@ -2224,7 +2228,7 @@ sources:
       屬重複登錄，已刪除並統一回本 id。
 
   - id: src.pmc10689961
-    display: "China drowning in minors 2013–2021, PMID 38047245 / PMC10689961 (已驗證)"
+    display: "Li, Z., Deng, X., Jin, Y., Duan, L., & Ye, P. (2023). Unintentional Drowning Mortality Among Individuals Under Age 20 - China, 2013-2021. China CDC Weekly."
     title: "Unintentional Drowning Mortality Among Individuals Under Age 20 - China, 2013-2021."
     type: journal-article
     verification_status: verified
@@ -2239,7 +2243,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc10713671
-    display: "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)"
+    display: "Abdelrahman, H. H., Ammar, N., Hassan, M. G., Essam, W., & Amer, H. (2023). Erosive tooth wear and salivary parameters among competitive swimmers and non-swimmers in Egypt: a cross-sectional study. Clinical Oral Investigations."
     title: "Erosive tooth wear and salivary parameters among competitive swimmers and non-swimmers in Egypt: a cross-sectional study."
     type: journal-article
     verification_status: verified
@@ -2251,7 +2255,7 @@ sources:
       pmid: "37924355"
       doi: "10.1007/s00784-023-05367-7"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 顯示字串更正：原 display 寫「competitive swimmers vs rowers」，但本篇的對照組是 **non-swimmers（非游泳者）**，不是划船選手。引用時不可寫成「與划船選手比較」。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc10813451
     display: "Validation of Automatically Quantified Swim Stroke Mechanics Using IMU in Paralympic Athletes, 2024"
@@ -2269,7 +2273,7 @@ sources:
     retrieved_on: "2026-07-28"
     notes: "原 display 以 2024 標示期卷年；PubMed metadata 的發表年為 2023，S3c 依權威紀錄保存。"
   - id: src.pmc11115434
-    display: "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)"
+    display: "Clemens, T., Moreland, B., Mack, K. A., Thomas, K., Bergen, G., & Lee, R. (2024). Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure - United States, 2019-2023. MMWR Morbidity and Mortality Weekly Report."
     title: "Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure - United States, 2019-2023."
     type: journal-article
     verification_status: verified
@@ -2282,7 +2286,7 @@ sources:
       doi: "10.15585/mmwr.mm7320e1"
     retrieved_on: "2026-07-27"
   - id: src.pmc11277273
-    display: "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)"
+    display: "Hock, G., Johnson, A., Barber, P., & Papa, C. (2024). Current Clinical Concepts: Rehabilitation of Thoracic Outlet Syndrome. Journal of Athletic Training."
     title: "Current Clinical Concepts: Rehabilitation of Thoracic Outlet Syndrome."
     type: journal-article
     verification_status: verified
@@ -2335,7 +2339,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11531034
-    display: "Swimming low back pain by stroke, PMC11531034 (已驗證)"
+    display: "Hsu, C., Krabak, B., Cunningham, B., & Borg-Stein, J. (2024). Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review. Sports Health."
     title: "Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review."
     type: journal-article
     verification_status: verified
@@ -2347,10 +2351,10 @@ sources:
       pmid: "38262981"
       doi: "10.1177/19417381231225213"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 顯示字串更正：原 display 寫「Swimming low back pain by stroke」，實際篇名是「Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review」。**使用邊界**：這是敘述性回顧（narrative review），不是分泳式的統計比較；引用分泳式盛行率時要回到本篇所轉引的原始研究，不能把「分泳式數據」記在本篇名下。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11642080
-    display: "FAI rehabilitation & RTS, PMC11642080 (已驗證)"
+    display: "Monselli, C., Bianco Prevot, L., Accetta, R., Tronconi, L. P., Bolcato, V., & Basile, G. (2024). State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review. Journal of Clinical Medicine."
     title: "State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review."
     type: journal-article
     verification_status: verified
@@ -2362,10 +2366,10 @@ sources:
       pmid: "39685760"
       doi: "10.3390/jcm13237302"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「FAI rehabilitation & RTS」，實際篇名是「State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review」——範圍限定在**髖關節鏡手術後**的復健，不是保守治療期的 FAI 復健。**使用邊界**：不可用來支持「FAI 泳者不開刀時該怎麼練」；術後復健的進程與負荷限制不能平移到未手術者。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11744971
-    display: "Resistance/impact BMD intervention, PMID 39833826 / PMC11744971 (已驗證)"
+    display: "Florvåg, A. G., Berg, Ø. A., Røksund, O. D., Jorem, G. T., & Bogen, B. E. (2025). Exercise interventions to improve bone mineral density in athletes participating in low-impact sports: a scoping review. BMC Musculoskeletal Disorders."
     title: "Exercise interventions to improve bone mineral density in athletes participating in low-impact sports: a scoping review."
     type: journal-article
     verification_status: verified
@@ -2380,7 +2384,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11954903
-    display: "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)"
+    display: "Xie, Z., Huang, Z., Ran, Q., Luo, W., & Du, W. (2025). Global burden of drowning and risk factors across 204 countries from 1990 to 2021. Scientific Reports."
     title: "Global burden of drowning and risk factors across 204 countries from 1990 to 2021."
     type: journal-article
     verification_status: verified
@@ -2393,7 +2397,7 @@ sources:
       doi: "10.1038/s41598-025-95486-w"
     retrieved_on: "2026-07-27"
   - id: src.pmc11985649
-    display: "Sex Differences in SCA/SCD in Competitive Athletes 系統綜述+meta, PMC11985649 (已驗證)"
+    display: "Li, L., Le Douairon Lahaye, S., Ding, S., & Schnell, F. (2025). Sex Differences in the Incidence of Sudden Cardiac Arrest/Death in Competitive Athletes: A Systematic Review and Meta-analysis. Sports Medicine."
     title: "Sex Differences in the Incidence of Sudden Cardiac Arrest/Death in Competitive Athletes: A Systematic Review and Meta-analysis."
     type: journal-article
     verification_status: verified
@@ -2408,7 +2412,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc12234767
-    display: "Lundström et al., 健康青少年冰水面浸心律研究, Physiological Reports 2025, PMC12234767 (已驗證)"
+    display: "Lundström, A., Karlsson, M., Rydberg, A., & Wiklund, U. (2025). Assessment of arrhythmias and heart rate response in healthy adolescents performing face immersion and body submersion in ice-cold water. Physiological Reports."
     title: "Assessment of arrhythmias and heart rate response in healthy adolescents performing face immersion and body submersion in ice-cold water."
     type: journal-article
     verification_status: verified
@@ -2421,7 +2425,7 @@ sources:
       doi: "10.14814/phy2.70430"
     retrieved_on: "2026-07-27"
   - id: src.pmc12847173
-    display: "Pathophysiology and treatment of EAH, J Endocrinol Invest 2025, PMC12847173 (已驗證)"
+    display: "Altieri, B., Aini, I., Cannavale, G., Magnelli, C., Mancini, C., Zamponi, V., Isidori, A. M., Colao, A., Faggiano, A., Peri, A., & NIKE group (2026). Pathophysiology and treatment of exercise-associated hyponatremia. Journal of Endocrinological Investigation."
     title: "Pathophysiology and treatment of exercise-associated hyponatremia."
     type: journal-article
     verification_status: verified
@@ -2433,9 +2437,10 @@ sources:
       pmid: "40913680"
       doi: "10.1007/s40618-025-02673-7"
     retrieved_on: "2026-07-28"
+    notes: "2026-09-06 顯示字串年份更正：原 display 寫「J Endocrinol Invest 2025」，但期刊卷期年份是 **2026**（2025 為線上先行年）。本專案一律記期號年份。"
     notes: "原 display 記 2025（DOI／online 年）；PubMed 所列期卷年為 2026，S3c 依權威紀錄保存。"
   - id: src.pmc1448328
-    display: "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)"
+    display: "Verbrugge, L. M., Rainey, J. J., Reimink, R. L., & Blankespoor, H. D. (2004). Swimmer's itch: incidence and risk factors. American Journal of Public Health."
     title: "Swimmer's itch: incidence and risk factors."
     type: journal-article
     verification_status: verified
@@ -2450,7 +2455,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc1626429
-    display: "Childhood pool exposure and asthma (Brussels), PMC1626429 (已驗證)"
+    display: "Bernard, A., Carbonnelle, S., de Burbure, C., Michel, O., & Nickmilder, M. (2006). Chlorinated pool attendance, atopy, and the risk of asthma during childhood. Environmental Health Perspectives."
     title: "Chlorinated pool attendance, atopy, and the risk of asthma during childhood."
     type: journal-article
     verification_status: verified
@@ -2480,7 +2485,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc2899837
-    display: "Cervical spine injuries 34 patients(C5 節段數據), PMC2899837 (已驗證)"
+    display: "Borius, P. Y., Gouader, I., Bousquet, P., Draper, L., & Roux, F. E. (2010). Cervical spine injuries resulting from diving accidents in swimming pools: outcome of 34 patients. European Spine Journal."
     title: "Cervical spine injuries resulting from diving accidents in swimming pools: outcome of 34 patients."
     type: journal-article
     verification_status: verified
@@ -2495,7 +2500,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3435931
-    display: "Competitive swimmers spine degeneration, PMC3435931 (已驗證)"
+    display: "Wanivenhaus, F., Fox, A. J., Chaudhury, S., & Rodeo, S. A. (2012). Epidemiology of injuries and prevention strategies in competitive swimmers. Sports Health."
     title: "Epidemiology of injuries and prevention strategies in competitive swimmers."
     type: journal-article
     verification_status: verified
@@ -2507,7 +2512,7 @@ sources:
       pmid: "23016094"
       doi: "10.1177/1941738112442132"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「Competitive swimmers spine degeneration」，實際篇名是「Epidemiology of injuries and prevention strategies in competitive swimmers」——這是**競技泳者傷害流行病學與預防的整體回顧**，不是脊椎退化專論。**使用邊界**：文中關於脊椎退化的比率是**轉引自其他研究的二手數字**，引用時必須標成二手，不能當本篇自己的量測。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3438875
     display: "Biomechanical Considerations in the Competitive Swimmer's Shoulder, PMC3438875"
@@ -2526,7 +2531,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3488741
-    display: "Trichloramine and lung function, PMC3488741 (已驗證)"
+    display: "Nordberg, G. F., Lundstrom, N. G., Forsberg, B., Hagenbjork-Gustafsson, A., Lagerkvist, B. J., Nilsson, J., Svensson, M., Blomberg, A., Nilsson, L., Bernard, A., Dumont, X., Bertilsson, H., & Eriksson, K. (2012). Lung function in volunteers before and after exposure to trichloramine in indoor pool environments and asthma in a cohort of pool workers. BMJ Open."
     title: "Lung function in volunteers before and after exposure to trichloramine in indoor pool environments and asthma in a cohort of pool workers."
     type: journal-article
     verification_status: verified
@@ -2541,7 +2546,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3579418
-    display: "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)"
+    display: "Buczkowska-Radlińska, J., Łagocka, R., Kaczmarek, W., Górski, M., & Nowicka, A. (2013). Prevalence of dental erosion in adolescent competitive swimmers exposed to gas-chlorinated swimming pool water. Clinical Oral Investigations."
     title: "Prevalence of dental erosion in adolescent competitive swimmers exposed to gas-chlorinated swimming pool water."
     type: journal-article
     verification_status: verified
@@ -2556,7 +2561,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc3811737
-    display: "SLAP lesions overview & rehab, PMC3811737 (已驗證)"
+    display: "Wilk, K. E., Macrina, L. C., Cain, E. L., Dugas, J. R., & Andrews, J. R. (2013). The recognition and treatment of superior labral (slap) lesions in the overhead athlete. International Journal of Sports Physical Therapy."
     title: "The recognition and treatment of superior labral (slap) lesions in the overhead athlete."
     type: journal-article
     verification_status: verified
@@ -2608,7 +2613,7 @@ sources:
     notes: "2026-09-06 efetch 核對後獨立登錄，來自拆解複合鍵 src.pmc4234766-b。內容：6 名菁英泳者，各做兩組 4 趟 15 m 全力仰式出發，比較「雙腳完全沒入水面下」與「雙腳露出水面」兩種腳位；矢狀面雙攝影機跨介質二維運動學，加上水下測力板與裝有 load cell 的握把測動力學。結果：腳沒入水者的重心水平起始位置、hands-off 時的重心水平速度、**起跳角度**都較大；腳露出水面者的觸牆時間、離台時重心的水平與向下垂直速度、下肢水平衝量、飛行期向下垂直速度較大；兩者的**重心水平入水距離、背弓角度與 5 m 出發時間相當**。**使用邊界（重要）**：① 本篇是**腳位變項**的比較，不是起跳角度與成績的關聯研究；② 它量到的方向恰好相反——起跳角度較大的那個變項，5 m 時間**沒有比較差**（兩者相當）；因此不得用本篇支持「起跳角度越大成績越差」；③ n=6 全為菁英泳者，且該規則背景是 2005 年改制，早於後續出發台與扶手規則變動。"
 
   - id: src.pmc4247626
-    display: "LHB and rotator cuff coexistence systematic review, PMC4247626 (已驗證)"
+    display: "Redondo-Alonso, L., Chamorro-Moriana, G., Jiménez-Rejano, J. J., López-Tarrida, P., & Ridao-Fernández, C. (2014). Relationship between chronic pathologies of the supraspinatus tendon and the long head of the biceps tendon: systematic review. BMC Musculoskeletal Disorders."
     title: "Relationship between chronic pathologies of the supraspinatus tendon and the long head of the biceps tendon: systematic review."
     type: review
     verification_status: verified
@@ -2623,7 +2628,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc4528289
-    display: "Swimmers refractory shoulder arthroscopy series, PMC4528289 (已驗證)"
+    display: "Butler, D., Funk, L., Mackenzie, T. A., & Herrington, L. C. (2015). Sorting swimmers shoulders: An observational study on swimmers that presented to a shoulder surgeon. International Journal of Shoulder Surgery."
     title: "Sorting swimmers shoulders: An observational study on swimmers that presented to a shoulder surgeon."
     type: journal-article
     verification_status: verified
@@ -2646,7 +2651,7 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc5286756
-    display: "Aquatic dermatoses 回顧, PMC5286756 (已驗證)"
+    display: "Sridhar, S. C., & Deo, S. C. (2017). Marine and Other Aquatic Dermatoses. Indian Journal of Dermatology."
     title: "Marine and Other Aquatic Dermatoses."
     type: journal-article
     verification_status: verified
@@ -2661,7 +2666,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc5800136
-    display: "Solar Radiation Latitudes and Pterygium systematic review, PMC5800136 (已驗證)"
+    display: "Modenese, A., & Gobba, F. (2017). Occupational Exposure to Solar Radiation at Different Latitudes and Pterygium: A Systematic Review of the Last 10 Years of Scientific Literature. International Journal of Environmental Research and Public Health."
     title: "Occupational Exposure to Solar Radiation at Different Latitudes and Pterygium: A Systematic Review of the Last 10 Years of Scientific Literature."
     type: review
     verification_status: verified
@@ -2676,7 +2681,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6092370
-    display: "EIB in competitive swimmers 回顧, PMC6092370 (已驗證)"
+    display: "Aggarwal, B., Mulgirigama, A., & Berend, N. (2018). Exercise-induced bronchoconstriction: prevalence, pathophysiology, patient impact, diagnosis and management. npj Primary Care Respiratory Medicine."
     title: "Exercise-induced bronchoconstriction: prevalence, pathophysiology, patient impact, diagnosis and management."
     type: journal-article
     verification_status: verified
@@ -2688,10 +2693,10 @@ sources:
       pmid: "30108224"
       doi: "10.1038/s41533-018-0098-2"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「EIB in competitive swimmers 回顧」，實際篇名是「Exercise-induced bronchoconstriction: prevalence, pathophysiology, patient impact, diagnosis and management」——這是**運動誘發支氣管收縮的一般性回顧，不是游泳專屬**。**使用邊界**：可用於 EIB 的機制、診斷與處置通則；泳者專屬的盛行率若要引用，必須指明那是本回顧轉引的族群數字，且不能寫成「本篇針對競技泳者」。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6137694
-    display: "Chloramine eye irritation 機制研究, PMC6137694 (已驗證)"
+    display: "Ahmad, S. S. (2018). Water related ocular diseases. Saudi Journal of Ophthalmology."
     title: "Water related ocular diseases."
     type: journal-article
     verification_status: verified
@@ -2703,7 +2708,7 @@ sources:
       pmid: "30224888"
       doi: "10.1016/j.sjopt.2017.10.009"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「Chloramine eye irritation 機制研究」，實際篇名是「Water related ocular diseases」——這是**與水相關眼疾的廣泛回顧，不是氯胺刺激的機制研究**，沒有做氯胺劑量—反應的原始量測。**使用邊界**：只能支撐「泳池水與消毒副產物是眼部刺激的已知成因之一」這一層，任何氯胺濃度與症狀的定量關係都要另找原始文獻。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6409673-a
     display: "【重複登錄，已解除】與 src.pmc6409673-b 為同一篇文獻"
@@ -2738,7 +2743,7 @@ sources:
     notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc6409673-b` 指向同一篇文獻（同 PMID 30696072、同 PMC6409673、同 DOI。原顯示字串標「(已驗證 URL)」——只驗過連結會通，沒驗書目）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc6409673-b`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc6464216
-    display: "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)"
+    display: "Nagano, Y., Kobayashi-Yamakawa, K., Higashihara, A., & Yako-Suketomo, H. (2019). Japanese translation and modification of the Oslo Sports Trauma Research Centre overuse injury questionnaire to evaluate overuse injuries in female college swimmers. PLoS ONE."
     title: "Japanese translation and modification of the Oslo Sports Trauma Research Centre overuse injury questionnaire to evaluate overuse injuries in female college swimmers."
     type: journal-article
     verification_status: verified
@@ -2750,10 +2755,10 @@ sources:
       pmcid: "PMC6464216"
       doi: "10.1371/journal.pone.0215352"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「Japanese university female swimmers」，實際篇名是「Japanese translation and modification of the Oslo Sports Trauma Research Centre overuse injury questionnaire to evaluate overuse injuries in female college swimmers」——這是 **OSTRC 過度使用傷害問卷的日文版翻譯與信效度研究**，主產出是量表而非傷害流行病學。**使用邊界**：其中的盛行率是驗證量表時的樣本描述（單一國家、單一族群、樣本量小），不可當成日本大學女泳者的代表性流行病學數據。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6597118
-    display: "Cryptosporidiosis outbreaks US 2009–2017, PMC6597118 (已驗證)"
+    display: "Gharpure, R., Perez, A., Miller, A. D., Wikswo, M. E., Silver, R., & Hlavsa, M. C. (2019). Cryptosporidiosis Outbreaks - United States, 2009-2017. MMWR Morbidity and Mortality Weekly Report."
     title: "Cryptosporidiosis Outbreaks - United States, 2009-2017."
     type: journal-article
     verification_status: verified
@@ -2768,7 +2773,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6863674
-    display: "Matsuura et al, BMJ Open Sport Exerc Med 2019, PMID 31798949 / PMC6863674 (已驗證，全文)"
+    display: "Matsuura, Y., Hangai, M., Koizumi, K., Ueno, K., Hirai, N., Akuzawa, H., & Kaneoka, K. (2019). Injury trend analysis in the Japan national swim team from 2002 to 2016: effect of the lumbar injury prevention project. BMJ Open Sport & Exercise Medicine."
     title: "Injury trend analysis in the Japan national swim team from 2002 to 2016: effect of the lumbar injury prevention project."
     type: journal-article
     verification_status: verified
@@ -2781,7 +2786,7 @@ sources:
       doi: "10.1136/bmjsem-2019-000615"
     retrieved_on: "2026-07-27"
   - id: src.pmc7039474
-    display: "Site-specific BMD in female swimmers, PMC7039474 (已驗證)"
+    display: "Miller, M., Kojetin, S., & Scibora, L. (2020). Site-Specific Effects of Swimming on Bone Density in Female Collegiate Swimmers. International Journal of Exercise Science."
     title: "Site-Specific Effects of Swimming on Bone Density in Female Collegiate Swimmers."
     type: journal-article
     verification_status: verified
@@ -2796,7 +2801,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7077213
-    display: "Warm-water surfers exostosis 橫斷研究, PMC7077213 (已驗證)"
+    display: "Simas, V., Hing, W., Furness, J., Walsh, J., & Climstein, M. (2020). The Prevalence and Severity of External Auditory Exostosis in Young to Quadragenarian-Aged Warm-Water Surfers: A Preliminary Study. Sports."
     title: "The Prevalence and Severity of External Auditory Exostosis in Young to Quadragenarian-Aged Warm-Water Surfers: A Preliminary Study."
     type: journal-article
     verification_status: verified
@@ -2811,7 +2816,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7340704
-    display: "TOS in athletes systematic review (Frontiers 2022) / PMC7340704 (已驗證)"
+    display: "Ohman, J. W., & Thompson, R. W. (2020). Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations. Current Reviews in Musculoskeletal Medicine."
     title: "Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations."
     type: review
     verification_status: verified
@@ -2823,9 +2828,10 @@ sources:
       pmid: "32514995"
       doi: "10.1007/s12178-020-09643-x"
     retrieved_on: "2026-07-28"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「TOS in athletes systematic review (Frontiers 2022) / PMC7340704」，三處都錯——本篇刊在 *Current Reviews in Musculoskeletal Medicine*（不是 Frontiers）、2020 年（不是 2022）、體例是**診斷與治療建議型回顧**（不是系統回顧）。**使用邊界**：它彙整的是過頭項目運動員 TOS 的診斷流程與處置建議，沒有做系統性檢索與合併統計，不可當成盛行率或療效的證據等級來源。"
     notes: "S3c 確認原 display 的 Frontiers 2022／systematic review 描述錯誤；實為 Ohman & Thompson 2020 的 overhead athlete 診療回顧，正文來源字串已更正。"
   - id: src.pmc7584313
-    display: "Hot tub folliculitis 回顧, PMC7584313 (已驗證)"
+    display: "Jacob, J. S., & Tschen, J. (2020). Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors. Cureus."
     title: "Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors."
     type: journal-article
     verification_status: verified
@@ -2840,7 +2846,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7605769
-    display: "Cam morphology in aquatic athletes, PMC7605769 (已驗證)"
+    display: "Langner, J. L., Black, M. S., MacKay, J. W., Hall, K. E., Safran, M. R., Kogan, F., & Gold, G. E. (2020). The prevalence of femoroacetabular impingement anatomy in Division 1 aquatic athletes who tread water. Journal of Hip Preservation Surgery."
     title: "The prevalence of femoroacetabular impingement anatomy in Division 1 aquatic athletes who tread water."
     type: journal-article
     verification_status: verified
@@ -2855,7 +2861,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc7824457
-    display: "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
+    display: "Suzuki, Y., Maeda, N., Sasadai, J., Kaneda, K., Shirakawa, T., & Urabe, Y. (2020). Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers. Medicina."
     title: "Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers."
     type: journal-article
     verification_status: verified
@@ -2886,7 +2892,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8136425
-    display: "Treated recreational water illness outbreaks 2015–2019, PMC8136425 (已驗證)"
+    display: "Hlavsa, M. C., Aluko, S. K., Miller, A. D., Person, J., Gerdes, M. E., Lee, S., Laco, J. P., Hannapel, E. J., & Hill, V. R. (2021). Outbreaks Associated with Treated Recreational Water - United States, 2015-2019. MMWR Morbidity and Mortality Weekly Report."
     title: "Outbreaks Associated with Treated Recreational Water - United States, 2015-2019."
     type: journal-article
     verification_status: verified
@@ -2998,7 +3004,7 @@ sources:
       ③ 0.4/100,000 是全人口年發生率，不是水域暴露者的發生率。
 
   - id: src.pmc8192199
-    display: "Spinal injuries Aegean Coast(24h 內減壓與恢復), PMC8192199 (已驗證)"
+    display: "Yılmaz, M., Ikizoglu, E., Arslan, M., Ozgiray, E., Calıskan, K. E., & Erbayraktar, R. S. (2021). An Overview of Spinal Injuries due to Dive or Fall into Shallow Water: Our Long-Term, Double-Center Experience from the Aegean Coast. Emergency Medicine International."
     title: "An Overview of Spinal Injuries due to Dive or Fall into Shallow Water: Our Long-Term, Double-Center Experience from the Aegean Coast."
     type: journal-article
     verification_status: verified
@@ -3060,7 +3066,7 @@ sources:
     retrieved_on: "2026-07-28"
     notes: "S3c 由 PMCID 確認本筆身分。內容：20 名平均 16.1 歲的女性競技泳者，三級跳遠測試判定慣用腳，比較慣用／非慣用腳放 OSB12 前緣的差異；慣用腳放前緣時 block 時間與 2 m、5 m 時間都較短（p < 0.05，Cohen's d 大效果）。使用邊界：族群是青少女競技泳者、台型限 OSB12、樣本 20 人；不得外推到男性、成人或其他出發台型。2026-09-06 併入複合鍵 src.takai（該鍵同時混入本 PMCID 與 PMID 27149652）。"
   - id: src.pmc8827183
-    display: "Sever disease in youth football academy, PMID 35139872 / PMC8827183 (已驗證)"
+    display: "Belikan, P., Färber, L. C., Abel, F., Nowak, T. E., Drees, P., & Mattyasovszky, S. G. (2022). Incidence of calcaneal apophysitis (Sever's disease) and return-to-play in adolescent athletes of a German youth soccer academy: a retrospective study of 10 years. Journal of Orthopaedic Surgery and Research."
     title: "Incidence of calcaneal apophysitis (Sever's disease) and return-to-play in adolescent athletes of a German youth soccer academy: a retrospective study of 10 years."
     type: journal-article
     verification_status: verified
@@ -3075,7 +3081,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8869186
-    display: "OSD incidence general practice (Netherlands), PMID 34990396 / PMC8869186 (已驗證)"
+    display: "van Leeuwen, G. J., de Schepper, E. I., Rathleff, M. S., Bindels, P. J., Bierma-Zeinstra, S. M., & van Middelkoop, M. (2022). Incidence and management of Osgood-Schlatter disease in general practice: retrospective cohort study. British Journal of General Practice."
     title: "Incidence and management of Osgood-Schlatter disease in general practice: retrospective cohort study."
     type: journal-article
     verification_status: verified
@@ -3142,7 +3148,7 @@ sources:
     notes: "2026-09-06 重複登錄合併：src.pmc8960438-b 已確認同篇並改掛本 id。src.pmc8960438-a／-c 已查明**不是本篇的重複登錄**，而是 Blanksby 等 1998, J Appl Biomech 14(2):180–189 被誤填了本篇的 PMCID；那篇已獨立登錄為 src.blanksby-1998-breaststroke-turns，兩個舊 id 已立墓碑。本篇（Chainok et al. 2022）的主題是分齡泳者的仰式轉蛙式轉換技術，與蛙式轉身的進牆／離牆速度分析無關，兩者不可互相代用。"
 
   - id: src.pmc9057286
-    display: "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)"
+    display: "Climstein, M., Doyle, B., Stapelberg, M., Rosic, N., Hertess, I., Furness, J., Simas, V., & Walsh, J. (2022). Point prevalence of non-melanoma and melanoma skin cancers in Australian surfers and swimmers in Southeast Queensland and Northern New South Wales. PeerJ."
     title: "Point prevalence of non-melanoma and melanoma skin cancers in Australian surfers and swimmers in Southeast Queensland and Northern New South Wales."
     type: journal-article
     verification_status: verified
@@ -3194,7 +3200,7 @@ sources:
     notes: "2026-09-06 重複登錄稽核：本 id 與 `src.mccabe-2022` 指向同一篇文獻（同 PMID 36081618、同 PMC9445308、同 DOI 10.3389/fspor.2022.963578）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.mccabe-2022`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc9658102
-    display: "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)"
+    display: "Gimunová, M., Paulínyová, A., Bernaciková, M., & Paludo, A. C. (2022). The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review. International Journal of Environmental Research and Public Health."
     title: "The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review."
     type: journal-article
     verification_status: verified
@@ -3206,10 +3212,10 @@ sources:
       pmcid: "PMC9658102"
       doi: "10.3390/ijerph192114243"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 誤標顯示字串更正：原 display 寫「Menstrual dysfunction in swimmers」，實際篇名是「The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review」——這是**跨多種運動項目的快速回顧，不是游泳專屬研究**。**使用邊界**：游泳的數字是本篇分項彙整的其中一格，引用時要標明「跨項目回顧中的游泳分項」；rapid review 的檢索與評讀強度低於系統回顧，確定性不應標到 🟢。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9699060
-    display: "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)"
+    display: "Klingert, M., Nikolaidis, P. T., Weiss, K., Thuany, M., Chlíbková, D., & Knechtle, B. (2022). Exercise-Associated Hyponatremia in Marathon Runners. Journal of Clinical Medicine."
     title: "Exercise-Associated Hyponatremia in Marathon Runners."
     type: journal-article
     verification_status: verified
@@ -3224,7 +3230,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9724109
-    display: "RED-S and bone stress injury risk, PMID 36479178 / PMC9724109 (已驗證)"
+    display: "Cabre, H. E., Moore, S. R., Smith-Ryan, A. E., & Hackney, A. C. (2022). Relative Energy Deficiency in Sport (RED-S): Scientific, Clinical, and Practical Implications for the Female Athlete. Deutsche Zeitschrift für Sportmedizin."
     title: "Relative Energy Deficiency in Sport (RED-S): Scientific, Clinical, and Practical Implications for the Female Athlete."
     type: journal-article
     verification_status: verified
@@ -3236,7 +3242,7 @@ sources:
       pmcid: "PMC9724109"
       doi: "10.5960/dzsm.2022.546"
     retrieved_on: "2026-07-27"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 顯示字串更正：原 display 寫「RED-S and bone stress injury risk」，實際篇名是「Relative Energy Deficiency in Sport (RED-S): Scientific, Clinical, and Practical Implications for the Female Athlete」——涵蓋女性運動員 RED-S 的全面影響，骨骼只是其中一節。**使用邊界**：骨折風險倍率是本篇轉引的二手數字，引用時須標二手。 ｜ 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-12840640-a
     display: "Ch9; Mujika & Padilla 2003 (PMID 12840640)"
@@ -3334,7 +3340,7 @@ sources:
     notes: "S3c 已裁決（2026-09-03）：① 原本與 src.pmc9402090-a 的 pmid 重疊不是重複登錄，而是 -a 那筆把本篇的 pmid 錯掛在 PMC9402090 之下；-a 已刪除，本筆是 24984154 的唯一登錄。② 原 src.sciencedirect-2014（無識別碼、unverified）經查證即本篇——Human Movement Science 是 Elsevier／ScienceDirect 期刊，2014，DOI 10.1016/j.humov.2014.05.004，主題正是踝肌力與柔韌性對海豚踢表現的影響，與該筆的引用內容（蹠屈＋內旋受限顯著降低 UDK 表現）一致；該筆已刪除並併入本筆。③ 「限制蹠屈 30% → 游速下降 19.5%」確為本篇數字，由 Kuhn & Legerlotz 2022 全文引述並明標出處為 Willems et al. 2014；庫內原寫「19%」已更正為 19.5%。查證後 year 已補 2014（舊註記「year 留空」已不適用）。"
 
   - id: src.pmid-25443755
-    display: "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)"
+    display: "Rogers, I. R., Grainger, S., & Nagree, Y. (2015). Exercise-associated hyponatremic encephalopathy in an endurance open water swimmer. Wilderness & Environmental Medicine."
     title: "Exercise-associated hyponatremic encephalopathy in an endurance open water swimmer."
     type: journal-article
     verification_status: verified
@@ -3404,7 +3410,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-30521295
-    display: "External Auditory Exostoses, StatPearls PMID 30521295 (已驗證)"
+    display: "Bart RM, Lau H, Cooper JS. Surfer's Ear. In: StatPearls. Treasure Island (FL): StatPearls Publishing（2026 年版）。"
     title: "Surfer's Ear."
     type: journal-article
     verification_status: verified
@@ -3479,7 +3485,7 @@ sources:
     notes: "2026-09-06 首次登錄。三方聯合聲明本身只給定義與立場，可操作的條文在這份簡報裡，因此分開登錄：教學端限下潛前單次吸氣、水下活動不得競賽化或反覆、不得出『看誰遠／看誰久』的題目；救生員端明列為 prohibit（禁止並介入制止），且涵蓋競技隊訓練；教練端原文是『generally conduct this activity on the surface of the water (except dolphin kick training)』，附帶只用於有經驗且狀況良好的泳者、一至多兩口深呼吸、限制反覆次數、給足恢復。這段原文很重要——本庫原本把它寫成『任何缺氧訓練只能在水面做，不能在水下做』的絕對禁令，漏掉了 generally 與海豚腿例外，已更正（見 breathing.safety.hypoxic_blackout 的 policy_boundary_zh）。另提供一組本庫先前沒有的頻率數字：YMCA 系統泳池自 2008 年起至少 5 起缺氧昏迷死亡、至少 18 人失去意識後獲救。"
 
   - id: src.pmid-32310515
-    display: "StatPearls Otitis Externa, PMID 32310515 (已驗證)"
+    display: "Medina-Blasini Y, Sharman T. Otitis Externa. In: StatPearls. Treasure Island (FL): StatPearls Publishing（2026 年版）。"
     title: "Otitis Externa."
     type: journal-article
     verification_status: verified
@@ -3491,7 +3497,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-33010194
-    display: "Swimming injuries narrative review, PubMed 33010194 (已驗證)"
+    display: "Trinidad, A., González-Garcia, H., & López-Valenciano, A. (2021). An Updated Review of the Epidemiology of Swimming Injuries. PM&R."
     title: "An Updated Review of the Epidemiology of Swimming Injuries."
     type: journal-article
     verification_status: verified
@@ -3578,7 +3584,7 @@ sources:
     notes: "2026-09-05 補登錄：本篇在 breathing.training.imt 的 source 顯示字串與 null_zh 內文都具名引用，卻始終沒有對應的 source_id——是複合鍵掩蓋掉的第三種失效樣態（不是重複、不是誤植，是整篇沒被登錄）。PubMed 所列刊期為 2019 Nov-Dec，Porto Biomed J 4(6):e49。"
 
   - id: src.pmid-39500300
-    display: "Doha 2024 Masters 3km 核心溫研究, PubMed 39500300 (已驗證)"
+    display: "Esh, C. J., Dablainville, V., Dalansi, F., Kathuria, S., & Cardinale, M. (2025). Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024. International Journal of Sports Physiology and Performance."
     title: "Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024."
     type: journal-article
     verification_status: verified
@@ -3620,7 +3626,7 @@ sources:
     notes: "2026-09-05 撤下：經 PubMed esummary 確認與 src.pmid-40252339-a 是同一篇（PMID 40252339、DOI 10.1016/j.jbiomech.2025.112694 完全一致），四筆引用已併入 -a。保留墓碑擋住同一筆被重新登錄。"
 
   - id: src.pmid-40783351
-    display: "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
+    display: "Markey, K., Galan-Lopez, N., Esh, C., Carter, S., Chrismas, B., Mountjoy, M., Constantini, N., & Taylor, L. (2026). Thermoregulatory responses in open water and pool swimming: Presentation of hypothermia and hyperthermia within and outside of World Aquatics water temperature thresholds. Journal of Science and Medicine in Sport."
     title: "Thermoregulatory responses in open water and pool swimming: Presentation of hypothermia and hyperthermia within and outside of World Aquatics water temperature thresholds."
     type: journal-article
     verification_status: verified
@@ -3631,9 +3637,10 @@ sources:
       pmid: "40783351"
       doi: "10.1016/j.jsams.2025.07.004"
     retrieved_on: "2026-07-28"
+    notes: "2026-09-06 顯示字串年份更正：原 display 寫「JSAMS 2025」，但期刊卷期年份是 **2026**（2025 為線上先行年）。本專案一律記期號年份。"
     notes: "原 display 記 online／DOI 年 2025；PubMed 所列期卷年為 2026。"
   - id: src.pmid-7673417
-    display: "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)"
+    display: "Constantini, N. W., & Warren, M. P. (1995). Menstrual dysfunction in swimmers: a distinct entity. The Journal of Clinical Endocrinology and Metabolism."
     title: "Menstrual dysfunction in swimmers: a distinct entity."
     type: journal-article
     verification_status: verified

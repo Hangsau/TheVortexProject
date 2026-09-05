@@ -20,8 +20,8 @@ epidemiology:
   caveat: 同一場賽事可同時出現低體溫與高體溫個案(核心溫變化 −3.1 至 +2.7°C)；多數研究為觀察性無對照
   sources:
     - "Brannigan D, Rogers IR, Jacobs I, et al. (2009). Hypothermia is a significant medical risk of mass participation long-distance open water swimming. Wilderness Environ Med 20(1):14–18. PMID 19364182"
-    - "JSAMS 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
-    - "Doha 2024 Masters 3km 核心溫研究（2025 發表）, PubMed 39500300 (已驗證)"
+    - "Markey, K., Galan-Lopez, N., Esh, C., Carter, S., Chrismas, B., Mountjoy, M., Constantini, N., & Taylor, L. (2026). Thermoregulatory responses in open water and pool swimming: Presentation of hypothermia and hyperthermia within and outside of World Aquatics water temperature thresholds. Journal of Science and Medicine in Sport."
+    - "Esh, C. J., Dablainville, V., Dalansi, F., Kathuria, S., & Cardinale, M. (2025). Core-Temperature Responses at the 3-km World Aquatics Open-Water Swimming Masters Championships in Doha 2024. International Journal of Sports Physiology and Performance."
   source_ids: [src.brannigan-2009, src.pmid-40783351, src.pmid-39500300]
 
 risk_factors:

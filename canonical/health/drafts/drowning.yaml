@@ -26,9 +26,9 @@ epidemiology:
     另：死亡常被泛歸「溺水」，特定機制(SWB/冷水休克/心因)難事後分辨；
     開放水域溺水人數多於泳池(紐西蘭 2020 達 87%)。
   sources:
-    - "WHO 2024-12-13 新聞稿『Drowning deaths decline globally』(已驗證 URL)"
-    - "Scientific Reports 2025 全球溺水負擔 204 國研究, PMC11954903 (已驗證)"
-    - "CDC Vital Signs 溺水死亡率, MMWR 2024, PMC11115434 (已驗證)"
+    - "World Health Organization. (2024-12-13). Drowning deaths decline globally, but the most vulnerable remain at risk [news release]. Accompanying the Global status report on drowning prevention 2024."
+    - "Xie, Z., Huang, Z., Ran, Q., Luo, W., & Du, W. (2025). Global burden of drowning and risk factors across 204 countries from 1990 to 2021. Scientific Reports."
+    - "Clemens, T., Moreland, B., Mack, K. A., Thomas, K., Bergen, G., & Lee, R. (2024). Vital Signs: Drowning Death Rates, Self-Reported Swimming Skill, Swimming Lesson Participation, and Recreational Water Exposure - United States, 2019-2023. MMWR Morbidity and Mortality Weekly Report."
   source_ids: [src.who-2024-12-13-drowning-deaths-decline-globa-2024, src.pmc11954903, src.pmc11115434]
 
 risk_factors:
@@ -54,7 +54,7 @@ management:
     - "任何溺水事件無論意識狀態皆視為緊急；意識喪失或無法自行離水 → 立即救援"
     - "離水後咳嗽/呼吸困難/喘鳴/發紺 → 立即就醫"
     - "繼發性惡化警示：溺水後數小時內(最長 24–72h)咳嗽加重/呼吸急促/異常疲倦/混亂 → 即使當下『看似沒事』也須就醫"
-  acute: "2024 AHA/AAP 溺水復甦(已驗證 doi:10.1161/CIR.0000000000001274)：移出水→受訓者安全時可水中救援呼吸→無反應無呼吸即 CPR『通氣優先』先給 5 次救援呼吸再按壓(溺水驟停根因為缺氧)→盡早 AED 但不延誤 CPR→呼叫 EMS→勿試圖『倒水』。中度(有呼吸但吸入水)監測 4–6h 防遲發肺水腫"
+  acute: "2024 年 AHA／AAP 溺水復甦指引：移出水→受訓者安全時可水中救援呼吸→無反應無呼吸即 CPR『通氣優先』先給 5 次救援呼吸再按壓(溺水驟停根因為缺氧)→盡早 AED 但不延誤 CPR→呼叫 EMS→勿試圖『倒水』。中度(有呼吸但吸入水)監測 4–6h 防遲發肺水腫"
   pain_rules: ~
   rehab: ~
   functional_progression_criteria:

@@ -19,8 +19,8 @@ epidemiology:
   evidence_grade: C
   caveat: TOS 診斷標準無完全共識(CORE-TOS 等)，盛行率差異大；易與 MDI/旋轉肌袖損傷混淆；游泳者文獻多為 1990s–2010s 小系列
   sources:
-    - "Thoracic Outlet Syndrome in the Overhead Athlete — diagnosis and treatment review, PMC7340704 (已驗證)"
-    - "TOS conservative rehabilitation protocol, PMC11277273 (已驗證)"
+    - "Ohman, J. W., & Thompson, R. W. (2020). Thoracic Outlet Syndrome in the Overhead Athlete: Diagnosis and Treatment Recommendations. Current Reviews in Musculoskeletal Medicine."
+    - "Hock, G., Johnson, A., Barber, P., & Papa, C. (2024). Current Clinical Concepts: Rehabilitation of Thoracic Outlet Syndrome. Journal of Athletic Training."
   source_ids: [src.pmc7340704, src.pmc11277273]
 
 risk_factors:

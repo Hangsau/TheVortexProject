@@ -19,9 +19,9 @@ epidemiology:
   evidence_grade: B
   caveat: 開放水域監測不一致、可水中補水量難追蹤、輕症常被誤診→無獨立盛行率
   sources:
-    - "Exercise-Associated Hyponatremia in Marathon Runners, PMC9699060 (已驗證)"
-    - "EAH hyponatremic encephalopathy in open water swimmer 案例, PubMed 25443755 (已驗證)"
-    - "Pathophysiology and treatment of EAH, J Endocrinol Invest, PMC12847173 (已驗證)"
+    - "Klingert, M., Nikolaidis, P. T., Weiss, K., Thuany, M., Chlíbková, D., & Knechtle, B. (2022). Exercise-Associated Hyponatremia in Marathon Runners. Journal of Clinical Medicine."
+    - "Rogers, I. R., Grainger, S., & Nagree, Y. (2015). Exercise-associated hyponatremic encephalopathy in an endurance open water swimmer. Wilderness & Environmental Medicine."
+    - "Altieri, B., Aini, I., Cannavale, G., Magnelli, C., Mancini, C., Zamponi, V., Isidori, A. M., Colao, A., Faggiano, A., Peri, A., & NIKE group (2026). Pathophysiology and treatment of exercise-associated hyponatremia. Journal of Endocrinological Investigation."
   source_ids: [src.pmc9699060, src.pmid-25443755, src.pmc12847173]
 
 risk_factors:

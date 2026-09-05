@@ -19,9 +19,9 @@ epidemiology:
   evidence_grade: C
   caveat: 各亞型多為案例報告或單地調查；台灣本島泳者癢資料幾乎缺如；發生率因地理/季節差異極大
   sources:
-    - "Aquatic dermatoses 回顧, PMC5286756 (已驗證)"
-    - "Cercarial dermatitis 前瞻調查, PMC1448328 (已驗證)"
-    - "Hot tub folliculitis 回顧, PMC7584313 (已驗證)"
+    - "Sridhar, S. C., & Deo, S. C. (2017). Marine and Other Aquatic Dermatoses. Indian Journal of Dermatology."
+    - "Verbrugge, L. M., Rainey, J. J., Reimink, R. L., & Blankespoor, H. D. (2004). Swimmer's itch: incidence and risk factors. American Journal of Public Health."
+    - "Jacob, J. S., & Tschen, J. (2020). Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors. Cureus."
   source_ids: [src.pmc5286756, src.pmc1448328, src.pmc7584313]
 
 risk_factors:

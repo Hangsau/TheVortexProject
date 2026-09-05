@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 多為橫斷面，樣本小；高雄激素型 vs 下視丘型非互斥；PCOS 先天 vs 訓練誘發因果方向無法確定；近年無大型前瞻性游泳員月經研究
   sources:
-    - "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)"
-    - "Swimmer menstrual dysfunction as distinct entity (hyperandrogenism), PMID 7673417 (已驗證)"
+    - "Gimunová, M., Paulínyová, A., Bernaciková, M., & Paludo, A. C. (2022). The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review. International Journal of Environmental Research and Public Health."
+    - "Constantini, N. W., & Warren, M. P. (1995). Menstrual dysfunction in swimmers: a distinct entity. The Journal of Clinical Endocrinology and Metabolism."
   source_ids: [src.pmc9658102, src.pmid-7673417]
 
 risk_factors:

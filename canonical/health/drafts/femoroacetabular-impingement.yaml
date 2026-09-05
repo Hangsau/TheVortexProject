@@ -19,8 +19,8 @@ epidemiology:
   evidence_grade: B
   caveat: 流行率數據來自水球/同步游泳(蛋踢)，非蛙泳特定；alpha angle 與蛋踢時數無統計相關，習得 vs 先天未定
   sources:
-    - "Cam morphology in aquatic athletes, PMC7605769 (已驗證)"
-    - "FAI rehabilitation & RTS, PMC11642080 (已驗證)"
+    - "Langner, J. L., Black, M. S., MacKay, J. W., Hall, K. E., Safran, M. R., Kogan, F., & Gold, G. E. (2020). The prevalence of femoroacetabular impingement anatomy in Division 1 aquatic athletes who tread water. Journal of Hip Preservation Surgery."
+    - "Monselli, C., Bianco Prevot, L., Accetta, R., Tronconi, L. P., Bolcato, V., & Basile, G. (2024). State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review. Journal of Clinical Medicine."
   source_ids: [src.pmc7605769, src.pmc11642080]
 
 risk_factors:

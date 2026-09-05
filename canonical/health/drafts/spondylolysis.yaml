@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 下背痛盛行率有游泳數據，但椎弓解離游泳特定比例為二手綜述；返回運動時間數字多為摘要層級
   sources:
-    - "Swimming low back pain by stroke, PMC11531034 (已驗證)"
-    - "Competitive swimmers spine degeneration, PMC3435931 (已驗證)"
+    - "Hsu, C., Krabak, B., Cunningham, B., & Borg-Stein, J. (2024). Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review. Sports Health."
+    - "Wanivenhaus, F., Fox, A. J., Chaudhury, S., & Rodeo, S. A. (2012). Epidemiology of injuries and prevention strategies in competitive swimmers. Sports Health."
   source_ids: [src.pmc11531034, src.pmc3435931]
 
 risk_factors:

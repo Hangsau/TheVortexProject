@@ -6,6 +6,60 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **「(已驗證)」display 軸歸零：49 筆登錄 + 121 條讀者可見字串重寫，逐筆對回 PubMed／Crossref 後 12 筆對不上（錯誤 35–46）。新增 W026 擋回頭路**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 142 | **142** |
+| W026 自證查驗狀態 | 49 + 121 | **0**（本輪新增的檢查） |
+| W008 | 2 | 2（`src.gonjo-2018`、`src.lee-2008`） |
+| W022 | 14 | 14（`l-indicators.yaml`，刻意保留） |
+| W023／W024／W025 | 0 | 0 |
+| `_sources.yaml` 筆數 | 751 | 751 |
+| 內容條目 | 923 | 923 |
+
+**「(已驗證)」不是查驗紀錄，是查驗劇場。** 一個 display 寫「Thoracic outlet syndrome in athletes systematic review (Frontiers 2022) (已驗證)」，三個層次同時出事：① 讀者看到的是**主題詞不是書目**，查不到那篇；② 三個字讓後面每個人都跳過複查；③ **主題詞根本沒對過篇名**——這才是真正的傷害。本輪把 49 筆逐一對回 PubMed esummary／Crossref，**12 筆對不上**。
+
+display 一律重寫成 `作者 (年). 篇名. 期刊.`，**只用已查證欄位組**（`authors`／`year`／`title`／`container`），卷期頁數沒存就不寫——不補造。期刊名做顯示層正規化（PubMed 給的是句首大寫加限定語：`PloS one` → `PLoS ONE`、`NPJ` → `npj`，並剝掉 ` : official publication of…` 與 `(Auckland, N.Z.)` 這類尾巴）。
+
+**同一句錯字串活在兩個地方。** 登錄端改乾淨不夠——這些字串當初是從 display **複製**進內容檔的 `source`／`sources`／`citation`，各自獨立存在，網站渲染的是內容檔那一份。實測 121 條（`injuries.yaml` 60 ＋ `health/drafts/` 61），全部同步替換。
+
+**十二筆歸因錯誤（錯誤 35–46）**，樣態分三類——**期刊／年份錯**、**研究類型錯**（把回顧當原始研究、把翻譯驗證當流行病學）、**族群或介入範圍錯**：
+
+| # | 來源 | display 宣稱 | 實際 |
+|---|---|---|---|
+| 35 | `src.pmc7340704` | TOS in athletes systematic review, Frontiers 2022 | Ohman & Thompson (2020), *Curr Rev Musculoskelet Med*，是**治療建議回顧**。期刊、年份、研究類型三項全錯 |
+| 36 | `src.pmc3435931` | Competitive swimmers spine degeneration | 篇名是 Epidemiology of injuries and prevention strategies…；裡面的脊椎退化數字是**二手轉述** |
+| 37 | `src.pmc6092370` | EIB in competitive swimmers 回顧 | **一般族群** EIB 回顧，不是游泳專屬 |
+| 38 | `src.pmc6137694` | Chloramine 眼刺激機制研究 | Water related ocular diseases，廣泛回顧，**沒有量氯胺劑量—反應** |
+| 39 | `src.pmc9658102` | Menstrual dysfunction in swimmers | **跨項目 rapid review**；rapid review 的證據強度不足以撐 🟢 |
+| 40 | `src.pmc12847173` | 2025 | 卷期年是 **2026** |
+| 41 | `src.pmid-40783351` | JSAMS 2025 | 卷期年是 **2026** |
+| 42 | `src.pmc6464216` | 日本大學女泳者流行率 | **OSTRC 問卷翻譯與效度驗證**研究；它的流行率是樣本描述，不是代表性流行病學 |
+| 43 | `src.pmc11642080` | FAI 復健與重返運動 | **髖關節鏡術後**復健；不能拿來談非手術 FAI 的訓練處置 |
+| 44 | `src.pmc11531034` | Swimming low back pain by stroke | 篇名是 Swimming Anatomy and Lower Back Injuries…: A Narrative Review；**分泳式的數字屬於它引用的那些研究，不屬於它** |
+| 45 | `src.pmc9724109` | RED-S 與骨應力傷害風險 | 廣泛的女性運動員 RED-S 回顧；骨折倍率是**二手** |
+| 46 | `src.pmc10713671` | 對照組是划船選手 | 對照組是**非游泳者** |
+
+**處置：改字串、補使用邊界，不改主張。** 動手前逐筆讀了引用區塊，多數 `caveat` 其實已經寫對範圍（例如 FAI 那筆已註明「流行率數據來自水球／同步游泳，非蛙泳特定」）。**主張本身沒被這 12 筆假書目污染**，被污染的是讀者的查證路徑。所以每筆在 `notes` 補一段講明「宣稱什麼、實際是什麼、因此不能拿來支持什麼」，主張留原樣。
+
+**新增 W026**（登錄端 + 引用端各一支）：抓 display 與 `source`／`sources`／`citation` 裡的**肯定式**自證查驗狀態（`已驗證`／`已查證`，可帶 `URL`／`全文`／`DOI` 短限定語）。**刻意不抓「待驗證／未查證」**——後者在散文裡是正當敘述（`src.vortex-l0-l6` 的「感知專屬層仍待驗證」就是），一起抓會製造假陽性，而真正誤導讀者的是肯定式。W026 上線當下就抓到 7 個我肉眼 grep `(已驗證)` 漏掉的變體：`(已驗證，全文)`、`(已驗證 URL)`×2、`，已驗證)`×3、`(已驗證 doi:…)`。
+
+**⚠ 錯誤編號更正**：本檔的錯誤編號**早已撞號**——`a87590a` 那一段的「錯誤 22–34」與上一段的「錯誤 15–25」是兩條各自起算的序列。我上一段接著 `2047de8` 寫「錯誤 25」時沒查全檔最大值就續號。本輪起改為**全檔取最大值再往上接**（故從 35 開始）。舊的撞號不回頭改（引用它的 commit message 已固定），但後續一律先 `grep -o "錯誤 [0-9]\+" HANDOFF.md` 取最大值。
+
+**🔴 新地雷：`tools/build_injuries.py` 會靜默吃掉手改。** `canonical/health/injuries.yaml` 是產出物、`canonical/health/drafts/` 是來源，但**兩邊已經漂移約 75 行**——有一批修正只改在產出物上，從來沒回填 drafts。本輪我改完 drafts 後照流程重生 `injuries.yaml`，WARN 直接 142 → 150：
+
+- 2026-09-05 那筆 Kitamura 2020 的解決被還原，`src.kitamura-2020-dolphin-kick-lumbar-extension` 變孤兒
+- Aiello 2025 的 AK 統合分析（105 篇／91,951 眼／每百萬 2.34 眼）被還原成舊的 `PMC11424229` 版本句子，`src.aiello-2025-ak-incidence-meta` 變孤兒（W008 2 → 4）
+- 數個 `caveat` 裡已清掉的原始 PMID（`31141446`／`27824234`／`16596112`）與 `src.*` slug（`src.pmc8147101`／`src.pmc2858141`）**全部長回讀者可見的散文裡**（W024 0 → 6）
+
+**處置**：`git checkout canonical/health/injuries.yaml` 還原，再把本輪的 60 筆改動直接改在產出物上（drafts 的修正保留，本身是對的）。**在漂移回填完成前不要跑 `build_injuries.py`。** 回填是一件獨立的工作：要逐行 diff `injuries.yaml` 與「由當前 drafts 重生的版本」，把只存在於產出物的修正搬回 drafts，然後才恢復「改 drafts → 重生」的正常流程。
+
+**下一步建議**：接續下一節第 1 項的 **47 筆複合鍵**（清單與分群見下），先做「書目複合」那 6 筆（每段都是完整書目，最好拆）。第 2 項「(已驗證) 軸」本輪已完成。
+
+---
+
 ### ✅ **W025 歸零：重複登錄與複合／誤標鍵全部處理完，逼出十一處內容錯誤（錯誤 15–25）**
 
 三個 commit（`750671a` 驗證器 E016／W025 ＋ 19 筆合併／`7c03d43` 三筆合併與 takai、mckenzie 拆解／`2047de8` dryland、仰式出發、蛙式轉身三組拆解）。`notify-mysite` 三筆都確認觸發。

@@ -18,8 +18,8 @@ epidemiology:
   evidence_grade: B
   caveat: 多為橫斷面無法確認時間序列；泳池水質差異大；現有研究多聚焦 14–25 歲競技者，老年/休閒數據缺如
   sources:
-    - "Dental erosion in competitive swimmers (Poland), PMC3579418 (已驗證)"
-    - "Dental erosion competitive swimmers vs rowers (Egypt), PMC10713671 (已驗證)"
+    - "Buczkowska-Radlińska, J., Łagocka, R., Kaczmarek, W., Górski, M., & Nowicka, A. (2013). Prevalence of dental erosion in adolescent competitive swimmers exposed to gas-chlorinated swimming pool water. Clinical Oral Investigations."
+    - "Abdelrahman, H. H., Ammar, N., Hassan, M. G., Essam, W., & Amer, H. (2023). Erosive tooth wear and salivary parameters among competitive swimmers and non-swimmers in Egypt: a cross-sectional study. Clinical Oral Investigations."
   source_ids: [src.pmc3579418, src.pmc10713671]
 
 risk_factors:
