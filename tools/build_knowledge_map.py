@@ -25,6 +25,8 @@ from pathlib import Path
 
 import yaml
 
+from textfold import unfold_cjk
+
 ROOT = Path(__file__).resolve().parent.parent
 OUT = ROOT / "KNOWLEDGE_MAP.md"
 
@@ -561,7 +563,9 @@ def main():
     if insert_idx is not None:
         lines = lines[:insert_idx] + summary_lines + [""] + lines[insert_idx:]
 
-    OUT.write_text("\n".join(lines), encoding="utf-8")
+    # 全檔唯一的輸出口。canonical 的 `>-` 折點會被 YAML 接成空白，中文因此在句
+    # 子中間長出空格；不接掉的話跨折點的片語在地圖裡 grep 不到。
+    OUT.write_text(unfold_cjk("\n".join(lines)), encoding="utf-8")
     print(f"已寫入 {OUT.relative_to(ROOT)}（{len(lines)} 行）")
     print(f"摘要：")
     for sec, n, _ in summary_rows:

@@ -23,6 +23,7 @@ from typing import Iterator
 import yaml
 
 import validate
+from textfold import unfold_cjk
 
 ROOT = Path(__file__).resolve().parent.parent
 OUT_DIR = ROOT / "indices"
@@ -404,7 +405,12 @@ def build_views(root: Path = ROOT) -> dict[str, dict]:
 def write_views(views: dict[str, dict], output_dir: Path = OUT_DIR) -> None:
     output_dir.mkdir(parents=True, exist_ok=True)
     for name, payload in views.items():
-        text = json.dumps(payload, ensure_ascii=False, indent=2, sort_keys=False) + "\n"
+        # 全檔唯一的輸出口，所以 unfold 放這裡就夠：canonical 用 `>-` 折行，YAML
+        # 會把折點接成空白，中文因此在句子中間長出空格。不接掉的話跨折點的片語
+        # 在 indices 裡 grep 不到（單詞搜得到，所以很難發現）。
+        text = json.dumps(
+            unfold_cjk(payload), ensure_ascii=False, indent=2, sort_keys=False
+        ) + "\n"
         (output_dir / name).write_text(text, encoding="utf-8")
 
 
