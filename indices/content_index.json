@@ -5238,7 +5238,7 @@
       },
       "source_ids": [
         "src.tanaka-2024-b",
-        "src.u-s-masters-swimming"
+        "src.usms-breaststroke-kick-guide"
       ],
       "outgoing_ids": [
         "breast.tech.9"
@@ -5265,7 +5265,7 @@
       },
       "source_ids": [
         "src.nicol-2022-breaststroke-systematic-review",
-        "src.u-s-masters-swimming"
+        "src.usms-breaststroke-timing-guide"
       ],
       "outgoing_ids": [
         "breast.tech.8"
@@ -5291,7 +5291,7 @@
       },
       "source_ids": [
         "src.swimming-world-magazine",
-        "src.u-s-masters-swimming"
+        "src.usms-breaststroke-timing-guide"
       ],
       "outgoing_ids": [
         "breast.tech.35",
@@ -5460,7 +5460,7 @@
       "source_ids": [
         "src.strzala-2013-b",
         "src.swimoutlet",
-        "src.u-s-masters-swimming"
+        "src.usms-breaststroke-kick-guide"
       ],
       "outgoing_ids": [
         "breast.tech.11",
@@ -5840,9 +5840,7 @@
           "breast"
         ]
       },
-      "source_ids": [
-        "src.the-race-club"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out"
       ]
@@ -8058,7 +8056,7 @@
       "source_ids": [
         "src.enjoy-swimming-com",
         "src.sanders-1995-c",
-        "src.usms"
+        "src.usms-fish-2025-butterfly-hips"
       ],
       "outgoing_ids": [
         "fly.tech.16",
@@ -8113,7 +8111,7 @@
       },
       "source_ids": [
         "src.brent-rushall-sdsu",
-        "src.usms"
+        "src.usms-lassen-2018-butterfly-side-breathing"
       ],
       "outgoing_ids": [
         "fly.tech.16",
@@ -18739,7 +18737,7 @@
         ]
       },
       "source_ids": [
-        "src.u-s-masters-swimming"
+        "src.usms-bay-2024-backstroke-flags"
       ],
       "outgoing_ids": []
     },
@@ -20269,8 +20267,7 @@
       },
       "source_ids": [
         "src.myswimpro",
-        "src.usms",
-        "src.usms-body-alignment-guide-b"
+        "src.usms-sheaff-2022-how-to-do-underwater-kicks"
       ],
       "outgoing_ids": [
         "udk.tech.24"
@@ -20376,8 +20373,8 @@
         ]
       },
       "source_ids": [
-        "src.usms",
-        "src.usms-body-alignment-guide-b"
+        "src.usms-sheaff-2022-how-to-do-underwater-kicks",
+        "src.usms-underwater-kick-body-alignment-guide"
       ],
       "outgoing_ids": [
         "udk.tech.24",
@@ -20877,7 +20874,7 @@
         ]
       },
       "source_ids": [
-        "src.usms-body-alignment-guide-a"
+        "src.usms-sheaff-2022-how-to-do-underwater-kicks"
       ],
       "outgoing_ids": []
     },

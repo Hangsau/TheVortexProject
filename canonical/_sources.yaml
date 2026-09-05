@@ -4749,20 +4749,8 @@ sources:
   - id: src.the-race-club
     display: "The Race Club（機構層，未定位到單篇）"
     type: other
-    verification_status: unverified
-    notes: >-
-      機構名不是文獻。2026-09-05 把原本掛在這裡的單篇文章 URL（自由式入水常見錯誤）
-      拆成 src.the-race-club-freestyle-hand-entry：那個 URL 只支撐得了入水手型那幾條，
-      卻替海豚踢、蛙式髖旋轉、換氣指標等 6 條完全無關的主張背書，是「一個 URL 當全機構
-      擋箭牌」。**本登錄刻意不帶 identifier**，避免同樣的事再發生一次。
-      2026-09-05 續查，原本掛在這裡的 4 條已解決 3 條：free.err18 → src.the-race-club-3-breathing-tips、
-      udk.err8 → src.the-race-club-turn-when-to-start-dolphin-kick、
-      udk.err9 → src.the-race-club-flip-turn-kick-count。
-      **剩 breast.tech.15（每度髖旋轉推進 +5%）追不到**：站上談蛙式髖旋轉的公開文章是
-      Building Better Breaststroke Tools: Hip Internal Rotation，正文在會員牆後，
-      公開可讀的部分沒有這個數字；換三組關鍵字搜尋也沒有。該條已有 observation_basis，
-      維持 🟠 掛在機構層，不補造來源。另注意該文標題講的是**內旋**，而條目本身標記了
-      內旋／外旋的歸屬衝突（見 breast.tech.15 的 text），查證時不要拿標題當定案。
+    verification_status: retracted
+    notes: "機構名不是文獻，本登錄已撤下、保留為墓碑擋住同型字串再長回來。歷程：原本掛在這裡的單篇文章 URL（自由式入水常見錯誤）2026-09-05 拆成 src.the-race-club-freestyle-hand-entry——那個 URL 只支撐得了入水手型那幾條，卻替海豚踢、蛙式髖旋轉、換氣指標等 6 條完全無關的主張背書，是「一個 URL 當全機構擋箭牌」。同日續查把其餘 3 條各自定位到單篇（free.err18 → src.the-race-club-3-breathing-tips、udk.err8 → src.the-race-club-turn-when-to-start-dolphin-kick、udk.err9 → src.the-race-club-flip-turn-kick-count）。最後一條 breast.tech.15（每度髖旋轉推進 +5%）追不到：站上談蛙式髖旋轉的公開文章是 Building Better Breaststroke Tools - Hip Internal Rotation，正文在會員牆後，公開可讀的部分沒有這個數字，換三組關鍵字搜尋也沒有。該條本來就是 🟠 且已有 observation_basis（其中已寫明觀察者為 The Race Club 教練群），所以正解是把 source／source_ids 整組拿掉而不是掛在機構層——🟠 依證據契約不需要 source_ids，掛著只會讓讀者看到一個點進去沒有東西的引用。另注意該文標題講的是內旋，而條目本身標記了內旋／外旋的歸屬衝突（見 breast.tech.15 的 text），查證時不要拿標題當定案。"
 
   - id: src.the-race-club-freestyle-hand-entry
     display: "The Race Club — Common Mistakes from the Freestyle Hand Entry"
@@ -5066,8 +5054,8 @@ sources:
   - id: src.u-s-masters-swimming
     display: "U.S. Masters Swimming"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "機構名不是文獻，已撤下、保留為墓碑。與 src.usms 是同一機構被登錄成兩個 id，這種同義重複靠驗證器抓不到（兩個 id 都存在，E005 通過）。2026-09-05 把掛在這裡的 5 條引用逐條定位：breast.err 踢腳非旋轉、踢多寬 → src.usms-breaststroke-kick-guide；蛙式手腳時序 2 條 → src.usms-breaststroke-timing-guide；仰式旗幟計步 → src.usms-bay-2024-backstroke-flags。"
 
   - id: src.u-s-masters-swimming-backstroke-body-positio
     display: "U.S. Masters Swimming Backstroke Body Position guide；swim-teach.com；enjoy-swimming（教學共識）"
@@ -5118,6 +5106,73 @@ sources:
     verification_status: unverified
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
+  - id: src.usms-breaststroke-kick-guide
+    display: "U.S. Masters Swimming. Breaststroke Kick: The Complete Guide."
+    title: "Breaststroke Kick: The Complete Guide"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/guides/breaststroke/kick"
+    notes: "2026-09-05 直接取全文核對，兩條引用逐字對得上：「One of the most common misconceptions about breaststroke kick is that it's primarily a rotational kick. Your goal should be to apply as much force as possible backward against the water with each kick.」與「The most important thing is kicking straight back and, regardless of how wide your knees are, keeping your knees in the same position throughout most of your kick.」該頁為機構指南、未署名作者、未標日期，故不填 year。"
+
+  - id: src.usms-breaststroke-timing-guide
+    display: "U.S. Masters Swimming. Breaststroke Timing: The Complete Guide."
+    title: "Breaststroke Timing: The Complete Guide"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/guides/breaststroke/timing"
+    notes: "2026-09-05 取全文核對。時序引用逐字對得上：「Pull while your legs are in streamlined position right after your kick and right before you start to recover your legs, and kick right after you recover your arms and right before your pull.」；本庫原本寫成引文的「同時踩油門和踩煞車」不是原文用字，是把「Taking your pull while recovering your legs slows you down when you're trying to speed up」與「overlapping your arms and legs, which is like putting on the brakes」兩句合併的措辭，已在條目內標明。該頁為機構指南、未署名作者、未標日期。"
+
+  - id: src.usms-fish-2025-butterfly-hips
+    display: "Fish, A. (2025). What Your Hips Need to Do While You Swim Butterfly. U.S. Masters Swimming."
+    title: "What Your Hips Need to Do While You Swim Butterfly"
+    type: other
+    year: 2025
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/videos/what-your-hips-need-to-do-while-you-swim-butterfly"
+    notes: "2026-09-05 取全文核對，引用句逐字對得上：「Undulation starts with the head and moves down in a wave-like action. It accesses the core, back, hip and strong leg muscles as it moves through and culminates in a foot flick at the end of the kick.」發表日 2025-04-16。注意站上另有 URL /videos/hip-movement-when-swimming-the-butterfly-stroke 內容與標題完全相同，是同一篇的別名，不另登錄。另注意同機構的 Five Ways to Improve Your Butterfly 把起伏起點寫在肋廓下緣、Butterfly Success 寫成核心與軀幹——起點歸屬在該機構內部並未統一，引用時不可當成單一定論。"
+
+  - id: src.usms-lassen-2018-butterfly-side-breathing
+    display: "Lassen, M. (2018). Breathing Easy to the Side on Butterfly. U.S. Masters Swimming."
+    title: "Breathing Easy to the Side on Butterfly"
+    type: other
+    year: 2018
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/breathing-easy-to-the-side-on-butterfly"
+    notes: "2026-09-05 取全文核對，發表日 2018-11-12。原文確有 Mel Stewart 1992 奧運 200 蝶以側向換氣奪金，以及「Side-breathing can get you into a more streamlined position than when you breathe forward and have poor undulation.」。**原文沒有**「頭部保持更靠近水面」「臀部不易下沉」——全文搜尋 lift your head／head up／hips drop／sink 皆無命中；本庫原先把這兩句當成引文掛在這裡，已改回原文範圍並把推導留在 🔵 層。"
+
+  - id: src.usms-sheaff-2022-how-to-do-underwater-kicks
+    display: "Sheaff, A. (2022). How to Do Underwater Kicks. U.S. Masters Swimming."
+    title: "How to Do Underwater Kicks"
+    type: other
+    year: 2022
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-do-underwater-kicks"
+    notes: "2026-09-05 取全文核對，發表日 2022-05-24。原文列出「成功水下踢腿」的四個並列要素：Maintain a stable platform／Create as much propulsion as possible／Maintain equal propulsion and tempo in both directions／Maintain a posture that reduces drag。**原文沒有**本庫原先寫的「在緊縮流線型中開始並在正確時機起踢」——那是漂移的改寫，已換成原文的四要素。穩定平台段落原文為「Pretend your hands are locked into concrete, and they're rock solid. Don't let them move.」與「This will only be effective if you can create a source of stability by keeping the hands and head still.」，但同段隨即補「Although there are elite underwater dolphin kickers who have some hand motion, they're executing an advanced version」。此「保持靜止」措辭後來被同機構的 Underwater Kick Body Alignment 指南收斂成「穩定不等於僵直」，引用時採較晚版本。"
+
+  - id: src.usms-underwater-kick-body-alignment-guide
+    display: "U.S. Masters Swimming. Underwater Kick Body Alignment: The Complete Guide."
+    title: "Underwater Kick Body Alignment: The Complete Guide"
+    type: other
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/guides/underwater-kick/body-alignment"
+    notes: "2026-09-05 取全文核對。兩處引用逐字對得上：「Your hands, head, and shoulders are the first parts of your body to face the water... If they're moving up and down or left and right without any intention, you'll experience a lot of resistance... But if you can control the motion, you'll be able to keep resistance low.」與「Stability isn't the same as rigidity. Your hands and upper body will move in a rhythmic manner that limits resistance and facilitates an effective undulation of your body. They're not staying still, but they are in control.」後者修正了同機構 2022 年文章的「保持靜止」措辭，是本次唯一由同一出版方自我修訂而拿到的實料。該頁為機構指南、未署名作者、未標日期。"
+
+  - id: src.usms-bay-2024-backstroke-flags
+    display: "Bay, S. (2024). How to Use Backstroke Flags in Swimming. U.S. Masters Swimming."
+    title: "How to Use Backstroke Flags in Swimming"
+    type: other
+    year: 2024
+    verification_status: verified
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-use-backstroke-flags-in-swimming"
+    notes: "2026-09-05 取全文核對，作者 Scott Bay，發表日 2024-03-05。原文：「How many strokes you take between the flags and the wall depends on multiple factors, including velocity and stroke efficiency. Your body geometry in terms of height and arm length also play a part.」以及「your stroke count will be different for finishes, turns, yards vs meters, and top race speed vs lazy warm-up speed」。本庫條目主張的「需分速度標定」由後一句直接支撐。"
+
   - id: src.usa-swimming-foundations-of-swimming-dryland
     display: "USA Swimming Foundations of Swimming（dryland-in-water 模擬）"
     type: other
@@ -5133,8 +5188,8 @@ sources:
   - id: src.usms
     display: "USMS"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "機構名不是文獻，已撤下、保留為墓碑擋住同型字串再長回來。2026-09-05 把掛在這裡的 4 條引用逐條回原文定位到單篇：fly.err9 起伏傳遞 → src.usms-fish-2025-butterfly-hips、fly.err13 側向換氣 → src.usms-lassen-2018-butterfly-side-breathing、udk.err5 上半身晃動阻力 → src.usms-underwater-kick-body-alignment-guide、udk.err13 成功水下踢腿要素 → src.usms-sheaff-2022-how-to-do-underwater-kicks。同一機構還有另一個裸登錄 src.u-s-masters-swimming，一併撤下。"
 
   - id: src.usms-backstroke-kick-guide
     display: "U.S. Masters Swimming Backstroke Kick guide；多家教學指引一致"
@@ -5145,14 +5200,14 @@ sources:
   - id: src.usms-body-alignment-guide-a
     display: "USMS Body Alignment Guide"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.usms-body-alignment-guide-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "已撤下、保留為墓碑。先前標註「疑似與 -b 為同一來源，待查證後合併」，2026-09-05 查證結果是兩者都不是同一篇、也都不是它們字面上寫的那份文件：兩條引用的原文其實出自 Sheaff, A. (2022). How to Do Underwater Kicks，而站上真有一份叫 Underwater Kick Body Alignment 的指南、內容卻是另一回事（且對「保持靜止」的說法與 2022 文相反）。教訓是「疑似重複」不能只用字串近似判定，要回原文；否則合併會把兩條引用一起指到錯的文件。"
 
   - id: src.usms-body-alignment-guide-b
     display: "USMS, Body Alignment Guide"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.usms-body-alignment-guide-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "已撤下、保留為墓碑。與 -a 同案，見 src.usms-body-alignment-guide-a 的 notes。原引用（udk.err5 的穩定平台句）已改指 src.usms-sheaff-2022-how-to-do-underwater-kicks。"
 
   - id: src.usms-masters-teaching-article
     display: "USMS Masters Teaching Article"

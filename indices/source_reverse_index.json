@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 727,
+  "source_count": 734,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -11753,16 +11753,10 @@
     {
       "id": "src.the-race-club",
       "display": "The Race Club（機構層，未定位到單篇）",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "breast.tech.15",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[85].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.the-race-club-3-breathing-tips",
@@ -13006,36 +13000,10 @@
     {
       "id": "src.u-s-masters-swimming",
       "display": "U.S. Masters Swimming",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 5,
-      "usages": [
-        {
-          "id": "breast.err1",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[42].public.evidence[0]"
-        },
-        {
-          "id": "breast.err10",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[51].public.evidence[0]"
-        },
-        {
-          "id": "breast.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[52].public.evidence[1]"
-        },
-        {
-          "id": "breast.err2",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[43].public.evidence[0]"
-        },
-        {
-          "id": "starts-turns.tech.23",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[202].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.u-s-masters-swimming-backstroke-body-positio",
@@ -13213,31 +13181,10 @@
     {
       "id": "src.usms",
       "display": "USMS",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 4,
-      "usages": [
-        {
-          "id": "fly.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[69].public.evidence[1]"
-        },
-        {
-          "id": "fly.err13",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[71].public.evidence[0]"
-        },
-        {
-          "id": "udk.err13",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[87].public.evidence[0]"
-        },
-        {
-          "id": "udk.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[79].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.usms-backstroke-kick-guide",
@@ -13259,35 +13206,108 @@
       ]
     },
     {
-      "id": "src.usms-body-alignment-guide-a",
-      "display": "USMS Body Alignment Guide",
-      "verification_status": "unverified",
-      "identifier": {},
+      "id": "src.usms-bay-2024-backstroke-flags",
+      "display": "Bay, S. (2024). How to Use Backstroke Flags in Swimming. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-use-backstroke-flags-in-swimming"
+      },
       "usage_count": 1,
       "usages": [
         {
-          "id": "udk.tech.24",
+          "id": "starts-turns.tech.23",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[160].public.evidence[0]"
+          "path": "points[202].public.evidence[0]"
         }
       ]
     },
     {
+      "id": "src.usms-body-alignment-guide-a",
+      "display": "USMS Body Alignment Guide",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
       "id": "src.usms-body-alignment-guide-b",
       "display": "USMS, Body Alignment Guide",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.usms-breaststroke-kick-guide",
+      "display": "U.S. Masters Swimming. Breaststroke Kick: The Complete Guide.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/guides/breaststroke/kick"
+      },
       "usage_count": 2,
       "usages": [
         {
-          "id": "udk.err13",
+          "id": "breast.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[87].public.evidence[2]"
+          "path": "errors[42].public.evidence[0]"
         },
         {
-          "id": "udk.err5",
+          "id": "breast.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[79].public.evidence[0]"
+          "path": "errors[43].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.usms-breaststroke-timing-guide",
+      "display": "U.S. Masters Swimming. Breaststroke Timing: The Complete Guide.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/guides/breaststroke/timing"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "breast.err10",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[51].public.evidence[0]"
+        },
+        {
+          "id": "breast.err11",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[52].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.usms-fish-2025-butterfly-hips",
+      "display": "Fish, A. (2025). What Your Hips Need to Do While You Swim Butterfly. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/videos/what-your-hips-need-to-do-while-you-swim-butterfly"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err11",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[69].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.usms-lassen-2018-butterfly-side-breathing",
+      "display": "Lassen, M. (2018). Breathing Easy to the Side on Butterfly. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/breathing-easy-to-the-side-on-butterfly"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err13",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[71].public.evidence[0]"
         }
       ]
     },
@@ -13320,6 +13340,32 @@
       ]
     },
     {
+      "id": "src.usms-sheaff-2022-how-to-do-underwater-kicks",
+      "display": "Sheaff, A. (2022). How to Do Underwater Kicks. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-do-underwater-kicks"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "udk.err13",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[87].public.evidence[0]"
+        },
+        {
+          "id": "udk.err5",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[79].public.evidence[0]"
+        },
+        {
+          "id": "udk.tech.24",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[160].public.evidence[0]"
+        }
+      ]
+    },
+    {
       "id": "src.usms-swimming-world-magazine-the-race-club",
       "display": "USMS, Swimming World Magazine, The Race Club",
       "verification_status": "unverified",
@@ -13335,6 +13381,22 @@
           "id": "udk.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[86].public.physical_reason"
+        }
+      ]
+    },
+    {
+      "id": "src.usms-underwater-kick-body-alignment-guide",
+      "display": "U.S. Masters Swimming. Underwater Kick Body Alignment: The Complete Guide.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/guides/underwater-kick/body-alignment"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.err5",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[79].public.evidence[1]"
         }
       ]
     },
