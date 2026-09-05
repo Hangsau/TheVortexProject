@@ -3249,12 +3249,45 @@ sources:
     notes: "2026-09-05 撤下：id 直接用 PMID 當字串、display 以 Ch9 開頭。已查證為 Bosquet, Montpetit, Arvisais & Mujika (2007) Med Sci Sports Exerc 39(8):1358-1365。引用改指 src.bosquet-2007-tapering-meta-analysis。"
 
   - id: src.pmid-21259156
-    display: "Swimming Canada LTAD 分齡; PHV 文獻; Ford et al. 2011 (PMID 21259156); van Hooren & De Ste Croix 2020"
-    type: other
-    verification_status: unverified
+    display: "Ford, P., De Ste Croix, M., Lloyd, R., Meyers, R., Moosavi, M., Oliver, J., Till, K., & Williams, C. (2011). The long-term athlete development model: physiological evidence and application. Journal of Sports Sciences, 29(4), 389–402."
+    title: "The long-term athlete development model: physiological evidence and application"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ford P", "De Ste Croix M", "Lloyd R", "Meyers R", "Moosavi M", "Oliver J", "Till K", "Williams C"]
+    year: 2011
+    container: "Journal of Sports Sciences"
     identifier:
       pmid: "21259156"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.1080/02640414.2010.536849"
+      url: "https://pubmed.ncbi.nlm.nih.gov/21259156/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 從複合鍵拆出。原登錄一個 id 綁四樣東西：Swimming Canada LTAD 分齡、『PHV 文獻』、本篇、van Hooren & De Ste Croix 2020，只有本篇有 PMID，其餘三者沒有任何可解析識別。拆分後本鍵只保留本篇。摘要可支持的結論：LTAD 是單一維度（生理）模型、缺乏實證基礎、所依據的資料建立在可疑假設與有瑕疵的方法上，且是通則模型而非個別化計畫；作者主張把它當『work in progress』而非定論。這正是本庫 windows_of_trainability_contested 標記的依據。"
+
+  - id: src.van-hooren-2020-sensitive-periods
+    display: "van Hooren, B., & De Ste Croix, M. (2020). Sensitive periods to train general motor abilities in children and adolescents: Do they exist? A critical appraisal. Strength and Conditioning Journal, 42(6), 7–14."
+    title: "Sensitive Periods to Train General Motor Abilities in Children and Adolescents: Do They Exist? A Critical Appraisal"
+    type: journal-article
+    verification_status: verified
+    authors: ["van Hooren B", "De Ste Croix M"]
+    year: 2020
+    container: "Strength and Conditioning Journal"
+    identifier:
+      doi: "10.1519/ssc.0000000000000545"
+      url: "https://doi.org/10.1519/ssc.0000000000000545"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 從 src.pmid-21259156 複合鍵拆出並首次獨立登錄。本篇在 PubMed 查無——Strength and Conditioning Journal 未被 PubMed 索引，用 Crossref 書目查詢才定位到（線上發表日 2020-07-31）。這是複合鍵能長期存活的一個結構原因：鍵上掛的 PMID 只驗證得了其中一篇，其餘幾篇連『查得到嗎』都沒被問過。"
+
+  - id: src.swimming-canada-ltad-strategy
+    display: "Swimming Canada. Long Term Athlete Development Strategy（游泳專項 LTAD 策略文件，40 頁）。"
+    title: "Swimming Canada Long Term Athlete Development Strategy"
+    type: report
+    verification_status: verified
+    authors: ["Swimming Canada"]
+    container: "Swimming Canada"
+    identifier:
+      url: "https://swimbc.ca/wp-content/uploads/SNC-LTAD-strategy-1.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 從 src.pmid-21259156 複合鍵拆出並首次獨立登錄，同時吸收原複合字串裡那個沒有指向的『PHV 文獻』——PHV 平均年齡（女 12.5、男 14）就出自本文件 p.15，不是另一篇獨立文獻。URL 是 Swim BC（卑詩省分會）託管的 PDF，Swimming Canada 官網該路徑回 403，取用時以本鏡像為準。查證時比對出兩件事寫在這裡備查：① 本文件的實際分齡（FUN 女 5–8／男 6–9；L2T 女 8–11／男 9–12；T2T 女 11–14／男 12–15；T2C 女 14–16／男 15–18；Compete to Win 女 16+／男 18+）與本庫原本登錄的不同——原本登錄的那一套（T2T 女 11–15／男 12–16、T2C 女 15–21／男 16–23、T2W 女 18+／男 19+）是跨項目通用的 Canadian Sport for Life LTAD 分齡表，四段全部吻合，顯然是把通用表誤標成游泳專項表。附帶一提，該通用表的數字在 CS4L LTAD 2.1 原件正文裡抽不出來（疑似只存在於圖表影像），只有二手來源可查，因此本庫不另登錄它、也不在公開散文裡當成有出處的事實引用，這條線索只留在此備查。② 本文件確實列有分齡週泳量（L2T 8–14；T2T 24–30 建立到 40–50；T2C 與 Compete to Win 40–50+ km/wk），本庫原本『查無 Swimming Canada 原始數據表』的說法不成立。另注意本文件本身主張 windows of optimal trainability，與 src.pmid-21259156、src.van-hooren-2020-sensitive-periods 的批判直接對立——引用時三者要並置，不能只取一邊。"
 
   - id: src.pmid-24421735
     display: "Kapus, J., Ušaj, A., & Lomax, M. (2013). Adaptation of endurance training with a reduced breathing frequency. Journal of Sports Science & Medicine, 12(4), 744–752."
@@ -3367,12 +3400,73 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-32119507
-    display: "StatPearls 缺氧昏迷機轉 (PMID 32119507); CDC MMWR 2015;64(19) 紐約州 DUBB 致死研究; American Red Cross / YMCA / USA Swimming 缺氧昏迷聯合聲明 (2015/2022)"
-    type: other
-    verification_status: unverified
+    display: "Bart, R. M., Murray, B. P., & Lau, H. (2026). Shallow water blackout. In StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing."
+    title: "Shallow Water Blackout"
+    type: reference-entry
+    verification_status: verified
+    authors: ["Bart RM", "Murray BP", "Lau H"]
+    year: 2026
+    container: "StatPearls [Internet]"
     identifier:
       pmid: "32119507"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+      url: "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 從複合鍵拆出，本鍵只保留 StatPearls 這一篇（NCBI Bookshelf NBK554620，條目持續更新，本次取到的版本標 2026 Jan）。原複合字串另含 MMWR 與三方聯合聲明，各自改指 src.mmwr-2015-dubb-new-york、src.hypoxic-blackout-joint-statement。本條目本身即記載紅十字會、YMCA 與 USA Swimming 把此症正名為 hypoxic blackout，並指出『shallow water blackout』一詞誤導——水深不是機轉的一部分。"
+
+  - id: src.mmwr-2015-dubb-new-york
+    display: "Boyd, C., Levy, A., McProud, T., Huang, L., Raneses, E., & Olson, C. (2015). Fatal and nonfatal drowning outcomes related to dangerous underwater breath-holding behaviors — New York State, 1988–2011. Morbidity and Mortality Weekly Report, 64(19), 518–521."
+    title: "Fatal and nonfatal drowning outcomes related to dangerous underwater breath-holding behaviors - New York State, 1988-2011"
+    type: journal-article
+    verification_status: verified
+    authors: ["Boyd C", "Levy A", "McProud T", "Huang L", "Raneses E", "Olson C"]
+    year: 2015
+    container: "MMWR Morbidity and Mortality Weekly Report"
+    identifier:
+      pmid: "25996093"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4584570/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 從 src.pmid-32119507 複合鍵拆出並首次獨立登錄。全文可核的數字寫在這裡供日後比對：16 例分布於 15 起事件（其中一起同時兩人），四人死亡；全體年齡 7–47 歲、平均 17 歲，16 人中 13 名男性；四名死者全部 17–22 歲、全為男性、全被列為 advanced 至 expert 等級的泳者、全部有刻意過度換氣。DUBB 三類行為＝刻意過度換氣、靜態閉氣、缺氧訓練（長距離水下游或延長閉氣間歇）；同時從事一種以上者致死風險上升。本文只提到一名『為了考海豹部隊而訓練』的個案，沒有任何軍方群體統計——本庫原本『美軍同期也有數十起相關溺斃』一句在本文中無據，已撤下。"
+
+  - id: src.craig-1976-underwater-loc
+    display: "Craig, A. B., Jr. (1976). Summary of 58 cases of loss of consciousness during underwater swimming and diving. Medicine and Science in Sports, 8(3), 171–175."
+    title: "Summary of 58 cases of loss of consciousness during underwater swimming and diving"
+    type: journal-article
+    verification_status: verified
+    authors: ["Craig AB Jr"]
+    year: 1976
+    container: "Medicine and Science in Sports"
+    identifier:
+      pmid: "979564"
+      doi: "10.1249/00005768-197600830-00007"
+      url: "https://pubmed.ncbi.nlm.nih.gov/979564/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 首次登錄。查證『美軍同期也有數十起相關溺斃』時定位到本篇——它極可能就是那句話的原型，但兩個關鍵詞都錯了：不是美軍（本篇是泳池與潛水的一般案例彙整），也不是同期（1976 年，比 MMWR 的 1988–2011 早一個世代）。摘要數字：58 例，56 例為男性，最常見年齡層 16–20 歲（全距 12–33），全部為公認的泳技或潛水良好者，約 80% 發生在有救生員的泳池，35 人存活、23 人死亡；閉氣實驗顯示失去意識到死亡之間可能不超過 2.5 分鐘。『泳技好』與『有救生員在場』這兩點與 MMWR 四名死者全是 advanced–expert 等級互相印證，是本庫安全章比死亡人數更有教學價值的發現。"
+
+  - id: src.hypoxic-blackout-joint-statement
+    display: "American Red Cross, YMCA of the USA, & USA Swimming. Joint statement on hypoxic blackout（2015 年首發、2022 年改版）。"
+    title: "Joint Statement on Hypoxic Blackout"
+    type: report
+    verification_status: verified
+    authors: ["American Red Cross", "YMCA of the USA", "USA Swimming"]
+    year: 2022
+    container: "American Red Cross Scientific Advisory Council"
+    identifier:
+      url: "https://www.redcross.org/content/dam/redcross/training-services/scientific-advisory-council/2022-Hypoxic-Blackout-Joint-Statement-Red-Cross-Y-USA-Swimming-1-10-2022.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 從 src.pmid-32119507 複合鍵拆出並首次獨立登錄。實作層的具體條文（下潛前單次吸氣、水下活動不得競賽化或反覆、救生員主動制止、教練端『原則上在水面、海豚腿除外』）出自同一夥伴關係的 2017 年簡報，登錄為 src.hypoxic-blackout-presentation-2017。兩個版本都確認存在：2015-05-27 紅十字會與 YMCA 版、2022 年三方版（紅十字會網站上有 1/10 與 10/31 兩份 PDF）。聲明的核心動作是正名：因為水深不是機轉的一部分，『shallow water blackout』一詞誤導，改稱 hypoxic blackout；並要求救生員、教練與教學者主動制止過度換氣與延長閉氣，教學中的呼吸控制限制為下潛前僅一次呼吸。紅十字會的 PDF 直接抓會回 403，需帶瀏覽器 UA。"
+
+  - id: src.hypoxic-blackout-presentation-2017
+    display: "Espino, M., & Harvey, C. (2017). Hypoxic blackout: A partnership to raise awareness. 2017 World Congress on Drowning Prevention（YMCA of the USA、American Red Cross、USA Swimming 聯合簡報）。"
+    title: "Hypoxic Blackout: A Partnership to Raise Awareness"
+    type: report
+    verification_status: verified
+    authors: ["Espino M", "Harvey C"]
+    year: 2017
+    container: "2017 World Congress on Drowning Prevention"
+    identifier:
+      url: "https://www.usaswimming.org/docs/default-source/risk-management/safety-and-operational-risk/hypoxic-blackout-presentation.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 首次登錄。三方聯合聲明本身只給定義與立場，可操作的條文在這份簡報裡，因此分開登錄：教學端限下潛前單次吸氣、水下活動不得競賽化或反覆、不得出『看誰遠／看誰久』的題目；救生員端明列為 prohibit（禁止並介入制止），且涵蓋競技隊訓練；教練端原文是『generally conduct this activity on the surface of the water (except dolphin kick training)』，附帶只用於有經驗且狀況良好的泳者、一至多兩口深呼吸、限制反覆次數、給足恢復。這段原文很重要——本庫原本把它寫成『任何缺氧訓練只能在水面做，不能在水下做』的絕對禁令，漏掉了 generally 與海豚腿例外，已更正（見 breathing.safety.hypoxic_blackout 的 policy_boundary_zh）。另提供一組本庫先前沒有的頻率數字：YMCA 系統泳池自 2008 年起至少 5 起缺氧昏迷死亡、至少 18 人失去意識後獲救。"
 
   - id: src.pmid-32310515
     display: "StatPearls Otitis Externa, PMID 32310515 (已驗證)"

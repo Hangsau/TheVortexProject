@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-09-05 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-09-06 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -586,7 +586,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.structure.gas | 🟢 | 為什麼週期化要有節奏不能一路往上堆？因為身體對訓練壓力有三個階段：① 警覺期（剛開始幾天，覺得難）、② 適應期（幾週後身體變強）、③ 耗竭期（再撐就崩）。週期化的目標就是每段訓練都 |
 | periodization.structure.detraining | 🟢 | 完全停練掉得有多快？最大攝氧量：停 4 天掉 4%、停 4 週掉 14%、停 8 週掉 20%。力量也類似（停 4 週最大肌力掉 6–10%）。好消息是這些可以練回來。實務結論：休 |
 | periodization.structure.swim_annual | 🟢 | 菁英游泳的年度結構長怎樣（有實證的）：一年大概切 2–4 個中週期（每個約 15 週）。最反直覺的數字——高達 86–90% 的訓練量是低強度（血乳酸 ≤4），不是整天操高強度。有 |
-| periodization.structure.swim_youth_ltad | 🟢 | 青少年怎麼分齡練（對齊 ADM 階段）：大致按年齡分學習訓練→訓練為訓練→訓練為競賽→訓練為勝利。生長陡增高峰（長最快的時候）女生約 12.5 歲、男生約 14 歲，可作排訓練的參 |
+| periodization.structure.swim_youth_ltad | 🟢 | 青少年怎麼分齡練：Swimming Canada 的游泳專項表大致是——女生 8–11 歲學習訓練、11–14 訓練為訓練、14–16 訓練為競賽、16 歲以上競賽求勝；男生各段晚 |
 | periodization.structure.schools_overview | 🔵 | 週期化不是一套被證明的定論，而是幾套互相辯論的框架。它們問的問題不同、適用的對象不同——把任何一派當『標準答案』都是誤讀。 |
 | periodization.structure.school_block | 🟡 | 板塊週期化（Issurin）跟 Bompa 最大的不同：Bompa 主張準備期可以同時把很多能力一起練；Issurin 說高水準選手做不到——很多訓練刺激會互相打架（大量有氧會干擾 |
 | periodization.structure.perception_periodization_bridge | 🔵 | 先講清楚兩層：第一層『技能會不會該被週期化、疲勞會不會傷技術』——這層有研究撐：Branscheidt 2019 證實疲勞不只讓你當下做不好，連『學會新技能』的能力都被拖累，而且累 |

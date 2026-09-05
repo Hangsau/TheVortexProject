@@ -6807,13 +6807,17 @@
       "domain": "breathing",
       "file": "canonical/breathing/safety.yaml",
       "path": "hypoxic_blackout",
-      "title": "這一頁只有一句話最重要：不要在水下憋氣，也不要下水前猛吸幾口大氣再潛。那不是在練肺活量，是在關掉身體的警報器——二氧化碳才是讓你『想呼吸』的訊號，先把它排掉，人就會在完全沒有窒息感的情況下，安安靜靜地在水裡昏過去。這件事有實際死亡案例，美國紅十字會、YMCA、USA Swimming 三方也明文禁止。想練水裡的呼吸，練",
+      "title": "這一頁只有一句話最重要：不要在水下憋氣，也不要下水前猛吸幾口大氣再潛。那不是在練肺活量，是在關掉身體的警報器——二氧化碳才是讓你『想呼吸』的訊號，先把它排掉，人就會在完全沒有窒息感的情況下，安安靜靜地在水裡昏過去。如果你覺得這輪不到自己，看一下死者的樣子：紐約州那份統計裡四名死者全是十七到二十二歲、全被歸類為進階以上的",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
+        "src.craig-1976-underwater-loc",
+        "src.hypoxic-blackout-joint-statement",
+        "src.hypoxic-blackout-presentation-2017",
+        "src.mmwr-2015-dubb-new-york",
         "src.pmid-32119507"
       ],
       "outgoing_ids": [
@@ -15836,14 +15840,16 @@
       "domain": "periodization",
       "file": "canonical/periodization/structure.yaml",
       "path": "swim_youth_ltad",
-      "title": "青少年怎麼分齡練（對齊 ADM 階段）：大致按年齡分學習訓練→訓練為訓練→訓練為競賽→訓練為勝利。生長陡增高峰（長最快的時候）女生約 12.5 歲、男生約 14 歲，可作排訓練的參考。但要特別小心一個流行說法——『某些能力有黃金訓練窗口、錯過就補不回』，這在學界是有爭議的（Ford 2011 等批判它證據不足）。家長和",
+      "title": "青少年怎麼分齡練：Swimming Canada 的游泳專項表大致是——女生 8–11 歲學習訓練、11–14 訓練為訓練、14–16 訓練為競賽、16 歲以上競賽求勝；男生各段晚一到兩年。但這張表最該記的其實不是數字。第一，年齡只是座標，該文件自己說進階要看生長趨緩與技術掌握，不是看生日。第二，同樣 11 歲的兩個孩",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
-        "src.pmid-21259156"
+        "src.pmid-21259156",
+        "src.swimming-canada-ltad-strategy",
+        "src.van-hooren-2020-sensitive-periods"
       ],
       "outgoing_ids": []
     },

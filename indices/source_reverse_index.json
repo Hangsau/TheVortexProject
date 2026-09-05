@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 738,
+  "source_count": 744,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1497,6 +1497,24 @@
           "id": "periodization.structure.detraining",
           "file": "canonical/periodization/structure.yaml",
           "path": "detraining"
+        }
+      ]
+    },
+    {
+      "id": "src.craig-1976-underwater-loc",
+      "display": "Craig, A. B., Jr. (1976). Summary of 58 cases of loss of consciousness during underwater swimming and diving. Medicine and Science in Sports, 8(3), 171–175.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "979564",
+        "doi": "10.1249/00005768-197600830-00007",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/979564/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.safety.hypoxic_blackout",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypoxic_blackout"
         }
       ]
     },
@@ -3551,6 +3569,38 @@
       ]
     },
     {
+      "id": "src.hypoxic-blackout-joint-statement",
+      "display": "American Red Cross, YMCA of the USA, & USA Swimming. Joint statement on hypoxic blackout（2015 年首發、2022 年改版）。",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.redcross.org/content/dam/redcross/training-services/scientific-advisory-council/2022-Hypoxic-Blackout-Joint-Statement-Red-Cross-Y-USA-Swimming-1-10-2022.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.safety.hypoxic_blackout",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypoxic_blackout"
+        }
+      ]
+    },
+    {
+      "id": "src.hypoxic-blackout-presentation-2017",
+      "display": "Espino, M., & Harvey, C. (2017). Hypoxic blackout: A partnership to raise awareness. 2017 World Congress on Drowning Prevention（YMCA of the USA、American Red Cross、USA Swimming 聯合簡報）。",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usaswimming.org/docs/default-source/risk-management/safety-and-operational-risk/hypoxic-blackout-presentation.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.safety.hypoxic_blackout",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypoxic_blackout"
+        }
+      ]
+    },
+    {
       "id": "src.ioc-iron-in-sport-doi-webfetch",
       "display": "【查無此文獻，已解除】IOC 共識聲明 — Iron in sport（具體 DOI 待 WebFetch 核實）",
       "verification_status": "retracted",
@@ -5131,6 +5181,23 @@
           "id": "psych.interaction.vagal_tone_fear_extinction",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.mmwr-2015-dubb-new-york",
+      "display": "Boyd, C., Levy, A., McProud, T., Huang, L., Raneses, E., & Olson, C. (2015). Fatal and nonfatal drowning outcomes related to dangerous underwater breath-holding behaviors — New York State, 1988–2011. Morbidity and Mortality Weekly Report, 64(19), 518–521.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25996093",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4584570/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breathing.safety.hypoxic_blackout",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypoxic_blackout"
         }
       ]
     },
@@ -8636,10 +8703,12 @@
     },
     {
       "id": "src.pmid-21259156",
-      "display": "Swimming Canada LTAD 分齡; PHV 文獻; Ford et al. 2011 (PMID 21259156); van Hooren & De Ste Croix 2020",
-      "verification_status": "unverified",
+      "display": "Ford, P., De Ste Croix, M., Lloyd, R., Meyers, R., Moosavi, M., Oliver, J., Till, K., & Williams, C. (2011). The long-term athlete development model: physiological evidence and application. Journal of Sports Sciences, 29(4), 389–402.",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "21259156"
+        "pmid": "21259156",
+        "doi": "10.1080/02640414.2010.536849",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21259156/"
       },
       "usage_count": 1,
       "usages": [
@@ -8882,10 +8951,11 @@
     },
     {
       "id": "src.pmid-32119507",
-      "display": "StatPearls 缺氧昏迷機轉 (PMID 32119507); CDC MMWR 2015;64(19) 紐約州 DUBB 致死研究; American Red Cross / YMCA / USA Swimming 缺氧昏迷聯合聲明 (2015/2022)",
-      "verification_status": "unverified",
+      "display": "Bart, R. M., Murray, B. P., & Lau, H. (2026). Shallow water blackout. In StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing.",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "32119507"
+        "pmid": "32119507",
+        "url": "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
       },
       "usage_count": 2,
       "usages": [
@@ -11439,6 +11509,22 @@
       "usages": []
     },
     {
+      "id": "src.swimming-canada-ltad-strategy",
+      "display": "Swimming Canada. Long Term Athlete Development Strategy（游泳專項 LTAD 策略文件，40 頁）。",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://swimbc.ca/wp-content/uploads/SNC-LTAD-strategy-1.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.swim_youth_ltad",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "swim_youth_ltad"
+        }
+      ]
+    },
+    {
       "id": "src.swimming-injury-imaging-review-1-radiologyke",
       "display": "【非可引用來源，已解除】Swimming injury imaging review (踝部約 1%), radiologykey",
       "verification_status": "retracted",
@@ -13502,6 +13588,23 @@
           "id": "psych.motivation.hmiem_bottomup",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[7].public"
+        }
+      ]
+    },
+    {
+      "id": "src.van-hooren-2020-sensitive-periods",
+      "display": "van Hooren, B., & De Ste Croix, M. (2020). Sensitive periods to train general motor abilities in children and adolescents: Do they exist? A critical appraisal. Strength and Conditioning Journal, 42(6), 7–14.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1519/ssc.0000000000000545",
+        "url": "https://doi.org/10.1519/ssc.0000000000000545"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.swim_youth_ltad",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "swim_youth_ltad"
         }
       ]
     },
