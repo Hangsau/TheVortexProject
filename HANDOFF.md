@@ -6,6 +6,14 @@
 
 ## 當前狀態（2026-09-05，最新）
 
+### ✅ **讀者看得到 13 處機器鍵（source_id slug、schema 欄位名）。改在 drafts/ 不是 injuries.yaml**
+
+線上稽核抓到 10 處未渲染的 markdown 反引號，全部是同一類問題：**內部機器鍵寫進了面向讀者的散文**。來源健檢紀錄本身是有價值的內容（解釋某個數字為什麼被撤除），但它用 source_id 的 slug 稱呼文獻——讀者看到的是一串 `src.` 開頭的 slug，不是「Akkurt et al. 2017」。另有一處把 schema 欄位名（`fatal_acute: true`）當成論述用語，和一個早已不存在的內部檔案路徑 `Technica/自由式水感框架.md`。一律改成人看得懂的指稱，結論與語意完全不動。
+
+**動手前先確認要改哪一份檔**：`canonical/health/injuries.yaml` **是產出物，不是來源**。`tools/build_injuries.py` 從 `canonical/health/drafts/*.yaml` 提升生成，檔頭自己寫著「Promoted artifact……勿手改，改 drafts/ 後重跑」；`validate.py` 也把 `drafts/` 排除在 E002 重複 ID 檢查外。所以 13 處改在 12 個 drafts 檔（12 處 `caveat` + 1 處 `prevalence`），再重跑 `build_injuries.py`。
+
+**重生後 `injuries.yaml` 的 diff 恰好 10 行對 10 行**——這是刻意去核對的：產出物重生最怕夾帶無關改動（欄位順序、引號風格、時間戳），diff 行數與預期改動數一致才能確定沒有。
+
 ### ✅ **`water-sense-levels.yaml` 的破折號是 pandoc 轉檔殘留，讀者看到的是 `耳朵入水------這些訊號`。91 + 64 處已還原**
 
 這份檔是從 Word／pandoc 轉來的：em dash 落地成**六個半形連字號**，數字區間落地成兩個。線上實測 **82 處出現在讀者看得到的正文裡**（水感發展地圖 37、仰式頁 25、查資料頁 20）。
