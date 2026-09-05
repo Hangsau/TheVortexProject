@@ -310,7 +310,121 @@ sources:
     year: 2019
     identifier: {isbn: "9781492544814"}
     retrieved_on: "2026-07-29"
-    notes: "依 Atlas 本地完整書檔與 ISBN 核對；範圍用作方案起點，需以泳者歷次反應校準。"
+    notes: >-
+      依 Atlas 本地完整書檔與 ISBN 核對；範圍用作方案起點，需以泳者歷次反應校準。
+      印刷版 ISBN 978-1-4925-4480-7、電子版 978-1-4925-4481-4，Human Kinetics, Champaign IL。
+      2026-09-05：本專案原有 17 筆以章節代號為 id 的登錄（src.ch5／ch7／ch8／ch9／ch11 及其表號組合）
+      全部是本書，已合併到本筆，章節與表號改寫進各條目的顯示字串。
+
+  - id: src.viru-1995-adaptation-in-sports-training
+    display: "Viru, A. (1995). Adaptation in Sports Training. Boca Raton, FL: CRC Press."
+    title: "Adaptation in Sports Training"
+    type: book
+    verification_status: verified
+    authors: ["Atko Viru"]
+    year: 1995
+    identifier: {isbn: "9780849379154"}
+    retrieved_on: '2026-09-05'
+    notes: >-
+      Bompa & Buzzichelli 2019 第 8 章參考文獻編號 28。本庫取用：停練 4 天最大攝氧量即降約 4%。
+      該數字在本專案原本併在「Mujika & Padilla 2000」名下，實際上不是他們的數據。
+
+  - id: src.coyle-1984-loss-of-adaptations
+    display: "Coyle, E. F., Martin, W. H., 3rd, Sinacore, D. R., Joyner, M. J., Hagberg, J. M., & Holloszy, J. O. (1984). Time course of loss of adaptations after stopping prolonged intense endurance training. Journal of Applied Physiology, 57(6), 1857-1864."
+    title: "Time course of loss of adaptations after stopping prolonged intense endurance training."
+    type: journal_article
+    verification_status: verified
+    authors: ["Coyle EF", "Martin WH 3rd", "Sinacore DR", "Joyner MJ", "Hagberg JM", "Holloszy JO"]
+    year: 1984
+    container: "Journal of Applied Physiology"
+    identifiers:
+      pmid: '6511559'
+      doi: 10.1152/jappl.1984.57.6.1857
+    retrieved_on: '2026-09-05'
+    notes: >-
+      Bompa & Buzzichelli 2019 第 8 章參考文獻編號 4。本庫取用：停練 3 週最大攝氧量降約 7%。
+
+  - id: src.mujika-padilla-2000-detraining-part1
+    display: "Mujika, I., & Padilla, S. (2000). Detraining: loss of training-induced physiological and performance adaptations. Part I: Short term insufficient training stimulus. Sports Medicine, 30(2), 79-87."
+    title: "Detraining: loss of training-induced physiological and performance adaptations. Part I: short term insufficient training stimulus."
+    type: review
+    verification_status: verified
+    authors: ["Mujika I", "Padilla S"]
+    year: 2000
+    container: "Sports Medicine"
+    identifiers:
+      pmid: '10966148'
+      doi: 10.2165/00007256-200030020-00002
+    retrieved_on: '2026-09-05'
+    notes: >-
+      短期停練（少於 4 週）的回顧。本庫取用：停練 4 週最大攝氧量降約 14%；
+      短期停練力竭時間降 4–25%。摘要本身不含這兩個百分比，數字取自
+      Bompa & Buzzichelli 2019 第 8 章正文對本文的引用（該章參考文獻編號 20）。
+
+  - id: src.mujika-padilla-2000-detraining-part2
+    display: "Mujika, I., & Padilla, S. (2000). Detraining: loss of training-induced physiological and performance adaptations. Part II: Long term insufficient training stimulus. Sports Medicine, 30(3), 145-154."
+    title: "Detraining: loss of training-induced physiological and performance adaptations. Part II: Long term insufficient training stimulus."
+    type: review
+    verification_status: verified
+    authors: ["Mujika I", "Padilla S"]
+    year: 2000
+    container: "Sports Medicine"
+    identifiers:
+      pmid: '10999420'
+      doi: 10.2165/00007256-200030030-00001
+    retrieved_on: '2026-09-05'
+    notes: >-
+      長期停練（超過 4 週）的回顧。本庫取用：停練 8 週最大攝氧量可降至 20%。
+      該文亦是「維持強度、只降量」這條減量原則的來源。數字同樣取自
+      Bompa & Buzzichelli 2019 第 8 章正文（該章參考文獻編號 21）。
+
+  - id: src.izquierdo-2007-detraining-tapering
+    display: "Izquierdo, M., Ibañez, J., González-Badillo, J. J., Ratamess, N. A., Kraemer, W. J., Häkkinen, K., Bonnabau, H., Granados, C., French, D. N., & Gorostiaga, E. M. (2007). Detraining and tapering effects on hormonal responses and strength performance. Journal of Strength and Conditioning Research, 21(3), 768-775."
+    title: "Detraining and tapering effects on hormonal responses and strength performance."
+    type: journal_article
+    verification_status: verified
+    authors: ["Izquierdo M", "Ibañez J", "González-Badillo JJ", "Ratamess NA", "Kraemer WJ", "Häkkinen K", "Bonnabau H", "Granados C", "French DN", "Gorostiaga EM"]
+    year: 2007
+    container: "Journal of Strength and Conditioning Research"
+    identifiers:
+      pmid: '17685721'
+      doi: 10.1519/R-21136.1
+    retrieved_on: '2026-09-05'
+    notes: >-
+      Bompa & Buzzichelli 2019 第 8 章參考文獻編號 15。本庫取用：完全停力量訓練 4 週，
+      最大肌力降 6–10%、最大功率降 14–17%。這組數字原本也掛在「Mujika & Padilla 2000」名下，
+      實際不是他們的數據。
+
+  - id: src.mujika-padilla-2003-tapering-strategies
+    display: "Mujika, I., & Padilla, S. (2003). Scientific bases for precompetition tapering strategies. Medicine & Science in Sports & Exercise, 35(7), 1182-1187."
+    title: "Scientific bases for precompetition tapering strategies."
+    type: review
+    verification_status: verified
+    authors: ["Mujika I", "Padilla S"]
+    year: 2003
+    container: "Medicine & Science in Sports & Exercise"
+    identifiers:
+      pmid: '12840640'
+      doi: 10.1249/01.MSS.0000074448.73931.11
+    retrieved_on: '2026-09-05'
+    notes: >-
+      減量定義與四大可操作變數（量／強度／頻率／時長）的來源。
+      取代原本的 src.pmid-12840640-a 與 -b（同一篇被登錄成兩筆，id 直接用 PMID 當字串）。
+
+  - id: src.bosquet-2007-tapering-meta-analysis
+    display: "Bosquet, L., Montpetit, J., Arvisais, D., & Mujika, I. (2007). Effects of tapering on performance: a meta-analysis. Medicine & Science in Sports & Exercise, 39(8), 1358-1365."
+    title: "Effects of tapering on performance: a meta-analysis."
+    type: review
+    verification_status: verified
+    authors: ["Bosquet L", "Montpetit J", "Arvisais D", "Mujika I"]
+    year: 2007
+    container: "Medicine & Science in Sports & Exercise"
+    identifiers:
+      pmid: '17762369'
+      doi: 10.1249/mss.0b013e31806010e0
+    retrieved_on: '2026-09-05'
+    notes: >-
+      減量曲線型態與各型增益幅度的統合分析來源。取代原本的 src.pmid-17762369。
 
   - id: src.morouco-2015
     display: "Morouço et al. 2015, fully tethered front crawl"
@@ -684,105 +798,105 @@ sources:
   - id: src.ch11-table-11-1-methods-of-developing-low-in
     display: "Ch11 Table 11.1 Methods of developing low-intensity exercise endurance"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch11-table-11-2
     display: "Ch11 Table 11.2"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-ch8
     display: "Ch5; Ch8"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-endurance-periodization
     display: "Ch5 Endurance periodization"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-periodization-terminology-ch8-phases
     display: "Ch5 Periodization Terminology; Ch8 Phases"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-table-5-1-ch5-selective-periodization-ch
     display: "Ch5 Table 5.1; Ch5 Selective Periodization; Ch8 (Fig 8.8)"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-table-5-1-ch8-classifying-annual-plans-f
     display: "Ch5 Table 5.1; Ch8 Classifying Annual Plans (Fig 8.4/8.5)"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-table-5-1-ch8-fig-8-6-ch5-fig-5-11-200m
     display: "Ch5 Table 5.1; Ch8 (Fig 8.6); Ch5 Fig 5.11 (游泳 200m 範例)"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch5-table-5-1-ch8-fig-8-7
     display: "Ch5 Table 5.1; Ch8 (Fig 8.7)"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch7-planning-training-cycles
     display: "Ch7 Planning Training Cycles"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch7-planning-training-cycles-table-7-1-zones
     display: "Ch7 Planning Training Cycles (Table 7.1 強度分區見 zones.yaml)"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch7-table-7-1-ch11-table-11-2
     display: "Ch7 Table 7.1 + Ch11 Table 11.2 框架推導（游泳項目對映）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch7-table-7-1-intensity-zones-and-training-d
     display: "Ch7 Table 7.1 Intensity Zones and Training Demand"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch8
     display: "Ch8"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch8-table-8-2-mujika-padilla-2000
     display: "Ch8 Table 8.2; Mujika & Padilla 2000"
     type: other
-    verification_status: unverified
     year: 2000
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：同上（章節代號登錄），另有歸因錯誤。原顯示字串把整張 detraining 安全表歸給 Mujika & Padilla 2000，但依 Bompa & Buzzichelli 2019 第 8 章正文，「停練 4 天降 4%」出自 Viru 1995、「3 週降 7%」出自 Coyle 等人 1984、「4 週力量降 6–10%／功率降 14–17%」出自 Izquierdo 等人 2007；Mujika & Padilla 2000 只涵蓋「4 週降 14%」（Part I）與「8 週降 20%」（Part II）。引用已改指該書加上五筆原始文獻。"
 
   - id: src.ch8-transition-phase
     display: "Ch8 Transition Phase"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.ch9
     display: "Ch9"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 與 display 都只有章節代號，讀者看不出是哪本書，同一本書被拆成 17 筆互不相干的 unverified 登錄。已確認全部是 Bompa, T. O., & Buzzichelli, C. A. (2019). Periodization - Theory and Methodology of Training (6th ed.). Human Kinetics（ISBN 978-1-4925-4480-7）。引用改指 src.bompa-buzzichelli-2019，章節與表號寫進各條目的顯示字串。留墓碑擋住同型章節代號再登錄。"
 
   - id: src.chilitri-com
     display: "chilitri.com"
@@ -3111,28 +3225,28 @@ sources:
   - id: src.pmid-12840640-a
     display: "Ch9; Mujika & Padilla 2003 (PMID 12840640)"
     type: other
-    verification_status: unverified
     year: 2003
     identifier:
       pmid: "12840640"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmid-12840640-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmid-12840640-b 共用 pmid 12840640，疑似同一文獻，待 S3c 查證。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 直接用 PMID 當字串、display 以 Ch9 開頭，同一篇被登錄成 -a／-b 兩筆。已查證為 Mujika & Padilla (2003) Med Sci Sports Exerc 35(7):1182-1187。引用改指 src.mujika-padilla-2003-tapering-strategies。"
 
   - id: src.pmid-12840640-b
     display: "Ch9; Mujika & Padilla 2003 (PMID 12840640); Bosquet et al. 2007 (PMID 17762369)"
     type: other
-    verification_status: unverified
     identifier:
       pmid: "12840640"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmid-12840640-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmid-12840640-a 共用 pmid 12840640，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：同 src.pmid-12840640-a，且 display 把兩篇不同文獻（Mujika & Padilla 2003 與 Bosquet 等人 2007）併在同一筆登錄裡。引用已拆成兩個 source_id。"
 
   - id: src.pmid-17762369
     display: "Ch9; Bosquet et al. 2007 (PMID 17762369)"
     type: other
-    verification_status: unverified
     year: 2007
     identifier:
       pmid: "17762369"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
+    verification_status: retracted
+    notes: "2026-09-05 撤下：id 直接用 PMID 當字串、display 以 Ch9 開頭。已查證為 Bosquet, Montpetit, Arvisais & Mujika (2007) Med Sci Sports Exerc 39(8):1358-1365。引用改指 src.bosquet-2007-tapering-meta-analysis。"
 
   - id: src.pmid-21259156
     display: "Swimming Canada LTAD 分齡; PHV 文獻; Ford et al. 2011 (PMID 21259156); van Hooren & De Ste Croix 2020"

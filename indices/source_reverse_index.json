@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 720,
+  "source_count": 727,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -607,12 +607,112 @@
       "identifier": {
         "isbn": "9781492544814"
       },
-      "usage_count": 1,
+      "usage_count": 21,
       "usages": [
+        {
+          "id": "periodization.structure.annual.bicycle",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "annual_plan_types[1]"
+        },
+        {
+          "id": "periodization.structure.annual.monocycle",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "annual_plan_types[0]"
+        },
+        {
+          "id": "periodization.structure.annual.multipeak",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "annual_plan_types[3]"
+        },
+        {
+          "id": "periodization.structure.annual.tricycle",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "annual_plan_types[2]"
+        },
+        {
+          "id": "periodization.structure.detraining",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "detraining"
+        },
+        {
+          "id": "periodization.structure.macrocycle",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "macrocycle"
+        },
+        {
+          "id": "periodization.structure.microcycle",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "microcycle"
+        },
+        {
+          "id": "periodization.taper.definition",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "definition"
+        },
+        {
+          "id": "periodization.taper.duration",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[3]"
+        },
+        {
+          "id": "periodization.taper.frequency",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[2]"
+        },
+        {
+          "id": "periodization.taper.intensity",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[1]"
+        },
         {
           "id": "periodization.taper.peak_window",
           "file": "canonical/periodization/taper.yaml",
           "path": "peak"
+        },
+        {
+          "id": "periodization.taper.type.fast_exponential",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "taper_types[2]"
+        },
+        {
+          "id": "periodization.taper.type.linear",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "taper_types[0]"
+        },
+        {
+          "id": "periodization.taper.type.step",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "taper_types[1]"
+        },
+        {
+          "id": "periodization.taper.volume",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[0]"
+        },
+        {
+          "id": "periodization.zones.endurance_phases",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "endurance_periodization"
+        },
+        {
+          "id": "periodization.zones.swim",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "swim_application"
+        },
+        {
+          "id": "periodization.zones.table_11_1",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "liee_methods"
+        },
+        {
+          "id": "periodization.zones.table_11_2",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "hr_vo2_ergogenesis"
+        },
+        {
+          "id": "periodization.zones.table_7_1",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "intensity_zones"
         }
       ]
     },
@@ -665,6 +765,30 @@
           "id": "starts-turns.tech.28",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[207].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.bosquet-2007-tapering-meta-analysis",
+      "display": "Bosquet, L., Montpetit, J., Arvisais, D., & Mujika, I. (2007). Effects of tapering on performance: a meta-analysis. Medicine & Science in Sports & Exercise, 39(8), 1358-1365.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "periodization.taper.type.fast_exponential",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "taper_types[2]"
+        },
+        {
+          "id": "periodization.taper.type.step",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "taper_types[1]"
+        },
+        {
+          "id": "periodization.taper.volume",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[0]"
         }
       ]
     },
@@ -854,35 +978,23 @@
     {
       "id": "src.ch11-table-11-1-methods-of-developing-low-in",
       "display": "Ch11 Table 11.1 Methods of developing low-intensity exercise endurance",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.table_11_1",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "liee_methods"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch11-table-11-2",
       "display": "Ch11 Table 11.2",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.table_11_2",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "hr_vo2_ergogenesis"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch5-ch8",
       "display": "Ch5; Ch8",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
       "usage_count": 0,
       "usages": []
@@ -890,21 +1002,15 @@
     {
       "id": "src.ch5-endurance-periodization",
       "display": "Ch5 Endurance periodization",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.endurance_phases",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "endurance_periodization"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch5-periodization-terminology-ch8-phases",
       "display": "Ch5 Periodization Terminology; Ch8 Phases",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
       "usage_count": 0,
       "usages": []
@@ -912,119 +1018,71 @@
     {
       "id": "src.ch5-table-5-1-ch5-selective-periodization-ch",
       "display": "Ch5 Table 5.1; Ch5 Selective Periodization; Ch8 (Fig 8.8)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.annual.multipeak",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "annual_plan_types[3]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch5-table-5-1-ch8-classifying-annual-plans-f",
       "display": "Ch5 Table 5.1; Ch8 Classifying Annual Plans (Fig 8.4/8.5)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.annual.monocycle",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "annual_plan_types[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch5-table-5-1-ch8-fig-8-6-ch5-fig-5-11-200m",
       "display": "Ch5 Table 5.1; Ch8 (Fig 8.6); Ch5 Fig 5.11 (游泳 200m 範例)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.annual.bicycle",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "annual_plan_types[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch5-table-5-1-ch8-fig-8-7",
       "display": "Ch5 Table 5.1; Ch8 (Fig 8.7)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.annual.tricycle",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "annual_plan_types[2]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch7-planning-training-cycles",
       "display": "Ch7 Planning Training Cycles",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.macrocycle",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "macrocycle"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch7-planning-training-cycles-table-7-1-zones",
       "display": "Ch7 Planning Training Cycles (Table 7.1 強度分區見 zones.yaml)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.microcycle",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "microcycle"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch7-table-7-1-ch11-table-11-2",
       "display": "Ch7 Table 7.1 + Ch11 Table 11.2 框架推導（游泳項目對映）",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.swim",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "swim_application"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch7-table-7-1-intensity-zones-and-training-d",
       "display": "Ch7 Table 7.1 Intensity Zones and Training Demand",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.table_7_1",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "intensity_zones"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch8",
       "display": "Ch8",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
       "usage_count": 0,
       "usages": []
@@ -1032,21 +1090,15 @@
     {
       "id": "src.ch8-table-8-2-mujika-padilla-2000",
       "display": "Ch8 Table 8.2; Mujika & Padilla 2000",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.detraining",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "detraining"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ch8-transition-phase",
       "display": "Ch8 Transition Phase",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
       "usage_count": 0,
       "usages": []
@@ -1054,26 +1106,10 @@
     {
       "id": "src.ch9",
       "display": "Ch9",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "periodization.taper.intensity",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "variables[1]"
-        },
-        {
-          "id": "periodization.taper.peak_window",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "peak"
-        },
-        {
-          "id": "periodization.taper.type.linear",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "taper_types[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.cheng-2022-breaststrokers-knee-mri",
@@ -1430,6 +1466,20 @@
           "id": "psych.attention.association_dissociation",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[5].public"
+        }
+      ]
+    },
+    {
+      "id": "src.coyle-1984-loss-of-adaptations",
+      "display": "Coyle, E. F., Martin, W. H., 3rd, Sinacore, D. R., Joyner, M. J., Hagberg, J. M., & Holloszy, J. O. (1984). Time course of loss of adaptations after stopping prolonged intense endurance training. Journal of Applied Physiology, 57(6), 1857-1864.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.detraining",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "detraining"
         }
       ]
     },
@@ -3507,6 +3557,20 @@
       ]
     },
     {
+      "id": "src.izquierdo-2007-detraining-tapering",
+      "display": "Izquierdo, M., Ibañez, J., González-Badillo, J. J., Ratamess, N. A., Kraemer, W. J., Häkkinen, K., Bonnabau, H., Granados, C., French, D. N., & Gorostiaga, E. M. (2007). Detraining and tapering effects on hormonal responses and strength performance. Journal of Strength and Conditioning Research, 21(3), 768-775.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.detraining",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "detraining"
+        }
+      ]
+    },
+    {
       "id": "src.jackson-1995-flow-elite-athletes",
       "display": "Jackson, S. A. (1995). Factors influencing the occurrence of flow state in elite athletes.",
       "verification_status": "verified",
@@ -5160,6 +5224,63 @@
           "id": "periodization.taper.swim",
           "file": "canonical/periodization/taper.yaml",
           "path": "swim_application"
+        }
+      ]
+    },
+    {
+      "id": "src.mujika-padilla-2000-detraining-part1",
+      "display": "Mujika, I., & Padilla, S. (2000). Detraining: loss of training-induced physiological and performance adaptations. Part I: Short term insufficient training stimulus. Sports Medicine, 30(2), 79-87.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.detraining",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "detraining"
+        }
+      ]
+    },
+    {
+      "id": "src.mujika-padilla-2000-detraining-part2",
+      "display": "Mujika, I., & Padilla, S. (2000). Detraining: loss of training-induced physiological and performance adaptations. Part II: Long term insufficient training stimulus. Sports Medicine, 30(3), 145-154.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.detraining",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "detraining"
+        }
+      ]
+    },
+    {
+      "id": "src.mujika-padilla-2003-tapering-strategies",
+      "display": "Mujika, I., & Padilla, S. (2003). Scientific bases for precompetition tapering strategies. Medicine & Science in Sports & Exercise, 35(7), 1182-1187.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 4,
+      "usages": [
+        {
+          "id": "periodization.taper.definition",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "definition"
+        },
+        {
+          "id": "periodization.taper.duration",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[3]"
+        },
+        {
+          "id": "periodization.taper.frequency",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[2]"
+        },
+        {
+          "id": "periodization.taper.volume",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "variables[0]"
         }
       ]
     },
@@ -8426,65 +8547,32 @@
     {
       "id": "src.pmid-12840640-a",
       "display": "Ch9; Mujika & Padilla 2003 (PMID 12840640)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {
         "pmid": "12840640"
       },
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "periodization.taper.definition",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "definition"
-        },
-        {
-          "id": "periodization.taper.duration",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "variables[3]"
-        },
-        {
-          "id": "periodization.taper.frequency",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "variables[2]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmid-12840640-b",
       "display": "Ch9; Mujika & Padilla 2003 (PMID 12840640); Bosquet et al. 2007 (PMID 17762369)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {
         "pmid": "12840640"
       },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.taper.volume",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "variables[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmid-17762369",
       "display": "Ch9; Bosquet et al. 2007 (PMID 17762369)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {
         "pmid": "17762369"
       },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "periodization.taper.type.fast_exponential",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "taper_types[2]"
-        },
-        {
-          "id": "periodization.taper.type.step",
-          "file": "canonical/periodization/taper.yaml",
-          "path": "taper_types[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmid-21259156",
@@ -13446,6 +13534,22 @@
           "id": "free.tech.23",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[25].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.viru-1995-adaptation-in-sports-training",
+      "display": "Viru, A. (1995). Adaptation in Sports Training. Boca Raton, FL: CRC Press.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9780849379154"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.detraining",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "detraining"
         }
       ]
     },

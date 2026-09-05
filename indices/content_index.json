@@ -15624,7 +15624,7 @@
         ]
       },
       "source_ids": [
-        "src.ch5-table-5-1-ch8-fig-8-6-ch5-fig-5-11-200m"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.structure.annual.monocycle"
@@ -15642,7 +15642,7 @@
         ]
       },
       "source_ids": [
-        "src.ch5-table-5-1-ch8-classifying-annual-plans-f"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -15658,7 +15658,7 @@
         ]
       },
       "source_ids": [
-        "src.ch5-table-5-1-ch5-selective-periodization-ch"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -15674,7 +15674,7 @@
         ]
       },
       "source_ids": [
-        "src.ch5-table-5-1-ch8-fig-8-7"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -15690,7 +15690,12 @@
         ]
       },
       "source_ids": [
-        "src.ch8-table-8-2-mujika-padilla-2000"
+        "src.bompa-buzzichelli-2019",
+        "src.coyle-1984-loss-of-adaptations",
+        "src.izquierdo-2007-detraining-tapering",
+        "src.mujika-padilla-2000-detraining-part1",
+        "src.mujika-padilla-2000-detraining-part2",
+        "src.viru-1995-adaptation-in-sports-training"
       ],
       "outgoing_ids": []
     },
@@ -15725,7 +15730,7 @@
         ]
       },
       "source_ids": [
-        "src.ch7-planning-training-cycles"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.structure.school_block"
@@ -15744,7 +15749,7 @@
         ]
       },
       "source_ids": [
-        "src.ch7-planning-training-cycles-table-7-1-zones"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.structure.macrocycle",
@@ -15852,7 +15857,8 @@
         ]
       },
       "source_ids": [
-        "src.pmid-12840640-a"
+        "src.bompa-buzzichelli-2019",
+        "src.mujika-padilla-2003-tapering-strategies"
       ],
       "outgoing_ids": []
     },
@@ -15868,7 +15874,8 @@
         ]
       },
       "source_ids": [
-        "src.pmid-12840640-a"
+        "src.bompa-buzzichelli-2019",
+        "src.mujika-padilla-2003-tapering-strategies"
       ],
       "outgoing_ids": []
     },
@@ -15884,7 +15891,8 @@
         ]
       },
       "source_ids": [
-        "src.pmid-12840640-a"
+        "src.bompa-buzzichelli-2019",
+        "src.mujika-padilla-2003-tapering-strategies"
       ],
       "outgoing_ids": []
     },
@@ -15900,7 +15908,7 @@
         ]
       },
       "source_ids": [
-        "src.ch9"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.structure.detraining"
@@ -15918,8 +15926,7 @@
         ]
       },
       "source_ids": [
-        "src.bompa-buzzichelli-2019",
-        "src.ch9"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -15951,7 +15958,8 @@
         ]
       },
       "source_ids": [
-        "src.pmid-17762369"
+        "src.bompa-buzzichelli-2019",
+        "src.bosquet-2007-tapering-meta-analysis"
       ],
       "outgoing_ids": []
     },
@@ -15967,7 +15975,7 @@
         ]
       },
       "source_ids": [
-        "src.ch9"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -15983,7 +15991,8 @@
         ]
       },
       "source_ids": [
-        "src.pmid-17762369"
+        "src.bompa-buzzichelli-2019",
+        "src.bosquet-2007-tapering-meta-analysis"
       ],
       "outgoing_ids": []
     },
@@ -15999,7 +16008,9 @@
         ]
       },
       "source_ids": [
-        "src.pmid-12840640-b"
+        "src.bompa-buzzichelli-2019",
+        "src.bosquet-2007-tapering-meta-analysis",
+        "src.mujika-padilla-2003-tapering-strategies"
       ],
       "outgoing_ids": []
     },
@@ -16015,7 +16026,7 @@
         ]
       },
       "source_ids": [
-        "src.ch5-endurance-periodization"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.zones.olbrecht_model"
@@ -16096,7 +16107,7 @@
         ]
       },
       "source_ids": [
-        "src.ch7-table-7-1-ch11-table-11-2"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.zones.olbrecht_model",
@@ -16181,7 +16192,7 @@
         ]
       },
       "source_ids": [
-        "src.ch11-table-11-1-methods-of-developing-low-in"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -16197,7 +16208,7 @@
         ]
       },
       "source_ids": [
-        "src.ch11-table-11-2"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": []
     },
@@ -16213,7 +16224,7 @@
         ]
       },
       "source_ids": [
-        "src.ch7-table-7-1-intensity-zones-and-training-d"
+        "src.bompa-buzzichelli-2019"
       ],
       "outgoing_ids": [
         "periodization.zones.school_polarized"
