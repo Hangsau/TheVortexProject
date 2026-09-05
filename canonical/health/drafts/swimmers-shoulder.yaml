@@ -77,7 +77,7 @@ links:
 
 references:
   - { citation: "Sein ML, Walton J, Linklater J, Appleyard R, Kirkbride B, Kuah D, Murrell G. (2010). Shoulder pain in elite swimmers: primarily due to swim-volume-induced supraspinatus tendinopathy. Br J Sports Med 44(2):105-113. PMID 18463295", certainty: 🟢, verified: true, source_ids: [src.sein-2010] }
-  - { citation: "McKenzie 系統綜述 2023, Scand J Med Sci Sports, DOI:10.1111/sms.14454", certainty: 🔴, verified: false, source_ids: [src.mckenzie-2023-b] }
+  - { citation: "McKenzie A, Larequi S-A, Hams A, Headrick J, Whiteley R, Duhig S. (2023). Shoulder pain and injury risk factors in competitive swimmers: a systematic review. Scand J Med Sci Sports 33(12):2396–2412. PMID 37515375", certainty: 🟢, verified: true, source_ids: [src.mckenzie-2023-a] }
   - { citation: "Masters 泳者肩超音波研究, PMC7824457", certainty: 🟡, verified: false, source_ids: [src.pmc7824457] }
   - { citation: "Pink M, Jobe FW, Perry J, Kerrigan J, Browne A, Scovazzo ML. (1993). The normal shoulder during the butterfly swim stroke. Clin Orthop Relat Res (288):48–59. PMID 8458154", certainty: 🟡, verified: true, source_ids: [src.pink-1993] }
 

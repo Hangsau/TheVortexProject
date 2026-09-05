@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 743,
+  "source_count": 745,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -790,8 +790,13 @@
         "pmid": "19364182",
         "doi": "10.1580/08-WEME-OR-214.1"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "hypothermia-swimmers",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[27].epidemiology"
+        },
         {
           "id": "hypothermia-swimmers",
           "file": "canonical/health/injuries.yaml",
@@ -801,19 +806,11 @@
     },
     {
       "id": "src.brannigan-et-al-hypothermia-mass-participati-2009",
-      "display": "Brannigan D, Rogers IR, Jacobs I, et al. (2009). Hypothermia is a significant medical risk of mass participation long-distance open water swimming. Wilderness Environ Med 20(1):14–18.",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "19364182"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "hypothermia-swimmers",
-          "file": "canonical/health/injuries.yaml",
-          "path": "injuries[27].epidemiology"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.brannigan-2009 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.breath-hold-training",
@@ -1677,6 +1674,25 @@
           "id": "psych.motivation.bpn_triad",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.della-tommasina-2023-kabat-d2",
+      "display": "Della Tommasina, I., Trinidad-Morales, A., Martínez-Lozano, P., González-de-la-Flor, Á., & Del-Blanco-Muñiz, J. Á. (2023). Effects of a dry-land strengthening exercise program with elastic bands following the Kabat D2 diagonal flexion pattern for the prevention of shoulder injuries in swimmers. Frontiers in Physiology, 14, 1275285.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "38028779",
+        "pmcid": "PMC10679734",
+        "doi": "10.3389/fphys.2023.1275285",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38028779/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.injury",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "injury_prevention"
         }
       ]
     },
@@ -4238,13 +4254,9 @@
     },
     {
       "id": "src.liu-2025-core-meta",
-      "display": "Liu et al. 2025, youth swimmer core-training meta-analysis",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1186/s13102-025-01366-1",
-        "pmid": "41219810",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/41219810/"
-      },
+      "display": "【重複登錄，已解除】與 src.liu-2025-core-stability-youth-swimmers 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
       "usage_count": 0,
       "usages": []
     },
@@ -4966,31 +4978,14 @@
     },
     {
       "id": "src.mckenzie-2023-a",
-      "display": "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）",
+      "display": "McKenzie, A., Larequi, S.-A., Hams, A., Headrick, J., Whiteley, R., & Duhig, S. (2023). Shoulder pain and injury risk factors in competitive swimmers: a systematic review. Scandinavian Journal of Medicine & Science in Sports, 33(12), 2396–2412.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1111/sms.14454",
         "pmid": "37515375",
         "url": "https://pubmed.ncbi.nlm.nih.gov/37515375/"
       },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "swimmers-shoulder",
-          "file": "canonical/health/injuries.yaml",
-          "path": "injuries[5].epidemiology"
-        }
-      ]
-    },
-    {
-      "id": "src.mckenzie-2023-b",
-      "display": "McKenzie et al. 2023 SR, Scand J Med Sci Sports (DOI 10.1111/sms.14454); Kabat D2 彈力帶計畫, Frontiers Physiology 2023 (PMC10679734); 綜合傷害預防 RCT (ScienceDirect S1360859225004899)",
-      "verification_status": "unverified",
-      "identifier": {
-        "doi": "10.1111/sms.14454",
-        "pmcid": "PMC10679734"
-      },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "periodization.dryland.injury",
@@ -5000,9 +4995,22 @@
         {
           "id": "swimmers-shoulder",
           "file": "canonical/health/injuries.yaml",
+          "path": "injuries[5].epidemiology"
+        },
+        {
+          "id": "swimmers-shoulder",
+          "file": "canonical/health/injuries.yaml",
           "path": "injuries[5].references[1]"
         }
       ]
+    },
+    {
+      "id": "src.mckenzie-2023-b",
+      "display": "【複合來源鍵，已解除】原字串綁了三篇文獻，已拆為 src.mckenzie-2023-a、src.della-tommasina-2023-kabat-d2、src.moghadasi-2026-injury-prevention-rct",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mdi-management-review-annals-of-joint",
@@ -5152,6 +5160,23 @@
           "id": "breathing.safety.hypoxic_blackout",
           "file": "canonical/breathing/safety.yaml",
           "path": "hypoxic_blackout"
+        }
+      ]
+    },
+    {
+      "id": "src.moghadasi-2026-injury-prevention-rct",
+      "display": "Moghadasi, A., & Baziyar, Y. (2026). Comprehensive injury prevention training significantly enhances upper limb dynamic stability and front crawl performance in adolescent swimmers: a randomized controlled trial. Journal of Bodywork and Movement Therapies, 46, 391–403.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/j.jbmt.2025.12.002",
+        "url": "https://doi.org/10.1016/j.jbmt.2025.12.002"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.injury",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "injury_prevention"
         }
       ]
     },
@@ -8227,7 +8252,7 @@
     },
     {
       "id": "src.pmc8700779",
-      "display": "Leg Dominance 研究 2021",
+      "display": "Matúš, I., Ružbarský, P., Vadašová, B., & Čech, P. (2021). Leg dominance and OSB12 kick start performance in young competitive swimmers. International Journal of Environmental Research and Public Health, 18(24), 13156.",
       "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC8700779",
@@ -8235,8 +8260,13 @@
         "pmid": "34948765",
         "doi": "10.3390/ijerph182413156"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "starts-turns.err2",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[89].public.evidence[1]"
+        },
         {
           "id": "starts-turns.tech.8",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -10813,20 +10843,11 @@
     },
     {
       "id": "src.sports-biomechanics-2026",
-      "display": "Takeda T, Koga D, Tsunokawa T, Sengoku Y, Takagi H. (2026). Net force analysis during streamlined glide, dolphin kick, and front crawl at high velocities in competitive swimming: implications for optimal propulsion timing. Sports Biomech. Online ahead of print 2026-02-23. PMID 41728809 / doi:10.1080/14763141.2026.2627415",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "41728809",
-        "doi": "10.1080/14763141.2026.2627415"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "udk.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[2]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.takeda-2026 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.sta-2023-world-aquatics-diving-depth",
@@ -11597,33 +11618,28 @@
     },
     {
       "id": "src.takai",
-      "display": "Takai et al. 2016; PMC8700779 (2021)",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmid": "27149652",
-        "pmcid": "PMC8700779",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err2",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[89].public.evidence[0]"
-        }
-      ]
+      "display": "【複合來源鍵，已解除】原字串綁了兩篇文獻，已拆為 src.takai-2016 與 src.pmc8700779",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.takai-2016",
-      "display": "Takai et al. 2016",
+      "display": "Takeda, T., Sakai, S., Takagi, H., Okuno, K., & Tsubakimoto, S. (2017). Contribution of hand and foot force to take-off velocity for the kick-start in competitive swimming. Journal of Sports Sciences, 35(6), 565–571.",
       "verification_status": "verified",
       "identifier": {
         "pmid": "27149652",
         "url": "https://pubmed.ncbi.nlm.nih.gov/27149652/",
         "doi": "10.1080/02640414.2016.1180417"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "starts-turns.err2",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[89].public.evidence[0]"
+        },
         {
           "id": "starts-turns.tech.7",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -11638,14 +11654,20 @@
     },
     {
       "id": "src.takeda-2026",
-      "display": "Takeda et al. 2026, glide–DK–front-crawl transition",
+      "display": "Takeda, T., Koga, D., Tsunokawa, T., Sengoku, Y., & Takagi, H. (2026). Net force analysis during streamlined glide, dolphin kick, and front crawl at high velocities in competitive swimming: implications for optimal propulsion timing. Sports Biomechanics（線上先行版）.",
       "verification_status": "verified",
       "identifier": {
+        "pmid": "41728809",
         "doi": "10.1080/14763141.2026.2627415",
         "url": "https://doi.org/10.1080/14763141.2026.2627415"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "udk.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[82].public.evidence[2]"
+        },
         {
           "id": "udk.tech.17",
           "file": "canonical/instructional/technical-analysis.yaml",

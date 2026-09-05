@@ -11349,7 +11349,6 @@
       },
       "source_ids": [
         "src.brannigan-2009",
-        "src.brannigan-et-al-hypothermia-mass-participati-2009",
         "src.dow-2019",
         "src.pmid-39500300",
         "src.pmid-40783351"
@@ -15524,14 +15523,16 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "injury_prevention",
-      "title": "有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。",
+      "title": "有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。要知道彈力帶那套目前只有小型試驗、效果沒達顯著，值得試但別當成保證。",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
-        "src.mckenzie-2023-b"
+        "src.della-tommasina-2023-kabat-d2",
+        "src.mckenzie-2023-a",
+        "src.moghadasi-2026-injury-prevention-rct"
       ],
       "outgoing_ids": []
     },
@@ -18200,7 +18201,8 @@
         ]
       },
       "source_ids": [
-        "src.takai"
+        "src.pmc8700779",
+        "src.takai-2016"
       ],
       "outgoing_ids": [
         "starts-turns.tech.7",
@@ -20088,14 +20090,12 @@
           "A-shoulder-upper"
         ],
         "certainty": [
-          "🔴",
           "🟡",
           "🟢"
         ]
       },
       "source_ids": [
         "src.mckenzie-2023-a",
-        "src.mckenzie-2023-b",
         "src.pink-1993",
         "src.pmc7824457",
         "src.sein-2010",
@@ -20460,7 +20460,7 @@
         ]
       },
       "source_ids": [
-        "src.sports-biomechanics-2026",
+        "src.takeda-2026",
         "src.the-race-club-turn-when-to-start-dolphin-kick"
       ],
       "outgoing_ids": [

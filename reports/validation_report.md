@@ -135,18 +135,11 @@
 
 ## W025 — 同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）（E005 對此完全無感：每個 id 都解析得到；後果是同一篇被當成多個獨立證據、撤稿撤不乾淨、讀者看到多個不同的來源名）
 
-**WARN，共 11 筆**
+**WARN，共 4 筆**
 
-  pmid='19364182' 同時登錄於 2 筆：'src.brannigan-2009', 'src.brannigan-et-al-hypothermia-mass-participati-2009'
-  pmid='27149652' 同時登錄於 2 筆：'src.takai', 'src.takai-2016'
-  pmid='41219810' 同時登錄於 2 筆：'src.liu-2025-core-meta', 'src.liu-2025-core-stability-youth-swimmers'
   pmcid='pmc4234766' 同時登錄於 2 筆：'src.pmc4234766-a', 'src.pmc4234766-b'
-  pmcid='pmc8700779' 同時登錄於 2 筆：'src.pmc8700779', 'src.takai'
   pmcid='pmc8960438' 同時登錄於 3 筆：'src.pmc8960438-a', 'src.pmc8960438-c', 'src.pmc8960438-d'
   pmcid='pmc9424421' 同時登錄於 2 筆：'src.pmc9424421-a', 'src.pmc9424421-b'
-  doi='10.1080/14763141.2026.2627415' 同時登錄於 2 筆：'src.sports-biomechanics-2026', 'src.takeda-2026'
-  doi='10.1111/sms.14454' 同時登錄於 2 筆：'src.mckenzie-2023-a', 'src.mckenzie-2023-b'
-  doi='10.1186/s13102-025-01366-1' 同時登錄於 2 筆：'src.liu-2025-core-meta', 'src.liu-2025-core-stability-youth-swimmers'
   doi='10.3389/fphys.2025.1636595' 同時登錄於 2 筆：'src.pmc9424421-a', 'src.wang-2025-training-nma'
 
 ---
@@ -375,11 +368,10 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用（`verification_status: retracted` 的墓碑除外）
 
-**WARN，共 3 筆**
+**WARN，共 2 筆**
 
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.liu-2025-core-meta' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 

@@ -22,7 +22,7 @@ epidemiology:
     - "Brannigan D, Rogers IR, Jacobs I, et al. (2009). Hypothermia is a significant medical risk of mass participation long-distance open water swimming. Wilderness Environ Med 20(1):14–18. PMID 19364182"
     - "JSAMS 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
     - "Doha 2024 Masters 3km 核心溫研究（2025 發表）, PubMed 39500300 (已驗證)"
-  source_ids: [src.brannigan-et-al-hypothermia-mass-participati-2009, src.pmid-40783351, src.pmid-39500300]
+  source_ids: [src.brannigan-2009, src.pmid-40783351, src.pmid-39500300]
 
 risk_factors:
   - { text: "水溫 <18°C(競賽分界)", grade: B }
