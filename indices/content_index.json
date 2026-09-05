@@ -17171,8 +17171,12 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-a",
-        "src.research-psych-08-c"
+        "src.craig-2002-interoception",
+        "src.craig-2009-anterior-insula",
+        "src.haase-2016-mindfulness-insula",
+        "src.paulus-2012-elite-athletes-insula",
+        "src.paulus-stein-2010-interoception-anxiety",
+        "src.sugawara-2024-interoceptive-training"
       ],
       "outgoing_ids": []
     },
@@ -17192,7 +17196,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-e"
+        "src.easterbrook-1959-cue-utilization"
       ],
       "outgoing_ids": []
     },
@@ -17211,7 +17215,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-h"
+        "src.easterbrook-1959-cue-utilization",
+        "src.marcora-2009-mental-fatigue"
       ],
       "outgoing_ids": []
     },
@@ -17231,7 +17236,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-g"
+        "src.kozlowska-2015-defense-cascade",
+        "src.kyriakoulis-2021-diving-response-panic",
+        "src.roelofs-2017-freeze-for-action"
       ],
       "outgoing_ids": []
     },
@@ -17251,9 +17258,12 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-d",
-        "src.research-psych-08-k",
-        "src.research-psych-08-l"
+        "src.blanchfield-2014-nonconscious-cues",
+        "src.blanchfield-2014-self-talk-exhaustion",
+        "src.marcora-2009-mental-fatigue",
+        "src.noakes-1997-central-governor",
+        "src.pageaux-2014-psychobiological-model",
+        "src.tucker-2009-anticipatory-regulation"
       ],
       "outgoing_ids": []
     },
@@ -17273,8 +17283,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-b",
-        "src.research-psych-08-j"
+        "src.langlet-2017-anxiety-forearm-emg",
+        "src.olstad-2017-world-champion-breaststroke",
+        "src.trapero-asenjo-2025-relaxation-imagery",
+        "src.vaz-2016-breaststroke-coordination"
       ],
       "outgoing_ids": []
     },
@@ -17295,8 +17307,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-f",
-        "src.research-psych-08-i"
+        "src.miu-2009-hrv-anxiety",
+        "src.paciorek-skora-2020-vns-interoception",
+        "src.pappens-2014-hrv-fear-extinction",
+        "src.porges-2022-polyvagal-safety"
       ],
       "outgoing_ids": []
     },
@@ -17316,8 +17330,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-08-c",
-        "src.research-psych-08-i"
+        "src.baba-2021-water-immersion-interoception",
+        "src.craig-2002-interoception",
+        "src.paulus-stein-2010-interoception-anxiety"
       ],
       "outgoing_ids": []
     },

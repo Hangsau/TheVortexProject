@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 696,
+  "source_count": 717,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -315,6 +315,22 @@
       ]
     },
     {
+      "id": "src.baba-2021-water-immersion-interoception",
+      "display": "Baba, Y., Sato, D., Otsuru, N., Ikarashi, K., Fujimoto, T., & Yamashiro, K. (2021). Does long-term training in a water immersion environment change interoception?",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3390/ijerph181910259"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.water_immersion_interoception",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[7].public"
+        }
+      ]
+    },
+    {
       "id": "src.barbosa-2008",
       "display": "Barbosa et al. (2008). Predicting the intra-cyclic variation of the velocity of the centre of mass from segmental velocities in butterfly stroke: a pilot study.",
       "verification_status": "unverified",
@@ -491,6 +507,40 @@
           "id": "breathing.regulation.wim_hof",
           "file": "canonical/breathing/regulation.yaml",
           "path": "wim_hof"
+        }
+      ]
+    },
+    {
+      "id": "src.blanchfield-2014-nonconscious-cues",
+      "display": "Blanchfield, A., Hardy, J., & Marcora, S. (2014). Non-conscious visual cues related to affect and action alter perception of effort and endurance performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25566014",
+        "pmc": "PMC4263011",
+        "doi": "10.3389/fnhum.2014.00967"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public"
+        }
+      ]
+    },
+    {
+      "id": "src.blanchfield-2014-self-talk-exhaustion",
+      "display": "Blanchfield, A. W., Hardy, J., de Morree, H. M., Staiano, W., & Marcora, S. M. (2014). Talking yourself out of exhaustion: The effects of self-talk on endurance performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1249/MSS.0000000000000184"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public"
         }
       ]
     },
@@ -1370,6 +1420,43 @@
       ]
     },
     {
+      "id": "src.craig-2002-interoception",
+      "display": "Craig, A. D. (2002). How do you feel? Interoception: the sense of the physiological condition of the body.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1038/nrn894"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public"
+        },
+        {
+          "id": "psych.interaction.water_immersion_interoception",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[7].public"
+        }
+      ]
+    },
+    {
+      "id": "src.craig-2009-anterior-insula",
+      "display": "Craig, A. D. (2009). How do you feel — now? The anterior insula and human awareness.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1038/nrn2555"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public"
+        }
+      ]
+    },
+    {
       "id": "src.csikszentmihalyi-1990-flow",
       "display": "Csikszentmihalyi, M. (1990). Flow: The Psychology of Optimal Experience. Harper & Row.",
       "verification_status": "verified",
@@ -1641,6 +1728,28 @@
           "id": "drowning",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[25].references[4]"
+        }
+      ]
+    },
+    {
+      "id": "src.easterbrook-1959-cue-utilization",
+      "display": "Easterbrook, J. A. (1959). The effect of emotion on cue utilization and the organization of behavior.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "13658305",
+        "doi": "10.1037/h0047707"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.interaction.attentional_narrowing",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[3].public"
+        },
+        {
+          "id": "psych.interaction.breathing_cognitive_load",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[6].public"
         }
       ]
     },
@@ -2640,6 +2749,24 @@
       ]
     },
     {
+      "id": "src.haase-2016-mindfulness-insula",
+      "display": "Haase, L., Thom, N. J., Shukla, A., Davenport, P. W., Simmons, A. N., Stanley, E. A., et al. (2016). Mindfulness-based training attenuates insula response to an aversive interoceptive challenge.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "24714209",
+        "pmc": "PMC4692309",
+        "doi": "10.1093/scan/nsu042"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public"
+        }
+      ]
+    },
+    {
       "id": "src.haff-triplett-2016",
       "display": "Haff & Triplett (eds.), NSCA Essentials of Strength Training and Conditioning, 4th ed., 2016",
       "verification_status": "verified",
@@ -3627,12 +3754,17 @@
         "pmcid": "PMC4495877",
         "doi": "10.1097/HRP.0000000000000065"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.fear.freeze_reflex",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[2].public"
+        },
+        {
+          "id": "psych.interaction.freeze_prefrontal_shutdown",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[5].public"
         }
       ]
     },
@@ -3732,12 +3864,17 @@
         "pmcid": "PMC8667218",
         "doi": "10.3389/fpsyt.2021.784884"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.fear.diving_reflex_calm",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[4].public"
+        },
+        {
+          "id": "psych.interaction.freeze_prefrontal_shutdown",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[5].public"
         }
       ]
     },
@@ -3777,6 +3914,22 @@
           "id": "psych.self_talk.systematic_training",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[5].concepts[7].public"
+        }
+      ]
+    },
+    {
+      "id": "src.langlet-2017-anxiety-forearm-emg",
+      "display": "Langlet, C., Hainaut, J. P., & Bolmont, B. (2017). Moderate anxiety modifies the electromyographic activity of a forearm muscle during a time-reaction task in women.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1016/j.neulet.2017.02.024"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.stress_hypertonia",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[1].public"
         }
       ]
     },
@@ -4235,6 +4388,28 @@
           "id": "psych.attention.elite_resilience",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[2].public"
+        }
+      ]
+    },
+    {
+      "id": "src.marcora-2009-mental-fatigue",
+      "display": "Marcora, S. M., Staiano, W., & Manning, V. (2009). Mental fatigue impairs physical performance in humans.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19131473",
+        "doi": "10.1152/japplphysiol.91324.2008"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.interaction.breathing_cognitive_load",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[6].public"
+        },
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public"
         }
       ]
     },
@@ -4789,6 +4964,23 @@
           "id": "psych.fear.control_loss",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.miu-2009-hrv-anxiety",
+      "display": "Miu, A. C., Heilman, R. M., & Miclea, M. (2009). Reduced heart rate variability and vagal tone in anxiety: Trait versus state, and the effects of autogenic training.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19059813",
+        "doi": "10.1016/j.autneu.2008.11.010"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.vagal_tone_fear_extinction",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[4].public"
         }
       ]
     },
@@ -5962,6 +6154,23 @@
       ]
     },
     {
+      "id": "src.noakes-1997-central-governor",
+      "display": "Noakes, T. D. (1997). 1996 J.B. Wolffe Memorial Lecture. Challenging beliefs: Ex Africa semper aliquid novi.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "9140893",
+        "doi": "10.1097/00005768-199705000-00001"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public"
+        }
+      ]
+    },
+    {
       "id": "src.nordin-frankel-2012",
       "display": "Nordin M, Frankel VH (eds). (2012). Basic Biomechanics of the Musculoskeletal System. 4th ed. Baltimore: Lippincott Williams & Wilkins.",
       "verification_status": "verified",
@@ -6062,6 +6271,22 @@
       ]
     },
     {
+      "id": "src.olstad-2017-world-champion-breaststroke",
+      "display": "Olstad, B. H., Zinner, C., Vaz, J. R., Cabri, J. M. H., & Kjendlie, P.-L. (2017). Muscle activation in world-champion, world-class, and national breaststroke swimmers.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1123/ijspp.2015-0703"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.stress_hypertonia",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[1].public"
+        }
+      ]
+    },
+    {
       "id": "src.osgood-schlatter-disease-statpearls-nbk44199",
       "display": "Smith JM. Osgood-Schlatter Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441995（最後更新 2023-08-04）。",
       "verification_status": "verified",
@@ -6097,6 +6322,38 @@
           "id": "movement.demand.breast.arm-recovery.pull-to-kick-interval",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[13]"
+        }
+      ]
+    },
+    {
+      "id": "src.paciorek-skora-2020-vns-interoception",
+      "display": "Paciorek, A., & Skora, L. (2020). Vagus nerve stimulation as a gateway to interoception.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.3389/fpsyg.2020.01659"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.vagal_tone_fear_extinction",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.pageaux-2014-psychobiological-model",
+      "display": "Pageaux, B. (2014). The psychobiological model of endurance performance: An effort-based decision-making theory to explain self-paced endurance performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1007/s40279-014-0198-2"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public"
         }
       ]
     },
@@ -6155,6 +6412,65 @@
           "id": "psych.fear.diving_reflex_calm",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.pappens-2014-hrv-fear-extinction",
+      "display": "Pappens, M., Schroijen, M., Sütterlin, S., Smets, E., Van den Bergh, O., Thayer, J. F., et al. (2014). Resting heart rate variability predicts safety learning and fear extinction in an interoceptive fear conditioning paradigm.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "25181542",
+        "pmc": "PMC4152223",
+        "doi": "10.1371/journal.pone.0105054"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.vagal_tone_fear_extinction",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.paulus-2012-elite-athletes-insula",
+      "display": "Paulus, M. P., Flagan, T., Simmons, A. N., Gillis, K., Kotturi, S., Thom, N., et al. (2012). Subjecting elite athletes to inspiratory breathing load reveals behavioral and neural signatures of optimal performers in extreme environments.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "22276111",
+        "pmc": "PMC3261851",
+        "doi": "10.1371/journal.pone.0029394"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.paulus-stein-2010-interoception-anxiety",
+      "display": "Paulus, M. P., & Stein, M. B. (2010). Interoception in anxiety and depression.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "20490545",
+        "pmc": "PMC2886901",
+        "doi": "10.1007/s00429-010-0258-9"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public"
+        },
+        {
+          "id": "psych.interaction.water_immersion_interoception",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[7].public"
         }
       ]
     },
@@ -8678,12 +8994,17 @@
       "identifier": {
         "doi": "10.3389/fnint.2022.871227"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.fear.safety_precondition",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[5].public"
+        },
+        {
+          "id": "psych.interaction.vagal_tone_fear_extinction",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[4].public"
         }
       ]
     },
@@ -9452,180 +9773,98 @@
     {
       "id": "src.research-psych-08-a",
       "display": "Research/心理/08_心理感知生理交互.md#1.1",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.anterior_insula_gain",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[0].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-b",
       "display": "Research/心理/08_心理感知生理交互.md#1.2",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.stress_hypertonia",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-c",
       "display": "Research/心理/08_心理感知生理交互.md#1.3",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.interaction.anterior_insula_gain",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[0].public"
-        },
-        {
-          "id": "psych.interaction.water_immersion_interoception",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[7].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-d",
       "display": "Research/心理/08_心理感知生理交互.md#1.4",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.rpe_psychobiological",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[2].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-e",
       "display": "Research/心理/08_心理感知生理交互.md#1.6",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.attentional_narrowing",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[3].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-f",
       "display": "Research/心理/08_心理感知生理交互.md#1.7",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.vagal_tone_fear_extinction",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[4].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-g",
       "display": "Research/心理/08_心理感知生理交互.md#1.8",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.freeze_prefrontal_shutdown",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[5].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-h",
       "display": "Research/心理/08_心理感知生理交互.md#1.9",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.breathing_cognitive_load",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[6].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-i",
       "display": "Research/心理/08_心理感知生理交互.md#4.1",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "psych.interaction.vagal_tone_fear_extinction",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[4].public"
-        },
-        {
-          "id": "psych.interaction.water_immersion_interoception",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[7].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-j",
       "display": "Research/心理/08_心理感知生理交互.md#4.2",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.stress_hypertonia",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[1].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-k",
       "display": "Research/心理/08_心理感知生理交互.md#5.1",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.rpe_psychobiological",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[2].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.research-psych-08-l",
       "display": "Research/心理/08_心理感知生理交互.md#5.2",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.interaction.rpe_psychobiological",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[1].concepts[2].public"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.researchgate-3d-analysis-2018",
@@ -9829,12 +10068,17 @@
         "pmcid": "PMC5332864",
         "doi": "10.1098/rstb.2016.0206"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.fear.freeze_reflex",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[2].public"
+        },
+        {
+          "id": "psych.interaction.freeze_prefrontal_shutdown",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[5].public"
         }
       ]
     },
@@ -10789,6 +11033,22 @@
           "id": "fly.tech.7",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[108].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.sugawara-2024-interoceptive-training",
+      "display": "Sugawara, A., Katsunuma, R., Terasawa, Y., & Sekiguchi, A. (2024). Interoceptive training impacts the neural circuit of the anterior insula cortex.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1038/s41398-024-02933-9"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public"
         }
       ]
     },
@@ -12525,6 +12785,24 @@
       ]
     },
     {
+      "id": "src.trapero-asenjo-2025-relaxation-imagery",
+      "display": "Trapero-Asenjo, S., Fernández-Guinea, S., Guillot, A., Pecos-Martín, D., & Nunez-Nagy, S. (2025). Muscle relaxation enhances motor imagery capacity in people with anxiety: A randomized clinical trial.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "39792894",
+        "pmc": "PMC11723612",
+        "doi": "10.1371/journal.pone.0316723"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.stress_hypertonia",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[1].public"
+        }
+      ]
+    },
+    {
       "id": "src.tri-coaching",
       "display": "Tri-Coaching",
       "verification_status": "unverified",
@@ -12598,6 +12876,23 @@
           "id": "open-water-marine-biological-hazards",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[39].references[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.tucker-2009-anticipatory-regulation",
+      "display": "Tucker, R. (2009). The anticipatory regulation of performance: The physiological basis for pacing strategies and the development of a perception-based model for exercise performance.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19224911",
+        "doi": "10.1136/bjsm.2008.050799"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public"
         }
       ]
     },
@@ -13023,6 +13318,23 @@
           "id": "breast.tech.38",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[170].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.vaz-2016-breaststroke-coordination",
+      "display": "Vaz, J. R., Olstad, B. H., Cabri, J., Kjendlie, P.-L., Pezarat-Correia, P., & Hug, F. (2016). Muscle coordination during breaststroke swimming: Comparison between elite swimmers and beginners.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26878097",
+        "doi": "10.1080/02640414.2016.1143109"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "psych.interaction.stress_hypertonia",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[1].public"
         }
       ]
     },

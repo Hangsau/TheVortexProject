@@ -3860,74 +3860,74 @@ sources:
   - id: src.research-psych-08-a
     display: "Research/心理/08_心理感知生理交互.md#1.1"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-b
     display: "Research/心理/08_心理感知生理交互.md#1.2"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-c
     display: "Research/心理/08_心理感知生理交互.md#1.3"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-d
     display: "Research/心理/08_心理感知生理交互.md#1.4"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-e
     display: "Research/心理/08_心理感知生理交互.md#1.6"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-f
     display: "Research/心理/08_心理感知生理交互.md#1.7"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-g
     display: "Research/心理/08_心理感知生理交互.md#1.8"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-h
     display: "Research/心理/08_心理感知生理交互.md#1.9"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-i
     display: "Research/心理/08_心理感知生理交互.md#4.1"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-j、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-j
     display: "Research/心理/08_心理感知生理交互.md#4.2"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-k、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-k
     display: "Research/心理/08_心理感知生理交互.md#5.1"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-l 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-08-l
     display: "Research/心理/08_心理感知生理交互.md#5.2"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-08-a、src.research-psych-08-b、src.research-psych-08-c、src.research-psych-08-d、src.research-psych-08-e、src.research-psych-08-f、src.research-psych-08-g、src.research-psych-08-h、src.research-psych-08-i、src.research-psych-08-j、src.research-psych-08-k 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/08_心理感知生理交互.md 逐節把該節實際引用的原始文獻挖出來，登錄成 21 筆帶 DOI／PMID／PMC 的 verified 來源（另復用 4 筆既有登錄），canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.researchgate-3d-analysis-2018
     display: "三維分析研究，ResearchGate 2018"
@@ -8412,3 +8412,353 @@ sources:
       本庫取用：理想表現狀態可能是跨認知／情緒／生理的多變數「配方」，
       心流只是其中一種可能型態而非唯一——這是 canonical 不把心流等同於最佳表現的依據。
       證據等級 🟠（教科書式整理，非原始實證）。
+
+  - id: src.craig-2002-interoception
+    display: "Craig, A. D. (2002). How do you feel? Interoception: the sense of the physiological condition of the body."
+    type: journal_article
+    verification_status: verified
+    year: 2002
+    authors: ["Craig AD"]
+    container: "Nature Reviews Neuroscience"
+    identifier:
+      doi: 10.1038/nrn894
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：3(8):655-666。
+      本庫取用：前島作為內感訊號的整合中心、lamina I 上行路徑。
+      這是內感受領域的奠基綜述，非實驗研究；任何「水中內感」的具體宣稱要另找一手研究。
+
+  - id: src.craig-2009-anterior-insula
+    display: "Craig, A. D. (2009). How do you feel — now? The anterior insula and human awareness."
+    type: journal_article
+    verification_status: verified
+    year: 2009
+    authors: ["Craig AD"]
+    container: "Nature Reviews Neuroscience"
+    identifier:
+      doi: 10.1038/nrn2555
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：10(1):59-70。
+      本庫取用：前島把身體狀態整合成「此刻的整體情緒時刻」這一層 meta-representation，
+      用來解釋為何焦慮會改變泳者對同一組身體訊號的解讀。
+
+  - id: src.paulus-stein-2010-interoception-anxiety
+    display: "Paulus, M. P., & Stein, M. B. (2010). Interoception in anxiety and depression."
+    type: journal_article
+    verification_status: verified
+    year: 2010
+    authors: ["Paulus MP", "Stein MB"]
+    container: "Brain Structure and Function"
+    identifier:
+      pmid: '20490545'
+      pmc: PMC2886901
+      doi: 10.1007/s00429-010-0258-9
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：214(5-6):451-463, 2010 Jun。
+      本庫取用：焦慮者的前島對身體訊號放大（敏感化），使中性的身體感覺被讀成威脅。
+      臨床焦慮／憂鬱族群研究，外推至水中初學者標 🔵。
+
+  - id: src.paulus-2012-elite-athletes-insula
+    display: "Paulus, M. P., Flagan, T., Simmons, A. N., Gillis, K., Kotturi, S., Thom, N., et al. (2012). Subjecting elite athletes to inspiratory breathing load reveals behavioral and neural signatures of optimal performers in extreme environments."
+    type: journal_article
+    verification_status: verified
+    year: 2012
+    authors: ["Paulus MP", "Flagan T", "Simmons AN", "Gillis K", "Kotturi S", "Thom N"]
+    container: "PLoS ONE"
+    identifier:
+      pmid: '22276111'
+      pmc: PMC3261851
+      doi: 10.1371/journal.pone.0029394
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：7(1):e29394。
+      本庫取用：菁英冒險賽選手在吸氣阻力負荷下右前島反應被「抑制」而非放大，對照組則暴增。
+      這是 canonical 主張「前島反應模式可被訓練重新校準」的關鍵證據。
+      樣本是陸上極限運動員，不是泳者。
+
+  - id: src.haase-2016-mindfulness-insula
+    display: "Haase, L., Thom, N. J., Shukla, A., Davenport, P. W., Simmons, A. N., Stanley, E. A., et al. (2016). Mindfulness-based training attenuates insula response to an aversive interoceptive challenge."
+    type: journal_article
+    verification_status: verified
+    year: 2016
+    authors: ["Haase L", "Thom NJ", "Shukla A", "Davenport PW", "Simmons AN", "Stanley EA"]
+    container: "Social Cognitive and Affective Neuroscience"
+    identifier:
+      pmid: '24714209'
+      pmc: PMC4692309
+      doi: 10.1093/scan/nsu042
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：11(1):182-190, 2016 Jan（草稿記為 2015，以正式出版年 2016 為準）。
+      本庫取用：正念訓練使海軍陸戰隊員的前島反應模式向菁英運動員靠攏。
+      陸上訓練外推至游泳教學未驗證，canonical 內標明。
+
+  - id: src.sugawara-2024-interoceptive-training
+    display: "Sugawara, A., Katsunuma, R., Terasawa, Y., & Sekiguchi, A. (2024). Interoceptive training impacts the neural circuit of the anterior insula cortex."
+    type: journal_article
+    verification_status: verified
+    year: 2024
+    authors: ["Sugawara A", "Katsunuma R", "Terasawa Y", "Sekiguchi A"]
+    container: "Translational Psychiatry"
+    identifier:
+      doi: 10.1038/s41398-024-02933-9
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：14(1), 2024-05-23（草稿無作者，本次補足）。
+      本庫取用：內感訓練可直接改變前島迴路——這是「感知訓練有神經可塑性基礎」的依據，
+      但研究情境非游泳。
+
+  - id: src.langlet-2017-anxiety-forearm-emg
+    display: "Langlet, C., Hainaut, J. P., & Bolmont, B. (2017). Moderate anxiety modifies the electromyographic activity of a forearm muscle during a time-reaction task in women."
+    type: journal_article
+    verification_status: verified
+    year: 2017
+    authors: ["Langlet C", "Hainaut JP", "Bolmont B"]
+    container: "Neuroscience Letters"
+    identifier:
+      doi: 10.1016/j.neulet.2017.02.024
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：643:1-7, 2017 Mar。
+      本庫取用：中度焦慮使前運動時間（premotor time）的 EMG 活性升高——
+      即焦慮在動作啟動前就已改變肌肉徵召，不是動作中才出問題。
+      樣本為女性、實驗室反應時作業，非游泳；外推標 🔵。
+      注意：草稿把本筆記成「Barreto et al.」且 DOI 記成 10.1016/j.neulet.2017.02.033；
+      該 DOI 實際指向 Pixa 等人的 tDCS 研究，作者群中也沒有 Barreto。
+
+  - id: src.trapero-asenjo-2025-relaxation-imagery
+    display: "Trapero-Asenjo, S., Fernández-Guinea, S., Guillot, A., Pecos-Martín, D., & Nunez-Nagy, S. (2025). Muscle relaxation enhances motor imagery capacity in people with anxiety: A randomized clinical trial."
+    type: journal_article
+    verification_status: verified
+    year: 2025
+    authors: ["Trapero-Asenjo S", "Fernández-Guinea S", "Guillot A", "Pecos-Martín D", "Nunez-Nagy S"]
+    container: "PLoS ONE"
+    identifier:
+      pmid: '39792894'
+      pmc: PMC11723612
+      doi: 10.1371/journal.pone.0316723
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：20(1):e0316723。隨機臨床試驗。
+      本庫取用：先放鬆肌肉可恢復焦慮者的運動意象能力——支持「陸上放鬆先行、再入水」的順序。
+      非游泳樣本。
+
+  - id: src.vaz-2016-breaststroke-coordination
+    display: "Vaz, J. R., Olstad, B. H., Cabri, J., Kjendlie, P.-L., Pezarat-Correia, P., & Hug, F. (2016). Muscle coordination during breaststroke swimming: Comparison between elite swimmers and beginners."
+    type: journal_article
+    verification_status: verified
+    year: 2016
+    authors: ["Vaz JR", "Olstad BH", "Cabri J", "Kjendlie PL", "Pezarat-Correia P", "Hug F"]
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: '26878097'
+      doi: 10.1080/02640414.2016.1143109
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：34(20):1941-1948, 2016 Oct（草稿未記刊物與卷期，本次補足）。
+      8 塊肌肉表面 EMG。本庫取用：初學者的推進期肌肉啟動時機早於菁英——
+      這是 FUTURE_RESEARCH「EMG 悖論」條目的游泳特異一手證據。
+
+  - id: src.olstad-2017-world-champion-breaststroke
+    display: "Olstad, B. H., Zinner, C., Vaz, J. R., Cabri, J. M. H., & Kjendlie, P.-L. (2017). Muscle activation in world-champion, world-class, and national breaststroke swimmers."
+    type: journal_article
+    verification_status: verified
+    year: 2017
+    authors: ["Olstad BH", "Zinner C", "Vaz JR", "Cabri JMH", "Kjendlie PL"]
+    container: "International Journal of Sports Physiology and Performance"
+    identifier:
+      doi: 10.1123/ijspp.2015-0703
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：12(4):538-547, 2017（草稿頁碼記對、DOI 記錯）。
+      本庫取用：世界冠軍與國家級菁英的差別在踝關節周邊肌肉的交替更精準，
+      支持「頂尖的差異在協調時序而非力量大小」。
+      注意：草稿記的 DOI 10.1123/ijspp.2016-0179 實際指向 Dos'Santos 等人的等長中大腿拉力不對稱研究。
+
+  - id: src.marcora-2009-mental-fatigue
+    display: "Marcora, S. M., Staiano, W., & Manning, V. (2009). Mental fatigue impairs physical performance in humans."
+    type: journal_article
+    verification_status: verified
+    year: 2009
+    authors: ["Marcora SM", "Staiano W", "Manning V"]
+    container: "Journal of Applied Physiology"
+    identifier:
+      pmid: '19131473'
+      doi: 10.1152/japplphysiol.91324.2008
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：106(3):857-864, 2009 Mar。
+      90 分鐘認知任務後力竭時間縮短約 15%，但心肺與代謝指標不變、RPE 升高。
+      本庫取用的正是這個分離：認知負荷透過「努力知覺」而非生理極限限制表現，
+      是「感知訓練降低認知負荷 → 改善耐力表現」推導鏈的證據起點。
+      樣本為成人受訓者，非游泳。
+
+  - id: src.blanchfield-2014-nonconscious-cues
+    display: "Blanchfield, A., Hardy, J., & Marcora, S. (2014). Non-conscious visual cues related to affect and action alter perception of effort and endurance performance."
+    type: journal_article
+    verification_status: verified
+    year: 2014
+    authors: ["Blanchfield A", "Hardy J", "Marcora S"]
+    container: "Frontiers in Human Neuroscience"
+    identifier:
+      pmid: '25566014'
+      pmc: PMC4263011
+      doi: 10.3389/fnhum.2014.00967
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PMC esummary 核對：8:967。
+      閾下呈現的笑臉可在受試者不知情下降低 RPE、延長耐力約 3 分鐘。
+      本庫取用：努力知覺可被意識層以下的線索改變，因此教學環境的情緒氛圍不是裝飾而是變項。
+
+  - id: src.blanchfield-2014-self-talk-exhaustion
+    display: "Blanchfield, A. W., Hardy, J., de Morree, H. M., Staiano, W., & Marcora, S. M. (2014). Talking yourself out of exhaustion: The effects of self-talk on endurance performance."
+    type: journal_article
+    verification_status: verified
+    year: 2014
+    authors: ["Blanchfield AW", "Hardy J", "de Morree HM", "Staiano W", "Marcora SM"]
+    container: "Medicine & Science in Sports & Exercise"
+    identifier:
+      doi: 10.1249/MSS.0000000000000184
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：46(5):998-1007（草稿只記三位作者，實為五位，本次補足）。
+      正向自我對話使力竭時間提升約 18%、RPE 上升速率變慢。
+      本庫用它把心理層第 06 章的自我對話與本章的努力知覺模型接起來。
+
+  - id: src.pageaux-2014-psychobiological-model
+    display: "Pageaux, B. (2014). The psychobiological model of endurance performance: An effort-based decision-making theory to explain self-paced endurance performance."
+    type: journal_article
+    verification_status: verified
+    year: 2014
+    authors: ["Pageaux B"]
+    container: "Sports Medicine"
+    identifier:
+      doi: 10.1007/s40279-014-0198-2
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：44(9):1319-1320。
+      注意：這是兩頁的評論／致編輯信，不是草稿所稱的「模型綜述」；
+      本庫只用它作為「努力知覺與動機是自訂配速耐力表現的終極決定因子」這個立場的引用點，
+      不當作系統性證據來源。
+
+  - id: src.noakes-1997-central-governor
+    display: "Noakes, T. D. (1997). 1996 J.B. Wolffe Memorial Lecture. Challenging beliefs: Ex Africa semper aliquid novi."
+    type: journal_article
+    verification_status: verified
+    year: 1997
+    authors: ["Noakes TD"]
+    container: "Medicine & Science in Sports & Exercise"
+    identifier:
+      pmid: '9140893'
+      doi: 10.1097/00005768-199705000-00001
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：29(5):571-590, 1997 May。
+      中央調節者假說的首次完整提出。本庫取用：表現極限是中樞預期性調節的產物，
+      不是外周生理系統的災難性失效。這是一個講座稿，屬理論主張而非實驗；
+      canonical 內與 Marcora 的心理生物模型並列呈現兩派共識，不宣稱其中一派已勝出。
+
+  - id: src.tucker-2009-anticipatory-regulation
+    display: "Tucker, R. (2009). The anticipatory regulation of performance: The physiological basis for pacing strategies and the development of a perception-based model for exercise performance."
+    type: journal_article
+    verification_status: verified
+    year: 2009
+    authors: ["Tucker R"]
+    container: "British Journal of Sports Medicine"
+    identifier:
+      pmid: '19224911'
+      doi: 10.1136/bjsm.2008.050799
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：43(6):392-400, 2009 Jun。
+      中央調節者理論的修訂版，把 RPE 放在中介位置並提出 pacing template。
+      本庫取用：泳者的配速崩潰可解讀為 RPE 超出預期模板後的中樞降載，
+      而不是單純的體能不足。
+
+  - id: src.easterbrook-1959-cue-utilization
+    display: "Easterbrook, J. A. (1959). The effect of emotion on cue utilization and the organization of behavior."
+    type: journal_article
+    verification_status: verified
+    year: 1959
+    authors: ["Easterbrook JA"]
+    container: "Psychological Review"
+    identifier:
+      pmid: '13658305'
+      doi: 10.1037/h0047707
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：66(3):183-201, 1959 May（OLDMEDLINE 收錄，
+      草稿早期版本誤記為「無 PMID」，已更正）。
+      Cue Utilization 假說：喚醒升高使可利用線索的範圍收窄，先丟掉的是周邊線索。
+      本庫取用：水中周邊線索（掌心壓力、體側漩渦）正是高喚醒下最先被丟掉的一類，
+      這是「緊張的人感覺不到水」的機制解釋。
+      1959 年的認知心理學實驗室研究，非水中情境，年代久遠標 🟡。
+
+  - id: src.pappens-2014-hrv-fear-extinction
+    display: "Pappens, M., Schroijen, M., Sütterlin, S., Smets, E., Van den Bergh, O., Thayer, J. F., et al. (2014). Resting heart rate variability predicts safety learning and fear extinction in an interoceptive fear conditioning paradigm."
+    type: journal_article
+    verification_status: verified
+    year: 2014
+    authors: ["Pappens M", "Schroijen M", "Sütterlin S", "Smets E", "Van den Bergh O", "Thayer JF"]
+    container: "PLoS ONE"
+    identifier:
+      pmid: '25181542'
+      pmc: PMC4152223
+      doi: 10.1371/journal.pone.0105054
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：9(9):e105054。
+      靜息 HRV 較高者恐懼消弱較快。本庫取用：迷走張力是「能不能學會安全」的個體差異變項，
+      因此對高焦慮學習者要把安全學習的時間拉長，不是加大刺激。
+      內感受恐懼制約典範，非游泳樣本，外推標 🔵。
+
+  - id: src.miu-2009-hrv-anxiety
+    display: "Miu, A. C., Heilman, R. M., & Miclea, M. (2009). Reduced heart rate variability and vagal tone in anxiety: Trait versus state, and the effects of autogenic training."
+    type: journal_article
+    verification_status: verified
+    year: 2009
+    authors: ["Miu AC", "Heilman RM", "Miclea M"]
+    container: "Autonomic Neuroscience"
+    identifier:
+      pmid: '19059813'
+      doi: 10.1016/j.autneu.2008.11.010
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 PubMed esummary 核對：145(1-2):99-103, 2009 Jan。
+      高特質焦慮者靜息 HRV 較低，且自律訓練（autogenic training）可部分逆轉。
+      本庫取用：迷走張力是可訓練的，不是固定體質——這是水中規律深慢呼吸練習的機制依據，
+      但游泳課前後的 HRV 變化本身尚無量測。
+
+  - id: src.paciorek-skora-2020-vns-interoception
+    display: "Paciorek, A., & Skora, L. (2020). Vagus nerve stimulation as a gateway to interoception."
+    type: journal_article
+    verification_status: verified
+    year: 2020
+    authors: ["Paciorek A", "Skora L"]
+    container: "Frontiers in Psychology"
+    identifier:
+      doi: 10.3389/fpsyg.2020.01659
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：11:1659, 2020-07-29。
+      本庫取用：迷走神經通路與內感覺知在機制上相連，因此「調迷走」與「開感知」不是兩件事。
+      綜述層級，且刺激手段為 VNS 而非呼吸練習，把它外推成「深呼吸能提升水感」是過度延伸，
+      canonical 內只用它建立通路關聯。
+
+  - id: src.baba-2021-water-immersion-interoception
+    display: "Baba, Y., Sato, D., Otsuru, N., Ikarashi, K., Fujimoto, T., & Yamashiro, K. (2021). Does long-term training in a water immersion environment change interoception?"
+    type: journal_article
+    verification_status: verified
+    year: 2021
+    authors: ["Baba Y", "Sato D", "Otsuru N", "Ikarashi K", "Fujimoto T", "Yamashiro K"]
+    container: "International Journal of Environmental Research and Public Health"
+    identifier:
+      doi: 10.3390/ijerph181910259
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：18(19):10259, 2021-09-29。
+      本庫取用：水浸環境與內感準確性的關聯——這是全庫少數直接把「水」與「內感」連起來的一手研究。
+      樣本為成人，恐水者／兒童／競技泳者均未涵蓋；25 分鐘的效果不等於教學課程的最適時長，
+      canonical 內明確標出這條邊界。
