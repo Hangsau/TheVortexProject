@@ -4,7 +4,47 @@
 
 ---
 
-## 當前狀態（2026-09-05，最新）
+## 當前狀態（2026-09-06，最新）
+
+### ✅ **複合來源鍵這條軸做完了：四筆「一個 id 綁多篇文獻」全部拆開，逼出九處內容錯誤（錯誤 6–14）**
+
+三個 commit（`a87590a` PMID 族誤植與重複／`732d700` 呼吸章兩筆複合鍵／`09cf424` 安全章與 LTAD 兩筆複合鍵）。`notify-mysite` 三筆都確認 success。
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 143 | **143**（全程持平） |
+| W008 孤兒來源 | 3 | 3 |
+| W022 | 14 | 14（`l-indicators.yaml`，刻意保留） |
+| W023／W024 | 0／0 | 0／0 |
+| `_sources.yaml` 筆數 | 734 | **744** |
+| `retracted` 墓碑 | 123 | **125** |
+| 內容條目 | 923 | 923 |
+
+**這條軸的核心發現是驗證器的一個結構性盲點，值得單獨記住。** `E005` 只檢查 `source_id` 能不能解析到一筆存在的登錄。它看不見四件事：① 同一篇文獻被登錄成兩個不同 id；② 一筆登錄的 `display` 指的是甲文獻、`identifier` 指的是乙文獻；③ **一個鍵綁了好幾篇不同的著作**；④ 散文裡點名了某篇文獻但它根本沒有登錄。複合鍵是其中最惡性的一種，因為**它讓鍵上綁的其他文獻永遠不會被讀到**——鍵能解析，驗證器就閉嘴了，而那些沒被讀過的文獻裡就藏著本輪這九處錯誤。
+
+**兩筆複合鍵的 `identifier` 區塊裡，`doi` 和 `pmid` 指向的是不同的論文**（`src.pmid-39351143` 的 doi 是 Liu 2025 的、pmid 是 Carvajal-Tello 2024 的；`src.pmid-24421735` 的 doi 是 de Asís-Fernández 2022 的、pmid 是 Kapus 2013 的）。這是往後稽核可以直接掃的訊號：**同一筆登錄的兩個識別碼各自解析到不同文獻＝複合鍵**。
+
+**九處錯誤依 commit 分列：**
+
+- **錯誤 6–7（`a87590a`）**：`src.pmid-1194152` 把文獻歸給 Konno & Mead，實際是 Sharp, Goldberg, Druz & Danon (1975)。**誤植的來歷可以指認**——該摘要第一句就是「By use of the **method of** Konno and Mead」，用了誰的量測法被讀成了作者是誰。這是一個可重用的診斷樣態：**摘要開頭的「method of X」極易被抄成作者欄**。連帶撤下掛在它下面的「直立時胸廓貢獻可達 74%、範圍 47–91%」——摘要與所有可取得的紀錄裡都沒有這組數字，改以摘要真正支持的內容（n=81、男女與老少無顯著差異、直立胸廓主導／仰臥腹部主導）重寫，論證反而比原本那個孤立數字更站得住。
+- **錯誤 8（`a87590a`）**：`src.pmid-28605694` 的 display 寫「Gonjo et al.」，它自己的 `authors` 欄卻正確寫著 Yamakawa。本庫另有多筆真正的 Gonjo 文獻，留著會把兩者混在一起。
+- **錯誤 9–10（`732d700`）**：`breathing.training.imt` 斷言「目前沒有任何依距離分層的證據」，而 Chen 2026 正是一篇 50／100／200m 分層的統合分析——它就綁在同一個複合鍵上，所以從沒被讀過。結論方向沒變，但理由從「沒有人分析過」改成「分析過了，三段都是 null」。同節的 Cunha 2019 在 `source` 顯示字串與 `null_zh` 散文裡都被點名，卻**完全沒有登錄**——這是複合鍵掩蓋的第三種失效樣態。
+- **錯誤 11（`09cf424`）**：安全章「美軍同期也有數十起相關溺斃」在 MMWR 原文中無據（該文只有一名「為考海豹部隊而訓練」的個案）。查證時定位到這句話極可能的原型 Craig (1976) 58 例彙整，但**不是美軍、也不是同期**（1976 年，早 MMWR 的 1988–2011 一個世代）。撤句，改以 Craig 1976 據實補上。
+- **錯誤 12（`09cf424`）**：`periodization.structure.swim_youth_ltad` 把跨項目通用的 Canadian Sport for Life 分齡表標成「Swimming Canada 分齡」。四段全部吻合通用表；Swimming Canada 游泳專項文件的實際分齡是 T2T 女 11–14／男 12–15、T2C 女 14–16／男 15–18、Compete to Win 女 16+／男 18+。兩套在青少年後段差到五、六歲。
+- **錯誤 13（`09cf424`）**：同節稱「查無 Swimming Canada 原始數據表」而不收分齡週泳量，但原文逐階段列有（L2T 8–14；T2T 24–30 建立到 40–50；T2C 與 Compete to Win 40–50+ km/wk）。已補為 `volume_zh` 並標 🟡。
+- **錯誤 14（`09cf424`）**：`policy_zh` 把 USA Swimming 對教練的規範寫成「任何缺氧訓練只能在水面做」的絕對禁令，原文是「**generally** conduct this activity on the surface of the water (**except dolphin kick training**)」。新增 `policy_boundary_zh` 把機構立場與本庫立場分開。**本庫可以比機構更嚴，但不能把別人的規範轉述得比原文更絕對**——聽起來更安全，實際是引用不實，讀者一查原文整段可信度一起賠掉。
+
+**內容層的實質收穫（不只是修錯）**：安全章的訊息從「這會發生」改成「**這殺的是泳技好的人，而且就發生在有人看著的泳池裡**」——MMWR 四名死者全是 17–22 歲男性、全為進階至專家等級泳者、全部刻意過度換氣；Craig 1976 的 58 例中約八成發生在有救生員的泳池。另補 YMCA 系統 2008 年後至少 5 死、至少 18 人獲救（**獲救數才是真實頻率，死亡數只是浮出水面的一小截**）。呼吸訓練節新增 `reconciliation_zh`，用「FEV1 只在吸吐合併訓練下才改善（SMD 0.78 vs IMT-only 0.19，P_diff=0.03）」化解了三份統合分析的表面衝突，並直接推導出器材選擇建議。
+
+**兩條可重用的查證紀律：**
+
+1. **書目一律回權威登錄查，不信草稿自帶的識別碼。** PubMed esummary／efetch、Crossref by DOI；非 PubMed 索引的期刊（如 *Strength & Conditioning Journal*）走 Crossref 書目查詢。**curl 直接 pipe 進 python stdin**，不要中轉 `/tmp` 檔。
+2. **PDF 原件優先於搜尋摘要。** 本輪 Swimming Canada LTAD 的分齡與泳量、USA Swimming 簡報的教練條文，都是抓 PDF 用 `fitz` 抽文字才拿到的，搜尋摘要一概給不出。反面案例同樣重要：CS4L LTAD 2.1 的分齡數字在原件正文裡抽不出來（疑似只在圖表影像），因此**不登錄、也不在公開散文裡當成有出處的事實引用**，只把線索留在 `_sources.yaml` 的 `notes`。
+
+**建議下一步（模糊登錄軸，複合鍵已清空，剩下的是「登錄得到但看不出是哪一篇」）**：先做 `src.pmid-*` 裡 display 尾巴掛著「(已驗證)」的那 8 筆（`-25443755`、`-30485006`、`-30521295`、`-32310515`、`-33010194`、`-39500300`、`-40783351`、`-7673417`）——它們的 display 是「主題詞 + PMID + (已驗證)」的機器味字串，不是書目，而且「已驗證」寫在 display 裡與 `verification_status` 欄位重複，屬同一種反模式，成本低。接著是機構／網站族：`src.swim-like-a-fish-2025`（4 條引用）、`src.race-club-pdm-data`（4）、`src.race-club-pdm-elite-general`（2）、`src.usms-backstroke-kick-guide`（2）、`src.u-s-masters-swimming-backstroke-body-positio`（id 被截斷且 display 是複合的）、`src.usms-masters-teaching-article`、`src.swim-smart`、`src.swim-teach-com`、`src.usa-swimming-foundations-*` 兩筆；再來是兩筆書目複合登錄 `src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2`、`src.bompa-ch5-ch11-mcardle-exercise-physiology-s`，以及 `fundamentals-of-fast-swimming-*` 重複族與 `src.gonjo`／`-2016`／`-2020-a/b/c`／`-2021-a/b/c`／`-2023`、`src.gonzalez-rave` 這幾串。
+
+**兩個不要動的地雷**：① **W022 的 14 筆全在 `l-indicators.yaml`，是刻意保留的，不要批次清掉**；② `src.gonjo-2018` 是一筆標錯名的孤兒（id 寫 Gonjo，實際是 Nicol, Ball & Tor (2021) 轉身生物力學，PMID 30694108，0 條引用）——**現在不要立墓碑**，因為 W008 排除 `retracted`，撤掉它會讓 W008 掉到 3 以下、破壞這個不變量。要處理它得連同 W008 的基準一起重新定義。
 
 ### ✅ **模糊登錄軸再收三族：Nicol 2022、Olstad 2017、週期化書目。整合本身不是重點，重點是整合過程逼出的內容錯誤**
 
