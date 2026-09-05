@@ -6,6 +6,36 @@
 
 ## 當前狀態（2026-09-05，最新）
 
+### ✅ **W023 與 W024 雙雙歸零。八章心理草稿的自證來源全部換成真文獻，過程中抓出三十餘筆草稿識別碼錯誤——這才是這條軸的實際產出**
+
+**這條軸做完了。** `Research/心理/01`–`08` 八章逐章審計，把 `_sources.yaml` 裡 `display` 是本專案自己草稿路徑的登錄（W023，自己引自己＝自證，而且那串路徑會原樣印在讀者的「來源」欄）全部換掉，最後兩章（07 心流／08 心理感知生理交互）於本輪收尾。
+
+| 指標 | 起點 | 現在 |
+|---|---|---|
+| W023 自證來源 | 26 | **0** |
+| W024 機器鍵外洩散文 | 23 | **0** |
+| W008 孤兒來源 | 3 | 3（全程持平） |
+| ERROR | 0 | 0 |
+| 總 WARN | 193 | **144** |
+| `_sources.yaml` 筆數 | 676 | 717 |
+| `retracted` 墓碑 | 69 | 95 |
+
+**真正的產出不是 WARN 數字，是校正。** 逐節回原文用 PubMed esummary／Crossref／OpenLibrary 解析每一個識別碼後，八章草稿累計抓出**三十餘筆歸因錯誤**，第 07、08 兩章就佔 14 筆（逐條指名寫在 `72466b8`、`243d06f`、`9f78fda` 三個 commit message 裡，不在此重複）。錯誤的形態高度一致，值得記住：
+
+- **DOI 解析到完全不同的論文是最強的診斷訊號**——這一輪出現 5 次。Swann 2017 的 DOI 指向 Ryba 的文化運動心理學；Flow-Clutch Scale 的 DOI 指向 Dineen 的自我調節效能 RCT；焦慮 EMG 的 DOI 指向 Pixa 的 HD-tDCS 研究；Olstad 蛙式的 DOI 指向 Dos'Santos 的等長中大腿拉。**不要相信草稿自帶的 DOI／PMID，一律重解析。**
+- **作者名可以是憑空的**。第 08 章的焦慮 EMG 一節寫「Barreto et al. (2017)」，真正那篇的作者群是 Langlet／Hainaut／Bolmont——**Barreto 這個名字不在作者列表裡的任何位置**。DOI 錯與作者名錯同時發生，兩者互相「佐證」，單看任一項都不覺得可疑。
+- **數字會脫離來源獨立漂流**。injuries 的棘阿米巴角膜炎「全球年發生率 23,561 例（2.9/百萬）」掛在一篇 Cureus 敘事綜述下，而那篇摘要**一個數字都沒有**；真正的統合分析（Aiello 2025, Ophthalmology）給的是每百萬 2.34 眼、2023 年基準 12,953 眼。數字與出處都要各自查。
+
+**方法上可重用的兩件事**：
+
+1. **不登錄沒有條目引用的來源。** 查證途中一定會撈到相關但用不到的文獻（本輪跳過了 Lee-Shi & Ley 2022、Loehr、Jackson & Marsh 1996、Marcora 的 brain endurance training 等）。登錄它們會立刻製造 W008 孤兒——W008 全程守在 3 就是靠這條紀律。
+2. **誠實的限制寫進 `notes`，不寫進 commit 就沒了。** 例：Pageaux 2014 其實是 2 頁 letter 不是綜述（notes 註明不當系統性證據）；Harris 2021 的統合分析**反對而非支持**「練心流以提升成績」；Noakes 1997 是講座不是實驗，canonical 把 Marcora 與 Noakes 並陳、不宣告誰贏；Paciorek & Skora 的迷走神經刺激外推到呼吸 drill 屬過度延伸。這些是下一個人接手時唯一能看到的判斷依據。
+
+**建議下一步**：這條軸沒有殘留待辦。**不要**去清 W022（15 筆，全在 `l-indicators.yaml`，理由見下一段，是刻意保留）。仍有實料的方向有兩條——
+
+- **內容缺口（本輪查證途中浮現）**：OPTIMAL theory（Wulf & Lewthwaite 2016, *Psychon Bull Rev*, DOI 10.3758/s13423-015-0999-9）橫跨注意力焦點與動機兩章，Vortex 目前兩章都沒有接到它。這是**內容工作不是登錄工作**，開工前先讀 `KNOWLEDGE_MAP.md` 的 psychology 章確認沒有近似條目。
+- **模糊登錄的殘餘族群**：`src.the-race-club`（機構層，1 條追不到）、`src.swim-like-a-fish-2025`（4 條引用）、`src.ch8`（display 就是「Ch8」，4 條引用）、`src.usms`／`src.u-s-masters-swimming`（疑似重複）、`src.race-club-pdm-data`、`src.nicol-2022-c`（**21 條引用、無任何 identifier**，是剩下最大的一筆）、`fundamentals-of-fast-swimming-*` 重複族。方法沿用「把它掛的每一條主張拿去原文找」，見下方 The Race Club 那兩輪的紀錄。
+
 ### 🟡 **W022：evidence 的 `text` 就是它自己的來源名稱。15 筆，全在 `l-indicators.yaml`**
 
 `{certainty: 🟡, text: Mason 1992, source: Mason 1992, source_ids: [src.mason-1992-a]}`——這條宣告的是「有 Mason 1992 這篇」，不是「Mason 1992 顯示了什麼」。前者 `source_ids` 已經記了，證據列的作用是後者。**W021 抓不到**：`text` 非空，所以「區塊有內容欄位」成立，只是那個內容的資訊量是零。兩條規則問的是不同問題——W021 問「有沒有欄位」，W022 問「欄位裡是不是只有來源名」。
