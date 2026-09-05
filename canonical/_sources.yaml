@@ -1217,7 +1217,7 @@ sources:
     display: "Gonjo et al. 2017, PubMed 28605694"
     title: "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick."
     type: journal-article
-    verification_status: verified
+    verification_status: retracted
     authors: ["Yamakawa KK", "Shimojo H", "Takagi H", "Tsubakimoto S", "Sengoku Y"]
     year: 2017
     container: "Human movement science"
@@ -1225,7 +1225,7 @@ sources:
       pmid: "28605694"
       doi: "10.1016/j.humov.2017.06.002"
     retrieved_on: "2026-07-28"
-    notes: "S3c 依原字串明列的 PMID 28605694 確認作者應為 Yamakawa et al.，正文引用已更正。與 src.pmid-28605694 確認為同一文獻；暫留穩定 alias，待專門合併批次處理。"
+    notes: "2026-09-05 撤下：與 src.pmid-28605694 為同一文獻（PMID 28605694），兩筆引用已併入該筆。這個 id 本身就是錯誤歸因的化石——文獻是 Yamakawa 等人的，卻以 Gonjo 命名，而 Vortex 內另有多筆真正的 Gonjo 文獻，留著會讓兩者混在一起。保留墓碑擋住同一筆被重新登錄。"
 
   - id: src.gonjo-2018
     display: "Nicol E, Ball K, Tor E. (2021). The biomechanics of freestyle and butterfly turn technique in elite swimmers. Sports Biomech 20(4):444-457. PMID 30694108"
@@ -3267,7 +3267,7 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
 
   - id: src.pmid-24984154
-    display: "PubMed 24984154"
+    display: "Willems, T. M., Cornelis, J. A., De Deurwaerder, L. E., Roelandt, F., & De Mits, S. (2014). The effect of ankle muscle strength and flexibility on dolphin kick performance in competitive swimmers. Human Movement Science, 36, 167–176."
     title: "The effect of ankle muscle strength and flexibility on dolphin kick performance in competitive swimmers."
     type: journal-article
     verification_status: verified
@@ -3295,7 +3295,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-25455956
-    display: "PubMed 25455956 2014"
+    display: "Tor, E., Pease, D. L., & Ball, K. A. (2015). Comparing three underwater trajectories of the swimming start. Journal of Science and Medicine in Sport, 18(6), 725–729."
     title: "Comparing three underwater trajectories of the swimming start."
     type: journal-article
     verification_status: verified
@@ -3309,7 +3309,7 @@ sources:
     retrieved_on: "2026-07-28"
     notes: "原 display 記 online／DOI 年 2014；PubMed 所列期卷年為 2015。"
   - id: src.pmid-28605694
-    display: "Gonjo et al."
+    display: "Yamakawa, K. K., Shimojo, H., Takagi, H., Tsubakimoto, S., & Sengoku, Y. (2017). Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick. Human Movement Science, 54, 276–286."
     title: "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick."
     type: journal-article
     verification_status: verified
@@ -3321,10 +3321,10 @@ sources:
       url: "https://pubmed.ncbi.nlm.nih.gov/28605694/"
       doi: "10.1016/j.humov.2017.06.002"
     retrieved_on: "2026-07-28"
-    notes: "S3c 由 PMID 28605694 確認作者應為 Yamakawa et al.；與 src.gonjo-2017 為同一文獻，暫留穩定 alias，待專門合併批次處理。"
+    notes: "S3c 由 PMID 28605694 確認作者應為 Yamakawa et al.；原 display 誤記為「Gonjo et al.」，2026-09-05 依 PubMed esummary 更正為完整書目。同批次已把 src.gonjo-2017 的兩筆引用併入本筆並將該 alias 撤下，合併完成。"
 
   - id: src.pmid-28975846
-    display: "PubMed 28975846"
+    display: "Barkwell, G. E., & Dickey, J. P. (2018). Backstroke start performance: the impact of using the Omega OBL2 backstroke ledge. Sports Biomechanics, 17(4), 429–441."
     title: "Backstroke start performance: the impact of using the Omega OBL2 backstroke ledge."
     type: journal-article
     verification_status: verified
@@ -3437,7 +3437,7 @@ sources:
     display: "PubMed 40252339"
     title: "Can the tumble turn performance be improved by aligning the push-off force vector to the centre of mass trajectory?"
     type: journal-article
-    verification_status: verified
+    verification_status: retracted
     authors: ["Koster P", "Schreven S", "David S", "Beek PJ"]
     year: 2025
     container: "Journal of biomechanics"
@@ -3445,7 +3445,7 @@ sources:
       pmid: "40252339"
       doi: "10.1016/j.jbiomech.2025.112694"
     retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmid-40252339-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmid-40252339-a 共用 pmid 40252339，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-05 撤下：經 PubMed esummary 確認與 src.pmid-40252339-a 是同一篇（PMID 40252339、DOI 10.1016/j.jbiomech.2025.112694 完全一致），四筆引用已併入 -a。保留墓碑擋住同一筆被重新登錄。"
 
   - id: src.pmid-40783351
     display: "JSAMS 2025 開放水域/泳池體溫調節, PubMed 40783351 (已驗證)"
@@ -5599,14 +5599,19 @@ sources:
     notes: "n=49 菁英競速滑冰選手，Wingate 與 CPET 皆無顯著相關。原文明述 BOLT 尚未經科學驗證。"
 
   - id: src.pmid-1194152
-    display: "胸廓與腹部貢獻比例：Konno & Mead, Relative contributions of rib cage and abdomen to breathing in normal subjects (PMID 1194152)"
+    display: "Sharp, J. T., Goldberg, N. B., Druz, W. S., & Danon, J. (1975). Relative contributions of rib cage and abdomen to breathing in normal subjects. Journal of Applied Physiology, 39(4), 608–618."
     type: journal-article
-    verification_status: unverified
+    verification_status: verified
     title: "Relative contributions of rib cage and abdomen to breathing in normal subjects"
-    authors: ["Konno K", "Mead J"]
+    authors: ["Sharp JT", "Goldberg NB", "Druz WS", "Danon J"]
+    year: 1975
+    container: "Journal of Applied Physiology"
     identifier:
       pmid: "1194152"
-    notes: "僅確認標題與 PMID，期刊名與年份未經查證，故留空。"
+      doi: "10.1152/jappl.1975.39.4.608"
+      url: "https://pubmed.ncbi.nlm.nih.gov/1194152/"
+    retrieved_on: "2026-09-05"
+    notes: "2026-09-05 更正作者歸屬：原登錄把本篇記成 Konno & Mead，PubMed esummary 確認實際作者是 Sharp、Goldberg、Druz、Danon（1975, J Appl Physiol 39(4):608-18）。誤植的來源可辨識——本篇摘要第一句就是「By use of the method of Konno and Mead」，也就是它用了 Konno–Mead 的量測法，被誤讀成作者。Konno & Mead 本人的文獻是 PMID 4225383（1967, 量測法本身）與 PMID 5643402（1968, 胸腹靜態壓容特性），兩篇都不是本庫引用的內容。摘要可支持的結論：n=81（32 名青壯年男性、29 名女性、20 名老年男性），性別與年齡間無顯著差異，平靜呼吸時直立為胸廓主導、仰臥為腹部主導，快速呼吸動作主要由胸廓完成。摘要未給出任何百分比數值。"
 
   - id: src.statpearls-tidal-volume
     display: "潮氣量與呼吸肌：StatPearls, Physiology, Tidal Volume (NCBI Bookshelf NBK482502)"
