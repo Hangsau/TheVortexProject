@@ -6,7 +6,64 @@
 
 ## 當前狀態（2026-09-06，最新）
 
-### ✅ **複合來源鍵這條軸做完了：四筆「一個 id 綁多篇文獻」全部拆開，逼出九處內容錯誤（錯誤 6–14）**
+### ✅ **W025 歸零：重複登錄與複合／誤標鍵全部處理完，逼出十一處內容錯誤（錯誤 15–25）**
+
+三個 commit（`750671a` 驗證器 E016／W025 ＋ 19 筆合併／`7c03d43` 三筆合併與 takai、mckenzie 拆解／`2047de8` dryland、仰式出發、蛙式轉身三組拆解）。`notify-mysite` 三筆都確認觸發。
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 154 | **142** |
+| W025 同篇多登錄 | 11 | **0** |
+| W008 孤兒來源 | 2 | 2（`src.gonjo-2018`、`src.lee-2008`） |
+| W022 | 14 | 14（`l-indicators.yaml`，刻意保留） |
+| W023／W024 | 0／0 | 0／0 |
+| E016 同 id 重複 | — | 0（本輪新增的檢查） |
+| `_sources.yaml` 筆數 | 734 | **751** |
+| 內容條目 | 923 | 923 |
+
+**這輪的核心區分：來源鍵的病有三種，處置完全不同，混在一起做會毀資料。**
+
+| 病 | 樣態 | 正確處置 | 錯誤處置的後果 |
+|---|---|---|---|
+| **重複登錄** | 同一篇文獻掛兩個以上 id | 合併，引用改掛存活者，死鍵立墓碑 | — |
+| **複合鍵** | 一個 id 綁好幾篇不同著作 | **拆**：每篇獨立登錄、每個主張改掛真正支撐它的那篇 | **合併會把其他篇整個吞掉**——鍵能解析，驗證器就閉嘴，那些文獻永遠不會被讀到 |
+| **誤標鍵** | `display` 指甲文獻、`identifier` 指乙文獻 | 回權威登錄查出真正是哪一篇，重新登錄 | 顯示層與機器層各講一篇，讀者與索引拿到不同答案 |
+
+**`_sources.yaml` 裡既有的「疑似同一文獻，待 S3c 查證後合併」註記不可信，必須從識別碼重新推導。** 本輪三組被這樣標記的，實際全部是複合鍵或誤標鍵：`src.mckenzie-2023-a`／`-b` 若照註記合併，會吞掉兩篇 RCT；`src.pmc4234766-a`／`-b` 會吞掉 de Jesus 2013；`src.pmc8960438-a`／`-c` 掛的 PMCID 根本是別篇的。**它們共用識別碼只是因為複合鍵的第一段剛好就是那篇。**
+
+**W025 歸零不等於複合鍵清空。** W025 只抓「共用 PMID／PMCID／DOI」的群集；成員之間沒有共用識別碼的複合鍵它完全看不見（`src.fphys-2024-1406518` 就是這樣漏掉的）。目前唯一還能用的訊號是 `notes` 裡的「顯示字串疑似含多筆文獻（以 ; ／ ； 分隔）」——**扣掉墓碑後還有 47 筆**，清單見下方「下一步建議」。
+
+**十一處內容錯誤（錯誤 15–25）**，其中後三處是本 commit 抓到的，共同樣態是**主張與它自己引用的來源方向相反**：
+
+- **錯誤 15–19（`750671a`）**：我自己在前一個 commit 重複建了 `src.pmid-32119507`（StatPearls 章節已登錄）；`src.masters-maxwell-2008-reinvestment-theory` 同一個 id 登錄兩次、下游 dict 收合讓其中一筆靜默失效（已由新增的 **E016** 擋住）；`src.sanders-1995-c` 的 display 篇名與刊名雙錯；`src.mccullough-a` 寫「(2009/2010)」兩個年份；`src.mccabe-2022` 把主題改寫句當成原篇名。
+- **錯誤 20–22（`7c03d43`）**：`periodization.dryland.injury` 以 🟢 把 8 週 Kabat D2 彈力帶方案寫成處方——實查該 RCT（PMID 38028779）n=22 全男性、**p > 0.05 未達顯著**、作者自述效果輕微、且量的是肌力與活動度**沒有量傷害發生率**；同一區塊的讀者可見 `source` 字串外洩了 PMCID 與 ScienceDirect 的 PII；`src.mckenzie-2023-a` 的 display 掛著「（DOI 待 WebFetch 驗證）」，而它自己的 notes 早已寫明查證完成。
+- **錯誤 23（`2047de8`）**：`periodization.dryland.methods` 的 caveat 以 🟢 寫「增強式『有效』指的多半是出發與轉身，不是讓你游每一趟都更快」——**與它引用的系統回顧結果相反**。Ramirez-Campillo et al. 2022（26 篇、618 人）量到的是：水中垂直跳與水中敏捷**完全無效果**（ES −0.15 至 0.03，p 0.477–0.899），計時泳段速度**反而有小幅但顯著的效果**（ES 0.42，p = 0.005），而且它**根本沒有量出發或轉身的分段時間**。
+- **錯誤 24（`2047de8`）**：`starts-turns.err4` 以 🟢 寫「起跳角度越大，仰式成績越差」。該複合鍵綁的兩篇都不支持：de Jesus 2013 比的是腳位，**起跳角度較大的那組 5 m 時間並沒有比較差**；de Jesus 2014 是方法學回顧，不報告角度—成績關聯。
+- **錯誤 25（`2047de8`）**：`starts-turns.tech.17` 與 `starts-turns.err5` 都寫「進牆速度是轉身成績的（首要）預測變數」。實查 Blanksby et al. 1998 摘要：逐步迴歸留下的預測項是出水距離、身高、出水水平速度、pivot time、離牆峰值水平速度——**五項全在離牆側，沒有一項是進牆速度**。並補上族群限制（23 名分齡蛙式泳者、25 m 池），年份 1998 屬舊文獻，確定性由 🟢 降為 🟡。
+
+**新增兩個驗證器檢查**：`E016`（同一個 id 在 `_sources.yaml` 出現兩次——YAML 解析成 dict 時後者覆蓋前者，完全靜默）、`W025`（同一篇文獻登錄成多筆，靠共用 PMID／PMCID／DOI 偵測）。
+
+**一條可重用的處置紀律：無法識別的引用字串要刪，不要補一個近似的頂上去。** 本輪的「簡短回顧 (Redalyc 3010)」，3010 是 Redalyc 平台的**期刊代號不是文章代號**，不指向任何一篇特定文獻；讀者拿它查不到東西，本專案也無從核對它說了什麼。**補一篇看起來合理的上去就是製造來源**，正確處置是承認它不成立、移除引用、把理由寫進墓碑的 notes。
+
+**另一條：出版社 PII 與 DOI 帶的常是線上先行年，不是卷期年。** 本輪兩次踩到（`jbmt.2025.12.002` → 2026 年第 46 卷；`scispo.2018.07.003` → 2019 年第 34 卷）。**本庫一律記卷期年。** 解 PII 的方法是 Crossref 的 ISSN ＋ 書目查詢，PII 會出現在 `alternative-id`。
+
+**⚠ 更正本檔下一節（`a87590a` 那節）的兩個過期宣稱**：
+
+1. 該節標題寫「**複合來源鍵這條軸做完了**」——**錯**。那個結論建立在肉眼掃 `display` 字串上。改用識別碼分群後又找出五組，而 `src.fphys-2024-1406518` 連識別碼分群都看不見（成員之間不共用任何識別碼）。**目前的正確說法是：W025 這個可機檢的子集歸零，靠 notes 標記還看得到 47 筆待拆。**
+2. 該節的「W008 孤兒來源 3」與地雷欄的「撤掉 `src.gonjo-2018` 會讓 W008 掉到 3 以下」——**數字是過期的，HEAD 版報告本來就是 2 筆**（`src.gonjo-2018`、`src.lee-2008`）。`src.gonjo-2018` 仍然不要立墓碑（它是標錯名的孤兒，實際是 Nicol, Ball & Tor 2021 轉身生物力學，PMID 30694108，0 條引用），但理由是「處理它要連同 W008 的基準一起重新定義」，不是為了守一個不存在的 3。
+
+**下一步建議（依成本由低到高）**
+
+1. **剩下的 47 筆複合鍵**（notes 標「顯示字串疑似含多筆文獻」、非墓碑）。重掃指令：切到 repo 根，用 `re.split(r'(?=\n  - id: src\.)')` 逐塊比對 `notes` 是否含該句且不含 `verification_status: retracted`。分三群：
+   - **書目複合**（最好處理，每一段都是完整書目）：`src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2`、`src.bompa-ch5-ch11-mcardle-exercise-physiology-s`、`src.toussaint-colwin-1990-maglischo-2003-swimmin`、`src.olbrecht-2000`、`src.issurin`、`src.selye`。
+   - **機構／網站族**（沒有 DOI，靠 URL 與擷取日期登錄）：`src.usms-*` 五筆、`src.race-club-*` 三筆、`src.u-s-masters-swimming-*` 三筆、`src.yourswimlog-*` 三筆、`src.total-immersion-terry-laughlin-vortex`、`src.myswimpro-2022-coachsci-sdsu-edu-2022`、`src.swimswam-koga-wku-kinematic`、`src.competitor-swim-udk-drills-swimswam-udk-sets`、`src.360swim-usms-swimming-world`、`src.fina-sw64-usas-usms`、`src.getphysical-strengthmatters-alactic-power-in`、`src.specificity-of-practice-usrpt`、`src.train-daly-u-s-masters-swimming-5yd-m`、`src.vortex-l0-l6`、`src.vortex-paralympic-visually-impaired-tapper-s`。
+   - **單姓氏族**（`src.gonjo`、`src.arellano`、`src.toussaint`、`src.zamparo`、`src.pink`、`src.hellard`、`src.mujika`、`src.seiler`、`src.lyttle`、`src.hayashi`、`src.andersen-2020`、`src.ward-2018`／`-c`、`src.benjanuvatra-2007-b`、`src.mccullough-d`、`src.gonzalez-rave`、`src.pmc5260528`、`src.pmc8607769`、`src.race-club-ch-14`、`src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020`）。**這群最貴**：一個姓氏可能對到同一作者的好幾篇，必須逐條讀引用它的主張才知道指的是哪一篇。
+2. **「(已驗證)」display 軸 49 筆**（見上方更正）。多數是機械改寫（把「主題詞 + PMID + (已驗證)」換成書目），但已知有約 9 筆的主題詞與實際篇名對不上，要當誤標鍵處理：`src.pmc7340704`（display 寫 Frontiers 2022，實際是 Ohman & Thompson 2020, *Curr Rev Musculoskelet Med* 13(4):457–471）、`src.pmc6092370`、`src.pmc6137694`（display 寫「Chloramine 眼刺激機制研究」，實際篇名是 Water related ocular diseases）、`src.pmc9658102`、`src.pmc3435931`、`src.pmc11531034`、`src.pmc12847173` 與 `src.pmid-40783351`（display 寫 2025，PubMed 的卷期日期是 2026 年 1 月）。
+3. **`src.adductor-loading-return-to-sport-practice-co`**（display 已標【佔位字串，非真實文獻】但還沒立墓碑）。
+4. **`notes` 帶「待 S3c」的還有 196 筆**——這是個統計數字不是待辦清單，多數是已完成查證但沒清掉的過期註記（`src.mckenzie-2023-a` 與 `src.pmc4234766-a` 都是這樣，本輪順手清掉）。**不要當成 196 件工作估**，正確做法是併進上面各軸順手清。
+
+### ⏸ **（以下為前一段落，標題已於上方更正）複合來源鍵：四筆「一個 id 綁多篇文獻」拆開，逼出九處內容錯誤（錯誤 6–14）**
 
 三個 commit（`a87590a` PMID 族誤植與重複／`732d700` 呼吸章兩筆複合鍵／`09cf424` 安全章與 LTAD 兩筆複合鍵）。`notify-mysite` 三筆都確認 success。
 
@@ -41,6 +98,8 @@
 
 1. **書目一律回權威登錄查，不信草稿自帶的識別碼。** PubMed esummary／efetch、Crossref by DOI；非 PubMed 索引的期刊（如 *Strength & Conditioning Journal*）走 Crossref 書目查詢。**curl 直接 pipe 進 python stdin**，不要中轉 `/tmp` 檔。
 2. **PDF 原件優先於搜尋摘要。** 本輪 Swimming Canada LTAD 的分齡與泳量、USA Swimming 簡報的教練條文，都是抓 PDF 用 `fitz` 抽文字才拿到的，搜尋摘要一概給不出。反面案例同樣重要：CS4L LTAD 2.1 的分齡數字在原件正文裡抽不出來（疑似只在圖表影像），因此**不登錄、也不在公開散文裡當成有出處的事實引用**，只把線索留在 `_sources.yaml` 的 `notes`。
+
+**⚠ 下面這段的「8 筆」是錯的數字，已於 2026-09-06 更正為 49 筆——見本檔最上方那一節，動手前以更正後的清單為準。** 當時我只掃了 `src.pmid-*` 這一個前綴，但「display 尾巴掛著 (已驗證)」的反模式跨遍整個註冊表：實際 **49 筆**（本輪合併掉 4 筆後的現況，原為 53），其中只有 **7 筆**是 `src.pmid-*`。**把它估成 8 筆會讓下一輪以為是半小時的雜務，實際是一條完整的軸。**
 
 **建議下一步（模糊登錄軸，複合鍵已清空，剩下的是「登錄得到但看不出是哪一篇」）**：先做 `src.pmid-*` 裡 display 尾巴掛著「(已驗證)」的那 8 筆（`-25443755`、`-30485006`、`-30521295`、`-32310515`、`-33010194`、`-39500300`、`-40783351`、`-7673417`）——它們的 display 是「主題詞 + PMID + (已驗證)」的機器味字串，不是書目，而且「已驗證」寫在 display 裡與 `verification_status` 欄位重複，屬同一種反模式，成本低。接著是機構／網站族：`src.swim-like-a-fish-2025`（4 條引用）、`src.race-club-pdm-data`（4）、`src.race-club-pdm-elite-general`（2）、`src.usms-backstroke-kick-guide`（2）、`src.u-s-masters-swimming-backstroke-body-positio`（id 被截斷且 display 是複合的）、`src.usms-masters-teaching-article`、`src.swim-smart`、`src.swim-teach-com`、`src.usa-swimming-foundations-*` 兩筆；再來是兩筆書目複合登錄 `src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2`、`src.bompa-ch5-ch11-mcardle-exercise-physiology-s`，以及 `fundamentals-of-fast-swimming-*` 重複族與 `src.gonjo`／`-2016`／`-2020-a/b/c`／`-2021-a/b/c`／`-2023`、`src.gonzalez-rave` 這幾串。
 
