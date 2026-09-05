@@ -17,8 +17,8 @@ epidemiology:
   certainty: 🟠
   evidence_grade: B
   caveat: >-
-    2026-08-18 更正（重複登錄）：原掛的 `src.aiac-ijkss-v-6n-1p-25` 與
-    `src.stress-fractures-in-swimmers-systematic-revi` 是同一篇 Vasiliadis 2018，已統一到後者。
+    2026-08-18 更正（重複登錄）：本欄原掛的兩筆引用（一筆以期刊卷期登錄、一筆以標題登錄）
+    其實是同一篇 Vasiliadis 2018，已合併為一筆。
     **使用邊界**：該回顧僅納入 10 篇、多為個案報告、**無合併統計亦無分母**，
     可支撐「泳者應力性骨折罕見且以肋骨為主」，**不能導出發生率**；檢索截止 2017 年 1 月（🟡）。
     另：肋骨骨折常誤診為肌肉拉傷延誤 4–6 週；某些倍率數字為二手綜述。

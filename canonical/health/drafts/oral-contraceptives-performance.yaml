@@ -34,15 +34,15 @@ mechanism:
     也不應成為建議選手換藥或停藥的理由——那是醫療決策，且證據強度不支持通則。
 
 epidemiology:
-  prevalence: "OC 在女性運動族群中使用普遍（方向性描述）。**舊稿的「使用率 30–50%」已於 2026-08-17 撤除**：它掛在兩個來源下，但一個查無此文獻（`src.bushman-2006`），另一個（Elliott-Sale 2020）是表現統合分析、根本不產出使用率數字。要恢復量化使用率必須另找流行病學調查。"
+  prevalence: "OC 在女性運動族群中使用普遍（方向性描述）。**舊稿的「使用率 30–50%」已於 2026-08-17 撤除**：它掛在兩個來源下，但一個查無此文獻（Bushman 2006），另一個（Elliott-Sale 2020）是表現統合分析、根本不產出使用率數字。要恢復量化使用率必須另找流行病學調查。"
   certainty: 🟡
   evidence_grade: B
   caveat: >-
     **2026-08-17 來源健檢：本條目原有兩層錯誤，均已更正。**
-    ① **引用不存在**：`src.bushman-2006`（「Bushman et al. 2006, Phys Sportsmed，早期 OC × VO₂max 量化」）
+    ① **引用不存在**：舊稿引的「Bushman et al. 2006, Phys Sportsmed，早期 OC × VO₂max 量化」
     在 PubMed 查無——該作者在該期刊 0 筆；唯一真實的 Bushman × OC 文獻是 J Sports Med Phys Fitness 2006
     的**無氧功率**研究（PMID 16596112），期刊與測量指標皆不符。VO₂max 數字的真正出處是
-    Lebrun 2003（已補為 `src.lebrun-2003-triphasic-oc-vo2max`），且實測值 4.7%、非舊稿的 10–11%。
+    Lebrun 2003（已補入來源清單），且實測值 4.7%、非舊稿的 10–11%。
     ② **引用與主張不對應**：Elliott-Sale 2020 被誤記為 Br J Sports Med（實為 Sports Med），
     且被用來支撐「使用率 30–50%」——那是表現統合分析，不含使用率資料。
     現存證據的固有限制：Lebrun 2003 **n=14**、只測一種三相型配方、未測比賽表現；

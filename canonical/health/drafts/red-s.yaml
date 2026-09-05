@@ -17,8 +17,8 @@ epidemiology:
   certainty: 🟡
   evidence_grade: B
   caveat: >-
-    2026-08-18 更正（重複登錄）：本欄原掛兩個 source_id，實為同一份 IOC 共識，
-    已刪去 `src.mountjoy-ioc-consensus-webfetch`，只保留一個——原寫法會讓一份文獻看起來像兩份獨立支撐。
+    2026-08-18 更正（重複登錄）：本欄原本掛了兩筆引用，實為同一份 IOC 共識，
+    已刪去重複的那筆、只保留一個——原寫法會讓一份文獻看起來像兩份獨立支撐。
     另：引用 IOC 共識必須標版本（2014／2018／2023 三版結論不同），本條目數字尚未逐版對回。
     定義與篩檢工具(LEAF-Q／REDs CAT2)差異大→盛行率不可橫向比較；男性 RED-S 長期被低估。
   sources:
