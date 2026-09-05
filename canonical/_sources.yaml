@@ -2172,7 +2172,7 @@ sources:
     notes: "疑似與 src.pmc11297363-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc11297363-a 共用 pmcid PMC11297363，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11424229
-    display: "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)"
+    display: "Garg, D., & Daigavane, S. (2024). A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies. Cureus, 16(8), e67803."
     title: "A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies."
     type: journal-article
     verification_status: verified
@@ -2317,7 +2317,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc2858141
-    display: "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)"
+    display: "Brockmann, S., Piechotowski, I., Bock-Hensley, O., Winter, C., Oehme, R., Zimmermann, S., Hartelt, K., & Luge, E. (2010). Outbreak of leptospirosis among triathlon participants in Germany, 2006. BMC Infectious Diseases, 10, 91."
     title: "Outbreak of leptospirosis among triathlon participants in Germany, 2006."
     type: journal-article
     verification_status: verified
@@ -8762,3 +8762,22 @@ sources:
       本庫取用：水浸環境與內感準確性的關聯——這是全庫少數直接把「水」與「內感」連起來的一手研究。
       樣本為成人，恐水者／兒童／競技泳者均未涵蓋；25 分鐘的效果不等於教學課程的最適時長，
       canonical 內明確標出這條邊界。
+
+  - id: src.aiello-2025-ak-incidence-meta
+    display: "Aiello, F., Gallo Afflitto, G., Ceccarelli, F., Turco, M. V., et al. (2025). Perspectives on the Incidence of Acanthamoeba Keratitis: A Systematic Review and Meta-Analysis. Ophthalmology, 132(2), 206-218."
+    type: journal_article
+    verification_status: verified
+    retrieved_on: '2026-09-05'
+    identifiers:
+      pmid: '39127408'
+      doi: 10.1016/j.ophtha.2024.08.003
+    notes: 105 篇研究、91,951 眼（其中 5,660 眼為 AK）的統合分析，是目前 AK 發生率最權威的估計。核心數字：中位年度單中心發生率 1.9 眼（95% CI 1.5-2.6）；AK 佔非病毒性微生物角膜炎的 1.52%（95% CI 1.03-2.22%）；對總人口的比率為每百萬 2.34 眼（95% CI 0.98-5.55）；2023 年基準推估全球 12,953 眼。本專案原記的「23,561 例、2.9/百萬」與本統合分析不符，已依此改正。
+  - id: src.kitamura-2020-dolphin-kick-lumbar-extension
+    display: "Kitamura, G., Tateuchi, H., & Ichihashi, N. (2020). Greater Lumbar Extension During Dolphin Kick and Psoas Major Tightness in Swimmers With Low Back Pain. Journal of Sport Rehabilitation, 29(6), 716-722."
+    type: journal_article
+    verification_status: verified
+    retrieved_on: '2026-09-05'
+    identifiers:
+      pmid: '31141446'
+      doi: 10.1123/jsr.2018-0262
+    notes: 蝶泳下背痛的機制研究：下背痛泳者蝴蝶踢時腰椎伸展角度較大、髂腰肌較緊。本專案先前只記 PMID、標記為「摘要／二手待查」，2026-09-05 已完整解析（作者、期刊、卷期、DOI 皆確認），改列 verified 並正式引用。

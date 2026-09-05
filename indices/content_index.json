@@ -3475,6 +3475,7 @@
         ]
       },
       "source_ids": [
+        "src.aiello-2025-ak-incidence-meta",
         "src.pmc11424229"
       ],
       "outgoing_ids": []
@@ -7597,6 +7598,7 @@
         ]
       },
       "source_ids": [
+        "src.kitamura-2020-dolphin-kick-lumbar-extension",
         "src.pmc11531034",
         "src.pmc3435931"
       ],

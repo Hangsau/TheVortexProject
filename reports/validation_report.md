@@ -149,14 +149,9 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 6 筆**
+**WARN，共 0 筆**
 
-  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 27824234' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 16596112' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' source_id='src.pmc8147101' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' source_id='src.pmc2858141' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+（無）
 
 ---
 

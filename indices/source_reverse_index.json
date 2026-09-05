@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 717,
+  "source_count": 719,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -93,6 +93,20 @@
       },
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.aiello-2025-ak-incidence-meta",
+      "display": "Aiello, F., Gallo Afflitto, G., Ceccarelli, F., Turco, M. V., et al. (2025). Perspectives on the Incidence of Acanthamoeba Keratitis: A Systematic Review and Meta-Analysis. Ophthalmology, 132(2), 206-218.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "acanthamoeba-keratitis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[13].epidemiology"
+        }
+      ]
     },
     {
       "id": "src.akkurt-2017",
@@ -3712,6 +3726,20 @@
       ]
     },
     {
+      "id": "src.kitamura-2020-dolphin-kick-lumbar-extension",
+      "display": "Kitamura, G., Tateuchi, H., & Ichihashi, N. (2020). Greater Lumbar Extension During Dolphin Kick and Psoas Major Tightness in Swimmers With Low Back Pain. Journal of Sport Rehabilitation, 29(6), 716-722.",
+      "verification_status": "verified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "extension-low-back-pain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[8].epidemiology"
+        }
+      ]
+    },
+    {
       "id": "src.kitsahawong-2024",
       "display": "Kitsahawong K, Pitiphat W, Thongpaiboon P, Thongpaiboon S, Saengsuwannarot S (2024). Evaluating the protective effects of mouthguards with neutralizing agents against chlorinated water-induced enamel erosion. Front Oral Health 5:1469228. PMID 39328893",
       "verification_status": "verified",
@@ -6937,7 +6965,7 @@
     },
     {
       "id": "src.pmc11424229",
-      "display": "Global incidence of Acanthamoeba keratitis, PMC11424229 (已驗證)",
+      "display": "Garg, D., & Daigavane, S. (2024). A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies. Cureus, 16(8), e67803.",
       "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC11424229",
@@ -7182,7 +7210,7 @@
     },
     {
       "id": "src.pmc2858141",
-      "display": "Leptospirosis associated with triathlon/open water, PMC2858141 (已驗證)",
+      "display": "Brockmann, S., Piechotowski, I., Bock-Hensley, O., Winter, C., Oehme, R., Zimmermann, S., Hartelt, K., & Luge, E. (2010). Outbreak of leptospirosis among triathlon participants in Germany, 2006. BMC Infectious Diseases, 10, 91.",
       "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC2858141",
