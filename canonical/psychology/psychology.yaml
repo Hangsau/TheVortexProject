@@ -2749,8 +2749,8 @@ themes:
           Yerkes-Dodson（1908）的原始實驗用電擊強度對比老鼠辨別任務，並非直接測量喚醒與運動表現。
           倒 U 曲線是後人（1950 年代起）從圖形形狀反向命名——原作者從未使用「arousal」一詞。
           廣為流傳的版本是：喚醒過低或過高均削弱表現，中等最佳；任務難度越高，最佳喚醒點越低。
-          2024 年《Trends in Cognitive Sciences》的系統性重審（PII S1364-6613(24)00078-0）
-          指出，倒 U 曲線在文獻中的實證支持遠比教科書描述稀薄，需要重新概念化——
+          Nieuwenhuis（2024）在《Trends in Cognitive Sciences》的短評指出，
+          倒 U 曲線在文獻中的實證支持遠比教科書描述稀薄，需要重新概念化——
           特別是「一條曲線適用所有人」這個預設，忽略了個體差異。
           在游泳等封閉技術性動作（closed-skill）場域，喚醒影響的機制可能不只是「量」的多寡，
           還有「類型」（透過注意力配置改變、肌肉張力前饋干預感知通道、誘發再投資行為三條路徑）。
@@ -2758,7 +2758,7 @@ themes:
           有個很流行的說法叫「倒 U 曲線」：太放鬆或太亢奮表現都差，中間剛好最好。
           這個圖常被當成定律，但它的來歷其實有點糊——原始實驗是拿電擊測老鼠，
           作者本人根本沒講過「喚醒」這個詞，倒 U 是後人看圖形反推命名的。
-          2024 年有篇重審指出，這條曲線的實證支持比教科書講的薄弱得多，
+          2024 年有篇短評指出，這條曲線的實證支持比教科書講的薄弱得多，
           最大問題是「一條曲線套所有人」忽略了個體差異。對游泳這種封閉技術動作來說，
           壓力影響的可能不只是「亢奮多少」，還有「哪一種亢奮」。所以把它當粗略的起點就好，別當鐵律。
       hardware_boundary:
@@ -2779,8 +2779,9 @@ themes:
         成人初學在不同情境中的喚醒反應均未系統研究。
         青少年競技的評價焦慮與高水平游泳員的競賽焦慮屬不同結構，不可互相外推最佳喚醒範圍。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
-      source_ids: [src.research-psych-02-b]
+      - Yerkes & Dodson 1908（Journal of Comparative Neurology and Psychology）
+      - Nieuwenhuis 2024（Trends in Cognitive Sciences）
+      source_ids: [src.yerkes-dodson-1908, src.nieuwenhuis-2024-inverted-u-revisited]
     diagnostic:
       reading_signals:
       - 游者描述「賽前感覺太平靜，結果游得很差」= 可能底線喚醒不足，需往 IZOF 方向個人化診斷
@@ -2825,8 +2826,9 @@ themes:
         屬素材缺口。兒童競技游者的情緒激活最佳區尚無系統資料；
         鐵人三項的開放水域環境使情緒激活混入環境恐懼，診斷需區隔。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
-      source_ids: [src.research-psych-02-b]
+      - Hanin 1997（European Yearbook of Sport Psychology）
+      - Ruiz, Raglin & Hanin 2015（International Journal of Sport and Exercise Psychology）
+      source_ids: [src.hanin-1997-izof, src.ruiz-raglin-hanin-2015-izof-overview]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -2853,7 +2855,7 @@ themes:
           但高認知焦慮 + 高生理喚醒同時發生時，跨越某個臨界點後，表現會發生「災難式跌落」——
           不是漸進惡化，而是突然崩潰。更關鍵的是「滯後效應（hysteresis）」：
           崩潰後要回到原表現水平，需先大幅降低喚醒，不是稍微調整就能回來。
-          Hardy, Parfitt & Pates（1994）在滾球運動的場地實驗（PMID: 7932942）部分支持此模型。
+          Hardy, Parfitt & Pates（1994）在草地滾球選手（n=8）的場地實驗部分支持此模型。
           自信心是偏置因子：高自信把崩潰閾值推右（更晚觸發），低自信推左（更容易觸發）。
         plain_text: >-
           當一個人「腦子裡的擔憂」很高、身體又很亢奮，兩個同時撞在一起，表現不是慢慢變差，
@@ -2884,8 +2886,9 @@ themes:
         鐵人三項開放水域的環境干擾（能見度差、群泳、無法觸壁）可能加速高認知焦慮的積累，
         在技術崩潰前已先觸發恐慌性動作退化，與封閉泳道情境的崩潰路徑可能不同。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
-      source_ids: [src.research-psych-02-b]
+      - Hardy 1990（Stress and Performance in Sport，Wiley）
+      - Hardy, Parfitt & Pates 1994（Journal of Sports Science）
+      source_ids: [src.hardy-1990-catastrophe-model, src.hardy-parfitt-pates-1994-hysteresis]
     diagnostic:
       reading_signals:
       - 游者報「後半段突然什麼感覺都沒有了、動作完全不對了」= 可能跨越了崩潰閾值，滯後效應啟動
@@ -2911,7 +2914,7 @@ themes:
           再投資（reinvestment）是 Masters（1992）提出的機制：技能熟練後通常以程序化形式儲存，
           不需意識監控。壓力下，運動員「重新意識化」動作控制——工作記憶調用外顯的、基於規則的動作知識，
           在線上即時控制動作機械。這會把自動化流程強制拉回外顯操控，觸發崩潰。
-          Masters & Maxwell（2008，DOI: 10.1080/17509840802287218）整合理論，
+          Masters & Maxwell（2008）整合理論，
           確認再投資不只是壓力反應，也是人格特質（disposition）：
           個體在「再投資傾向」（MSRS 量表）上存在穩定差異——
           高外顯知識量 × 高再投資傾向 × 壓力情境 = 崩潰風險最高。
@@ -2954,9 +2957,11 @@ themes:
         鐵人三項游泳段屬開放水域，環境新奇性（失去熟悉感知錨點）是獨立的再投資觸發因子，
         與泳池封閉環境不同，不可直接外推。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節
-      source_ids: [src.research-psych-02-b, src.research-psych-02-a]
+      - Masters 1992（British Journal of Psychology）
+      - Masters, Polman & Hammond 1993（Personality and Individual Differences）
+      - Masters & Maxwell 2008（International Review of Sport and Exercise Psychology）
+      source_ids: [src.masters-1992-knowledge-knerves, src.masters-polman-hammond-1993-reinvestment-scale,
+        src.masters-maxwell-2008-reinvestment-theory]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3011,8 +3016,8 @@ themes:
           感覺不對時把注意力移向外部效果（「感覺水在哪裡」「讓身體滑長一點」），
           而非掃瞄內部動作細節；感知目標語言正是設計來取代解剖指令的工具。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
-      source_ids: [src.research-psych-02-b]
+      - Beilock & Carr 2001（Journal of Experimental Psychology: General）
+      source_ids: [src.beilock-carr-2001-fragility]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3035,8 +3040,9 @@ themes:
           水對身體的阻力分佈改變 → 感知信號改變（感知到的水的回饋不再是「正常姿態」的水感）→
           水感失真 → 游者試圖再投資修正 → 自動化進一步崩潰。
           這是焦慮破壞感知-動作自動化的**雙向迴路**，在游泳中因「感知通道本身是水」而特別顯著。
-          間接支持：Hazlett 等（1994，DOI: 10.1111/j.1469-8986.1994.tb01039.x）
-          確認廣泛焦慮症患者的肌肉 EMG 活動顯著高於對照組——焦慮不只是主觀感受，是肌肉電位的物理狀態。
+          間接支持：Hazlett、McLeod 與 Hoehn-Saric（1994）確認廣泛性焦慮症患者的靜息肌電
+          顯著高於對照組——焦慮不只是主觀感受，是肌肉電位的物理狀態。
+          但那是臨床樣本的陸上靜息測量，只撐住這條鏈的第一個環節，其餘仍是推導。
         plain_text: >-
           游泳有一條別的運動沒有的迴路。在陸上，緊張會讓肌肉繃緊、影響協調；
           但在水裡，緊張讓全身先繃起來→身體在水中的姿態和硬度變了→水流經過身體的阻力跟著變→
@@ -3071,9 +3077,8 @@ themes:
         對競技游者的意義是「在高強度壓力場景（決賽、被超越）中微量張力改變感知精度」。
         三個族群表現出的現象相似但嚴重程度和情境觸發完全不同，不能用同一套干預強度處理。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#與水感框架的連結
-      source_ids: [src.research-psych-02-c, src.research-psych-02-d]
+      - Hazlett, McLeod & Hoehn-Saric 1994（Psychophysiology）
+      source_ids: [src.hazlett-1994-muscle-tension-gad]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3127,9 +3132,6 @@ themes:
         青少年競技在評賽壓力下的呼吸急促目前缺乏直接游泳研究，是素材缺口；
         鐵人三項開放水域群泳起跑的呼吸節拍干擾（被踩踏、吸到浪）是環境誘發的節拍崩潰，
         機制相似但觸發源不同——干預需從環境減敏著手而不只是節拍訓練。
-      sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性
-      source_ids: [src.research-psych-02-c]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3151,14 +3153,16 @@ themes:
           工作記憶中沒有可被再投資劫持的顯性規則。
           主要策略：
           ① 類比教學（analogy instruction）：用整體意象取代分解規則，
-          Poolton 等（2007，DOI: 10.1260/174795407780367177）蝶泳實驗
-          確認「像海豚那樣踢」比「膝蓋先彎曲再伸展推水」在壓力下更穩健。
+          Poolton 與 Zachry（2007）整理內隱學習的教練應用，主張類比指令
+          （「像海豚那樣踢」）比分解規則（「膝蓋先彎曲再伸展推水」）少留下可被再投資的顯性規則。
+          須注意這是概念性回顧不是實驗，類比教學在游泳中的抗壓效果尚無直接實驗資料。
           ② 外部聚焦（external focus of attention）：指向身體外部效果的注意力
           比內部身體聚焦更能支持自動化（Wulf 等多篇研究，2001–2010）。
           游泳應用：「讓手切過水線」vs「控制手掌角度」。
           ③ 降低顯性回饋密度：訓練中不在每趟後詳細分析技術，讓感知探索先於解釋。
-          ④ 正念/接受導向訓練：正念降低「評估衝動」（PMC10497761），
-          減少游者在壓力下啟動外顯知識搜尋的傾向。
+          ④ 正念/接受導向訓練：Tang 等人（2023）在易 choking 運動員中發現，
+          正念傾向較高者焦慮較低，韌性與知覺壓力是中介；那是橫斷面相關不是介入實驗，
+          「練正念可降低崩潰」仍屬推論。
         plain_text: >-
           既然再投資崩潰需要兩個條件——壓力 + 一堆「說得出口的動作規則」可以被調出來用——
           那最強的預防方法，就是從學習階段就不要囤那麼多「說得出口的規則」。這叫內隱學習。
@@ -3188,9 +3192,12 @@ themes:
         成人初學帶入大量生活技術外顯知識（「游泳就是手划腳踢」），內隱學習設計需要同時解除這些預設；
         鐵人三項游者多有多年技術積累外顯知識，再投資風險高，是內隱重設計的高優先候選族群。
       sources:
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節
-      - Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論
-      source_ids: [src.research-psych-02-a, src.research-psych-02-b]
+      - Masters & Maxwell 2008（International Review of Sport and Exercise Psychology）
+      - Poolton & Zachry 2007（International Journal of Sports Science & Coaching）
+      - Wulf & Prinz 2001（Psychonomic Bulletin & Review）
+      - Tang et al. 2023（Frontiers in Psychology）
+      source_ids: [src.masters-maxwell-2008-reinvestment-theory, src.poolton-zachry-2007-implicit-coaching,
+        src.wulf-prinz-2001-directing-attention, src.tang-2023-mindfulness-choking]
     diagnostic:
       abc_link: C
       reading_signals:

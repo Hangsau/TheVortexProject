@@ -3551,26 +3551,26 @@ sources:
   - id: src.research-psych-02-a
     display: "Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-02-b、src.research-psych-02-c、src.research-psych-02-d 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/02_喚醒焦慮與壓力崩潰.md 逐節把該節實際引用的原始文獻挖出來，登錄成 13 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-02-b
     display: "Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-02-a、src.research-psych-02-c、src.research-psych-02-d 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/02_喚醒焦慮與壓力崩潰.md 逐節把該節實際引用的原始文獻挖出來，登錄成 13 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-02-c
     display: "Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-02-a、src.research-psych-02-b、src.research-psych-02-d 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/02_喚醒焦慮與壓力崩潰.md 逐節把該節實際引用的原始文獻挖出來，登錄成 13 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-02-d
     display: "Research/心理/02_喚醒焦慮與壓力崩潰.md#與水感框架的連結"
     type: other
-    verification_status: unverified
-    notes: "本筆不是外部文獻，而是指向本 repo Research/ 層檔案錨點的內部交叉參照；S3c 須追到該節實際引用的原始文獻。 疑似與 src.research-psych-02-a、src.research-psych-02-b、src.research-psych-02-c 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    notes: 2026-09-05 撤下：display 是本專案自己的草稿檔錨點（W023），不是外部文獻。已回 Research/心理/02_喚醒焦慮與壓力崩潰.md 逐節把該節實際引用的原始文獻挖出來，登錄成 13 筆帶 DOI／PMID 的 verified 來源，canonical 引用全部改指過去。留墓碑擋住同型字串再登錄。
 
   - id: src.research-psych-03-a
     display: "Research/心理/03_水中恐懼與學習者心理.md#FWAQ"
@@ -6962,3 +6962,212 @@ sources:
       doi: 10.3389/fpsyg.2019.00535
     retrieved_on: '2026-09-05'
     notes: 2026-09-05 idconv + esummary 核對：10:535。耐力表現中 EF／IF 對結果無差異，關鍵在「監控的層面」不同。
+
+  - id: src.yerkes-dodson-1908
+    display: "Yerkes, R. M., & Dodson, J. D. (1908). The relation of strength of stimulus to rapidity of habit-formation."
+    type: journal_article
+    verification_status: verified
+    year: 1908
+    authors: ["Yerkes RM", "Dodson JD"]
+    container: "Journal of Comparative Neurology and Psychology"
+    identifier:
+      doi: 10.1002/cne.920180503
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：18(5):459-482。草稿與多數二手教材都寫「無 DOI」，
+      實際上 Wiley 回溯建檔已給了 DOI。內容邊界要講清楚：原文是老鼠在不同電擊強度下
+      學會明暗辨別的速度，全文沒有 arousal 這個詞，也沒有畫倒 U 曲線——
+      「喚醒-表現倒 U 定律」是 1950 年代後人從資料形狀反向命名並外推到人類的。
+      引用它時只能當「倒 U 說法的歷史起點」，不能當「喚醒與運動表現關係的證據」。
+
+  - id: src.nieuwenhuis-2024-inverted-u-revisited
+    display: "Nieuwenhuis, S. (2024). Arousal and performance: revisiting the famous inverted-U-shaped curve."
+    type: journal_article
+    verification_status: verified
+    year: 2024
+    authors: ["Nieuwenhuis S"]
+    container: "Trends in Cognitive Sciences"
+    identifier:
+      pmid: '38570252'
+      doi: 10.1016/j.tics.2024.03.011
+      pii: S1364-6613(24)00078-0
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esearch + esummary 核對：28(5):394-396，單一作者 Nieuwenhuis。
+      更正一項性質誤植：草稿與 canonical 原本都寫成「系統性重審／重新審視文獻」，
+      實際是 3 頁的 Spotlight 短評，評論 Beerendonk 與 Mejías 的計算模型論文，
+      不是系統性回顧。它確實指出倒 U 的實證支持比教科書描述稀薄，
+      但那是評論者的論點，不是回顧研究的合成結果——引用時不得升格成後者。
+
+  - id: src.hanin-1997-izof
+    display: "Hanin, Y. L. (1997). Emotions and athletic performance: Individual zones of optimal functioning model."
+    type: book_chapter
+    verification_status: verified
+    year: 1997
+    authors: ["Hanin YL"]
+    container: "European Yearbook of Sport Psychology, 1, 29-72"
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 確認：年鑑章節，非索引期刊，本來就沒有 DOI／PMID，
+      不是「查不到」而是「不存在」。IZOF 的完整英文表述以此為準；
+      更早的 Hanin 1978 是俄文報告，本庫不另登錄（無可重取識別）。
+
+  - id: src.ruiz-raglin-hanin-2015-izof-overview
+    display: "Ruiz, M. C., Raglin, J. S., & Hanin, Y. L. (2015). The individual zones of optimal functioning (IZOF) model (1978-2014): Historical overview of its development and use."
+    type: journal_article
+    verification_status: verified
+    year: 2015
+    authors: ["Ruiz MC", "Raglin JS", "Hanin YL"]
+    container: "International Journal of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/1612197X.2015.1041545
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：15(1):41-63。更正一項歸因錯誤：草稿寫成
+      「Hanin, Y. L. (2015)」，實際第一作者是 Ruiz，Hanin 是第三作者。
+      這是 IZOF 1978-2014 的歷史綜覽，引用時作者順序不得省成 Hanin 單著。
+
+  - id: src.hardy-1990-catastrophe-model
+    display: "Hardy, L. (1990). A catastrophe model of anxiety and performance. In J. G. Jones & L. Hardy (Eds.), Stress and performance in sport (pp. 81-106). Wiley."
+    type: book_chapter
+    verification_status: verified
+    year: 1990
+    authors: ["Hardy L"]
+    container: "Stress and Performance in Sport (Wiley)"
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 確認：書章節，無 DOI。災難模型的原始提出（更早的會議版是
+      Hardy & Fazey 1987）。模型本體出自此章，實證檢驗見
+      src.hardy-parfitt-pates-1994-hysteresis——兩者不可互相取代引用。
+
+  - id: src.hardy-parfitt-pates-1994-hysteresis
+    display: "Hardy, L., Parfitt, G., & Pates, J. (1994). Performance catastrophes in sport: A test of the hysteresis hypothesis."
+    type: journal_article
+    verification_status: verified
+    year: 1994
+    authors: ["Hardy L", "Parfitt G", "Pates J"]
+    container: "Journal of Sports Science"
+    identifier:
+      pmid: '7932942'
+      doi: 10.1080/02640419408732178
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 esummary 核對：12(4):327-334。草稿只記了 PMID，DOI 一併補上。
+      樣本是 8 名草地滾球選手的場地實驗——外推到游泳要降級：
+      滾球是靜態站姿的精細上肢投擲，沒有全身協調與水中感知通道。
+
+  - id: src.masters-1992-knowledge-knerves
+    display: "Masters, R. S. W. (1992). Knowledge, knerves and know-how: The role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure."
+    type: journal_article
+    verification_status: verified
+    year: 1992
+    authors: ["Masters RSW"]
+    container: "British Journal of Psychology"
+    identifier:
+      doi: 10.1111/j.2044-8295.1992.tb02446.x
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：83(3):343-358。再投資理論的原始文獻。
+      注意與 src.masters-ogles-1998-associative-dissociative 是不同人：
+      此處是 Richard S. W. Masters（再投資／內隱學習），
+      1998 那筆是 Kevin S. Masters（聯想／解離策略），同姓不同人。
+      實驗是高爾夫推桿，外推到全身水中動作模式須降級。
+
+  - id: src.masters-polman-hammond-1993-reinvestment-scale
+    display: "Masters, R. S. W., Polman, R. C. J., & Hammond, N. V. (1993). 'Reinvestment': A dimension of personality implicated in skill breakdown under pressure."
+    type: journal_article
+    verification_status: verified
+    year: 1993
+    authors: ["Masters RSW", "Polman RCJ", "Hammond NV"]
+    container: "Personality and Individual Differences"
+    identifier:
+      doi: 10.1016/0191-8869(93)90113-H
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：14(5):655-666。更正草稿的 DOI 打錯：
+      草稿寫 10.1016/0191-8690(93)90113-H，該字串在 Crossref 解不出任何東西；
+      正確是 0191-8869（該刊 ISSN），一碼之差。此文是再投資人格量表初版，
+      動作特異的 MSRS 是 Masters, Eves & Maxwell (2005) 的 ISSP 會議論文，
+      無期刊 DOI，本庫不另登錄。
+
+  - id: src.masters-maxwell-2008-reinvestment-theory
+    display: "Masters, R., & Maxwell, J. (2008). The theory of reinvestment."
+    type: journal_article
+    verification_status: verified
+    year: 2008
+    authors: ["Masters R", "Maxwell J"]
+    container: "International Review of Sport and Exercise Psychology"
+    identifier:
+      doi: 10.1080/17509840802287218
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：1(2):160-183。再投資理論的整合綜述，
+      確立「再投資既是壓力反應也是穩定人格傾向」，並分出動作再投資與決策再投資。
+      本身是綜述不是實驗，引用它談機制可以，引用它當某項效果的實證來源不行。
+
+  - id: src.beilock-carr-2001-fragility
+    display: "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure?"
+    type: journal_article
+    verification_status: verified
+    year: 2001
+    authors: ["Beilock SL", "Carr TH"]
+    container: "Journal of Experimental Psychology: General"
+    identifier:
+      doi: 10.1037/0096-3445.130.4.701
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：130(4):701-725。草稿寫「無 PMID（非醫學期刊），
+      只能給 APA 的 PDF 連結」——PMID 確實沒有，但 DOI 存在，補上後就有可重取識別，
+      不需要再掛 apa.org 的 PDF 網址。外顯監控理論的核心實驗（高爾夫推桿 vs 字母算術）。
+
+  - id: src.hazlett-1994-muscle-tension-gad
+    display: "Hazlett, R. L., McLeod, D. R., & Hoehn-Saric, R. (1994). Muscle tension in generalized anxiety disorder: Elevated muscle tonus or agitated movement?"
+    type: journal_article
+    verification_status: verified
+    year: 1994
+    authors: ["Hazlett RL", "McLeod DR", "Hoehn-Saric R"]
+    container: "Psychophysiology"
+    identifier:
+      doi: 10.1111/j.1469-8986.1994.tb01039.x
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對：31(2):189-195。用途邊界要標死：受試者是廣泛性焦慮症
+      臨床樣本，測的是靜息肌電，不是運動員也不在水裡。它只能支持「焦慮伴隨可測量的
+      肌肉張力升高」這一個環節，不能拿來支持整條「焦慮→張力→流體動力學→水感失真」鏈
+      ——後者在游泳中仍是推導（🔵）。
+
+  - id: src.poolton-zachry-2007-implicit-coaching
+    display: "Poolton, J. M., & Zachry, T. L. (2007). So you want to learn implicitly? Coaching and learning through implicit motor learning techniques."
+    type: journal_article
+    verification_status: verified
+    year: 2007
+    authors: ["Poolton JM", "Zachry TL"]
+    container: "International Journal of Sports Science & Coaching"
+    identifier:
+      doi: 10.1260/174795407780367177
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 Crossref 核對後更正兩處。① 卷期頁：實際是 2(1):67-78，
+      草稿寫 2(2):185-195。② 性質：這是寫給教練看的概念性回顧
+      （摘要原文「we attempt to provide a jumping off point for practitioners by
+      briefly outlining the theoretical concepts」），**不是實驗**。
+      canonical 原本寫「Poolton 等（2007）蝶泳實驗確認『像海豚那樣踢』比
+      『膝蓋先彎曲再伸展推水』在壓力下更穩健」——這個實驗與這個結果都不存在，已改寫。
+      類比教學在游泳中的抗壓效果目前查無直接實驗，屬研究空白。
+
+  - id: src.tang-2023-mindfulness-choking
+    display: "Tang, Y., Jing, L., Liu, Y., & Wang, H. (2023). Association of mindfulness on state-trait anxiety in choking-susceptible athletes: Mediating roles of resilience and perceived stress."
+    type: journal_article
+    verification_status: verified
+    year: 2023
+    authors: ["Tang Y", "Jing L", "Liu Y", "Wang H"]
+    container: "Frontiers in Psychology"
+    identifier:
+      pmid: '37711325'
+      pmcid: PMC10497761
+      doi: 10.3389/fpsyg.2023.1232929
+    retrieved_on: '2026-09-05'
+    notes: >-
+      2026-09-05 idconv + esummary 核對：14:1232929，年份是 2023 不是草稿標注位置
+      暗示的 2024。橫斷面問卷研究（正念、韌性、知覺壓力、狀態-特質焦慮的中介模型），
+      不是介入實驗——只能說「正念傾向與較低焦慮相關」，不能說「練正念可降低 choking」。

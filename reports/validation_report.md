@@ -149,7 +149,7 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 51 筆**
+**WARN，共 46 筆**
 
   file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\health\injuries.yaml field='prevalence' PMID/PMC='PMC11424229' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
@@ -197,22 +197,13 @@
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC12433939' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 40426460' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
   file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 16368636' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMID: 7932942' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1080/17509840802287218' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1111/j.1469-8986.1994.tb01039.x' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' PMID/PMC='PMC10497761' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\psychology\psychology.yaml field='text' DOI='10.1260/174795407780367177' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
 
 ---
 
 ## W023 — `_sources.yaml` 的 `display` 是本專案自己的草稿路徑（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，且這串會原樣印在讀者頁面的「來源」欄
 
-**WARN，共 63 筆**
+**WARN，共 59 筆**
 
-  source_id='src.research-psych-02-a' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#Reinvestment專節' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-02-b' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#核心理論' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-02-c' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#游泳特異性' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
-  source_id='src.research-psych-02-d' display='Research/心理/02_喚醒焦慮與壓力崩潰.md#與水感框架的連結' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-03-a' display='Research/心理/03_水中恐懼與學習者心理.md#FWAQ' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-03-b' display='Research/心理/03_水中恐懼與學習者心理.md#凍結反應' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄
   source_id='src.research-psych-03-c' display='Research/心理/03_水中恐懼與學習者心理.md#呼吸介入' 是本專案自己的草稿路徑——回草稿找它引的原始文獻再登錄

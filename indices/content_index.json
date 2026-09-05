@@ -16300,9 +16300,7 @@
           "complete"
         ]
       },
-      "source_ids": [
-        "src.research-psych-02-c"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -16321,7 +16319,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-b"
+        "src.hardy-1990-catastrophe-model",
+        "src.hardy-parfitt-pates-1994-hysteresis"
       ],
       "outgoing_ids": []
     },
@@ -16340,7 +16339,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-b"
+        "src.beilock-carr-2001-fragility"
       ],
       "outgoing_ids": []
     },
@@ -16359,8 +16358,10 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-a",
-        "src.research-psych-02-b"
+        "src.masters-maxwell-2008-reinvestment-theory",
+        "src.poolton-zachry-2007-implicit-coaching",
+        "src.tang-2023-mindfulness-choking",
+        "src.wulf-prinz-2001-directing-attention"
       ],
       "outgoing_ids": []
     },
@@ -16380,7 +16381,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-b"
+        "src.nieuwenhuis-2024-inverted-u-revisited",
+        "src.yerkes-dodson-1908"
       ],
       "outgoing_ids": []
     },
@@ -16399,7 +16401,8 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-b"
+        "src.hanin-1997-izof",
+        "src.ruiz-raglin-hanin-2015-izof-overview"
       ],
       "outgoing_ids": []
     },
@@ -16418,8 +16421,7 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-c",
-        "src.research-psych-02-d"
+        "src.hazlett-1994-muscle-tension-gad"
       ],
       "outgoing_ids": []
     },
@@ -16438,8 +16440,9 @@
         ]
       },
       "source_ids": [
-        "src.research-psych-02-a",
-        "src.research-psych-02-b"
+        "src.masters-1992-knowledge-knerves",
+        "src.masters-maxwell-2008-reinvestment-theory",
+        "src.masters-polman-hammond-1993-reinvestment-scale"
       ],
       "outgoing_ids": []
     },
