@@ -6,6 +6,37 @@
 
 ## 當前狀態（2026-09-05，最新）
 
+### ✅ **模糊登錄軸再收三族：Nicol 2022、Olstad 2017、週期化書目。整合本身不是重點，重點是整合過程逼出的內容錯誤**
+
+三個 commit（`7377c3c` Nicol／`43c9ff9` Olstad 內容更正／`d843e61` 週期化），共同的機制是：**把一筆來源的多個模糊登錄併成一筆已驗證來源時，被迫回原文；一回原文，掛在那些登錄下的主張就露餡了。** 所以每一族的產出都分兩層——來源層（可追溯）與內容層（說法與原文相符）。
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| W008 孤兒來源 | 3 | 3（全程持平） |
+| W022 | 15 | 14 |
+| W023／W024 | 0／0 | 0／0 |
+| 總 WARN | 144 | **143** |
+| `_sources.yaml` 筆數 | 717 | **727** |
+| `retracted` 墓碑 | 95 | **118** |
+
+**Nicol 2022（`7377c3c`）**：同一篇系統性綜述被登錄成 `-a`／`-b`／`-c` 三筆未驗證 stub，共 23 條引用。`-b` 的期刊寫成 *Sports Biomechanics*，實際是 *Sports Medicine - Open* 8(1):75（PMID 35674850、DOI 10.1186/s40798-022-00467-2）。**驗證器抓不到這種錯**：它只檢查 id 存在，不檢查 display 追不追得回一篇論文。順帶抓到跨式誤引——`fly.tech.13`（蝶式）引了一篇純蛙式綜述，該篇全文只提到蝶式一次而且是拿來對比的，已改寫成 🔵 並把檢索過程寫進條目。Nicol 確實另有一篇真的在 *Sports Biomechanics*（時序分析、性別 × 距離），**刻意不登錄**，因為沒有條目會引用它，登了就是 W008 孤兒。
+
+**Olstad 2017（`43c9ff9`）**：這是刻意拆成第二個 commit 的內容更正（來源層先落地，內容層後補）。`breast.tech.5`／`breast.tech.23`／`breast.err5` 三處有三筆與原文不符的敘述——① 寫「精英更早啟動 insweep（含肱二頭肌）」，原文報的是**胸大肌活化時間較長**（71% 對 50%，是時長不是起始），肱二頭肌根本不在區辨指標裡；② 寫「較短的共同收縮」，原文寫的是世界冠軍脛前肌與腓腸肌**完全沒有**共同收縮；③ 寫「腓腸肌踢腿末端更強、股直肌滑行初期更早」，原文是兩條肌肉都在**滑腿相一開始**就活化，而踢腿推進相的差異是**肱三頭肌活化較少**。三處都已改回原文，並在 `practical_implication` 標明 n=4 對 4 屬個案級對照、不宜當群體常模。
+
+**週期化書目（`d843e61`）**：`structure.yaml`／`taper.yaml`／`zones.yaml` 共 28 條引用，指向 20 筆「章節代號」或「PMID 字串」型登錄（`src.ch8`、`src.pmid-12840640-a` 這類）。同一本書被登錄了 17 次；讀者看到的 `source` 欄位就是「Ch8」「Ch11 Table 11.2」這種對外無意義的字串，其中一條甚至外洩了本庫內部檔名 `zones.yaml`。全部改指 `src.bompa-buzzichelli-2019`，display 改寫成人看得懂的形式（「Bompa & Buzzichelli 2019，第 8 章表 8.2」）。
+
+**最有價值的一筆是 detraining 表**：整張表原本掛在 Mujika & Padilla 2000 一篇下。**去讀本機書本語料**（`C:/claudehome/resources/books/Periodization__Theory_and_Methodology_of_Training/`）的第 8 章正文才發現，四個 VO2max 數字分屬 Viru 1995／Coyle 1984／Mujika Part I／Mujika Part II 四個來源，肌力功率數字出自 Izquierdo 2007。五篇原始文獻連同 Mujika & Padilla 2003、Bosquet 2007 全部逐一查證後新登錄（7 筆，全部有條目引用，W008 未動）。**誠實的限制**：Mujika & Padilla 2000 兩篇的摘要裡沒有那些百分比，數字只在全文，這點寫進了登錄的 `notes` 而不是含混帶過。
+
+**本機書本語料是一等驗證來源**，這輪是它第一次決定性地推翻既有歸因。使用要點記在此：`00_Title_Page.md`／`01_Copyright.md` 給版次與 ISBN；`NN_Chapter_N.md` **只有參考文獻列表**，正文在 `NN_Summary_of_Major_Concepts.md`（第 8 章正文＝`14_...`）；表格不在擷取出的 markdown 裡。
+
+**兩條可重用的操作紀律（都是本輪踩到才學到的）**：
+
+1. **repoint 腳本的字串替換必須由長到短排序，並用 regex 邊界。** 新 id 可能把舊 id 當子字串包住——`src.nicol-2022-b` 是新 id `src.nicol-2022-breaststroke-systematic-review` 的前綴，直接 `replace` 造出了 `...reviewreaststroke-systematic-review` 這種爛 id。正確寫法：`re.sub(r'(?<![\w.-])' + re.escape(oid) + r'(?![\w-])', NEW, s)`，並 `sorted(OLD_IDS, key=len, reverse=True)`，每一步 `assert count == n`。
+2. **YAML 的 `>-` folded scalar 內絕不可按固定字元寬度斷行。** 它以空格接合各行，會把英文單字從中間切開（`Met`／`hodology`）。**而且 YAML 照樣 parse 得過，驗證器不會叫**——只能靠寫完回頭看。長 `notes` 一律寫成單行雙引號字串。
+
+**建議下一步**：這條軸的下一族有兩個候選，優先做後者——`_sources.yaml` 還有 **25 筆 `src.pmid-*`**（本輪只解掉 3 筆，是同一種「機器鍵當 id」的反模式）；以及 **`src.the-race-club`（19 條引用，剩下最大的單一模糊登錄）**、`src.usms`（15）／`src.u-s-masters-swimming`（6，疑似重複）、`src.swim-like-a-fish-2025`（4）、`src.race-club-pdm-data`（4）與兩筆複合登錄（`src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2`、`src.bompa-ch5-ch11-mcardle-exercise-physiology-s`）。
+
 ### ✅ **W023 與 W024 雙雙歸零。八章心理草稿的自證來源全部換成真文獻，過程中抓出三十餘筆草稿識別碼錯誤——這才是這條軸的實際產出**
 
 **這條軸做完了。** `Research/心理/01`–`08` 八章逐章審計，把 `_sources.yaml` 裡 `display` 是本專案自己草稿路徑的登錄（W023，自己引自己＝自證，而且那串路徑會原樣印在讀者的「來源」欄）全部換掉，最後兩章（07 心流／08 心理感知生理交互）於本輪收尾。
