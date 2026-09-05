@@ -93,6 +93,9 @@ exit code：
         擋的是「證據標記還在、內容不見了」——刪多行鍵時漏刪續行、或續行
         被下一個鍵吸收（beece5a 一次弄壞 20 條 physical_reason，四個月後
         才被肉眼發現）
+  W022  evidence 的 text 就是它自己的來源顯示字串（「Mason 1992」），等於只
+        宣告「有這篇文獻」而沒說它顯示了什麼。W021 抓不到——text 非空，
+        只是內容為零。
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -1302,6 +1305,43 @@ def check_content_presence(rel: str, data: object, warnings: dict):
         )
 
 
+def _norm_citation(value: object) -> str:
+    """比對用正規化：去掉所有空白與尾端標點，大小寫不敏感。"""
+    return "".join(str(value or "").split()).lower().strip(".,;:")
+
+
+def check_text_is_citation(
+    rel: str, data: object, source_displays: dict, warnings: dict
+):
+    """W022：`text` 的內容就是它自己的來源名稱，等於什麼都沒說。
+
+    `{certainty: 🟡, text: Mason 1992, source: Mason 1992}` 宣告的是「有
+    Mason 1992 這篇」，不是「Mason 1992 顯示了什麼」。證據列的作用是後者——
+    前者 `source_ids` 已經記了。
+
+    W021 抓不到這種：`text` 非空，所以「區塊有內容欄位」成立，只是那個內容
+    的資訊量是零。兩條規則問的是不同問題——W021 問「有沒有欄位」，W022 問
+    「欄位裡是不是只有來源名」。
+    """
+    for loc, eid, block in iter_blocks(data):
+        text = block.get("text")
+        if not isinstance(text, str) or not text.strip():
+            continue
+        candidates = [block.get("source")]
+        candidates += [
+            source_displays.get(sid) for sid in (block.get("source_ids") or [])
+        ]
+        norm_text = _norm_citation(text)
+        for cand in candidates:
+            if cand and norm_text == _norm_citation(cand):
+                warnings["W022"].append(
+                    f"  file={rel} id={eid!r} at={loc} "
+                    f"text 就是來源名稱 {text.strip()!r}"
+                    f"（只說了有這篇，沒說它顯示什麼）"
+                )
+                break
+
+
 def check_public_layer_leak(rel: str, data: object, errors: dict):
     """E010：診斷型鍵名出現在 public 子樹內。
 
@@ -1933,6 +1973,7 @@ def run_validation():
         source_records = load_source_records()
         allowed_source_ids = {s["id"] for s in source_records}
         retracted_ids = retracted_source_ids(source_records)
+        source_displays = {s["id"]: s.get("display") for s in source_records}
     except Exception as e:
         print(f"[ERROR] Cannot load _sources.yaml: {e}")
         sys.exit(1)
@@ -1974,7 +2015,7 @@ def run_validation():
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
-        "W021": []
+        "W021": [], "W022": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2169,6 +2210,7 @@ def run_validation():
         # 診斷層鍵名在 Drills 也可能出現。
         check_practitioner_blocks(rel, data, warnings)
         check_content_presence(rel, data, warnings)
+        check_text_is_citation(rel, data, source_displays, warnings)
         check_public_layer_leak(rel, data, errors)
         check_evidence_from(rel, data, all_id_set, errors)
 
@@ -2317,6 +2359,11 @@ def _write_report(
             "`source_ids` 指向 `retracted` 墓碑"
             "（墓碑仍在 allowed 集合裡，E005 會放行，等於靜默引用一筆"
             "已判定不可引用的來源）",
+        ),
+        "W022": (
+            "WARN",
+            "`text` 的內容就是它自己的來源名稱（「Mason 1992」）——"
+            "只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）",
         ),
         "W001": (
             "WARN",

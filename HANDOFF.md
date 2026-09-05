@@ -6,6 +6,18 @@
 
 ## 當前狀態（2026-09-05，最新）
 
+### 🟡 **W022：evidence 的 `text` 就是它自己的來源名稱。15 筆，全在 `l-indicators.yaml`**
+
+`{certainty: 🟡, text: Mason 1992, source: Mason 1992, source_ids: [src.mason-1992-a]}`——這條宣告的是「有 Mason 1992 這篇」，不是「Mason 1992 顯示了什麼」。前者 `source_ids` 已經記了，證據列的作用是後者。**W021 抓不到**：`text` 非空，所以「區塊有內容欄位」成立，只是那個內容的資訊量是零。兩條規則問的是不同問題——W021 問「有沒有欄位」，W022 問「欄位裡是不是只有來源名」。
+
+15 筆全部集中在 `l-indicators.yaml`，是該檔 `evidence` 欄位的系統性寫法（當成裸來源清單用）：`free.L2.kick`／`free.L4.roll-coupling`／`free.L5.serratus`／`back.L2.up-kick`／`back.L3.pull`／`back.L4.roll-stability`／`back.L5.roll-invariant`／`fly.L2.kick`／`fly.L3.undulation-integration`／`fly.L4.outsweep`／`fly.L5.two-kick-differentiation`（2 筆）／`breast.L4.undulation`／`breast.L5.undulation-stability`（2 筆）。
+
+**不是線上缺陷**：`vortex-levels.html` 根本沒有渲染 `evidence`，這 15 筆讀者看不到（動手前先開了 layout 確認，不是用推的）。
+
+**刻意不批量補**：要寫出「這篇顯示了什麼」得逐篇讀 15 個來源；從來源名稱反推內容正是專案規則點名的幻覺路徑（「人名歸因是高風險幻覺區」）。現在規則會叫，防止這個寫法擴散到別的檔；補內容留成研究工作。
+
+總 WARN 因此從 129 變 **144**。
+
 ### ✅ **一個 URL 替 6 條無關主張背書，順帶查出一個線上的錯誤角度（30–40° → 55–75°）**
 
 `src.the-race-club` 的 display 是「The Race Club」（機構名），identifier 卻是**單篇文章** URL（自由式入水常見錯誤）。它被 9 個區塊引用，其中只有 3 條真的在講入水手型；另外 6 條是海豚踢膝屈曲、滑行減速、水下距離、蛙式髖旋轉、護目鏡換氣指標——**那個 URL 支撐不了任何一條**，但因為登錄看起來「有 identifier」，這 6 條在資料上長得像已查證。機構名 + 單篇 URL 的組合是最糟的：機構名讓它可以被任何主張引用，URL 讓它看起來有出處。
