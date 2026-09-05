@@ -3503,7 +3503,7 @@ themes:
       - "Masters, R. S. W. (1992). Knowledge, knerves and know-how. British Journal of Psychology, 83(3), 343-358."
       - "Masters, R., & Maxwell, J. (2008). The theory of reinvestment. International Review of Sport and Exercise Psychology, 1(2), 160-183."
       - "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure? Journal of Experimental Psychology: General, 130(4), 701-725."
-      source_ids: [src.masters-1992-reinvestment, src.masters-maxwell-2008-reinvestment-theory, src.beilock-carr-2001-choking]
+      source_ids: [src.masters-1992-knowledge-knerves, src.masters-maxwell-2008-reinvestment-theory, src.beilock-carr-2001-fragility]
     diagnostic:
       abc_link: C
       reading_signals:

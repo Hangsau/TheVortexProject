@@ -767,6 +767,71 @@ def check_source_verification_status(records: list[dict], errors: dict):
             )
 
 
+def check_source_id_uniqueness(records: list[dict], errors: dict):
+    """E016：同一個 `src.*` id 在 `_sources.yaml` 登錄超過一次。
+
+    這是資料層的靜默毀損，不是風格問題。`_sources.yaml` 的 `sources` 是
+    **list**，所以兩筆同 id 都存在於檔案裡；但所有下游都用 dict／set 收攏它
+    （`allowed_source_ids`、`source_displays`、`retracted_ids`），後一筆直接
+    蓋掉前一筆。後果是：兩筆有不同 `verification_status` 時，「哪一筆生效」
+    取決於檔案順序——把一筆撤成 `retracted` 卻沒人擋得住引用，因為勝出的是
+    另一筆 `verified`。E005/E015 全程綠燈。列 ERROR 因為沒有任何合法用途：
+    要記錄同一文獻的不同面向就寫同一筆的 notes，不是複製一個 id。
+    """
+    seen = defaultdict(int)
+    for s in records:
+        seen[s["id"]] += 1
+    for sid, n in sorted(seen.items()):
+        if n > 1:
+            errors["E016"].append(
+                f"  source_id={sid!r} 在 _sources.yaml 登錄 {n} 次"
+                f"（下游以 dict 收攏，只有最後一筆生效）"
+            )
+
+
+# 用來判定「同一篇文獻被登錄成多筆」的識別碼欄位。三者任一相同即視為同一篇——
+# 這三個都是全域唯一鍵，不是「相似度」推測。
+_SOURCE_IDENTITY_KEYS = ("pmid", "pmcid", "doi")
+
+
+def check_duplicate_source_registrations(records: list[dict], warnings: dict):
+    """W025：兩筆以上非 `retracted` 登錄共用同一個 PMID／PMCID／DOI。
+
+    E005 只問「這個 id 解析得到嗎」，對「同一篇文獻登錄成三個 id」完全無感——
+    三個 id 都解析得到，三筆都 `verified`，檢查全綠。實際傷害有三層：
+
+    1. **W008 失真**：同一篇拆成三筆，只要有一筆被引用，另兩筆就是孤兒；反過來
+       三筆各被引用一次，看起來是三個獨立證據，其實是同一篇被數了三次。
+    2. **撤稿撤不乾淨**：把其中一筆改 `retracted`，另外兩筆照樣可引用，E015 抓不到。
+    3. **讀者端看到的是三個不同的來源名**（「Sanders 1995」「Sanders et al. 1995」
+       「Sanders, Cappaert & Devlin 1995」），像三篇文獻在支持同一個說法。
+
+    列 WARN 不列 ERROR：合併需要決定保留哪個 id 並改寫所有引用，不是驗證器
+    能自動判的；但它必須可見，否則只能靠肉眼掃 display 才發現——而 display
+    正是三筆長得都不一樣的那個欄位。
+    """
+    live = [
+        s for s in records
+        if s.get("verification_status") != "retracted"
+    ]
+    for key in _SOURCE_IDENTITY_KEYS:
+        buckets = defaultdict(list)
+        for s in live:
+            ident = s.get("identifier")
+            if not isinstance(ident, dict):
+                continue
+            val = ident.get(key)
+            if isinstance(val, str) and val.strip():
+                buckets[val.strip().lower()].append(s["id"])
+        for val, ids in sorted(buckets.items()):
+            uniq = sorted(set(ids))
+            if len(uniq) > 1:
+                warnings["W025"].append(
+                    f"  {key}={val!r} 同時登錄於 {len(uniq)} 筆："
+                    f"{', '.join(repr(i) for i in uniq)}"
+                )
+
+
 # ── 確定性：需要來源的等級 ─────────────────────────────────────────────────────
 
 # green=\U0001F7E2, yellow=\U0001F7E1
@@ -2105,14 +2170,15 @@ def run_validation():
     errors: dict[str, list[str]] = {
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
-        "E011": [], "E012": [], "E013": [], "E014": [], "E015": []
+        "E011": [], "E012": [], "E013": [], "E014": [], "E015": [],
+        "E016": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
         "W006": [], "W007": [], "W008": [], "W009": [], "W010": [],
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
-        "W021": [], "W022": [], "W023": [], "W024": []
+        "W021": [], "W022": [], "W023": [], "W024": [], "W025": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2317,6 +2383,8 @@ def run_validation():
         allowed_source_ids, referenced_source_ids, warnings, retracted_ids
     )
     check_source_verification_status(source_records, errors)
+    check_source_id_uniqueness(source_records, errors)
+    check_duplicate_source_registrations(source_records, warnings)
     check_observation_not_source(source_records, errors)
     check_internal_path_sources(source_records, warnings)
 
@@ -2458,6 +2526,18 @@ def _write_report(
             "`source_ids` 指向 `retracted` 墓碑"
             "（墓碑仍在 allowed 集合裡，E005 會放行，等於靜默引用一筆"
             "已判定不可引用的來源）",
+        ),
+        "E016": (
+            "ERROR",
+            "同一個 `src.*` id 在 `_sources.yaml` 登錄超過一次"
+            "（下游全部以 dict 收攏，後一筆靜默蓋掉前一筆——"
+            "把其中一筆撤成 `retracted` 可能完全不生效）",
+        ),
+        "W025": (
+            "WARN",
+            "同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）"
+            "（E005 對此完全無感：每個 id 都解析得到；後果是同一篇被當成"
+            "多個獨立證據、撤稿撤不乾淨、讀者看到多個不同的來源名）",
         ),
         "W022": (
             "WARN",

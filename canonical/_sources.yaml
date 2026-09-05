@@ -603,7 +603,7 @@ sources:
       ④ 它已非 ANSI 標準，援引時不得以「美國國家標準」的權威層級表述。
 
   - id: src.atkison-2014-a
-    display: "Atkison et al. 2014"
+    display: "Atkison, R. R., Dickey, J. P., Dragunas, A., & Nolte, V. (2014). Importance of sagittal kick symmetry for underwater dolphin kick performance. Human Movement Science, 33, 298–311."
     title: "Importance of sagittal kick symmetry for underwater dolphin kick performance."
     type: journal-article
     verification_status: verified
@@ -616,33 +616,22 @@ sources:
       doi: "10.1016/j.humov.2013.08.013"
     retrieved_on: "2026-07-27"
     et_al: true
-    notes: "疑似與 src.atkison-2014-b、src.atkison-2014-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-b、src.atkison-2014-c 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    notes: "2026-09-06 重複登錄合併：src.atkison-2014-b、src.atkison-2014-c 已確認同篇（同 PMID／DOI）並改掛本 id。"
 
   - id: src.atkison-2014-b
-    display: "Atkison et al. 2014, PubMed 24290609"
+    display: "【重複登錄，已解除】與 src.atkison-2014-a 為同一篇文獻"
     title: "Importance of sagittal kick symmetry for underwater dolphin kick performance."
-    type: journal-article
-    verification_status: verified
-    authors: ["Atkison RR", "Dickey JP", "Dragunas A", "Nolte V"]
-    year: 2014
-    container: "Human movement science"
-    identifier:
-      pmid: "24290609"
-      doi: "10.1016/j.humov.2013.08.013"
-    retrieved_on: "2026-07-27"
-    et_al: true
-    notes: "疑似與 src.atkison-2014-a、src.atkison-2014-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-a、src.atkison-2014-c 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.atkison-2014-a` 指向同一篇文獻（同 PMID 24290609、同 DOI 10.1016/j.humov.2013.08.013）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.atkison-2014-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.atkison-2014-c
-    display: "Atkison et al. 2014, PubMed 24290609; ScienceDirect"
+    display: "【重複登錄，已解除】與 src.atkison-2014-a 為同一篇文獻"
     type: other
-    verification_status: unverified
-    authors: ["Atkison"]
-    et_al: true
-    year: 2014
-    identifier:
-      pmid: "24290609"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.atkison-2014-a、src.atkison-2014-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.atkison-2014-a、src.atkison-2014-b 共用 pmid 24290609，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.atkison-2014-a` 指向同一篇文獻（同 PMID 24290609；顯示字串裡的「ScienceDirect」是取得管道不是第二篇文獻）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.atkison-2014-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.benjanuvatra-2007-a
     display: "Benjanuvatra et al. 2007"
@@ -1098,30 +1087,12 @@ sources:
       **本 id 保持 unverified 且不得再被任何條目引用；成為孤兒來源（W008）是正確結果。**
 
   - id: src.female-athlete-triad-in-swimmers-systematic
-    display: "Buchanan BK, Bergstein VE, Rothschild EF, Coslick A. (2025). The Female Athlete Triad in Swimmers: a Review of Current Literature. J Womens Sports Med 5(1):30-38."
+    display: "【重複登錄，已解除】與 src.buchanan-2025-female-athlete-triad-swimmers 為同一篇文獻"
     title: "The Female Athlete Triad in Swimmers: a Review of Current Literature"
-    type: review
-    verification_status: verified
-    authors: ["Buchanan BK", "Bergstein VE", "Rothschild EF", "Coslick A"]
-    year: 2025
-    container: "Journal of Women's Sports Medicine"
-    identifier:
-      doi: "10.53646/ahq2qs39"
-    url: "https://jwomenssportsmed.org/index.php/jwsm/article/view/68"
-    retrieved_on: "2026-08-18"
-    notes: >-
-      2026-08-18 取回期刊頁面定位成功。原顯示字串只有「JWSM（已驗證，無 PMID 記載）」，
-      沒有作者、年份、卷期——現補齊：**2025 年、第 5 卷第 1 期、30-38 頁、DOI 10.53646/ahq2qs39**。
-      2023-11-08 檢索 PubMed 與 Google Scholar，259 篇中納入 **17 篇**。
-      數字：**約 41% 女性泳者被評估為有三聯症風險**；月經失調最常見（平均約 41%）；
-      **低骨密度近 12%**；**低能量可用性 51%**。
-      **使用邊界**：① 標題自稱「a Review of Current Literature」，
-      期刊頁摘要卻寫 systematic review——**體例自我不一致**，引用時以「文獻回顧」看待較保險；
-      ② **「17 篇／478 人」的對應關係有兩種說法**：檢索結果指出 478 人是
-      **有報告人數的 11 篇**加總，期刊頁摘要則寫成 17 篇 478 人（全文未開啟，未能判定），
-      引用時不應寫死「17 研究 n=478」；
-      ③ **不是 PubMed 收錄期刊**，無 PMID；
-      ④ 各納入研究的三聯症判定標準不一，41% 是彙整值不是合併統計量。
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.buchanan-2025-female-athlete-triad-swimmers` 指向同一篇文獻（同 DOI 10.53646/ahq2qs39。保留的那筆 id 用作者年份、且 notes 已記錄「原題是 a Review of Current Literature、不是 systematic review」——本 id 的 slug 正好把那個誤稱寫死在機器鍵裡）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.buchanan-2025-female-athlete-triad-swimmers`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.fernandes-2024
     display: "Fernandes et al. 2024"
@@ -1513,7 +1484,7 @@ sources:
       ③ 本回顧只談處置，不含流行病學。
 
   - id: src.journal-pone-0241345-a
-    display: "PLOS ONE 2020"
+    display: "van Dijk, M. P., Beek, P. J., & van Soest, A. J. K. (2020). Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers. PLOS ONE, 15(10), e0241345."
     title: "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers"
     type: journal-article
     verification_status: verified
@@ -1524,21 +1495,15 @@ sources:
       doi: "10.1371/journal.pone.0241345"
       url: "https://doi.org/10.1371/journal.pone.0241345"
     retrieved_on: "2026-07-28"
-    notes: "S3c 由 DOI 確認與 src.journal-pone-0241345-b 為同一文獻；暫留穩定 alias，待專門合併批次處理。"
+    notes: "2026-09-06 重複登錄合併：src.journal-pone-0241345-b 已確認同篇並改掛本 id。"
 
   - id: src.journal-pone-0241345-b
-    display: "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020"
+    display: "【重複登錄，已解除】與 src.journal-pone-0241345-a 為同一篇文獻"
     title: "Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers"
-    type: journal-article
-    verification_status: verified
-    authors: ["Marit P. van Dijk", "Peter J. Beek", "A. J. Knoek van Soest"]
-    year: 2020
-    container: "PLOS ONE"
-    identifier:
-      doi: "10.1371/journal.pone.0241345"
-      url: "https://doi.org/10.1371/journal.pone.0241345"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.journal-pone-0241345-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.journal-pone-0241345-a 共用 doi 10.1371/journal.pone.0241345，疑似同一文獻，待 S3c 查證。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.journal-pone-0241345-a` 指向同一篇文獻（同 DOI 10.1371/journal.pone.0241345、同標題）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.journal-pone-0241345-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.kudo-2014
     display: "Kudo et al. 2014"
@@ -1721,7 +1686,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.mccullough-2009-a
-    display: "McCullough 2009"
+    display: "McCullough, A. S., Kraemer, W. J., Volek, J. S., Solomon-Hill, G. F. Jr., Hatfield, D. L., Vingren, J. L., Ho, J. Y., Fragala, M. S., Thomas, G. A., Häkkinen, K., & Maresh, C. M. (2009). Factors affecting flutter kicking speed in women who are competitive and recreational swimmers. Journal of Strength and Conditioning Research, 23(7), 2130–2136."
     title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
     type: journal-article
     verification_status: verified
@@ -1733,39 +1698,23 @@ sources:
       doi: "10.1519/JSC.0b013e31819ab977"
       url: "https://pubmed.ncbi.nlm.nih.gov/19855342/"
     retrieved_on: "2026-07-28"
-    notes: "S3c 由正文踝蹠屈／踢水速度脈絡確認為 src.mccullough-a 同篇穩定 alias；研究只支持相關性，不是柔軟度訓練介入試驗。"
+    notes: "2026-09-06 重複登錄合併：src.mccullough-2009-b、src.mccullough-a 已確認同篇並改掛本 id。"
 
   - id: src.mccullough-2009-b
-    display: "McCullough et al. 2009"
+    display: "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻"
     title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
-    type: journal-article
-    verification_status: verified
-    authors: ["McCullough AS", "Kraemer WJ", "Volek JS", "Solomon-Hill GF Jr", "Hatfield DL", "Vingren JL", "Ho JY", "Fragala MS", "Thomas GA", "Häkkinen K", "Maresh CM"]
-    et_al: true
-    year: 2009
-    container: "Journal of strength and conditioning research"
-    identifier:
-      pmid: "19855342"
-      doi: "10.1519/JSC.0b013e31819ab977"
-      url: "https://pubmed.ncbi.nlm.nih.gov/19855342/"
-    retrieved_on: "2026-07-28"
-    notes: "S3c 由正文踝蹠屈／踢水速度脈絡確認為 src.mccullough-a 同篇穩定 alias；原字串以 et al. 略記。研究只支持相關性，不是柔軟度訓練介入試驗。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.mccullough-2009-a` 指向同一篇文獻（同 PMID 19855342、同 DOI 10.1519/JSC.0b013e31819ab977）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.mccullough-2009-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.mccullough-a
-    display: "McCullough et al. (2009/2010), J. Strength & Conditioning Research"
+    display: "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻"
     title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
-    type: journal-article
-    verification_status: verified
-    authors: ["McCullough AS", "Kraemer WJ", "Volek JS", "Solomon-Hill GF Jr", "Hatfield DL", "Vingren JL", "Ho JY", "Fragala MS", "Thomas GA", "Häkkinen K", "Maresh CM"]
-    year: 2009
-    container: "Journal of strength and conditioning research"
-    identifier:
-      pmid: "19855342"
-      doi: "10.1519/JSC.0b013e31819ab977"
-      url: "https://pubmed.ncbi.nlm.nih.gov/19855342/"
-    retrieved_on: "2026-07-28"
-    et_al: true
-    notes: "原字串以 et al. 略記且年份含糊。S3c 確認原掛 PMID 19387413 為無關跑鞋研究，已改為 McCullough et al. 2009 的 PMID 19855342／DOI 10.1519/JSC.0b013e31819ab977；同 base 的 b/c/d 尚待各自重建。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.mccullough-2009-a` 指向同一篇文獻（同 PMID 19855342、同 DOI。原顯示字串寫「(2009/2010)」兩個年份，實際出版年是 2009）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.mccullough-2009-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.mccullough-b
     display: "McCullough et al. 2009/2010"
@@ -2256,22 +2205,15 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc11297363-a
-    display: "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)"
+    display: "【重複登錄，已解除】與 src.pmc11297363-b 為同一篇文獻"
     title: "Shoulder Pain in Competitive Swimmers: A Multi-Site Survey Study."
-    type: journal-article
-    verification_status: verified
-    authors: ["Stirling BD", "Sum JC", "Baek L", "Michener LA", "Barrack AJ", "Tate AR"]
-    year: 2024
-    container: "International journal of sports physical therapy"
-    identifier:
-      pmcid: "PMC11297363"
-      pmid: "39100936"
-      doi: "10.26603/001c.121114"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc11297363-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc11297363-b 共用 pmcid PMC11297363，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc11297363-b` 指向同一篇文獻（同 PMID 39100936、同 PMC11297363、同 DOI 10.26603/001c.121114）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc11297363-b`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc11297363-b
-    display: "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)"
+    display: "Stirling, B. D., Sum, J. C., Baek, L., Michener, L. A., Barrack, A. J., & Tate, A. R. (2024). Shoulder pain in competitive swimmers: a multi-site survey study. International Journal of Sports Physical Therapy, 19(8), 965–975."
     title: "Shoulder Pain in Competitive Swimmers: A Multi-Site Survey Study."
     type: journal-article
     verification_status: verified
@@ -2283,7 +2225,7 @@ sources:
       pmcid: "PMC11297363"
       doi: "10.26603/001c.121114"
     retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc11297363-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc11297363-a 共用 pmcid PMC11297363，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 重複登錄合併：src.pmc11297363-a 已確認同篇並改掛本 id。"
 
   - id: src.pmc11424229
     display: "Garg, D., & Daigavane, S. (2024). A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies. Cureus, 16(8), e67803."
@@ -2660,23 +2602,15 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc6409673-a
-    display: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673"
+    display: "【重複登錄，已解除】與 src.pmc6409673-b 為同一篇文獻"
     title: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques."
-    type: journal-article
-    verification_status: verified
-    authors: ["Weimar W", "Sumner A", "Romer B", "Fox J", "Rehm J", "Decoux B", "Patel J"]
-    year: 2019
-    container: "Sports (Basel, Switzerland)"
-    identifier:
-      pmcid: "PMC6409673"
-      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/"
-      pmid: "30696072"
-      doi: "10.3390/sports7020032"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc6409673-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc6409673-b 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。 S3a-2 補記：疑似與 src.pmc6409673-c（S3a-2 新增，共用 pmcid PMC6409673）、src.pmc6409673-c（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc6409673-b` 指向同一篇文獻（同 PMID 30696072、同 PMC6409673、同 DOI 10.3390/sports7020032）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc6409673-b`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc6409673-b
-    display: "PMC6409673"
+    display: "Weimar, W., Sumner, A., Romer, B., Fox, J., Rehm, J., Decoux, B., & Patel, J. (2019). Kinetic analysis of swimming flip-turn push-off techniques. Sports, 7(2), 32."
     title: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques."
     type: journal-article
     verification_status: verified
@@ -2689,22 +2623,15 @@ sources:
       pmid: "30696072"
       doi: "10.3390/sports7020032"
     retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc6409673-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc6409673-a 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。 S3a-2 補記：疑似與 src.pmc6409673-c（S3a-2 新增，共用 pmcid PMC6409673）、src.pmc6409673-c（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
+    notes: "2026-09-06 重複登錄合併：src.pmc6409673-a、src.pmc6409673-c 已確認同篇並改掛本 id。"
 
   - id: src.pmc6409673-c
-    display: "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)"
+    display: "【重複登錄，已解除】與 src.pmc6409673-b 為同一篇文獻"
     title: "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques."
-    type: journal-article
-    verification_status: verified
-    authors: ["Weimar W", "Sumner A", "Romer B", "Fox J", "Rehm J", "Decoux B", "Patel J"]
-    year: 2019
-    container: "Sports (Basel, Switzerland)"
-    identifier:
-      pmcid: "PMC6409673"
-      pmid: "30696072"
-      doi: "10.3390/sports7020032"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc6409673-a、src.pmc6409673-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc6409673-a、src.pmc6409673-b 共用 pmcid PMC6409673，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc6409673-b` 指向同一篇文獻（同 PMID 30696072、同 PMC6409673、同 DOI。原顯示字串標「(已驗證 URL)」——只驗過連結會通，沒驗書目）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc6409673-b`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc6464216
     display: "Japanese university female swimmers, PMID 30986226 / PMC6464216 (已驗證)"
@@ -2982,7 +2909,7 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc8442910-a
-    display: "Frontiers in Physiology 2021"
+    display: "Pla, R., Poszalczyk, G., Souaissia, C., Joulia, F., & Guimard, A. (2021). Underwater and surface swimming parameters reflect performance level in elite swimmers. Frontiers in Physiology, 12, 712652."
     title: "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers."
     type: journal-article
     verification_status: verified
@@ -2995,22 +2922,15 @@ sources:
       pmid: "34539436"
       doi: "10.3389/fphys.2021.712652"
     retrieved_on: "2026-07-28"
-    notes: "S3c 由 PMCID 確認與 src.pmc8442910-b 為同一文獻；暫留穩定 alias，待專門合併批次處理。"
+    notes: "2026-09-06 重複登錄合併：src.pmc8442910-b 已確認同篇並改掛本 id。"
 
   - id: src.pmc8442910-b
-    display: "Frontiers in Physiology 2021, PMC8442910"
+    display: "【重複登錄，已解除】與 src.pmc8442910-a 為同一篇文獻"
     title: "Underwater and Surface Swimming Parameters Reflect Performance Level in Elite Swimmers."
-    type: journal-article
-    verification_status: verified
-    authors: ["Pla R", "Poszalczyk G", "Souaissia C", "Joulia F", "Guimard A"]
-    year: 2021
-    container: "Frontiers in physiology"
-    identifier:
-      pmcid: "PMC8442910"
-      pmid: "34539436"
-      doi: "10.3389/fphys.2021.712652"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc8442910-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8442910-a 共用 pmcid PMC8442910，疑似同一文獻，待 S3c 查證。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc8442910-a` 指向同一篇文獻（同 PMID 34539436、同 PMC8442910、同 DOI 10.3389/fphys.2021.712652）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc8442910-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc8607769
     display: "PMC8607769（Sprint Interval Swim Training Set 與 100m 自由式關聯，血乳酸+運動學）；另見 PMC10747448（訓練組順序對乳酸反應）"
@@ -3076,19 +2996,12 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc8960438-b、src.pmc8960438-c、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-b、src.pmc8960438-c、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。"
 
   - id: src.pmc8960438-b
-    display: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438"
+    display: "【重複登錄，已解除】與 src.pmc8960438-d 為同一篇文獻"
     title: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques in Age-Group Swimmers."
-    type: journal-article
-    verification_status: verified
-    authors: ["Chainok P", "de Jesus K", "Mourão L", "Fonseca PFP", "Zacca R", "Fernandes RJ", "Vilas-Boas JP"]
-    year: 2022
-    container: "Frontiers in sports and active living"
-    identifier:
-      pmcid: "PMC8960438"
-      pmid: "35359502"
-      doi: "10.3389/fspor.2022.802967"
-    retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc8960438-a、src.pmc8960438-c、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-c、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc8960438-d` 指向同一篇文獻（同 PMID 35359502、同 PMC8960438、同 DOI 10.3389/fspor.2022.802967）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc8960438-d`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc8960438-c
     display: "Journal of Applied Biomechanics 1998; PMC8960438"
@@ -3100,7 +3013,7 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-d 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。"
 
   - id: src.pmc8960438-d
-    display: "PMC8960438"
+    display: "Chainok, P., de Jesus, K., Mourão, L., Fonseca, P. F. P., Zacca, R., Fernandes, R. J., & Vilas-Boas, J. P. (2022). Biomechanical features of backstroke to breaststroke transition techniques in age-group swimmers. Frontiers in Sports and Active Living, 4, 802967."
     title: "Biomechanical Features of Backstroke to Breaststroke Transition Techniques in Age-Group Swimmers."
     type: journal-article
     verification_status: verified
@@ -3113,7 +3026,7 @@ sources:
       pmid: "35359502"
       doi: "10.3389/fspor.2022.802967"
     retrieved_on: "2026-07-27"
-    notes: "疑似與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.pmc8960438-a、src.pmc8960438-b、src.pmc8960438-c 共用 pmcid PMC8960438，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
+    notes: "2026-09-06 重複登錄合併：src.pmc8960438-b 已確認同篇並改掛本 id。src.pmc8960438-a／-c 不併——它們掛的是 1998 年 Journal of Applied Biomechanics 的另一篇，只是被誤填了本篇的 PMCID，另案處理。"
 
   - id: src.pmc9057286
     display: "Point prevalence skin cancers Australian surfers/swimmers, PMC9057286 (已驗證)"
@@ -3164,19 +3077,13 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.pmc9424421-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 與 src.pmc9424421-a 共用 pmcid PMC9424421，疑似同一文獻，待 S3c 查證。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc9445308
-    display: "PMC9445308 Frontiers 2022"
+    display: "【重複登錄，已解除】與 src.mccabe-2022 為同一篇文獻"
     title: "The characteristics of the breaststroke pullout in elite swimming."
-    type: journal-article
-    verification_status: verified
-    authors: ["McCabe C", "Mosscrop E", "Hodierne R", "Tor E"]
-    year: 2022
-    container: "Frontiers in sports and active living"
-    identifier:
-      pmcid: "PMC9445308"
-      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/"
-      pmid: "36081618"
-      doi: "10.3389/fspor.2022.963578"
-    retrieved_on: "2026-07-27"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.mccabe-2022` 指向同一篇文獻（同 PMID 36081618、同 PMC9445308、同 DOI 10.3389/fspor.2022.963578）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.mccabe-2022`，本 id 保留為墓碑、不得再使用。"
+
   - id: src.pmc9658102
     display: "Menstrual dysfunction in swimmers, PMID 36361122 / PMC9658102 (已驗證)"
     title: "The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review."
@@ -3400,18 +3307,12 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmid-32119507
-    display: "Bart, R. M., Murray, B. P., & Lau, H. (2026). Shallow water blackout. In StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing."
+    display: "【重複登錄，已解除】與 src.statpearls-shallow-water-blackout-nbk554620 為同一篇文獻"
     title: "Shallow Water Blackout"
-    type: reference-entry
-    verification_status: verified
-    authors: ["Bart RM", "Murray BP", "Lau H"]
-    year: 2026
-    container: "StatPearls [Internet]"
-    identifier:
-      pmid: "32119507"
-      url: "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
+    type: other
+    verification_status: retracted
     retrieved_on: "2026-09-06"
-    notes: "2026-09-06 從複合鍵拆出，本鍵只保留 StatPearls 這一篇（NCBI Bookshelf NBK554620，條目持續更新，本次取到的版本標 2026 Jan）。原複合字串另含 MMWR 與三方聯合聲明，各自改指 src.mmwr-2015-dubb-new-york、src.hypoxic-blackout-joint-statement。本條目本身即記載紅十字會、YMCA 與 USA Swimming 把此症正名為 hypoxic blackout，並指出『shallow water blackout』一詞誤導——水深不是機轉的一部分。"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.statpearls-shallow-water-blackout-nbk554620` 指向同一篇文獻（同 PMID 32119507、同一章 StatPearls（NCBI Bookshelf NBK554620）。保留的 id 用 Bookshelf 編號：StatPearls 是持續改版的參考書章，用 PMID 當 id 會讓人以為是一篇有固定版本的期刊論文）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.statpearls-shallow-water-blackout-nbk554620`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.mmwr-2015-dubb-new-york
     display: "Boyd, C., Levy, A., McProud, T., Huang, L., Raneses, E., & Olson, C. (2015). Fatal and nonfatal drowning outcomes related to dangerous underwater breath-holding behaviors — New York State, 1988–2011. Morbidity and Mortality Weekly Report, 64(19), 518–521."
@@ -4298,7 +4199,7 @@ sources:
     notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在。**原顯示標題有誤**：實際章名為單數 Salter-Harris Fracture，已更正並補作者。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.sanders-1995-a
-    display: "Sanders 1995"
+    display: "Sanders, R. H., Cappaert, J. M., & Devlin, R. K. (1995). Wave characteristics of butterfly swimming. Journal of Biomechanics, 28(1), 9–16."
     title: "Wave characteristics of butterfly swimming"
     type: journal-article
     verification_status: verified
@@ -4309,50 +4210,31 @@ sources:
       doi: "10.1016/0021-9290(95)80002-6"
       url: "https://doi.org/10.1016/0021-9290(95)80002-6"
     retrieved_on: "2026-07-28"
-    notes: "S3c 由正文蝶式波動整合脈絡確認與 src.sanders-1995-c/d 同篇；暫留穩定 alias。"
+    notes: "2026-09-06 重複登錄合併：src.sanders-1995-b／-c／-d 已確認同篇並改掛本 id。"
 
   - id: src.sanders-1995-b
-    display: "Sanders et al. 1995"
+    display: "【重複登錄，已解除】與 src.sanders-1995-a 為同一篇文獻"
     title: "Wave characteristics of butterfly swimming"
-    type: journal-article
-    verification_status: verified
-    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
-    et_al: true
-    year: 1995
-    container: "Journal of Biomechanics"
-    identifier:
-      doi: "10.1016/0021-9290(95)80002-6"
-      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
-    retrieved_on: "2026-07-28"
-    notes: "S3c 由正文 H1 諧波分析脈絡確認與 src.sanders-1995-c/d 同篇；原字串以 et al. 略記，暫留穩定 alias。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.sanders-1995-a` 指向同一篇文獻（同 DOI 10.1016/0021-9290(95)80002-6、同標題）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.sanders-1995-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.sanders-1995-c
-    display: "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech"
+    display: "【重複登錄，已解除】與 src.sanders-1995-a 為同一篇文獻"
     title: "Wave characteristics of butterfly swimming"
-    type: journal-article
-    verification_status: verified
-    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
-    year: 1995
-    container: "Journal of Biomechanics"
-    identifier:
-      doi: "10.1016/0021-9290(95)80002-6"
-      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
-    retrieved_on: "2026-07-28"
-    notes: "S3c 確認原 display 的 J Appl Biomech 期刊名誤植；實為 Journal of Biomechanics。與 src.sanders-1995-d 確認同篇；a/b 尚待判讀。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.sanders-1995-a` 指向同一篇文獻（同 DOI、同標題。原顯示字串寫「Biomechanics of butterfly. J Appl Biomech」，題名與刊名都不是原文——該 DOI 屬 Journal of Biomechanics，原題為 Wave characteristics of butterfly swimming）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.sanders-1995-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.sanders-1995-d
-    display: "Sanders, Cappaert & Devlin 1995"
+    display: "【重複登錄，已解除】與 src.sanders-1995-a 為同一篇文獻"
     title: "Wave characteristics of butterfly swimming"
-    type: journal-article
-    verification_status: verified
-    authors: ["Ross H. Sanders", "Jane M. Cappaert", "Roni K. Devlin"]
-    year: 1995
-    container: "Journal of Biomechanics"
-    identifier:
-      doi: "10.1016/0021-9290(95)80002-6"
-      url: "https://doi.org/10.1016/0021-9290(95)80002-6"
-    retrieved_on: "2026-07-28"
-    notes: "S3c 確認與 src.sanders-1995-c 為同一文獻；暫留穩定 alias，待專門合併批次處理。a/b 尚待判讀。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.sanders-1995-a` 指向同一篇文獻（同 DOI、同標題）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.sanders-1995-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.sanders-1998
     display: "Sanders 1998"
@@ -5527,7 +5409,7 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.welcher-2008-a
-    display: "Welcher et al. 2008"
+    display: "Welcher, R. L., Hinrichs, R. N., & George, T. R. (2008). Front- or rear-weighted track start or grab start: which is the best for female swimmers? Sports Biomechanics, 7(1), 100–113."
     title: "Front- or rear-weighted track start or grab start: Which is the best for female swimmers?"
     type: journal-article
     verification_status: verified
@@ -5539,21 +5421,15 @@ sources:
       doi: "10.1080/14763140701683247"
       url: "https://doi.org/10.1080/14763140701683247"
     retrieved_on: "2026-07-28"
-    notes: "S3c 由正文後重心起跳脈絡確認與 src.welcher-2008-b 同篇；原字串以 et al. 略記，暫留穩定 alias。"
+    notes: "2026-09-06 重複登錄合併：src.welcher-2008-b 已確認同篇並改掛本 id。"
 
   - id: src.welcher-2008-b
-    display: "Welcher, Hinrichs & George 2008"
+    display: "【重複登錄，已解除】與 src.welcher-2008-a 為同一篇文獻"
     title: "Front- or rear-weighted track start or grab start: Which is the best for female swimmers?"
-    type: journal-article
-    verification_status: verified
-    authors: ["Robert L. Welcher", "Richard N. Hinrichs", "Thomas R. George"]
-    year: 2008
-    container: "Sports Biomechanics"
-    identifier:
-      doi: "10.1080/14763140701683247"
-      url: "https://doi.org/10.1080/14763140701683247"
-    retrieved_on: "2026-07-28"
-    notes: "S3c 由完整作者、年份、正文 20 名女子選手脈絡與 Crossref 題名交叉確認；src.welcher-2008-a 尚待判讀。"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.welcher-2008-a` 指向同一篇文獻（同 DOI 10.1080/14763140701683247、同標題）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.welcher-2008-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.who-2024-12-13-drowning-deaths-decline-globa-2024
     display: "World Health Organization. (2024-12-13). Drowning deaths decline globally, but the most vulnerable remain at risk [news release]. Accompanying the Global status report on drowning prevention 2024."
@@ -6193,20 +6069,24 @@ sources:
       非大學競技族群外推。
 
   - id: src.mccabe-2022
-    display: "McCabe et al. (2022). Breaststroke underwater pullout analysis of elite swimmers. Front Sports Act Living."
+    display: "McCabe, C., Mosscrop, E., Hodierne, R., & Tor, E. (2022). The characteristics of the breaststroke pullout in elite swimming. Frontiers in Sports and Active Living, 4, 963578."
+    title: "The characteristics of the breaststroke pullout in elite swimming."
     type: journal-article
-    verification_status: unverified
-    authors: ["McCabe"]
+    verification_status: verified
+    authors: ["McCabe C", "Mosscrop E", "Hodierne R", "Tor E"]
     year: 2022
     container: "Frontiers in Sports and Active Living"
     identifier:
       pmid: "36081618"
       pmcid: "PMC9445308"
       doi: "10.3389/fspor.2022.963578"
-    retrieved_on: "2026-09-02"
+    retrieved_on: "2026-09-06"
     notes: >-
-      Step 17b 為 BR-35 裁決登錄。識別碼於蒐證階段實際解析取得，標題與完整
-      作者清單未逐字轉錄，故標 unverified，title 留空不猜。
+      2026-09-06 PubMed esummary 核對 PMID 36081618：標題與四位作者逐字補齊，
+      verification_status 由 unverified 升為 verified。原登錄的 display 把主題改寫句
+      「Breaststroke underwater pullout analysis of elite swimmers」當成篇名擺著，
+      那不是原題——原題是 The characteristics of the breaststroke pullout in elite swimming。
+      同時併入 src.pmc9445308（同 PMID／PMC／DOI 的重複登錄）。
       內容：60 名菁英泳者、150 筆世界大賽／奧運比賽影像；研究對象是蛙式水下
       pullout。propulsive kick 定義為雙腳第一次後移至「雙腳靠攏、結束向內側
       移動」，第三段 glide 自雙腳併攏開始。
@@ -7393,7 +7273,7 @@ sources:
       滾球是靜態站姿的精細上肢投擲，沒有全身協調與水中感知通道。
 
   - id: src.masters-1992-knowledge-knerves
-    display: "Masters, R. S. W. (1992). Knowledge, knerves and know-how: The role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure."
+    display: "Masters, R. S. W. (1992). Knowledge, knerves and know-how: the role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure. British Journal of Psychology, 83(3), 343–358."
     type: journal_article
     verification_status: verified
     year: 1992
@@ -7427,7 +7307,8 @@ sources:
       無期刊 DOI，本庫不另登錄。
 
   - id: src.masters-maxwell-2008-reinvestment-theory
-    display: "Masters, R., & Maxwell, J. (2008). The theory of reinvestment."
+    display: "Masters, R., & Maxwell, J. (2008). The theory of reinvestment. International Review of Sport and Exercise Psychology, 1(2), 160–183."
+    title: "The theory of reinvestment"
     type: journal_article
     verification_status: verified
     year: 2008
@@ -7440,9 +7321,14 @@ sources:
       2026-09-05 Crossref 核對：1(2):160-183。再投資理論的整合綜述，
       確立「再投資既是壓力反應也是穩定人格傾向」，並分出動作再投資與決策再投資。
       本身是綜述不是實驗，引用它談機制可以，引用它當某項效果的實證來源不行。
+      確認是 IRSEP 期刊綜述而非書章（草稿 v1 曾誤植為 Hirsch 主編書中的一章，草稿自己已更正）。
+      本庫取用還包括：「去再投資」只適用於已建立足夠隱性程序知識的學習者這條邊界。
+      2026-09-06 併入同 id 的第二筆登錄——這個 id 在 `_sources.yaml` 被寫了兩次，
+      兩筆內容幾乎相同、只有 notes 不同。下游全部以 dict 收攏來源，
+      後一筆會靜默蓋掉前一筆，等於有一筆完全不生效卻無人察覺；驗證器新增 E016 擋這件事。
 
   - id: src.beilock-carr-2001-fragility
-    display: "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure?"
+    display: "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: what governs choking under pressure? Journal of Experimental Psychology: General, 130(4), 701–725."
     type: journal_article
     verification_status: verified
     year: 2001
@@ -8583,51 +8469,19 @@ sources:
       注意：草稿把這筆記成「Gonzalez-García et al.」，作者群並非如此，以 PMC9895101 的實際署名為準。
 
   - id: src.masters-1992-reinvestment
-    display: "Masters, R. S. W. (1992). Knowledge, knerves and know-how: The role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure."
-    type: journal_article
-    verification_status: verified
-    year: 1992
-    authors: ["Masters RSW"]
-    container: "British Journal of Psychology"
-    identifier:
-      doi: 10.1111/j.2044-8295.1992.tb02446.x
-    retrieved_on: '2026-09-05'
-    notes: >-
-      2026-09-05 Crossref 核對：83(3):343-358。
-      本庫取用：壓力下重新叫回顯性規則知識會打斷已自動化的動作程序，
-      以及高／低再投資傾向的個體差異。原始實驗是高爾夫推桿，非游泳。
+    display: "【重複登錄，已解除】與 src.masters-1992-knowledge-knerves 為同一篇文獻"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.masters-1992-knowledge-knerves` 指向同一篇文獻（同 DOI 10.1111/j.2044-8295.1992.tb02446.x、顯示字串逐字相同。保留的 id 取自原題（Knowledge, knerves and know-how），本 id 取自概念名）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.masters-1992-knowledge-knerves`，本 id 保留為墓碑、不得再使用。"
 
-  - id: src.masters-maxwell-2008-reinvestment-theory
-    display: "Masters, R., & Maxwell, J. (2008). The theory of reinvestment."
-    type: journal_article
-    verification_status: verified
-    year: 2008
-    authors: ["Masters R", "Maxwell J"]
-    container: "International Review of Sport and Exercise Psychology"
-    identifier:
-      doi: 10.1080/17509840802287218
-    retrieved_on: '2026-09-05'
-    notes: >-
-      2026-09-05 Crossref 核對：1(2):160-183，確認是 IRSEP 期刊綜述而非書章
-      （草稿 v1 曾誤植為 Hirsch 主編書中的一章，草稿自己已更正，本筆再確認一次）。
-      本庫取用：再投資是意識監控干擾自動化動作的核心機制，
-      以及「去再投資」只適用於已建立足夠隱性程序知識的學習者這條邊界。
 
   - id: src.beilock-carr-2001-choking
-    display: "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure?"
-    type: journal_article
-    verification_status: verified
-    year: 2001
-    authors: ["Beilock SL", "Carr TH"]
-    container: "Journal of Experimental Psychology: General"
-    identifier:
-      doi: 10.1037/0096-3445.130.4.701
-    retrieved_on: '2026-09-05'
-    notes: >-
-      2026-09-05 Crossref 核對：130(4):701-725。
-      本庫取用「明確監控假說」的關鍵不對稱：要求監控動作細節會讓高技能者變差、低技能者不受害甚至受益。
-      這是 canonical 主張「賽前動作清單指令對進階泳者有害、對初學者無害」的證據依據。
-      原始實驗是高爾夫推桿，游泳專屬驗證缺失。
+    display: "【重複登錄，已解除】與 src.beilock-carr-2001-fragility 為同一篇文獻"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：本 id 與 `src.beilock-carr-2001-fragility` 指向同一篇文獻（同 DOI 10.1037/0096-3445.130.4.701、顯示字串逐字相同）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.beilock-carr-2001-fragility`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.liao-masters-2001-analogy-learning
     display: "Liao, C.-M., & Masters, R. S. W. (2001). Analogy learning: A means to implicit motor learning."

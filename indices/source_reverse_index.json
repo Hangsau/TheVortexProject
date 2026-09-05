@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 744,
+  "source_count": 743,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -248,14 +248,14 @@
     },
     {
       "id": "src.atkison-2014-a",
-      "display": "Atkison et al. 2014",
+      "display": "Atkison, R. R., Dickey, J. P., Dragunas, A., & Nolte, V. (2014). Importance of sagittal kick symmetry for underwater dolphin kick performance. Human Movement Science, 33, 298–311.",
       "verification_status": "verified",
       "identifier": {
         "pmid": "24290609",
         "url": "https://pubmed.ncbi.nlm.nih.gov/24290609/",
         "doi": "10.1016/j.humov.2013.08.013"
       },
-      "usage_count": 2,
+      "usage_count": 6,
       "usages": [
         {
           "id": "udk.err3",
@@ -266,19 +266,7 @@
           "id": "udk.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[77].public.physical_reason"
-        }
-      ]
-    },
-    {
-      "id": "src.atkison-2014-b",
-      "display": "Atkison et al. 2014, PubMed 24290609",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "24290609",
-        "doi": "10.1016/j.humov.2013.08.013"
-      },
-      "usage_count": 2,
-      "usages": [
+        },
         {
           "id": "udk.tech.10",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -288,18 +276,7 @@
           "id": "udk.tech.10",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[146].public.mechanism"
-        }
-      ]
-    },
-    {
-      "id": "src.atkison-2014-c",
-      "display": "Atkison et al. 2014, PubMed 24290609; ScienceDirect",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmid": "24290609"
-      },
-      "usage_count": 2,
-      "usages": [
+        },
         {
           "id": "udk.tech.12",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -311,6 +288,22 @@
           "path": "points[148].public.mechanism"
         }
       ]
+    },
+    {
+      "id": "src.atkison-2014-b",
+      "display": "【重複登錄，已解除】與 src.atkison-2014-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.atkison-2014-c",
+      "display": "【重複登錄，已解除】與 src.atkison-2014-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.au-natural-therapies-buteyko-2024",
@@ -444,33 +437,30 @@
     },
     {
       "id": "src.beilock-carr-2001-choking",
-      "display": "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure?",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1037/0096-3445.130.4.701"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.flow.reinvestment",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[7].concepts[4].public"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.beilock-carr-2001-fragility 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.beilock-carr-2001-fragility",
-      "display": "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: What governs choking under pressure?",
+      "display": "Beilock, S. L., & Carr, T. H. (2001). On the fragility of skilled performance: what governs choking under pressure? Journal of Experimental Psychology: General, 130(4), 701–725.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1037/0096-3445.130.4.701"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.arousal.explicit_monitoring",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[6].concepts[4].public"
+        },
+        {
+          "id": "psych.flow.reinvestment",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[4].public"
         }
       ]
     },
@@ -906,8 +896,13 @@
         "doi": "10.53646/ahq2qs39",
         "url": "https://jwomenssportsmed.org/index.php/jwsm/article/view/68"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "female-athlete-triad",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[31].epidemiology"
+        },
         {
           "id": "female-athlete-triad",
           "file": "canonical/health/injuries.yaml",
@@ -2067,19 +2062,11 @@
     },
     {
       "id": "src.female-athlete-triad-in-swimmers-systematic",
-      "display": "Buchanan BK, Bergstein VE, Rothschild EF, Coslick A. (2025). The Female Athlete Triad in Swimmers: a Review of Current Literature. J Womens Sports Med 5(1):30-38.",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.53646/ahq2qs39"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "female-athlete-triad",
-          "file": "canonical/health/injuries.yaml",
-          "path": "injuries[31].epidemiology"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.buchanan-2025-female-athlete-triad-swimmers 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.fernandes-2024",
@@ -3741,14 +3728,19 @@
     },
     {
       "id": "src.journal-pone-0241345-a",
-      "display": "PLOS ONE 2020",
+      "display": "van Dijk, M. P., Beek, P. J., & van Soest, A. J. K. (2020). Predicting dive start performance from kinematic variables at water entry in (sub-)elite swimmers. PLOS ONE, 15(10), e0241345.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1371/journal.pone.0241345",
         "url": "https://doi.org/10.1371/journal.pone.0241345"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "starts-turns.err3",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[90].public.evidence[0]"
+        },
         {
           "id": "starts-turns.tech.12",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -3763,20 +3755,11 @@
     },
     {
       "id": "src.journal-pone-0241345-b",
-      "display": "Predicting dive start performance from kinematic variables at water entry, PLOS ONE 2020",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1371/journal.pone.0241345",
-        "url": "https://doi.org/10.1371/journal.pone.0241345"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err3",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[90].public.evidence[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.journal-pone-0241345-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.kadi-2024",
@@ -4693,70 +4676,36 @@
     },
     {
       "id": "src.masters-1992-knowledge-knerves",
-      "display": "Masters, R. S. W. (1992). Knowledge, knerves and know-how: The role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure.",
+      "display": "Masters, R. S. W. (1992). Knowledge, knerves and know-how: the role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure. British Journal of Psychology, 83(3), 343–358.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1111/j.2044-8295.1992.tb02446.x"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.arousal.reinvestment",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[6].concepts[3].public"
+        },
+        {
+          "id": "psych.flow.reinvestment",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[4].public"
         }
       ]
     },
     {
       "id": "src.masters-1992-reinvestment",
-      "display": "Masters, R. S. W. (1992). Knowledge, knerves and know-how: The role of explicit versus implicit knowledge in the breakdown of a complex motor skill under pressure.",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1111/j.2044-8295.1992.tb02446.x"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "psych.flow.reinvestment",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[7].concepts[4].public"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.masters-1992-knowledge-knerves 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.masters-maxwell-2008-reinvestment-theory",
-      "display": "Masters, R., & Maxwell, J. (2008). The theory of reinvestment.",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1080/17509840802287218"
-      },
-      "usage_count": 4,
-      "usages": [
-        {
-          "id": "psych.arousal.implicit_learning",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[6].concepts[7].public"
-        },
-        {
-          "id": "psych.arousal.reinvestment",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[6].concepts[3].public"
-        },
-        {
-          "id": "psych.flow.de_reinvestment",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[7].concepts[5].public"
-        },
-        {
-          "id": "psych.flow.reinvestment",
-          "file": "canonical/psychology/psychology.yaml",
-          "path": "themes[7].concepts[4].public"
-        }
-      ]
-    },
-    {
-      "id": "src.masters-maxwell-2008-reinvestment-theory",
-      "display": "Masters, R., & Maxwell, J. (2008). The theory of reinvestment.",
+      "display": "Masters, R., & Maxwell, J. (2008). The theory of reinvestment. International Review of Sport and Exercise Psychology, 1(2), 160–183.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1080/17509840802287218"
@@ -4851,33 +4800,58 @@
     },
     {
       "id": "src.mccabe-2022",
-      "display": "McCabe et al. (2022). Breaststroke underwater pullout analysis of elite swimmers. Front Sports Act Living.",
-      "verification_status": "unverified",
+      "display": "McCabe, C., Mosscrop, E., Hodierne, R., & Tor, E. (2022). The characteristics of the breaststroke pullout in elite swimming. Frontiers in Sports and Active Living, 4, 963578.",
+      "verification_status": "verified",
       "identifier": {
         "pmid": "36081618",
         "pmcid": "PMC9445308",
         "doi": "10.3389/fspor.2022.963578"
       },
-      "usage_count": 1,
+      "usage_count": 4,
       "usages": [
         {
           "id": "movement.demand.breast.glide.plantarflexed-streamline-finish",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[6]"
+        },
+        {
+          "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[51]"
+        },
+        {
+          "id": "starts-turns.tech.26",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[205].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.26",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[205].public.mechanism"
         }
       ]
     },
     {
       "id": "src.mccullough-2009-a",
-      "display": "McCullough 2009",
+      "display": "McCullough, A. S., Kraemer, W. J., Volek, J. S., Solomon-Hill, G. F. Jr., Hatfield, D. L., Vingren, J. L., Ho, J. Y., Fragala, M. S., Thomas, G. A., Häkkinen, K., & Maresh, C. M. (2009). Factors affecting flutter kicking speed in women who are competitive and recreational swimmers. Journal of Strength and Conditioning Research, 23(7), 2130–2136.",
       "verification_status": "verified",
       "identifier": {
         "pmid": "19855342",
         "doi": "10.1519/JSC.0b013e31819ab977",
         "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
       },
-      "usage_count": 4,
+      "usage_count": 7,
       "usages": [
+        {
+          "id": "back.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[59].public.evidence[0]"
+        },
+        {
+          "id": "back.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[59].public.mechanism"
+        },
         {
           "id": "fly.tech.24",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -4894,6 +4868,11 @@
           "path": "indicators[7].public.evidence[0]"
         },
         {
+          "id": "free.err11",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[10].public.evidence[0]"
+        },
+        {
           "id": "movement.demand.free.down-kick.ankle-plantarflexion",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[2]"
@@ -4902,44 +4881,19 @@
     },
     {
       "id": "src.mccullough-2009-b",
-      "display": "McCullough et al. 2009",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "19855342",
-        "doi": "10.1519/JSC.0b013e31819ab977",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "back.tech.16",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[59].public.evidence[0]"
-        },
-        {
-          "id": "back.tech.16",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[59].public.mechanism"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mccullough-a",
-      "display": "McCullough et al. (2009/2010), J. Strength & Conditioning Research",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "19855342",
-        "doi": "10.1519/JSC.0b013e31819ab977",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "free.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[10].public.evidence[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mccullough-b",
@@ -7156,33 +7110,28 @@
     },
     {
       "id": "src.pmc11297363-a",
-      "display": "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)",
+      "display": "【重複登錄，已解除】與 src.pmc11297363-b 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.pmc11297363-b",
+      "display": "Stirling, B. D., Sum, J. C., Baek, L., Michener, L. A., Barrack, A. J., & Tate, A. R. (2024). Shoulder pain in competitive swimmers: a multi-site survey study. International Journal of Sports Physical Therapy, 19(8), 965–975.",
       "verification_status": "verified",
       "identifier": {
-        "pmcid": "PMC11297363",
         "pmid": "39100936",
+        "pmcid": "PMC11297363",
         "doi": "10.26603/001c.121114"
       },
-      "usage_count": 1,
+      "usage_count": 4,
       "usages": [
         {
           "id": "rotator-cuff-tendinopathy",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[1].epidemiology"
-        }
-      ]
-    },
-    {
-      "id": "src.pmc11297363-b",
-      "display": "Youth swimmer shoulder pain multi-site, PMID 39100936 / PMC11297363 (已驗證)",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "39100936",
-        "pmcid": "PMC11297363",
-        "doi": "10.26603/001c.121114"
-      },
-      "usage_count": 3,
-      "usages": [
+        },
         {
           "id": "rotator-cuff-tendinopathy",
           "file": "canonical/health/injuries.yaml",
@@ -7845,26 +7794,15 @@
     },
     {
       "id": "src.pmc6409673-a",
-      "display": "Kinetic Analysis of Swimming Flip-Turn Push-Off Techniques, PMC6409673",
-      "verification_status": "verified",
-      "identifier": {
-        "pmcid": "PMC6409673",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC6409673/",
-        "pmid": "30696072",
-        "doi": "10.3390/sports7020032"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[96].public.evidence[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.pmc6409673-b 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc6409673-b",
-      "display": "PMC6409673",
+      "display": "Weimar, W., Sumner, A., Romer, B., Fox, J., Rehm, J., Decoux, B., & Patel, J. (2019). Kinetic analysis of swimming flip-turn push-off techniques. Sports, 7(2), 32.",
       "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC6409673",
@@ -7872,12 +7810,27 @@
         "pmid": "30696072",
         "doi": "10.3390/sports7020032"
       },
-      "usage_count": 5,
+      "usage_count": 8,
       "usages": [
+        {
+          "id": "flip-turn-wall-push",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[38].epidemiology"
+        },
+        {
+          "id": "flip-turn-wall-push",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[38].references[0]"
+        },
         {
           "id": "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[48]"
+        },
+        {
+          "id": "starts-turns.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[96].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.17",
@@ -7903,26 +7856,11 @@
     },
     {
       "id": "src.pmc6409673-c",
-      "display": "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)",
-      "verification_status": "verified",
-      "identifier": {
-        "pmcid": "PMC6409673",
-        "pmid": "30696072",
-        "doi": "10.3390/sports7020032"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "flip-turn-wall-push",
-          "file": "canonical/health/injuries.yaml",
-          "path": "injuries[38].epidemiology"
-        },
-        {
-          "id": "flip-turn-wall-push",
-          "file": "canonical/health/injuries.yaml",
-          "path": "injuries[38].references[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.pmc6409673-b 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc6464216",
@@ -8241,7 +8179,7 @@
     },
     {
       "id": "src.pmc8442910-a",
-      "display": "Frontiers in Physiology 2021",
+      "display": "Pla, R., Poszalczyk, G., Souaissia, C., Joulia, F., & Guimard, A. (2021). Underwater and surface swimming parameters reflect performance level in elite swimmers. Frontiers in Physiology, 12, 712652.",
       "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC8442910",
@@ -8249,32 +8187,27 @@
         "pmid": "34539436",
         "doi": "10.3389/fphys.2021.712652"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "udk.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[83].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.pmc8442910-b",
-      "display": "Frontiers in Physiology 2021, PMC8442910",
-      "verification_status": "verified",
-      "identifier": {
-        "pmcid": "PMC8442910",
-        "pmid": "34539436",
-        "doi": "10.3389/fphys.2021.712652"
-      },
-      "usage_count": 1,
-      "usages": [
+        },
         {
           "id": "udk.tech.18",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[154].public.evidence[0]"
         }
       ]
+    },
+    {
+      "id": "src.pmc8442910-b",
+      "display": "【重複登錄，已解除】與 src.pmc8442910-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc8607769",
@@ -8375,21 +8308,11 @@
     },
     {
       "id": "src.pmc8960438-b",
-      "display": "Biomechanical Features of Backstroke to Breaststroke Transition Techniques, PMC8960438",
-      "verification_status": "verified",
-      "identifier": {
-        "pmcid": "PMC8960438",
-        "pmid": "35359502",
-        "doi": "10.3389/fspor.2022.802967"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[95].public.evidence[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.pmc8960438-d 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc8960438-c",
@@ -8414,7 +8337,7 @@
     },
     {
       "id": "src.pmc8960438-d",
-      "display": "PMC8960438",
+      "display": "Chainok, P., de Jesus, K., Mourão, L., Fonseca, P. F. P., Zacca, R., Fernandes, R. J., & Vilas-Boas, J. P. (2022). Biomechanical features of backstroke to breaststroke transition techniques in age-group swimmers. Frontiers in Sports and Active Living, 4, 802967.",
       "verification_status": "verified",
       "identifier": {
         "pmcid": "PMC8960438",
@@ -8422,7 +8345,7 @@
         "pmid": "35359502",
         "doi": "10.3389/fspor.2022.802967"
       },
-      "usage_count": 6,
+      "usage_count": 7,
       "usages": [
         {
           "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
@@ -8433,6 +8356,11 @@
           "id": "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[48]"
+        },
+        {
+          "id": "starts-turns.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[95].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.25",
@@ -8557,32 +8485,11 @@
     },
     {
       "id": "src.pmc9445308",
-      "display": "PMC9445308 Frontiers 2022",
-      "verification_status": "verified",
-      "identifier": {
-        "pmcid": "PMC9445308",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC9445308/",
-        "pmid": "36081618",
-        "doi": "10.3389/fspor.2022.963578"
-      },
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "movement.demand.starts-turns.breaststroke-pullout.variant-order-differs-joint-composition-does-not",
-          "file": "canonical/movement/stroke-demands.yaml",
-          "path": "demands[51]"
-        },
-        {
-          "id": "starts-turns.tech.26",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[205].public.evidence[0]"
-        },
-        {
-          "id": "starts-turns.tech.26",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[205].public.mechanism"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.mccabe-2022 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc9658102",
@@ -8951,25 +8858,11 @@
     },
     {
       "id": "src.pmid-32119507",
-      "display": "Bart, R. M., Murray, B. P., & Lau, H. (2026). Shallow water blackout. In StatPearls [Internet]. Treasure Island (FL): StatPearls Publishing.",
-      "verification_status": "verified",
-      "identifier": {
-        "pmid": "32119507",
-        "url": "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "breathing.physiology.chemoreceptors",
-          "file": "canonical/breathing/physiology.yaml",
-          "path": "chemoreceptors"
-        },
-        {
-          "id": "breathing.safety.hypoxic_blackout",
-          "file": "canonical/breathing/safety.yaml",
-          "path": "hypoxic_blackout"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.statpearls-shallow-water-blackout-nbk554620 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmid-32310515",
@@ -10510,18 +10403,43 @@
     },
     {
       "id": "src.sanders-1995-a",
-      "display": "Sanders 1995",
+      "display": "Sanders, R. H., Cappaert, J. M., & Devlin, R. K. (1995). Wave characteristics of butterfly swimming. Journal of Biomechanics, 28(1), 9–16.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1016/0021-9290(95)80002-6",
         "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
       },
-      "usage_count": 2,
+      "usage_count": 7,
       "usages": [
         {
           "id": "fly.L3.undulation-integration",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[30].public.evidence[0]"
+        },
+        {
+          "id": "fly.err11",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[69].public.evidence[2]"
+        },
+        {
+          "id": "fly.err6",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[64].public.evidence[2]"
+        },
+        {
+          "id": "fly.pre.undulation",
+          "file": "canonical/technica/l-indicators.yaml",
+          "path": "indicators[27].public.evidence[0]"
+        },
+        {
+          "id": "fly.tech.3",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[104].public.evidence[0]"
+        },
+        {
+          "id": "fly.tech.3",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[104].public.mechanism"
         },
         {
           "id": "movement.demand.fly.first-kick.timing-and-wave-reception",
@@ -10532,64 +10450,27 @@
     },
     {
       "id": "src.sanders-1995-b",
-      "display": "Sanders et al. 1995",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1016/0021-9290(95)80002-6",
-        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "fly.pre.undulation",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[27].public.evidence[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.sanders-1995-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.sanders-1995-c",
-      "display": "Sanders, Cappaert & Devlin (1995). Biomechanics of butterfly. J Appl Biomech",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1016/0021-9290(95)80002-6",
-        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "fly.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[69].public.evidence[2]"
-        },
-        {
-          "id": "fly.err6",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[64].public.evidence[2]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.sanders-1995-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.sanders-1995-d",
-      "display": "Sanders, Cappaert & Devlin 1995",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1016/0021-9290(95)80002-6",
-        "url": "https://doi.org/10.1016/0021-9290(95)80002-6"
-      },
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "fly.tech.3",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[104].public.evidence[0]"
-        },
-        {
-          "id": "fly.tech.3",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[104].public.mechanism"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.sanders-1995-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.sanders-1998",
@@ -11017,8 +10898,18 @@
         "pmid": "32119507",
         "url": "https://www.ncbi.nlm.nih.gov/books/NBK554620/"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "breathing.physiology.chemoreceptors",
+          "file": "canonical/breathing/physiology.yaml",
+          "path": "chemoreceptors"
+        },
+        {
+          "id": "breathing.safety.hypoxic_blackout",
+          "file": "canonical/breathing/safety.yaml",
+          "path": "hypoxic_blackout"
+        },
         {
           "id": "shallow-water-blackout",
           "file": "canonical/health/injuries.yaml",
@@ -14108,14 +13999,19 @@
     },
     {
       "id": "src.welcher-2008-a",
-      "display": "Welcher et al. 2008",
+      "display": "Welcher, R. L., Hinrichs, R. N., & George, T. R. (2008). Front- or rear-weighted track start or grab start: which is the best for female swimmers? Sports Biomechanics, 7(1), 100–113.",
       "verification_status": "verified",
       "identifier": {
         "doi": "10.1080/14763140701683247",
         "url": "https://doi.org/10.1080/14763140701683247"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "starts-turns.tech.1",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[176].public.evidence[0]"
+        },
         {
           "id": "starts-turns.tech.9",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -14130,20 +14026,11 @@
     },
     {
       "id": "src.welcher-2008-b",
-      "display": "Welcher, Hinrichs & George 2008",
-      "verification_status": "verified",
-      "identifier": {
-        "doi": "10.1080/14763140701683247",
-        "url": "https://doi.org/10.1080/14763140701683247"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.tech.1",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[176].public.evidence[0]"
-        }
-      ]
+      "display": "【重複登錄，已解除】與 src.welcher-2008-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.who-2024-12-13-drowning-deaths-decline-globa-2024",

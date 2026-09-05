@@ -4385,7 +4385,7 @@
         ]
       },
       "source_ids": [
-        "src.mccullough-2009-b"
+        "src.mccullough-2009-a"
       ],
       "outgoing_ids": []
     },
@@ -6621,7 +6621,7 @@
         ]
       },
       "source_ids": [
-        "src.pmid-32119507"
+        "src.statpearls-shallow-water-blackout-nbk554620"
       ],
       "outgoing_ids": [
         "breathing.training.buteyko",
@@ -6818,7 +6818,7 @@
         "src.hypoxic-blackout-joint-statement",
         "src.hypoxic-blackout-presentation-2017",
         "src.mmwr-2015-dubb-new-york",
-        "src.pmid-32119507"
+        "src.statpearls-shallow-water-blackout-nbk554620"
       ],
       "outgoing_ids": [
         "breathing.framework.overview"
@@ -7630,7 +7630,6 @@
       "source_ids": [
         "src.buchanan-2025-female-athlete-triad-swimmers",
         "src.de-souza-2014",
-        "src.female-athlete-triad-in-swimmers-systematic",
         "src.red-s-clinical-assessment-tool-framework-ioc"
       ],
       "outgoing_ids": [
@@ -7677,7 +7676,7 @@
         ]
       },
       "source_ids": [
-        "src.pmc6409673-c",
+        "src.pmc6409673-b",
         "src.pmid-33010194"
       ],
       "outgoing_ids": [
@@ -8063,7 +8062,7 @@
       },
       "source_ids": [
         "src.enjoy-swimming-com",
-        "src.sanders-1995-c",
+        "src.sanders-1995-a",
         "src.usms-fish-2025-butterfly-hips"
       ],
       "outgoing_ids": [
@@ -8320,7 +8319,7 @@
         ]
       },
       "source_ids": [
-        "src.sanders-1995-c",
+        "src.sanders-1995-a",
         "src.swim-teach-com",
         "src.swimming-science-livio-cocozza"
       ],
@@ -8446,7 +8445,7 @@
         ]
       },
       "source_ids": [
-        "src.sanders-1995-b"
+        "src.sanders-1995-a"
       ],
       "outgoing_ids": []
     },
@@ -8952,7 +8951,7 @@
         ]
       },
       "source_ids": [
-        "src.sanders-1995-d"
+        "src.sanders-1995-a"
       ],
       "outgoing_ids": []
     },
@@ -9764,7 +9763,7 @@
         ]
       },
       "source_ids": [
-        "src.mccullough-a"
+        "src.mccullough-2009-a"
       ],
       "outgoing_ids": [
         "free.tech.13"
@@ -13813,9 +13812,9 @@
       },
       "source_ids": [
         "src.hall-murphy-2020",
+        "src.mccabe-2022",
         "src.neumann-2017",
-        "src.pmc8960438-d",
-        "src.pmc9445308"
+        "src.pmc8960438-d"
       ],
       "outgoing_ids": [
         "movement.demand.breast.foot-flip.multi-joint-composition-of-toe-out",
@@ -16983,8 +16982,8 @@
         ]
       },
       "source_ids": [
-        "src.beilock-carr-2001-choking",
-        "src.masters-1992-reinvestment",
+        "src.beilock-carr-2001-fragility",
+        "src.masters-1992-knowledge-knerves",
         "src.masters-maxwell-2008-reinvestment-theory"
       ],
       "outgoing_ids": []
@@ -17805,7 +17804,6 @@
       },
       "source_ids": [
         "src.feijen-2020",
-        "src.pmc11297363-a",
         "src.pmc11297363-b",
         "src.pmc7824457",
         "src.tavares-2025"
@@ -18228,7 +18226,7 @@
         ]
       },
       "source_ids": [
-        "src.journal-pone-0241345-b"
+        "src.journal-pone-0241345-a"
       ],
       "outgoing_ids": [
         "starts-turns.tech.11",
@@ -18356,7 +18354,7 @@
       },
       "source_ids": [
         "src.coach-jozsef-nagy-swimswam-the-breaststroke",
-        "src.pmc8960438-b",
+        "src.pmc8960438-d",
         "src.swimswam-b"
       ],
       "outgoing_ids": [
@@ -18384,7 +18382,7 @@
       },
       "source_ids": [
         "src.building-the-perfect-turn-push-off-strength",
-        "src.pmc6409673-a",
+        "src.pmc6409673-b",
         "src.pmid-40252339-a"
       ],
       "outgoing_ids": [
@@ -18414,7 +18412,7 @@
       },
       "source_ids": [
         "src.cossor-2001",
-        "src.welcher-2008-b"
+        "src.welcher-2008-a"
       ],
       "outgoing_ids": []
     },
@@ -18811,7 +18809,7 @@
         ]
       },
       "source_ids": [
-        "src.pmc9445308"
+        "src.mccabe-2022"
       ],
       "outgoing_ids": []
     },
@@ -20537,7 +20535,7 @@
         ]
       },
       "source_ids": [
-        "src.atkison-2014-b"
+        "src.atkison-2014-a"
       ],
       "outgoing_ids": []
     },
@@ -20579,7 +20577,7 @@
         ]
       },
       "source_ids": [
-        "src.atkison-2014-c"
+        "src.atkison-2014-a"
       ],
       "outgoing_ids": []
     },
@@ -20723,7 +20721,7 @@
         ]
       },
       "source_ids": [
-        "src.pmc8442910-b"
+        "src.pmc8442910-a"
       ],
       "outgoing_ids": []
     },

@@ -29,7 +29,7 @@ epidemiology:
   sources:
     - "Buchanan BK, et al. (2025). Female athlete triad in swimmers: a systematic review. J Womens Sports Med 5(1):30-38. doi:10.53646/ahq2qs39"
     - "RED-S Clinical Assessment Tool framework (IOC)"
-  source_ids: [src.female-athlete-triad-in-swimmers-systematic, src.red-s-clinical-assessment-tool-framework-ioc]
+  source_ids: [src.buchanan-2025-female-athlete-triad-swimmers, src.red-s-clinical-assessment-tool-framework-ioc]
 
 risk_factors:
   - { text: "低能量可及性(LEA <30 kcal/kg FFM/天)", grade: A }

@@ -20,7 +20,7 @@ epidemiology:
   sources:
     - "Masters swimmers shoulder ultrasound, PMC7824457 (已驗證)"
     - "Youth swimmer shoulder pain multi-site survey, PMC11297363 (已驗證)"
-  source_ids: [src.pmc7824457, src.pmc11297363-a]
+  source_ids: [src.pmc7824457, src.pmc11297363-b]
 
 risk_factors:
   - { text: "高訓練量/急遽增量(>15 h/週或 >35 km/週)", grade: B }

@@ -125,6 +125,32 @@
 
 ---
 
+## E016 — 同一個 `src.*` id 在 `_sources.yaml` 登錄超過一次（下游全部以 dict 收攏，後一筆靜默蓋掉前一筆——把其中一筆撤成 `retracted` 可能完全不生效）
+
+**ERROR，共 0 筆**
+
+（無）
+
+---
+
+## W025 — 同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）（E005 對此完全無感：每個 id 都解析得到；後果是同一篇被當成多個獨立證據、撤稿撤不乾淨、讀者看到多個不同的來源名）
+
+**WARN，共 11 筆**
+
+  pmid='19364182' 同時登錄於 2 筆：'src.brannigan-2009', 'src.brannigan-et-al-hypothermia-mass-participati-2009'
+  pmid='27149652' 同時登錄於 2 筆：'src.takai', 'src.takai-2016'
+  pmid='41219810' 同時登錄於 2 筆：'src.liu-2025-core-meta', 'src.liu-2025-core-stability-youth-swimmers'
+  pmcid='pmc4234766' 同時登錄於 2 筆：'src.pmc4234766-a', 'src.pmc4234766-b'
+  pmcid='pmc8700779' 同時登錄於 2 筆：'src.pmc8700779', 'src.takai'
+  pmcid='pmc8960438' 同時登錄於 3 筆：'src.pmc8960438-a', 'src.pmc8960438-c', 'src.pmc8960438-d'
+  pmcid='pmc9424421' 同時登錄於 2 筆：'src.pmc9424421-a', 'src.pmc9424421-b'
+  doi='10.1080/14763141.2026.2627415' 同時登錄於 2 筆：'src.sports-biomechanics-2026', 'src.takeda-2026'
+  doi='10.1111/sms.14454' 同時登錄於 2 筆：'src.mckenzie-2023-a', 'src.mckenzie-2023-b'
+  doi='10.1186/s13102-025-01366-1' 同時登錄於 2 筆：'src.liu-2025-core-meta', 'src.liu-2025-core-stability-youth-swimmers'
+  doi='10.3389/fphys.2025.1636595' 同時登錄於 2 筆：'src.pmc9424421-a', 'src.wang-2025-training-nma'
+
+---
+
 ## W022 — `text` 的內容就是它自己的來源名稱（「Mason 1992」）——只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）
 
 **WARN，共 14 筆**

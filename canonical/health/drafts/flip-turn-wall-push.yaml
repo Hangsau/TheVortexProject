@@ -21,7 +21,7 @@ epidemiology:
   sources:
     - "Flip-turn kinetics 生物力學研究, PMC6409673 (已驗證 URL)"
     - "Swimming injuries narrative review, PubMed 33010194 (已驗證)"
-  source_ids: [src.pmc6409673-c, src.pmid-33010194]
+  source_ids: [src.pmc6409673-b, src.pmid-33010194]
 
 risk_factors:
   - { text: "轉身技術未成熟（足踝角度/牆距判斷）", grade: Expert }
@@ -70,7 +70,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Biomechanics of swimming flip-turn (wall contact kinetics), PMC6409673", certainty: 🟢, verified: true, source_ids: [src.pmc6409673-c] }
+  - { citation: "Biomechanics of swimming flip-turn (wall contact kinetics), PMC6409673", certainty: 🟢, verified: true, source_ids: [src.pmc6409673-b] }
   - { citation: "Swimming injuries: a narrative review, PubMed 33010194", certainty: 🟢, verified: true, source_ids: [src.pmid-33010194] }
 
 flags:
