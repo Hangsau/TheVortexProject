@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 769,
+  "source_count": 771,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -2211,27 +2211,11 @@
     },
     {
       "id": "src.fina-sw64-usas-usms",
-      "display": "FINA/World Aquatics SW 6.4; USA Swimming; USMS",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.world-aquatics-2023-swimming-technical-rules 等 2 筆",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
-      "usages": [
-        {
-          "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
-          "file": "canonical/movement/stroke-demands.yaml",
-          "path": "demands[47]"
-        },
-        {
-          "id": "starts-turns.tech.29",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[208].public.evidence[0]"
-        },
-        {
-          "id": "starts-turns.tech.29",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[208].public.mechanism"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.finis-snorkel-based-perception-priming",
@@ -13534,6 +13518,32 @@
       ]
     },
     {
+      "id": "src.usa-swimming-101-6-individual-medley",
+      "display": "USA Swimming. Rule 101.6 Individual Medley (medley rules change effective 21 September 2017).",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usaswimming.org/docs/default-source/officialsdocuments/officials-training-resources/interpretations-and-recommendations/medley-rules-change-eff092117.pdf"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[47]"
+        },
+        {
+          "id": "starts-turns.tech.29",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[208].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.29",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[208].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.usa-swimming-foundations",
       "display": "USA Swimming Foundations / 通用蛙式教學熱身",
       "verification_status": "unverified",
@@ -14499,6 +14509,32 @@
           "id": "swimmer-elbow-wrist-overuse",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[4].references[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.world-aquatics-2023-swimming-technical-rules",
+      "display": "World Aquatics (2023). Swimming Technical Rules 2023–2025 (valid as of 1 January 2023).",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://resources.fina.org/fina/document/2023/01/04/65961a45-bde5-4217-b666-ca1f5dc2d1f0/1_Swimming-Technical-Rules.04.01.2023.pdf"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "starts-turns.tech.24",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[203].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.29",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[208].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.29",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[208].public.mechanism"
         }
       ]
     },

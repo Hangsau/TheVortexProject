@@ -1179,10 +1179,11 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.fina-sw64-usas-usms
-    display: "FINA/World Aquatics SW 6.4; USA Swimming; USMS"
+    display: "【複合來源鍵，已拆解】已拆為 src.world-aquatics-2023-swimming-technical-rules 等 2 筆"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解：顯示字串「FINA/World Aquatics SW 6.4; USA Swimming; USMS」綁了三個機構。拆的時候把規則原文下載逐條讀過，查出引用的條號是錯的——**SW 6.4 是仰式→仰式的轉身條，最後一句寫「The swimmer must have returned to the position on the back upon leaving the wall」（離牆時必須回到仰臥），與它被拿來支撐的「離牆時已轉至俯臥」正好相反**。個人混合式背→蛙的明文離牆門檻出自 USA Swimming 101.6.3.B(2)；World Aquatics 體系是 SW 9.4 接 SW 6.5（只規範觸牆）。USMS 未登錄：顯示字串只寫機構名，沒有指向任何一份文件，登了就是編（USMS 規則本身沿用 USA Swimming，要登必須指到具體條號）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.finis-snorkel-based-perception-priming
     display: "FINIS 教練資源（snorkel-based perception priming）"
@@ -9337,3 +9338,29 @@ sources:
       url: "https://pubmed.ncbi.nlm.nih.gov/1553457/"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 為修正 error.back.06 的歸因而新增。這篇是反證：Toussaint 自己 1992 年的回顧明寫「與高水準表現相關的共同技術元素，是用複雜的手部撥水動作**特別去產生升力**」，並給出菁英 61% vs 鐵人三項 44% 的推進效率對比。把「1990 年代起 Toussaint 等人證明升力推進效率較低」寫進內容，與這篇的敘述相反。"
+
+  - id: src.world-aquatics-2023-swimming-technical-rules
+    display: "World Aquatics (2023). Swimming Technical Rules 2023–2025 (valid as of 1 January 2023)."
+    title: "Swimming Technical Rules 2023–2025"
+    type: standard
+    verification_status: verified
+    authors: ["World Aquatics"]
+    year: 2023
+    container: "World Aquatics"
+    identifier:
+      url: "https://resources.fina.org/fina/document/2023/01/04/65961a45-bde5-4217-b666-ca1f5dc2d1f0/1_Swimming-Technical-Rules.04.01.2023.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.fina-sw64-usas-usms 拆出，規則原文已下載逐條核對（非二手轉述）。相關條文原文：**SW 6.2**「the normal position on the back can include a roll movement of the body up to, but not including 90 degrees from horizontal」（定義什麼還算仰臥）；**SW 6.4**「When executing the turn there must be a touch of the wall… The swimmer must have returned to the position on the back upon leaving the wall.」（仰式→仰式的轉身，離牆時必須回到仰臥）；**SW 6.5**「Upon the finish of the race the swimmer must touch the wall while on the back.」；**SW 9.4**「Each section must be finished in accordance with the rule which applies to the stroke concerned.」。**使用邊界**：本規則書**沒有**任何一條寫「離牆時肩部須過垂直面轉向俯臥」——個人混合式背→蛙的離牆要求在 World Aquatics 體系裡是靠 SW 9.4 接 SW 6.5 推出來的（只規範觸牆），明文的離牆門檻出自 USA Swimming 101.6，見 src.usa-swimming-101-6-individual-medley。2026-03-13 版的官方 Swimming Reference Card 條號一致（6.4 列「Not on the back upon leaving the wall after the turn」、9.4 列「Finish of section not in accordance with rule of the stroke concerned」）。"
+
+  - id: src.usa-swimming-101-6-individual-medley
+    display: "USA Swimming. Rule 101.6 Individual Medley (medley rules change effective 21 September 2017)."
+    title: "USA Swimming Rule 101.6 – 101.7 Medley Swimming"
+    type: standard
+    verification_status: verified
+    authors: ["USA Swimming"]
+    year: 2017
+    container: "USA Swimming"
+    identifier:
+      url: "https://www.usaswimming.org/docs/default-source/officialsdocuments/officials-training-resources/interpretations-and-recommendations/medley-rules-change-eff092117.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.fina-sw64-usas-usms 拆出，官方文件已下載逐條核對。背→蛙轉換的明文出處是 **101.6.3.B(2)**：「Backstroke to Breaststroke — The swimmer must touch the wall while on the back. Once a legal touch has been made, the swimmer may turn in any manner but the shoulders must be at or past the vertical toward the breast when the swimmer leaves the wall and the prescribed breaststroke form must be attained prior to the first arm stroke.」——**觸牆與離牆兩個獨立時間點的說法，來自這裡，不是 FINA/World Aquatics 的 SW 6.4**（那條講的是仰式→仰式轉身，且要求離牆時回到仰臥，方向相反）。「肩部過垂直面」等同從仰臥往俯臥滾 ≥90°，是裁判目視的合規門檻，不是任何關節角度量測。"

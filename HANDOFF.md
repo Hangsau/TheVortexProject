@@ -6,6 +6,26 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **競賽規則族：`src.fina-sw64-usas-usms` 拆解時下載規則原文核對，查出引用的條號說的是反話（錯誤 55）**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 141 | 141 |
+| `_sources.yaml` 筆數 | 769 | **771**（1 筆立墓碑 + 2 筆新登錄） |
+
+**錯誤 55：`starts-turns.tech.29`（背→蛙轉身規則）掛在「FINA Swimming Technical Rules SW 6.4」名下，但 SW 6.4 講的是仰式→仰式的轉身，而且最後一句要求的正好相反。** 官方規則書 PDF 已下載逐條讀過（World Aquatics Swimming Technical Rules 2023–2025），SW 6.4 原文結尾是「The swimmer must have returned to the position on the back upon leaving the wall」——**離牆時必須回到仰臥**。內容拿它來支撐「離牆時已轉至俯臥」。2026-03-13 版官方 Reference Card 條號一致（6.4 那格印的是「Not on the back upon leaving the wall after the turn」），不是舊版問題。
+
+**真正的出處是 USA Swimming 101.6.3.B(2)**：「觸牆時必須在仰臥；完成合法觸牆後可用任何方式轉身，但離牆時肩部須位於或超過垂直面轉向俯臥，且第一次划手前須成蛙式姿勢。」**World Aquatics 的規則書根本沒有等價明文**——它是 SW 9.4（各段依該式完成規則）接 SW 6.5（仰式須以仰臥觸牆）推出來的，只規範觸牆、不規範離牆。「兩個獨立時間點」這個說法本身是 USA Swimming 體系的規定，不是國際規則。內容與 `stroke-demands.yaml` 的 `measurement_conditions` 都已改指，並在兩處明寫這個體系差異。
+
+**≥90° 這個數字活下來，但理由換了。** 原本寫「規則文字寫作『肩部旋轉』」——World Aquatics 沒有這句。USA Swimming 寫的是「shoulders at or past the vertical」，等同從仰臥往俯臥滾 ≥90°，所以數字站得住，改的是它憑什麼成立。順帶注意 SW 6.2 裡也有一個 90°（「roll movement of the body up to, but not including 90 degrees from horizontal」），那是**定義什麼還算仰臥**，不是轉身門檻——兩個 90° 意義完全不同，混用會得出相反結論。
+
+**順手補一筆無來源的規則主張**：`starts-turns.tech.24`（仰式轉身俯臥觸牆不違規）原本整條沒有 source_ids，規則主張只靠一句 🔵 推導撐著。既然規則書已登錄，補上 SW 6.4 原文的 evidence——順便講清楚它的兩個限制（轉為俯臥後必須「立即連續」划手啟動轉身、離牆時要回到仰臥），這兩點原文有、原本的敘述沒有。
+
+**USMS 未登錄**：顯示字串只寫機構名，沒有指向任何文件。USMS 規則沿用 USA Swimming，要登必須指到具體條號，否則就是編。
+
+新登錄用了 `type: standard`（原本註冊表只有 `journal-article`／`book`／`guideline`／`report`／`other` 等）。`type` 這個欄位在 `_taxonomy.yaml` 裡**沒有受控詞彙表**，所以沒有東西可以對照登錄；選 `standard` 而不是併進 `guideline`，是因為 `guideline` 目前那 9 筆是臨床／教練指引（非強制），競賽規則是強制條文，混在一起會讓這個欄位失去篩選價值。**要收緊的話該做的是替 `type` 建詞彙表，不是把規則書塞進最接近的既有值。**
+
 ### ✅ **Maglischo／Toussaint 族：同一本書被登了八次（W025 完全看不見），拆解時查出一條敘述與它自己引用的作者原文相反（錯誤 52–54）**
 
 | 指標 | 段落起點 | 現在 |

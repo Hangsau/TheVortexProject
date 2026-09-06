@@ -14251,9 +14251,9 @@
         ]
       },
       "source_ids": [
-        "src.fina-sw64-usas-usms",
         "src.neumann-2017",
-        "src.pmc7918682"
+        "src.pmc7918682",
+        "src.usa-swimming-101-6-individual-medley"
       ],
       "outgoing_ids": [
         "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action"
@@ -18785,13 +18785,16 @@
           "stroke-cycle"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "starts-turns"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
       "outgoing_ids": []
     },
     {
@@ -18902,7 +18905,8 @@
         ]
       },
       "source_ids": [
-        "src.fina-sw64-usas-usms"
+        "src.usa-swimming-101-6-individual-medley",
+        "src.world-aquatics-2023-swimming-technical-rules"
       ],
       "outgoing_ids": []
     },
