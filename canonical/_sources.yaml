@@ -746,17 +746,38 @@ sources:
     notes: "原字串以 et al. 略記。S3c 查證確認原掛 PMC3990873 錯誤；依正文角度數據改連 Benjanuvatra、Edmunds & Blanksby 2007（DOI 10.25035/ijare.01.03.06）。src.benjanuvatra-2007-b 仍是另一筆待拆解的複合字串。"
 
   - id: src.benjanuvatra-2007-b
-    display: "Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start: A Review"
+    display: "【複合來源鍵，已拆解】已拆為 src.benjanuvatra-2007-a 與 src.vantorre-2014-swim-start-review"
     type: other
-    verification_status: unverified
-    authors: ["Benjanuvatra"]
-    et_al: true
-    year: 2007
-    identifier:
-      pmcid: "PMC3990873"
-      url: "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.benjanuvatra-2007-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 與 src.benjanuvatra-2007-a 共用 pmcid PMC3990873，疑似同一文獻，待 S3c 查證。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 拆解。原字串「Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start:
+      A Review」把兩篇不同文獻壓在一起，且**掛的 PMC3990873 只屬於後者**——該 PMCID 對應
+      Vantorre J, Chollet D, Seifert L (2014) 的綜述，與 Benjanuvatra 無關。
+      前者已有 src.benjanuvatra-2007-a（IJARE，DOI 10.25035/ijare.01.03.06），後者新登錄為
+      src.vantorre-2014-swim-start-review。本 id 保留為墓碑、不得再使用。
 
+  - id: src.vantorre-2014-swim-start-review
+    display: "Vantorre J, Chollet D, Seifert L. (2014). Biomechanical Analysis of the Swim-Start: A Review. J Sports Sci Med 13(2):223-231."
+    title: "Biomechanical Analysis of the Swim-Start: A Review"
+    type: review
+    verification_status: verified
+    authors: ["Vantorre J", "Chollet D", "Seifert L"]
+    year: 2014
+    container: "Journal of Sports Science & Medicine"
+    identifier:
+      pmid: "24790473"
+      pmcid: "PMC3990873"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。原文可支持者：把出發定義為「開始準備蹬離出發台」到「開始游進」之間；
+      指出出發的專長**與泳姿專長是分開的兩件事**；高水準出發的區辨因子是反應時間與蹬離期的
+      足部施力控制與方向、適當的滑行時間長度、由踢腿轉入完整划手的銜接效率，以及流線姿勢下的
+      能量節約；出發較弱的選手花在此階段的時間較長，可訓練的是「信號到蹬離」與「滑行→踢腿→完整游進」
+      兩段轉換時間。作者另把變異性定位為**具功能性**（跨受試、跨試次、跨慣用與非慣用技術三個層次）。
+      使用邊界：本文明寫出發是一連串**妥協**——空中距離要長（減少水阻）與入水姿勢要正確（需要旋轉）
+      兩個約束彼此拉扯；**不可用本文支持「角度越低越好」這種單向結論**。
+      本文是敘述性綜述、不提供可引用的角度或速度數值；本庫任何起跳角度數字都不得掛在本文名下。
   - id: src.blanksby-2002
     display: "Blanksby et al. 2002"
     type: other

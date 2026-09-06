@@ -18039,6 +18039,7 @@
         ],
         "certainty": [
           "🔵",
+          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -18046,7 +18047,9 @@
         ]
       },
       "source_ids": [
-        "src.benjanuvatra-2007-b"
+        "src.benjanuvatra-2007-a",
+        "src.vantorre-2014-swim-start-review",
+        "src.wilson-1983"
       ],
       "outgoing_ids": [
         "starts-turns.tech.39",

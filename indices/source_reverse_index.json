@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 824,
+  "source_count": 825,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -534,8 +534,13 @@
         "doi": "10.25035/ijare.01.03.06",
         "url": "https://doi.org/10.25035/ijare.01.03.06"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "starts-turns.err1",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[88].public.evidence[0]"
+        },
         {
           "id": "starts-turns.tech.6",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -545,20 +550,11 @@
     },
     {
       "id": "src.benjanuvatra-2007-b",
-      "display": "Benjanuvatra et al. 2007; Biomechanical Analysis of the Swim-Start: A Review",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmcid": "PMC3990873",
-        "url": "https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3990873/"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err1",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[88].public.evidence[0]"
-        }
-      ]
+      "display": "【複合來源鍵，已拆解】已拆為 src.benjanuvatra-2007-a 與 src.vantorre-2014-swim-start-review",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.blades-2024-whm",
@@ -14427,6 +14423,23 @@
       ]
     },
     {
+      "id": "src.vantorre-2014-swim-start-review",
+      "display": "Vantorre J, Chollet D, Seifert L. (2014). Biomechanical Analysis of the Swim-Start: A Review. J Sports Sci Med 13(2):223-231.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "24790473",
+        "pmcid": "PMC3990873"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "starts-turns.err1",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[88].public.evidence[2]"
+        }
+      ]
+    },
+    {
       "id": "src.vaschillo-2002-baroreflex",
       "display": "壓力反射共振頻率實測：Vaschillo et al. 2002 (DOI 10.1023/A:1014587304314)",
       "verification_status": "unverified",
@@ -14983,8 +14996,13 @@
       "display": "Wilson & Marino 1983",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "starts-turns.err1",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[88].public.evidence[1]"
+        },
         {
           "id": "starts-turns.tech.6",
           "file": "canonical/instructional/technical-analysis.yaml",
