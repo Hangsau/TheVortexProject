@@ -601,7 +601,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-swimming-fastest-paddles-for-s-pat"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -1348,7 +1348,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-swimming-fastest-breaststroke-padd"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -2020,7 +2020,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-swimming-fastest-butterfly-paddle"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -2822,7 +2822,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-swimming-fastest-paddle-catch-isol"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -3549,7 +3549,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-2003-b"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -4023,7 +4023,9 @@
       },
       "source_ids": [
         "src.gonjo-2020-b",
-        "src.toussaint-colwin-1990-maglischo-2003-swimmin"
+        "src.maglischo-2003-swimming-fastest",
+        "src.toussaint-2002-pumped-up-propulsion",
+        "src.toussaint-beek-1992-biomechanics-front-crawl"
       ],
       "outgoing_ids": []
     },
@@ -4093,7 +4095,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-2003-a"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -4280,7 +4282,7 @@
       },
       "source_ids": [
         "src.gonjo-2020-c",
-        "src.maglischo-2003-b"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -4362,7 +4364,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-2003-c"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -4429,7 +4431,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-2003-d"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -4638,7 +4640,7 @@
       },
       "source_ids": [
         "src.gonjo-2020-c",
-        "src.maglischo-2003-b"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": [
         "back.tech.24",
@@ -9255,7 +9257,7 @@
         ]
       },
       "source_ids": [
-        "src.maglischo-2003-b",
+        "src.maglischo-2003-swimming-fastest",
         "src.strzala-2017"
       ],
       "outgoing_ids": []
@@ -12439,7 +12441,7 @@
       },
       "source_ids": [
         "src.gonjo-2020-c",
-        "src.maglischo-2003-b"
+        "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
     },
@@ -16150,12 +16152,12 @@
       "title": "不同距離靠的能量系統差很多：50m 幾乎全靠無氧（有氧只 5–20%），100m 有氧無氧大概各半，400m 以上開始有氧主導。注意 400m 的有氧占比在不同研究差很大（40% 到 84% 都有人測到），這不是我亂寫，是研究本身的真實分歧——所以保留區間不硬湊成一個數字。實務意義：練 50 自由式衝刺跟練 1500 ",
       "tags": {
         "certainty": [
-          "🟡",
-          "🟢"
+          "🟡"
         ]
       },
       "source_ids": [
-        "src.toussaint"
+        "src.rodriguez-mader-2011",
+        "src.toussaint-hollander-1994-energetics-swimming"
       ],
       "outgoing_ids": []
     },

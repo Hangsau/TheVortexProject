@@ -1652,36 +1652,32 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.maglischo-2003-a
-    display: "Maglischo (2003) Swimming Fastest"
-    type: book
-    verification_status: unverified
-    authors: ["Maglischo"]
-    year: 2003
-    notes: "疑似與 src.maglischo-2003-b、src.maglischo-2003-c、src.maglischo-2003-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    display: "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併：a/b/c/d 四筆是同一本書（Maglischo, Swimming Fastest, 2003, Human Kinetics, ISBN 0736031804），原 notes 自己就寫「疑似為同一文獻，待 S3c 查證後合併」。已全數改指 src.maglischo-2003-swimming-fastest。**重複登錄才合併，複合鍵一律拆**——這兩件事在 notes 裡長得很像（都是「一個主題多個 id」），判準是「這些字串指向幾部作品」：四筆全指同一部，合併；一筆指多部，拆。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-2003-b
-    display: "Maglischo 2003"
-    type: book
-    verification_status: unverified
-    authors: ["Maglischo"]
-    year: 2003
-    notes: "疑似與 src.maglischo-2003-a、src.maglischo-2003-c、src.maglischo-2003-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    display: "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併，見 src.maglischo-2003-a 的說明。本 id 原有 7 處引用（technical-analysis 5、stroke-demands 1、l-indicators 1），已全數改指 src.maglischo-2003-swimming-fastest。其中 l-indicators.yaml 的 back.L2.up-kick 是一筆 W022（evidence 的 text 就寫「Maglischo 2003」等於沒說內容），合併時一併補寫真正的內容——**若只換 id 不補 text，W022 會因為顯示字串不再相等而自動消失，等於把缺口藏起來**。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-2003-c
-    display: "Maglischo 2003（屬定性方向參考，量化數字待現代研究更新）"
-    type: book
-    verification_status: unverified
-    authors: ["Maglischo"]
-    year: 2003
-    notes: "疑似與 src.maglischo-2003-a、src.maglischo-2003-b、src.maglischo-2003-d 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    display: "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併，見 src.maglischo-2003-a 的說明。本 id 的 display 尾巴「（屬定性方向參考，量化數字待現代研究更新）」是引用者的使用判斷、不是書目，合併時移出；同樣的話原本就已寫在 back.tech.15 的 mechanism 與 evidence 文字裡，沒有資訊損失。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-2003-d
-    display: "Maglischo 2003（量化區間屬歷史參考，現代研究尚未更新具體值）"
-    type: book
-    verification_status: unverified
-    authors: ["Maglischo"]
-    year: 2003
-    notes: "疑似與 src.maglischo-2003-a、src.maglischo-2003-b、src.maglischo-2003-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    display: "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併，見 src.maglischo-2003-a 的說明。本 id 的 display 尾巴「（量化區間屬歷史參考，現代研究尚未更新具體值）」同 c 的情況，已移出；back.tech.19 的內文本來就寫著同一句。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-2012
     display: "Maglischo 2012, Training Zones Revisited, J Swimming Research 19(2)（全文）"
@@ -1691,28 +1687,32 @@ sources:
     year: 2012
 
   - id: src.maglischo-swimming-fastest-breaststroke-padd
-    display: "Maglischo Swimming Fastest（breaststroke paddle work）"
-    type: book
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併：這是第二組指向同一本書的重複 id——四筆 src.maglischo-swimming-fastest-* 各自綁一個 drill 的用途（蛙式手掌板），**用途被寫進 id 與 display**，於是同一本書在註冊表裡有八個分身（另四筆是 src.maglischo-2003-a/b/c/d）。W025 看不見這一群，因為它們彼此沒有共用識別碼。已全數改指 src.maglischo-2003-swimming-fastest。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-swimming-fastest-butterfly-paddle
-    display: "Maglischo Swimming Fastest（butterfly paddle work）"
-    type: book
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併：這是第二組指向同一本書的重複 id——四筆 src.maglischo-swimming-fastest-* 各自綁一個 drill 的用途（蝶式手掌板），**用途被寫進 id 與 display**，於是同一本書在註冊表裡有八個分身（另四筆是 src.maglischo-2003-a/b/c/d）。W025 看不見這一群，因為它們彼此沒有共用識別碼。已全數改指 src.maglischo-2003-swimming-fastest。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-swimming-fastest-paddle-catch-isol
-    display: "Maglischo Swimming Fastest（paddle catch isolation）"
-    type: book
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併：這是第二組指向同一本書的重複 id——四筆 src.maglischo-swimming-fastest-* 各自綁一個 drill 的用途（自由式捕水隔離），**用途被寫進 id 與 display**，於是同一本書在註冊表裡有八個分身（另四筆是 src.maglischo-2003-a/b/c/d）。W025 看不見這一群，因為它們彼此沒有共用識別碼。已全數改指 src.maglischo-2003-swimming-fastest。本 id 保留為墓碑、不得再使用。"
 
   - id: src.maglischo-swimming-fastest-paddles-for-s-pat
-    display: "Maglischo Swimming Fastest（paddles for S-pattern feedback）"
-    type: book
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest"
+    type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄合併：這是第二組指向同一本書的重複 id——四筆 src.maglischo-swimming-fastest-* 各自綁一個 drill 的用途（仰式拉水壓力圖），**用途被寫進 id 與 display**，於是同一本書在註冊表裡有八個分身（另四筆是 src.maglischo-2003-a/b/c/d）。W025 看不見這一群，因為它們彼此沒有共用識別碼。已全數改指 src.maglischo-2003-swimming-fastest。本 id 保留為墓碑、不得再使用。"
 
   - id: src.marinho-2010
     display: "Marinho et al. (2010), Journal of Applied Biomechanics"
@@ -5323,17 +5323,18 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.toussaint
-    display: "Toussaint & Hollander 1994 (Sports Med 18:384–405); Rodríguez & Mader 2011"
+    display: "【複合來源鍵，已拆解】已拆為 src.toussaint-hollander-1994-energetics-swimming 等 2 筆"
     type: other
-    verification_status: unverified
-    authors: ["Toussaint", "Hollander"]
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解：顯示字串「Toussaint & Hollander 1994 (Sports Med 18:384–405); Rodríguez & Mader 2011」綁了兩筆互不相關的來源。前者查得到（PMID 7886354，卷期頁碼完全吻合）；後者 PubMed／Crossref 皆無記錄，只能以 unverified 登錄並在 notes 記下未確認的線索。拆解時另外查出：Toussaint & Hollander 1994 的摘要**沒有各距離有氧供能百分比**，而 periodization.zones.swim_energy_by_distance 正是以 🟢 掛著 50m ≈5–20%、100m ≈40–50% 這些數字——已在該區塊補上使用邊界註記。本 id 保留為墓碑、不得再使用。"
 
   - id: src.toussaint-colwin-1990-maglischo-2003-swimmin
-    display: "Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest"
+    display: "【複合來源鍵，已拆解】已拆為 src.toussaint-2002-pumped-up-propulsion 等 3 筆"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解：顯示字串「Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest」裡，只有 Maglischo 那半是可解析的書目，前半是對一整批文獻的手勢。拆解時查出更嚴重的問題：它支撐的那句「流體力學研究指出划水中升力推進效率低於阻力推進」**與 Toussaint 本人的著作相反**——Toussaint & Beek 1992 明寫菁英技術的共同元素是用複雜撥水動作特別去產生升力；Toussaint 等 2002 挑戰的是 quasi-steady 升力／阻力分解模型（流場非定常、手臂旋轉、存在軸向流），不是宣告阻力推進比升力推進有效率。error.back.06 的敘述已據此重寫，改指 src.toussaint-2002-pumped-up-propulsion 與 src.maglischo-2003-swimming-fastest。Colwin 未登錄：沒有任何線索指出是哪一部作品，登了就是編。本 id 保留為墓碑、不得再使用。"
 
   - id: src.train-daly
     display: "Train Daly"
@@ -9269,3 +9270,70 @@ sources:
       → 外划提前 → 滑行時間縮短」，是強度效應不是水準組別效應；本專案原先掛在此處的
       「精英比國家選手更早啟動 insweep（biceps brachii + pectoralis major）」屬於個別收錄研究
       （Olstad 等人 2017）的層次，不是本綜述的整合結論，且與 Olstad 原文亦有出入（見該筆登錄）。
+
+  - id: src.maglischo-2003-swimming-fastest
+    display: "Maglischo, E. W. (2003). Swimming Fastest. Champaign, IL: Human Kinetics."
+    title: "Swimming Fastest"
+    type: book
+    verification_status: verified
+    authors: ["Ernest W. Maglischo"]
+    year: 2003
+    container: "Human Kinetics"
+    identifier:
+      isbn: "0736031804"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由四筆重複登錄 src.maglischo-2003-a/b/c/d 合併而來，經 Open Library 核對（ISBN 0736031804 / 9780736031806，Human Kinetics，2003）。四筆之中有兩筆把**使用邊界寫進 display**（「屬定性方向參考，量化數字待現代研究更新」「量化區間屬歷史參考」），那是引用者對這本書的判斷、不是書目的一部分，合併時移除——同樣的話已經寫在引用它的 mechanism/evidence 文字裡。**使用邊界**：本專案未取得原書；書中的量化值（仰式上踢 70–80% 推進佔比、踢水深度 30–40 cm）是 2003 年對更早研究的二手整理，引用時只能當定性方向與群體均值參考，不可當當代精確值。"
+
+  - id: src.toussaint-hollander-1994-energetics-swimming
+    display: "Toussaint, H. M., & Hollander, A. P. (1994). Energetics of competitive swimming. Implications for training programmes. Sports Medicine, 18(6), 384–405."
+    title: "Energetics of competitive swimming. Implications for training programmes"
+    type: journal-article
+    verification_status: verified
+    authors: ["Huub M. Toussaint", "A. Peter Hollander"]
+    year: 1994
+    container: "Sports Medicine"
+    identifier:
+      pmid: "7886354"
+      doi: "10.2165/00007256-199418060-00004"
+      url: "https://pubmed.ncbi.nlm.nih.gov/7886354/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.toussaint 拆出，卷期頁碼與原顯示字串「Sports Med 18:384–405」完全吻合。**使用邊界**：摘要的主體是游泳能量成本模型與推進效率（10% 推進效率提升的效益大於 10% 有氧或無氧能力提升），**沒有列出各距離的有氧供能百分比**。periodization.zones.swim_energy_by_distance 的 50m ≈5–20%／100m ≈40–50% 等數字掛在本文獻名下，全文層級尚未核對；要嘛回原文確認，要嘛把該區塊降級。"
+
+  - id: src.rodriguez-mader-2011
+    display: "Rodríguez, F. A., & Mader, A. (2011)."
+    type: other
+    verification_status: unverified
+    authors: ["Ferran A. Rodríguez", "Alois Mader"]
+    year: 2011
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.toussaint 拆出。**查不到**：PubMed 查 Rodriguez FA[au] AND Mader A[au] 零筆，Crossref 也無此共同著作；顯示字串只有「Rodríguez & Mader 2011」，不足以定位。**未確認的線索**（不得當成已查證）：此組合最常被引為 Seifert, Chollet & Mujika（編）World Book of Swimming: From Science to Performance（Nova Science Publishers, 2011，ISBN 9781616682026）中的能量系統章；該書本身經 Open Library 核對存在，但「這一章由這兩人所寫」本專案未取得任何一手證據，故 container 欄位刻意留空。它支撐的是 400m 有氧佔比 ≈84% 這個數字，在未確認前不得升級 certainty。"
+
+  - id: src.toussaint-2002-pumped-up-propulsion
+    display: "Toussaint, H. M., Van den Berg, C., & Beek, W. J. (2002). \"Pumped-up propulsion\" during front crawl swimming. Medicine & Science in Sports & Exercise, 34(2), 314–319."
+    title: "\"Pumped-up propulsion\" during front crawl swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Huub M. Toussaint", "C. Van den Berg", "Wolfgang J. Beek"]
+    year: 2002
+    container: "Medicine & Science in Sports & Exercise"
+    identifier:
+      pmid: "11828242"
+      doi: "10.1097/00005768-200202000-00020"
+      url: "https://pubmed.ncbi.nlm.nih.gov/11828242/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 為修正 error.back.06（S 形划水）的歸因而新增。本文用絨毛流場觀察與沿臂壓力量測，指出以定常流假設（把手模放在等速水槽裡量升力／阻力）計算推進力是可疑的，實際划水中流場高度非定常、手臂大幅旋轉，並存在沿臂軸向流。**它挑戰的是 quasi-steady 的升力／阻力分解模型，不是宣告「升力推進效率低於阻力推進」**——原本的引用把後者掛在 Toussaint 名下，見 src.toussaint-colwin-1990-maglischo-2003-swimmin 的墓碑說明。"
+
+  - id: src.toussaint-beek-1992-biomechanics-front-crawl
+    display: "Toussaint, H. M., & Beek, P. J. (1992). Biomechanics of competitive front crawl swimming. Sports Medicine, 13(1), 8–24."
+    title: "Biomechanics of competitive front crawl swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Huub M. Toussaint", "Peter J. Beek"]
+    year: 1992
+    container: "Sports Medicine"
+    identifier:
+      pmid: "1553457"
+      doi: "10.2165/00007256-199213010-00002"
+      url: "https://pubmed.ncbi.nlm.nih.gov/1553457/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 為修正 error.back.06 的歸因而新增。這篇是反證：Toussaint 自己 1992 年的回顧明寫「與高水準表現相關的共同技術元素，是用複雜的手部撥水動作**特別去產生升力**」，並給出菁英 61% vs 鐵人三項 44% 的推進效率對比。把「1990 年代起 Toussaint 等人證明升力推進效率較低」寫進內容，與這篇的敘述相反。"

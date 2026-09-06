@@ -6,6 +6,40 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **Maglischo／Toussaint 族：同一本書被登了八次（W025 完全看不見），拆解時查出一條敘述與它自己引用的作者原文相反（錯誤 52–54）**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 142 | **141** |
+| `_sources.yaml` 筆數 | 764 | **769**（10 筆立墓碑 + 5 筆新登錄） |
+| 內容條目 | 923 | 923 |
+| W022 | 14 | **13**（見下方說明，這是真的補上內容，不是把警告藏掉） |
+
+**同一本書有八個分身，重複偵測完全看不見。** `Swimming Fastest`（Maglischo 2003）在註冊表裡有兩組各四筆：`src.maglischo-2003-a/b/c/d`，以及 `src.maglischo-swimming-fastest-breaststroke-padd`／`-butterfly-paddle`／`-paddle-catch-isol`／`-paddles-for-s-pat`。W025（重複來源偵測）靠共用識別碼比對，這八筆**一個 ISBN、一個 DOI 都沒有**，所以彼此不相識。找得到它們是因為第一組的 `notes` 自己寫著「疑似為同一文獻，待 S3c 查證後合併」，順著人名 grep 才撞出第二組。
+
+**第二組的命名方式是問題本身：用途被寫進 id。** 四筆各自綁一個 drill（蛙式手掌板、蝶式手掌板、自由式捕水隔離、仰式壓力圖），id 與 display 都帶著「這次拿它來做什麼」。**引用場合不是書目的一部分**——同一本書被四種用途各登一次，就是四筆重複。第一組裡另有兩筆把**使用邊界**寫進 display（「屬定性方向參考，量化數字待現代研究更新」「量化區間屬歷史參考」），同樣是引用者的判斷不是書目；合併時移出，且確認那兩句話原本就已經寫在引用它的 `back.tech.15`／`back.tech.19` 內文裡，沒有資訊損失。
+
+**合併與拆解是相反操作，判準只有一個：這串字指向幾部作品。** 八筆全指同一部 → 合併成 `src.maglischo-2003-swimming-fastest`（ISBN `0736031804`，經 OpenLibrary 核對）。`src.toussaint` 與 `src.toussaint-colwin-1990-maglischo-2003-swimmin` 各指多部 → 拆。兩件事在 `notes` 裡長得很像（都是「一個主題多個 id」），所以判準寫進了每一筆墓碑的 `notes`，避免下一輪憑印象處理。
+
+**新登錄 5 筆**：Maglischo 2003（ISBN 0736031804）、Toussaint & Hollander 1994（PMID 7886354）、Toussaint 等 2002（PMID 11828242）、Toussaint & Beek 1992（PMID 1553457）、Rodríguez & Mader 2011（**unverified**）。
+
+**Rodríguez & Mader 2011 查不到，所以 `container` 刻意留空。** PubMed 查 `Rodriguez FA[au] AND Mader A[au]` 零筆，Crossref 也無此共同著作。網路上最常見的說法是它出自 Seifert／Chollet／Mujika 編《World Book of Swimming》（Nova, 2011，ISBN 9781616682026）的能量系統章——該書本身在 OpenLibrary 存在，但「這一章由這兩人寫」本專案沒有任何一手證據。這條線索寫進 `notes` 並明標**不得當成已查證**；填 container 就是把推測寫成事實。
+
+**三處錯誤（錯誤 52–54）：**
+
+| # | 位置 | 原本 | 實際 |
+|---|---|---|---|
+| 52 | `error.back.06`（S 形划水）的 `physical_reason` 與第一條 evidence | 「流體力學研究指出划水中升力推進效率低於阻力推進」，掛 Toussaint 名下 | **與被引用者本人的原文相反。** Toussaint & Beek 1992 的回顧明寫「與高水準表現相關的共同技術元素，是用複雜的手部撥水動作**特別去產生升力**」（菁英 61% vs 鐵人 44% 推進效率）。Toussaint 等 2002 挑戰的是 **quasi-steady 升力／阻力分解模型**（流場非定常、手臂大幅旋轉、存在沿臂軸向流），不是宣告阻力推進較有效率。兩處敘述已重寫成「S 形的理由建立在一個被質疑的計算模型上，不是升力沒有用」，並把 1992 那篇當**反證**一併登錄引用，讓下一個讀到這條的人看得見矛盾 |
+| 53 | `Drills/drills_backstroke.yaml` 的 `BkPad1`（手掌板仰式拉手） | `purpose_zh` 寫「幫助找到 **S 路徑的甜蜜點**」 | 與 `error.back.06`（刻意 S 形是過時誤解）**直接衝突**。drill 的實際操作沒問題（壓力地圖、肘部收近身體、回報最有壓力的點），問題只在框架語言與 source 顯示字串。改寫為「讓泳者說得出整段拉水裡哪一段最有壓力」——**這是 drill 本來就在做的事**，S 路徑是硬套上去的解釋 |
+| 54 | `periodization.zones.swim_energy_by_distance` | 🟢，掛 Toussaint & Hollander 1994 ＋ Rodríguez & Mader 2011 | Toussaint & Hollander 1994 的摘要主體是**游泳能量成本模型與推進效率**（10% 推進效率提升的效益大於 10% 有氧或無氧能力提升），**沒有列出各距離的有氧供能百分比**；另一半來源查不到。整表（含各列）降 🟡，`caution_zh` 補上使用邊界並明講「本專案尚未回到任何一篇原文核對過具體值」。數字本身沒改——它們在游泳訓練文獻裡流傳很廣、方向也與生理常識一致，改的是它憑什麼標綠 |
+
+**W022 從 14 降到 13，這是實際補內容不是清警告。** `back.L2.up-kick` 的 evidence 原本 `text: Maglischo 2003`、`source: Maglischo 2003`——**引用字串被當成內容寫**，等於沒說。合併 id 時差點就這樣過去：W022 的判定是 `_norm_citation(text)` 去比對 `source` 與註冊表 `display`（`tools/validate.py:1503–1519`），**只要把 display 正規化成標準書目，這筆警告會自動消失而缺口原封不動**。所以先讀了驗證器再動手，把 `text` 真的寫出來（上踢是仰式踢水主推進、足背蹠屈形成推進面；70–80% 佔比屬歷史量化不採用）。基準線因此位移，記在這裡免得下次被當成無故變動。
+
+**下一步建議**：複合鍵剩 **40 筆**。zones.yaml 裡另外撞見兩筆新的：`src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012`、`src.pmc8607769`。接著做機構／網站族（`src.usms-*`、`src.race-club-*`、`src.yourswimlog-*`、`src.total-immersion-terry-laughlin-vortex` 等 15 筆——這族的難點不是查不到，是**要判斷網站頁面算不算來源**）與單姓氏族（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.seiler`、`src.hellard`、`src.mujika` 等；**`src.seiler` 與 `src.hellard` 已被 `schools_overview` 引用，拆時一併改指**）。另有 `src.adductor-loading-return-to-sport-practice-co`，display 已標【佔位字串，非真實文獻】但還沒立墓碑。
+
+**依舊不要碰的三件事**：不要整批清 W022（剩 13 筆全在 `l-indicators.yaml`，刻意保留）；不要在重新定義 W008 基準前把 `src.gonjo-2018` 立墓碑；**不要跑 `tools/build_injuries.py`**（產出物與 drafts 已漂移約 75 行，跑了會靜默回退）。
+
 ### ✅ **複合鍵軸開工：週期化書目族 5 筆拆成 13 筆真登錄（751 → 764）。過程逼出五處錯誤（錯誤 47–51），其中一處是「整個區塊沒有任何 layout 讀，讀者從來沒看過」**
 
 | 指標 | 段落起點 | 現在 |

@@ -896,8 +896,8 @@ drills:
     success_signal: "停 3 秒手仍有支撐感不下滑；左右側壓力感類似"
     failure_signal: "板一停就下沉（代表肘部沒高於手）；左右側差異很大"
     deficiency_fixes: [13]
-    source: "Maglischo Swimming Fastest（paddle catch isolation）"
-    source_ids: [src.maglischo-swimming-fastest-paddle-catch-isol]
+    source: "Maglischo, E. W. (2003). Swimming Fastest. Human Kinetics."
+    source_ids: [src.maglischo-2003-swimming-fastest]
     body_position: prone
     constraints: [paddle_amplifier, single_arm]
     movement_pattern: pause_pulse

@@ -610,7 +610,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.zones.swim_maglischo | 🟢 | Maglischo 是游泳專用的分區系統，用血乳酸＋訓練目的把游泳強度分成：恢復、有氧基礎(En1)、有氧維持(En2)、有氧超負荷(En3)、無氧閾值(AnTh，乳酸 3–5)、 |
 | periodization.zones.swim_three_zone | 🟢 | 做訓練強度分布分析時最常用的簡化版：用血乳酸把強度切三段——Z1 輕鬆（≤2）、Z2 閾值（2–4）、Z3 吃力（>4）。下面的 polarized / pyramidal 分布就 |
 | periodization.zones.energy_systems_primer | 🟡 | 身體有三套供能系統，差別在『撐多久、靠什麼、怎麼累』：① 磷酸原（ATP-PCr）——前 10 秒的爆發力來源，用肌肉裡現成的能量，不產乳酸，但很快用完，休 3–5 分鐘才回補；對 |
-| periodization.zones.swim_energy_by_distance | 🟢 | 不同距離靠的能量系統差很多：50m 幾乎全靠無氧（有氧只 5–20%），100m 有氧無氧大概各半，400m 以上開始有氧主導。注意 400m 的有氧占比在不同研究差很大（40%  |
+| periodization.zones.swim_energy_by_distance | 🟡 | 不同距離靠的能量系統差很多：50m 幾乎全靠無氧（有氧只 5–20%），100m 有氧無氧大概各半，400m 以上開始有氧主導。注意 400m 的有氧占比在不同研究差很大（40%  |
 | periodization.zones.swim_tid | 🟢 | TID＝整個週期裡輕鬆/閾值/吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。游泳實證裡『金字 |
 | periodization.zones.swim | 🔵 | 游泳怎麼套 Bompa 這套：組課強度用『比賽配速百分比』講——賽配速＝zone 2，比賽更快（衝刺/乳酸耐受）＝zone 1，閾值/節奏＝zone 3，有氧基礎＝zone 4，恢 |
 | periodization.zones.school_polarized | 🟢 | 極化派（Seiler）問的不是『每區強度多少』而是『每區各占幾成』。他觀察菁英耐力選手，發現他們自然形成『大量輕鬆＋少量超吃力、中間幾乎不練』的分布——大約 80% 低強度、20% |

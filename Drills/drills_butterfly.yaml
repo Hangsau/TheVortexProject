@@ -952,8 +952,8 @@ drills:
     success_signal: "捕水時板上有強烈壓力；推進感明顯"
     failure_signal: "板上沒壓力（代表肘部下垂）"
     deficiency_fixes: [2, 12]
-    source: "Maglischo Swimming Fastest（butterfly paddle work）"
-    source_ids: [src.maglischo-swimming-fastest-butterfly-paddle]
+    source: "Maglischo, E. W. (2003). Swimming Fastest. Human Kinetics."
+    source_ids: [src.maglischo-2003-swimming-fastest]
     body_position: prone
     constraints: [paddle_amplifier]
     movement_pattern: continuous

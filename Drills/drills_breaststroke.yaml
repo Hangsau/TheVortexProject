@@ -1039,8 +1039,8 @@ drills:
     success_signal: "三段速度差異反映在板上的壓力變化；划水數穩定"
     failure_signal: "三段都平均壓力（代表沒在加速）"
     deficiency_fixes: [4, 5]
-    source: "Maglischo Swimming Fastest（breaststroke paddle work）"
-    source_ids: [src.maglischo-swimming-fastest-breaststroke-padd]
+    source: "Maglischo, E. W. (2003). Swimming Fastest. Human Kinetics."
+    source_ids: [src.maglischo-2003-swimming-fastest]
     body_position: prone
     constraints: [paddle_amplifier, no_kick]
     movement_pattern: progressive

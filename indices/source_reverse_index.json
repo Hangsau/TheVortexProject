@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 764,
+  "source_count": 769,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -4604,11 +4604,75 @@
     },
     {
       "id": "src.maglischo-2003-a",
-      "display": "Maglischo (2003) Swimming Fastest",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.maglischo-2003-b",
+      "display": "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.maglischo-2003-c",
+      "display": "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.maglischo-2003-d",
+      "display": "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.maglischo-2003-swimming-fastest",
+      "display": "Maglischo, E. W. (2003). Swimming Fastest. Champaign, IL: Human Kinetics.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "0736031804"
+      },
+      "usage_count": 18,
       "usages": [
+        {
+          "id": "BkPad1",
+          "file": "Drills/drills_backstroke.yaml",
+          "path": "drills[27]"
+        },
+        {
+          "id": "BrPad1",
+          "file": "Drills/drills_breaststroke.yaml",
+          "path": "drills[35]"
+        },
+        {
+          "id": "FlPad1",
+          "file": "Drills/drills_butterfly.yaml",
+          "path": "drills[32]"
+        },
+        {
+          "id": "FrPad1",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[29]"
+        },
+        {
+          "id": "back.L2.up-kick",
+          "file": "canonical/technica/l-indicators.yaml",
+          "path": "indicators[19].public.evidence[0]"
+        },
+        {
+          "id": "back.err2",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[26].public.evidence[0]"
+        },
         {
           "id": "back.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -4618,20 +4682,6 @@
           "id": "back.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[29].public.physical_reason"
-        }
-      ]
-    },
-    {
-      "id": "src.maglischo-2003-b",
-      "display": "Maglischo 2003",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 7,
-      "usages": [
-        {
-          "id": "back.L2.up-kick",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[19].public.evidence[0]"
         },
         {
           "id": "back.tech.11",
@@ -4642,6 +4692,26 @@
           "id": "back.tech.11",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[54].public.mechanism"
+        },
+        {
+          "id": "back.tech.15",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[58].public.evidence[0]"
+        },
+        {
+          "id": "back.tech.15",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[58].public.mechanism"
+        },
+        {
+          "id": "back.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[61].public.evidence[0]"
+        },
+        {
+          "id": "back.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[61].public.mechanism"
         },
         {
           "id": "back.tech.26",
@@ -4666,44 +4736,6 @@
       ]
     },
     {
-      "id": "src.maglischo-2003-c",
-      "display": "Maglischo 2003（屬定性方向參考，量化數字待現代研究更新）",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "back.tech.15",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[58].public.evidence[0]"
-        },
-        {
-          "id": "back.tech.15",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[58].public.mechanism"
-        }
-      ]
-    },
-    {
-      "id": "src.maglischo-2003-d",
-      "display": "Maglischo 2003（量化區間屬歷史參考，現代研究尚未更新具體值）",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "back.tech.18",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[61].public.evidence[0]"
-        },
-        {
-          "id": "back.tech.18",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[61].public.mechanism"
-        }
-      ]
-    },
-    {
       "id": "src.maglischo-2012",
       "display": "Maglischo 2012, Training Zones Revisited, J Swimming Research 19(2)（全文）",
       "verification_status": "unverified",
@@ -4719,59 +4751,35 @@
     },
     {
       "id": "src.maglischo-swimming-fastest-breaststroke-padd",
-      "display": "Maglischo Swimming Fastest（breaststroke paddle work）",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "BrPad1",
-          "file": "Drills/drills_breaststroke.yaml",
-          "path": "drills[35]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.maglischo-swimming-fastest-butterfly-paddle",
-      "display": "Maglischo Swimming Fastest（butterfly paddle work）",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "FlPad1",
-          "file": "Drills/drills_butterfly.yaml",
-          "path": "drills[32]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.maglischo-swimming-fastest-paddle-catch-isol",
-      "display": "Maglischo Swimming Fastest（paddle catch isolation）",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "FrPad1",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[29]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.maglischo-swimming-fastest-paddles-for-s-pat",
-      "display": "Maglischo Swimming Fastest（paddles for S-pattern feedback）",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已合併】已併入 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "BkPad1",
-          "file": "Drills/drills_backstroke.yaml",
-          "path": "drills[27]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.maloney-gorman-2021-skilled-swimmers-focus",
@@ -10461,6 +10469,20 @@
       ]
     },
     {
+      "id": "src.rodriguez-mader-2011",
+      "display": "Rodríguez, F. A., & Mader, A. (2011).",
+      "verification_status": "unverified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.swim_energy_by_distance",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "swim_energy_by_distance"
+        }
+      ]
+    },
+    {
       "id": "src.roelofs-2017-freeze-for-action",
       "display": "Roelofs, K. (2017). Freeze for action: Neurobiological mechanisms in animal and human freezing.",
       "verification_status": "verified",
@@ -13163,23 +13185,21 @@
     },
     {
       "id": "src.toussaint",
-      "display": "Toussaint & Hollander 1994 (Sports Med 18:384–405); Rodríguez & Mader 2011",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.toussaint-hollander-1994-energetics-swimming 等 2 筆",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.swim_energy_by_distance",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "swim_energy_by_distance"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
-      "id": "src.toussaint-colwin-1990-maglischo-2003-swimmin",
-      "display": "Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest",
-      "verification_status": "unverified",
-      "identifier": {},
+      "id": "src.toussaint-2002-pumped-up-propulsion",
+      "display": "Toussaint, H. M., Van den Berg, C., & Beek, W. J. (2002). \"Pumped-up propulsion\" during front crawl swimming. Medicine & Science in Sports & Exercise, 34(2), 314–319.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "11828242",
+        "doi": "10.1097/00005768-200202000-00020",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/11828242/"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -13191,6 +13211,50 @@
           "id": "back.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[26].public.physical_reason"
+        }
+      ]
+    },
+    {
+      "id": "src.toussaint-beek-1992-biomechanics-front-crawl",
+      "display": "Toussaint, H. M., & Beek, P. J. (1992). Biomechanics of competitive front crawl swimming. Sports Medicine, 13(1), 8–24.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "1553457",
+        "doi": "10.2165/00007256-199213010-00002",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/1553457/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "back.err2",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[26].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.toussaint-colwin-1990-maglischo-2003-swimmin",
+      "display": "【複合來源鍵，已拆解】已拆為 src.toussaint-2002-pumped-up-propulsion 等 3 筆",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.toussaint-hollander-1994-energetics-swimming",
+      "display": "Toussaint, H. M., & Hollander, A. P. (1994). Energetics of competitive swimming. Implications for training programmes. Sports Medicine, 18(6), 384–405.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "7886354",
+        "doi": "10.2165/00007256-199418060-00004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/7886354/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.swim_energy_by_distance",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "swim_energy_by_distance"
         }
       ]
     },

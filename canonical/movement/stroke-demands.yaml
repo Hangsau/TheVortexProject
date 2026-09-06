@@ -1139,7 +1139,7 @@ demands:
     action_status: provisional
     evidence_profile: swimming-kinematics
     source_ids:
-      - src.maglischo-2003-b
+      - src.maglischo-2003-swimming-fastest
       - src.gonjo-2020-c
     public:
       name_zh: 仰式拉水期的前臂朝向優先於路徑形狀

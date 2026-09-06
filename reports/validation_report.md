@@ -143,12 +143,11 @@
 
 ## W022 — `text` 的內容就是它自己的來源名稱（「Mason 1992」）——只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）
 
-**WARN，共 14 筆**
+**WARN，共 13 筆**
 
   file=canonical\technica\l-indicators.yaml id='free.L2.kick' at=indicators[7].public.evidence[0] text 就是來源名稱 'McCullough 2009'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='free.L4.roll-coupling' at=indicators[11].public.evidence[0] text 就是來源名稱 'Gonjo 2020'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='free.L5.serratus' at=indicators[16].public.evidence[1] text 就是來源名稱 'StatPearls 2023'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='back.L2.up-kick' at=indicators[19].public.evidence[0] text 就是來源名稱 'Maglischo 2003'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='back.L3.pull' at=indicators[20].public.evidence[0] text 就是來源名稱 'Gonjo 2020'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='back.L4.roll-stability' at=indicators[22].public.evidence[0] text 就是來源名稱 'González-Ravé 2025'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='back.L5.roll-invariant' at=indicators[24].public.evidence[0] text 就是來源名稱 'Gonjo 2021'（只說了有這篇，沒說它顯示什麼）
