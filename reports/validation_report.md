@@ -151,14 +151,11 @@
 
 ## W022 — `text` 的內容就是它自己的來源名稱（「Mason 1992」）——只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）
 
-**WARN，共 12 筆**
+**WARN，共 9 筆**
 
   file=canonical\technica\l-indicators.yaml id='free.L2.kick' at=indicators[7].public.evidence[0] text 就是來源名稱 'McCullough 2009'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='free.L4.roll-coupling' at=indicators[11].public.evidence[0] text 就是來源名稱 'Gonjo 2020'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='free.L5.serratus' at=indicators[16].public.evidence[1] text 就是來源名稱 'StatPearls 2023'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='back.L3.pull' at=indicators[20].public.evidence[0] text 就是來源名稱 'Gonjo 2020'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='back.L4.roll-stability' at=indicators[22].public.evidence[0] text 就是來源名稱 'González-Ravé 2025'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='back.L5.roll-invariant' at=indicators[24].public.evidence[0] text 就是來源名稱 'Gonjo 2021'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L2.kick' at=indicators[28].public.evidence[0] text 就是來源名稱 'PMC 2018'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L3.undulation-integration' at=indicators[30].public.evidence[0] text 就是來源名稱 'Sanders 1995'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L4.outsweep' at=indicators[33].public.evidence[0] text 就是來源名稱 'Peyrebrune & Turner 2007'（只說了有這篇，沒說它顯示什麼）
@@ -388,10 +385,11 @@
 
 ---
 
-## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用（`verification_status: retracted` 的墓碑除外）
+## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目引用——兩條通道都算：各檔通用的 `source_ids`，與 movement 的 `measurement_conditions[].source_id`（`verification_status: retracted` 的墓碑除外）
 
-**WARN，共 2 筆**
+**WARN，共 3 筆**
 
+  source_id='src.gonjo-2016' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
 

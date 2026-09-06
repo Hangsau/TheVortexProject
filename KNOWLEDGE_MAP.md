@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 116, '🟢': 73, '🟠': 21, '🟡': 11, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
@@ -100,7 +100,7 @@
 | back.tech.2 | rotation |  | 🟢 |
 | back.tech.3 | rotation |  | 🔵 |
 | back.tech.4 | rotation |  | 🔵 |
-| back.tech.5 | rotation |  | 🟢 |
+| back.tech.5 | rotation |  | 🔵 |
 | back.tech.6 | rotation |  | 🔵 |
 | back.tech.7 | tempo |  | 🟠 |
 | back.tech.8 | stroke-cycle |  | 🔵 |
@@ -444,7 +444,7 @@
 | common.L3.watersense | common | L3 | 水感萌芽 | 捕水有前臂壓力感（自蝶仰）；踢腿後有滑行感（蛙）；波動傳到腳（蝶）；肩旋轉帶動划手（仰） |
 | common.L4.under-pressure | common | L4 | 壓力崩潰 | 慢游技術正確但加速後崩潰；EVF 在高划頻下消失；蛙式踢腿時機在速度下跑掉；蝶式第二踢失同步 |
 | common.L5.automation | common | L5 | 自動化過渡 | 划頻提升但划距不下降（Staunton 2025）；蛙式 late kick 時機穩定；蝶式兩踢功能分化；仰式旋轉角度不因速度縮小 |
-| common.L6.stability | common | L6 | 自動化完成 | 疲勞下仍維持技術穩定性（Gonjo & Olstad 2023 精英特徵）；能感知並即時修正細微偏差；SWOLF 跨距離差距極小 |
+| common.L6.stability | common | L6 | 自動化完成 | 疲勞下仍維持技術穩定性；能感知並即時修正細微偏差；SWOLF 跨距離差距極小 |
 | free.pre.resistance | free | pre | 阻力感知 | 靜止漂浮身體鬆緊有可觀察差異；推蹬後滑行距離可量測 |
 | free.L2.kick | free | L2 | 踢水推進 | 浮板踢水能穩定前進，踝蹠屈角度使腳掌朝後 |
 | free.L2.hand-pressure | free | L2 | 手部壓力 | 前臂面向後方時有水壓感知（外感受器啟動） |
@@ -456,7 +456,7 @@
 | free.L5.coupling-timing | free | L5 | 肩-髖旋轉時間差 | 精英特徵：肩旋轉峰值與髖旋轉峰值相差 0.2–0.3 秒（不是同步）；初學者兩者同時或無時差 |
 | free.L5.lift-phase-duration | free | L5 | 升力相時長與風格匹配 | 精英特徵：升力相時長與所選風格的 SR 對應——hip-driven 60 SPM 約 >0.6 秒、shoulder-driven 120 SPM <0.3  |
 | free.L5.serratus | free | L5 | 前鋸肌耐力 | 疲勞後 EVF 仍維持；肩胛骨不 wing；第 4-6 趟技術與第 1-2 趟差距小 |
-| free.L6.stability | free | L6 | 技術穩定性 | 疲勞全程划距穩定（Gonjo & Olstad 2023 精英特徵）；SWOLF 跨速度差異 < 3 |
+| free.L6.stability | free | L6 | 技術穩定性 | 疲勞全程划距穩定；SWOLF 跨速度差異 < 3 |
 | back.pre.orientation | back | pre | 方向感安全 | 能仰漂靜止 > 5 秒不扶持；描述得出「耳入水聲音變化」 |
 | back.L2.up-kick | back | L2 | 上踢推進 | 浮板仰式踢水穩定前進；腳背往上踢能描述「水團被往上推」 |
 | back.L3.pull | back | L3 | 手部划水 | 前臂在水下有水壓感知；能描述拉水「有抓住什麼」；入水不跨越中線（蛇行感知） |
@@ -465,7 +465,7 @@
 | back.L4.head-stillness | back | L4 | 頭部加速靜止度 | 加速後頭部仍能維持完全靜止（不左右晃、不前後點）；額頭水線位置不偏移。
 L4 訊號是「加速時頭部開始輕微晃動但仍能控制」；L5 是「全速下完全不動」。
 測試：在 |
-| back.L5.roll-invariant | back | L5 | 旋轉不隨速縮 | 仰式精英特徵：速度增加時旋轉幅度維持（≠ 自由式）；划距穩定 |
+| back.L5.roll-invariant | back | L5 | 旋轉不隨速縮 | 速度增加時旋轉幅度維持（≠ 自由式） |
 | back.L5.start-turn | back | L5 | 出發轉身流線 | 推蹬後流線型滑行至速度降至游進速度才開始划手；時機感知穩定 |
 | back.L6.stability | back | L6 | 技術穩定性 | 疲勞後技術與前段差距極小；六拍踢節律全程維持；划距跨速度穩定 |
 | fly.pre.undulation | fly | pre | 波動感知 | 胸骨下壓能描述「有東西傳到腳」；海豚漂浮有連貫弧線而非上下擺動 |
@@ -488,7 +488,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | breast.L4.undulation | breast | L4 | 波動整合 | 能做波動蛙式但偶爾下沉（角度不穩）；Wave style 俯衝角度感知不穩 |
 | breast.L5.late-kick | breast | L5 | late kick 時機 | insweep 啟動時才踢腿（比傳統更晚）；速度谷值明顯縮小；%VDO 降低 |
 | breast.L5.undulation-stability | breast | L5 | 波動穩定 | Wave style 俯衝角度可自評（胸口下壓時機穩定）；收腿阻力與滑行感配對 |
-| breast.L6.stability | breast | L6 | 技術穩定性 | 精英特徵：划距穩定；疲勞後 IVV（週期內速度波動）差距極小 |
+| breast.L6.stability | breast | L6 | 技術穩定性 | 100 m 全程游進段速度不掉；疲勞後 IVV（週期內速度波動）差距極小 |
 
 ### `water-sense-levels.yaml` — 水感層級（**26 條目**）
 

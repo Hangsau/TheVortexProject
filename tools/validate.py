@@ -67,7 +67,8 @@ exit code：
   W006  cross_ref 有值但完全沒有 cross_ref_ids 欄位（連空陣列都沒有）
   W007  links.*_link 有非空字串但完全沒有對應的 *_link_ids 欄位
         （連空陣列都沒有）
-  W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目以 source_ids 引用。
+  W008  孤兒來源：_sources.yaml 有登錄但沒有任何條目引用（source_ids 與
+        movement 的 measurement_conditions[].source_id 兩條通道都算）。
         verification_status: retracted 的墓碑不算孤兒（它本來就不該有人引用）
   W009  certainty 為 green/yellow 且**完全沒有**任何來源資訊
         （既無 source/sources/citation 顯示字串，也無 source_ids，
@@ -2163,7 +2164,9 @@ def check_measurement_conditions(
     entries: list[tuple[int, dict]],
     source_id_set: set,
     warnings: dict,
-):
+    errors: dict = None,
+    retracted_ids: set = frozenset(),
+) -> set[str]:
     """W019：demand 文字出現量化主張時，必須帶完整的 measurement_conditions。
 
     直接依據是 FR-44：同一個頭位操弄，手臂體側時 4–5.2%、雙臂過頭時
@@ -2172,9 +2175,16 @@ def check_measurement_conditions(
 
     掃描範圍刻意排除 measurement_conditions 本身（否則它自帶的 value 會
     觸發它自己）與 source_ids／id 這類機器鍵。
+
+    回傳被 `measurement_conditions[].source_id` 引用到的 ID 集合。這個欄位是
+    **第二條引用通道**，過去只做「存不存在」檢查（W019），沒有餵進 W008 的
+    referenced 集合、也沒過 E015：後果是一筆只在這裡被引用的來源會被誤報成
+    孤兒，而一筆已撤下的墓碑掛在這裡會完全靜默。兩個洞都源自「引用只走
+    source_ids」的假設。
     """
+    referenced: set[str] = set()
     if entry_key != "demands":
-        return
+        return referenced
 
     for index, entry in entries:
         eid = entry.get("id", "(no id)")
@@ -2233,11 +2243,21 @@ def check_measurement_conditions(
                 )
 
             sid = cond.get("source_id")
-            if isinstance(sid, str) and sid and sid not in source_id_set:
-                warnings["W019"].append(
-                    f"  file={rel} id={eid!r} at={cond_loc} "
-                    f"source_id={sid!r} 不存在於 _sources.yaml"
-                )
+            if isinstance(sid, str) and sid:
+                referenced.add(sid)
+                if sid not in source_id_set:
+                    warnings["W019"].append(
+                        f"  file={rel} id={eid!r} at={cond_loc} "
+                        f"source_id={sid!r} 不存在於 _sources.yaml"
+                    )
+                elif sid in retracted_ids and errors is not None:
+                    errors["E015"].append(
+                        f"  file={rel} id={eid!r} at={cond_loc} "
+                        f"measurement_conditions.source_id 指向已撤下的墓碑 "
+                        f"{sid!r}（該登錄已判定不可引用，不是待補來源）"
+                    )
+
+    return referenced
 
 
 def check_evidence_from(
@@ -2381,6 +2401,9 @@ def run_validation():
         tuple[str, str, str, list[tuple[int, dict]]]
     ] = []
     movement_id_set: set[str] = set()
+    # measurement_conditions[].source_id 是 source_ids 之外的第二條引用通道，
+    # 收在這裡，稍後併進 W008 的 referenced 集合。
+    measurement_referenced: set[str] = set()
     for filename, (entry_key, expected_prefix) in MOVEMENT_FILE_RULES.items():
         path = MOVEMENT_DIR / filename
         try:
@@ -2419,8 +2442,9 @@ def run_validation():
             rel, entry_key, entries, phase_registry, warnings
         )
         check_action_reference_frame(rel, entry_key, entries, warnings)
-        check_measurement_conditions(
-            rel, entry_key, entries, allowed_source_ids, warnings
+        measurement_referenced |= check_measurement_conditions(
+            rel, entry_key, entries, allowed_source_ids, warnings,
+            errors, retracted_ids
         )
         check_action_status_readiness(rel, entry_key, entries, warnings)
 
@@ -2576,8 +2600,14 @@ def run_validation():
         check_evidence_from(rel, data, all_id_set, errors)
 
     # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
+    # 兩條引用通道都算：source_ids（各檔通用）與 movement 的
+    # measurement_conditions[].source_id。只認前者會把「只在量測條件裡被引用」
+    # 的來源誤報成孤兒，誘導人去刪一筆其實正在被用的登錄。
     check_orphan_sources(
-        allowed_source_ids, referenced_source_ids, warnings, retracted_ids
+        allowed_source_ids,
+        referenced_source_ids | measurement_referenced,
+        warnings,
+        retracted_ids,
     )
     check_source_verification_status(source_records, errors)
     check_source_id_uniqueness(source_records, errors)
@@ -2805,8 +2835,10 @@ def _write_report(
         ),
         "W008": (
             "WARN",
-            "孤兒來源：`_sources.yaml` 有登錄但沒有任何條目以 `source_ids` 引用"
-            "（`verification_status: retracted` 的墓碑除外）",
+            "孤兒來源：`_sources.yaml` 有登錄但沒有任何條目引用——兩條通道都算："
+            "各檔通用的 `source_ids`，與 movement 的 "
+            "`measurement_conditions[].source_id`（`verification_status: "
+            "retracted` 的墓碑除外）",
         ),
         "W009": (
             "WARN",

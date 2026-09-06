@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 827,
+  "source_count": 829,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -2479,41 +2479,22 @@
     },
     {
       "id": "src.gonjo",
-      "display": "Gonjo et al. 2020；Maglischo 2003 修正",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】Gonjo 2020 那一半查無此文，Maglischo 2003 改用 src.maglischo-2003-swimming-fastest",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "free.err24",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[23].public.evidence[0]"
-        },
-        {
-          "id": "free.err24",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[23].public.physical_reason"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.gonjo-2016",
-      "display": "Gonjo et al. 2016",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "back.tech.2",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[45].public.evidence[0]"
-        },
-        {
-          "id": "back.tech.2",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[45].public.mechanism"
-        }
-      ]
+      "display": "Sanders RH, Gonjo T, McCabe CB. (2016). Reliability of Three-Dimensional Angular Kinematics and Kinetics of Swimming Derived from Digitized Video. J Sports Sci Med 15(1):158-166.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26957939",
+        "pmcid": "PMC4763835"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.gonjo-2017",
@@ -2540,35 +2521,43 @@
     },
     {
       "id": "src.gonjo-2020-a",
-      "display": "Gonjo 2020",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已合併】同一篇 Gonjo 等人 2020，改用 src.gonjo-2020-upper-body-kinematics",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonjo-2020-b",
+      "display": "【重複登錄，已合併】同一篇 Gonjo 等人 2020，改用 src.gonjo-2020-upper-body-kinematics",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonjo-2020-c",
+      "display": "【重複登錄，已合併】同一篇 Gonjo 等人 2020，改用 src.gonjo-2020-upper-body-kinematics",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonjo-2020-upper-body-kinematics",
+      "display": "Gonjo T, Fernandes RJ, Vilas-Boas JP, Sanders R. (2020). Upper body kinematic differences between maximum front crawl and backstroke swimming. J Biomech 98:109452.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31708239",
+        "doi": "10.1016/j.jbiomech.2019.109452"
+      },
+      "usage_count": 6,
       "usages": [
-        {
-          "id": "back.L3.pull",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[20].public.evidence[0]"
-        },
         {
           "id": "back.L3.shoulder-roll",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[21].public.evidence[0]"
         },
-        {
-          "id": "free.L4.roll-coupling",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[11].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.gonjo-2020-b",
-      "display": "Gonjo et al. (2020)",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 4,
-      "usages": [
         {
           "id": "back.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -2580,25 +2569,6 @@
           "path": "errors[25].public.physical_reason"
         },
         {
-          "id": "back.err2",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[26].public.evidence[1]"
-        },
-        {
-          "id": "back.err2",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[26].public.physical_reason"
-        }
-      ]
-    },
-    {
-      "id": "src.gonjo-2020-c",
-      "display": "Gonjo et al. 2020",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 8,
-      "usages": [
-        {
           "id": "back.tech.1",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[43].public.evidence[0]"
@@ -2609,44 +2579,20 @@
           "path": "points[43].public.mechanism"
         },
         {
-          "id": "back.tech.11",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[54].public.evidence[1]"
-        },
-        {
-          "id": "back.tech.11",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[54].public.mechanism"
-        },
-        {
-          "id": "back.tech.26",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[69].public.evidence[0]"
-        },
-        {
           "id": "back.tech.5",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[48].public.evidence[0]"
-        },
-        {
-          "id": "back.tech.5",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[48].public.mechanism"
-        },
-        {
-          "id": "movement.demand.back.pull.forearm-orientation-over-path-shape",
-          "file": "canonical/movement/stroke-demands.yaml",
-          "path": "demands[18]"
         }
       ]
     },
     {
       "id": "src.gonjo-2021",
-      "display": "Gonjo et al. 2021, Sports Biomechanics",
+      "display": "Gonjo T, Fernandes RJ, Vilas-Boas JP, Sanders R. (2021). Differences in the rotational effect of buoyancy and trunk kinematics between front crawl and backstroke swimming. Sports Biomech 22(12):1590-1601.",
       "verification_status": "verified",
       "identifier": {
+        "pmid": "34009106",
         "doi": "10.1080/14763141.2021.1921835",
-        "url": "https://doi.org/10.1080/14763141.2021.1921835"
+        "url": "https://pubmed.ncbi.nlm.nih.gov/34009106/"
       },
       "usage_count": 1,
       "usages": [
@@ -2659,25 +2605,36 @@
     },
     {
       "id": "src.gonjo-2021-a",
-      "display": "Gonjo 2021",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已合併】同一篇 Gonjo 等人 2021 滾轉研究，改用 src.gonjo-2021-body-roll",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonjo-2021-b",
+      "display": "【重複登錄，已合併】同一篇 Gonjo 等人 2021 滾轉研究，改用 src.gonjo-2021-body-roll",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonjo-2021-body-roll",
+      "display": "Gonjo T, Fernandes RJ, Vilas-Boas JP, Sanders R. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep 11(1):824.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33436944",
+        "pmcid": "PMC7804020",
+        "doi": "10.1038/s41598-020-80711-5"
+      },
+      "usage_count": 11,
       "usages": [
         {
           "id": "back.L5.roll-invariant",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[24].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.gonjo-2021-b",
-      "display": "Gonjo et al. (2021)",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 4,
-      "usages": [
+        },
         {
           "id": "back.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -2697,34 +2654,12 @@
           "id": "back.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[28].public.physical_reason"
-        }
-      ]
-    },
-    {
-      "id": "src.gonjo-2021-body-roll",
-      "display": "Gonjo et al. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep.",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmid": "33436944",
-        "pmcid": "PMC7804020",
-        "doi": "10.1038/s41598-020-80711-5"
-      },
-      "usage_count": 1,
-      "usages": [
+        },
         {
-          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
-          "file": "canonical/movement/stroke-demands.yaml",
-          "path": "demands[15]"
-        }
-      ]
-    },
-    {
-      "id": "src.gonjo-2021-c",
-      "display": "Gonjo et al. 2021",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
-      "usages": [
+          "id": "back.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[45].public.evidence[0]"
+        },
         {
           "id": "back.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -2734,15 +2669,41 @@
           "id": "back.tech.2",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[45].public.mechanism"
+        },
+        {
+          "id": "back.tech.26",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[69].public.evidence[0]"
+        },
+        {
+          "id": "free.L4.roll-coupling",
+          "file": "canonical/technica/l-indicators.yaml",
+          "path": "indicators[11].public.evidence[0]"
+        },
+        {
+          "id": "movement.demand.free.entry.shoulder-line-roll-peak",
+          "file": "canonical/movement/stroke-demands.yaml",
+          "path": "demands[15]"
         }
       ]
     },
     {
-      "id": "src.gonjo-2023",
-      "display": "Gonjo & Olstad 2023",
-      "verification_status": "unverified",
+      "id": "src.gonjo-2021-c",
+      "display": "【重複登錄，已合併】同一篇 Gonjo 等人 2021 滾轉研究，改用 src.gonjo-2021-body-roll",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 5,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonjo-2023",
+      "display": "Gonjo T, Olstad BH. (2023). Differences between elite and sub-elite swimmers in a 100 m breaststroke: a new race analysis approach with time-series velocity data. Sports Biomech 22(12):1722-1733.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "34380363",
+        "doi": "10.1080/14763141.2021.1954238"
+      },
+      "usage_count": 3,
       "usages": [
         {
           "id": "breast.L6.stability",
@@ -2758,16 +2719,6 @@
           "id": "breast.tech.22",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[92].public.mechanism"
-        },
-        {
-          "id": "common.L6.stability",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[5].public.evidence[0]"
-        },
-        {
-          "id": "free.L6.stability",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[17].public.evidence[0]"
         }
       ]
     },
@@ -5227,6 +5178,17 @@
           "path": "energy_systems_primer"
         }
       ]
+    },
+    {
+      "id": "src.mccabe-2011-sprint-distance-kinematics",
+      "display": "McCabe CB, Psycharakis S, Sanders R. (2011). Kinematic differences between front crawl sprint and distance swimmers at sprint pace. J Sports Sci 29(2):115-123.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "21120744",
+        "doi": "10.1080/02640414.2010.523090"
+      },
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mccabe-2022",

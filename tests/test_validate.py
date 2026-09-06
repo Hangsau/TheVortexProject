@@ -133,14 +133,11 @@ class FixtureTestBase(unittest.TestCase):
             except Exception:
                 pass
 
-        errors = {
-            "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
-            "E006": [], "E007": [], "E010": [], "E011": [], "E013": [],
-        }
-        warnings = {
-            "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
-            "W006": [], "W007": [], "W008": [], "W009": [], "W011": [],
-        }
+        # 用 defaultdict 而非手寫鍵集：手寫的那份會跟產品端漂移，而漂移的
+        # 症狀是 KeyError 讓測試整條掛掉（W027 新增時就發生過），看起來像
+        # 被測邏輯壞了，其實只是 harness 少了一個桶。
+        errors = defaultdict(list)
+        warnings = defaultdict(list)
 
         # E001
         for path in validate_files:
@@ -219,7 +216,10 @@ class FixtureTestBase(unittest.TestCase):
                 rel, data, allowed_source_ids, errors, warnings
             )
             # W011 / E010 / E011：與產品端同一輪走訪
-            validate_mod.check_practitioner_blocks(rel, data, warnings)
+            validate_mod.check_practitioner_blocks(
+                rel, data, warnings,
+                validate_mod.resolvable_source_ids(source_records),
+            )
             validate_mod.check_public_layer_leak(rel, data, errors)
             validate_mod.check_evidence_from(rel, data, all_id_set, errors)
 

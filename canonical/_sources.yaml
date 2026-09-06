@@ -455,16 +455,29 @@ sources:
     notes: "NCBI metadata 與全文核對。比例是 30 秒最大強度完全繫繩測試中，分開手／腿條件的力貢獻估計，不是自由游固定推進比例。"
 
   - id: src.gonjo-2021
-    display: "Gonjo et al. 2021, Sports Biomechanics"
+    display: "Gonjo T, Fernandes RJ, Vilas-Boas JP, Sanders R. (2021). Differences in the rotational effect of buoyancy and trunk kinematics between front crawl and backstroke swimming. Sports Biomech 22(12):1590-1601."
     title: "Differences in the rotational effect of buoyancy and trunk kinematics between front crawl and backstroke swimming"
     type: journal-article
     verification_status: verified
-    authors: ["Tomohiro Gonjo", "Ricardo J. Fernandes", "João Paulo Vilas-Boas", "Ross Sanders"]
+    authors: ["Gonjo T", "Fernandes RJ", "Vilas-Boas JP", "Sanders R"]
     year: 2021
     container: "Sports Biomechanics"
-    identifier: {doi: "10.1080/14763141.2021.1921835", url: "https://doi.org/10.1080/14763141.2021.1921835"}
-    retrieved_on: "2026-07-29"
-
+    identifier:
+      pmid: "34009106"
+      doi: "10.1080/14763141.2021.1921835"
+      url: "https://pubmed.ncbi.nlm.nih.gov/34009106/"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 補正。原登錄只有 DOI、顯示字串只寫「Gonjo et al. 2021, Sports Biomechanics」，
+      已補 PMID 34009106 與完整書目。線上首發 2021-05-19，正式刊期是 2023 年 22(12):1590-1601，
+      本專案沿用 2021 作為引用年，兩者指的是同一筆。
+      原文可支持者：十名泳者、自由式與仰式各在四個相同速度下，以逆動力學求橫軸的浮力矩與
+      水動力矩；自由式的抬腿浮力矩與沉腿水動力矩都比仰式大 30–40%（p ≤ 0.001）；
+      時間序列顯示自由式的沉腿水動力矩峰值落在水下上肢動作的前半段，仰式沒有這個型態。
+      地雷（重要）：本筆與 src.gonjo-2023（Gonjo & Olstad，PMID 34380363）同刊同卷同期
+      （Sports Biomech 22(12)，本筆 1590-1601、該筆 1722-1733），只寫「Gonjo, Sports Biomech」
+      無法區分；又與 src.gonjo-2021-body-roll（Sci Rep 2021，同一組作者的另一篇滾轉研究）
+      極易互串。引用時務必帶 PMID。
   - id: src.hyodo-2025
     display: "Hyodo 2025, trunk rotation review"
     title: "A Review of Trunk Rotation Mechanics in Front Crawl Swimming"
@@ -1304,22 +1317,45 @@ sources:
     notes: "顯示字串第一個字就是「教練共識」——那是證據等級的自述，不是來源。扣掉共識兩字剩下的是兩個健身網站名，指不到具體文章。唯一引用 periodization/zones.yaml 的 phosphagen 訓練處方已於 2026-09-06 改寫成 observation_basis（誰的共識、什麼族群、外推到哪裡為止），並保留原文對 PCr 再合成動力學的內部交叉參照。留墓碑擋重新登錄——見 validate.py E014。"
 
   - id: src.gonjo
-    display: "Gonjo et al. 2020；Maglischo 2003 修正"
+    display: "【複合來源鍵，已拆解】Gonjo 2020 那一半查無此文，Maglischo 2003 改用 src.maglischo-2003-swimming-fastest"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 拆解，並逼出一個幻影來源。原顯示字串「Gonjo et al. 2020；Maglischo 2003 修正」
+      支持的主張是「現代研究確認菁英自由式選手手部軌跡是相對直線的後推
+      （Gonjo 2020 個體差異研究的核心發現之一）」。實際查核：Gonjo T 在 2020 年的游泳運動學
+      論文只有 PMID 31708239 一篇（自由式與仰式最大速度的上肢運動學比較），該文量的是
+      肩／髖滾轉角、划距、划頻與各相位時長，完全沒有量手部軌跡，也沒有做個體差異分析。
+      「Gonjo 2020 手部軌跡個體差異研究」在文獻中不存在，該半句已從正文刪除。
+      Maglischo 2003 那一半是真的，已有 src.maglischo-2003-swimming-fastest。
+      本 id 保留為墓碑、不得再使用。
   - id: src.gonjo-2016
-    display: "Gonjo et al. 2016"
-    type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
+    display: "Sanders RH, Gonjo T, McCabe CB. (2016). Reliability of Three-Dimensional Angular Kinematics and Kinetics of Swimming Derived from Digitized Video. J Sports Sci Med 15(1):158-166."
+    title: "Reliability of Three-Dimensional Angular Kinematics and Kinetics of Swimming Derived from Digitized Video"
+    type: journal-article
+    verification_status: verified
+    authors: ["Sanders RH", "Gonjo T", "McCabe CB"]
     year: 2016
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+    container: "Journal of Sports Science and Medicine"
+    identifier:
+      pmid: "26957939"
+      pmcid: "PMC4763835"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 查核。原顯示字串只有「Gonjo et al. 2016」；PubMed 以 Gonjo T 為作者的 2016 年
+      文獻只回傳這一筆，而且第一作者是 Sanders 不是 Gonjo。
+      原文可支持者：這是一篇方法學信度研究——兩名自由式與一名仰式高水準泳者（n=3），
+      同一個划手週期在每個機位各數位化五次，比較 50 fps 與 25 fps 兩種取樣與外插設定；
+      重複性係數 r = 0.93–0.99，結論是「用多機位水上水下影像手動數位化做逆動力學，
+      信度足以辨識淨力矩的真實差異」；並建議踢水劇烈者在小腿加標記以降低踝部誤差。
+      使用邊界（重要）：本文沒有比較不同速度、沒有比較不同泳式、n=3，它量的是
+      「量測方法可不可靠」不是「泳者怎麼游」。原本掛在「仰式在不同速度下肩／髖旋轉幅度
+      不隨速度改變」這條主張上，本文完全不能支持——該結論的真正出處是
+      src.gonjo-2021-body-roll，正文已改指。
+      本專案未能定位原編者心中的那篇「Gonjo 2016」，若確實存在應另行登錄。
+      本筆是真實已驗證文獻、目前無條目引用（W008 孤兒 +1），比照 src.gonjo-2018 的處理
+      不轉墓碑；id 的 gonjo-2016 字面是穩定鍵不是事實宣稱。
   - id: src.gonjo-2017
     display: "Gonjo et al. 2017, PubMed 28605694"
     title: "Effect of increased kick frequency on propelling efficiency and muscular co-activation during underwater dolphin kick."
@@ -1357,64 +1393,137 @@ sources:
       且目前無條目引用本筆。本筆是真實已驗證文獻，不轉墓碑。
 
   - id: src.gonjo-2020-a
-    display: "Gonjo 2020"
+    display: "【重複登錄，已合併】同一篇 Gonjo 等人 2020，改用 src.gonjo-2020-upper-body-kinematics"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    year: 2020
-    notes: "疑似與 src.gonjo-2020-b、src.gonjo-2020-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。逐筆核對 Gonjo T 的 2020 年 PubMed 文獻，只有 PMID 31708239
+      一篇是游泳上肢運動學研究，故本 id 與 src.gonjo-2020-b、src.gonjo-2020-c 確為同一文獻，一併撤下，
+      統一改指 src.gonjo-2020-upper-body-kinematics。本 id 保留為墓碑、不得再使用。
   - id: src.gonjo-2020-b
-    display: "Gonjo et al. (2020)"
+    display: "【重複登錄，已合併】同一篇 Gonjo 等人 2020，改用 src.gonjo-2020-upper-body-kinematics"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
-    year: 2020
-    notes: "疑似與 src.gonjo-2020-a、src.gonjo-2020-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。逐筆核對 Gonjo T 的 2020 年 PubMed 文獻，只有 PMID 31708239
+      一篇是游泳上肢運動學研究，故本 id 與 src.gonjo-2020-a、src.gonjo-2020-c 確為同一文獻，一併撤下，
+      統一改指 src.gonjo-2020-upper-body-kinematics。本 id 保留為墓碑、不得再使用。
   - id: src.gonjo-2020-c
-    display: "Gonjo et al. 2020"
+    display: "【重複登錄，已合併】同一篇 Gonjo 等人 2020，改用 src.gonjo-2020-upper-body-kinematics"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。與 src.gonjo-2020-a、src.gonjo-2020-b 為同一文獻（PMID 31708239），
+      統一改指 src.gonjo-2020-upper-body-kinematics。本 id 保留為墓碑、不得再使用。
+
+  - id: src.gonjo-2020-upper-body-kinematics
+    display: "Gonjo T, Fernandes RJ, Vilas-Boas JP, Sanders R. (2020). Upper body kinematic differences between maximum front crawl and backstroke swimming. J Biomech 98:109452."
+    title: "Upper body kinematic differences between maximum front crawl and backstroke swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Gonjo T", "Fernandes RJ", "Vilas-Boas JP", "Sanders R"]
     year: 2020
-    notes: "疑似與 src.gonjo-2020-a、src.gonjo-2020-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+    container: "Journal of Biomechanics"
+    identifier:
+      pmid: "31708239"
+      doi: "10.1016/j.jbiomech.2019.109452"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對 PubMed 摘要。十名男性競技泳者（原文 "ten male competitive swimmers"，
+      不是 elite），50 m 自由式與仰式各一趟最大速度，取一個上肢週期做三維運動學。
+      原文可支持者：自由式重心速度快於仰式（1.70 ± 0.04 vs 1.54 ± 0.06 m/s，p < 0.01），
+      划距沒有差異（2.00 ± 0.25 vs 2.07 ± 0.17 m/cycle），划頻自由式較高
+      （51.67 ± 6.38 vs 44.81 ± 4.68 cycles/min，p < 0.01）；最大肩滾轉自由式大於仰式
+      （52.88 ± 4.89 vs 49.73 ± 5.73°，p < 0.05），最大髖滾轉自由式小於仰式
+      （33.79 ± 6.07 vs 39.83 ± 7.25°，p < 0.05）；release 期絕對時長與 recovery 期相對時長
+      自由式較短（0.07 ± 0.03 vs 0.26 ± 0.08 s；28.69 ± 2.50 vs 33.21 ± 1.43%）。
+      結論是自由式比仰式快來自划頻較高，而划頻高來自較短的 release 與 recovery。
+      使用邊界（重要）：① 受試者是 competitive 不是 elite，寫「精英」是加碼；
+      ② 只測最大速度一個條件，任何「速度增加時如何變化」「加速後旋轉崩潰」的主張
+      都不能掛在本文名下，那是 src.gonjo-2021-body-roll 的結果；
+      ③ 本文沒有量手部或前臂的軌跡形狀、也沒有做個體差異分析，
+      「划手路徑個體差異顯著」不是本文的結論；報的 SD（約 6°）是滾轉角的組內離散，
+      不是路徑形狀的個體差異。
   - id: src.gonjo-2021-a
-    display: "Gonjo 2021"
+    display: "【重複登錄，已合併】同一篇 Gonjo 等人 2021 滾轉研究，改用 src.gonjo-2021-body-roll"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    year: 2021
-    notes: "疑似與 src.gonjo-2021-b、src.gonjo-2021-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。本 id 與 src.gonjo-2021-b、src.gonjo-2021-c 支持的都是「仰式旋轉幅度不隨速度縮小」，
+      對應 Sci Rep 2021 的滾轉研究（PMID 33436944），一併撤下，
+      統一改指 src.gonjo-2021-body-roll。注意同一組作者 2021 年另有一篇橫軸力矩研究
+      （src.gonjo-2021，PMID 34009106），兩者不可互換。本 id 保留為墓碑、不得再使用。
   - id: src.gonjo-2021-b
-    display: "Gonjo et al. (2021)"
+    display: "【重複登錄，已合併】同一篇 Gonjo 等人 2021 滾轉研究，改用 src.gonjo-2021-body-roll"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
-    year: 2021
-    notes: "疑似與 src.gonjo-2021-a、src.gonjo-2021-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。本 id 與 src.gonjo-2021-a、src.gonjo-2021-c 支持的都是「仰式旋轉幅度不隨速度縮小」，
+      對應 Sci Rep 2021 的滾轉研究（PMID 33436944），一併撤下，
+      統一改指 src.gonjo-2021-body-roll。注意同一組作者 2021 年另有一篇橫軸力矩研究
+      （src.gonjo-2021，PMID 34009106），兩者不可互換。本 id 保留為墓碑、不得再使用。
   - id: src.gonjo-2021-c
-    display: "Gonjo et al. 2021"
+    display: "【重複登錄，已合併】同一篇 Gonjo 等人 2021 滾轉研究，改用 src.gonjo-2021-body-roll"
     type: other
-    verification_status: unverified
-    authors: ["Gonjo"]
-    et_al: true
-    year: 2021
-    notes: "疑似與 src.gonjo-2021-a、src.gonjo-2021-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。與 src.gonjo-2021-a、src.gonjo-2021-b 為同一文獻（PMID 33436944），
+      統一改指 src.gonjo-2021-body-roll。本 id 保留為墓碑、不得再使用。
 
+  - id: src.mccabe-2011-sprint-distance-kinematics
+    display: "McCabe CB, Psycharakis S, Sanders R. (2011). Kinematic differences between front crawl sprint and distance swimmers at sprint pace. J Sports Sci 29(2):115-123."
+    title: "Kinematic differences between front crawl sprint and distance swimmers at sprint pace"
+    type: journal-article
+    verification_status: verified
+    authors: ["McCabe CB", "Psycharakis S", "Sanders R"]
+    year: 2011
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "21120744"
+      doi: "10.1080/02640414.2010.523090"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 查核。七名短距離與八名長距離自由式專項選手，各四趟 25 m 衝刺，
+      六台同步攝影機、6.75 立方公尺標定空間，三維量測速度、划距、划頻、上肢與足部位移、
+      肘角、肩滾轉與髖滾轉角、各相位時長，以及週期內各事件相對入水的時點。
+      原文可支持者：① 兩組在衝刺配速下的差異普遍很小且不顯著，僅集中在週期的時序面向，
+      作者結論是「教練不應在技術發展上區別對待短距與長距選手」；
+      ② 本文是「自由式衝刺時最大肩滾轉峰值出現在入水期轉入拉手期的交界」這個時點描述的
+      原始出處——Gonjo 等人 2021 討論段引用的正是本文，該時點不是 Gonjo 2021 自己的量測結果。
+      使用邊界：受試為自由式專項選手、只在衝刺配速下量測，不涵蓋仰式；
+      也不支持把峰值時點寫成「整段入水期都維持」的狀態。
   - id: src.gonjo-2023
-    display: "Gonjo & Olstad 2023"
-    type: other
-    verification_status: unverified
-    authors: ["Gonjo", "Olstad"]
+    display: "Gonjo T, Olstad BH. (2023). Differences between elite and sub-elite swimmers in a 100 m breaststroke: a new race analysis approach with time-series velocity data. Sports Biomech 22(12):1722-1733."
+    title: "Differences between elite and sub-elite swimmers in a 100 m breaststroke: a new race analysis approach with time-series velocity data"
+    type: journal-article
+    verification_status: verified
+    authors: ["Gonjo T", "Olstad BH"]
     year: 2023
-
+    container: "Sports Biomechanics"
+    identifier:
+      pmid: "34380363"
+      doi: "10.1080/14763141.2021.1954238"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對 PubMed 摘要。菁英與次菁英男性各七名（FINA 分 772.1 ± 35.2 vs
+      610.6 ± 24.7），100 m 蛙式計時游，多機位系統取滑行、pull-out、clean-swimming
+      三個分段的平均與時間序列速度。
+      原文可支持者：菁英的 clean-swimming 平均速度在四趟全部較快（差 7–11%），
+      滑行段在第 2、3 趟較快（差約 13%）；時間序列顯示菁英在滑行段前 40% 時間內速度較快；
+      clean-swimming 段除了最初 5–15% 時間外全段有差異；pull-out 段沒有差異。
+      作者自己的結論是：既然 pull-out 與 clean-swimming 起頭沒有差異，
+      教練與選手不該假設游進技術好就保證這些分段也快。
+      使用邊界（重要）：本文量的是分段速度，沒有量划距（SL）、沒有量划頻，
+      也沒有做疲勞下技術穩定性的分析。本專案原先用它支持「精英優勢在划距穩定」
+      「疲勞下技術穩定性是精英特徵」「疲勞全程划距穩定是精英特徵」等四處，
+      全部是本文沒有量過的東西；唯一原本就正確的半句是「pull-out 差異反而不顯著」。
+      另注意本筆與 src.gonjo-2021 同刊同卷同期（Sports Biomech 22(12)），引用時帶 PMID。
   - id: src.gonzalez-rave
     display: "【複合來源鍵，已拆解】已拆為 src.gonzalez-rave-2021-tid-review、src.papadimitriou-2026-sprint-tid 等 2 筆（第三筆 Barbosa et al. 2019 查無此文，已刪）"
     type: other
@@ -7306,30 +7415,35 @@ sources:
       兩套教材策略的優劣判定。
 
   - id: src.gonjo-2021-body-roll
-    display: "Gonjo et al. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep."
+    display: "Gonjo T, Fernandes RJ, Vilas-Boas JP, Sanders R. (2021). Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities. Sci Rep 11(1):824."
     title: "Body roll amplitude and timing in backstroke swimming and their differences from front crawl at the same swimming intensities"
     type: journal-article
-    verification_status: unverified
-    authors: ["Gonjo"]
+    verification_status: verified
+    authors: ["Gonjo T", "Fernandes RJ", "Vilas-Boas JP", "Sanders R"]
     year: 2021
     container: "Scientific Reports"
     identifier:
       pmid: "33436944"
       pmcid: "PMC7804020"
       doi: "10.1038/s41598-020-80711-5"
-    retrieved_on: "2026-09-02"
+    retrieved_on: "2026-09-06"
     notes: >-
-      Step 17d 為 FR-10 裁決登錄。識別碼於蒐證階段實際解析，完整作者清單未
-      逐字轉錄，標 unverified。10 名男性、四種游泳強度，19 個體表 landmark，
-      四台水下與兩台水上攝影機重建；shoulder roll 定義為左右肩關節中心連線
-      在橫斷面的投影角，峰值落在 entry 到後續 pull 的交界。
-      適用範圍：只支持「肩線 roll 峰值落在入水期到拉手期的交界」這個時點
-      描述，且必須寫明肩線是體表 landmark 連線的投影角。
-      不可用於：把肩線 roll 寫成脊椎旋轉或脊椎分節角；把峰值時點寫成整段
-      入水期或「前伸滑行期」的狀態；任何未附參考系與正負向的「同側／對側」句。
-      注意：本條與 src.gonjo-2021（Sports Biomechanics，浮力轉動效應與軀幹
-      運動學，DOI 10.1080/14763141.2021.1921835）是同年不同篇，不得互相替代。
-
+      2026-09-06 核對 PMC 全文（原為 Step 17d 只解析識別碼的 unverified 登錄，本次補齊作者與結果）。
+      十名男性泳者 × 兩種泳式 × 四種強度（最大速度的 83 / 88 / 93 / 100%）共 80 趟，
+      19 個體表標記，兩台水上與四台水下攝影機重建；分析一個上肢週期（同側手腕入水到下一次入水），
+      取肩滾轉、髖滾轉、全身滾轉（WBR）與浮力矩造成的全身滾轉（WBRBT）。
+      原文可支持者：① 幅度——強度上升時自由式的 WBR、肩滾轉、髖滾轉幅度全部縮小，
+      仰式只有 WBRBT 縮小，WBR／肩／髖滾轉幅度維持（p ≤ 0.017）；
+      ② 時序——WBRBT 峰值時點兩式都不隨強度改變；自由式在強度上升時把 WBR 與髖滾轉峰值
+      往週期前段移，仰式的時點反而是穩定的；③ 泳式差異——仰式的 WBRBT 與肩滾轉峰值比自由式早。
+      使用邊界（重要）：① 「峰值時點往週期前段移」是自由式的結果，不是仰式的，
+      寫反會把本文的核心對比整個顛倒；② 「仰式旋轉幅度完全不隨速度縮小」講得太滿——
+      WBRBT 這一項在仰式也顯著縮小；③ 本文的划距在兩式都隨強度下降
+      （仰式 2.59 → 2.52 → 2.29 → 2.07 m/cycle），不可拿本文支持「仰式划距穩定」；
+      ④ 「自由式衝刺時肩滾轉峰值落在入水期與拉手期的交界」出現在本文討論段、是引用他人
+      （McCabe、Psycharakis & Sanders 2011），不是本文的量測結果，
+      要引請引 src.mccabe-2011-sprint-distance-kinematics；
+      ⑤ 作者自己寫明「目前沒有直接證據支持滾轉幅度與入水期時長的關係」。
   - id: src.armstrong-2021
     display: 'Armstrong LE (2021). Rehydration during Endurance Exercise: Challenges, Research, Options,
       Methods. Nutrients 13(3):887. PMID 33803421'

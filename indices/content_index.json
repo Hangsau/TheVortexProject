@@ -3554,7 +3554,7 @@
       "title": "前臂在水下有水壓感知；能描述拉水「有抓住什麼」；入水不跨越中線（蛇行感知）",
       "tags": {
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "l_level": [
           "L3"
@@ -3563,9 +3563,7 @@
           "back"
         ]
       },
-      "source_ids": [
-        "src.gonjo-2020-a"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -3586,7 +3584,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-a"
+        "src.gonjo-2020-upper-body-kinematics"
       ],
       "outgoing_ids": []
     },
@@ -3681,7 +3679,7 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[24]",
-      "title": "仰式精英特徵：速度增加時旋轉幅度維持（≠ 自由式）；划距穩定",
+      "title": "速度增加時旋轉幅度維持（≠ 自由式）",
       "tags": {
         "certainty": [
           "🟢"
@@ -3694,7 +3692,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2021-a"
+        "src.gonjo-2021-body-roll"
       ],
       "outgoing_ids": []
     },
@@ -3781,8 +3779,8 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-b",
-        "src.gonjo-2021-b",
+        "src.gonjo-2020-upper-body-kinematics",
+        "src.gonjo-2021-body-roll",
         "src.race-club-gary-hall-jr"
       ],
       "outgoing_ids": [
@@ -3984,15 +3982,14 @@
           "pull"
         ],
         "certainty": [
-          "🟡",
-          "🟢"
+          "🔵",
+          "🟡"
         ],
         "stroke": [
           "back"
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-b",
         "src.maglischo-2003-swimming-fastest",
         "src.toussaint-2002-pumped-up-propulsion",
         "src.toussaint-beek-1992-biomechanics-front-crawl"
@@ -4039,7 +4036,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2021-b"
+        "src.gonjo-2021-body-roll"
       ],
       "outgoing_ids": [
         "back.tech.1",
@@ -4188,7 +4185,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[43]",
-      "title": "精英仰式泳者肩旋轉與髖旋轉的現代運動學數據",
+      "title": "競技仰式泳者肩旋轉與髖旋轉的現代運動學數據",
       "tags": {
         "category": [
           "rotation"
@@ -4201,7 +4198,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-c"
+        "src.gonjo-2020-upper-body-kinematics"
       ],
       "outgoing_ids": []
     },
@@ -4239,6 +4236,7 @@
           "stroke-cycle"
         ],
         "certainty": [
+          "🔵",
           "🟡",
           "🟢"
         ],
@@ -4247,7 +4245,6 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-c",
         "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
@@ -4441,8 +4438,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2016",
-        "src.gonjo-2021-c"
+        "src.gonjo-2021-body-roll"
       ],
       "outgoing_ids": []
     },
@@ -4605,7 +4601,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-c",
+        "src.gonjo-2021-body-roll",
         "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": [
@@ -4758,12 +4754,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[48]",
-      "title": "旋轉最優區間：45–50° 為群體中位數，個體差異合理",
+      "title": "旋轉最優區間：45–50° 是實測到的群體平均，個體散佈合理",
       "tags": {
         "category": [
           "rotation"
         ],
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "stroke": [
@@ -4771,7 +4768,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-c"
+        "src.gonjo-2020-upper-body-kinematics"
       ],
       "outgoing_ids": []
     },
@@ -5166,7 +5163,7 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[46]",
-      "title": "精英特徵：划距穩定；疲勞後 IVV（週期內速度波動）差距極小",
+      "title": "100 m 全程游進段速度不掉；疲勞後 IVV（週期內速度波動）差距極小",
       "tags": {
         "certainty": [
           "🟢"
@@ -5981,7 +5978,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[92]",
-      "title": "精英優勢在划距穩定性，非划頻",
+      "title": "精英與次精英的差距在游進段與滑行段速度，pull-out 反而不是",
       "tags": {
         "category": [
           "tempo"
@@ -7016,10 +7013,10 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[5]",
-      "title": "疲勞下仍維持技術穩定性（Gonjo & Olstad 2023 精英特徵）；能感知並即時修正細微偏差；SWOLF 跨距離差距極小",
+      "title": "疲勞下仍維持技術穩定性；能感知並即時修正細微偏差；SWOLF 跨距離差距極小",
       "tags": {
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "l_level": [
           "L6"
@@ -7028,9 +7025,7 @@
           "common"
         ]
       },
-      "source_ids": [
-        "src.gonjo-2023"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -9467,7 +9462,7 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-a"
+        "src.gonjo-2021-body-roll"
       ],
       "outgoing_ids": []
     },
@@ -9631,10 +9626,10 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[17]",
-      "title": "疲勞全程划距穩定（Gonjo & Olstad 2023 精英特徵）；SWOLF 跨速度差異 < 3",
+      "title": "疲勞全程划距穩定；SWOLF 跨速度差異 < 3",
       "tags": {
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "l_level": [
           "L6"
@@ -9643,9 +9638,7 @@
           "free"
         ]
       },
-      "source_ids": [
-        "src.gonjo-2023"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -10074,15 +10067,13 @@
           "pull"
         ],
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "stroke": [
           "free"
         ]
       },
-      "source_ids": [
-        "src.gonjo"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "back.err2",
         "free.tech.7"
@@ -12396,7 +12387,6 @@
         ]
       },
       "source_ids": [
-        "src.gonjo-2020-c",
         "src.maglischo-2003-swimming-fastest"
       ],
       "outgoing_ids": []
