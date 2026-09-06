@@ -925,6 +925,13 @@ errors:
             兩者外觀相似，但主動用力方向完全不同。
           source: "Race Club, Gary Hall Jr."
           source_ids: [src.race-club-gary-hall-jr]
+          observation_basis: >-
+            觀察者為 The Race Club 的 Gary Hall Jr.（奧運選手兼教練），
+            族群為其技術教學面向的競技與進階成人仰式泳者。
+            外推邊界：這是**動作意識的處方**，不是量測結果——「回臂側主動上抬」與
+            「划水側主動下壓」在水下影像上外觀高度相近，本庫無法由公開素材區分兩者的
+            實際肌肉徵召差異，因此只作為教學語言的選擇建議，不作為機制主張；
+            初學與兒童族群未在此觀察範圍內。
       cross_ref: 技術分析 §旋轉機制
       cross_ref_ids: [back.tech.1, back.tech.5, back.tech.6]
       correct_concept: >-
@@ -1010,6 +1017,12 @@ errors:
             捕水完成時肘部角度約 100–120°。注意：此數字來自教練觀測影像分析，非精確實驗室控制研究。
           source: "Aaron Peirsol / Ryan Murphy 水下影像分析（教練觀測）"
           source_ids: [src.aaron-peirsol-ryan-murphy]
+          observation_basis: >-
+            觀察者為教練群（非單一具名研究者），素材是 Aaron Peirsol、Ryan Murphy 等
+            奧運層級仰式選手的公開水下影像，族群 = 男子菁英仰式短中距離。
+            外推邊界：影像判讀無標定尺規與同步測力，10–20 cm 與 100–120° 都是**目測區間**，
+            誤差未知、不得當成量測值引用或再做運算；樣本是少數頂尖個案，
+            不代表族群分布，也不可外推到女子、青少年、成人初學或其他泳式。
       correct_concept: >-
         「肘部高於手腕、手腕高於指尖」的相對位置比深度數字本身更重要。
         最優深度依選手條件而定：短距離高力量選手可接受略深手位；長距離或力量不足者明確淺抓；
@@ -1157,6 +1170,12 @@ errors:
             並協助手腿協調與放鬆。兒童憋氣是教練需主動辨識並糾正的常見問題。
           source: "swim-teach.com、A3 Performance、enjoy-swimming 等背式呼吸教學指引（教學共識）"
           source_ids: [src.swim-teach-com-a3-performance-enjoy-swimming]
+          observation_basis: >-
+            觀察者是三個獨立的泳訓教學網站（swim-teach.com、A3 Performance、enjoy-swimming），
+            族群為成人初學到中階仰式學員與兒童泳訓班。本條記錄的是**多家教材說法一致**這件事，
+            不是任何一家的實驗結果。
+            外推邊界：「一臂吸、對臂吐」是普遍的入門處方，沒有任何一家給出對照組或呼吸交換量測；
+            競技層級的呼吸節律（配合划頻與距離調整）不在此範圍，不可用本條反推菁英做法。
       cross_ref: 頭部基礎位置、化學受器與呼吸驅動
       cross_ref_ids: [back.tech.21, breathing.physiology.chemoreceptors]
       correct_concept: >-
@@ -1318,6 +1337,11 @@ errors:
             小指轉動發生在入水前 0.1-0.2 秒，不是整個回臂過程。
           source: "教練影像觀察 / Race Club Ch 13-14"
           source_ids: [src.race-club-ch-13-14]
+          observation_basis: >-
+            觀察者為教練群與 The Race Club 第 13–14 章的技術教學素材，族群為競技仰式泳者。
+            外推邊界：入水點「在肩線或略內側」是影像目測，無標定尺規；
+            「入水前 0.1–0.2 秒」是由影格數估算的區間，**不是同步計時量測**，
+            不得當成可再運算的時間常數；初學者與兒童的回臂型態不在此觀察範圍。
       correct_concept: >-
         回臂大部分時間手掌朝側（中性位置），只在接近水面那一瞬把小指轉到朝下切水。
         重點是入水位置在肩膀延伸線，不是手腕旋轉幅度。
@@ -2092,11 +2116,21 @@ errors:
           失去高肘 leverage，推進力降到約 30-50% 之間（依肘位置而定）。
           菁英蛙式選手 insweep 時手肘明顯保持在「肩膀前方、不貼身體」的高位置——
           這需要訓練建立的核心穩定支撐。
+        observation_basis: >-
+          觀察者為 The Race Club 第 18 章的技術教學素材與通用菁英影像，族群為競技蛙式泳者。
+          外推邊界：「手肘保持在肩前高位」是可由影像確認的姿態描述；
+          但「推進力降到約 30–50%」**沒有量測依據**——本庫未取得任何蛙式 insweep 的
+          肘位置對推進力的測力數據，該區間只是幅度上的定性提示，不得引用為數值、
+          不得再做運算或比較。
       evidence:
         - certainty: 🟠
           text: 菁英蛙式選手 insweep 影像分析：手肘在肩膀前方、不貼身體側
           source: Race Club Ch 18 / 通用菁英影像觀察
           source_ids: [src.race-club-ch-18]
+          observation_basis: >-
+            觀察者為 The Race Club 第 18 章素材與通用菁英水下影像，族群為競技蛙式泳者。
+            外推邊界：這是姿態的有無判讀（肘在肩前 vs 貼身側），無角度或深度量測；
+            成人初學與兒童因核心穩定不足常做不到此姿態，本條不可當成他們的教學指標。
       correct_concept: >-
         insweep 時手肘維持在肩膀前方、上方，
         前臂橫掃水（像扇葉），不是「手肘收緊推手掌」。
@@ -3249,6 +3283,13 @@ errors:
           text: 有效的 UDK 教學需要具體的技術語言，指向身體的特定部位和感知目標。
           source: USMS, Swimming World Magazine, The Race Club
           source_ids: [src.usms-swimming-world-magazine-the-race-club]
+          observation_basis: >-
+            觀察者是三個獨立的泳訓教學發布方（U.S. Masters Swimming、Swimming World、The Race Club）
+            的 UDK 教學內容，族群為競技與進階成人泳者。本條記錄的是**這些教材共同採用具體部位語言
+            而非動物類比**這個現象，不是任何一方的實驗結論。
+            外推邊界：沒有任何一方比較過「具體技術語言」與「動物類比」的教學成效，
+            所以本條**不能宣稱前者教得比較快**——它只支持「業界主流教材是這樣寫的」。
+            兒童初學階段的口令選擇不在此範圍（形象類比在該族群可能有不同作用）。
       cross_ref: UDK 是全身波動，不是腿部踢水、Strouhal 數與人類 UDK 推進效率
       cross_ref_ids: [udk.tech.4, udk.tech.8]
       correct_concept: >-
@@ -3688,6 +3729,12 @@ errors:
           text: Amanda Kendall VM 量測抬頭 vs 低頭：抬頭飛行距離 +11%、到 12m 時間 -3%；但量測對象需要本身有足夠核心控制配合。
           source: Race Club Ch 23（菁英影像觀察）
           source_ids: [src.race-club-ch-23]
+          observation_basis: >-
+            觀察者為 The Race Club 第 23 章的教學素材，受測者具名為單一菁英選手 Amanda Kendall，
+            量測方式為該單位自行架設的影像分析。
+            外推邊界：**n=1**，未報告重複次數與變異，「+11%」「-3%」是單一受試的對比值，
+            不是可預期的族群增益；且原始素材本身指出效果依賴受測者的核心控制能力，
+            所以連該選手自己在疲勞或減量期是否重現都未知。不得用於任何族群推論。
       correct_concept: >-
         評估選手核心控制與飛行軌跡偏好再決定：核心強+追求飛行距離的選手用抬頭 coupling；
         核心普通或追求快入水策略的用低頭。教學初期先用中立姿勢（不刻意抬也不壓），
@@ -3819,11 +3866,24 @@ errors:
           無論比賽距離（200/400/800/1500 都一樣）。
           轉身後第一划換氣（200m 以上）是另一回事——那是補回轉身屏氣的需求，
           兩者不能類推。
+        observation_basis: >-
+          觀察者為 The Race Club 第 23 章第 7 點的教練處方（即下方 evidence 的來源），
+          族群為競技自由式 200 m 以上項目的選手。
+          外推邊界：「breakout 是整趟最快段」與「一划約 1–2 秒」是本庫的力學與時序推導，
+          **不是 Race Club 提供的量測**；該素材給的是一條絕對化的教練規定，
+          沒有附上速度損失量或氧債的數據，所以本條不得宣稱「損失多少秒」。
+          成人初學與兒童在 breakout 常本來就撐不到不換氣，不適用此規定。
       evidence:
         - certainty: 🟠
           text: Race Club 觀察菁英 200m+ 選手的 breakout 模式，幾乎全部第一划不換氣。
           source: Race Club Ch 23 第 7 點（菁英教練共識）
           source_ids: [src.race-club-ch-23-7]
+          observation_basis: >-
+            觀察者為 The Race Club 的教練群，素材是菁英 200 m 以上自由式選手的比賽／訓練影像，
+            判讀項目是「第一划有無換氣」這個二元事實。
+            外推邊界：「幾乎全部」是印象式的比例陳述，**未報告樣本數與確切比例**，
+            不得寫成百分比；本觀察只能支持「菁英族群普遍如此」，
+            不能支持「這樣做會比較快」——沒有任何對照。
       correct_concept: >-
         起跳後第一划絕對不換氣，第二划開始建立呼吸節律。
         轉身後可以第一划換氣（200m+ 距離），是不同情境的不同決策。
