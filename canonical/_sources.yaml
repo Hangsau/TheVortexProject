@@ -1824,21 +1824,42 @@ sources:
     notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.lyttle
-    display: "Lyttle 1998; Novais et al. 2012"
+    display: "【複合來源鍵，已拆解】已拆為 src.lyttle-1998 與 src.novais-2012-glide-depth-cfd"
     type: other
-    verification_status: unverified
-    authors: ["Lyttle"]
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 拆解。原顯示字串「Lyttle 1998; Novais et al. 2012」把兩篇不同文獻壓在一起，
+      且兩篇支持的是不同半句：0.4–0.6 m 這一半只有 Lyttle 1998（實測拖曳）能支持，
+      0.75 m 上限這一半只有 Novais 2012（CFD 模擬）能支持，兩者的方法、深度取樣點與
+      可外推範圍都不同。本 id 保留為墓碑、不得再使用。
   - id: src.lyttle-1998
-    display: "Lyttle et al. 1998"
-    type: other
-    verification_status: unverified
-    authors: ["Lyttle"]
-    et_al: true
+    display: "Lyttle A, Blanksby B, Elliott B, Lloyd D. (1998). The effect of depth and velocity on drag during the streamlined glide. J Swim Res 13:15-22."
+    title: "The effect of depth and velocity on drag during the streamlined glide"
+    type: journal-article
+    verification_status: verified
+    authors: ["Lyttle AD", "Blanksby BA", "Elliott BC", "Lloyd DG"]
     year: 1998
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+    container: "Journal of Swimming Research"
+    identifier:
+      url: "https://research-repository.uwa.edu.au/en/publications/the-effect-of-depth-and-velocity-on-drag-in-the-streamlined-glide/"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 查核。本刊未收錄於 PubMed，無 PMID 也無 DOI；書目由三個管道交叉確認：
+      西澳大學機構典藏（作者、刊名、卷 13、頁 15-22）、Novais 等人 2012 全文的參考文獻條目
+      （「J Swim Res 1998;13:15-22」）、以及該刊摘要。原文可支持者：以拖曳測力方式量測
+      **水面、0.2 m、0.4 m、0.6 m** 四個深度、1.6 至 3.1 m/s 六個速度下的**總阻力**；
+      各速度下水面阻力都顯著高於三個水下深度；作者結論是轉身後在約 0.4 m 深滑行可得到
+      最大的阻力減幅，**速度高於 1.9 m/s 時尤其明顯**。Novais 等人 2012 轉述本文的數值為
+      0.4 m 與 0.6 m 相對水面降阻 **10–20%**、0.2 m 降 **7–14%**。
+      使用邊界（重要）：① 本文最深只測到 **0.6 m**，所以「0.4–0.6 m 最優」有一部分是
+      取樣範圍造成的——本文**無法**對 0.6 m 以深說任何話，0.75 m 上限要引 Novais 2012；
+      ② 測的是總阻力，不是波浪阻力的分量，**不可寫成「0.6 m 時波浪阻力降低 20%」**；
+      波浪阻力佔比要引 Vennell 等人 2006；③ 本專案只取得摘要與被引轉述，未取得全文 PDF，
+      逐項統計值不得再往下細分。
+      另注意：同一組作者另有 **1999 年的會議論文**（Optimal depth for streamlined gliding,
+      Biomechanics and Medicine in Swimming VIII, pp.165-170）與 **2000 年的 J Sports Sci 論文**
+      （已登錄為 src.lyttle-2000），三篇常被混引，年份必須寫對。
   - id: src.maglischo-2003-a
     display: "【複合來源鍵，已拆解】已併入 src.maglischo-2003-swimming-fastest"
     type: other
@@ -2289,23 +2310,49 @@ sources:
       **不是游泳來源**：全書 0 處提及 swimming，不得用本書支持任何游泳專屬主張。
 
   - id: src.novais-2012-a
-    display: "Novais et al. 2012 (JHK)"
+    display: "【重複登錄，已合併】同一篇 Novais 等人 2012，改用 src.novais-2012-glide-depth-cfd"
     type: other
-    verification_status: unverified
-    authors: ["Novais"]
-    et_al: true
-    year: 2012
-    notes: "疑似與 src.novais-2012-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。PubMed 以 Novais ML[au] + 2012[dp] 查詢只回傳一筆（PMID 23487502），
+      故本 id 與 src.novais-2012-b 確為同一文獻，兩者一併撤下，統一改指
+      src.novais-2012-glide-depth-cfd。本 id 保留為墓碑、不得再使用。
   - id: src.novais-2012-b
-    display: "Novais et al. 2012, Journal of Human Kinetics"
+    display: "【重複登錄，已合併】同一篇 Novais 等人 2012，改用 src.novais-2012-glide-depth-cfd"
     type: other
-    verification_status: unverified
-    authors: ["Novais"]
-    et_al: true
-    year: 2012
-    notes: "疑似與 src.novais-2012-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 合併。與 src.novais-2012-a 為同一文獻（PMID 23487502），
+      統一改指 src.novais-2012-glide-depth-cfd。本 id 保留為墓碑、不得再使用。
 
+  - id: src.novais-2012-glide-depth-cfd
+    display: "Novais ML, Silva AJ, Mantha VR, Ramos RJ, Rouboa AI, Vilas-Boas JP, Luis SR, Marinho DA. (2012). The Effect of Depth on Drag During the Streamlined Glide: A Three-Dimensional CFD Analysis. J Hum Kinet 33:55-62."
+    title: "The Effect of Depth on Drag During the Streamlined Glide: A Three-Dimensional CFD Analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["Novais ML", "Silva AJ", "Mantha VR", "Ramos RJ", "Rouboa AI", "Vilas-Boas JP", "Luis SR", "Marinho DA"]
+    year: 2012
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "23487502"
+      pmcid: "PMC3588683"
+      doi: "10.2478/v10078-012-0044-2"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對 PMC 全文。三維 CFD 模擬（Fluent、標準 k-epsilon 紊流模型、9 億網格），
+      單一泳者流線型模型置於水下 **0 至 1.0 m、每 0.25 m 一階**，速度 1.5、2.0、2.5 m/s。
+      原文可支持者：**阻力隨深度增加而下降，但超過 0.75 m 之後幾乎不再變化**
+      （「decreased with depth, although after 0.75 m values remained almost constant」），
+      作者由此推論在 0.75 m 以深滑行對泳者不再有額外好處。
+      使用邊界（重要）：① 本文是 CFD 模擬、單一模型、無真人受試，也**沒有量測上浮時間、
+      breakout 角度或能量消耗**——任何「過深會增加上浮耗時」的說法都不能掛在本文名下；
+      ② 本文取樣點是 0 / 0.25 / 0.50 / 0.75 / 1.0 m，**沒有 0.4 m 與 0.6 m**，
+      所以「0.4–0.6 m 最優」不是本文的結論，那是 Lyttle 等人 1998 的；
+      ③ 本文有一個常被略過的結果：**最低阻力出現在「水面」條件**、最高出現在 0.25 m。
+      原因是該條件下模型半出水、濕表面積小，作者自己指出這種姿勢在出發轉身後
+      「不可行」（not feasible），所以本文的水面值不可拿來論證「貼水面比較快」。
   - id: src.olbrecht-2000
     display: "【複合來源鍵，已拆解】已拆為 src.olbrecht-2000-science-of-winning"
     type: other
@@ -4688,11 +4735,41 @@ sources:
     year: 1979
 
   - id: src.sciencedirect-wave-drag-study
-    display: "ScienceDirect 波浪阻力研究"
+    display: "【佔位字串，已取代】原字串只寫平台名，實為 Vennell 等人 2006，改用 src.vennell-2006-wave-drag"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 取代。原顯示字串「ScienceDirect 波浪阻力研究」只是**內容聚合平台的名字**，
+      不是文獻——ScienceDirect 上有數十萬篇論文，這個字串無法唯一定位任何一篇。
+      循它支持的主張（水下某深度以後波浪阻力低於總阻力 5%）回溯，可確定是
+      Vennell R, Pease D, Wilson B (2006) J Biomech 39(4):664-671，已新登錄為
+      src.vennell-2006-wave-drag。本 id 保留為墓碑、不得再使用。
 
+  - id: src.vennell-2006-wave-drag
+    display: "Vennell R, Pease D, Wilson B. (2006). Wave drag on human swimmers. J Biomech 39(4):664-671."
+    title: "Wave drag on human swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Vennell R", "Pease D", "Wilson B"]
+    year: 2006
+    container: "Journal of Biomechanics"
+    identifier:
+      pmid: "16439236"
+      doi: "10.1016/j.jbiomech.2005.01.023"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。拖曳人體模型（mannequin），涵蓋人類游泳速度區間、拖曳深度至 1.0 m。
+      原文可支持者：水面總阻力最高可達完全沒入時的 **2.4 倍**；被動波浪阻力是最大的一項阻力，
+      在 1.7 m/s 時佔總阻力 **50–60%**，遠高於先前的估計；
+      **波浪阻力低於總阻力 5% 的條件是「1 m/s 時深於 0.5 m」與「2 m/s 時深於 0.7 m」**；
+      換算成體型比例，要避開顯著波浪阻力需沒入水面下 1.8 倍胸厚（Fr=0.2，約 0.9 m/s）
+      至 2.8 倍胸厚（Fr=0.42，約 2.0 m/s）。
+      使用邊界（重要）：① **5% 門檻是速度相依的**，寫成「超過 0.7 m 就低於 5%」等於把
+      條件砍掉一半，慢速時 0.5 m 就夠、快速時才需要 0.7 m；
+      ② 受測物是**假人模型**不是活體泳者，沒有踢腿或姿勢變動；
+      ③ 作者的深度建議是以**胸厚倍數**表達的，絕對公尺數（0.5 / 0.7）是以胸厚 0.25 m、
+      指尖到腳趾 2.34 m 這組體型換算來的，體型不同者不可直接套用。
   - id: src.scott-bay-usms-level-5-coach
     display: "Scott Bay, USMS Level 5 Coach"
     type: other

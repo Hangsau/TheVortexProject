@@ -18969,7 +18969,8 @@
         ]
       },
       "source_ids": [
-        "src.lyttle"
+        "src.lyttle-1998",
+        "src.novais-2012-glide-depth-cfd"
       ],
       "outgoing_ids": []
     },
@@ -20432,8 +20433,8 @@
       },
       "source_ids": [
         "src.lyttle-1998",
-        "src.novais-2012-b",
-        "src.sciencedirect-wave-drag-study"
+        "src.novais-2012-glide-depth-cfd",
+        "src.vennell-2006-wave-drag"
       ],
       "outgoing_ids": [
         "udk.tech.2"
@@ -20766,8 +20767,8 @@
       },
       "source_ids": [
         "src.lyttle-1998",
-        "src.novais-2012-a",
-        "src.sciencedirect-wave-drag-study"
+        "src.novais-2012-glide-depth-cfd",
+        "src.vennell-2006-wave-drag"
       ],
       "outgoing_ids": []
     },
