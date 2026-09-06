@@ -748,16 +748,18 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2
-    display: "作者綜合：Bompa & Buzzichelli 6th ed.；Issurin 2008/2010/2016；Seiler 2010；Olbrecht 2000；Sweetenham & Atkinson 2003；Hellard 2019"
+    display: "【複合來源鍵，已拆解】已拆：改掛 6 個既有／新增的獨立來源"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 書目複合鍵拆解：本 id 是 periodization.structure.schools_overview 這個🔵 作者綜合區塊的「參考書單」，把六位作者的著作綁成一個鍵。已改掛獨立來源：src.bompa-buzzichelli-2019（本來就已登錄）、src.issurin-2008-block-periodization-book 與三篇 Issurin 期刊回顧、src.seiler（待拆）、src.olbrecht-2000-science-of-winning、src.sweetenham-atkinson-2003-championship-swim-training、src.hellard（待拆）。**書單型複合鍵的處置是逐本登錄後改掛，不是合併**——合併會讓五本書永遠不會被讀到。本 id 保留為墓碑、不得再使用。"
 
   - id: src.bompa-ch5-ch11-mcardle-exercise-physiology-s
-    display: "公認運動生理學（磷酸原/糖酵解/氧化三系統時程為教科書級共識，如 Bompa Ch5/Ch11、McArdle Exercise Physiology）；游泳項目對映見 swim_energy_by_distance 來源（Toussaint & Hollander 1994 / Rodríguez & Mader 2011）"
+    display: "【複合來源鍵，已拆解】已拆為 src.mcardle-katch-exercise-physiology-textbook 等"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解：本 id 的顯示字串其實是**一句敘述不是一個書目**——「公認運動生理學（…如 Bompa Ch5/Ch11、McArdle Exercise Physiology）；游泳項目對映見 swim_energy_by_distance 來源（Toussaint & Hollander 1994 / Rodríguez & Mader 2011）」。它同時混了兩本教科書、一個「見其他區塊」的內部指路、與兩篇游泳文獻。已改掛 src.bompa-buzzichelli-2019 與新登錄的 src.mcardle-katch-exercise-physiology-textbook；Toussaint／Rodríguez 那兩篇屬 src.toussaint（另一個待拆的複合鍵）。**McArdle 那筆刻意不填版次與 ISBN**：本專案沒記錄查的是哪一版哪一頁，補版次就是造假，故該來源只能支撐「教科書共識」層級的敘述、不能支撐任何具體數字。本 id 保留為墓碑、不得再使用。"
 
   - id: src.born-2022-im
     display: "Born, Romann & Stöggl 2022, Start Fast, Swim Faster, Turn Fastest: Section Analyses and Normative Data for Individual Medley, PMC9157519"
@@ -1510,14 +1512,11 @@ sources:
       ③ 非游泳專項，游泳族群盛行率需另尋來源。
 
   - id: src.issurin
-    display: "Issurin 2008《Block Periodization》; Issurin 2008 (PMID 18212712); 2010 (DOI 10.2165/11319770); 2016 (PMID 26573916); 2019 (PMID 30411234); Breil 2019 meta (PMID 31802956)"
+    display: "【複合來源鍵，已拆解】已拆為 src.issurin-2008-block-periodization-book 等 6 筆"
     type: other
-    verification_status: unverified
-    authors: ["Issurin"]
-    identifier:
-      doi: "10.2165/11319770"
-      pmid: "18212712"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 書目複合鍵拆解：本 id 綁了一本書加五篇文章。已拆為 src.issurin-2008-block-periodization-book（ISBN 9780981718002）、src.issurin-2008-block-vs-traditional-review（PMID 18212712）、src.issurin-2010-new-horizons-periodization（PMID 20199119）、src.issurin-2016-block-benefits-limitations（PMID 26573916）、src.issurin-2019-block-biological-background（PMID 30411234）、src.molmen-2019-block-endurance-meta（PMID 31802956）。**拆解逼出兩個錯誤**：① 本 id 的 identifier 掛的 DOI 10.2165/11319770 是壞的（Crossref 回 404），完整值應為 10.2165/11319770-000000000-00000；② 顯示字串把 PMID 31802956 那份統合分析的作者寫成「Breil」——那篇的作者是 Mølmen、Øfsteng 與 Rønnestad，Breil et al. 2010 是另一篇高山滑雪的原始研究。本 id 保留為墓碑、不得再使用。"
 
   - id: src.jellyfish-envenomation-first-aid
     display: "【佔位字串，非真實文獻】原記為「Jellyfish envenomation first-aid 系統回顧（種屬特異, 待補具體出處）」"
@@ -2071,12 +2070,11 @@ sources:
     notes: "疑似與 src.novais-2012-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.olbrecht-2000
-    display: "Olbrecht 2000《The Science of Winning》(書摘/訪談重建); Scientific Triathlon EP#198 訪談; TMR Coaching / lactate.com / INSCYD 二手摘要"
+    display: "【複合來源鍵，已拆解】已拆為 src.olbrecht-2000-science-of-winning"
     type: other
-    verification_status: unverified
-    authors: ["Olbrecht"]
-    year: 2000
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解：本 id 的顯示字串把原書、一集 podcast 訪談、以及 TMR Coaching／lactate.com／INSCYD 三個網站的二手摘要綁成一個鍵。原書已獨立登錄為 src.olbrecht-2000-science-of-winning。**其餘幾項刻意不登錄成來源**：它們是重建原書內容的閱讀途徑，不是可回溯的權威登錄；把二手摘要登錄成來源會讓讀者以為那些數字有出處。正確處置是在 periodization.zones.olbrecht_model 的 caveat 裡明說原書全文不可及、細節由書摘與訪談重建（該處已如此標示並標 🔴）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.osgood-schlatter-disease-statpearls-nbk44199
     display: "Smith JM. Osgood-Schlatter Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441995（最後更新 2023-08-04）。"
@@ -4403,11 +4401,189 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.selye
-    display: "Selye 1974, 1976; 整合進 Bompa 體系（多教練書共識）"
+    display: "【複合來源鍵，已拆解】已拆為 src.selye-1974-stress-without-distress 等 4 筆"
     type: other
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 書目複合鍵拆解：本 id 的顯示字串「Selye 1974, 1976; 整合進 Bompa 體系（多教練書共識）」把兩本專著與一句教練書共識綁成一個鍵，而且**沒有任何識別碼**。已拆為 src.selye-1974-stress-without-distress（ISBN 0397010265）與 src.selye-1976-stress-in-health-and-disease（ISBN 0407985107）。拆解過程中查出更重要的事：把 GAS 當成週期化的生理學底層在文獻上是**有爭議的**（Buckner 等 2017 指出 Selye 的原始對象是毒性藥理刺激不是運動訓練；Kiely 2012 指出各家週期化模型底層共用一套已無科學依據的沿襲假設），故同時新增 src.buckner-2017-gas-resistance-exercise 與 src.kiely-2012-periodization-paradigms，periodization.structure.gas 的確定性由 🟢 降為 🟡 並補上爭議。本 id 保留為墓碑、不得再使用。"
+
+  - id: src.selye-1974-stress-without-distress
+    display: "Selye, H. (1974). Stress without Distress. Philadelphia: J. B. Lippincott."
+    title: "Stress without Distress"
+    type: book
+    verification_status: verified
+    authors: ["Hans Selye"]
+    year: 1974
+    container: "J. B. Lippincott"
+    identifier:
+      isbn: "0397010265"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.selye 拆出，經 Open Library 版本紀錄核對（ISBN 0397010265，Lippincott，1974 年第一版）。GAS 三階段（警覺／適應／耗竭）的通俗版陳述出自本書。**使用邊界**：本專案的 GAS 敘述是教科書層級的框架轉述，不是對本書特定頁碼的一手引用；任何具體數字、時程或訓練處方都不得掛在本書名下。另見 src.buckner-2017-gas-resistance-exercise——Selye 的原始研究對象是毒性藥理刺激下的全身反應，不是運動訓練，把 GAS 直接當成週期化的生理學依據在文獻上是有爭議的。"
+
+  - id: src.selye-1976-stress-in-health-and-disease
+    display: "Selye, H. (1976). Stress in Health and Disease. Boston: Butterworths."
+    title: "Stress in Health and Disease"
+    type: book
+    verification_status: verified
+    authors: ["Hans Selye"]
+    year: 1976
+    container: "Butterworths"
+    identifier:
+      isbn: "0407985107"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.selye 拆出，經 Open Library 版本紀錄核對（ISBN 0407985107，Butterworths，1976）。這是 Selye 對 GAS 最完整的專著版本。使用邊界同 src.selye-1974-stress-without-distress：本專案只轉述框架，不引用特定頁碼，且 GAS 到訓練週期化的外推有文獻爭議。"
+
+  - id: src.buckner-2017-gas-resistance-exercise
+    display: "Buckner, S. L., Mouser, J. G., Dankel, S. J., Jessee, M. B., Mattocks, K. T., & Loenneke, J. P. (2017). The General Adaptation Syndrome: Potential misapplications to resistance exercise. Journal of Science and Medicine in Sport, 20(11), 1015–1017."
+    title: "The General Adaptation Syndrome: Potential misapplications to resistance exercise"
+    type: journal-article
+    verification_status: verified
+    authors: ["Samuel L. Buckner", "J. Grant Mouser", "Scott J. Dankel", "Matthew B. Jessee", "Kevin T. Mattocks", "Jeremy P. Loenneke"]
+    year: 2017
+    container: "Journal of Science and Medicine in Sport"
+    identifier:
+      pmid: "28377133"
+      doi: "10.1016/j.jsams.2017.02.012"
+      url: "https://pubmed.ncbi.nlm.nih.gov/28377133/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 為修正 periodization.structure.gas 而新增（該區塊原本以 🟢 把 GAS 當成週期化的生物學底層）。作者回頭讀 Selye 原始著作與「把 GAS 引進阻力訓練」的那幾篇奠基論文，結論是：Selye 的研究對象是**毒性劑量的藥理與物理刺激下的全身反應**，把它外推到阻力訓練「看起來只是鬆散地借用概念，可能不是合適的依據」。這不是說週期化無效，而是說**週期化的有效性不能靠 GAS 來論證**。"
+
+  - id: src.kiely-2012-periodization-paradigms
+    display: "Kiely, J. (2012). Periodization paradigms in the 21st century: evidence-led or tradition-driven? International Journal of Sports Physiology and Performance, 7(3), 242–250."
+    title: "Periodization paradigms in the 21st century: evidence-led or tradition-driven?"
+    type: journal-article
+    verification_status: verified
+    authors: ["John Kiely"]
+    year: 2012
+    container: "International Journal of Sports Physiology and Performance"
+    identifier:
+      pmid: "22356774"
+      doi: "10.1123/ijspp.7.3.242"
+      url: "https://pubmed.ncbi.nlm.nih.gov/22356774/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 為修正 periodization.structure.gas 而新增。核心論點：各家週期化模型表面上互不相同，底層卻共用一套**歷史沿襲而來、如今已不再有科學依據**的規劃假設；訓練反應的個體差異極大，套用通用的規則式決策並不適合。作者明說這**不是要全盤否定週期化**，而是要求對各模型的強弱有更細緻的認識。引用時不可拿它來支持「週期化無用」。"
+
+  - id: src.issurin-2008-block-periodization-book
+    display: "Issurin, V. (2008). Block Periodization: Breakthrough in Sport Training. Michigan: Ultimate Athlete Concepts."
+    title: "Block Periodization: Breakthrough in Sport Training"
+    type: book
+    verification_status: verified
+    authors: ["Vladimir Issurin"]
+    year: 2008
+    container: "Ultimate Athlete Concepts"
+    identifier:
+      isbn: "9780981718002"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.issurin 拆出，經 Open Library 核對（ISBN 9780981718002，Ultimate Athlete Concepts，2008）。板塊週期化殘留效應天數表（據轉引為 Table 2.4）出自本書。**使用邊界**：本專案未取得原書，殘留效應的「± N 天」究竟是實驗數據還是專家估計、確切頁碼與方法論細節皆未核，引用時必須保留該註記。"
+
+  - id: src.issurin-2008-block-vs-traditional-review
+    display: "Issurin, V. (2008). Block periodization versus traditional training theory: a review. Journal of Sports Medicine and Physical Fitness, 48(1), 65–75."
+    title: "Block periodization versus traditional training theory: a review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Vladimir Issurin"]
+    year: 2008
+    container: "Journal of Sports Medicine and Physical Fitness"
+    identifier:
+      pmid: "18212712"
+      url: "https://pubmed.ncbi.nlm.nih.gov/18212712/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.issurin 拆出。本刊該年份無 DOI，識別碼只有 PMID。這是板塊派對傳統線性提出正面挑戰的期刊版回顧，與同年那本書是兩份不同的著作。"
+
+  - id: src.issurin-2010-new-horizons-periodization
+    display: "Issurin, V. B. (2010). New horizons for the methodology and physiology of training periodization. Sports Medicine, 40(3), 189–206."
+    title: "New horizons for the methodology and physiology of training periodization"
+    type: journal-article
+    verification_status: verified
+    authors: ["Vladimir B. Issurin"]
+    year: 2010
+    container: "Sports Medicine"
+    identifier:
+      pmid: "20199119"
+      doi: "10.2165/11319770-000000000-00000"
+      url: "https://pubmed.ncbi.nlm.nih.gov/20199119/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.issurin 拆出。**原複合鍵的 DOI 是壞的**——它寫 10.2165/11319770，Crossref 回 404；Adis 該時期的 DOI 帶後綴，完整值是 10.2165/11319770-000000000-00000（由 PubMed 取得）。對傳統線性的三點批評（多峰賽季難產生、菁英進步率遞減、不相容負荷互相干擾）出自本篇。"
+
+  - id: src.issurin-2016-block-benefits-limitations
+    display: "Issurin, V. B. (2016). Benefits and Limitations of Block Periodized Training Approaches to Athletes' Preparation: A Review. Sports Medicine, 46(3), 329–338."
+    title: "Benefits and Limitations of Block Periodized Training Approaches to Athletes' Preparation: A Review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Vladimir B. Issurin"]
+    year: 2016
+    container: "Sports Medicine"
+    identifier:
+      pmid: "26573916"
+      doi: "10.1007/s40279-015-0425-5"
+      url: "https://pubmed.ncbi.nlm.nih.gov/26573916/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.issurin 拆出。**注意這是板塊派自己寫的回顧**，不是獨立第三方評價；引用它談「板塊的限制」時要標明作者立場。"
+
+  - id: src.issurin-2019-block-biological-background
+    display: "Issurin, V. B. (2019). Biological Background of Block Periodized Endurance Training: A Review. Sports Medicine, 49(1), 31–39."
+    title: "Biological Background of Block Periodized Endurance Training: A Review"
+    type: journal-article
+    verification_status: verified
+    authors: ["Vladimir B. Issurin"]
+    year: 2019
+    container: "Sports Medicine"
+    identifier:
+      pmid: "30411234"
+      doi: "10.1007/s40279-018-1019-9"
+      url: "https://pubmed.ncbi.nlm.nih.gov/30411234/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.issurin 拆出。同樣是板塊派作者自撰的回顧。"
+
+  - id: src.molmen-2019-block-endurance-meta
+    display: "Mølmen, K. S., Øfsteng, S. J., & Rønnestad, B. R. (2019). Block periodization of endurance training – a systematic review and meta-analysis. Open Access Journal of Sports Medicine, 10, 145–160."
+    title: "Block periodization of endurance training - a systematic review and meta-analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["Knut Sindre Mølmen", "Sjur Johansen Øfsteng", "Bent R. Rønnestad"]
+    year: 2019
+    container: "Open Access Journal of Sports Medicine"
+    identifier:
+      pmid: "31802956"
+      pmcid: "PMC6802561"
+      doi: "10.2147/OAJSM.S180408"
+      url: "https://pubmed.ncbi.nlm.nih.gov/31802956/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.issurin 拆出。**原複合鍵把本篇的作者寫成「Breil」——錯**。Breil et al. 2010（PMID 20364385）是高山滑雪 11 天 HIT 的原始研究，與本篇這份 2019 年統合分析是兩件不同的東西。實際結果：篩 2905 篇、納入 20 篇，其中 6 篇可併入統合分析；板塊相對傳統的效果是**小的**——VO2max SMD 0.40（95% CI 0.02–0.79）、最大功率 SMD 0.28（95% CI 0.01–0.54），兩個信賴區間的下界都幾乎貼著 0。**作者自己的警告必須一起帶**：納入研究規模小、方法學品質普遍偏低（PEDro 平均 3.7／10），結果需保留看待。因此本篇**不能用「證實板塊優於傳統」這種措辭引用**。"
+
+  - id: src.olbrecht-2000-science-of-winning
+    display: "Olbrecht, J. (2000). The Science of Winning: Planning, Periodizing and Optimizing Swim Training. Luton: Swimshop."
+    title: "The Science of Winning: Planning, Periodizing and Optimizing Swim Training"
+    type: book
     verification_status: unverified
-    authors: ["Selye"]
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    authors: ["Jan Olbrecht"]
+    year: 2000
+    container: "Swimshop"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.olbrecht-2000 拆出。Open Library 有本書的著作紀錄（J. Olbrecht，Swimshop，2000）但**沒有登錄 ISBN**，故不填識別碼、狀態維持 unverified——寧可留空也不補一個沒核過的號碼。**使用邊界（重要）**：本專案**沒有取得原書全文**，periodization.zones.olbrecht_model 的內容是由書摘、訪談與二手摘要重建的。原書的具體游泳配速處方、乳酸測試完整協議、前後半賽季週次比例**都不可追溯**，該區塊已標 🔴 說明；引用本來源時不得補上任何原書未經核對的數字。另注意 VLamax 是 Weber／INSCYD 的術語，與 Olbrecht 的「無氧能力」對應但不完全等同。"
+
+  - id: src.mcardle-katch-exercise-physiology-textbook
+    display: "McArdle, W. D., Katch, F. I., & Katch, V. L. Exercise Physiology: Nutrition, Energy, and Human Performance. Philadelphia: Lippincott Williams & Wilkins."
+    title: "Exercise Physiology: Nutrition, Energy, and Human Performance"
+    type: book
+    verification_status: unverified
+    authors: ["William D. McArdle", "Frank I. Katch", "Victor L. Katch"]
+    container: "Lippincott Williams & Wilkins"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.bompa-ch5-ch11-mcardle-exercise-physiology-s 拆出。**刻意不填年份、版次與 ISBN**：引用它的 periodization.zones.energy_systems_primer 只是把它當「教科書級共識」的代表著作在點名，本專案沒有記錄查的是哪一版哪一頁，補一個版次上去就是造假。因此本來源**只能支撐「這是運動生理學教科書共識」這個層級的敘述，不能支撐任何具體數字**；該區塊的三系統時長已標為主導窗口的近似值、不可當精確門檻。"
+
+  - id: src.sweetenham-atkinson-2003-championship-swim-training
+    display: "Sweetenham, B., & Atkinson, J. (2003). Championship Swim Training. Champaign, IL: Human Kinetics."
+    title: "Championship Swim Training"
+    type: book
+    verification_status: verified
+    authors: ["Bill Sweetenham", "John Atkinson"]
+    year: 2003
+    container: "Human Kinetics"
+    identifier:
+      isbn: "0736045430"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2 拆出，經 Open Library 核對（ISBN 0736045430，Human Kinetics，2003）。反向週期化（速度先行、當全季校準錨）在本專案中的代表著作。**使用邊界**：periodization.structure.schools_overview 已註明原書的五法則與具體數字網路上不可查、本專案未取得原書，該派的評價是靠成績佐證而非 RCT。"
 
   - id: src.sever-s-disease-calcaneal-apophysitis-statpe
     display: "Smith JM. Sever Disease (Calcaneal Apophysitis). In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK441928（最後更新 2024-01-11）。"

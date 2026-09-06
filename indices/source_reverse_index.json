@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 751,
+  "source_count": 764,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -641,7 +641,7 @@
       "identifier": {
         "isbn": "9781492544814"
       },
-      "usage_count": 21,
+      "usage_count": 23,
       "usages": [
         {
           "id": "periodization.structure.annual.bicycle",
@@ -677,6 +677,11 @@
           "id": "periodization.structure.microcycle",
           "file": "canonical/periodization/structure.yaml",
           "path": "microcycle"
+        },
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
         },
         {
           "id": "periodization.taper.definition",
@@ -729,6 +734,11 @@
           "path": "endurance_periodization"
         },
         {
+          "id": "periodization.zones.energy_systems_primer",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "energy_systems_primer"
+        },
+        {
           "id": "periodization.zones.swim",
           "file": "canonical/periodization/zones.yaml",
           "path": "swim_application"
@@ -752,31 +762,19 @@
     },
     {
       "id": "src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2",
-      "display": "作者綜合：Bompa & Buzzichelli 6th ed.；Issurin 2008/2010/2016；Seiler 2010；Olbrecht 2000；Sweetenham & Atkinson 2003；Hellard 2019",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆：改掛 6 個既有／新增的獨立來源",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.schools_overview",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "schools_overview"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.bompa-ch5-ch11-mcardle-exercise-physiology-s",
-      "display": "公認運動生理學（磷酸原/糖酵解/氧化三系統時程為教科書級共識，如 Bompa Ch5/Ch11、McArdle Exercise Physiology）；游泳項目對映見 swim_energy_by_distance 來源（Toussaint & Hollander 1994 / Rodríguez & Mader 2011）",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.mcardle-katch-exercise-physiology-textbook 等",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.energy_systems_primer",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "energy_systems_primer"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.born-2022-im",
@@ -948,6 +946,24 @@
           "id": "female-athlete-triad",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[31].references[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.buckner-2017-gas-resistance-exercise",
+      "display": "Buckner, S. L., Mouser, J. G., Dankel, S. J., Jessee, M. B., Mattocks, K. T., & Loenneke, J. P. (2017). The General Adaptation Syndrome: Potential misapplications to resistance exercise. Journal of Science and Medicine in Sport, 20(11), 1015–1017.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "28377133",
+        "doi": "10.1016/j.jsams.2017.02.012",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28377133/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.gas",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "general_adaptation_syndrome"
         }
       ]
     },
@@ -3481,8 +3497,13 @@
         "pmid": "36247944",
         "pmcid": "PMC6470949"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
+        },
         {
           "id": "periodization.structure.swim_annual",
           "file": "canonical/periodization/structure.yaml",
@@ -3689,11 +3710,104 @@
     },
     {
       "id": "src.issurin",
-      "display": "Issurin 2008《Block Periodization》; Issurin 2008 (PMID 18212712); 2010 (DOI 10.2165/11319770); 2016 (PMID 26573916); 2019 (PMID 30411234); Breil 2019 meta (PMID 31802956)",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.issurin-2008-block-periodization-book 等 6 筆",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.issurin-2008-block-periodization-book",
+      "display": "Issurin, V. (2008). Block Periodization: Breakthrough in Sport Training. Michigan: Ultimate Athlete Concepts.",
+      "verification_status": "verified",
       "identifier": {
-        "doi": "10.2165/11319770",
-        "pmid": "18212712"
+        "isbn": "9780981718002"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.structure.school_block",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "school_block"
+        },
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
+        }
+      ]
+    },
+    {
+      "id": "src.issurin-2008-block-vs-traditional-review",
+      "display": "Issurin, V. (2008). Block periodization versus traditional training theory: a review. Journal of Sports Medicine and Physical Fitness, 48(1), 65–75.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "18212712",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/18212712/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.school_block",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "school_block"
+        }
+      ]
+    },
+    {
+      "id": "src.issurin-2010-new-horizons-periodization",
+      "display": "Issurin, V. B. (2010). New horizons for the methodology and physiology of training periodization. Sports Medicine, 40(3), 189–206.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "20199119",
+        "doi": "10.2165/11319770-000000000-00000",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20199119/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.structure.school_block",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "school_block"
+        },
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
+        }
+      ]
+    },
+    {
+      "id": "src.issurin-2016-block-benefits-limitations",
+      "display": "Issurin, V. B. (2016). Benefits and Limitations of Block Periodized Training Approaches to Athletes' Preparation: A Review. Sports Medicine, 46(3), 329–338.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26573916",
+        "doi": "10.1007/s40279-015-0425-5",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26573916/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.structure.school_block",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "school_block"
+        },
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
+        }
+      ]
+    },
+    {
+      "id": "src.issurin-2019-block-biological-background",
+      "display": "Issurin, V. B. (2019). Biological Background of Block Periodized Endurance Training: A Review. Sports Medicine, 49(1), 31–39.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "30411234",
+        "doi": "10.1007/s40279-018-1019-9",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30411234/"
       },
       "usage_count": 1,
       "usages": [
@@ -3930,6 +4044,24 @@
           "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[6]"
+        }
+      ]
+    },
+    {
+      "id": "src.kiely-2012-periodization-paradigms",
+      "display": "Kiely, J. (2012). Periodization paradigms in the 21st century: evidence-led or tradition-driven? International Journal of Sports Physiology and Performance, 7(3), 242–250.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "22356774",
+        "doi": "10.1123/ijspp.7.3.242",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/22356774/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.gas",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "general_adaptation_syndrome"
         }
       ]
     },
@@ -4883,6 +5015,20 @@
       ]
     },
     {
+      "id": "src.mcardle-katch-exercise-physiology-textbook",
+      "display": "McArdle, W. D., Katch, F. I., & Katch, V. L. Exercise Physiology: Nutrition, Energy, and Human Performance. Philadelphia: Lippincott Williams & Wilkins.",
+      "verification_status": "unverified",
+      "identifier": {},
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.energy_systems_primer",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "energy_systems_primer"
+        }
+      ]
+    },
+    {
       "id": "src.mccabe-2022",
       "display": "McCabe, C., Mosscrop, E., Hodierne, R., & Tor, E. (2022). The characteristics of the breaststroke pullout in elite swimming. Frontiers in Sports and Active Living, 4, 963578.",
       "verification_status": "verified",
@@ -5249,6 +5395,25 @@
           "id": "periodization.dryland.injury",
           "file": "canonical/periodization/dryland.yaml",
           "path": "injury_prevention"
+        }
+      ]
+    },
+    {
+      "id": "src.molmen-2019-block-endurance-meta",
+      "display": "Mølmen, K. S., Øfsteng, S. J., & Rønnestad, B. R. (2019). Block periodization of endurance training – a systematic review and meta-analysis. Open Access Journal of Sports Medicine, 10, 145–160.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31802956",
+        "pmcid": "PMC6802561",
+        "doi": "10.2147/OAJSM.S180408",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31802956/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.school_block",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "school_block"
         }
       ]
     },
@@ -6543,11 +6708,24 @@
     },
     {
       "id": "src.olbrecht-2000",
-      "display": "Olbrecht 2000《The Science of Winning》(書摘/訪談重建); Scientific Triathlon EP#198 訪談; TMR Coaching / lactate.com / INSCYD 二手摘要",
+      "display": "【複合來源鍵，已拆解】已拆為 src.olbrecht-2000-science-of-winning",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.olbrecht-2000-science-of-winning",
+      "display": "Olbrecht, J. (2000). The Science of Winning: Planning, Periodizing and Optimizing Swim Training. Luton: Swimshop.",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
+        },
         {
           "id": "periodization.zones.olbrecht_model",
           "file": "canonical/periodization/zones.yaml",
@@ -10711,8 +10889,13 @@
         "pmid": "16430681",
         "pmcid": "PMC3912323"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
+        },
         {
           "id": "periodization.zones.school_polarized",
           "file": "canonical/periodization/zones.yaml",
@@ -10739,9 +10922,35 @@
     },
     {
       "id": "src.selye",
-      "display": "Selye 1974, 1976; 整合進 Bompa 體系（多教練書共識）",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.selye-1974-stress-without-distress 等 4 筆",
+      "verification_status": "retracted",
       "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.selye-1974-stress-without-distress",
+      "display": "Selye, H. (1974). Stress without Distress. Philadelphia: J. B. Lippincott.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "0397010265"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.gas",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "general_adaptation_syndrome"
+        }
+      ]
+    },
+    {
+      "id": "src.selye-1976-stress-in-health-and-disease",
+      "display": "Selye, H. (1976). Stress in Health and Disease. Boston: Butterworths.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "0407985107"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -11343,6 +11552,22 @@
           "id": "psych.flow.flow_vs_clutch",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[3].public"
+        }
+      ]
+    },
+    {
+      "id": "src.sweetenham-atkinson-2003-championship-swim-training",
+      "display": "Sweetenham, B., & Atkinson, J. (2003). Championship Swim Training. Champaign, IL: Human Kinetics.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "0736045430"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.schools_overview",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "schools_overview"
         }
       ]
     },

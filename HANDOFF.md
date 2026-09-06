@@ -6,6 +6,43 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **複合鍵軸開工：週期化書目族 5 筆拆成 13 筆真登錄（751 → 764）。過程逼出五處錯誤（錯誤 47–51），其中一處是「整個區塊沒有任何 layout 讀，讀者從來沒看過」**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 142 | **142** |
+| `_sources.yaml` 筆數 | 751 | **764**（5 筆立墓碑 + 13 筆新登錄） |
+| 內容條目 | 923 | 923 |
+| W008／W022／W026 | 2／14／0 | 2／14／0 |
+| `periodization.structure.gas` 線上可見 | ❌ 無 layout 讀 | ✅ 已接上 |
+
+**上一段把這 6 筆描述成「每段都是完整書目，最好拆」——只有 3 筆是。** `src.bompa-ch5-ch11-mcardle-exercise-physiology-s`、`src.selye`、`src.toussaint-colwin-1990-maglischo-2003-swimmin` 根本不是書目，是把教科書名、一個「見另一區塊」的內部指標、教練書共識混在一起的散文句，沒有任何識別碼。**「複合鍵」這個分類名稱本身會讓人以為裡面是結構化的東西**，實際上要先判斷「這串字裡到底有幾個可解析實體」才談得上拆。
+
+**拆不合併，這條規則在這裡是硬的。** `src.bompa-buzzichelli-6th-ed-issurin-2008-2010-2` 一個 id 綁 6 部作品；合併成任何一部，另外 5 部就永久不可達——它們不會變成「待補」，會變成「看起來已經有來源了」。5 筆全部立墓碑（`verification_status: retracted` + display 標【複合來源鍵，已拆解】+ `notes` 寫清楚拆出了什麼、拆的過程暴露了什麼錯），引用端逐一改指真 id。
+
+新登錄 13 筆，識別碼全部逐筆解析：Selye 兩本（ISBN 0397010265／0407985107）、Buckner 2017（PMID 28377133）、Kiely 2012（PMID 22356774）、Issurin 五筆（書 ISBN 9780981718002；PMID 18212712／20199119／26573916／30411234）、Mølmen 2019（PMID 31802956）、Olbrecht 2000、McArdle 教科書、Sweetenham & Atkinson 2003（ISBN 0736045430）。
+
+**三次拒絕補造，都寫進 `notes`：** ① McArdle 只登「書」不登版次年份 ISBN——本專案從來沒記錄過查的是第幾版，寫一個版次就是編的；它因此只能撐「教科書共識」層級的敘述，**不能撐任何具體數字**。② Olbrecht 登錄不帶 ISBN——OpenLibrary 有這部作品但沒有 ISBN 記錄。③ Breil 2010 **刻意不登錄**——沒有任何內容引用它，登了就是製造一筆 W008 孤兒；該修的是歸因錯誤本身（見錯誤 50）。
+
+**同理拒絕把 Olbrecht 的二手網摘登成來源**（Scientific Triathlon EP#198／TMR Coaching／lactate.com／INSCYD）。那些是閱讀路徑不是可回溯的權威；登進去只會讓讀者以為那幾個數字有出處。正解是保留現有的 🔴 caveat，明講原書未取得、內容由二手摘要重建。
+
+**五處錯誤（錯誤 47–51）：**
+
+| # | 位置 | 原本 | 實際 |
+|---|---|---|---|
+| 47 | `periodization.structure.gas` | 🟢，定位成「週期化的生物學底層」 | GAS→週期化的外推**在文獻上被直接挑戰**（Buckner 2017 指 Selye 用的是毒性劑量刺激、受試不是運動員；Kiely 2012 指各家模型共用一套已站不住的規劃假設）。降 🟡，新增 `controversy_zh` 欄位寫清邊界，並在 `why_periodization_works_zh` 明寫「這是類比不是證據」 |
+| 48 | 同上（呈現層） | — | **整個 GAS 區塊沒有任何 layout 讀它**，讀者從來沒看過。查法是拿四份 periodization data 的 top-level key 逐一去 `vortex-periodization.html` grep `$st.<key>`／`$zn.<key>`——Hugo 的 `index` 查不到 key 回空字串且不報錯，所以「同步了」跟「渲染了」是兩件事。掃完確認 GAS 是唯一一個內容型漏接，其餘未命中的都是 `domain`／`schema_version` 這類 metadata |
+| 49 | `src.issurin` 的 DOI | `10.2165/11319770` | Crossref 404。Adis 時期的 DOI 帶後綴，真值是 `10.2165/11319770-000000000-00000` |
+| 50 | `structure.yaml` 的 `limitations_zh` ＋ 檔頭註解 | 把 PMID 31802956 歸給「Breil」 | 是 **Mølmen, Øfsteng & Rønnestad (2019)**。這筆同時錯在讀者看得到的散文和給維護者看的註解——**兩個地方各改一次才算修完** |
+| 51 | 同一段 `limitations_zh` | 「統合分析證實板塊週期化有優越表現」 | 效果量是 SMD 0.40（CI 0.02–0.79）與 0.28（CI 0.01–0.54），CI 下界貼著 0；作者自己標 PEDro 平均 3.7/10 提醒證據品質低。現在寫成「有小幅優勢、證據品質低，不能講成已被證實」。**這段話原本就寫在一個叫 `limitations` 的欄位裡**——欄位名不會讓內容自動變成限制 |
+
+**收尾**：`structure.yaml` 的 `general_adaptation_syndrome`／`schools_overview`／`school_block`／`limitations_zh`、`zones.yaml` 的 `energy_systems_primer`／`olbrecht_model` 全部改指真 id；my-site 的 `vortex-periodization.html` 在「三大階段」後新增「因 · 為什麼要有節奏（GAS）」面板，`controversy_zh` 走 `vx-pz-warn`（左框線 + 警示底）確保 🟡 邊界不被讀成背景說明。
+
+**下一步建議**：複合鍵剩 **42 筆**，接著做 **`src.toussaint-colwin-1990-maglischo-2003-swimmin` ＋ `src.toussaint` ＋ 四筆重複的 `src.maglischo-2003-a/b/c/d`**（同一本書登了四次，因為彼此沒有共用識別碼所以 W025 看不見）。Maglischo《Swimming Fastest》2003 的 ISBN 已解析完成：`0736031804`，可直接用。之後是機構／網站族（`src.usms-*`、`src.race-club-*`、`src.yourswimlog-*` 等 15 筆）與最貴的單姓氏族（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.seiler`、`src.hellard`、`src.mujika` 等——**注意 `src.seiler` 與 `src.hellard` 已被本輪的 `schools_overview` 引用，拆的時候要一併改指**）。
+
+**依舊不要碰的三件事**：不要整批清 W022（14 筆全在 `l-indicators.yaml`，刻意保留）；不要在重新定義 W008 基準前把 `src.gonjo-2018` 立墓碑；**不要跑 `tools/build_injuries.py`**（產出物與 drafts 已漂移約 75 行，跑了會靜默回退）。
+
 ### ✅ **「(已驗證)」display 軸歸零：49 筆登錄 + 121 條讀者可見字串重寫，逐筆對回 PubMed／Crossref 後 12 筆對不上（錯誤 35–46）。新增 W026 擋回頭路**
 
 | 指標 | 段落起點 | 現在 |
