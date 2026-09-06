@@ -198,11 +198,11 @@
     },
     {
       "id": "src.andersen-2020",
-      "display": "Andersen et al. (2020) 方向；PMID 32500807",
-      "verification_status": "unverified",
+      "display": "Andersen JT, Sinclair PJ, McCabe CB, Sanders RH. (2020). Kinematic Differences in Shoulder Roll and Hip Roll at Different Front Crawl Speeds in National Level Swimmers. J Strength Cond Res 34(1):20-25.",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "32500807",
-        "url": "https://pubmed.ncbi.nlm.nih.gov/32500807/"
+        "pmid": "31567840",
+        "doi": "10.1519/JSC.0000000000003281"
       },
       "usage_count": 1,
       "usages": [

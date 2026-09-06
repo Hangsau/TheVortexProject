@@ -635,17 +635,28 @@ sources:
       `sci-hip-flexor-contracture` 盛行率數字已於同日改標 🟠 + `observation_basis`。
 
   - id: src.andersen-2020
-    display: "Andersen et al. (2020) 方向；PMID 32500807"
-    type: other
-    verification_status: unverified
-    authors: ["Andersen"]
-    et_al: true
+    display: "Andersen JT, Sinclair PJ, McCabe CB, Sanders RH. (2020). Kinematic Differences in Shoulder Roll and Hip Roll at Different Front Crawl Speeds in National Level Swimmers. J Strength Cond Res 34(1):20-25."
+    title: "Kinematic Differences in Shoulder Roll and Hip Roll at Different Front Crawl Speeds in National Level Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Andersen JT", "Sinclair PJ", "McCabe CB", "Sanders RH"]
     year: 2020
+    container: "Journal of Strength and Conditioning Research"
     identifier:
-      pmid: "32500807"
-      url: "https://pubmed.ncbi.nlm.nih.gov/32500807/"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
-
+      pmid: "31567840"
+      doi: "10.1519/JSC.0000000000003281"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。**本登錄原掛的 PMID 32500807 是別篇論文**（Vila Dieguez O, Barden JM.
+      2022. Body roll differences in freestyle swimming between swimmers with and without shoulder
+      pain. Sports Biomech 21(10):1277-1290），與本文作者、年份、主題全部不符，已更正。
+      原文可支持者：13 名蘇格蘭菁英自由式專項選手，3D 運動學比較衝刺配速與 400 公尺配速。
+      髖旋轉在衝刺時**減少**（36.8° 對 49.9°）；肩旋轉**沒有對應減少**（97.7° 對 101.6°）；
+      因此軀幹扭轉範圍在衝刺時反而**更大**（78.1° 對 61.3°），角速度亦更大
+      （軀幹扭轉 166.3 對 96.9 °/s、肩 190.9 對 139.2 °/s、髖 75.5 對 69.1 °/s），
+      划頻 0.95 對 0.70 stroke/s。作者結論是陸訓應設計能重現這些軀幹扭矩的動作。
+      使用邊界：**不可用本文支持「衝刺的旋轉幅度整體小於長距離」**——只有髖旋轉如此，
+      肩旋轉持平、軀幹扭轉更大。n=13、僅自由式、只比較兩種配速，無介入。
   - id: src.arellano
     display: "Arellano 2013; ScienceDaily 2024"
     type: other
