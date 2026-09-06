@@ -556,8 +556,10 @@ sources:
   - id: src.360swim
     display: "360swim"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是站台層級殘樁，同時替三條主張背書（蛙式換氣時機兩條、蛙腿推進面一條），無識別碼。已回站檢索確認這三條分屬兩篇不同文章：Top 5 Most Common Breaststroke Mistakes（換氣時機）與 Breaststroke Lesson - How About Them Legs?（小腿推進）。兩篇已分別登錄為 src.360swim-common-breaststroke-mistakes 與 src.360swim-breaststroke-legs，引用處已改指。"
+
 
   - id: src.360swim-usms-swimming-world
     display: "【只有站名，非文獻，已撤下】360swim／USMS／Swimming World 的公開教學內容"
@@ -1090,16 +1092,25 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.danswim
-    display: "DanSwim"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Novikov, D. Mastering the Dolphin Kick: Techniques for Effortless Speed. DanSwim."
+    title: "Mastering the Dolphin Kick: Techniques for Effortless Speed"
+    type: web_guide
+    verification_status: verified
+    authors: ["Dan Novikov"]
+    publisher: "DanSwim"
+    identifier:
+      url: "https://danswim.com/dolphin-kick"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。原文確實把發力點放在髖而非膝：Starting the kick from your hips helps to send the wave across the entire body, creating a faster, easier dolphin kick.。但本庫原先的引用寫成「從膝蓋而非核心和髖部啟動踢腿是**常見初學者問題**。如果只從膝蓋踢，動作看起來會是**抖動的**，速度也會損失」——原文是**正面指導語，沒有把它列為初學者錯誤，也沒有「抖動」這個描述**，引用文字已改寫成原文實際說的內容。使用邊界：教練個人網站的技術頁，無發表日期、無量測、無研究引用。"
+
 
   - id: src.eatsleepswimcoach
     display: "EatSleepSwimCoach"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是站台層級殘樁，替兩處（同一句話）主張背書：過度起伏造成游泳者動作緩慢、深沉且低效，同樣容易讓游泳者很快疲勞。已回站取回 eatsleepswimcoach.com 的蝶式教學文全文核對，**全篇沒有這句話，也沒有討論過度起伏的負面效果**；該站的蝶式內容只有一篇，不存在其他候選。兩處引用已刪除來源、改標教練觀測並補 observation_basis。這是本輪唯一一個檢索後仍找不回真身的站台殘樁。"
+
 
   - id: src.ecg-scd-3-6-0-4-10-89-url
     display: "Corrado D, Basso C, Pavei A, Michieli P, Schiavon M, Thiene G. (2006). Trends in sudden cardiovascular death in young competitive athletes after implementation of a preparticipation screening program. JAMA 296(13):1593-601."
@@ -1155,8 +1166,10 @@ sources:
   - id: src.enjoy-swimming-com
     display: "enjoy-swimming.com"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是站台層級殘樁，同時替一條蝶式起伏驅動主張與一條換氣頻率主張背書，無識別碼。已回站檢索確認分屬兩篇 Christophe Keller 的文章：Butterfly Swimming Technique: The Body Undulation（2021-12-29）與 How to Breathe while Swimming Butterfly。兩篇已分別登錄，引用處已改指。"
+
 
   - id: src.falls-and-hip-fracture-mortality-pmid
     display: "【佔位字串，非真實文獻】原記為「Falls and hip fracture mortality, 一般骨科文獻（待補具體 PMID）」——顯示字串本身就寫著「待補 PMID」，從未指向任何一篇可解析文獻"
@@ -1406,11 +1419,18 @@ sources:
       doi: "10.1177/0363546503258905"
     retrieved_on: "2026-07-27"
   - id: src.hall-sr-2020
-    display: "Hall Sr. 2020"
-    type: other
-    verification_status: unverified
+    display: "Hall, G., Sr. The Correct Pulling Motion for Sprint Freestyle. The Race Club Aqua Notes."
+    title: "The Correct Pulling Motion for Sprint Freestyle"
+    type: web_article
+    verification_status: verified
+    authors: ["Gary Hall Sr."]
     year: 2020
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    publisher: "The Race Club"
+    identifier:
+      url: "https://theraceclub.com/aqua_note/pulling-motion-sprint-freestyle/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。本庫主張的核心（手掌而非前臂是推進主來源）逐字對上：Most of the propulsion from the pulling arm is coming from the hand, not the forearm.。但要標三條邊界：① **本文沒有出現 PDM 測試**，本庫原先寫成「The Race Club PDM 測試確認」是把該機構其他文章的測量脈絡套進來的，本文只是教練論述；② 三個物理原因（手掌扁平 vs 前臂圓柱、手掌後移速度較快、握拳游測試）**散見於 The Race Club 的其他 Aqua Notes 篇章，不在本文內**；③ 該機構另處給出的「約 90% 手臂推進來自手掌」是自家估計值，非同儕審查量測，本庫未採用該數字。發表日期未在頁面標示，year 沿用原登錄的 2020，僅供排序不作引用依據。"
+
 
   - id: src.harvey-2024-asia-pacific-hip-fracture-mortality
     display: "Harvey LA, Payne NL, Tan A, et al. (2024). Variation in mortality following hip fracture across the Asia Pacific region: Systematic review and proportional meta-analysis. Arch Gerontol Geriatr 126:105519."
@@ -1907,10 +1927,17 @@ sources:
     notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.melton-swimming
-    display: "Melton Swimming"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Melton Swimming (2012, September 25). Teaching the Butterfly Stroke."
+    title: "Teaching the Butterfly Stroke"
+    type: web_guide
+    verification_status: verified
+    year: 2012
+    publisher: "Melton Swimming Club"
+    identifier:
+      url: "https://www.meltonswimming.com/teaching-butterfly-stroke/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。本庫引用的回臂描述逐字對上：The hands, little finger first, exit the water and the arms are thrown laterally over the water back to the entry position, keeping the little finger on the top and the thumb just brushing the surface.；菲爾普斯那句對應 The World famous Michael Phelps shows good form in this picture. Chin on the water to breathe, arms carried laterally over the water with little finger on the top and thumb just brushing the surface.。使用邊界：① 原文的菲爾普斯敘述是**對一張照片的描述**，不是動作分析，也沒有指出是哪一場比賽或哪一年；② 掛名作者只有 Admin，是俱樂部教學頁不是署名文章；③ 文章日期 2012，早於菲爾普斯 2016 復出後的技術版本。"
+
 
   - id: src.military-swim-training-sipe
     display: "【佔位字串，非真實文獻】原記為「軍事泳訓 SIPE 研究（具體文獻待 WebFetch 核實）」"
@@ -1967,15 +1994,23 @@ sources:
   - id: src.myswimpro
     display: "MySwimPro"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是站台層級殘樁，同時替一條蝶式入水點主張（11 點與 1 點）與一條水下海豚踢主張背書，無識別碼。已回站檢索確認分屬兩篇：How To Swim Butterfly With Perfect Technique（2020-09-23）與 This is the Fastest Way to Move Through the Water（2023-08-30）。兩篇已分別登錄，引用處已改指。"
+
 
   - id: src.myswimpro-2022
-    display: "MySwimPro 2022"
-    type: other
-    verification_status: unverified
+    display: "MySwimPro (2022, December 6). 7 Butterfly & Breaststroke Turn Mistakes to Avoid."
+    title: "7 Butterfly & Breaststroke Turn Mistakes to Avoid"
+    type: web_article
+    verification_status: verified
     year: 2022
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    publisher: "MySwimPro"
+    identifier:
+      url: "https://blog.myswimpro.com/2022/12/06/7-butterfly-breaststroke-turn-mistakes-to-avoid/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。本庫引用的「縮臂湊牆被列名為轉身錯誤」比對到該文把「靠近牆時彎肘把自己拉向牆」列為錯誤，並要求 keeping your arms extended and staying as far from the wall as you can。使用邊界：這是 app 廠商的教學部落格，屬教練共識，沒有量測數據；原文用的是「彎肘拉牆」的描述，**沒有出現「縮臂（short-arming）」這個術語**，本庫的措辭是轉譯而非逐字引用。"
+
 
   - id: src.myswimpro-2022-coachsci-sdsu-edu-2022
     display: "【只有站名，非文獻，已撤下】MySwimPro 2022／coachsci.sdsu.edu"
@@ -4888,27 +4923,47 @@ sources:
   - id: src.swim-like-a-fish
     display: "Swim Like A Fish"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是站台層級殘樁，同時替一條蛙式動能主張與一條蝶式第二踢時機主張背書，無識別碼。已回站檢索確認分屬兩篇：4 Ways You Are Stopping Your Breaststroke Momentum 與 Part II: Focus on Your Second Dolphin Kick。兩篇已分別登錄，引用處已改指。"
+
 
   - id: src.swim-like-a-fish-2025
-    display: "Swim Like A Fish 2025"
-    type: other
-    verification_status: unverified
-    year: 2025
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    display: "3 Common Butterfly Mistakes to Fix. Swim Like A Fish."
+    title: "3 Common Butterfly Mistakes to Fix"
+    type: web_guide
+    verification_status: verified
+    publisher: "Swim Like A Fish (swimlikeafish.org)"
+    identifier:
+      url: "https://swimlikeafish.org/3-common-butterfly-stroke-mistakes-you-might-be-making/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。原為站台層級殘樁，替三條蝶式兩踢主張背書，已定位到單篇並就地升級。核對結果是**三條有兩條需要改寫**：① 原引用寫「把兩踢當同一動作做兩次是最常見的訓練錯誤」，原文說的是泳者**忽略或不重視第二踢**（有些人為了省力乾脆不踢第二下），不是「當成同一動作做兩次」；② 原引用寫「兩踢合計推進比例約 80%」，原文說的是 Up to 80% of the propulsion generated in Butterfly & Breaststroke can be created from the **waist down**——那是**腰部以下（含全身波動）**的比例，不是兩次踢腿的比例，兩者不能互換；③ 第三條（菁英第二踢穩定性）對應原文 it's the second kick that really drives through the finish of the stroke and to allow for a smooth recovery at the top。三處引用文字均已改寫。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對，作者與發表日期留空，原 id 尾綴的 2025 不代表已查證的發表年；② 教練教學站的論述，80% 這個數字原文未附出處。"
+
 
   - id: src.swim-smart
-    display: "Swim Smart"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Teaching Butterfly. Swim Smart."
+    title: "Teaching Butterfly"
+    type: web_guide
+    verification_status: verified
+    publisher: "Swim Smart (swimsmarttoday.com)"
+    identifier:
+      url: "https://www.swimsmarttoday.com/pages/teaching-butterfly"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。本庫引用的拇指拖曳 drill 比對到該頁的表述：對於每一次回臂都往天花板伸的學員，讓他們在回臂時把拇指拖過水面，可以教會他們把手臂維持在貼近水面的高度。使用邊界：① 本機直取該頁回傳空內容，本筆靠檢索索引的摘錄比對，未能逐字讀完全頁，作者與日期留空；② 這是**教學單位的教練 drill 頁**，drill 的效果沒有任何對照或量測支持，只能當教學手段登錄，不能當成技術主張的證據。"
+
 
   - id: src.swim-teach-com
-    display: "swim-teach.com"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Young, M. Butterfly Stroke Body Movement Begins At The Head. Swim Teach."
+    title: "Butterfly Stroke Body Movement Begins At The Head"
+    type: web_guide
+    verification_status: verified
+    authors: ["Mark Young"]
+    publisher: "Swim Teach (swim-teach.com)"
+    identifier:
+      url: "https://www.swim-teach.com/butterfly-stroke-body-movement.html"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。原為站台層級殘樁，替兩處主張背書，其中**只有一處查得到**，已就地升級為該單篇。查到的是起伏過大那句，逐字對上：The swimmer then puts more effort and energy into moving up and down instead of swimming forwards.。查不到的是「根據超過 40 年的英國游泳教學經驗，先教腿再教全身更容易造成膝蓋過度彎曲……」——已逐頁核對本站的蝶式與蛙式教學頁（butterfly-stroke-body-movement、butterfly-stroke-kick、breaststroke-timing、how-to-swim-breaststroke），**沒有任何一頁提出這個教學順序主張**；而且作者 Mark Young 在站上自述的是 over 30 years of experience，不是 40 年。該處引用已刪除來源、改標教練觀測並補 observation_basis。使用邊界：本站是英國 ASA 資格教練的個人教學站，屬教學經驗陳述，無研究引用、無發表日期。"
+
 
   - id: src.swim-teach-com-a3-performance-enjoy-swimming
     display: "swim-teach.com、A3 Performance、enjoy-swimming 等背式呼吸教學指引（教學共識）"
@@ -4917,10 +4972,18 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.swimcoachingblog-com
-    display: "swimcoachingblog.com"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Coach Gary (2022, December 14). Are You Training Dolphin Kick? Or Butterfly Kick? swimcoachingblog."
+    title: "Are You Training Dolphin Kick? Or Butterfly Kick?"
+    type: web_article
+    verification_status: verified
+    authors: ["Coach Gary"]
+    year: 2022
+    publisher: "swimcoachingblog.com"
+    identifier:
+      url: "https://swimcoachingblog.com/2022/12/14/are-you-training-dolphin-kick-or-butterfly-kick/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。本庫兩處引用（教學誤區篇與技術分析篇）都對上同一組對照：If you watch a swimmer perform dolphin kick on their front, with arms at their sides, at the surface, you will see the head is always on the down phase of the dolphin kick. 對比 If you watch someone swimming Butterfly you will know that a good flier kicks twice per arm rotation... on the downward kick the head is up and on the next downward kick the head is down.。使用邊界：教練部落格的動作觀察論述，沒有量測；作者只以 Coach Gary 具名。本庫的 UDK 章節另有 3D 分析研究承擔關節角度層面的舉證，這條只承擔「時序不同」的定性對照。"
+
 
   - id: src.swimmers-knee-epidemiology-sr
     display: "【佔位字串，非可引用來源】游泳膝傷流病系統綜述"
@@ -4959,10 +5022,17 @@ sources:
       本 id 保持 unverified 且不得再被引用。
 
   - id: src.swimming-science-livio-cocozza
-    display: "Swimming Science / Livio Cocozza"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Cocozza, L. Undulation Technique to Improve Your Butterfly Stroke. Swimming Science."
+    title: "Undulation Technique to Improve Your Butterfly Stroke"
+    type: web_article
+    verification_status: verified
+    authors: ["Livio Cocozza"]
+    publisher: "Swimming Science (swimmingscience.net)"
+    identifier:
+      url: "https://www.swimmingscience.net/undulation-technique-to-improve-your-butterfly-stroke/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。本庫引用的前半（腿的動作是起伏的結果而非原因）比對到該文的 The legs support the undulation created by the head movement.，方向一致。**後半（要等學員能流暢做出全身波浪動作後才加入腿的主動施力）沒有比對到出處**，那是本庫自己的教學順序推論，已從引用文字拆出、在引用處以 caveat 標明不屬於本文主張。使用邊界：① 站台本機直取連續兩次回 HTTP 503，本筆靠檢索索引的摘錄比對，未能逐字讀完全文，發表日期留空；② 作者是義大利 Perugia 大學運動科學背景的教練，文章屬教練論述，站名雖有 Science 字樣但該文沒有引用任何研究。"
+
 
   - id: src.swimming-world-magazine
     display: "Swimming World Magazine"
@@ -4986,10 +5056,17 @@ sources:
     notes: "2026-09-06 撤除。原登錄只有刊物名＋人名＋頭銜。查證後發現引用方向與 Havriluk 的實際立場相反（見 breast.err7 的更正說明與 src.havriluk-2017-breathing-misconceptions-revisited 的 notes）：本庫引用他支持「頭部跟著肩胛骨移動、不獨立仰起」，但他在 2015／2017／2020 三篇裡一致把「換氣時不改變頸部角度」明列為 technique misconception。引用處已改指 src.havriluk-2017-breathing-misconceptions-revisited 並改寫成他真正的主張。"
 
   - id: src.swimoutlet
-    display: "SwimOutlet"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "SwimOutlet.com (2024, January 22). Common Breaststroke Mistakes."
+    title: "Common Breaststroke Mistakes"
+    type: web_guide
+    verification_status: verified
+    year: 2024
+    publisher: "SwimOutlet.com"
+    identifier:
+      url: "https://www.swimoutlet.com/blogs/guides/common-breaststroke-mistakes"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。原為站台層級殘樁，已定位到單篇並就地升級。本庫兩處引用逐字對上：換氣抬頭那條對應 Breathing like this drops your hips low in the water. This body alignment pushes you upward rather than forward. 與 If you can look toward the water at about a 45 degree angle, this will help lift your hips up.；蛙腿膝蓋外開那條對應 Pointing your knees outward toward the lane ropes angles your shin in a way that doesn't allow you to grip the water well. 與 Even though you feel a lot of water between your legs, you're pushing the water in toward itself.。使用邊界：這是**電商通路的教學導購文**，無掛名作者、無研究引用，45 度是教學口令不是量測值。另外要注意同站同日的姊妹篇 how-to-kick-breaststroke **不含**上述任何一句，而且它講的是 look forward when you breathe in breaststroke. Try to keep your chin low，與 45 度說法方向相反——不要把兩篇混為一談。"
+
 
   - id: src.swimswam-a
     display: "SwimSwam"
@@ -5362,10 +5439,18 @@ sources:
     notes: "2026-09-06 複合鍵拆解：顯示字串「Toussaint, Colwin 等（1990 年代起）；Maglischo (2003) Swimming Fastest」裡，只有 Maglischo 那半是可解析的書目，前半是對一整批文獻的手勢。拆解時查出更嚴重的問題：它支撐的那句「流體力學研究指出划水中升力推進效率低於阻力推進」**與 Toussaint 本人的著作相反**——Toussaint & Beek 1992 明寫菁英技術的共同元素是用複雜撥水動作特別去產生升力；Toussaint 等 2002 挑戰的是 quasi-steady 升力／阻力分解模型（流場非定常、手臂旋轉、存在軸向流），不是宣告阻力推進比升力推進有效率。error.back.06 的敘述已據此重寫，改指 src.toussaint-2002-pumped-up-propulsion 與 src.maglischo-2003-swimming-fastest。Colwin 未登錄：沒有任何線索指出是哪一部作品，登了就是編。本 id 保留為墓碑、不得再使用。"
 
   - id: src.train-daly
-    display: "Train Daly"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Daly, D. (2026, February 9). How to Swim Butterfly with Speed and Power. Train Daly."
+    title: "How to Swim Butterfly with Speed and Power"
+    type: web_article
+    verification_status: verified
+    authors: ["Dan Daly"]
+    year: 2026
+    publisher: "Train Daly"
+    identifier:
+      url: "https://www.traindaly.com/train-daly/blog/how-to-swim-butterfly-with-speed-and-power"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。本庫兩處引用都對上：起伏幅度那條逐字對應 Too much vertical movement creates drag and kills momentum, while too little limits propulsion.；踢幅那條對應 effective dolphin kicks are compact and rhythmic, not massive up-and-down movements 與 maintaining relatively straight knees (a slight bend is natural)。使用邊界：這是教練個人網站的技術文，屬教練共識；原文說的是「緊湊且有節奏」與「膝蓋相對打直、微彎是自然的」，**沒有給任何踢幅角度或距離數值**，本庫引用中的「造成極大阻力、消耗大量能量」是程度形容不是量測結論。"
+
 
   - id: src.train-daly-u-s-masters-swimming-5yd-m
     display: "【複合鍵，已拆解】Train Daly 仰式翻身系統／USMS（旗標距牆 5yd/m）"
@@ -5553,10 +5638,18 @@ sources:
     notes: "已撤下、保留為墓碑。與 -a 同案，見 src.usms-body-alignment-guide-a 的 notes。原引用（udk.err5 的穩定平台句）已改指 src.usms-sheaff-2022-how-to-do-underwater-kicks。"
 
   - id: src.usms-masters-teaching-article
-    display: "USMS Masters Teaching Article"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "McBride, N. (2009, December 18). Teaching Masters to Master the Butterfly. U.S. Masters Swimming."
+    title: "Teaching Masters to Master the Butterfly"
+    type: web_article
+    verification_status: verified
+    authors: ["Nate McBride"]
+    year: 2009
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/teaching-masters-to-master-the-butterfly"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。本庫引用逐字對上兩句：When you deliberately lift your head to breathe as your hands exit the water, thus forcing your hips to drop and you basically start swimming up instead of forward. 與 No one does the neutral head position in butterfly better than Michael Phelps; Michael's head doesn't move a single inch in any direction.。使用邊界：① 這是 2009 年的成人泳者教學專欄，**教學對象是 masters 泳者不是菁英**；② 菲爾普斯那句是教練的目視印象（一英寸都不動是修辭），不是影像量測，本庫引用時寫成「幾乎完全沒有移動」已是必要的降級。"
+
 
   - id: src.usms-sgswim
     display: "【只有站名，非文獻，已撤下】USMS／SGSwim"
@@ -5707,10 +5800,16 @@ sources:
     notes: "2026-09-06 撤除：複合鍵殘樁，把 Ward 2018 與「Peaty 技術」黏成一個 id。Ward 部分改指 src.ward-2018；Peaty 部分本身不是文獻，其歸屬已寫進 src.ward-2018 的 notes（該論文前言以 Peaty 2016 奧運為研究動機）。"
 
   - id: src.waterford-crystal-swimming-club
-    display: "Waterford Crystal Swimming Club"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Butterfly. Swimming Technique. Waterford Crystal Swimming Club."
+    title: "Butterfly (Swimming Technique)"
+    type: web_guide
+    verification_status: verified
+    publisher: "Waterford Crystal Swimming Club"
+    identifier:
+      url: "https://www.gomotionapp.com/team/reczzwcsc/page/swimming-technique/187-butterfly"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。原為俱樂部層級殘樁，實際只對應該站的單一蝶式技術頁，已就地升級。本庫引用的表述比對到 a straighter arm pull has been favoured in competitive swimming。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對到頁面與該表述，未能逐字讀完全頁，因此作者與日期留空；② 這是**地方泳隊掛在 GoMotion 平台上的教學頁**，屬教練共識陳述，沒有引用任何研究，也沒有指出這個轉向發生在哪個年代或依據什麼量測。"
+
 
   - id: src.welcher-1979
     display: "Welcher et al. 1979（歷史依據）"
@@ -5770,10 +5869,16 @@ sources:
       ③ 全球彙總數字，無泳池／開放水域分層。
 
   - id: src.wikipedia-breaststroke
-    display: "Wikipedia Breaststroke"
-    type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    display: "Breaststroke. Wikipedia (English)."
+    title: "Breaststroke"
+    type: web_article
+    verification_status: verified
+    publisher: "Wikipedia"
+    identifier:
+      url: "https://en.wikipedia.org/wiki/Breaststroke"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 補上識別碼。本庫引用的是滑行長度與距離的關係（衝刺滑行短、長距離滑行長）。使用邊界：**維基百科是可隨時被編輯的動態頁面**，本筆記錄的是本日版本；該條目此段沒有附註來源，屬於百科層級的常識性歸納，不能當作量測依據，只能當方向性佐證。本庫另有 Veiga 2022 等系統性綜述可承擔量化層面的舉證。"
+
 
   - id: src.wilson-1983
     display: "Wilson & Marino 1983"
@@ -5809,8 +5914,10 @@ sources:
   - id: src.yourswimlog-b
     display: "yourswimlog"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.yourswimlog-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是站台層級殘樁，同時替一條水下距離主張與一條菁英振幅主張背書，無識別碼；原註記還推測它與 src.yourswimlog-a 是同一來源，該推測本次未採信也未合併（swimswam-a／-b 的前例已證明這種同源猜測會猜錯）。已回站檢索確認本筆的兩處引用分屬兩篇 Olivier Poirier-Leroy 的文章：How Far Underwater Should You Be Dolphin Kicking? 與 3 Things Swimmers Can Learn from Gretchen Walsh's Underwater Dolphin Kick。兩篇已分別登錄，引用處已改指。"
+
 
   - id: src.yourswimlog-com-4-5-tethered-60s-rest-2-3
     display: "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
@@ -9673,3 +9780,120 @@ sources:
       url: "https://swimswam.com/my-golden-method-for-teachingimproving-butterfly/"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 定位。本庫引用的是「強調直線後推（straight back pull），而非過時的鑰匙孔／雪人／大-小-大划法」，這個表述已比對到本文。使用邊界兩條，都要看清楚：① **SwimSwam 現已改由 tollbit 代管，本機直取全文回 HTTP 402**，本筆是靠檢索索引的摘錄比對到篇名與該表述，未能逐字讀完原文，因此作者與發表日期留空；② 本文是教練教學方法論的公開投稿，不是研究。本庫原本掛在 src.swimswam-a 的另一句引文（如果他們太快完成動作，會把划手變成蛙式划水）**沒有比對到出處，該列已刪除**，不隨本筆一起洗成已查證。"
+
+  - id: src.360swim-common-breaststroke-mistakes
+    display: "Do You Know How To Swim Breaststroke? (Top 5 Most Common Breaststroke Mistakes). 360swim."
+    title: "Do You Know How To Swim Breaststroke? (Top 5 Most Common Breaststroke Mistakes)"
+    type: web_guide
+    verification_status: verified
+    publisher: "360swim"
+    identifier:
+      url: "https://360swim.com/blog/how-to-swim-breaststroke"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。從 src.360swim 站台殘樁拆出。本庫兩處引用逐字對上：take a breath at the same time you start your pull (when your arms are still stretched upfront) and finish the breath as you are stretching your arms forward.；The common mistake here is taking a breath when your arms are already by your shoulders or, even worse, your hips. When this happens, your head is out of the water, but you have no support from your arms, causing you to sink.。使用邊界：教學網站的常見錯誤清單，無掛名作者、無發表日期、無量測；換氣時機的描述是動作口令，沒有給時間窗數值。"
+
+  - id: src.360swim-breaststroke-legs
+    display: "Breaststroke Lesson - How About Them Legs? 360swim."
+    title: "Breaststroke Lesson - How About Them Legs?"
+    type: web_guide
+    verification_status: verified
+    publisher: "360swim"
+    identifier:
+      url: "https://360swim.com/blog/breaststroke-lesson-how-about-them-legs"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。從 src.360swim 站台殘樁拆出。本庫引用的推進面主張逐字對上：A frog propels herself forward with the membranes between her toes. In breaststroke, we need to propel ourselves forward with our shins and partially with our feet at the end of the stroke.。使用邊界：教學網站文章，無掛名作者、無發表日期；青蛙的類比是教學修辭，原文沒有量化小腿與腳掌各自的推進佔比。本庫的蛙腿章節另有系統性綜述承擔量化層面。"
+
+  - id: src.swimlikeafish-breaststroke-momentum
+    display: "How to Improve Breaststroke Momentum: 4 Coaching Fixes That Work. Swim Like A Fish."
+    title: "How to Improve Breaststroke Momentum: 4 Coaching Fixes That Work"
+    type: web_guide
+    verification_status: verified
+    publisher: "Swim Like A Fish (swimlikeafish.org)"
+    identifier:
+      url: "https://swimlikeafish.org/4-ways-stopping-breaststroke-momentum"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。從 src.swim-like-a-fish 站台殘樁拆出。本庫引用比對到該文的兩個要點：動能在泳者停頓、而非流暢銜接下一次划手時流失（原文把滑行期停留過久列為最主要的 momentum killer），以及速度一旦流失，泳者就得用力氣而不是時機感去追回。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對，作者與發表日期留空；② 教練教學站的論述，沒有給滑行時間的量測門檻，本庫引用處已註明「適當滑行長度依情境而定」不是本文的結論而是本庫的整合。"
+
+  - id: src.swimlikeafish-second-dolphin-kick
+    display: "Part II: Focus on Your Second Dolphin Kick. Swim Like A Fish."
+    title: "Part II: Focus on Your Second Dolphin Kick"
+    type: web_guide
+    verification_status: verified
+    publisher: "Swim Like A Fish (swimlikeafish.org)"
+    identifier:
+      url: "https://swimlikeafish.org/part-ii-focus-on-your-second-dolphin-kick/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。從 src.swim-like-a-fish 站台殘樁拆出。本庫引用比對到該文的時序修正：把「踢手出去（kick the hands out）」當起點是好的開始但不完全正確，第二踢應該發生在**手肘開始伸展之前、雙手通過肚臍位置時**，比手臂出水更早。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對，作者與發表日期留空；② 這是教練的動作時序修正建議，沒有影像或測力佐證，屬教練共識層級。"
+
+  - id: src.myswimpro-2020-butterfly-technique
+    display: "MySwimPro (2020, September 23). How To Swim Butterfly With Perfect Technique."
+    title: "How To Swim Butterfly With Perfect Technique"
+    type: web_article
+    verification_status: verified
+    year: 2020
+    publisher: "MySwimPro"
+    identifier:
+      url: "https://blog.myswimpro.com/2020/09/23/how-to-swim-butterfly-with-perfect-technique/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。從 src.myswimpro 站台殘樁拆出。本庫引用逐字對上：Your hands should enter the water slightly wider than your shoulders — think about placing your hands at 11:00 and 1:00 on a clock! Your hands should hit the water flat with minimal splash.。使用邊界：app 廠商的教學部落格，無個別掛名作者；11 點與 1 點是**教學口令的鐘面比喻**，不是角度量測，實際寬度隨肩寬與身高而異，本庫不應把它當成可驗證的入水角度規格。"
+
+  - id: src.myswimpro-2023-fastest-way-underwater
+    display: "MySwimPro (2023, August 30). This is the Fastest Way to Move Through the Water (Hint: It's Not Freestyle)."
+    title: "This is the Fastest Way to Move Through the Water (Hint: It's Not Freestyle)"
+    type: web_article
+    verification_status: verified
+    year: 2023
+    publisher: "MySwimPro"
+    identifier:
+      url: "https://blog.myswimpro.com/2023/08/30/this-is-the-fastest-way-to-move-through-the-water-hint-its-not-freestyle/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。從 src.myswimpro 站台殘樁拆出。本庫引用比對到該文主張：在緊縮流線型中執行水下海豚踢是人在水中最快的移動方式，比自由式更快；該文並給出自由式約 8 km/h、水下踢約 10 km/h 的對照，以及 15 公尺規則因此而生的說明。使用邊界：app 廠商的教學部落格，速度數字為概略引述、未附出處，本庫只採用定性結論（水下踢快於水面泳式），**未採用 8/10 km/h 這組數字**。"
+
+  - id: src.keller-enjoyswimming-butterfly-undulation
+    display: "Keller, C. (2021, December 29). Butterfly Swimming Technique: The Body Undulation. Enjoy Swimming."
+    title: "Butterfly Swimming Technique: The Body Undulation"
+    type: web_guide
+    verification_status: verified
+    authors: ["Christophe Keller"]
+    year: 2021
+    publisher: "Enjoy Swimming (enjoy-swimming.com)"
+    identifier:
+      url: "https://www.enjoy-swimming.com/butterfly-swimming.html"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。從 src.enjoy-swimming-com 站台殘樁拆出。本庫引用逐字對上：Pushing and releasing the chest and hips in sequence in this manner is what drives body undulation.，以及對常見誤解的修正 the body undulation is mainly driven by the up and down movements of the hips. However, the vertical movements of the head and shoulders actually exceed those of the hips.。**起點歸屬要注意**：本文說波動 begins at the head and ends at the feet（起於頭），與同機構另兩篇把起點寫在肋廓下緣或核心軀幹不一致——該機構內部沒有統一，本庫引用處已保留這個註記。使用邊界：教學網站，無研究引用、無量測。"
+
+  - id: src.keller-enjoyswimming-butterfly-breathing
+    display: "Keller, C. How to Breathe while Swimming Butterfly. Enjoy Swimming."
+    title: "How to Breathe while Swimming Butterfly"
+    type: web_guide
+    verification_status: verified
+    authors: ["Christophe Keller"]
+    publisher: "Enjoy Swimming (enjoy-swimming.com)"
+    identifier:
+      url: "https://www.enjoy-swimming.com/swimming-butterfly.html"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。從 src.enjoy-swimming-com 站台殘樁拆出。本庫引用的「換氣頻率沒有固定答案」比對到該文要點：短距離可以少吸甚至不吸、長距離必然需要更多換氣週期，初學與健身泳者通常適合一划一換（1-and-1），並建議泳者在不同比賽距離上自行試出適合的換氣型態。使用邊界：① 本機直取全文未成，本筆靠檢索索引的摘錄比對，發表日期留空；② 教學網站的建議，沒有生理或成績量測支持，本庫引用處把它當成「不存在單一固定頻率」的佐證，不當成任何頻率處方的依據。"
+
+  - id: src.yourswimlog-how-far-underwater-kicking
+    display: "Poirier-Leroy, O. How Far Underwater Should You Be Dolphin Kicking? YourSwimLog."
+    title: "How Far Underwater Should You Be Dolphin Kicking?"
+    type: web_article
+    verification_status: verified
+    authors: ["Olivier Poirier-Leroy"]
+    publisher: "YourSwimLog.com"
+    identifier:
+      url: "https://www.yourswimlog.com/how-far-underwater-should-you-be-kicking/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。從 src.yourswimlog-b 站台殘樁拆出。本庫引用比對到該文要點：多磨出幾下踢只為多游一段、但每一下的速度都在下降，顯然不等於用爆發有效的踢腿走完同樣距離；談到水下距離時 quality > quantity。該文並指出 100 公尺項目中，快的泳者不是踢得更遠，而是**在水下踢得更快**——差別在速度不在距離。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對，發表日期留空；② 這是泳者導向的教練評論，該文轉述的研究結論本庫未逐一回溯原始文獻，量化層面另由本庫既有的同儕審查來源承擔。"
+
+  - id: src.yourswimlog-gretchen-walsh-udk
+    display: "Poirier-Leroy, O. 3 Things Swimmers Can Learn from Gretchen Walsh's Underwater Dolphin Kick. YourSwimLog."
+    title: "3 Things Swimmers Can Learn from Gretchen Walsh's Underwater Dolphin Kick"
+    type: web_article
+    verification_status: verified
+    authors: ["Olivier Poirier-Leroy"]
+    publisher: "YourSwimLog.com"
+    identifier:
+      url: "https://www.yourswimlog.com/gretchen-walsh-underwater-dolphin-kick/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。從 src.yourswimlog-b 站台殘樁拆出。本庫引用比對到該文要點：Dressel 與 Gretchen Walsh 使用的振幅明顯大於一般泳者，差別不只在力量，而在讓推進力足以超過額外阻力的軀幹控制與核心力量；該文並指出 Maggie Mac Neill 與 Walsh 兩位世界級泳者的振幅與頻率策略截然不同，大振幅慢節奏與小振幅高頻率可以同樣有效。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對，發表日期留空；② 這是對菁英影像的教練評述，**振幅大小與核心能力都沒有數值**，本庫引用處必須維持「不是通用法則」的限定，不能反推成振幅越大越好。"

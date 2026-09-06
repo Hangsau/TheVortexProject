@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 791,
+  "source_count": 801,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -13,15 +13,36 @@
     {
       "id": "src.360swim",
       "display": "360swim",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.360swim-breaststroke-legs",
+      "display": "Breaststroke Lesson - How About Them Legs? 360swim.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://360swim.com/blog/breaststroke-lesson-how-about-them-legs"
+      },
+      "usage_count": 1,
       "usages": [
         {
           "id": "breast.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[44].public.evidence[0]"
-        },
+        }
+      ]
+    },
+    {
+      "id": "src.360swim-common-breaststroke-mistakes",
+      "display": "Do You Know How To Swim Breaststroke? (Top 5 Most Common Breaststroke Mistakes). 360swim.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://360swim.com/blog/how-to-swim-breaststroke"
+      },
+      "usage_count": 2,
+      "usages": [
         {
           "id": "breast.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -1674,9 +1695,11 @@
     },
     {
       "id": "src.danswim",
-      "display": "DanSwim",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Novikov, D. Mastering the Dolphin Kick: Techniques for Effortless Speed. DanSwim.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://danswim.com/dolphin-kick"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -1995,21 +2018,10 @@
     {
       "id": "src.eatsleepswimcoach",
       "display": "EatSleepSwimCoach",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "fly.err7",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[65].public.evidence[1]"
-        },
-        {
-          "id": "udk.err1",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[75].public.evidence[2]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ecg-scd-3-6-0-4-10-89-url",
@@ -2111,21 +2123,10 @@
     {
       "id": "src.enjoy-swimming-com",
       "display": "enjoy-swimming.com",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "fly.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[69].public.evidence[0]"
-        },
-        {
-          "id": "fly.err14",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[72].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.falls-and-hip-fracture-mortality-pmid",
@@ -3144,9 +3145,11 @@
     },
     {
       "id": "src.hall-sr-2020",
-      "display": "Hall Sr. 2020",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Hall, G., Sr. The Correct Pulling Motion for Sprint Freestyle. The Race Club Aqua Notes.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://theraceclub.com/aqua_note/pulling-motion-sprint-freestyle/"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -4067,6 +4070,38 @@
           "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[6]"
+        }
+      ]
+    },
+    {
+      "id": "src.keller-enjoyswimming-butterfly-breathing",
+      "display": "Keller, C. How to Breathe while Swimming Butterfly. Enjoy Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.enjoy-swimming.com/swimming-butterfly.html"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err14",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[72].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.keller-enjoyswimming-butterfly-undulation",
+      "display": "Keller, C. (2021, December 29). Butterfly Swimming Technique: The Body Undulation. Enjoy Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.enjoy-swimming.com/butterfly-swimming.html"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err11",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[69].public.evidence[0]"
         }
       ]
     },
@@ -5366,9 +5401,11 @@
     },
     {
       "id": "src.melton-swimming",
-      "display": "Melton Swimming",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Melton Swimming (2012, September 25). Teaching the Butterfly Stroke.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.meltonswimming.com/teaching-butterfly-stroke/"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -5815,27 +5852,34 @@
     {
       "id": "src.myswimpro",
       "display": "MySwimPro",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.myswimpro-2020-butterfly-technique",
+      "display": "MySwimPro (2020, September 23). How To Swim Butterfly With Perfect Technique.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://blog.myswimpro.com/2020/09/23/how-to-swim-butterfly-with-perfect-technique/"
+      },
+      "usage_count": 1,
       "usages": [
         {
           "id": "fly.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[60].public.evidence[0]"
-        },
-        {
-          "id": "udk.err13",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[87].public.evidence[1]"
         }
       ]
     },
     {
       "id": "src.myswimpro-2022",
-      "display": "MySwimPro 2022",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "MySwimPro (2022, December 6). 7 Butterfly & Breaststroke Turn Mistakes to Avoid.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://blog.myswimpro.com/2022/12/06/7-butterfly-breaststroke-turn-mistakes-to-avoid/"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -5852,6 +5896,22 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.myswimpro-2023-fastest-way-underwater",
+      "display": "MySwimPro (2023, August 30). This is the Fastest Way to Move Through the Water (Hint: It's Not Freestyle).",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://blog.myswimpro.com/2023/08/30/this-is-the-fastest-way-to-move-through-the-water-hint-its-not-freestyle/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.err13",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[87].public.evidence[1]"
+        }
+      ]
     },
     {
       "id": "src.namli-2025-vr-swimming-imagery",
@@ -11796,27 +11856,18 @@
     {
       "id": "src.swim-like-a-fish",
       "display": "Swim Like A Fish",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "breast.err12",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[53].public.evidence[0]"
-        },
-        {
-          "id": "fly.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[67].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.swim-like-a-fish-2025",
-      "display": "Swim Like A Fish 2025",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "3 Common Butterfly Mistakes to Fix. Swim Like A Fish.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://swimlikeafish.org/3-common-butterfly-stroke-mistakes-you-might-be-making/"
+      },
       "usage_count": 4,
       "usages": [
         {
@@ -11843,9 +11894,11 @@
     },
     {
       "id": "src.swim-smart",
-      "display": "Swim Smart",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Teaching Butterfly. Swim Smart.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimsmarttoday.com/pages/teaching-butterfly"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -11857,20 +11910,17 @@
     },
     {
       "id": "src.swim-teach-com",
-      "display": "swim-teach.com",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
+      "display": "Young, M. Butterfly Stroke Body Movement Begins At The Head. Swim Teach.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swim-teach.com/butterfly-stroke-body-movement.html"
+      },
+      "usage_count": 1,
       "usages": [
         {
           "id": "fly.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[68].public.evidence[0]"
-        },
-        {
-          "id": "fly.err6",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[64].public.evidence[0]"
         }
       ]
     },
@@ -11890,9 +11940,11 @@
     },
     {
       "id": "src.swimcoachingblog-com",
-      "display": "swimcoachingblog.com",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Coach Gary (2022, December 14). Are You Training Dolphin Kick? Or Butterfly Kick? swimcoachingblog.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://swimcoachingblog.com/2022/12/14/are-you-training-dolphin-kick-or-butterfly-kick/"
+      },
       "usage_count": 3,
       "usages": [
         {
@@ -11909,6 +11961,38 @@
           "id": "udk.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[80].public.physical_reason"
+        }
+      ]
+    },
+    {
+      "id": "src.swimlikeafish-breaststroke-momentum",
+      "display": "How to Improve Breaststroke Momentum: 4 Coaching Fixes That Work. Swim Like A Fish.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://swimlikeafish.org/4-ways-stopping-breaststroke-momentum"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breast.err12",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[53].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.swimlikeafish-second-dolphin-kick",
+      "display": "Part II: Focus on Your Second Dolphin Kick. Swim Like A Fish.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://swimlikeafish.org/part-ii-focus-on-your-second-dolphin-kick/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[67].public.evidence[0]"
         }
       ]
     },
@@ -11946,9 +12030,11 @@
     },
     {
       "id": "src.swimming-science-livio-cocozza",
-      "display": "Swimming Science / Livio Cocozza",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Cocozza, L. Undulation Technique to Improve Your Butterfly Stroke. Swimming Science.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimmingscience.net/undulation-technique-to-improve-your-butterfly-stroke/"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -11984,9 +12070,11 @@
     },
     {
       "id": "src.swimoutlet",
-      "display": "SwimOutlet",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "SwimOutlet.com (2024, January 22). Common Breaststroke Mistakes.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimoutlet.com/blogs/guides/common-breaststroke-mistakes"
+      },
       "usage_count": 2,
       "usages": [
         {
@@ -13416,9 +13504,11 @@
     },
     {
       "id": "src.train-daly",
-      "display": "Train Daly",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Daly, D. (2026, February 9). How to Swim Butterfly with Speed and Power. Train Daly.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.traindaly.com/train-daly/blog/how-to-swim-butterfly-with-speed-and-power"
+      },
       "usage_count": 3,
       "usages": [
         {
@@ -13897,9 +13987,11 @@
     },
     {
       "id": "src.usms-masters-teaching-article",
-      "display": "USMS Masters Teaching Article",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "McBride, N. (2009, December 18). Teaching Masters to Master the Butterfly. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/teaching-masters-to-master-the-butterfly"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -14427,9 +14519,11 @@
     },
     {
       "id": "src.waterford-crystal-swimming-club",
-      "display": "Waterford Crystal Swimming Club",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Butterfly. Swimming Technique. Waterford Crystal Swimming Club.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.gomotionapp.com/team/reczzwcsc/page/swimming-technique/187-butterfly"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -14509,9 +14603,11 @@
     },
     {
       "id": "src.wikipedia-breaststroke",
-      "display": "Wikipedia Breaststroke",
-      "verification_status": "unverified",
-      "identifier": {},
+      "display": "Breaststroke. Wikipedia (English).",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://en.wikipedia.org/wiki/Breaststroke"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -14873,21 +14969,10 @@
     {
       "id": "src.yourswimlog-b",
       "display": "yourswimlog",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "udk.err1",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[75].public.evidence[3]"
-        },
-        {
-          "id": "udk.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[83].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yourswimlog-com-4-5-tethered-60s-rest-2-3",
@@ -14932,6 +15017,38 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.yourswimlog-gretchen-walsh-udk",
+      "display": "Poirier-Leroy, O. 3 Things Swimmers Can Learn from Gretchen Walsh's Underwater Dolphin Kick. YourSwimLog.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.yourswimlog.com/gretchen-walsh-underwater-dolphin-kick/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.err1",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[75].public.evidence[3]"
+        }
+      ]
+    },
+    {
+      "id": "src.yourswimlog-how-far-underwater-kicking",
+      "display": "Poirier-Leroy, O. How Far Underwater Should You Be Dolphin Kicking? YourSwimLog.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.yourswimlog.com/how-far-underwater-should-you-be-kicking/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[83].public.evidence[1]"
+        }
+      ]
     },
     {
       "id": "src.yourswimlog-monofin",

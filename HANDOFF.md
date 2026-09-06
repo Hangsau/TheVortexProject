@@ -6,6 +6,40 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **W027 歸零：教學網站殘樁族 18 筆一次清完，18 個裡 16 個找得回真身；查出一個編造的年資（錯誤 65）與一個被換算過的推進比例（錯誤 66）**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 179 | **144** |
+| W027 | 34 | **0** |
+| `_sources.yaml` 筆數 | 791 | **801**（10 筆新登錄 verified + 14 筆就地升級 + 6 筆立墓碑） |
+
+**上一輪修正的方針（先檢索找單篇，找不到才立墓碑）在這一輪被數據證實是對的：18 個殘樁裡 16 個找得回真身，只有 1 個確認查無、1 個是站台層級無單篇。** 若照原計畫一律立墓碑，會丟掉 16 個可用來源。
+
+**同時修正了機構族前例的一個細節**：殘樁若只對應**一篇**文章，就**就地升級**（改 `title`／`authors`／`identifier`／`verification_status: verified`），不立墓碑再造新 id——id 是不透明的把手，換 id 只製造引用改動而不增加資訊。只有殘樁**拆成兩篇以上**時才立墓碑＋建新 id。這一輪 6 個墓碑裡有 5 個是後者（`src.360swim`、`src.swim-like-a-fish`、`src.myswimpro`、`src.enjoy-swimming-com`、`src.yourswimlog-b` 各拆成 2 篇），第 6 個 `src.eatsleepswimcoach` 是真的查不到。
+
+**錯誤 65：`fly` 教學順序條目的「超過 40 年的英國游泳教學經驗」是編造的，而且那個主張本身不在來源裡。** 原引用掛 swim-teach.com，說「先教腿再教全身更容易造成膝蓋過度彎曲、臀部幾乎沒有起伏」。逐頁取回該站四篇（`butterfly-stroke-body-movement`、`butterfly-stroke-kick`、`breaststroke-timing`、`how-to-swim-breaststroke`）——**沒有任何一頁提出這個教學順序主張**，而且作者 Mark Young 在站上自述的是 **over 30 years**，不是 40 年。數字與主張都無出處，已撤下引用改標教練觀測並補 `observation_basis`（更正紀錄寫在該欄位內，沿用錯誤 62／63 的就地更正慣例）。該站另一處引用（起伏過大那句）查得到逐字出處，`src.swim-teach-com` 因此就地升級為那一篇。
+
+**錯誤 66：`src.swim-like-a-fish-2025` 背書的三條裡有兩條講的不是原文的事。** ① `fly.tech.9` 寫「**兩踢**合計推進比例約 80%」，原文說的是 *Up to 80% of the propulsion generated in Butterfly & Breaststroke can be created from the **waist down***——那是**腰部以下（含全身波動）**的比例，被靜默換算成兩次踢腿的比例，而且 `public.summary` 也照抄了這個數字（讀者可見），已一併改寫並加 `caveat` 註明那是教練站台未附出處的估計值。② `fly.tech.6` 寫「把兩踢當同一動作做兩次是最常見的訓練錯誤」，原文說的是泳者**忽略或不重視第二踢**（有些人為了省力乾脆不踢第二下），是完全不同的錯誤類型。③ 第三條（`fly.tech.8`）方向對但措辭偏，一併改寫成原文的說法。
+
+**另外三筆是誇大而非錯置，都以 `caveat` 或改寫處理：**
+- `src.hall-sr-2020`（`free.tech.9`）原寫「The Race Club **PDM 測試確認**……；三個物理原因（形狀、速度、拳頭測試）**均支持此結論**」。取回全文：該文**沒有 PDM 測試**，只有一句教練論述 *Most of the propulsion from the pulling arm is coming from the hand, not the forearm.*；三個物理原因散見該機構其他 Aqua Notes，不在本文內。該機構另處的「約 90% 來自手掌」是自家估計值，本庫不採用。
+- `src.danswim` 原寫「從膝蓋啟動是**常見初學者問題**……動作看起來會是**抖動的**」。原文是純正面指導語（*Starting the kick from your hips helps to send the wave across the entire body*），**沒有錯誤框架、也沒有「抖動」這個描述**，引用文字已改寫成原文實際說的內容。
+- `src.swimming-science-livio-cocozza` 只支持一半：*The legs support the undulation created by the head movement* 對應「腿是起伏的結果而非原因」；併寫在同一句的「要等學員能流暢做出全身波浪動作後才加入腿的主動施力」是本庫自己的教學順序推論，已從引用文字拆出、在引用處以 `caveat` 標明。
+
+**唯一查不到的：`src.eatsleepswimcoach`。** 它替同一句話背書兩次（「過度起伏造成游泳者動作緩慢、深沉且低效」），取回該站唯一一篇蝶式教學文全文，**全篇沒有這句話也沒有討論過度起伏的負面效果**，站上無其他候選。已立墓碑，兩處引用改標教練觀測補 `observation_basis`。
+
+**網路可達性（本環境實測，接續前一輪的紀錄）**：可達 = `swimoutlet.com`、`360swim.com`、`blog.myswimpro.com`、`meltonswimming.com`、`swimcoachingblog.com`、`traindaly.com`、`danswim.com`、`enjoy-swimming.com`、`swim-teach.com`、`eatsleepswimcoach.com`、`theraceclub.com`、`usms.org`。**不可達的四種模式**：`swimlikeafish.org`／`yourswimlog.com`／`gomotionapp.com` 回 **403**（機器人阻擋）、`swimmingscience.net` 回 **503**、`swimswam.com` 轉址付費牆回 **402**、`swimsmarttoday.com` 回**空 body**。這四類全部改用檢索索引的摘錄比對，並在各自登錄的 notes 逐筆註明「未能逐字讀完全文，作者與發表日期留空」——**不假裝是全文核對**。特別記一筆：`swimmingscience.net` 那筆刻意**沒有**登錄成 `unverified` + 給 identifier，因為那正好會複製錯誤 64 的 fail-open 型態（有 identifier 就永久通過 W027）。
+
+**過程錯誤（我自己的）**：24 個登錄的 `notes:` 欄位漏寫 YAML 收尾雙引號（Python 三引號字串以 `。"""` 結尾，Python 把那個引號吃掉了）。腳本第一次跑完回報成功，實際檔案已壞——未封閉的雙引號純量會靜默吞掉後續行數。靠 `yaml.safe_load` 抓到（ParserError @ 1094）。因為 `git status` 確認只有該檔被改、整份異動可由腳本重現，用 `git checkout --` 還原後在腳本裡加一道收尾正規化＋assert 再跑。**教訓：批次產生 YAML 純量時，收尾字元要由程式斷言，不能靠人眼。**
+
+**順帶抓到兩個新缺陷（不在 W027 名單內）**：① `l-indicators.yaml` 的 `fly.L5.two-kick-differentiation` 有一列 `text` 內容**就是來源名**（`text: Swim Like A Fish 2025`），標 🟢 卻指向一個教練站台——已改寫成真正的主張並降為 🟠（W022 因此 13 → 12）。**同區塊另一列 `text: Mason 1992` 是同型缺陷但先不動**，因為 `src.mason-1992-a`／`-b` 帶著「疑似同一文獻」的 note、屬於明文禁止逕行合併的那類，要跟單姓氏族一起處理。② `teaching-errors.yaml:1172` 的 `src.swim-teach-com-a3-performance-enjoy-swimming` 是**三方複合鍵**（swim-teach.com＋A3 Performance＋enjoy-swimming），沒被 W027 抓到是因為該列自帶 `observation_basis`。留給複合鍵批處理。
+
+**下一步建議**：W027 已歸零，接下來是**單姓氏族**（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.pink`、`src.hellard`、`src.mujika`、`src.lyttle`、`src.hayashi`、`src.andersen-2020`、`src.benjanuvatra-2007-b`、`src.mccullough-d`、`src.gonzalez-rave`、`src.pmc5260528`、`src.pmc8607769`、`src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020`、`src.seiler`；**`src.seiler` 與 `src.hellard` 被 `schools_overview` 引用，拆時一併改指**），以及上述兩個複合鍵。這族最貴：錯誤 58、60、62、63、65、66 已經**六次**證明引用的**結論方向**可能與原文相反或被換算過，每筆都必須取回原文核對主張本身，不能只確認「這個人寫過這個主題」。**地雷照舊**：W022 剩 12 筆（全在 `l-indicators.yaml`）不可批次清空；`src.gonjo-2018` 不可在未重新定義 W008 基準前立墓碑；`tools/build_injuries.py` 不可執行；`src.race-club-b/-c/-d` 不可憑「疑似同一來源」的 note 合併。零星未結沿用下一段落清單，另加：來源 `type` 的受控詞彙表仍未登錄進 `_taxonomy.yaml`（現用值已達 `conference_abstract`／`web_guide`／`web_article`／`conference_paper`／`thesis`）。
+
+---
+
 ### ✅ **W027 教學網站批（第一輪）：一位生物力學者的立場被本庫記成相反（錯誤 62）、一句引言掛錯作者與出版方（錯誤 63），以及一個「有連結但連結講的是別的事」的來源（錯誤 64）——最後這個同時暴露 W027 本身的設計盲點**
 
 | 指標 | 段落起點 | 現在 |

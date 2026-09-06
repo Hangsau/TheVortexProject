@@ -5282,7 +5282,7 @@
         ]
       },
       "source_ids": [
-        "src.swim-like-a-fish",
+        "src.swimlikeafish-breaststroke-momentum",
         "src.wikipedia-breaststroke"
       ],
       "outgoing_ids": [
@@ -5451,7 +5451,7 @@
         ]
       },
       "source_ids": [
-        "src.360swim"
+        "src.360swim-breaststroke-legs"
       ],
       "outgoing_ids": [
         "breast.tech.11",
@@ -5581,7 +5581,7 @@
         ]
       },
       "source_ids": [
-        "src.360swim"
+        "src.360swim-common-breaststroke-mistakes"
       ],
       "outgoing_ids": [
         "breast.tech.5",
@@ -7894,8 +7894,8 @@
       "title": "能區分第一踢（輕、穩、觸發）和第二踢（強、同步出水）的不同感知",
       "tags": {
         "certainty": [
-          "🟡",
-          "🟢"
+          "🟠",
+          "🟡"
         ],
         "l_level": [
           "L5"
@@ -8025,7 +8025,7 @@
         ]
       },
       "source_ids": [
-        "src.enjoy-swimming-com",
+        "src.keller-enjoyswimming-butterfly-undulation",
         "src.sanders-1995-a",
         "src.usms-fish-2025-butterfly-hips"
       ],
@@ -8111,7 +8111,7 @@
         ]
       },
       "source_ids": [
-        "src.enjoy-swimming-com"
+        "src.keller-enjoyswimming-butterfly-breathing"
       ],
       "outgoing_ids": [
         "fly.tech.30"
@@ -8182,7 +8182,7 @@
         ]
       },
       "source_ids": [
-        "src.myswimpro"
+        "src.myswimpro-2020-butterfly-technique"
       ],
       "outgoing_ids": [
         "fly.tech.12",
@@ -8284,7 +8284,6 @@
       },
       "source_ids": [
         "src.sanders-1995-a",
-        "src.swim-teach-com",
         "src.swimming-science-livio-cocozza"
       ],
       "outgoing_ids": [
@@ -8311,7 +8310,6 @@
         ]
       },
       "source_ids": [
-        "src.eatsleepswimcoach",
         "src.train-daly"
       ],
       "outgoing_ids": [
@@ -8364,7 +8362,7 @@
         ]
       },
       "source_ids": [
-        "src.swim-like-a-fish"
+        "src.swimlikeafish-second-dolphin-kick"
       ],
       "outgoing_ids": [
         "fly.tech.10",
@@ -20151,10 +20149,9 @@
         ]
       },
       "source_ids": [
-        "src.eatsleepswimcoach",
         "src.train-daly",
         "src.veiga-2022",
-        "src.yourswimlog-b"
+        "src.yourswimlog-gretchen-walsh-udk"
       ],
       "outgoing_ids": [
         "udk.tech.13",
@@ -20258,7 +20255,7 @@
         ]
       },
       "source_ids": [
-        "src.myswimpro",
+        "src.myswimpro-2023-fastest-way-underwater",
         "src.usms-sheaff-2022-how-to-do-underwater-kicks"
       ],
       "outgoing_ids": [
@@ -20474,7 +20471,7 @@
       "source_ids": [
         "src.pmc8442910-a",
         "src.the-race-club-flip-turn-kick-count",
-        "src.yourswimlog-b"
+        "src.yourswimlog-how-far-underwater-kicking"
       ],
       "outgoing_ids": [
         "udk.tech.18",

@@ -485,7 +485,10 @@ indicators:
       note: 兩踢功能分化是蝶式最重要的進階感知——第一踢（輕、觸發）與第二踢（強、同步出水）是不同的感知對象。
       evidence:
         - {certainty: 🟡, text: Mason 1992, source: Mason 1992, source_ids: [src.mason-1992-a]}
-        - {certainty: 🟢, text: Swim Like A Fish 2025, source: Swim Like A Fish 2025, source_ids: [src.swim-like-a-fish-2025]}
+        - certainty: 🟠
+          text: 兩踢任務不同——第二踢負責把划手推到底並帶動手臂出水恢復；泳者常忽略或不重視第二踢。
+          source: "3 Common Butterfly Mistakes to Fix. Swim Like A Fish."
+          source_ids: [src.swim-like-a-fish-2025]
 
   - id: fly.L5.glide-elimination
     stroke: fly

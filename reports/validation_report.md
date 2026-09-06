@@ -151,7 +151,7 @@
 
 ## W022 — `text` 的內容就是它自己的來源名稱（「Mason 1992」）——只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）
 
-**WARN，共 13 筆**
+**WARN，共 12 筆**
 
   file=canonical\technica\l-indicators.yaml id='free.L2.kick' at=indicators[7].public.evidence[0] text 就是來源名稱 'McCullough 2009'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='free.L4.roll-coupling' at=indicators[11].public.evidence[0] text 就是來源名稱 'Gonjo 2020'（只說了有這篇，沒說它顯示什麼）
@@ -163,7 +163,6 @@
   file=canonical\technica\l-indicators.yaml id='fly.L3.undulation-integration' at=indicators[30].public.evidence[0] text 就是來源名稱 'Sanders 1995'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L4.outsweep' at=indicators[33].public.evidence[0] text 就是來源名稱 'Peyrebrune & Turner 2007'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L5.two-kick-differentiation' at=indicators[34].public.evidence[0] text 就是來源名稱 'Mason 1992'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='fly.L5.two-kick-differentiation' at=indicators[34].public.evidence[1] text 就是來源名稱 'Swim Like A Fish 2025'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='breast.L4.undulation' at=indicators[43].public.evidence[0] text 就是來源名稱 'Colman 1998'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='breast.L5.undulation-stability' at=indicators[45].public.evidence[1] text 就是來源名稱 'Tanaka 2024'（只說了有這篇，沒說它顯示什麼）
 
@@ -187,42 +186,9 @@
 
 ## W027 — 🟠 只靠一個解析不到文件的顯示字串通過 W011 的來源逃生口（`source_ids` 沒有任何一筆指到非 retracted 且帶 identifier 的登錄）——查證成真來源登錄，或承認是實務觀察改寫 `observation_basis`
 
-**WARN，共 34 筆**
+**WARN，共 0 筆**
 
-  file=canonical\instructional\teaching-errors.yaml id='breast.err2' at=errors[43].public.evidence[1] certainty=orange 靠顯示字串通過（source='SwimOutlet'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='breast.err3' at=errors[44].public.evidence[0] certainty=orange 靠顯示字串通過（source='360swim'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='breast.err7' at=errors[48].public.evidence[0] certainty=orange 靠顯示字串通過（source='SwimOutlet'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='breast.err8' at=errors[49].public.evidence[0] certainty=orange 靠顯示字串通過（source='360swim'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='breast.err8' at=errors[49].public.evidence[1] certainty=orange 靠顯示字串通過（source='360swim'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='breast.err12' at=errors[53].public.evidence[0] certainty=orange 靠顯示字串通過（source='Swim Like A Fish'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='breast.err12' at=errors[53].public.evidence[1] certainty=orange 靠顯示字串通過（source='Wikipedia Breaststroke'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err1' at=errors[59].public.evidence[1] certainty=orange 靠顯示字串通過（source='Waterford Crystal Swimming Club'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err2' at=errors[60].public.evidence[0] certainty=orange 靠顯示字串通過（source='MySwimPro'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err4' at=errors[62].public.evidence[0] certainty=orange 靠顯示字串通過（source='Melton Swimming'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err4' at=errors[62].public.evidence[1] certainty=orange 靠顯示字串通過（source='Swim Smart'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err6' at=errors[64].public.evidence[0] certainty=orange 靠顯示字串通過（source='swim-teach.com'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err6' at=errors[64].public.evidence[1] certainty=orange 靠顯示字串通過（source='Swimming Science / Livio Cocozza'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err7' at=errors[65].public.evidence[0] certainty=orange 靠顯示字串通過（source='Train Daly'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err7' at=errors[65].public.evidence[1] certainty=orange 靠顯示字串通過（source='EatSleepSwimCoach'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err8' at=errors[66].public.evidence[0] certainty=orange 靠顯示字串通過（source='swimcoachingblog.com'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err9' at=errors[67].public.evidence[0] certainty=orange 靠顯示字串通過（source='Swim Like A Fish'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err10' at=errors[68].public.evidence[0] certainty=orange 靠顯示字串通過（source='swim-teach.com'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err10' at=errors[68].public.evidence[1] certainty=orange 靠顯示字串通過（source='Train Daly'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err11' at=errors[69].public.evidence[0] certainty=orange 靠顯示字串通過（source='enjoy-swimming.com'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err12' at=errors[70].public.evidence[0] certainty=orange 靠顯示字串通過（source='USMS Masters Teaching Article'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='fly.err14' at=errors[72].public.evidence[0] certainty=orange 靠顯示字串通過（source='enjoy-swimming.com'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err1' at=errors[75].public.evidence[1] certainty=orange 靠顯示字串通過（source='Train Daly'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err1' at=errors[75].public.evidence[2] certainty=orange 靠顯示字串通過（source='EatSleepSwimCoach'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err1' at=errors[75].public.evidence[3] certainty=orange 靠顯示字串通過（source='yourswimlog'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err2' at=errors[76].public.evidence[1] certainty=orange 靠顯示字串通過（source='DanSwim'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err6' at=errors[80].public.evidence[0] certainty=orange 靠顯示字串通過（source='swimcoachingblog.com'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err9' at=errors[83].public.evidence[1] certainty=orange 靠顯示字串通過（source='yourswimlog'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\teaching-errors.yaml id='udk.err13' at=errors[87].public.evidence[1] certainty=orange 靠顯示字串通過（source='MySwimPro'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\technical-analysis.yaml id='free.tech.9' at=points[10].public.evidence[0] certainty=orange 靠顯示字串通過（source='Hall Sr. 2020'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.6' at=points[107].public.evidence[0] certainty=orange 靠顯示字串通過（source='Swim Like A Fish 2025'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.8' at=points[109].public.evidence[0] certainty=orange 靠顯示字串通過（source='Swim Like A Fish 2025'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\technical-analysis.yaml id='fly.tech.9' at=points[110].public.evidence[0] certainty=orange 靠顯示字串通過（source='Swim Like A Fish 2025'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
-  file=canonical\instructional\technical-analysis.yaml id='starts-turns.tech.19' at=points[198].public.evidence[0] certainty=orange 靠顯示字串通過（source='MySwimPro 2022'），但 source_ids 解析不到可取得的登錄——查證成真來源或改寫 observation_basis
+（無）
 
 ---
 
