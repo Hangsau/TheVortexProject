@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 784,
+  "source_count": 791,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -993,16 +993,10 @@
     {
       "id": "src.building-the-perfect-turn-push-off-strength",
       "display": "Building the Perfect Turn: Push Off Strength, Tritonwear / SwimSwam",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[96].public.evidence[2]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.bushman-2006",
@@ -1322,16 +1316,10 @@
     {
       "id": "src.coach-jozsef-nagy-swimswam-the-breaststroke",
       "display": "Coach Jozsef Nagy / SwimSwam, The Breaststroke Turn",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[95].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.coach-observation",
@@ -3406,6 +3394,38 @@
       ]
     },
     {
+      "id": "src.havriluk-2017-breathing-misconceptions-revisited",
+      "display": "Havriluk, R. (2017, December). Technique Misconceptions: Breaststroke and Butterfly Breathing Revisited. Swimming World Magazine.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimmingworldmagazine.com/news/swimming-world-presents-technique-misconceptions-breaststroke-and-butterfly-breathing-revisited/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breast.err7",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[48].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.havriluk-2020-breaststroke-head-timing-delay",
+      "display": "Havriluk, R. (2020, December 6). Swimming Technique Concepts: Breaststroke Breathing Head Timing Delay. Swimming World Magazine, December 2020 issue.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimmingworldmagazine.com/news/swimming-world-presents-swimming-technique-concepts-breaststroke-breathing-head-timing-delay/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breast.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[50].public.evidence[0]"
+        }
+      ]
+    },
+    {
       "id": "src.hayashi",
       "display": "Hayashi 2025；Strzała 2013",
       "verification_status": "unverified",
@@ -4850,6 +4870,22 @@
       ]
     },
     {
+      "id": "src.marr-2018-tritonwear-push-off-strength",
+      "display": "Marr, K. (2018, January 28). Building the Perfect Turn: Push-Off Strength. TritonWear Blog.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://blog.tritonwear.com/building-perfect-turn-push-off-strength"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "starts-turns.err9",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[96].public.evidence[2]"
+        }
+      ]
+    },
+    {
       "id": "src.martens-2015",
       "display": "Martens J, Figueiredo P, Daly D. (2015). Electromyography in the four competitive swimming strokes: a systematic review. J Electromyogr Kinesiol 25(2):273-291.",
       "verification_status": "verified",
@@ -5072,6 +5108,48 @@
           "id": "starts-turns.tech.26",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[205].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.mccauley-1993-usms-modern-breaststroke",
+      "display": "McCauley, W. (1993, October 1). The Modern Breaststroke. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/the-modern-breaststroke"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "breast.err5",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[46].public.evidence[0]"
+        },
+        {
+          "id": "breast.err5",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[46].public.physical_reason"
+        },
+        {
+          "id": "breast.err6",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[47].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.mccauley-1998-usms-complete-new-breaststroke-turn",
+      "display": "McCauley, W. (1998, January 23). The Complete New Breaststroke Turn. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/the-complete-new-breaststroke-turn"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "starts-turns.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[95].public.evidence[1]"
         }
       ]
     },
@@ -5645,6 +5723,22 @@
           "id": "periodization.taper.volume",
           "file": "canonical/periodization/taper.yaml",
           "path": "variables[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.mullen-2011-swimmingworld-hand-entry",
+      "display": "Mullen, G. J. (2011, October 31). Science of Performance: Hand Entry. Swimming World Magazine.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimmingworldmagazine.com/news/science-of-performance-hand-entry/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[7].public.evidence[0]"
         }
       ]
     },
@@ -6530,7 +6624,7 @@
         {
           "id": "breast.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[46].public.evidence[2]"
+          "path": "errors[46].public.evidence[1]"
         },
         {
           "id": "breast.err5",
@@ -11867,66 +11961,26 @@
     {
       "id": "src.swimming-world-magazine",
       "display": "Swimming World Magazine",
-      "verification_status": "unverified",
-      "identifier": {
-        "url": "https://www.swimmingworldmagazine.com/news/science-of-performance-hand-entry/"
-      },
-      "usage_count": 5,
-      "usages": [
-        {
-          "id": "breast.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[52].public.evidence[0]"
-        },
-        {
-          "id": "breast.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[46].public.evidence[0]"
-        },
-        {
-          "id": "breast.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[46].public.physical_reason"
-        },
-        {
-          "id": "breast.err6",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[47].public.evidence[0]"
-        },
-        {
-          "id": "free.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[7].public.evidence[0]"
-        }
-      ]
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.swimming-world-magazine-rod-havriluk",
       "display": "Swimming World Magazine（Rod Havriluk）",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "breast.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[50].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.swimming-world-magazine-rod-havriluk-phd-bio",
       "display": "Swimming World Magazine（Rod Havriluk, PhD biomechanist）",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "breast.err7",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[48].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.swimoutlet",
@@ -11950,33 +12004,32 @@
     {
       "id": "src.swimswam-a",
       "display": "SwimSwam",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.swimswam-b",
+      "display": "SwimSwam 教練觀察",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.swimswam-golden-method-butterfly",
+      "display": "My Golden Method for Teaching/Improving Butterfly. SwimSwam.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://swimswam.com/my-golden-method-for-teachingimproving-butterfly/"
+      },
+      "usage_count": 1,
       "usages": [
         {
           "id": "fly.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[59].public.evidence[0]"
-        },
-        {
-          "id": "fly.err3",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[61].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.swimswam-b",
-      "display": "SwimSwam 教練觀察",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[95].public.evidence[2]"
         }
       ]
     },
@@ -13933,21 +13986,10 @@
     {
       "id": "src.usms-wayne-mccauley",
       "display": "USMS (Wayne McCauley)",
-      "verification_status": "unverified",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "breast.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[46].public.evidence[1]"
-        },
-        {
-          "id": "breast.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[46].public.physical_reason"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vallerand-1997-hmiem",

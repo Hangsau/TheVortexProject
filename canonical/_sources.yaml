@@ -817,8 +817,9 @@ sources:
   - id: src.building-the-perfect-turn-push-off-strength
     display: "Building the Perfect Turn: Push Off Strength, Tritonwear / SwimSwam"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除，改指 src.marr-2018-tritonwear-push-off-strength。已取回原文確認作者與日期（Katie Marr，2018-01-28，TritonWear 部落格，SwimSwam 有轉載）。"
 
   - id: src.bushman-2006
     display: "【查無此文獻】原記為「Bushman et al. 2006, Phys Sportsmed（早期 OC × VO₂max 量化）」，該期刊無此作者文獻"
@@ -1023,8 +1024,9 @@ sources:
   - id: src.coach-jozsef-nagy-swimswam-the-breaststroke
     display: "Coach Jozsef Nagy / SwimSwam, The Breaststroke Turn"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除：歸屬錯誤，不是只有殘樁問題。本庫掛在這個 id 下的引文是「拉著自己靠近牆時會讓髖部下沉，就像放錨一樣」，該句的真正出處是 McCauley, W.（1998-01-23）The Complete New Breaststroke Turn（U.S. Masters Swimming），原文逐字為 The object is to kick into the wall, never pulling into it. Pulling in causes the hips to sink, just like putting out an anchor.；「髖部下沉讓你很難啟動轉身」則對應 Moffet, J.（1993-06-01）The Breaststroke Turn（USMS）的 pulling alone causes the hips to sink, making it difficult to begin the turn.。Nagy 在 SwimSwam 確有一篇 The Breaststroke Turn，但該站現已改由 tollbit 代管、本機取全文回 HTTP 402，無法核對；可確定的是這段引文不需要它就有出處。引用處已改指 src.mccauley-1998-usms-complete-new-breaststroke-turn。"
 
   - id: src.coach-observation
     display: "教練觀測"
@@ -4965,22 +4967,23 @@ sources:
   - id: src.swimming-world-magazine
     display: "Swimming World Magazine"
     type: other
-    verification_status: unverified
-    identifier:
-      url: "https://www.swimmingworldmagazine.com/news/science-of-performance-hand-entry/"
-    notes: "顯示字串未給出單一明確年份，year 留空。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。本登錄是刊物層級殘樁，唯一識別碼是一篇 2011-10-31 由 G. John Mullen 撰寫的**自由式入水**文章（science-of-performance-hand-entry），卻同時替四處主張背書，其中三處是蛙式（外划不需加速／外划寬度與肩胛骨／insweep 結束時上踢）。已取回該文全文核對：整篇只談自由式入水（指縫、拇指位置、腕屈、入水速度），**沒有任何蛙式內容**。這是「一個 URL 替多條無關主張背書」的同型問題，但因為它有 identifier 所以能通過 W027——W027 只問「指不指得到文件」，不問「那份文件講的是不是這件事」。自由式那一處改指 src.mullen-2011-swimmingworld-hand-entry（該文確實逐字支持）；三處蛙式引用已分別改指或刪除。"
 
   - id: src.swimming-world-magazine-rod-havriluk
     display: "Swimming World Magazine（Rod Havriluk）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除，改指 src.havriluk-2020-breaststroke-head-timing-delay。原登錄只有刊物名＋人名，無篇名無年份。回查 Havriluk 在 Swimming World 的蛙式換氣系列後，本庫引用的時序主張對應的是 2020-12-06 的 Breaststroke Breathing Head Timing Delay。"
 
   - id: src.swimming-world-magazine-rod-havriluk-phd-bio
     display: "Swimming World Magazine（Rod Havriluk, PhD biomechanist）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。原登錄只有刊物名＋人名＋頭銜。查證後發現引用方向與 Havriluk 的實際立場相反（見 breast.err7 的更正說明與 src.havriluk-2017-breathing-misconceptions-revisited 的 notes）：本庫引用他支持「頭部跟著肩胛骨移動、不獨立仰起」，但他在 2015／2017／2020 三篇裡一致把「換氣時不改變頸部角度」明列為 technique misconception。引用處已改指 src.havriluk-2017-breathing-misconceptions-revisited 並改寫成他真正的主張。"
 
   - id: src.swimoutlet
     display: "SwimOutlet"
@@ -4991,14 +4994,16 @@ sources:
   - id: src.swimswam-a
     display: "SwimSwam"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.swimswam-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。原 notes 猜測「疑似與 src.swimswam-b 為同一來源」，**這個猜測是錯的**：本 id 掛的是蝶式划手內容、swimswam-b 掛的是蛙式轉身內容，兩者不同文。本 id 在 fly.err1 的引文（強調直線後推而非過時的鑰匙孔／雪人／大-小-大）已比對到 SwimSwam 的 My Golden Method for Teaching/Improving Butterfly，改指 src.swimswam-golden-method-butterfly；在 fly.err3 的引文（如果他們太快完成動作，會把划手變成蛙式划水）核對不到出處，該列已刪除。"
 
   - id: src.swimswam-b
     display: "SwimSwam 教練觀察"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.swimswam-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除。掛在本 id 下的唯一主張是「選手最常見的錯誤，是在接近牆之前減速，並在腿還未完全收回時就讓髖部下落」。已查 USMS 的兩篇蛙式轉身文（Moffet 1993、McCauley 1998）與 SwimSwam 的 Nagy 篇（後者 tollbit 代管、HTTP 402 取不到），**都沒有「接近牆前減速」這個敘述**。查不到出處就不留，該列已刪除——留白比留一個查不到的敘述誠實。原 notes 的「疑似與 src.swimswam-a 同源」也是錯的（見該筆）。"
 
   - id: src.swimswam-koga-wku-kinematic
     display: "【殘樁＋引用方向相反，已撤下】SwimSwam Junya Koga analysis／WKU Digital Commons Kinematic Comparison"
@@ -5569,8 +5574,9 @@ sources:
   - id: src.usms-wayne-mccauley
     display: "USMS (Wayne McCauley)"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除，改指 src.mccauley-1993-usms-modern-breaststroke。原登錄只有機構＋人名。已在 U.S. Masters Swimming 站上找到單篇真身：McCauley, W.（1993-10-01）The Modern Breaststroke，本庫引用的 30–45 度手前臂夾角與「out-scull 推進力很小」逐字對得上。"
 
   - id: src.veiga-2022
     display: "Veiga et al. 2022 systematic review"
@@ -9579,3 +9585,91 @@ sources:
       url: "https://vuir.vu.edu.au/34057/1/TOR%20Elaine%20-%20thesis_nosignatures.pdf"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 取全文（232 頁）核對。以澳洲國家隊菁英泳者為對象，研究 Omega OSB11 kick-start 的水下階段。本庫取用兩件事：① 第 73 頁逐字「The percentage time contribution of each sub-phase is approximately 11%, 5% and 84% respectively (Slawson, Conway, Cosser, Chakravorti, & West, 2013)」——這是 84% 的歸屬證據，且該處把 Cossor 誤拼為 Cosser；② 第 111 頁逐字「水下階段是出發最長的一段，且多次被證實是決定整體出發效率最關鍵的一段（Cossor & Mason, 2001; Naemi & Sanders, 2008; Thow et al., 2012）」，以及水下階段可解釋出發時間 95% 的變異（Connaboy 2010; Tor 2014）。使用邊界：本論文的受試者是菁英 kick-start 使用者，2010 年 OSB11 出發台引入後的技術，早期 grab／track start 的數據不可直接套用。"
+  - id: src.havriluk-2020-breaststroke-head-timing-delay
+    display: "Havriluk, R. (2020, December 6). Swimming Technique Concepts: Breaststroke Breathing Head Timing Delay. Swimming World Magazine, December 2020 issue."
+    title: "Swimming Technique Concepts: Breaststroke Breathing Head Timing Delay"
+    type: web_article
+    verification_status: verified
+    authors: ["Rod Havriluk"]
+    year: 2020
+    container: "Swimming World Magazine"
+    identifier:
+      url: "https://www.swimmingworldmagazine.com/news/swimming-world-presents-swimming-technique-concepts-breaststroke-breathing-head-timing-delay/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取原文核對。Havriluk 是生物力學背景的技術評論者（Swimming Technology Research），本文主張蛙式換氣時頭部動作應晚於手臂動作啟動。可引的逐字內容：a swimmer begins the arm motion and then begins the head motion；As she begins her arm motion, her head stays in the streamline with her vision directed straight down until her hands come into her field of view；The head timing delay is only about one-quarter of a second；延遲結束時 she is already generating about 10 pounds of hand force。使用邊界：這是單一示範個案的影像＋測力分析，不是對照研究，沒有樣本數與統計；四分之一秒與 10 磅是該個案的值，不是族群常模。**本文沒有說「外划時換氣已不再被現代頂尖選手使用」，也沒有描述停停走走的節奏**，本庫原先掛在此人名下的那段敘述已改寫成本文真正說的內容。"
+
+  - id: src.havriluk-2017-breathing-misconceptions-revisited
+    display: "Havriluk, R. (2017, December). Technique Misconceptions: Breaststroke and Butterfly Breathing Revisited. Swimming World Magazine."
+    title: "Technique Misconceptions: Breaststroke and Butterfly Breathing Revisited"
+    type: web_article
+    verification_status: verified
+    authors: ["Rod Havriluk"]
+    year: 2017
+    container: "Swimming World Magazine"
+    identifier:
+      url: "https://www.swimmingworldmagazine.com/news/swimming-world-presents-technique-misconceptions-breaststroke-and-butterfly-breathing-revisited/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取原文核對，並與同作者 2015-06 與 2020-12 兩篇交叉比對，三篇立場一致。Havriluk 的主張是：換氣要在**頸部做完整活動範圍的伸展、同時下巴留在水面高度**，這樣身體反而更接近水平、阻力更小；他明確把「換氣時不應改變頸部角度」列為 technique misconception（2015 篇逐字：A common technique misconception is that a breastroker should not change the angle at the neck to breathe；An effective breathing motion requires extension at the neck through the full range of motion），並引 Urbanchek 1995 描述無效技術是 the angle at the neck was fixed so that it was like the head was in a cast with your neck and your shoulder。**本庫先前引用他來支持「頭部跟著肩胛骨移動、不獨立仰起」，方向剛好相反**，已於 2026-09-06 更正。使用邊界：本文是技術評論，只給質性描述（less vertical motion、more level body position），**沒有任何阻力或速度的量測值**；且他反對的是「抬頭、頸、上胸整塊出水」，不是反對維持身體水平。"
+
+  - id: src.mccauley-1993-usms-modern-breaststroke
+    display: "McCauley, W. (1993, October 1). The Modern Breaststroke. U.S. Masters Swimming."
+    title: "The Modern Breaststroke"
+    type: web_article
+    verification_status: verified
+    authors: ["Wayne McCauley"]
+    year: 1993
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/the-modern-breaststroke"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取原文核對。本庫引用兩處，都逐字對上：The out-scull is not very propulsive, to get any propulsion you must pitch the hands at an angle to the fore-arms, thirty to forty-five degrees；How wide you make the catch point depends on how strong you are。使用邊界兩條：① 這是 1993 年的教練／masters 選手技術文章，不是研究，沒有量測；② **30–45 度的手前臂夾角是升力理論（sculling／lift-based propulsion）時代的處方**，該理論後續已被大幅修正，本庫引它只用來支持「外划推進力很小」這個仍成立的方向性判斷，不把角度數字當成現行技術指令。作者為 masters 50／200 蛙式全美選手與 50 蛙全國冠軍。另註：本庫原本掛在此人名下的「外划寬度目標是在手肘伸直下讓手掌盡量移離肩胛骨」一句，全文查無，已刪除。"
+
+  - id: src.mccauley-1998-usms-complete-new-breaststroke-turn
+    display: "McCauley, W. (1998, January 23). The Complete New Breaststroke Turn. U.S. Masters Swimming."
+    title: "The Complete New Breaststroke Turn"
+    type: web_article
+    verification_status: verified
+    authors: ["Wayne McCauley"]
+    year: 1998
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/the-complete-new-breaststroke-turn"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取原文核對。「放錨」那句的真正出處，逐字為 The object is to kick into the wall, never pulling into it. Pulling in causes the hips to sink, just like putting out an anchor. 本庫原先把它掛給 Coach Jozsef Nagy / SwimSwam（見 src.coach-jozsef-nagy-swimswam-the-breaststroke 的墓碑）。同主題另有 Moffet, J.（1993-06-01）The Breaststroke Turn（USMS）寫 pulling alone causes the hips to sink, making it difficult to begin the turn.。使用邊界：教練撰寫的技術文章，非研究，無量測；且本文沒有提到「接近牆前減速」。"
+
+  - id: src.marr-2018-tritonwear-push-off-strength
+    display: "Marr, K. (2018, January 28). Building the Perfect Turn: Push-Off Strength. TritonWear Blog."
+    title: "Building the Perfect Turn: Push-Off Strength"
+    type: web_article
+    verification_status: verified
+    authors: ["Katie Marr"]
+    year: 2018
+    publisher: "TritonWear"
+    identifier:
+      url: "https://blog.tritonwear.com/building-perfect-turn-push-off-strength"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取原文核對（SwimSwam 有同文轉載）。本庫引用的流線型前提條件逐字對上：if a swimmer isn't streamlined during push off, they won't gain any speed no matter how hard they push, as the water will push back against them negating any forward propulsion, and returning a lower Push-Off Strength value.。使用邊界：本文是**穿戴裝置廠商解說自家指標**的部落格文章。文中的 Push-Off Strength 是 TritonWear 依感測器多點資料算出的**專屬綜合加速度指標，不是物理上的力**，它引用的菁英基準（50 公尺項目女 29–31、男 30–33）是該指標的無單位數值，不可與牛頓、體重倍數或任何文獻的推蹬力數據相互換算或比較。"
+
+  - id: src.mullen-2011-swimmingworld-hand-entry
+    display: "Mullen, G. J. (2011, October 31). Science of Performance: Hand Entry. Swimming World Magazine."
+    title: "Science of Performance: Hand Entry"
+    type: web_article
+    verification_status: verified
+    authors: ["G. John Mullen"]
+    year: 2011
+    container: "Swimming World Magazine"
+    identifier:
+      url: "https://www.swimmingworldmagazine.com/news/science-of-performance-hand-entry/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。**只談自由式入水**（指縫、拇指位置、腕屈、入水速度），全篇無蛙式內容。本庫引用的個體差異主張逐字對上：One size fits none!；During the entry, a swimmer using a straight arm recovery will need a higher amount of wrist flexion compared to their bent elbow recovery to ensure minimal water resistance at the entry.；Injury history and functional limitations should also be considered.。使用邊界：技術評論文章，論述性質，沒有量測數據。本筆是從 src.swimming-world-magazine 這個刊物層級殘樁拆出來的——該殘樁的識別碼就是本文網址，卻同時替三條蛙式主張背書（見其墓碑）。"
+
+  - id: src.swimswam-golden-method-butterfly
+    display: "My Golden Method for Teaching/Improving Butterfly. SwimSwam."
+    title: "My Golden Method for Teaching/Improving Butterfly"
+    type: web_article
+    verification_status: verified
+    publisher: "SwimSwam"
+    identifier:
+      url: "https://swimswam.com/my-golden-method-for-teachingimproving-butterfly/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 定位。本庫引用的是「強調直線後推（straight back pull），而非過時的鑰匙孔／雪人／大-小-大划法」，這個表述已比對到本文。使用邊界兩條，都要看清楚：① **SwimSwam 現已改由 tollbit 代管，本機直取全文回 HTTP 402**，本筆是靠檢索索引的摘錄比對到篇名與該表述，未能逐字讀完原文，因此作者與發表日期留空；② 本文是教練教學方法論的公開投稿，不是研究。本庫原本掛在 src.swimswam-a 的另一句引文（如果他們太快完成動作，會把划手變成蛙式划水）**沒有比對到出處，該列已刪除**，不隨本筆一起洗成已查證。"

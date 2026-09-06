@@ -6,6 +6,43 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **W027 教學網站批（第一輪）：一位生物力學者的立場被本庫記成相反（錯誤 62）、一句引言掛錯作者與出版方（錯誤 63），以及一個「有連結但連結講的是別的事」的來源（錯誤 64）——最後這個同時暴露 W027 本身的設計盲點**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 202 | **194** |
+| W027 | 57 | **49** |
+| `_sources.yaml` 筆數 | 784 | **791**（7 筆新登錄 verified + 8 筆立墓碑） |
+
+這批的共同特徵是：登錄本身看起來像「教學網站殘樁」（無作者、無年份、`type: other`），但**實際上背後有一篇具體、可取得的文章**。回原文之後，8 個殘樁裡有 7 個找回真身，1 個確認查不到而刪除引用。找回真身的過程逼出三個內容錯誤。
+
+**錯誤 62：`breast.err7` 把 Rod Havriluk 的立場記成相反。** 本庫原本引他說「頭部是跟著肩胛骨移動的……頭部隨脊柱移動而非獨立仰起」。實際查 Havriluk 在 Swimming World 的 2015、2017、2020 三篇專欄，他一貫把**「蛙式換氣時不該改變頸部角度」列為技術誤區**——他要求頸部在完整活動範圍內伸展，判準是下巴維持在水面高度，並引 Jon Urbanchek 的話形容錯誤版本像「頸部和肩膀打了石膏」。本庫等於拿他當權威去背書他本人點名反對的做法。已改寫 `physical_reason`、`correct_concept`、`perception_impact` 與該 evidence 列，並在條目內留下更正紀錄。污染範圍經 grep 確認只限 `breast.err7`。
+
+**錯誤 63：`starts-turns.err8` 的「放錨」引言掛錯人。** 原標「Coach Jozsef Nagy / SwimSwam, The Breaststroke Turn」。實際出處是 **McCauley, W. (1998)〈The Complete New Breaststroke Turn〉, U.S. Masters Swimming**（原文：目標是把腿踢進牆、絕不是把自己拉進牆，拉進去會讓髖部下沉「就像放了錨一樣」）。作者錯、出版方錯。另有一句「選手最常見的錯誤是在接近牆之前減速」掛在 `src.swimswam-b` 下，換三組關鍵字都找不到出處，**直接刪除該列**（沿用錯誤 59 的處置：留白比留一個查不到的數字誠實）。
+
+**錯誤 64：`src.swimming-world-magazine` 是雜誌層級的殘樁，唯一的 identifier 是一篇 2011 年談自由式入水的文章，卻被 4 條主張引用、其中 3 條是蛙式。** 那篇是 Mullen, G. J. (2011)〈Science of Performance: Hand Entry〉，全篇自由式，「One size fits none!」那句確實出自它——所以 `free.err8` 的引用是合法的，已獨立登錄為 `src.mullen-2011-swimmingworld-hand-entry`。但另外三條蛙式主張（外划不需加速、外划寬度取決於肌力、insweep 結束時開始上踢）跟這個 URL 沒有任何關係。
+
+> **這一條是驗證器層的發現，不只是資料錯誤。** W027 的判準是 `resolvable_source_ids()` = 「非 retracted 且有 identifier」——它只問「這個 id 指不指得到一份文件」，**不問「那份文件講的是不是這件事」**。所以一個掛著真實但主題無關 URL 的殘樁，可以永久地通過 W027。這是 fail-open，不是誤判：驗證器沒寫錯，是它的語意邊界就到這裡。目前無自動化解法（要判斷主題相符需要讀原文），**處置是把它記錄成已知盲點，並在清理殘樁族時一律回原文核對主題，不以「有 identifier」為通過條件**。
+
+**七筆新登錄（皆 verified，含逐字引文與使用邊界）**：`src.havriluk-2020-breaststroke-head-timing-delay`、`src.havriluk-2017-breathing-misconceptions-revisited`、`src.mccauley-1993-usms-modern-breaststroke`、`src.mccauley-1998-usms-complete-new-breaststroke-turn`、`src.marr-2018-tritonwear-push-off-strength`、`src.mullen-2011-swimmingworld-hand-entry`、`src.swimswam-golden-method-butterfly`。
+
+**順帶修掉的兩個引用衛生問題**：① `breast.err6` 原本寫「外划最重要的目標是在保持手肘伸直的前提下，讓手掌盡量移離肩胛骨」，回 McCauley 1993 原文查無此句，刪除（原文只說寬度取決於個人力量）；② `breast.err11` 有一列標 🔵 的推導卻掛著 `source` + `source_ids`——🔵 依證據契約不需要來源，掛了反而讓讀者以為那是文獻結論，兩個鍵都拿掉。
+
+**網路可達性補記**：`swimswam.com` 在本環境**不可直接取得**——302 轉址到 `tollbit.swimswam.com` 後回 HTTP 402（付費牆）。`src.swimswam-golden-method-butterfly` 的內容只能由檢索索引的段落取得，已在引用處註明「未逐字覆核全文」。`usms.org`、`blog.tritonwear.com`、`swimmingworldmagazine.com` 三者可達。
+
+**一個被推翻的猜測**：`src.swimswam-a` 與 `src.swimswam-b` 的 note 原本寫「疑似與 -b 同源，待合併」。實際查證後兩者**不同源**——`-a` 是〈My Golden Method for Teaching/Improving Butterfly〉，`-b` 查無出處。這個案例值得記著：殘樁族裡 `src.race-club-b/-c/-d` 也帶著「疑似同一來源，待合併」的 note，**不可據此直接合併**。
+
+**下一步建議**：W027 剩 **49 筆**，主體仍是教學網站殘樁族（約 25 個 id）。**這批的處置方針要按本輪的結果修正**：原本計畫是「一律立墓碑 + 給引用區塊寫 `observation_basis`」，但本輪 8 個殘樁裡 7 個其實找得回真身，直接立墓碑會把可用的來源當垃圾丟掉。**改成：先花一次檢索確認「這個站是否有對應的單篇文章」，找得到就升 verified 並回填逐字引文與使用邊界，找不到才立墓碑轉 `observation_basis`。** 有 URL 的站優先（`src.360swim` 3 筆、`src.train-daly` 3 筆、`src.swim-like-a-fish-2025` 3 筆、`src.swimoutlet` 2 筆、`src.myswimpro` 2 筆、`src.race-club-ch-18`／`-ch-23-7`／`-ch-13-14`／`-ch-23` 這組 Race Club 章節編號看起來直接對應影片單集）；`src.elite-video-consensus`（2 筆）與 `src.swim-smart` 這類本來就不是文章的，直接走 `observation_basis`。**每一筆回原文時一併核對主題是否相符**——錯誤 64 證明「有 identifier」不等於「講的是這件事」，而 W027 抓不到這種。
+
+W027 在 `teaching-errors.yaml` 以外的殘留：`free.tech.9`、`free.tech.15`、`fly.tech.6`、`fly.tech.8`、`fly.tech.9`、`starts-turns.tech.19`（`technical-analysis.yaml`），`free.L5.coupling-timing`、`free.L5.lift-phase-duration`、`back.L4.head-stillness`、`fly.L5.glide-elimination`（`l-indicators.yaml`）。
+
+殘樁族清完之後才輪到**單姓氏族**（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.pink`、`src.hellard`、`src.mujika`、`src.lyttle`、`src.hayashi`、`src.andersen-2020`、`src.benjanuvatra-2007-b`、`src.mccullough-d`、`src.gonzalez-rave`、`src.pmc5260528`、`src.pmc8607769`、`src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020`、`src.seiler`；**`src.seiler` 與 `src.hellard` 被 `schools_overview` 引用，拆時一併改指**）。這族最貴，且錯誤 58、60、62、63 已經四次證明**引用方向可能與原文相反**，每筆都必須取回原文核對結論方向，不能只確認「這個人寫過這個主題」。
+
+零星未結沿用：`_taxonomy.yaml` 仍缺來源 `type` 的受控詞彙表（已新增 `conference_abstract`／`web_guide`／`web_article`／`conference_paper`／`thesis` 五個值）、`src.adductor-loading-return-to-sport-practice-co` 未立墓碑、`src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012`（`zones.yaml:218`）、`FrEC1` 的 W002（需《Total Immersion》原書頁碼）、Chatard 等（1990）未登錄。
+
+---
+
 ### ✅ **W027 真文獻批：兩個 84% 的引用都掛錯人（錯誤 60）、一個書目細節是編造的（錯誤 61），另外抓到一個讓 9 筆真來源被誤判成「查不到」的 schema 漂移**
 
 | 指標 | 段落起點 | 現在 |

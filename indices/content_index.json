@@ -5256,7 +5256,6 @@
         ]
       },
       "source_ids": [
-        "src.swimming-world-magazine",
         "src.usms-breaststroke-timing-guide"
       ],
       "outgoing_ids": [
@@ -5493,7 +5492,7 @@
           "pull"
         ],
         "certainty": [
-          "🟠",
+          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -5501,9 +5500,8 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-breaststroke-systematic-review",
-        "src.swimming-world-magazine",
-        "src.usms-wayne-mccauley"
+        "src.mccauley-1993-usms-modern-breaststroke",
+        "src.nicol-2022-breaststroke-systematic-review"
       ],
       "outgoing_ids": [
         "breast.tech.3",
@@ -5522,14 +5520,14 @@
         ],
         "certainty": [
           "🔵",
-          "🟠"
+          "🟡"
         ],
         "stroke": [
           "breast"
         ]
       },
       "source_ids": [
-        "src.swimming-world-magazine"
+        "src.mccauley-1993-usms-modern-breaststroke"
       ],
       "outgoing_ids": [
         "breast.tech.24",
@@ -5556,7 +5554,7 @@
         ]
       },
       "source_ids": [
-        "src.swimming-world-magazine-rod-havriluk-phd-bio",
+        "src.havriluk-2017-breathing-misconceptions-revisited",
         "src.swimoutlet"
       ],
       "outgoing_ids": [
@@ -5608,7 +5606,7 @@
         ]
       },
       "source_ids": [
-        "src.swimming-world-magazine-rod-havriluk"
+        "src.havriluk-2020-breaststroke-head-timing-delay"
       ],
       "outgoing_ids": [
         "breast.tech.3",
@@ -7971,7 +7969,7 @@
         ]
       },
       "source_ids": [
-        "src.swimswam-a",
+        "src.swimswam-golden-method-butterfly",
         "src.waterford-crystal-swimming-club"
       ],
       "outgoing_ids": [
@@ -8202,16 +8200,13 @@
           "pull"
         ],
         "certainty": [
-          "🔵",
-          "🟠"
+          "🔵"
         ],
         "stroke": [
           "fly"
         ]
       },
-      "source_ids": [
-        "src.swimswam-a"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "fly.tech.12",
         "fly.tech.13",
@@ -10271,7 +10266,7 @@
         ]
       },
       "source_ids": [
-        "src.swimming-world-magazine"
+        "src.mullen-2011-swimmingworld-hand-entry"
       ],
       "outgoing_ids": [
         "free.tech.27",
@@ -18341,9 +18336,8 @@
         ]
       },
       "source_ids": [
-        "src.coach-jozsef-nagy-swimswam-the-breaststroke",
-        "src.pmc8960438-d",
-        "src.swimswam-b"
+        "src.mccauley-1998-usms-complete-new-breaststroke-turn",
+        "src.pmc8960438-d"
       ],
       "outgoing_ids": [
         "starts-turns.tech.25"
@@ -18369,7 +18363,7 @@
         ]
       },
       "source_ids": [
-        "src.building-the-perfect-turn-push-off-strength",
+        "src.marr-2018-tritonwear-push-off-strength",
         "src.pmc6409673-b",
         "src.pmid-40252339-a"
       ],
