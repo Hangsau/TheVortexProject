@@ -9797,9 +9797,7 @@
           "free"
         ]
       },
-      "source_ids": [
-        "src.mccullough-c"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "free.tech.13"
       ]
@@ -10418,7 +10416,7 @@
         ]
       },
       "source_ids": [
-        "src.mccullough-b"
+        "src.mccullough-2009-a"
       ],
       "outgoing_ids": []
     },
@@ -15471,8 +15469,9 @@
       },
       "source_ids": [
         "src.kaminoff-matthews-2007",
-        "src.mccullough-d",
-        "src.neumann-2017"
+        "src.mccullough-2009-a",
+        "src.neumann-2017",
+        "src.pink-tibone-2000-painful-shoulder-swimmer"
       ],
       "outgoing_ids": [
         "periodization.dryland.injury"
@@ -15570,14 +15569,19 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "youth_safety",
-      "title": "約7、8歲、能守指令就能從自體重量開始；PHV前以徒手為主，成熟後再逐步負重。成人初學先學動作，masters 加長恢復並看關節反應，para 依可用肢段與輔具設定；完成品質穩定再增加2.5–5%。",
+      "title": "約7、8歲、能守指令就能從自體重量開始；生長陡增期前以徒手為主，成熟後再逐步負重（Swimming Australia 的教材把負重動作設給女生13歲以上、男生14歲以上，16歲以下不碰奧林匹克舉重）。但同一個出生年的孩子成熟度最多可差約5歲，年齡只是起點，實際看眼前這個人。成人初學先學動作，masters 加長恢復並",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
-        "src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020"
+        "src.aap-2020-resistance-training-youth",
+        "src.lindholm-2024-bio-banding-hockey",
+        "src.lloyd-2014-chronological-vs-biological",
+        "src.malina-2011-skeletal-age",
+        "src.nsca-2009-youth-resistance-training",
+        "src.swimming-australia-sc-development-swimmers"
       ],
       "outgoing_ids": []
     },

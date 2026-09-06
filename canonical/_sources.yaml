@@ -569,12 +569,17 @@ sources:
     notes: "顯示字串只有三個網站的名字，讀者追不到任何一篇具體文章，也讀不出族群與外推邊界。唯一引用 starts-turns.tech.31 的 mechanism 已經把這三個來源、族群與外推邊界寫進 observation_basis，掛在下方的 evidence 只是把同一件事再說一次（「適用情境分類來自教練系統觀測。」），2026-09-06 已刪除該 evidence 條並撤下本 id。留墓碑擋重新登錄——見 validate.py E014／W027。"
 
   - id: src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020
-    display: "AAP Pediatrics 2020;145(6):e20201011; NSCA Youth Resistance Training 立場聲明; Swimming Australia 處方"
+    display: "【複合來源鍵，已拆解】已拆為 src.nsca-2009-youth-resistance-training、src.aap-2020-resistance-training-youth、src.swimming-australia-sc-development-swimmers 等 3 筆"
     type: other
-    verification_status: unverified
-    year: 2020
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解：原顯示字串把三份彼此獨立的機構文件（AAP 2020 政策聲明、
+      NSCA 2009 青少年阻力訓練立場聲明、Swimming Australia 陸上訓練教材）綁在同一個 id 下，
+      結果是青少年安全條目裡每一個數字都指向同一個籠統來源、無法逐項驗證。
+      拆解後逐份取原文核對，抓到兩處數字掛錯來源：①「多個機構建議 5–8 歲」三份原文皆無；
+      ②「成熟度可差 4–5 歲」也不在這三份裡，實際出處是 bio-banding 文獻。
+      本 id 保留為墓碑、不得再使用。
   - id: src.aaron-peirsol-ryan-murphy
     display: "Aaron Peirsol / Ryan Murphy 水下影像分析（教練觀測）"
     type: other
@@ -1938,28 +1943,30 @@ sources:
     notes: "2026-09-06 重複登錄稽核：本 id 與 `src.mccullough-2009-a` 指向同一篇文獻（同 PMID 19855342、同 DOI。原顯示字串寫「(2009/2010)」兩個年份，實際出版年是 2009）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.mccullough-2009-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.mccullough-b
-    display: "McCullough et al. 2009/2010"
+    display: "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻"
+    title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
     type: other
-    verification_status: unverified
-    authors: ["McCullough"]
-    et_al: true
-    notes: "疑似與 src.mccullough-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。 S3a-2 補記：疑似與 src.mccullough-c（S3a-2 新增，同 base）、src.mccullough-d（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：原顯示字串「McCullough et al. 2009/2010」的兩個年份是誤記，實際只有一篇（PMID 19855342、DOI 10.1519/JSC.0b013e31819ab977，2009 年 10 月出版）。引用已改掛 `src.mccullough-2009-a`，本 id 保留為墓碑、不得再使用。"
   - id: src.mccullough-c
-    display: "McCullough 2009/2010 方向"
+    display: "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻"
+    title: "Factors affecting flutter kicking speed in women who are competitive and recreational swimmers."
     type: other
-    verification_status: unverified
-    authors: ["McCullough"]
-    notes: "疑似與 src.mccullough-d、src.mccullough-a、src.mccullough-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重複登錄稽核：原顯示字串「McCullough 2009/2010 方向」指的是同一篇（PMID 19855342）。引用已改掛 `src.mccullough-2009-a`；該引用點本來就標 🔴、明說本文是橫斷相關研究、不能支持 6 週介入效果，改掛後這個界線仍然成立。本 id 保留為墓碑、不得再使用。"
   - id: src.mccullough-d
-    display: "McCullough et al. 2009/2010 踝活動度與踢水推進相關研究; Pink/Tibone 肩關節基線; 通用瑜伽解剖 / 運動科學共識"
+    display: "【複合來源鍵，已拆解】已拆為 src.mccullough-2009-a、src.pink-tibone-2000-painful-shoulder-swimmer，另瑜伽解剖已另列 src.kaminoff-matthews-2007"
     type: other
-    verification_status: unverified
-    authors: ["McCullough"]
-    et_al: true
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.mccullough-c、src.mccullough-a、src.mccullough-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
-
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解：原顯示字串把踝活動度相關研究、泳肩臨床基線與「通用瑜伽解剖／
+      運動科學共識」三者綁在一起，最後一項根本不是可定位的來源。拆解後：踝的部分是
+      McCullough 等人 2009（PMID 19855342，已有 src.mccullough-2009-a）；泳肩基線是
+      Pink & Tibone 2000（PMID 10736394）；瑜伽解剖原本就已另行掛在 src.kaminoff-matthews-2007。
+      本 id 保留為墓碑、不得再使用。
   - id: src.mckenzie-2023-a
     display: "McKenzie, A., Larequi, S.-A., Hams, A., Headrick, J., Whiteley, R., & Duhig, S. (2023). Shoulder pain and injury risk factors in competitive swimmers: a systematic review. Scandinavian Journal of Medicine & Science in Sports, 33(12), 2396–2412."
     title: "Shoulder pain and injury risk factors in competitive swimmers: A systematic review"
@@ -6448,6 +6455,152 @@ sources:
       「**伸展併外旋（extension and external rotation）**」的最弱位置之間的關聯——
       **不是**內掃期、**不是**內旋內收。此點與解剖學一致：前脫位的典型機制本就是
       外展＋外旋＋伸展。
+
+  - id: src.nsca-2009-youth-resistance-training
+    display: "Faigenbaum AD, Kraemer WJ, Blimkie CJR, Jeffreys I, Micheli LJ, Nitka M, Rowland TW. (2009). Youth resistance training: updated position statement paper from the National Strength and Conditioning Association. J Strength Cond Res 23(5 Suppl):S60-S79."
+    title: "Youth resistance training: updated position statement paper from the National Strength and Conditioning Association"
+    type: review
+    verification_status: verified
+    authors: ["Faigenbaum AD", "Kraemer WJ", "Blimkie CJ", "Jeffreys I", "Micheli LJ", "Nitka M", "Rowland TW"]
+    year: 2009
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "19620931"
+      doi: "10.1519/JSC.0b013e31819df407"
+      url: "https://www.nsca.com/globalassets/about/position-statements/position_stand_youth_resistance_training---2009.pdf"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 依 NSCA 官網公開 PDF（20 頁全文）核對。原文可支持者：
+      「**沒有最低年齡門檻**（there is no minimum age requirement）——但參與者必須在心理與身體上
+      能遵從指導、承受訓練壓力；一般來說，孩子只要已能參與有組織的運動（**大致 7 或 8 歲**），
+      就適合某種形式的阻力訓練。」另原文把 children 定義為尚未出現第二性徵者
+      （女約 11 歲以前、男約 13 歲以前，Tanner 1–2 期），adolescence 為女 12–18、男 14–18 歲。
+      使用邊界一：原文列出的器材（器械／自由重量／彈力帶／藥球／等長／自體重量）是
+      **「文獻中已被使用且有效」的並列清單，不是遞進階梯**；原文只說「合理的做法是從相對簡單的
+      動作開始，隨信心與能力提升再進到多關節動作」。
+      使用邊界二：全文檢索「5 or 6」零命中、「biological age」與「chronologic」皆零命中——
+      **本文沒有給出任何起始年齡下界（如 5 歲）或成熟度年齡差距數字**。
+
+  - id: src.aap-2020-resistance-training-youth
+    display: "Stricker PR, Faigenbaum AD, McCambridge TM; Council on Sports Medicine and Fitness. (2020). Resistance Training for Children and Adolescents. Pediatrics 145(6):e20201011."
+    title: "Resistance Training for Children and Adolescents"
+    type: review
+    verification_status: verified
+    authors: ["Stricker PR", "Faigenbaum AD", "McCambridge TM", "Council on Sports Medicine and Fitness"]
+    year: 2020
+    container: "Pediatrics"
+    identifier:
+      pmid: "32457216"
+      doi: "10.1542/peds.2020-1011"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對。美國兒科學會政策聲明，是 2008 年版的改版，回顧兒少阻力訓練的效益與風險。
+      **全文付費牆**（OpenAlex `oa_status: closed`、無任何典藏庫全文、publications.aap.org 回 403），
+      本庫只取得摘要。可支持者僅為「阻力訓練應納入完整訓練、學校體育與課後方案，本文回顧其效益與風險」，
+      以及次級報導可查證的「加負荷依據是先前訓練經歷、負重量、動作品質與心智成熟度，而非只看實齡」。
+      使用邊界：**任何掛在本文名下的具體數字都未經全文核對**；需要數字時改引 NSCA 2009 立場聲明
+      或 Swimming Australia 教材。AAP 自家衛教單（Care of the Young Athlete: Strength Training）
+      的說法是「能聽並遵守指令、約 7 或 8 歲能維持平衡與姿勢控制」，與 NSCA 一致。
+
+  - id: src.swimming-australia-sc-development-swimmers
+    display: "Swimming Australia. Strength & Conditioning Exercises for Development Level Swimmers（16 頁海報式陸上訓練指引，經 Swimming WA 官網發布）。"
+    title: "Strength & Conditioning Exercises for Development Level Swimmers"
+    type: web_guide
+    verification_status: verified
+    authors: ["Swimming Australia"]
+    container: "Swimming Australia / Swimming WA"
+    identifier:
+      url: "https://wa.swimming.org.au/sites/default/files/assets/documents/S%26C%20Exercises%20for%20Development%20Level%20Swimmers.pdf"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 下載原始 PDF（16 頁）逐句核對。原文可支持者：
+      ①「Swimming Australia 的建議是**尚未達到生長陡增期的運動員只做自體重量動作**；
+      本方案中使用負重阻力的動作因此是設計給**女生 13 歲以上、男生 14 歲以上**。」
+      ② 每週 2–3 次、安排在非連續日；每個動作流各選 5–8 個動作，從 2 組開始。
+      ③ 依澳洲肌力與體能協會（ASCA）指引的最低反覆次數：6–9 歲 15–18 次、9–12 歲 10–12 次、
+      12–15 歲 8–10 次、15–18 歲 6–8 次，每次以 2 次為級距遞增。
+      ④ **強烈建議 16 歲以下不做較進階的舉重動作**（奧林匹克舉重及硬舉、上膊、抓舉等衍生動作）；
+      使用該動作流前須先精熟自體重量動作、並在合格教練直接督導下完成 4 年以上結構化課程。
+      ⑤ 社區／俱樂部層級的陸訓教練至少須具 ASCA Level 1 資格。
+      使用邊界：這是單一國家級協會的實務指引，不是實證研究；13／14 歲是對應族群平均 PHV 的
+      **行政切分，不是生理臨界值**，個別泳者仍以實測成熟度為準。
+
+  - id: src.lloyd-2014-chronological-vs-biological
+    display: "Lloyd RS, Oliver JL, Faigenbaum AD, Myer GD, De Ste Croix MB. (2014). Chronological age vs. biological maturation: implications for exercise programming in youth. J Strength Cond Res 28(5):1454-1464."
+    title: "Chronological age vs. biological maturation: implications for exercise programming in youth"
+    type: review
+    verification_status: verified
+    authors: ["Lloyd RS", "Oliver JL", "Faigenbaum AD", "Myer GD", "De Ste Croix MB"]
+    year: 2014
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "24476778"
+      doi: "10.1519/JSC.0000000000000391"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 摘要核對。本文整篇論點是：長骨快速生長相對於肌肉延長的失配會擾動結構、
+      神經肌肉功能與運動表現，因此陸上課表應依生物成熟度而非實齡設計；文中彙整可行的成熟度評估方法。
+      使用邊界：**全文付費牆，本庫只取得摘要**；本 id 用來支持「實齡是壞代理變數」這個定性主張，
+      不得用來掛任何成熟度差距的具體年數。
+
+  - id: src.malina-2011-skeletal-age
+    display: "Malina RM. (2011). Skeletal age and age verification in youth sport. Sports Med 41(11):925-947."
+    title: "Skeletal age and age verification in youth sport"
+    type: review
+    verification_status: verified
+    authors: ["Malina RM"]
+    year: 2011
+    container: "Sports Medicine"
+    identifier:
+      pmid: "21985214"
+      doi: "10.2165/11590300-000000000-00000"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 摘要核對。主題是骨齡（skeletal age）的評估方法，以及同一實齡組內骨齡的變異幅度——
+      結論是骨齡不能用來驗證實齡（青少年男性運動員會因骨齡超前被誤判為超齡，女性藝術體操選手
+      則會因骨齡落後被誤判為未達齡）。
+      使用邊界：**全文付費牆，本庫只取得摘要**；摘要本身沒有寫出「同一出生年可差幾歲」的數字，
+      該數字本庫改引明文轉引本文的開放取用文獻 src.lindholm-2024-bio-banding-hockey。
+
+  - id: src.lindholm-2024-bio-banding-hockey
+    display: "Lindholm O, Niklasson E, Lind J, Cardinale DA, Lundberg TR. (2024). A pilot study on bio-banding in male youth ice hockey: Players' perceptions and coaches' selection preferences. PLoS One 19(8):e0308676."
+    title: "A pilot study on bio-banding in male youth ice hockey: Players' perceptions and coaches' selection preferences"
+    type: journal-article
+    verification_status: verified
+    authors: ["Lindholm O", "Niklasson E", "Lind J", "Cardinale DA", "Lundberg TR"]
+    year: 2024
+    container: "PLoS One"
+    identifier:
+      pmid: "39133685"
+      pmcid: "PMC11318913"
+      doi: "10.1371/journal.pone.0308676"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 取 PMC 全文核對。本庫只用它的引言一句：「青春期期間，**同一個出生年之內的
+      體格成熟度最多可差 5 歲**（somatic maturity can vary by up to 5 years within a birth year）」，
+      該句在原文標註轉引 Malina 2011（PMID 21985214）。
+      使用邊界一：**這是二手轉引，不是本文自己的測量**。
+      使用邊界二：本文自身的研究對象是 69 名 12–13 歲瑞典菁英男子冰球員，主題是 bio-banding 分組下的
+      球員感受與教練選材偏好——**與游泳、與陸上肌力處方都無關**，不得用來支持任何訓練處方。
+
+  - id: src.pink-tibone-2000-painful-shoulder-swimmer
+    display: "Pink MM, Tibone JE. (2000). The painful shoulder in the swimming athlete. Orthop Clin North Am 31(2):247-261."
+    title: "The painful shoulder in the swimming athlete"
+    type: review
+    verification_status: verified
+    authors: ["Pink MM", "Tibone JE"]
+    year: 2000
+    container: "Orthopedic Clinics of North America"
+    identifier:
+      pmid: "10736394"
+      doi: "10.1016/s0030-5898(05)70145-0"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 摘要核對。泳肩的臨床綜述，涵蓋損傷機轉、診斷工具、早期徵象，以及以保守治療為主的
+      處理（伸展、肌力、消除急性發炎）。是本庫「泳肩臨床基線」這個說法的實際出處。
+      使用邊界：**全文付費牆，本庫只取得摘要**，且為 2000 年舊文獻。只能用來標示
+      「泳肩以保守處理為第一線」這個層級的定性主張，**不得掛任何具體角度、次數或方案數字**；
+      蝶式肩部肌電時序另引 src.pink-1993。
 
   - id: src.pink-1993
     display: "Pink M, Jobe FW, Perry J, Kerrigan J, Browne A, Scovazzo ML. (1993). The normal shoulder during the butterfly swim stroke. An electromyographic and cinematographic analysis of twelve muscles. Clin Orthop Relat Res (288):48–59."

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 813,
+  "source_count": 820,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -64,10 +64,13 @@
       "usages": []
     },
     {
-      "id": "src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020",
-      "display": "AAP Pediatrics 2020;145(6):e20201011; NSCA Youth Resistance Training 立場聲明; Swimming Australia 處方",
-      "verification_status": "unverified",
-      "identifier": {},
+      "id": "src.aap-2020-resistance-training-youth",
+      "display": "Stricker PR, Faigenbaum AD, McCambridge TM; Council on Sports Medicine and Fitness. (2020). Resistance Training for Children and Adolescents. Pediatrics 145(6):e20201011.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "32457216",
+        "doi": "10.1542/peds.2020-1011"
+      },
       "usage_count": 1,
       "usages": [
         {
@@ -76,6 +79,14 @@
           "path": "youth_safety"
         }
       ]
+    },
+    {
+      "id": "src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020",
+      "display": "【複合來源鍵，已拆解】已拆為 src.nsca-2009-youth-resistance-training、src.aap-2020-resistance-training-youth、src.swimming-australia-sc-development-swimmers 等 3 筆",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.aaron-peirsol-ryan-murphy",
@@ -4534,6 +4545,24 @@
       ]
     },
     {
+      "id": "src.lindholm-2024-bio-banding-hockey",
+      "display": "Lindholm O, Niklasson E, Lind J, Cardinale DA, Lundberg TR. (2024). A pilot study on bio-banding in male youth ice hockey: Players' perceptions and coaches' selection preferences. PLoS One 19(8):e0308676.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "39133685",
+        "pmcid": "PMC11318913",
+        "doi": "10.1371/journal.pone.0308676"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.youth",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "youth_safety"
+        }
+      ]
+    },
+    {
       "id": "src.lippmann-2023-australia-breathhold-fatalities",
       "display": "Lippmann J. (2023). Snorkelling and breath-hold diving fatalities in Australian waters, 2014 to 2018. Diving Hyperb Med 53(3):210-217.",
       "verification_status": "verified",
@@ -4637,6 +4666,23 @@
           "id": "breathing.training.imt",
           "file": "canonical/breathing/training.yaml",
           "path": "imt"
+        }
+      ]
+    },
+    {
+      "id": "src.lloyd-2014-chronological-vs-biological",
+      "display": "Lloyd RS, Oliver JL, Faigenbaum AD, Myer GD, De Ste Croix MB. (2014). Chronological age vs. biological maturation: implications for exercise programming in youth. J Strength Cond Res 28(5):1454-1464.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "24476778",
+        "doi": "10.1519/JSC.0000000000000391"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.youth",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "youth_safety"
         }
       ]
     },
@@ -4896,6 +4942,23 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.malina-2011-skeletal-age",
+      "display": "Malina RM. (2011). Skeletal age and age verification in youth sport. Sports Med 41(11):925-947.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "21985214",
+        "doi": "10.2165/11590300-000000000-00000"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.youth",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "youth_safety"
+        }
+      ]
     },
     {
       "id": "src.maloney-gorman-2021-skilled-swimmers-focus",
@@ -5252,7 +5315,7 @@
         "doi": "10.1519/JSC.0b013e31819ab977",
         "url": "https://pubmed.ncbi.nlm.nih.gov/19855342/"
       },
-      "usage_count": 7,
+      "usage_count": 10,
       "usages": [
         {
           "id": "back.tech.16",
@@ -5285,9 +5348,24 @@
           "path": "errors[10].public.evidence[0]"
         },
         {
+          "id": "free.tech.13",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[14].public.evidence[0]"
+        },
+        {
+          "id": "free.tech.13",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[14].public.mechanism"
+        },
+        {
           "id": "movement.demand.free.down-kick.ankle-plantarflexion",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[2]"
+        },
+        {
+          "id": "periodization.dryland.flexibility",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "flexibility_mobility"
         }
       ]
     },
@@ -5309,50 +5387,27 @@
     },
     {
       "id": "src.mccullough-b",
-      "display": "McCullough et al. 2009/2010",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "free.tech.13",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[14].public.evidence[0]"
-        },
-        {
-          "id": "free.tech.13",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[14].public.mechanism"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mccullough-c",
-      "display": "McCullough 2009/2010 方向",
-      "verification_status": "unverified",
+      "display": "【重複登錄，已解除】與 src.mccullough-2009-a 為同一篇文獻",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "free.err14",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[13].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mccullough-d",
-      "display": "McCullough et al. 2009/2010 踝活動度與踢水推進相關研究; Pink/Tibone 肩關節基線; 通用瑜伽解剖 / 運動科學共識",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.mccullough-2009-a、src.pink-tibone-2000-painful-shoulder-swimmer，另瑜伽解剖已另列 src.kaminoff-matthews-2007",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.dryland.flexibility",
-          "file": "canonical/periodization/dryland.yaml",
-          "path": "flexibility_mobility"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.mckay-2024-reporting-bias-external-focus",
@@ -6965,6 +7020,24 @@
       ]
     },
     {
+      "id": "src.nsca-2009-youth-resistance-training",
+      "display": "Faigenbaum AD, Kraemer WJ, Blimkie CJR, Jeffreys I, Micheli LJ, Nitka M, Rowland TW. (2009). Youth resistance training: updated position statement paper from the National Strength and Conditioning Association. J Strength Cond Res 23(5 Suppl):S60-S79.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19620931",
+        "doi": "10.1519/JSC.0b013e31819df407",
+        "url": "https://www.nsca.com/globalassets/about/position-statements/position_stand_youth_resistance_training---2009.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.youth",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "youth_safety"
+        }
+      ]
+    },
+    {
       "id": "src.nuber-1986",
       "display": "Nuber et al. (1986). Fine wire electromyography analysis of muscles of the shoulder during swimming. Am J Sports Med.",
       "verification_status": "unverified",
@@ -7480,6 +7553,23 @@
           "id": "swimmers-shoulder",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[5].references[3]"
+        }
+      ]
+    },
+    {
+      "id": "src.pink-tibone-2000-painful-shoulder-swimmer",
+      "display": "Pink MM, Tibone JE. (2000). The painful shoulder in the swimming athlete. Orthop Clin North Am 31(2):247-261.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "10736394",
+        "doi": "10.1016/s0030-5898(05)70145-0"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.flexibility",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "flexibility_mobility"
         }
       ]
     },
@@ -12172,6 +12262,22 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.swimming-australia-sc-development-swimmers",
+      "display": "Swimming Australia. Strength & Conditioning Exercises for Development Level Swimmers（16 頁海報式陸上訓練指引，經 Swimming WA 官網發布）。",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://wa.swimming.org.au/sites/default/files/assets/documents/S%26C%20Exercises%20for%20Development%20Level%20Swimmers.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.dryland.youth",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "youth_safety"
+        }
+      ]
     },
     {
       "id": "src.swimming-canada-ltad-strategy",
