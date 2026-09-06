@@ -354,7 +354,7 @@ sources:
     authors: ["Coyle EF", "Martin WH 3rd", "Sinacore DR", "Joyner MJ", "Hagberg JM", "Holloszy JO"]
     year: 1984
     container: "Journal of Applied Physiology"
-    identifiers:
+    identifier:
       pmid: '6511559'
       doi: 10.1152/jappl.1984.57.6.1857
     retrieved_on: '2026-09-05'
@@ -369,7 +369,7 @@ sources:
     authors: ["Mujika I", "Padilla S"]
     year: 2000
     container: "Sports Medicine"
-    identifiers:
+    identifier:
       pmid: '10966148'
       doi: 10.2165/00007256-200030020-00002
     retrieved_on: '2026-09-05'
@@ -386,7 +386,7 @@ sources:
     authors: ["Mujika I", "Padilla S"]
     year: 2000
     container: "Sports Medicine"
-    identifiers:
+    identifier:
       pmid: '10999420'
       doi: 10.2165/00007256-200030030-00001
     retrieved_on: '2026-09-05'
@@ -403,7 +403,7 @@ sources:
     authors: ["Izquierdo M", "Ibañez J", "González-Badillo JJ", "Ratamess NA", "Kraemer WJ", "Häkkinen K", "Bonnabau H", "Granados C", "French DN", "Gorostiaga EM"]
     year: 2007
     container: "Journal of Strength and Conditioning Research"
-    identifiers:
+    identifier:
       pmid: '17685721'
       doi: 10.1519/R-21136.1
     retrieved_on: '2026-09-05'
@@ -420,7 +420,7 @@ sources:
     authors: ["Mujika I", "Padilla S"]
     year: 2003
     container: "Medicine & Science in Sports & Exercise"
-    identifiers:
+    identifier:
       pmid: '12840640'
       doi: 10.1249/01.MSS.0000074448.73931.11
     retrieved_on: '2026-09-05'
@@ -436,7 +436,7 @@ sources:
     authors: ["Bosquet L", "Montpetit J", "Arvisais D", "Mujika I"]
     year: 2007
     container: "Medicine & Science in Sports & Exercise"
-    identifiers:
+    identifier:
       pmid: '17762369'
       doi: 10.1249/mss.0b013e31806010e0
     retrieved_on: '2026-09-05'
@@ -1016,9 +1016,9 @@ sources:
   - id: src.coach-andrew-sheaff-2022
     display: "Coach Andrew Sheaff 2022"
     type: other
-    verification_status: unverified
-    year: 2022
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除：只有教練姓名與年份，沒有篇名、刊載處或網址，無法定位到任何單一文件。引用處（fly.tech.5）的 mechanism 已自帶 observation_basis 指名 Sheaff 2022 的公開教學評論並標明外推邊界，原本掛在下面那列證據只是把 mechanism 重述一次，該列一併刪除。"
 
   - id: src.coach-jozsef-nagy-swimswam-the-breaststroke
     display: "Coach Jozsef Nagy / SwimSwam, The Breaststroke Turn"
@@ -1057,11 +1057,17 @@ sources:
     notes: "顯示字串只有兩個網站的欄目名，沒有文章標題、作者或日期，指不到任何一份文件。唯一引用是 Drills/drills_udk.yaml 的 UDK2（流線打水換面），該練習的動作內容不依賴這兩個網站的任何特定主張。2026-09-06 撤下 source_ids，散文署名保留在 drill 的 source 欄位。留墓碑擋重新登錄。"
 
   - id: src.cossor-2001
-    display: "Cossor & Mason 2001"
-    type: other
-    verification_status: unverified
-    authors: ["Cossor", "Mason"]
+    display: "Cossor, J. M., & Mason, B. R. (2001). Swim start performances at the Sydney 2000 Olympic Games. In J. R. Blackwell & R. H. Sanders (Eds.), Proceedings of Swim Sessions, XIX International Symposium on Biomechanics in Sports (pp. 70-74). San Francisco: University of San Francisco."
+    title: "Swim start performances at the Sydney 2000 Olympic Games"
+    type: conference_paper
+    verification_status: verified
+    authors: ["J. M. Cossor", "B. R. Mason"]
     year: 2001
+    publisher: "ISBS Conference Proceedings Archive"
+    identifier:
+      url: "https://ojs.ub.uni-konstanz.de/cpa/article/view/3870"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 查證。本文分析雪梨 2000 奧運游泳項目決賽與準決賽選手的出發表現，把總出發時間定義為「起跳訊號到頭部中心通過 15 公尺」，並拆成 on-block／flight／underwater 三個次階段。可引用的結論有二：① 出發時間佔全程比賽時間 0.8%–26.1%（隨項目距離而變，距離越短佔比越高）；② 決定出發快慢最顯著的變數，男女組都是水下距離與水下時間——水下距離與 15 公尺時間呈負相關，也就是待在水下越久（在規則允許內）到 15 公尺越快。使用邊界：**本文沒有報告 11%／5%／84% 這組三階段時間佔比**。該組數字出自 Slawson 等人 2013（見 src.slawson-2013-osb11-start-categorisation），Tor 2015 博論第 73 頁逐字寫的是 approximately 11%, 5% and 84% respectively (Slawson, Conway, Cosser, Chakravorti, & West, 2013)——該處把 Cossor 拼成 Cosser，本庫先前的誤植極可能由此而來。2026-09-06 已把 84% 從本登錄名下移除。"
 
   - id: src.counsilman-fist-sculling
     display: "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）"
@@ -1457,8 +1463,9 @@ sources:
   - id: src.how-to-use-backstroke-flags-in-swimming-u-s
     display: "How to Use Backstroke Flags in Swimming, U.S. Masters Swimming"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除：與 src.usms-bay-2024-backstroke-flags 是同一篇 USMS 文章（Scott Bay, 2024-03-05）的重複殘樁，該筆已 verified 且帶 URL。引用處改指 src.usms-bay-2024-backstroke-flags。"
 
   - id: src.hvid-2024
     display: "Hvid et al. 2024, Sports, PMC11125574"
@@ -5667,28 +5674,31 @@ sources:
       ② 數字逐年下降，引用時必須寫出年份，不能寫成一個固定值；③ 非游泳族群，只能作為高齡跌倒後果的一般背景。
 
   - id: src.ward-2018
-    display: "Ward 2018（碩士論文，University of Hawaii at Manoa；亦見 Journal of Swimming Research Vol. 26）"
-    type: other
-    verification_status: unverified
-    authors: ["Ward"]
+    display: "Ward, S. M. (2018). Kinematic analysis of peak velocities in the breaststroke as a function of the timing of the kick [Master of Science thesis, University of Hawaii at Manoa]."
+    title: "Kinematic Analysis of Peak Velocities in the Breaststroke as a Function of the Timing of the Kick"
+    type: thesis
+    verification_status: verified
+    authors: ["Susan M. Ward"]
     year: 2018
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 S3a-2 補記：疑似與 src.ward-2018-b（S3a-2 新增，同 base）、src.ward-2018-c（S3a-2 新增，同 base） 為同一來源，待 S3c 查證後合併。"
+    publisher: "University of Hawaii at Manoa (ScholarSpace)"
+    identifier:
+      url: "https://scholarspace.manoa.hawaii.edu/bitstream/10125/62185/1/2018-05-ms-ward.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文核對。碩士論文，指導委員 Cris Stickley（主席）、Jan Prins、Yukiya Oba、Bret Freemyer。受試者 n=9（NCAA 第一級校隊，男 4 女 5），單一受試者設計（每位受試者自己三種踢腿時機互比，不跨受試者比），三種方案：C100 傳統時序（100 碼衝刺配速）、DU1 late kick（晚划臂內划時踢）、DU2 delayed late kick（划臂回復早期才踢）。水下攝影數位化取髖部速度，重複量數 ANOVA。結果（平均±SD）：%VDO 速度下降百分比 C100 91.2±4.9／DU1 86.8±5.0／DU2 82.5±5.2（C100 vs DU1 p=0.02、C100 vs DU2 p=0.01、DU1 vs DU2 p=0.03）；%VR 速度回復百分比 C100 91.1±11.8／DU1 96.3±11.6／DU2 97.3±10.2（C100 vs DU1 p=0.02、C100 vs DU2 p=0.01、DU1 vs DU2 p=0.39 不顯著）；最大膝屈角 36.1／33.7／31.6 度；完成踢腿時間 0.6／0.7／0.7 秒。手臂產生的髖部峰值速度（2.2／1.9／1.9 m/s）與腿產生的髖部峰值速度（2.0／1.9／1.8 m/s）**各組間都沒有顯著差異**。使用邊界三條：① 本研究測的是週期內髖部速度起伏，**沒有測游速或成績**——摘要寫的是 higher swimming velocities may be achieved，是推論不是量測；② n=9、單次施測、受試者是被口頭提示改變時機，不是慣用晚踢者，不能外推成長期訓練效果；③ 越晚踢越好的趨勢在 DU2 仍持續，所以「晚踢」不是一個有最佳點的已知答案。附帶：Adam Peaty 的歸屬有原文根據，本論文前言明寫 2016 奧運 Peaty 以「比慣常教法更晚踢」的技術破世界紀錄，並以此為研究動機。另：本登錄原顯示字串宣稱「亦見 Journal of Swimming Research Vol. 26」，全文與參考書目均查無此篇（該論文引用的 JSR 只有 13(1)、(4)、21(1) 三筆），2026-09-06 撤除該書目宣稱。"
 
   - id: src.ward-2018-b
     display: "Ward 2018"
     type: other
-    verification_status: unverified
-    authors: ["Ward"]
-    year: 2018
-    notes: "疑似與 src.ward-2018-c、src.ward-2018 為同一來源，待 S3c 查證後合併；本階段刻意不合併。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除：與 src.ward-2018 是同一份文獻（Ward 2018 UH Manoa 碩士論文）的重複殘樁登錄，重複登錄會讓反向索引看起來有兩個獨立支撐。引用處改指 src.ward-2018。"
 
   - id: src.ward-2018-c
     display: "Ward 2018；Peaty"
     type: other
-    verification_status: unverified
-    authors: ["Ward"]
-    year: 2018
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 疑似與 src.ward-2018-b、src.ward-2018 為同一來源，待 S3c 查證後合併；本階段刻意不合併。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 撤除：複合鍵殘樁，把 Ward 2018 與「Peaty 技術」黏成一個 id。Ward 部分改指 src.ward-2018；Peaty 部分本身不是文獻，其歸屬已寫進 src.ward-2018 的 notes（該論文前言以 Peaty 2016 奧運為研究動機）。"
 
   - id: src.waterford-crystal-swimming-club
     display: "Waterford Crystal Swimming Club"
@@ -9266,7 +9276,7 @@ sources:
     type: journal_article
     verification_status: verified
     retrieved_on: '2026-09-05'
-    identifiers:
+    identifier:
       pmid: '39127408'
       doi: 10.1016/j.ophtha.2024.08.003
     notes: 105 篇研究、91,951 眼（其中 5,660 眼為 AK）的統合分析，是目前 AK 發生率最權威的估計。核心數字：中位年度單中心發生率 1.9 眼（95% CI 1.5-2.6）；AK 佔非病毒性微生物角膜炎的 1.52%（95% CI 1.03-2.22%）；對總人口的比率為每百萬 2.34 眼（95% CI 0.98-5.55）；2023 年基準推估全球 12,953 眼。本專案原記的「23,561 例、2.9/百萬」與本統合分析不符，已依此改正。
@@ -9275,7 +9285,7 @@ sources:
     type: journal_article
     verification_status: verified
     retrieved_on: '2026-09-05'
-    identifiers:
+    identifier:
       pmid: '31141446'
       doi: 10.1123/jsr.2018-0262
     notes: 蝶泳下背痛的機制研究：下背痛泳者蝴蝶踢時腰椎伸展角度較大、髂腰肌較緊。本專案先前只記 PMID、標記為「摘要／二手待查」，2026-09-05 已完整解析（作者、期刊、卷期、DOI 皆確認），改列 verified 並正式引用。
@@ -9285,7 +9295,7 @@ sources:
     type: review
     verification_status: verified
     retrieved_on: '2026-09-05'
-    identifiers:
+    identifier:
       pmid: '35674850'
       pmcid: 'PMC9177912'
       doi: 10.1186/s40798-022-00467-2
@@ -9543,3 +9553,29 @@ sources:
       url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/backstroke-pointers"
     retrieved_on: "2026-09-06"
     notes: "作者為 Montgomery Ancient Mariners 與 DC Aquatics Club 的 masters 教練、USA-S 分齡教練。踢腿段原文逐字：Toes should be pointed slightly in and they should flick water up AND down... The kick drives from the hip and only a slight bend of the knees is needed. 邊界：原文只寫到「髖驅動＋膝微屈」，沒有描述上踢末端的鞭打機制——本庫在 back.err 用到的鞭打說法是專案自己的力學讀法，不是這篇支撐的。屬教練撰寫的教學文章不是研究，引用時證據等級應為 🟠。"
+  - id: src.slawson-2013-osb11-start-categorisation
+    display: "Slawson, S. E., Conway, P. P., Cossor, J., Chakravorti, N., & West, A. A. (2013). The categorisation of swimming start performance with reference to force generation on the main block and footrest components of the Omega OSB11 start blocks. Journal of Sports Sciences, 31(5), 468-478."
+    title: "The categorisation of swimming start performance with reference to force generation on the main block and footrest components of the Omega OSB11 start blocks"
+    type: journal_article
+    verification_status: verified
+    authors: ["S. E. Slawson", "P. P. Conway", "J. Cossor", "N. Chakravorti", "A. A. West"]
+    year: 2013
+    container: "Journal of Sports Sciences"
+    identifier:
+      pmid: "23131017"
+      doi: 10.1080/02640414.2012.736631
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取 PubMed 書目與摘要核對。本文主體是以 Omega OSB11 出發台主台與後踏板的測力元件峰值力，把出發動作分成九類；受試者 46 名英國菁英泳者、逾 1000 趟出發。本庫引用的不是這個分類法，而是文獻慣引到本文的「on-block／flight／underwater 三階段時間佔比約 11%／5%／84%」。使用邊界：這組數字不在本文摘要內，本庫是循 Tor 2015 博論第 73 頁的歸屬（見 src.tor-2015-underwater-phase-swimming-start）取得，未能開啟本文全文逐字確認，屬二手歸屬；可確定的只有「84% 不是 Cossor & Mason 2001 的數字」。"
+
+  - id: src.tor-2015-underwater-phase-swimming-start
+    display: "Tor, E. (2015). Factors affecting the underwater phase of the swimming start [Doctor of Philosophy thesis, Victoria University]."
+    title: "Factors affecting the underwater phase of the swimming start"
+    type: thesis
+    verification_status: verified
+    authors: ["Elaine Tor"]
+    year: 2015
+    publisher: "Victoria University (Institute of Sport, Exercise and Active Living)"
+    identifier:
+      url: "https://vuir.vu.edu.au/34057/1/TOR%20Elaine%20-%20thesis_nosignatures.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取全文（232 頁）核對。以澳洲國家隊菁英泳者為對象，研究 Omega OSB11 kick-start 的水下階段。本庫取用兩件事：① 第 73 頁逐字「The percentage time contribution of each sub-phase is approximately 11%, 5% and 84% respectively (Slawson, Conway, Cosser, Chakravorti, & West, 2013)」——這是 84% 的歸屬證據，且該處把 Cossor 誤拼為 Cosser；② 第 111 頁逐字「水下階段是出發最長的一段，且多次被證實是決定整體出發效率最關鍵的一段（Cossor & Mason, 2001; Naemi & Sanders, 2008; Thow et al., 2012）」，以及水下階段可解釋出發時間 95% 的變異（Connaboy 2010; Tor 2014）。使用邊界：本論文的受試者是菁英 kick-start 使用者，2010 年 OSB11 出發台引入後的技術，早期 grab／track start 的數據不可直接套用。"

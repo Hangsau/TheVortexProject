@@ -6,6 +6,29 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **W027 真文獻批：兩個 84% 的引用都掛錯人（錯誤 60）、一個書目細節是編造的（錯誤 61），另外抓到一個讓 9 筆真來源被誤判成「查不到」的 schema 漂移**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 208 | **202** |
+| W027 | 63 | **57** |
+| `_sources.yaml` 筆數 | 782 | **784**（2 筆新登錄 + 4 筆立墓碑 + 2 筆從 unverified 升 verified） |
+
+W027 的 63 筆分成兩批：**能追到真文件的**（本批）與**教學網站殘樁**（下批）。本批 6 筆全部處理完，過程逼出兩個內容錯誤和一個驗證器層的資料問題。
+
+**schema 漂移：9 筆帶真 PMID／DOI 的登錄，因為鍵名寫成複數而被當成「查不到」。** `resolvable_source_ids()` 只認單數的 `identifier`，但 `_sources.yaml` 裡有 9 筆寫成 `identifiers:`（Coyle 1984、Mujika & Padilla 2000 Part I/II、Izquierdo 2007、Mujika & Padilla 2003、Bosquet 2007、Aiello 2025、Kitamura 2020、Nicol 2022），對 422 筆單數而言是少數派。這 9 筆本身完全合格，卻在 W027 的計數裡當了假陽性。**修法是把資料改成單數，不是在驗證器加相容層**——多認一個鍵名等於把漂移合法化，下次還會漂。
+
+**錯誤 60：「水下佔起跳時間 84%」被引了兩次，兩次都掛給 Cossor & Mason 2001，但那不是這篇的數字。** `starts-turns.tech.1` 與 `starts-turns.tech.39` 都寫這句。ISBS 的會議論文原文取不到（`ojs.ub.uni-konstanz.de` 從本機連不上），改從 **Tor（2015）維多利亞大學博論**（232 頁，全文已取回）追，第 73 頁逐字是：「The percentage time contribution of each sub-phase is approximately 11%, 5% and 84% respectively (**Slawson, Conway, Cosser, Chakravorti, & West, 2013**)」——**注意 `Cosser`，那是 Cossor 的誤拼**（Jodi Cossor 正是 Slawson 那篇的共同作者），本庫的誤植極可能就是從這個拼錯衍生的。真正的出處是 **Slawson 等（2013），J Sports Sci 31(5):468-478，PMID 23131017**，已新登錄；Tor 博論也一併登錄，因為 11/5/84 這組數字**不在 Slawson 的摘要裡**，本庫是循 Tor 的歸屬取得、未能開啟 Slawson 全文逐字確認，屬**二手歸屬**——這件事寫進兩筆登錄的 notes 與引用列的使用邊界，不假裝是一手。Cossor & Mason 真正支持的是另外兩件事（出發佔全程 0.8%–26.1%；水下距離與水下時間是最顯著的決定變數，水下距離與 15 公尺時間負相關），已改寫成引用列的正文。同時 `starts-turns.tech.1` 原本還有一句「不同起跳方式在精英層級結果不顯著」——**在任何可取得的原文裡都查不到，已撤除**，並在該列明寫「不要再據以宣稱精英層級無差異」，因為這句話正在替 tech.1 的 practical_implication 背書。
+
+**錯誤 61：`src.ward-2018` 的顯示字串宣稱「亦見 Journal of Swimming Research Vol. 26」，那一期不存在。** 取回 Ward（2018）夏威夷大學碩士論文全文，該論文引用到的 JSR 只有 13(1)、13(4)、21(1) 三筆，沒有 Vol. 26。已從登錄與 `breast.tech.8` 的讀者可見字串撤除。
+
+**Ward 那筆順帶把一條「只有結論方向、沒有數字」的引用補成可查核的，也翻出一個本庫自己講反的原則。** 原文數據（n=9 NCAA 第一級，單一受試者設計）：%VDO 傳統 91.2±4.9／晚踢 86.8±5.0／延遲晚踢 82.5±5.2；%VR 91.1±11.8／96.3±11.6／97.3±10.2；手產生與腿產生的髖部峰值速度**三組間都不顯著**。三條使用邊界都寫進引用列：① 量的是**週期內髖部速度起伏，不是游速也不是成績**，摘要的 “may be achieved” 是推論；② n=9、單次施測、受試者是被口頭提示改時機、不是慣用晚踢者；③ **越晚越好的趨勢到 DU2 仍在持續**，所以「多晚才是最好」沒有已知答案。第三點直接打到 `breast.tech.8` 原本寫的「兩個推進峰值盡量接近但不重疊」——DU2 是把踢腿推到划臂回復早期、兩個峰值**分得更開**，卻拿到最好的 %VDO。另一邊 Nicol 2022 的系統性回顧報告的是**推進重疊型**協調與較低的週期內速度變異相關、且距離越短越常見。兩邊量的不是同一件事（髖部速度起伏 vs IVV），時間間隔的定義也不同（Nicol 表 10 的 T1b 是「腿內划結束 → 手開始推進」，與本庫講的「insweep 啟動時才踢腿」不是同一個間隔）。**處置是把爭議寫出來、把原則降級成方向**，不挑一邊寫成定論。這也是刻意避開錯誤 58 的同型陷阱——差一點就把 Nicol 拿去替一個它其實不支持的間隔定義背書。
+
+**其餘 3 筆是純結構問題。** `src.ward-2018-b`（重複殘樁）、`src.ward-2018-c`（把 Ward 2018 與「Peaty 技術」黏成一個 id 的複合鍵）、`src.how-to-use-backstroke-flags-in-swimming-u-s`（與已 verified 的 `src.usms-bay-2024-backstroke-flags` 是同一篇）都立墓碑；重複登錄的害處是**在反向索引裡看起來像兩份獨立支撐**。`src.coach-andrew-sheaff-2022`（只有教練姓名＋年份）也立墓碑，它掛的那一列（`fly.tech.5`）只是把區塊 mechanism 重述一次、而 mechanism 已自帶完整 observation_basis，整列刪除——同 `starts-turns.tech.31` 的前例。`l-indicators.yaml` 的 `breast.L4.undulation` 那列 Ward 殘樁，`text` 內容就是「Ward 2018 研究」（是引用字串不是主張），區塊另有可解析的 Colman 1998，直接刪；`breast.L5.late-kick` 那列是該區塊**唯一**的證據列，改寫成帶完整數字的 🟢 列。
+
+**下一步建議**：接著清 **W027 剩下的 57 筆**，主體是**教學網站殘樁族**（約 30 個 id）——全部 `unverified`／`type: other`，notes 都是同一句樣板「顯示字串未給出單一明確年份……S3c 須回原文脈絡重建」。處置照機構族前例：**立墓碑 + 替引用它的 🟠 區塊寫自己的 `observation_basis`**，因為這批的實質內容本來就是教學觀察，不是文獻。清單：`src.360swim`(3)、`src.train-daly`(3)、`src.swim-like-a-fish-2025`(3)、`src.swimoutlet`(2)、`src.swim-like-a-fish`(2)、`src.race-club-ch-18`(2)、`src.swimswam-a`(2)、`src.myswimpro`(2)、`src.swim-teach-com`(2)、`src.eatsleepswimcoach`(2)、`src.swimcoachingblog-com`(2)、`src.enjoy-swimming-com`(2)、`src.yourswimlog-b`(2)、`src.race-club-ch-23-7`(2)、`src.elite-video-consensus`(2)，其餘各 1 筆。**其中 4 個值得先各花一次檢索再決定**，因為單篇文章很可能真的存在：`src.usms-wayne-mccauley`、`src.coach-jozsef-nagy-swimswam-the-breaststroke`、`src.building-the-perfect-turn-push-off-strength`，以及兩筆 Rod Havriluk 的 Swimming World 專欄。另注意 `src.race-club-b/-c/-d`、`src.swimswam-a/-b`、`src.yourswimlog-b` 的 notes 自陳「疑似與……為同一來源，待查證後合併」，是合併候選，別各自立墓碑製造更多殘樁。單姓氏族（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.pink`、`src.hellard`、`src.mujika`、`src.lyttle`、`src.hayashi`、`src.andersen-2020`、`src.benjanuvatra-2007-b`、`src.mccullough-d`、`src.gonzalez-rave`、`src.pmc5260528`、`src.pmc8607769`、`src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020`、`src.seiler`；**`src.seiler` 與 `src.hellard` 被 `schools_overview` 引用，拆時一併改指**）維持原判斷：每筆都要取回原文核對**結論方向**，錯誤 58 與錯誤 60 都證明了「這個人確實寫過這個主題」不等於「他說的是本庫寫的那件事」。另有一筆該做的整理：`_taxonomy.yaml` 至今沒有來源 `type` 的受控詞彙表，這幾輪已經新增了 `conference_abstract`／`web_guide`／`web_article`／`conference_paper`／`thesis`，再不登錄就會開始各寫各的。零星未結沿用上一段落清單（`src.adductor-loading-return-to-sport-practice-co` 未立墓碑、`src.liee-methods-...`、`FrEC1` 的 W002、Chatard 等 1990 未登錄）。
+
 ### ✅ **機構／網站族 18 筆：查出一條「引用的研究其實反駁自己」（錯誤 58）與一個編造的數字（錯誤 59），並新增 W027 堵住 W011 的最大逃生口**
 
 | 指標 | 段落起點 | 現在 |
