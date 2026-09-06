@@ -6258,13 +6258,81 @@ sources:
     notes: "2026-09-06 取回 phantomlattice.com 那篇水下海豚腳生物力學文章全文（21,745 字元）逐字比對：文中沒有出現「25%」或任何踝關節力量增幅的數字，踝的段落全是質性描述（「更好的踝柔軟度讓下踢的鞭打更有效」）。該站的導覽分類是「生活／教育科技／科技汽車」，是綜合型內容農場不是專業來源。前半的「yourswimlog 核心力量研究」同樣指不到具體研究。原掛於 udk.tech.4 的 🟢「核心力量提升使踝關節力量增加 25%」已整條刪除。留墓碑擋重新登錄。"
 
   - id: src.zamparo
-    display: "Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004"
+    display: "【複合來源鍵，已拆解】已拆為 src.von-loebbecke-2009-kinematics、src.von-loebbecke-2009-propulsive-efficiency、src.nicolas-2007-monofin-strouhal 等 3 筆"
     type: other
-    verification_status: unverified
-    authors: ["Zamparo"]
-    et_al: true
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 拆解。原顯示字串「Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004」
+      的第一段**作者掛錯**：2009 年 J Biomech Eng 上與水下海豚踢相關的論文作者是
+      von Loebbecke A, Mittal R, Fish F, Mark R，不是 Zamparo；Zamparo P 在 2009 年
+      的論文是《Active and passive drag: the role of trunk incline》（EJAP 106(2):195-205），
+      主題是阻力不是 Strouhal 數。拆解時另發現原鍵掛的三個數字分別來自三篇不同論文
+      （見各新登錄）。Rohr & Fish 2004 已另有 src.rohr-2004。本 id 保留為墓碑、不得再使用。
 
+  - id: src.von-loebbecke-2009-kinematics
+    display: "von Loebbecke A, Mittal R, Fish F, Mark R. (2009). A comparison of the kinematics of the dolphin kick in humans and cetaceans. Hum Mov Sci 28(1):99-112."
+    title: "A comparison of the kinematics of the dolphin kick in humans and cetaceans"
+    type: journal-article
+    verification_status: verified
+    authors: ["von Loebbecke A", "Mittal R", "Fish F", "Mark R"]
+    year: 2009
+    container: "Human Movement Science"
+    identifier:
+      pmid: "18986721"
+      doi: "10.1016/j.humov.2008.07.005"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。9 名女性與 13 名男性奧運層級選手的水下影像分析，
+      對照 Rohr & Fish 2004 的鯨豚資料。原文可支持者：**人類水下海豚踢的平均 Strouhal 數為 0.80，
+      高於水下波動推進的最適區間**；人類與鯨豚的無因次踢幅相當，但同速下人類踢頻更高；
+      人類每前進一個體長最多需要五次踢腿，鯨豚只需 1.3 次；人類的體長標準化速度最高 0.81，
+      約為鯨豚的一半。使用邊界：泳速範圍 1.12–1.85 m/s，涵蓋不同用力程度；
+      俯臥、仰臥、側身三種姿勢混計未分開；本文是運動學比較，不含效率計算——
+      **效率數字要引另一篇（src.von-loebbecke-2009-propulsive-efficiency）**。
+
+  - id: src.von-loebbecke-2009-propulsive-efficiency
+    display: "von Loebbecke A, Mittal R, Fish F, Mark R. (2009). Propulsive efficiency of the underwater dolphin kick in humans. J Biomech Eng 131(5):054504."
+    title: "Propulsive efficiency of the underwater dolphin kick in humans"
+    type: journal-article
+    verification_status: verified
+    authors: ["von Loebbecke A", "Mittal R", "Fish F", "Mark R"]
+    year: 2009
+    container: "Journal of Biomechanical Engineering"
+    identifier:
+      pmid: "19388788"
+      doi: "10.1115/1.3116150"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。五名奧運層級選手水下海豚踢的三維非定常 CFD 模擬，
+      幾何來自雷射掃描、動作來自水下影像。原文可支持者：**人類推進效率落在約 11% 至 29% 的大區間**，
+      同法計算的鯨豚約 **56%**。使用邊界（很重要）：原文明寫**算出的效率與細長體理論、
+      與 Strouhal 數皆不相關**——所以不可以用「降低 Strouhal 數就會提高效率」當作本文的結論；
+      本庫若要談 St 與效率的關聯，必須另引有測到該關聯的來源（如 src.nicolas-2007-monofin-strouhal），
+      並註明那是蛙鞋族群。另：n=5、CFD 模擬非實測，且此處的「推進效率」與蛙鞋文獻常用的
+      Froude 效率不是同一個量，兩者不可直接並列比大小。
+
+  - id: src.nicolas-2007-monofin-strouhal
+    display: "Nicolas G, Bideau B, Colobert B, Berton E. (2007). How are Strouhal number, drag, and efficiency adjusted in high level underwater monofin-swimming? Hum Mov Sci 26(3):426-442."
+    title: "How are Strouhal number, drag, and efficiency adjusted in high level underwater monofin-swimming?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Nicolas G", "Bideau B", "Colobert B", "Berton E"]
+    year: 2007
+    container: "Human Movement Science"
+    identifier:
+      pmid: "17509711"
+      doi: "10.1016/j.humov.2007.03.002"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。12 名國際級單蛙鞋選手最大速度試泳，同時計算 Strouhal 數、
+      Froude 效率（細長體理論）與主動阻力（速度擾動法）。原文可支持者：
+      **最低的 St（0.34）出現在速度最高（R=-.77）、效率最高（R=-.86）、主動阻力最低（R=.91）的選手身上**；
+      效率有在 **St 接近 0.4 的窄區間達到 ηF=0.82** 的趨勢，該區間位於一般宣稱的
+      0.25–0.4 最適區的上緣。使用邊界：**族群是單蛙鞋選手，不是裸泳**；
+      作者自己的結論是「提高效率與降低阻力本身就會提升表現，**與這兩者如何和 St 相關無關**」，
+      所以本文也不支持把 St 當成可直接操作的訓練目標。ηF=0.82 是 Froude 效率，
+      與 CFD 推進效率（11–29%）不是同一個量，不可並列比較。
   - id: src.pmid-26855425
     display: "嘆息迴路定位：Li P, Janczewski WA, Yackle K, et al. (2016). The peptidergic control circuit for sighing. Nature, 530(7590), 293–297."
     type: journal-article

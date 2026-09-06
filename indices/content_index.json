@@ -21151,7 +21151,10 @@
         ]
       },
       "source_ids": [
-        "src.zamparo"
+        "src.nicolas-2007-monofin-strouhal",
+        "src.rohr-2004",
+        "src.von-loebbecke-2009-kinematics",
+        "src.von-loebbecke-2009-propulsive-efficiency"
       ],
       "outgoing_ids": []
     },

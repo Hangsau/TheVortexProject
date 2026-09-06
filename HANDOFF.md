@@ -6,6 +6,18 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **`src.zamparo` 拆解：作者掛錯人（錯誤 76），而且原文明寫的否定結論被反向寫成本庫的教學建議（錯誤 77）**
+
+拆解 `src.zamparo`（顯示字串「Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004」）。一個複合鍵裡的三個數字，實際來自**三篇不同論文**，全部查回並獨立登錄。
+
+**錯誤 76 — 作者掛錯人。** 2009 年 J Biomech Eng 上談水下海豚踢的論文作者是 **von Loebbecke A, Mittal R, Fish F, Mark R**，不是 Zamparo。Zamparo P 2009 年的論文是《Active and passive drag: the role of trunk incline》（EJAP 106(2):195-205），主題是阻力，與 Strouhal 數無關。更麻煩的是這個鍵**同時混了兩篇 von Loebbecke 2009**：St=0.80 出自 Hum Mov Sci 28(1):99-112（PMID 18986721，22 名奧運層級選手影像分析），效率 11–29% 出自 J Biomech Eng 131(5):054504（PMID 19388788，5 人 CFD 模擬）。顯示字串的期刊名對應後者，引用的數字卻來自前者。
+
+**錯誤 77 — 原文明寫「不相關」，本庫寫成因果並據此給訓練建議。** J Biomech Eng 那篇的摘要最後一句是 *The computed efficiency is found not to correlate with either the slender body theory or with the Strouhal number.* 本庫卻用 St 偏高解釋效率偏低，並推出 `practical_implication`「裸泳提升效率的方向是……」。連蛙鞋那篇（Nicolas 等人 2007）的作者結論也是「提高效率與降低阻力本身就會提升表現，**與這兩者如何和 St 相關無關**」。**兩篇原始文獻各自明說 St 不是可操作的槓桿，本庫把它當成了槓桿。** 已改寫：St 保留為診斷指標（偏高＝踢頻相對速度太高），但不再作為訓練目標。
+
+**另清掉一組單位混用。** 原 `mechanism` 把「人類裸泳效率 11–29%」與「單蛙鞋可達 82%」並列。前者是 CFD 推進效率（von Loebbecke），後者是 Froude 效率 ηF=0.82（Nicolas 等人 2007，12 名國際級單蛙鞋選手）——**不是同一個量，並列比大小無意義**。同段的「monofin St ~0.34」也查回 Nicolas 2007（St 最低者同時速度最快、效率最高、阻力最低）。「魚類最優 0.25–0.35」查回 Rohr & Fish 2004，但要注意那是**預測值**：該文 248 筆鯨豚實測有 74% 落在 0.20–0.30，作者結論是實際值比預測的最適區低約 20%。三點都已寫進條目與登錄的使用邊界。
+
+---
+
 ### ✅ **`src.pmc5260528` 拆解：一個不存在於原文的測量變數「tuck index」，散在四個檔案（錯誤 75）**
 
 拆解 `src.pmc5260528`（一篇論文 + The Race Club + 360swim 三者壓成一鍵）。論文查回為 Wen Y, Peng Y, Zhao F, Zhen K (2016)《The effects of specific drills on the flip turns of freestyle swimmers based on a kinesiology analysis》，J Hum Kinet 52:165-173，PMID 28149404。

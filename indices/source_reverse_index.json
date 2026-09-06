@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 821,
+  "source_count": 824,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -6913,6 +6913,23 @@
       "usages": []
     },
     {
+      "id": "src.nicolas-2007-monofin-strouhal",
+      "display": "Nicolas G, Bideau B, Colobert B, Berton E. (2007). How are Strouhal number, drag, and efficiency adjusted in high level underwater monofin-swimming? Hum Mov Sci 26(3):426-442.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "17509711",
+        "doi": "10.1016/j.humov.2007.03.002"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.tech.8",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[144].public.evidence[2]"
+        }
+      ]
+    },
+    {
       "id": "src.nieuwenhuis-2024-inverted-u-revisited",
       "display": "Nieuwenhuis, S. (2024). Arousal and performance: revisiting the famous inverted-U-shaped curve.",
       "verification_status": "verified",
@@ -10889,7 +10906,7 @@
         "pmid": "15073196",
         "doi": "10.1242/jeb.00948"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "udk.err12",
@@ -10900,6 +10917,11 @@
           "id": "udk.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[86].public.physical_reason"
+        },
+        {
+          "id": "udk.tech.8",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[144].public.evidence[2]"
         }
       ]
     },
@@ -14631,6 +14653,40 @@
       ]
     },
     {
+      "id": "src.von-loebbecke-2009-kinematics",
+      "display": "von Loebbecke A, Mittal R, Fish F, Mark R. (2009). A comparison of the kinematics of the dolphin kick in humans and cetaceans. Hum Mov Sci 28(1):99-112.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "18986721",
+        "doi": "10.1016/j.humov.2008.07.005"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.tech.8",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[144].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.von-loebbecke-2009-propulsive-efficiency",
+      "display": "von Loebbecke A, Mittal R, Fish F, Mark R. (2009). Propulsive efficiency of the underwater dolphin kick in humans. J Biomech Eng 131(5):054504.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19388788",
+        "doi": "10.1115/1.3116150"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "udk.tech.8",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[144].public.evidence[1]"
+        }
+      ]
+    },
+    {
       "id": "src.vortex-a",
       "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理",
       "verification_status": "retracted",
@@ -15419,17 +15475,11 @@
     },
     {
       "id": "src.zamparo",
-      "display": "Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.von-loebbecke-2009-kinematics、src.von-loebbecke-2009-propulsive-efficiency、src.nicolas-2007-monofin-strouhal 等 3 筆",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "udk.tech.8",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[144].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.zang-2025-focus-distance-meta",
