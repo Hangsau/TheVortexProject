@@ -6,6 +6,16 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **`src.pmc5260528` 拆解：一個不存在於原文的測量變數「tuck index」，散在四個檔案（錯誤 75）**
+
+拆解 `src.pmc5260528`（一篇論文 + The Race Club + 360swim 三者壓成一鍵）。論文查回為 Wen Y, Peng Y, Zhao F, Zhen K (2016)《The effects of specific drills on the flip turns of freestyle swimmers based on a kinesiology analysis》，J Hum Kinet 52:165-173，PMID 28149404。
+
+**錯誤 75 — 主要測量變數是編出來的。** 本庫在兩個 `technical-analysis` 條目寫「翻滾啟動時機研究**以 tuck index（腳觸牆時臀部距牆距離）為主要測量變數**」，`movement/stroke-demands` 另有五處把 tuck index 當成「素材中的量」在推論邊界。取回 PMC 全文全文檢索：**`tuck index` 零命中**。該研究的測量變數是 Kistler 系統量的分段時間、速度、膝與髖角度與施力。tuck index 是游泳生物力學裡真實存在的名詞，但不出自這份來源——這類「真名詞掛錯來源」比純捏造更難察覺，因為查證者搜到名詞存在就容易收手。五處敘述已改寫成該研究實際有的量（分段時間、速度、啟動位置），論點（空間量不能反推關節角度）本身成立故保留。
+
+**同時，原文能支持的東西比本庫寫的多。** 兩個條目原本都標 🟠（教練觀測），但 Wen 2016 直接寫了：①訓練內容明列「加速游 10 公尺、記住頭通過距牆 5 公尺 T 線到啟動翻滾之間的划數」，結論段確認這建立了划數判距能力——本庫的「計步判距」有一手來源；②前測把「接近牆前抬頭」列為缺失，結論寫「訓練後他們不再在翻滾前抬頭，這有助於快速轉身」——「頭不抬」也有一手來源；③**全體受試者都在錯誤位置啟動翻滾**（過早或過晚），78% 翻滾時身體沒收緊。兩條 evidence 已由 🟠 升 🟢 並改寫。使用邊界寫進登錄：n=9、受試者是現代五項選手（原文自陳游泳訓練時間有限）、無對照組。
+
+---
+
 ### ✅ **`src.andersen-2020`：PMID 掛到另一篇論文上，而真論文的結論與本庫寫的相反（錯誤 74）**
 
 `src.andersen-2020` 登錄的 PMID 32500807 指向的是 Vila Dieguez & Barden (2022)《Body roll differences in freestyle swimming between swimmers with and without shoulder pain》——作者、年份、主題三項全不符。真正的 Andersen 2020 是 PMID **31567840**（J Strength Cond Res 34(1):20-25，13 名蘇格蘭菁英自由式選手 3D 運動學）。

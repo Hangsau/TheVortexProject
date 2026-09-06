@@ -2857,13 +2857,44 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.pmc5260528
-    display: "PMC5260528; The Race Club; 360swim"
+    display: "【複合來源鍵，已拆解】已拆為 src.wen-2016-flip-turn-drills"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     identifier:
       pmcid: "PMC5260528"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 拆解。原鍵把一篇論文與兩個教練網站（The Race Club、360swim）壓在一起。
+      論文部分已獨立登錄為 src.wen-2016-flip-turn-drills；兩個網站部分沒有任何具體主張追溯得到，
+      且原本掛在它們名下的「tuck index」在論文全文中零命中（見新登錄的使用邊界），故不另立來源。
+      本 id 保留為墓碑、不得再使用。
 
+  - id: src.wen-2016-flip-turn-drills
+    display: "Wen Y, Peng Y, Zhao F, Zhen K. (2016). The effects of specific drills on the flip turns of freestyle swimmers based on a kinesiology analysis. J Hum Kinet 52:165-173."
+    title: "The effects of specific drills on the flip turns of freestyle swimmers based on a kinesiology analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["Wen Y", "Peng Y", "Zhao F", "Zhen K"]
+    year: 2016
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "28149404"
+      pmcid: "PMC5260528"
+      doi: "10.1515/hukin-2016-0004"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 取回 PMC 全文核對。9 名中國現代五項國家隊選手（20–26 歲、平均訓練年資 10 年），
+      以 Kistler Performance Analysis System 做前後測，中間 10 週、每週 3 次專項轉身分解訓練。
+      原文可支持者：①**計步判距**——訓練內容明列「加速游 10 公尺、記住頭通過 T 線（距牆 5 公尺）
+      到啟動翻滾之間的划數」，且結論段寫明這些分解動作讓選手意識到划數對應信號的重要性；
+      ②**頭不抬**——前測診斷把「接近牆前抬頭」列為缺失，結論寫「透過觀察與強調，他們不再在翻滾前抬頭，
+      這有助於快速轉身」；③翻滾啟動過早或過晚是前測全體共有的錯誤，成因是膝屈曲過大；
+      ④78% 的受試者翻滾時身體沒有收緊，導致速度損失；⑤10 週後接近、翻滾、蹬牆、滑行四段速度均提升，
+      翻滾時間顯著下降（p<0.05）。
+      使用邊界：**全文檢索「tuck index」零命中**——本研究的測量變數是分段時間、速度、膝與髖角度與力，
+      不是 tuck index，任何以 tuck index 為主要變數的敘述都不能掛在本文名下。
+      另：n=9、受試者是現代五項選手不是專項泳者（原文自陳其游泳訓練時間有限），
+      且無對照組，10 週前後測的改善不能全歸因於分解動作本身。
   - id: src.pmc5286756
     display: "Sridhar, S. C., & Deo, S. C. (2017). Marine and Other Aquatic Dermatoses. Indian Journal of Dermatology."
     title: "Marine and Other Aquatic Dermatoses."
