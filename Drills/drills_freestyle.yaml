@@ -745,7 +745,6 @@ drills:
     failure_signal: "入水後憋住、快出水才一次爆吐；出水時還要先把氣吐光才能吸"
     deficiency_fixes: [1, 2]
     source: "通用游泳教學法（Vortex 整理）"
-    source_ids: [src.vortex-b]
     body_position: standing
     constraints: []
     movement_pattern: pause_pulse
@@ -775,7 +774,6 @@ drills:
     failure_signal: "全程僵硬、靠踢腿才不沉；吸飽氣仍快速下沉（偏瘦／低體脂者屬硬體浮力低，非緊張，需另循輔助具）"
     deficiency_fixes: [3]
     source: "通用游泳教學法（Vortex 整理）"
-    source_ids: [src.vortex-b]
     body_position: vertical
     constraints: [no_arms, no_kick]
     movement_pattern: static
@@ -805,7 +803,6 @@ drills:
     failure_signal: "轉頭前才急著把氣吐光；轉頭吸氣時還在吐氣或吸到水"
     deficiency_fixes: [1, 2]
     source: "通用游泳教學法（Vortex 整理）"
-    source_ids: [src.vortex-b]
     body_position: prone
     constraints: []
     movement_pattern: continuous
@@ -835,7 +832,6 @@ drills:
     failure_signal: "弱側憋氣或改用抬頭換氣；換到弱側時節律亂掉、身體失去平衡"
     deficiency_fixes: [1, 2, 4]
     source: "通用游泳教學法（Vortex 整理）"
-    source_ids: [src.vortex-b]
     body_position: prone
     constraints: [tempo_constrained]
     movement_pattern: continuous
@@ -867,7 +863,6 @@ drills:
     failure_signal: "失去方向（漂離中線）；划手感覺混亂"
     deficiency_fixes: [4, 6, 11]
     source: "Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理"
-    source_ids: [src.total-immersion-terry-laughlin-vortex]
     body_position: prone
     constraints: [eyes_closed]
     movement_pattern: pause_pulse
@@ -1047,7 +1042,6 @@ drills:
     failure_signal: "手背只感覺到亂流或無感（代表姿勢有偏）"
     deficiency_fixes: [4, 10]
     source: "Vortex 整理（pressure mapping 系列）"
-    source_ids: [src.vortex-pressure-mapping]
     body_position: side
     constraints: [no_arms]
     movement_pattern: progressive

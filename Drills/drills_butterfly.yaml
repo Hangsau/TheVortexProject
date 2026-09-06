@@ -923,7 +923,6 @@ drills:
     failure_signal: "立刻漂離中線；波動從膝蓋啟動"
     deficiency_fixes: [8]
     source: "Vortex 整理（proprioception × wave undulation）"
-    source_ids: [src.vortex-proprioception-wave-undulation]
     body_position: prone
     constraints: [eyes_closed]
     movement_pattern: continuous

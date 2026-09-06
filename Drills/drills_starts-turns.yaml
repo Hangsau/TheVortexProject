@@ -171,7 +171,6 @@ drills:
     failure_signal: "嚴重誤差（>1 公尺）；需要睜眼或撞牆"
     deficiency_fixes: []
     source: "Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）"
-    source_ids: [src.vortex-paralympic-visually-impaired-tapper-s]
     body_position: supine
     constraints: [eyes_closed]
     movement_pattern: continuous

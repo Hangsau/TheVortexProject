@@ -787,7 +787,6 @@ drills:
     failure_signal: "嚴重漂離中線；身體下沉"
     deficiency_fixes: [3]
     source: "Vortex 整理（proprioception × spatial axis）"
-    source_ids: [src.vortex-proprioception-spatial-axis]
     body_position: supine
     constraints: [eyes_closed, no_arms]
     movement_pattern: continuous
@@ -907,7 +906,6 @@ drills:
     failure_signal: "翻邊時失去平衡；頭部跟著晃"
     deficiency_fixes: [3, 4]
     source: "通用游泳教學法（switch drill warmup variant）"
-    source_ids: [src.switch-drill-warmup-variant]
     body_position: transitional
     constraints: []
     movement_pattern: alternating

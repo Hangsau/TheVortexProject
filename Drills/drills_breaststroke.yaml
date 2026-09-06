@@ -1010,7 +1010,6 @@ drills:
     failure_signal: "嚴重偏離；一手感覺比另一手早結束"
     deficiency_fixes: [1, 3]
     source: "Vortex 整理（pulldown × proprioception 結合）"
-    source_ids: [src.vortex-pulldown-proprioception]
     body_position: underwater
     constraints: [eyes_closed, no_breath]
     movement_pattern: pause_pulse

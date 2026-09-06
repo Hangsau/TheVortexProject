@@ -521,9 +521,7 @@
           "L3"
         ]
       },
-      "source_ids": [
-        "src.vortex-proprioception-spatial-axis"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -560,9 +558,7 @@
           "L3"
         ]
       },
-      "source_ids": [
-        "src.switch-drill-warmup-variant"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -1307,9 +1303,7 @@
           "L4"
         ]
       },
-      "source_ids": [
-        "src.vortex-pulldown-proprioception"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -1999,9 +1993,7 @@
           "L4"
         ]
       },
-      "source_ids": [
-        "src.vortex-proprioception-wave-undulation"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -2517,9 +2509,7 @@
           "breathing"
         ]
       },
-      "source_ids": [
-        "src.vortex-b"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -2533,9 +2523,7 @@
           "breathing"
         ]
       },
-      "source_ids": [
-        "src.vortex-b"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -2549,9 +2537,7 @@
           "breathing"
         ]
       },
-      "source_ids": [
-        "src.vortex-b"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -2568,9 +2554,7 @@
           "L2"
         ]
       },
-      "source_ids": [
-        "src.vortex-b"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -2588,9 +2572,7 @@
           "L4"
         ]
       },
-      "source_ids": [
-        "src.total-immersion-terry-laughlin-vortex"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -2861,9 +2843,7 @@
           "L3"
         ]
       },
-      "source_ids": [
-        "src.vortex-pressure-mapping"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -3057,9 +3037,7 @@
           "L5"
         ]
       },
-      "source_ids": [
-        "src.vortex-paralympic-visually-impaired-tapper-s"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -3414,9 +3392,7 @@
           "L4"
         ]
       },
-      "source_ids": [
-        "src.vortex-vertical-kick-proprioception"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -10253,8 +10229,7 @@
         ]
       },
       "source_ids": [
-        "src.the-race-club-freestyle-hand-entry",
-        "src.vortex-a"
+        "src.the-race-club-freestyle-hand-entry"
       ],
       "outgoing_ids": [
         "free.tech.20",
@@ -15782,7 +15757,8 @@
         ]
       },
       "source_ids": [
-        "src.vortex-l0-l6"
+        "src.branscheidt-2019-fatigue-motor-skill-learning",
+        "src.otte-2019-post-skill-training-periodization"
       ],
       "outgoing_ids": [
         "periodization.structure.school_block",

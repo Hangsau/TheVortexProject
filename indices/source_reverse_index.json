@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 771,
+  "source_count": 773,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -853,6 +853,24 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.branscheidt-2019-fatigue-motor-skill-learning",
+      "display": "Branscheidt, M., Kassavetis, P., Anaya, M., Rogers, D., Huang, H. D., Lindquist, M. A., & Celnik, P. (2019). Fatigue induces long-lasting detrimental changes in motor-skill learning. eLife, 8, e40578.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "30832766",
+        "doi": "10.7554/eLife.40578",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30832766/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.perception_periodization_bridge",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "perception_periodization_bridge"
+        }
+      ]
     },
     {
       "id": "src.breath-hold-training",
@@ -6795,6 +6813,24 @@
       ]
     },
     {
+      "id": "src.otte-2019-post-skill-training-periodization",
+      "display": "Otte, F. W., Millar, S.-K., & Klatt, S. (2019). Skill training periodization in \"specialist\" sports coaching—An introduction of the \"PoST\" framework for skill development. Frontiers in Sports and Active Living, 1, 61.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33344984",
+        "doi": "10.3389/fspor.2019.00061",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33344984/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.perception_periodization_bridge",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "perception_periodization_bridge"
+        }
+      ]
+    },
+    {
       "id": "src.oxford-2017",
       "display": "Oxford et al. (2017). Changes in kinematics and arm-leg coordination during a 100-m breaststroke swim. J Sports Sci.",
       "verification_status": "unverified",
@@ -11888,17 +11924,11 @@
     },
     {
       "id": "src.switch-drill-warmup-variant",
-      "display": "通用游泳教學法（switch drill warmup variant）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】通用游泳教學法（switch drill warmup variant）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "BkLow1",
-          "file": "Drills/drills_backstroke.yaml",
-          "path": "drills[30]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.takai",
@@ -13155,17 +13185,11 @@
     },
     {
       "id": "src.total-immersion-terry-laughlin-vortex",
-      "display": "Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "FrEC1",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[28]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.toussaint",
@@ -14117,144 +14141,75 @@
     },
     {
       "id": "src.vortex-a",
-      "display": "Vortex 整理",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "free.err6",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[5].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-b",
-      "display": "通用游泳教學法（Vortex 整理）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】通用游泳教學法（Vortex 整理）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 4,
-      "usages": [
-        {
-          "id": "FrBr1",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[24]"
-        },
-        {
-          "id": "FrBr2",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[25]"
-        },
-        {
-          "id": "FrBr3",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[26]"
-        },
-        {
-          "id": "FrBr4",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[27]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-l0-l6",
-      "display": "作者綜合（Vortex 核心命題 × 週期化）；通用『技能週期化』與『疲勞損害技能學習』有文獻支持，水感知(L0–L6)專屬層仍待驗證",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】作者綜合（Vortex 核心命題 × 週期化）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.structure.perception_periodization_bridge",
-          "file": "canonical/periodization/structure.yaml",
-          "path": "perception_periodization_bridge"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-paralympic-visually-impaired-tapper-s",
-      "display": "Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "STSpat1",
-          "file": "Drills/drills_starts-turns.yaml",
-          "path": "drills[5]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-pressure-mapping",
-      "display": "Vortex 整理（pressure mapping 系列）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（pressure mapping 系列）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "FrSide2",
-          "file": "Drills/drills_freestyle.yaml",
-          "path": "drills[34]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-proprioception-spatial-axis",
-      "display": "Vortex 整理（proprioception × spatial axis）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（proprioception × spatial axis）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "BkEC1",
-          "file": "Drills/drills_backstroke.yaml",
-          "path": "drills[26]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-proprioception-wave-undulation",
-      "display": "Vortex 整理（proprioception × wave undulation）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（proprioception × wave undulation）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "FlEC1",
-          "file": "Drills/drills_butterfly.yaml",
-          "path": "drills[31]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-pulldown-proprioception",
-      "display": "Vortex 整理（pulldown × proprioception 結合）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（pulldown × proprioception 結合）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "BrEC1",
-          "file": "Drills/drills_breaststroke.yaml",
-          "path": "drills[34]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.vortex-vertical-kick-proprioception",
-      "display": "Vortex 整理（vertical kick × proprioception）",
-      "verification_status": "unverified",
+      "display": "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（vertical kick × proprioception）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "UDKEC1",
-          "file": "Drills/drills_udk.yaml",
-          "path": "drills[5]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.wang-2013-taiwan-hip-fracture-mortality",

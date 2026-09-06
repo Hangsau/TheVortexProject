@@ -4998,10 +4998,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.switch-drill-warmup-variant
-    display: "通用游泳教學法（switch drill warmup variant）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】通用游泳教學法（switch drill warmup variant）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "switch drill 本身是廣泛流傳的教學動作，但「通用游泳教學法」不是可回溯的歸屬；若日後查到最早提出者（如某本教材或某個課程體系）再以真來源登錄。 2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.takai
     display: "【複合來源鍵，已解除】原字串綁了兩篇文獻，已拆為 src.takai-2016 與 src.pmc8700779"
@@ -5318,10 +5319,11 @@ sources:
       性質是評論/概觀而非原始研究，引用時不得寫成「Tipton 等人的研究發現」。
 
   - id: src.total-immersion-terry-laughlin-vortex
-    display: "Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "這筆指的是一個**訓練傳統**（Total Immersion 的感知訓練取向）加上本專案自述，不是書裡的某條 drill。Terry Laughlin 的《Total Immersion》（1996；2004 修訂版 ISBN 0-7432-5343-4）是真書，但本專案未取得原書、也未核對過書中是否有「閉眼超人趕上」這條動作；直接把書登上去等於宣稱一件沒查過的事（同 2026-09-06 SW 6.4 錯誤的形態）。日後若讀到原書並找到對應頁碼，再以真來源＋頁碼登錄。 2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.toussaint
     display: "【複合來源鍵，已拆解】已拆為 src.toussaint-hollander-1994-energetics-swimming 等 2 筆"
@@ -5569,58 +5571,67 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.vortex-a
-    display: "Vortex 整理"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.vortex-b 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-b
-    display: "通用游泳教學法（Vortex 整理）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】通用游泳教學法（Vortex 整理）"
     type: other
-    verification_status: unverified
-    notes: "疑似與 src.vortex-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-l0-l6
-    display: "作者綜合（Vortex 核心命題 × 週期化）；通用『技能週期化』與『疲勞損害技能學習』有文獻支持，水感知(L0–L6)專屬層仍待驗證"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】作者綜合（Vortex 核心命題 × 週期化）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "本筆同時是複合鍵：display 把「作者綜合」與「通用技能週期化／疲勞損害技能學習有文獻支持」黏在一起。拆解後發現該區塊散文裡其實已經寫出兩篇真文獻的完整 DOI（Branscheidt 等 2019、Otte 等 2019），只是從未登錄，機器索引完全看不到。已補登為 src.branscheidt-2019-fatigue-motor-skill-learning 與 src.otte-2019-post-skill-training-periodization，引用處改指這兩筆；真正 🔴 的「水感知（L0–L6）專屬層」則本來就是假設，不需要來源。 2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-paralympic-visually-impaired-tapper-s
-    display: "Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（高階空間感訓練；類似 paralympic visually impaired tapper system）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "括號裡的 paralympic tapper system 是**類比**不是引用——原文寫的是「類似」，本專案並未讀過任何一份描述該制度的文件。要登錄必須指到具體規則書或文獻。 2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-pressure-mapping
-    display: "Vortex 整理（pressure mapping 系列）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（pressure mapping 系列）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-proprioception-spatial-axis
-    display: "Vortex 整理（proprioception × spatial axis）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（proprioception × spatial axis）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-proprioception-wave-undulation
-    display: "Vortex 整理（proprioception × wave undulation）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（proprioception × wave undulation）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-pulldown-proprioception
-    display: "Vortex 整理（pulldown × proprioception 結合）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（pulldown × proprioception 結合）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.vortex-vertical-kick-proprioception
-    display: "Vortex 整理（vertical kick × proprioception）"
+    display: "【非來源：本專案自述／泛稱歸屬，已撤下】Vortex 整理（vertical kick × proprioception）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 「非來源」清查撤下。這個 display 扣掉括號補語後只剩本專案自己的名字（「Vortex 整理」「作者綜合」）或一句泛稱（「通用游泳教學法」）——沒有指向任何可回溯的作品，登在 `_sources.yaml` 裡只是讓來源總數多一筆、反向來源索引多一個點不進去的節點。與 E014（把「教練觀測」登錄成來源）、W023（把自己的草稿路徑登錄成來源）是同一種病的第三種寫法：長得像引用、實際回不到任何外部證據，卻能滿足 E005／W002 的來源檢查。**處置不是去找一篇文獻來補**——這些內容本來就是本專案自己整理的，正解是拿掉 `source_ids`、把自述留在讀者看得到的 `source` 顯示字串裡（那句話本身是誠實的），並讓驗證器不再把這種字串算成「已有來源資訊」（新增 E017 + W002／W009／W011 逃生口收緊）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.wang-2013-taiwan-hip-fracture-mortality
     display: "Wang CB, Lin CF, Liang WM, et al. (2013). Excess mortality after hip fracture among the elderly in Taiwan: a nationwide population-based cohort study. Bone 56(1):147–153."
@@ -9364,3 +9375,33 @@ sources:
       url: "https://www.usaswimming.org/docs/default-source/officialsdocuments/officials-training-resources/interpretations-and-recommendations/medley-rules-change-eff092117.pdf"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 由複合鍵 src.fina-sw64-usas-usms 拆出，官方文件已下載逐條核對。背→蛙轉換的明文出處是 **101.6.3.B(2)**：「Backstroke to Breaststroke — The swimmer must touch the wall while on the back. Once a legal touch has been made, the swimmer may turn in any manner but the shoulders must be at or past the vertical toward the breast when the swimmer leaves the wall and the prescribed breaststroke form must be attained prior to the first arm stroke.」——**觸牆與離牆兩個獨立時間點的說法，來自這裡，不是 FINA/World Aquatics 的 SW 6.4**（那條講的是仰式→仰式轉身，且要求離牆時回到仰臥，方向相反）。「肩部過垂直面」等同從仰臥往俯臥滾 ≥90°，是裁判目視的合規門檻，不是任何關節角度量測。"
+
+  - id: src.branscheidt-2019-fatigue-motor-skill-learning
+    display: "Branscheidt, M., Kassavetis, P., Anaya, M., Rogers, D., Huang, H. D., Lindquist, M. A., & Celnik, P. (2019). Fatigue induces long-lasting detrimental changes in motor-skill learning. eLife, 8, e40578."
+    title: "Fatigue induces long-lasting detrimental changes in motor-skill learning"
+    type: journal-article
+    verification_status: verified
+    authors: ["Meret Branscheidt", "Panagiotis Kassavetis", "Manuel Anaya", "Davis Rogers", "Han Debra Huang", "Martin A. Lindquist", "Pablo Celnik"]
+    year: 2019
+    container: "eLife"
+    identifier:
+      pmid: "30832766"
+      doi: "10.7554/eLife.40578"
+      url: "https://pubmed.ncbi.nlm.nih.gov/30832766/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 補登。這篇原本只出現在 periodization.structure.perception_periodization_bridge 的散文裡（連 DOI 都寫全了），卻從未進 _sources.yaml——反向來源索引因此看不到它，該區塊掛的是本專案自述的 src.vortex-l0-l6。作者／年份／期刊／卷期經 Crossref 與 PubMed 雙向核對。用途：支撐「疲勞損害的是動作技能的**學習**本身、不只是當下執行，且影響延續到隔天無疲勞狀態」這條，也是 Vortex「高疲勞期不該導入新技術」推論的通用層依據。**使用邊界**：受試是實驗室手臂動作學習任務，不是游泳、也不是水感知；把它讀成「水感知會被疲勞破壞」屬於外推。"
+
+  - id: src.otte-2019-post-skill-training-periodization
+    display: "Otte, F. W., Millar, S.-K., & Klatt, S. (2019). Skill training periodization in \"specialist\" sports coaching—An introduction of the \"PoST\" framework for skill development. Frontiers in Sports and Active Living, 1, 61."
+    title: "Skill Training Periodization in \"Specialist\" Sports Coaching-An Introduction of the \"PoST\" Framework for Skill Development"
+    type: journal-article
+    verification_status: verified
+    authors: ["Fabian W. Otte", "Sarah-Kate Millar", "Stefanie Klatt"]
+    year: 2019
+    container: "Frontiers in Sports and Active Living"
+    identifier:
+      pmid: "33344984"
+      doi: "10.3389/fspor.2019.00061"
+      url: "https://pubmed.ncbi.nlm.nih.gov/33344984/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 補登，與 src.branscheidt-2019-fatigue-motor-skill-learning 同一批（原本只寫在散文裡、機器索引看不到）。作者／年份／期刊／卷期經 Crossref 與 PubMed 雙向核對。用途：證明「技能本身可被週期化」不是 Vortex 原創——PoST 框架把技能訓練分成 coordination → skill adaptation → performance 三階段。**使用邊界**：這是概念框架論文（introduction of a framework），不是療效試驗；它建立的是「有人這樣主張並提出結構」，不是「這樣排比較有效」。原文標題在專項名詞外加了引號，登錄時保留。"

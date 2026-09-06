@@ -6,6 +6,32 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **自述族：註冊表裡有 11 筆「來源」的內容是本專案自己的名字（E017，新增檢查）**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 141 | 142（W002 0 → 1，見下） |
+| `_sources.yaml` 筆數 | 771 | **773**（11 筆立墓碑 + 2 筆新登錄） |
+| 檢查條數 | E001–E016 | **E001–E017** |
+
+**問題**：`_sources.yaml` 裡有一族登錄，display 扣掉括號補語後只剩「Vortex 整理」「作者綜合」或「通用游泳教學法」——`src.vortex-a`、`src.vortex-b`、`src.vortex-pressure-mapping`、`src.vortex-proprioception-spatial-axis`、`src.vortex-proprioception-wave-undulation`、`src.vortex-pulldown-proprioception`、`src.vortex-vertical-kick-proprioception`、`src.switch-drill-warmup-variant`，共 8 筆純自述，加上 3 筆混合型（見下）。它們指不到任何外部作品，卻散在 14 處引用裡當機器鍵用。
+
+**這是第三種自證，前兩種已經有檢查了**：E014 抓「教練觀測」（四個字的觀察行為登錄成來源），W023 抓 `Research/心理/03_….md#凍結反應`（自己的草稿路徑登錄成來源）。這一族是同一種病的第三種寫法——**自己的名字**。三者共用同一個 fail-open 機制：`has_source_info()` 只問「有沒有字串」，所以一句「Vortex 整理」就能讓 W002 判成「已有顯示層、只差遷移機器鍵」，並把 W011（🟠 必須交代 `observation_basis`）的逃生口打開。
+
+**處置不是去找一篇文獻來補。** 這些內容本來就是本專案自己整理的，說「Vortex 整理」是誠實的；錯的是把這句誠實話**登錄成來源**。所以：11 筆立墓碑、14 處引用拿掉 `source_ids`、讀者看得到的 `source` 顯示字串原樣保留（讀者看到「Vortex 整理（pressure mapping 系列）」是有意義的資訊，看到一個點不進去的 `src.*` 不是）。
+
+**驗證器同步收三個口**（`tools/validate.py`）：新增 `is_self_attribution()` + **E017**（登錄即 ERROR）；`has_source_info()` 不再把自述算成來源資訊（W009／W011 的逃生口關上，來源繼承也不再讓帶自述的祖先替整棵子樹擋掉 W009）；W002 跳過自述（沒有機器鍵可以遷移過去，掛 W002 等於永遠修不掉的待辦）。清空後才升 ERROR，所以沒有存量赤字。
+
+**三筆混合型另外判**：
+- `src.vortex-l0-l6` 同時是複合鍵。拆的時候發現 `periodization.structure.perception_periodization_bridge` 的散文裡**早就把兩篇真文獻的完整 DOI 寫出來了**，只是從沒登錄，機器索引完全看不到——已補登 **Branscheidt 等 2019**（eLife 8:e40578，PMID 30832766，疲勞損害的是動作技能的「學習」本身、影響延續到隔天）與 **Otte、Millar 與 Klatt 2019**（Front. Sports Act. Living 1:61，PMID 33344984，PoST 技能週期化框架），Crossref 與 PubMed 雙向核對，引用處改指這兩筆。真正 🔴 的「水感知（L0–L6）專屬層」本來就是假設，不需要來源。
+- `src.vortex-paralympic-visually-impaired-tapper-s`：括號裡的 paralympic tapper system 是**類比**（原文寫「類似」），本專案沒讀過任何描述該制度的文件，不登。
+- `src.total-immersion-terry-laughlin-vortex`：指的是一個**訓練傳統**加自述，不是書裡某條 drill。Terry Laughlin 的《Total Immersion》是真書（1996；2004 修訂版 ISBN 0-7432-5343-4），但本專案未取得原書、未核對書中是否有「閉眼超人趕上」；直接登上去等於宣稱一件沒查過的事（同 SW 6.4 錯誤的形態）。**因此 W002 從 0 變 1**——`FrEC1` 的 display 指名了一部真作品卻沒有機器鍵，這筆 W002 是正確的、要留著，它就是「該去讀原書核頁碼」的待辦。
+
+**`src.vortex-a` 那一處是 🟠**（`free.err6` 入水點的「現代共識」列），拿掉 `source_ids` 後改寫 `observation_basis`：交代誰觀察、哪些族群、並明說「約肩寬、距頭部 30–45 公分」是教學上拿來對齊的操作範圍、不是量測結果（沒有研究測過這個距離），外推邊界排除競技衝刺配速。
+
+**下一步建議**：複合鍵剩 **36 筆**。下一批做 `src.specificity-of-practice-usrpt`（`free.err23` 引用，真複合鍵：「特異性練習」是運動學習原則、USRPT 是 Rushall 在 SDSU 的訓練體系，兩個各自要真來源；**順手一起解掉兄弟殘樁 `src.brent-rushall-sdsu`**，display 只寫「Brent Rushall, SDSU」——人名加機構不是來源，`teaching-errors.yaml` 有 2 處引用）。接著是體量最大的**機構／網站族**：`src.usms-*`／`src.u-s-masters-swimming-*`／`src.race-club-*`／`src.yourswimlog-*`／`src.swimswam-*` 等 17 筆。這族的難點不是查不到，是**要判斷網站頁面算不算來源**——專案自己已有前例可循：**文章層級的登錄是 `verified`**（`src.the-race-club-freestyle-hand-entry`、`src.usms-bay-2024-backstroke-flags` 都指到單篇文章＋URL），**機構層級的一律 `retracted`**（`src.the-race-club`、`src.usms`、`src.u-s-masters-swimming` 已立墓碑）。照這條線走即可，不必重新決策。最後是最貴的單姓氏族（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.seiler`、`src.hellard`、`src.mujika`、`src.pink`、`src.lyttle`、`src.hayashi` 等；**`src.seiler` 與 `src.hellard` 已被 `schools_overview` 引用，拆時一併改指**）。另有兩筆非複合但同樣要處理：`src.adductor-loading-return-to-sport-practice-co`（display 已標【佔位字串，非真實文獻】但還沒立墓碑）、`FrEC1` 的 W002（要讀《Total Immersion》原書核對「閉眼超人趕上」是否在書中，才登得了書＋頁碼）。
+
 ### ✅ **競賽規則族：`src.fina-sw64-usas-usms` 拆解時下載規則原文核對，查出引用的條號說的是反話（錯誤 55）**
 
 | 指標 | 段落起點 | 現在 |

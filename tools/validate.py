@@ -49,6 +49,10 @@ exit code：
         src.coach-observation（4 處引用）與 src.2024-2025（2 處）。
   E015  source_ids 指向 retracted 墓碑。墓碑仍在 allowed 集合裡，E005 會
         放行——引用一筆已判定不可引用的來源會完全靜默。
+  E017  _sources.yaml 把「本專案自述」或「泛稱歸屬」登錄成來源（display 扣掉
+        括號補語後只剩「Vortex 整理」「作者綜合」「通用游泳教學法」這類字串）。
+        與 E014／W023 同病：長得像引用、回不到任何外部作品，卻滿足 E005 與
+        W002 的來源檢查。2026-09-06 撤下 11 筆（14 處引用）。
   E013  _sources.yaml 的 verification_status 不是 verified/unverified/
         retracted 三值之一。同樣是 fail-open 欄位：retracted 拼錯，那筆
         已判定不可引用的墓碑會靜默回到 W008 名單被當成「該接的來源」
@@ -400,8 +404,15 @@ def iter_blocks_with_source_inheritance(
 
 
 def has_source_info(block: dict) -> bool:
-    """區塊自身是否帶任何來源資訊（顯示字串或機器鍵）。"""
-    if has_display_source(block):
+    """區塊自身是否帶任何來源資訊（顯示字串或機器鍵）。
+
+    「Vortex 整理」這種自述**不算**來源資訊——它是「沒有來源」的誠實說法。
+    算進來的話，W011 的逃生口會被自己的名字打開（同 E014 對「教練觀測」的處理），
+    來源繼承也會讓帶自述的祖先替整棵子樹擋掉 W009。
+    """
+    if has_display_source(block) and not is_self_attribution(
+        block.get("source") or block.get("citation") or block.get("sources")
+    ):
         return True
     sids = block.get("source_ids")
     return isinstance(sids, list) and any(
@@ -712,6 +723,62 @@ def check_observation_not_source(records: list[dict], errors: dict):
             errors["E014"].append(
                 f"  source_id={s['id']!r} display={s.get('display')!r} "
                 f"是觀察行為不是來源——改在引用它的區塊寫 observation_basis"
+            )
+
+
+# 「Vortex 整理」／「作者綜合」／「通用游泳教學法」——這些不是來源，是**沒有來源**的
+# 誠實說法。誠實歸誠實，登進 `_sources.yaml` 就變成第三種自證：E014 是四個字的觀察行為、
+# W023 是自己的草稿路徑、這裡是自己的名字。三者共同的機制傷害是同一個——`has_source_info`
+# 只問「有沒有字串」，於是一句「Vortex 整理」就能讓 W002 說「已有機器鍵待遷移」、讓 W011
+# 的逃生口打開，把「這條沒有任何外部依據」偽裝成「來源已登錄」。
+_SELF_ATTRIBUTION_TOKENS = frozenset({
+    "vortex", "vortex整理", "vortex彙整", "vortex綜合", "vortex專案整理",
+    "作者綜合", "作者整理", "作者彙整", "本專案整理", "本專案綜合",
+    "通用游泳教學法", "一般游泳教學法", "通用教學法",
+})
+
+# 括號補語（「（pressure mapping 系列）」）只是在說這句自述涵蓋哪些內容，不會讓它變成
+# 一份可回溯的作品，判斷前先剝掉；巢狀括號少見但剝三輪保險。
+_PAREN_GLOSS = re.compile(r"[（(][^（()）]*[）)]")
+_SELF_ATTR_NOISE = re.compile(
+    r"\d{4}(?:\s*[–—-]\s*\d{2,4})?|[\s,，.。()（）\[\]【】:：;；/\\×-]"
+)
+
+
+def is_self_attribution(display: object) -> bool:
+    """display 剝掉括號補語後，每一段都只是本專案自述或泛稱 → 這不是來源。
+
+    逐段判斷（以 `；;／/、` 切），**每一段都要是自述才算**。所以
+    `Total Immersion (Terry Laughlin) 感知訓練傳統；Vortex 整理` 不會被這條
+    抓到——它指名了一部作品，屬於複合鍵（該拆，不該直接判死）。
+    """
+    text = str(display or "")
+    for _ in range(3):
+        text = _PAREN_GLOSS.sub("", text)
+    parts = [
+        _SELF_ATTR_NOISE.sub("", p).lower()
+        for p in re.split(r"[；;／/、]", text)
+    ]
+    parts = [p for p in parts if p]
+    return bool(parts) and all(p in _SELF_ATTRIBUTION_TOKENS for p in parts)
+
+
+def check_self_attribution_sources(records: list[dict], errors: dict):
+    """E017：不得把本專案自述／泛稱歸屬登錄成來源（`retracted` 墓碑除外）。
+
+    列 ERROR 而非 WARN 的理由與 E014 相同：它 fail-open，而且**修法不是補來源**
+    ——這些內容本來就是自己整理的，正解是拿掉 `source_ids`、把自述留在 `source`
+    顯示字串（讀者看到「Vortex 整理」是有意義的資訊，看到一筆點不進去的 `src.*`
+    不是）。2026-09-06 清空後才升 ERROR，所以這條不會有存量赤字。
+    """
+    for s in records:
+        if s.get("verification_status") == "retracted":
+            continue
+        if is_self_attribution(s.get("display")):
+            errors["E017"].append(
+                f"  source_id={s['id']!r} display={s.get('display')!r} "
+                f"是本專案自述不是來源——拿掉引用處的 source_ids，"
+                f"自述留在 source 顯示字串即可"
             )
 
 
@@ -1351,8 +1418,13 @@ def check_source_blocks(
         cert = block.get("certainty")
         cert_label = {"\U0001F7E2": "green", "\U0001F7E1": "yellow"}.get(cert)
 
-        # W002：有顯示字串就該有機器鍵，不看 certainty
-        if has_display_source(block):
+        # W002：有顯示字串就該有機器鍵，不看 certainty。
+        # 例外：顯示字串本身就是「這是我們自己整理的」——沒有機器鍵可以遷移過去，
+        # 掛 W002 等於永遠修不掉的待辦。這種區塊要走下面的 W009／W011（真正的
+        # 問題是「憑什麼標 🟢／🟠」，不是「缺一個鍵」）。
+        if has_display_source(block) and not is_self_attribution(
+            block.get("source") or block.get("citation") or block.get("sources")
+        ):
             field = display_source_field(block)
             suffix = f" certainty={cert_label}" if cert_label else " 無 certainty"
             warnings["W002"].append(
@@ -2238,7 +2310,7 @@ def run_validation():
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
         "E011": [], "E012": [], "E013": [], "E014": [], "E015": [],
-        "E016": []
+        "E016": [], "E017": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
@@ -2455,6 +2527,7 @@ def run_validation():
     check_source_id_uniqueness(source_records, errors)
     check_duplicate_source_registrations(source_records, warnings)
     check_observation_not_source(source_records, errors)
+    check_self_attribution_sources(source_records, errors)
     check_internal_path_sources(source_records, warnings)
     check_verification_marker_in_display(source_records, warnings)
 
@@ -2602,6 +2675,13 @@ def _write_report(
             "同一個 `src.*` id 在 `_sources.yaml` 登錄超過一次"
             "（下游全部以 dict 收攏，後一筆靜默蓋掉前一筆——"
             "把其中一筆撤成 `retracted` 可能完全不生效）",
+        ),
+        "E017": (
+            "ERROR",
+            "`_sources.yaml` 把本專案自述／泛稱歸屬登錄成來源"
+            "（「Vortex 整理」「作者綜合」「通用游泳教學法」——"
+            "回不到任何外部作品，卻能滿足 E005／W002 的來源檢查，"
+            "並打開 W011 的逃生口）",
         ),
         "W025": (
             "WARN",

@@ -171,7 +171,6 @@ drills:
     failure_signal: "立刻歪斜或下沉"
     deficiency_fixes: []
     source: "Vortex 整理（vertical kick × proprioception）"
-    source_ids: [src.vortex-vertical-kick-proprioception]
     body_position: vertical
     constraints: [eyes_closed, tension_held]
     movement_pattern: static
