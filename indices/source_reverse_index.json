@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 778,
+  "source_count": 782,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -36,17 +36,11 @@
     },
     {
       "id": "src.360swim-usms-swimming-world",
-      "display": "360swim; USMS; Swimming World",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】360swim／USMS／Swimming World 的公開教學內容",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.tech.31",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[210].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020",
@@ -432,6 +426,22 @@
           "id": "psych.self_talk.trainable_skill",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[5].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.bay-2017-usms-flip-turn-fundamentals",
+      "display": "Bay, S. (2017, August 14). Flip Turn Fundamentals. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/flip-turn-fundamentals"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "ST5",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[4]"
         }
       ]
     },
@@ -1415,17 +1425,11 @@
     },
     {
       "id": "src.competitor-swim-udk-drills-swimswam-udk-sets",
-      "display": "Competitor Swim UDK drills；swimswam UDK sets",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】Competitor Swim UDK drills／SwimSwam UDK sets",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "UDK2",
-          "file": "Drills/drills_udk.yaml",
-          "path": "drills[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.conroy-coatsworth-2007-ascq",
@@ -2430,17 +2434,11 @@
     },
     {
       "id": "src.getphysical-strengthmatters-alactic-power-in",
-      "display": "教練共識（getphysical / strengthmatters alactic power intervals）；與 PCr 再合成動力學一致（90–120s 部分恢復、3–5min 大致完全，見上 recovery_zh）",
-      "verification_status": "unverified",
+      "display": "【非文獻，已撤下】顯示字串自陳「教練共識」（getphysical／strengthmatters）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.energy_systems_primer",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "energy_systems_primer.training_protocols[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.goff-2023",
@@ -5746,17 +5744,11 @@
     },
     {
       "id": "src.myswimpro-2022-coachsci-sdsu-edu-2022",
-      "display": "MySwimPro 2022; coachsci.sdsu.edu",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】MySwimPro 2022／coachsci.sdsu.edu",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.err5",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[92].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.namli-2025-vr-swimming-imagery",
@@ -9542,17 +9534,11 @@
     },
     {
       "id": "src.race-club-ch-14",
-      "display": "Race Club Ch 14；通用菁英影像觀察",
-      "verification_status": "unverified",
+      "display": "【殘樁，非文獻，已撤下】The Race Club 第 14 章",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "back.err12",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[36].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.race-club-ch-18",
@@ -9636,17 +9622,11 @@
     },
     {
       "id": "src.race-club-gary-hall-jr-vs-u-s-masters-swimmi",
-      "display": "Race Club（Gary Hall Jr.）背式彎臂 vs 直臂分析；U.S. Masters Swimming Backstroke Pull guide",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】The Race Club（Gary Hall Jr.）彎臂 vs 直臂分析／USMS Backstroke Pull guide",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "back.err6",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[30].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.race-club-pdm-data",
@@ -9679,22 +9659,11 @@
     },
     {
       "id": "src.race-club-pdm-elite-general",
-      "display": "Race Club PDM；通用菁英研究",
-      "verification_status": "unverified",
+      "display": "【非文獻，已撤下】Race Club PDM／「通用菁英研究」",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "free.err25",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[24].public.evidence[0]"
-        },
-        {
-          "id": "free.err25",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[24].public.physical_reason"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.ramirez-campillo-2022-plyo-water-sports",
@@ -10867,6 +10836,32 @@
       ]
     },
     {
+      "id": "src.scharborough-2017-dolphin-kick-prone-supine",
+      "display": "Scharborough, M. B., Robinson, P., Albin, E. E., Broussard, J., Adams, T., & Dubrose, E. (2017). Kinematic Comparison of Dolphin Kicking Performed in a Prone and Supine Body Position. International Journal of Exercise Science: Conference Proceedings, 2(9), Article 81.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://digitalcommons.wku.edu/ijesab/vol2/iss9/81/"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "udk.err11",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[85].public.evidence[0]"
+        },
+        {
+          "id": "udk.tech.22",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[158].public.evidence[0]"
+        },
+        {
+          "id": "udk.tech.30",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[167].public.mechanism"
+        }
+      ]
+    },
+    {
       "id": "src.scheuermann-disease-statpearls-nbk499966",
       "display": "Mansfield JT. Scheuermann Disease. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK499966（最後更新 2023-07-31）。",
       "verification_status": "verified",
@@ -11952,31 +11947,19 @@
     },
     {
       "id": "src.swimswam-koga-wku-kinematic",
-      "display": "SwimSwam Junya Koga analysis; WKU Digital Commons Kinematic Comparison",
-      "verification_status": "unverified",
+      "display": "【殘樁＋引用方向相反，已撤下】SwimSwam Junya Koga analysis／WKU Digital Commons Kinematic Comparison",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "udk.tech.22",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[158].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.swimswam-wku-kinematic",
-      "display": "SwimSwam / Kinematic Comparison，WKU Digital Commons",
-      "verification_status": "unverified",
+      "display": "【重複殘樁，已撤下】與 src.swimswam-koga-wku-kinematic 是同一個顯示字串的第二個登錄",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "udk.err11",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[85].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.switch-drill-warmup-variant",
@@ -13348,17 +13331,11 @@
     },
     {
       "id": "src.train-daly-u-s-masters-swimming-5yd-m",
-      "display": "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）",
-      "verification_status": "unverified",
+      "display": "【複合鍵，已拆解】Train Daly 仰式翻身系統／USMS（旗標距牆 5yd/m）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "ST4",
-          "file": "Drills/drills_starts-turns.yaml",
-          "path": "drills[3]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.trapero-asenjo-2025-relaxation-imagery",
@@ -13482,31 +13459,19 @@
     },
     {
       "id": "src.u-s-masters-swimming-backstroke-body-positio",
-      "display": "U.S. Masters Swimming Backstroke Body Position guide；swim-teach.com；enjoy-swimming（教學共識）",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】USMS Backstroke Body Position guide／swim-teach.com／enjoy-swimming",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "back.err9",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[33].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.u-s-masters-swimming-faster-flip-turns-eatsl",
-      "display": "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression",
-      "verification_status": "unverified",
+      "display": "【殘樁，已重建】USMS Faster Flip Turns／EatSleepSwimCoach mid-pool progression",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "ST1",
-          "file": "Drills/drills_starts-turns.yaml",
-          "path": "drills[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.u-s-masters-swimming-faster-flip-turns-wall",
@@ -13524,17 +13489,11 @@
     },
     {
       "id": "src.u-s-masters-swimming-flip-turn-fundamentals",
-      "display": "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills",
-      "verification_status": "unverified",
+      "display": "【殘樁，已重建】USMS Flip Turn Fundamentals／arenaswim flip turn drills",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "ST5",
-          "file": "Drills/drills_starts-turns.yaml",
-          "path": "drills[4]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.u-s-masters-swimming-turns-guides-tight-stre",
@@ -13689,22 +13648,11 @@
     },
     {
       "id": "src.usms-backstroke-kick-guide",
-      "display": "U.S. Masters Swimming Backstroke Kick guide；多家教學指引一致",
-      "verification_status": "unverified",
+      "display": "【殘樁，已重建】USMS Backstroke Kick guide／「多家教學指引一致」",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "back.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[32].public.evidence[0]"
-        },
-        {
-          "id": "back.err8",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[32].public.physical_reason"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.usms-bay-2024-backstroke-flags",
@@ -13713,8 +13661,13 @@
       "identifier": {
         "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-use-backstroke-flags-in-swimming"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "ST4",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[3]"
+        },
         {
           "id": "starts-turns.tech.23",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -13797,6 +13750,22 @@
       ]
     },
     {
+      "id": "src.usms-flip-turns-complete-guide",
+      "display": "U.S. Masters Swimming. Flip Turns: The Complete Guide. usms.org 技術指引（未署名）。",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/guides/turns/flip-turns"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "ST1",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[0]"
+        }
+      ]
+    },
+    {
       "id": "src.usms-lassen-2018-butterfly-side-breathing",
       "display": "Lassen, M. (2018). Breathing Easy to the Side on Butterfly. U.S. Masters Swimming.",
       "verification_status": "verified",
@@ -13828,17 +13797,11 @@
     },
     {
       "id": "src.usms-sgswim",
-      "display": "USMS; SGSwim",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】USMS／SGSwim",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "starts-turns.tech.36",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[215].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.usms-sheaff-2022-how-to-do-underwater-kicks",
@@ -13847,8 +13810,13 @@
       "identifier": {
         "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-to-do-underwater-kicks"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "UDK1",
+          "file": "Drills/drills_udk.yaml",
+          "path": "drills[0]"
+        },
         {
           "id": "udk.err13",
           "file": "canonical/instructional/teaching-errors.yaml",
@@ -14541,6 +14509,27 @@
       ]
     },
     {
+      "id": "src.wolf-2012-usms-backstroke-pointers",
+      "display": "Wolf, L. (2012, December 21). Backstroke Pointers. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/backstroke-pointers"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "back.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[32].public.evidence[0]"
+        },
+        {
+          "id": "back.err8",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[32].public.physical_reason"
+        }
+      ]
+    },
+    {
       "id": "src.world-aquatics-2023-swimming-technical-rules",
       "display": "World Aquatics (2023). Swimming Technical Rules 2023–2025 (valid as of 1 January 2023).",
       "verification_status": "verified",
@@ -14818,17 +14807,11 @@
     },
     {
       "id": "src.yourswimlog-com-race-tempo-underwater-swimsw",
-      "display": "yourswimlog.com（race-tempo underwater）；swimswam UDK sets",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】yourswimlog.com（race-tempo underwater）／SwimSwam UDK sets",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "UDK5",
-          "file": "Drills/drills_udk.yaml",
-          "path": "drills[4]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yourswimlog-com-tempo-trainer-cone-15m",
@@ -14846,17 +14829,11 @@
     },
     {
       "id": "src.yourswimlog-com-vertical-kicking-u-s-masters",
-      "display": "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】yourswimlog.com（vertical kicking）／USMS Underwater Kick guide",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "UDK1",
-          "file": "Drills/drills_udk.yaml",
-          "path": "drills[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yourswimlog-monofin",
@@ -14879,17 +14856,11 @@
     },
     {
       "id": "src.yourswimlog-phantomlattice-core",
-      "display": "yourswimlog 核心力量研究；phantomlattice.com 生物力學分析",
-      "verification_status": "unverified",
+      "display": "【引用內容查無此數字，已撤下】yourswimlog 核心力量研究／phantomlattice.com 生物力學分析",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "udk.tech.4",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[140].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yu-kwok-2021-sc-front-crawl",

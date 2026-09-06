@@ -6,6 +6,31 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **機構／網站族 18 筆：查出一條「引用的研究其實反駁自己」（錯誤 58）與一個編造的數字（錯誤 59），並新增 W027 堵住 W011 的最大逃生口**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 142 | **208**（W027 新增 63 筆，W002 1 → 4） |
+| `_sources.yaml` 筆數 | 778 | **782**（18 筆立墓碑 + 4 筆新登錄） |
+| 檢查條數 | E001–E017 / W001–W026 | **＋W027** |
+
+**這族原本以為是機械工作**（照既有前例：文章層級 `verified`、機構層級 `retracted`），實際讀完 19 處引用脈絡後長出三件事。
+
+**W027：W011 的逃生口比想像中大得多。** `has_source_info()` 一路以來只問「有沒有字串」，E014／W023／E017 各堵掉一種形式（「教練觀測」、自己的草稿路徑、本專案的名字）。但最大的一種沒堵：**🟠 區塊掛一個「解析得到 id、id 卻指不到任何文件」的來源**，就能合法跳過「交代誰觀察、什麼族群、外推到哪裡」。量過了——動手前 184 個 🟠 區塊裡 **126 個（68%）是靠這個逃生口過關的**。新增的 `resolvable_source_ids()` 把「可解析」定義成「非 retracted 且帶 identifier」，不滿足就落 W027。**沒有直接把 W011 改嚴**，因為 W011 的 0 是真的賺來的（每個完全沒來源的 🟠 都確實寫了 observation_basis），而且兩者的修法不同：W011 要補交代，W027 要去查證來源到底是什麼。本批修掉 6 筆，**剩 63 筆是新的積欠清單**。
+
+**錯誤 58：`udk.tech.22` 與 `udk.err11` 拿來當證據的那份研究，結論明文反駁它們自己。** 兩條互為 cross_ref 的內容都主張「仰式 UDK 效率高於俯式」，都引「WKU Digital Commons Kinematic Comparison」（而且同一個殘樁被登錄成 `src.swimswam-koga-wku-kinematic` 與 `src.swimswam-wku-kinematic` 兩筆，在反向索引裡看起來像兩份獨立支撐）。查到真身是 **Scharborough 等（2017），International Journal of Exercise Science 會議摘要 2(9):81**，原文已取回：n=6，俯臥與仰臥全力海豚腳的**水平速度（p=0.774）與踢頻（p=0.730）都沒有差異**，關節活動度也不受體位影響（p=0.36），結論逐字是「Despite some recent suggestions that a supine dolphin kick may be more effective than a prone dolphin kick, no kinematic difference were observed in this sample of swimmers.」而本庫寫的是「俯臥峰值超 2 m/s、波動達 0.5 m/s；仰臥曲線明顯更平緩」——**這兩個數字原文裡沒有**。處置：兩條都重寫，標題從「仰式 UDK 效率高於俯式的物理原因」改成「推導講得通，但唯一直接對照的研究沒測到差異」；浮力幾何那段保留為 🔵（它成立的只有「兩個體位的幾何關係不同」），效率結論撤回；並在新列註明 n=6 的會議摘要**沒測到差異也不等於證明相等**，它能推翻的只有「已有證據支持仰式較優」。下游污染一併清掉：`udk.tech.23` 的逐式水下距離策略原本寫「仰式可能較長（UDK 效率機制較優）」，`udk.tech.30`（體位翻轉的命名）的 cross_ref 也複述了「仰式效率高於俯式」，兩處都已改寫；`udk.tech.30` 原本自陳「本專案的游泳文獻集在此主題沒有可用篇目」，現在有了，已改成「已取得一份 n=6 直接對照，但它只報告活動度總量、沒報告角度軌跡與相位時間分配，所以問題仍然開著」並把新來源加進 source_ids。`stroke-demands.yaml` 只在 `derived_from_ids` 列了 `udk.tech.22`（純 ID 參照、沒有複述結論），不需要改。
+
+**錯誤 59：`udk.tech.4` 的「核心力量提升使踝關節力量增加 25%」在所引文章裡查無此數字。** 取回 phantomlattice.com 全文（21,745 字元）逐字比對，`25%` 一次都沒出現，踝的段落全是質性描述；該站導覽分類是「生活／教育科技／科技汽車」，是綜合型內容農場。整列刪除，並在 mechanism 裡明寫「核心訓練對水下海豚腳推進的量化效果，本庫目前找不到可引的來源」——**留白比留一個查不到的數字誠實**。
+
+**三筆殘樁重建成功、兩筆改掛既有登錄。** 新登錄 `src.usms-flip-turns-complete-guide`、`src.bay-2017-usms-flip-turn-fundamentals`（Scott Bay，2017-08-14，原文明寫「轉體要在蹬牆之後」）、`src.wolf-2012-usms-backstroke-pointers`（Lisa Wolf，2012-12-21，踢腿段逐字對上）、`src.scharborough-2017-dolphin-kick-prone-supine`。另外 `src.train-daly-*` 的旗標規格改掛既有的 `src.usms-bay-2024-backstroke-flags`、UDK1 改掛 `src.usms-sheaff-2022-how-to-do-underwater-kicks`。
+
+**Wolf 那筆順帶抓出一個層級錯標**：`back.err`（腿要打直）的兩處引用標 🟡「舊文獻」，但真身是一篇 2012 年教練撰寫的教學文章，不是研究——已改 🟠 並補 observation_basis，同時標明**原文只寫「髖驅動＋膝微屈」，沒有描述上踢末端的鞭打**，鞭打是本專案自己接的力學讀法。同理 `free.err25` 的 physical_reason 標 🟢 掛「Race Club PDM；通用菁英研究」，但那整段是幾何與流體阻力推導 → 改 🔵、拿掉來源；它的 evidence 列宣稱「深拉水的上臂阻力代價已在多項菁英研究中量化」，本庫沒有任何這樣的研究 → 整列刪除。
+
+**W002 從 1 升到 4 是刻意的。** `UDK2`／`UDK5`／`starts-turns.err5` 的來源確實指不到文件，改成散文署名 + 無 `source_ids`，讓它落進 W002 被追蹤——**比掛一個假 id 讓它看起來合格好**。
+
+**下一步建議**：先清 **W027 的 63 筆**，那是這次量出來的最大單一積欠，而且它與複合鍵剩下的 **16 筆**高度重疊（同一批「只有站名／只有姓氏」的登錄同時是兩張清單的成員），一起做比分開做省事。複合鍵剩下的主體是**單姓氏族**：`src.gonjo`、`src.arellano`、`src.zamparo`、`src.pink`、`src.hellard`、`src.mujika`、`src.lyttle`、`src.hayashi`、`src.andersen-2020`、`src.ward-2018`、`src.ward-2018-c`、`src.benjanuvatra-2007-b`、`src.mccullough-d`、`src.gonzalez-rave`、`src.pmc5260528`、`src.pmc8607769`、`src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020`、`src.seiler`（**`src.seiler` 與 `src.hellard` 已被 `schools_overview` 引用，拆時一併改指**）。這族比機構族貴：姓氏＋主題要靠引用脈絡去反查論文，且很可能出現與錯誤 58 同型的問題——**引用方向與原文相反**，所以每一筆都要取回原文核對結論，不能只確認「這個人確實寫過這個主題」。零星未結：`src.adductor-loading-return-to-sport-practice-co`（display 已標【佔位字串】但沒立墓碑）、`src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012`（`zones.yaml:218`）、`FrEC1` 的 W002（要讀《Total Immersion》原書核對頁碼）、Chatard 等（1990）仍未登錄。
+
 ### ✅ **Rushall 族：一個殘樁、一個複合鍵，回原文核對後查出兩個錯誤（錯誤 56–57）**
 
 | 指標 | 段落起點 | 現在 |

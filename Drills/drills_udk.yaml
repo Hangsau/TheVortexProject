@@ -22,8 +22,8 @@ drills:
     success_signal: "頭能穩定維持在水面附近，前後兩個踢向都感覺到水壓。"
     failure_signal: "身體下沉、只靠膝蓋猛踩、單向（只有下踢）有力。"
     deficiency_fixes: []
-    source: "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide"
-    source_ids: [src.yourswimlog-com-vertical-kicking-u-s-masters]
+    source: "垂直打水是通行的教學練習；「兩個方向都要主動推水」一項對得上 Sheaff, A. (2022). How to Do Underwater Kicks. U.S. Masters Swimming."
+    source_ids: [src.usms-sheaff-2022-how-to-do-underwater-kicks]
     body_position: vertical
     constraints: [tension_held]
     movement_pattern: static
@@ -51,8 +51,7 @@ drills:
     success_signal: "換面後仍維持推進與緊湊流線，速度不明顯掉。"
     failure_signal: "某個朝向（常是俯臥）波動變小或膝蓋代償；換面時流線鬆掉。"
     deficiency_fixes: []
-    source: "Competitor Swim UDK drills；swimswam UDK sets"
-    source_ids: [src.competitor-swim-udk-drills-swimswam-udk-sets]
+    source: "通行的水下打水練習形式；本庫未取得可定位的單篇出處"
     body_position: transitional
     constraints: [tension_held]
     movement_pattern: alternating
@@ -138,8 +137,7 @@ drills:
     success_signal: "出水接划手沒有明顯減速、波動到最後一下仍完整。"
     failure_signal: "後段波動塌掉、太晚或太早出水、breakout 卡頓。"
     deficiency_fixes: []
-    source: "yourswimlog.com（race-tempo underwater）；swimswam UDK sets"
-    source_ids: [src.yourswimlog-com-race-tempo-underwater-swimsw]
+    source: "通行的比賽節奏水下練習形式；本庫未取得可定位的單篇出處"
     body_position: underwater
     constraints: [tension_held]
     movement_pattern: continuous

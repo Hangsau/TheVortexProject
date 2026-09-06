@@ -2880,7 +2880,7 @@
         ]
       },
       "source_ids": [
-        "src.u-s-masters-swimming-faster-flip-turns-eatsl"
+        "src.usms-flip-turns-complete-guide"
       ],
       "outgoing_ids": []
     },
@@ -2940,7 +2940,7 @@
         ]
       },
       "source_ids": [
-        "src.train-daly-u-s-masters-swimming-5yd-m"
+        "src.usms-bay-2024-backstroke-flags"
       ],
       "outgoing_ids": []
     },
@@ -2960,7 +2960,7 @@
         ]
       },
       "source_ids": [
-        "src.u-s-masters-swimming-flip-turn-fundamentals"
+        "src.bay-2017-usms-flip-turn-fundamentals"
       ],
       "outgoing_ids": []
     },
@@ -3294,7 +3294,7 @@
         ]
       },
       "source_ids": [
-        "src.yourswimlog-com-vertical-kicking-u-s-masters"
+        "src.usms-sheaff-2022-how-to-do-underwater-kicks"
       ],
       "outgoing_ids": []
     },
@@ -3313,9 +3313,7 @@
           "L5"
         ]
       },
-      "source_ids": [
-        "src.competitor-swim-udk-drills-swimswam-udk-sets"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -3373,9 +3371,7 @@
           "L6"
         ]
       },
-      "source_ids": [
-        "src.yourswimlog-com-race-tempo-underwater-swimsw"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -3856,9 +3852,7 @@
           "back"
         ]
       },
-      "source_ids": [
-        "src.race-club-ch-14"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "back.tech.11",
         "back.tech.12"
@@ -4092,9 +4086,7 @@
           "back"
         ]
       },
-      "source_ids": [
-        "src.race-club-gary-hall-jr-vs-u-s-masters-swimmi"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "back.err3"
       ]
@@ -4136,14 +4128,14 @@
           "kick"
         ],
         "certainty": [
-          "🟡"
+          "🟠"
         ],
         "stroke": [
           "back"
         ]
       },
       "source_ids": [
-        "src.usms-backstroke-kick-guide"
+        "src.wolf-2012-usms-backstroke-pointers"
       ],
       "outgoing_ids": [
         "back.err5"
@@ -4166,9 +4158,7 @@
           "back"
         ]
       },
-      "source_ids": [
-        "src.u-s-masters-swimming-backstroke-body-positio"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "back.err1"
       ]
@@ -10122,15 +10112,13 @@
           "pull"
         ],
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "stroke": [
           "free"
         ]
       },
-      "source_ids": [
-        "src.race-club-pdm-elite-general"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
         "back.err3",
         "free.tech.9"
@@ -16060,7 +16048,6 @@
         "src.bompa-buzzichelli-2019",
         "src.british-swimming-a-guide-to-anaerobic-traini-a",
         "src.british-swimming-a-guide-to-anaerobic-traini-b",
-        "src.getphysical-strengthmatters-alactic-power-in",
         "src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012",
         "src.mcardle-katch-exercise-physiology-textbook",
         "src.pmc8607769"
@@ -18285,8 +18272,7 @@
         ]
       },
       "source_ids": [
-        "src.blanksby-1998-breaststroke-turns",
-        "src.myswimpro-2022-coachsci-sdsu-edu-2022"
+        "src.blanksby-1998-breaststroke-turns"
       ],
       "outgoing_ids": [
         "starts-turns.tech.19"
@@ -18954,9 +18940,7 @@
           "starts-turns"
         ]
       },
-      "source_ids": [
-        "src.360swim-usms-swimming-world"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -19065,9 +19049,7 @@
           "starts-turns"
         ]
       },
-      "source_ids": [
-        "src.usms-sgswim"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -20230,7 +20212,7 @@
         ]
       },
       "source_ids": [
-        "src.swimswam-wku-kinematic"
+        "src.scharborough-2017-dolphin-kick-prone-supine"
       ],
       "outgoing_ids": [
         "udk.tech.22"
@@ -20830,7 +20812,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[158]",
-      "title": "仰式 UDK 效率高於俯式的物理原因",
+      "title": "「仰式 UDK 比俯式有效率」——推導講得通，但唯一直接對照的研究沒測到差異",
       "tags": {
         "category": [
           "comparison"
@@ -20844,7 +20826,7 @@
         ]
       },
       "source_ids": [
-        "src.swimswam-koga-wku-kinematic"
+        "src.scharborough-2017-dolphin-kick-prone-supine"
       ],
       "outgoing_ids": []
     },
@@ -21053,7 +21035,8 @@
         ]
       },
       "source_ids": [
-        "src.neumann-2017"
+        "src.neumann-2017",
+        "src.scharborough-2017-dolphin-kick-prone-supine"
       ],
       "outgoing_ids": [
         "back.tech.30",
@@ -21072,16 +21055,13 @@
           "undulation"
         ],
         "certainty": [
-          "🔵",
-          "🟢"
+          "🔵"
         ],
         "stroke": [
           "udk"
         ]
       },
-      "source_ids": [
-        "src.yourswimlog-phantomlattice-core"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {

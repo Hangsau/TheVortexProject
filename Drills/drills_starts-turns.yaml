@@ -22,8 +22,8 @@ drills:
     success_signal: "能在原地直線翻過去，不向側邊偏。"
     failure_signal: "翻滾鬆散、身體歪向一側、翻完方向跑掉。"
     deficiency_fixes: []
-    source: "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression"
-    source_ids: [src.u-s-masters-swimming-faster-flip-turns-eatsl]
+    source: "U.S. Masters Swimming. Flip Turns: The Complete Guide（翻滾、觸牆、蹬牆與常見錯誤各段）"
+    source_ids: [src.usms-flip-turns-complete-guide]
     body_position: transitional
     constraints: []
     movement_pattern: rotational
@@ -109,8 +109,8 @@ drills:
     success_signal: "用划手數就能準確到牆翻身，不需偷看、不撞牆或撈空。"
     failure_signal: "仍需抬頭看牆、划手數不穩、到牆距離忽遠忽近。"
     deficiency_fixes: []
-    source: "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）"
-    source_ids: [src.train-daly-u-s-masters-swimming-5yd-m]
+    source: "Bay, S. (2024). How to Use Backstroke Flags in Swimming. U.S. Masters Swimming.（旗標距牆 5yd/m，划手數因人而異、加蛙鞋要重新校正）"
+    source_ids: [src.usms-bay-2024-backstroke-flags]
     body_position: supine
     constraints: [tempo_constrained]
     movement_pattern: continuous
@@ -138,8 +138,8 @@ drills:
     success_signal: "出水順、無卡頓、轉體中流線維持、銜接划手不減速。"
     failure_signal: "為了轉體鬆開流線、太早浮起、breakout 時明顯減速。"
     deficiency_fixes: []
-    source: "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills"
-    source_ids: [src.u-s-masters-swimming-flip-turn-fundamentals]
+    source: "Bay, S. (2017). Flip Turn Fundamentals. U.S. Masters Swimming.（原文明寫：轉體要在蹬牆之後，不要在蹬牆前先扭到側身或俯臥）"
+    source_ids: [src.bay-2017-usms-flip-turn-fundamentals]
     body_position: transitional
     constraints: []
     movement_pattern: continuous

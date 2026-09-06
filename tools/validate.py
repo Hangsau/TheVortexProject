@@ -110,6 +110,19 @@ exit code：
   W026  查驗狀態寫進讀者看得到的引用字串（「…, PMC6092370 (已驗證)」）。
         狀態屬於 `verification_status`，不屬於書目；而且這種字串的主題詞
         是當初手寫的、沒對過篇名，實測 49 筆裡有 12 筆對不上。
+  W027  🟠 區塊靠一個**顯示字串**通過 W011，但那個字串解析不到任何可取得的
+        文件。W011 的逃生口原本的理由是「已經指了外部來源 → 依據可追」，
+        可是它只問「有沒有字串」——於是「Tritonwear」「SwimOutlet」
+        「Wikipedia Breaststroke」這種只有站名的字串也算數，讀者拿它
+        既到不了原文、也讀不出誰觀察／什麼族群／外推到哪。
+        本檢查把逃生口收成「要有能解析的機器鍵」：`source_ids` 至少一筆
+        指到 `_sources.yaml` 中**非 retracted 且帶 identifier** 的登錄。
+        兩條合法出路（擇一）：把來源查成真文章登錄進註冊表，或者承認它
+        本來就是實務觀察、改寫 `observation_basis`。
+        與 W011 分開計數是因為**修法不同**：W011 是「什麼都沒有」→ 補
+        observation_basis；W027 是「有字串但指不到東西」→ 查證或改寫。
+        把兩者合併會讓 W011 的 0 消失，而那個 0 是真的（每個完全沒來源的
+        🟠 都已交代觀察基礎），不該被這個問題吃掉。
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -1472,8 +1485,31 @@ DIAGNOSTIC_KEYS = frozenset({
 })
 
 
-def check_practitioner_blocks(rel: str, data: object, warnings: dict):
+def resolvable_source_ids(records: list[dict]) -> set[str]:
+    """能真的把讀者送到一份文件的登錄：非 retracted，且帶 identifier。
+
+    「有登錄」不等於「指得到東西」——`_sources.yaml` 裡大量早期登錄只有
+    display 字串（站名、人名、機構名），沒有 DOI／PMID／ISBN／URL。拿那種
+    登錄當「依據可追」的憑證，追不到任何地方。
+    """
+    return {
+        s["id"]
+        for s in records
+        if isinstance(s, dict)
+        and "id" in s
+        and s.get("verification_status") != "retracted"
+        and s.get("identifier")
+    }
+
+
+def check_practitioner_blocks(
+    rel: str,
+    data: object,
+    warnings: dict,
+    resolvable_ids: set = frozenset(),
+):
     """W011：certainty 🟠（教練觀測）但沒說出觀察基礎。
+    W027：🟠 只靠一個解析不到文件的顯示字串通過 W011。
 
     🟠 是第一手實務證據，本來就不該被要求 source_ids（那會逼人去替教練觀察
     硬找文獻，也就是把自己的觀察包裝成別人的研究）。但「第一手」不等於
@@ -1493,11 +1529,30 @@ def check_practitioner_blocks(rel: str, data: object, warnings: dict):
             # 已經指了外部來源（例如引 Race Club 的影像觀察）→ 依據可追。
             # 但 `source: 教練觀測` 不是外部來源，是這個區塊自己——拿它當
             # 逃生口等於用「我觀察到的」證明「我交代了觀察基礎」。
+            #
+            # 「可追」還有第二個條件：那個來源要真的指得到東西。只有站名的
+            # 顯示字串（「SwimOutlet」「Wikipedia Breaststroke」）讀者追不到
+            # 原文，也讀不出族群與外推邊界——那種情況落 W027，不是綠燈。
+            ids = block.get("source_ids")
+            if isinstance(ids, list) and any(i in resolvable_ids for i in ids):
+                continue
+            warnings["W027"].append(
+                f"  file={rel} id={eid!r} at={loc} "
+                f"certainty=orange 靠顯示字串通過（source={_short(block)!r}），"
+                f"但 source_ids 解析不到可取得的登錄"
+                f"——查證成真來源或改寫 observation_basis"
+            )
             continue
         warnings["W011"].append(
             f"  file={rel} id={eid!r} at={loc} "
             f"certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）"
         )
+
+
+def _short(block: dict) -> str:
+    raw = block.get("source") or block.get("citation") or block.get("sources")
+    text = raw if isinstance(raw, str) else str(raw)
+    return text[:60]
 
 
 # W021：宣告了確定性、卻沒有任何內容可宣告。下面這組是**中繼欄位**——它們描述
@@ -2318,7 +2373,7 @@ def run_validation():
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
         "W021": [], "W022": [], "W023": [], "W024": [], "W025": [],
-        "W026": []
+        "W026": [], "W027": []
     }
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
@@ -2498,6 +2553,7 @@ def run_validation():
     # 只把它們納入**來源契約**這一組檢查（E005/W002/W009），不併進
     # validate_files——後者會連帶把 E001/E004/W003/W005 等 canonical 專屬
     # 規則套到 Drills 上，那是另一個決策，不在 S3a-2 範圍。
+    resolvable_ids = resolvable_source_ids(source_records)
     source_scan_files = validate_files + sorted(DRILLS_DIR.glob("*.yaml"))
     referenced_source_ids: set[str] = set()
     for path in source_scan_files:
@@ -2511,7 +2567,7 @@ def run_validation():
         )
         # W011 / E010 與來源契約同一輪走訪範圍（含 Drills）：教練觀測與
         # 診斷層鍵名在 Drills 也可能出現。
-        check_practitioner_blocks(rel, data, warnings)
+        check_practitioner_blocks(rel, data, warnings, resolvable_ids)
         check_content_presence(rel, data, warnings)
         check_text_is_citation(rel, data, source_displays, warnings)
         check_public_layer_leak(rel, data, errors)
@@ -2705,6 +2761,12 @@ def _write_report(
             "`_sources.yaml` 的 `display` 是本專案自己的草稿路徑"
             "（`Research/心理/03_….md#凍結反應`）——引用自己的草稿當來源是自證，"
             "且這串會原樣印在讀者頁面的「來源」欄",
+        ),
+        "W027": (
+            "WARN",
+            "🟠 只靠一個解析不到文件的顯示字串通過 W011 的來源逃生口"
+            "（`source_ids` 沒有任何一筆指到非 retracted 且帶 identifier 的登錄）"
+            "——查證成真來源登錄，或承認是實務觀察改寫 `observation_basis`",
         ),
         "W026": (
             "WARN",

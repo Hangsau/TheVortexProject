@@ -560,10 +560,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.360swim-usms-swimming-world
-    display: "360swim; USMS; Swimming World"
+    display: "【只有站名，非文獻，已撤下】360swim／USMS／Swimming World 的公開教學內容"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "顯示字串只有三個網站的名字，讀者追不到任何一篇具體文章，也讀不出族群與外推邊界。唯一引用 starts-turns.tech.31 的 mechanism 已經把這三個來源、族群與外推邊界寫進 observation_basis，掛在下方的 evidence 只是把同一件事再說一次（「適用情境分類來自教練系統觀測。」），2026-09-06 已刪除該 evidence 條並撤下本 id。留墓碑擋重新登錄——見 validate.py E014／W027。"
 
   - id: src.aap-pediatrics-2020-145-6-e20201011-nsca-you-2020
     display: "AAP Pediatrics 2020;145(6):e20201011; NSCA Youth Resistance Training 立場聲明; Swimming Australia 處方"
@@ -1049,10 +1050,11 @@ sources:
     notes: "疑似與 src.colman-1998-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.competitor-swim-udk-drills-swimswam-udk-sets
-    display: "Competitor Swim UDK drills；swimswam UDK sets"
+    display: "【只有站名，非文獻，已撤下】Competitor Swim UDK drills／SwimSwam UDK sets"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "顯示字串只有兩個網站的欄目名，沒有文章標題、作者或日期，指不到任何一份文件。唯一引用是 Drills/drills_udk.yaml 的 UDK2（流線打水換面），該練習的動作內容不依賴這兩個網站的任何特定主張。2026-09-06 撤下 source_ids，散文署名保留在 drill 的 source 欄位。留墓碑擋重新登錄。"
 
   - id: src.cossor-2001
     display: "Cossor & Mason 2001"
@@ -1237,10 +1239,11 @@ sources:
     notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.getphysical-strengthmatters-alactic-power-in
-    display: "教練共識（getphysical / strengthmatters alactic power intervals）；與 PCr 再合成動力學一致（90–120s 部分恢復、3–5min 大致完全，見上 recovery_zh）"
+    display: "【非文獻，已撤下】顯示字串自陳「教練共識」（getphysical／strengthmatters）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "顯示字串第一個字就是「教練共識」——那是證據等級的自述，不是來源。扣掉共識兩字剩下的是兩個健身網站名，指不到具體文章。唯一引用 periodization/zones.yaml 的 phosphagen 訓練處方已於 2026-09-06 改寫成 observation_basis（誰的共識、什麼族群、外推到哪裡為止），並保留原文對 PCr 再合成動力學的內部交叉參照。留墓碑擋重新登錄——見 validate.py E014。"
 
   - id: src.gonjo
     display: "Gonjo et al. 2020；Maglischo 2003 修正"
@@ -1966,11 +1969,11 @@ sources:
     notes: "無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.myswimpro-2022-coachsci-sdsu-edu-2022
-    display: "MySwimPro 2022; coachsci.sdsu.edu"
+    display: "【只有站名，非文獻，已撤下】MySwimPro 2022／coachsci.sdsu.edu"
     type: other
-    verification_status: unverified
-    year: 2022
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "兩個網站名加一個年份，指不到具體文章；coachsci.sdsu.edu 是 Brent Rushall 的 Coaching Science Abstracts 站台，本身是二手摘要索引不是原始文獻。唯一引用 teaching-errors.yaml 的最後一划誤區已於 2026-09-06 改寫成 observation_basis。留墓碑擋重新登錄。"
 
   - id: src.neumann-2017
     display: "Neumann DA. (2017). Kinesiology of the Musculoskeletal System: Foundations for Rehabilitation. 3rd ed. St. Louis: Elsevier."
@@ -3709,10 +3712,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.race-club-ch-14
-    display: "Race Club Ch 14；通用菁英影像觀察"
+    display: "【殘樁，非文獻，已撤下】The Race Club 第 14 章"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "「Ch 14」是某份未指名出版品的章號——沒有書名、沒有年份、沒有作者，本專案無法確認它指的是哪一份 Race Club 教材。唯一引用 back.err（仰式拉水出水時機）的 mechanism 已有完整 observation_basis，evidence 條於 2026-09-06 補上自己的 observation_basis 並撤下 source_ids。留墓碑擋重新登錄。"
 
   - id: src.race-club-ch-18
     display: "Race Club Ch 18 / 通用菁英影像觀察"
@@ -3745,10 +3749,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.race-club-gary-hall-jr-vs-u-s-masters-swimmi
-    display: "Race Club（Gary Hall Jr.）背式彎臂 vs 直臂分析；U.S. Masters Swimming Backstroke Pull guide"
+    display: "【只有站名，非文獻，已撤下】The Race Club（Gary Hall Jr.）彎臂 vs 直臂分析／USMS Backstroke Pull guide"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "顯示字串是兩個機構的主題描述，不是可定位的文章；本專案未取得任何一份對應原文。引用處的正文已自陳「具體百分比來自教學影片分析，未追溯到同儕審查原始數據」——那句自陳才是誠實的證據狀態，掛一個 source_ids 反而讓它在反向索引裡看起來有文獻支撐。2026-09-06 撤下，evidence 條補 observation_basis。留墓碑擋重新登錄。"
 
   - id: src.race-club-pdm-data
     display: "The Race Club PDM 量測資料"
@@ -3757,10 +3762,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.race-club-pdm-elite-general
-    display: "Race Club PDM；通用菁英研究"
+    display: "【非文獻，已撤下】Race Club PDM／「通用菁英研究」"
     type: other
-    verification_status: unverified
-    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "後半段「通用菁英研究」是共識敘述不是文獻；前半段 PDM（壓力計量測）只有儀器名。2026-09-06 稽核發現這個 id 撐著 free.err25 的一整段 🟢：physical_reason 其實是流體力學推導（已改 🔵，不需要來源），evidence 則宣稱「深拉水的上臂阻力代價已在多項菁英研究中量化」——本專案沒有任何一篇這樣的研究可引，該子句已刪除。留墓碑擋重新登錄。"
 
   - id: src.red-s-clinical-assessment-tool-framework-ioc
     display: "Mountjoy M, Sundgot-Borgen J, Burke L, et al. (2015). The IOC relative energy deficiency in sport clinical assessment tool (RED-S CAT). Br J Sports Med 49(21):1354."
@@ -4988,16 +4994,18 @@ sources:
     notes: "疑似與 src.swimswam-a 為同一來源，待 S3c 查證後合併；本階段刻意不合併。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.swimswam-koga-wku-kinematic
-    display: "SwimSwam Junya Koga analysis; WKU Digital Commons Kinematic Comparison"
+    display: "【殘樁＋引用方向相反，已撤下】SwimSwam Junya Koga analysis／WKU Digital Commons Kinematic Comparison"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "複合鍵：SwimSwam 那半只有選手名指不到文章；WKU 那半 2026-09-06 已查到真身——Scharborough et al. (2017) 的俯臥／仰臥海豚腳運動學對照（已登錄為 src.scharborough-2017-dolphin-kick-prone-supine）。查回原文後發現引用方向是相反的：該研究沒有測到兩種體位的速度或踢頻差異，結論明文反駁「仰臥海豚腳較有效」的說法，而本專案原本拿它當「仰式效率較高」的支撐，並掛上原文裡沒有的數字（峰值 2 m/s、波動 0.5 m/s）。udk.tech.22 已重寫。留墓碑擋重新登錄。"
 
   - id: src.swimswam-wku-kinematic
-    display: "SwimSwam / Kinematic Comparison，WKU Digital Commons"
+    display: "【重複殘樁，已撤下】與 src.swimswam-koga-wku-kinematic 是同一個顯示字串的第二個登錄"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "同一份 SwimSwam／WKU 殘樁被登錄了兩次（本 id 與 src.swimswam-koga-wku-kinematic），分別撐著 udk.err11 與 udk.tech.22 兩條互為交叉參照的內容——同一個查不到的東西掛兩個 id，在反向索引裡看起來像兩份獨立支撐。2026-09-06 兩筆同時撤下，真身 Scharborough et al. (2017) 已另行登錄，兩條內容都已按原文結論重寫。留墓碑擋重新登錄。"
 
   - id: src.switch-drill-warmup-variant
     display: "【非來源：本專案自述／泛稱歸屬，已撤下】通用游泳教學法（switch drill warmup variant）"
@@ -5348,10 +5356,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.train-daly-u-s-masters-swimming-5yd-m
-    display: "Train Daly 仰式翻身系統；U.S. Masters Swimming（旗標距牆 5yd/m，數划手）"
+    display: "【複合鍵，已拆解】Train Daly 仰式翻身系統／USMS（旗標距牆 5yd/m）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "複合鍵：前半「Train Daly 仰式翻身系統」指不到具體文章；後半的旗標距牆規格本專案已另有可取得的登錄（src.usms-bay-2024-backstroke-flags）。2026-09-06 引用改掛該筆，本 id 撤下。留墓碑擋重新登錄。"
 
   - id: src.tri-coaching
     display: "Tri-Coaching"
@@ -5376,16 +5385,18 @@ sources:
     notes: "機構名不是文獻，已撤下、保留為墓碑。與 src.usms 是同一機構被登錄成兩個 id，這種同義重複靠驗證器抓不到（兩個 id 都存在，E005 通過）。2026-09-05 把掛在這裡的 5 條引用逐條定位：breast.err 踢腳非旋轉、踢多寬 → src.usms-breaststroke-kick-guide；蛙式手腳時序 2 條 → src.usms-breaststroke-timing-guide；仰式旗幟計步 → src.usms-bay-2024-backstroke-flags。"
 
   - id: src.u-s-masters-swimming-backstroke-body-positio
-    display: "U.S. Masters Swimming Backstroke Body Position guide；swim-teach.com；enjoy-swimming（教學共識）"
+    display: "【只有站名，非文獻，已撤下】USMS Backstroke Body Position guide／swim-teach.com／enjoy-swimming"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "三個網站名，沒有一篇可定位的文章。引用處自己已經寫明「這是教材共識而非實驗結果」，2026-09-06 evidence 條補上自己的 observation_basis 並撤下 source_ids——共識就標成共識，不要掛一個指不到東西的 id 讓它看起來像文獻。留墓碑擋重新登錄。"
 
   - id: src.u-s-masters-swimming-faster-flip-turns-eatsl
-    display: "U.S. Masters Swimming Faster Flip Turns；EatSleepSwimCoach mid-pool progression"
+    display: "【殘樁，已重建】USMS Faster Flip Turns／EatSleepSwimCoach mid-pool progression"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "複合鍵：後半的 EatSleepSwimCoach 指不到文章；前半 2026-09-06 已查到 USMS 的翻身轉身完整指引真身（已登錄為 src.usms-flip-turns-complete-guide，含 approach／flip／contact／push-off／streamline／transition 各段與常見錯誤）。引用（Drills ST1 池中央翻滾）已改掛該筆，本 id 撤下。留墓碑擋重新登錄。"
 
   - id: src.u-s-masters-swimming-faster-flip-turns-wall
     display: "U.S. Masters Swimming Faster Flip Turns（wall progression）"
@@ -5394,10 +5405,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.u-s-masters-swimming-flip-turn-fundamentals
-    display: "U.S. Masters Swimming Flip Turn Fundamentals（approach/execution/breakout）；arenaswim flip turn drills"
+    display: "【殘樁，已重建】USMS Flip Turn Fundamentals／arenaswim flip turn drills"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "複合鍵：後半的 arenaswim 指不到文章；前半 2026-09-06 已查到真身——Scott Bay 於 2017-08-14 發表在 USMS 的 Flip Turn Fundamentals（已登錄為 src.bay-2017-usms-flip-turn-fundamentals）。引用（Drills ST5 蹬牆轉體出水）已改掛該筆，本 id 撤下。留墓碑擋重新登錄。"
 
   - id: src.u-s-masters-swimming-turns-guides-tight-stre
     display: "U.S. Masters Swimming Turns guides（tight streamline push-off）"
@@ -5510,10 +5522,11 @@ sources:
     notes: "機構名不是文獻，已撤下、保留為墓碑擋住同型字串再長回來。2026-09-05 把掛在這裡的 4 條引用逐條回原文定位到單篇：fly.err9 起伏傳遞 → src.usms-fish-2025-butterfly-hips、fly.err13 側向換氣 → src.usms-lassen-2018-butterfly-side-breathing、udk.err5 上半身晃動阻力 → src.usms-underwater-kick-body-alignment-guide、udk.err13 成功水下踢腿要素 → src.usms-sheaff-2022-how-to-do-underwater-kicks。同一機構還有另一個裸登錄 src.u-s-masters-swimming，一併撤下。"
 
   - id: src.usms-backstroke-kick-guide
-    display: "U.S. Masters Swimming Backstroke Kick guide；多家教學指引一致"
+    display: "【殘樁，已重建】USMS Backstroke Kick guide／「多家教學指引一致」"
     type: other
-    verification_status: unverified
-    notes: "顯示字串是通則／共識敘述，不是可定位的單一文獻；S3c 須判定改標確定性或補實際來源。 顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "後半「多家教學指引一致」是共識敘述不是文獻；前半 2026-09-06 已查到最接近的真身——Lisa Wolf 於 2012-12-21 發表在 USMS 的 Backstroke Pointers（已登錄為 src.wolf-2012-usms-backstroke-pointers），原文寫有「The kick drives from the hip and only a slight bend of the knees is needed」。查回原文後也發現原本掛的 🟡（舊文獻）標錯層級：那是一篇教練撰寫的教學文章不是研究，兩處引用已改成 🟠 並補 observation_basis。留墓碑擋重新登錄。"
 
   - id: src.usms-body-alignment-guide-a
     display: "USMS Body Alignment Guide"
@@ -5534,10 +5547,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.usms-sgswim
-    display: "USMS; SGSwim"
+    display: "【只有站名，非文獻，已撤下】USMS／SGSwim"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "兩個機構名。引用處 starts-turns.tech.36 的 evidence 內容是「效率損失清單來自教練系統觀測。」——證據欄位裡寫的是證據等級的自述，不是證據（E014 的病灶長在 evidence 文字裡，靠 W011 的顯示字串逃生口躲過檢查，這正是 2026-09-06 新增 W027 要抓的形態）。該條已改寫成帶 observation_basis 的形式。留墓碑擋重新登錄。"
 
   - id: src.usms-swimming-world-magazine-the-race-club
     display: "USMS, Swimming World Magazine, The Race Club"
@@ -5789,10 +5803,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.yourswimlog-com-race-tempo-underwater-swimsw
-    display: "yourswimlog.com（race-tempo underwater）；swimswam UDK sets"
+    display: "【只有站名，非文獻，已撤下】yourswimlog.com（race-tempo underwater）／SwimSwam UDK sets"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "兩個網站的主題描述，指不到文章。唯一引用是 Drills/drills_udk.yaml 的比賽節奏水下打水，該練習的動作內容不依賴這兩站的任何特定主張。2026-09-06 撤下 source_ids，散文署名保留在 drill 的 source 欄位。留墓碑擋重新登錄。"
 
   - id: src.yourswimlog-com-tempo-trainer-cone-15m
     display: "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
@@ -5801,10 +5816,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.yourswimlog-com-vertical-kicking-u-s-masters
-    display: "yourswimlog.com（vertical kicking）；U.S. Masters Swimming Underwater Kick guide"
+    display: "【只有站名，非文獻，已撤下】yourswimlog.com（vertical kicking）／USMS Underwater Kick guide"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "兩個網站的主題描述，指不到文章。垂直打水是通行的教學練習，不需要靠來源撐；唯一引用是 Drills/drills_udk.yaml 的 UDK1。2026-09-06 撤下 source_ids，散文署名保留在 drill 的 source 欄位。留墓碑擋重新登錄。"
 
   - id: src.yourswimlog-monofin
     display: "yourswimlog monofin 研究"
@@ -5813,10 +5829,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.yourswimlog-phantomlattice-core
-    display: "yourswimlog 核心力量研究；phantomlattice.com 生物力學分析"
+    display: "【引用內容查無此數字，已撤下】yourswimlog 核心力量研究／phantomlattice.com 生物力學分析"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 取回 phantomlattice.com 那篇水下海豚腳生物力學文章全文（21,745 字元）逐字比對：文中沒有出現「25%」或任何踝關節力量增幅的數字，踝的段落全是質性描述（「更好的踝柔軟度讓下踢的鞭打更有效」）。該站的導覽分類是「生活／教育科技／科技汽車」，是綜合型內容農場不是專業來源。前半的「yourswimlog 核心力量研究」同樣指不到具體研究。原掛於 udk.tech.4 的 🟢「核心力量提升使踝關節力量增加 25%」已整條刪除。留墓碑擋重新登錄。"
 
   - id: src.zamparo
     display: "Zamparo et al. 2009, J Biomech Eng; Rohr & Fish 2004"
@@ -9477,3 +9494,52 @@ sources:
       doi: "10.1002/9780470549148"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 主動補登，用途是替蝶式抬頭換氣段落提供頭頸段質量的可查證數字。Table 4.1 的原文節錄（第 83-84 頁）已下載並逐行核對，**Head and neck = 0.081 of total body mass**（分段定義為 C7-T1 與第一肋至耳道）。70 公斤成人換算約 5.7 公斤。**使用邊界**：這是屍體研究與掃描資料綜合出的平均比例，用來估量級，不是個體實測；表中頭與頸是**合併**的一段，單獨頭部更輕。登錄動機見同日對 Rushall（1996）「成人頭部至少 7 公斤」的核對——那個數字沒有量測出處，且要體重 86 公斤以上才成立。"
+  - id: src.scharborough-2017-dolphin-kick-prone-supine
+    display: "Scharborough, M. B., Robinson, P., Albin, E. E., Broussard, J., Adams, T., & Dubrose, E. (2017). Kinematic Comparison of Dolphin Kicking Performed in a Prone and Supine Body Position. International Journal of Exercise Science: Conference Proceedings, 2(9), Article 81."
+    title: "Kinematic Comparison of Dolphin Kicking Performed in a Prone and Supine Body Position"
+    type: conference_abstract
+    verification_status: verified
+    authors: ["M. B. Scharborough", "P. Robinson", "E. E. Albin", "J. Broussard", "T. Adams", "E. Dubrose"]
+    year: 2017
+    publisher: "International Journal of Exercise Science (Western Kentucky University Digital Commons)"
+    identifier:
+      url: "https://digitalcommons.wku.edu/ijesab/vol2/iss9/81/"
+    retrieved_on: "2026-09-06"
+    notes: "n=6 大學校隊泳者（身高 1.77±0.07 m、體重 72.4±7.6 kg、19.8±1.0 歲），俯臥與仰臥各三趟 10 m 全力海豚腳，60 Hz 水下攝影、12 個標記點、四階 Butterworth 濾波、2×2 重複量數 ANOVA。結果：水平速度 t(4)=0.308, p=0.774、踢頻 t(4)=0.371, p=0.730 兩種體位都沒有差異；膝的活動度顯著大於髖 F(1,4)=110.967，但活動度不受體位影響 F(1,4)=1.068, p=0.36（膝 ROM 俯 69.7±4.5／仰 73.6±6.7，髖 俯 37.7±8.3／仰 40.5±9.0）。結論原文：Despite some recent suggestions that a supine dolphin kick may be more effective than a prone dolphin kick, no kinematic difference were observed in this sample of swimmers. 使用邊界：這是 n=6 的會議摘要（未經完整同儕審查、未報告檢定力），沒測到差異不能反過來當成「兩者相等」的證據；它能支撐的只有「目前沒有運動學證據支持仰臥較優」。"
+
+  - id: src.usms-flip-turns-complete-guide
+    display: "U.S. Masters Swimming. Flip Turns: The Complete Guide. usms.org 技術指引（未署名）。"
+    title: "Flip Turns: The Complete Guide"
+    type: web_guide
+    verification_status: verified
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/guides/turns/flip-turns"
+    retrieved_on: "2026-09-06"
+    notes: "USMS 官方的翻身轉身完整指引，逐段涵蓋 approach／flip／contact／push-off／streamline／transition、仰式翻身轉身、常見錯誤，並附練習、課表與陸上訓練。頁面未署名作者，屬機構教學內容不是研究——引用時證據等級應為 🟠 並交代族群（成人泳者／masters）與外推邊界，不可標成文獻。"
+
+  - id: src.bay-2017-usms-flip-turn-fundamentals
+    display: "Bay, S. (2017, August 14). Flip Turn Fundamentals. U.S. Masters Swimming."
+    title: "Flip Turn Fundamentals"
+    type: web_article
+    verification_status: verified
+    authors: ["Scott Bay"]
+    year: 2017
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/flip-turn-fundamentals"
+    retrieved_on: "2026-09-06"
+    notes: "作者 Scott Bay 為 USMS Level 5 教練（本庫另有 src.scott-bay-usms-level-5-coach）。四個步驟：Get Ready（最後一划在池底 T 字標記正上方或稍後啟動；仰式通常在旗標後 3–4 划）、Hands to Hips、Flip the Feet、蹬牆流線。原文明確寫 avoid the temptation to twist to get on your side or stomach before you push off——轉體要在蹬牆之後，不是蹬牆之前。屬教練撰寫的教學文章不是研究，引用時證據等級應為 🟠。"
+
+  - id: src.wolf-2012-usms-backstroke-pointers
+    display: "Wolf, L. (2012, December 21). Backstroke Pointers. U.S. Masters Swimming."
+    title: "Backstroke Pointers"
+    type: web_article
+    verification_status: verified
+    authors: ["Lisa Wolf"]
+    year: 2012
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/backstroke-pointers"
+    retrieved_on: "2026-09-06"
+    notes: "作者為 Montgomery Ancient Mariners 與 DC Aquatics Club 的 masters 教練、USA-S 分齡教練。踢腿段原文逐字：Toes should be pointed slightly in and they should flick water up AND down... The kick drives from the hip and only a slight bend of the knees is needed. 邊界：原文只寫到「髖驅動＋膝微屈」，沒有描述上踢末端的鞭打機制——本庫在 back.err 用到的鞭打說法是專案自己的力學讀法，不是這篇支撐的。屬教練撰寫的教學文章不是研究，引用時證據等級應為 🟠。"
