@@ -795,10 +795,11 @@ sources:
       不偽裝成軍方文件。本 id 保持 unverified 且不得再被引用。
 
   - id: src.brent-rushall-sdsu
-    display: "Brent Rushall, SDSU"
+    display: "【殘樁／複合鍵，已重建】Brent Rushall, SDSU"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 重建。display 只有「人名＋機構」，指不到任何一份文件——這種字串既無法查證也無法反駁，是「看起來有來源」的最低成本偽裝。回原文脈絡（`fly.err*` 兩處關於蝶式換氣的 🟠 evidence）比對後查到真正的出處是 **Rushall (1996). Breathing Actions in Butterfly Swimming, Carlile Coaches' Forum 2(6)**，原文已下載，兩句引用逐字對上（「adult head weighs at least 7 kg」「Breathing below the water line … reducing frontal and wave resistances」）。已改指 src.rushall-1996-butterfly-breathing-actions。本 id 保留為墓碑、不得再使用。"
 
   - id: src.british-swimming-a-guide-to-anaerobic-traini-a
     display: "British Swimming《A Guide to Anaerobic Training—Lactate Production》(© British Swimming 2006, Revised 2020)"
@@ -4737,10 +4738,11 @@ sources:
       5.0% **絕不可外推到一般開放水域泳者或鐵人選手**（同期一般賽事族群約 0.44%，相差逾十倍）。
 
   - id: src.specificity-of-practice-usrpt
-    display: "Specificity of Practice；USRPT"
+    display: "【殘樁／複合鍵，已重建】Specificity of Practice；USRPT"
     type: other
-    verification_status: unverified
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 複合鍵拆解。這串把**兩個不同領域的同名概念**黏在一起：動作學習的「specificity of practice」（Proteau 一系，講練習時的**感覺條件**）與訓練學的「Principle of Specificity」（講**刺激特異性**）。回原文（Rushall 的 Swimming Science Bulletin 49）核對後確認 USRPT 援引的是後者，而且 Rushall 自己指的依據是Chatard 等 1990 與 Craig & Pendergast 1979 的**游速—技術特異性**，與 Proteau 那一系無關。已拆為 src.rushall-2016-usrpt-defined-bulletin-49（主張者原文）＋src.craig-pendergast-1979-stroke-rate-distance-velocity（Rushall 指的原始運動學依據），並主動補登 src.nugent-2019-usrpt-systematic-review（獨立系統性回顧，結論是 USRPT 目前沒有任何合格研究支撐）。本 id 保留為墓碑、不得再使用。"
 
   - id: src.sports-biomechanics-2026
     display: "【重複登錄，已解除】與 src.takeda-2026 為同一篇文獻"
@@ -9405,3 +9407,73 @@ sources:
       url: "https://pubmed.ncbi.nlm.nih.gov/33344984/"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 補登，與 src.branscheidt-2019-fatigue-motor-skill-learning 同一批（原本只寫在散文裡、機器索引看不到）。作者／年份／期刊／卷期經 Crossref 與 PubMed 雙向核對。用途：證明「技能本身可被週期化」不是 Vortex 原創——PoST 框架把技能訓練分成 coordination → skill adaptation → performance 三階段。**使用邊界**：這是概念框架論文（introduction of a framework），不是療效試驗；它建立的是「有人這樣主張並提出結構」，不是「這樣排比較有效」。原文標題在專項名詞外加了引號，登錄時保留。"
+
+  - id: src.rushall-1996-butterfly-breathing-actions
+    display: "Rushall, B. S. (1996). Breathing actions in butterfly swimming. Carlile Coaches' Forum, 2(6), 14 February 1996. San Diego State University."
+    title: "Breathing Actions in Butterfly Swimming"
+    type: other
+    verification_status: verified
+    authors: ["Brent S. Rushall"]
+    year: 1996
+    container: "Carlile Coaches' Forum"
+    identifier:
+      url: "https://coachsci.sdsu.edu/swim/ccf/ccf0206.htm"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由殘樁 src.brent-rushall-sdsu（display 只有「Brent Rushall, SDSU」＝人名＋機構）重建。原文已下載逐句核對，兩處引用的句子都在這一篇裡：**「Since an adult head weighs at least 7 kg the lifting action created considerable force that had to be counter-balanced by a large downward component in the arms and/or kick.」**（對應「成人頭部至少 7 公斤」）與 **「Breathing below the water line results in very little head movement saving energy in the pull and/or kick, and reducing frontal and wave resistances.」**（對應側向換氣省阻力）。**性質邊界**：這是 Rushall 自行編輯發行的教練通訊，不是同行評審文獻，7 kg 是他的斷言、文中未附量測出處；引用時只能寫「Rushall 主張」不能寫「研究顯示」。**時代邊界**：1996 年寫的，文中把側向換氣描述成「did not fully accommodate the rules of butterfly swimming」但官方容忍——那是當時對對稱性規則的詮釋，不可拿 1996 年的規則描述當現行規則（現行 World Aquatics 蝶式條文只規範雙臂同時出水入水、未規範換氣方向；**條號本次未逐字核對，要寫進公開內容前先查現行規則書**——這正是錯誤 55 踩過的坑）。"
+
+  - id: src.rushall-2016-usrpt-defined-bulletin-49
+    display: "Rushall, B. S. (2016). USRPT defined: After two years USRPT comes of age (Version 1.2). Swimming Science Bulletin, 49. San Diego State University."
+    title: "USRPT Defined: After Two Years USRPT Comes of Age"
+    type: other
+    verification_status: verified
+    authors: ["Brent S. Rushall"]
+    year: 2016
+    container: "Swimming Science Bulletin"
+    identifier:
+      url: "https://coachsci.sdsu.edu/swim/bullets/49DEFINED.pdf"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.specificity-of-practice-usrpt 拆出，PDF 已下載逐句核對。這是 USRPT 的主張者本人最完整的定義文件（USRPT = race-specific technique instruction + race-specific psychology + race-specific conditioning）。**關鍵更正**：文中援引的是訓練學的 **Principle of Specificity**，而且原文明寫它的依據是 **「stroke technique is specific to the velocity of swimming (Chatard et al., 1990; Craig & Pendergast, 1979)」**——**不是動作學習領域的「specificity of practice」**（Proteau 那一系，講的是練習時的感覺條件而非游速）。原複合鍵把兩個不同領域的同名概念黏成一串。**性質邊界**：自行編輯發行的 bulletin，非同行評審，且作者是該訓練體系的倡議者本人；獨立系統性回顧（Nugent 等 2019）找不到任何一篇合格的 USRPT 研究，見 src.nugent-2019-usrpt-systematic-review。引用時只能寫「Rushall 主張並給出理由」，不能寫成已驗證。"
+
+  - id: src.craig-pendergast-1979-stroke-rate-distance-velocity
+    display: "Craig, A. B., Jr., & Pendergast, D. R. (1979). Relationships of stroke rate, distance per stroke, and velocity in competitive swimming. Medicine and Science in Sports, 11(3), 278–283."
+    title: "Relationships of stroke rate, distance per stroke, and velocity in competitive swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Albert B. Craig Jr.", "David R. Pendergast"]
+    year: 1979
+    container: "Medicine and Science in Sports"
+    identifier:
+      pmid: "522640"
+      url: "https://pubmed.ncbi.nlm.nih.gov/522640/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 由複合鍵 src.specificity-of-practice-usrpt 拆出——它是 Rushall 在 Bulletin 49 裡替「技術隨游速而變」指的兩個原始依據之一（另一個是 Chatard 等 1990，尚未登錄）。摘要已核：四式皆為**提高游速＝提高划頻＋降低每划距離**，而且各式的換法不同（蝶式的加速幾乎全部來自划頻；蛙式的每划距離掉得最多）；自由式游最快的人在低划頻時每划距離最長，且在最大速度時每划距離的下降幅度**更大**。速度周期內的速度波動：捷式與仰式 ±15–20%，蝶式與蛙式 ±45–50%。**使用邊界**：這是**運動學**證據（划頻／每划距離／速度的關係），不是神經動作模式的直接量測——它撐得起「慢游時的划水參數不等於比賽速度的划水參數」，撐不起「慢速習得的神經模式不能遷移」；後者是外推。1979 年、器材為頸環拉線位移計。"
+
+  - id: src.nugent-2019-usrpt-systematic-review
+    display: "Nugent, F., Comyns, T., Kearney, P., & Warrington, G. (2019). Ultra-short race-pace training (USRPT) in swimming: Current perspectives. Open Access Journal of Sports Medicine, 10, 133–144."
+    title: "Ultra-Short Race-Pace Training (USRPT) In Swimming: Current Perspectives"
+    type: review
+    verification_status: verified
+    authors: ["Fiona Nugent", "Thomas Comyns", "Philip Kearney", "Giles Warrington"]
+    year: 2019
+    container: "Open Access Journal of Sports Medicine"
+    identifier:
+      pmid: "31632163"
+      pmcid: "PMC6789176"
+      doi: "10.2147/OAJSM.S180598"
+      url: "https://pubmed.ncbi.nlm.nih.gov/31632163/"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 主動補登（不在原複合鍵裡）——理由是原複合鍵只掛了倡議者本人的說法，沒有任何獨立檢驗。摘要已核，結論是**否定性的**：系統性回顧檢索 1347 篇、全文評估 15 篇，**15 篇全部排除，因為介入措施並不是 USRPT**，因此「USRPT 目前並非建立在同行評審文獻上」；並明指 USRPT 主張的「避免阻力訓練、交叉訓練、低於比賽配速的強度、以及分解式 drill」**高度爭議且缺乏科學證據**。作者判定 USRPT 實質上是高強度間歇訓練（HIT）的一個變體，建議教練謹慎使用、放進多元週期化計畫裡而非取代之。**對本專案的意義**：Vortex 是 drill 密集的教學系統，引用 USRPT 支撐「速度不是訓練分界線」時，必須同時說清楚 USRPT 自己反對 drill 這件事沒有證據——不能只挑對自己有利的一半。"
+
+  - id: src.winter-2009-biomechanics-anthropometric-table
+    display: "Winter, D. A. (2009). Biomechanics and Motor Control of Human Movement (4th ed.), Table 4.1: Anthropometric Data, pp. 83-84. Hoboken, NJ: Wiley."
+    title: "Biomechanics and Motor Control of Human Movement (4th ed.)"
+    type: book
+    verification_status: verified
+    authors: ["David A. Winter"]
+    year: 2009
+    publisher: "Wiley"
+    identifier:
+      isbn: "978-0-470-39818-0"
+      doi: "10.1002/9780470549148"
+    retrieved_on: "2026-09-06"
+    notes: "2026-09-06 主動補登，用途是替蝶式抬頭換氣段落提供頭頸段質量的可查證數字。Table 4.1 的原文節錄（第 83-84 頁）已下載並逐行核對，**Head and neck = 0.081 of total body mass**（分段定義為 C7-T1 與第一肋至耳道）。70 公斤成人換算約 5.7 公斤。**使用邊界**：這是屍體研究與掃描資料綜合出的平均比例，用來估量級，不是個體實測；表中頭與頸是**合併**的一段，單獨頭部更輕。登錄動機見同日對 Rushall（1996）「成人頭部至少 7 公斤」的核對——那個數字沒有量測出處，且要體重 86 公斤以上才成立。"

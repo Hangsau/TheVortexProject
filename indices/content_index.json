@@ -8060,15 +8060,17 @@
         ],
         "certainty": [
           "🔵",
-          "🟠"
+          "🟠",
+          "🟡"
         ],
         "stroke": [
           "fly"
         ]
       },
       "source_ids": [
-        "src.brent-rushall-sdsu",
-        "src.usms-masters-teaching-article"
+        "src.rushall-1996-butterfly-breathing-actions",
+        "src.usms-masters-teaching-article",
+        "src.winter-2009-biomechanics-anthropometric-table"
       ],
       "outgoing_ids": [
         "fly.tech.17",
@@ -8088,14 +8090,15 @@
         ],
         "certainty": [
           "🔵",
-          "🟠"
+          "🟠",
+          "🟡"
         ],
         "stroke": [
           "fly"
         ]
       },
       "source_ids": [
-        "src.brent-rushall-sdsu",
+        "src.rushall-1996-butterfly-breathing-actions",
         "src.usms-lassen-2018-butterfly-side-breathing"
       ],
       "outgoing_ids": [
@@ -10066,14 +10069,17 @@
         ],
         "certainty": [
           "🔵",
-          "🟠"
+          "🟡",
+          "🟢"
         ],
         "stroke": [
           "free"
         ]
       },
       "source_ids": [
-        "src.specificity-of-practice-usrpt"
+        "src.craig-pendergast-1979-stroke-rate-distance-velocity",
+        "src.nugent-2019-usrpt-systematic-review",
+        "src.rushall-2016-usrpt-defined-bulletin-49"
       ],
       "outgoing_ids": [
         "free.tech.24",

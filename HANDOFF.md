@@ -6,6 +6,30 @@
 
 ## 當前狀態（2026-09-06，最新）
 
+### ✅ **Rushall 族：一個殘樁、一個複合鍵，回原文核對後查出兩個錯誤（錯誤 56–57）**
+
+| 指標 | 段落起點 | 現在 |
+|---|---|---|
+| ERROR | 0 | 0 |
+| 總 WARN | 142 | 142 |
+| `_sources.yaml` 筆數 | 773 | **778**（2 筆立墓碑 + 5 筆新登錄） |
+
+**兩筆一起做，因為它們指向同一個人。** `src.brent-rushall-sdsu` 的 display 只有「Brent Rushall, SDSU」——人名加機構，指不到任何一份文件，是「看起來有來源」的最低成本偽裝。`src.specificity-of-practice-usrpt` 則是把兩個東西黏成一串。
+
+**錯誤 56：`src.specificity-of-practice-usrpt` 黏的不是「兩個概念」，是兩個不同領域的同名概念。** 動作學習有一個「specificity of practice」（Proteau 一系，講的是**練習當下的感覺條件**會被綁進技能裡），訓練學有一個「Principle of Specificity」（講**刺激特異性**）。`free.err23` 的證據列寫「特異性原則：慢速習得的神經動作模式不能自動遷移至比賽速度」，語感像前者、內容是後者。回 Rushall 的 Swimming Science Bulletin 49 原文核對（PDF 已下載逐句讀）確認 USRPT 援引的是後者，而且他自己標明的依據是「stroke technique is specific to the velocity of swimming (Chatard et al., 1990; Craig & Pendergast, 1979)」——**游速與技術的關係，跟 Proteau 那一系毫無關係**。
+
+**同一列還有第二層外推。** Craig 與 Pendergast（1979，PMID 522640，摘要已核）量的是**運動學**：划頻、每划距離與速度的關係（四式都是提速＝提划頻＋降每划距離，蝶式的加速幾乎全來自划頻，蛙式每划距離掉最多）。它撐得起「慢游練的參數不等於快游的參數」，撐不起「神經動作模式無法遷移」——後者沒有任何量測。已把該列拆成兩列：一列 🟡 Craig & Pendergast 講運動學並自己標出外推邊界，一列 🟢 講 Rushall 的主張。
+
+**主動補登一筆反證。** 原複合鍵只掛倡議者本人的說法，沒有任何獨立檢驗——這種單邊引用比缺來源更難察覺。已登錄 Nugent 等（2019，PMID 31632163）的系統性回顧：檢索 1347 篇、全文評估 15 篇後**15 篇全部排除，因為介入措施並不是 USRPT**，結論是 USRPT 目前並未建立在同行評審文獻上；同一份回顧也指出 USRPT 反對分解式 drill 這一點缺乏證據。**本庫是 drill 密集的系統**，引用 USRPT 支撐「速度不是訓練分界線」時，不能只取對自己有利的一半，新寫的那一列把這件事寫進正文。
+
+**殘樁重建成功。** 回到 `teaching-errors.yaml` 兩處引用的上下文，用英文原句去找，查到真出處是 **Rushall（1996）. Breathing Actions in Butterfly Swimming, Carlile Coaches' Forum 2(6)**，原文已下載，兩句逐字對上（"Since an adult head weighs at least 7 kg…"／"Breathing below the water line results in very little head movement…"）。**兩處引用的 certainty 從 🟠 升成 🟡**——原本標教練觀測，其實有文件；但它是 Rushall 自編自行發行的教練通訊、非同行評審，所以寫「Rushall 主張」不寫「研究顯示」。同一篇還有一個時代陷阱：文中說側向換氣「未完全符合蝶式規則」而裁判容忍，那是 **1996 年**對對稱性規則的詮釋，已在正文標明不可當現行規則讀。
+
+**錯誤 57：`fly.err12` 的「成人頭部至少 7 公斤」是 Rushall 沒有出處的斷言，而且偏高，卻被本庫寫成 🔵 推導。** 🔵 代表物理／解剖推導、不需要來源，但頭部質量是量測值不是推導值——這個標記本身就用錯了。查 Winter 的人體測量表（Table 4.1 原文節錄已下載，逐行核對）：**頭頸段合計 = 體重的 0.081**，70 公斤成人約 5.7 公斤。要到 7 公斤得體重 86 公斤以上，而且那還是頭**頸**合計、單獨頭部更輕。處置：🔵 那列拿掉數字只留機制（機制本身沒問題——抬頭的反作用力確實得由手臂下壓或踢腿抵消），數字改由新登錄的 Winter（2009）以 🟡 承擔，並在 Rushall 那列明寫「機制成立、數字不要照抄」。**這條的通則是：一個數字被反覆轉引久了會長出 🔵 的外觀，但推導不出來的東西就不是推導。**
+
+**新登錄 5 筆**：`src.rushall-1996-butterfly-breathing-actions`、`src.rushall-2016-usrpt-defined-bulletin-49`、`src.craig-pendergast-1979-stroke-rate-distance-velocity`、`src.nugent-2019-usrpt-systematic-review`、`src.winter-2009-biomechanics-anthropometric-table`（ISBN 978-0-470-39818-0，DOI 10.1002/9780470549148）。前四筆全部下載原文或核對 PubMed 摘要後才登。
+
+**下一步建議**：複合鍵剩 **34 筆**。下一批是體量最大的**機構／網站族** 17 筆：`src.usms-*`／`src.u-s-masters-swimming-*`／`src.race-club-*`／`src.yourswimlog-*`／`src.swimswam-*`／`src.360swim-*`／`src.competitor-swim-*`／`src.getphysical-*`／`src.myswimpro-*`／`src.train-daly-*`。這族的難點不是查不到，是**要判斷網站頁面算不算來源**——專案自己已有前例可循，**照走即可、不必重新決策**：文章層級的登錄是 `verified`（`src.the-race-club-freestyle-hand-entry`、`src.usms-bay-2024-backstroke-flags` 都指到單篇文章＋URL），**機構層級的一律 `retracted`**（`src.the-race-club`、`src.usms`、`src.u-s-masters-swimming` 已立墓碑）。接著是最貴的單姓氏族（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.seiler`、`src.hellard`、`src.mujika`、`src.pink`、`src.lyttle`、`src.hayashi`、`src.andersen-2020`、`src.ward-2018`、`src.benjanuvatra-2007-b`、`src.pmc5260528`、`src.pmc8607769` 等；**`src.seiler` 與 `src.hellard` 已被 `schools_overview` 引用，拆時一併改指**）。另有三筆非複合但同樣要處理：`src.adductor-loading-return-to-sport-practice-co`（display 已標【佔位字串，非真實文獻】但還沒立墓碑）、`src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012`（`zones.yaml:218`）、`FrEC1` 的 W002（要讀《Total Immersion》原書核對「閉眼超人趕上」是否在書中，才登得了書＋頁碼）。**還欠一筆**：Chatard 等（1990）是 Rushall 指的另一個游速—技術特異性依據，本次未解析、未登錄。
+
 ### ✅ **自述族：註冊表裡有 11 筆「來源」的內容是本專案自己的名字（E017，新增檢查）**
 
 | 指標 | 段落起點 | 現在 |
@@ -30,7 +54,7 @@
 
 **`src.vortex-a` 那一處是 🟠**（`free.err6` 入水點的「現代共識」列），拿掉 `source_ids` 後改寫 `observation_basis`：交代誰觀察、哪些族群、並明說「約肩寬、距頭部 30–45 公分」是教學上拿來對齊的操作範圍、不是量測結果（沒有研究測過這個距離），外推邊界排除競技衝刺配速。
 
-**下一步建議**：複合鍵剩 **36 筆**。下一批做 `src.specificity-of-practice-usrpt`（`free.err23` 引用，真複合鍵：「特異性練習」是運動學習原則、USRPT 是 Rushall 在 SDSU 的訓練體系，兩個各自要真來源；**順手一起解掉兄弟殘樁 `src.brent-rushall-sdsu`**，display 只寫「Brent Rushall, SDSU」——人名加機構不是來源，`teaching-errors.yaml` 有 2 處引用）。接著是體量最大的**機構／網站族**：`src.usms-*`／`src.u-s-masters-swimming-*`／`src.race-club-*`／`src.yourswimlog-*`／`src.swimswam-*` 等 17 筆。這族的難點不是查不到，是**要判斷網站頁面算不算來源**——專案自己已有前例可循：**文章層級的登錄是 `verified`**（`src.the-race-club-freestyle-hand-entry`、`src.usms-bay-2024-backstroke-flags` 都指到單篇文章＋URL），**機構層級的一律 `retracted`**（`src.the-race-club`、`src.usms`、`src.u-s-masters-swimming` 已立墓碑）。照這條線走即可，不必重新決策。最後是最貴的單姓氏族（`src.gonjo`、`src.arellano`、`src.zamparo`、`src.seiler`、`src.hellard`、`src.mujika`、`src.pink`、`src.lyttle`、`src.hayashi` 等；**`src.seiler` 與 `src.hellard` 已被 `schools_overview` 引用，拆時一併改指**）。另有兩筆非複合但同樣要處理：`src.adductor-loading-return-to-sport-practice-co`（display 已標【佔位字串，非真實文獻】但還沒立墓碑）、`FrEC1` 的 W002（要讀《Total Immersion》原書核對「閉眼超人趕上」是否在書中，才登得了書＋頁碼）。
+（本段的「下一步建議」已由上方 Rushall 族段落接手，不重複。）
 
 ### ✅ **競賽規則族：`src.fina-sw64-usas-usms` 拆解時下載規則原文核對，查出引用的條號說的是反話（錯誤 55）**
 

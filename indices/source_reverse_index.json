@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 773,
+  "source_count": 778,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -882,22 +882,11 @@
     },
     {
       "id": "src.brent-rushall-sdsu",
-      "display": "Brent Rushall, SDSU",
-      "verification_status": "unverified",
+      "display": "【殘樁／複合鍵，已重建】Brent Rushall, SDSU",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "fly.err12",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[70].public.evidence[1]"
-        },
-        {
-          "id": "fly.err13",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[71].public.evidence[1]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.british-swimming-a-guide-to-anaerobic-traini-a",
@@ -1622,6 +1611,23 @@
           "id": "psych.interaction.anterior_insula_gain",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.craig-pendergast-1979-stroke-rate-distance-velocity",
+      "display": "Craig, A. B., Jr., & Pendergast, D. R. (1979). Relationships of stroke rate, distance per stroke, and velocity in competitive swimming. Medicine and Science in Sports, 11(3), 278–283.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "522640",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/522640/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.err23",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[22].public.evidence[0]"
         }
       ]
     },
@@ -6717,6 +6723,25 @@
       ]
     },
     {
+      "id": "src.nugent-2019-usrpt-systematic-review",
+      "display": "Nugent, F., Comyns, T., Kearney, P., & Warrington, G. (2019). Ultra-short race-pace training (USRPT) in swimming: Current perspectives. Open Access Journal of Sports Medicine, 10, 133–144.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "31632163",
+        "pmcid": "PMC6789176",
+        "doi": "10.2147/OAJSM.S180598",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/31632163/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.err23",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[22].public.evidence[1]"
+        }
+      ]
+    },
+    {
       "id": "src.olbrecht-2000",
       "display": "【複合來源鍵，已拆解】已拆為 src.olbrecht-2000-science-of-winning",
       "verification_status": "retracted",
@@ -10634,6 +10659,43 @@
       ]
     },
     {
+      "id": "src.rushall-1996-butterfly-breathing-actions",
+      "display": "Rushall, B. S. (1996). Breathing actions in butterfly swimming. Carlile Coaches' Forum, 2(6), 14 February 1996. San Diego State University.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://coachsci.sdsu.edu/swim/ccf/ccf0206.htm"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "fly.err12",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[70].public.evidence[2]"
+        },
+        {
+          "id": "fly.err13",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[71].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.rushall-2016-usrpt-defined-bulletin-49",
+      "display": "Rushall, B. S. (2016). USRPT defined: After two years USRPT comes of age (Version 1.2). Swimming Science Bulletin, 49. San Diego State University.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://coachsci.sdsu.edu/swim/bullets/49DEFINED.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "free.err23",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[22].public.evidence[1]"
+        }
+      ]
+    },
+    {
       "id": "src.ryan-deci-2000-sdt-facilitation",
       "display": "Ryan, R. M., & Deci, E. L. (2000). Self-determination theory and the facilitation of intrinsic motivation, social development, and well-being.",
       "verification_status": "verified",
@@ -11093,17 +11155,11 @@
     },
     {
       "id": "src.specificity-of-practice-usrpt",
-      "display": "Specificity of Practice；USRPT",
-      "verification_status": "unverified",
+      "display": "【殘樁／複合鍵，已重建】Specificity of Practice；USRPT",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "free.err23",
-          "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[22].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.spencer-2018-sipe-systematic-review",
@@ -14442,6 +14498,23 @@
           "id": "psych.motivation.competence_moderator",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[5].public"
+        }
+      ]
+    },
+    {
+      "id": "src.winter-2009-biomechanics-anthropometric-table",
+      "display": "Winter, D. A. (2009). Biomechanics and Motor Control of Human Movement (4th ed.), Table 4.1: Anthropometric Data, pp. 83-84. Hoboken, NJ: Wiley.",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "978-0-470-39818-0",
+        "doi": "10.1002/9780470549148"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err12",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[70].public.evidence[1]"
         }
       ]
     },
