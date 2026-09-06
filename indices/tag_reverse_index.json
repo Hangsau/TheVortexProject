@@ -1502,7 +1502,6 @@
         "periodization.taper.type.fast_exponential",
         "periodization.taper.type.step",
         "periodization.taper.volume",
-        "periodization.zones.energy_systems_primer",
         "periodization.zones.school_polarized",
         "periodization.zones.swim_maglischo",
         "periodization.zones.swim_three_zone",

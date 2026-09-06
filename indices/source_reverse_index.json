@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 801,
+  "source_count": 813,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -842,8 +842,13 @@
         "pmid": "17762369",
         "doi": "10.1249/mss.0b013e31806010e0"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "periodization.taper.swim",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "swim_application"
+        },
         {
           "id": "periodization.taper.type.fast_exponential",
           "file": "canonical/periodization/taper.yaml",
@@ -2761,18 +2766,49 @@
     },
     {
       "id": "src.gonzalez-rave",
-      "display": "González-Ravé et al. 2021 (IJSPP 16(7):913–926, PMID 33952709, 系統回顧 9 篇入選/162 筆 TID); Papadimitriou et al. 2025 (Eur J Appl Physiol, DOI 10.1007/s00421-025-06064-x，全文); Barbosa et al. 2019（衝刺者）",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.gonzalez-rave-2021-tid-review、src.papadimitriou-2026-sprint-tid 等 2 筆（第三筆 Barbosa et al. 2019 查無此文，已刪）",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.gonzalez-rave-2021-tid-review",
+      "display": "González-Ravé JM, Hermosilla F, González-Mohíno F, Casado A, Pyne DB. (2021). Training Intensity Distribution, Training Volume, and Periodization Models in Elite Swimmers: A Systematic Review. Int J Sports Physiol Perform 16(7):913-926.",
+      "verification_status": "verified",
       "identifier": {
-        "doi": "10.1007/s00421-025-06064-x，全文",
-        "pmid": "33952709"
+        "pmid": "33952709",
+        "doi": "10.1123/ijspp.2020-0906"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.zones.school_polarized",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "school_polarized"
+        },
         {
           "id": "periodization.zones.swim_tid",
           "file": "canonical/periodization/zones.yaml",
           "path": "swim_tid"
+        }
+      ]
+    },
+    {
+      "id": "src.gonzalez-rave-2022-400im-case",
+      "display": "González-Ravé JM, Pyne DB, Del Castillo JA, González-Mohíno F, Stone MH. (2022). Training periodization for a world-class 400 meters individual medley swimmer. Biol Sport 39(4):883-888.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "36247944",
+        "pmcid": "PMC9536385",
+        "doi": "10.5114/biolsport.2022.109954"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.swim_annual",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "swim_annual_structure"
         }
       ]
     },
@@ -3520,13 +3556,22 @@
     },
     {
       "id": "src.hellard",
-      "display": "Hellard et al. 2019 (PMC6470949); González-Ravé et al. 2022 (PMID 36247944, n=1)",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.hellard-2019、src.gonzalez-rave-2022-400im-case 等 2 筆",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.hellard-2019",
+      "display": "Hellard P, Avalos-Fernandes M, Lefort G, Pla R, Mujika I, Toussaint JF, Pyne DB. (2019). Elite Swimmers' Training Patterns in the 25 Weeks Prior to Their Season's Best Performances: Insights Into Periodization From a 20-Years Cohort. Front Physiol 10:363.",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "36247944",
-        "pmcid": "PMC6470949"
+        "pmid": "31031631",
+        "pmcid": "PMC6470949",
+        "doi": "10.3389/fphys.2019.00363"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
         {
           "id": "periodization.structure.schools_overview",
@@ -3537,6 +3582,16 @@
           "id": "periodization.structure.swim_annual",
           "file": "canonical/periodization/structure.yaml",
           "path": "swim_annual_structure"
+        },
+        {
+          "id": "periodization.zones.school_polarized",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "school_polarized"
+        },
+        {
+          "id": "periodization.zones.swim_tid",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "swim_tid"
         }
       ]
     },
@@ -5683,10 +5738,36 @@
     },
     {
       "id": "src.mujika",
-      "display": "Mujika et al. 1996 (PMID 8775162); Mujika/Padilla/Pyne 2002 (PMID 12439774); Bosquet et al. 2007 (PMID 17762369)",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.mujika-1996-taper-modeling、src.mujika-2002-sydney-taper 等 2 筆（第三筆 Bosquet 2007 沿用既有 src.bosquet-2007-tapering-meta-analysis）",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.mujika-1996-taper-modeling",
+      "display": "Mujika I, Busso T, Lacoste L, Barale F, Geyssant A, Chatard JC. (1996). Modeled responses to training and taper in competitive swimmers. Med Sci Sports Exerc 28(2):251-258.",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "8775162"
+        "pmid": "8775162",
+        "doi": "10.1097/00005768-199602000-00015"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.taper.swim",
+          "file": "canonical/periodization/taper.yaml",
+          "path": "swim_application"
+        }
+      ]
+    },
+    {
+      "id": "src.mujika-2002-sydney-taper",
+      "display": "Mujika I, Padilla S, Pyne D. (2002). Swimming performance changes during the final 3 weeks of training leading to the Sydney 2000 Olympic Games. Int J Sports Med 23(8):582-587.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "12439774",
+        "doi": "10.1055/s-2002-35526"
       },
       "usage_count": 1,
       "usages": [
@@ -6795,6 +6876,24 @@
       ]
     },
     {
+      "id": "src.nikitakis-2023-set-order",
+      "display": "Nikitakis IS, Bogdanis GC, Paradisis GP, Toubekis AG. (2023). Effects of Training Sets Sequence on Swimming Performance, Training Load and Physiological Responses. Sports (Basel) 11(12):240.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "38133107",
+        "pmcid": "PMC10747448",
+        "doi": "10.3390/sports11120240"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.energy_systems_primer",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "energy_systems_primer.training_protocols[3]"
+        }
+      ]
+    },
+    {
       "id": "src.noakes-1997-central-governor",
       "display": "Noakes, T. D. (1997). 1996 J.B. Wolffe Memorial Lecture. Challenging beliefs: Ex Africa semper aliquid novi.",
       "verification_status": "verified",
@@ -7118,6 +7217,41 @@
           "id": "psych.fear.diving_reflex_calm",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[0].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.papadimitriou-2026-sprint-tid",
+      "display": "Papadimitriou K, Ruiz-Navarro JJ, Cuenca-Fernández F, Margaritelis NV. (2026). Training intensity distribution for sprinter swimmers: suggestions for swimming coaches and scientists. Eur J Appl Physiol 126(2):619-628.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "41269307",
+        "doi": "10.1007/s00421-025-06064-x"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.swim_tid",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "swim_tid"
+        }
+      ]
+    },
+    {
+      "id": "src.papadimitriou-2026-sprinter-case",
+      "display": "Papadimitriou K, Margaritelis NV, Tsalis G. (2026). One Sprinter, Two Olympic Preparations: A Single-Athlete Longitudinal Observational Study of Training-Intensity Distribution and Implications for Future 50 m Events. Sports (Basel) 14(1):23.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "41590965",
+        "pmcid": "PMC12845544",
+        "doi": "10.3390/sports14010023"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.swim_tid",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "swim_tid"
         }
       ]
     },
@@ -8693,19 +8827,11 @@
     },
     {
       "id": "src.pmc8607769",
-      "display": "PMC8607769（Sprint Interval Swim Training Set 與 100m 自由式關聯，血乳酸+運動學）；另見 PMC10747448（訓練組順序對乳酸反應）",
-      "verification_status": "unverified",
-      "identifier": {
-        "pmcid": "PMC8607769"
-      },
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "periodization.zones.energy_systems_primer",
-          "file": "canonical/periodization/zones.yaml",
-          "path": "energy_systems_primer.training_protocols[3]"
-        }
-      ]
+      "display": "【複合來源鍵，已拆解】已拆為 src.terzi-2021-sprint-interval-set、src.nikitakis-2023-set-order 等 2 筆",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pmc8700779",
@@ -11149,11 +11275,19 @@
     },
     {
       "id": "src.seiler",
-      "display": "Seiler & Kjerland 2006 (PMID 16430681); Seiler 2010 (IJSPP 5(3):276–291); Stöggl & Sperlich 2014 (PMC3912323); González-Ravé et al. 2021 (PMID 33952709, IJSPP 16(7):913–926)",
-      "verification_status": "unverified",
+      "display": "【複合來源鍵，已拆解】已拆為 src.seiler-kjerland-2006、src.seiler-2010、src.stoggl-sperlich-2014 等 3 筆（第四筆 González-Ravé 2021 見 src.gonzalez-rave-2021-tid-review）",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.seiler-2010",
+      "display": "Seiler S. (2010). What is best practice for training intensity and duration distribution in endurance athletes? Int J Sports Physiol Perform 5(3):276-291.",
+      "verification_status": "verified",
       "identifier": {
-        "pmid": "16430681",
-        "pmcid": "PMC3912323"
+        "pmid": "20861519",
+        "doi": "10.1123/ijspp.5.3.276"
       },
       "usage_count": 2,
       "usages": [
@@ -11162,6 +11296,23 @@
           "file": "canonical/periodization/structure.yaml",
           "path": "schools_overview"
         },
+        {
+          "id": "periodization.zones.school_polarized",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "school_polarized"
+        }
+      ]
+    },
+    {
+      "id": "src.seiler-kjerland-2006",
+      "display": "Seiler KS, Kjerland GØ. (2006). Quantifying training intensity distribution in elite endurance athletes: is there evidence for an \"optimal\" distribution? Scand J Med Sci Sports 16(1):49-56.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "16430681",
+        "doi": "10.1111/j.1600-0838.2004.00418.x"
+      },
+      "usage_count": 1,
+      "usages": [
         {
           "id": "periodization.zones.school_polarized",
           "file": "canonical/periodization/zones.yaml",
@@ -11624,6 +11775,24 @@
           "id": "psych.attention.elite_resilience",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[2].public"
+        }
+      ]
+    },
+    {
+      "id": "src.stoggl-sperlich-2014",
+      "display": "Stöggl T, Sperlich B. (2014). Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training. Front Physiol 5:33.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "24550842",
+        "pmcid": "PMC3912323",
+        "doi": "10.3389/fphys.2014.00033"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.school_polarized",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "school_polarized"
         }
       ]
     },
@@ -12345,6 +12514,24 @@
           "id": "psych.motivation.mastery_vs_performance_climate",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[3].public"
+        }
+      ]
+    },
+    {
+      "id": "src.terzi-2021-sprint-interval-set",
+      "display": "Terzi E, Skari A, Nikolaidis S, Papadimitriou K, Kabasakalis A, Mougios V. (2021). Relevance of a Sprint Interval Swim Training Set to the 100-Meter Freestyle Event Based on Blood Lactate and Kinematic Variables. J Hum Kinet 80:153-161.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "34868425",
+        "pmcid": "PMC8607769",
+        "doi": "10.2478/hukin-2021-0091"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.zones.energy_systems_primer",
+          "file": "canonical/periodization/zones.yaml",
+          "path": "energy_systems_primer.training_protocols[3]"
         }
       ]
     },

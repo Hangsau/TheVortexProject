@@ -585,7 +585,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.structure.microcycle | 🟡 | Microcycle＝一週，是排課表的最小單位。一週有不同類型：發展型（往上堆）、競賽型（賽前 3–5 天達峰）、恢復型、卸載型（量砍一半以上）。游泳就以『週』為單位排課。週內休息 |
 | periodization.structure.gas | 🟡 | 為什麼週期化要有節奏、不能一路往上堆？教練書最常用的解釋是 Selye 的壓力三階段：① 警覺期（剛開始幾天，覺得難）、② 適應期（幾週後身體變強）、③ 耗竭期（再撐就崩），所以每 |
 | periodization.structure.detraining | 🟢 | 完全停練掉得有多快？最大攝氧量：停 4 天掉 4%、停 4 週掉 14%、停 8 週掉 20%。力量也類似（停 4 週最大肌力掉 6–10%）。好消息是這些可以練回來。實務結論：休 |
-| periodization.structure.swim_annual | 🟢 | 菁英游泳的年度結構長怎樣（有實證的）：一年大概切 2–4 個中週期（每個約 15 週）。最反直覺的數字——高達 86–90% 的訓練量是低強度（血乳酸 ≤4），不是整天操高強度。有 |
+| periodization.structure.swim_annual | 🟢 | 菁英游泳的年度結構長怎樣（有實證的）：中週期大約 14–15 週一個，回推全年大概 2–4 個
+（這個「一年幾個」是推估，原始研究只看了賽季最佳成績前的 25 週）。而且長短有差— |
 | periodization.structure.swim_youth_ltad | 🟢 | 青少年怎麼分齡練：Swimming Canada 的游泳專項表大致是——女生 8–11 歲學習訓練、11–14 訓練為訓練、14–16 訓練為競賽、16 歲以上競賽求勝；男生各段晚 |
 | periodization.structure.schools_overview | 🔵 | 週期化不是一套被證明的定論，而是幾套互相辯論的框架。它們問的問題不同、適用的對象不同——把任何一派當『標準答案』都是誤讀。 |
 | periodization.structure.school_block | 🟡 | 板塊週期化（Issurin）跟 Bompa 最大的不同：Bompa 主張準備期可以同時把很多能力一起練；Issurin 說高水準選手做不到——很多訓練刺激會互相打架（大量有氧會干擾 |
@@ -611,9 +612,13 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.zones.swim_three_zone | 🟢 | 做訓練強度分布分析時最常用的簡化版：用血乳酸把強度切三段——Z1 輕鬆（≤2）、Z2 閾值（2–4）、Z3 吃力（>4）。下面的 polarized / pyramidal 分布就 |
 | periodization.zones.energy_systems_primer | 🟡 | 身體有三套供能系統，差別在『撐多久、靠什麼、怎麼累』：① 磷酸原（ATP-PCr）——前 10 秒的爆發力來源，用肌肉裡現成的能量，不產乳酸，但很快用完，休 3–5 分鐘才回補；對 |
 | periodization.zones.swim_energy_by_distance | 🟡 | 不同距離靠的能量系統差很多：50m 幾乎全靠無氧（有氧只 5–20%），100m 有氧無氧大概各半，400m 以上開始有氧主導。注意 400m 的有氧占比在不同研究差很大（40%  |
-| periodization.zones.swim_tid | 🟢 | TID＝整個週期裡輕鬆/閾值/吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。游泳實證裡『金字 |
+| periodization.zones.swim_tid | 🟢 | TID＝整個週期裡輕鬆／閾值／吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆
+＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。
+游泳最該知道 |
 | periodization.zones.swim | 🔵 | 游泳怎麼套 Bompa 這套：組課強度用『比賽配速百分比』講——賽配速＝zone 2，比賽更快（衝刺/乳酸耐受）＝zone 1，閾值/節奏＝zone 3，有氧基礎＝zone 4，恢 |
-| periodization.zones.school_polarized | 🟢 | 極化派（Seiler）問的不是『每區強度多少』而是『每區各占幾成』。他觀察菁英耐力選手，發現他們自然形成『大量輕鬆＋少量超吃力、中間幾乎不練』的分布——大約 80% 低強度、20% |
+| periodization.zones.school_polarized | 🟢 | 極化派（Seiler）問的不是「每區強度多少」而是「每區各占幾成」。他觀察全國／國際級
+耐力選手，發現他們自然形成「大量輕鬆＋少量超吃力、中間幾乎不練」的分布——大約
+80% 低強 |
 | periodization.zones.olbrecht_model | 🟡 | Olbrecht（游泳能量系統論）的核心是『最適，不是最大』：有氧和無氧都不是越大越好，要配到最適組合點——無氧太強會拖累有氧效率，有氧練過頭又壓掉速度。他最有名的是質疑閾值訓練是 |
 
 ### `dryland.yaml` （**9 節點**）

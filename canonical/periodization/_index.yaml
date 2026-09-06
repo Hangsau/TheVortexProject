@@ -54,7 +54,7 @@ taper:
 
 # ── 能量系統強度分區（zones.yaml）──
 zones:
-  - {id: periodization.zones.school_polarized, file: zones.yaml, name_zh: 極化分布（Seiler/TID）, gist_zh: "問每區占幾成：80/20 極化、避中間 Z2；但游泳金字塔型更常見（González-Ravé 2021）", stages: [t2c, t2w]}
+  - {id: periodization.zones.school_polarized, file: zones.yaml, name_zh: 極化分布（Seiler/TID）, gist_zh: "問每區占幾成：80/20 極化、避中間 Z2；但游泳不吻合——菁英泳者 44–46% 的量就在 2–4 mmol（Hellard 2019）", stages: [t2c, t2w]}
   - {id: periodization.zones.olbrecht_model, file: zones.yaml, name_zh: Olbrecht 能量系統個體化, gist_zh: "最適非最大；閾值=魔法子彈謬誤；capacity/power 不能同時練；個體乳酸測試", stages: [t2c, t2w]}
   - {id: periodization.zones.table_7_1, file: zones.yaml, name_zh: Bompa 六分區, gist_zh: "用最大表現百分比分 6 區；賽配速=zone 2，每週≥50% 落賽配速", stages: [t2t, t2c, t2w]}
   - {id: periodization.zones.energy_systems_primer, file: zones.yaml, name_zh: 三大能量系統運作入門, gist_zh: "磷酸原(0–10s爆發)/糖酵解(10s–2min乳酸)/有氧(2min+持續)三系統的運作、主導距離與訓練方向；三者連續重疊非開關", stages: [t2t, t2c, t2w]}
@@ -64,7 +64,7 @@ zones:
   - {id: periodization.zones.swim_maglischo, file: zones.yaml, name_zh: Maglischo 游泳六分區, gist_zh: "游泳專用分區：恢復/En1/En2/En3/AnTh(3–5mmol)/VO2max；SP另類", stages: [t2t, t2c, t2w]}
   - {id: periodization.zones.swim_three_zone, file: zones.yaml, name_zh: 三區乳酸模型, gist_zh: "TID 分析用：Z1≤2 / Z2 2–4 / Z3>4 mmol", stages: [t2c, t2w]}
   - {id: periodization.zones.swim_energy_by_distance, file: zones.yaml, name_zh: 各距離能量系統供能比, gist_zh: "50m 有氧5–20%、100m≈各半、400m 40–84%(跨研究區間)", stages: [t2c, t2w]}
-  - {id: periodization.zones.swim_tid, file: zones.yaml, name_zh: 訓練強度分布 TID, gist_zh: "極化/金字塔/閾值三型；游泳金字塔最常見(162筆89);依距離分流短=極化長=金字塔;連衝刺者也87–90%量在Z1", stages: [t2c, t2w]}
+  - {id: periodization.zones.swim_tid, file: zones.yaml, name_zh: 訓練強度分布 TID, gist_zh: "極化/金字塔/閾值三型；游泳把 44–46% 的量放在中間閾值區(Hellard 2019);依距離分流短=極化長=金字塔", stages: [t2c, t2w]}
   - {id: periodization.zones.swim, file: zones.yaml, name_zh: 游泳配速分區應用, gist_zh: "組課強度用比賽配速百分比表達；映射 Bompa 不發明數字", stages: [t2t, t2c, t2w]}
 
 # ── 陸上力量訓練（dryland.yaml）──

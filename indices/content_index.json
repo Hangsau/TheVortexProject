@@ -15784,12 +15784,12 @@
       },
       "source_ids": [
         "src.bompa-buzzichelli-2019",
-        "src.hellard",
+        "src.hellard-2019",
         "src.issurin-2008-block-periodization-book",
         "src.issurin-2010-new-horizons-periodization",
         "src.issurin-2016-block-benefits-limitations",
         "src.olbrecht-2000-science-of-winning",
-        "src.seiler",
+        "src.seiler-2010",
         "src.sweetenham-atkinson-2003-championship-swim-training"
       ],
       "outgoing_ids": [
@@ -15803,14 +15803,15 @@
       "domain": "periodization",
       "file": "canonical/periodization/structure.yaml",
       "path": "swim_annual_structure",
-      "title": "菁英游泳的年度結構長怎樣（有實證的）：一年大概切 2–4 個中週期（每個約 15 週）。最反直覺的數字——高達 86–90% 的訓練量是低強度（血乳酸 ≤4），不是整天操高強度。有一個 400 混合式選手的個案，全年 52 週分 3 段，週泳量在 24–90 km 間起伏（這是單一個案，不是通則）。",
+      "title": "菁英游泳的年度結構長怎樣（有實證的）：中週期大約 14–15 週一個，回推全年大概 2–4 個（這個「一年幾個」是推估，原始研究只看了賽季最佳成績前的 25 週）。而且長短有差——在那 25 週裡採「兩個 14–15 週長中週期」的泳者成績最快，採單一平坦型態的最慢。最常被誤讀的數字：86–90% 的訓練量落在血",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
-        "src.hellard"
+        "src.gonzalez-rave-2022-400im-case",
+        "src.hellard-2019"
       ],
       "outgoing_ids": []
     },
@@ -15929,7 +15930,9 @@
         ]
       },
       "source_ids": [
-        "src.mujika"
+        "src.bosquet-2007-tapering-meta-analysis",
+        "src.mujika-1996-taper-modeling",
+        "src.mujika-2002-sydney-taper"
       ],
       "outgoing_ids": []
     },
@@ -16029,8 +16032,7 @@
         "certainty": [
           "🔵",
           "🟠",
-          "🟡",
-          "🟢"
+          "🟡"
         ]
       },
       "source_ids": [
@@ -16039,7 +16041,8 @@
         "src.british-swimming-a-guide-to-anaerobic-traini-b",
         "src.liee-methods-bompa-ch11-table-11-1-swim-magl-2012",
         "src.mcardle-katch-exercise-physiology-textbook",
-        "src.pmc8607769"
+        "src.nikitakis-2023-set-order",
+        "src.terzi-2021-sprint-interval-set"
       ],
       "outgoing_ids": [
         "periodization.zones.swim_energy_by_distance",
@@ -16069,14 +16072,18 @@
       "domain": "periodization",
       "file": "canonical/periodization/zones.yaml",
       "path": "school_polarized",
-      "title": "極化派（Seiler）問的不是『每區強度多少』而是『每區各占幾成』。他觀察菁英耐力選手，發現他們自然形成『大量輕鬆＋少量超吃力、中間幾乎不練』的分布——大約 80% 低強度、20% 高強度（這個 80/20 算的是課次，不是時間）。為什麼避開中間（閾值）區？因為那強度『高不成低不就』：累積疲勞不少，但刺激又不如真正的高",
+      "title": "極化派（Seiler）問的不是「每區強度多少」而是「每區各占幾成」。他觀察全國／國際級耐力選手，發現他們自然形成「大量輕鬆＋少量超吃力、中間幾乎不練」的分布——大約 80% 低強度、20% 高強度（這個 80/20 算的是課次，不是時間）。為什麼避開中間（閾值）區？因為那強度「高不成低不就」：累積疲勞不少，刺激又不",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
-        "src.seiler"
+        "src.gonzalez-rave-2021-tid-review",
+        "src.hellard-2019",
+        "src.seiler-2010",
+        "src.seiler-kjerland-2006",
+        "src.stoggl-sperlich-2014"
       ],
       "outgoing_ids": [
         "periodization.zones.swim_three_zone"
@@ -16156,14 +16163,17 @@
       "domain": "periodization",
       "file": "canonical/periodization/zones.yaml",
       "path": "swim_tid",
-      "title": "TID＝整個週期裡輕鬆/閾值/吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。游泳實證裡『金字塔型』其實比『極化型』更常見（González-Ravé 2021 的 162 筆資料：金字塔 89、極化 65、閾值 8），而且型態會看主",
+      "title": "TID＝整個週期裡輕鬆／閾值／吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆 ＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。游泳最該知道的一件事是：它不像跑步、自行車那樣呈現極化。追蹤 127 名法國菁英泳者、 289 個賽季的資料顯示，將近一半的訓練量（44–46%）就落在",
       "tags": {
         "certainty": [
           "🟢"
         ]
       },
       "source_ids": [
-        "src.gonzalez-rave"
+        "src.gonzalez-rave-2021-tid-review",
+        "src.hellard-2019",
+        "src.papadimitriou-2026-sprint-tid",
+        "src.papadimitriou-2026-sprinter-case"
       ],
       "outgoing_ids": []
     },

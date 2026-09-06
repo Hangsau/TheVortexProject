@@ -1379,15 +1379,83 @@ sources:
     year: 2023
 
   - id: src.gonzalez-rave
-    display: "González-Ravé et al. 2021 (IJSPP 16(7):913–926, PMID 33952709, 系統回顧 9 篇入選/162 筆 TID); Papadimitriou et al. 2025 (Eur J Appl Physiol, DOI 10.1007/s00421-025-06064-x，全文); Barbosa et al. 2019（衝刺者）"
+    display: "【複合來源鍵，已拆解】已拆為 src.gonzalez-rave-2021-tid-review、src.papadimitriou-2026-sprint-tid 等 2 筆（第三筆 Barbosa et al. 2019 查無此文，已刪）"
     type: other
-    verification_status: unverified
-    authors: ["González-Ravé"]
-    et_al: true
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解，並逼出兩個錯誤。① 顯示字串宣稱 González-Ravé 2021 是「系統回顧
+      9 篇入選／162 筆 TID」，但該文摘要寫的是「識別 3487 篇 → 標題摘要篩選後剩 17 篇 →
+      全文審查再排除 8 篇 → **最終納入 9 篇**」，全文為 IJSPP 付費牆（Europe PMC、OpenAlex
+      皆確認無開放版本）。本庫據此推出的「162 筆 TID：金字塔 89、極化 65、閾值 8」在 PubMed、
+      Europe PMC 全文檢索、引用該文的論文全文、以及全網精確字串搜尋中**都找不到任何出處**，
+      判定為無依據數字，已從全部五個引用點撤除。② 第三筆「Barbosa et al. 2019（衝刺者）」
+      用來支撐「衝刺選手仍約 87–90% 訓練量落在 Z1」，PubMed 以作者、年份、主題交叉檢索
+      均查無此文；且目前唯一可查到的衝刺者 TID 實測（Papadimitriou 2026, PMID 41590965，
+      50 自菁英單一個案）各期 Z1 為 80/60/40/50% 與 85/60/30/40%，與 87–90% 相距甚遠。
+      該筆已刪除、不另建 id。本 id 保留為墓碑、不得再使用。
+
+  - id: src.gonzalez-rave-2021-tid-review
+    display: "González-Ravé JM, Hermosilla F, González-Mohíno F, Casado A, Pyne DB. (2021). Training Intensity Distribution, Training Volume, and Periodization Models in Elite Swimmers: A Systematic Review. Int J Sports Physiol Perform 16(7):913-926."
+    title: "Training Intensity Distribution, Training Volume, and Periodization Models in Elite Swimmers: A Systematic Review"
+    type: review
+    verification_status: verified
+    authors: ["González-Ravé JM", "Hermosilla F", "González-Mohíno F", "Casado A", "Pyne DB"]
+    year: 2021
+    container: "International Journal of Sports Physiology and Performance"
     identifier:
-      doi: "10.1007/s00421-025-06064-x，全文"
       pmid: "33952709"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.1123/ijspp.2020-0906"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      使用邊界：**只有摘要可取得**（IJSPP 付費牆，Europe PMC 與 OpenAlex 均確認無開放全文），
+      因此本庫只能引用摘要明載的內容。摘要可支持者為：檢索 3487 篇、最終納入 9 篇（3 篇為 1b
+      介入研究、6 篇為 2b 觀察研究）；短距離泳者多為極化與閾值型、中距離為閾值與金字塔型、
+      長距離主要為金字塔型；週期化以中週期波浪式為多數。**摘要不含任何 TID 筆數統計**，
+      任何「幾筆中金字塔幾筆」的計數都不得掛在本文名下。
+
+  - id: src.papadimitriou-2026-sprint-tid
+    display: "Papadimitriou K, Ruiz-Navarro JJ, Cuenca-Fernández F, Margaritelis NV. (2026). Training intensity distribution for sprinter swimmers: suggestions for swimming coaches and scientists. Eur J Appl Physiol 126(2):619-628."
+    title: "Training intensity distribution for sprinter swimmers: suggestions for swimming coaches and scientists"
+    type: review
+    verification_status: verified
+    authors: ["Papadimitriou K", "Ruiz-Navarro JJ", "Cuenca-Fernández F", "Margaritelis NV"]
+    year: 2026
+    container: "European Journal of Applied Physiology"
+    identifier:
+      pmid: "41269307"
+      doi: "10.1007/s00421-025-06064-x"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。本庫原把本文年份寫成 2025——那是線上先行（Epub 2025-11-21）的
+      日期，正式出版為 2026 年 2 月，已更正。原文可支持者：50 公尺項目的有氧貢獻約 20%、
+      100 公尺升至約 40–50%；儘管 50 公尺以無氧為主，**許多教練仍沿用含大量有氧量的極化式
+      TID**，作者主張短距離專項者應更倚重 HIIT、輔助衝刺與超速訓練，並提早專項化、
+      加重陸上肌力。使用邊界：本文是觀點／建議型綜述，作者自陳仍需實驗研究驗證，
+      不可當成效驗證據引用。
+
+  - id: src.papadimitriou-2026-sprinter-case
+    display: "Papadimitriou K, Margaritelis NV, Tsalis G. (2026). One Sprinter, Two Olympic Preparations: A Single-Athlete Longitudinal Observational Study of Training-Intensity Distribution and Implications for Future 50 m Events. Sports (Basel) 14(1):23."
+    title: "One Sprinter, Two Olympic Preparations: A Single-Athlete Longitudinal Observational Study of Training-Intensity Distribution and Implications for Future 50 m Events"
+    type: journal-article
+    verification_status: verified
+    authors: ["Papadimitriou K", "Margaritelis NV", "Tsalis G"]
+    year: 2026
+    container: "Sports (Basel)"
+    identifier:
+      pmid: "41590965"
+      pmcid: "PMC12845544"
+      doi: "10.3390/sports14010023"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 新增，用來取代查無此文的「Barbosa et al. 2019（衝刺者 87–90% 量在 Z1）」。
+      原文可支持者：一名 50 公尺自由式菁英男選手（個人最佳 21.27 秒），跨 Rio 2016 與
+      Tokyo 2021 兩個奧運週期、各四個中週期，TID 以占總游泳量百分比表示。
+      Rio 2016（Z1/Z2/Z3）：一般期 80/0/20、專項期 60/0/40、賽前期 40/30/30、減量期 50/20/30；
+      Tokyo 2021：85/0/15、60/0/40、30/30/40、40/20/40。Tokyo 週期在賽前與減量期投入更多
+      Z3，成績較佳（21.57 對 21.79 秒）。使用邊界：**n=1 觀察研究，作者自陳無法推論因果、
+      且記錄方式限制了外推**；本庫只用它來否證「衝刺者亦有約九成低強度量」的說法，
+      不用它建立處方。
 
   - id: src.gonzalez-rave-2025-a
     display: "González-Ravé 2025"
@@ -1466,15 +1534,64 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.hellard
-    display: "Hellard et al. 2019 (PMC6470949); González-Ravé et al. 2022 (PMID 36247944, n=1)"
+    display: "【複合來源鍵，已拆解】已拆為 src.hellard-2019、src.gonzalez-rave-2022-400im-case 等 2 筆"
     type: other
-    verification_status: unverified
-    authors: ["Hellard"]
-    et_al: true
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解。兩篇皆已取得全文並逐項核對，另逼出一處外推誤標：本庫原寫
+      「macrocycles_per_year: 2–4（菁英游泳常見；Hellard 2019）」，但 Hellard 2019 只觀察
+      賽季最佳成績前的 25 週，原文給的是該窗內的三種型態（兩個約 14–15 週的長 macrocycle、
+      兩個約 12–13 週、或單一平坦 macrocycle），**未給任何年度數量**；「2–4」是以 14–15 週
+      回推全年的推估，已改標 🔵 並註明非原文。本 id 保留為墓碑、不得再使用。
+
+  - id: src.hellard-2019
+    display: "Hellard P, Avalos-Fernandes M, Lefort G, Pla R, Mujika I, Toussaint JF, Pyne DB. (2019). Elite Swimmers' Training Patterns in the 25 Weeks Prior to Their Season's Best Performances: Insights Into Periodization From a 20-Years Cohort. Front Physiol 10:363."
+    title: "Elite Swimmers' Training Patterns in the 25 Weeks Prior to Their Season's Best Performances: Insights Into Periodization From a 20-Years Cohort"
+    type: journal-article
+    verification_status: verified
+    authors: ["Hellard P", "Avalos-Fernandes M", "Lefort G", "Pla R", "Mujika I", "Toussaint JF", "Pyne DB"]
+    year: 2019
+    container: "Frontiers in Physiology"
+    identifier:
+      pmid: "31031631"
+      pmcid: "PMC6470949"
+      doi: "10.3389/fphys.2019.00363"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 取回全文核對。原文可支持者（逐字）：127 名法國菁英泳者（男 60、女 67；
+      46 名短距離、81 名中距離），20 個賽季（1992–2012）、289 個泳者-賽季，觀察窗為賽季最佳
+      成績前的 25 週；「∼86–90% of the training was swum at an intensity of [La]b ≤ 4 mmol⋅L-1」，
+      再細分為 40–44% 在 <2 mmol、**44–46% 在 2 至 ≤4 mmol**、6–9.5% 在 >4–6 mmol、
+      3.5–4.5% 在 >6 mmol。本文對本庫最關鍵的一句是作者自己的對照：其他耐力運動在
+      2–4 mmol 這一區通常只占 2–16%，游泳卻放了將近一半——這才是「游泳不吻合極化模型」
+      的實證，取代先前查無出處的計數。原文並給出機制解釋：游泳在 <2 mmol 的速度與划頻
+      遠低於實際比賽，長時間停在該區等於練不像比賽的動作。
+      短距離組另辨識出三種總訓練負荷型態：兩個約 14–15 週的長 macrocycle、兩個約 12–13 週、
+      或單一平坦 macrocycle；**長型態成績最快**，且最常出現在奧運週期。
+      使用邊界：本文只涵蓋賽季最佳前 25 週，不可用來宣稱年度 macrocycle 數量。
+
+  - id: src.gonzalez-rave-2022-400im-case
+    display: "González-Ravé JM, Pyne DB, Del Castillo JA, González-Mohíno F, Stone MH. (2022). Training periodization for a world-class 400 meters individual medley swimmer. Biol Sport 39(4):883-888."
+    title: "Training periodization for a world-class 400 meters individual medley swimmer"
+    type: journal-article
+    verification_status: verified
+    authors: ["González-Ravé JM", "Pyne DB", "Del Castillo JA", "González-Mohíno F", "Stone MH"]
+    year: 2022
+    container: "Biology of Sport"
     identifier:
       pmid: "36247944"
-      pmcid: "PMC6470949"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。"
+      pmcid: "PMC9536385"
+      doi: "10.5114/biolsport.2022.109954"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 取回全文核對。單一世界級 400 公尺個人混合式泳者的賽季個案（n=1），
+      2018 歐錦賽銅牌。原文可支持者：52 週採傳統週期化、分三個 macrocycle，全季 15 場比賽
+      （第三個 macrocycle 密度最高）；週訓練量三個 macrocycle 分別為 25–79 km、24–87 km、
+      25–90 km；高地訓練占總訓練週數 23%，其後血紅素由 14.9 升至 16.0 g/100 ml、
+      血比容由 45.1% 升至 48.1%。TID 型態在一般準備期為傳統金字塔型，賽前專項期轉為
+      極化與閾值型。使用邊界：n=1 個案，不可當通則；本庫原寫「週量在 24–90 km 間波動」
+      是把三個 macrocycle 的區間壓成單一包絡，已改為分段呈現。
 
   - id: src.historical-background-unattributed
     display: "歷史背景"
@@ -1970,14 +2087,46 @@ sources:
       本 id 保持 unverified 且不得再被引用。
 
   - id: src.mujika
-    display: "Mujika et al. 1996 (PMID 8775162); Mujika/Padilla/Pyne 2002 (PMID 12439774); Bosquet et al. 2007 (PMID 17762369)"
+    display: "【複合來源鍵，已拆解】已拆為 src.mujika-1996-taper-modeling、src.mujika-2002-sydney-taper 等 2 筆（第三筆 Bosquet 2007 沿用既有 src.bosquet-2007-tapering-meta-analysis）"
     type: other
-    verification_status: unverified
-    authors: ["Mujika"]
-    et_al: true
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解。三篇的數字全部逐項核對過摘要，**本族是本輪唯一數字零誤差的一組**。
+      本 id 保留為墓碑、不得再使用。
+
+  - id: src.mujika-1996-taper-modeling
+    display: "Mujika I, Busso T, Lacoste L, Barale F, Geyssant A, Chatard JC. (1996). Modeled responses to training and taper in competitive swimmers. Med Sci Sports Exerc 28(2):251-258."
+    title: "Modeled responses to training and taper in competitive swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Mujika I", "Busso T", "Lacoste L", "Barale F", "Geyssant A", "Chatard JC"]
+    year: 1996
+    container: "Medicine and Science in Sports and Exercise"
     identifier:
       pmid: "8775162"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.1097/00005768-199602000-00015"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要，本庫引用的「三週減量平均 +2.90±1.50%、四週 +3.20±1.70%，N=18」
+      與原文一致。
+
+  - id: src.mujika-2002-sydney-taper
+    display: "Mujika I, Padilla S, Pyne D. (2002). Swimming performance changes during the final 3 weeks of training leading to the Sydney 2000 Olympic Games. Int J Sports Med 23(8):582-587."
+    title: "Swimming performance changes during the final 3 weeks of training leading to the Sydney 2000 Olympic Games"
+    type: journal-article
+    verification_status: verified
+    authors: ["Mujika I", "Padilla S", "Pyne D"]
+    year: 2002
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "12439774"
+      doi: "10.1055/s-2002-35526"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要，本庫引用的數字完全一致：99 筆成績（男 50、女 49），
+      整體 +2.18±1.50%（範圍 −1.14% 至 +6.02%），男 +2.57±1.45%、女 +1.78±1.45%；
+      99 筆中有 91 筆變快、8 筆變慢。
 
   - id: src.multidirectional-instability-of-the-shoulder
     display: "Dwidmuthe SC. Multidirectional Shoulder Instability. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK557726（最後更新 2025-11-07）。"
@@ -3090,12 +3239,52 @@ sources:
     notes: "2026-09-06 重複登錄稽核：本 id 與 `src.pmc8442910-a` 指向同一篇文獻（同 PMID 34539436、同 PMC8442910、同 DOI 10.3389/fphys.2021.712652）。同一篇掛兩個 id 會讓它在來源反向索引裡看起來像兩份獨立支撐，撤下其中一筆也擋不住另一筆被引用。引用已全數改掛 `src.pmc8442910-a`，本 id 保留為墓碑、不得再使用。"
 
   - id: src.pmc8607769
-    display: "PMC8607769（Sprint Interval Swim Training Set 與 100m 自由式關聯，血乳酸+運動學）；另見 PMC10747448（訓練組順序對乳酸反應）"
+    display: "【複合來源鍵，已拆解】已拆為 src.terzi-2021-sprint-interval-set、src.nikitakis-2023-set-order 等 2 筆"
     type: other
-    verification_status: unverified
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解，並逼出一處二手轉引誤標：本庫把「4×50／6×50／8×50 m 可誘發
+      12–18 mmol/L 血乳酸」掛在 PMC8607769 名下當一手實測，但取回全文後確認**該數字出現在
+      該文引言、且明確標注引自 Kabasakalis et al. 2014/2019/2020 與 Nikolaidis et al. 2016**，
+      不是 Terzi 等人自己的測量。引用處已改標為轉引。本 id 保留為墓碑、不得再使用。
+
+  - id: src.terzi-2021-sprint-interval-set
+    display: "Terzi E, Skari A, Nikolaidis S, Papadimitriou K, Kabasakalis A, Mougios V. (2021). Relevance of a Sprint Interval Swim Training Set to the 100-Meter Freestyle Event Based on Blood Lactate and Kinematic Variables. J Hum Kinet 80:153-161."
+    title: "Relevance of a Sprint Interval Swim Training Set to the 100-Meter Freestyle Event Based on Blood Lactate and Kinematic Variables"
+    type: journal-article
+    verification_status: verified
+    authors: ["Terzi E", "Skari A", "Nikolaidis S", "Papadimitriou K", "Kabasakalis A", "Mougios V"]
+    year: 2021
+    container: "Journal of Human Kinetics"
     identifier:
+      pmid: "34868425"
       pmcid: "PMC8607769"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.2478/hukin-2021-0091"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 取回全文核對。本文自己測的是 27 名競技泳者（男 11、女 16，16.1±1.1 歲）
+      在 4×50 m 最大努力組（work:rest = 1:4）與 100 m 自由式之間的比較：4×50 m 的速度、
+      血乳酸、划頻均高於 100 m，且兩者在測驗間呈正相關（p<0.001）；結論是該組可用於
+      100 m 的準備與成績預測。**使用邊界：「12–18 mmol/L」不是本文的測量值**，
+      而是本文引言轉引 Kabasakalis 與 Nikolaidis 等人的數據；引用該數字時必須標為轉引，
+      要當一手須回到 Kabasakalis 系列原文。
+
+  - id: src.nikitakis-2023-set-order
+    display: "Nikitakis IS, Bogdanis GC, Paradisis GP, Toubekis AG. (2023). Effects of Training Sets Sequence on Swimming Performance, Training Load and Physiological Responses. Sports (Basel) 11(12):240."
+    title: "Effects of Training Sets Sequence on Swimming Performance, Training Load and Physiological Responses"
+    type: journal-article
+    verification_status: verified
+    authors: ["Nikitakis IS", "Bogdanis GC", "Paradisis GP", "Toubekis AG"]
+    year: 2023
+    container: "Sports (Basel)"
+    identifier:
+      pmid: "38133107"
+      pmcid: "PMC10747448"
+      doi: "10.3390/sports11120240"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      訓練組編排順序對成績、訓練負荷與生理反應的影響，本庫用作乳酸反應的佐證來源。
 
   - id: src.pmc8700779
     display: "Matúš, I., Ružbarský, P., Vadašová, B., & Čech, P. (2021). Leg dominance and OSB12 kick start performance in young competitive swimmers. International Journal of Environmental Research and Public Health, 18(24), 13156."
@@ -4443,14 +4632,75 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。"
 
   - id: src.seiler
-    display: "Seiler & Kjerland 2006 (PMID 16430681); Seiler 2010 (IJSPP 5(3):276–291); Stöggl & Sperlich 2014 (PMC3912323); González-Ravé et al. 2021 (PMID 33952709, IJSPP 16(7):913–926)"
+    display: "【複合來源鍵，已拆解】已拆為 src.seiler-kjerland-2006、src.seiler-2010、src.stoggl-sperlich-2014 等 3 筆（第四筆 González-Ravé 2021 見 src.gonzalez-rave-2021-tid-review）"
     type: other
-    verification_status: unverified
-    authors: ["Seiler", "Kjerland"]
+    verification_status: retracted
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 複合鍵拆解，並逼出一處受試者層級誤標：本庫把 Seiler & Kjerland 2006 的
+      受試者寫成「11 名**菁英**越野滑雪青少年」，但原文用的是 well-trained junior
+      cross-country skiers 與 nationally competitive junior skiers，是全國賽層級的青少年，
+      不是頂級菁英；該文標題裡的 elite endurance athletes 指的是拿來比對的文獻族群，
+      不是本研究的受試者。已在引用處改正。本 id 保留為墓碑、不得再使用。
+
+  - id: src.seiler-kjerland-2006
+    display: "Seiler KS, Kjerland GØ. (2006). Quantifying training intensity distribution in elite endurance athletes: is there evidence for an \"optimal\" distribution? Scand J Med Sci Sports 16(1):49-56."
+    title: "Quantifying training intensity distribution in elite endurance athletes: is there evidence for an optimal distribution?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Seiler KS", "Kjerland GØ"]
+    year: 2006
+    container: "Scandinavian Journal of Medicine & Science in Sports"
     identifier:
       pmid: "16430681"
+      doi: "10.1111/j.1600-0838.2004.00418.x"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要。原文可支持者：11 名男性越野滑雪選手，連續 32 天共 384 堂課
+      （37 堂力量、347 堂耐力），以通氣閾值 VT1/VT2 劃三區；耐力課（n=318）的強度分布
+      心率法為 Z1 75±3%／Z2 8±3%／Z3 17±4%，session RPE 法為 76±4／6±5／18±7；
+      另 60 堂課的血乳酸法為 ≤2.0 mM 占 71%、2–4 mM 占 7%、>4 mM 占 22%。
+      **使用邊界：受試者原文為 well-trained junior / nationally competitive junior skiers**
+      （全國賽層級青少年），標題中的 elite endurance athletes 指的是對照的文獻族群，
+      引用時不得把受試者寫成菁英。分布百分比的單位是**課次**，不是時間。
+
+  - id: src.seiler-2010
+    display: "Seiler S. (2010). What is best practice for training intensity and duration distribution in endurance athletes? Int J Sports Physiol Perform 5(3):276-291."
+    title: "What is best practice for training intensity and duration distribution in endurance athletes?"
+    type: review
+    verification_status: verified
+    authors: ["Seiler S"]
+    year: 2010
+    container: "International Journal of Sports Physiology and Performance"
+    identifier:
+      pmid: "20861519"
+      doi: "10.1123/ijspp.5.3.276"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-04 起本庫「80/20」說法的來源。核對摘要，原文寫的是：每週訓練 10 至 13 次的
+      全國／國際級耐力選手，其強度分布收斂於「約 80% 的**課次**在低強度（2 mM 血乳酸）、
+      約 20% 由高強度區段（如約 90% VO2max 的間歇）主導」。另一句常被略過但對本庫重要：
+      對已經訓練有素的選手，加重高強度間歇的訓練強化研究**並未提供令人信服的長期成績增益證據**。
+
+  - id: src.stoggl-sperlich-2014
+    display: "Stöggl T, Sperlich B. (2014). Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training. Front Physiol 5:33."
+    title: "Polarized training has greater impact on key endurance variables than threshold, high intensity, or high volume training"
+    type: journal-article
+    verification_status: verified
+    authors: ["Stöggl T", "Sperlich B"]
+    year: 2014
+    container: "Frontiers in Physiology"
+    identifier:
+      pmid: "24550842"
       pmcid: "PMC3912323"
-    notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。"
+      doi: "10.3389/fphys.2014.00033"
+    retrieved_on: "2026-09-06"
+    notes: >-
+      2026-09-06 核對摘要，本庫引用的數字全部一致：48 名跑者、自行車、鐵人三項與越野滑雪
+      選手（VO2peak 62.6±7.1 mL·min⁻¹·kg⁻¹），隨機分入四組進行 9 週；POL 組 VO2peak
+      增加 6.8 mL·min·kg⁻¹（+11.7%，p<0.001）、遞增測驗力竭時間 +17.4%（p<0.001）、
+      峰值速度／功率 +5.1%（p<0.01）。使用邊界：受試者為 well-trained 而非頂級菁英，
+      介入僅 9 週，且這是本主題唯一一篇 RCT。
 
   - id: src.selye
     display: "【複合來源鍵，已拆解】已拆為 src.selye-1974-stress-without-distress 等 4 筆"
