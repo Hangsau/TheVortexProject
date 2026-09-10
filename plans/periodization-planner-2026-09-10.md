@@ -70,4 +70,6 @@
 - Hugo：170 頁成功，保留既有 languageCode 淘汰警告。
 - 本機瀏覽器：21 項驗收、8,820 組規則全部通過；390/320px、200% 字級、鍵盤、無 JS、三範例、複製 fallback、來源定位與資料庫入口均已驗。
 - 已目視手機表單與桌面結果。來源重核：PubMed 41410759 直接開啟回空，改從同站索引取得完整摘要；41348148 摘要及 eLife 40578 實驗 4 已核，未提高閱讀狀態。
-- 發布狀態：等待本輪提交與 CI／正式站驗收完成後補記。
+- 發布完成：my-site 實作 `a37790963e2922b9f2cbd80d2017287ee67a2c90`、canonical `748756ffc4867767ba0399ce6f0a2ba7a655f670` 均已推送；[網站部署 CI](https://github.com/Hangsau/cortex/actions/runs/34452544465) 與 [canonical 同步 CI](https://github.com/Hangsau/TheVortexProject/actions/runs/34452546812) 已按完整 SHA 核對成功。
+- [正式工具](https://hangsau.github.io/cortex/vortex/periodization/#planner) 驗收 21/21、8,820 條件組合通過，內嵌資料與本機相同，CSS／JS 逐位元相同；證據為 my-site `research/periodization-planner-2026-09-10/{public-validation,public-assets,ci-verification}.json`。截圖已排除擷取長元件時的固定導覽遮擋。
+- 本階段已完成。後續以實際使用回饋修訂模型，無未完成的背景任務；不需重跑暫存整合腳本。
