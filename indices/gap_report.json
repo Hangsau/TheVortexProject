@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 126
+    "unlinked_records": 124
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -188,11 +188,6 @@
       "path": "methods"
     },
     {
-      "id": "periodization.dryland.needs_analysis",
-      "file": "canonical/periodization/dryland.yaml",
-      "path": "needs_analysis"
-    },
-    {
       "id": "periodization.dryland.overview",
       "file": "canonical/periodization/dryland.yaml",
       "path": "overview"
@@ -241,11 +236,6 @@
       "id": "periodization.taper.peak_window",
       "file": "canonical/periodization/taper.yaml",
       "path": "peak"
-    },
-    {
-      "id": "periodization.taper.swim",
-      "file": "canonical/periodization/taper.yaml",
-      "path": "swim_application"
     },
     {
       "id": "periodization.taper.type.fast_exponential",

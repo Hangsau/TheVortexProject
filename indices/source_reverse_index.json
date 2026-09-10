@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 829,
+  "source_count": 831,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1038,6 +1038,24 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.carvalho-2026-overload-hrv",
+      "display": "Carvalho et al. 2026, Sports Med 56(5):1235–1254 (online 2025-12-05)",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1007/s40279-025-02369-1",
+        "pmid": "41348148",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41348148/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.decisions.hrv_response",
+          "file": "canonical/periodization/decisions.yaml",
+          "path": "hrv_response"
+        }
+      ]
     },
     {
       "id": "src.caty-2007",
@@ -6921,6 +6939,24 @@
           "id": "periodization.zones.energy_systems_primer",
           "file": "canonical/periodization/zones.yaml",
           "path": "energy_systems_primer.training_protocols[3]"
+        }
+      ]
+    },
+    {
+      "id": "src.nikitakis-toubekis-2026-training-sets",
+      "display": "Nikitakis & Toubekis 2026, Eur J Appl Physiol 126(5):2477–2489 (online 2025-12-18)",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1007/s00421-025-06090-9",
+        "pmid": "41410759",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41410759/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.decisions.set_response",
+          "file": "canonical/periodization/decisions.yaml",
+          "path": "set_response"
         }
       ]
     },

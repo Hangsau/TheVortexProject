@@ -162,6 +162,28 @@ generated_date: "2026-07-29"
 #      "There's a Drill for That"），缺頁碼與版本，S3c 須補 book-chapter 細節。
 
 sources:
+  - id: src.nikitakis-toubekis-2026-training-sets
+    display: "Nikitakis & Toubekis 2026, Eur J Appl Physiol 126(5):2477–2489 (online 2025-12-18)"
+    type: journal-article
+    verification_status: verified
+    title: "Swimming training sets across intensity domains: physiological responses beyond lactate concentration and internal load"
+    authors: ["Ioannis S Nikitakis", "Argyris G Toubekis"]
+    year: 2026
+    identifier: {doi: "10.1007/s00421-025-06090-9", pmid: "41410759", url: "https://pubmed.ncbi.nlm.nih.gov/41410759/"}
+    retrieved_on: "2026-09-10"
+    notes: "PubMed metadata 與完整摘要已核；直接 open 回空後由 PubMed 搜尋索引核對。未取得全文。30 名男性泳者、急性組課生理反應比較；只支持單一乳酸／內負荷不足以概括各組反應，不支持長期組課優劣或通用強度門檻。紙本 2026 May，首次上線 2025-12-18。"
+
+  - id: src.carvalho-2026-overload-hrv
+    display: "Carvalho et al. 2026, Sports Med 56(5):1235–1254 (online 2025-12-05)"
+    type: journal-article
+    verification_status: verified
+    title: "Impact of an Overload Period on Heart Rate Variability, Sleep Quality, Motivation, and Performance in High-level Swimmers: Use of Explainable Artificial Intelligence (XAI) to Assess Training Load Variations"
+    authors: ["Diogo D Carvalho", "Márcio Fagundes Goethel", "Mégane Erblang", "João Paulo Vilas-Boas", "David B Pyne", "Ricardo J Fernandes", "Philippe Lopes"]
+    year: 2026
+    identifier: {doi: "10.1007/s40279-025-02369-1", pmid: "41348148", url: "https://pubmed.ncbi.nlm.nih.gov/41348148/"}
+    retrieved_on: "2026-09-10"
+    notes: "PubMed metadata 與摘要已核；未取得全文。14 名高水準泳者（4 男 10 女、17.5±1.5 歲），三個七日週期；HRV 變化與表現維持並存。不能從 XAI 配適或單日 HRV 判個人訓練失敗／傷病，也不提供自動加減量 cutoff。紙本 2026 May，首次上線 2025-12-05。"
+
 
   - id: src.kudo-yanai-matsuda-2025
     display: "Kudo, Yanai & Matsuda 2025, front-crawl stroke power"

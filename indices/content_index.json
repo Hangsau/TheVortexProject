@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 923,
+  "record_count": 927,
   "records": [
     {
       "id": "Bk1",
@@ -15415,6 +15415,80 @@
       "outgoing_ids": []
     },
     {
+      "id": "periodization.decisions.hrv_response",
+      "domain": "periodization",
+      "file": "canonical/periodization/decisions.yaml",
+      "path": "hrv_response",
+      "title": "新研究：HRV 改變不等於游泳表現變差",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.carvalho-2026-overload-hrv"
+      ],
+      "outgoing_ids": [
+        "periodization.decisions.monitoring"
+      ]
+    },
+    {
+      "id": "periodization.decisions.monitoring",
+      "domain": "periodization",
+      "file": "canonical/periodization/decisions.yaml",
+      "path": "monitoring",
+      "title": "先對齊量測，再判斷進退",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.decisions.hrv_response",
+        "periodization.decisions.planner",
+        "periodization.decisions.set_response",
+        "periodization.dryland.concurrent"
+      ]
+    },
+    {
+      "id": "periodization.decisions.planner",
+      "domain": "periodization",
+      "file": "canonical/periodization/decisions.yaml",
+      "path": "planner",
+      "title": "把週期化變成每週可重用的決策",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.decisions.monitoring",
+        "periodization.dryland.needs_analysis",
+        "periodization.structure.perception_periodization_bridge",
+        "periodization.taper.swim"
+      ]
+    },
+    {
+      "id": "periodization.decisions.set_response",
+      "domain": "periodization",
+      "file": "canonical/periodization/decisions.yaml",
+      "path": "set_response",
+      "title": "新研究：同一乳酸數字可能掩蓋不同組課反應",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.nikitakis-toubekis-2026-training-sets"
+      ],
+      "outgoing_ids": [
+        "periodization.decisions.monitoring"
+      ]
+    },
+    {
       "id": "periodization.dryland.caveats",
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
@@ -15435,7 +15509,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/dryland.yaml",
       "path": "concurrent_scheduling",
-      "title": "一般訓練週把重陸訓和下一堂品質水課隔一晚；如果隔天配速、SR/SL或RPE連續兩次低於個人基線，就把間隔拉到24–36小時。比賽週與減量週則把重陸訓移出主賽前48小時。",
+      "title": "陸訓與水課怎麼隔，先看個人可恢復的安排。同任務越游越慢、同速越來越吃力或動作品質下降時，回看總負荷與間隔；比賽前沿用已知反應，不臨時加新刺激。",
       "tags": {
         "certainty": [
           "🟢"
@@ -15689,7 +15763,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/structure.yaml",
       "path": "macrocycle",
-      "title": "Macrocycle＝由幾個週組成的中型週期（2–6 週）。最常見的節奏是『3:1』——練 3 個漸增負荷的週，接 1 個減量恢復週。這契合身體自然的疲勞—恢復節律。泳者特別累時改 3:2（多一週恢復）。",
+      "title": "本書這裡的 Macrocycle 指數週組成的中型週期。3:1 表示三個負荷週接一個恢復週，是一種安排選項；是否適合要看任務與恢復，不能從自然節律推定人人都該照做。",
       "tags": {
         "certainty": [
           "🟡"
@@ -15707,7 +15781,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/structure.yaml",
       "path": "microcycle",
-      "title": "Microcycle＝一週，是排課表的最小單位。一週有不同類型：發展型（往上堆）、競賽型（賽前 3–5 天達峰）、恢復型、卸載型（量砍一半以上）。游泳就以『週』為單位排課。週內休息日預設「六練一休」，少數隊伍用「四練一休」或全天天練但需要更細的監測。",
+      "title": "Microcycle 常用一週來組織發展、競賽或恢復重點。先列出實際可練的課次與間隔，再分配主重點和維持任務；每堂仍可依完成品質與恢復調整。",
       "tags": {
         "certainty": [
           "🟡",
@@ -15727,7 +15801,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/structure.yaml",
       "path": "perception_periodization_bridge",
-      "title": "先講清楚兩層：第一層『技能會不會該被週期化、疲勞會不會傷技術』——這層有研究撐：Branscheidt 2019 證實疲勞不只讓你當下做不好，連『學會新技能』的能力都被拖累，而且累的影響會延續到隔天；減量研究也說賽前降頻會掉水感和技術，要維持頻率才保得住；甚至有專門的『技能週期化』框架（PoST）。所以『大量輕鬆游的階",
+      "title": "可以先區分「學會任務、穩定重複、在速度下維持」來安排練習。這是本站待驗的操作模型；手部力量控制研究不代表所有泳姿或水感知都同樣受疲勞影響，練得輕也不保證不累。",
       "tags": {
         "certainty": [
           "🔵"
@@ -16088,7 +16162,7 @@
       "domain": "periodization",
       "file": "canonical/periodization/zones.yaml",
       "path": "swim_application",
-      "title": "游泳怎麼套 Bompa 這套：組課強度用『比賽配速百分比』講——賽配速＝zone 2，比賽更快（衝刺/乳酸耐受）＝zone 1，閾值/節奏＝zone 3，有氧基礎＝zone 4，恢復游＝zone 5。但要老實說：這是把通用理論硬套到游泳的自製對照，不是游泳實證。游泳教練實際上更常用 Maglischo 的乳酸六分區、或",
+      "title": "組課先寫清楚要游什麼、多久、休多久。比賽配速的意義依泳式和距離改變，不能一律當成同一區，也不套每週至少一半賽速的通用配方。分區是描述工具，還要看實際完成品質與恢復。",
       "tags": {
         "certainty": [
           "🔵"

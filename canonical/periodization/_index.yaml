@@ -1,7 +1,7 @@
 # ============================================================
 # Canonical 知識結構 — 週期化領域 / 概念目錄（Concept Index）
 # ------------------------------------------------------------
-# 單一真相來源的「目錄頁」：把 structure / taper / zones 三檔的每個概念節點
+# 單一真相來源的「目錄頁」：把 structure / taper / zones / dryland / decisions 的概念節點
 # 列成一張可瀏覽 / 可反查的索引。
 #
 # 用途：
@@ -9,7 +9,7 @@
 #   swim-coach：FTS 反查時的概念清單（id 對應到哪一檔、屬哪個 ADM 階段）
 #
 # 維護規則：
-#   三檔（structure/taper/zones）新增或刪除節點時，必須同步更新本檔對應 entry。
+#   各內容檔新增或刪除節點時，必須同步更新本檔對應 entry。
 #   每個 entry 的 id 必須與來源檔的節點 id 完全一致（swim-coach 靠 id 反查）。
 #
 # 欄位：
@@ -26,15 +26,16 @@ schema_version: 1
 
 # ── 年度計畫結構（structure.yaml）──
 structure:
+  - {id: periodization.structure.gas, file: structure.yaml, name_zh: 一般適應症候群, gist_zh: "用壓力與恢復理解訓練適應的框架；不是個人加量時程的驗證", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.structure.schools_overview, file: structure.yaml, name_zh: 週期化多派概覽, gist_zh: "週期化不是定論而是幾派辯論：傳統/板塊/極化/Olbrecht/反向；含 Q1–Q11 導讀＋作者立場", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.structure.school_block, file: structure.yaml, name_zh: 板塊週期化（Issurin）, gist_zh: "菁英序列集中而非並行；殘留效應決定換塊（速度~5d/有氧~30d）；8–12 週一階段", stages: [t2c, t2w]}
-  - {id: periodization.structure.perception_periodization_bridge, file: structure.yaml, name_zh: 感知—週期化橋接, gist_zh: "🔵綜合：技能週期化+疲勞損害技能學習有文獻(Branscheidt2019/PoST)；真正🔴空白只剩水感知L0–L6專屬量測", stages: [l2t, t2t, t2c, t2w]}
+  - {id: periodization.structure.perception_periodization_bridge, file: structure.yaml, name_zh: 感知—週期化橋接, gist_zh: "特定手部任務的疲勞學習研究與 PoST 概念框架；跨到游泳及水感知仍需驗證", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.structure.annual.monocycle, file: structure.yaml, name_zh: 單週期, gist_zh: "一年衝一個高峰；適合新手/青少年/單一目標賽季", stages: [l2t, t2t]}
   - {id: periodization.structure.annual.bicycle, file: structure.yaml, name_zh: 雙週期, gist_zh: "一年衝兩個高峰；競技泳者原型，對應 ADM 一年兩巔峰", stages: [t2c, t2w]}
   - {id: periodization.structure.annual.tricycle, file: structure.yaml, name_zh: 三週期, gist_zh: "一年衝三個高峰；高水準多目標賽季", stages: [t2w]}
   - {id: periodization.structure.annual.multipeak, file: structure.yaml, name_zh: 多巔峰, gist_zh: "賽事極密集時用；風險高，游泳少用", stages: []}
-  - {id: periodization.structure.macrocycle, file: structure.yaml, name_zh: 中觀週期, gist_zh: "2–6 週的中型週期；最常見 3:1（3 負荷週 + 1 恢復週）", stages: [t2t, t2c, t2w]}
-  - {id: periodization.structure.microcycle, file: structure.yaml, name_zh: 微觀週期, gist_zh: "一週，排課表的最小單位；分發展/競賽/恢復/卸載型", stages: [t2t, t2c, t2w]}
+  - {id: periodization.structure.macrocycle, file: structure.yaml, name_zh: 中觀週期, gist_zh: "本書數週組成的中型週期；3:1 是選項，依任務與恢復決定", stages: [t2t, t2c, t2w]}
+  - {id: periodization.structure.microcycle, file: structure.yaml, name_zh: 微觀週期, gist_zh: "常用一週整理可用課次；每堂依品質與恢復調整，不預設六練一休", stages: [t2t, t2c, t2w]}
   - {id: periodization.structure.detraining, file: structure.yaml, name_zh: 停練衰退安全表, gist_zh: "完全停練的衰退速率；停 4 週 VO2max 掉 14%——休季別躺平", stages: [t2c, t2w]}
   - {id: periodization.structure.swim_annual, file: structure.yaml, name_zh: 游泳年度結構, gist_zh: "菁英實證：一年 2–4 macrocycle、86–90% 量為低強度（Hellard 2019）", stages: [t2c, t2w]}
   - {id: periodization.structure.swim_youth_ltad, file: structure.yaml, name_zh: 青少年分齡 LTAD, gist_zh: "對齊 ADM 分齡；PHV 女12.5/男14；trainability 窗口有爭議須慎用", stages: [l2t, t2t, t2c, t2w]}
@@ -65,15 +66,24 @@ zones:
   - {id: periodization.zones.swim_three_zone, file: zones.yaml, name_zh: 三區乳酸模型, gist_zh: "TID 分析用：Z1≤2 / Z2 2–4 / Z3>4 mmol", stages: [t2c, t2w]}
   - {id: periodization.zones.swim_energy_by_distance, file: zones.yaml, name_zh: 各距離能量系統供能比, gist_zh: "50m 有氧5–20%、100m≈各半、400m 40–84%(跨研究區間)", stages: [t2c, t2w]}
   - {id: periodization.zones.swim_tid, file: zones.yaml, name_zh: 訓練強度分布 TID, gist_zh: "極化/金字塔/閾值三型；游泳把 44–46% 的量放在中間閾值區(Hellard 2019);依距離分流短=極化長=金字塔", stages: [t2c, t2w]}
-  - {id: periodization.zones.swim, file: zones.yaml, name_zh: 游泳配速分區應用, gist_zh: "組課強度用比賽配速百分比表達；映射 Bompa 不發明數字", stages: [t2t, t2c, t2w]}
+  - {id: periodization.zones.swim, file: zones.yaml, name_zh: 游泳配速分區應用, gist_zh: "組課明列距離、速度、次數與休息；撤回通用賽速分區與每週至少一半賽速配方", stages: [t2t, t2c, t2w]}
 
 # ── 陸上力量訓練（dryland.yaml）──
 dryland:
+  - {id: periodization.dryland.flexibility, file: dryland.yaml, name_zh: 柔軟度與活動度介入, gist_zh: "先分清被動範圍、主動控制與任務限制，再選介入及水中驗收", stages: [l2t, t2t, t2c, t2w]}
+
   - {id: periodization.dryland.overview, file: dryland.yaml, name_zh: 陸訓總覽, gist_zh: "出發用爆發、推牆與划水產力用最大力量、轉身後5m用核心；全部接回水中驗收", stages: [t2t, t2c, t2w]}
   - {id: periodization.dryland.transfer, file: dryland.yaml, name_zh: 力量轉移效果, gist_zh: "36個RCT共844人支持水中＋陸上；依掉速段選陸訓，4–6週用水中分段判定轉移", stages: [t2c, t2w]}
   - {id: periodization.dryland.methods, file: dryland.yaml, name_zh: 陸訓模式比較, gist_zh: "最大力量接推牆與划水功率；增強式接出發轉身；核心接轉身後5m；力量耐力接後段姿勢", stages: [t2c, t2w]}
-  - {id: periodization.dryland.concurrent, file: dryland.yaml, name_zh: 並行排程殘留疲勞, gist_zh: "一般週重陸訓與品質水課隔一晚；掉出基線就拉至24–36h", stages: [t2c, t2w]}
+  - {id: periodization.dryland.concurrent, file: dryland.yaml, name_zh: 並行排程殘留疲勞, gist_zh: "小樣本隔夜研究未見差異；按同條件表現、RPE 與品質調整，不用通用間隔", stages: [t2c, t2w]}
   - {id: periodization.dryland.needs_analysis, file: dryland.yaml, name_zh: NSCA需求分析與三層驗收, gist_zh: "先找掉速任務與個人限制；依序驗收陸上能力、水中相位／外力與完整泳段", stages: [t2t, t2c, t2w]}
   - {id: periodization.dryland.injury, file: dryland.yaml, name_zh: 游泳肩容量與疼痛管理, gist_zh: "有痛先追疼痛、ROM與容量；無痛但能力不足再補外旋、肩胛與全鏈訓練", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.dryland.youth, file: dryland.yaml, name_zh: 青少年與特殊族群負重安全, gist_zh: "能守規則約7–8歲起徒手；成熟後負重；成人先學動作、masters看恢復、para依功能分流", stages: [l2t, t2t]}
   - {id: periodization.dryland.caveats, file: dryland.yaml, name_zh: 無反應時的調整規則, gist_zh: "陸上進步但水中不變就換水中阻力或賽速；每4–6週依乾地→分段→完整成績換法", stages: [t2c, t2w]}
+
+# 本版新增公開決策；anchor 是 my-site 對應落點，屬導覽資料。
+decisions:
+  - {id: periodization.decisions.planner, file: decisions.yaml, anchor: planner, name_zh: 套用週期決策, gist_zh: "輸入目標、課次、近期反應，取得安排理由、觀察點與調整條件；含三個可試範例", stages: [l2t, t2t, t2c, t2w]}
+  - {id: periodization.decisions.monitoring, file: decisions.yaml, anchor: planner-monitoring, name_zh: 同條件比較與記錄, gist_zh: "計時、RPE、划頻划距與恢復的判讀方向；一張可重用的記錄欄", stages: [l2t, t2t, t2c, t2w]}
+  - {id: periodization.decisions.set_response, file: decisions.yaml, anchor: periodization.decisions.set_response, name_zh: 2026 組課反應研究, gist_zh: "同一乳酸數字可能掩蓋不同生理反應；急性研究不證明長期訓練優劣", stages: [t2c, t2w]}
+  - {id: periodization.decisions.hrv_response, file: decisions.yaml, anchor: periodization.decisions.hrv_response, name_zh: 2026 HRV 負荷反應研究, gist_zh: "加量時 HRV 改變與表現維持可並存，不以單一數字自動加減量", stages: [t2c, t2w]}

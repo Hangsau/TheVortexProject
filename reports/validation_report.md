@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-09-06
-> 驗證條目數：747，Drills ID 數：176
+> 生成日期：2026-09-10
+> 驗證條目數：751，Drills ID 數：176
 
 ---
 
@@ -220,7 +220,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 126 筆**
+**WARN，共 124 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -261,7 +261,6 @@
   file=canonical\periodization\dryland.yaml id='periodization.dryland.transfer'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.methods'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.concurrent'
-  file=canonical\periodization\dryland.yaml id='periodization.dryland.needs_analysis'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.youth'
   file=canonical\periodization\dryland.yaml id='periodization.dryland.caveats'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.tricycle'
@@ -275,7 +274,6 @@
   file=canonical\periodization\taper.yaml id='periodization.taper.type.step'
   file=canonical\periodization\taper.yaml id='periodization.taper.type.fast_exponential'
   file=canonical\periodization\taper.yaml id='periodization.taper.peak_window'
-  file=canonical\periodization\taper.yaml id='periodization.taper.swim'
   file=canonical\psychology\psychology.yaml id='psych.fear'
   file=canonical\psychology\psychology.yaml id='psych.fear.control_loss'
   file=canonical\psychology\psychology.yaml id='psych.fear.perception_masking'

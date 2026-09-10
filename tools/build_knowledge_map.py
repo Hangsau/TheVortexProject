@@ -125,21 +125,23 @@ def extract_technical_standards(path: Path):
     return rows
 
 def extract_periodization(path: Path):
-    """週期化檔——top-level 各 dict 一個條目"""
+    """週期化檔——遞迴列出實際穩定 ID，包含年度型態與減量變項。"""
     data = yaml.safe_load(path.read_text(encoding="utf-8"))
     rows = []
-    SKIP = {"domain", "sub", "schema_version", "source_repos", "certainty_legend", "evidence_grade_legend"}
-    for key, val in data.items():
-        if key in SKIP:
-            continue
-        if not isinstance(val, dict):
-            continue
-        rows.append({
-            "id": val.get("id", key),
-            "section": key,
-            "cert": val.get("cert", ""),
-            "title": (val.get("premise_zh") or val.get("plain_zh") or val.get("text_zh") or "")[:90],
-        })
+    def visit(value):
+        if isinstance(value, dict):
+            if isinstance(value.get("id"), str):
+                rows.append({
+                    "id": value["id"],
+                    "cert": value.get("cert", ""),
+                    "title": (value.get("name_zh") or value.get("premise_zh") or value.get("plain_zh") or value.get("text_zh") or "")[:90],
+                })
+            for child in value.values():
+                visit(child)
+        elif isinstance(value, list):
+            for child in value:
+                visit(child)
+    visit(data)
     return rows
 
 def extract_psychology(path: Path):
@@ -396,7 +398,7 @@ def main():
     lines.append("")
     lines.append("## 週期化 `canonical/periodization/`")
     lines.append("")
-    for fname in ["structure", "taper", "zones", "dryland", "_index"]:
+    for fname in ["structure", "taper", "zones", "dryland", "decisions"]:
         path = ROOT / f"canonical/periodization/{fname}.yaml"
         if not path.exists():
             continue

@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-09-06 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-09-10 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -20,11 +20,11 @@
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
 | `development/technical-standards` | 22 | 技術基準 |
-| `periodization/structure` | 9 | 各節點 |
-| `periodization/taper` | 3 | 各節點 |
+| `periodization/structure` | 13 | 各節點 |
+| `periodization/taper` | 10 | 各節點 |
 | `periodization/zones` | 12 | 各節點 |
 | `periodization/dryland` | 9 | 各節點 |
-| `periodization/_index` | 0 | 各節點 |
+| `periodization/decisions` | 4 | 各節點 |
 | `breathing/safety` | 2 | 各節點 |
 | `breathing/framework` | 3 | 各節點 |
 | `breathing/physiology` | 5 | 各節點 |
@@ -577,12 +577,16 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 ## 週期化 `canonical/periodization/`
 
-### `structure.yaml` （**9 節點**）
+### `structure.yaml` （**13 節點**）
 
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
-| periodization.structure.macrocycle | 🟡 | Macrocycle＝由幾個週組成的中型週期（2–6 週）。最常見的節奏是『3:1』——練 3 個漸增負荷的週，接 1 個減量恢復週。這契合身體自然的疲勞—恢復節律。泳者特別累時改 |
-| periodization.structure.microcycle | 🟡 | Microcycle＝一週，是排課表的最小單位。一週有不同類型：發展型（往上堆）、競賽型（賽前 3–5 天達峰）、恢復型、卸載型（量砍一半以上）。游泳就以『週』為單位排課。週內休息 |
+| periodization.structure.annual.monocycle | 🟡 | 單週期 |
+| periodization.structure.annual.bicycle | 🟡 | 雙週期 |
+| periodization.structure.annual.tricycle | 🟡 | 三週期 |
+| periodization.structure.annual.multipeak | 🟡 | 多巔峰 |
+| periodization.structure.macrocycle | 🟡 | 本書這裡的 Macrocycle 指數週組成的中型週期。3:1 表示三個負荷週接一個恢復週，是一種安排選項；是否適合要看任務與恢復，不能從自然節律推定人人都該照做。 |
+| periodization.structure.microcycle | 🟡 | Microcycle 常用一週來組織發展、競賽或恢復重點。先列出實際可練的課次與間隔，再分配主重點和維持任務；每堂仍可依完成品質與恢復調整。 |
 | periodization.structure.gas | 🟡 | 為什麼週期化要有節奏、不能一路往上堆？教練書最常用的解釋是 Selye 的壓力三階段：① 警覺期（剛開始幾天，覺得難）、② 適應期（幾週後身體變強）、③ 耗竭期（再撐就崩），所以每 |
 | periodization.structure.detraining | 🟢 | 完全停練掉得有多快？最大攝氧量：停 4 天掉 4%、停 4 週掉 14%、停 8 週掉 20%。力量也類似（停 4 週最大肌力掉 6–10%）。好消息是這些可以練回來。實務結論：休 |
 | periodization.structure.swim_annual | 🟢 | 菁英游泳的年度結構長怎樣（有實證的）：中週期大約 14–15 週一個，回推全年大概 2–4 個
@@ -590,13 +594,20 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.structure.swim_youth_ltad | 🟢 | 青少年怎麼分齡練：Swimming Canada 的游泳專項表大致是——女生 8–11 歲學習訓練、11–14 訓練為訓練、14–16 訓練為競賽、16 歲以上競賽求勝；男生各段晚 |
 | periodization.structure.schools_overview | 🔵 | 週期化不是一套被證明的定論，而是幾套互相辯論的框架。它們問的問題不同、適用的對象不同——把任何一派當『標準答案』都是誤讀。 |
 | periodization.structure.school_block | 🟡 | 板塊週期化（Issurin）跟 Bompa 最大的不同：Bompa 主張準備期可以同時把很多能力一起練；Issurin 說高水準選手做不到——很多訓練刺激會互相打架（大量有氧會干擾 |
-| periodization.structure.perception_periodization_bridge | 🔵 | 先講清楚兩層：第一層『技能會不會該被週期化、疲勞會不會傷技術』——這層有研究撐：Branscheidt 2019 證實疲勞不只讓你當下做不好，連『學會新技能』的能力都被拖累，而且累 |
+| periodization.structure.perception_periodization_bridge | 🔵 | 可以先區分「學會任務、穩定重複、在速度下維持」來安排練習。這是本站待驗的操作模型；手部力量控制研究不代表所有泳姿或水感知都同樣受疲勞影響，練得輕也不保證不累。 |
 
-### `taper.yaml` （**3 節點**）
+### `taper.yaml` （**10 節點**）
 
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
 | periodization.taper.definition | 🟢 | 減量＝比賽前那幾週，故意把訓練量慢慢降下來。關鍵在：之前練出來的本事（體能）會留著，但累積的疲勞會被消掉。比賽當天身體既有料又不累，成績自然跑得出來。 |
+| periodization.taper.volume | 🟢 | 訓練量 |
+| periodization.taper.intensity | 🟡 | 訓練強度 |
+| periodization.taper.frequency | 🟡 | 訓練頻率 |
+| periodization.taper.duration | 🟢 | 減量時長 |
+| periodization.taper.type.linear | 🟡 | 線性遞減 |
+| periodization.taper.type.step | 🟢 | 階梯式（單次驟降） |
+| periodization.taper.type.fast_exponential | 🟢 | 快速指數遞減 |
 | periodization.taper.peak_window | 🟡 | 把最重要的比賽放進7–14天高表現窗。第二場主賽若隔得更久，中間不要一路休息：先恢復，再補少量賽速刺激，最後做短減量。 |
 | periodization.taper.swim | 🟢 | 沒有個人減量歷史時，直接從標準方案開始：8–14天、快速指數降量、總量少41–60%、下水次數留八成、每堂保留少量賽速。高量訓練後把降量提高到60–90%；停量後容易失速者取8天端 |
 
@@ -615,7 +626,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.zones.swim_tid | 🟢 | TID＝整個週期裡輕鬆／閾值／吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆
 ＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。
 游泳最該知道 |
-| periodization.zones.swim | 🔵 | 游泳怎麼套 Bompa 這套：組課強度用『比賽配速百分比』講——賽配速＝zone 2，比賽更快（衝刺/乳酸耐受）＝zone 1，閾值/節奏＝zone 3，有氧基礎＝zone 4，恢 |
+| periodization.zones.swim | 🔵 | 組課先寫清楚要游什麼、多久、休多久。比賽配速的意義依泳式和距離改變，不能一律當成同一區，也不套每週至少一半賽速的通用配方。分區是描述工具，還要看實際完成品質與恢復。 |
 | periodization.zones.school_polarized | 🟢 | 極化派（Seiler）問的不是「每區強度多少」而是「每區各占幾成」。他觀察全國／國際級
 耐力選手，發現他們自然形成「大量輕鬆＋少量超吃力、中間幾乎不練」的分布——大約
 80% 低強 |
@@ -628,16 +639,21 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.dryland.overview | 🔵 | 陸訓能提高游泳表現，最佳使用方式是和水中訓練結合：阻力訓練負責提高可用力量，核心與爆發訓練分別補足軀幹傳力、出發與轉身，再由水中賽速訓練把能力接回泳姿。 |
 | periodization.dryland.transfer | 🟡 | 最有效的預設不是只練陸上，而是陸上提高能力、水中把能力接回動作。每個方法都對準一個掉速段：爆發對出發，力量對推牆與划水功率，核心對轉身後5m和短距離穩定。 |
 | periodization.dryland.methods | 🟢 | 出發慢做爆發，推牆或划水產力不足做最大力量，轉身後5m與軀幹控制差做核心，後段姿勢先散才做力量耐力；每一項都用對應水中分段驗收。 |
-| periodization.dryland.concurrent | 🟢 | 一般訓練週把重陸訓和下一堂品質水課隔一晚；如果隔天配速、SR/SL或RPE連續兩次低於個人基線，就把間隔拉到24–36小時。比賽週與減量週則把重陸訓移出主賽前48小時。 |
+| periodization.dryland.concurrent | 🟢 | 陸訓與水課怎麼隔，先看個人可恢復的安排。同任務越游越慢、同速越來越吃力或動作品質下降時，回看總負荷與間隔；比賽前沿用已知反應，不臨時加新刺激。 |
 | periodization.dryland.needs_analysis | 🟡 | 陸訓處方從比賽掉速段反推：先定位出發、轉身、水下或水面段，再測最可能限制該段的力量、爆發力、活動度、軀幹控制與左右差，最後選能直接改變該限制的訓練。 |
 | periodization.dryland.injury | 🟢 | 有痛先降引發症狀的負荷；無痛但外旋、肩胛或跨側控制不足，就做8週容量方案；鬆但控制差練穩定，不再拉更開。每週用疼痛、ROM、肌力和可承受划量追蹤。要知道彈力帶那套目前只有小型試驗、 |
 | periodization.dryland.youth | 🟢 | 約7、8歲、能守指令就能從自體重量開始；生長陡增期前以徒手為主，成熟後再逐步負重（Swimming Australia 的教材把負重動作設給女生13歲以上、男生14歲以上，16歲以 |
 | periodization.dryland.flexibility | 🟢 | 活動度決定泳者能使用哪些技術路徑：過頭活動度不足會限制流線與回臂，蛙式翻腳的角度同時來自髖、膝與足部三處而不是單一關節，踝蹠屈不足會縮小自由式與蝶式踢腿的有效推進面。處方先分成被動 |
 | periodization.dryland.caveats | 🟡 | 陸上變強卻沒游快，就不要再加同一種重量：把能力接到水中阻力與賽速；臥推不轉移就改測划水功率；增強式不轉移就降到維持量，改看出發與 5m、15m 分段有沒有在動。每4–6週照三層結果 |
 
-### `_index.yaml` （**0 節點**）
+### `decisions.yaml` （**4 節點**）
 
-（無）
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| periodization.decisions.planner | 🔵 | 把週期化變成每週可重用的決策 |
+| periodization.decisions.monitoring | 🔵 | 先對齊量測，再判斷進退 |
+| periodization.decisions.set_response | 🟢 | 新研究：同一乳酸數字可能掩蓋不同組課反應 |
+| periodization.decisions.hrv_response | 🟢 | 新研究：HRV 改變不等於游泳表現變差 |
 
 ---
 
