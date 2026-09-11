@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 927,
+  "record_count": 932,
   "records": [
     {
       "id": "Bk1",
@@ -1172,6 +1172,43 @@
       "outgoing_ids": []
     },
     {
+      "id": "Br35",
+      "domain": "drills",
+      "file": "Drills/drills_breaststroke.yaml",
+      "path": "drills[38]",
+      "title": "網球夾下巴蛙式",
+      "tags": {
+        "category": [
+          "breathing"
+        ],
+        "l_level": [
+          "L2",
+          "L3"
+        ]
+      },
+      "source_ids": [
+        "src.sica-2025-swimmingworld-tennis-ball-breaststroke"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "Br36",
+      "domain": "drills",
+      "file": "Drills/drills_breaststroke.yaml",
+      "path": "drills[39]",
+      "title": "水中步行蛙式划手",
+      "tags": {
+        "category": [
+          "breathing"
+        ],
+        "l_level": [
+          "L2"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
       "id": "Br4",
       "domain": "drills",
       "file": "Drills/drills_breaststroke.yaml",
@@ -1856,6 +1893,26 @@
       },
       "source_ids": [
         "src.theres-a-drill-for-that"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "Fl32",
+      "domain": "drills",
+      "file": "Drills/drills_butterfly.yaml",
+      "path": "drills[34]",
+      "title": "憋氣對照換氣蝶式",
+      "tags": {
+        "category": [
+          "breathing"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.alves-1999-butterfly-inspiratory-kinematics"
       ],
       "outgoing_ids": []
     },
@@ -5299,14 +5356,18 @@
           "head"
         ],
         "certainty": [
-          "🟠"
+          "🟠",
+          "🟢"
         ],
         "stroke": [
           "breast"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.stallman-2010-breaststroke-movement-economy"
+      ],
       "outgoing_ids": [
+        "breast.err18",
         "breast.tech.26",
         "breast.tech.5"
       ]
@@ -5398,6 +5459,33 @@
       "source_ids": [],
       "outgoing_ids": [
         "FrBr3"
+      ]
+    },
+    {
+      "id": "breast.err18",
+      "domain": "instructional",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[59]",
+      "title": "游慢一點就不會抬頭壓髖——把槓桿問題當成速度問題",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "certainty": [
+          "🟠",
+          "🟢"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [
+        "src.stallman-2010-breaststroke-movement-economy",
+        "src.usms-breaststroke-body-position-guide"
+      ],
+      "outgoing_ids": [
+        "breast.err13",
+        "breast.err7"
       ]
     },
     {
@@ -7949,7 +8037,7 @@
       "id": "fly.err1",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[59]",
+      "path": "errors[60]",
       "title": "水下划手應走鑰匙孔（Keyhole）或S形整條路徑",
       "tags": {
         "category": [
@@ -7977,7 +8065,7 @@
       "id": "fly.err10",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[68]",
+      "path": "errors[69]",
       "title": "蝶式起伏幅度越大越好、越像海豚越好",
       "tags": {
         "category": [
@@ -8004,7 +8092,7 @@
       "id": "fly.err11",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[69]",
+      "path": "errors[70]",
       "title": "蝶式起伏是靠臀部主動上下來驅動的",
       "tags": {
         "category": [
@@ -8033,7 +8121,7 @@
       "id": "fly.err12",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[70]",
+      "path": "errors[71]",
       "title": "蝶式換氣時頭要往上抬高、眼睛看前方",
       "tags": {
         "category": [
@@ -8063,7 +8151,7 @@
       "id": "fly.err13",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[71]",
+      "path": "errors[72]",
       "title": "蝶式只能向正前方換氣，側向換氣不規範",
       "tags": {
         "category": [
@@ -8091,7 +8179,7 @@
       "id": "fly.err14",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[72]",
+      "path": "errors[73]",
       "title": "蝶式每下必換氣，或每兩下才能換一次，是固定標準",
       "tags": {
         "category": [
@@ -8116,7 +8204,7 @@
       "id": "fly.err15",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[73]",
+      "path": "errors[74]",
       "title": "入水手指先入、手腕折下——破壞高肘設定造成 EVF 早期崩潰",
       "tags": {
         "category": [
@@ -8139,7 +8227,7 @@
       "id": "fly.err16",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[74]",
+      "path": "errors[75]",
       "title": "入水越深、起手越輕鬆",
       "tags": {
         "category": [
@@ -8159,10 +8247,37 @@
       ]
     },
     {
+      "id": "fly.err17",
+      "domain": "instructional",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[76]",
+      "title": "蝶式換氣沉臀只要調速度就會好——換氣本身造成的軀幹上抬不隨快慢消失",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "certainty": [
+          "🟠",
+          "🟢"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [
+        "src.alves-1999-butterfly-inspiratory-kinematics",
+        "src.lepinski-2020-usms-five-ways-butterfly"
+      ],
+      "outgoing_ids": [
+        "breast.err18",
+        "fly.err16"
+      ]
+    },
+    {
       "id": "fly.err2",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[60]",
+      "path": "errors[61]",
       "title": "蝶式雙手入水位置要靠近中線甚至額頭正前方",
       "tags": {
         "category": [
@@ -8188,7 +8303,7 @@
       "id": "fly.err3",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[61]",
+      "path": "errors[62]",
       "title": "蝶式划手要像蛙式一樣「向外掃—向內夾」",
       "tags": {
         "category": [
@@ -8212,7 +8327,7 @@
       "id": "fly.err4",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[62]",
+      "path": "errors[63]",
       "title": "蝶式回臂要高舉、大弧度、讓手臂遠離身體",
       "tags": {
         "category": [
@@ -8239,7 +8354,7 @@
       "id": "fly.err5",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[63]",
+      "path": "errors[64]",
       "title": "競賽規則要求雙臂對稱，所以力道與時機也必須完全一致",
       "tags": {
         "category": [
@@ -8262,7 +8377,7 @@
       "id": "fly.err6",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[64]",
+      "path": "errors[65]",
       "title": "先教蝶腿，掌握海豚踢後再整合其他動作",
       "tags": {
         "category": [
@@ -8290,7 +8405,7 @@
       "id": "fly.err7",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[65]",
+      "path": "errors[66]",
       "title": "蝶腿要踢大一點才有力",
       "tags": {
         "category": [
@@ -8315,7 +8430,7 @@
       "id": "fly.err8",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[66]",
+      "path": "errors[67]",
       "title": "流線型手臂貼側的海豚踢等同蝶式踢腿訓練",
       "tags": {
         "category": [
@@ -8342,7 +8457,7 @@
       "id": "fly.err9",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[67]",
+      "path": "errors[68]",
       "title": "第二踢在手臂離水時發生",
       "tags": {
         "category": [
@@ -18095,7 +18210,7 @@
       "id": "starts-turns.err1",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[88]",
+      "path": "errors[90]",
       "title": "起跳角度越大、飛越遠，入水後速度越快",
       "tags": {
         "category": [
@@ -18124,7 +18239,7 @@
       "id": "starts-turns.err10",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[97]",
+      "path": "errors[99]",
       "title": "起跳一定要抬頭（或反向：絕對不能抬頭）——二元口令兩派都過度執行",
       "tags": {
         "category": [
@@ -18148,7 +18263,7 @@
       "id": "starts-turns.err11",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[98]",
+      "path": "errors[100]",
       "title": "轉身越快越好——approach 速度過快反失分",
       "tags": {
         "category": [
@@ -18172,7 +18287,7 @@
       "id": "starts-turns.err12",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[99]",
+      "path": "errors[101]",
       "title": "Breakout 多踢幾下、慢慢上來避免掉速——水下越久速度衰減越多",
       "tags": {
         "category": [
@@ -18198,7 +18313,7 @@
       "id": "starts-turns.err13",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[100]",
+      "path": "errors[102]",
       "title": "蛙式 pullout 完全靜止才划手——錯失最佳推進力疊加時機",
       "tags": {
         "category": [
@@ -18222,7 +18337,7 @@
       "id": "starts-turns.err14",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[101]",
+      "path": "errors[103]",
       "title": "起跳後第一划要呼吸補氣（200m 以上）——破壞 breakout 速度的最大錯誤",
       "tags": {
         "category": [
@@ -18246,7 +18361,7 @@
       "id": "starts-turns.err2",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[89]",
+      "path": "errors[91]",
       "title": "Kick Start：前腳是主力推進腳",
       "tags": {
         "category": [
@@ -18273,7 +18388,7 @@
       "id": "starts-turns.err3",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[90]",
+      "path": "errors[92]",
       "title": "入水要垂直插入——手指先插進去、身體筆直最乾淨",
       "tags": {
         "category": [
@@ -18299,7 +18414,7 @@
       "id": "starts-turns.err4",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[91]",
+      "path": "errors[93]",
       "title": "仰式起跳要盡量拱背，弧線越大越好",
       "tags": {
         "category": [
@@ -18326,7 +18441,7 @@
       "id": "starts-turns.err5",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[92]",
+      "path": "errors[94]",
       "title": "蛙式／蝶式接近牆時提前收手，換取快速觸牆",
       "tags": {
         "category": [
@@ -18352,7 +18467,7 @@
       "id": "starts-turns.err6",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[93]",
+      "path": "errors[95]",
       "title": "觸牆蹬出之後才做流線型",
       "tags": {
         "category": [
@@ -18374,7 +18489,7 @@
       "id": "starts-turns.err7",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[94]",
+      "path": "errors[96]",
       "title": "仰式計步：從旗幟數固定步數就翻，速度快慢都一樣",
       "tags": {
         "category": [
@@ -18399,7 +18514,7 @@
       "id": "starts-turns.err8",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[95]",
+      "path": "errors[97]",
       "title": "蛙式轉身觸牆後要刻意往下沉，讓腳找到牆",
       "tags": {
         "category": [
@@ -18426,7 +18541,7 @@
       "id": "starts-turns.err9",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[96]",
+      "path": "errors[98]",
       "title": "推牆力道越大，出去速度就越快",
       "tags": {
         "category": [
@@ -20216,7 +20331,7 @@
       "id": "udk.err1",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[75]",
+      "path": "errors[77]",
       "title": "踢的幅度越大，推進力越強",
       "tags": {
         "category": [
@@ -20244,7 +20359,7 @@
       "id": "udk.err10",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[84]",
+      "path": "errors[86]",
       "title": "最後一踢結束後才出水，踢完再接第一划",
       "tags": {
         "category": [
@@ -20269,7 +20384,7 @@
       "id": "udk.err11",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[85]",
+      "path": "errors[87]",
       "title": "仰式水下踢法與俯式相同，橫躺過來踢就好",
       "tags": {
         "category": [
@@ -20294,7 +20409,7 @@
       "id": "udk.err12",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[86]",
+      "path": "errors[88]",
       "title": "「像海豚一樣游」足以傳遞 UDK 的技術要求",
       "tags": {
         "category": [
@@ -20322,7 +20437,7 @@
       "id": "udk.err13",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[87]",
+      "path": "errors[89]",
       "title": "直接練踢腿就好，流線型會自然到位",
       "tags": {
         "category": [
@@ -20348,7 +20463,7 @@
       "id": "udk.err2",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[76]",
+      "path": "errors[78]",
       "title": "踢腿應從大腿或膝蓋主動發力",
       "tags": {
         "category": [
@@ -20375,7 +20490,7 @@
       "id": "udk.err3",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[77]",
+      "path": "errors[79]",
       "title": "上踢只是回復動作，推進力來自下踢",
       "tags": {
         "category": [
@@ -20404,7 +20519,7 @@
       "id": "udk.err4",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[78]",
+      "path": "errors[80]",
       "title": "強迫提高踢頻才能提升水下速度",
       "tags": {
         "category": [
@@ -20429,7 +20544,7 @@
       "id": "udk.err5",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[79]",
+      "path": "errors[81]",
       "title": "頭部引導波動才能產生完整的海豚踢",
       "tags": {
         "category": [
@@ -20456,7 +20571,7 @@
       "id": "udk.err6",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[80]",
+      "path": "errors[82]",
       "title": "會游蝶式就等於會踢 UDK，技術可以直接遷移",
       "tags": {
         "category": [
@@ -20482,7 +20597,7 @@
       "id": "udk.err7",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[81]",
+      "path": "errors[83]",
       "title": "水下踢得越深，速度越快",
       "tags": {
         "category": [
@@ -20508,7 +20623,7 @@
       "id": "udk.err8",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[82]",
+      "path": "errors[84]",
       "title": "轉身後必須先滑行，等速度降下來再開始踢腿",
       "tags": {
         "category": [
@@ -20535,7 +20650,7 @@
       "id": "udk.err9",
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
-      "path": "errors[83]",
+      "path": "errors[85]",
       "title": "水下踢越遠越好，15 公尺上限就是目標",
       "tags": {
         "category": [

@@ -1109,3 +1109,63 @@ drills:
     cognitive_load: low
     tactile_anchor: core_tension_internal
     difficulty_tier: intermediate
+
+  - id: Br35
+    name_en: "Tennis Ball Breaststroke"
+    name_zh: "網球夾下巴蛙式"
+    strokes: [breaststroke]
+    category: breathing
+    equipment: [ball]
+    l_target: [L2, L3]
+    abc_type: C
+    purpose_zh: "用下巴夾住網球當外部限制，一抬頭球就掉——把「不要抬頭」從口頭提醒換成立即回饋"
+    how_to:
+      - "把網球輕輕夾在下巴與胸口之間，游蛙式"
+      - "划手與踢腿照常，換氣靠內划把肩帶起來，頭不主動往上抬"
+      - "只要在任何一刻抬頭，球就會掉出來；球掉了就停下撿球重來"
+      - "單趟 25 公尺以內的矯正用途，不拿來練長距離——夾球會限制每次踢腿後的推進與滑行段，整體 stroke 會被拖慢"
+    perception_goal: "感覺換氣時下巴往前推而不是往上抬；球在下巴下方的接觸點是頭部位置的即時參考"
+    success_signal: "整趟球都沒掉，而且還吸得到氣"
+    failure_signal: "球掉出來（抬頭了）；或為了不讓球掉而把頸部整個鎖死、上半身僵硬——球雖然沒掉，卻換來另一個問題"
+    deficiency_fixes: [1]
+    source: "Sica, J. (2025). Swim Drill of the Week: Tennis Ball Breaststroke. Swimming World."
+    source_ids: [src.sica-2025-swimmingworld-tennis-ball-breaststroke]
+    body_position: prone
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [streamline_line, breath_rhythm]
+    stroke_phase: whole_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
+
+  - id: Br36
+    name_en: "Walking Breaststroke Pull"
+    name_zh: "水中步行蛙式划手"
+    strokes: [breaststroke]
+    category: breathing
+    equipment: []
+    l_target: [L0, L2]
+    abc_type: C
+    purpose_zh: "在淺水區用走的做蛙式划手，把「上浮的力量來自手不是脖子」變成直接可感覺的事"
+    how_to:
+      - "站在及胸水深，身體前傾把臉放進水裡，雙手前伸"
+      - "邊往前走邊做完整蛙式划手：外划、內划、前伸"
+      - "內划時手往內往下壓，讓上半身被推起來，等臉自然出水再吸氣"
+      - "頭不主動抬；如果壓完了臉還在水裡，是手沒壓夠，不是脖子抬不夠"
+      - "走 10–15 公尺，重複 4–6 趟"
+    perception_goal: "感覺到「氣是手給的」——上浮來自內划的向下分量，頸部全程不出力"
+    success_signal: "臉在內划進行到一半時自己出水；吸完氣頭自己回到水裡"
+    failure_signal: "靠仰頭把臉抬出水；或手壓完了臉還在水裡（內划沒有向下分量）"
+    deficiency_fixes: [1]
+    source: "Vortex 整理（外部限制矯正法；淺水步行版划手）"
+    body_position: standing
+    constraints: [no_kick]
+    movement_pattern: progressive
+    skill_focus: [forearm_pressure, breath_rhythm]
+    stroke_phase: pull
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: hand_pressure
+    difficulty_tier: foundation

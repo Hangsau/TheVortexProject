@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-09-10 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-09-11 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -15,7 +15,7 @@
 | 章節 | 條目數 | 備註 |
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
-| `teaching-errors` | 102 | 泳式分布：{'free': 25, 'back': 17, 'breast': 17, 'fly': 16, 'udk': 13, 'starts-turns': 14} |
+| `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -33,7 +33,7 @@
 | `health/injuries (built)` | 0 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
-| `Drills (7 files)` | 176 | 176 drill 含 9 軸 fingerprint |
+| `Drills (7 files)` | 179 | 176 drill 含 9 軸 fingerprint |
 
 ---
 
@@ -295,9 +295,9 @@
 | udk.tech.29 | streamline |  | 🔵 |
 | udk.tech.30 | joint |  | 🔵 |
 
-### `teaching-errors.yaml` — 教學誤區（**102 條目**）
+### `teaching-errors.yaml` — 教學誤區（**104 條目**）
 
-**泳式分布**：仰式 17, 蛙式 17, 蝶式 16, 自由式 25, 起跳轉身 14, 水下蝶腳 13
+**泳式分布**：仰式 17, 蛙式 18, 蝶式 17, 自由式 25, 起跳轉身 14, 水下蝶腳 13
 
 #### 自由式 (25)
 
@@ -351,7 +351,7 @@
 | back.err16 | recovery |  |
 | back.err17 | recovery |  |
 
-#### 蛙式 (17)
+#### 蛙式 (18)
 
 | ID | 範疇 | 標題/摘要 |
 |---|---|---|
@@ -372,8 +372,9 @@
 | breast.err15 | pull |  |
 | breast.err16 | undulation |  |
 | breast.err17 | head |  |
+| breast.err18 | head |  |
 
-#### 蝶式 (16)
+#### 蝶式 (17)
 
 | ID | 範疇 | 標題/摘要 |
 |---|---|---|
@@ -393,6 +394,7 @@
 | fly.err14 | head |  |
 | fly.err15 | entry |  |
 | fly.err16 | entry |  |
+| fly.err17 | head |  |
 
 #### 起跳轉身 (14)
 
@@ -1018,9 +1020,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | BkLow1 | 六踢換邊 | timing | L2 L3 | intermediate | backstroke |
 | BkEL1 | 仰式 6K1S（蛙鞋） | timing | L5 | elite | backstroke |
 
-### `drills_breaststroke.yaml` — breaststroke (**38 drills**)
+### `drills_breaststroke.yaml` — breaststroke (**40 drills**)
 
-**難度分布**：{'foundation': 6, 'intermediate': 15, 'advanced': 14, 'elite': 3}
+**難度分布**：{'foundation': 7, 'intermediate': 16, 'advanced': 14, 'elite': 3}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1062,10 +1064,12 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | BrPad1 | 手掌板蛙式外撇 | arm | L3 L4 | intermediate | breaststroke |
 | BrSt1 | 站姿牆邊流線設定 | balance | L1 L2 | foundation | breaststroke |
 | BrLow1 | 拉拉踢 | timing | L2 L3 | intermediate | breaststroke |
+| Br35 | 網球夾下巴蛙式 | breathing | L2 L3 | intermediate | breaststroke |
+| Br36 | 水中步行蛙式划手 | breathing | L0 L2 | foundation | breaststroke |
 
-### `drills_butterfly.yaml` — butterfly (**34 drills**)
+### `drills_butterfly.yaml` — butterfly (**35 drills**)
 
-**難度分布**：{'foundation': 3, 'intermediate': 7, 'advanced': 22, 'elite': 2}
+**難度分布**：{'foundation': 3, 'intermediate': 7, 'advanced': 23, 'elite': 2}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1103,6 +1107,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | FlEC1 | 閉眼蝶腿 | kick | L3 L4 | intermediate | butterfly underwater_dolphin_kick |
 | FlPad1 | 手掌板水下恢復臂 | arm | L4 L5 | advanced | butterfly |
 | FlSt1 | 站姿胸壓+髖前後 | kick | L1 L2 | foundation | butterfly |
+| Fl32 | 憋氣對照換氣蝶式 | breathing | L3 L4 | advanced | butterfly |
 
 ### `drills_sculling.yaml` — sculling (**12 drills**)
 

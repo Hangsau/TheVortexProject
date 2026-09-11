@@ -992,3 +992,35 @@ drills:
     cognitive_load: low
     tactile_anchor: core_tension_internal
     difficulty_tier: foundation
+
+  - id: Fl32
+    name_en: "No-Breath / Breath Contrast Fly"
+    name_zh: "憋氣對照換氣蝶式"
+    strokes: [butterfly]
+    category: breathing
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: C
+    purpose_zh: "用「後段不換氣」與「全程換氣」交替對照，把換氣這一拍實際造成的軀幹上抬量變成可比較的感覺差"
+    how_to:
+      - "游 4 趟 50 公尺蝶式，趟與趟之間休息到完全恢復（原研究給 6 分鐘）"
+      - "第 1、3 趟前 25 公尺自由換氣、後 25 公尺完全不換氣"
+      - "第 2、4 趟全程自由換氣"
+      - "兩趟強度分開：其中一組約 75%、另一組約 95% 個人 100 公尺蝶式最佳配速"
+      - "每趟一結束立刻回想：不換氣那 25 公尺，髖與腳的位置跟換氣時差多少"
+      - "有同伴從側面看或錄影更好——差的是軀幹上抬的角度，不是手的動作"
+    perception_goal: "感覺到換氣那一拍額外把軀幹翹起來多少；這個差值就是換氣目前的成本"
+    success_signal: "說得出兩種游法在髖部高度或腳的深度上的具體差別"
+    failure_signal: "兩趟感覺一樣——多半是不換氣那段也在抬頭看前面，或換氣時本來就沒有抬頭（那問題不在這裡）"
+    deficiency_fixes: [1, 2]
+    source: "Alves et al. 1999 實驗設計改寫（Biomechanics and Medicine in Swimming VIII）"
+    source_ids: [src.alves-1999-butterfly-inspiratory-kinematics]
+    body_position: prone
+    constraints: [no_breath]
+    movement_pattern: alternating
+    skill_focus: [breath_rhythm, wave_undulation]
+    stroke_phase: whole_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced

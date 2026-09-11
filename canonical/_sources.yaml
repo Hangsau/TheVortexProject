@@ -10644,3 +10644,70 @@ sources:
       url: "https://www.yourswimlog.com/gretchen-walsh-underwater-dolphin-kick/"
     retrieved_on: "2026-09-06"
     notes: "2026-09-06 定位。從 src.yourswimlog-b 站台殘樁拆出。本庫引用比對到該文要點：Dressel 與 Gretchen Walsh 使用的振幅明顯大於一般泳者，差別不只在力量，而在讓推進力足以超過額外阻力的軀幹控制與核心力量；該文並指出 Maggie Mac Neill 與 Walsh 兩位世界級泳者的振幅與頻率策略截然不同，大振幅慢節奏與小振幅高頻率可以同樣有效。使用邊界：① 站台本機直取回 HTTP 403，本筆靠檢索索引的摘錄比對，發表日期留空；② 這是對菁英影像的教練評述，**振幅大小與核心能力都沒有數值**，本庫引用處必須維持「不是通用法則」的限定，不能反推成振幅越大越好。"
+
+  - id: src.stallman-2010-breaststroke-movement-economy
+    display: "Stallman, R. K., Major, J., Hemmer, S., & Haavaag, G. (2010). Movement economy in breaststroke swimming: A survival perspective. In Biomechanics and Medicine in Swimming XI (pp. 379-381). Oslo: Norwegian School of Sport Sciences."
+    title: "Movement economy in breaststroke swimming: A survival perspective"
+    type: conference_paper
+    verification_status: verified
+    authors: ["Robert Keig Stallman", "J. Major", "S. Hemmer", "G. Haavaag"]
+    year: 2010
+    container: "Biomechanics and Medicine in Swimming XI"
+    publisher: "Norwegian School of Sport Sciences, Oslo"
+    pages: "379-381"
+    identifier:
+      url: "https://bms.sport-iat.de/Record/4020561"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 經 IAT 書目資料庫（bms.sport-iat.de）取回完整書目與摘要核對。本庫取用兩件事：① 次最大強度下，頭部持續保持在水面上游蛙式時，攝氧量、脈搏率與血乳酸**三項都顯著高於**正常換氣游法（Douglas bag 呼吸測量法）；② 作者給的機制敘述是「the center of gravity is displaced backward, farther from the center of buoyancy」，因而身體傾角與阻力上升。**使用邊界（重要）**：這是一份**救生／生存視角**的研究，受試在實驗組是「頭部持續保持水面上」（survival 情境的極端姿勢），**不是競技蛙式換氣時的短暫抬頭**——本庫引用時只能當「頭部位置抬高會帶來可量測的代謝代價」的方向性證據，不可反推成「每次換氣抬頭會使 VO2 上升 N%」。③ 該摘要**未給出樣本數、受試程度與差異幅度的數值**，會議論文全文本庫未取得，故不得引用任何百分比。④ 這是 2010 年會議論文集，非同儕審查期刊。"
+
+  - id: src.alves-1999-butterfly-inspiratory-kinematics
+    display: "Alves, F., Cunha, P., & Gomes-Pereira, J. (1999). Kinematic changes with inspiratory actions in butterfly swimming. In Biomechanics and Medicine in Swimming VIII (pp. 9-14). University of Jyväskylä."
+    title: "Kinematic changes with inspiratory actions in butterfly swimming"
+    type: conference_paper
+    verification_status: verified
+    authors: ["Francisco Alves", "P. Cunha", "J. Gomes-Pereira"]
+    year: 1999
+    container: "Biomechanics and Medicine in Swimming VIII"
+    publisher: "University of Jyväskylä"
+    pages: "9-14"
+    identifier:
+      url: "https://www.bisp-surf.de/Record/PU200110000335"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 由 BISp-SURF 取回**逐字完整摘要**核對（bms.sport-iat.de/Record/4037170 為同一篇的第二筆書目）。方法逐字：11 名女性泳者依程度分組，4×50 m、組間休息 6 分鐘，2 趟 75%、2 趟 95% 個人 100 m 蝶式最佳成績；其中 2 趟自由換氣（v75R、v95R）、2 趟在後 25 m 禁止換氣（v75NR、v95NR）；水上水下同步攝影機拍矢狀面做運動學分析。可引的逐字結果：① **程度較低組**，禁止換氣時軀幹最大正向傾角由 32.14°±4.06 降至 24.08°±3.01（v75）、由 33.5°±5.72 降至 24.63°±1.44（v95）——換言之換氣這件事本身替該組多帶來約 8–9° 的軀幹上抬；② 程度較高組，正面換氣造成 v75 下較長的 downsweep、v95 下較深的踢腿；③ 逐字「The pernicious effect of the lifting of the head was weakened in the case of the more skilled swimmers with the increase of velocity, **but not for the other group**」。**使用邊界**：① 量的是**軀幹傾角**，不是髖部高度或阻力，不可換算；② 全為女性、n=11 且再拆兩組，每組樣本極小，摘要未給組別人數與統計檢定值；③ 第 ③ 點是本專案引用的重點——速度對抬頭代價的緩衝**只在較熟練組成立**，不可寫成通則。"
+
+  - id: src.usms-breaststroke-body-position-guide
+    display: "U.S. Masters Swimming. Breaststroke Body Position: The Complete Guide."
+    title: "Breaststroke Body Position: The Complete Guide"
+    type: web_guide
+    verification_status: verified
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/guides/breaststroke/body-position"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 取該頁核對。本庫取用的逐字句為：「When you lift your head to breathe, your hips drop. Skilled swimmers may be able to keep their hips at the surface but they have to work hard to do that, which costs them a lot of energy and slows them down.」以及蹺蹺板比喻「If you quickly press down hard on one side of the seesaw (your head and chest in this metaphor), the opposite side (your hips) quickly pops up to the surface.」**使用邊界**：① 該頁為機構教學指南、未署名作者、未標日期，故不填 year／authors，證據層級只能到教學共識（🟠），**不得標 🟢**；② 蹺蹺板是**比喻**不是力學模型，本庫引用時必須同時給出真正的機制語言（重心相對浮心後移，見 src.stallman-2010-breaststroke-movement-economy），不可讓比喻單獨承擔機制解釋；③ 該頁**沒有任何量測值**，「costs them a lot of energy」是質性敘述，代謝代價的量測另由 Stallman 2010 承擔。"
+
+  - id: src.sica-2025-swimmingworld-tennis-ball-breaststroke
+    display: "Sica, J. (2025, December 27). Swim Drill of the Week: Tennis Ball Breaststroke. Swimming World Magazine."
+    title: "Swim Drill of the Week: Tennis Ball Breaststroke"
+    type: web_article
+    verification_status: verified
+    authors: ["James Sica"]
+    year: 2025
+    container: "Swimming World Magazine"
+    identifier:
+      url: "https://www.swimmingworldmagazine.com/news/swim-drill-tennis-ball-breaststroke/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 取原文核對。可引內容：泳者把網球夾在下巴下方游蛙式；逐字「If they try to lift their heads up at any point in the stroke the tennis ball will fall out and they will know that position is incorrect.」；該文說明多數年輕泳者游蛙式時自然朝前看，而這會「slows down the stroke by limiting the propulsion and glide phase at the end of every kick」。**使用邊界（本庫整合時抓到的加料）**：來源筆記宣稱這個 drill「下巴縮太低、頭完全埋進水裡也會掉球，所以同時避免代償性抬頭與過度低頭兩種極端」——**原文沒有這個說法**，全文只描述抬頭會掉球這一個方向。該雙向宣稱已在整合時剔除，不得再寫入。② 原文定位是青少年泳隊的趣味矯正 drill（並建議以計時競賽遊戲化），不是生物力學研究，無任何量測值。"
+
+  - id: src.lepinski-2020-usms-five-ways-butterfly
+    display: "Lepinski, C. (2020, October 27). Five Ways to Improve Your Butterfly. U.S. Masters Swimming."
+    title: "Five Ways to Improve Your Butterfly"
+    type: web_article
+    verification_status: verified
+    authors: ["Cokie Lepinski"]
+    year: 2020
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/five-ways-to-improve-your-butterfly"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 取原文核對。可引的逐字內容：換氣時機「Breathe when your arms pull under your torso.」、換氣太晚會使髖部下沉、以及「get your head back down before your hands reach your shoulders on the sweep forward」；Biondi drill 逐字「Do a couple of dolphin kicks in a streamlined position underwater to build up momentum; perform a butterfly stroke underwater, bringing your head up to breathe when your hands pass your midsection; and then recover your arms underwater.」；胸壓 drill 逐字「Stretch your arms out in a slight 'Y' position, and gently press your chest down and then pull it back up.」並註明呼吸管為 optional、用途是免除為換氣而抬頭。**使用邊界**：① 教練專欄，無量測值與樣本；② 來源筆記把換氣時機寫成「推水最後三分之一開始」並歸給 USMS 論壇討論串——**本文的說法是 pull under your torso（划到軀幹下方）**，兩者不同，本庫採原文措辭；③ 本庫另有 src.usms-fish-2025-butterfly-hips 的 notes 已記載：USMS 站內對蝶式起伏起點的歸屬並不統一（本文寫肋廓下緣），引用時不可當單一定論。"

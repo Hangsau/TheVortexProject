@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 831,
+  "source_count": 836,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -164,6 +164,27 @@
       ]
     },
     {
+      "id": "src.alves-1999-butterfly-inspiratory-kinematics",
+      "display": "Alves, F., Cunha, P., & Gomes-Pereira, J. (1999). Kinematic changes with inspiratory actions in butterfly swimming. In Biomechanics and Medicine in Swimming VIII (pp. 9-14). University of Jyväskylä.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.bisp-surf.de/Record/PU200110000335"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "Fl32",
+          "file": "Drills/drills_butterfly.yaml",
+          "path": "drills[34]"
+        },
+        {
+          "id": "fly.err17",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[76].public.physical_reason"
+        }
+      ]
+    },
+    {
       "id": "src.amaro-2019-dryland-sr",
       "display": "Amaro, N. M., Morouço, P. G., Marques, M. C., Batalha, N., Neiva, H., & Marinho, D. A. (2019). A systematic review on dry-land strength and conditioning training on swimming performance. Science & Sports, 34(1), e1–e14.",
       "verification_status": "verified",
@@ -244,12 +265,12 @@
         {
           "id": "udk.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[77].public.evidence[1]"
+          "path": "errors[79].public.evidence[1]"
         },
         {
           "id": "udk.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[77].public.physical_reason"
+          "path": "errors[79].public.physical_reason"
         }
       ]
     },
@@ -306,12 +327,12 @@
         {
           "id": "udk.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[77].public.evidence[0]"
+          "path": "errors[79].public.evidence[0]"
         },
         {
           "id": "udk.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[77].public.physical_reason"
+          "path": "errors[79].public.physical_reason"
         },
         {
           "id": "udk.tech.10",
@@ -539,7 +560,7 @@
         {
           "id": "starts-turns.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[88].public.evidence[0]"
+          "path": "errors[90].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.6",
@@ -619,7 +640,7 @@
         {
           "id": "starts-turns.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[92].public.evidence[0]"
+          "path": "errors[94].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.17",
@@ -1735,7 +1756,7 @@
         {
           "id": "udk.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[76].public.evidence[1]"
+          "path": "errors[78].public.evidence[1]"
         }
       ]
     },
@@ -1787,7 +1808,7 @@
         {
           "id": "starts-turns.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[91].public.evidence[0]"
+          "path": "errors[93].public.evidence[0]"
         }
       ]
     },
@@ -2442,12 +2463,12 @@
         {
           "id": "starts-turns.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[99].public.evidence[0]"
+          "path": "errors[101].public.evidence[0]"
         },
         {
           "id": "starts-turns.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[99].public.physical_reason"
+          "path": "errors[101].public.physical_reason"
         }
       ]
     },
@@ -3998,7 +4019,7 @@
         {
           "id": "starts-turns.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[90].public.evidence[0]"
+          "path": "errors[92].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.12",
@@ -4116,7 +4137,7 @@
         {
           "id": "fly.err14",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[72].public.evidence[0]"
+          "path": "errors[73].public.evidence[0]"
         }
       ]
     },
@@ -4132,7 +4153,7 @@
         {
           "id": "fly.err11",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[69].public.evidence[0]"
+          "path": "errors[70].public.evidence[0]"
         }
       ]
     },
@@ -4480,6 +4501,22 @@
       ]
     },
     {
+      "id": "src.lepinski-2020-usms-five-ways-butterfly",
+      "display": "Lepinski, C. (2020, October 27). Five Ways to Improve Your Butterfly. U.S. Masters Swimming.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/five-ways-to-improve-your-butterfly"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "fly.err17",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[76].public.evidence[0]"
+        }
+      ]
+    },
+    {
       "id": "src.liao-masters-2001-analogy-learning",
       "display": "Liao, C.-M., & Masters, R. S. W. (2001). Analogy learning: A means to implicit motor learning.",
       "verification_status": "verified",
@@ -4694,12 +4731,12 @@
         {
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[81].public.evidence[0]"
+          "path": "errors[83].public.evidence[0]"
         },
         {
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[81].public.physical_reason"
+          "path": "errors[83].public.physical_reason"
         },
         {
           "id": "udk.tech.2",
@@ -5000,7 +5037,7 @@
         {
           "id": "starts-turns.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[96].public.evidence[2]"
+          "path": "errors[98].public.evidence[2]"
         }
       ]
     },
@@ -5279,7 +5316,7 @@
         {
           "id": "starts-turns.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[95].public.evidence[1]"
+          "path": "errors[97].public.evidence[1]"
         }
       ]
     },
@@ -5498,7 +5535,7 @@
         {
           "id": "fly.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[62].public.evidence[0]"
+          "path": "errors[63].public.evidence[0]"
         }
       ]
     },
@@ -5982,7 +6019,7 @@
         {
           "id": "fly.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[60].public.evidence[0]"
+          "path": "errors[61].public.evidence[0]"
         }
       ]
     },
@@ -6022,7 +6059,7 @@
         {
           "id": "udk.err13",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[87].public.evidence[1]"
+          "path": "errors[89].public.evidence[1]"
         }
       ]
     },
@@ -7033,12 +7070,12 @@
         {
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[81].public.evidence[2]"
+          "path": "errors[83].public.evidence[2]"
         },
         {
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[81].public.physical_reason"
+          "path": "errors[83].public.physical_reason"
         },
         {
           "id": "udk.tech.2",
@@ -8319,7 +8356,7 @@
         {
           "id": "starts-turns.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[91].public.evidence[1]"
+          "path": "errors[93].public.evidence[1]"
         },
         {
           "id": "starts-turns.tech.14",
@@ -8543,7 +8580,7 @@
         {
           "id": "starts-turns.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[96].public.evidence[0]"
+          "path": "errors[98].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.17",
@@ -8905,7 +8942,7 @@
         {
           "id": "udk.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[83].public.evidence[0]"
+          "path": "errors[85].public.evidence[0]"
         },
         {
           "id": "udk.tech.18",
@@ -8945,7 +8982,7 @@
         {
           "id": "starts-turns.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[89].public.evidence[1]"
+          "path": "errors[91].public.evidence[1]"
         },
         {
           "id": "starts-turns.tech.8",
@@ -9049,7 +9086,7 @@
         {
           "id": "starts-turns.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[95].public.evidence[0]"
+          "path": "errors[97].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.25",
@@ -9449,12 +9486,12 @@
         {
           "id": "udk.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[78].public.evidence[0]"
+          "path": "errors[80].public.evidence[0]"
         },
         {
           "id": "udk.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[78].public.physical_reason"
+          "path": "errors[80].public.physical_reason"
         },
         {
           "id": "udk.tech.13",
@@ -9686,7 +9723,7 @@
         {
           "id": "starts-turns.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[96].public.evidence[1]"
+          "path": "errors[98].public.evidence[1]"
         },
         {
           "id": "starts-turns.tech.17",
@@ -9959,7 +9996,7 @@
         {
           "id": "starts-turns.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[97].public.evidence[0]"
+          "path": "errors[99].public.evidence[0]"
         }
       ]
     },
@@ -9973,12 +10010,12 @@
         {
           "id": "starts-turns.err14",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[101].public.evidence[0]"
+          "path": "errors[103].public.evidence[0]"
         },
         {
           "id": "starts-turns.err14",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[101].public.physical_reason"
+          "path": "errors[103].public.physical_reason"
         }
       ]
     },
@@ -10689,12 +10726,12 @@
         {
           "id": "udk.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[80].public.evidence[1]"
+          "path": "errors[82].public.evidence[1]"
         },
         {
           "id": "udk.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[80].public.physical_reason"
+          "path": "errors[82].public.physical_reason"
         }
       ]
     },
@@ -10922,12 +10959,12 @@
         {
           "id": "udk.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[86].public.evidence[0]"
+          "path": "errors[88].public.evidence[0]"
         },
         {
           "id": "udk.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[86].public.physical_reason"
+          "path": "errors[88].public.physical_reason"
         },
         {
           "id": "udk.tech.8",
@@ -11034,12 +11071,12 @@
         {
           "id": "fly.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[70].public.evidence[2]"
+          "path": "errors[71].public.evidence[2]"
         },
         {
           "id": "fly.err13",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[71].public.evidence[1]"
+          "path": "errors[72].public.evidence[1]"
         }
       ]
     },
@@ -11148,12 +11185,12 @@
         {
           "id": "fly.err11",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[69].public.evidence[2]"
+          "path": "errors[70].public.evidence[2]"
         },
         {
           "id": "fly.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[64].public.evidence[2]"
+          "path": "errors[65].public.evidence[2]"
         },
         {
           "id": "fly.pre.undulation",
@@ -11242,7 +11279,7 @@
         {
           "id": "udk.err11",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[85].public.evidence[0]"
+          "path": "errors[87].public.evidence[0]"
         },
         {
           "id": "udk.tech.22",
@@ -11511,6 +11548,22 @@
       "usages": []
     },
     {
+      "id": "src.sica-2025-swimmingworld-tennis-ball-breaststroke",
+      "display": "Sica, J. (2025, December 27). Swim Drill of the Week: Tennis Ball Breaststroke. Swimming World Magazine.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.swimmingworldmagazine.com/news/swim-drill-tennis-ball-breaststroke/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "Br35",
+          "file": "Drills/drills_breaststroke.yaml",
+          "path": "drills[38]"
+        }
+      ]
+    },
+    {
       "id": "src.sim-2019",
       "display": "Sim M, Garvican-Lewis LA, Cox GR, et al. (2019). Iron considerations for the athlete: a narrative review. Eur J Appl Physiol 119(7):1463–1478.",
       "verification_status": "verified",
@@ -11643,6 +11696,27 @@
           "id": "diving-cervical-injury",
           "file": "canonical/health/injuries.yaml",
           "path": "injuries[37].references[4]"
+        }
+      ]
+    },
+    {
+      "id": "src.stallman-2010-breaststroke-movement-economy",
+      "display": "Stallman, R. K., Major, J., Hemmer, S., & Haavaag, G. (2010). Movement economy in breaststroke swimming: A survival perspective. In Biomechanics and Medicine in Swimming XI (pp. 379-381). Oslo: Norwegian School of Sport Sciences.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://bms.sport-iat.de/Record/4020561"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "breast.err13",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[54].public.evidence[0]"
+        },
+        {
+          "id": "breast.err18",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[59].public.physical_reason"
         }
       ]
     },
@@ -12159,7 +12233,7 @@
         {
           "id": "fly.err4",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[62].public.evidence[1]"
+          "path": "errors[63].public.evidence[1]"
         }
       ]
     },
@@ -12175,7 +12249,7 @@
         {
           "id": "fly.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[68].public.evidence[0]"
+          "path": "errors[69].public.evidence[0]"
         }
       ]
     },
@@ -12205,17 +12279,17 @@
         {
           "id": "fly.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[66].public.evidence[0]"
+          "path": "errors[67].public.evidence[0]"
         },
         {
           "id": "udk.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[80].public.evidence[0]"
+          "path": "errors[82].public.evidence[0]"
         },
         {
           "id": "udk.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[80].public.physical_reason"
+          "path": "errors[82].public.physical_reason"
         }
       ]
     },
@@ -12247,7 +12321,7 @@
         {
           "id": "fly.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[67].public.evidence[0]"
+          "path": "errors[68].public.evidence[0]"
         }
       ]
     },
@@ -12311,7 +12385,7 @@
         {
           "id": "fly.err6",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[64].public.evidence[1]"
+          "path": "errors[65].public.evidence[1]"
         }
       ]
     },
@@ -12388,7 +12462,7 @@
         {
           "id": "fly.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[59].public.evidence[0]"
+          "path": "errors[60].public.evidence[0]"
         }
       ]
     },
@@ -12438,7 +12512,7 @@
         {
           "id": "starts-turns.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[89].public.evidence[0]"
+          "path": "errors[91].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.7",
@@ -12466,7 +12540,7 @@
         {
           "id": "udk.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[2]"
+          "path": "errors[84].public.evidence[2]"
         },
         {
           "id": "udk.tech.17",
@@ -12673,7 +12747,7 @@
         {
           "id": "udk.err2",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[76].public.evidence[0]"
+          "path": "errors[78].public.evidence[0]"
         },
         {
           "id": "udk.tech.9",
@@ -12694,7 +12768,7 @@
         {
           "id": "udk.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[83].public.evidence[2]"
+          "path": "errors[85].public.evidence[2]"
         }
       ]
     },
@@ -12943,12 +13017,12 @@
         {
           "id": "udk.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[0]"
+          "path": "errors[84].public.evidence[0]"
         },
         {
           "id": "udk.err8",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[82].public.evidence[1]"
+          "path": "errors[84].public.evidence[1]"
         },
         {
           "id": "udk.tech.17",
@@ -13803,17 +13877,17 @@
         {
           "id": "fly.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[68].public.evidence[1]"
+          "path": "errors[69].public.evidence[1]"
         },
         {
           "id": "fly.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[65].public.evidence[0]"
+          "path": "errors[66].public.evidence[0]"
         },
         {
           "id": "udk.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[75].public.evidence[1]"
+          "path": "errors[77].public.evidence[1]"
         }
       ]
     },
@@ -14159,7 +14233,7 @@
         {
           "id": "starts-turns.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[94].public.evidence[0]"
+          "path": "errors[96].public.evidence[0]"
         },
         {
           "id": "starts-turns.tech.23",
@@ -14183,6 +14257,22 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.usms-breaststroke-body-position-guide",
+      "display": "U.S. Masters Swimming. Breaststroke Body Position: The Complete Guide.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/guides/breaststroke/body-position"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "breast.err18",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[59].public.evidence[0]"
+        }
+      ]
     },
     {
       "id": "src.usms-breaststroke-kick-guide",
@@ -14238,7 +14328,7 @@
         {
           "id": "fly.err11",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[69].public.evidence[1]"
+          "path": "errors[70].public.evidence[1]"
         }
       ]
     },
@@ -14270,7 +14360,7 @@
         {
           "id": "fly.err13",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[71].public.evidence[0]"
+          "path": "errors[72].public.evidence[0]"
         }
       ]
     },
@@ -14286,7 +14376,7 @@
         {
           "id": "fly.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[70].public.evidence[0]"
+          "path": "errors[71].public.evidence[0]"
         }
       ]
     },
@@ -14315,12 +14405,12 @@
         {
           "id": "udk.err13",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[87].public.evidence[0]"
+          "path": "errors[89].public.evidence[0]"
         },
         {
           "id": "udk.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[79].public.evidence[0]"
+          "path": "errors[81].public.evidence[0]"
         },
         {
           "id": "udk.tech.24",
@@ -14339,12 +14429,12 @@
         {
           "id": "udk.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[86].public.evidence[1]"
+          "path": "errors[88].public.evidence[1]"
         },
         {
           "id": "udk.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[86].public.physical_reason"
+          "path": "errors[88].public.physical_reason"
         }
       ]
     },
@@ -14360,7 +14450,7 @@
         {
           "id": "udk.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[79].public.evidence[1]"
+          "path": "errors[81].public.evidence[1]"
         }
       ]
     },
@@ -14434,7 +14524,7 @@
         {
           "id": "starts-turns.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[88].public.evidence[2]"
+          "path": "errors[90].public.evidence[2]"
         }
       ]
     },
@@ -14538,12 +14628,12 @@
         {
           "id": "udk.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[75].public.evidence[0]"
+          "path": "errors[77].public.evidence[0]"
         },
         {
           "id": "udk.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[75].public.physical_reason"
+          "path": "errors[77].public.physical_reason"
         }
       ]
     },
@@ -14560,12 +14650,12 @@
         {
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[81].public.evidence[1]"
+          "path": "errors[83].public.evidence[1]"
         },
         {
           "id": "udk.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[81].public.physical_reason"
+          "path": "errors[83].public.physical_reason"
         },
         {
           "id": "udk.tech.2",
@@ -14896,7 +14986,7 @@
         {
           "id": "fly.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[59].public.evidence[1]"
+          "path": "errors[60].public.evidence[1]"
         }
       ]
     },
@@ -15027,7 +15117,7 @@
         {
           "id": "starts-turns.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[88].public.evidence[1]"
+          "path": "errors[90].public.evidence[1]"
         },
         {
           "id": "starts-turns.tech.6",
@@ -15081,7 +15171,7 @@
         {
           "id": "fly.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[70].public.evidence[1]"
+          "path": "errors[71].public.evidence[1]"
         }
       ]
     },
@@ -15352,22 +15442,22 @@
         {
           "id": "udk.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[84].public.evidence[0]"
+          "path": "errors[86].public.evidence[0]"
         },
         {
           "id": "udk.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[84].public.evidence[1]"
+          "path": "errors[86].public.evidence[1]"
         },
         {
           "id": "udk.err10",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[84].public.evidence[2]"
+          "path": "errors[86].public.evidence[2]"
         },
         {
           "id": "udk.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[77].public.evidence[2]"
+          "path": "errors[79].public.evidence[2]"
         }
       ]
     },
@@ -15435,7 +15525,7 @@
         {
           "id": "udk.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[75].public.evidence[3]"
+          "path": "errors[77].public.evidence[3]"
         }
       ]
     },
@@ -15451,7 +15541,7 @@
         {
           "id": "udk.err9",
           "file": "canonical/instructional/teaching-errors.yaml",
-          "path": "errors[83].public.evidence[1]"
+          "path": "errors[85].public.evidence[1]"
         }
       ]
     },

@@ -3,7 +3,7 @@
 > Sources: *There's a Drill for That!* (Cokie Lepinski, 2011) + *Fundamentals of Fast Swimming* (The Race Club / Gary Hall Sr) + Vortex 整理（呼吸、UDK、starts-turns、gap fills）
 > Perception layer mapping: Vortex L0–L6 framework (Hangsau 2026)  
 > 9-axis tag fingerprint v1.0 (2026-06-27): 見 `TAG_SCHEMA.md`  
-> Total: **176 drills** (Fr44 + Bk32 + Br38 + Fl34 + Sc12 + ST9 + UDK7)；其中 **22 elite**
+> Total: **179 drills** (Fr44 + Bk32 + Br40 + Fl35 + Sc12 + ST9 + UDK7)；其中 **22 elite**
 
 ## Files
 
@@ -11,8 +11,8 @@
 |------|-------|---------|
 | `drills_freestyle.yaml` | 44 | Fr1–Fr24 + FrBr1–FrBr4（呼吸）+ FrEC1/FrPad1/FrSt1/FrP1/FrP2/FrSide1/FrSide2/FrLow1（gap fills）+ FrEL1–FrEL8（Race Club elite） |
 | `drills_backstroke.yaml` | 32 | Bk1–Bk26 + BkEC1/BkPad1/BkSt1/BkP1/BkLow1（gap fills）+ BkEL1（Race Club elite） |
-| `drills_breaststroke.yaml` | 38 | Br1–Br34 + BrEC1/BrPad1/BrSt1/BrLow1（gap fills） |
-| `drills_butterfly.yaml` | 34 | Fl1–Fl31 + FlEC1/FlPad1/FlSt1（gap fills） |
+| `drills_breaststroke.yaml` | 40 | Br1–Br36 + BrEC1/BrPad1/BrSt1/BrLow1（gap fills） |
+| `drills_butterfly.yaml` | 35 | Fl1–Fl32 + FlEC1/FlPad1/FlSt1（gap fills） |
 | `drills_sculling.yaml` | 12 | Sc1–Sc10 + ScFist/ScUW1（gap fills） |
 | `drills_starts-turns.yaml` | 9 | ST1–ST5 + STSpat1（gap fills）+ STEL1–STEL3（Race Club 仰式出發） |
 | `drills_udk.yaml` | 7 | UDK1–UDK5 + UDKEC1/UDKLow1（gap fills） |
@@ -72,8 +72,8 @@
 ### 按泳式
 - 自由式：Fr1–Fr24
 - 仰式：Bk1–Bk26
-- 蛙式：Br1–Br34（含 Sc 划水鑽）
-- 蝶式：Fl1–Fl31（含 Sc 划水鑽）
+- 蛙式：Br1–Br36（含 Sc 划水鑽）
+- 蝶式：Fl1–Fl32（含 Sc 划水鑽）
 - 水下蝶腳：Fl2, Fl4–Fl11 + 所有 underwater_dolphin_kick 標記
 - 出發與轉身：Fl30
 
