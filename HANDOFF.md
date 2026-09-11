@@ -24,7 +24,9 @@
 
 ## 下一步建議（本批）
 
-canonical 側完成。剩 my-site 接線：`my-site/tools/sync_vortex.py:66` 的 `PERIODIZATION_FILES` 是硬編碼清單，要加 `"set-design"`，否則新檔靜默不同步；`layouts/vortex/vortex-periodization.html` 要加 `$sd` 資料綁定、rail 導覽 `<li>`、總覽 `vx-path-item` 與新 `<section>`，並把所有 `主題 N / 5` 改成 `/ 6`。線上驗收要抓 HTTP 狀態碼（404 頁面 grep 回 0 和正常頁長得一樣），正則要吃得下 minify 後的 `class=vx-xxx\b`。
+**本批已全部完成。** canonical `3ee2bac`（含 `steady_per_100_s` 的 `note_zh` 與 (3) 條的斷行修正）、my-site `4f8e054` / `ee6fe09`，CI 綠，線上已驗（HTTP 200；主題 5 區段 `<strong>` 84、字面 `**` 0、空 `<p>`／`<td>`／`<span>` 各 0、六個診斷鍵 0 次外洩）。入口 https://hangsau.github.io/cortex/vortex/periodization/#set-design 。素材 `resources/raw/notes/游泳訓練設計完整指南.md` 已依規則刪除。
+
+接線過程的三個踩雷點已寫進 `my-site/HANDOFF.md`，這裡只記對本 repo 有約束力的那條：**`tools/build_knowledge_map.py:401` 與 `my-site/tools/sync_vortex.py:66` 各有一份硬編碼的 periodization 檔名清單**，canonical 加新檔要同時改兩處，否則新檔靜默不進地圖也不出站，而且兩邊都不報錯。另外 canonical 的多行規則欄位（不縮排＝新條、縮排＝續行）在 my-site 由新的 `richlines.html` 逐行渲染，**接續行時不插空白**——某行若停在中文、續行開頭是 ASCII，線上就會黏成 `走decisions.yaml`；斷行位置要在 canonical 這側顧好。
 
 **上一批開的規劃線仍在：`plans/E組_問題索引層設計與派工.md`（W18–W25）**，下一步 W18 建 `canonical/instructional/problems.yaml` 骨架 + `validate.py` 三處註冊，微 diff 自己做。
 
