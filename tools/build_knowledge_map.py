@@ -398,7 +398,7 @@ def main():
     lines.append("")
     lines.append("## 週期化 `canonical/periodization/`")
     lines.append("")
-    for fname in ["structure", "taper", "zones", "dryland", "decisions"]:
+    for fname in ["structure", "taper", "zones", "dryland", "decisions", "set-design"]:
         path = ROOT / f"canonical/periodization/{fname}.yaml"
         if not path.exists():
             continue

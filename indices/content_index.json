@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 932,
+  "record_count": 943,
   "records": [
     {
       "id": "Bk1",
@@ -15763,6 +15763,272 @@
         "src.swimming-australia-sc-development-swimmers"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "periodization.set_design.anchors",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "anchors",
+      "title": "錨點時間與測驗協議",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.piatrikova-2018-3min-all-out-cs",
+        "src.scott-2024-css-stroke-specific-reliability",
+        "src.toubekis-2006-css-distance-selection",
+        "src.wakayoshi-1993-critical-velocity-mlss",
+        "src.zacca-2016-400m-single-test-estimate"
+      ],
+      "outgoing_ids": [
+        "periodization.decisions.monitoring",
+        "periodization.set_design.css_evidence",
+        "periodization.set_design.variables"
+      ]
+    },
+    {
+      "id": "periodization.set_design.css_evidence",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "css_evidence",
+      "title": "臨界游速的證據鏈與外推邊界",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.dekerle-2005-css-not-mlss",
+        "src.dekerle-2010-css-severe-domain",
+        "src.diprampero-2008-css-energetic-correction",
+        "src.nikitakis-2019-css-children-adolescents",
+        "src.pelarigo-2011-css-above-mlss",
+        "src.rizzato-2018-css-population-bias",
+        "src.toubekis-2011-cv-insensitive-to-training",
+        "src.toubekis-tokmakidis-2013-css-review",
+        "src.wakayoshi-1992-critical-velocity-flume",
+        "src.wakayoshi-1993-critical-velocity-mlss"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.anchors",
+        "periodization.zones.olbrecht_model",
+        "periodization.zones.swim_three_zone"
+      ]
+    },
+    {
+      "id": "periodization.set_design.energy_targets",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "energy_targets",
+      "title": "能量系統與組課意圖對照",
+      "tags": {
+        "certainty": [
+          "🔵",
+          "🟠",
+          "🟡",
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.haff-triplett-2016",
+        "src.mavroudi-2023-sprint-lactate-by-distance",
+        "src.terzi-2021-sprint-interval-set"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.unverified_claims",
+        "periodization.set_design.variables",
+        "periodization.zones.energy_systems_primer",
+        "periodization.zones.swim_energy_by_distance"
+      ]
+    },
+    {
+      "id": "periodization.set_design.generator",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "generator",
+      "title": "自動課表生成參數",
+      "tags": {
+        "certainty": [
+          "🔵",
+          "🟠",
+          "🟢"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.decisions.planner",
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.monitoring_exit",
+        "periodization.set_design.overview",
+        "periodization.set_design.usrpt",
+        "periodization.set_design.variables",
+        "periodization.set_design.weekly_assembly"
+      ]
+    },
+    {
+      "id": "periodization.set_design.monitoring_exit",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "monitoring_exit",
+      "title": "退出規則與重測時機",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.decisions.monitoring",
+        "periodization.decisions.planner",
+        "periodization.set_design.css_evidence",
+        "periodization.set_design.generator",
+        "periodization.set_design.usrpt",
+        "periodization.set_design.variables"
+      ]
+    },
+    {
+      "id": "periodization.set_design.overview",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "overview",
+      "title": "組課設計的六個步驟",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.decisions.planner",
+        "periodization.set_design.anchors",
+        "periodization.set_design.css_evidence",
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.monitoring_exit",
+        "periodization.set_design.phase_allocation",
+        "periodization.set_design.variables",
+        "periodization.set_design.weekly_assembly",
+        "periodization.zones.swim"
+      ]
+    },
+    {
+      "id": "periodization.set_design.phase_allocation",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "phase_allocation",
+      "title": "階段配置與減量銜接",
+      "tags": {
+        "certainty": [
+          "🟡"
+        ]
+      },
+      "source_ids": [
+        "src.hellard-2013-optimal-overload-taper",
+        "src.hellard-2019"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.weekly_assembly",
+        "periodization.structure.detraining",
+        "periodization.structure.swim_annual",
+        "periodization.taper.swim"
+      ]
+    },
+    {
+      "id": "periodization.set_design.unverified_claims",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "unverified_claims",
+      "title": "查證後未採用的六個數字",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.haff-triplett-2016",
+        "src.hellard-2013-optimal-overload-taper",
+        "src.mavroudi-2023-sprint-lactate-by-distance",
+        "src.swimsmooth-training-zones-blog",
+        "src.terzi-2021-sprint-interval-set"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.monitoring_exit",
+        "periodization.set_design.phase_allocation",
+        "periodization.zones.swim"
+      ]
+    },
+    {
+      "id": "periodization.set_design.usrpt",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "usrpt",
+      "title": "超短距賽速訓練的原始參數與證據地位",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.cuenca-fernandez-2023-usrpt-vs-rpt",
+        "src.nugent-2019-usrpt-systematic-review",
+        "src.papadimitriou-2023-usrpt-vs-hiit-youth",
+        "src.papadimitriou-2024-usrpt-scoping-review",
+        "src.papadimitriou-2026-sprint-tid",
+        "src.rushall-2016-usrpt-defined-bulletin-49",
+        "src.rushall-usrpt-planning-bulletin-47",
+        "src.williamson-2020-usrpt-acute-response"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.variables",
+        "periodization.zones.swim_tid"
+      ]
+    },
+    {
+      "id": "periodization.set_design.variables",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "variables",
+      "title": "四個變項的決定順序",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.set_design.anchors",
+        "periodization.set_design.css_evidence",
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.generator",
+        "periodization.set_design.monitoring_exit",
+        "periodization.set_design.usrpt",
+        "periodization.zones.swim"
+      ]
+    },
+    {
+      "id": "periodization.set_design.weekly_assembly",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "weekly_assembly",
+      "title": "週組裝與間隔規則",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.decisions.monitoring",
+        "periodization.decisions.planner",
+        "periodization.dryland.concurrent",
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.monitoring_exit",
+        "periodization.set_design.phase_allocation",
+        "periodization.structure.microcycle"
+      ]
     },
     {
       "id": "periodization.structure.annual.bicycle",

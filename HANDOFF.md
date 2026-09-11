@@ -4,7 +4,31 @@
 
 ---
 
-## 當前狀態（2026-09-11，最新）
+## 當前狀態（2026-09-12，最新）
+
+外部筆記「游泳訓練設計完整指南」查證後整合，新增 `canonical/periodization/set-design.yaml`（11 節點）。這批不是補三個洞，是補**整條設計鏈**——起因是先前做自動課表生成時卡住，根因是庫裡沒有一份從「量什麼錨點」到「一組怎麼開」再到「什麼條件停組」的完整決策鏈，所以這次一路寫到機器可讀的參數區塊為止。
+
+**鏈的形狀**：錨點測驗（T25/T50/T100 + T200/T400 → CSS）→ 選能量系統意圖（六種）→ 四個變數照固定順序決定（距離 → 目標秒數 → 休息 → 趟數）→ 週組裝（間隔規則 + 1–6 課次預算）→ 階段配比 → 監控與退出條件。最後 `generator` 節點把整條鏈壓成 `inputs` / `derived`（五條公式）/ `set_types`（六型，各帶距離域、目標推導、休息秒數、退出條件、每週上限）/ `assembly_rules` / `refusals`（五條拒絕生成的條件），課表生成器直接讀這一節就夠。
+
+**查證結果先行**：筆記裡六個數字沒過關，全部逐條裁決後寫進 `unverified_claims` 節點（不靜默刪掉，下次有人拿同一份素材來才看得到為什麼不收）。① 「乳酸 ≥20 mmol/L」查無出處，游泳第一手值 4×50 自由式（休 2 分）男 14.1±3.1／女 15.3±3.1，改採 **10–16，個體上緣偶達 18**。② 「完全恢復至少 48 小時」只有二手教練講義，48 小時是 **DOMS 峰值**的時間軸被挪用，改成可觀察判準（同條件熱身能回到正常速度且技術完整才算恢復）。③ 「速度衰退 >3–5% 停組」文獻全是槓鈴平均速度，且 3–5% 對 25 公尺衝刺只有 0.3–0.6 秒、落在手計時誤差內，改成 **max(0.5 秒, 3%)**。④ Taper 2.4% 來源是真的（Hellard 2013），但三處身分講錯：觀察性非因果、2.4±1.6% 是最佳群集而整體平均是 1.7±1.7%、負荷型態是**兩個峰**不是一個。⑤ NSCA work:rest 表來源真（Haff & Triplett 4th ed. Table 3.6）但筆記版本**四列全錯**，含一個表裡不存在的類別和一列方向寫反的有氧列，已改用逐字值。⑥ Swim Smooth 心率分區表——官方頁面明寫心率對游泳者「從來沒真正站穩」且**整頁沒有任何心率百分比**，該表另有內部矛盾（Z4 上緣 82% 與 Z5 下緣 90% 中間空 8 個百分點），刪除，只留三個逐字 CSS 配速偏移。
+
+**最重要的一處是語意修正不是數字修正**：筆記把 CSS 寫成「能穩定維持 20–30 分鐘的有氧閾值」。數字活下來但意思整個反了——Dekerle 2010 量到的 24.3±7.7 分鐘是**力竭時間**，期間乳酸與攝氧持續爬到峰值的 95±5%，CS 落在 **severe domain**，不是可維持閾值。這直接改掉一條設計規則：不寫 CSS 連續 30 分鐘游，改寫間歇（10×400 @CS 休 40 秒是有證據的形式，總時長 53.9±2.7 分鐘可完成）；未成年更只能寫間歇（連續游會超過 sMLSS，10×200 間歇才對得上）。
+
+**USRPT 按證據現況寫，不按主張寫**：兩份自出版非同儕審查公報；系統性回顧篩 1347 篇、評估 15 篇、**15 篇全數排除**；2024 scoping review 篩 90,612 筆只留 4 篇且全是急性反應。「1:1 work-rest」**從來沒被測量過**，那是回顧的分類語言。急性數據直接反駁低乳酸主張：20×25 賽配速 BLa 7.7±2.4 → **13.6±3.1**，3 分鐘後仍 11.3±2.6，RPE 18.0±1.6；青少年交叉試驗 USRPT 乳酸心率確實低於 HIIT，但**每划距離與划頻指數顯著更差**。採用它三件事（賽配速結構、失敗規則、可量化指標），不採用反陸訓與反次賽配速量。
+
+**新增**：`_sources.yaml` +22 筆（836 → 858，零重複）：CSS 證據鏈 14 筆（Wakayoshi 1992/1993、Dekerle 2005/2010、Pelarigo 2011、Toubekis 2006/2011/2013、Scott 2024 分泳式信度、di Prampero 2008、Nikitakis 2019 兒童、Piatrikova 2018 3-min all-out、Zacca 2016、Rizzato 2018）、可疑數字裁決 3 筆、USRPT 5 筆。四筆 `verification_status: unverified` 照 schema v2「不確定就不要填」處理，對應主張一律只做質性使用。
+
+**驗收**：0 ERROR／**138 WARN**（基線 140，比基線低）；索引重生為 **943 records／858 sources**／179 drills；高確定性無來源 0。`tools/build_knowledge_map.py` 的週期化檔名清單是硬編碼的，已補 `"set-design"`（沒補的話新檔在 `KNOWLEDGE_MAP.md` 裡會靜默消失）。
+
+**寫在前面的兩個踩雷點**：`overview.steps` 原本用 `{no: 1, ...}`，YAML 1.1 把未加引號的 `no` 解析成布林 `False`，`build_indices.py` 直接 crash（`'bool' object has no attribute 'endswith'`），已改 `step_no`；`observation_basis` 不要寫成 `observation_basis_zh`，W011 認前者。
+
+## 下一步建議（本批）
+
+canonical 側完成。剩 my-site 接線：`my-site/tools/sync_vortex.py:66` 的 `PERIODIZATION_FILES` 是硬編碼清單，要加 `"set-design"`，否則新檔靜默不同步；`layouts/vortex/vortex-periodization.html` 要加 `$sd` 資料綁定、rail 導覽 `<li>`、總覽 `vx-path-item` 與新 `<section>`，並把所有 `主題 N / 5` 改成 `/ 6`。線上驗收要抓 HTTP 狀態碼（404 頁面 grep 回 0 和正常頁長得一樣），正則要吃得下 minify 後的 `class=vx-xxx\b`。
+
+**上一批開的規劃線仍在：`plans/E組_問題索引層設計與派工.md`（W18–W25）**，下一步 W18 建 `canonical/instructional/problems.yaml` 骨架 + `validate.py` 三處註冊，微 diff 自己做。
+
+## 上一階段狀態（2026-09-11）
 
 外部筆記「蛙式蝶式換氣抬頭抬腳矯正」查證後整合入庫。原筆記八成內容本庫已有（`breast.err7/8/9/13` 四條抬頭換氣誤區，胸壓、Biondi、單臂蝶、低位換氣、蛙式呼吸管等 drill 都在），真正的缺口是**矯正法層**——「抬頭壓髖要怎麼斷」沒有條目，所以只補這一層。
 
@@ -14,7 +38,7 @@
 
 **驗收**：0 ERROR／140 WARN（與上一批同基線，未新增警告）；索引重生為 932 records／836 sources／179 drills；`Br36` 是本專案自行整理的 drill，依 2026-09-06「非來源」清查的處置方式只留 `source` 顯示字串、不掛 `source_ids`。
 
-## 下一步建議（本批）
+## 下一步建議（2026-09-11 批）
 
 內容整合已全部完成。canonical `97c7693`；`notify-mysite` 自動跑完 `sync_vortex.py` 並推回 my-site `1cbcb66`，Pages deploy success。線上驗收：`/vortex/drills/` 三個新 drill 都在、`/vortex/breaststroke/` 有 `Br35`／`Br36` 與 `breast.err18`、`/vortex/butterfly/` 有 `Fl32` 與 `fly.err17`；三頁 grep 不到任何診斷鍵（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`contrast_question`）或 `src.` slug，公開／診斷分層與機器鍵都沒外洩。原始筆記已依 `resources/CLAUDE.md` 刪除。
 

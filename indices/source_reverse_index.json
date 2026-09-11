@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 836,
+  "source_count": 858,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -1727,6 +1727,23 @@
       ]
     },
     {
+      "id": "src.cuenca-fernandez-2023-usrpt-vs-rpt",
+      "display": "Cuenca-Fernandez, F., Lopez-Contreras, G., Arellano, R., 等 (2023). Acute responses to ultra-short race pace training versus race pace training in swimmers. Research in Sports Medicine, 31(1), 21-34.",
+      "verification_status": "unverified",
+      "identifier": {
+        "doi": "10.1080/15438627.2021.1929227",
+        "url": "https://www.tandfonline.com/doi/abs/10.1080/15438627.2021.1929227"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
+        }
+      ]
+    },
+    {
       "id": "src.cunha-2019-imt-elite-swimmers-rct",
       "display": "Cunha, M., Mendes, F., Paciência, I., Rodolfo, A., Carneiro-Leão, L., Rama, T., et al. (2019). The effect of inspiratory muscle training on swimming performance, inspiratory muscle strength, lung function, and perceived breathlessness in elite swimmers: a randomized controlled trial. Porto Biomedical Journal, 4(6), e49.",
       "verification_status": "verified",
@@ -1842,6 +1859,42 @@
           "id": "psych.motivation.bpn_triad",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[0].public"
+        }
+      ]
+    },
+    {
+      "id": "src.dekerle-2005-css-not-mlss",
+      "display": "Dekerle, J., Pelayo, P., Clipet, B., Depretz, S., Lefevre, T., & Sidney, M. (2005). Critical swimming speed does not represent the speed at maximal lactate steady state. International Journal of Sports Medicine, 26(7), 524-530.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "16195984",
+        "doi": "10.1055/s-2004-821227",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16195984/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
+      "id": "src.dekerle-2010-css-severe-domain",
+      "display": "Dekerle, J., Brickley, G., Alberty, M., & Pelayo, P. (2010). Characterising the slope of the distance-time relationship in swimming. Journal of Science and Medicine in Sport, 13(3), 365-370.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "19577514",
+        "doi": "10.1016/j.jsams.2009.05.007",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/19577514/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
         }
       ]
     },
@@ -1989,6 +2042,24 @@
           "id": "psych.imagery.kinesthetic_priority",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[3].concepts[2].public"
+        }
+      ]
+    },
+    {
+      "id": "src.diprampero-2008-css-energetic-correction",
+      "display": "di Prampero, P. E., Dekerle, J., Capelli, C., & Zamparo, P. (2008). The critical velocity in swimming. European Journal of Applied Physiology, 102(2), 165-171.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "17901978",
+        "doi": "10.1007/s00421-007-0569-6",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/17901978/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
         }
       ]
     },
@@ -2997,12 +3068,22 @@
       "identifier": {
         "isbn": "9781718210868"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
         {
           "id": "periodization.dryland.needs_analysis",
           "file": "canonical/periodization/dryland.yaml",
           "path": "needs_analysis"
+        },
+        {
+          "id": "periodization.set_design.energy_targets",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "energy_targets"
+        },
+        {
+          "id": "periodization.set_design.unverified_claims",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "unverified_claims"
         }
       ]
     },
@@ -3560,6 +3641,29 @@
       "usages": []
     },
     {
+      "id": "src.hellard-2013-optimal-overload-taper",
+      "display": "Hellard, P., Avalos, M., Hausswirth, C., Pyne, D., Toussaint, J. F., & Mujika, I. (2013). Identifying optimal overload and taper in elite swimmers over time. Journal of Sports Science and Medicine, 12(4), 668-678.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "24421726",
+        "pmcid": "PMC3873657",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/24421726/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.set_design.phase_allocation",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "phase_allocation"
+        },
+        {
+          "id": "periodization.set_design.unverified_claims",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "unverified_claims"
+        }
+      ]
+    },
+    {
       "id": "src.hellard-2019",
       "display": "Hellard P, Avalos-Fernandes M, Lefort G, Pla R, Mujika I, Toussaint JF, Pyne DB. (2019). Elite Swimmers' Training Patterns in the 25 Weeks Prior to Their Season's Best Performances: Insights Into Periodization From a 20-Years Cohort. Front Physiol 10:363.",
       "verification_status": "verified",
@@ -3568,8 +3672,13 @@
         "pmcid": "PMC6470949",
         "doi": "10.3389/fphys.2019.00363"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
+        {
+          "id": "periodization.set_design.phase_allocation",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "phase_allocation"
+        },
         {
           "id": "periodization.structure.schools_overview",
           "file": "canonical/periodization/structure.yaml",
@@ -5217,6 +5326,30 @@
           "id": "free.err3",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[2].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.mavroudi-2023-sprint-lactate-by-distance",
+      "display": "Mavroudi, M., Kabasakalis, A., Petridou, A., & Mougios, V. (2023). Blood lactate and maximal lactate accumulation rate at three sprint swimming distances in highly trained and elite swimmers. Sports, 11(4), 87.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "37104161",
+        "pmcid": "PMC10146159",
+        "doi": "10.3390/sports11040087",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37104161/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.set_design.energy_targets",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "energy_targets"
+        },
+        {
+          "id": "periodization.set_design.unverified_claims",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "unverified_claims"
         }
       ]
     },
@@ -6962,6 +7095,24 @@
       ]
     },
     {
+      "id": "src.nikitakis-2019-css-children-adolescents",
+      "display": "Nikitakis, I. S., Paradisis, G. P., Bogdanis, G. C., & Toubekis, A. G. (2019). Physiological responses of continuous and intermittent swimming at critical speed and maximum lactate steady state in children and adolescent swimmers. Sports, 7(1), 25.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "30669295",
+        "doi": "10.3390/sports7010025",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/30669295/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
       "id": "src.nikitakis-2023-set-order",
       "display": "Nikitakis IS, Bogdanis GC, Paradisis GP, Toubekis AG. (2023). Effects of Training Sets Sequence on Swimming Performance, Training Load and Physiological Responses. Sports (Basel) 11(12):240.",
       "verification_status": "verified",
@@ -7128,12 +7279,17 @@
         "doi": "10.2147/OAJSM.S180598",
         "url": "https://pubmed.ncbi.nlm.nih.gov/31632163/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.err23",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[22].public.evidence[1]"
+        },
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
         }
       ]
     },
@@ -7359,6 +7515,42 @@
       ]
     },
     {
+      "id": "src.papadimitriou-2023-usrpt-vs-hiit-youth",
+      "display": "Papadimitriou, K., Kabasakalis, A., Papadopoulos, A., Mavridis, G., & Tsalis, G. (2023). Comparison of ultra-short race pace and high-intensity interval training in age group competitive swimmers. Sports, 11(9), 186.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "37755863",
+        "pmcid": "PMC10537129",
+        "doi": "10.3390/sports11090186",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/37755863/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
+        }
+      ]
+    },
+    {
+      "id": "src.papadimitriou-2024-usrpt-scoping-review",
+      "display": "Papadimitriou, K. (2024). Ultra-short race pace training in swimming: A scoping review. Sports, 12(8), 227.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmcid": "PMC11358974",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC11358974/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
+        }
+      ]
+    },
+    {
       "id": "src.papadimitriou-2026-sprint-tid",
       "display": "Papadimitriou K, Ruiz-Navarro JJ, Cuenca-Fernández F, Margaritelis NV. (2026). Training intensity distribution for sprinter swimmers: suggestions for swimming coaches and scientists. Eur J Appl Physiol 126(2):619-628.",
       "verification_status": "verified",
@@ -7366,8 +7558,13 @@
         "pmid": "41269307",
         "doi": "10.1007/s00421-025-06064-x"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
+        },
         {
           "id": "periodization.zones.swim_tid",
           "file": "canonical/periodization/zones.yaml",
@@ -7453,6 +7650,24 @@
       ]
     },
     {
+      "id": "src.pelarigo-2011-css-above-mlss",
+      "display": "Pelarigo, J. G., Denadai, B. S., & Greco, C. C. (2011). Stroke phases responses around maximal lactate steady state in front crawl. Journal of Science and Medicine in Sport, 14(2), 168.e1-168.e5.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "20926340",
+        "doi": "10.1016/j.jsams.2010.08.004",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/20926340/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
       "id": "src.pelletier-2001-swimmer-persistence",
       "display": "Pelletier, L. G., Fortier, M. S., Vallerand, R. J., & Brière, N. M. (2001). Associations among perceived autonomy support, forms of self-regulation, and persistence: A prospective study.",
       "verification_status": "verified",
@@ -7510,6 +7725,24 @@
           "id": "fly.tech.12",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[113].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.piatrikova-2018-3min-all-out-cs",
+      "display": "Piatrikova, E., Sousa, A. C., Gonzalez, J. T., & Williams, S. (2018). Validity and reliability of the 3-minute all-out test in national and international competitive swimmers. International Journal of Sports Physiology and Performance, 13(9), 1190-1198.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "29651887",
+        "doi": "10.1123/ijspp.2018-0018",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/29651887/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.anchors",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "anchors"
         }
       ]
     },
@@ -10878,6 +11111,23 @@
       ]
     },
     {
+      "id": "src.rizzato-2018-css-population-bias",
+      "display": "Rizzato, A., Paoli, A., 等（2018）。Critical swim speed as a tool to evaluate the anaerobic threshold in different swimmers populations. Journal of Sports Medicine and Physical Fitness, 58(10), 1398-1402.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "28597620",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/28597620/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
       "id": "src.rocketswim",
       "display": "Rocketswim",
       "verification_status": "unverified",
@@ -11087,12 +11337,33 @@
       "identifier": {
         "url": "https://coachsci.sdsu.edu/swim/bullets/49DEFINED.pdf"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "free.err23",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[22].public.evidence[1]"
+        },
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
+        }
+      ]
+    },
+    {
+      "id": "src.rushall-usrpt-planning-bulletin-47",
+      "display": "Rushall, B. S. Step-by-step USRPT planning and decision-making processes. Swimming Science Bulletin Number 47, Version 3.1 (2018-06-27). San Diego State University.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://coachsci.sdsu.edu/swim/bullets/47GUIDE.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
         }
       ]
     },
@@ -11355,6 +11626,25 @@
           "id": "psych.imagery.pettlep",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[3].concepts[1].public"
+        }
+      ]
+    },
+    {
+      "id": "src.scott-2024-css-stroke-specific-reliability",
+      "display": "Scott, B. E., Burden, R., & Dekerle, J. (2024). Stroke-specific swimming critical speed testing: Balancing feasibility and scientific rigour. Journal of Human Kinetics, 90, 239-251.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "38380294",
+        "pmcid": "PMC10875687",
+        "doi": "10.5114/jhk/170882",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/38380294/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.anchors",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "anchors"
         }
       ]
     },
@@ -12435,6 +12725,22 @@
       ]
     },
     {
+      "id": "src.swimsmooth-training-zones-blog",
+      "display": "Newsome, P. Understanding Training Zones. Swim Smooth 官方部落格。",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://blog.swimsmooth.com/p/understanding-training-zones"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.unverified_claims",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "unverified_claims"
+        }
+      ]
+    },
+    {
       "id": "src.swimswam-a",
       "display": "SwimSwam",
       "verification_status": "retracted",
@@ -12702,8 +13008,18 @@
         "pmcid": "PMC8607769",
         "doi": "10.2478/hukin-2021-0091"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "periodization.set_design.energy_targets",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "energy_targets"
+        },
+        {
+          "id": "periodization.set_design.unverified_claims",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "unverified_claims"
+        },
         {
           "id": "periodization.zones.energy_systems_primer",
           "file": "canonical/periodization/zones.yaml",
@@ -13789,6 +14105,59 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.toubekis-2006-css-distance-selection",
+      "display": "Toubekis, A. G., Tsami, A. P., & Tokmakidis, S. P. (2006). Critical velocity and lactate threshold in young swimmers. International Journal of Sports Medicine, 27(2), 117-123.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "16475057",
+        "doi": "10.1055/s-2005-837487",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16475057/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.anchors",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "anchors"
+        }
+      ]
+    },
+    {
+      "id": "src.toubekis-2011-cv-insensitive-to-training",
+      "display": "Toubekis, A. G., & Tokmakidis, S. P. 等（2011）。青少年泳者訓練期間的表現與生理反應。Journal of Strength and Conditioning Research, 25(6), 1563-1570.",
+      "verification_status": "unverified",
+      "identifier": {
+        "pmid": "21386726",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/21386726/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
+      "id": "src.toubekis-tokmakidis-2013-css-review",
+      "display": "Toubekis, A. G., & Tokmakidis, S. P. (2013). Metabolic responses at various intensities relative to critical swimming velocity. Journal of Strength and Conditioning Research, 27(6), 1731-1741.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "23449237",
+        "doi": "10.1519/JSC.0b013e31828e1e77",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/23449237/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
     },
     {
       "id": "src.toussaint",
@@ -14888,6 +15257,47 @@
       "usages": []
     },
     {
+      "id": "src.wakayoshi-1992-critical-velocity-flume",
+      "display": "Wakayoshi, K., Ikuta, K., Yoshida, T., Udo, M., Moritani, T., Mutoh, Y., & Miyashita, M. (1992). Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer. European Journal of Applied Physiology and Occupational Physiology, 64(2), 153-157.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "1555562",
+        "doi": "10.1007/BF00717953",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/1555562/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
+      "id": "src.wakayoshi-1993-critical-velocity-mlss",
+      "display": "Wakayoshi, K., Yoshida, T., Udo, M., Harada, T., Moritani, T., Mutoh, Y., & Miyashita, M. (1993). Does critical swimming velocity represent exercise intensity at maximal lactate steady state? European Journal of Applied Physiology and Occupational Physiology, 66(1), 90-95.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "8425518",
+        "doi": "10.1007/BF00863406",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/8425518/"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "periodization.set_design.anchors",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "anchors"
+        },
+        {
+          "id": "periodization.set_design.css_evidence",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "css_evidence"
+        }
+      ]
+    },
+    {
       "id": "src.wang-2013-taiwan-hip-fracture-mortality",
       "display": "Wang CB, Lin CF, Liang WM, et al. (2013). Excess mortality after hip fracture among the elderly in Taiwan: a nationwide population-based cohort study. Bone 56(1):147–153.",
       "verification_status": "verified",
@@ -15104,6 +15514,24 @@
           "id": "breast.err12",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[53].public.evidence[1]"
+        }
+      ]
+    },
+    {
+      "id": "src.williamson-2020-usrpt-acute-response",
+      "display": "Williamson, D., McCarthy, E., & Ditroilo, M. (2020). Acute physiological responses to ultra short race-pace training in competitive swimmers. Journal of Human Kinetics, 75, 95-102.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "33312298",
+        "doi": "10.2478/hukin-2020-0040",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/33312298/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.usrpt",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "usrpt"
         }
       ]
     },
@@ -15588,6 +16016,24 @@
           "id": "periodization.dryland.methods",
           "file": "canonical/periodization/dryland.yaml",
           "path": "methods"
+        }
+      ]
+    },
+    {
+      "id": "src.zacca-2016-400m-single-test-estimate",
+      "display": "Zacca, R., Fernandes, R. J. P., Pyne, D. B., & Castro, F. A. S. (2016). Swimming training assessment: The critical velocity and the 400-m test in age-group swimmers. Journal of Strength and Conditioning Research, 30(5), 1365-1372.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "26473520",
+        "doi": "10.1519/JSC.0000000000001239",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/26473520/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.anchors",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "anchors"
         }
       ]
     },

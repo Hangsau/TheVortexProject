@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-09-11 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-09-12 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -25,6 +25,7 @@
 | `periodization/zones` | 12 | 各節點 |
 | `periodization/dryland` | 9 | 各節點 |
 | `periodization/decisions` | 4 | 各節點 |
+| `periodization/set-design` | 11 | 各節點 |
 | `breathing/safety` | 2 | 各節點 |
 | `breathing/framework` | 3 | 各節點 |
 | `breathing/physiology` | 5 | 各節點 |
@@ -656,6 +657,22 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.decisions.monitoring | 🔵 | 先對齊量測，再判斷進退 |
 | periodization.decisions.set_response | 🟢 | 新研究：同一乳酸數字可能掩蓋不同組課反應 |
 | periodization.decisions.hrv_response | 🟢 | 新研究：HRV 改變不等於游泳表現變差 |
+
+### `set-design.yaml` （**11 節點**）
+
+| ID | 確定性 | premise/摘要 |
+|---|---|---|
+| periodization.set_design.overview | 🔵 | 組課設計的六個步驟 |
+| periodization.set_design.anchors | 🟢 | 錨點時間與測驗協議 |
+| periodization.set_design.css_evidence | 🟢 | 臨界游速的證據鏈與外推邊界 |
+| periodization.set_design.energy_targets | 🟡 | 能量系統與組課意圖對照 |
+| periodization.set_design.variables | 🔵 | 四個變項的決定順序 |
+| periodization.set_design.usrpt | 🟢 | 超短距賽速訓練的原始參數與證據地位 |
+| periodization.set_design.weekly_assembly | 🔵 | 週組裝與間隔規則 |
+| periodization.set_design.phase_allocation | 🟡 | 階段配置與減量銜接 |
+| periodization.set_design.monitoring_exit | 🔵 | 退出規則與重測時機 |
+| periodization.set_design.generator | 🔵 | 自動課表生成參數 |
+| periodization.set_design.unverified_claims | 🔵 | 查證後未採用的六個數字 |
 
 ---
 

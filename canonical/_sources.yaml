@@ -10711,3 +10711,322 @@ sources:
       url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/five-ways-to-improve-your-butterfly"
     retrieved_on: "2026-09-11"
     notes: "2026-09-11 取原文核對。可引的逐字內容：換氣時機「Breathe when your arms pull under your torso.」、換氣太晚會使髖部下沉、以及「get your head back down before your hands reach your shoulders on the sweep forward」；Biondi drill 逐字「Do a couple of dolphin kicks in a streamlined position underwater to build up momentum; perform a butterfly stroke underwater, bringing your head up to breathe when your hands pass your midsection; and then recover your arms underwater.」；胸壓 drill 逐字「Stretch your arms out in a slight 'Y' position, and gently press your chest down and then pull it back up.」並註明呼吸管為 optional、用途是免除為換氣而抬頭。**使用邊界**：① 教練專欄，無量測值與樣本；② 來源筆記把換氣時機寫成「推水最後三分之一開始」並歸給 USMS 論壇討論串——**本文的說法是 pull under your torso（划到軀幹下方）**，兩者不同，本庫採原文措辭；③ 本庫另有 src.usms-fish-2025-butterfly-hips 的 notes 已記載：USMS 站內對蝶式起伏起點的歸屬並不統一（本文寫肋廓下緣），引用時不可當單一定論。"
+
+  # ── 2026-09-11 組課設計層（set-design）新增 A：臨界游速 CSS 證據鏈 ──
+  - id: src.wakayoshi-1992-critical-velocity-flume
+    display: "Wakayoshi, K., Ikuta, K., Yoshida, T., Udo, M., Moritani, T., Mutoh, Y., & Miyashita, M. (1992). Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer. European Journal of Applied Physiology and Occupational Physiology, 64(2), 153-157."
+    title: "Determination and validity of critical velocity as an index of swimming performance in the competitive swimmer"
+    type: journal-article
+    verification_status: verified
+    authors: ["Kohji Wakayoshi", "K. Ikuta", "T. Yoshida", "M. Udo", "T. Moritani", "Y. Mutoh", "M. Miyashita"]
+    year: 1992
+    container: "European Journal of Applied Physiology and Occupational Physiology"
+    identifier:
+      pmid: "1555562"
+      doi: "10.1007/BF00717953"
+      url: "https://pubmed.ncbi.nlm.nih.gov/1555562/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。臨界游速概念的原始論文之一。n=9 男大學泳者，在**水槽（flume）**以 6 個預定速度各游至力竭求距離—時間直線；d-t 線性 r2>0.998，vcrit 1.166±0.052 m/s，與 OBLA 速度 r=0.949、與 400m 速度 r=0.864。**使用邊界**：① 水槽不是泳池，場域不同；② **未量 MLSS**，也未量 vcrit 下的力竭時間；③ 未使用教練實務採用的兩點式 200/400。教練圈常見的「Wakayoshi 1992 證明 CSS 與乳酸閾值 r 約 0.95」把本篇（r=0.949 對 OBLA，水槽）與 1993 篇（r=0.914 對 4mmol 閾速，泳池兩點式）縫成一句，那是兩個不同方法的研究，引用時必須分開。"
+
+  - id: src.wakayoshi-1993-critical-velocity-mlss
+    display: "Wakayoshi, K., Yoshida, T., Udo, M., Harada, T., Moritani, T., Mutoh, Y., & Miyashita, M. (1993). Does critical swimming velocity represent exercise intensity at maximal lactate steady state? European Journal of Applied Physiology and Occupational Physiology, 66(1), 90-95."
+    title: "Does critical swimming velocity represent exercise intensity at maximal lactate steady state?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Kohji Wakayoshi", "T. Yoshida", "M. Udo", "T. Harada", "T. Moritani", "Y. Mutoh", "M. Miyashita"]
+    year: 1993
+    container: "European Journal of Applied Physiology and Occupational Physiology"
+    identifier:
+      pmid: "8425518"
+      doi: "10.1007/BF00863406"
+      url: "https://pubmed.ncbi.nlm.nih.gov/8425518/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**兩點式 200m+400m 的原始出處**：原文明寫 vcrit 取「游 200m 與 400m 所需兩個時間連線的斜率」。教練圈流傳的「(T400-T200)/2 是 Swim Smooth 發明的」是錯的——Swim Smooth 只是把同一斜率換算成每 100m 配速，數學等價。n=8，另做 4x400 於 98/100/102% vcrit 的 MLSS 測試，100% vcrit 時乳酸約 3.2 mmol/L 呈穩定；vcrit 與 4mmol 閾速 r=0.914、與 400m 速度 r=0.977。**使用邊界**：① 4x400 含 4 次休息採血，不是真正的連續定速負荷，用它支持「CSS 就是 MLSS」是過度解讀，後續至少三篇獨立研究給出相反結論（見 src.dekerle-2005-css-not-mlss）；② n=8，未做重測信度，未跨泳式。"
+
+  - id: src.dekerle-2005-css-not-mlss
+    display: "Dekerle, J., Pelayo, P., Clipet, B., Depretz, S., Lefevre, T., & Sidney, M. (2005). Critical swimming speed does not represent the speed at maximal lactate steady state. International Journal of Sports Medicine, 26(7), 524-530."
+    title: "Critical swimming speed does not represent the speed at maximal lactate steady state"
+    type: journal-article
+    verification_status: verified
+    authors: ["Jeanne Dekerle", "Patrick Pelayo", "B. Clipet", "S. Depretz", "T. Lefevre", "Michel Sidney"]
+    year: 2005
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "16195984"
+      doi: "10.1055/s-2004-821227"
+      url: "https://pubmed.ncbi.nlm.nih.gov/16195984/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。直接推翻「CSS = MLSS」：n=8 well-trained（18.6±1.9 歲），CSS 為最大有氧速度的 92.7±2.6%，顯著高於 MLSS 速度的 88.3±2.9%；兩者 r=0.87 但一致性界限 0.07±0.13 m/s，作者判定**不可互換**。**使用邊界**：未測 CSS 下的力竭時間（那是 src.dekerle-2010-css-severe-domain 做的）。"
+
+  - id: src.pelarigo-2011-css-above-mlss
+    display: "Pelarigo, J. G., Denadai, B. S., & Greco, C. C. (2011). Stroke phases responses around maximal lactate steady state in front crawl. Journal of Science and Medicine in Sport, 14(2), 168.e1-168.e5."
+    title: "Stroke phases responses around maximal lactate steady state in front crawl"
+    type: journal-article
+    verification_status: verified
+    authors: ["Jailton G. Pelarigo", "Benedito S. Denadai", "Camila C. Greco"]
+    year: 2011
+    container: "Journal of Science and Medicine in Sport"
+    identifier:
+      pmid: "20926340"
+      doi: "10.1016/j.jsams.2010.08.004"
+      url: "https://pubmed.ncbi.nlm.nih.gov/20926340/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。n=12 耐力泳者，臨界速度 1.30±0.08 m/s 顯著高於 MLSS 速度 1.22±0.05 m/s（約高 6.6%）。**使用邊界**：本文主目的是划頻與划距在 MLSS 附近的變化，CS 與 MLSS 的差距是附帶結果而非效度驗證的主設計；引用時只能當「同方向的第二筆證據」。"
+
+  - id: src.dekerle-2010-css-severe-domain
+    display: "Dekerle, J., Brickley, G., Alberty, M., & Pelayo, P. (2010). Characterising the slope of the distance-time relationship in swimming. Journal of Science and Medicine in Sport, 13(3), 365-370."
+    title: "Characterising the slope of the distance-time relationship in swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Jeanne Dekerle", "Gary Brickley", "Morgan Alberty", "Patrick Pelayo"]
+    year: 2010
+    container: "Journal of Science and Medicine in Sport"
+    identifier:
+      pmid: "19577514"
+      doi: "10.1016/j.jsams.2009.05.007"
+      url: "https://pubmed.ncbi.nlm.nih.gov/19577514/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**唯一實測臨界速度力竭時間的一手來源**：n=9 男競技泳者，以 100-200-400-800m 四點求斜率後，做 CS、CS-5%、CS+5% 三次連續定速游至力竭。在 CS 力竭時間 24.3±7.7 分鐘，乳酸與攝氧量持續上升至 95±5% peak VO2；CS-5% 為 48.9±14.1 分鐘且乳酸 3.8±1.9 穩定；CS+5% 為 8.6±3.1 分鐘。另測 10x400 在 CS（休 40 秒）可完成且乳酸穩定。**關鍵語意**：教練圈「CSS 是能維持 20-30 分鐘的配速」數字對得上，但原作者的結論是 CS 落在 **severe intensity domain**——24 分鐘是**力竭時間**不是可從容維持的閾值；且同一速度做成間歇就變得可持續。引用時不可把力竭時間寫成閾值定義。**使用邊界**：全為男性；未做重測信度；用四點 100-800m 而非兩點 200/400。"
+
+  - id: src.toubekis-tokmakidis-2013-css-review
+    display: "Toubekis, A. G., & Tokmakidis, S. P. (2013). Metabolic responses at various intensities relative to critical swimming velocity. Journal of Strength and Conditioning Research, 27(6), 1731-1741."
+    title: "Metabolic responses at various intensities relative to critical swimming velocity"
+    type: review
+    verification_status: verified
+    authors: ["Argyris G. Toubekis", "Savvas P. Tokmakidis"]
+    year: 2013
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "23449237"
+      doi: "10.1519/JSC.0b013e31828e1e77"
+      url: "https://pubmed.ncbi.nlm.nih.gov/23449237/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**綜述，非原始實測**：彙整值為臨界速度比 MLSS 快約 3-6%、比乳酸閾值快約 8-11%。引用時必須標明是二手彙整，原始數據在 src.dekerle-2005-css-not-mlss 與 src.pelarigo-2011-css-above-mlss。"
+
+  - id: src.scott-2024-css-stroke-specific-reliability
+    display: "Scott, B. E., Burden, R., & Dekerle, J. (2024). Stroke-specific swimming critical speed testing: Balancing feasibility and scientific rigour. Journal of Human Kinetics, 90, 239-251."
+    title: "Stroke-Specific Swimming Critical Speed Testing: Balancing Feasibility and Scientific Rigour"
+    type: journal-article
+    verification_status: verified
+    authors: ["Bethany E. Scott", "Richard Burden", "Jeanne Dekerle"]
+    year: 2024
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "38380294"
+      pmcid: "PMC10875687"
+      doi: "10.5114/jhk/170882"
+      url: "https://pubmed.ncbi.nlm.nih.gov/38380294/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**教練實際使用的兩點 200/400 協議的信度證據**：n=32 國家級泳者（蝶 7、仰 8、蛙 7、自由式 10），三週內各做 3 次 200m 與 3 次 400m。臨界速度 typical error 小於等於 0.04 m/s、變異係數小於 4%，四種泳式皆可靠；200m 與 400m 單項表現變異係數小於 2%。**超臨界距離容量（D prime）判定不可靠**：typical error 4-9 m、變異係數 13-45%——這一條直接否定拿它當處方依據的做法。可行性：只有 39% 蝶式選手願意或認為能完成 800m 第三點（蛙 71%、仰與自由式 100%），**蝶式無法擴充成三點協議**。**使用邊界**：純信度研究，未與 MLSS 比對。"
+
+  - id: src.toubekis-2006-css-distance-selection
+    display: "Toubekis, A. G., Tsami, A. P., & Tokmakidis, S. P. (2006). Critical velocity and lactate threshold in young swimmers. International Journal of Sports Medicine, 27(2), 117-123."
+    title: "Critical velocity and lactate threshold in young swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Argyris G. Toubekis", "A. P. Tsami", "Savvas P. Tokmakidis"]
+    year: 2006
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "16475057"
+      doi: "10.1055/s-2005-837487"
+      url: "https://pubmed.ncbi.nlm.nih.gov/16475057/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**測驗距離怎麼選會改變結果**：n=20 青少年（12.9±1.1 歲），凡組合中含 50m 或 100m 者，臨界速度顯著高於乳酸閾值速度，50+100m 組合高於所有其他組合；200-400m 組合則略低於 4mmol 速度。這是「不要用短距離湊 CSS」的直接依據。**使用邊界**：樣本為青少年競技泳者。"
+
+  - id: src.diprampero-2008-css-energetic-correction
+    display: "di Prampero, P. E., Dekerle, J., Capelli, C., & Zamparo, P. (2008). The critical velocity in swimming. European Journal of Applied Physiology, 102(2), 165-171."
+    title: "The critical velocity in swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Pietro E. di Prampero", "Jeanne Dekerle", "Carlo Capelli", "Paola Zamparo"]
+    year: 2008
+    container: "European Journal of Applied Physiology"
+    identifier:
+      pmid: "17901978"
+      doi: "10.1007/s00421-007-0569-6"
+      url: "https://pubmed.ncbi.nlm.nih.gov/17901978/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。以能量學模型重算 20 名菁英男泳者：傳統距離—時間斜率比能量學修正值高 4%（蝶）、16%（仰）、7%（蛙）、11%（自由式）。**意義**：偏差程度隨泳式改變，仰式最大——這是「不同泳式要各測各的、不能用自由式 CSS 去派其他泳式配速」的依據之一（另一條是 src.scott-2024-css-stroke-specific-reliability）。"
+
+  - id: src.nikitakis-2019-css-children-adolescents
+    display: "Nikitakis, I. S., Paradisis, G. P., Bogdanis, G. C., & Toubekis, A. G. (2019). Physiological responses of continuous and intermittent swimming at critical speed and maximum lactate steady state in children and adolescent swimmers. Sports, 7(1), 25."
+    title: "Physiological Responses of Continuous and Intermittent Swimming at Critical Speed and Maximum Lactate Steady State in Children and Adolescent Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ioannis S. Nikitakis", "Giorgos P. Paradisis", "Gregory C. Bogdanis", "Argyris G. Toubekis"]
+    year: 2019
+    container: "Sports"
+    identifier:
+      pmid: "30669295"
+      doi: "10.3390/sports7010025"
+      url: "https://pubmed.ncbi.nlm.nih.gov/30669295/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。n=10 兒童（11.5±0.4 歲）與 n=10 青少年（15.8±0.7 歲）。臨界速度與 MLSS 速度的**平均值**無顯著差（p=0.12），但**連續游**到臨界速度末端的乳酸顯著高於 MLSS（兒童 4.0 對 3.4、青少年 4.5 對 3.1 mmol/L），且部分受試者無法完成 30 分鐘連續游；**改成間歇（10x200）則與 MLSS 一致**。**用途**：支持「同一個 CSS 配速，連續游與間歇游對兒童青少年不是同一件事」，也是「不要對兒童青少年排長時間連續 CSS 游」的依據。"
+
+  - id: src.toubekis-2011-cv-insensitive-to-training
+    display: "Toubekis, A. G., & Tokmakidis, S. P. 等（2011）。青少年泳者訓練期間的表現與生理反應。Journal of Strength and Conditioning Research, 25(6), 1563-1570."
+    type: journal-article
+    verification_status: unverified
+    year: 2011
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "21386726"
+      url: "https://pubmed.ncbi.nlm.nih.gov/21386726/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄，**狀態 unverified**：查證回報的關鍵結果是「14 週訓練量增加後臨界速度幾乎未變（0.3±0.8%）而乳酸閾值上升 6.5%」，但完整標題與作者列未由本專案直接 dereference 確認，display 是重建而非逐字轉錄，故不填 title/authors（v2 契約：不確定就不要填）。**引用限制**：只能支持「已有研究指出臨界速度對訓練適應的敏感度可能低於乳酸閾值，兩者不可互換」這個定性主張，**不得引用該百分比數字**，直到補查升級為 verified。"
+
+  - id: src.piatrikova-2018-3min-all-out-cs
+    display: "Piatrikova, E., Sousa, A. C., Gonzalez, J. T., & Williams, S. (2018). Validity and reliability of the 3-minute all-out test in national and international competitive swimmers. International Journal of Sports Physiology and Performance, 13(9), 1190-1198."
+    title: "Validity and Reliability of the 3-Minute All-Out Test in National and International Competitive Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Eva Piatrikova", "Ana Carolina Sousa", "Javier T. Gonzalez", "Sean Williams"]
+    year: 2018
+    container: "International Journal of Sports Physiology and Performance"
+    identifier:
+      pmid: "29651887"
+      doi: "10.1123/ijspp.2018-0018"
+      url: "https://pubmed.ncbi.nlm.nih.gov/29651887/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。3 分鐘全力測作為取得臨界速度的替代協議：重測變異係數 0.9%、r=0.97；超臨界距離容量變異係數 9.1%。**用途**：給「不想做兩次全力計時」的替代路徑。**使用邊界**：樣本為國家與國際級競技泳者，未驗證於初學或壯年族群。"
+
+  - id: src.zacca-2016-400m-single-test-estimate
+    display: "Zacca, R., Fernandes, R. J. P., Pyne, D. B., & Castro, F. A. S. (2016). Swimming training assessment: The critical velocity and the 400-m test in age-group swimmers. Journal of Strength and Conditioning Research, 30(5), 1365-1372."
+    title: "Swimming Training Assessment: The Critical Velocity and the 400-m Test in Age-Group Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Rodrigo Zacca", "Ricardo J. P. Fernandes", "David B. Pyne", "Flavio A. S. Castro"]
+    year: 2016
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      pmid: "26473520"
+      doi: "10.1519/JSC.0000000000001239"
+      url: "https://pubmed.ncbi.nlm.nih.gov/26473520/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。14-16 歲分齡組泳者，單次 400m 即可推估四參數臨界速度：約等於 0.92 乘上 400m 平均速度，變異係數 2%。**用途**：最低成本的錨點取得路徑（只需一次 400m）。**使用邊界**：分齡競技泳者樣本；這是**推估**不是量測，個體誤差會比實測兩點大。"
+
+  - id: src.rizzato-2018-css-population-bias
+    display: "Rizzato, A., Paoli, A., 等（2018）。Critical swim speed as a tool to evaluate the anaerobic threshold in different swimmers populations. Journal of Sports Medicine and Physical Fitness, 58(10), 1398-1402."
+    type: journal-article
+    verification_status: unverified
+    year: 2018
+    container: "Journal of Sports Medicine and Physical Fitness"
+    identifier:
+      pmid: "28597620"
+      url: "https://pubmed.ncbi.nlm.nih.gov/28597620/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄，**狀態 unverified**：完整作者列未由本專案直接 dereference 確認。查證回報的結果是「相對 4mmol 閾速，菁英被低估、壯年（Master）被高估」，且推算用的是賽季最佳成績而非當場計時。**引用限制**：只能用於「CSS 的偏差方向隨族群不同」這個定性主張，**不得引用任何數值**。"
+
+  # ── 2026-09-11 組課設計層新增 B：可疑數字裁決所需來源 ──
+  - id: src.mavroudi-2023-sprint-lactate-by-distance
+    display: "Mavroudi, M., Kabasakalis, A., Petridou, A., & Mougios, V. (2023). Blood lactate and maximal lactate accumulation rate at three sprint swimming distances in highly trained and elite swimmers. Sports, 11(4), 87."
+    title: "Blood Lactate and Maximal Lactate Accumulation Rate at Three Sprint Swimming Distances in Highly Trained and Elite Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Maria Mavroudi", "Athanasios Kabasakalis", "Anatoli Petridou", "Vassilis Mougios"]
+    year: 2023
+    container: "Sports"
+    identifier:
+      pmid: "37104161"
+      pmcid: "PMC10146159"
+      doi: "10.3390/sports11040087"
+      url: "https://pubmed.ncbi.nlm.nih.gov/37104161/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。n=14（14-32 歲，國家與國際級）單趟全力後的血乳酸實測：25m 為 7.0±1.5、35m 為 9.3±2.2、50m 為 13.8±2.6 mmol/L。**用途**：把「游泳無氧課表的乳酸到底多高」拉回一手實測。教練文獻流傳的「乳酸耐受組可接近或超過 20 mmol/L」在本庫查無可靠一手來源（唯一線索 Affonso 等 2019 刊於無 PMID、非索引期刊，且宣稱 15m 衝刺達 22 mmol/L，生理上高度可疑），一律標未驗證。"
+
+  - id: src.hellard-2013-optimal-overload-taper
+    display: "Hellard, P., Avalos, M., Hausswirth, C., Pyne, D., Toussaint, J. F., & Mujika, I. (2013). Identifying optimal overload and taper in elite swimmers over time. Journal of Sports Science and Medicine, 12(4), 668-678."
+    title: "Identifying Optimal Overload and Taper in Elite Swimmers over Time"
+    type: journal-article
+    verification_status: verified
+    authors: ["Philippe Hellard", "Marta Avalos", "Christophe Hausswirth", "David Pyne", "Jean-Francois Toussaint", "Inigo Mujika"]
+    year: 2013
+    container: "Journal of Sports Science and Medicine"
+    identifier:
+      pmid: "24421726"
+      pmcid: "PMC3873657"
+      url: "https://pubmed.ncbi.nlm.nih.gov/24421726/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**觀察性縱貫研究，非實驗**：32 名菁英泳者（15 女、17 男），橫跨 1-9 個賽季共 85 個「賽前最後六週」期，六週切成 3 週 overload 加 3 週 taper，以 cluster 分析比對負荷型態；表現指標是**比賽成績**（世界紀錄百分比）。**數字歸屬更正**：整體平均進步 1.7±1.7%；**2.4±1.6% 是 cluster 分析中最有效那一型的進步幅度，不是全體平均**——二手筆記寫成「約 2.4% 的進步」等於把最佳組當平均值。負荷型態是**兩個峰**不是單峰：overload 第 1 週（賽前第 6 週）中等負荷峰後線性緩降（84 到 81 到 80% 最大負荷），taper 第 1 週再一峰後緩降（57 到 45 到 38%）。最佳型態**隨生涯階段改變**（前三季宜維持中等負荷延續到 taper，第四季起改為更高 overload 加更陡降）。**引用限制**：觀察性設計，不得寫成因果。"
+
+  - id: src.swimsmooth-training-zones-blog
+    display: "Newsome, P. Understanding Training Zones. Swim Smooth 官方部落格。"
+    title: "Understanding Training Zones"
+    type: web_article
+    verification_status: verified
+    authors: ["Paul Newsome"]
+    publisher: "Swim Smooth"
+    identifier:
+      url: "https://blog.swimsmooth.com/p/understanding-training-zones"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 取原文核對。**登錄理由是更正一個廣為流傳的錯置**：中文與日文教練圈流傳一張掛在「Swim Smooth 五分區」名下的**最大心率百分比**表（Z1 低於 65%、Z2 66-74%、Z3 75-79%、Z4 80-82%、Z5 高於 90%），該表自身即不自洽（Z4 的心率低於 Z5 卻標為更高強度區）。**Swim Smooth 官方根本不用心率分區**：原文明講心率法對跑步與自行車有效但對泳者 never quite stuck，因此改以 CSS 為基準、用每 100m 相對 CSS 的**秒數偏移**定義強度。文字段落中可逐字核對的偏移值：Easy 與 Recovery 為 CSS 加 8-10 秒/100m、Steady 為 CSS 加 6 秒/100m、Threshold 即 CSS 配速本身。**未取得部分**：官方完整五區數值放在該頁圖表內，文字版未逐區列出，本庫不以第三方計算機網站數值頂替。**性質**：商業教練品牌的實務教材，非研究來源。"
+
+  # ── 2026-09-11 組課設計層新增 C：USRPT 參數原文與獨立實測 ──
+  - id: src.rushall-usrpt-planning-bulletin-47
+    display: "Rushall, B. S. Step-by-step USRPT planning and decision-making processes. Swimming Science Bulletin Number 47, Version 3.1 (2018-06-27). San Diego State University."
+    title: "Step-by-step USRPT planning and decision-making processes"
+    type: other
+    verification_status: verified
+    authors: ["Brent S. Rushall"]
+    year: 2018
+    container: "Swimming Science Bulletin"
+    identifier:
+      url: "https://coachsci.sdsu.edu/swim/bullets/47GUIDE.pdf"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 取 PDF 核對。這是 USRPT **組課參數**的主張者原文（Bulletin 49 給定義，本篇給排課步驟）。可逐字引用者：① 單趟距離「Usual distances will be 15, 25, 50, and less often 75 m」；② 配速取法「best time for the event being practiced... divided by the number of repetition distances in the target-race」——是**個人最佳成績除以分段數**，不是比賽實際分段時間；③ 失敗規則「there is no penalty for a failure so early in the set」（前 5 趟不計）、第一次失敗後「normally the next repetition should be missed」、終止條件「When the specific sequence of failure-rest-failure occurs, that is, two failures in a row, participation in the set should end」；④ 整組做完代表太輕，**下次加快配速而非加量**。**查不到**：100m 單趟的專屬休息秒數規則（Rushall 把 50m 以上一律歸 20 秒）。**性質邊界**：自編自刊、非同行評審，作者是該體系倡議者本人；獨立系統性回顧（src.nugent-2019-usrpt-systematic-review）找不到任何一篇合格的 USRPT 研究。引用時只能寫「Rushall 規定」，不能寫成已驗證。"
+
+  - id: src.williamson-2020-usrpt-acute-response
+    display: "Williamson, D., McCarthy, E., & Ditroilo, M. (2020). Acute physiological responses to ultra short race-pace training in competitive swimmers. Journal of Human Kinetics, 75, 95-102."
+    title: "Acute Physiological Responses to Ultra Short Race-Pace Training in Competitive Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["David Williamson", "Edward McCarthy", "Massimiliano Ditroilo"]
+    year: 2020
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "33312298"
+      doi: "10.2478/hukin-2020-0040"
+      url: "https://pubmed.ncbi.nlm.nih.gov/33312298/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。**USRPT 急性生理反應的第一筆正式發表實測**（即 Nugent 2019 引用的那份當時未發表碩論）。n=14，20x25m 維持個人 100m 最佳成績配速：血乳酸由 7.7±2.4 升到 13.6±3.1 mmol/L，恢復 3 分鐘仍有 11.3±2.6；最高心率 188±9；主觀吃力度由 8±1.6 升到 18±1.6；趟速較第 1 趟慢 3.3-10.8%。作者結論為 anaerobic style of training——**直接推翻 Rushall 宣稱 USRPT 只產生低量或無血乳酸**。**未決事項**：原文寫 20x25m with a 35-s rest interval，但平均趟時 15.3 秒，且 Nugent 描述同一份資料時寫 20 秒休息；35 秒極可能是循環間隔而非淨休息，無法自證，本庫標為未決、不引用該秒數。"
+
+  - id: src.papadimitriou-2023-usrpt-vs-hiit-youth
+    display: "Papadimitriou, K., Kabasakalis, A., Papadopoulos, A., Mavridis, G., & Tsalis, G. (2023). Comparison of ultra-short race pace and high-intensity interval training in age group competitive swimmers. Sports, 11(9), 186."
+    title: "Comparison of ultra-short race pace and high-intensity interval training in age group competitive swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Konstantinos Papadimitriou", "Athanasios Kabasakalis", "Andreas Papadopoulos", "Georgios Mavridis", "Georgios Tsalis"]
+    year: 2023
+    container: "Sports"
+    identifier:
+      pmid: "37755863"
+      pmcid: "PMC10537129"
+      doi: "10.3390/sports11090186"
+      url: "https://pubmed.ncbi.nlm.nih.gov/37755863/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄。n=18（13.5±0.1 歲）隨機平衡交叉：USRPT 2x10x25m 循環 35 秒、用 100m 配速，對比 HIIT 5x50m 約 103% 配速、休 3 分鐘。血乳酸 USRPT 8.7±0.8 與 10.0±0.9 對 HIIT 12.9±0.4；心率 173±1 與 180±0 對 196±1；USRPT 速度較快但**每划距離與划水指數顯著較差**。**兩個用途**：① 與 src.williamson-2020-usrpt-acute-response 的 13.6 mmol/L 並列可見同一形式課表的乳酸值跨研究差距很大，不可用單一數字當處方依據；② 「速度較快但每划距離變差」對本專案是直接相關的技術代價證據。**使用邊界**：急性反應，非訓練成效；樣本為分齡競技青少年。"
+
+  - id: src.cuenca-fernandez-2023-usrpt-vs-rpt
+    display: "Cuenca-Fernandez, F., Lopez-Contreras, G., Arellano, R., 等 (2023). Acute responses to ultra-short race pace training versus race pace training in swimmers. Research in Sports Medicine, 31(1), 21-34."
+    type: journal-article
+    verification_status: unverified
+    year: 2023
+    container: "Research in Sports Medicine"
+    identifier:
+      doi: "10.1080/15438627.2021.1929227"
+      url: "https://www.tandfonline.com/doi/abs/10.1080/15438627.2021.1929227"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄，**狀態 unverified**：完整標題與作者列未由本專案直接 dereference（僅取得出版商摘要頁），display 為重建，故不填 title/authors。查證回報內容：n=14，等量 1000m 交叉設計，USRPT 20x50m 對比 RPT 10x100m，**兩組的 1:1 work:rest 都是研究者設定的**，依 200m 配速；結果 USRPT 乳酸負荷較低、下蹲跳掉幅較小、5 分鐘回基線。**對本專案的意義**：這證明「1:1」在文獻中是**研究者的實驗約束**，不是「USRPT 本質就是 1:1」的實測證據——Rushall 原文規定的是固定秒數（25m 約 15 秒、50m 以上約 20 秒），1:1 只是短距離時的近似結果。**引用限制**：升級為 verified 前不引用具體數值。"
+
+  - id: src.papadimitriou-2024-usrpt-scoping-review
+    display: "Papadimitriou, K. (2024). Ultra-short race pace training in swimming: A scoping review. Sports, 12(8), 227."
+    type: review
+    verification_status: unverified
+    year: 2024
+    container: "Sports"
+    identifier:
+      pmcid: "PMC11358974"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11358974/"
+    retrieved_on: "2026-09-11"
+    notes: "2026-09-11 登錄，**狀態 unverified**：完整標題與作者列未由本專案直接 dereference，display 為重建。查證回報內容：篩檢 90,612 篇後僅 4 篇合格且**全為急性反應研究**，無縱貫對照試驗。**用途**：這是 src.nugent-2019-usrpt-systematic-review（2019 年判定 0 篇合格）之後的**時間更新**——五年過去，USRPT 的訓練成效證據基礎實質上仍不存在。**引用限制**：升級為 verified 前只引用定性結論（仍無縱貫對照試驗），不引用篩檢篇數。"
