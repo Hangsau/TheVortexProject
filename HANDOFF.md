@@ -16,7 +16,7 @@
 
 ## 下一步建議（本批）
 
-Vortex 端已完成並推送。剩下 my-site：跑 `tools/sync_vortex.py` 把 `drills.yaml` 與 teaching-errors 帶過去、Hugo build、確認三個新 drill 與兩條新誤區有落地且**診斷層零外洩**，推上去後驗 Pages deploy 實際生效（push 成功不等於線上更新）。整合完成後原始筆記 `C:/claudehome/resources/raw/notes/蛙式蝶式換氣抬頭抬腳矯正研究.md` 依 `resources/CLAUDE.md` 規定刪除。
+本批已全部完成，無待辦。canonical `97c7693`；`notify-mysite` 自動跑完 `sync_vortex.py` 並推回 my-site `1cbcb66`，Pages deploy success。線上驗收：`/vortex/drills/` 三個新 drill 都在、`/vortex/breaststroke/` 有 `Br35`／`Br36` 與 `breast.err18`、`/vortex/butterfly/` 有 `Fl32` 與 `fly.err17`；三頁 grep 不到任何診斷鍵（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`contrast_question`）或 `src.` slug，公開／診斷分層與機器鍵都沒外洩。原始筆記已依 `resources/CLAUDE.md` 刪除。
 
 再往後沒有排定工作；若要延伸，自然的下一題是自由式的同型問題（換氣抬頭與身體位置的連動有沒有等價的外部限制矯正法），本庫目前只在蛙蝶兩式處理過。
 
