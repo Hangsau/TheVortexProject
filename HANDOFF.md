@@ -16,9 +16,15 @@
 
 ## 下一步建議（本批）
 
-本批已全部完成，無待辦。canonical `97c7693`；`notify-mysite` 自動跑完 `sync_vortex.py` 並推回 my-site `1cbcb66`，Pages deploy success。線上驗收：`/vortex/drills/` 三個新 drill 都在、`/vortex/breaststroke/` 有 `Br35`／`Br36` 與 `breast.err18`、`/vortex/butterfly/` 有 `Fl32` 與 `fly.err17`；三頁 grep 不到任何診斷鍵（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`contrast_question`）或 `src.` slug，公開／診斷分層與機器鍵都沒外洩。原始筆記已依 `resources/CLAUDE.md` 刪除。
+內容整合已全部完成。canonical `97c7693`；`notify-mysite` 自動跑完 `sync_vortex.py` 並推回 my-site `1cbcb66`，Pages deploy success。線上驗收：`/vortex/drills/` 三個新 drill 都在、`/vortex/breaststroke/` 有 `Br35`／`Br36` 與 `breast.err18`、`/vortex/butterfly/` 有 `Fl32` 與 `fly.err17`；三頁 grep 不到任何診斷鍵（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`contrast_question`）或 `src.` slug，公開／診斷分層與機器鍵都沒外洩。原始筆記已依 `resources/CLAUDE.md` 刪除。
 
-再往後沒有排定工作；若要延伸，自然的下一題是自由式的同型問題（換氣抬頭與身體位置的連動有沒有等價的外部限制矯正法），本庫目前只在蛙蝶兩式處理過。
+**接著開了新的規劃線：`plans/E組_問題索引層設計與派工.md`（W18–W25）。**
+
+起因是本批寫完 `breast.err18` 才發現 `movement.intervention.breaststroke-breathing.arm-driven-torso-lift` 講同一個機制、兩邊零連結。掃描確認這不是個案：teaching-errors 104 條全檔只有 2 個 drill 引用、technical-analysis 222 條只有 6 個、interventions 7 條 0 個，而 179 個 drill 沒有任何一個指回 canonical ID。drill 唯一帶問題語意的 `deficiency_fixes`（值域 1–16）是外部書本編號，專案內查不到定義，且與 `category` 不對齊（值 1 橫跨五類），無法反推重建。
+
+規劃結論是**先接線、不寫新內容**：在 `canonical/instructional/problems.yaml` 建 `prob.*` 問題 ID 空間，一條問題把「現象 → 力學解釋 → 陸上動作 → 水中 drill」四欄接起來，Drills/ 零改動。放 `instructional/` 而非新開目錄，是因為 `validate.py` 的 `_domain_of_path()` 取 canonical 下第一層當 domain，新目錄會整批觸發 E008。介入層維持 7 筆不增厚（D組 已裁定那是證據上限），所以陸上欄會大面積是空的——用 `coverage_gap` 明標，空格本身是缺口報告的輸入。
+
+下一步 W18：建骨架 + `validate.py` 三處註冊（`KNOWN_ENTRY_LIST_KEYS` 加 `problems`、`LINKS_ID_REF_KEYS` 加 `interventions`、docstring 一行），微 diff 自己做。
 
 ## 上一階段狀態（2026-09-10）
 
