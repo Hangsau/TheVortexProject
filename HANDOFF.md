@@ -24,7 +24,17 @@
 
 ## 下一步建議（本批）
 
-**本批已全部完成。** canonical `3ee2bac`（含 `steady_per_100_s` 的 `note_zh` 與 (3) 條的斷行修正）、my-site `4f8e054` / `ee6fe09`，CI 綠，線上已驗（HTTP 200；主題 5 區段 `<strong>` 84、字面 `**` 0、空 `<p>`／`<td>`／`<span>` 各 0、六個診斷鍵 0 次外洩）。入口 https://hangsau.github.io/cortex/vortex/periodization/#set-design 。素材 `resources/raw/notes/游泳訓練設計完整指南.md` 已依規則刪除。
+**本批已全部完成。** canonical `3ee2bac` → `55fb011` → `51b7641` → `342575b`、my-site `4f8e054` / `ee6fe09` / `845f831` 與兩次自動 sync，CI 綠，線上已驗（HTTP 200；主題 5 區段字面 `**` 0、空 `<p>`／`<td>`／`<span>` 各 0、六個診斷鍵 0 次外洩）。入口 https://hangsau.github.io/cortex/vortex/periodization/#set-design 。素材 `resources/raw/notes/游泳訓練設計完整指南.md` 已依規則刪除。
+
+**收尾兩次結構性更正（都是使用者指出的設計錯誤，不是筆誤）：**
+
+① **缺錨點不得拒絕出課表**（`51b7641` 之前的 `3ee2bac`）。原本 `generator.refusals` 寫「缺 T200/T400 → 不輸出」。實際上四個變項只有目標時間需要錨點，退出規則（本組最快趟 ＋ max(0.5 秒, 3%)）本身是相對的，第一趟游完就有基準——一個變項的缺失被寫成否決整張課表。改成 `anchor_tiers` 四級降級（實測／估計／外推／**自校準**）＋ `embedded_test_zh`（把計時排進當堂課表當主組的一部分，兩次後升級成精確值），拒絕只剩兩類：安全（有症狀）與結構性輸入缺失（泳式／池長／每週課數／每課分鐘／階段）。同軸規則已寫入全域記憶 `feedback_degrade_dont_refuse_on_missing_data.md`。
+
+② **配速改用百分比，固定秒數只是輸出格式**（`51b7641`）。來源給的是固定偏移（穩定 ＋6 秒、輕鬆 ＋8–10 秒／100 公尺）。關鍵發現：固定秒數與百分比在 `CSS = 秒數 ÷ 百分比` 相等，把四個值代進去——＋6⟷×1.06、＋8⟷×1.08、＋9⟷×1.09、＋10⟷×1.10——**交叉點全部是 CSS = 100 秒／100 公尺**。四對同時交在同一整數表示固定秒數是百分比模型在 1:40／100（來源預設的休閒泳者）附近的線性化，是池邊心算的產物。我先前用 `≥80 / <80` 雙規則「補救」快泳者那一段，那是把來源的線性化誤差硬編進一半值域——已刪除，改單一模型 `steady = CSS × 1.06`、`easy = CSS × 1.09`。**生成器沒有心算限制，不應繼承來源的心算簡化**。
+
+接線過程的三個踩雷點已寫進 `my-site/HANDOFF.md`，這裡只記對本 repo 有約束力的那條：**`tools/build_knowledge_map.py:401` 與 `my-site/tools/sync_vortex.py:66` 各有一份硬編碼的 periodization 檔名清單**，canonical 加新檔要同時改兩處，否則新檔靜默不進地圖也不出站，而且兩邊都不報錯。另外 canonical 的多行規則欄位（不縮排＝新條、縮排＝續行）在 my-site 由新的 `richlines.html` 逐行渲染，有**兩類**約束要在 canonical 這側顧好：① 接續行時不插空白，某行停在中文、續行開頭是 ASCII 就會黏成 `走decisions.yaml`（不可改成自動補空白，會破壞 `0.40` ＋ `（95% 信賴區間`）；② 粗體 regex 是 `\*\*([^*\n]+?)\*\*`，**不能跨行**，`**…\n…**` 會原樣印出星號。兩者都有一次性稽核腳本寫法記錄在本次 session。
+
+**尚未接線（使用者未裁決）**：整條設計鏈目前**沒有任何程式讀它**。四個接點是 —— (a) `swim-coach/engine/schemas.py` 的 `SessionSetBlock` 缺 `target_time_s` 與 `rest_s` 兩個欄位（四變項只有距離有家，是結構缺口不是資料未填）；(b) 沒有 `generator.derived` 的公式求值器；(c) `decision.py` 選模板前沒有跑 `refusals`；(d) `tier_d` 自校準路徑未實作。另 `tier_c` 的距離—時間外推係數仍標 🔴 未查證。
 
 接線過程的三個踩雷點已寫進 `my-site/HANDOFF.md`，這裡只記對本 repo 有約束力的那條：**`tools/build_knowledge_map.py:401` 與 `my-site/tools/sync_vortex.py:66` 各有一份硬編碼的 periodization 檔名清單**，canonical 加新檔要同時改兩處，否則新檔靜默不進地圖也不出站，而且兩邊都不報錯。另外 canonical 的多行規則欄位（不縮排＝新條、縮排＝續行）在 my-site 由新的 `richlines.html` 逐行渲染，**接續行時不插空白**——某行若停在中文、續行開頭是 ASCII，線上就會黏成 `走decisions.yaml`；斷行位置要在 canonical 這側顧好。
 
