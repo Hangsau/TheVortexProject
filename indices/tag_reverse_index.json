@@ -344,6 +344,7 @@
         "FrSide2"
       ],
       "breakout": [
+        "prob.starts-turns.slow-breakout",
         "prob.udk.late-breakout",
         "starts-turns.err12",
         "starts-turns.err14"
@@ -431,6 +432,7 @@
         "prob.free.bubble-catch",
         "prob.free.cross-midline-entry",
         "prob.free.forward-push",
+        "prob.starts-turns.split-entry",
         "starts-turns.err3"
       ],
       "errors": [
@@ -709,6 +711,8 @@
         "ScUW1"
       ],
       "start": [
+        "prob.starts-turns.low-back-start",
+        "prob.starts-turns.steep-entry",
         "starts-turns.err1",
         "starts-turns.err2",
         "starts-turns.err4"
@@ -724,6 +728,8 @@
         "free.tech.34",
         "prob.back.early-surfacing",
         "prob.breast.overlong-glide",
+        "prob.starts-turns.late-streamline",
+        "prob.starts-turns.unheld-streamline",
         "prob.udk.broken-streamline",
         "starts-turns.err6",
         "starts-turns.tech.11",
@@ -858,6 +864,7 @@
         "prob.fly.entry-pause",
         "prob.fly.late-second-kick",
         "prob.free.breath-waiting-arm",
+        "prob.starts-turns.pullout-wait",
         "prob.udk.breakout-pause",
         "starts-turns.err13",
         "udk.err10"
@@ -872,6 +879,11 @@
         "STEL2",
         "STEL3",
         "STSpat1",
+        "prob.starts-turns.deep-turn",
+        "prob.starts-turns.early-arm-tuck",
+        "prob.starts-turns.misaligned-push",
+        "prob.starts-turns.step-mismatch",
+        "prob.starts-turns.turn-timing",
         "starts-turns.err11",
         "starts-turns.err5",
         "starts-turns.err7",
@@ -3217,6 +3229,18 @@
         "movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action",
         "movement.demand.starts-turns.wall-push-off.shoulder-complex-composite-angle-and-streamline-precedence",
         "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
+        "prob.starts-turns.deep-turn",
+        "prob.starts-turns.early-arm-tuck",
+        "prob.starts-turns.late-streamline",
+        "prob.starts-turns.low-back-start",
+        "prob.starts-turns.misaligned-push",
+        "prob.starts-turns.pullout-wait",
+        "prob.starts-turns.slow-breakout",
+        "prob.starts-turns.split-entry",
+        "prob.starts-turns.steep-entry",
+        "prob.starts-turns.step-mismatch",
+        "prob.starts-turns.turn-timing",
+        "prob.starts-turns.unheld-streamline",
         "starts-turns.err1",
         "starts-turns.err10",
         "starts-turns.err11",

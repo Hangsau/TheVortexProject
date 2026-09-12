@@ -29,6 +29,10 @@ categories:
   name_zh: 流線與滑行
 - key: depth
   name_zh: 深度與啟動
+- key: start
+  name_zh: 出發
+- key: turn
+  name_zh: 轉身
 - key: breakout
   name_zh: 出水銜接
 problems:
@@ -1371,3 +1375,261 @@ problems:
   - udk.err11
   coverage_gap:
   - no_intervention
+- id: prob.starts-turns.steep-entry
+  stroke: starts-turns
+  category: start
+  title: 起跳往上飛得很高，入水後水平速度流失
+  public:
+    observable: |-
+      - 起跳後主要往上升，飛行弧線很高。
+      - 入水後需要很長一段才回到水平前進。
+    mechanism_summary: 離台時的推蹬方向會影響水平與垂直速度分配；空中主要是在整理入水姿勢，不能重新改變重心的飛行路徑。不能只用飛得高或遠判定出發品質。
+  links:
+    technical_analysis:
+    - starts-turns.tech.6
+    - starts-turns.tech.10
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 起跳角度越大、飛越遠，入水後速度越快
+  cross_ref_ids:
+  - starts-turns.err1
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.starts-turns.split-entry
+  stroke: starts-turns
+  category: entry
+  title: 手先入水後，胸、髖與腳分別拍在水面
+  public:
+    observable: |-
+      - 手入水後，胸、髖或腳又分別拍到另一處水面。
+      - 入水瞬間手臂或雙腿張開。
+    mechanism_summary: 肢段若不能沿相近路徑入水，迎水截面會增加，水的作用也更容易把姿勢撐開。先看入水前是否已收攏，不要求模仿超出個人能力的極端流線。
+  links:
+    technical_analysis:
+    - starts-turns.tech.11
+    - starts-turns.tech.42
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 入水要垂直插入——手指先插進去、身體筆直最乾淨
+  cross_ref_ids:
+  - starts-turns.err3
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.starts-turns.low-back-start
+  stroke: starts-turns
+  category: start
+  title: 仰式起跳臀部沒離水，背部直接拍回水面
+  public:
+    observable: |-
+      - 仰式起跳時臀部還在水裡，腿已伸直。
+      - 身體沒有順利離水，背部直接拍回水面。
+    mechanism_summary: 臀部仍在水中時推蹬，水阻力會影響離水與前進。應看髖部離水和蹬腿的銜接，不把拱背越大、弧線越高當作更好的出發。
+  links:
+    technical_analysis:
+    - starts-turns.tech.14
+    - starts-turns.tech.16
+    drills:
+    - STEL2
+    interventions: []
+    water_interventions: []
+  cross_ref: 仰式起跳要盡量拱背，弧線越大越好
+  cross_ref_ids:
+  - starts-turns.err4
+  coverage_gap:
+  - no_intervention
+- id: prob.starts-turns.early-arm-tuck
+  stroke: starts-turns
+  category: turn
+  title: 蛙蝶接近牆時提早收手，剩下距離靠滑等
+  public:
+    observable: |-
+      - 蛙式或蝶式距牆還有一段，就先縮短最後一划。
+      - 手收回後只能滑著等牆靠近。
+    mechanism_summary: 最後一划提前結束，會讓進牆前的推進較早消失。先看最後一划與觸牆距離的搭配，不用縮手代替距離判斷。
+  links:
+    technical_analysis:
+    - starts-turns.tech.19
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 蛙式／蝶式接近牆時提前收手，換取快速觸牆
+  cross_ref_ids:
+  - starts-turns.err5
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.starts-turns.late-streamline
+  stroke: starts-turns
+  category: streamline
+  title: 腳已推離牆，雙手才開始整理流線
+  public:
+    observable: |-
+      - 腳已離開牆，雙手才開始往前合攏。
+      - 推出後仍在扭動身體或整理頭臂位置。
+    mechanism_summary: 推蹬時姿態尚未整理好，會把部分動量用在轉動與回位。先比較腳觸牆、手臂就位和離牆三個事件，確認流線能否在推出前完成。
+  links:
+    technical_analysis:
+    - starts-turns.tech.18
+    drills:
+    - ST3
+    interventions: []
+    water_interventions: []
+  cross_ref: 觸牆蹬出之後才做流線型
+  cross_ref_ids:
+  - starts-turns.err6
+  coverage_gap:
+  - no_intervention
+- id: prob.starts-turns.unheld-streamline
+  stroke: starts-turns
+  category: streamline
+  title: 雙臂上舉時分開，或拱腰後才夾得住頭
+  public:
+    observable: |-
+      - 雙臂上舉後手臂分開，或只有明顯拱腰才夾得住頭。
+      - 放開協助或稍微維持一段時間，姿勢就散開。
+    mechanism_summary: 手臂上舉是肩複合體多處共同完成的動作。外觀不能指出限制在哪一層，也不能分辨被動範圍不足與主動維持不足；兩者需分流評估。
+  links:
+    technical_analysis:
+    - starts-turns.tech.48
+    drills: []
+    interventions:
+    - movement.intervention.shoulder-elevation.active-control
+    - movement.intervention.shoulder-elevation.conditional-soft-tissue
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_drill
+- id: prob.starts-turns.step-mismatch
+  stroke: starts-turns
+  category: turn
+  title: 仰式從旗幟數同樣划次，卻有時太近、有時太遠
+  public:
+    observable: |-
+      - 從仰式旗幟起數相同划次，有時翻得太早、有時已擠到牆邊。
+      - 換速度後，原來的划次數失準。
+    mechanism_summary: 相同划次涵蓋的距離會隨速度與划幅改變，不能跨速度直接沿用。應分別記錄個人在不同速度下從旗幟到牆的結果，並在技術改變後重新核對。
+  links:
+    technical_analysis:
+    - starts-turns.tech.23
+    drills:
+    - ST4
+    interventions: []
+    water_interventions: []
+  cross_ref: 仰式計步：從旗幟數固定步數就翻，速度快慢都一樣
+  cross_ref_ids:
+  - starts-turns.err7
+  coverage_gap:
+  - no_intervention
+- id: prob.starts-turns.deep-turn
+  stroke: starts-turns
+  category: turn
+  title: 觸牆後身體刻意往下沉，蹬出前停留變長
+  public:
+    observable: |-
+      - 蛙式觸牆後先刻意把髖往下沉。
+      - 腳踩牆較深，推出方向明顯朝上。
+    mechanism_summary: 踩牆深度會改變蹬出方向，過多向上的分量不會全變成水平前進。觀察觸牆後的路徑與推出方向，不把某個群體深度值當作每人的標準。
+  links:
+    technical_analysis:
+    - starts-turns.tech.25
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 蛙式轉身觸牆後要刻意往下沉，讓腳找到牆
+  cross_ref_ids:
+  - starts-turns.err8
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.starts-turns.misaligned-push
+  stroke: starts-turns
+  category: turn
+  title: 蹬牆時身體折角，推出後往側面或上下偏
+  public:
+    observable: |-
+      - 雙腳蹬牆時身體仍有折角或左右偏轉。
+      - 推出後偏向側面或上下方向，無法沿體線前進。
+    mechanism_summary: 推蹬方向與身體軸線的配合，會影響多少速度留在前進方向。力量更大仍不能取代合適踩牆位置與流線姿態。
+  links:
+    technical_analysis:
+    - starts-turns.tech.22
+    drills:
+    - ST2
+    - ST3
+    interventions: []
+    water_interventions: []
+  cross_ref: 推牆力道越大，出去速度就越快
+  cross_ref_ids:
+  - starts-turns.err9
+  coverage_gap:
+  - no_intervention
+- id: prob.starts-turns.turn-timing
+  stroke: starts-turns
+  category: turn
+  title: 翻滾過早碰不到牆，或太晚擠在牆邊
+  public:
+    observable: |-
+      - 翻滾後離牆太遠，或太靠近牆而需要重新調整腳。
+      - 進牆前臨時減速，翻滾與踩牆無法連成一次動作。
+    mechanism_summary: 翻滾啟動時機與進牆距離共同影響踩牆位置和離牆方向。應比較整段進出牆結果，不能只追求翻得更快。
+  links:
+    technical_analysis:
+    - starts-turns.tech.17
+    - starts-turns.tech.38
+    drills:
+    - ST2
+    interventions: []
+    water_interventions: []
+  cross_ref: 轉身越快越好——approach 速度過快反失分
+  cross_ref_ids:
+  - starts-turns.err11
+  coverage_gap:
+  - no_intervention
+- id: prob.starts-turns.slow-breakout
+  stroke: starts-turns
+  category: breakout
+  title: 出水銜接時停頓或抬頭，第一划明顯掉速
+  public:
+    observable: |-
+      - 還沒開始第一划，手已提前分開、頭先抬起找水面。
+      - 出水那一下出現停頓，接著才重新加速。
+    mechanism_summary: 提前打開流線與最後一踢接不上第一划，都可能讓出水過渡流失速度。先查動作銜接，不把不換氣或延長水下距離當成人人適用的要求。
+  links:
+    technical_analysis:
+    - starts-turns.tech.44
+    drills:
+    - ST5
+    interventions: []
+    water_interventions: []
+  cross_ref: Breakout 多踢幾下、慢慢上來避免掉速——水下越久速度衰減越多；起跳後第一划要呼吸補氣（200m 以上）——破壞 breakout 速度的最大錯誤
+  cross_ref_ids:
+  - starts-turns.err12
+  - starts-turns.err14
+  coverage_gap:
+  - no_intervention
+- id: prob.starts-turns.pullout-wait
+  stroke: starts-turns
+  category: timing
+  title: 蛙式水下滑到幾乎靜止，才開始大划手
+  public:
+    observable: |-
+      - 蛙式出發或轉身後，滑到幾乎不再前進才開始大划手。
+      - 第一次大划手像從靜止重新起步。
+    mechanism_summary: ''
+  links:
+    technical_analysis: []
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 蛙式 pullout 完全靜止才划手——錯失最佳推進力疊加時機
+  cross_ref_ids:
+  - starts-turns.err13
+  coverage_gap:
+  - no_mechanism
+  - no_intervention
+  - no_drill

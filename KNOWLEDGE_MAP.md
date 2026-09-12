@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 61 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -500,6 +500,18 @@
 | prob.udk.breakout-pause | udk | timing | 最後一踢已結束，第一划還沒開始 |
 | prob.udk.broken-streamline | udk | streamline | 踢水時手臂張開、頭露在雙臂之外 |
 | prob.udk.posture-switch | udk | kick | 翻到仰面後，踢腿方向與原有節奏接不上 |
+| prob.starts-turns.steep-entry | starts-turns | start | 起跳往上飛得很高，入水後水平速度流失 |
+| prob.starts-turns.split-entry | starts-turns | entry | 手先入水後，胸、髖與腳分別拍在水面 |
+| prob.starts-turns.low-back-start | starts-turns | start | 仰式起跳臀部沒離水，背部直接拍回水面 |
+| prob.starts-turns.early-arm-tuck | starts-turns | turn | 蛙蝶接近牆時提早收手，剩下距離靠滑等 |
+| prob.starts-turns.late-streamline | starts-turns | streamline | 腳已推離牆，雙手才開始整理流線 |
+| prob.starts-turns.unheld-streamline | starts-turns | streamline | 雙臂上舉時分開，或拱腰後才夾得住頭 |
+| prob.starts-turns.step-mismatch | starts-turns | turn | 仰式從旗幟數同樣划次，卻有時太近、有時太遠 |
+| prob.starts-turns.deep-turn | starts-turns | turn | 觸牆後身體刻意往下沉，蹬出前停留變長 |
+| prob.starts-turns.misaligned-push | starts-turns | turn | 蹬牆時身體折角，推出後往側面或上下偏 |
+| prob.starts-turns.turn-timing | starts-turns | turn | 翻滾過早碰不到牆，或太晚擠在牆邊 |
+| prob.starts-turns.slow-breakout | starts-turns | breakout | 出水銜接時停頓或抬頭，第一划明顯掉速 |
+| prob.starts-turns.pullout-wait | starts-turns | timing | 蛙式水下滑到幾乎靜止，才開始大划手 |
 
 ---
 

@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1004,
+  "record_count": 1016,
   "records": [
     {
       "id": "Bk1",
@@ -17789,6 +17789,258 @@
       "outgoing_ids": [
         "free.tech.33",
         "movement.intervention.trunk-axial-rotation.cross-side-core-capacity"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.deep-turn",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[68]",
+      "title": "觸牆後身體刻意往下沉，蹬出前停留變長",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "starts-turns.err8",
+        "starts-turns.tech.25"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.early-arm-tuck",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[64]",
+      "title": "蛙蝶接近牆時提早收手，剩下距離靠滑等",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "starts-turns.err5",
+        "starts-turns.tech.19"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.late-streamline",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[65]",
+      "title": "腳已推離牆，雙手才開始整理流線",
+      "tags": {
+        "category": [
+          "streamline"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST3",
+        "starts-turns.err6",
+        "starts-turns.tech.18"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.low-back-start",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[63]",
+      "title": "仰式起跳臀部沒離水，背部直接拍回水面",
+      "tags": {
+        "category": [
+          "start"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "STEL2",
+        "starts-turns.err4",
+        "starts-turns.tech.14",
+        "starts-turns.tech.16"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.misaligned-push",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[69]",
+      "title": "蹬牆時身體折角，推出後往側面或上下偏",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST2",
+        "ST3",
+        "starts-turns.err9",
+        "starts-turns.tech.22"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.pullout-wait",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[72]",
+      "title": "蛙式水下滑到幾乎靜止，才開始大划手",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "starts-turns.err13"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.slow-breakout",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[71]",
+      "title": "出水銜接時停頓或抬頭，第一划明顯掉速",
+      "tags": {
+        "category": [
+          "breakout"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST5",
+        "starts-turns.err12",
+        "starts-turns.err14",
+        "starts-turns.tech.44"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.split-entry",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[62]",
+      "title": "手先入水後，胸、髖與腳分別拍在水面",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "starts-turns.err3",
+        "starts-turns.tech.11",
+        "starts-turns.tech.42"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.steep-entry",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[61]",
+      "title": "起跳往上飛得很高，入水後水平速度流失",
+      "tags": {
+        "category": [
+          "start"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "starts-turns.err1",
+        "starts-turns.tech.10",
+        "starts-turns.tech.6"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.step-mismatch",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[67]",
+      "title": "仰式從旗幟數同樣划次，卻有時太近、有時太遠",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST4",
+        "starts-turns.err7",
+        "starts-turns.tech.23"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.turn-timing",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[70]",
+      "title": "翻滾過早碰不到牆，或太晚擠在牆邊",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST2",
+        "starts-turns.err11",
+        "starts-turns.tech.17",
+        "starts-turns.tech.38"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.unheld-streamline",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[66]",
+      "title": "雙臂上舉時分開，或拱腰後才夾得住頭",
+      "tags": {
+        "category": [
+          "streamline"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "movement.intervention.shoulder-elevation.active-control",
+        "movement.intervention.shoulder-elevation.conditional-soft-tissue",
+        "starts-turns.tech.48"
       ]
     },
     {
