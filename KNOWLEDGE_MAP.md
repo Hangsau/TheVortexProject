@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 12 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `problems` | 27 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -451,6 +451,21 @@
 | prob.breast.overlong-glide | breast | streamline | 滑到幾乎停下來，才開始下一划 |
 | prob.breast.excess-undulation | breast | undulation | 上身升得很高，前送卻接不上 |
 | prob.breast.compressed-exhale | breast | head | 臉快出水時才突然吐氣，吸氣窗口被擠短 |
+| prob.free.cross-midline-entry | free | entry | 手從頭的正前方跨過中線入水 |
+| prob.free.cross-midline-pull | free | pull | 拉水時手掌斜向肚臍，身體左右偏移 |
+| prob.free.dropped-elbow | free | pull | 捕水時肘先下沉，前臂沒有立起來 |
+| prob.free.forward-push | free | entry | 入水後手臂用力往前頂，捕水被延後 |
+| prob.free.deep-pull | free | pull | 手往池底深壓，上臂也跟著沉下去 |
+| prob.free.locked-knee-kick | free | kick | 膝蓋全程僵直，整條腿上下擺 |
+| prob.free.toes-up-kick | free | kick | 踢水時腳尖持續勾起，腳掌朝向前進方向 |
+| prob.free.excess-roll | free | rotation | 身體轉到接近側躺，下一次捕水接不上 |
+| prob.free.head-lift-breath | free | head | 換氣時抬頭看前上方，腿同時下沉 |
+| prob.free.breath-waiting-arm | free | timing | 換氣時前手一直等著，兩臂之間出現停頓 |
+| prob.free.fatigue-short-strokes | free | tempo | 游到後段划次變多，每划前進距離變短 |
+| prob.free.trunk-lag | free | rotation | 肩髖連動反覆失序，左右差異在後段擴大 |
+| prob.free.fatigue-elbow-drop | free | pull | 前幾趟能維持捕水，後段肘與肩胛位置逐漸失守 |
+| prob.free.stiff-recovery | free | recovery | 回臂刻意夾高或繃緊，手臂前送卡住 |
+| prob.free.bubble-catch | free | entry | 手已入水，捕水時仍拖著一團氣泡 |
 
 ---
 

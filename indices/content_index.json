@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 955,
+  "record_count": 970,
   "records": [
     {
       "id": "Bk1",
@@ -16969,6 +16969,330 @@
         "breast.err6",
         "breast.tech.24",
         "breast.tech.3"
+      ]
+    },
+    {
+      "id": "prob.free.breath-waiting-arm",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[21]",
+      "title": "換氣時前手一直等著，兩臂之間出現停頓",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr11",
+        "free.err19",
+        "free.tech.8"
+      ]
+    },
+    {
+      "id": "prob.free.bubble-catch",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[26]",
+      "title": "手已入水，捕水時仍拖著一團氣泡",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr22",
+        "free.err9"
+      ]
+    },
+    {
+      "id": "prob.free.cross-midline-entry",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[12]",
+      "title": "手從頭的正前方跨過中線入水",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr13",
+        "free.err6",
+        "free.tech.20"
+      ]
+    },
+    {
+      "id": "prob.free.cross-midline-pull",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[13]",
+      "title": "拉水時手掌斜向肚臍，身體左右偏移",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "free.err10",
+        "free.err24",
+        "free.tech.7"
+      ]
+    },
+    {
+      "id": "prob.free.deep-pull",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[16]",
+      "title": "手往池底深壓，上臂也跟著沉下去",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "FrSide1",
+        "free.err25",
+        "free.tech.9"
+      ]
+    },
+    {
+      "id": "prob.free.dropped-elbow",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[14]",
+      "title": "捕水時肘先下沉，前臂沒有立起來",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr16",
+        "FrSide1",
+        "free.tech.21",
+        "free.tech.9"
+      ]
+    },
+    {
+      "id": "prob.free.excess-roll",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[19]",
+      "title": "身體轉到接近側躺，下一次捕水接不上",
+      "tags": {
+        "category": [
+          "rotation"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr11",
+        "free.err15",
+        "free.err16",
+        "free.err17",
+        "free.tech.16"
+      ]
+    },
+    {
+      "id": "prob.free.fatigue-elbow-drop",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[24]",
+      "title": "前幾趟能維持捕水，後段肘與肩胛位置逐漸失守",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "free.tech.10",
+        "free.tech.21",
+        "movement.intervention.scapular-upward-rotation.serratus-endurance"
+      ]
+    },
+    {
+      "id": "prob.free.fatigue-short-strokes",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[22]",
+      "title": "游到後段划次變多，每划前進距離變短",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr20",
+        "FrEL7",
+        "free.err20",
+        "free.tech.24",
+        "free.tech.3"
+      ]
+    },
+    {
+      "id": "prob.free.forward-push",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[15]",
+      "title": "入水後手臂用力往前頂，捕水被延後",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "free.err21",
+        "free.tech.22"
+      ]
+    },
+    {
+      "id": "prob.free.head-lift-breath",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[20]",
+      "title": "換氣時抬頭看前上方，腿同時下沉",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr11",
+        "Fr4",
+        "free.err18",
+        "free.tech.17",
+        "free.tech.18"
+      ]
+    },
+    {
+      "id": "prob.free.locked-knee-kick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[17]",
+      "title": "膝蓋全程僵直，整條腿上下擺",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr7",
+        "free.err13",
+        "free.tech.41"
+      ]
+    },
+    {
+      "id": "prob.free.stiff-recovery",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[25]",
+      "title": "回臂刻意夾高或繃緊，手臂前送卡住",
+      "tags": {
+        "category": [
+          "recovery"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "free.err1",
+        "free.err3",
+        "free.err4",
+        "free.err5",
+        "free.tech.32"
+      ]
+    },
+    {
+      "id": "prob.free.toes-up-kick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[18]",
+      "title": "踢水時腳尖持續勾起，腳掌朝向前進方向",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr7",
+        "free.err11",
+        "free.err14",
+        "free.tech.13",
+        "movement.intervention.ankle-plantarflexion.capacity-control",
+        "movement.intervention.ankle-plantarflexion.conditional-mobility"
+      ]
+    },
+    {
+      "id": "prob.free.trunk-lag",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[23]",
+      "title": "肩髖連動反覆失序，左右差異在後段擴大",
+      "tags": {
+        "category": [
+          "rotation"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "free.tech.33",
+        "movement.intervention.trunk-axial-rotation.cross-side-core-capacity"
       ]
     },
     {

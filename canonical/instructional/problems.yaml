@@ -9,16 +9,22 @@ schema_version: 1
 categories:
 - key: recovery
   name_zh: 回臂
+- key: entry
+  name_zh: 入水
 - key: pull
   name_zh: 水下划手
 - key: kick
   name_zh: 踢腿
+- key: rotation
+  name_zh: 身體旋轉
 - key: undulation
   name_zh: 身體波動
 - key: head
   name_zh: 頭部與換氣
 - key: timing
   name_zh: 手腳時機
+- key: tempo
+  name_zh: 划頻划距與訓練哲學
 - key: streamline
   name_zh: 流線與滑行
 problems:
@@ -297,3 +303,326 @@ problems:
   - no_mechanism
   - no_intervention
   - no_drill
+- id: prob.free.cross-midline-entry
+  stroke: free
+  category: entry
+  title: 手從頭的正前方跨過中線入水
+  public:
+    observable: |-
+      - 由正面看，手跨到頭部中線的另一側入水。
+      - 入水後先向外掃回，身體伴隨左右偏移。
+    mechanism_summary: 跨中線的入水點會讓後續捕水需要額外橫向調整。先看入水位置與身體偏移是否同時出現，不從這個外觀直接判定肩部病變。
+  links:
+    technical_analysis:
+    - free.tech.20
+    drills:
+    - Fr13
+    interventions: []
+    water_interventions: []
+  cross_ref: 「頭部正前方入水」是標準入水點
+  cross_ref_ids:
+  - free.err6
+  coverage_gap:
+  - no_intervention
+- id: prob.free.cross-midline-pull
+  stroke: free
+  category: pull
+  title: 拉水時手掌斜向肚臍，身體左右偏移
+  public:
+    observable: |-
+      - 水下拉水時，手由肩線斜向肚臍或對側。
+      - 划手推進伴隨反覆左右擺動。
+    mechanism_summary: 手部作用方向偏向橫向時，向後送水的有效分量會改變。關注的是推進方向，不要求手在身體或池底座標中畫出同一條固定直線。
+  links:
+    technical_analysis:
+    - free.tech.7
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: S 形划水路徑是高效划水的目標；拉水朝肚臍方向斜拉——常見「拉到肚臍」口令造成跨越中線
+  cross_ref_ids:
+  - free.err10
+  - free.err24
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.free.dropped-elbow
+  stroke: free
+  category: pull
+  title: 捕水時肘先下沉，前臂沒有立起來
+  public:
+    observable: |-
+      - 捕水開始時，肘比手更早向下掉。
+      - 前臂還沒轉成迎水面，上臂就已向下壓。
+    mechanism_summary: 肘與前臂的位置會同時影響上臂迎水面與捕水方向。外觀能指出捕水配置改變，不能據此算出推進力歸零或判定特定肌群失效。
+  links:
+    technical_analysis:
+    - free.tech.9
+    - free.tech.21
+    drills:
+    - Fr16
+    - FrSide1
+    interventions: []
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_intervention
+- id: prob.free.forward-push
+  stroke: free
+  category: entry
+  title: 入水後手臂用力往前頂，捕水被延後
+  public:
+    observable: |-
+      - 入水後手繼續用力朝前頂，卻沒有順勢轉入捕水。
+      - 另一手已離水，前手仍在延伸位置等待。
+    mechanism_summary: 手臂主動向前頂與由身體旋轉帶出的延伸是不同事件。前伸若拖延捕水，就會留下推進空窗；要把前伸和捕水放在同一時間軸觀察。
+  links:
+    technical_analysis:
+    - free.tech.22
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 「手伸遠一點」——在水中主動向前延伸增加划距
+  cross_ref_ids:
+  - free.err21
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.free.deep-pull
+  stroke: free
+  category: pull
+  title: 手往池底深壓，上臂也跟著沉下去
+  public:
+    observable: |-
+      - 捕水前整條上臂往池底壓。
+      - 手臂越壓越深，頭或軀幹也出現上下位移。
+    mechanism_summary: 深壓整條上臂會改變迎水截面；捕水重點是建立合適的手與前臂方向，不是把手放得越深越好。
+  links:
+    technical_analysis:
+    - free.tech.9
+    drills:
+    - FrSide1
+    interventions: []
+    water_interventions: []
+  cross_ref: 拉水越深推進越多——忽略「越深 = 越大阻力」的代價
+  cross_ref_ids:
+  - free.err25
+  coverage_gap:
+  - no_intervention
+- id: prob.free.locked-knee-kick
+  stroke: free
+  category: kick
+  title: 膝蓋全程僵直，整條腿上下擺
+  public:
+    observable: '- 踢水全程看不到膝部隨動，整條腿像同一根桿子擺動。'
+    mechanism_summary: 教練說的全程僵直，與膝完全伸直時的正常解剖鎖定不同。可以比較小幅隨動的踢法，但不能因為看到膝伸直就宣稱會受傷或一定沒效率。
+  links:
+    technical_analysis:
+    - free.tech.41
+    drills:
+    - Fr7
+    interventions: []
+    water_interventions: []
+  cross_ref: 「用腰帶腿踢」——踢水要從腰開始（鎖死膝蓋）
+  cross_ref_ids:
+  - free.err13
+  coverage_gap:
+  - no_intervention
+- id: prob.free.toes-up-kick
+  stroke: free
+  category: kick
+  title: 踢水時腳尖持續勾起，腳掌朝向前進方向
+  public:
+    observable: |-
+      - 踢腿時腳尖一直朝小腿方向勾起。
+      - 同樣努力下，足部朝向沒有隨踢腿換向。
+    mechanism_summary: 踝蹠屈可用量會影響足部朝向，但相關研究不能證明拉鬆腳踝就會變快。需另外確認被動範圍與主動控制，才能區分下列兩條陸上路徑。
+  links:
+    technical_analysis:
+    - free.tech.13
+    drills:
+    - Fr7
+    interventions:
+    - movement.intervention.ankle-plantarflexion.conditional-mobility
+    - movement.intervention.ankle-plantarflexion.capacity-control
+    water_interventions: []
+  cross_ref: 用力踢水才能快——力量優先於柔韌性；腳踝僵硬是先天條件，無法改善
+  cross_ref_ids:
+  - free.err11
+  - free.err14
+  coverage_gap: []
+- id: prob.free.excess-roll
+  stroke: free
+  category: rotation
+  title: 身體轉到接近側躺，下一次捕水接不上
+  public:
+    observable: |-
+      - 身體轉得接近完全側躺，前手捕水被拖住。
+      - 轉回來時又需要大幅反向調整。
+    mechanism_summary: 旋轉需要與對側手產力銜接；轉得更大或更快，並不保證能增加有效推進。問題在轉體後捕水接不上，而不是偏離某個固定角度。
+  links:
+    technical_analysis:
+    - free.tech.16
+    drills:
+    - Fr11
+    interventions: []
+    water_interventions: []
+  cross_ref: 主動轉髖是自由式旋轉的正確指令；旋轉幅度越大越好——「把肩膀打開」指令；「積極轉體，旋轉越快游越快」
+  cross_ref_ids:
+  - free.err15
+  - free.err16
+  - free.err17
+  coverage_gap:
+  - no_intervention
+- id: prob.free.head-lift-breath
+  stroke: free
+  category: head
+  title: 換氣時抬頭看前上方，腿同時下沉
+  public:
+    observable: |-
+      - 換氣時眼睛看向前上方，頭部明顯離開原有體線。
+      - 同一瞬間髖或腿下沉，回頭後才恢復。
+    mechanism_summary: 抬頭會改變全身平衡，腿部可能需要額外維持姿態。側轉換氣與主動抬頭應分開觀察；利用水面凹陷換氣也需要足夠速度與合適頭位。
+  links:
+    technical_analysis:
+    - free.tech.17
+    - free.tech.18
+    drills:
+    - Fr4
+    - Fr11
+    interventions: []
+    water_interventions: []
+  cross_ref: 換氣時眼睛要「看到天花板」
+  cross_ref_ids:
+  - free.err18
+  coverage_gap:
+  - no_intervention
+- id: prob.free.breath-waiting-arm
+  stroke: free
+  category: timing
+  title: 換氣時前手一直等著，兩臂之間出現停頓
+  public:
+    observable: |-
+      - 轉頭吸氣時前手一直停在前方。
+      - 後手已完成推水，前手仍沒有開始捕水。
+    mechanism_summary: 不同風格容許不同長度的前伸階段，但換氣若把等待額外拉長，就可能增加兩臂之間的推進空窗。先比較換氣與不換氣週期的時序。
+  links:
+    technical_analysis:
+    - free.tech.8
+    drills:
+    - Fr11
+    interventions: []
+    water_interventions: []
+  cross_ref: 換氣時前方手臂要「等在那裡」——catch-up 換氣
+  cross_ref_ids:
+  - free.err19
+  coverage_gap:
+  - no_intervention
+- id: prob.free.fatigue-short-strokes
+  stroke: free
+  category: tempo
+  title: 游到後段划次變多，每划前進距離變短
+  public:
+    observable: |-
+      - 相同泳池距離，後幾趟需要更多划次。
+      - 划頻維持或提高，完成時間卻沒有改善。
+    mechanism_summary: 每划前進距離縮短，可能被更快划手暫時掩蓋。應把划次、時間與後段动作放在一起比較，不能單靠高划頻判定效率改善。
+  links:
+    technical_analysis:
+    - free.tech.3
+    - free.tech.24
+    drills:
+    - Fr20
+    - FrEL7
+    interventions: []
+    water_interventions: []
+  cross_ref: 衝刺要「划快一點」——划頻越高越快
+  cross_ref_ids:
+  - free.err20
+  coverage_gap:
+  - no_intervention
+- id: prob.free.trunk-lag
+  stroke: free
+  category: rotation
+  title: 肩髖連動反覆失序，左右差異在後段擴大
+  public:
+    observable: |-
+      - 在相同配速下，肩髖與對側踢腿的先後順序反覆改變。
+      - 左右差異在後段擴大，伴隨側向擺動或推進停頓。
+    mechanism_summary: 跨側連動可能受陸上控制容量或水中時序影響，兩者處理方向不同。肩與髖本來就不必同時到峰值；只有延遲本身，不能判定有問題。
+  links:
+    technical_analysis:
+    - free.tech.33
+    drills: []
+    interventions:
+    - movement.intervention.trunk-axial-rotation.cross-side-core-capacity
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_drill
+- id: prob.free.fatigue-elbow-drop
+  stroke: free
+  category: pull
+  title: 前幾趟能維持捕水，後段肘與肩胛位置逐漸失守
+  public:
+    observable: |-
+      - 前段能維持的捕水肘位，在反覆划手後逐漸掉下。
+      - 休息後同一動作又可恢復。
+    mechanism_summary: 肩胛穩定需要持續控制，反覆負荷後才出現的流失可導向耐力容量檢查。單看掉肘仍不能確診前鋸肌不足，需核對適用條件。
+  links:
+    technical_analysis:
+    - free.tech.10
+    - free.tech.21
+    drills: []
+    interventions:
+    - movement.intervention.scapular-upward-rotation.serratus-endurance
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_drill
+- id: prob.free.stiff-recovery
+  stroke: free
+  category: recovery
+  title: 回臂刻意夾高或繃緊，手臂前送卡住
+  public:
+    observable: |-
+      - 回臂刻意夾高、貼身或繃成固定形狀。
+      - 前送過程出現停顿、抖動，無法連續回到入水點。
+    mechanism_summary: 回臂路徑需要配合個人活動度與距離的能量需求；彎臂和直臂都可能合用。強迫固定形狀若使回位卡住，應回頭檢查路徑，而不是把某一種肘高當作標準。
+  links:
+    technical_analysis:
+    - free.tech.32
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 高肘回臂是唯一正確方式；拉鏈 Drill 代表正確的高肘路徑；直臂回臂是初學者的壞習慣，需要矯正；回臂動作本身能產生推進力，所以要做得有力
+  cross_ref_ids:
+  - free.err1
+  - free.err3
+  - free.err4
+  - free.err5
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.free.bubble-catch
+  stroke: free
+  category: entry
+  title: 手已入水，捕水時仍拖著一團氣泡
+  public:
+    observable: '- 手已進入水中，開始捕水時掌旁仍帶著明顯氣泡。'
+    mechanism_summary: ''
+  links:
+    technical_analysis: []
+    drills:
+    - Fr22
+    interventions: []
+    water_interventions: []
+  cross_ref: 入水要「越安靜越好」
+  cross_ref_ids:
+  - free.err9
+  coverage_gap:
+  - no_mechanism
+  - no_intervention

@@ -422,6 +422,9 @@
         "free.err7",
         "free.err8",
         "free.err9",
+        "prob.free.bubble-catch",
+        "prob.free.cross-midline-entry",
+        "prob.free.forward-push",
         "starts-turns.err3"
       ],
       "errors": [
@@ -494,6 +497,7 @@
         "prob.breast.compressed-exhale",
         "prob.breast.early-breath",
         "prob.breast.head-lift-hip-drop",
+        "prob.free.head-lift-breath",
         "starts-turns.err10",
         "starts-turns.tech.4"
       ],
@@ -590,6 +594,8 @@
         "prob.breast.slow-leg-insweep",
         "prob.breast.unturned-feet",
         "prob.breast.wide-knee-recovery",
+        "prob.free.locked-knee-kick",
+        "prob.free.toes-up-kick",
         "starts-turns.tech.33",
         "starts-turns.tech.34",
         "udk.err1",
@@ -621,7 +627,11 @@
         "free.err24",
         "free.err25",
         "prob.breast.dropped-elbows",
-        "prob.breast.wide-outsweep"
+        "prob.breast.wide-outsweep",
+        "prob.free.cross-midline-pull",
+        "prob.free.deep-pull",
+        "prob.free.dropped-elbow",
+        "prob.free.fatigue-elbow-drop"
       ],
       "recovery": [
         "back.err15",
@@ -635,7 +645,8 @@
         "free.err3",
         "free.err4",
         "free.err5",
-        "prob.breast.recovery-drag"
+        "prob.breast.recovery-drag",
+        "prob.free.stiff-recovery"
       ],
       "rotation": [
         "back.err1",
@@ -652,7 +663,9 @@
         "free.tech.15",
         "free.tech.16",
         "free.tech.29",
-        "free.tech.30"
+        "free.tech.30",
+        "prob.free.excess-roll",
+        "prob.free.trunk-lag"
       ],
       "sculling": [
         "FrEL4",
@@ -754,6 +767,7 @@
         "free.err23",
         "free.tech.19",
         "free.tech.3",
+        "prob.free.fatigue-short-strokes",
         "starts-turns.tech.19",
         "udk.err4",
         "udk.tech.13",
@@ -812,6 +826,7 @@
         "fly.tech.21",
         "free.tech.35",
         "prob.breast.timing-dead-spot",
+        "prob.free.breath-waiting-arm",
         "starts-turns.err13",
         "udk.err10"
       ],
@@ -3113,7 +3128,22 @@
         "movement.demand.free.pull.upper-trunk-rotation-hand-velocity",
         "movement.demand.free.push.three-component-power-contribution",
         "movement.demand.free.rear-quadrant-propulsion.hip-snap-is-trunk-rotation",
-        "movement.demand.free.release.little-finger-orientation-is-not-a-rotation"
+        "movement.demand.free.release.little-finger-orientation-is-not-a-rotation",
+        "prob.free.breath-waiting-arm",
+        "prob.free.bubble-catch",
+        "prob.free.cross-midline-entry",
+        "prob.free.cross-midline-pull",
+        "prob.free.deep-pull",
+        "prob.free.dropped-elbow",
+        "prob.free.excess-roll",
+        "prob.free.fatigue-elbow-drop",
+        "prob.free.fatigue-short-strokes",
+        "prob.free.forward-push",
+        "prob.free.head-lift-breath",
+        "prob.free.locked-knee-kick",
+        "prob.free.stiff-recovery",
+        "prob.free.toes-up-kick",
+        "prob.free.trunk-lag"
       ],
       "starts-turns": [
         "movement.demand.starts-turns.breakout.streamline-maintenance-and-deferred-head-lift",

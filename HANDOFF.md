@@ -8,6 +8,8 @@
 
 使用者已確認執行 W18–W25。進度與驗收見 `plans/E組_執行清單.md`。
 
+最新 checkpoint：W21b free 已完成 15 題，累計 27 題；驗證 0 ERROR / 138 WARN。
+
 最新 checkpoint：W21a breast 已完成 12 題，累計 12 題；驗證 0 ERROR / 138 WARN。
 W18 已建立 problems 空骨架，註冊缺 ID 與兩種介入引用檢查，並補知識地圖接線。
 驗收：3 項註冊測試通過；0 ERROR / 138 WARN，943 records，與基線一致。
