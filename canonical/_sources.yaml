@@ -357,6 +357,27 @@ sources:
       且全為國際級選手。它支持的是**排序**（自由式最經濟，其次仰、蝶、蛙），
       不支持任何逐式的點值或比值外推，更不支持兒童與初學者。
 
+  - id: src.osiecki-2014-loglog-vs-critical-power-swim
+    display: "Osiecki, R., Nascimento, V. B., Daros, L. B., Becker, D., Stanganélli, L. C. R., & Dourado, A. C. (2014). Prediction of swimming performance over 200 m and 400 m freestyle through the log-log model and critical power model. Journal of Exercise Physiology online, 17(1), 58–66."
+    title: "Prediction of Swimming Performance Over 200 m and 400 m Freestyle through the Log-Log Model and Critical Power Model"
+    type: journal-article
+    verification_status: verified
+    authors: ["Raul Osiecki", "Vitor Bertoli Nascimento", "Larissa Bobroff Daros", "Daiane Becker", "Luiz Claudio Reeberg Stanganélli", "Antonio Carlos Dourado"]
+    year: 2014
+    container: "Journal of Exercise Physiology online (ASEP)"
+    identifier:
+      issn: "1097-9751"
+      url: "https://www.asep.org/asep/asep/JEPonlineFEBRUARY2014_Daros_Osiecki.pdf"
+    retrieved_on: "2026-09-12"
+    notes: |-
+      全文 PDF 直接取得並逐頁核對（非 PubMed 收錄期刊，取回路徑是 ASEP 官方站）。
+      本庫唯一一份**直接比對兩種外推模型在 400 公尺上誤差**的游泳資料。
+      設計：8 名男性（19±1.1 歲、隸屬巴西水上運動總會、訓練 4 年），25 公尺池，
+      同一人做完 50／100／200／400 全力，再用其中兩個距離去預測另一個。
+      **使用邊界**：n＝8、單一研究、非索引期刊、受試全為自由式受訓青年男性；
+      它支持的是**方向與量級**（線性兩點法從短距外推到 400 會系統性偏快），
+      不支持把 −14.25 秒當成可直接套用的修正常數。
+
   - id: src.myers-2021
     display: "Myers, Anatomy Trains, 4th ed., 2021"
     title: "Anatomy Trains: Myofascial Meridians for Manual Therapists and Movement Professionals"

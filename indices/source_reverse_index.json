@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 860,
+  "source_count": 861,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -7425,6 +7425,23 @@
       ]
     },
     {
+      "id": "src.osiecki-2014-loglog-vs-critical-power-swim",
+      "display": "Osiecki, R., Nascimento, V. B., Daros, L. B., Becker, D., Stanganélli, L. C. R., & Dourado, A. C. (2014). Prediction of swimming performance over 200 m and 400 m freestyle through the log-log model and critical power model. Journal of Exercise Physiology online, 17(1), 58–66.",
+      "verification_status": "verified",
+      "identifier": {
+        "issn": "1097-9751",
+        "url": "https://www.asep.org/asep/asep/JEPonlineFEBRUARY2014_Daros_Osiecki.pdf"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.generator",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "generator.anchor_tiers"
+        }
+      ]
+    },
+    {
       "id": "src.otte-2019-post-skill-training-periodization",
       "display": "Otte, F. W., Millar, S.-K., & Klatt, S. (2019). Skill training periodization in \"specialist\" sports coaching—An introduction of the \"PoST\" framework for skill development. Frontiers in Sports and Active Living, 1, 61.",
       "verification_status": "verified",
@@ -14150,12 +14167,17 @@
         "doi": "10.1055/s-2005-837487",
         "url": "https://pubmed.ncbi.nlm.nih.gov/16475057/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "periodization.set_design.anchors",
           "file": "canonical/periodization/set-design.yaml",
           "path": "anchors"
+        },
+        {
+          "id": "periodization.set_design.generator",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "generator.anchor_tiers"
         }
       ]
     },

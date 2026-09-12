@@ -15856,7 +15856,10 @@
           "🟢"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.osiecki-2014-loglog-vs-critical-power-swim",
+        "src.toubekis-2006-css-distance-selection"
+      ],
       "outgoing_ids": [
         "periodization.decisions.planner",
         "periodization.set_design.energy_targets",
