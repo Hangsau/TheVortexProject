@@ -354,4 +354,246 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 
 ## 定案
 
-W20 審閱中；每個候選將記錄問題 ID 或排除理由。
+共 73 個可見現象，條數由歸併結果產生；本表是編輯裁決紀錄，實作以 canonical 為真相。
+
+| 問題 ID | 可見現象 | 機制候選 | 誤區候選 |
+|---|---|---|---|
+| prob.breast.head-lift-hip-drop | 換氣時抬頭，髖與腿跟著下沉 | breast.tech.5, breast.tech.26 | breast.err7, breast.err13, breast.err18 |
+| prob.breast.early-breath | 手還沒內划，頭就先抬起來換氣 | breast.tech.5 | breast.err8, breast.err9 |
+| prob.breast.wide-knee-recovery | 收腿時膝蓋向前、向兩側張開 | breast.tech.10, breast.tech.13 | breast.err2, breast.err3, breast.err4, breast.err14 |
+| prob.breast.unturned-feet | 腳掌還沒轉向後方，就已開始蹬腿 | breast.tech.25, breast.tech.36 | breast.err1 |
+| prob.breast.slow-leg-insweep | 夾腿末段沒有加速，踢完前進不明顯 | breast.tech.12 | — |
+| prob.breast.wide-outsweep | 雙手一路往外划，遲遲沒有轉入捕水 | breast.tech.3, breast.tech.24 | breast.err5, breast.err6 |
+| prob.breast.dropped-elbows | 內划時肘先掉下、貼近身體 | breast.tech.4, breast.tech.5 | breast.err15 |
+| prob.breast.recovery-drag | 手臂回位時向外張開，身體明顯減速 | breast.tech.6 | — |
+| prob.breast.timing-dead-spot | 收手、收腿與推進接不上，每週期都卡一下 | breast.tech.8, breast.tech.35 | breast.err10, breast.err11 |
+| prob.breast.overlong-glide | 滑到幾乎停下來，才開始下一划 | breast.tech.7, breast.tech.28 | breast.err12 |
+| prob.breast.excess-undulation | 上身升得很高，前送卻接不上 | breast.tech.16, breast.tech.20, breast.tech.26 | breast.err16 |
+| prob.breast.compressed-exhale | 臉快出水時才突然吐氣，吸氣窗口被擠短 | 無專門技術條目 | breast.err17 |
+| prob.free.cross-midline-entry | 手從頭的正前方跨過中線入水 | free.tech.20 | free.err6 |
+| prob.free.cross-midline-pull | 拉水時手掌斜向肚臍，身體左右偏移 | free.tech.7 | free.err10, free.err24 |
+| prob.free.dropped-elbow | 捕水時肘先下沉，前臂沒有立起來 | free.tech.9, free.tech.21 | — |
+| prob.free.forward-push | 入水後手臂用力往前頂，捕水被延後 | free.tech.22 | free.err21 |
+| prob.free.deep-pull | 手往池底深壓，上臂也跟著沉下去 | free.tech.9 | free.err25 |
+| prob.free.locked-knee-kick | 膝蓋全程僵直，整條腿上下擺 | free.tech.41 | free.err13 |
+| prob.free.toes-up-kick | 踢水時腳尖持續勾起，腳掌朝向前進方向 | free.tech.13 | free.err11, free.err14 |
+| prob.free.excess-roll | 身體轉到接近側躺，下一次捕水接不上 | free.tech.16 | free.err15, free.err16, free.err17 |
+| prob.free.head-lift-breath | 換氣時抬頭看前上方，腿同時下沉 | free.tech.17, free.tech.18 | free.err18 |
+| prob.free.breath-waiting-arm | 換氣時前手一直等著，兩臂之間出現停頓 | free.tech.8 | free.err19 |
+| prob.free.fatigue-short-strokes | 游到後段划次變多，每划前進距離變短 | free.tech.3, free.tech.24 | free.err20 |
+| prob.free.trunk-lag | 肩髖連動反覆失序，左右差異在後段擴大 | free.tech.33 | — |
+| prob.free.fatigue-elbow-drop | 前幾趟能維持捕水，後段肘與肩胛位置逐漸失守 | free.tech.10, free.tech.21 | — |
+| prob.free.stiff-recovery | 回臂刻意夾高或繃緊，手臂前送卡住 | free.tech.32 | free.err1, free.err3, free.err4, free.err5 |
+| prob.free.bubble-catch | 手已入水，捕水時仍拖著一團氣泡 | 無專門技術條目 | free.err9 |
+| prob.back.head-lift-hip-drop | 抬頭看腳或刻意挺胸，髖部跟著下沉 | back.tech.21 | back.err9, back.err10 |
+| prob.back.wide-knee-kick | 踢水時膝蓋大幅彎曲、反覆露出水面 | back.tech.20 | back.err8 |
+| prob.back.passive-upkick | 腿用力往下壓，回到水面的上踢卻很慢 | back.tech.15, back.tech.30 | back.err5 |
+| prob.back.misaligned-entry | 入水偏離肩線，跨過頭頂或向外甩 | back.tech.8, back.tech.9, back.tech.29 | back.err11, back.err17 |
+| prob.back.deep-pull | 手伸得很深才開始拉水，身體向旁側偏 | back.tech.10 | back.err3 |
+| prob.back.straight-arm-pull | 水下手臂一直打直，從肩旁掃到大腿 | back.tech.14 | back.err6 |
+| prob.back.lateral-pull | 水下刻意左右繞手，前進方向跟著擺動 | back.tech.11 | back.err2 |
+| prob.back.overlong-push | 手已到髖旁仍往下延伸，出水回臂被拖住 | back.tech.12 | back.err12 |
+| prob.back.flat-rotation | 身體一直平躺，肩膀沒有隨划手交替抬起 | back.tech.3, back.tech.6 | back.err1 |
+| prob.back.fatigue-roll | 游到後段髖部擺動變大，划手距離縮短 | back.tech.24 | back.err13 |
+| prob.back.stiff-recovery | 回臂貼水或持續繃緊，手臂前送不連續 | back.tech.13, back.tech.28 | back.err15, back.err16 |
+| prob.back.early-surfacing | 推牆後很快抬頭破水，流線滑行被打斷 | back.tech.22, back.tech.23 | — |
+| prob.fly.head-lift-hip-drop | 換氣向上抬頭，胸抬高而髖部下沉 | fly.tech.17 | fly.err12, fly.err17 |
+| prob.fly.late-head-return | 雙手已回到前方，頭還留在水面上 | fly.tech.16, fly.tech.18 | — |
+| prob.fly.high-recovery | 回臂往上繞大圈，身體一起被拉高 | fly.tech.20, fly.tech.25 | fly.err4 |
+| prob.fly.deep-entry | 手入水後往深處壓，肘部也跟著下沉 | fly.tech.14 | fly.err15, fly.err16 |
+| prob.fly.narrow-entry | 雙手靠近額頭或中線入水，捕水前又向外找位置 | fly.tech.13 | fly.err2 |
+| prob.fly.lateral-pull | 水下划手大幅左右繞，向後推進被打斷 | fly.tech.12, fly.tech.13 | fly.err1, fly.err3 |
+| prob.fly.late-second-kick | 手臂已離水才做第二踢，回臂失去銜接 | fly.tech.8 | fly.err9 |
+| prob.fly.excess-kick | 兩次踢腿都做得很大，前進伴隨明顯上下跳動 | fly.tech.5, fly.tech.6 | fly.err7 |
+| prob.fly.waist-hinge | 腰部反覆折彎，胸到腳的波動接不起來 | fly.tech.3, fly.tech.4, fly.tech.29 | fly.err10, fly.err11 |
+| prob.fly.fatigue-catch | 疲勞後捕水肘下沉，手臂回位越來越困難 | fly.tech.14, fly.tech.27 | — |
+| prob.fly.entry-pause | 手入水後停住，下一次划手重新起動 | fly.tech.10, fly.tech.21 | — |
+| prob.udk.large-knee-bend | 踢腿時膝蓋折得很大，腿像在踩踏 | udk.tech.9, udk.tech.15 | udk.err2 |
+| prob.udk.passive-upkick | 下踢很快，上踢只是慢慢收回 | udk.tech.10, udk.tech.12 | udk.err3 |
+| prob.udk.excess-amplitude | 腳尖上下跨得很遠，踢的週期被拉長 | udk.tech.9, udk.tech.13 | udk.err1 |
+| prob.udk.forced-frequency | 踢頻提高、幅度縮小，計時卻沒有改善 | udk.tech.13, udk.tech.27 | udk.err4 |
+| prob.udk.head-bobbing | 頭部上下點動，雙臂與流線一起晃 | udk.tech.4 | udk.err5 |
+| prob.udk.depth-detour | 水下路徑過淺激起水面波，或往深處繞再爬升 | udk.tech.2 | udk.err7 |
+| prob.udk.late-kick | 推牆後滑到很慢，才開始水下踢腿 | udk.tech.17, udk.tech.29 | udk.err8 |
+| prob.udk.late-breakout | 水下已明顯減速，仍繼續踢到很遠才出水 | udk.tech.18, udk.tech.19 | udk.err9 |
+| prob.udk.breakout-pause | 最後一踢已結束，第一划還沒開始 | udk.tech.29 | udk.err10 |
+| prob.udk.broken-streamline | 踢水時手臂張開、頭露在雙臂之外 | udk.tech.24 | udk.err13 |
+| prob.udk.posture-switch | 翻到仰面後，踢腿方向與原有節奏接不上 | udk.tech.22, udk.tech.30 | udk.err11 |
+| prob.starts-turns.steep-entry | 起跳往上飛得很高，入水後水平速度流失 | starts-turns.tech.6, starts-turns.tech.10 | starts-turns.err1 |
+| prob.starts-turns.split-entry | 手先入水後，胸、髖與腳分別拍在水面 | starts-turns.tech.11, starts-turns.tech.42 | starts-turns.err3 |
+| prob.starts-turns.low-back-start | 仰式起跳臀部沒離水，背部直接拍回水面 | starts-turns.tech.14, starts-turns.tech.16 | starts-turns.err4 |
+| prob.starts-turns.early-arm-tuck | 蛙蝶接近牆時提早收手，剩下距離靠滑等 | starts-turns.tech.19 | starts-turns.err5 |
+| prob.starts-turns.late-streamline | 腳已推離牆，雙手才開始整理流線 | starts-turns.tech.18 | starts-turns.err6 |
+| prob.starts-turns.unheld-streamline | 雙臂上舉時分開，或拱腰後才夾得住頭 | starts-turns.tech.48 | — |
+| prob.starts-turns.step-mismatch | 仰式從旗幟數同樣划次，卻有時太近、有時太遠 | starts-turns.tech.23 | starts-turns.err7 |
+| prob.starts-turns.deep-turn | 觸牆後身體刻意往下沉，蹬出前停留變長 | starts-turns.tech.25 | starts-turns.err8 |
+| prob.starts-turns.misaligned-push | 蹬牆時身體折角，推出後往側面或上下偏 | starts-turns.tech.22 | starts-turns.err9 |
+| prob.starts-turns.turn-timing | 翻滾過早碰不到牆，或太晚擠在牆邊 | starts-turns.tech.17, starts-turns.tech.38 | starts-turns.err11 |
+| prob.starts-turns.slow-breakout | 出水銜接時停頓或抬頭，第一划明顯掉速 | starts-turns.tech.44 | starts-turns.err12, starts-turns.err14 |
+| prob.starts-turns.pullout-wait | 蛙式水下滑到幾乎靜止，才開始大划手 | 無專門技術條目 | starts-turns.err13 |
+
+### 未歸併為獨立問題的候選
+
+| 原 ID | 決定及原因 |
+|---|---|
+| free.tech.1 | 整體模型或訓練觀念，留在原機制背景。 |
+| free.tech.2 | 整體模型或訓練觀念，留在原機制背景。 |
+| free.tech.4 | 風格選擇與個體條件，風格本身不是異常。 |
+| free.tech.5 | 風格選擇與個體條件，風格本身不是異常。 |
+| free.tech.6 | 風格選擇與個體條件，風格本身不是異常。 |
+| free.tech.27 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.28 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.11 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.12 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.14 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.15 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.29 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.19 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.23 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.25 | 感知／神經控制層或教學辨識，不作可見問題。 |
+| free.tech.26 | 跨式、族群或策略比較，非單一可見現象。 |
+| free.tech.30 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.31 | 疲勞模型或特定族群背景，不擴張為通用可見診斷。 |
+| free.tech.34 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.35 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.tech.36 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| free.tech.37 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| free.tech.38 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| free.tech.39 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| free.tech.40 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| back.tech.1 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.2 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.4 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.5 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.7 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.16 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| back.tech.17 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.18 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.19 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| back.tech.25 | 整體模型或訓練觀念，留在原機制背景。 |
+| back.tech.26 | 跨式、族群或策略比較，非單一可見現象。 |
+| back.tech.27 | 跨式、族群或策略比較，非單一可見現象。 |
+| breast.tech.1 | 整體模型或訓練觀念，留在原機制背景。 |
+| breast.tech.2 | 跨式、族群或策略比較，非單一可見現象。 |
+| breast.tech.9 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| breast.tech.11 | 足部朝向不能歸給單一踝外翻；改連 breast.tech.36 的合成方向界線。 |
+| breast.tech.14 | 將蛙腿足部朝向直接歸因蹠屈的敘述與關節合成界線未對齊，不據以加陸上動作。 |
+| breast.tech.15 | D組未裁決的髖內／外旋方向衝突，不用來歸因或開介入。 |
+| breast.tech.17 | 風格選擇與個體條件，風格本身不是異常。 |
+| breast.tech.18 | 風格選擇與個體條件，風格本身不是異常。 |
+| breast.tech.19 | 風格選擇與個體條件，風格本身不是異常。 |
+| breast.tech.21 | 風格／解剖分類包含尚未裁決的旋轉方向，不用它分派風格。 |
+| breast.tech.22 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| breast.tech.23 | 感知／神經控制層或教學辨識，不作可見問題。 |
+| breast.tech.27 | 固定疲勞崩潰序列包含未直接量測的因果，不另立同名診断問題；可見分項已分開收錄。 |
+| breast.tech.29 | 跨式、族群或策略比較，非單一可見現象。 |
+| breast.tech.30 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| breast.tech.31 | 整體模型或訓練觀念，留在原機制背景。 |
+| fly.tech.1 | 整體模型或訓練觀念，留在原機制背景。 |
+| fly.tech.2 | 跨式、族群或策略比較，非單一可見現象。 |
+| fly.tech.7 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.9 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.11 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.15 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.19 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.22 | 疲勞模型或特定族群背景，不擴張為通用可見診斷。 |
+| fly.tech.23 | 疲勞模型或特定族群背景，不擴張為通用可見診斷。 |
+| fly.tech.24 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| fly.tech.26 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| fly.tech.28 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.30 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.31 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.32 | 感知／神經控制層或教學辨識，不作可見問題。 |
+| fly.tech.33 | 跨式、族群或策略比較，非單一可見現象。 |
+| fly.tech.34 | 跨式、族群或策略比較，非單一可見現象。 |
+| fly.tech.35 | 整體模型或訓練觀念，留在原機制背景。 |
+| udk.tech.1 | 整體模型或訓練觀念，留在原機制背景。 |
+| udk.tech.3 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.5 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.6 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.7 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.8 | 整體模型或訓練觀念，留在原機制背景。 |
+| udk.tech.11 | 跨式、族群或策略比較，非單一可見現象。 |
+| udk.tech.14 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| udk.tech.16 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| udk.tech.20 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.21 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.23 | 跨式、族群或策略比較，非單一可見現象。 |
+| udk.tech.25 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.26 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| udk.tech.28 | 原計畫明列措辭衝突不在本批裁決；踝介入沿用已發布條件。 |
+| fly.tech.36 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| breast.tech.37 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| breast.tech.38 | 肩傷時相校正，不由可見姿勢診斷傷害；留原技術條目。 |
+| fly.tech.37 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| fly.tech.38 | 肩夾擠歸因校正，不由入水外觀診斷傷害；留原技術條目。 |
+| starts-turns.tech.47 | 關節名與量測參照系校正，非獨立可見異常；不由外观反推關節。 |
+| starts-turns.tech.1 | 跨式、族群或策略比較，非單一可見現象。 |
+| starts-turns.tech.2 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.3 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| starts-turns.tech.4 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.41 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.43 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.5 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.7 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.8 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.9 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.12 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.13 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.15 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.20 | 感知／神經控制層或教學辨識，不作可見問題。 |
+| starts-turns.tech.21 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.24 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.26 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.27 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.28 | 跨式、族群或策略比較，非單一可見現象。 |
+| starts-turns.tech.29 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.30 | 跨式、族群或策略比較，非單一可見現象。 |
+| starts-turns.tech.31 | 跨式、族群或策略比較，非單一可見現象。 |
+| starts-turns.tech.32 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.33 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.34 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.35 | 跨式、族群或策略比較，非單一可見現象。 |
+| starts-turns.tech.36 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.37 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| starts-turns.tech.39 | 整體模型或訓練觀念，留在原機制背景。 |
+| starts-turns.tech.40 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
+| starts-turns.tech.45 | 跨式、族群或策略比較，非單一可見現象。 |
+| starts-turns.tech.46 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| free.err2 | 模仿菁英不是單一可見異常；回臂受阻另收，不把個人風格當錯誤。 |
+| free.err7 | 手指間距的規範口令；單憑夾緊外觀不推定效率問題。 |
+| free.err8 | 入水角度沒有唯一正確值；不把與某角度不同當成問題。 |
+| free.err12 | 兩拍／六拍是情境策略，拍數本身不是可見異常。 |
+| free.err22 | SR／SL 訓練觀念，沒有独立於後段划距縮短的新現象。 |
+| free.err23 | 慢游／快游的教學分類，非單一可見現象。 |
+| back.err4 | 肩髖主導的教學爭議；不由外觀替泳者指定驅動者。 |
+| back.err7 | 自然呼吸口令本身不是可見異常；沒有具體可重複的動作現象。 |
+| back.err14 | 固定呼吸頻率屬教學策略，不以自述感受建問題。 |
+| fly.err5 | 左右對稱程度不能直接等同力道或技術錯誤。 |
+| fly.err6 | 教學先後順序，非可見現象。 |
+| fly.err8 | drill 的跨情境遷移邊界，非單一可見問題。 |
+| fly.err13 | 正向／側向換氣是策略，方向本身不是錯誤。 |
+| fly.err14 | 換氣頻率是情境選擇，頻率本身不是錯誤。 |
+| udk.err6 | 跨式遷移觀念，不能獨立形成可見問題。 |
+| udk.err12 | 比喻式口令過於寬泛，沒有獨立的可見現象。 |
+| starts-turns.err2 | 前後腳力量分工需測力，不能由池畔外觀判定。 |
+| starts-turns.err10 | 靜態與動態頭位的策略差異，不以抬頭單一外觀判錯。 |
+| movement.intervention.shoulder-elevation.active-control | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+| movement.intervention.shoulder-elevation.conditional-soft-tissue | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+| movement.intervention.ankle-plantarflexion.conditional-mobility | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+| movement.intervention.ankle-plantarflexion.capacity-control | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+| movement.intervention.breaststroke-breathing.arm-driven-torso-lift | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+| movement.intervention.scapular-upward-rotation.serratus-endurance | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+| movement.intervention.trunk-axial-rotation.cross-side-core-capacity | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
+
+### 收錄邊界與三關校正
+
+- 符合資料：每個摘要回到被連結條目的 public 與證據邊界，不添加數字、劑量或療效。
+- 反問：同一外觀可有多個原因；問題只提供查找路徑，不代替限制類型或感知診斷。
+- 反推：只有在原條目的適用條件成立時才考慮介入；不由問題的出現宣告某肌群或關節有缺陷。
+- breast.tech.13 僅用膝距與收腿阻力段，不採用其 practical_implication 中的髖內旋歸因。
+- breast.tech.6 只用回位阻力描述，不轉述其互相衝突的肘部出水規則。
+- breast.tech.8 / breast.err10 / breast.err11 的時序口令互有差異；以 breast.tech.35 的多策略邊界呈現，不寫唯一時序。
+- free.tech.24 / back.tech.24 只連結可見的後段變化，不把作者列出的整條崩潰次序當成必然因果。
+- 只有誤區而沒有專門技術分析的項目保留 no_mechanism；不從外部補新機制。
+- 每式 W21 完成後記錄 drill 語意核對與實際缺口；ID 存在不等於配對正確。
