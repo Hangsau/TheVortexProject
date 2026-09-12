@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 982,
+  "record_count": 993,
   "records": [
     {
       "id": "Bk1",
@@ -17229,6 +17229,242 @@
         "breast.err6",
         "breast.tech.24",
         "breast.tech.3"
+      ]
+    },
+    {
+      "id": "prob.fly.deep-entry",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[42]",
+      "title": "手入水後往深處壓，肘部也跟著下沉",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl29",
+        "fly.err15",
+        "fly.err16",
+        "fly.tech.14"
+      ]
+    },
+    {
+      "id": "prob.fly.entry-pause",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[49]",
+      "title": "手入水後停太久，前進與下一踢一起中斷",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "fly.tech.21"
+      ]
+    },
+    {
+      "id": "prob.fly.excess-kick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[46]",
+      "title": "兩次踢腿都做得很大，前進伴隨明顯上下跳動",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "fly.err7",
+        "fly.tech.5",
+        "fly.tech.6"
+      ]
+    },
+    {
+      "id": "prob.fly.fatigue-catch",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[48]",
+      "title": "疲勞後捕水肘下沉，手臂回位越來越困難",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "fly.tech.14",
+        "fly.tech.27",
+        "movement.intervention.scapular-upward-rotation.serratus-endurance"
+      ]
+    },
+    {
+      "id": "prob.fly.head-lift-hip-drop",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[39]",
+      "title": "換氣向上抬頭，胸抬高而髖部下沉",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl20",
+        "fly.err12",
+        "fly.err17",
+        "fly.tech.17"
+      ]
+    },
+    {
+      "id": "prob.fly.high-recovery",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[41]",
+      "title": "回臂往上繞大圈，身體一起被拉高",
+      "tags": {
+        "category": [
+          "recovery"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl22",
+        "fly.err4",
+        "fly.tech.20",
+        "fly.tech.25"
+      ]
+    },
+    {
+      "id": "prob.fly.late-head-return",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[40]",
+      "title": "雙手已回到前方，頭還留在水面上",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl18",
+        "Fl20",
+        "fly.tech.16",
+        "fly.tech.18"
+      ]
+    },
+    {
+      "id": "prob.fly.late-second-kick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[45]",
+      "title": "手臂已離水才做第二踢，回臂失去銜接",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "fly.err9",
+        "fly.tech.8"
+      ]
+    },
+    {
+      "id": "prob.fly.lateral-pull",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[44]",
+      "title": "水下划手大幅左右繞，向後推進被打斷",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "fly.err1",
+        "fly.err3",
+        "fly.tech.12",
+        "fly.tech.13"
+      ]
+    },
+    {
+      "id": "prob.fly.narrow-entry",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[43]",
+      "title": "雙手靠近額頭或中線入水，捕水前又向外找位置",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "fly.err2",
+        "fly.tech.13"
+      ]
+    },
+    {
+      "id": "prob.fly.waist-hinge",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[47]",
+      "title": "腰部反覆折彎，胸到腳的波動接不起來",
+      "tags": {
+        "category": [
+          "undulation"
+        ],
+        "stroke": [
+          "fly"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl1",
+        "Fl3",
+        "fly.err10",
+        "fly.err11",
+        "fly.tech.29",
+        "fly.tech.3",
+        "fly.tech.4"
       ]
     },
     {

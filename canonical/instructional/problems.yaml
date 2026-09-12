@@ -887,3 +887,244 @@ problems:
   cross_ref_ids: []
   coverage_gap:
   - no_intervention
+- id: prob.fly.head-lift-hip-drop
+  stroke: fly
+  category: head
+  title: 換氣向上抬頭，胸抬高而髖部下沉
+  public:
+    observable: |-
+      - 吸氣時下巴向上、頭後仰，胸部抬高而髖往下掉。
+      - 臉回水後，身體還要重新接回波動。
+    mechanism_summary: 主動向上抬頭會改變頭、胸與髖的相對位置，增加垂直位移。換氣應與既有波動窗口銜接；不能假設只調游速就能消除抬頭造成的體線改變。
+  links:
+    technical_analysis:
+    - fly.tech.17
+    drills:
+    - Fl20
+    interventions: []
+    water_interventions: []
+  cross_ref: 蝶式換氣時頭要往上抬高、眼睛看前方；蝶式換氣沉臀只要調速度就會好——換氣本身造成的軀幹上抬不隨快慢消失
+  cross_ref_ids:
+  - fly.err12
+  - fly.err17
+  coverage_gap:
+  - no_intervention
+- id: prob.fly.late-head-return
+  stroke: fly
+  category: head
+  title: 雙手已回到前方，頭還留在水面上
+  public:
+    observable: |-
+      - 回臂已接近前方，頭仍仰在水面上。
+      - 手入水時頭才開始往下回，前端動作被分成兩次。
+    mechanism_summary: 頭部回位需要接上手臂前送與下一波動。觀察手入水時頭的位置，能區分換氣已結束，還是仍拖住前端銜接。
+  links:
+    technical_analysis:
+    - fly.tech.16
+    - fly.tech.18
+    drills:
+    - Fl20
+    - Fl18
+    interventions: []
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_intervention
+- id: prob.fly.high-recovery
+  stroke: fly
+  category: recovery
+  title: 回臂往上繞大圈，身體一起被拉高
+  public:
+    observable: |-
+      - 手臂離水後往上繞大圈，肩與上胸跟著抬高。
+      - 回臂前送吃力，下一次入水變慢。
+    mechanism_summary: 回臂高度與出水動量、可用活動度和回位路徑共同相關。低位路徑有其前提，不能只要求把手壓低，更不能由外觀直接判定肩活動度不足。
+  links:
+    technical_analysis:
+    - fly.tech.20
+    - fly.tech.25
+    drills:
+    - Fl22
+    interventions: []
+    water_interventions: []
+  cross_ref: 蝶式回臂要高舉、大弧度、讓手臂遠離身體
+  cross_ref_ids:
+  - fly.err4
+  coverage_gap:
+  - no_intervention
+- id: prob.fly.deep-entry
+  stroke: fly
+  category: entry
+  title: 手入水後往深處壓，肘部也跟著下沉
+  public:
+    observable: |-
+      - 手入水後向深處壓，肘部也跟著下沉。
+      - 建立捕水前，整條上臂已經向池底移動。
+    mechanism_summary: 捕水要讓手與前臂取得合適迎水方向，同時控制上臂阻力。把手放得更深不等於完成捕水，需要把肘與手的相對移動分開看。
+  links:
+    technical_analysis:
+    - fly.tech.14
+    drills:
+    - Fl29
+    interventions: []
+    water_interventions: []
+  cross_ref: 入水手指先入、手腕折下——破壞高肘設定造成 EVF 早期崩潰；入水越深、起手越輕鬆
+  cross_ref_ids:
+  - fly.err15
+  - fly.err16
+  coverage_gap:
+  - no_intervention
+- id: prob.fly.narrow-entry
+  stroke: fly
+  category: entry
+  title: 雙手靠近額頭或中線入水，捕水前又向外找位置
+  public:
+    observable: |-
+      - 雙手在額頭前方靠得很近，甚至接近中線。
+      - 入水後先往外重新找位置，才開始捕水。
+    mechanism_summary: 入水位置是外划與捕水的起點；過窄時可能需要額外調整才能形成迎水面。關注這段多出的調整，不把某個固定手距套用給每個人。
+  links:
+    technical_analysis:
+    - fly.tech.13
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 蝶式雙手入水位置要靠近中線甚至額頭正前方
+  cross_ref_ids:
+  - fly.err2
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.fly.lateral-pull
+  stroke: fly
+  category: pull
+  title: 水下划手大幅左右繞，向後推進被打斷
+  public:
+    observable: |-
+      - 雙手刻意畫很大的外掃、內夾路徑。
+      - 向後推水被反覆的橫向動作打斷。
+    mechanism_summary: 外划用來準備捕水，內划與上划再接出有效推進。刻意畫完整的鑰匙孔或 S 形，可能把空間定位當成主要產力，壓縮後續推進窗口。
+  links:
+    technical_analysis:
+    - fly.tech.12
+    - fly.tech.13
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 水下划手應走鑰匙孔（Keyhole）或S形整條路徑；蝶式划手要像蛙式一樣「向外掃—向內夾」
+  cross_ref_ids:
+  - fly.err1
+  - fly.err3
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.fly.late-second-kick
+  stroke: fly
+  category: timing
+  title: 手臂已離水才做第二踢，回臂失去銜接
+  public:
+    observable: |-
+      - 手已離水，腳才開始第二次向下踢。
+      - 踢腿與推水沒有出現在同一段時間。
+    mechanism_summary: 第二踢的銜接對象是手臂末段推進；若等手離水才踢，兩個推進事件就被分開。只比較這個先後，不從時序外觀推算力量或傷害。
+  links:
+    technical_analysis:
+    - fly.tech.8
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 第二踢在手臂離水時發生
+  cross_ref_ids:
+  - fly.err9
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.fly.excess-kick
+  stroke: fly
+  category: kick
+  title: 兩次踢腿都做得很大，前進伴隨明顯上下跳動
+  public:
+    observable: |-
+      - 每次踢腿腳都離開體線很遠，軀幹也大幅上下移動。
+      - 兩踢做成相同的大幅擺動，與划手接不上。
+    mechanism_summary: 兩次踢腿在週期中承擔不同的銜接任務，幅度也需配合頻率與距離。更大的垂直位移不保證能換成更多向前推進。
+  links:
+    technical_analysis:
+    - fly.tech.5
+    - fly.tech.6
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 蝶腿要踢大一點才有力
+  cross_ref_ids:
+  - fly.err7
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.fly.waist-hinge
+  stroke: fly
+  category: undulation
+  title: 腰部反覆折彎，胸到腳的波動接不起來
+  public:
+    observable: |-
+      - 腰部反覆形成明顯折角，胸部與腿部像分開運動。
+      - 波形沒有連續往腳端傳遞。
+    mechanism_summary: 連續波動與整個身體各自上下擺動不同。應觀察胸、髖、膝到腳的先後是否連續；單一腰部折角不足以判定某塊核心肌肉有缺陷。
+  links:
+    technical_analysis:
+    - fly.tech.3
+    - fly.tech.4
+    - fly.tech.29
+    drills:
+    - Fl1
+    - Fl3
+    interventions: []
+    water_interventions: []
+  cross_ref: 蝶式起伏幅度越大越好、越像海豚越好；蝶式起伏是靠臀部主動上下來驅動的
+  cross_ref_ids:
+  - fly.err10
+  - fly.err11
+  coverage_gap:
+  - no_intervention
+- id: prob.fly.fatigue-catch
+  stroke: fly
+  category: pull
+  title: 疲勞後捕水肘下沉，手臂回位越來越困難
+  public:
+    observable: |-
+      - 休息後能維持捕水肘位，反覆划手後才開始掉肘。
+      - 同時回臂越來越難，休息後又有改善。
+    mechanism_summary: 反覆肩胛控制可能受到容量限制，與一開始就缺少可用活動度的情況不同。只有符合負荷前後差異與適用條件，才考慮前鋸肌耐力路徑。
+  links:
+    technical_analysis:
+    - fly.tech.14
+    - fly.tech.27
+    drills: []
+    interventions:
+    - movement.intervention.scapular-upward-rotation.serratus-endurance
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_drill
+- id: prob.fly.entry-pause
+  stroke: fly
+  category: timing
+  title: 手入水後停太久，前進與下一踢一起中斷
+  public:
+    observable: |-
+      - 手入水後停留到向前速度明顯下降。
+      - 下一次踢腿也中斷，必須重新起動。
+    mechanism_summary: 入水時受控的減速有助於銜接波動，不能把所有停頓都當錯誤。這裡要查的是停留已使前進與下一踢中斷的情況，不是要求立刻消除每一次緩衝。
+  links:
+    technical_analysis:
+    - fly.tech.21
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_intervention
+  - no_drill

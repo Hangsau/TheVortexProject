@@ -407,7 +407,7 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 | prob.fly.excess-kick | 兩次踢腿都做得很大，前進伴隨明顯上下跳動 | fly.tech.5, fly.tech.6 | fly.err7 |
 | prob.fly.waist-hinge | 腰部反覆折彎，胸到腳的波動接不起來 | fly.tech.3, fly.tech.4, fly.tech.29 | fly.err10, fly.err11 |
 | prob.fly.fatigue-catch | 疲勞後捕水肘下沉，手臂回位越來越困難 | fly.tech.14, fly.tech.27 | — |
-| prob.fly.entry-pause | 手入水後停住，下一次划手重新起動 | fly.tech.10, fly.tech.21 | — |
+| prob.fly.entry-pause | 手入水後停太久，前進與下一踢一起中斷 | fly.tech.21 | — |
 | prob.udk.large-knee-bend | 踢腿時膝蓋折得很大，腿像在踩踏 | udk.tech.9, udk.tech.15 | udk.err2 |
 | prob.udk.passive-upkick | 下踢很快，上踢只是慢慢收回 | udk.tech.10, udk.tech.12 | udk.err3 |
 | prob.udk.excess-amplitude | 腳尖上下跨得很遠，踢的週期被拉長 | udk.tech.9, udk.tech.13 | udk.err1 |
@@ -617,3 +617,9 @@ FrEL5 會要求誇張旋轉，不配「過度轉體」；Fr12 固定高肘路徑
 12 題。Bk12 的雙臂肩線對齊才是入水偏位對照，不以名稱近似的 Bk13 代替；Bk26 有立即抓水與彎臂步驟，配深拉／直臂／橫向繞手；Bk19 是前臂對照；Bk22/1 看頭與體線；Bk3 直接限制膝蓋露水；Bk5/13 看滾轉；Bk10 看回臂與轉體起始；ST3 看推牆流線。
 Bk17 是滾轉暫停，不修正過度延長推水；Bk7 是垂直旋轉，不直接訓練仰面上踢；BkLow1 是熱身激活，不當作疲勞介入。這三個配對拒絕並保留缺口。
 踝、核心介入原 demand 不涵蓋仰式，不因同名動作跨式套用。刪去推進百分比、必然傷害與固定疲勞順序，只保留可見前後差異與原條目可支撐的方向。
+
+### W21d 蝶式驗收
+
+11 題。Fl20/18 有手入水前頭回水的明確步驟；Fl22 限低位回臂；Fl29 看肘手相對位置；Fl1/3 看胸部與後續波動。肩上舉與軀幹抗旋轉介入的 demand 未涵蓋這些蝶式問題，不跨套；只有 fatigue-catch 接原本涵蓋蝶式的 serratus。
+Fl21 名稱像捕水修正，但實際要求抬頭、快速深壓，與本題相反；Fl15 的「跑直線」講的是身體路線，不是水下手部路徑；Fl26 沒有直接拆解第二踢，不硬配。
+入水停頓題在讀完 fly.tech.21 後縮窄為「停到前進與下一踢中斷」；受控減速不是錯誤。fly.tech.10 的閉環列序與第二踢條目不一致，取消該連結，不裁決原文。上述拒絕及範圍修正是三關結果。

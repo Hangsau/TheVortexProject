@@ -423,6 +423,8 @@
         "free.err8",
         "free.err9",
         "prob.back.misaligned-entry",
+        "prob.fly.deep-entry",
+        "prob.fly.narrow-entry",
         "prob.free.bubble-catch",
         "prob.free.cross-midline-entry",
         "prob.free.forward-push",
@@ -499,6 +501,8 @@
         "prob.breast.compressed-exhale",
         "prob.breast.early-breath",
         "prob.breast.head-lift-hip-drop",
+        "prob.fly.head-lift-hip-drop",
+        "prob.fly.late-head-return",
         "prob.free.head-lift-breath",
         "starts-turns.err10",
         "starts-turns.tech.4"
@@ -598,6 +602,7 @@
         "prob.breast.slow-leg-insweep",
         "prob.breast.unturned-feet",
         "prob.breast.wide-knee-recovery",
+        "prob.fly.excess-kick",
         "prob.free.locked-knee-kick",
         "prob.free.toes-up-kick",
         "starts-turns.tech.33",
@@ -636,6 +641,8 @@
         "prob.back.straight-arm-pull",
         "prob.breast.dropped-elbows",
         "prob.breast.wide-outsweep",
+        "prob.fly.fatigue-catch",
+        "prob.fly.lateral-pull",
         "prob.free.cross-midline-pull",
         "prob.free.deep-pull",
         "prob.free.dropped-elbow",
@@ -655,6 +662,7 @@
         "free.err5",
         "prob.back.stiff-recovery",
         "prob.breast.recovery-drag",
+        "prob.fly.high-recovery",
         "prob.free.stiff-recovery"
       ],
       "rotation": [
@@ -838,6 +846,8 @@
         "fly.tech.21",
         "free.tech.35",
         "prob.breast.timing-dead-spot",
+        "prob.fly.entry-pause",
+        "prob.fly.late-second-kick",
         "prob.free.breath-waiting-arm",
         "starts-turns.err13",
         "udk.err10"
@@ -866,6 +876,7 @@
         "fly.tech.4",
         "fly.tech.5",
         "prob.breast.excess-undulation",
+        "prob.fly.waist-hinge",
         "udk.err5",
         "udk.tech.4",
         "udk.tech.5"
@@ -3051,7 +3062,18 @@
         "movement.demand.fly.entry.elevation-plane-and-contested-rotation-direction",
         "movement.demand.fly.exit.extension-position-with-blank-rotation-field",
         "movement.demand.fly.first-kick.timing-and-wave-reception",
-        "movement.demand.fly.second-kick.timing-with-arm-push"
+        "movement.demand.fly.second-kick.timing-with-arm-push",
+        "prob.fly.deep-entry",
+        "prob.fly.entry-pause",
+        "prob.fly.excess-kick",
+        "prob.fly.fatigue-catch",
+        "prob.fly.head-lift-hip-drop",
+        "prob.fly.high-recovery",
+        "prob.fly.late-head-return",
+        "prob.fly.late-second-kick",
+        "prob.fly.lateral-pull",
+        "prob.fly.narrow-entry",
+        "prob.fly.waist-hinge"
       ],
       "free": [
         "free.L0",

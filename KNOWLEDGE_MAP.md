@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 39 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `problems` | 50 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -478,6 +478,17 @@
 | prob.back.fatigue-roll | back | rotation | 游到後段髖部擺動變大，划手距離縮短 |
 | prob.back.stiff-recovery | back | recovery | 回臂貼水或持續繃緊，手臂前送不連續 |
 | prob.back.early-surfacing | back | streamline | 推牆後很快抬頭破水，流線滑行被打斷 |
+| prob.fly.head-lift-hip-drop | fly | head | 換氣向上抬頭，胸抬高而髖部下沉 |
+| prob.fly.late-head-return | fly | head | 雙手已回到前方，頭還留在水面上 |
+| prob.fly.high-recovery | fly | recovery | 回臂往上繞大圈，身體一起被拉高 |
+| prob.fly.deep-entry | fly | entry | 手入水後往深處壓，肘部也跟著下沉 |
+| prob.fly.narrow-entry | fly | entry | 雙手靠近額頭或中線入水，捕水前又向外找位置 |
+| prob.fly.lateral-pull | fly | pull | 水下划手大幅左右繞，向後推進被打斷 |
+| prob.fly.late-second-kick | fly | timing | 手臂已離水才做第二踢，回臂失去銜接 |
+| prob.fly.excess-kick | fly | kick | 兩次踢腿都做得很大，前進伴隨明顯上下跳動 |
+| prob.fly.waist-hinge | fly | undulation | 腰部反覆折彎，胸到腳的波動接不起來 |
+| prob.fly.fatigue-catch | fly | pull | 疲勞後捕水肘下沉，手臂回位越來越困難 |
+| prob.fly.entry-pause | fly | timing | 手入水後停太久，前進與下一踢一起中斷 |
 
 ---
 
