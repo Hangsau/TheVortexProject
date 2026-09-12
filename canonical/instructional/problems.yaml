@@ -6,5 +6,294 @@
 domain: instructional
 sub: problems
 schema_version: 1
-categories: []
-problems: []
+categories:
+- key: recovery
+  name_zh: 回臂
+- key: pull
+  name_zh: 水下划手
+- key: kick
+  name_zh: 踢腿
+- key: undulation
+  name_zh: 身體波動
+- key: head
+  name_zh: 頭部與換氣
+- key: timing
+  name_zh: 手腳時機
+- key: streamline
+  name_zh: 流線與滑行
+problems:
+- id: prob.breast.head-lift-hip-drop
+  stroke: breast
+  category: head
+  title: 換氣時抬頭，髖與腿跟著下沉
+  public:
+    observable: |-
+      - 吸氣那一下頭與胸往上抬，髖與腿同時下沉。
+      - 臉回水後，身體還需要重新拉回平直。
+    mechanism_summary: 額外抬頭會改變體線；上身過度往上移，也會增加垂直位移與阻力。教材把換氣安排在內划帶起上身的窗口，並不要求主動把頭撐高。
+  links:
+    technical_analysis:
+    - breast.tech.5
+    - breast.tech.26
+    drills:
+    - Br35
+    - Br36
+    - Br26
+    interventions: []
+    water_interventions:
+    - movement.intervention.breaststroke-breathing.arm-driven-torso-lift
+  cross_ref: 換氣時抬頭正前看、眼睛看向對岸；抬頭越高吸氣越容易——把蛙式做成海豚式上下擺動；游慢一點就不會抬頭壓髖——把槓桿問題當成速度問題
+  cross_ref_ids:
+  - breast.err7
+  - breast.err13
+  - breast.err18
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.early-breath
+  stroke: breast
+  category: head
+  title: 手還沒內划，頭就先抬起來換氣
+  public:
+    observable: |-
+      - 雙手還在向外分開，頭就已經往上仰。
+      - 頭開始上升、臉破水與吸氣擠在同一瞬間。
+    mechanism_summary: 內划是手臂加速與上身抬升銜接的階段。過早把頭抬出水，會使換氣與手臂原有的動作窗口分離；應分別觀察頭上升、臉破水和吸氣三個事件。
+  links:
+    technical_analysis:
+    - breast.tech.5
+    drills:
+    - Br36
+    interventions: []
+    water_interventions:
+    - movement.intervention.breaststroke-breathing.arm-driven-torso-lift
+  cross_ref: 划手末段才抬頭換氣；外划一開始就抬頭換氣是高效做法
+  cross_ref_ids:
+  - breast.err8
+  - breast.err9
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.wide-knee-recovery
+  stroke: breast
+  category: kick
+  title: 收腿時膝蓋向前、向兩側張開
+  public:
+    observable: |-
+      - 腳跟回收時，大腿明顯往前頂、雙膝向外張開。
+      - 收腿中段前進速度明顯下降。
+    mechanism_summary: 收腿是阻力較大的階段；大腿前移與膝距增加會擴大迎水面積。這個外觀只能導向收腿路徑檢查，不能直接判定髖內旋、外旋或某個關節不足。
+  links:
+    technical_analysis:
+    - breast.tech.10
+    - breast.tech.13
+    drills:
+    - Br1
+    - Br7
+    interventions: []
+    water_interventions: []
+  cross_ref: 膝蓋越開踢出力量越大；「像青蛙一樣踢」是正確的踢腳意象；「腳跟碰屁股」是正確的收腿口令；收腿要快、像彈簧反彈——增加阻力反而拖慢
+  cross_ref_ids:
+  - breast.err2
+  - breast.err3
+  - breast.err4
+  - breast.err14
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.unturned-feet
+  stroke: breast
+  category: kick
+  title: 腳掌還沒轉向後方，就已開始蹬腿
+  public:
+    observable: |-
+      - 膝已開始伸直，腳掌卻還沒有轉到朝後的位置。
+      - 蹬出後雙腳合攏，身體前進仍不明顯。
+    mechanism_summary: 腳掌尚未朝後就蹬出，會減少有效迎水面與後續推進。足部朝向是多個關節動作的合成，不能把「翻腳」直接等同單一踝外翻。
+  links:
+    technical_analysis:
+    - breast.tech.25
+    - breast.tech.36
+    drills:
+    - Br7
+    interventions: []
+    water_interventions: []
+  cross_ref: 踢腳主要是旋轉動作——上、外、繞回來才是核心
+  cross_ref_ids:
+  - breast.err1
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.slow-leg-insweep
+  stroke: breast
+  category: kick
+  title: 夾腿末段沒有加速，踢完前進不明顯
+  public:
+    observable: |-
+      - 兩腳從外側向內合攏時，末段速度沒有增加。
+      - 踢腿結尾不明顯帶出向前滑行。
+    mechanism_summary: 原技術條目把腳部內掃速度與推進聯繫起來；只把膝伸直得更快，並不等於把水有效往後送。先區分蹬出的方向與最後夾腿的加速。
+  links:
+    technical_analysis:
+    - breast.tech.12
+    drills:
+    - Br11
+    interventions: []
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.wide-outsweep
+  stroke: breast
+  category: pull
+  title: 雙手一路往外划，遲遲沒有轉入捕水
+  public:
+    observable: |-
+      - 雙手持續向兩側擴張，捕水與內划被延後。
+      - 向外划的動作很大，向前移動卻不相稱。
+    mechanism_summary: 外划主要用來找到捕水起點；外划過寬會增加側向移動，並使捕水位置不利。這裡關注的是遲遲不能轉入有效捕水，不要求所有人採同一手距。
+  links:
+    technical_analysis:
+    - breast.tech.3
+    - breast.tech.24
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 外划（outsweep）是蛙式手部動作的主要推進來源；outsweep 越寬越好，划得越遠推進力越大
+  cross_ref_ids:
+  - breast.err5
+  - breast.err6
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.breast.dropped-elbows
+  stroke: breast
+  category: pull
+  title: 內划時肘先掉下、貼近身體
+  public:
+    observable: |-
+      - 手還在內划，肘已先往下掉到軀幹旁。
+      - 前臂不再維持朝後的迎水方向。
+    mechanism_summary: 捕水與內划需要前臂維持有效迎水方向；肘先掉到身體旁，會改變這個推進面。外觀本身無法量出推進力損失的比例。
+  links:
+    technical_analysis:
+    - breast.tech.4
+    - breast.tech.5
+    drills:
+    - Br14
+    - Br13
+    interventions: []
+    water_interventions: []
+  cross_ref: insweep 時手肘要收緊貼身體——失去高肘 leverage
+  cross_ref_ids:
+  - breast.err15
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.recovery-drag
+  stroke: breast
+  category: recovery
+  title: 手臂回位時向外張開，身體明顯減速
+  public:
+    observable: |-
+      - 雙手由胸前回位時向外分開，手臂沒有隨即前送。
+      - 每次手回位都伴隨一段明顯減速。
+    mechanism_summary: 回臂的功能是以較小阻力回到前伸位置；張開手臂回位會增加迎水面。先觀察回位路徑與減速是否同時出現。
+  links:
+    technical_analysis:
+    - breast.tech.6
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.breast.timing-dead-spot
+  stroke: breast
+  category: timing
+  title: 收手、收腿與推進接不上，每週期都卡一下
+  public:
+    observable: |-
+      - 手臂回位與腿部推進互相卡住，或手伸完後整個人停住才開始準備腿。
+      - 同一週期可看到明顯的速度低谷。
+    mechanism_summary: 手腳的推進與回位會改變速度低谷；完全分段與部分重疊都是既有時序策略。應比較同一泳者不同銜接的結果，不能用「永遠不重疊」或「一定晚踢」作唯一規則。
+  links:
+    technical_analysis:
+    - breast.tech.8
+    - breast.tech.35
+    drills:
+    - Br30
+    - Br31
+    - Br32
+    interventions: []
+    water_interventions: []
+  cross_ref: 手腳可以同時動——同時划同時踢沒有問題；手完全前伸到底才能啟動踢腳
+  cross_ref_ids:
+  - breast.err10
+  - breast.err11
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.overlong-glide
+  stroke: breast
+  category: streamline
+  title: 滑到幾乎停下來，才開始下一划
+  public:
+    observable: |-
+      - 踢完後維持前伸很久，前進幾乎停止才再分手。
+      - 下一划像重新起步，而不是接續上一踢。
+    mechanism_summary: 滑行保存踢腿後的動能，但停留過久會讓速度下降後再重新加速。合適長度取決於個人與任務；不能把更長的滑行直接當成更好的技術。
+  links:
+    technical_analysis:
+    - breast.tech.7
+    - breast.tech.28
+    drills:
+    - Br32
+    interventions: []
+    water_interventions: []
+  cross_ref: 滑行越長代表技術越好、越省力
+  cross_ref_ids:
+  - breast.err12
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.excess-undulation
+  stroke: breast
+  category: undulation
+  title: 上身升得很高，前送卻接不上
+  public:
+    observable: |-
+      - 胸與肩抬得很高，上升後停在頂點。
+      - 身體上下位移很大，向前送出的動作卻接不上。
+    mechanism_summary: 抬升若不能接到前送，額外的垂直位移與波阻就會抵消收益。較平與較完整的波形各有適用情況，不能只憑波幅大小評定好壞。
+  links:
+    technical_analysis:
+    - breast.tech.16
+    - breast.tech.20
+    - breast.tech.26
+    drills:
+    - Br22
+    interventions: []
+    water_interventions: []
+  cross_ref: 蛙式波動越大越好——wave style 誤套到 flat style 選手
+  cross_ref_ids:
+  - breast.err16
+  coverage_gap:
+  - no_intervention
+- id: prob.breast.compressed-exhale
+  stroke: breast
+  category: head
+  title: 臉快出水時才突然吐氣，吸氣窗口被擠短
+  public:
+    observable: |-
+      - 臉快破水前，才出現一陣集中的吐氣泡。
+      - 嘴離水後仍在吐氣，吸氣與下一次入水擠在一起。
+    mechanism_summary: ''
+  links:
+    technical_analysis: []
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 水中先把氣全吐光再吸——破壞蛙式 stroke 內的連續呼吸節律
+  cross_ref_ids:
+  - breast.err17
+  coverage_gap:
+  - no_mechanism
+  - no_intervention
+  - no_drill

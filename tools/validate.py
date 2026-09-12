@@ -56,6 +56,7 @@ exit code：
   E013  _sources.yaml 的 verification_status 不是 verified/unverified/
         retracted 三值之一。同樣是 fail-open 欄位：retracted 拼錯，那筆
         已判定不可引用的墓碑會靜默回到 W008 名單被當成「該接的來源」
+  E018  problems 的版本、型別、公開欄位、引用類型或 coverage_gap 不符合契約
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
@@ -2338,6 +2339,98 @@ def find_missing_id_in_lists(data: object, rel: str, result: list):
 
 # ── 主驗證邏輯 ────────────────────────────────────────────────────────────────
 
+def check_problem_contract(rel: str, data: object, targets: dict, errors: dict):
+    """E018: definite structural failures; semantic pairing is reviewed separately.
+
+    interventions means dryland; water_interventions never fills that coverage.
+    A missing technical-analysis entry stays a gap even when an error has prose.
+    """
+    messages = errors.setdefault("E018", [])
+
+    def fail(where, reason):
+        messages.append(f"  file={rel} {where}: {reason}")
+
+    if not isinstance(data, dict):
+        fail("document", "must be a mapping")
+        return
+    if data.get("domain") != "instructional" or data.get("sub") != "problems" or type(data.get("schema_version")) is not int or data["schema_version"] != 1:
+        fail("document", "expected instructional/problems schema_version=1")
+    if not isinstance(data.get("categories"), list):
+        fail("categories", "must be a list")
+    problems = data.get("problems")
+    if not isinstance(problems, list):
+        fail("problems", "must be a list, including when empty")
+        return
+    link_patterns = {
+        "technical_analysis": r"(?:free|back|breast|fly|udk|starts-turns|common)\.tech\.[0-9]+",
+        "drills": r"(?:Fr|Bk|Br|Fl|Sc|ST|UDK)[A-Za-z0-9]+",
+        "interventions": r"movement\.intervention\.[a-z0-9.-]+",
+        "water_interventions": r"movement\.intervention\.[a-z0-9.-]+",
+    }
+    context_ids = {"interventions": set(), "water_interventions": set()}
+    for index, entry in enumerate(problems):
+        where = f"problems[{index}]"
+        if not isinstance(entry, dict):
+            fail(where, "must be a mapping")
+            continue
+        for field in ("id", "stroke", "category", "title"):
+            if not isinstance(entry.get(field), str) or not entry[field].strip():
+                fail(where, f"{field} must be a nonempty string")
+        eid = entry.get("id", "")
+        if not isinstance(eid, str) or not re.fullmatch(r"prob\.[a-z]+(?:-[a-z]+)*\.[a-z0-9]+(?:-[a-z0-9]+)*", eid):
+            fail(where, "invalid prob.<stroke>.<slug> ID")
+        elif eid.split(".")[1] != entry.get("stroke"):
+            fail(where, "ID stroke differs from stroke field")
+        public = entry.get("public")
+        if not isinstance(public, dict) or set(public) != {"observable", "mechanism_summary"}:
+            fail(where, "public must contain only observable and mechanism_summary")
+            public = {}
+        if not isinstance(public.get("observable"), str) or not public["observable"].strip():
+            fail(where, "observable must be nonempty text")
+        if not isinstance(public.get("mechanism_summary"), str):
+            fail(where, "mechanism_summary must be text (empty for no_mechanism)")
+        links = entry.get("links")
+        if not isinstance(links, dict) or set(links) != set(link_patterns):
+            fail(where, "links must declare all four known relation lists")
+            continue
+        valid_links = True
+        for field, pattern in link_patterns.items():
+            values = links[field]
+            if not isinstance(values, list) or any(not isinstance(v, str) for v in values):
+                fail(where, f"links.{field} must be a list of strings")
+                valid_links = False
+                continue
+            if len(set(values)) != len(values):
+                fail(where, f"duplicate links.{field}")
+            for target in values:
+                if not re.fullmatch(pattern, target):
+                    fail(where, f"links.{field} has wrong target type: {target}")
+                record = targets.get(target)
+                if field in context_ids:
+                    context_ids[field].add(target)
+                    if record and (record.get("publication_status") != "published" or record.get("action_status") == "do-not-prescribe"):
+                        fail(where, f"intervention is not available for public action: {target}")
+        refs = entry.get("cross_ref_ids")
+        if not isinstance(refs, list) or any(not isinstance(v, str) or not re.fullmatch(r"(?:free|back|breast|fly|udk|starts-turns|common)\.err[0-9]+", v) for v in refs):
+            fail(where, "cross_ref_ids must list teaching-error IDs")
+        if not isinstance(entry.get("cross_ref"), str):
+            fail(where, "cross_ref must be display text")
+        gaps = entry.get("coverage_gap")
+        if not isinstance(gaps, list) or any(not isinstance(v, str) for v in gaps):
+            fail(where, "coverage_gap must be a list of strings")
+            continue
+        if valid_links:
+            expected = {gap for field, gap in (("technical_analysis", "no_mechanism"), ("interventions", "no_intervention"), ("drills", "no_drill")) if not links[field]}
+            if set(gaps) != expected or len(gaps) != len(set(gaps)):
+                fail(where, f"coverage_gap must equal {sorted(expected)}")
+            has_summary = bool(public.get("mechanism_summary"))
+            if has_summary != bool(links["technical_analysis"]):
+                fail(where, "mechanism_summary and technical_analysis coverage disagree")
+    overlap = context_ids["interventions"] & context_ids["water_interventions"]
+    if overlap:
+        fail("links", f"same intervention classified as both dryland and water: {sorted(overlap)}")
+
+
 def run_validation():
     # ── 載入 taxonomy 與 sources ──
     try:
@@ -2388,7 +2481,7 @@ def run_validation():
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
         "E011": [], "E012": [], "E013": [], "E014": [], "E015": [],
-        "E016": [], "E017": []
+        "E016": [], "E017": [], "E018": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
@@ -2398,6 +2491,17 @@ def run_validation():
         "W021": [], "W022": [], "W023": [], "W024": [], "W025": [],
         "W026": [], "W027": []
     }
+
+    # 新索引的空檔、截斷 YAML 或錯誤型別必須 fail closed，不能被一般掃描略過。
+    problem_path = CANONICAL_DIR / "instructional" / "problems.yaml"
+    if problem_path.exists():
+        rel = str(problem_path.relative_to(ROOT))
+        try:
+            data = load_yaml(problem_path)
+        except Exception as exc:
+            errors["E018"].append(f"  file={rel}: unreadable problem YAML: {exc}")
+        else:
+            check_problem_contract(rel, data, {entry["id"]: entry for _, entry in all_entries}, errors)
 
     # ── W012–W020: movement 網域契約（只掃四個明列內容檔）──
     movement_documents: list[
@@ -2772,6 +2876,7 @@ def _write_report(
             "回不到任何外部作品，卻能滿足 E005／W002 的來源檢查，"
             "並打開 W011 的逃生口）",
         ),
+        "E018": ("ERROR", "問題索引格式、引用類型、公開欄位或缺口與實際連結不一致"),
         "W025": (
             "WARN",
             "同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）"

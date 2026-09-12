@@ -491,6 +491,9 @@
         "free.err19",
         "free.tech.17",
         "free.tech.18",
+        "prob.breast.compressed-exhale",
+        "prob.breast.early-breath",
+        "prob.breast.head-lift-hip-drop",
         "starts-turns.err10",
         "starts-turns.tech.4"
       ],
@@ -584,6 +587,9 @@
         "free.tech.11",
         "free.tech.12",
         "free.tech.14",
+        "prob.breast.slow-leg-insweep",
+        "prob.breast.unturned-feet",
+        "prob.breast.wide-knee-recovery",
         "starts-turns.tech.33",
         "starts-turns.tech.34",
         "udk.err1",
@@ -613,7 +619,9 @@
         "fly.err3",
         "free.err10",
         "free.err24",
-        "free.err25"
+        "free.err25",
+        "prob.breast.dropped-elbows",
+        "prob.breast.wide-outsweep"
       ],
       "recovery": [
         "back.err15",
@@ -626,7 +634,8 @@
         "free.err2",
         "free.err3",
         "free.err4",
-        "free.err5"
+        "free.err5",
+        "prob.breast.recovery-drag"
       ],
       "rotation": [
         "back.err1",
@@ -674,6 +683,7 @@
         "fly.tech.31",
         "fly.tech.36",
         "free.tech.34",
+        "prob.breast.overlong-glide",
         "starts-turns.err6",
         "starts-turns.tech.11",
         "starts-turns.tech.18",
@@ -801,6 +811,7 @@
         "fly.tech.18",
         "fly.tech.21",
         "free.tech.35",
+        "prob.breast.timing-dead-spot",
         "starts-turns.err13",
         "udk.err10"
       ],
@@ -827,6 +838,7 @@
         "fly.tech.3",
         "fly.tech.4",
         "fly.tech.5",
+        "prob.breast.excess-undulation",
         "udk.err5",
         "udk.tech.4",
         "udk.tech.5"
@@ -2896,7 +2908,19 @@
         "movement.demand.breast.glide.plantarflexed-streamline-finish",
         "movement.demand.breast.leg-insweep.foot-orientation-control",
         "movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held",
-        "movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion"
+        "movement.demand.breast.leg-recovery.hip-flexion-abduction-with-knee-flexion",
+        "prob.breast.compressed-exhale",
+        "prob.breast.dropped-elbows",
+        "prob.breast.early-breath",
+        "prob.breast.excess-undulation",
+        "prob.breast.head-lift-hip-drop",
+        "prob.breast.overlong-glide",
+        "prob.breast.recovery-drag",
+        "prob.breast.slow-leg-insweep",
+        "prob.breast.timing-dead-spot",
+        "prob.breast.unturned-feet",
+        "prob.breast.wide-knee-recovery",
+        "prob.breast.wide-outsweep"
       ],
       "common": [
         "common.L2.propulsion",

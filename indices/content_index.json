@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 943,
+  "record_count": 955,
   "records": [
     {
       "id": "Bk1",
@@ -16699,6 +16699,277 @@
         "src.wang-2013-taiwan-hip-fracture-mortality"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "prob.breast.compressed-exhale",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[11]",
+      "title": "臉快出水時才突然吐氣，吸氣窗口被擠短",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "breast.err17"
+      ]
+    },
+    {
+      "id": "prob.breast.dropped-elbows",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[6]",
+      "title": "內划時肘先掉下、貼近身體",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br13",
+        "Br14",
+        "breast.err15",
+        "breast.tech.4",
+        "breast.tech.5"
+      ]
+    },
+    {
+      "id": "prob.breast.early-breath",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[1]",
+      "title": "手還沒內划，頭就先抬起來換氣",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br36",
+        "breast.err8",
+        "breast.err9",
+        "breast.tech.5",
+        "movement.intervention.breaststroke-breathing.arm-driven-torso-lift"
+      ]
+    },
+    {
+      "id": "prob.breast.excess-undulation",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[10]",
+      "title": "上身升得很高，前送卻接不上",
+      "tags": {
+        "category": [
+          "undulation"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br22",
+        "breast.err16",
+        "breast.tech.16",
+        "breast.tech.20",
+        "breast.tech.26"
+      ]
+    },
+    {
+      "id": "prob.breast.head-lift-hip-drop",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[0]",
+      "title": "換氣時抬頭，髖與腿跟著下沉",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br26",
+        "Br35",
+        "Br36",
+        "breast.err13",
+        "breast.err18",
+        "breast.err7",
+        "breast.tech.26",
+        "breast.tech.5",
+        "movement.intervention.breaststroke-breathing.arm-driven-torso-lift"
+      ]
+    },
+    {
+      "id": "prob.breast.overlong-glide",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[9]",
+      "title": "滑到幾乎停下來，才開始下一划",
+      "tags": {
+        "category": [
+          "streamline"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br32",
+        "breast.err12",
+        "breast.tech.28",
+        "breast.tech.7"
+      ]
+    },
+    {
+      "id": "prob.breast.recovery-drag",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[7]",
+      "title": "手臂回位時向外張開，身體明顯減速",
+      "tags": {
+        "category": [
+          "recovery"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "breast.tech.6"
+      ]
+    },
+    {
+      "id": "prob.breast.slow-leg-insweep",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[4]",
+      "title": "夾腿末段沒有加速，踢完前進不明顯",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br11",
+        "breast.tech.12"
+      ]
+    },
+    {
+      "id": "prob.breast.timing-dead-spot",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[8]",
+      "title": "收手、收腿與推進接不上，每週期都卡一下",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br30",
+        "Br31",
+        "Br32",
+        "breast.err10",
+        "breast.err11",
+        "breast.tech.35",
+        "breast.tech.8"
+      ]
+    },
+    {
+      "id": "prob.breast.unturned-feet",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[3]",
+      "title": "腳掌還沒轉向後方，就已開始蹬腿",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br7",
+        "breast.err1",
+        "breast.tech.25",
+        "breast.tech.36"
+      ]
+    },
+    {
+      "id": "prob.breast.wide-knee-recovery",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[2]",
+      "title": "收腿時膝蓋向前、向兩側張開",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br1",
+        "Br7",
+        "breast.err14",
+        "breast.err2",
+        "breast.err3",
+        "breast.err4",
+        "breast.tech.10",
+        "breast.tech.13"
+      ]
+    },
+    {
+      "id": "prob.breast.wide-outsweep",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[5]",
+      "title": "雙手一路往外划，遲遲沒有轉入捕水",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "breast"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "breast.err5",
+        "breast.err6",
+        "breast.tech.24",
+        "breast.tech.3"
+      ]
     },
     {
       "id": "protocol.free.evf",

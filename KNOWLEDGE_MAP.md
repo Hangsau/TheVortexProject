@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 0 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `problems` | 12 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -437,7 +437,20 @@
 
 ### `problems.yaml` — 問題索引
 
-（無）
+| ID | 泳式 | 範疇 | 可見問題 |
+|---|---|---|---|
+| prob.breast.head-lift-hip-drop | breast | head | 換氣時抬頭，髖與腿跟著下沉 |
+| prob.breast.early-breath | breast | head | 手還沒內划，頭就先抬起來換氣 |
+| prob.breast.wide-knee-recovery | breast | kick | 收腿時膝蓋向前、向兩側張開 |
+| prob.breast.unturned-feet | breast | kick | 腳掌還沒轉向後方，就已開始蹬腿 |
+| prob.breast.slow-leg-insweep | breast | kick | 夾腿末段沒有加速，踢完前進不明顯 |
+| prob.breast.wide-outsweep | breast | pull | 雙手一路往外划，遲遲沒有轉入捕水 |
+| prob.breast.dropped-elbows | breast | pull | 內划時肘先掉下、貼近身體 |
+| prob.breast.recovery-drag | breast | recovery | 手臂回位時向外張開，身體明顯減速 |
+| prob.breast.timing-dead-spot | breast | timing | 收手、收腿與推進接不上，每週期都卡一下 |
+| prob.breast.overlong-glide | breast | streamline | 滑到幾乎停下來，才開始下一划 |
+| prob.breast.excess-undulation | breast | undulation | 上身升得很高，前送卻接不上 |
+| prob.breast.compressed-exhale | breast | head | 臉快出水時才突然吐氣，吸氣窗口被擠短 |
 
 ---
 
