@@ -35,7 +35,10 @@
   perception_goal: "..."           # 應該感覺到什麼（中文）
   success_signal: "..."            # 感知成功的樣子（中文）
   failure_signal: "..."            # 感知失敗的樣子（中文）
-  deficiency_fixes: [1, 2]         # 對應書中 Common Stroke Deficiencies 編號
+  deficiency_fixes: [1, 2]         # legacy：外部書本 Common Stroke Deficiencies 編號
+                                  # 專案內無法解析（值域 1–16，與 category 不對齊）
+                                  # 問題查找改用 canonical/instructional/problems.yaml 的 prob.*
+                                  # 保留僅供回溯原書，不得作為查詢軸
   source: "There's a Drill for That"
   # === 9-axis fingerprint ===
   body_position: standing          # standing / vertical / prone / supine / side / underwater / transitional

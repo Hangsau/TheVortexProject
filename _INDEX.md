@@ -8,7 +8,8 @@
 
 ## 系統架構
 
-E組問題入口：`canonical/instructional/problems.yaml`（W18 骨架完成）；實作進度見 `plans/E組_執行清單.md`。
+E組問題入口：`canonical/instructional/problems.yaml`（73 個可見問題，六式完成）；實作進度見 `plans/E組_執行清單.md`。
+Drill 的 `deficiency_fixes` 已退役為原書回溯欄位；問題查找一律使用 `prob.*` 與其單向連結。
 
 ```
 TheVortexProject/

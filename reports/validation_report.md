@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-09-12
-> 驗證條目數：764，Drills ID 數：179
+> 驗證條目數：837，Drills ID 數：179
 
 ---
 
@@ -141,6 +141,14 @@
 
 ---
 
+## E018 — 問題索引格式、引用類型、公開欄位或缺口與實際連結不一致
+
+**ERROR，共 0 筆**
+
+（無）
+
+---
+
 ## W025 — 同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）（E005 對此完全無感：每個 id 都解析得到；後果是同一篇被當成多個獨立證據、撤稿撤不乾淨、讀者看到多個不同的來源名）
 
 **WARN，共 0 筆**
@@ -220,7 +228,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 122 筆**
+**WARN，共 120 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -249,10 +257,8 @@
   file=canonical\health\injuries.yaml id='osgood-schlatter'
   file=canonical\health\injuries.yaml id='sever-disease'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.31'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.9'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.18'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.20'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.23'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.32'
   file=canonical\instructional\technical-analysis.yaml id='udk.tech.26'
