@@ -31,7 +31,7 @@ profile: mixed_cross_domain。任務是既有 canonical 的索引整合，不新
 | W22 | manual（本代理） | 完成 | legacy 說明與 _INDEX；179 筆 drill 原文不變 |
 | W23 | manual（本代理） | 完成並上線 | my-site 3b06c0b；公開同步 11 項＋movement 8 項通過 |
 | W24 | claude: refactor（本代理沿用既有版型） | 完成並上線 | my-site 70e6c8e／476089d；309 連結／9 頁、四種寬度、搜尋與所有篩選在線上通過 |
-| W25 | manual（本代理） | 本機完成，待推送授權 | 6894568；四組 1／43／26／3；138 項測試，0 ERROR／136 WARN |
+| W25 | manual（本代理） | 完成並推送 | 6894568／d9b14b6；四組 1／43／26／3；138 項測試，0 ERROR／136 WARN；同步 CI 成功 |
 
 ## 執行與復原
 
@@ -60,13 +60,13 @@ GitHub workflow 可在本機離線時完成，需核對觸發 SHA 與公開頁�
 - 73 題、333 候選（191 筆已連結／142 筆保留原因），完整統計見 `E組_覆蓋驗收報告.md`。
 - `indices/gap_report.json.problem_coverage` 四組互斥；陸上與水中分開計數。
 - 1016 內容 ID、179 drills、861 sources；858 → 861 來自執行中另一路已提交的週期化工作，E 組未新增來源或介入。
-- 本機 logs 與截圖位於工作區暫存 `tmp/vortex-e-20260912/`；可重跑的驗收程式已入庫。
+- 驗收快照與可重跑的驗收程式已入庫；收尾時清除本次任務的暫存 logs、截圖、預覽站與下載工具。
 - W23／W24 推送一度被自動核准審查擋下；核對 origin、公開 repo 與三個 outgoing commits 後獲核准。
 
-## 部署結果與待授權動作
+## 部署結果與結案
 
 - 網站 `476089d` 部署成功：[CI 34697248838](https://github.com/Hangsau/cortex/actions/runs/34697248838)，使用 Hugo 0.159.1。
 - [公開找問題頁](https://hangsau.github.io/cortex/vortex/problems/) 重跑 `audit_vortex_problems.js` 全通過，與本機相同 73 題／309 連結／9 頁／四種寬度，JS error 0。
-- Vortex W25 提交 `6894568` 推至 `Hangsau/TheVortexProject` 的 `master` 被自動核准審查拒絕，理由是共享主分支需要明確發布授權。未改推其他分支或繞過審查。
-- 待使用者授權後，正常推送 W25 與本次交接記錄；等 notify-mysite workflow 成功，確認沒有非預期的公開資料差異。
-- 73 題主體已由 W21 推至遠端；剩餘 canonical 內容變動僅「动作／停顿」兩處正體字校正，另有 W25 索引程式、報告、測試與交接文件。
+- Vortex master 推送曾被自動審查要求明確授權；使用者回覆「推上吧」後，`6894568` 與 `d9b14b6` 已正常推送至 `Hangsau/TheVortexProject/master`。
+- [同步 CI 34701654801](https://github.com/Hangsau/TheVortexProject/actions/runs/34701654801) 成功，回報 `No public content changes.`；網站公開資料與 canonical 一致。
+- W25 覆蓋索引程式、報告、測試、交接文件及兩處正體字校正均已進遠端，E 組 W18–W25 結案。
