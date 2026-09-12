@@ -8,6 +8,8 @@
 
 ## 系統架構
 
+E組問題入口：`canonical/instructional/problems.yaml`（W18 骨架完成）；實作進度見 `plans/E組_執行清單.md`。
+
 ```
 TheVortexProject/
 │

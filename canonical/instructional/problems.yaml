@@ -1,0 +1,10 @@
+# 問題索引：只連結既有解釋與練習，證據由被引用條目承擔。
+# observable 只收池畔或水下可見現象，不由外觀判定關節或感知缺陷。
+# links.interventions 只收陸上介入；水中介入用 water_interventions。
+# coverage_gap: no_mechanism / no_intervention（無陸上介入）/ no_drill。
+# 有水中介入不代表有陸上動作，也不代表已有獨立 drill。
+domain: instructional
+sub: problems
+schema_version: 1
+categories: []
+problems: []

@@ -19,9 +19,9 @@ exit code：
 
 檢查代碼：
   E001  在已知條目陣列鍵（points/errors/levels/cells/standards/
-        indicators/injuries/themes）中發現缺 id 的元素
+        indicators/injuries/themes/problems）中發現缺 id 的元素
   E002  id 全域重複（排除 drafts/ 目錄）
-  E003  links.* 指向不存在的 ID（canonical 全集 + Drills）
+  E003  links.* 指向不存在的 ID（含 interventions / water_interventions；canonical 全集 + Drills）
   E004  category/stroke/certainty/status 出現不在 _taxonomy.yaml 的值
   E005  source_ids 指向不存在的 _sources.yaml ID
         （任意深度的區塊，不限條目頂層）
@@ -265,6 +265,7 @@ VOCAB_LIST_KEYS = {
 # 這些鍵下的元素是內容條目，必須有 id。
 # VOCAB_LIST_KEYS 的鍵已明確排除在外，不會出現在此集合中。
 KNOWN_ENTRY_LIST_KEYS = {
+    "problems",     # instructional/problems 問題索引
     "points",       # technical-analysis, teaching-errors (errors 鍵)
     "errors",       # teaching-errors
     "cells",        # development/matrix（內容格，不是詞彙定義）
@@ -279,6 +280,8 @@ KNOWN_ENTRY_LIST_KEYS = {
 # 本專案慣例：links 子鍵分三類
 # ID 參照類：值應對應全域 ID 集合，違規報 E003
 LINKS_ID_REF_KEYS = {
+    "interventions",      # → movement/interventions 的陸上介入
+    "water_interventions", # → movement/interventions 的水中介入，不算陸上覆蓋
     "standards",         # → development/technical-standards 的 std.* ID
     "drills",            # → Drills/*.yaml 的 Fr*/Bk*/Br*/Fl*/Sc* ID
     "l_indicators",      # → technica/l-indicators 的 {stroke}.{level}.{aspect} ID

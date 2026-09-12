@@ -22,6 +22,10 @@
 
 ## 2. 「要做 X → 去讀 Y」決策索引
 
+2026-09-12 局部更新：問題索引在 `canonical/instructional/problems.yaml`；驗證器
+`tools/validate.py`、地圖 `tools/build_knowledge_map.py`、機器索引 `tools/build_indices.py`
+共同消費。計畫與 checkpoint 見 `plans/E組_執行清單.md`；公開端接線在 my-site。
+
 | 你要做的事 | 動這裡 |
 |-----------|--------|
 | 改公開內容（網站會顯示的：技術/誤區/drill/L 階段/ADM/週期化） | **改 `canonical/` 對應 YAML**，不改散文 .md |

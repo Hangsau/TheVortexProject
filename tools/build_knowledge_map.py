@@ -353,6 +353,15 @@ def main():
         lines.extend(render_table(rows, [("id", "ID"), ("category", "範疇"), ("title", "標題/摘要")]))
         lines.append("")
 
+    # 問題索引不是新的證據層；列標題與泳式，不自行產生確定性。
+    problem_path = ROOT / "canonical/instructional/problems.yaml"
+    if problem_path.exists():
+        problems = yaml.safe_load(problem_path.read_text(encoding="utf-8")).get("problems", [])
+        summary_rows.append(("problems", len(problems), "現象 → 機制 → 陸上介入 → 水中練習"))
+        lines.extend(["### `problems.yaml` — 問題索引", ""])
+        lines.extend(render_table(problems, [("id", "ID"), ("stroke", "泳式"), ("category", "範疇"), ("title", "可見問題")]))
+        lines.append("")
+
     # === 感知層 technica ===
     lines.append("---")
     lines.append("")
