@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 970,
+  "record_count": 982,
   "records": [
     {
       "id": "Bk1",
@@ -16699,6 +16699,266 @@
         "src.wang-2013-taiwan-hip-fracture-mortality"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "prob.back.deep-pull",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[31]",
+      "title": "手伸得很深才開始拉水，身體向旁側偏",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk26",
+        "back.err3",
+        "back.tech.10"
+      ]
+    },
+    {
+      "id": "prob.back.early-surfacing",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[38]",
+      "title": "推牆後很快抬頭破水，流線滑行被打斷",
+      "tags": {
+        "category": [
+          "streamline"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST3",
+        "back.tech.22",
+        "back.tech.23"
+      ]
+    },
+    {
+      "id": "prob.back.fatigue-roll",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[36]",
+      "title": "游到後段髖部擺動變大，划手距離縮短",
+      "tags": {
+        "category": [
+          "rotation"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "back.err13",
+        "back.tech.24"
+      ]
+    },
+    {
+      "id": "prob.back.flat-rotation",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[35]",
+      "title": "身體一直平躺，肩膀沒有隨划手交替抬起",
+      "tags": {
+        "category": [
+          "rotation"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk13",
+        "Bk5",
+        "back.err1",
+        "back.tech.3",
+        "back.tech.6"
+      ]
+    },
+    {
+      "id": "prob.back.head-lift-hip-drop",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[27]",
+      "title": "抬頭看腳或刻意挺胸，髖部跟著下沉",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk1",
+        "Bk22",
+        "back.err10",
+        "back.err9",
+        "back.tech.21"
+      ]
+    },
+    {
+      "id": "prob.back.lateral-pull",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[33]",
+      "title": "水下刻意左右繞手，前進方向跟著擺動",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk26",
+        "back.err2",
+        "back.tech.11"
+      ]
+    },
+    {
+      "id": "prob.back.misaligned-entry",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[30]",
+      "title": "入水偏離肩線，跨過頭頂或向外甩",
+      "tags": {
+        "category": [
+          "entry"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk12",
+        "back.err11",
+        "back.err17",
+        "back.tech.29",
+        "back.tech.8",
+        "back.tech.9"
+      ]
+    },
+    {
+      "id": "prob.back.overlong-push",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[34]",
+      "title": "手已到髖旁仍往下延伸，出水回臂被拖住",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "back.err12",
+        "back.tech.12"
+      ]
+    },
+    {
+      "id": "prob.back.passive-upkick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[29]",
+      "title": "腿用力往下壓，回到水面的上踢卻很慢",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "back.err5",
+        "back.tech.15",
+        "back.tech.30"
+      ]
+    },
+    {
+      "id": "prob.back.stiff-recovery",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[37]",
+      "title": "回臂貼水或持續繃緊，手臂前送不連續",
+      "tags": {
+        "category": [
+          "recovery"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk10",
+        "back.err15",
+        "back.err16",
+        "back.tech.13",
+        "back.tech.28"
+      ]
+    },
+    {
+      "id": "prob.back.straight-arm-pull",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[32]",
+      "title": "水下手臂一直打直，從肩旁掃到大腿",
+      "tags": {
+        "category": [
+          "pull"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk19",
+        "Bk26",
+        "back.err6",
+        "back.tech.14"
+      ]
+    },
+    {
+      "id": "prob.back.wide-knee-kick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[28]",
+      "title": "踢水時膝蓋大幅彎曲、反覆露出水面",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "back"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk3",
+        "back.err8",
+        "back.tech.20"
+      ]
     },
     {
       "id": "prob.breast.compressed-exhale",

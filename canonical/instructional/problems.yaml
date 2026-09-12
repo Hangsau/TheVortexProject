@@ -626,3 +626,264 @@ problems:
   coverage_gap:
   - no_mechanism
   - no_intervention
+- id: prob.back.head-lift-hip-drop
+  stroke: back
+  category: head
+  title: 抬頭看腳或刻意挺胸，髖部跟著下沉
+  public:
+    observable: |-
+      - 為了看腳而抬頭，髖部同時往下沉。
+      - 或刻意挺胸拱背，身體無法維持平直。
+    mechanism_summary: 頭位與軀幹形狀會改變仰躺平衡；髖下沉時，迎水面積也會增加。先看頭、胸與髖的連動，不把「挺高」當作漂浮的唯一方法。
+  links:
+    technical_analysis:
+    - back.tech.21
+    drills:
+    - Bk22
+    - Bk1
+    interventions: []
+    water_interventions: []
+  cross_ref: 肚臍頂出水面、挺胸——把浮力口令做成拱背；看腳趾確認身體有沒有平——抬頭找視覺確認反而壓臀部
+  cross_ref_ids:
+  - back.err9
+  - back.err10
+  coverage_gap:
+  - no_intervention
+- id: prob.back.wide-knee-kick
+  stroke: back
+  category: kick
+  title: 踢水時膝蓋大幅彎曲、反覆露出水面
+  public:
+    observable: |-
+      - 膝蓋反覆露出水面，踢腿像踩腳踏車。
+      - 小腿在身體前方大幅來回折動。
+    mechanism_summary: 膝大幅彎曲會讓小腿更多地迎向來水，改變阻力與有效踢水路徑。修正對象是過大的踩踏，不是要求膝完全不能彎。
+  links:
+    technical_analysis:
+    - back.tech.20
+    drills:
+    - Bk3
+    interventions: []
+    water_interventions: []
+  cross_ref: 腿要打直、膝蓋不能彎——對「腳踏車式踢水」的過度矯正
+  cross_ref_ids:
+  - back.err8
+  coverage_gap:
+  - no_intervention
+- id: prob.back.passive-upkick
+  stroke: back
+  category: kick
+  title: 腿用力往下壓，回到水面的上踢卻很慢
+  public:
+    observable: '- 往池底踢的動作很快，朝水面回來的一拍卻明顯慢。'
+    mechanism_summary: 仰躺時朝水面的一拍與俯臥時朝池底的一拍方向對應不同。要分開觀察兩拍的足部朝向與速度，不能照搬自由式的「向下踢」口令，也不能由動作名稱算出推進比例。
+  links:
+    technical_analysis:
+    - back.tech.15
+    - back.tech.30
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 踢水要用力向下踢——自由式思維的直接干擾
+  cross_ref_ids:
+  - back.err5
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.back.misaligned-entry
+  stroke: back
+  category: entry
+  title: 入水偏離肩線，跨過頭頂或向外甩
+  public:
+    observable: |-
+      - 從泳者頭端看，手在頭頂中線內側或肩線很外側入水。
+      - 入水後手還需要向旁側找捕水位置。
+    mechanism_summary: 入水位置會改變接下來的捕水與拉水方向；偏向兩側可能增加橫向調整。用肩線作對照，不必靠過度扭轉手腕去追求小指先入水。
+  links:
+    technical_analysis:
+    - back.tech.8
+    - back.tech.9
+    - back.tech.29
+    drills:
+    - Bk12
+    interventions: []
+    water_interventions: []
+  cross_ref: 小指先入水的執著——過度旋轉手腕造成肩衝擊與入水偏外；手要過頭頂正上方再入水——破壞入水位置與肩線對齊
+  cross_ref_ids:
+  - back.err11
+  - back.err17
+  coverage_gap:
+  - no_intervention
+- id: prob.back.deep-pull
+  stroke: back
+  category: pull
+  title: 手伸得很深才開始拉水，身體向旁側偏
+  public:
+    observable: |-
+      - 手先往池底伸很深，才開始彎肘捕水。
+      - 拉水起始伴隨身體向側面偏移。
+    mechanism_summary: 捕水需要建立合適的掌面與前臂方向；單純增加深度不保證有更多有效推進。先觀察入水到捕水的過渡是否被向下伸手拖長。
+  links:
+    technical_analysis:
+    - back.tech.10
+    drills:
+    - Bk26
+    interventions: []
+    water_interventions: []
+  cross_ref: 手伸越深，抓到的水越多，推力越大
+  cross_ref_ids:
+  - back.err3
+  coverage_gap:
+  - no_intervention
+- id: prob.back.straight-arm-pull
+  stroke: back
+  category: pull
+  title: 水下手臂一直打直，從肩旁掃到大腿
+  public:
+    observable: |-
+      - 手臂在水下幾乎一直伸直，從肩旁掃到腿側。
+      - 肘沒有隨捕水轉成較有利的迎水配置。
+    mechanism_summary: 水下手臂配置會影響掌面作用角與前臂迎水方向；一直維持直臂可能限制這種調整。外觀不足以判定肩部傷害或推進力損失比例。
+  links:
+    technical_analysis:
+    - back.tech.14
+    drills:
+    - Bk26
+    - Bk19
+    interventions: []
+    water_interventions: []
+  cross_ref: 划手手臂打直，從肩掃到大腿
+  cross_ref_ids:
+  - back.err6
+  coverage_gap:
+  - no_intervention
+- id: prob.back.lateral-pull
+  stroke: back
+  category: pull
+  title: 水下刻意左右繞手，前進方向跟著擺動
+  public:
+    observable: |-
+      - 划手在水下刻意向外、向內繞動。
+      - 每次繞手伴隨身體左右偏移。
+    mechanism_summary: 拉水路徑可以有曲線，但不必刻意畫固定的 S 形。應看掌面與水流的作用方向，以及是否保留向後推進，而不是只對照路徑形狀。
+  links:
+    technical_analysis:
+    - back.tech.11
+    drills:
+    - Bk26
+    interventions: []
+    water_interventions: []
+  cross_ref: 划手要刻意走 S 形路徑，升力更多
+  cross_ref_ids:
+  - back.err2
+  coverage_gap:
+  - no_intervention
+- id: prob.back.overlong-push
+  stroke: back
+  category: pull
+  title: 手已到髖旁仍往下延伸，出水回臂被拖住
+  public:
+    observable: |-
+      - 手到髖旁後仍繼續向身體下方伸。
+      - 手離水與下一次回臂因此延後。
+    mechanism_summary: 推到髖部與繼續把手送到大腿底下是不同事件；末段有效推水需要接上釋放與回臂。提前收手與過度拖長都有代價，應觀察實際銜接。
+  links:
+    technical_analysis:
+    - back.tech.12
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 划水要拉到大腿底——過度延長拉水反被減速期反咬
+  cross_ref_ids:
+  - back.err12
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.back.flat-rotation
+  stroke: back
+  category: rotation
+  title: 身體一直平躺，肩膀沒有隨划手交替抬起
+  public:
+    observable: |-
+      - 每次划手時兩肩都接近同一水平面。
+      - 回臂側肩沒有交替露出，水下捕水顯得受限。
+    mechanism_summary: 肩部交替抬起會改變對側捕水位置，並參與划手與回臂的連動。觀察滾轉是否幫助捕水即可，不需要先指定每人相同的旋轉角度。
+  links:
+    technical_analysis:
+    - back.tech.3
+    - back.tech.6
+    drills:
+    - Bk5
+    - Bk13
+    interventions: []
+    water_interventions: []
+  cross_ref: 仰式要躺平，旋轉是不穩定的信號
+  cross_ref_ids:
+  - back.err1
+  coverage_gap:
+  - no_intervention
+- id: prob.back.fatigue-roll
+  stroke: back
+  category: rotation
+  title: 游到後段髖部擺動變大，划手距離縮短
+  public:
+    observable: |-
+      - 後段髖部左右擺動比前段大，肩部變化卻較小。
+      - 同時出現前進變少或更多划次。
+    mechanism_summary: 疲勞時肩與髖的滾轉可能以不同方式改變。這是比較前後段協調的入口，不能據此宣告核心一定不足，也不能把後續變化當成固定崩潰順序。
+  links:
+    technical_analysis:
+    - back.tech.24
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 核心要 brace 到極致——把柔性張力做成剛性硬塊割斷 coupling
+  cross_ref_ids:
+  - back.err13
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.back.stiff-recovery
+  stroke: back
+  category: recovery
+  title: 回臂貼水或持續繃緊，手臂前送不連續
+  public:
+    observable: |-
+      - 手臂出水後前送中斷，或貼水拖行。
+      - 肩部旋轉與抬臂的時機接不上。
+    mechanism_summary: 回臂要為下一次入水準備位置，並維持與肩部旋轉的連續性。直臂或微彎都可能適合；看得見的卡頓，比是否符合固定弧線更值得先處理。
+  links:
+    technical_analysis:
+    - back.tech.13
+    - back.tech.28
+    drills:
+    - Bk10
+    interventions: []
+    water_interventions: []
+  cross_ref: 回臂越貼水面越好——把長距離 low-octane 誤套到所有人；回臂手要打直、肌肉繃緊維持姿勢
+  cross_ref_ids:
+  - back.err15
+  - back.err16
+  coverage_gap:
+  - no_intervention
+- id: prob.back.early-surfacing
+  stroke: back
+  category: streamline
+  title: 推牆後很快抬頭破水，流線滑行被打斷
+  public:
+    observable: |-
+      - 推牆後仍在滑行，頭已先仰起破水。
+      - 雙臂與頭的流線隨即打開。
+    mechanism_summary: 推牆後速度較高，流線被打開會增加阻力損耗。重點是保持頭與雙臂的銜接，再依自己的速度變化決定出水時機。
+  links:
+    technical_analysis:
+    - back.tech.22
+    - back.tech.23
+    drills:
+    - ST3
+    interventions: []
+    water_interventions: []
+  cross_ref: ''
+  cross_ref_ids: []
+  coverage_gap:
+  - no_intervention

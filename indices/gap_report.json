@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 122
+    "unlinked_records": 120
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -56,16 +56,6 @@
       "id": "back.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[61]"
-    },
-    {
-      "id": "back.tech.20",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[63]"
-    },
-    {
-      "id": "back.tech.9",
-      "file": "canonical/instructional/technical-analysis.yaml",
-      "path": "points[52]"
     },
     {
       "id": "breast.tech.23",

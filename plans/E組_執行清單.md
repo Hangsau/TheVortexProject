@@ -24,7 +24,7 @@ profile: mixed_cross_domain。任務是既有 canonical 的索引整合，不新
 | W20 | manual（本代理） | 完成 | 73 個可見問題；333 候選有歸併／背景／不收錄去向 |
 | W21a | manual（本代理） | 完成 | 12 問題；0 ERROR / 138 WARN；三關審閱 |
 | W21b | manual（本代理） | 完成 | 15 問題；0 ERROR / 138 WARN；三關審閱 |
-| W21c | manual（本代理） | 未開始 | 仰式 |
+| W21c | manual（本代理） | 完成 | 12 問題；0 ERROR / 136 WARN；三關審閱 |
 | W21d | manual（本代理） | 未開始 | 蝶式 |
 | W21e | manual（本代理） | 未開始 | 水下蝶腳 |
 | W21f | manual（本代理） | 未開始 | 出發轉身 |

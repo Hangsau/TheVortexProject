@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 27 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `problems` | 39 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -466,6 +466,18 @@
 | prob.free.fatigue-elbow-drop | free | pull | 前幾趟能維持捕水，後段肘與肩胛位置逐漸失守 |
 | prob.free.stiff-recovery | free | recovery | 回臂刻意夾高或繃緊，手臂前送卡住 |
 | prob.free.bubble-catch | free | entry | 手已入水，捕水時仍拖著一團氣泡 |
+| prob.back.head-lift-hip-drop | back | head | 抬頭看腳或刻意挺胸，髖部跟著下沉 |
+| prob.back.wide-knee-kick | back | kick | 踢水時膝蓋大幅彎曲、反覆露出水面 |
+| prob.back.passive-upkick | back | kick | 腿用力往下壓，回到水面的上踢卻很慢 |
+| prob.back.misaligned-entry | back | entry | 入水偏離肩線，跨過頭頂或向外甩 |
+| prob.back.deep-pull | back | pull | 手伸得很深才開始拉水，身體向旁側偏 |
+| prob.back.straight-arm-pull | back | pull | 水下手臂一直打直，從肩旁掃到大腿 |
+| prob.back.lateral-pull | back | pull | 水下刻意左右繞手，前進方向跟著擺動 |
+| prob.back.overlong-push | back | pull | 手已到髖旁仍往下延伸，出水回臂被拖住 |
+| prob.back.flat-rotation | back | rotation | 身體一直平躺，肩膀沒有隨划手交替抬起 |
+| prob.back.fatigue-roll | back | rotation | 游到後段髖部擺動變大，划手距離縮短 |
+| prob.back.stiff-recovery | back | recovery | 回臂貼水或持續繃緊，手臂前送不連續 |
+| prob.back.early-surfacing | back | streamline | 推牆後很快抬頭破水，流線滑行被打斷 |
 
 ---
 
