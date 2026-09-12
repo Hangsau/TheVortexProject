@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 858,
+  "source_count": 860,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -401,6 +401,24 @@
           "id": "psych.interaction.water_immersion_interoception",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[7].public"
+        }
+      ]
+    },
+    {
+      "id": "src.barbosa-2006-energy-expenditure-strokes",
+      "display": "Barbosa, T. M., Fernandes, R., Keskinen, K. L., Colaço, P., Cardoso, C., Silva, J., & Vilas-Boas, J. P. (2006). Evaluation of the energy expenditure in competitive swimming strokes. International Journal of Sports Medicine, 27(11), 894–899.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "16612740",
+        "doi": "10.1055/s-2006-923776",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/16612740/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.variables",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "variables.var_rest"
         }
       ]
     },
@@ -1059,6 +1077,23 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.capelli-1998-energetics-maximal-speeds",
+      "display": "Capelli, C., Pendergast, D. R., & Termin, B. (1998). Energetics of swimming at maximal speeds in humans. European Journal of Applied Physiology and Occupational Physiology, 78(5), 385–393.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "9809837",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/9809837/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.variables",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "variables.var_rest"
+        }
+      ]
     },
     {
       "id": "src.carvalho-2026-overload-hrv",

@@ -15997,7 +15997,10 @@
           "🔵"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.barbosa-2006-energy-expenditure-strokes",
+        "src.capelli-1998-energetics-maximal-speeds"
+      ],
       "outgoing_ids": [
         "periodization.set_design.anchors",
         "periodization.set_design.css_evidence",

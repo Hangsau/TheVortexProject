@@ -318,6 +318,45 @@ sources:
     retrieved_on: "2026-07-29"
     notes: "依 Atlas 本地完整書檔核對；ISBN 為本地電子版。作需求分析、測試與處方框架使用。"
 
+  - id: src.capelli-1998-energetics-maximal-speeds
+    display: "Capelli, C., Pendergast, D. R., & Termin, B. (1998). Energetics of swimming at maximal speeds in humans. European Journal of Applied Physiology and Occupational Physiology, 78(5), 385–393."
+    title: "Energetics of swimming at maximal speeds in humans"
+    type: journal-article
+    verification_status: verified
+    authors: ["Carlo Capelli", "David R. Pendergast", "Budd Termin"]
+    year: 1998
+    container: "European Journal of Applied Physiology and Occupational Physiology"
+    identifier:
+      pmid: "9809837"
+      url: "https://pubmed.ncbi.nlm.nih.gov/9809837/"
+    retrieved_on: "2026-09-12"
+    notes: |-
+      摘要經 Europe PMC 全文取得並逐字核對。n＝20 菁英泳者，四式每公尺能量成本（Cs, kJ/m）。
+      **使用邊界**：受試全為菁英，且測的是「同一絕對速度下」的成本，不是「同一相對強度下」的成本——
+      不可直接外推成休息時間處方。
+      ⚠️ 已出版摘要在 1 m/s 那一組把蛙式印成「0.124 kJ·m⁻¹」，與同句其他三式（0.70／0.84／0.82）
+      差一個數量級，且與 1.5 m/s 的 1.87 不相容，明顯是小數點誤植，正確值應為 1.24。
+      **本庫引用時一律用 1.5 m/s 那一組（1.23／1.47／1.55／1.87），不引 1 m/s 的蛙式值。**
+
+  - id: src.barbosa-2006-energy-expenditure-strokes
+    display: "Barbosa, T. M., Fernandes, R., Keskinen, K. L., Colaço, P., Cardoso, C., Silva, J., & Vilas-Boas, J. P. (2006). Evaluation of the energy expenditure in competitive swimming strokes. International Journal of Sports Medicine, 27(11), 894–899."
+    title: "Evaluation of the energy expenditure in competitive swimming strokes"
+    type: journal-article
+    verification_status: verified
+    authors: ["Tiago M. Barbosa", "Ricardo Fernandes", "Kari L. Keskinen", "Paulo Colaço", "Carla Cardoso", "João Silva", "João Paulo Vilas-Boas"]
+    year: 2006
+    container: "International Journal of Sports Medicine"
+    identifier:
+      pmid: "16612740"
+      doi: "10.1055/s-2006-923776"
+      url: "https://pubmed.ncbi.nlm.nih.gov/16612740/"
+    retrieved_on: "2026-09-12"
+    notes: |-
+      摘要經 Europe PMC 全文取得並逐字核對。遞增式 200 公尺游至力竭，逐次呼吸測氣。
+      **使用邊界（重要）**：n＝26 但是**每式各自獨立的小樣本**——蛙 5、仰 5、蝶 4、自由式 12，
+      且全為國際級選手。它支持的是**排序**（自由式最經濟，其次仰、蝶、蛙），
+      不支持任何逐式的點值或比值外推，更不支持兒童與初學者。
+
   - id: src.myers-2021
     display: "Myers, Anatomy Trains, 4th ed., 2021"
     title: "Anatomy Trains: Myofascial Meridians for Manual Therapists and Movement Professionals"
