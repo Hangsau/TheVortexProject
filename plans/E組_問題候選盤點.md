@@ -354,9 +354,10 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 
 ## 定案
 
-共 73 個可見現象，條數由歸併結果產生；本表是編輯裁決紀錄，實作以 canonical 為真相。
+共 73 個可見現象，條數由歸併結果產生；下表於 W25 依最終 canonical 重整，保留 W21 各批裁決。
+333 筆候選中，191 筆連到問題，142 筆保留背景或不收錄理由；兩組不重疊，沒有漏列。
 
-| 問題 ID | 可見現象 | 機制候選 | 誤區候選 |
+| 問題 ID | 可見現象 | 已採機制 | 已採誤區 |
 |---|---|---|---|
 | prob.breast.head-lift-hip-drop | 換氣時抬頭，髖與腿跟著下沉 | breast.tech.5, breast.tech.26 | breast.err7, breast.err13, breast.err18 |
 | prob.breast.early-breath | 手還沒內划，頭就先抬起來換氣 | breast.tech.5 | breast.err8, breast.err9 |
@@ -436,6 +437,24 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 
 | 原 ID | 決定及原因 |
 |---|---|
+| free.err2 | 模仿菁英不是單一可見異常；回臂受阻另收，不把個人風格當錯誤。 |
+| free.err7 | 手指間距的規範口令；單憑夾緊外觀不推定效率問題。 |
+| free.err8 | 入水角度沒有唯一正確值；不把與某角度不同當成問題。 |
+| free.err12 | 兩拍／六拍是情境策略，拍數本身不是可見異常。 |
+| free.err22 | SR／SL 訓練觀念，沒有独立於後段划距縮短的新現象。 |
+| free.err23 | 慢游／快游的教學分類，非單一可見現象。 |
+| back.err4 | 肩髖主導的教學爭議；不由外觀替泳者指定驅動者。 |
+| back.err7 | 自然呼吸口令本身不是可見異常；沒有具體可重複的動作現象。 |
+| back.err14 | 固定呼吸頻率屬教學策略，不以自述感受建問題。 |
+| fly.err5 | 左右對稱程度不能直接等同力道或技術錯誤。 |
+| fly.err6 | 教學先後順序，非可見現象。 |
+| fly.err8 | drill 的跨情境遷移邊界，非單一可見問題。 |
+| fly.err13 | 正向／側向換氣是策略，方向本身不是錯誤。 |
+| fly.err14 | 換氣頻率是情境選擇，頻率本身不是錯誤。 |
+| udk.err6 | 跨式遷移觀念，不能獨立形成可見問題。 |
+| udk.err12 | 比喻式口令過於寬泛，沒有獨立的可見現象。 |
+| starts-turns.err2 | 前後腳力量分工需測力，不能由池畔外觀判定。 |
+| starts-turns.err10 | 靜態與動態頭位的策略差異，不以抬頭單一外觀判錯。 |
 | free.tech.1 | 整體模型或訓練觀念，留在原機制背景。 |
 | free.tech.2 | 整體模型或訓練觀念，留在原機制背景。 |
 | free.tech.4 | 風格選擇與個體條件，風格本身不是異常。 |
@@ -493,6 +512,7 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 | fly.tech.2 | 跨式、族群或策略比較，非單一可見現象。 |
 | fly.tech.7 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
 | fly.tech.9 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
+| fly.tech.10 | 閉環列序與第二踢條目不一致，取消入水停頓題的連結；不在索引層裁決原文（見 W21d）。 |
 | fly.tech.11 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
 | fly.tech.15 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
 | fly.tech.19 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
@@ -552,7 +572,6 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 | starts-turns.tech.31 | 跨式、族群或策略比較，非單一可見現象。 |
 | starts-turns.tech.32 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
 | starts-turns.tech.33 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
-| starts-turns.tech.34 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
 | starts-turns.tech.35 | 跨式、族群或策略比較，非單一可見現象。 |
 | starts-turns.tech.36 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
 | starts-turns.tech.37 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
@@ -560,31 +579,6 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 | starts-turns.tech.40 | 硬體能力／限制背景，沒有可由外觀確診的獨立問題。 |
 | starts-turns.tech.45 | 跨式、族群或策略比較，非單一可見現象。 |
 | starts-turns.tech.46 | 正常週期、運動學或訓練策略的背景條目；沒有新增的可見異常，留原資料供深入閱讀。 |
-| free.err2 | 模仿菁英不是單一可見異常；回臂受阻另收，不把個人風格當錯誤。 |
-| free.err7 | 手指間距的規範口令；單憑夾緊外觀不推定效率問題。 |
-| free.err8 | 入水角度沒有唯一正確值；不把與某角度不同當成問題。 |
-| free.err12 | 兩拍／六拍是情境策略，拍數本身不是可見異常。 |
-| free.err22 | SR／SL 訓練觀念，沒有独立於後段划距縮短的新現象。 |
-| free.err23 | 慢游／快游的教學分類，非單一可見現象。 |
-| back.err4 | 肩髖主導的教學爭議；不由外觀替泳者指定驅動者。 |
-| back.err7 | 自然呼吸口令本身不是可見異常；沒有具體可重複的動作現象。 |
-| back.err14 | 固定呼吸頻率屬教學策略，不以自述感受建問題。 |
-| fly.err5 | 左右對稱程度不能直接等同力道或技術錯誤。 |
-| fly.err6 | 教學先後順序，非可見現象。 |
-| fly.err8 | drill 的跨情境遷移邊界，非單一可見問題。 |
-| fly.err13 | 正向／側向換氣是策略，方向本身不是錯誤。 |
-| fly.err14 | 換氣頻率是情境選擇，頻率本身不是錯誤。 |
-| udk.err6 | 跨式遷移觀念，不能獨立形成可見問題。 |
-| udk.err12 | 比喻式口令過於寬泛，沒有獨立的可見現象。 |
-| starts-turns.err2 | 前後腳力量分工需測力，不能由池畔外觀判定。 |
-| starts-turns.err10 | 靜態與動態頭位的策略差異，不以抬頭單一外觀判錯。 |
-| movement.intervention.shoulder-elevation.active-control | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
-| movement.intervention.shoulder-elevation.conditional-soft-tissue | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
-| movement.intervention.ankle-plantarflexion.conditional-mobility | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
-| movement.intervention.ankle-plantarflexion.capacity-control | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
-| movement.intervention.breaststroke-breathing.arm-driven-torso-lift | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
-| movement.intervention.scapular-upward-rotation.serratus-endurance | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
-| movement.intervention.trunk-axial-rotation.cross-side-core-capacity | W21 依原 demand_ids、適用條件與水中重測結果配對；不是憑 limitation_type 自行增加可見問題。 |
 
 ### 收錄邊界與三關校正
 

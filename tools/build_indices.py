@@ -6,8 +6,8 @@ Outputs four JSON views under ``indices/``:
 * content_index.json: one searchable record per stable content ID
 * tag_reverse_index.json: controlled vocabulary value -> content IDs
 * source_reverse_index.json: registered source -> exact usage locations
-* gap_report.json: high-certainty claims without sources, unused tags, and
-  entries without links
+* gap_report.json: high-certainty claims without sources, unused tags,
+  entries without links, and problem coverage
 
 The scanner follows the same scope and relationship semantics as
 ``tools/validate.py``. Generated files are views; canonical YAML remains the
@@ -360,6 +360,45 @@ def unlinked_records(records: list[dict], entry_by_id: dict[str, dict]) -> list[
     return sorted(gaps, key=lambda item: item["id"])
 
 
+def problem_coverage(entries: list[dict]) -> dict:
+    """Partition observable problems by existing links, never by prose or water work.
+
+    no_mechanism means no linked technical-analysis entry, not that a related
+    teaching error has no explanation. Water interventions do not count as
+    dryland interventions or as a linked drill.
+    """
+    buckets = {key: [] for key in (
+        "mechanism_drill_land", "mechanism_drill_no_land",
+        "mechanism_no_drill", "no_mechanism",
+    )}
+    missing = {key: [] for key in ("no_mechanism", "no_intervention", "no_drill")}
+    by_stroke = {}
+    water_ids = []
+    for entry in sorted(entries, key=lambda item: item["id"]):
+        links = entry["links"]
+        mechanism, drill, land = (bool(links[k]) for k in ("technical_analysis", "drills", "interventions"))
+        bucket = ("no_mechanism" if not mechanism else "mechanism_no_drill" if not drill
+                  else "mechanism_drill_land" if land else "mechanism_drill_no_land")
+        buckets[bucket].append(entry["id"])
+        stroke = by_stroke.setdefault(entry["stroke"], {"total": 0, "with_mechanism": 0, "with_drill": 0, "with_land": 0})
+        stroke["total"] += 1
+        for flag, key in ((mechanism, "with_mechanism"), (drill, "with_drill"), (land, "with_land")):
+            stroke[key] += int(flag)
+        for flag, gap in ((mechanism, "no_mechanism"), (land, "no_intervention"), (drill, "no_drill")):
+            if not flag:
+                missing[gap].append(entry["id"])
+        if links["water_interventions"]:
+            water_ids.append(entry["id"])
+    return {
+        "total": len(entries),
+        "counts": {key: len(ids) for key, ids in buckets.items()},
+        "buckets": buckets,
+        "missing": missing,
+        "by_stroke": dict(sorted(by_stroke.items())),
+        "with_water_interventions": water_ids,
+    }
+
+
 def build_gap_report(
     root: Path,
     records: list[dict],
@@ -374,6 +413,8 @@ def build_gap_report(
 
     high_risk = high_certainty_without_source(root)
     unlinked = unlinked_records(records, entry_by_id)
+    problems = [entry_by_id[r["id"]] for r in records
+                if r["file"] == "canonical/instructional/problems.yaml"]
     return {
         "schema_version": SCHEMA_VERSION,
         "summary": {
@@ -384,6 +425,7 @@ def build_gap_report(
         "high_certainty_without_source": high_risk,
         "unused_taxonomy_values": unused_tags,
         "unlinked_records": unlinked,
+        "problem_coverage": problem_coverage(problems),
     }
 
 

@@ -32,6 +32,27 @@ class TestOwnedBlocks(unittest.TestCase):
 
 
 class TestGapDetection(unittest.TestCase):
+    def test_problem_coverage_all_link_combinations(self):
+        # Exercise all eight combinations and keep water-only intervention apart.
+        entries = []
+        for mechanism in (False, True):
+            for drill in (False, True):
+                for land in (False, True):
+                    entries.append({"id": f"prob.free.case-{len(entries)}", "stroke": "free", "links": {
+                        "technical_analysis": ["tech"] if mechanism else [],
+                        "drills": ["drill"] if drill else [],
+                        "interventions": ["land"] if land else [],
+                        "water_interventions": ["water"],
+                    }})
+        result = build_indices.problem_coverage(entries)
+        self.assertEqual(result["counts"], {"mechanism_drill_land": 1, "mechanism_drill_no_land": 1, "mechanism_no_drill": 2, "no_mechanism": 4})
+        self.assertEqual(result["by_stroke"]["free"]["with_land"], 4)
+        self.assertEqual(len(result["with_water_interventions"]), 8)
+        self.assertEqual([len(v) for v in result["missing"].values()], [4, 4, 4])
+        flattened = [i for ids in result["buckets"].values() for i in ids]
+        self.assertEqual(len(set(flattened)), 8)
+        self.assertEqual(build_indices.problem_coverage([])["total"], 0)
+
     def test_high_certainty_scanner_is_live(self):
         data = {
             "points": [
@@ -109,6 +130,21 @@ class TestGeneratedViews(unittest.TestCase):
             report["summary"]["unlinked_records"],
             len(report["unlinked_records"]),
         )
+
+    def test_real_problem_partition_and_gap_contract(self):
+        import yaml
+        entries = yaml.safe_load((ROOT / "canonical/instructional/problems.yaml").read_text(encoding="utf-8"))["problems"]
+        coverage = self.views["gap_report.json"]["problem_coverage"]
+        self.assertEqual(coverage["total"], 73)
+        self.assertEqual(sum(coverage["counts"].values()), 73)
+        covered = [i for ids in coverage["buckets"].values() for i in ids]
+        self.assertEqual(len(set(covered)), 73)
+        self.assertEqual(set(covered), {entry["id"] for entry in entries})
+        for gap, ids in coverage["missing"].items():
+            self.assertEqual(set(ids), {entry["id"] for entry in entries if gap in entry["coverage_gap"]})
+        content_ids = {r["id"] for r in self.views["content_index.json"]["records"]}
+        self.assertLessEqual(set(covered), content_ids)
+        self.assertEqual(sum(s["with_land"] for s in coverage["by_stroke"].values()), 6)
 
     def test_serialization_is_deterministic(self):
         with tempfile.TemporaryDirectory() as tmp:

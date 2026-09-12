@@ -24,7 +24,9 @@
 
 2026-09-12 局部更新：問題索引在 `canonical/instructional/problems.yaml`；驗證器
 `tools/validate.py`、地圖 `tools/build_knowledge_map.py`、機器索引 `tools/build_indices.py`
-共同消費。計畫與 checkpoint 見 `plans/E組_執行清單.md`；公開端接線在 my-site。
+共同消費。覆蓋報告擴充在 `indices/gap_report.json.problem_coverage`；契約與分組測試在
+`tests/test_problem_index.py`／`tests/test_build_indices.py`。計畫與 checkpoint 見
+`plans/E組_執行清單.md`；公開端由 my-site `sync_problems()` → problems data → `/vortex/problems/`。
 
 | 你要做的事 | 動這裡 |
 |-----------|--------|

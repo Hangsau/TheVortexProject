@@ -24,24 +24,16 @@
 
 使用者已確認執行 W18–W25。進度與驗收見 `plans/E組_執行清單.md`。
 
-最新 checkpoint：W21f starts-turns 已完成 12 題，累計 73 題；驗證 0 ERROR / 136 WARN。
-
-最新 checkpoint：W21e udk 已完成 11 題，累計 61 題；驗證 0 ERROR / 136 WARN。
-
-最新 checkpoint：W21d fly 已完成 11 題，累計 50 題；驗證 0 ERROR / 136 WARN。
-
-最新 checkpoint：W21c back 已完成 12 題，累計 39 題；驗證 0 ERROR / 136 WARN。
-
-最新 checkpoint：W21b free 已完成 15 題，累計 27 題；驗證 0 ERROR / 138 WARN。
-
-最新 checkpoint：W21a breast 已完成 12 題，累計 12 題；驗證 0 ERROR / 138 WARN。
-W18 已建立 problems 空骨架，註冊缺 ID 與兩種介入引用檢查，並補知識地圖接線。
-驗收：3 項註冊測試通過；0 ERROR / 138 WARN，943 records，與基線一致。
-陸上介入用 `links.interventions`，水中介入用 `links.water_interventions`；後者不消除陸上缺口。
+W18–W25 實作與本機驗收完成：六式共 73 題，從 333 筆候選整理，公開同步與四欄問題頁已接線。
+覆蓋四組為 1／43／26／3；6 題有陸上介入、2 題有水中介入。`links.interventions` 與
+`links.water_interventions` 分開，水中內容不消除陸上或 drill 缺口。
+`gap_report.json.problem_coverage` 為機器報告；`plans/E組_覆蓋驗收報告.md` 為本次快照。
+validate 0 ERROR／136 WARN；驗證器與索引 138 項、公開同步 11 項、movement 8 項測試通過。
+網頁已驗 309 站內連結／9 頁、篩選／搜尋／深連結與 320–1440px；推送、CI 與線上狀態見執行清單。
 
 ## 下一步建議（E組）
 
-W19 已盤點 333 筆；W20 定案 73 個可見問題，逐筆歸併與排除理由見候選盤點。接著完成蛙式試點與逐式驗收，再做公開同步、頁面與缺口統計。
+完成這次已驗收提交的推送與部署驗證。問題內容若需補充，先看現有缺口與候選裁決，不以湊滿四欄為目的增加介入。
 本計畫已獲開始授權，中斷後依 checkpoint 接續，不重跑計畫確認。
 
 **週期化層剩下的缺口（非 E 組範圍，不擋 E 組）**：tier_c 的 🔴 已結案（見當前狀態），但留下一個**外推邊界**的 🔴——log-log 在**兒童、初學者、蝶蛙仰三式**上完全沒有驗證資料，現有比對只有 n＝8 的自由式青年男性。這個缺口不影響生成器運作（tier_c 一律標「外推」），只有在想把 tier_c 升級成「估計」時才需要處理。要補的話，方向是找四泳式或青少年樣本的多距離實測，不要再找「係數」——係數是逐人擬合的，不存在可登錄的常數。

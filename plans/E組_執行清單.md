@@ -19,8 +19,8 @@ profile: mixed_cross_domain。任務是既有 canonical 的索引整合，不新
 
 | W | 派工 | 狀態 | 驗收 / 提交 |
 |---|---|---|---|
-| W18 | manual（本代理） | 完成 | 3 測試通過；0 ERROR / 138 WARN；943 records；地圖接線 |
-| W19 | manual（本代理，機械抽取） | 完成 | 333 筆原文欄位；d771a51 已推送 |
+| W18 | manual（本代理） | 完成 | d771a51；3 測試通過；0 ERROR / 138 WARN；943 records；地圖接線 |
+| W19 | manual（本代理，機械抽取） | 完成 | fdcaec7；333 筆原文欄位 |
 | W20 | manual（本代理） | 完成 | 73 個可見問題；333 候選有歸併／背景／不收錄去向 |
 | W21a | manual（本代理） | 完成 | 12 問題；0 ERROR / 138 WARN；三關審閱 |
 | W21b | manual（本代理） | 完成 | 15 問題；0 ERROR / 138 WARN；三關審閱 |
@@ -29,15 +29,15 @@ profile: mixed_cross_domain。任務是既有 canonical 的索引整合，不新
 | W21e | manual（本代理） | 完成 | 11 問題；0 ERROR / 136 WARN；三關審閱 |
 | W21f | manual（本代理） | 完成 | 12 問題；0 ERROR / 136 WARN；三關審閱 |
 | W22 | manual（本代理） | 完成 | legacy 說明與 _INDEX；179 筆 drill 原文不變 |
-| W23 | manual（本代理） | 未開始 | 公開同步、惡意／缺漏輸入、舊功能迴歸 |
-| W24 | claude: refactor（本代理沿用既有版型） | 未開始 | 問題頁、入口、手機與桌面驗收 |
-| W25 | manual（本代理） | 未開始 | 覆蓋統計、全鏈一致性 |
+| W23 | manual（本代理） | 本機完成 | my-site 3b06c0b；公開同步 11 項＋movement 8 項通過 |
+| W24 | claude: refactor（本代理沿用既有版型） | 本機完成 | my-site 70e6c8e；309 連結／9 頁、四種寬度、搜尋與所有篩選通過 |
+| W25 | manual（本代理） | 完成 | 四組 1／43／26／3；138 項測試，0 ERROR／136 WARN |
 
 ## 執行與復原
 
 每包驗收並 commit 後才開始下一包。canonical 變更重生地圖與四份 indices。
 不使用多代理或同時寫同一 YAML；同步與部署也依序執行，避免 bot 與本機推送競爭。
-push 前 fetch 並確認來源版本；同步失敗不发布後續頁面，修復後手動觸發既有 workflow。
+push 前 fetch 並確認來源版本；同步失敗不發布後續頁面，修復後手動觸發既有 workflow。
 本機睡眠或中斷不自動補跑；恢復工作後先核對本清單、git diff 與最後提交，再續作。
 GitHub workflow 可在本機離線時完成，需核對觸發 SHA 與公開頁內容才記完成。
 
@@ -54,3 +54,11 @@ GitHub workflow 可在本機離線時完成，需核對觸發 SHA 與公開頁�
 ## 未通過與裁決
 
 隨候選歸併逐筆記入 `E組_問題候選盤點.md`；不是要求新增介入的待辦。
+
+## W25 整合結果
+
+- 73 題、333 候選（191 筆已連結／142 筆保留原因），完整統計見 `E組_覆蓋驗收報告.md`。
+- `indices/gap_report.json.problem_coverage` 四組互斥；陸上與水中分開計數。
+- 1016 內容 ID、179 drills、861 sources；858 → 861 來自執行中另一路已提交的週期化工作，E 組未新增來源或介入。
+- 本機 logs 與截圖位於工作區暫存 `tmp/vortex-e-20260912/`；可重跑的驗收程式已入庫。
+- W23／W24 推送一度被自動核准審查擋下（遠端／外傳授權證據不足）。已核對 origin 與 GitHub 公開 repo `Hangsau/cortex`、限定兩個 outgoing commits，部署驗證接續記錄。
