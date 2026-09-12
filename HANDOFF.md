@@ -8,6 +8,8 @@
 
 使用者已確認執行 W18–W25。進度與驗收見 `plans/E組_執行清單.md`。
 
+最新 checkpoint：W21e udk 已完成 11 題，累計 61 題；驗證 0 ERROR / 136 WARN。
+
 最新 checkpoint：W21d fly 已完成 11 題，累計 50 題；驗證 0 ERROR / 136 WARN。
 
 最新 checkpoint：W21c back 已完成 12 題，累計 39 題；驗證 0 ERROR / 136 WARN。

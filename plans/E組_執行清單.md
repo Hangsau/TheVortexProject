@@ -26,7 +26,7 @@ profile: mixed_cross_domain。任務是既有 canonical 的索引整合，不新
 | W21b | manual（本代理） | 完成 | 15 問題；0 ERROR / 138 WARN；三關審閱 |
 | W21c | manual（本代理） | 完成 | 12 問題；0 ERROR / 136 WARN；三關審閱 |
 | W21d | manual（本代理） | 完成 | 11 問題；0 ERROR / 136 WARN；三關審閱 |
-| W21e | manual（本代理） | 未開始 | 水下蝶腳 |
+| W21e | manual（本代理） | 完成 | 11 問題；0 ERROR / 136 WARN；三關審閱 |
 | W21f | manual（本代理） | 未開始 | 出發轉身 |
 | W22 | manual（本代理） | 未開始 | legacy 說明與 _INDEX |
 | W23 | manual（本代理） | 未開始 | 公開同步、惡意／缺漏輸入、舊功能迴歸 |

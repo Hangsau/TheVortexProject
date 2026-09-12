@@ -412,11 +412,11 @@ title 取條目頂層，缺省才取 public.title；下表 ID 即原文定位。
 | prob.udk.passive-upkick | 下踢很快，上踢只是慢慢收回 | udk.tech.10, udk.tech.12 | udk.err3 |
 | prob.udk.excess-amplitude | 腳尖上下跨得很遠，踢的週期被拉長 | udk.tech.9, udk.tech.13 | udk.err1 |
 | prob.udk.forced-frequency | 踢頻提高、幅度縮小，計時卻沒有改善 | udk.tech.13, udk.tech.27 | udk.err4 |
-| prob.udk.head-bobbing | 頭部上下點動，雙臂與流線一起晃 | udk.tech.4 | udk.err5 |
+| prob.udk.head-bobbing | 頭部上下點動，雙臂與流線一起晃 | udk.tech.4, udk.tech.24 | udk.err5 |
 | prob.udk.depth-detour | 水下路徑過淺激起水面波，或往深處繞再爬升 | udk.tech.2 | udk.err7 |
 | prob.udk.late-kick | 推牆後滑到很慢，才開始水下踢腿 | udk.tech.17, udk.tech.29 | udk.err8 |
 | prob.udk.late-breakout | 水下已明顯減速，仍繼續踢到很遠才出水 | udk.tech.18, udk.tech.19 | udk.err9 |
-| prob.udk.breakout-pause | 最後一踢已結束，第一划還沒開始 | udk.tech.29 | udk.err10 |
+| prob.udk.breakout-pause | 最後一踢已結束，第一划還沒開始 | starts-turns.tech.34 | udk.err10 |
 | prob.udk.broken-streamline | 踢水時手臂張開、頭露在雙臂之外 | udk.tech.24 | udk.err13 |
 | prob.udk.posture-switch | 翻到仰面後，踢腿方向與原有節奏接不上 | udk.tech.22, udk.tech.30 | udk.err11 |
 | prob.starts-turns.steep-entry | 起跳往上飛得很高，入水後水平速度流失 | starts-turns.tech.6, starts-turns.tech.10 | starts-turns.err1 |
@@ -623,3 +623,10 @@ Bk17 是滾轉暫停，不修正過度延長推水；Bk7 是垂直旋轉，不�
 11 題。Fl20/18 有手入水前頭回水的明確步驟；Fl22 限低位回臂；Fl29 看肘手相對位置；Fl1/3 看胸部與後續波動。肩上舉與軀幹抗旋轉介入的 demand 未涵蓋這些蝶式問題，不跨套；只有 fatigue-catch 接原本涵蓋蝶式的 serratus。
 Fl21 名稱像捕水修正，但實際要求抬頭、快速深壓，與本題相反；Fl15 的「跑直線」講的是身體路線，不是水下手部路徑；Fl26 沒有直接拆解第二踢，不硬配。
 入水停頓題在讀完 fly.tech.21 後縮窄為「停到前進與下一踢中斷」；受控減速不是錯誤。fly.tech.10 的閉環列序與第二踢條目不一致，取消該連結，不裁決原文。上述拒絕及範圍修正是三關結果。
+
+### W21e 水下蝶腳驗收
+
+11 題。UDK1 與 Fl8 明確處理雙向推水／上踢；UDK4 比較個人頻率×幅度；Fl8 有頭手穩定要求；ST3 作純滑行對照；UDK2 只用來觀察換面後的連續性，不宣稱各體位角度完全相同。踝兩介入原 demand 明含 UDK，只連到先需分流的膝彎曲候選。
+UDKLow1 原文聲稱呼吸管能在完全水下延長呼吸，前提不成立；不納入問題索引、不修改原 drill。深度與出水距離問題保留 no_drill，不用長閉氣練習填空。
+breakout-pause 原候選 udk.tech.29 講起踢而非出水；改接 udk.err10 原本就引用的 starts-turns.tech.34，只取最後一踢與第一抓水銜接，不採固定髖部或統一小幅高頻口令。head-bobbing 補 udk.tech.24 的頭部受控界線。
+不轉述 udk.tech.19 的未驗證酸化因果，不以研究關聯當作伸展效果，不裁決 udk.tech.28 措辭衝突。

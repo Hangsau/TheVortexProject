@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 993,
+  "record_count": 1004,
   "records": [
     {
       "id": "Bk1",
@@ -17789,6 +17789,243 @@
       "outgoing_ids": [
         "free.tech.33",
         "movement.intervention.trunk-axial-rotation.cross-side-core-capacity"
+      ]
+    },
+    {
+      "id": "prob.udk.breakout-pause",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[58]",
+      "title": "最後一踢已結束，第一划還沒開始",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "starts-turns.tech.34",
+        "udk.err10"
+      ]
+    },
+    {
+      "id": "prob.udk.broken-streamline",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[59]",
+      "title": "踢水時手臂張開、頭露在雙臂之外",
+      "tags": {
+        "category": [
+          "streamline"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST3",
+        "udk.err13",
+        "udk.tech.24"
+      ]
+    },
+    {
+      "id": "prob.udk.depth-detour",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[55]",
+      "title": "水下路徑過淺激起水面波，或往深處繞再爬升",
+      "tags": {
+        "category": [
+          "depth"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "udk.err7",
+        "udk.tech.2"
+      ]
+    },
+    {
+      "id": "prob.udk.excess-amplitude",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[52]",
+      "title": "腳尖上下跨得很遠，踢的週期被拉長",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "UDK4",
+        "udk.err1",
+        "udk.tech.13",
+        "udk.tech.9"
+      ]
+    },
+    {
+      "id": "prob.udk.forced-frequency",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[53]",
+      "title": "踢頻提高、幅度縮小，計時卻沒有改善",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "UDK4",
+        "udk.err4",
+        "udk.tech.13",
+        "udk.tech.27"
+      ]
+    },
+    {
+      "id": "prob.udk.head-bobbing",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[54]",
+      "title": "頭部上下點動，雙臂與流線一起晃",
+      "tags": {
+        "category": [
+          "undulation"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl8",
+        "udk.err5",
+        "udk.tech.24",
+        "udk.tech.4"
+      ]
+    },
+    {
+      "id": "prob.udk.large-knee-bend",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[50]",
+      "title": "踢腿時膝蓋折得很大，腿像在踩踏",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "movement.intervention.ankle-plantarflexion.capacity-control",
+        "movement.intervention.ankle-plantarflexion.conditional-mobility",
+        "udk.err2",
+        "udk.tech.15",
+        "udk.tech.9"
+      ]
+    },
+    {
+      "id": "prob.udk.late-breakout",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[57]",
+      "title": "水下已明顯減速，仍繼續踢到很遠才出水",
+      "tags": {
+        "category": [
+          "breakout"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "udk.err9",
+        "udk.tech.18",
+        "udk.tech.19"
+      ]
+    },
+    {
+      "id": "prob.udk.late-kick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[56]",
+      "title": "推牆後滑到很慢，才開始水下踢腿",
+      "tags": {
+        "category": [
+          "depth"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "udk.err8",
+        "udk.tech.17",
+        "udk.tech.29"
+      ]
+    },
+    {
+      "id": "prob.udk.passive-upkick",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[51]",
+      "title": "下踢很快，上踢只是慢慢收回",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl8",
+        "UDK1",
+        "udk.err3",
+        "udk.tech.10",
+        "udk.tech.12"
+      ]
+    },
+    {
+      "id": "prob.udk.posture-switch",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[60]",
+      "title": "翻到仰面後，踢腿方向與原有節奏接不上",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "stroke": [
+          "udk"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "UDK2",
+        "udk.err11",
+        "udk.tech.22",
+        "udk.tech.30"
       ]
     },
     {

@@ -16,7 +16,7 @@
 |---|---|---|
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 72, '🟠': 21, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 50 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `problems` | 61 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -489,6 +489,17 @@
 | prob.fly.waist-hinge | fly | undulation | 腰部反覆折彎，胸到腳的波動接不起來 |
 | prob.fly.fatigue-catch | fly | pull | 疲勞後捕水肘下沉，手臂回位越來越困難 |
 | prob.fly.entry-pause | fly | timing | 手入水後停太久，前進與下一踢一起中斷 |
+| prob.udk.large-knee-bend | udk | kick | 踢腿時膝蓋折得很大，腿像在踩踏 |
+| prob.udk.passive-upkick | udk | kick | 下踢很快，上踢只是慢慢收回 |
+| prob.udk.excess-amplitude | udk | kick | 腳尖上下跨得很遠，踢的週期被拉長 |
+| prob.udk.forced-frequency | udk | tempo | 踢頻提高、幅度縮小，計時卻沒有改善 |
+| prob.udk.head-bobbing | udk | undulation | 頭部上下點動，雙臂與流線一起晃 |
+| prob.udk.depth-detour | udk | depth | 水下路徑過淺激起水面波，或往深處繞再爬升 |
+| prob.udk.late-kick | udk | depth | 推牆後滑到很慢，才開始水下踢腿 |
+| prob.udk.late-breakout | udk | breakout | 水下已明顯減速，仍繼續踢到很遠才出水 |
+| prob.udk.breakout-pause | udk | timing | 最後一踢已結束，第一划還沒開始 |
+| prob.udk.broken-streamline | udk | streamline | 踢水時手臂張開、頭露在雙臂之外 |
+| prob.udk.posture-switch | udk | kick | 翻到仰面後，踢腿方向與原有節奏接不上 |
 
 ---
 

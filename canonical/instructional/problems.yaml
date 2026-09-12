@@ -27,6 +27,10 @@ categories:
   name_zh: 划頻划距與訓練哲學
 - key: streamline
   name_zh: 流線與滑行
+- key: depth
+  name_zh: 深度與啟動
+- key: breakout
+  name_zh: 出水銜接
 problems:
 - id: prob.breast.head-lift-hip-drop
   stroke: breast
@@ -1128,3 +1132,242 @@ problems:
   coverage_gap:
   - no_intervention
   - no_drill
+- id: prob.udk.large-knee-bend
+  stroke: udk
+  category: kick
+  title: 踢腿時膝蓋折得很大，腿像在踩踏
+  public:
+    observable: |-
+      - 側面看，膝蓋折得很大、小腿反覆迎向來水。
+      - 上下踢之間像先把腿收成一團，再重新蹬開。
+    mechanism_summary: 膝彎曲參與踢腿，但過大的彎曲也可能增加迎水阻力。踝可用量不足與水中時序問題都可能有相似外觀，必須另外檢查才能選擇介入。
+  links:
+    technical_analysis:
+    - udk.tech.9
+    - udk.tech.15
+    drills: []
+    interventions:
+    - movement.intervention.ankle-plantarflexion.conditional-mobility
+    - movement.intervention.ankle-plantarflexion.capacity-control
+    water_interventions: []
+  cross_ref: 踢腿應從大腿或膝蓋主動發力
+  cross_ref_ids:
+  - udk.err2
+  coverage_gap:
+  - no_drill
+- id: prob.udk.passive-upkick
+  stroke: udk
+  category: kick
+  title: 下踢很快，上踢只是慢慢收回
+  public:
+    observable: |-
+      - 俯臥時向池底的一拍明顯較快，回到水面方向的一拍拖很久。
+      - 兩個方向的腳速與停留時間差異很大。
+    mechanism_summary: 上踢也參與推進與換向；只把它當回收，可能延長週期並留下速度低谷。比較兩向腳速即可，不要求每個人達到完全相同的幅度與時間。
+  links:
+    technical_analysis:
+    - udk.tech.10
+    - udk.tech.12
+    drills:
+    - UDK1
+    - Fl8
+    interventions: []
+    water_interventions: []
+  cross_ref: 上踢只是回復動作，推進力來自下踢
+  cross_ref_ids:
+  - udk.err3
+  coverage_gap:
+  - no_intervention
+- id: prob.udk.excess-amplitude
+  stroke: udk
+  category: kick
+  title: 腳尖上下跨得很遠，踢的週期被拉長
+  public:
+    observable: |-
+      - 腳端反覆離開體線很遠，一個踢腿週期變長。
+      - 振幅加大後，固定距離的時間沒有改善。
+    mechanism_summary: 踢頻、振幅與身體阻力需要一起考慮；振幅變大不保證增加淨前進。可以比較個人不同組合的計時，不設定所有人相同的腳端幅度。
+  links:
+    technical_analysis:
+    - udk.tech.9
+    - udk.tech.13
+    drills:
+    - UDK4
+    interventions: []
+    water_interventions: []
+  cross_ref: 踢的幅度越大，推進力越強
+  cross_ref_ids:
+  - udk.err1
+  coverage_gap:
+  - no_intervention
+- id: prob.udk.forced-frequency
+  stroke: udk
+  category: tempo
+  title: 踢頻提高、幅度縮小，計時卻沒有改善
+  public:
+    observable: |-
+      - 節拍器調快後踢頻提高，腳端幅度同時縮小。
+      - 到相同標記的時間沒有變短。
+    mechanism_summary: 頻率提高可能伴隨振幅縮小，抵消預期收益。節拍器應協助比較與穩定個人節奏，不把最快節拍直接當成最有效率的設定。
+  links:
+    technical_analysis:
+    - udk.tech.13
+    - udk.tech.27
+    drills:
+    - UDK4
+    interventions: []
+    water_interventions: []
+  cross_ref: 強迫提高踢頻才能提升水下速度
+  cross_ref_ids:
+  - udk.err4
+  coverage_gap:
+  - no_intervention
+- id: prob.udk.head-bobbing
+  stroke: udk
+  category: undulation
+  title: 頭部上下點動，雙臂與流線一起晃
+  public:
+    observable: |-
+      - 頭上下點動，雙手或上臂也跟著晃。
+      - 波動還沒到腿部，前端流線就反覆打開。
+    mechanism_summary: 水下蝶腳需要波動與前端流線同時維持。頭部可以受控而不必僵直，但不應靠獨立點頭把雙臂與體線一起打散。
+  links:
+    technical_analysis:
+    - udk.tech.4
+    - udk.tech.24
+    drills:
+    - Fl8
+    interventions: []
+    water_interventions: []
+  cross_ref: 頭部引導波動才能產生完整的海豚踢
+  cross_ref_ids:
+  - udk.err5
+  coverage_gap:
+  - no_intervention
+- id: prob.udk.depth-detour
+  stroke: udk
+  category: depth
+  title: 水下路徑過淺激起水面波，或往深處繞再爬升
+  public:
+    observable: |-
+      - 踢水貼近水面，水面被反覆推起波浪。
+      - 或刻意下潛很深，出水前必須走一段明顯上坡。
+    mechanism_summary: 接近水面時造波阻力較大，增加深度的效益則逐漸趨緩。深度還要與出水路徑合看，不能把越深直接等同越快。
+  links:
+    technical_analysis:
+    - udk.tech.2
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 水下踢得越深，速度越快
+  cross_ref_ids:
+  - udk.err7
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.udk.late-kick
+  stroke: udk
+  category: depth
+  title: 推牆後滑到很慢，才開始水下踢腿
+  public:
+    observable: '- 推牆後長時間只滑不踢，速度已明顯下降才啟動腿。'
+    mechanism_summary: 滑行與水下踢腿各有適合的速度區間，切換要依個人速度變化。出發入水還需要整理姿勢，不能把出發與轉身都套同一個固定等待秒數。
+  links:
+    technical_analysis:
+    - udk.tech.17
+    - udk.tech.29
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 轉身後必須先滑行，等速度降下來再開始踢腿
+  cross_ref_ids:
+  - udk.err8
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.udk.late-breakout
+  stroke: udk
+  category: breakout
+  title: 水下已明顯減速，仍繼續踢到很遠才出水
+  public:
+    observable: |-
+      - 水下後段已明顯變慢，仍繼續踢很遠才上來。
+      - 出水後還要重新加速才能接回水面速度。
+    mechanism_summary: 水下距離要與個人水面速度比較，超過有利的速度區間後繼續延長，未必改善整段成績。較遠不等於較有效，也不是延長閉氣的目標。
+  links:
+    technical_analysis:
+    - udk.tech.18
+    - udk.tech.19
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 水下踢越遠越好，15 公尺上限就是目標
+  cross_ref_ids:
+  - udk.err9
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.udk.breakout-pause
+  stroke: udk
+  category: timing
+  title: 最後一踢已結束，第一划還沒開始
+  public:
+    observable: |-
+      - 最後一踢完全結束後，身體有一段沒有划也沒有踢的空窗。
+      - 第一划像重新起步。
+    mechanism_summary: 最後一踢與第一抓水之間留下空窗，會打斷推進銜接。這是觀察時序的入口；不能由是否完全同步推算固定的速度收益。
+  links:
+    technical_analysis:
+    - starts-turns.tech.34
+    drills: []
+    interventions: []
+    water_interventions: []
+  cross_ref: 最後一踢結束後才出水，踢完再接第一划
+  cross_ref_ids:
+  - udk.err10
+  coverage_gap:
+  - no_intervention
+  - no_drill
+- id: prob.udk.broken-streamline
+  stroke: udk
+  category: streamline
+  title: 踢水時手臂張開、頭露在雙臂之外
+  public:
+    observable: |-
+      - 打腿時雙手分開，或頭反覆露出雙臂的輪廓。
+      - 每次波動前端都重新張開。
+    mechanism_summary: 踢腿產生推進時，前端流線仍影響阻力。可以先把純滑行的體線與加入打腿後比較，確認是原本就維持不住，還是波動加入後才打開。
+  links:
+    technical_analysis:
+    - udk.tech.24
+    drills:
+    - ST3
+    interventions: []
+    water_interventions: []
+  cross_ref: 直接練踢腿就好，流線型會自然到位
+  cross_ref_ids:
+  - udk.err13
+  coverage_gap:
+  - no_intervention
+- id: prob.udk.posture-switch
+  stroke: udk
+  category: kick
+  title: 翻到仰面後，踢腿方向與原有節奏接不上
+  public:
+    observable: |-
+      - 由俯臥翻成仰臥或側臥後，原有踢腿節奏中斷。
+      - 泳者把同一句「向下踢」照搬到新體位。
+    mechanism_summary: 翻面會改變池畔所見方向與關節動作的對照，關節命名本身並不翻轉。不同體位是否更快要實際比較，不能由幾何方向推定仰式一定更有效率。
+  links:
+    technical_analysis:
+    - udk.tech.22
+    - udk.tech.30
+    drills:
+    - UDK2
+    interventions: []
+    water_interventions: []
+  cross_ref: 仰式水下踢法與俯式相同，橫躺過來踢就好
+  cross_ref_ids:
+  - udk.err11
+  coverage_gap:
+  - no_intervention
