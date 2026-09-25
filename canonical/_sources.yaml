@@ -1753,13 +1753,20 @@ sources:
     notes: "顯示字串疑似含多筆文獻（以 ; ／ ； 分隔），S3c 查證後應拆成獨立來源條目。 顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
 
   - id: src.hayashi-2025
-    display: "Hayashi et al. 2025"
-    type: other
-    verification_status: unverified
-    authors: ["Hayashi"]
+    display: "Koga, D., Tsunokawa, T., Kawai, E., Nakazono, Y., Sengoku, Y., & Takagi, H. (2026). Relationship between 3D lower-limb kinematics and foot propulsive force during breaststroke kicking. Sports Biomechanics, 25(5), 773–790."
+    title: "Relationship between 3D lower-limb kinematics and foot propulsive force during breaststroke kicking."
+    type: journal-article
+    verification_status: verified
+    authors: ["Koga D", "Tsunokawa T", "Kawai E", "Nakazono Y", "Sengoku Y", "Takagi H"]
     et_al: true
-    year: 2025
-    notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    year: 2026
+    container: "Sports biomechanics"
+    identifier:
+      pmid: "41211735"
+      doi: "10.1080/14763141.2025.2580379"
+      url: "https://pubmed.ncbi.nlm.nih.gov/41211735/"
+    retrieved_on: "2026-09-26"
+    notes: "2026-09-26 以 NCBI E-utilities 取摘要原文核對。**作者歸屬錯誤**：本篇第一作者是 Koga（筑波大學），不是 Hayashi——Hayashi 是 src.tanaka-2024-c（CFD）的共同作者，兩篇被混在一起。id 是機器鍵不改，讀者看到的引用一律寫「Koga et al. 2025」（2025-11-10 線上先行，正式刊期 2026），不得依 id 字面寫成 Hayashi。散文底稿另把同一組 r=0.89 歸給「Nicol et al. 2022」，同樣是錯的。摘要數字：14 名男性、水槽內扶板最大努力蛙腿 10 秒、動作捕捉＋左腳 8 個壓力感測器估算腳底推進力。膝伸展階段：髖內收外展 ROM r=-0.57、踝蹠背屈 ROM r=0.59、平均蹠背屈角速度 r=0.56、膝伸展角速度峰值 r=-0.54、踝蹠屈角速度峰值 r=0.59；內夾階段：腳合成速度 r=0.89、前後向速度 r=0.79、垂直速度 r=0.71。**使用邊界**：相關不等於因果；推進力是單腳壓力估算不是整體推進；本篇沒有量測渦流，不能用來支撐任何渦流主張。"
 
   - id: src.hellard
     display: "【複合來源鍵，已拆解】已拆為 src.hellard-2019、src.gonzalez-rave-2022-400im-case 等 2 筆"
@@ -5713,30 +5720,34 @@ sources:
     retrieved_on: "2026-07-28"
     notes: "S3c 依 PMID 27149652 確認作者應為 Takeda et al.，正文引用已更正。2026-09-06 補：本 id 的 slug 寫成 takai-2016，兩處都不對——第一作者是 Takeda 不是 Takai，正式出版年是 2017（2016-05-05 線上先行）。id 是機器鍵不改，但讀者看到的 display 已改成正確書目，引用時不得依 id 字面寫成「Takai 2016」。內容：11 名男性競技泳者、三塊測力板（主台／後踏板／握把）分開量測衝量。使用邊界：全男性小樣本、實驗室量測，不得外推到女性或實賽；本篇量的是衝量分配，不是成績本身。2026-09-06 併入複合鍵 src.takai（該鍵同時混入本 PMID 與 PMC8700779）。"
   - id: src.tanaka-2024-a
-    display: "Tanaka 2024"
+    display: "【重複鍵，已併入 src.tanaka-2024-c】"
     type: other
-    verification_status: unverified
-    authors: ["Tanaka"]
-    year: 2024
-    notes: "疑似與 src.tanaka-2024-b、src.tanaka-2024-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    verification_status: retracted
+    retrieved_on: "2026-09-26"
+    notes: "2026-09-26 經 PMID 39305856 確認與 src.tanaka-2024-b、src.tanaka-2024-c 為同一篇（Tanaka, Hayashi & Isaka 2024, J Biomech 176:112329）。l-indicators.yaml 的 3 處引用（含 breast.L3.kick-vortex）已改指 src.tanaka-2024-c；本 id 保留為墓碑、不得再使用。"
 
   - id: src.tanaka-2024-b
-    display: "Tanaka et al. (2024). CFD study. Journal of Biomechanics"
+    display: "【重複鍵，已併入 src.tanaka-2024-c】"
     type: other
-    verification_status: unverified
-    authors: ["Tanaka"]
-    et_al: true
-    year: 2024
-    notes: "疑似與 src.tanaka-2024-a、src.tanaka-2024-c 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-09-26"
+    notes: "2026-09-26 經 PMID 39305856 確認與 src.tanaka-2024-a、src.tanaka-2024-c 為同一篇。唯一引用處 breast.err1 已改指 src.tanaka-2024-c；本 id 保留為墓碑、不得再使用。原顯示字串「Tanaka et al. (2024). CFD study. Journal of Biomechanics」。"
 
   - id: src.tanaka-2024-c
-    display: "Tanaka et al. 2024"
-    type: other
-    verification_status: unverified
-    authors: ["Tanaka"]
+    display: "Tanaka, T., Hayashi, T., & Isaka, T. (2024). Simulating vortex generation to investigate the propulsive and braking mechanisms of breaststroke kick using computational fluid dynamics on a breaststroke swimmer. Journal of Biomechanics, 176, 112329."
+    title: "Simulating vortex generation to investigate the propulsive and braking mechanisms of breaststroke kick using computational fluid dynamics on a breaststroke swimmer."
+    type: journal-article
+    verification_status: verified
+    authors: ["Tanaka T", "Hayashi T", "Isaka T"]
     et_al: true
     year: 2024
-    notes: "疑似與 src.tanaka-2024-a、src.tanaka-2024-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    container: "Journal of biomechanics"
+    identifier:
+      pmid: "39305856"
+      doi: "10.1016/j.jbiomech.2024.112329"
+      url: "https://pubmed.ncbi.nlm.nih.gov/39305856/"
+    retrieved_on: "2026-09-26"
+    notes: "2026-09-26 以 NCBI E-utilities 取摘要原文核對，併入重複鍵 src.tanaka-2024-a／-b。摘要可支持的主張只有：回收期小腿與腳產生可能使速度下降的渦流；外擺（out-sweep）時足背與小腿後外側的渦流使前進速度增加；內夾（in-sweep）時大腿、小腿側面與足背外側的渦流維持前進速度；外擺到內夾產生的渦流在內夾後合併並相對游進方向向後脫落。**使用邊界：一位男性蛙式選手、一次踢腿的 CFD 模擬（n=1）**；摘要沒有量化哪一段是「主推進」，不得寫成「完整確認」「主推進機制」或「而非反作用力」。原顯示字串「Tanaka et al. 2024」。"
 
   - id: src.tanaka-2025
     display: "Tanaka et al. 2025"

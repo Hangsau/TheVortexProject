@@ -3593,10 +3593,14 @@
     },
     {
       "id": "src.hayashi-2025",
-      "display": "Hayashi et al. 2025",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 7,
+      "display": "Koga, D., Tsunokawa, T., Kawai, E., Nakazono, Y., Sengoku, Y., & Takagi, H. (2026). Relationship between 3D lower-limb kinematics and foot propulsive force during breaststroke kicking. Sports Biomechanics, 25(5), 773–790.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "41211735",
+        "doi": "10.1080/14763141.2025.2580379",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/41211735/"
+      },
+      "usage_count": 6,
       "usages": [
         {
           "id": "breast.tech.12",
@@ -3622,11 +3626,6 @@
           "id": "breast.tech.9",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[79].public.evidence[1]"
-        },
-        {
-          "id": "breast.tech.9",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[79].public.mechanism"
         },
         {
           "id": "movement.demand.breast.leg-outsweep.extension-with-foot-orientation-held",
@@ -12914,10 +12913,30 @@
     },
     {
       "id": "src.tanaka-2024-a",
-      "display": "Tanaka 2024",
-      "verification_status": "unverified",
+      "display": "【重複鍵，已併入 src.tanaka-2024-c】",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.tanaka-2024-b",
+      "display": "【重複鍵，已併入 src.tanaka-2024-c】",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
+    },
+    {
+      "id": "src.tanaka-2024-c",
+      "display": "Tanaka, T., Hayashi, T., & Isaka, T. (2024). Simulating vortex generation to investigate the propulsive and braking mechanisms of breaststroke kick using computational fluid dynamics on a breaststroke swimmer. Journal of Biomechanics, 176, 112329.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "39305856",
+        "doi": "10.1016/j.jbiomech.2024.112329",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/39305856/"
+      },
+      "usage_count": 8,
       "usages": [
         {
           "id": "breast.L2.leg-propulsion",
@@ -12933,30 +12952,17 @@
           "id": "breast.L5.undulation-stability",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[45].public.evidence[1]"
-        }
-      ]
-    },
-    {
-      "id": "src.tanaka-2024-b",
-      "display": "Tanaka et al. (2024). CFD study. Journal of Biomechanics",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 1,
-      "usages": [
+        },
         {
           "id": "breast.err1",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[42].public.evidence[1]"
-        }
-      ]
-    },
-    {
-      "id": "src.tanaka-2024-c",
-      "display": "Tanaka et al. 2024",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 3,
-      "usages": [
+        },
+        {
+          "id": "breast.err1",
+          "file": "canonical/instructional/teaching-errors.yaml",
+          "path": "errors[42].public.physical_reason"
+        },
         {
           "id": "breast.tech.10",
           "file": "canonical/instructional/technical-analysis.yaml",

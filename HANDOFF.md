@@ -4,6 +4,17 @@
 
 ---
 
+## 當前狀態（2026-09-26，蛙腿推進機制更正）
+
+**使用者在新版網站讀到 `breast.err1`〈踢腳主要是旋轉動作〉與 `breast.tech.9`〈蛙腿推進機制〉互相矛盾，查證後整條證據鏈更正。**
+兩篇原文都用 NCBI E-utilities 取摘要逐字核對（`https://eutils.ncbi.nlm.nih.gov/entrez/eutils/efetch.fcgi?db=pubmed&id=<PMID>&rettype=abstract&retmode=text`，PubMed 網頁會擋 reCAPTCHA）。
+- **矛盾**：err1 的正解「直接向後推水」正是 tech.9 標題否定的模型；err1 同段又說外、內擺動「不是推進主角」卻引用「主推進是外擺→內夾渦流合併」。
+- **對原文**：Tanaka, Hayashi & Isaka 2024（J Biomech 176:112329，PMID 39305856）是**一位選手、一次踢腿**的 CFD；摘要說外擺渦流使速度**增加**、內夾渦流**維持**速度、兩段渦流在內夾後合併向後脫落，**沒有**說哪段是主推進。「完整確認」「主推進機制」「而非反作用力」三個說法都超出原文；「渦流 vs 反作用力」本身是假二分（向後脫落的渦流帶走向後動量＝反作用力）。
+- **作者歸屬錯誤**：`src.hayashi-2025`（r=0.89）真實作者是 **Koga et al.**（Sports Biomech 25(5):773–790，PMID 41211735，14 人、單腳壓力感測器、沒量渦流）；散文底稿另把 r=0.89 歸給 Nicol 2022。r=0.59 是**膝伸展階段**不是 insweep。
+- **改了什麼**：`_sources.yaml` 把 `src.tanaka-2024-a/-b` 設墓碑併入 `-c`（verified，含 DOI／PMID／使用邊界），`src.hayashi-2025` 改 verified＋正確書目（id 不改名，讀者引用寫 Koga）；`teaching-errors.yaml#breast.err1` 重寫物理原因與正解；`technical-analysis.yaml` 的 tech.9（改標題）、tech.12（改標題）、tech.14 相位；`l-indicators.yaml` 3 處改指 `-c` 並修正 L5 一條「text 只寫來源名」；`stroke-demands.yaml` 的 Koga measurement_conditions 補 n、endpoint 改 `foot-propulsive-force`；散文 `Instructional/蛙式教學誤區深探.md`、`蛙式深度技術分析.md`、`蝶式深度技術分析.md`、`Bridge/蛙式感知橋接.md`、`Technica/技術指標_L級對應框架.md` 同步。my-site 手管的 `data/vortex/breast.yaml` 動作 2／6 同步改（另更正動作 6 口令「手要用力夾」→「腳」）。
+- 驗收：validate 0 ERROR／135 WARN，地圖與索引已重生。
+- **未處理**：散文 237 行「Nicol et al. 2022：疲勞導致 insweep 腳速下降」仍未查證（已標未查證）。
+
 ## 當前狀態（2026-09-12，E組完成）
 
 **插隊完成（2026-09-12，來自 swim-coach 側的追問）：`set-design.yaml#variables.var_rest` 新增 `stroke_economy_zh`，回答「休息要不要按泳式分」。**

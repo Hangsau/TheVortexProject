@@ -4995,7 +4995,7 @@
       },
       "source_ids": [
         "src.hayashi",
-        "src.tanaka-2024-a"
+        "src.tanaka-2024-c"
       ],
       "outgoing_ids": []
     },
@@ -5038,7 +5038,7 @@
         ]
       },
       "source_ids": [
-        "src.tanaka-2024-a"
+        "src.tanaka-2024-c"
       ],
       "outgoing_ids": []
     },
@@ -5191,7 +5191,7 @@
         ]
       },
       "source_ids": [
-        "src.tanaka-2024-a"
+        "src.tanaka-2024-c"
       ],
       "outgoing_ids": []
     },
@@ -5248,7 +5248,6 @@
           "kick"
         ],
         "certainty": [
-          "🔵",
           "🟠",
           "🟢"
         ],
@@ -5257,7 +5256,7 @@
         ]
       },
       "source_ids": [
-        "src.tanaka-2024-b",
+        "src.tanaka-2024-c",
         "src.usms-breaststroke-kick-guide"
       ],
       "outgoing_ids": [
@@ -5811,7 +5810,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[82]",
-      "title": "insweep 腳速是推進力的直接決定因子",
+      "title": "內夾腳速與腳底推進力高度相關",
       "tags": {
         "category": [
           "kick"
@@ -6528,7 +6527,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[79]",
-      "title": "蛙腿推進機制：渦流整合而非反作用力",
+      "title": "蛙腿推進機制：外擺加速、內夾維持，渦流合併後向後脫落",
       "tags": {
         "category": [
           "kick"
