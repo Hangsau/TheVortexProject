@@ -10141,17 +10141,12 @@
       "display": "Psycharakis & Sanders 2010",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 2,
       "usages": [
         {
           "id": "back.tech.24",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[67].public.evidence[0]"
-        },
-        {
-          "id": "back.tech.24",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[67].public.mechanism"
         },
         {
           "id": "movement.intervention.trunk-axial-rotation.cross-side-core-capacity",

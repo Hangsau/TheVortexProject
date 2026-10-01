@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 116, '🟢': 72, '🟠': 22, '🟡': 11, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 115, '🟢': 71, '🟠': 23, '🟡': 11, '🔴': 2} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
@@ -103,7 +103,7 @@
 | back.tech.3 | rotation |  | 🔵 |
 | back.tech.4 | rotation |  | 🔵 |
 | back.tech.5 | rotation |  | 🔵 |
-| back.tech.6 | rotation |  | 🔵 |
+| back.tech.6 | rotation |  | 🟠 |
 | back.tech.7 | tempo |  | 🟠 |
 | back.tech.8 | stroke-cycle |  | 🔵 |
 | back.tech.9 | errors |  | 🔵 |
@@ -121,7 +121,7 @@
 | back.tech.21 | head |  | 🔵 |
 | back.tech.22 | streamline |  | 🟢 |
 | back.tech.23 | streamline |  | 🔵 |
-| back.tech.24 | fatigue |  | 🟢 |
+| back.tech.24 | fatigue |  | 🔴 |
 | back.tech.25 | concept |  | 🟢 |
 | back.tech.26 | comparison |  | 🔵 |
 | back.tech.27 | comparison |  | 🟢 |

@@ -4286,7 +4286,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[54]",
-      "title": "拉水：橢圓曲線路徑，肘部屈曲 90–100°（S形路徑已過時）",
+      "title": "拉水：屈肘、前臂面向推進方向（S 形路徑指導語已過時）",
       "tags": {
         "category": [
           "stroke-cycle"
@@ -4310,7 +4310,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[55]",
-      "title": "推水：手臂加速推至大腿側，指尖朝向池底，充分伸展至髖部",
+      "title": "推水：手臂加速推到臀部側面附近，指尖朝向池底",
       "tags": {
         "category": [
           "stroke-cycle"
@@ -4591,12 +4591,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[67]",
-      "title": "仰式疲勞崩潰序列：四個代償階段",
+      "title": "仰式疲勞崩潰序列（假說）：四個代償階段，由自由式研究外推",
       "tags": {
         "category": [
           "fatigue"
         ],
         "certainty": [
+          "🔴",
           "🟢"
         ],
         "stroke": [
@@ -4833,13 +4834,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[49]",
-      "title": "仰式旋轉的不對稱性：回臂側主動上抬，划水側被動深沉",
+      "title": "仰式旋轉的教學焦點：回臂側上抬，划水側順勢深沉",
       "tags": {
         "category": [
           "rotation"
         ],
         "certainty": [
-          "🔵"
+          "🟠"
         ],
         "stroke": [
           "back"

@@ -915,6 +915,7 @@
     "certainty": {
       "🔴": [
         "_asian-epidemiology-supplement",
+        "back.tech.24",
         "breast.tech.14",
         "breathing.training.co2_tolerance",
         "free.err14",
@@ -946,7 +947,6 @@
         "back.tech.30",
         "back.tech.4",
         "back.tech.5",
-        "back.tech.6",
         "back.tech.8",
         "back.tech.9",
         "breast.L2.hand-support",
@@ -1205,6 +1205,7 @@
         "back.err9",
         "back.tech.28",
         "back.tech.29",
+        "back.tech.6",
         "back.tech.7",
         "breast.err1",
         "breast.err10",
