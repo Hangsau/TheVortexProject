@@ -2920,7 +2920,7 @@
       "display": "González-Ravé 2025",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 2,
       "usages": [
         {
           "id": "back.L4.roll-stability",
@@ -2931,11 +2931,6 @@
           "id": "back.L5.start-turn",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[25].public.evidence[0]"
-        },
-        {
-          "id": "back.L6.stability",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[26].public.evidence[0]"
         }
       ]
     },
@@ -6986,7 +6981,7 @@
         "pmcid": "PMC9177912",
         "doi": "10.1186/s40798-022-00467-2"
       },
-      "usage_count": 19,
+      "usage_count": 18,
       "usages": [
         {
           "id": "breast.L4.timing",
@@ -7057,11 +7052,6 @@
           "id": "breast.tech.6",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[76].public.evidence[0]"
-        },
-        {
-          "id": "breast.tech.6",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[76].public.mechanism"
         },
         {
           "id": "breast.tech.7",
@@ -15716,8 +15706,13 @@
       "identifier": {
         "url": "https://resources.fina.org/fina/document/2023/01/04/65961a45-bde5-4217-b666-ca1f5dc2d1f0/1_Swimming-Technical-Rules.04.01.2023.pdf"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "breast.tech.6",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[76].public.mechanism"
+        },
         {
           "id": "starts-turns.tech.24",
           "file": "canonical/instructional/technical-analysis.yaml",

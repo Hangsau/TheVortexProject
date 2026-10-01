@@ -3696,6 +3696,7 @@
       "title": "高划頻下旋轉幅度縮小；加速後蛇行明顯；流線型滑行後提早抬頭",
       "tags": {
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "l_level": [
@@ -3803,7 +3804,7 @@
       "title": "疲勞後技術與前段差距極小；六拍踢節律全程維持；划距跨速度穩定",
       "tags": {
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "l_level": [
           "L6"
@@ -3812,9 +3813,7 @@
           "back"
         ]
       },
-      "source_ids": [
-        "src.gonzalez-rave-2025-a"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -6473,7 +6472,8 @@
         ]
       },
       "source_ids": [
-        "src.nicol-2022-breaststroke-systematic-review"
+        "src.nicol-2022-breaststroke-systematic-review",
+        "src.world-aquatics-2023-swimming-technical-rules"
       ],
       "outgoing_ids": []
     },
@@ -8890,7 +8890,10 @@
         "src.mccullough-2009-a"
       ],
       "outgoing_ids": [
-        "fly.tech.34"
+        "back.tech.16",
+        "breast.tech.14",
+        "free.tech.13",
+        "udk.tech.14"
       ]
     },
     {
@@ -9503,7 +9506,7 @@
       "title": "划手有明顯的捕水「卡頓感」；拳頭游 vs 開手速度差 > 15%",
       "tags": {
         "certainty": [
-          "🟢"
+          "🟠"
         ],
         "l_level": [
           "L3"
@@ -10862,7 +10865,7 @@
         ],
         "certainty": [
           "🔵",
-          "🟢"
+          "🟠"
         ],
         "stroke": [
           "free"
@@ -21231,7 +21234,7 @@
           "stroke-cycle"
         ],
         "certainty": [
-          "🟢"
+          "🟠"
         ],
         "stroke": [
           "starts-turns"

@@ -1,6 +1,6 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-09-26
+> 生成日期：2026-10-02
 > 驗證條目數：837，Drills ID 數：179
 
 ---
@@ -159,11 +159,10 @@
 
 ## W022 — `text` 的內容就是它自己的來源名稱（「Mason 1992」）——只宣告有這篇文獻，沒說它顯示了什麼；W021 抓不到（text 非空）
 
-**WARN，共 8 筆**
+**WARN，共 7 筆**
 
   file=canonical\technica\l-indicators.yaml id='free.L2.kick' at=indicators[7].public.evidence[0] text 就是來源名稱 'McCullough 2009'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='free.L5.serratus' at=indicators[16].public.evidence[1] text 就是來源名稱 'StatPearls 2023'（只說了有這篇，沒說它顯示什麼）
-  file=canonical\technica\l-indicators.yaml id='back.L4.roll-stability' at=indicators[22].public.evidence[0] text 就是來源名稱 'González-Ravé 2025'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L2.kick' at=indicators[28].public.evidence[0] text 就是來源名稱 'PMC 2018'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L3.undulation-integration' at=indicators[30].public.evidence[0] text 就是來源名稱 'Sanders 1995'（只說了有這篇，沒說它顯示什麼）
   file=canonical\technica\l-indicators.yaml id='fly.L4.outsweep' at=indicators[33].public.evidence[0] text 就是來源名稱 'Peyrebrune & Turner 2007'（只說了有這篇，沒說它顯示什麼）
@@ -227,7 +226,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 120 筆**
+**WARN，共 119 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -256,7 +255,6 @@
   file=canonical\health\injuries.yaml id='osgood-schlatter'
   file=canonical\health\injuries.yaml id='sever-disease'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.31'
-  file=canonical\instructional\technical-analysis.yaml id='back.tech.16'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.18'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.23'
   file=canonical\instructional\technical-analysis.yaml id='fly.tech.32'
