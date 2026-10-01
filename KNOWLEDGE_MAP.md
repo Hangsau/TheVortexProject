@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 117, '🟢': 71, '🟠': 22, '🟡': 11, '🔴': 1} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 116, '🟢': 72, '🟠': 22, '🟡': 11, '🔴': 1} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
@@ -58,7 +58,7 @@
 | free.tech.7 | stroke-cycle |  | 🔵 |
 | free.tech.8 | stroke-cycle |  | 🟠 |
 | free.tech.27 | stroke-cycle |  | 🔵 |
-| free.tech.28 | stroke-cycle |  | 🔵 |
+| free.tech.28 | stroke-cycle |  | 🟢 |
 | free.tech.9 | stroke-cycle |  | 🔵 |
 | free.tech.10 | hardware |  | 🟢 |
 | free.tech.11 | kick |  | 🔵 |
@@ -530,11 +530,11 @@
 | free.pre.resistance | free | pre | 阻力感知 | 靜止漂浮身體鬆緊有可觀察差異；推蹬後滑行距離可量測 |
 | free.L2.kick | free | L2 | 踢水推進 | 浮板踢水能穩定前進，踝蹠屈角度使腳掌朝後 |
 | free.L2.hand-pressure | free | L2 | 手部壓力 | 前臂面向後方時有水壓感知（外感受器啟動） |
-| free.L3.evf | free | L3 | EVF 捕水 | 划手有明顯的捕水「卡頓感」；拳頭游 vs 開手速度差 > 15% |
+| free.L3.evf | free | L3 | EVF 捕水 | 划手有明顯的捕水「卡頓感」；拳頭游與開手游的速度差開始縮小（差距仍大於 15% 時，屬手感缺失 A 型的訊號） |
 | free.L3.kick-rhythm | free | L3 | 踢水節律 | 六拍踢能描述「對側配對」；踢水後下半身不下沉 |
-| free.L4.roll-coupling | free | L4 | 旋轉耦合 | 加速後旋轉崩潰（肩旋轉提前縮小）；高划頻下 EVF 消失 |
-| free.L4.sr-sl | free | L4 | 划頻×划距 | SR 提高時 SL 下降 > 5%（感知尚未支撐技術） |
-| free.L5.sr-sl | free | L5 | 划頻×划距 | 精英特徵：高 SR 下 SL 不下降；SR 與速度負相關消失 |
+| free.L4.roll-coupling | free | L4 | 旋轉耦合 | 加速後旋轉與划手推力的時機錯開（推力峰與旋轉峰不再對齊）；高划頻下 EVF 消失。旋轉幅度隨強度縮小是一般現象，不單獨當失守判準 |
+| free.L4.sr-sl | free | L4 | 划頻×划距 | SR 提高時 SL 比自己慢游時的基準明顯縮短（感知尚未支撐技術） |
+| free.L5.sr-sl | free | L5 | 划頻×划距 | 精英特徵：高 SR 下 SL 不明顯縮短 |
 | free.L5.coupling-timing | free | L5 | 肩-髖旋轉時間差 | 精英特徵：肩旋轉峰值與髖旋轉峰值相差 0.2–0.3 秒（不是同步）；初學者兩者同時或無時差 |
 | free.L5.lift-phase-duration | free | L5 | 升力相時長與風格匹配 | 精英特徵：升力相時長與所選風格的 SR 對應——hip-driven 60 SPM 約 >0.6 秒、shoulder-driven 120 SPM <0.3  |
 | free.L5.serratus | free | L5 | 前鋸肌耐力 | 疲勞後 EVF 仍維持；肩胛骨不 wing；第 4-6 趟技術與第 1-2 趟差距小 |

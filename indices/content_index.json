@@ -5851,13 +5851,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[84]",
-      "title": "踝關節蹠屈柔韌性：第一解剖決定因子",
+      "title": "踝關節活動度：值得先評估的硬體條件",
       "tags": {
         "category": [
           "hardware"
         ],
         "certainty": [
-          "🟡",
+          "🔴",
           "🟢"
         ],
         "stroke": [
@@ -9503,9 +9503,10 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[9]",
-      "title": "划手有明顯的捕水「卡頓感」；拳頭游 vs 開手速度差 > 15%",
+      "title": "划手有明顯的捕水「卡頓感」；拳頭游與開手游的速度差開始縮小（差距仍大於 15% 時，屬手感缺失 A 型的訊號）",
       "tags": {
         "certainty": [
+          "🔵",
           "🟠"
         ],
         "l_level": [
@@ -9566,9 +9567,10 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[11]",
-      "title": "加速後旋轉崩潰（肩旋轉提前縮小）；高划頻下 EVF 消失",
+      "title": "加速後旋轉與划手推力的時機錯開（推力峰與旋轉峰不再對齊）；高划頻下 EVF 消失。旋轉幅度隨強度縮小是一般現象，不單獨當失守判準",
       "tags": {
         "certainty": [
+          "🔵",
           "🟢"
         ],
         "l_level": [
@@ -9588,10 +9590,10 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[12]",
-      "title": "SR 提高時 SL 下降 > 5%（感知尚未支撐技術）",
+      "title": "SR 提高時 SL 比自己慢游時的基準明顯縮短（感知尚未支撐技術）",
       "tags": {
         "certainty": [
-          "🟢"
+          "🔵"
         ],
         "l_level": [
           "L4"
@@ -9600,9 +9602,7 @@
           "free"
         ]
       },
-      "source_ids": [
-        "src.staunton-2025-c"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -9701,7 +9701,7 @@
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
       "path": "indicators[13]",
-      "title": "精英特徵：高 SR 下 SL 不下降；SR 與速度負相關消失",
+      "title": "精英特徵：高 SR 下 SL 不明顯縮短",
       "tags": {
         "certainty": [
           "🟢"
@@ -9799,8 +9799,8 @@
         ],
         "certainty": [
           "🔵",
-          "🟡",
-          "🟢"
+          "🟠",
+          "🟡"
         ],
         "stroke": [
           "free"
@@ -9917,7 +9917,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/teaching-errors.yaml",
       "path": "errors[14]",
-      "title": "主動轉髖是自由式旋轉的正確指令",
+      "title": "主動轉髖是所有情境下自由式旋轉的正確指令",
       "tags": {
         "category": [
           "rotation"
@@ -10336,6 +10336,7 @@
           "entry"
         ],
         "certainty": [
+          "🟠",
           "🟢"
         ],
         "stroke": [
@@ -10555,7 +10556,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[16]",
-      "title": "肩胛肌群啟動旋轉——菱形肌是旋轉的主動發動者，髖部被動跟隨",
+      "title": "推水末段肩胛肌群活躍——以肩胛動作作為滾轉的教學入口",
       "tags": {
         "category": [
           "rotation"
@@ -10881,19 +10882,21 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[9]",
-      "title": "划水時手指微張製造紊流——把手的有效面積放大",
+      "title": "划水時手指微張——小縫優於併攏，也優於大張",
       "tags": {
         "category": [
           "stroke-cycle"
         ],
         "certainty": [
-          "🔵"
+          "🟢"
         ],
         "stroke": [
           "free"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.marinho-2010"
+      ],
       "outgoing_ids": []
     },
     {
@@ -11066,7 +11069,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[34]",
-      "title": "划手週期 timing——SR 與 SL 的負相關不可避免，但斜率可訓練",
+      "title": "划手週期 timing——SR 上升時 SL 常縮短，縮短多少可訓練",
       "tags": {
         "category": [
           "timing"
@@ -11313,7 +11316,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[6]",
-      "title": "S 形划手路徑是歷史錯誤——現代共識為接近直線的後向推進路徑",
+      "title": "S 形划手口令已不再建議——以手掌持續朝後施力為感知目標",
       "tags": {
         "category": [
           "stroke-cycle"

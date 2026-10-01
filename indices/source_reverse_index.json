@@ -2823,7 +2823,7 @@
         {
           "id": "free.L4.roll-coupling",
           "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[11].public.evidence[0]"
+          "path": "indicators[11].public.evidence[1]"
         },
         {
           "id": "movement.demand.free.entry.shoulder-line-roll-peak",
@@ -5149,7 +5149,7 @@
         "doi": "10.1123/jab.26.1.87",
         "url": "https://pubmed.ncbi.nlm.nih.gov/20147761/"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "free.err7",
@@ -5160,6 +5160,11 @@
           "id": "free.err7",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[6].public.physical_reason"
+        },
+        {
+          "id": "free.tech.28",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[9].public.mechanism"
         }
       ]
     },
@@ -10182,7 +10187,7 @@
         {
           "id": "free.L3.evf",
           "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[9].public.evidence[0]"
+          "path": "indicators[9].public.evidence[1]"
         }
       ]
     },
@@ -12195,17 +12200,12 @@
       "display": "Staunton et al. 2025",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 3,
+      "usage_count": 2,
       "usages": [
         {
           "id": "common.L5.automation",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[4].public.evidence[0]"
-        },
-        {
-          "id": "free.L4.sr-sl",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[12].public.evidence[0]"
         },
         {
           "id": "free.L5.sr-sl",
