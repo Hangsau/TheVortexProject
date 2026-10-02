@@ -6986,7 +6986,7 @@
         "pmcid": "PMC9177912",
         "doi": "10.1186/s40798-022-00467-2"
       },
-      "usage_count": 18,
+      "usage_count": 17,
       "usages": [
         {
           "id": "breast.L4.timing",
@@ -7022,11 +7022,6 @@
           "id": "breast.tech.27",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[97].public.evidence[0]"
-        },
-        {
-          "id": "breast.tech.27",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[97].public.mechanism"
         },
         {
           "id": "breast.tech.28",

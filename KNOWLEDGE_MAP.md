@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 115, '🟢': 71, '🟠': 23, '🟡': 11, '🔴': 2} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 115, '🟢': 70, '🟠': 23, '🟡': 11, '🔴': 3} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
@@ -156,7 +156,7 @@
 | breast.tech.24 | errors |  | 🟢 |
 | breast.tech.25 | errors |  | 🔵 |
 | breast.tech.26 | errors |  | 🔵 |
-| breast.tech.27 | fatigue |  | 🟢 |
+| breast.tech.27 | fatigue |  | 🔴 |
 | breast.tech.28 | streamline |  | 🟢 |
 | breast.tech.29 | comparison |  | 🔵 |
 | breast.tech.30 | kick |  | 🟢 |
@@ -565,7 +565,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | breast.L2.leg-propulsion | breast | L2 | 腿部推進 | 浮板踢水能穩定前進；翻腳掌時腳掌有水壓感知（非腳心朝後） |
 | breast.L2.hand-support | breast | L2 | 手部撐水 | 外划內抱能撐起身體換氣（不需要額外抬頭） |
 | breast.L3.kick-vortex | breast | L3 | 踢腿渦流 | 踢完後有滑行感；能描述「夾水後身體繼續往前」而非踢完即停 |
-| breast.L3.recovery-drag | breast | L3 | 收腿阻力 | 開始感知收腿「有煞車感」；收腿路徑往外側而非正中（髖外旋意識） |
+| breast.L3.recovery-drag | breast | L3 | 收腿阻力 | 開始感知收腿「有煞車感」；收腿路徑往外側而非正中（腳跟往外側臀部靠的意識） |
 | breast.L4.timing | breast | L4 | 手腳時序 | 加速後手腳時序跑掉（兩個推進脈衝重疊或空白過長）；速度谷值明顯加深 |
 | breast.L4.undulation | breast | L4 | 波動整合 | 能做波動蛙式但偶爾下沉（角度不穩）；Wave style 俯衝角度感知不穩 |
 | breast.L5.late-kick | breast | L5 | late kick 時機 | insweep 啟動時才踢腿（比傳統更晚）；速度谷值明顯縮小；%VDO 降低 |
