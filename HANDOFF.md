@@ -4,6 +4,24 @@
 
 ---
 
+## 當前狀態（2026-10-02，全庫內容審查：59 處矛盾與錯誤修正完畢）
+
+使用者要求檢視渦流計畫是否有矛盾或明顯錯誤。讀過 teaching-errors（104）、technical-analysis（222）、l-indicators、
+water-sense-levels，找出 59 處；全部處理完，逐條紀錄與裁決在 `plans/內容審查_2026-10-01.md` 與 `plans/內容審查_2026-10-01/`。
+- **A 類 18 條（事實／算術／筆誤，直接修）**：蛙式肘露水回臂違反 SW 7.3、背→蛙「背面朝上」、自由式下踢誤寫屈膝、
+  「前臂正對水流升力係數最大」（應為阻力係數）、假公式與假比例、Pink 1991 歸屬、Gonjo／González-Ravé 殘留引用、Race Club 確定性統一 🟠。
+- **B／C／D 類 41 條（三方辯論：MiniMax-M3 ＋ Sonnet ＋ Opus 裁決）**：第一手查證 Marinho 2010（指縫）、Psycharakis & Sanders 2008
+  （200 m 自由式，非仰式）、蛙式髖內旋（屈髖屈膝下內旋使腳在膝外側）、Barrowman 為 wave。主要改動：SR–SL 不是必然負相關、
+  踝柔軟度「優先於力量」全庫撤除、仰式呼吸兩條調和、蛙式手腳重疊／收腿快慢、四式疲勞序列中無量測者降 🔴、拳頭游指標統一百分比。
+- 驗收：validate 0 ERROR／133 WARN（原 135），地圖與索引已重生，每批獨立 commit 並推 master。
+- **範圍外未讀**：psychology、health、movement、problems、Drills、散文 .md、periodization 細讀；散文底稿沒有同步本次修正。
+
+## 下一步建議（內容審查後）
+
+1. 同一套方法審查範圍外的 canonical：先 psychology（3.8k 行）與 health/injuries（5.4k 行），兩者都含高風險主張。
+2. 追查仍待查證的來源（清單在 `plans/內容審查_2026-10-01.md` 收尾段），查到後回填或撤下對應句子。
+3. 散文底稿（Instructional/*.md）與 canonical 已有落差，若仍要當研究底稿用，需另批對齊；若已不用，可在 MAP 標註退役。
+
 ## 當前狀態（2026-09-26，蛙腿推進機制更正）
 
 **使用者在新版網站讀到 `breast.err1`〈踢腳主要是旋轉動作〉與 `breast.tech.9`〈蛙腿推進機制〉互相矛盾，查證後整條證據鏈更正。**

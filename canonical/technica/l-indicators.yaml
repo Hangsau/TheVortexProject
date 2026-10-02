@@ -23,10 +23,10 @@ source_repos:
 levels:
   - {key: pre, name_zh: 前置, perception: 感覺阻力存在，但未與動作連結, quant_ref: 漂行 > 體長}
   - {key: L2, name_zh: L2,   perception: 推進感萌芽：動作開始讓身體前進, quant_ref: 浮板踢 15m 不停頓}
-  - {key: L3, name_zh: L3,   perception: 水感出現但不穩定：偶爾抓到，下一趟又消失, quant_ref: SWOLF 45-60（25m）}
-  - {key: L4, name_zh: L4,   perception: 壓力下感知維持不住：技術開始崩潰, quant_ref: SWOLF 35-45；高速不超過 +8}
-  - {key: L5, name_zh: L5,   perception: 感知自動化過渡：高速下開始穩定, quant_ref: SWOLF 35-40；拳頭游差距 < 10%}
-  - {key: L6, name_zh: L6,   perception: 感知自動化完成：不需要刻意思考, quant_ref: SWOLF < 35；精英範圍}
+  - {key: L3, name_zh: L3,   perception: 水感出現但不穩定：偶爾抓到，下一趟又消失, quant_ref: SWOLF 45-60（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）}
+  - {key: L4, name_zh: L4,   perception: 壓力下感知維持不住：技術開始崩潰, quant_ref: SWOLF 40-50（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）；高速不超過 +8}
+  - {key: L5, name_zh: L5,   perception: 感知自動化過渡：高速下開始穩定, quant_ref: SWOLF 35-45（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）；拳頭游差距 < 10%}
+  - {key: L6, name_zh: L6,   perception: 感知自動化完成：不需要刻意思考, quant_ref: SWOLF 30-38（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）}
 
 # ── 欄：泳式（跨式通用 + 四式）──
 strokes:
@@ -73,7 +73,7 @@ indicators:
     public:
       indicator: 捕水有前臂壓力感（自蝶仰）；踢腿後有滑行感（蛙）；波動傳到腳（蝶）；肩旋轉帶動划手（仰）
       framework_state: 水感出現但不穩定：偶爾抓到，下一趟又消失
-      quant_ref: SWOLF 45-60（25m）
+      quant_ref: SWOLF 45-60（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）
       evidence:
         - {certainty: 🔵, text: 框架設計邏輯, source: ''}
     diagnostic:
@@ -86,7 +86,7 @@ indicators:
     public:
       indicator: 慢游技術正確但加速後崩潰；EVF 在高划頻下消失；蛙式踢腿時機在速度下跑掉；蝶式第二踢失同步
       framework_state: 壓力下感知維持不住：技術開始崩潰
-      quant_ref: SWOLF 35-45；高速不超過 +8
+      quant_ref: SWOLF 40-50（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）；高速不超過 +8
       evidence:
         - {certainty: 🔵, text: 框架設計邏輯, source: ''}
     diagnostic:
@@ -99,7 +99,7 @@ indicators:
     public:
       indicator: 划頻提升但划距不下降（Staunton 2025）；蛙式 late kick 時機穩定；蝶式兩踢功能分化；仰式旋轉角度不因速度縮小
       framework_state: 感知自動化過渡：高速下開始穩定
-      quant_ref: SWOLF 35-40；拳頭游差距 < 10%
+      quant_ref: SWOLF 35-45（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）；拳頭游差距 < 10%
       evidence:
         - {certainty: 🟢, text: Staunton 2025, source: Staunton et al. 2025, source_ids: [src.staunton-2025-c]}
     diagnostic:
@@ -112,7 +112,7 @@ indicators:
     public:
       indicator: 疲勞下仍維持技術穩定性；能感知並即時修正細微偏差；SWOLF 跨距離差距極小
       framework_state: 感知自動化完成：不需要刻意思考
-      quant_ref: SWOLF < 35；精英範圍
+      quant_ref: SWOLF 30-38（自由式 25 m 參考值，與 water-sense-levels 自由式一致；各泳式級距不同，見該檔）
       evidence:
         - {certainty: 🔵, text: "「疲勞下技術仍穩定」是本框架對 L6 的定義性描述，不是量測結果。（2026-09-06 移除誤引：原本掛 Gonjo & Olstad 2023 並寫成「精英特徵」，但那篇量的是 100 m 蛙式三個分段的速度，沒有量划距、沒有量划頻，也沒有做疲勞穩定性分析。）"}
     diagnostic:
