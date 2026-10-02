@@ -1,0 +1,10 @@
+[claude-code:unrecognized_model] {"model":"MiniMax-M3","query_source":"sdk"}
+[claude-m3-lite] turns 1｜input 17568｜cache_read 0｜output 14924
+[claude-code:unrecognized_model] {"model":"MiniMax-M3","query_source":"sdk"}
+[claude-m3-lite] turns 1｜input 8979｜cache_read 128｜output 12174
+[claude-code:unrecognized_model] {"model":"MiniMax-M3","query_source":"sdk"}
+[claude-m3-lite] turns 1｜input 14212｜cache_read 161｜output 16457
+[claude-code:unrecognized_model] {"model":"MiniMax-M3","query_source":"sdk"}
+[claude-m3-lite] turns 1｜input 7847｜cache_read 128｜output 13284
+[claude-code:unrecognized_model] {"model":"MiniMax-M3","query_source":"sdk"}
+[claude-m3-lite] turns 1｜input 13172｜cache_read 128｜output 10240

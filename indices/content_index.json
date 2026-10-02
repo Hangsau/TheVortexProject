@@ -8809,13 +8809,13 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[122]",
-      "title": "入水停頓機制：水平動量轉換為垂直動量",
+      "title": "入水後的短暫銜接：手臂前伸、不主動施力",
       "tags": {
         "category": [
           "timing"
         ],
         "certainty": [
-          "🔵"
+          "🟠"
         ],
         "stroke": [
           "fly"
@@ -9338,7 +9338,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[109]",
-      "title": "第二踢（Exit Kick / Power Kick）：推進放大與恢復助力",
+      "title": "第二踢（Exit Kick，教練常稱 Power Kick）：推進放大與恢復助力",
       "tags": {
         "category": [
           "kick"

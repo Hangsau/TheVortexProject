@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 115, '🟢': 70, '🟠': 23, '🟡': 11, '🔴': 3} |
+| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 114, '🟢': 70, '🟠': 24, '🟡': 11, '🔴': 3} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
@@ -190,7 +190,7 @@
 | fly.tech.18 | timing |  | 🔵 |
 | fly.tech.19 | head |  | 🔵 |
 | fly.tech.20 | stroke-cycle |  | 🔵 |
-| fly.tech.21 | timing |  | 🔵 |
+| fly.tech.21 | timing |  | 🟠 |
 | fly.tech.22 | fatigue |  | 🔵 |
 | fly.tech.23 | fatigue |  | 🔵 |
 | fly.tech.24 | hardware |  | 🔵 |
