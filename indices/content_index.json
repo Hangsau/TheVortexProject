@@ -3453,7 +3453,7 @@
       "domain": "drills",
       "file": "Drills/drills_udk.yaml",
       "path": "drills[6]",
-      "title": "戴呼吸管水下巡航",
+      "title": "水面呼吸管蝶腿",
       "tags": {
         "category": [
           "kick"
@@ -3463,7 +3463,7 @@
         ]
       },
       "source_ids": [
-        "src.finis-snorkel-udk-warmup-standard"
+        "src.pollock-2015-snorkels-pros-cons"
       ],
       "outgoing_ids": []
     },

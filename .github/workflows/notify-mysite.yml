@@ -16,6 +16,7 @@ on:
     paths:
       - 'canonical/**'
       - 'Drills/**'
+      - 'Instructional/**'
       - '.github/workflows/notify-mysite.yml'
 
 permissions:

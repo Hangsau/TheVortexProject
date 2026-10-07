@@ -1350,8 +1350,22 @@ sources:
   - id: src.finis-snorkel-udk-warmup-standard
     display: "FINIS 教練資源（snorkel UDK warmup standard）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-10-07"
+    notes: "撤下不具文章識別的來源鍵。原 UDKLow1 把一般呼吸管寫成可支援水下持續呼吸，功能假設錯誤；已改成水面正常呼吸的 Vortex 操作設計。呼吸管功能邊界改指 Pollock（2015）；未宣稱其原文提供該 drill 處方。保留墓碑避免再次引用。"
+
+  - id: src.pollock-2015-snorkels-pros-cons
+    display: "Pollock, N. W. (2015). Snorkels: Pros and Cons. Divers Alert Network."
+    title: "Snorkels: Pros and Cons"
+    type: other
+    verification_status: verified
+    authors: ["Neal W. Pollock"]
+    year: 2015
+    container: "Divers Alert Network — Alert Diver"
+    identifier:
+      url: "https://dan.org/alert-diver/article/snorkels-pros-and-cons/"
+    retrieved_on: "2026-10-07"
+    notes: "已讀正文，原文日期 2015-08-01。僅支持一般呼吸管讓臉入水時從水面吸氣的功能邊界；不提供水下供氣，不是蝶腿教學或長期訓練介入研究。"
 
   - id: src.fphys-2024-1406518
     display: "【複合來源鍵，已解除】已拆為 src.jin-2024-resistance-front-crawl、src.amaro-2019-dryland-sr（另一篇無法識別，已刪）"

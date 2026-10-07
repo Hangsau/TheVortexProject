@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-10-02 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-10-07 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -1252,4 +1252,4 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | UDK4 | 節拍器找個人打水頻率 | kick | L4 L5 | elite | underwater_dolphin_kick |
 | UDK5 | 比賽配速水下打水 | kick | L5 L6 | elite | underwater_dolphin_kick |
 | UDKEC1 | 閉眼垂直蝶腿 | kick | L4 | advanced | underwater_dolphin_kick |
-| UDKLow1 | 戴呼吸管水下巡航 | kick | L3 | intermediate | underwater_dolphin_kick |
+| UDKLow1 | 水面呼吸管蝶腿 | kick | L3 | intermediate | underwater_dolphin_kick |
