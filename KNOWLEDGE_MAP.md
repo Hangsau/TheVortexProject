@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-10-07 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-10-13 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -761,7 +761,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
-| breathing.safety.hypoxic_blackout | 🟢 | 這一頁只有一句話最重要：不要在水下憋氣，也不要下水前猛吸幾口大氣再潛。那不是在練肺活量，是在關掉身體的警報器——二氧化碳才是讓你『想呼吸』的訊號，先把它排掉，人就會在完全沒有窒息感 |
+| breathing.safety.hypoxic_blackout | 🟢 | 水下練習本身不是問題——出發和轉身後的水下段、水下海豚腿、短距離少換氣衝刺，都是競速必練的。會出人命的是一個特定組合：下水前猛吸好幾口大氣，再憋到極限（看誰游得遠、憋得久，或一次次 |
 | breathing.safety.hypocapnia_mechanism | 🟢 | 有人會拿血氧機說『你看血氧正常啊』，這個判斷是錯的。過度換氣真正危險的地方是二氧化碳被排掉後腦血管會收縮，送到腦部的血流變少——血氧機量不到這件事。順便說清楚一個常被搞反的觀念：二 |
 
 ### `framework.yaml` （**3 節點**）
