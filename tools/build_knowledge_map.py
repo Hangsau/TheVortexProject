@@ -362,6 +362,16 @@ def main():
         lines.extend(render_table(problems, [("id", "ID"), ("stroke", "泳式"), ("category", "範疇"), ("title", "可見問題")]))
         lines.append("")
 
+    # 泳式動作（6 泳式頁的技術組件）；確定性寫在字串內的呈現標記，不另抽。
+    moves_path = ROOT / "canonical/instructional/moves.yaml"
+    if moves_path.exists():
+        moves = [dict(m, stroke=s["stroke"]) for s in
+                 yaml.safe_load(moves_path.read_text(encoding="utf-8"))["strokes"] for m in s["moves"]]
+        summary_rows.append(("moves", len(moves), "泳式頁技術組件（動作）"))
+        lines.extend(["### `moves.yaml` — 泳式動作", ""])
+        lines.extend(render_table(moves, [("id", "ID"), ("stroke", "泳式"), ("name", "動作"), ("one", "一句話")]))
+        lines.append("")
+
     # === 感知層 technica ===
     lines.append("---")
     lines.append("")

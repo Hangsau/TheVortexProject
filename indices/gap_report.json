@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 119
+    "unlinked_records": 127
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -51,6 +51,11 @@
       "id": "back.tech.18",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[61]"
+    },
+    {
+      "id": "breast.move.1",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[0]"
     },
     {
       "id": "breast.tech.23",
@@ -606,6 +611,41 @@
       "id": "slap-lesion",
       "file": "canonical/health/injuries.yaml",
       "path": "injuries[3]"
+    },
+    {
+      "id": "starts-turns.move.1",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[0]"
+    },
+    {
+      "id": "starts-turns.move.2",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[1]"
+    },
+    {
+      "id": "starts-turns.move.3",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[2]"
+    },
+    {
+      "id": "starts-turns.move.4",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[3]"
+    },
+    {
+      "id": "starts-turns.move.5",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[4]"
+    },
+    {
+      "id": "starts-turns.move.6",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[5]"
+    },
+    {
+      "id": "starts-turns.move.7",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[6]"
     },
     {
       "id": "swimmer-dental-erosion",

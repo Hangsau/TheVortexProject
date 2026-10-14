@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1016,
+  "record_count": 1067,
   "records": [
     {
       "id": "Bk1",
@@ -4217,6 +4217,132 @@
       ]
     },
     {
+      "id": "back.move.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[0]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk1",
+        "Bk4"
+      ]
+    },
+    {
+      "id": "back.move.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[1]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk1",
+        "Bk22",
+        "Bk4"
+      ]
+    },
+    {
+      "id": "back.move.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[2]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk18",
+        "Bk3",
+        "Bk6",
+        "Bk7"
+      ]
+    },
+    {
+      "id": "back.move.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[3]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk14",
+        "Bk15",
+        "Bk25"
+      ]
+    },
+    {
+      "id": "back.move.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[4]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk19",
+        "Bk24",
+        "Bk26",
+        "Sc1"
+      ]
+    },
+    {
+      "id": "back.move.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[5]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk20",
+        "Bk8",
+        "Bk9"
+      ]
+    },
+    {
+      "id": "back.move.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[6]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk12",
+        "Bk21",
+        "Bk23"
+      ]
+    },
+    {
+      "id": "back.move.8",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[7]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk13",
+        "Bk16",
+        "Bk17"
+      ]
+    },
+    {
+      "id": "back.move.9",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[1].moves[8]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Bk1",
+        "Bk25"
+      ]
+    },
+    {
       "id": "back.pre.orientation",
       "domain": "technica",
       "file": "canonical/technica/l-indicators.yaml",
@@ -5695,6 +5821,146 @@
       "outgoing_ids": [
         "breast.tech.3",
         "breast.tech.5"
+      ]
+    },
+    {
+      "id": "breast.move.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[0]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "breast.move.10",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[9]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br18",
+        "Br20"
+      ]
+    },
+    {
+      "id": "breast.move.11",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[10]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br21",
+        "Br23"
+      ]
+    },
+    {
+      "id": "breast.move.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[1]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br1",
+        "Br10",
+        "Br5"
+      ]
+    },
+    {
+      "id": "breast.move.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[2]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br12",
+        "Br26"
+      ]
+    },
+    {
+      "id": "breast.move.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[3]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Sc1",
+        "Sc2"
+      ]
+    },
+    {
+      "id": "breast.move.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[4]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br15",
+        "Br19"
+      ]
+    },
+    {
+      "id": "breast.move.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[5]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br3",
+        "Br8"
+      ]
+    },
+    {
+      "id": "breast.move.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[6]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br11",
+        "Br9"
+      ]
+    },
+    {
+      "id": "breast.move.8",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[7]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br30"
+      ]
+    },
+    {
+      "id": "breast.move.9",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[2].moves[8]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Br31",
+        "Br32"
       ]
     },
     {
@@ -8480,6 +8746,123 @@
       ]
     },
     {
+      "id": "fly.move.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[0]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl1",
+        "Fl5"
+      ]
+    },
+    {
+      "id": "fly.move.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[1]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl1",
+        "Fl12"
+      ]
+    },
+    {
+      "id": "fly.move.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[2]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Sc1",
+        "Sc2"
+      ]
+    },
+    {
+      "id": "fly.move.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[3]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl21",
+        "Fl29"
+      ]
+    },
+    {
+      "id": "fly.move.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[4]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl15",
+        "Fl16"
+      ]
+    },
+    {
+      "id": "fly.move.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[5]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl17",
+        "Fl19"
+      ]
+    },
+    {
+      "id": "fly.move.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[6]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl20",
+        "Fl30"
+      ]
+    },
+    {
+      "id": "fly.move.8",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[7]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl20"
+      ]
+    },
+    {
+      "id": "fly.move.9",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[3].moves[8]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl22",
+        "Fl24",
+        "Fl25"
+      ]
+    },
+    {
       "id": "fly.pre",
       "domain": "technica",
       "file": "canonical/technica/water-sense-levels.yaml",
@@ -10402,6 +10785,118 @@
       "outgoing_ids": [
         "free.tech.27",
         "free.tech.29"
+      ]
+    },
+    {
+      "id": "free.move.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[0]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr11",
+        "Fr13",
+        "Fr21"
+      ]
+    },
+    {
+      "id": "free.move.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[1]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr10",
+        "Fr16",
+        "Fr17"
+      ]
+    },
+    {
+      "id": "free.move.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[2]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr11",
+        "Fr12",
+        "Fr16"
+      ]
+    },
+    {
+      "id": "free.move.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[3]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr23",
+        "Fr24",
+        "Sc7"
+      ]
+    },
+    {
+      "id": "free.move.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[4]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr5",
+        "Fr7",
+        "Fr8"
+      ]
+    },
+    {
+      "id": "free.move.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[5]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr2",
+        "Fr22",
+        "Fr4"
+      ]
+    },
+    {
+      "id": "free.move.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[6]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr12",
+        "Fr20",
+        "Fr23"
+      ]
+    },
+    {
+      "id": "free.move.8",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[0].moves[7]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fr15",
+        "Fr23",
+        "Fr24"
       ]
     },
     {
@@ -20426,6 +20921,76 @@
       ]
     },
     {
+      "id": "starts-turns.move.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[0]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[1]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[2]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[3]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[4]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[5]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[6]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
       "id": "starts-turns.tech.1",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
@@ -22531,6 +23096,97 @@
       "outgoing_ids": [
         "udk.tech.18",
         "udk.tech.19"
+      ]
+    },
+    {
+      "id": "udk.move.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[0]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl5",
+        "Fl7"
+      ]
+    },
+    {
+      "id": "udk.move.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[1]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl1",
+        "Fl8"
+      ]
+    },
+    {
+      "id": "udk.move.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[2]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl10",
+        "Fl11"
+      ]
+    },
+    {
+      "id": "udk.move.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[3]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl4",
+        "Fl9"
+      ]
+    },
+    {
+      "id": "udk.move.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[4]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl10",
+        "Fl23"
+      ]
+    },
+    {
+      "id": "udk.move.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[5]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl5",
+        "Fl9"
+      ]
+    },
+    {
+      "id": "udk.move.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[4].moves[6]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "Fl15",
+        "Fl19"
       ]
     },
     {

@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-10-14
-> 驗證條目數：837，Drills ID 數：179
+> 驗證條目數：888，Drills ID 數：179
 
 ---
 
@@ -234,7 +234,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 119 筆**
+**WARN，共 127 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -262,6 +262,14 @@
   file=canonical\health\injuries.yaml id='poolside-slip-fall'
   file=canonical\health\injuries.yaml id='osgood-schlatter'
   file=canonical\health\injuries.yaml id='sever-disease'
+  file=canonical\instructional\moves.yaml id='breast.move.1'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.1'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.2'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.3'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.4'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.5'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.6'
+  file=canonical\instructional\moves.yaml id='starts-turns.move.7'
   file=canonical\instructional\technical-analysis.yaml id='free.tech.31'
   file=canonical\instructional\technical-analysis.yaml id='back.tech.18'
   file=canonical\instructional\technical-analysis.yaml id='breast.tech.23'

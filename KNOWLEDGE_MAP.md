@@ -17,6 +17,7 @@
 | `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 114, '🟢': 70, '🟠': 24, '🟡': 11, '🔴': 3} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `moves` | 51 | 泳式頁技術組件（動作） |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -512,6 +513,62 @@
 | prob.starts-turns.turn-timing | starts-turns | turn | 翻滾過早碰不到牆，或太晚擠在牆邊 |
 | prob.starts-turns.slow-breakout | starts-turns | breakout | 出水銜接時停頓或抬頭，第一划明顯掉速 |
 | prob.starts-turns.pullout-wait | starts-turns | timing | 蛙式水下滑到幾乎靜止，才開始大划手 |
+
+### `moves.yaml` — 泳式動作
+
+| ID | 泳式 | 動作 | 一句話 |
+|---|---|---|---|
+| free.move.1 | free | 入水位置 | 手在肩前入水，不跨中線 |
+| free.move.2 | free | 捕水 EVF | 高肘抓水，推進的起點 |
+| free.move.3 | free | 拉水加速 | 手掌加速向後推，不是定速划 |
+| free.move.4 | free | 旋轉耦合 | 旋轉時機對上推力峰值 |
+| free.move.5 | free | 踢水節律 | 踢水和划手整合，不是各跑各的 |
+| free.move.6 | free | 頭部位置 | 頭不抬，眼球上轉換氣 |
+| free.move.7 | free | 划距感知 | 察覺這趟划得比較短了 |
+| free.move.8 | free | 旋轉連動鏈 | 回臂入水放大對側推力（進階） |
+| back.move.1 | back | 仰漂安全感 | 讓水撐住身體的起點 |
+| back.move.2 | back | 仰漂三指標 | 耳入水、額不碰水、腳到水面 |
+| back.move.3 | back | 上踢推進 | 腳背向後上推水，身體前進 |
+| back.move.4 | back | 入水角度 | 小指先入，沿肩線不過中線 |
+| back.move.5 | back | 捕水 EVF | 高肘在身後抓水，拉身體過去 |
+| back.move.6 | back | 旋轉不對稱 | 回臂側肩抬高，划水側自然深沉 |
+| back.move.7 | back | 旋轉幅度穩定 | 加速時旋轉不縮小 |
+| back.move.8 | back | 頭部固定方向 | 身體繞頭轉，頭是不動的軸 |
+| back.move.9 | back | 流線型（出發/轉身） | 雙臂夾耳全入水，滑到速度降才划 |
+| breast.move.1 | breast | 阻力存在（火箭漂） | 先感覺阻力才能減阻 |
+| breast.move.2 | breast | 腿部推進（夾水） | 踢完身體還在走 |
+| breast.move.3 | breast | 手部撐水（撐起換氣） | 外划撐起頭自然出水 |
+| breast.move.4 | breast | 外划邊界（Outsweep） | 捕水出現外划即停 |
+| breast.move.5 | breast | 手部 Insweep 加速 | 水壓出現立刻加速內夾 |
+| breast.move.6 | breast | 腿部 Insweep 加速 | 腳掌到位再加速夾入 |
+| breast.move.7 | breast | 收腿路徑 | 腳跟往外側臀部靠 |
+| breast.move.8 | breast | 滑行結束點 | 速度開始快速掉才啟動下一划 |
+| breast.move.9 | breast | 手腳時序 | 手射出去腿才收，不重疊 |
+| breast.move.10 | breast | 連鎖觸發 | 每個動作製造下一個的條件 |
+| breast.move.11 | breast | 波動（俯衝角度） | 角度對了升力自然出現 |
+| fly.move.1 | fly | 波動啟動（壓胸起波） | 胸骨下壓，能量傳到腳 |
+| fly.move.2 | fly | 第一踢（入水踢） | 手入水同時踢，啟動波動 |
+| fly.move.3 | fly | 外划定位 | 輕展開到捕水位置 |
+| fly.move.4 | fly | 捕水 EVF（高肘） | 高肘抓水，前臂面向後 |
+| fly.move.5 | fly | 內划爆發（主推進） | 前臂面推水爆發 |
+| fly.move.6 | fly | 出水（推完了） | 手推到水壓消失即出水 |
+| fly.move.7 | fly | 第二踢（髖提升、手臂發射） | 踢下去，手臂被彈出 |
+| fly.move.8 | fly | 呼吸時序（下巴向前） | 下巴向前，不向上 |
+| fly.move.9 | fly | 空中恢復（Recovery） | 低位飛過，入水受控停頓 |
+| udk.move.1 | udk | 流線型就位 | 推蹬後身體鎖成箭 |
+| udk.move.2 | udk | 核心→腳尖波動傳遞 | 核心動，傳到腳尖 |
+| udk.move.3 | udk | 下踢末段聚攏（渦流觸發） | 腳掌聚攏，噴流推出 |
+| udk.move.4 | udk | 上踢主動加速 | 上踢也是推進相，主動發力 |
+| udk.move.5 | udk | 踢腿切換速度（渦流回收） | 下踢接上踢，不停頓 |
+| udk.move.6 | udk | 俯臥 vs 仰臥差異 | 俯臥爆發、仰臥穩定 |
+| udk.move.7 | udk | 出水銜接（Breakout） | 最後一踢動能接進第一划 |
+| starts-turns.move.1 | starts-turns | 推蹬（出發） | 向前墜落，不是主動跳出 |
+| starts-turns.move.2 | starts-turns | 入水（出發） | 全身穿過同一個洞 |
+| starts-turns.move.3 | starts-turns | 接近轉身 | 靠計步，不靠抬頭看牆 |
+| starts-turns.move.4 | starts-turns | 觸牆推蹬 | 腳到指尖一條線彈出 |
+| starts-turns.move.5 | starts-turns | IM 轉身：背→蛙 | 觸碰觸發旋轉，三種轉法擇一 |
+| starts-turns.move.6 | starts-turns | IM 轉身：蝶→背 | 觸牆即縮腿，折疊最短路徑 |
+| starts-turns.move.7 | starts-turns | 蛙式 Pullout | 水下單次手划＋一次蛙踢 |
 
 ---
 
