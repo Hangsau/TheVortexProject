@@ -118,10 +118,24 @@ def call_m3(prompt: str) -> str:
 
 
 def parse_json_array(text: str) -> list:
-    m = re.search(r"```json\s*(\[.*\])\s*```", text, re.S) or re.search(r"(\[.*\])", text, re.S)
-    if not m:
+    """M3 有時把結果拆成多個陣列或逐行物件輸出；逐段 raw_decode 後合併。"""
+    dec, items, i, found = json.JSONDecoder(), [], 0, False
+    while (i := min((k for k in (text.find("[", i), text.find("{", i)) if k >= 0), default=-1)) >= 0:
+        try:
+            val, end = dec.raw_decode(text, i)
+        except json.JSONDecodeError:
+            i += 1
+            continue
+        if isinstance(val, list):
+            items += val
+            found = True
+        elif isinstance(val, dict):
+            items.append(val)
+            found = True
+        i = end
+    if not found:
         raise ValueError("no JSON array in answer")
-    return json.loads(m.group(1))
+    return items
 
 
 def run_batch(prompt: str, out: Path) -> None:
