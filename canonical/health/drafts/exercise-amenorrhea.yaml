@@ -13,7 +13,7 @@ mechanism:
   who: 長期高量訓練者、能量赤字者、低體脂者、可能既有高雄激素傾向者
 
 epidemiology:
-  prevalence: "游泳族群原發性無月經最高 19%、繼發性無月經 0–23.8%、稀發月經 9.5–38.9%；系統性回顧游泳員月經失調平均約 41%；部分小樣本研究指游泳員停經後月經不規則率偏高(一研究達 82%、對照 40%，樣本小且為橫斷面)、雌二醇維持正常伴輕度高雄激素症"
+  prevalence: "游泳族群原發性無月經最高 19%、繼發性無月經 0–23.8%、稀發月經 9.5–38.9%；系統性回顧游泳員月經失調平均約 41%；部分小樣本研究指游泳員雌二醇維持正常、伴輕度高雄激素症"
   certainty: 🟡
   evidence_grade: B
   caveat: 多為橫斷面，樣本小；高雄激素型 vs 下視丘型非互斥；PCOS 先天 vs 訓練誘發因果方向無法確定；近年無大型前瞻性游泳員月經研究
@@ -41,7 +41,7 @@ management:
     - "骨折/飲食失調 → 多科介入"
   acute: "排除妊娠及器質病因；評估能量狀態；多科介入"
   pain_rules: ~
-  rehab: "增加能量 → 月經恢復(中位 3–6 月)；疑 PCOS 型轉內分泌科"
+  rehab: "增加能量 → 月經可望恢復(所需時間個體差異大，數月到更久)；疑 PCOS 型轉內分泌科"
   functional_progression_criteria:
     - "月經改善"
     - "能量狀態恢復"
@@ -70,7 +70,7 @@ links:
 
 references:
   - { citation: "Gimunová, M., Paulínyová, A., Bernaciková, M., & Paludo, A. C. (2022). The Prevalence of Menstrual Cycle Disorders in Female Athletes from Different Sports Disciplines: A Rapid Review. International Journal of Environmental Research and Public Health.", certainty: 🟢, verified: true, source_ids: [src.pmc9658102] }
-  - { citation: "Constantini, N. W., & Warren, M. P. (1995). Menstrual dysfunction in swimmers: a distinct entity. The Journal of Clinical Endocrinology and Metabolism.", certainty: 🟢, verified: true, source_ids: [src.pmid-7673417] }
+  - { citation: "Constantini, N. W., & Warren, M. P. (1995). Menstrual dysfunction in swimmers: a distinct entity. The Journal of Clinical Endocrinology and Metabolism.", certainty: 🟡, verified: true, source_ids: [src.pmid-7673417] }
 
 flags:
   pending_verification:

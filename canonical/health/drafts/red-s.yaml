@@ -9,11 +9,11 @@ layer: [public, clinical]
 structures: [下視丘-腦下垂體-性腺軸, 骨骼(骨密度), 內分泌系統, 心血管/代謝/免疫多系統]
 mechanism:
   summary: 能量攝取長期低於運動消耗(low energy availability, LEA)→身體下調非必要功能以保命→月經/睪固酮、骨代謝、代謝率、免疫、心血管、心理多系統受抑。不是單一疾病而是低能量可用性引發的多系統症候群。女性運動員三聯症(低能量可用性+月經失調+低骨密度)是 RED-S 的子集。
-  driver: "能量可用性 = (攝取 − 運動消耗) / 去脂體重；< 30 kcal/kg FFM/day 為臨床關切閾值（具體閾值待核實，個體差異大）"
+  driver: "能量可用性 = (攝取 − 運動消耗) / 去脂體重；< 30 kcal/kg 去脂體重/日為常用的關切閾值(Loucks & Thuma 2003：29 名月經規律的久坐女性 5 天實驗，低於此值 LH 脈衝開始紊亂；個體差異大，不可當單一診斷切點)"
   swim_context: 泳者每日高熱量消耗 + 體型/外觀壓力 + 大量陸訓，能量赤字易被低估
 
 epidemiology:
-  prevalence: "女性運動員 LEA/三聯症盛行率報導範圍極廣；游泳專項數字待 WebFetch 核實。青少年女子泳者 disordered eating 盛行率 25–31%、月經失調 3–65%（範圍極廣反映定義差異），是同年齡男性與非運動族群的數倍"
+  prevalence: "女性運動員 LEA/三聯症盛行率報導範圍極廣；游泳專項的可靠數字目前缺乏；青少年女子泳者的飲食失調與月經失調報導比例範圍很大，反映定義與篩檢工具不一，本庫不列單一數字"
   certainty: 🟡
   evidence_grade: B
   caveat: >-
@@ -76,12 +76,12 @@ links:
   perception_link: ~
 
 references:
+  - { citation: "Loucks AB, Thuma JR. (2003). Luteinizing hormone pulsatility is disrupted at a threshold of energy availability in regularly menstruating women. J Clin Endocrinol Metab 88(1):297-311.", certainty: 🟡, verified: true, source_ids: [src.loucks-thuma-2003] }
   - { citation: "Mountjoy M, Ackerman KE, Bailey DM, et al. (2023). 2023 International Olympic Committee's (IOC) consensus statement on Relative Energy Deficiency in Sport (REDs). Br J Sports Med 57(17):1073-1097.", certainty: 🟢, verified: true, source_ids: [src.ioc-red-s-2014-2018-2023-doi] }
   - { citation: "Nattiv A, Loucks AB, Manore MM, Sanborn CF, Sundgot-Borgen J, Warren MP. (2007). American College of Sports Medicine position stand. The female athlete triad. Med Sci Sports Exerc 39(10):1867-82. PMID 17909417（2026-09-04 定版：原登錄未標年份，本條指定為 2007 現行版；1997 首版 PMID 9140913 為不同文獻）", certainty: 🟡, verified: true, source_ids: [src.nattiv-2007] }
 
 flags:
   pending_verification:
-    - "能量可用性 30 kcal/kg FFM/day 閾值為常引數字，待原文核實後才入 public"
     - "游泳專項盛行率數字全部待查，public 層不放數字"
   contested:
     - claim: "三聯症 vs RED-S 框架範圍"

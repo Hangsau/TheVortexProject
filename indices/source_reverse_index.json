@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 862,
+  "source_count": 863,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -3918,7 +3918,7 @@
         {
           "id": "red-s",
           "file": "canonical/health/injuries.yaml",
-          "path": "injuries[34].references[0]"
+          "path": "injuries[34].references[1]"
         }
       ]
     },
@@ -4824,6 +4824,24 @@
           "id": "periodization.dryland.youth",
           "file": "canonical/periodization/dryland.yaml",
           "path": "youth_safety"
+        }
+      ]
+    },
+    {
+      "id": "src.loucks-thuma-2003",
+      "display": "Loucks AB, Thuma JR. (2003). Luteinizing hormone pulsatility is disrupted at a threshold of energy availability in regularly menstruating women. J Clin Endocrinol Metab 88(1):297-311.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "12519869",
+        "doi": "10.1210/jc.2002-020369",
+        "url": "https://pubmed.ncbi.nlm.nih.gov/12519869/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "red-s",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[34].references[0]"
         }
       ]
     },
@@ -6279,7 +6297,7 @@
         {
           "id": "red-s",
           "file": "canonical/health/injuries.yaml",
-          "path": "injuries[34].references[1]"
+          "path": "injuries[34].references[2]"
         }
       ]
     },

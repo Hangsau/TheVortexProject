@@ -11122,3 +11122,18 @@ sources:
       url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC11358974/"
     retrieved_on: "2026-09-11"
     notes: "2026-09-11 登錄，**狀態 unverified**：完整標題與作者列未由本專案直接 dereference，display 為重建。查證回報內容：篩檢 90,612 篇後僅 4 篇合格且**全為急性反應研究**，無縱貫對照試驗。**用途**：這是 src.nugent-2019-usrpt-systematic-review（2019 年判定 0 篇合格）之後的**時間更新**——五年過去，USRPT 的訓練成效證據基礎實質上仍不存在。**引用限制**：升級為 verified 前只引用定性結論（仍無縱貫對照試驗），不引用篩檢篇數。"
+
+  - id: src.loucks-thuma-2003
+    display: "Loucks AB, Thuma JR. (2003). Luteinizing hormone pulsatility is disrupted at a threshold of energy availability in regularly menstruating women. J Clin Endocrinol Metab 88(1):297-311."
+    title: "Luteinizing hormone pulsatility is disrupted at a threshold of energy availability in regularly menstruating women"
+    type: journal-article
+    verification_status: verified
+    authors: ["Anne B Loucks", "Jean R Thuma"]
+    year: 2003
+    container: "J Clin Endocrinol Metab"
+    identifier:
+      pmid: "12519869"
+      doi: "10.1210/jc.2002-020369"
+      url: "https://pubmed.ncbi.nlm.nih.gov/12519869/"
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 登錄（RED-S 30 kcal 閾值出處）。29 名月經規律、久坐、體組成正常的年輕女性，5 天操控能量可用性 45 對 10／20／30 kcal/kg LBM/日：30 時 LH 脈衝不受影響，低於 30 時頻率下降。**使用邊界**：短期實驗、久坐族群，不是運動員長期盛行率，也不是單一診斷切點。"
