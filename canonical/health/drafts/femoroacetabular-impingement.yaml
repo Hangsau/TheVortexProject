@@ -77,8 +77,8 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Cam morphology in aquatic (water polo/synchro) athletes, PMC7605769", certainty: 🟢, verified: true, source_ids: [src.pmc7605769] }
-  - { citation: "FAI surgical rehabilitation and return to sport, PMC11642080", certainty: 🟢, verified: true, source_ids: [src.pmc11642080] }
+  - { citation: "Langner, J. L., Black, M. S., MacKay, J. W., Hall, K. E., Safran, M. R., Kogan, F., & Gold, G. E. (2020). The prevalence of femoroacetabular impingement anatomy in Division 1 aquatic athletes who tread water. Journal of Hip Preservation Surgery.", certainty: 🟢, verified: true, source_ids: [src.pmc7605769] }
+  - { citation: "Monselli, C., Bianco Prevot, L., Accetta, R., Tronconi, L. P., Bolcato, V., & Basile, G. (2024). State of the Art in Rehabilitation Strategies After Hip Arthroscopy for Femoroacetabular Impingement Syndrome: A Systematic Review. Journal of Clinical Medicine.", certainty: 🟢, verified: true, source_ids: [src.pmc11642080] }
 
 flags:
   pending_verification:

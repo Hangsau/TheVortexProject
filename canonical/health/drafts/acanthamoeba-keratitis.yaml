@@ -69,7 +69,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Garg & Daigavane 2024, Cureus 16(8):e67803（綜述；年發生率轉引 Zhang 等 2023）", certainty: 🟢, verified: true, source_ids: [src.pmc11424229] }
+  - { citation: "Garg, D., & Daigavane, S. (2024). A Comprehensive Review on Acanthamoeba Keratitis: An Overview of Epidemiology, Risk Factors, and Therapeutic Strategies. Cureus, 16(8), e67803.", certainty: 🟢, verified: true, source_ids: [src.pmc11424229] }
 
 flags:
   pending_verification:

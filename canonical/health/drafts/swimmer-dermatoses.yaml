@@ -71,9 +71,9 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Aquatic dermatoses, PMC5286756", certainty: 🟢, verified: true, source_ids: [src.pmc5286756] }
-  - { citation: "Cercarial dermatitis epidemiology (Douglas Lake), PMC1448328", certainty: 🟢, verified: true, source_ids: [src.pmc1448328] }
-  - { citation: "Hot tub (Pseudomonas) folliculitis, PMC7584313", certainty: 🟢, verified: true, source_ids: [src.pmc7584313] }
+  - { citation: "Sridhar, S. C., & Deo, S. C. (2017). Marine and Other Aquatic Dermatoses. Indian Journal of Dermatology.", certainty: 🟢, verified: true, source_ids: [src.pmc5286756] }
+  - { citation: "Verbrugge, L. M., Rainey, J. J., Reimink, R. L., & Blankespoor, H. D. (2004). Swimmer's itch: incidence and risk factors. American Journal of Public Health.", certainty: 🟢, verified: true, source_ids: [src.pmc1448328] }
+  - { citation: "Jacob, J. S., & Tschen, J. (2020). Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors. Cureus.", certainty: 🟢, verified: true, source_ids: [src.pmc7584313] }
 
 flags:
   pending_verification:

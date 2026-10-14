@@ -72,8 +72,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "SLAP lesions: diagnosis and rehabilitation, PMC3811737", certainty: 🟢, verified: true, source_ids: [src.pmc3811737] }
-  - { citation: "Arthroscopy in refractory swimmer's shoulder, PMC4528289", certainty: 🟢, verified: true, source_ids: [src.pmc4528289] }
+  - { citation: "Wilk, K. E., Macrina, L. C., Cain, E. L., Dugas, J. R., & Andrews, J. R. (2013). The recognition and treatment of superior labral (slap) lesions in the overhead athlete. International Journal of Sports Physical Therapy.", certainty: 🟢, verified: true, source_ids: [src.pmc3811737] }
+  - { citation: "Butler, D., Funk, L., Mackenzie, T. A., & Herrington, L. C. (2015). Sorting swimmers shoulders: An observational study on swimmers that presented to a shoulder surgeon. International Journal of Shoulder Surgery.", certainty: 🟢, verified: true, source_ids: [src.pmc4528289] }
   - { citation: "Michener LA, Abrams JS, Bliven KCH, et al. (2018). National Athletic Trainers' Association Position Statement: Evaluation, Management, and Outcomes of and Return-to-Play Criteria for Overhead Athletes With Superior Labral Anterior-Posterior Injuries. J Athl Train 53(3):209-229. PMID 29624450 / PMC5894372", certainty: 🟢, verified: true, source_ids: [src.michener-2018] }
 
 flags:

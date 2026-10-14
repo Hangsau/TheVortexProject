@@ -72,7 +72,7 @@ links:
 
 references:
   - { citation: "Thoracic outlet syndrome in athletes (systematic review), PMC7340704", certainty: 🟢, verified: true, source_ids: [src.pmc7340704] }
-  - { citation: "Conservative rehabilitation for neurogenic TOS, PMC11277273", certainty: 🟢, verified: true, source_ids: [src.pmc11277273] }
+  - { citation: "Hock, G., Johnson, A., Barber, P., & Papa, C. (2024). Current Clinical Concepts: Rehabilitation of Thoracic Outlet Syndrome. Journal of Athletic Training.", certainty: 🟢, verified: true, source_ids: [src.pmc11277273] }
 
 flags:
   pending_verification:

@@ -78,8 +78,8 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Low back pain in swimmers by stroke, PMC11531034", certainty: 🟢, verified: true, source_ids: [src.pmc11531034] }
-  - { citation: "Spine degeneration in competitive swimmers, PMC3435931", certainty: 🟢, verified: true, source_ids: [src.pmc3435931] }
+  - { citation: "Hsu, C., Krabak, B., Cunningham, B., & Borg-Stein, J. (2024). Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review. Sports Health.", certainty: 🟢, verified: true, source_ids: [src.pmc11531034] }
+  - { citation: "Wanivenhaus, F., Fox, A. J., Chaudhury, S., & Rodeo, S. A. (2012). Epidemiology of injuries and prevention strategies in competitive swimmers. Sports Health.", certainty: 🟢, verified: true, source_ids: [src.pmc3435931] }
 
 flags:
   pending_verification:

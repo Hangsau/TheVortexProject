@@ -61,9 +61,9 @@ sections:
     - "腰椎優先+女性傷害率較高為東亞模式，需更多本地研究確認"
 
 references:
-  - { citation: "Japan national swim team injury survey, PMC6863674 (PMID 31798949)", certainty: 🟢, verified: true, source_ids: [src.pmc6863674] }
-  - { citation: "Japanese university female swimmers injury, PMC6464216 (PMID 30986226)", certainty: 🟢, verified: true, source_ids: [src.pmc6464216] }
-  - { citation: "China drowning deaths in minors, PMC10689961 (PMID 38047245)", certainty: 🟢, verified: true, source_ids: [src.pmc10689961] }
+  - { citation: "Matsuura, Y., Hangai, M., Koizumi, K., Ueno, K., Hirai, N., Akuzawa, H., & Kaneoka, K. (2019). Injury trend analysis in the Japan national swim team from 2002 to 2016: effect of the lumbar injury prevention project. BMJ Open Sport & Exercise Medicine.", certainty: 🟢, verified: true, source_ids: [src.pmc6863674] }
+  - { citation: "Nagano, Y., Kobayashi-Yamakawa, K., Higashihara, A., & Yako-Suketomo, H. (2019). Japanese translation and modification of the Oslo Sports Trauma Research Centre overuse injury questionnaire to evaluate overuse injuries in female college swimmers. PLoS ONE.", certainty: 🟢, verified: true, source_ids: [src.pmc6464216] }
+  - { citation: "Li, Z., Deng, X., Jin, Y., Duan, L., & Ye, P. (2023). Unintentional Drowning Mortality Among Individuals Under Age 20 - China, 2013-2021. China CDC Weekly.", certainty: 🟢, verified: true, source_ids: [src.pmc10689961] }
 
 flags:
   pending_verification:

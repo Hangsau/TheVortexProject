@@ -69,7 +69,7 @@ links:
 
 references:
   - { citation: "Osgood-Schlatter disease, StatPearls NBK441995", certainty: 🟢, verified: true, source_ids: [src.osgood-schlatter-disease-statpearls-nbk44199] }
-  - { citation: "OSD incidence in general practice, PMC8869186", certainty: 🟢, verified: true, source_ids: [src.pmc8869186] }
+  - { citation: "van Leeuwen, G. J., de Schepper, E. I., Rathleff, M. S., Bindels, P. J., Bierma-Zeinstra, S. M., & van Middelkoop, M. (2022). Incidence and management of Osgood-Schlatter disease in general practice: retrospective cohort study. British Journal of General Practice.", certainty: 🟢, verified: true, source_ids: [src.pmc8869186] }
 
 flags:
   pending_verification: []

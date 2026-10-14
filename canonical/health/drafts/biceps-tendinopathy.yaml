@@ -9,11 +9,11 @@ layer: [public, clinical]
 structures: [肱二頭肌長頭腱, 結節間溝, 旋轉肌袖, 旋轉間隔]
 mechanism:
   summary: 肱二頭肌長頭腱(LHB)於結節間溝承受摩擦，推進期(自由式/蝶式拉水)反覆張力與剪切。LHB 兼任肱骨頭前方穩定器，當棘上肌功能下降後 LHB 代償超載而腱病；穩定肌疲勞後肩胛前傾增加溝內壓迫。多與旋轉肌袖退化共存，常為旋轉肌袖完整性下降之繼發表現。
-  trigger_phase: 自由式拉水轉換、背泳恢復、蝶式入水
+  trigger_phase: 自由式拉水轉換、背泳恢復、蝶式入水抓水到拉水
   who: 較大年齡者(Masters 尤甚)、棘上肌腱病共存者、肩部疼痛史者
 
 epidemiology:
-  prevalence: "Masters 泳者超音波(n=80 泳者/40 對照)LHB 腱病 48.8% vs 對照 12.5%；棘上肌與 LHB 共存率 22–78.5%(n=200 約 49% 共存退化);年齡每增 1 歲 LHB 腱病風險 +5%、晚競技每增 1 年 +4%"
+  prevalence: "Masters 泳者超音波(40 名泳者 80 肩 vs 20 名對照 40 肩)LHB 腱病 48.8% vs 對照 12.5%；棘上肌慢性病變合併 LHB 病變的比例，5 篇研究介於 22–78.5%(其中一篇 n=200 的手術研究約 49% 合併 LHB 退化);年齡每增 1 歲 LHB 腱病勝算約 1.05 倍、開始競技年齡每晚 1 年約 1.04 倍(勝算比，不是百分點)"
   certainty: 🟡
   evidence_grade: B
   caveat: 主要為 Masters 影像數據，年輕競技者資料較少；多與旋轉肌袖損傷共病，獨立歸因困難
@@ -46,7 +46,7 @@ management:
   functional_progression_criteria:
     - "Speed/Yergason 無痛"
     - "拉水無前肩痛"
-    - "肌力 ≥85% 對側"
+    - "肌力約達對側 85% 以上(常見的臨床回場慣例，不是本症專屬的研究切點)"
   swim_modifications_in_rehab:
     - "減拉水頻率、停划手板"
     - "改踢腿板/浮袋訓練"
@@ -75,8 +75,8 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Shoulder pathology in masters swimmers, PMC7824457", certainty: 🟢, verified: true, source_ids: [src.pmc7824457] }
-  - { citation: "LHB tendon and rotator cuff coexistence, PMC4247626", certainty: 🟢, verified: true, source_ids: [src.pmc4247626] }
+  - { citation: "Suzuki, Y., Maeda, N., Sasadai, J., Kaneda, K., Shirakawa, T., & Urabe, Y. (2020). Ultrasonographic Evaluation of the Shoulders and Its Associations with Shoulder Pain, Age, and Swim Training in Masters Swimmers. Medicina.", certainty: 🟢, verified: true, source_ids: [src.pmc7824457] }
+  - { citation: "Redondo-Alonso, L., Chamorro-Moriana, G., Jiménez-Rejano, J. J., López-Tarrida, P., & Ridao-Fernández, C. (2014). Relationship between chronic pathologies of the supraspinatus tendon and the long head of the biceps tendon: systematic review. BMC Musculoskeletal Disorders.", certainty: 🟢, verified: true, source_ids: [src.pmc4247626] }
 
 flags:
   pending_verification:

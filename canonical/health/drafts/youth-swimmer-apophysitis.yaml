@@ -71,7 +71,7 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Shoulder pain in youth competitive swimmers, PMC11297363", certainty: 🟢, verified: true, source_ids: [src.pmc11297363-b] }
+  - { citation: "Stirling, B. D., Sum, J. C., Baek, L., Michener, L. A., Barrack, A. J., & Tate, A. R. (2024). Shoulder pain in competitive swimmers: a multi-site survey study. International Journal of Sports Physical Therapy, 19(8), 965–975.", certainty: 🟢, verified: true, source_ids: [src.pmc11297363-b] }
 
 flags:
   pending_verification:

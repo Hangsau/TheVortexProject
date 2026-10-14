@@ -118,7 +118,7 @@ references:
   - { citation: "Tsai CT, Lin JN, Lee CH, et al. (2020). The epidemiology, characteristics and outbreaks of human leptospirosis and the association with animals in Taiwan, 2007-2014. Zoonoses Public Health 67(2):156-166. PMID 31916706", certainty: 🟢, verified: true, source_ids: [src.tsai-2020-taiwan-leptospirosis-nationwide] }
   - { citation: "McGee RG, Webster AC, Lewis SR, Welsford M (2023). Interventions for the symptoms and signs resulting from jellyfish stings. Cochrane Database Syst Rev 6(6):CD009688. PMID 37272501", certainty: 🟢, verified: true, source_ids: [src.cochrane-2023-jellyfish-interventions] }
   - { citation: "Lin IC, Hussain B, Hsu BM, et al. (2021). Prevalence, Genetic Diversity, Antimicrobial Resistance, and Toxigenic Profile of Vibrio vulnificus Isolated from Aquatic Environments in Taiwan. Antibiotics 10(5):505. PMID 33946739（僅支撐「創傷弧菌存在於台灣水域環境」）", certainty: 🟢, verified: true, source_ids: [src.pmc8147101] }
-  - { citation: "Leptospirosis outbreak associated with triathlon/open water swimming, PMC2858141（德國賽事群聚）", certainty: 🟢, verified: true, source_ids: [src.pmc2858141] }
+  - { citation: "Brockmann, S., Piechotowski, I., Bock-Hensley, O., Winter, C., Oehme, R., Zimmermann, S., Hartelt, K., & Luge, E. (2010). Outbreak of leptospirosis among triathlon participants in Germany, 2006. BMC Infectious Diseases, 10, 91.", certainty: 🟢, verified: true, source_ids: [src.pmc2858141] }
 
 flags:
   pending_verification:

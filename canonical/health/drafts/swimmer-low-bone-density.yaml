@@ -71,8 +71,8 @@ links:
   perception_link: ~
 
 references:
-  - { citation: "Site-specific bone density in female swimmers, PMC7039474", certainty: 🟢, verified: true, source_ids: [src.pmc7039474] }
-  - { citation: "Bone density intervention in low-impact athletes, PMC11744971", certainty: 🟢, verified: true, source_ids: [src.pmc11744971] }
+  - { citation: "Miller, M., Kojetin, S., & Scibora, L. (2020). Site-Specific Effects of Swimming on Bone Density in Female Collegiate Swimmers. International Journal of Exercise Science.", certainty: 🟢, verified: true, source_ids: [src.pmc7039474] }
+  - { citation: "Florvåg, A. G., Berg, Ø. A., Røksund, O. D., Jorem, G. T., & Bogen, B. E. (2025). Exercise interventions to improve bone mineral density in athletes participating in low-impact sports: a scoping review. BMC Musculoskeletal Disorders.", certainty: 🟢, verified: true, source_ids: [src.pmc11744971] }
 
 flags:
   pending_verification:

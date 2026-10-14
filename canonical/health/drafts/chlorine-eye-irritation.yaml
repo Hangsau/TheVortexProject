@@ -69,7 +69,7 @@ links:
   perception_link_ids: []
 
 references:
-  - { citation: "Chloramines and ocular irritation in swimming pools, PMC6137694", certainty: 🟢, verified: true, source_ids: [src.pmc6137694] }
+  - { citation: "Ahmad, S. S. (2018). Water related ocular diseases. Saudi Journal of Ophthalmology.", certainty: 🟢, verified: true, source_ids: [src.pmc6137694] }
 
 flags:
   pending_verification:
