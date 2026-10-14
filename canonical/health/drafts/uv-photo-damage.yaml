@@ -14,7 +14,7 @@ mechanism:
 
 epidemiology:
   prevalence: "澳洲衝浪/泳者黑色素瘤點盛行率為一般澳洲族群 76 倍(高 UV 地區，不可外推全球)；翼狀胬肉全球約 12%(20 歲以下 3%、80 歲以上 19.5%)"
-  certainty: 🟡
+  certainty: 🟢
   evidence_grade: B
   caveat: 皮膚癌流病多為澳洲研究外推需謹慎；翼狀胬肉 12%/76 倍/15000 J·m⁻² 等數字來自二次來源，原始論文作者待查
   sources:
@@ -52,11 +52,11 @@ management:
   swim_modifications_in_rehab: ~
   return_to_train: "曬傷皮膚癒合後/翼狀胬肉術後復原後 → 回水並強化防護"
   return_to_compete: ~
-  prognosis: "早期皮膚癌(尤黑色素瘤)5 年存活 >95%，轉移性預後差；翼狀胬肉手術成功率高但復發 10–40%(結膜移植術可降至 <5%)"
+  prognosis: "早期皮膚癌(尤黑色素瘤)5 年存活 >95%，轉移性預後差；翼狀胬肉手術成功率高但單純切除復發率高，合併自體結膜移植可明顯降低"
 
 population_notes:
   age:
-    youth: "皮膚癌潛伏期數十年，但兒童期 UV 暴露是日後皮膚癌最強獨立預測因子"
+    youth: "皮膚癌潛伏期數十年，但兒童期 UV 暴露是日後皮膚癌重要預測因子"
     adult_beginner: ~
     masters: "累積 UV 最多，翼狀胬肉及皮膚癌盛行率最高，定期篩查尤重要"
   sex:
@@ -74,7 +74,7 @@ references:
   - { citation: "Climstein, M., Doyle, B., Stapelberg, M., Rosic, N., Hertess, I., Furness, J., Simas, V., & Walsh, J. (2022). Point prevalence of non-melanoma and melanoma skin cancers in Australian surfers and swimmers in Southeast Queensland and Northern New South Wales. PeerJ.", certainty: 🟢, verified: true, source_ids: [src.pmc9057286] }
   - { citation: "Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes — Narrative Review, Cancers 2023, PMC10339925", certainty: 🟢, verified: true, source_ids: [src.pmc10339925] }
   - { citation: "Modenese, A., & Gobba, F. (2017). Occupational Exposure to Solar Radiation at Different Latitudes and Pterygium: A Systematic Review of the Last 10 Years of Scientific Literature. International Journal of Environmental Research and Public Health.", certainty: 🟢, verified: true, source_ids: [src.pmc5800136] }
-  - { citation: "Harrison SC, Bergfeld WF. (2009). Ultraviolet light and skin cancer in athletes. Sports Health 1(4):335-40. PMID 23015891 / PMC3445124", certainty: 🟢, verified: true, source_ids: [src.harrison-2009] }
+  - { citation: "Harrison SC, Bergfeld WF. (2009). Ultraviolet light and skin cancer in athletes. Sports Health 1(4):335-40. PMID 23015891 / PMC3445124", certainty: 🟡, verified: true, source_ids: [src.harrison-2009] }
 
 flags:
   pending_verification:

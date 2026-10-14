@@ -978,8 +978,6 @@
         "breathing.framework.boundaries",
         "breathing.framework.grading",
         "breathing.framework.overview",
-        "breathing.regulation.claims_gap",
-        "breathing.regulation.principle",
         "breathing.training.self_tracking",
         "common.L2.propulsion",
         "common.L3.watersense",

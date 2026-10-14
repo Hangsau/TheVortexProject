@@ -13,7 +13,7 @@ mechanism:
   who: 衝浪者(研究最多)、冷水/冬泳者、划艇選手、潛水員；任何長期反覆冷水暴露者
 
 epidemiology:
-  prevalence: "一般人群約每千人 6.3 例；冷水衝浪者 70–80%，連暖水衝浪者小樣本(n=23)仍達 69.6%；已確診者約 80% 雙側"
+  prevalence: "一般人群約每千人 6.3 例；冷水衝浪者 70–80%，連暖水衝浪者小樣本(n=23)仍達 69.6%；已確診者常為雙側"
   certainty: 🟡
   evidence_grade: C
   caveat: 絕大多數研究針對衝浪者，競技(室內溫水)游泳者獨立盛行率幾乎不存在；女性樣本過少
@@ -32,7 +32,7 @@ risk_factors:
 prevention:
   - { text: "完整密封型矽膠耳塞", grade: B }
   - { text: "氯丁橡膠帽(neoprene hood)保溫", grade: Expert }
-  - { text: "每次入水均用耳保護(實際依從率僅約 5%)", grade: Expert }
+  - { text: "每次入水均用耳保護(實際依從率普遍偏低)", grade: Expert }
   - { text: "術後持續耳保護防復發", grade: Expert }
 
 management:
@@ -40,7 +40,7 @@ management:
     - "耳道阻塞 >80% → 耳鼻喉科評估"
     - "反覆外耳道炎(≥3 次/年)+傳導性聽損 → 轉介"
     - "持續耳痛/耳鳴 → 轉介"
-  acute: "保守(Grade 1–2)：定期耳垢清潔、治療合併外耳道炎、監測進展。外科(canalplasty/exostectomy)：阻塞 >80%+持續症狀；術後約 68% 生活品質改善，約 14% 併發症(鼓膜穿孔/顏面神經麻痺/顳顎關節障礙)"
+  acute: "保守(Grade 1–2)：定期耳垢清潔、治療合併外耳道炎、監測進展。外科(canalplasty/exostectomy)：阻塞 >80%+持續症狀；術後多數生活品質改善，但有鼓膜穿孔、顏面神經麻痺、顳顎關節障礙等併發症風險"
   pain_rules: ~
   rehab: ~
   functional_progression_criteria:

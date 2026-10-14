@@ -9,12 +9,12 @@ subtypes: [熱浴缸毛囊炎(綠膿桿菌), 泳者癢(尾蚴性皮膚炎), 綠�
 
 structures: [毛囊, 表皮角質層, 真皮(過敏反應), 毛髮角蛋白]
 mechanism:
-  summary: 四亞型——A 熱浴缸毛囊炎：綠膿桿菌(Pseudomonas)在溫水/高 pH/低氯環境繁殖，經毛囊侵入致泳衣覆蓋區丘疹膿疱；B 泳者癢：淡水/海水中禽鳥血吸蟲尾蚴誤穿人皮膚後死亡引發遲發型過敏(再暴露反應加重)；C 綠髮：並非氯致綠，而是水中銅離子(銅管腐蝕/硫酸銅除藻劑)被氯氧化後與毛髮角蛋白螯合，漂染髮更明顯；D 氯刺激性皮膚炎：氯氧化作用去脂、破壞皮膚屏障致刺激性接觸性皮膚炎。
+  summary: 四亞型——①熱浴缸毛囊炎：綠膿桿菌(Pseudomonas)在溫水/高 pH/低氯環境繁殖，經毛囊侵入致泳衣覆蓋區丘疹膿疱；②泳者癢：淡水/海水中禽鳥血吸蟲尾蚴誤穿人皮膚後死亡引發遲發型過敏(再暴露反應加重)；③綠髮：並非氯致綠，而是水中銅離子(銅管腐蝕/硫酸銅除藻劑)被氯氧化後與毛髮角蛋白螯合，漂染髮更明顯；④氯刺激性皮膚炎：氯氧化作用去脂、破壞皮膚屏障致刺激性接觸性皮膚炎。
   trigger_phase: 熱浴缸/SPA(毛囊炎)、淡水湖淺水順風區(泳者癢)、含銅泳池(綠髮)、高頻室內泳池(氯皮膚炎)
   who: 競技泳者(氯皮膚炎/綠髮)、開放水域/湖泳者(泳者癢)、免疫低下/糖尿病(毛囊炎重症)、兒童(皮膚屏障薄)
 
 epidemiology:
-  prevalence: "泳者癢(Michigan Douglas Lake 2000)每 100 水中暴露日 6.8 例、301 名湖泊使用者中 17.3% 有症狀；熱浴缸毛囊炎估計 67% 熱浴缸/63% 泳池有綠膿桿菌污染(污染率為二手引用)；氯皮膚炎/綠髮無系統盛行率"
+  prevalence: "泳者癢(Michigan Douglas Lake，2000 年調查、Verbrugge 等 2004 發表)每 100 水中暴露日 6.8 例、301 名湖泊使用者中 17.3% 有症狀；熱浴缸毛囊炎估計 67% 熱浴缸/63% 泳池有綠膿桿菌污染(污染率為二手引用)；氯皮膚炎/綠髮無系統盛行率"
   certainty: 🟡
   evidence_grade: C
   caveat: 各亞型多為案例報告或單地調查；台灣本島泳者癢資料幾乎缺如；發生率因地理/季節差異極大
@@ -43,7 +43,7 @@ management:
     - "毛囊炎合併發燒/蜂窩組織炎/膿腫 → 就醫"
     - "泳者癢廣泛性繼發細菌感染 → 就醫"
     - "皮膚炎大面積/合併全身症狀 → 就醫"
-  acute: "毛囊炎：免疫正常多 1–2 週自癒，醋酸濕敷；嚴重用環丙沙星。泳者癢：抗組胺+局部類固醇+止癢，3–7 天自限。綠髮：螯合(EDTA/組胺酸)洗髮，無健康風險。氯皮膚炎：避免暴露+局部類固醇(輕中度)，停止暴露後數天消退"
+  acute: "毛囊炎：免疫正常多在 2 週內自癒，醋酸濕敷；嚴重用環丙沙星。泳者癢：抗組胺+局部類固醇+止癢，3–7 天自限。綠髮：螯合(EDTA/組胺酸)洗髮，無健康風險。氯皮膚炎：避免暴露+局部類固醇(輕中度)，停止暴露後數天消退"
   pain_rules: ~
   rehab: ~
   functional_progression_criteria:
@@ -52,7 +52,7 @@ management:
   swim_modifications_in_rehab: ~
   return_to_train: "皮損癒合後回水；氯皮膚炎考慮改低氯泳池"
   return_to_compete: ~
-  prognosis: "毛囊炎 2–10 天自行消退多不留疤；泳者癢自限數日；綠髮為美觀問題可洗除；氯皮膚炎避刺激源後預後良好"
+  prognosis: "毛囊炎 多在 2 週內自行消退多不留疤；泳者癢自限數日；綠髮為美觀問題可洗除；氯皮膚炎避刺激源後預後良好"
 
 population_notes:
   age:
@@ -72,7 +72,7 @@ links:
 
 references:
   - { citation: "Sridhar, S. C., & Deo, S. C. (2017). Marine and Other Aquatic Dermatoses. Indian Journal of Dermatology.", certainty: 🟢, verified: true, source_ids: [src.pmc5286756] }
-  - { citation: "Verbrugge, L. M., Rainey, J. J., Reimink, R. L., & Blankespoor, H. D. (2004). Swimmer's itch: incidence and risk factors. American Journal of Public Health.", certainty: 🟢, verified: true, source_ids: [src.pmc1448328] }
+  - { citation: "Verbrugge, L. M., Rainey, J. J., Reimink, R. L., & Blankespoor, H. D. (2004). Swimmer's itch: incidence and risk factors. American Journal of Public Health.", certainty: 🟡, verified: true, source_ids: [src.pmc1448328] }
   - { citation: "Jacob, J. S., & Tschen, J. (2020). Hot Tub-Associated Pseudomonas Folliculitis: A Case Report and Review of Host Risk Factors. Cureus.", certainty: 🟢, verified: true, source_ids: [src.pmc7584313] }
 
 flags:

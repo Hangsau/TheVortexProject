@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 546,
+  "record_count": 549,
   "trails": {
     "back.L4.roll-stability": [
       {
@@ -3050,6 +3050,32 @@
         "file": "plans/W4_圖譜填充派工規格.md",
         "line": 429,
         "section": "BR-35｜新增相鄰兩筆"
+      }
+    ],
+    "breathing.physiology.baroreflex_resonance": [
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.1_breathing_regulation_01.md",
+        "line": 16,
+        "section": "3｜全檔教學決策與檔案邊界的 🔵"
+      }
+    ],
+    "breathing.physiology.neural_control": [
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.1_breathing_regulation_01.md",
+        "line": 16,
+        "section": "3｜全檔教學決策與檔案邊界的 🔵"
+      }
+    ],
+    "breathing.safety.hypoxic_blackout": [
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.1_breathing_regulation_01.md",
+        "line": 16,
+        "section": "3｜全檔教學決策與檔案邊界的 🔵"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.1_breathing_regulation_01.md",
+        "line": 17,
+        "section": "3｜全檔教學決策與檔案邊界的 🔵"
       }
     ],
     "common.L5.automation": [
