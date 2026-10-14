@@ -125,6 +125,9 @@ exit code：
         observation_basis；W027 是「有字串但指不到東西」→ 查證或改寫。
         把兩者合併會讓 W011 的 0 消失，而那個 0 是真的（每個完全沒來源的
         🟠 都已交代觀察基礎），不該被這個問題吃掉。
+  W028  診斷框架用語（A/B/C 型、感知三型、「泳者說：」）寫在 public 子樹的
+        文字裡。E010 只看鍵名，診斷語寫進 public 的普通欄位（`perception_impact`
+        等）會原字上線——2026-10-14 稽核在 back.err5–9 抓到「B 型腳感系統」。
 
 備註：
   canonical/health/drafts/ 是 build source，canonical/health/injuries.yaml
@@ -1703,6 +1706,38 @@ def check_machine_key_in_prose(rel: str, data: object, warnings: dict):
     walk(data)
 
 
+_DIAGNOSTIC_TEXT_PATTERNS = (
+    re.compile(r"[ABC]\s?型"),
+    re.compile(r"三型(?:診斷|分類|的|訊號|區分)|感知三型"),
+    re.compile(r"泳者說[「『：:]"),
+)
+
+
+def check_diagnostic_text_in_public(rel: str, data: object, warnings: dict):
+    """W028：診斷框架用語寫進 public 子樹的文字值。
+
+    E010 擋的是診斷型**鍵名**；這裡擋的是診斷語**內容**被寫進 public 的普通
+    欄位。兩者洩漏路徑不同、修法相同（移到 diagnostic 或改寫成不依賴分型的描述）。
+    """
+    def walk(node, path, in_public):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                walk(v, f"{path}.{k}" if path else str(k), in_public or k == "public")
+        elif isinstance(node, list):
+            for i, item in enumerate(node):
+                walk(item, f"{path}[{i}]", in_public)
+        elif in_public and isinstance(node, str):
+            for pat in _DIAGNOSTIC_TEXT_PATTERNS:
+                m = pat.search(node)
+                if m:
+                    warnings["W028"].append(
+                        f"  file={rel} at={path} 診斷用語 {m.group(0)!r} 寫在 public 文字裡"
+                    )
+                    break
+
+    walk(data, "", False)
+
+
 def check_public_layer_leak(rel: str, data: object, errors: dict):
     """E010：診斷型鍵名出現在 public 子樹內。
 
@@ -2489,7 +2524,7 @@ def run_validation():
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
         "W021": [], "W022": [], "W023": [], "W024": [], "W025": [],
-        "W026": [], "W027": []
+        "W026": [], "W027": [], "W028": []
     }
 
     # 新索引的空檔、截斷 YAML 或錯誤型別必須 fail closed，不能被一般掃描略過。
@@ -2702,6 +2737,7 @@ def run_validation():
         check_content_presence(rel, data, warnings)
         check_text_is_citation(rel, data, source_displays, warnings)
         check_public_layer_leak(rel, data, errors)
+        check_diagnostic_text_in_public(rel, data, warnings)
         check_machine_key_in_prose(rel, data, warnings)
         check_verification_marker_in_citation(rel, data, warnings)
         check_evidence_from(rel, data, all_id_set, errors)
@@ -2905,6 +2941,11 @@ def _write_report(
             "🟠 只靠一個解析不到文件的顯示字串通過 W011 的來源逃生口"
             "（`source_ids` 沒有任何一筆指到非 retracted 且帶 identifier 的登錄）"
             "——查證成真來源登錄，或承認是實務觀察改寫 `observation_basis`",
+        ),
+        "W028": (
+            "WARN",
+            "診斷框架用語（A/B/C 型、感知三型、「泳者說：」）寫在 public 子樹文字裡"
+            "——E010 只看鍵名，這類文字會原字上線",
         ),
         "W026": (
             "WARN",

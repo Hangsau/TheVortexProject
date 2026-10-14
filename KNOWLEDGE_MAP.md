@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-10-13 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-10-14 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -530,7 +530,7 @@
 | free.pre.resistance | free | pre | 阻力感知 | 靜止漂浮身體鬆緊有可觀察差異；推蹬後滑行距離可量測 |
 | free.L2.kick | free | L2 | 踢水推進 | 浮板踢水能穩定前進，踝蹠屈角度使腳掌朝後 |
 | free.L2.hand-pressure | free | L2 | 手部壓力 | 前臂面向後方時有水壓感知（外感受器啟動） |
-| free.L3.evf | free | L3 | EVF 捕水 | 划手有明顯的捕水「卡頓感」；拳頭游與開手游的速度差開始縮小（差距仍大於 15% 時，屬手感缺失 A 型的訊號） |
+| free.L3.evf | free | L3 | EVF 捕水 | 划手有明顯的捕水「卡頓感」；拳頭游與開手游的速度差開始縮小（差距仍大於 15% 時，代表手部還沒感覺到水壓） |
 | free.L3.kick-rhythm | free | L3 | 踢水節律 | 六拍踢能描述「對側配對」；踢水後下半身不下沉 |
 | free.L4.roll-coupling | free | L4 | 旋轉耦合 | 加速後旋轉與划手推力的時機錯開（推力峰與旋轉峰不再對齊）；高划頻下 EVF 消失。旋轉幅度隨強度縮小是一般現象，不單獨當失守判準 |
 | free.L4.sr-sl | free | L4 | 划頻×划距 | SR 提高時 SL 比自己慢游時的基準明顯縮短（感知尚未支撐技術） |

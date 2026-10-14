@@ -2848,3 +2848,25 @@ class TestDomainOf(unittest.TestCase):
 
 if __name__ == "__main__":
     unittest.main(verbosity=2)
+
+
+class TestW028DiagnosticTextInPublic(unittest.TestCase):
+    """W028：診斷框架用語寫進 public 文字欄位。"""
+
+    def run_check(self, data):
+        from collections import defaultdict
+        warnings = defaultdict(list)
+        validate_mod.check_diagnostic_text_in_public("x.yaml", data, warnings)
+        return warnings["W028"]
+
+    def test_type_label_in_public_text_flagged(self):
+        data = {"errors": [{"id": "a", "public": {"perception_impact": "腳感缺失（B 型）"}}]}
+        self.assertEqual(len(self.run_check(data)), 1)
+
+    def test_type_label_in_diagnostic_not_flagged(self):
+        data = {"errors": [{"id": "a", "diagnostic": {"type": "B 型腳感缺失"}}]}
+        self.assertEqual(self.run_check(data), [])
+
+    def test_ordinary_wording_not_flagged(self):
+        data = {"x": {"public": {"text": "讓泳者說得出哪一段最有壓力；疼痛三型先分開"}}}
+        self.assertEqual(self.run_check(data), [])

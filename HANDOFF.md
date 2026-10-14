@@ -4,6 +4,24 @@
 
 ---
 
+## 當前狀態（2026-10-14，三層重構 Phase 1 完成）
+
+- 使用者核准 `plans/三層重構與全庫檢查_2026-10-14.md`：網站分成資料庫／呈現／應用三層，並審完全庫內容。checkpoint 在該檔 §7。
+- Phase 1 機械稽核：新工具 `tools/audit_layers.py` → `reports/layer_audit.md`。已證實的問題：
+  - 散文頁（Instructional／Technica／Bridge）直接上線，且落後 canonical：53 筆漂移候選。
+  - 診斷語在 39 頁、450 處外洩，主路徑是散文。
+  - 6 泳式頁的 51 個動作與 `water-sense.md` 由 my-site 手動維護，不在 canonical。
+- 已修：
+  - canonical public 文字裡 6 處 A/B/C 型字樣（back.err5–9、free.L3.evf）。
+  - validate 新增 W028 防再犯。
+  - my-site drill／心理頁的來源改顯示書目，不再印 `src.*`。
+- validate 0 ERROR。WARN 為 W003 119／W022 7／W002 4／W008 3。
+
+## 下一步建議（三層重構）
+
+1. Phase 2 批 2.1：health＋breathing 內容審查。派 codex 前先查額度；追蹤檔 `plans/內容審查_2026-10-14.md`。
+2. 散文漂移與診斷語外洩要等 Phase 3（散文撤出呈現層）才會歸零，在那之前不必逐頁修散文。
+
 ## 當前狀態（2026-10-13，水下安全立場更正）
 
 - `breathing/safety.yaml` 原本寫「零水下憋氣」，檔頭還把三方聯合聲明誤引成「只能在水面、絕不在水下」——這正是同檔 `policy_boundary_zh` 自己警告的引用不實。使用者指出這把正常訓練和危險行為混在一起：50 m 衝刺幾乎不換氣、轉身水下段每趟都要練。
