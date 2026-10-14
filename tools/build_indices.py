@@ -434,8 +434,9 @@ def build_gap_report(
 
 _ID_TOKEN = re.compile(r"[A-Za-z][\w-]*(?:\.[\w-]+)+")
 _HEADING = re.compile(r"^#{1,6}\s+(.*)")
-# MiniMax 初讀是未驗證的可疑點清單，不是推論紀錄；只收經 Claude 裁決的檔
-TRAIL_EXCLUDE_DIRS = {"初讀"}
+# MiniMax 初讀是未驗證的可疑點清單，不是推論紀錄；驗證/ 是 codex 的工作檔（抓回的摘要、
+# validate 報告快照），也不是裁決。只收經裁決的紀錄檔
+TRAIL_EXCLUDE_DIRS = {"初讀", "驗證"}
 
 
 def build_decision_trail(root: Path, records: list[dict]) -> dict:
@@ -455,8 +456,7 @@ def build_decision_trail(root: Path, records: list[dict]) -> dict:
             match = _HEADING.match(line)
             if match:
                 heading = match.group(1).strip()
-            for token in set(_ID_TOKEN.findall(line)):
-                token = token.rstrip(".")
+            for token in {raw.rstrip(".") for raw in _ID_TOKEN.findall(line)}:
                 if token in ids:
                     trails[token].append({"file": rel, "line": lineno, "section": heading})
     return {

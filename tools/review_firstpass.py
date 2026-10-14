@@ -16,7 +16,6 @@ from __future__ import annotations
 
 import argparse
 import subprocess
-import sys
 import time
 from pathlib import Path
 
@@ -29,6 +28,8 @@ ROLE_FILE = Path("C:/claudehome/tools/m3-reviewer-role.md")
 M3 = "C:/Users/hangs/bin/claude-m3-lite"  # bash 腳本，Windows 要經 bash 執行
 CHUNK_CHARS = 18000
 CALL_TIMEOUT = 1200
+MAX_ATTEMPTS = 2
+RETRY_WAIT_SECONDS = 60
 
 BATCHES: dict[str, list[Path]] = {
     "2.1": sorted((ROOT / "canonical/health/drafts").glob("*.yaml"))
@@ -138,6 +139,21 @@ def call_m3(prompt: str) -> str:
     return text
 
 
+def review_chunk(prompt: str, out: Path, header: str) -> None:
+    """Call M3 with retries and write the answer; stop the run on repeated failure."""
+    for attempt in range(1, MAX_ATTEMPTS + 1):
+        try:
+            answer = call_m3(prompt)
+            break
+        except (RuntimeError, subprocess.TimeoutExpired) as exc:
+            print(f"[fail {attempt}] {out.name}: {exc}", flush=True)
+            if attempt == MAX_ATTEMPTS:
+                raise SystemExit(f"停在 {out.name}；重跑本指令會從這裡續")
+            time.sleep(RETRY_WAIT_SECONDS)
+    out.write_text(header + answer + "\n", encoding="utf-8")
+    print(f"[ok] {out.name}", flush=True)
+
+
 def main() -> None:
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("--batch", nargs="*", default=list(BATCHES))
@@ -155,18 +171,8 @@ def main() -> None:
                     print(f"[dry] {out.name} {len(chunk)} chars")
                     continue
                 prompt = f"{role}\n\n{INSTRUCTIONS}\n\n# 片段（{path.name} 第 {n} 段）\n\n{chunk}"
-                for attempt in (1, 2):
-                    try:
-                        answer = call_m3(prompt)
-                        break
-                    except (RuntimeError, subprocess.TimeoutExpired) as exc:
-                        print(f"[fail {attempt}] {out.name}: {exc}", flush=True)
-                        if attempt == 2:
-                            raise SystemExit(f"停在 {out.name}；重跑本指令會從這裡續")
-                        time.sleep(60)
                 header = f"<!-- 來源：{path.relative_to(ROOT.parent).as_posix()} 第 {n} 段 -->\n\n"
-                out.write_text(header + answer + "\n", encoding="utf-8")
-                print(f"[ok] {out.name}", flush=True)
+                review_chunk(prompt, out, header)
     print("全部完成", flush=True)
 
 

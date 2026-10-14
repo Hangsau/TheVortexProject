@@ -1713,6 +1713,28 @@ _DIAGNOSTIC_TEXT_PATTERNS = (
     re.compile(r"三型(?:診斷|分類|的|訊號|區分)|感知三型"),
     re.compile(r"泳者說[「『：:]"),
 )
+# 這些目錄的檔沒有 public／diagnostic 分層，整份由 sync 搬上公開站（moves.yaml 同）
+_WHOLE_PUBLIC_DIRS = ("breathing", "periodization")
+
+
+def _is_whole_public(rel: str, extra_dirs: tuple = ()) -> bool:
+    return Path(rel).name == "moves.yaml" or Path(rel).parent.name in _WHOLE_PUBLIC_DIRS + extra_dirs
+
+
+def _public_strings(data: object, whole_public: bool, skip_keys: frozenset = frozenset()):
+    """逐一產出讀者看得到的字串值 (欄位路徑, 字串)：public 子樹內，或整份公開的檔。"""
+    def walk(node, path, in_public):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k not in skip_keys:
+                    yield from walk(v, f"{path}.{k}" if path else str(k), in_public or k == "public")
+        elif isinstance(node, list):
+            for i, item in enumerate(node):
+                yield from walk(item, f"{path}[{i}]", in_public)
+        elif in_public and isinstance(node, str):
+            yield path, node
+
+    yield from walk(data, "", whole_public)
 
 
 def check_diagnostic_text_in_public(rel: str, data: object, warnings: dict):
@@ -1721,26 +1743,14 @@ def check_diagnostic_text_in_public(rel: str, data: object, warnings: dict):
     E010 擋的是診斷型**鍵名**；這裡擋的是診斷語**內容**被寫進 public 的普通
     欄位。兩者洩漏路徑不同、修法相同（移到 diagnostic 或改寫成不依賴分型的描述）。
     """
-    # 這些檔沒有 public／diagnostic 分層，整份由 sync 搬上公開站
-    whole_public = Path(rel).name == "moves.yaml" or Path(rel).parent.name in ("breathing", "periodization")
-
-    def walk(node, path, in_public):
-        if isinstance(node, dict):
-            for k, v in node.items():
-                walk(v, f"{path}.{k}" if path else str(k), in_public or k == "public")
-        elif isinstance(node, list):
-            for i, item in enumerate(node):
-                walk(item, f"{path}[{i}]", in_public)
-        elif in_public and isinstance(node, str):
-            for pat in _DIAGNOSTIC_TEXT_PATTERNS:
-                m = pat.search(node)
-                if m:
-                    warnings["W028"].append(
-                        f"  file={rel} at={path} 診斷用語 {m.group(0)!r} 寫在 public 文字裡"
-                    )
-                    break
-
-    walk(data, "", whole_public)
+    for path, text in _public_strings(data, _is_whole_public(rel)):
+        for pat in _DIAGNOSTIC_TEXT_PATTERNS:
+            m = pat.search(text)
+            if m:
+                warnings["W028"].append(
+                    f"  file={rel} at={path} 診斷用語 {m.group(0)!r} 寫在 public 文字裡"
+                )
+                break
 
 
 def check_injuries_built_from_drafts(errors: dict):
@@ -1779,29 +1789,15 @@ def check_review_trail_in_public(rel: str, data: object, warnings: dict):
     修訂史屬研究庫的審查與裁決紀錄；公開正文只寫最終說法。仍需保留的限定
     （例如「只涵蓋男子項目」）改寫成不帶日期與「原寫」的陳述。
     """
-    name = Path(rel).name
-    if name == "injuries.yaml":
+    if Path(rel).name == "injuries.yaml":
         return  # 產物；真相源 drafts/ 已掃過，避免重複計數
-    whole_public = (name == "moves.yaml"
-                    or Path(rel).parent.name in ("breathing", "periodization", "drafts"))
-
-    def walk(node, path, in_public):
-        if isinstance(node, dict):
-            for k, v in node.items():
-                if k in _TRAIL_EXEMPT_KEYS:
-                    continue
-                walk(v, f"{path}.{k}" if path else str(k), in_public or k == "public")
-        elif isinstance(node, list):
-            for i, item in enumerate(node):
-                walk(item, f"{path}[{i}]", in_public)
-        elif in_public and isinstance(node, str):
-            m = _REVIEW_TRAIL.search(node)
-            if m:
-                warnings["W029"].append(
-                    f"  file={rel} at={path} 讀者文字含審查軌跡 {m.group(0)!r}"
-                )
-
-    walk(data, "", whole_public)
+    whole_public = _is_whole_public(rel, extra_dirs=("drafts",))
+    for path, text in _public_strings(data, whole_public, frozenset(_TRAIL_EXEMPT_KEYS)):
+        m = _REVIEW_TRAIL.search(text)
+        if m:
+            warnings["W029"].append(
+                f"  file={rel} at={path} 讀者文字含審查軌跡 {m.group(0)!r}"
+            )
 
 
 def check_public_layer_leak(rel: str, data: object, errors: dict):

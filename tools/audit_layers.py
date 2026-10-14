@@ -81,6 +81,8 @@ MACHINE_KEY = re.compile(r"\bsrc\.[a-z0-9][a-z0-9-]+|\b(?:fatal_acute|source_ids
 CLAUSE_SPLIT = re.compile(r"[，。；：！？、（）()「」『』\n|*#>]+|——")
 YEAR = re.compile(r"(?:19|20)\d\d")
 MIN_CLAUSE = 10
+# 站內網址（正式站與本機預覽），其餘 http(s) 連結算外連
+SITE_HOSTS = ("hangsau.github.io", "127.0.0.1")
 
 TAG = re.compile(r"<[^>]+>")
 SCRIPT_STYLE = re.compile(r"<(script|style)\b.*?</\1>", re.S)
@@ -182,7 +184,7 @@ def audit(site: Path, since: str) -> str:
         if keys:
             machine_hits.append((rel, keys))
         for url in HREF.findall(raw):
-            if "hangsau.github.io" not in url and "127.0.0.1" not in url:
+            if not any(host in url for host in SITE_HOSTS):
                 external.append((rel, url))
 
     removed = removed_canonical_clauses(since)
@@ -204,61 +206,61 @@ def audit(site: Path, since: str) -> str:
                 cert_no_year.append((label(p), n, line.strip()[:80]))
 
     out: list[str] = []
-    w = out.append
-    w("# 三層歸屬稽核報告（Phase 1）\n")
-    w(f"> 由 `tools/audit_layers.py` 產生；drift 基準 `{since}`。數字是 Phase 3 閘門分母。\n")
-    w("## 摘要\n")
-    w("| 檢查 | 筆數 |\n|---|---|")
-    w(f"| 已發布 Vortex 頁（不含轉址） | {len(pages)} |")
-    w(f"| 無歸屬頁 | {len(unmatched)} |")
-    w(f"| P1 散文頁 | {len(issues['P1'])} |")
-    w(f"| P3 my-site 手管／手寫頁 | {len(issues['P3'])} |")
-    w(f"| P1 漂移候選：呈現／應用層（閘門，須為 0） | {len(drift)} |")
-    w(f"| 漂移：研究庫凍結底稿（已加凍結說明，僅供參考） | {frozen_drift} |")
-    w(f"| P2 公開頁含診斷語的頁 | {len(diag_hits)}（共 {sum(sum(c.values()) for _, c in diag_hits)} 處） |")
-    w(f"| 機器鍵外洩頁 | {len(machine_hits)} |")
-    w(f"| 外站連結 | {len(external)} |")
-    w(f"| 🟢／🟡 但同行無年份（呈現層散文／手管） | {len(cert_no_year)} |\n")
+    emit = out.append
+    emit("# 三層歸屬稽核報告（Phase 1）\n")
+    emit(f"> 由 `tools/audit_layers.py` 產生；drift 基準 `{since}`。數字是 Phase 3 閘門分母。\n")
+    emit("## 摘要\n")
+    emit("| 檢查 | 筆數 |\n|---|---|")
+    emit(f"| 已發布 Vortex 頁（不含轉址） | {len(pages)} |")
+    emit(f"| 無歸屬頁 | {len(unmatched)} |")
+    emit(f"| P1 散文頁 | {len(issues['P1'])} |")
+    emit(f"| P3 my-site 手管／手寫頁 | {len(issues['P3'])} |")
+    emit(f"| P1 漂移候選：呈現／應用層（閘門，須為 0） | {len(drift)} |")
+    emit(f"| 漂移：研究庫凍結底稿（已加凍結說明，僅供參考） | {frozen_drift} |")
+    emit(f"| P2 公開頁含診斷語的頁 | {len(diag_hits)}（共 {sum(sum(c.values()) for _, c in diag_hits)} 處） |")
+    emit(f"| 機器鍵外洩頁 | {len(machine_hits)} |")
+    emit(f"| 外站連結 | {len(external)} |")
+    emit(f"| 🟢／🟡 但同行無年份（呈現層散文／手管） | {len(cert_no_year)} |\n")
 
-    w("## W1.1 頁面 → 層\n")
-    w("| 目標層 | 頁數 |\n|---|---|")
+    emit("## W1.1 頁面 → 層\n")
+    emit("| 目標層 | 頁數 |\n|---|---|")
     for k, v in sorted(by_layer.items()):
-        w(f"| {k} | {v} |")
-    w("\n| 來源種類 | 頁數 |\n|---|---|")
+        emit(f"| {k} | {v} |")
+    emit("\n| 來源種類 | 頁數 |\n|---|---|")
     for k, v in sorted(by_kind.items()):
-        w(f"| {k} | {v} |")
-    w("\n**無歸屬頁**：" + ("、".join(f"`{u}`" for u in unmatched) if unmatched else "無") + "\n")
+        emit(f"| {k} | {v} |")
+    emit("\n**無歸屬頁**：" + ("、".join(f"`{u}`" for u in unmatched) if unmatched else "無") + "\n")
     for code in ("P1", "P3", "P4"):
         if issues[code]:
-            w(f"**{code} 頁**：" + "、".join(f"`{u}`" for u in issues[code]) + "\n")
+            emit(f"**{code} 頁**：" + "、".join(f"`{u}`" for u in issues[code]) + "\n")
 
-    w("## W1.2 散文漂移候選\n")
-    w("句段在 canonical 的修訂中被刪除、現行 canonical 已無，但仍出現在散文或手管資料。"
+    emit("## W1.2 散文漂移候選\n")
+    emit("句段在 canonical 的修訂中被刪除、現行 canonical 已無，但仍出現在散文或手管資料。"
       "屬「候選」：改寫同義、或散文本就另有語境者需人工判定。\n")
-    w("| 檔案 | 句段 | 原 canonical 檔 |\n|---|---|---|")
+    emit("| 檔案 | 句段 | 原 canonical 檔 |\n|---|---|---|")
     for f, c, src in sorted(drift):
-        w(f"| `{f}` | {c.replace('|', '／')} | `{src}` |")
+        emit(f"| `{f}` | {c.replace('|', '／')} | `{src}` |")
 
-    w("\n## W1.3 公開頁診斷語\n")
-    w("| 頁 | 命中 |\n|---|---|")
+    emit("\n## W1.3 公開頁診斷語\n")
+    emit("| 頁 | 命中 |\n|---|---|")
     for rel, hits in sorted(diag_hits, key=lambda x: -sum(x[1].values())):
-        w(f"| `{rel or '(首頁)'}` | " + "、".join(f"{k}×{v}" for k, v in hits.items()) + " |")
+        emit(f"| `{rel or '(首頁)'}` | " + "、".join(f"{k}×{v}" for k, v in hits.items()) + " |")
 
-    w("\n## W1.4 機器鍵／外站連結／確定性無年份\n")
-    w("**機器鍵外洩**\n")
+    emit("\n## W1.4 機器鍵／外站連結／確定性無年份\n")
+    emit("**機器鍵外洩**\n")
     for rel, keys in machine_hits:
-        w(f"- `{rel}`：{', '.join(keys)}")
+        emit(f"- `{rel}`：{', '.join(keys)}")
     if not machine_hits:
-        w("- 無")
-    w("\n**外站連結**\n")
+        emit("- 無")
+    emit("\n**外站連結**\n")
     for rel, url in external:
-        w(f"- `{rel}` → {url}")
+        emit(f"- `{rel}` → {url}")
     if not external:
-        w("- 無")
-    w("\n**🟢／🟡 同行無年份**\n")
-    w("| 檔案 | 行 | 內容 |\n|---|---|---|")
+        emit("- 無")
+    emit("\n**🟢／🟡 同行無年份**\n")
+    emit("| 檔案 | 行 | 內容 |\n|---|---|---|")
     for f, n, line in cert_no_year:
-        w(f"| `{f}` | {n} | {line.replace('|', '／')} |")
+        emit(f"| `{f}` | {n} | {line.replace('|', '／')} |")
     return "\n".join(out) + "\n"
 
 
