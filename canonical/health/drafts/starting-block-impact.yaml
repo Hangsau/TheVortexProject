@@ -9,9 +9,9 @@ subtypes: [出發台入水撞擊, 游泳中撞牆, 水面拍水傷(bellyflop)]
 
 structures: [頭/臉/腦(腦震盪), 頸椎, 腕/手指, 肋骨/胸壁皮膚]
 mechanism:
-  summary: 三子機制——A 出發台起跳：頭/臉/肩撞池底(水深不足)或不正確角度入水(腹/胸拍水)，或踩台失足跌至硬面；B 游泳中撞牆：高速轉身/衝刺末端未及時減速，頭/臉/腕撞壁，或密集起跑肢體碰撞；C 水面拍水傷：腹/胸大面積撞水面致皮膚撕裂/肌肉挫傷，高台情境有肺挫傷風險。
+  summary: 三子機制——①出發台起跳：頭/臉/肩撞池底(水深不足)或不正確角度入水(腹/胸拍水)，或踩台失足跌至硬面；②游泳中撞牆：高速轉身/衝刺末端未及時減速，頭/臉/腕撞壁；③水面拍水傷：腹/胸大面積撞水面致皮膚撕裂/肌肉挫傷，高台情境有肺挫傷風險。
   trigger_phase: 出發起跳相(block phase)、轉身前減速相、密集起跑前數秒
-  who: 初學出發動作的青少年競技泳者、技術訓練不足者、泳道秩序混亂(公開水域起跑)
+  who: 初學出發動作的青少年競技泳者、技術訓練不足者、起跑混亂(開放水域集體出發)
 
 epidemiology:
   prevalence: >-
@@ -36,7 +36,7 @@ epidemiology:
 risk_factors:
   - { text: "出發技術未成熟(入水角度過陡致頭部觸底)", grade: Expert }
   - { text: "水深不足(出發台前區)", grade: A }
-  - { text: "教練缺乏出發技術指導協議(僅 21.7% 用系統化進展)", grade: B }
+  - { text: "教練缺乏出發技術指導協議(Cornett 等 2012 的 USA Swimming 教練調查中，使用進階教學流程的教練只有 21.7% 採用專業組織提供的資料)", grade: B }
   - { text: "高速衝刺末端視野受限(近終點看不清牆距)", grade: Expert }
   - { text: "Para 視覺障礙(靠觸牆棒 tapper 延誤反應)", grade: Expert }
 
@@ -61,7 +61,7 @@ management:
   swim_modifications_in_rehab: ~
   return_to_train: "依傷型(腦震盪逐步回場/骨折癒合/裂傷癒合)分別評估"
   return_to_compete: "完成回場分級且無症狀 → 復賽"
-  prognosis: "頭部撞擊多為輕度腦震盪完全恢復(數天至數週)；反覆腦震盪(Para 個案)有神經行為後遺風險；未診斷腦震盪帶傷續練有 second impact syndrome 風險(罕見但嚴重)"
+  prognosis: "頭部撞擊多為輕度腦震盪完全恢復(數天至數週)；反覆腦震盪可能有神經行為後遺(游泳僅有 1 例 Para 個案報告)；未診斷腦震盪帶傷續練有 second impact syndrome 風險(罕見但嚴重)"
 
 population_notes:
   age:
@@ -83,7 +83,7 @@ links:
 references:
   - { citation: "Belilos E, Jow S, Maxwell M (2023). Descriptive Epidemiology of High School Swimming and Diving Injuries. Clin J Sport Med 33(4):428-434. PMID 36715985", certainty: 🟢, verified: true, source_ids: [src.pmc10372189] }
   - { citation: "Boltz AJ, Robison HJ, Morris SN, D'Alonzo BA, Collins CL, Chandran A. (2021). Epidemiology of Injuries in National Collegiate Athletic Association Men's Swimming and Diving: 2014-2015 Through 2018-2019. J Athl Train 56(7):719-726. PMID 34280272（2026-09-04 更正：只涵蓋男子項目，族群邊界不得擴及女子）", certainty: 🟢, verified: true, source_ids: [src.boltz-2021] }
-  - { citation: "Helmich I, Chang YY, Gemmerich R, et al. (2024). Neurobehavioral consequences of repetitive head impacts in Para swimming: A case report. J Sci Med Sport 27(1):16-19.", certainty: 🟡, verified: true, source_ids: [src.neurobehavioral-consequences-of-repetitive-h] }
+  - { citation: "Helmich I, Chang YY, Gemmerich R, et al. (2024). Neurobehavioral consequences of repetitive head impacts in Para swimming: A case report. J Sci Med Sport 27(1):16-19.", certainty: 🟢, verified: true, source_ids: [src.neurobehavioral-consequences-of-repetitive-h] }
 
 flags:
   pending_verification:

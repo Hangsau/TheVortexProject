@@ -20380,7 +20380,7 @@
           "C-nonMSK-medical"
         ],
         "certainty": [
-          "🔵"
+          "🟠"
         ]
       },
       "source_ids": [],
@@ -20466,7 +20466,6 @@
           "D-systemic-acute"
         ],
         "certainty": [
-          "🟡",
           "🟢"
         ]
       },
@@ -20535,7 +20534,6 @@
           "E-acute-trauma"
         ],
         "certainty": [
-          "🟡",
           "🟢"
         ]
       },
@@ -22706,7 +22704,6 @@
           "C-nonMSK-medical"
         ],
         "certainty": [
-          "🟡",
           "🟢"
         ]
       },
