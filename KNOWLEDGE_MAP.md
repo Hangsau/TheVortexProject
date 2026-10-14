@@ -1207,7 +1207,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | Br26 | 戴呼吸管游蛙式 | arm | L2 L3 | foundation | breaststroke |
 | Br27 | 水下完整蛙式 | timing | L4 | advanced | breaststroke |
 | Br28 | 仰面水下蛙式 | timing | L4 | advanced | breaststroke |
-| Br29 | 正仰面組合 | timing | L4 | advanced | breaststroke |
+| Br29 | 水面水下組合 | timing | L4 | advanced | breaststroke |
 | Br30 | 拉停踢停 | timing | L3 L4 | intermediate | breaststroke |
 | Br31 | 重疊時序 | timing | L5 | elite | breaststroke |
 | Br32 | 划次速度訓練 | timing | L5 | elite | breaststroke |

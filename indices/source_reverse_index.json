@@ -7636,17 +7636,11 @@
     },
     {
       "id": "src.pair-pacing-in-adjacent-lanes",
-      "display": "通用團隊訓練法（pair pacing in adjacent lanes）",
-      "verification_status": "unverified",
+      "display": "【只有泛稱，非文獻，已撤下】通用團隊訓練法（pair pacing in adjacent lanes）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "BkP1",
-          "file": "Drills/drills_backstroke.yaml",
-          "path": "drills[29]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.pair-tap-drill-ncaa",

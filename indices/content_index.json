@@ -576,9 +576,7 @@
           "L5"
         ]
       },
-      "source_ids": [
-        "src.pair-pacing-in-adjacent-lanes"
-      ],
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -1039,7 +1037,7 @@
       "domain": "drills",
       "file": "Drills/drills_breaststroke.yaml",
       "path": "drills[28]",
-      "title": "正仰面組合",
+      "title": "水面水下組合",
       "tags": {
         "category": [
           "timing"

@@ -333,11 +333,11 @@ drills:
     equipment: []
     l_target: [L2, L3]
     abc_type: A
-    purpose_zh: "雙臂同時划水修正過度後伸越過中線，感覺手臂對齊肩膀舉起"
+    purpose_zh: "雙臂同時划水修正回臂頂端越過身體中線，感覺手臂對齊肩膀舉起"
     how_to:
       - "雙臂同時划仰式"
       - "手臂舉過頭往後時，讓雙臂與肩膀對齊（想像球賽得分後雙手上舉慶祝的寬度）"
-      - "用來重設划手的肌肉記憶，特別是手臂在頂端越過中線或往後伸太遠時"
+      - "用來重設划手的肌肉記憶，特別是手臂在回臂頂端過度伸向身體中線時"
     perception_goal: "雙臂上舉時感覺像慶祝射門；手臂對齊肩膀不越過中線"
     success_signal: "兩手對稱且對齊肩膀；背部感覺舒適"
     failure_signal: "手超過中線；一側比另一側難"
@@ -757,7 +757,7 @@ drills:
     source: "There's a Drill for That"
     source_ids: [src.theres-a-drill-for-that]
     body_position: supine
-    constraints: [single_arm]
+    constraints: []
     movement_pattern: continuous
     skill_focus: [catch_evf, hand_acceleration]
     stroke_phase: catch
@@ -776,7 +776,7 @@ drills:
     equipment: []
     l_target: [L2, L3]
     abc_type: null
-    purpose_zh: "閉眼仰式流線踢水，靠耳朵感覺池底距離、靠體感確認身體線；建立純粹的本體感"
+    purpose_zh: "閉眼仰式流線踢水，留意周圍水聲、靠體感確認身體線；練習減少視覺依賴"
     how_to:
       - "確認泳道淨空、最好有同伴看著；仰躺 streamline 踢水"
       - "閉眼出發，靠耳朵聽水流方向、靠身體感覺水面位置"
@@ -875,8 +875,7 @@ drills:
     success_signal: "兩人能在約定划數下到牆，划水節律穩定"
     failure_signal: "為了配速犧牲身體線；節律跟不上"
     deficiency_fixes: []
-    source: "通用團隊訓練法（pair pacing in adjacent lanes）"
-    source_ids: [src.pair-pacing-in-adjacent-lanes]
+    source: "通行的相鄰泳道同伴配速練習形式；本庫未取得可定位的單篇出處"
     body_position: supine
     constraints: [tempo_constrained]
     movement_pattern: continuous
@@ -905,7 +904,7 @@ drills:
     success_signal: "切換流暢；節律穩定不亂"
     failure_signal: "翻邊時失去平衡；頭部跟著晃"
     deficiency_fixes: [3, 4]
-    source: "通用游泳教學法（switch drill warmup variant）"
+    source: "通行的六踢換邊熱身變式；本庫未取得可定位的單篇出處"
     body_position: transitional
     constraints: []
     movement_pattern: alternating

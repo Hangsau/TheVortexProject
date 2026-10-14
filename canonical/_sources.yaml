@@ -2599,10 +2599,11 @@ sources:
     notes: "2026-08-17 直接取 NCBI Bookshelf 頁面證實存在。注意本條 id slug 尾碼被截成 nbk44199，正確 accession 是 **NBK441995**，以 identifier 欄為準。StatPearls 屬教科書層級證據，非原始研究。"
 
   - id: src.pair-pacing-in-adjacent-lanes
-    display: "通用團隊訓練法（pair pacing in adjacent lanes）"
+    display: "【只有泛稱，非文獻，已撤下】通用團隊訓練法（pair pacing in adjacent lanes）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 審查 2.4：顯示字串只是練習形式的泛稱，指不到任何文件，完整英文名檢索亦無可對應文獻。唯一引用 Drills BkP1 已撤下 source_ids，散文署名改寫為「通行的…練習形式；本庫未取得可定位的單篇出處」（同 UDK2 先例）。留墓碑擋重新登錄。"
 
   - id: src.pair-tap-drill-ncaa
     display: "通用團隊訓練法（pair-tap drill 美式 NCAA 慣用）"
