@@ -146,6 +146,16 @@ class TestGeneratedViews(unittest.TestCase):
         self.assertLessEqual(set(covered), content_ids)
         self.assertEqual(sum(s["with_land"] for s in coverage["by_stroke"].values()), 6)
 
+    def test_decision_trail_points_at_real_ids_and_lines(self):
+        trail = self.views["decision_trail.json"]["trails"]
+        content_ids = {r["id"] for r in self.views["content_index.json"]["records"]}
+        self.assertLessEqual(set(trail), content_ids)
+        for hits in trail.values():
+            for hit in hits:
+                self.assertTrue(hit["file"].startswith("plans/"))
+                self.assertNotIn("初讀", hit["file"])
+                self.assertGreater(hit["line"], 0)
+
     def test_serialization_is_deterministic(self):
         with tempfile.TemporaryDirectory() as tmp:
             output = Path(tmp)

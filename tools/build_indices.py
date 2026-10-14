@@ -8,6 +8,8 @@ Outputs four JSON views under ``indices/``:
 * source_reverse_index.json: registered source -> exact usage locations
 * gap_report.json: high-certainty claims without sources, unused tags,
   entries without links, and problem coverage
+* decision_trail.json: content ID -> review / ruling records under plans/
+  that mention it (how a conclusion was reached)
 
 The scanner follows the same scope and relationship semantics as
 ``tools/validate.py``. Generated files are views; canonical YAML remains the
@@ -16,6 +18,7 @@ only source of truth.
 from __future__ import annotations
 
 import json
+import re
 from collections import defaultdict
 from pathlib import Path
 from typing import Iterator
@@ -429,6 +432,40 @@ def build_gap_report(
     }
 
 
+_ID_TOKEN = re.compile(r"[A-Za-z][\w-]*(?:\.[\w-]+)+")
+_HEADING = re.compile(r"^#{1,6}\s+(.*)")
+# MiniMax 初讀是未驗證的可疑點清單，不是推論紀錄；只收經 Claude 裁決的檔
+TRAIL_EXCLUDE_DIRS = {"初讀"}
+
+
+def build_decision_trail(root: Path, records: list[dict]) -> dict:
+    """知識點 ID → 提到它的審查／裁決紀錄（plans/ 下的 Markdown），附行號與所在小節。
+
+    這是研究庫「這條結論怎麼來的」的資料來源（三層重構 W3.4）。只做字面比對：
+    紀錄裡寫了條目 ID 才算，不推測同義。
+    """
+    ids = {record["id"] for record in records}
+    trails: dict[str, list[dict]] = defaultdict(list)
+    for path in sorted((root / "plans").rglob("*.md")):
+        if TRAIL_EXCLUDE_DIRS & set(path.relative_to(root).parts):
+            continue
+        rel = path.relative_to(root).as_posix()
+        heading = ""
+        for lineno, line in enumerate(path.read_text(encoding="utf-8").splitlines(), 1):
+            match = _HEADING.match(line)
+            if match:
+                heading = match.group(1).strip()
+            for token in set(_ID_TOKEN.findall(line)):
+                token = token.rstrip(".")
+                if token in ids:
+                    trails[token].append({"file": rel, "line": lineno, "section": heading})
+    return {
+        "schema_version": SCHEMA_VERSION,
+        "record_count": len(trails),
+        "trails": {key: trails[key] for key in sorted(trails)},
+    }
+
+
 def build_views(root: Path = ROOT) -> dict[str, dict]:
     records, entry_by_id = collect_records(root)
     taxonomy = taxonomy_values(root)
@@ -441,6 +478,7 @@ def build_views(root: Path = ROOT) -> dict[str, dict]:
         "tag_reverse_index.json": tags,
         "source_reverse_index.json": sources,
         "gap_report.json": gaps,
+        "decision_trail.json": build_decision_trail(root, records),
     }
 
 
@@ -463,6 +501,7 @@ def main() -> int:
     print(f"Wrote {len(views)} views to {OUT_DIR.relative_to(ROOT)}/")
     print(f"Content records: {views['content_index.json']['record_count']}")
     print(f"Registered sources: {views['source_reverse_index.json']['source_count']}")
+    print(f"Decision trails: {views['decision_trail.json']['record_count']} records")
     print(
         "Gaps: "
         f"high-certainty-without-source={gaps['high_certainty_without_source']}, "
