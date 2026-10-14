@@ -2204,9 +2204,11 @@
     },
     {
       "id": "src.elite-japanese-swimmer-4month",
-      "display": "Elite Japanese swimmer study, 4-month intervention",
+      "display": "Sengoku Y, Yamakawa K, Tsunokawa T, et al. (2020). Training to enhance underwater dolphin kick speed in elite swimmers: focusing on kick frequency and propelling efficiency. Research Journal of Sports Performance 12:396–407.",
       "verification_status": "unverified",
-      "identifier": {},
+      "identifier": {
+        "url": "https://trios.tsukuba.ac.jp/en/researcher/3603"
+      },
       "usage_count": 2,
       "usages": [
         {

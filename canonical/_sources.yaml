@@ -1268,10 +1268,17 @@ sources:
       ④ ACC/AHA 對常規 ECG 篩查的反對意見依然存在，本來源只是爭議的一方。
 
   - id: src.elite-japanese-swimmer-4month
-    display: "Elite Japanese swimmer study, 4-month intervention"
-    type: other
+    display: "Sengoku Y, Yamakawa K, Tsunokawa T, et al. (2020). Training to enhance underwater dolphin kick speed in elite swimmers: focusing on kick frequency and propelling efficiency. Research Journal of Sports Performance 12:396–407."
+    title: "Training to enhance underwater dolphin kick speed in elite swimmers: focusing on kick frequency and propelling efficiency"
+    type: journal-article
     verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    authors: ["Yasuo Sengoku", "Keisuke Yamakawa", "Takaaki Tsunokawa"]
+    year: 2020
+    container: "Research Journal of Sports Performance"
+    identifier:
+      url: "https://trios.tsukuba.ac.jp/en/researcher/3603"
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 重建：書目（篇名、期刊、卷頁、年份、前三位作者）經筑波大學研究者資料庫（TRIOS，角川隆明頁）確認；原文未取得，故仍為 unverified。本庫引用的 n=32、男 1.73→1.81 m/s、女 1.49→1.53 m/s 只見於二手報導（SwimSwam〈5 Sets for Improving Underwater Dolphin Kick〉、YourSwimLog），兩份報導對介入方案說法不一：一說每週 9–10 堂訓練中各加約 10 分鐘，一說 200 m 正背交替海豚踢＋5×4 次阻力管全力踢、每週 2–4 次。**使用邊界**：數字只可轉述並標明轉引；方案細節（頻率、組成）不可當成原文結論；族群為日本全國級泳者。id 字面保留（穩定鍵）。"
 
   - id: src.elite-video-consensus
     display: "通用菁英影像共識"
