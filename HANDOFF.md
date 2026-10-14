@@ -4,6 +4,33 @@
 
 ---
 
+## 當前狀態（2026-10-14 晚，三層重構＋全庫內容檢查：全計畫完成）
+
+- 規劃書 `plans/三層重構與全庫檢查_2026-10-14.md` 的 Phase 1–5 全部完成，§7 最末段有完成總結；不再排 shotclock 接續。
+- **Phase 2 內容審查全數完成**：逐條紀錄在 `plans/內容審查_2026-10-14.md`，追蹤表每個 canonical 檔都有狀態列。本窗收掉的項目：
+  - 2.7 W022：讀原文補述或撤下，W022 歸零。
+  - 呼吸 `_index`／framework。
+  - 2.8 審查軌跡：W029 60 → 0。
+  - 2.4 Drills 全 7 檔。
+- **本輪確立的規則**（已寫進 CLAUDE.md）：
+  - 修訂史寫在 `maintenance_note`，公開文字只寫最終說法（W029）。
+  - health 改 drafts 不改產物（E019）。
+  - Drills 頂層 `abc_type` 是公開篩選軸，不是診斷外洩。
+- **外派教訓**：
+  - codex 會做超出 finding 的結構改動，例如把 70 筆 abc_type 搬進 diagnostic，驗收一定要看 `git diff` 的結構面。
+  - codex 會把 validate 報告存進紀錄夾，`build_indices` 已排除 `驗證/`。
+  - drill 無出處時，codex 傾向寫「Vortex 編製」，正確寫法是「通行的…練習形式；本庫未取得可定位的單篇出處」。
+- 驗收：
+  - validate 0 ERROR／140 WARN。
+  - my-site 22 specs PASS、121 舊網址對應。
+  - 兩 repo 的 MAP／CLAUDE／HANDOFF 已對齊；code-audit 完成。
+
+## 下一步建議（三層重構完成後）
+
+1. swim-coach 的 `vendor/vortex` submodule pin 落後於三層重構（moves.yaml、Drills 修正、來源墓碑）。下次動 swim-coach 時更新 pin，並確認 `generate_menu.py` 讀頂層 `abc_type` 仍正常。
+2. W002 增加的幾筆是「無出處署名」的刻意狀態，不必處理。W003 孤兒條目（127）是另一條長期工作，見 gap_report。
+3. unverified 來源裡，原文取不到的（例如 StatPearls 2023 前鋸肌、Sengoku 2020）已在 registry 註明；有機會取得全文時再回補。
+
 ## 當前狀態（2026-10-14 13:50，三層重構 Phase 1／3／4 完成，Phase 2 剩 2.4 Drills／2.7／2.8）
 
 - 網站已改成知識、應用、研究庫三入口，正式站上線（my-site `52b202c`）。研究庫包含 613 筆來源條目頁、14 份審查與裁決紀錄、研究筆記、研究底稿；知識點頁可以點進來源，也能看到「這條結論怎麼來的」。

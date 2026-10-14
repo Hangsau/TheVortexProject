@@ -159,4 +159,7 @@ Vortex 不套單一文獻門檻——那會讓感知層永遠不合格。改成*
 - **墓碑不得被引用**（E015）：`retracted` 仍留在 `_sources.yaml`，所以它**仍在 E005 的合法集合裡**——引用一筆已判定不可引用的來源本來會完全靜默。撤下某來源時要同時處理它現有的引用，不能只改 `verification_status`。
 - **來源繼承**：祖先區塊帶來源時子區塊不重複要求，但繼承只在同一條目（最近的 `id`）子樹內成立，不跨兄弟條目。
 - **綜述行**：結論的證據由子條目承擔時寫 `evidence_from: [子條目 ID]`；空 list `[]` 不算宣告。
+- **修訂史不寫進公開文字（W029）**：公開欄位只寫最終說法，必要的限定改成不帶日期的陳述；「原寫…／某日更正／見錯誤 N」寫在條目最外層 `maintenance_note`（與 `id` 同層、`public` 之外；health drafts 任何層級都可，sync 一律剝除）。
+- **health 改 drafts 不改產物（E019）**：`canonical/health/injuries.yaml` 由 `tools/build_injuries.py` 從 `drafts/` 重建，直接改產物會在下次重建時被無聲蓋掉。
+- **Drills 的頂層 `abc_type` 是公開篩選軸，不是診斷外洩**：網站只把它顯示成「補哪一塊感知：手感／腳感／全身張力」，不印 A/B/C；不要搬進 `diagnostic`（swim-coach 也讀頂層）。
 - **公開／診斷分層是結構性的**：診斷判讀語（`perception_probe`／`signal_structure`／`discriminators`／`type_diagnosis`／`manipulation`／`contrast_question`…）只能放 `diagnostic` 子樹。`my-site/tools/sync_vortex.py` 對 `public` 整包 `rec.update(pub)`（白名單），所以新增 diagnostic 型兄弟鍵不會外洩，**唯一實際洩漏路徑是把診斷內容寫進 `public` 底下**——這條是 ERROR 級（E010），不是警告。
