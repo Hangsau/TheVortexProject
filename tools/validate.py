@@ -126,6 +126,7 @@ exit code：
         observation_basis；W027 是「有字串但指不到東西」→ 查證或改寫。
         把兩者合併會讓 W011 的 0 消失，而那個 0 是真的（每個完全沒來源的
         🟠 都已交代觀察基礎），不該被這個問題吃掉。
+  W029  審查軌跡寫在公開文字裡（修訂史應在研究庫的審查紀錄，正文只寫最終說法）
   W028  診斷框架用語（A/B/C 型、感知三型、「泳者說：」）寫在 public 子樹的
         文字裡。E010 只看鍵名，診斷語寫進 public 的普通欄位（`perception_impact`
         等）會原字上線——2026-10-14 稽核在 back.err5–9 抓到「B 型腳感系統」。
@@ -1767,6 +1768,42 @@ def check_injuries_built_from_drafts(errors: dict):
         )
 
 
+_REVIEW_TRAIL = re.compile(r"20\d\d-\d\d-\d\d *(?:更正|補|修正)|見錯誤 ?\d+|錯誤 \d+）")
+# 不出站的維護欄位：寫在這裡的修訂史合法
+_TRAIL_EXEMPT_KEYS = {"observation_basis", "maintenance_note", "audit", "pending_verification", "notes"}
+
+
+def check_review_trail_in_public(rel: str, data: object, warnings: dict):
+    """W029：審查軌跡（「2026-09-04 更正：原寫…」「見錯誤 32」）寫在讀者看得到的文字裡。
+
+    修訂史屬研究庫的審查與裁決紀錄；公開正文只寫最終說法。仍需保留的限定
+    （例如「只涵蓋男子項目」）改寫成不帶日期與「原寫」的陳述。
+    """
+    name = Path(rel).name
+    if name == "injuries.yaml":
+        return  # 產物；真相源 drafts/ 已掃過，避免重複計數
+    whole_public = (name == "moves.yaml"
+                    or Path(rel).parent.name in ("breathing", "periodization", "drafts"))
+
+    def walk(node, path, in_public):
+        if isinstance(node, dict):
+            for k, v in node.items():
+                if k in _TRAIL_EXEMPT_KEYS:
+                    continue
+                walk(v, f"{path}.{k}" if path else str(k), in_public or k == "public")
+        elif isinstance(node, list):
+            for i, item in enumerate(node):
+                walk(item, f"{path}[{i}]", in_public)
+        elif in_public and isinstance(node, str):
+            m = _REVIEW_TRAIL.search(node)
+            if m:
+                warnings["W029"].append(
+                    f"  file={rel} at={path} 讀者文字含審查軌跡 {m.group(0)!r}"
+                )
+
+    walk(data, "", whole_public)
+
+
 def check_public_layer_leak(rel: str, data: object, errors: dict):
     """E010：診斷型鍵名出現在 public 子樹內。
 
@@ -2553,7 +2590,7 @@ def run_validation():
         "W011": [], "W012": [], "W014": [], "W015": [],
         "W016": [], "W017": [], "W018": [], "W019": [], "W020": [],
         "W021": [], "W022": [], "W023": [], "W024": [], "W025": [],
-        "W026": [], "W027": [], "W028": []
+        "W026": [], "W027": [], "W028": [], "W029": []
     }
 
     # 新索引的空檔、截斷 YAML 或錯誤型別必須 fail closed，不能被一般掃描略過。
@@ -2767,6 +2804,7 @@ def run_validation():
         check_text_is_citation(rel, data, source_displays, warnings)
         check_public_layer_leak(rel, data, errors)
         check_diagnostic_text_in_public(rel, data, warnings)
+        check_review_trail_in_public(rel, data, warnings)
         check_machine_key_in_prose(rel, data, warnings)
         check_verification_marker_in_citation(rel, data, warnings)
         check_evidence_from(rel, data, all_id_set, errors)
@@ -2973,6 +3011,11 @@ def _write_report(
             "🟠 只靠一個解析不到文件的顯示字串通過 W011 的來源逃生口"
             "（`source_ids` 沒有任何一筆指到非 retracted 且帶 identifier 的登錄）"
             "——查證成真來源登錄，或承認是實務觀察改寫 `observation_basis`",
+        ),
+        "W029": (
+            "WARN",
+            "審查軌跡（「2026-09-04 更正：原寫…」「見錯誤 N」）寫在讀者看得到的文字裡"
+            "——修訂史屬研究庫審查紀錄，公開正文只寫最終說法",
         ),
         "W028": (
             "WARN",

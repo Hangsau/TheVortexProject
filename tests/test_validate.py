@@ -2889,3 +2889,25 @@ class TestE019InjuriesBuiltFromDrafts(unittest.TestCase):
         errors = defaultdict(list)
         validate_mod.check_injuries_built_from_drafts(errors)
         self.assertEqual(errors["E019"], [])
+
+
+class TestW029ReviewTrailInPublic(unittest.TestCase):
+    """W029：審查軌跡寫進公開文字。"""
+
+    def run_check(self, rel, data):
+        from collections import defaultdict
+        warnings = defaultdict(list)
+        validate_mod.check_review_trail_in_public(rel, data, warnings)
+        return warnings["W029"]
+
+    def test_trail_in_public_flagged(self):
+        data = {"errors": [{"id": "a", "public": {"text": "（2026-09-04 更正：原寫 X）正文"}}]}
+        self.assertEqual(len(self.run_check("canonical/x.yaml", data)), 1)
+
+    def test_trail_in_exempt_field_not_flagged(self):
+        data = {"errors": [{"id": "a", "public": {"observation_basis": "2026-09-04 更正：原寫 X"}}]}
+        self.assertEqual(self.run_check("canonical/x.yaml", data), [])
+
+    def test_generated_injuries_skipped(self):
+        data = {"injuries": [{"id": "a", "caveat": "2026-09-04 更正：原寫 X"}]}
+        self.assertEqual(self.run_check("canonical/health/injuries.yaml", data), [])

@@ -203,6 +203,73 @@
 
 ---
 
+## W029 — 審查軌跡（「2026-09-04 更正：原寫…」「見錯誤 N」）寫在讀者看得到的文字裡——修訂史屬研究庫審查紀錄，公開正文只寫最終說法
+
+**WARN，共 60 筆**
+
+  file=canonical\instructional\teaching-errors.yaml at=errors[9].public.physical_reason.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[11].public.evidence[0].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[14].public.physical_reason.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[26].public.evidence[1].text 讀者文字含審查軌跡 '2026-09-06 修正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[28].public.correct_concept 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[29].public.physical_reason.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[38].public.physical_reason.text 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[48].public.evidence[1].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[51].public.correct_concept 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[55].public.correct_concept 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[60].public.physical_reason.text 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[74].public.correct_concept 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[84].public.physical_reason.text 讀者文字含審查軌跡 '2026-09-04 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[87].public.physical_reason.text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[87].public.evidence[0].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[97].public.evidence[1].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\teaching-errors.yaml at=errors[98].public.physical_reason.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[6].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[7].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[9].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[11].public.evidence[0].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[16].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[33].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[34].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[45].public.evidence[1].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[50].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\technical-analysis.yaml at=points[53].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[67].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[73].public.practical_implication 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\technical-analysis.yaml at=points[74].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[76].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[84].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[84].public.practical_implication 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[88].public.practical_implication 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\technical-analysis.yaml at=points[92].public.evidence[0].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[116].public.summary 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\technical-analysis.yaml at=points[122].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[141].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[158].public.evidence[0].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[167].public.mechanism.text 讀者文字含審查軌跡 '2026-09-06 補'
+  file=canonical\instructional\technical-analysis.yaml at=points[176].public.evidence[1].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[178].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\technical-analysis.yaml at=points[212].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[213].public.mechanism.text 讀者文字含審查軌跡 '2026-10-02 修正'
+  file=canonical\instructional\technical-analysis.yaml at=points[215].public.mechanism.text 讀者文字含審查軌跡 '2026-09-04 更正'
+  file=canonical\instructional\technical-analysis.yaml at=points[218].public.evidence[0].text 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\dryland.yaml at=youth_safety.age_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\dryland.yaml at=youth_safety.maturation_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\dryland.yaml at=youth_safety.swim_specific_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\set-design.yaml at=generator.refusal_scope_zh 讀者文字含審查軌跡 '2026-09-12 更正'
+  file=canonical\periodization\zones.yaml at=swim_tid.not_polarized_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\zones.yaml at=swim_tid.sprinter_note_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\zones.yaml at=school_polarized.key_numbers_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\periodization\zones.yaml at=school_polarized.swim_caveat_zh 讀者文字含審查軌跡 '2026-09-06 更正'
+  file=canonical\technica\l-indicators.yaml at=indicators[11].public.evidence[0].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\technica\l-indicators.yaml at=indicators[12].public.evidence[0].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\technica\l-indicators.yaml at=indicators[22].public.evidence[1].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\technica\l-indicators.yaml at=indicators[38].public.evidence[1].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\technica\l-indicators.yaml at=indicators[41].public.evidence[0].text 讀者文字含審查軌跡 '2026-10-02 更正'
+  file=canonical\technica\l-indicators.yaml at=indicators[46].public.evidence[0].text 讀者文字含審查軌跡 '2026-09-06 更正'
+
+---
+
 ## W028 — 診斷框架用語（A/B/C 型、感知三型、「泳者說：」）寫在 public 子樹文字裡——E010 只看鍵名，這類文字會原字上線
 
 **WARN，共 0 筆**
