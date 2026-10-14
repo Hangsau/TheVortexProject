@@ -1210,10 +1210,11 @@ sources:
     notes: "2026-09-06 查證。本文分析雪梨 2000 奧運游泳項目決賽與準決賽選手的出發表現，把總出發時間定義為「起跳訊號到頭部中心通過 15 公尺」，並拆成 on-block／flight／underwater 三個次階段。可引用的結論有二：① 出發時間佔全程比賽時間 0.8%–26.1%（隨項目距離而變，距離越短佔比越高）；② 決定出發快慢最顯著的變數，男女組都是水下距離與水下時間——水下距離與 15 公尺時間呈負相關，也就是待在水下越久（在規則允許內）到 15 公尺越快。使用邊界：**本文沒有報告 11%／5%／84% 這組三階段時間佔比**。該組數字出自 Slawson 等人 2013（見 src.slawson-2013-osb11-start-categorisation），Tor 2015 博論第 73 頁逐字寫的是 approximately 11%, 5% and 84% respectively (Slawson, Conway, Cosser, Chakravorti, & West, 2013)——該處把 Cossor 拼成 Cosser，本庫先前的誤植極可能由此而來。2026-09-06 已把 84% 從本登錄名下移除。"
 
   - id: src.counsilman-fist-sculling
-    display: "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）"
+    display: "【只有人名，非文獻，已撤下】Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 審查 2.4：顯示字串只是把練習掛在 Counsilman 名下，沒有書名、年份或章節，指不到任何可回查的著作；人名歸因是本專案點名的高風險幻覺區。唯一引用 Drills/drills_sculling.yaml 已撤下 source_ids，散文署名改為「通行的…練習形式；本庫未取得可定位的單篇出處」。留墓碑擋重新登錄。"
 
   - id: src.counsilman-hand-arm-pressure-isolation
     display: "Counsilman 捕水傳統（hand-arm pressure isolation）"
@@ -1222,10 +1223,11 @@ sources:
     notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
 
   - id: src.counsilman-hover-sculling
-    display: "Counsilman 沉浮平衡傳統（hover sculling）"
+    display: "【只有人名，非文獻，已撤下】Counsilman 沉浮平衡傳統（hover sculling）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 審查 2.4：顯示字串只是把練習掛在 Counsilman 名下，沒有書名、年份或章節，指不到任何可回查的著作；人名歸因是本專案點名的高風險幻覺區。唯一引用 Drills/drills_sculling.yaml 已撤下 source_ids，散文署名改為「通行的…練習形式；本庫未取得可定位的單篇出處」。留墓碑擋重新登錄。"
 
   - id: src.danswim
     display: "Novikov, D. Mastering the Dolphin Kick: Techniques for Effortless Speed. DanSwim."

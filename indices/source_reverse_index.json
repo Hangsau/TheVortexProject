@@ -1597,17 +1597,11 @@
     },
     {
       "id": "src.counsilman-fist-sculling",
-      "display": "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）",
-      "verification_status": "unverified",
+      "display": "【只有人名，非文獻，已撤下】Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "ScFist",
-          "file": "Drills/drills_sculling.yaml",
-          "path": "drills[10]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.counsilman-hand-arm-pressure-isolation",
@@ -1625,17 +1619,11 @@
     },
     {
       "id": "src.counsilman-hover-sculling",
-      "display": "Counsilman 沉浮平衡傳統（hover sculling）",
-      "verification_status": "unverified",
+      "display": "【只有人名，非文獻，已撤下】Counsilman 沉浮平衡傳統（hover sculling）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "ScUW1",
-          "file": "Drills/drills_sculling.yaml",
-          "path": "drills[11]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.couture-1999-swimming-cognitive-strategies",

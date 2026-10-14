@@ -160,8 +160,8 @@ drills:
     purpose_zh: "仰面腳先行，手在髖部兩側小圓圈划水，感覺前臂抓水向後推的力量"
     how_to:
       - "仰躺、雙手放身側、腳朝前方移動整趟泳池；盡量放鬆每個部位（膝蓋鬆、可微彎），肩膀放鬆、頸與脊椎對齊"
-      - "雙手在臀部附近做小圓圈撥水：離臀部約6-10吋、深度約4-6吋，雙手大致與臀部平行"
-      - "只用手臂發力（主要前臂、部分三角肌）；能輕鬆做完25後計時當基準看進步"
+      - "雙手在臀部附近做小圓圈撥水：離臀部約 15–25 公分（6–10 吋）、深度約 10–15 公分（4–6 吋），雙手大致與臀部平行"
+      - "只用手臂發力（主要前臂、部分三角肌）；能輕鬆做完一趟 25（公尺或碼，依泳池）後，計時當基準看進步"
     perception_goal: "小圓圈划水時感覺到手和前臂在抓水；不是整臂在動"
     success_signal: "腳朝前能前進；感覺到推力"
     failure_signal: "幾乎無法移動（代表沒有抓到水）"
@@ -190,7 +190,7 @@ drills:
     how_to:
       - "面朝下、夾浮棒、戴呼吸管"
       - "雙手放在臀部旁，只用手掌撥水"
-      - "手移動幅度很小，只有幾吋"
+      - "手移動幅度很小，只有幾公分"
     perception_goal: "手在髖部感覺細微的水壓；感覺出水前的最後推力"
     success_signal: "小動作也能感覺到水壓差異"
     failure_signal: "感覺不到任何水壓"
@@ -314,8 +314,7 @@ drills:
     success_signal: "握拳能前進；開手後推進量明顯多但感覺基線在前臂"
     failure_signal: "握拳完全無法前進（代表整個系統依賴手掌）"
     deficiency_fixes: []
-    source: "Counsilman 捕水訓練（fist sculling 為前臂感知標準練習）"
-    source_ids: [src.counsilman-fist-sculling]
+    source: "通行的握拳撥水練習形式；本庫未取得可定位的單篇出處"
     body_position: prone
     constraints: [closed_fist, no_kick, tension_held]
     movement_pattern: static
@@ -339,13 +338,12 @@ drills:
       - "深吸一口氣下潛到約 1.5 公尺深，俯臥水下"
       - "雙臂前伸做 Sc1 寬 Y 撥水，目標是讓身體停在那個深度（不浮不沉）"
       - "做 10–15 秒一組，回水面換氣 30 秒再重複"
-      - "做 4 組；過程注意呼吸安全（淺水區、有同伴監看）"
+      - "做 4 組；在水深足夠下潛 1.5 公尺的區域、有同伴在水面監看；下潛前一口正常深吸氣，不刻意過度換氣，想換氣就上浮，不延長閉氣"
     perception_goal: "懸停代表撥水的力量恰好抵消浮力，是捕水效率的客觀標尺"
     success_signal: "能維持深度 10 秒以上不浮"
     failure_signal: "立刻上浮（撥水沒抓到水）"
     deficiency_fixes: []
-    source: "Counsilman 沉浮平衡傳統（hover sculling）"
-    source_ids: [src.counsilman-hover-sculling]
+    source: "通行的水下懸停撥水練習形式；本庫未取得可定位的單篇出處"
     body_position: underwater
     constraints: [no_kick, no_breath]
     movement_pattern: static
