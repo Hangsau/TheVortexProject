@@ -8,6 +8,7 @@
 MiniMax 只做初標；units.jsonl 的對應在使用者審過前一律是 🔴 假設。
 
 用法：
+  python tools/map_learner_speech.py extract --round N        （飽和抽樣第 N 輪：Reddit 每查詢 4 篇＋PTT 粗篩後 150 篇）
   python tools/map_learner_speech.py extract [--limit N] [--source reddit|ptt]
   python tools/map_learner_speech.py map [--limit N]
   python tools/map_learner_speech.py merge
@@ -30,7 +31,7 @@ CARD = BASE / "framework_card.md"
 UNITS = BASE / "units.jsonl"
 M3 = "C:/Users/hangs/bin/claude-m3-lite"  # bash 腳本，Windows 要經 bash 執行
 
-EXTRACT_BATCH = 12
+EXTRACT_BATCH = 16
 MAP_BATCH = 15
 BODY_CHARS = 1800
 CALL_TIMEOUT = 1200
@@ -81,7 +82,7 @@ MAP_PROMPT = """\
 
 ## 每句輸出
 - `unit_id`：照抄。
-- `sufficient`：這句話的資訊夠不夠判讀。只有籠統結果、沒有任何身體感覺或情境（例：「都游不快」「好難」）→ false，此時 `level_candidates`、`type_candidates` 都給空陣列，其餘欄位照填。
+- `sufficient`：這句話的資訊夠不夠判讀。**只要**提到身體部位、身體感覺或具體情境（例：「夾了浮條還是沉」「很難浮起來」「換氣喝到水」）就是 true。只有籠統結果、完全沒有身體或情境（例：「都游不快」「好難」「技術怪怪的」）才是 false，此時 `level_candidates`、`type_candidates` 都給空陣列，其餘欄位照填。
 - `level_candidates`：可能的 L 級（L0–L6），1–3 個，每個附 `why`（一句）與 `evidence`（從速查卡**逐字複製**的一小段原文，10–40 字，會被程式比對，不是逐字就作廢）與 `card_id`（該段所在條目，例如 free.L3）。
 - `type_candidates`：A／B／C，可多個，每個附 `why`、`evidence`、`card_id`（規則同上）。**L0–L2 不判型；候選都在 L0–L2 時給空陣列。**
 - `non_perception`：只在原話或情境**明確提到**時才標，不要推測。
@@ -149,15 +150,71 @@ def load_posts(source: str | None) -> list[dict]:
     return posts
 
 
-def cmd_extract(limit: int | None, source: str | None) -> None:
+# PTT 雜訊多（試點 24 篇只留 4 篇）：先用身體／技術詞粗篩，省 MiniMax 額度
+PTT_BODY_WORDS = ("換氣", "呼吸", "沉", "浮", "喘", "嗆", "喝水", "踢", "划", "腳", "腿", "手", "臀", "屁股", "腰",
+                  "肩", "頭", "身體", "水感", "抓水", "抽筋", "轉身", "滾翻", "憋氣", "前進", "吃力", "卡")
+
+
+def ptt_relevant(p: dict) -> bool:
+    text = p["title"] + p["body"][:BODY_CHARS]
+    return p["title"].startswith(("[泳技]", "[問題]", "[請益]")) and sum(w in text for w in PTT_BODY_WORDS) >= 3
+
+
+def sample_round(round_no: int, per_query: int, ptt_n: int) -> list[dict]:
+    """Deterministic stratified sample for one saturation round (each round takes the next slice).
+
+    Reddit: `per_query` posts per search query, so every 卡關切角 is represented.
+    PTT: `ptt_n` posts from those passing `ptt_relevant`, evenly spread over the board's history.
+    """
+    picked = []
+    by_query: dict[str, list[dict]] = {}
+    for p in load_posts("reddit"):
+        by_query.setdefault(p["query"], []).append(p)
+    lo, hi = (round_no - 1) * per_query, round_no * per_query
+    for group in by_query.values():
+        picked += group[lo:hi]
+    ptt = [p for p in load_posts("ptt") if ptt_relevant(p)]
+    if ptt and ptt_n:
+        stride = max(1, len(ptt) // (ptt_n * 4))  # 最多 4 輪不重複
+        offset = round_no - 1
+        picked += ptt[offset::stride][:ptt_n]
+    return picked
+
+
+def minimax_5h_used() -> float | None:
+    """Read MiniMax 5H usage from deskboard; None if unavailable (then we don't block)."""
+    try:
+        sys.path.insert(0, "C:/claudehome/tools/deskboard")
+        import llm_usage  # noqa: PLC0415
+        return next(w.used_percent for w in llm_usage.read_minimax().windows if w.label == "5H")
+    except Exception:
+        return None
+
+
+QUOTA_STOP_PERCENT = 90
+
+
+def quota_guard() -> None:
+    used = minimax_5h_used()
+    if used is not None and used >= QUOTA_STOP_PERCENT:
+        raise SystemExit(f"MiniMax 5H 已用 {used:.0f}%（≥{QUOTA_STOP_PERCENT}%），停下；重跑同指令會從這裡續")
+
+
+def cmd_extract(limit: int | None, source: str | None, round_no: int | None = None) -> None:
     out_dir = WORK / "extract"
     out_dir.mkdir(parents=True, exist_ok=True)
-    posts = load_posts(source)[:limit] if limit else load_posts(source)
+    if round_no:  # PTT 還在蒐集時先跑 --source reddit，抽樣才不會隨資料增加而漂移
+        posts = [p for p in sample_round(round_no, per_query=4, ptt_n=150)
+                 if not source or p["source"].startswith(source)]
+    else:
+        posts = load_posts(source)[:limit] if limit else load_posts(source)
+    print(f"{len(posts)} posts to extract", flush=True)
     for i in range(0, len(posts), EXTRACT_BATCH):
         batch = posts[i:i + EXTRACT_BATCH]
         out = out_dir / f"{batch[0]['id']}__{len(batch)}.json"
         if out.exists():
             continue
+        quota_guard()
         text = "\n\n".join(f"## post_id: {p['id']}\n標題：{p['title']}\n{p['body'][:BODY_CHARS]}" for p in batch)
         run_batch(EXTRACT_PROMPT.format(n=len(batch), posts=text), out)
 
@@ -170,12 +227,13 @@ def norm(s: str) -> str:
 def extracted_units() -> list[dict]:
     """Flatten extract results into units with stable ids, checking quotes against the raw post."""
     posts = {p["id"]: p for p in load_posts(None)}
-    units = []
+    units, done_posts = [], set()
     for f in sorted((WORK / "extract").glob("*.json")):
         for rec in json.loads(f.read_text(encoding="utf-8")):
             post = posts.get(rec.get("post_id"))
-            if not rec.get("keep") or not post:
+            if not rec.get("keep") or not post or post["id"] in done_posts:  # 同篇跨輪重抽只取一次
                 continue
+            done_posts.add(post["id"])
             for k, u in enumerate(rec.get("units") or [], 1):
                 quote = (u.get("quote_orig") or "").strip()
                 u.update(unit_id=f"{post['id']}#{k}", post_id=post["id"], url=post["url"],
@@ -208,6 +266,7 @@ def cmd_map(limit: int | None) -> None:
             out = out_dir / f"{stroke}__{batch[0]['unit_id'].replace('#', '_')}__{len(batch)}.json"
             if out.exists():
                 continue
+            quota_guard()
             text = "\n".join(f"- unit_id: {u['unit_id']}｜泳式：{u.get('stroke')}｜kind：{u.get('kind', '')}"
                              f"｜情境：{json.dumps(u.get('context') or {}, ensure_ascii=False)}"
                              f"｜原話：{u['speech_zh']}" for u in batch)
@@ -247,8 +306,9 @@ def main() -> None:
     ap.add_argument("cmd", choices=("extract", "map", "merge"))
     ap.add_argument("--limit", type=int)
     ap.add_argument("--source", choices=("reddit", "ptt"))
+    ap.add_argument("--round", type=int, help="飽和抽樣第幾輪（extract 用）")
     args = ap.parse_args()
-    {"extract": lambda: cmd_extract(args.limit, args.source),
+    {"extract": lambda: cmd_extract(args.limit, args.source, args.round),
      "map": lambda: cmd_map(args.limit), "merge": cmd_merge}[args.cmd]()
 
 
