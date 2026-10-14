@@ -7,7 +7,7 @@
 ## 當前狀態（2026-10-15 凌晨，學習者原話研究：第 1 輪完成）
 
 研究底稿在 `Research/學習者原話/`（不公開、不進 canonical）。規格見該目錄 `README.md`。
-- 蒐集：Reddit 3,577 篇（完成）；PTT swim 板背景抓取中（4,300+ 篇，往第 1 頁方向抓）。原文只在 `_raw/`（gitignored）。
+- 蒐集：Reddit 3,577 篇（完成）；PTT swim 板 8,469 篇（完成，全板）。原文只在 `_raw/`（gitignored）。
 - 工具：`tools/collect_learner_speech.py`（蒐集）、`tools/build_framework_card.py`（速查卡）、`tools/map_learner_speech.py`（extract／map／merge，MiniMax 經 `claude-m3-lite -p`，飽和抽樣 `--round N --source`，額度守門 ≥90% 停、可續跑）。
 - 第 1 輪：Reddit 200 篇 → `units.jsonl` 275 句（含試點 PTT 9 句）。報告 `report.md`：吻合 7 類、缺口 G1–G7（最大是「下沉」約 32 句、「喘」約 28 句，框架都沒有區辨問題）、衝突 K1–K3。
 - 修正：M3 多段 JSON 解析（9a6a6f4）；抽句規則固定器材譯名（pull buoy＝夾腿浮條，kickboard＝浮板），第 1 輪有幾句因此錯配 Q2，報告第四節已列。
@@ -15,7 +15,7 @@
 ## 下一步建議（學習者原話）
 
 1. **等使用者審 `report.md` 第五節的三個決定**（沉／喘區辨問題要不要進 diagnostic、情境性恐懼放哪、是否新增前庭與環境兩個非感知分類）。成果只進 `diagnostic`，絕不進 public（E010）。
-2. PTT 抓完後：`python -I tools/map_learner_speech.py extract --round 1 --source ptt`，再 `map`、`merge`。
+2. PTT 已抓完；04:10 shotclock（gq3h）會跑 PTT 第 1 輪＋Reddit 第 2 輪。手動版：`python -I tools/map_learner_speech.py extract --round 1 --source ptt`，再 `map`、`merge`。
 3. Reddit 第 2 輪（`--round 2 --source reddit`）當驗證輪：新說法類型 ≤ 1 個就停。
 4. merge 依原文去重（跨板重貼目前會算兩次）。
 
