@@ -37,8 +37,8 @@ schema_version: 1
 
 # ── 安全鐵則（safety.yaml）── 置頂，不可妥協，先讀這兩條再讀其他
 safety:
-  - {id: breathing.safety.hypoxic_blackout, file: safety.yaml, name_zh: 缺氧昏迷（危險水下憋氣的致死機轉）, gist_zh: "🟢全章最高優先：致命的是游前過度換氣＋憋到極限＋無專人盯的組合；CO2 被排掉後人在毫無窒息感下昏迷。三方聲明對教練是條件式規範（原則上水面、海豚腿除外），正常的水下段與少換氣訓練不在禁止之列", stages: [l2t, t2t, t2c, t2w]}
-  - {id: breathing.safety.hypocapnia_mechanism, file: safety.yaml, name_zh: 血氧正常 ≠ 安全, gist_zh: "🟢主導機制是腦血管收縮（非波爾效應左移）；血氧機量不到，不能拿來當缺氧昏迷的防線", stages: [l2t, t2t, t2c, t2w]}
+  - {id: breathing.safety.hypoxic_blackout, file: safety.yaml, name_zh: 缺氧昏迷（危險水下憋氣的致死機轉）, gist_zh: "🟢全章最高優先：致命的是游前過度換氣＋憋到極限＋無專人盯的組合；CO2 被排掉後人在毫無窒息感下昏迷。三方聲明的條件是下水前最多一兩口深呼吸、每趟有距離上限、限制趟數並給足恢復、有人專門盯這一道；照這些條件，出發轉身水下段、限量水下海豚腿與少換氣衝刺都是正常訓練", stages: [l2t, t2t, t2c, t2w]}
+  - {id: breathing.safety.hypocapnia_mechanism, file: safety.yaml, name_zh: 血氧正常 ≠ 安全, gist_zh: "🟢二氧化碳被排掉後腦血管收縮、腦血流下降，是過度換氣讓腦缺氧的機制之一；血氧機量不到這件事，不能拿來當缺氧昏迷的防線", stages: [l2t, t2t, t2c, t2w]}
 
 # ── 章節框架（framework.yaml）── 三條線的定位與收錄邊界
 framework:
@@ -51,22 +51,22 @@ physiology:
   - {id: breathing.physiology.muscles, file: physiology.yaml, name_zh: 呼吸肌是骨骼肌, gist_zh: "🟡橫膈與肋間肌是骨骼肌所以練得動——這是整條生理線的前提；肺不是肌肉，「練肺活量」是誤稱", stages: [l2t, t2t, t2c, t2w]}
   - {id: breathing.physiology.neural_control, file: physiology.yaml, name_zh: 呼吸的神經控制, gist_zh: "🟢前包欽格複合體是吸氣節律起搏點；呼吸是少數可自主介入的自動化系統，介入有再投資代價", stages: [l2t, t2t, t2c, t2w]}
   - {id: breathing.physiology.chemoreceptors, file: physiology.yaml, name_zh: 化學受器與呼吸驅動, gist_zh: "🟢驅動「想呼吸」的主要訊號是CO2不是缺氧——這句話同時解釋了缺氧昏迷為何致命與CO2耐受訓練想動什麼", stages: [l2t, t2t, t2c, t2w]}
-  - {id: breathing.physiology.autonomic_coupling, file: physiology.yaml, name_zh: 呼吸與自律神經耦合, gist_zh: "🟢吸氣偏交感、吐氣偏副交感（RSA）；吐氣長於吸氣會鎮定的機制基礎", stages: [l2t, t2t, t2c, t2w]}
+  - {id: breathing.physiology.autonomic_coupling, file: physiology.yaml, name_zh: 呼吸與自律神經耦合, gist_zh: "🟢平靜呼吸時吸氣伴隨心臟迷走作用減弱、吐氣時恢復，心率隨之起伏（RSA）；這不等於吐氣拉長就保證鎮定", stages: [l2t, t2t, t2c, t2w]}
   - {id: breathing.physiology.baroreflex_resonance, file: physiology.yaml, name_zh: 壓力反射共振, gist_zh: "🟢壓力反射迴路有自然振盪頻率（族群平均約0.1Hz），呼吸對上會共振放大HRV；族群平均不是個人處方", stages: [l2t, t2t, t2c, t2w]}
 
 # ── 生理線 / 訓練法（training.yaml）── 按負荷分級，與陸上力量訓練平行
 training:
-  - {id: breathing.training.imt, file: training.yaml, name_zh: 吸氣肌訓練 IMT/RMT, gist_zh: "🟡肌力一定進步（MIP +29.35 cmH2O）但成績不一定：13篇僅3篇見成績進步，另一份統合分析卻見顯著；兩份結論不一致。更正15%MIP是安慰劑劑量不是訓練下限", stages: [t2c, t2w]}
+  - {id: breathing.training.imt, file: training.yaml, name_zh: 吸氣肌訓練 IMT/RMT, gist_zh: "🟢吸氣肌力一致進步（MIP 平均 +29.35 cmH2O），成績未定：三份統合分析中兩份看不到成績效益。15% MIP 在多數試驗裡是假訓練組的劑量，不是訓練下限", stages: [t2c, t2w]}
   - {id: breathing.training.co2_tolerance, file: training.yaml, name_zh: CO2 耐受表, gist_zh: "🔴從自由潛水搬來的做法，游泳表現上零實證；閉氣訓練VO2max無提升僅乳酸上升；陸上做要有人陪，絕不入水", stages: [t2c, t2w]}
   - {id: breathing.training.buteyko, file: training.yaml, name_zh: 布泰科呼吸法, gist_zh: "🟡證據全在氣喘臨床（極低確定性、效果小、生活品質無差異），沒有一篇測游泳；收錄理由是教練會被問到，屬醫療範疇別含糊點頭", stages: [t2t, t2c]}
-  - {id: breathing.training.bolt_test, file: training.yaml, name_zh: BOLT 測試, gist_zh: "🟢測法可照做，但「理想40秒/多數人15–25秒」沒有常模研究支撐；49位菁英選手身上與表現零相關，絕不可拿來分級選材", stages: [t2t, t2c]}
+  - {id: breathing.training.bolt_test, file: training.yaml, name_zh: BOLT 測試, gist_zh: "🟢測法可照做，但「理想40秒/多數人15–25秒」沒有常模研究支撐；在 49 位菁英競速滑冰選手身上與表現無相關（沒有游泳研究），絕不可拿來分級選材", stages: [t2t, t2c]}
   - {id: breathing.training.self_tracking, file: training.yaml, name_zh: 自我追蹤, gist_zh: "🔵晨起心率/HRV/BOLT/主觀壓力；核心原則是看2–4週趨勢不看單日；是趨勢工具不是診斷工具，不可拿來判水感", stages: [t2t, t2c, t2w]}
 
 # ── 喚醒調節線（regulation.yaml）── 全部陸上進行，處理賽前緊張與過度警醒
 regulation:
   - {id: breathing.regulation.principle, file: regulation.yaml, name_zh: 喚醒調節總則, gist_zh: "🔵處理「下水前就繃住」；兩條硬邊界：情緒證據≠游泳表現證據、所有方法一律陸上不入水", stages: [l2t, t2t, t2c, t2w]}
   - {id: breathing.regulation.physiological_sigh, file: regulation.yaml, name_zh: 生理性嘆息, gist_zh: "🟢兩段吸氣＋長吐氣；零練習門檻、池畔當場可用；Balban 2023 情緒與呼吸速率顯著優於正念，但HRV與靜息心率無變化", stages: [l2t, t2t, t2c, t2w]}
-  - {id: breathing.regulation.resonance_breathing, file: regulation.yaml, name_zh: 共振呼吸, gist_zh: "🟡吸吐各5–6秒、每天10–20分鐘；個人化頻率用4.5–6.5次/分掃描取HRV振幅最大。更正：Lalanza 2023 是方法學回顧不是療效證據", stages: [t2t, t2c, t2w]}
-  - {id: breathing.regulation.box_breathing, file: regulation.yaml, name_zh: 箱式呼吸, gist_zh: "🟡吸4-閉4-吐4-閉4；更正：在最直接測過它的研究裡未達統計顯著，坊間「已證實有效」是誤讀", stages: [t2t, t2c, t2w]}
+  - {id: breathing.regulation.resonance_breathing, file: regulation.yaml, name_zh: 共振呼吸, gist_zh: "🟡吸吐各5–6秒、每天10–20分鐘；個人化頻率用4.5–6.5次/分掃描取HRV振幅最大。常被引用的 Lalanza 2023 是方法學回顧（143 篇中約三分之二沒交代實際呼吸頻率），不是療效證據", stages: [t2t, t2c, t2w]}
+  - {id: breathing.regulation.box_breathing, file: regulation.yaml, name_zh: 箱式呼吸, gist_zh: "🟡吸4-閉4-吐4-閉4；在直接比較過它的 Balban 2023 四組研究裡，情緒改善未達統計顯著，坊間「已證實有效」是誤讀", stages: [t2t, t2c, t2w]}
   - {id: breathing.regulation.wim_hof, file: regulation.yaml, name_zh: Wim Hof 法, gist_zh: "🟡刻意過度換氣＋閉氣。安全比效果重要：絕不在水中/站立/開車時做，池畔鹼中毒會與缺氧昏迷疊加。品質最高的Blades 2024（n=84有主動對照）為虛無結果", stages: [t2t, t2c, t2w]}
   - {id: breathing.regulation.claims_gap, file: regulation.yaml, name_zh: 宣稱與證據的落差, gist_zh: "🔵學生帶網路宣稱來問時的四個判斷樣式：樣本小/混合介入無法歸因/短期指標≠長期結果/缺主動對照", stages: [t2t, t2c, t2w]}
