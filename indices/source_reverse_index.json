@@ -128,8 +128,19 @@
         "pmid": "39127408",
         "doi": "10.1016/j.ophtha.2024.08.003"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "acanthamoeba-keratitis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[13].epidemiology"
+        },
+        {
+          "id": "acanthamoeba-keratitis",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[13].references[0]"
+        }
+      ]
     },
     {
       "id": "src.akkurt-2017",
@@ -4329,8 +4340,14 @@
         "pmid": "31141446",
         "doi": "10.1123/jsr.2018-0262"
       },
-      "usage_count": 0,
-      "usages": []
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "extension-low-back-pain",
+          "file": "canonical/health/injuries.yaml",
+          "path": "injuries[8].epidemiology"
+        }
+      ]
     },
     {
       "id": "src.kitsahawong-2024",
@@ -8202,7 +8219,7 @@
         {
           "id": "acanthamoeba-keratitis",
           "file": "canonical/health/injuries.yaml",
-          "path": "injuries[13].references[0]"
+          "path": "injuries[13].references[1]"
         }
       ]
     },

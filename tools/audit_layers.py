@@ -33,7 +33,7 @@ DEFAULT_SINCE = "27ffd10^"  # parent of the 2026-10-01 content review
 # Prose directories that my-site mounts as article pages (sync_vortex.py).
 PROSE_DIRS = ("Instructional", "Technica", "Bridge")
 # 仍在呈現／應用層的散文（其餘 Instructional／Technica 是研究庫的凍結底稿，Bridge 已退役）
-PRESENTATION_PROSE = {"游泳器材使用指南"}
+PRESENTATION_PROSE = {"游泳器材使用指南", "水感是什麼"}
 STROKE_DATA = ("free", "back", "breast", "fly", "udk", "starts-turns")
 
 # first URL segment under /vortex/ → (source kind, source, target layer, issue)
@@ -55,7 +55,7 @@ SEGMENT_RULES = {
     "workout-studio": ("工具", "next/layouts/_partials/vortex/workout-redirect.html", "應用", "P4"),
     "workout": ("工具", "next/assets/js/workout*.js", "應用", "P4"),
     "moves": ("canonical", "instructional/moves.yaml", "呈現", ""),
-    "water-sense": ("my-site 手寫", "my-site next/content/vortex/water-sense.md", "呈現", "P3"),
+    "water-sense": ("散文（公開文章）", "Technica/水感是什麼.md", "呈現", ""),
     "research": ("散文（研究底稿）", "Instructional／Technica/*.md → research/drafts", "資料庫", ""),
     "instructional": ("散文", "Instructional/*.md", "資料庫", "P1"),
     "technica": ("散文", "Technica/*.md", "資料庫", "P1"),
@@ -143,7 +143,6 @@ def prose_files():
         for p in sorted((ROOT / d).glob("*.md")):
             yield p, p.stem in PRESENTATION_PROSE
     yield ROOT / "canonical" / "instructional" / "moves.yaml", True
-    yield MYSITE / "next" / "content" / "vortex" / "water-sense.md", True
 
 
 def label(p: Path) -> str:

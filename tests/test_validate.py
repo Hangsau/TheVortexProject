@@ -2878,3 +2878,14 @@ class TestW028DiagnosticTextInPublic(unittest.TestCase):
             "canonical/instructional/moves.yaml",
             {"strokes": [{"moves": [{"id": "free.move.1", "lnote": "A 型核心"}]}]}, warnings)
         self.assertEqual(len(warnings["W028"]), 1)
+
+
+class TestE019InjuriesBuiltFromDrafts(unittest.TestCase):
+    """E019：injuries.yaml 必須等於 drafts 重建結果（現況應一致）。"""
+
+    def test_current_repo_consistent(self):
+        from collections import defaultdict
+        validate_mod.ROOT = Path(validate_mod.__file__).resolve().parent.parent
+        errors = defaultdict(list)
+        validate_mod.check_injuries_built_from_drafts(errors)
+        self.assertEqual(errors["E019"], [])

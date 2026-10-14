@@ -62,7 +62,8 @@ def normalize(rec, drift):
     return rec
 
 
-def main():
+def build():
+    """從 drafts 算出 injuries.yaml 的內容（不寫檔）。validate.py 用它檢查產物沒被直接手改。"""
     files = sorted(glob.glob(os.path.join(DRAFTS, "*.yaml")))
     injuries, metas = [], []
     drift, anomalies = [], []
@@ -112,6 +113,11 @@ def main():
         "meta_references": metas,
         "injuries": injuries,
     }
+    return out_data, files, injuries, metas, drift, anomalies, pending_total
+
+
+def main():
+    out_data, files, injuries, metas, drift, anomalies, pending_total = build()
 
     # 稽核報告
     print("=" * 60)

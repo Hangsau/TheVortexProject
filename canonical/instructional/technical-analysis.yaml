@@ -2570,7 +2570,7 @@ points:
         text: 另一組獨立樣本（10 名受過良好訓練的泳者，5 男 5 女）以貼紮限制最大蹠屈 10.42%，游速由 1.20 ± 0.14 降至 1.13 ± 0.13 m/s、踢腿效率由 0.72 ± 0.10 降至 0.69 ± 0.09 m；但「增加蹠屈」條件的游速與效率並未優於一般條件
         source: Kuhn & Legerlotz 2022 (PMC9402090)
         source_ids: [src.pmc9402090-b]
-      practical_implication: 可用來排除「範圍不足」這個限制，不能用來推銷加大範圍。介入怎麼做屬於介入層（見 cross_ref），該層已明寫沒有長期伸展介入試驗、也沒有劑量來源；本點不在此另給訓練處方。
+      practical_implication: 可用來排除「範圍不足」這個限制，不能用來推銷加大範圍。介入怎麼做屬於介入層（見相關條目），該層已明寫沒有長期伸展介入試驗、也沒有劑量來源；本點不在此另給訓練處方。
       cross_ref: movement.intervention.ankle-plantarflexion.conditional-mobility（踝蹠屈受限時的條件式活動度介入）
       cross_ref_ids: [movement.intervention.ankle-plantarflexion.conditional-mobility]
   - id: udk.tech.15

@@ -16,11 +16,12 @@ epidemiology:
   prevalence: "蝶式下背痛 33.3–50%、蛙泳 22.2–47%；有下背痛者蝴蝶踢時腰椎過伸角度顯著較大、髂腰肌彈性模量更高；精英泳者脊椎退化率 68% vs 休閒 29%"
   certainty: 🟡
   evidence_grade: B
-  caveat: 橫斷面為主，因果方向不明；機制研究(PMID 31141446)與 68% 退化率原始研究為摘要/二手
+  caveat: 橫斷面為主，因果方向不明；機制證據來自 Kitamura 等人（2020）的單一小樣本研究，68% 退化率的原始研究仍為摘要/二手
   sources:
     - "Hsu, C., Krabak, B., Cunningham, B., & Borg-Stein, J. (2024). Swimming Anatomy and Lower Back Injuries in Competitive Swimmers: A Narrative Review. Sports Health."
     - "Wanivenhaus, F., Fox, A. J., Chaudhury, S., & Rodeo, S. A. (2012). Epidemiology of injuries and prevention strategies in competitive swimmers. Sports Health."
-  source_ids: [src.pmc11531034, src.pmc3435931]
+    - "Kitamura, G., Tateuchi, H., & Ichihashi, N. (2020). Greater Lumbar Extension During Dolphin Kick and Psoas Major Tightness in Swimmers With Low Back Pain. Journal of Sport Rehabilitation, 29(6), 716-722."
+  source_ids: [src.pmc11531034, src.pmc3435931, src.kitamura-2020-dolphin-kick-lumbar-extension]
 
 risk_factors:
   - { text: "髂腰肌緊縮", grade: B }
@@ -80,7 +81,7 @@ references:
 
 flags:
   pending_verification:
-    - "機制研究(PMID 31141446)、68% 退化率原始研究作者/DOI、女性差異數字為摘要/二手待 W3"
+    - "68% 退化率原始研究作者/DOI、女性差異數字為摘要/二手待 W3（機制研究已於 2026-09-05 解析為 Kitamura 等人 2020，已解除待查）"
   contested:
     - claim: "伸展型下背痛 vs 椎弓解離鑑別"
       consensus_source: "影像前難鑑別，處理相近"

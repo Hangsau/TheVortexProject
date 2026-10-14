@@ -57,6 +57,7 @@ exit code：
         retracted 三值之一。同樣是 fail-open 欄位：retracted 拼錯，那筆
         已判定不可引用的墓碑會靜默回到 W008 名單被當成「該接的來源」
   E018  problems 的版本、型別、公開欄位、引用類型或 coverage_gap 不符合契約
+  E019  health/injuries.yaml 不等於 drafts/ 重建結果（產物被直接手改）
   W001  cross_ref 字串中偵測到疑似穩定 ID 的 token，但該 token 沒有列入
         同一層的 cross_ref_ids（ids 與顯示字串脫節）
   W002  區塊有來源顯示資訊（source 字串或 sources 清單）但沒有 source_ids
@@ -1741,6 +1742,31 @@ def check_diagnostic_text_in_public(rel: str, data: object, warnings: dict):
     walk(data, "", whole_public)
 
 
+def check_injuries_built_from_drafts(errors: dict):
+    """E019：`health/injuries.yaml` 必須等於 drafts 重建結果。
+
+    injuries.yaml 是 promoted artifact，真相源是 drafts/。直接改產物的修正會在
+    下次 build_injuries.py 時被無聲蓋掉——2026-10-14 一次重建就蓋掉了 5 條
+    先前直接改在產物上的修正（Aiello 2025 發生率、Kitamura 2020 歸屬等）。
+    """
+    import importlib.util
+    tools_dir = Path(__file__).resolve().parent
+    # build_injuries 讀的是本 repo 的 drafts；ROOT 被測試換成 fixture 目錄時不比對
+    if ROOT.resolve() != tools_dir.parent or not (ROOT / "canonical" / "health" / "drafts").is_dir():
+        return
+    spec = importlib.util.spec_from_file_location(
+        "build_injuries", tools_dir / "build_injuries.py")
+    module = importlib.util.module_from_spec(spec)
+    spec.loader.exec_module(module)
+    expected = module.build()[0]
+    actual = load_yaml(ROOT / "canonical" / "health" / "injuries.yaml")
+    if actual != expected:
+        errors["E019"].append(
+            "  file=canonical/health/injuries.yaml 與 drafts/ 重建結果不一致——"
+            "修正要改在 drafts/ 再跑 tools/build_injuries.py，不可直接改產物"
+        )
+
+
 def check_public_layer_leak(rel: str, data: object, errors: dict):
     """E010：診斷型鍵名出現在 public 子樹內。
 
@@ -2519,7 +2545,7 @@ def run_validation():
         "E001": [], "E002": [], "E003": [], "E004": [], "E005": [],
         "E006": [], "E007": [], "E008": [], "E009": [], "E010": [],
         "E011": [], "E012": [], "E013": [], "E014": [], "E015": [],
-        "E016": [], "E017": [], "E018": []
+        "E016": [], "E017": [], "E018": [], "E019": []
     }
     warnings: dict[str, list[str]] = {
         "W001": [], "W002": [], "W003": [], "W004": [], "W005": [],
@@ -2745,6 +2771,8 @@ def run_validation():
         check_verification_marker_in_citation(rel, data, warnings)
         check_evidence_from(rel, data, all_id_set, errors)
 
+    check_injuries_built_from_drafts(errors)
+
     # ── W008: 孤兒來源（_sources.yaml 有登錄但沒人引用）──
     # 兩條引用通道都算：source_ids（各檔通用）與 movement 的
     # measurement_conditions[].source_id。只認前者會把「只在量測條件裡被引用」
@@ -2916,6 +2944,7 @@ def _write_report(
             "並打開 W011 的逃生口）",
         ),
         "E018": ("ERROR", "問題索引格式、引用類型、公開欄位或缺口與實際連結不一致"),
+        "E019": ("ERROR", "health/injuries.yaml 與 drafts/ 重建結果不一致（產物被直接手改，下次重建會被蓋掉）"),
         "W025": (
             "WARN",
             "同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）"

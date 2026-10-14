@@ -6,14 +6,14 @@
 
 | 檢查 | 筆數 |
 |---|---|
-| 已發布 Vortex 頁（不含轉址） | 820 |
+| 已發布 Vortex 頁（不含轉址） | 848 |
 | 無歸屬頁 | 0 |
 | P1 散文頁 | 0 |
-| P3 my-site 手管／手寫頁 | 1 |
+| P3 my-site 手管／手寫頁 | 0 |
 | P1 漂移候選：呈現／應用層（閘門，須為 0） | 0 |
 | 漂移：研究庫凍結底稿（已加凍結說明，僅供參考） | 49 |
 | P2 公開頁含診斷語的頁 | 0（共 0 處） |
-| 機器鍵外洩頁 | 2 |
+| 機器鍵外洩頁 | 0 |
 | 外站連結 | 0 |
 | 🟢／🟡 但同行無年份（呈現層散文／手管） | 7 |
 
@@ -23,20 +23,18 @@
 |---|---|
 | 呈現 | 723 |
 | 應用 | 78 |
-| 資料庫 | 19 |
+| 資料庫 | 47 |
 
 | 來源種類 | 頁數 |
 |---|---|
 | canonical | 795 |
-| my-site 手寫 | 1 |
 | my-site 版型 | 2 |
 | 工具 | 2 |
 | 散文 | 1 |
-| 散文（研究底稿） | 19 |
+| 散文（公開文章） | 1 |
+| 散文（研究底稿） | 47 |
 
 **無歸屬頁**：無
-
-**P3 頁**：`water-sense`
 
 **P4 頁**：`workout`、`workout-studio`
 
@@ -56,8 +54,7 @@
 
 **機器鍵外洩**
 
-- `movement`：cross_ref
-- `tech/udk-tech-14`：cross_ref
+- 無
 
 **外站連結**
 
@@ -67,10 +64,10 @@
 
 | 檔案 | 行 | 內容 |
 |---|---|---|
-| `my-site/next/content/vortex/water-sense.md` | 37 | ### 神經科學層次 🟢 |
-| `my-site/next/content/vortex/water-sense.md` | 78 | ### 學習水感的四個能力階段 🟡 |
-| `my-site/next/content/vortex/water-sense.md` | 177 | ### SWOLF：最實用的無儀器效率指標 🟢 |
-| `my-site/next/content/vortex/water-sense.md` | 192 | ### SPL（每趟划手數） 🟢 |
-| `my-site/next/content/vortex/water-sense.md` | 227 | ### 1. 製造大誤差，而非漸進微調 🟢 |
-| `my-site/next/content/vortex/water-sense.md` | 237 | ### 2. 交替練習，而非連續練習 🟢 |
-| `my-site/next/content/vortex/water-sense.md` | 249 | ### 4. 暫時回到認知學習階段 🟡 |
+| `Technica/水感是什麼.md` | 37 | ### 神經科學層次 🟢 |
+| `Technica/水感是什麼.md` | 78 | ### 學習水感的四個能力階段 🟡 |
+| `Technica/水感是什麼.md` | 177 | ### SWOLF：最實用的無儀器效率指標 🟢 |
+| `Technica/水感是什麼.md` | 192 | ### SPL（每趟划手數） 🟢 |
+| `Technica/水感是什麼.md` | 227 | ### 1. 製造大誤差，而非漸進微調 🟢 |
+| `Technica/水感是什麼.md` | 237 | ### 2. 交替練習，而非連續練習 🟢 |
+| `Technica/水感是什麼.md` | 249 | ### 4. 暫時回到認知學習階段 🟡 |

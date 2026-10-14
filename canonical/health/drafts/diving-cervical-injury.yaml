@@ -7,18 +7,18 @@ sport_variant: [swim, diving_entry]
 layer: [public, clinical]
 fatal_acute: true          # 災難性，可致四肢癱/死亡，layout 置頂
 
-structures: [頸椎(C4–C6), 脊髓, 椎間盤/韌帶]
+structures: [頸椎(C1–C7，以中下頸椎為主), 脊髓, 椎間盤/韌帶]
 mechanism:
   summary: 入水頭頂先觸底，頸椎受軸向壓縮力(axial loading)致爆裂性骨折或骨折脫位；脊髓同時受壓/撕裂/缺血→四肢癱(tetraplegia)。關鍵物理條件：入水角度過陡+水深不足以吸收減速距離。
   trigger_phase: 從池邊/跳水台/石礁/防波堤往不明深度水域頭朝下跳；競賽出發台起跳角度過陡；撞上隱藏障礙(礁石/沙洲)
-  who: 年輕男性(97.5–98.7%)；非正式場合、下午/傍晚、夏日水域；首次使用該場地者
+  who: 年輕男性為主(Ull 等人 2021 的 60 例中男性占 98.3%)；非正式場合、下午/傍晚、夏日水域；首次使用該場地者
 
 epidemiology:
-  prevalence: "美國每年約 800 起跳水致脊髓損傷(約 90% 永久癱)；90% 發生於水深 <6 英尺(1.83m)、57% <4 英尺(1.22m)；受傷節段 C5 最常見(60.9%)；入院 55% 為完全性四肢癱(AIS A)"
+  prevalence: "跳水致脊髓損傷可造成永久性神經功能障礙；DeVivo 與 Sekar 1997 的泳池傷例調查中，57% 發生於水深 <4 英尺(1.22m)；Yılmaz 等人 2021 的病例以 C5 受傷最常見；Ull 等人 2021 的 60 例中，入院 55% 為完全性四肢癱(AIS A)"
   certainty: 🟢
   evidence_grade: B
   caveat: >-
-    「每年 800 起」為多個美國傷害登記的廣泛引用估計(非單一 peer-reviewed 計數)；
+    上述數字為各研究收治或受訪病例的分布，不能外推為所有泳者的發生率；
     跳水佔所有脊髓損傷 1.2–22%(族群/登記系統差異大)。
     **使用邊界（2026-08-18 補）**：Barss 等 2008 的魁北克 44 年研究**回收率僅 44%**，
     存在選擇偏誤；其樣本以**私人／住家泳池的休閒式跳水**為主，
@@ -30,7 +30,7 @@ epidemiology:
   source_ids: [src.pmc2899837, src.pmc8192199, src.quebec-44-year-diving-sci-study-sciencedirec]
 
 risk_factors:
-  - { text: "水深不足(<1.5m)——最強可改變風險因子", grade: A }
+  - { text: "頭朝下入水時，水深與前方淨空不足以容納入水軌跡及減速距離", grade: A }
   - { text: "飲酒(41.7% 案例涉及)", grade: B }
   - { text: "年輕男性(16–35 歲，社會風險行為)", grade: B }
   - { text: "未知水域/首次使用場地(無法判斷深度/障礙)", grade: B }
@@ -40,8 +40,8 @@ risk_factors:
 prevention:
   - { text: "禁止在水深 <1.35m(競賽出發，World Aquatics)/<1.8m(教學跳水，另需前方淨空 7.6m)/<2.74m(一般跳水，美紅十字)水域頭朝下入水——三個門檻對應三種情境，不可互相代換", grade: A }
   - { text: "陌生水域一律腳先入水", grade: A }
-  - { text: "競賽出發台須接受正式指導(僅 21.7% 教練用機構制定的潛水進展協議)", grade: B }
-  - { text: "禁止在私人/旅館泳池跳水(普遍 <1.5m)", grade: B }
+  - { text: "競賽出發台須接受正式指導(Cornett 等人 2012 的 USA Swimming 教練調查中，使用進階教學流程的受訪教練有 21.7% 採用專業組織提供的資料)", grade: B }
+  - { text: "私人/旅館泳池須確認該入水方式所需的水深、前方淨空、池底坡度及障礙物，並遵守場地規定；未確認或有禁止跳水標示時，不得頭朝下入水", grade: B }
   - { text: "清楚設置水深標示與『禁止跳水』標誌", grade: Expert }
   - { text: "飲酒後禁止入水", grade: B }
 
@@ -54,7 +54,7 @@ management:
   pain_rules: ~
   rehab: "水療(aquatic therapy)為脊髓損傷主要復健工具；頸椎固定後須影像確認骨癒合再規劃水中活動"
   functional_progression_criteria:
-    - "完全性四肢癱(AIS A)：幾乎不可能回競技游泳，水療為主"
+    - "完全性四肢癱(AIS A)：回水須經神經外科/復健科評估；依個別功能評估水療、適應性游泳及 Para 競技路徑，參賽另須通過相應資格與分級評估，不能僅憑 AIS A 判定無法競技"
     - "不完全損傷(AIS B–D)：神經外科/復健科評估後個別化，回水前功能性評估"
   swim_modifications_in_rehab: ~
   return_to_train: "依損傷完全性個別化；不完全損傷經神外/復健評估後漸進"
@@ -67,7 +67,7 @@ population_notes:
     adult_beginner: ~
     masters: "跌入水中(非主動跳水)為不同機制(見 poolside-slip/drowning)"
   sex:
-    male: "97–98% 案例(社會風險行為+飲酒)"
+    male: "Ull 等人 2021 的 60 例中男性占 98.3%(社會風險行為+飲酒)"
     female: "明顯低風險(<3%)"
   ability:
     para: "潛在風險尚無充分文獻"
@@ -88,7 +88,7 @@ references:
 
 flags:
   pending_verification:
-    - "『每年 800 起』『90%/57% 水深』為廣泛引用估計，原始登記作者/出處待 W3 核;作者全名/DOI 待補"
+    - "美國跳水致脊髓損傷年度人數、永久癱比例及水深 <6 英尺的病例比例，原始登記資料待查；C5 占 60.9% 的原始全文數值待查。已確認的 57% 水深 <4 英尺出自 DeVivo 與 Sekar 1997，入院 55% AIS A 出自 Ull 等人 2021"
   contested:
     - claim: "各組織最低水深標準不一致"
       consensus_source: "禁止淺水跳水、陌生水域腳先入水為強烈共識"

@@ -149,6 +149,14 @@
 
 ---
 
+## E019 — health/injuries.yaml 與 drafts/ 重建結果不一致（產物被直接手改，下次重建會被蓋掉）
+
+**ERROR，共 0 筆**
+
+（無）
+
+---
+
 ## W025 — 同一篇文獻登錄成多筆（共用 PMID／PMCID／DOI）（E005 對此完全無感：每個 id 都解析得到；後果是同一篇被當成多個獨立證據、撤稿撤不乾淨、讀者看到多個不同的來源名）
 
 **WARN，共 0 筆**
@@ -173,13 +181,9 @@
 
 ## W024 — 機器鍵（PMID／PMC／DOI／`src.*`）寫進讀者散文欄位（`text`／`caveat`／`population_note`…）——這些欄位原樣上線，讀者看到的是識別碼不是「作者 年份」
 
-**WARN，共 5 筆**
+**WARN，共 0 筆**
 
-  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 31141446' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 27824234' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' PMID/PMC='PMID 16596112' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' source_id='src.pmc8147101' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
-  file=canonical\health\injuries.yaml field='caveat' source_id='src.pmc2858141' 寫進讀者散文——改成人可讀的「作者 年份」，識別碼留在 _sources.yaml
+（無）
 
 ---
 
@@ -406,12 +410,10 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目引用——兩條通道都算：各檔通用的 `source_ids`，與 movement 的 `measurement_conditions[].source_id`（`verification_status: retracted` 的墓碑除外）
 
-**WARN，共 5 筆**
+**WARN，共 3 筆**
 
-  source_id='src.aiello-2025-ak-incidence-meta' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2016' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.kitamura-2020-dolphin-kick-lumbar-extension' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
