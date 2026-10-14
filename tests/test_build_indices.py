@@ -88,13 +88,14 @@ class TestGeneratedViews(unittest.TestCase):
     def setUpClass(cls):
         cls.views = build_indices.build_views(ROOT)
 
-    def test_four_views_and_unique_records(self):
+    def test_five_views_and_unique_records(self):
         self.assertEqual(
             {
                 "content_index.json",
                 "tag_reverse_index.json",
                 "source_reverse_index.json",
                 "gap_report.json",
+                "decision_trail.json",
             },
             set(self.views),
         )
