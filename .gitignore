@@ -2,3 +2,6 @@
 *.xlsx
 __pycache__/
 .implementation_*.md
+
+# 學習者原話研究：原始貼文含帳號與全文，不進 repo
+Research/學習者原話/_raw/
