@@ -1042,7 +1042,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | movement.demand.starts-turns.takeoff.rear-leg-direction-reversal-and-joint-sequencing | takeoff | descriptive | 起跳的後腿方向反轉、繞臂差在肘不在肩，與關節間時序 | partially-supported | provisional |
 | movement.demand.starts-turns.flight.posture-attainment-without-trajectory-change | flight | descriptive | 飛行期的姿勢達成——關節動作不改變重心軌跡 | partially-supported | provisional |
 | movement.demand.starts-turns.entry.hyperstreamline-layering-and-unresolved-lumbar-choice | entry | descriptive | 乾淨入水的超流線分層，與尚未解決的腰椎擇一 | disputed | provisional |
-| movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary | turn-approach | descriptive | 進牆期的頸椎維持不伸展，與本層的覆蓋邊界 | partially-supported | provisional |
+| movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary | turn-approach | descriptive | 進牆期的頸椎維持不伸展，與本圖譜的覆蓋邊界 | partially-supported | provisional |
 | movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action | flip | descriptive | 翻滾的團身關節組成，以及「翻轉本身不是關節動作」 | partially-supported | provisional |
 | movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation | wall-rotation | descriptive | 規則裡的「肩部旋轉 ≥90°」是身體方位，不是肩關節動作 | partially-supported | provisional |
 | movement.demand.starts-turns.wall-contact.knee-flexion-position-and-depth-is-not-a-joint-action | wall-contact | descriptive | 觸牆的膝屈曲位，與「觸牆深度不是關節動作」 | partially-supported | provisional |

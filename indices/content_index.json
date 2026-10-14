@@ -14561,7 +14561,7 @@
       "domain": "movement",
       "file": "canonical/movement/stroke-demands.yaml",
       "path": "demands[45]",
-      "title": "進牆期的頸椎維持不伸展，與本層的覆蓋邊界",
+      "title": "進牆期的頸椎維持不伸展，與本圖譜的覆蓋邊界",
       "tags": {
         "action_reference_frame": [
           "joint-local"
