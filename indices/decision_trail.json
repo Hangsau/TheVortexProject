@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 549,
+  "record_count": 560,
   "trails": {
     "back.L4.roll-stability": [
       {
@@ -41,6 +41,11 @@
         "file": "plans/內容審查_2026-10-01/立場_仰式_Sonnet.md",
         "line": 24,
         "section": "題 25"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 26,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err4｜errors[28].public.correct_concept"
       }
     ],
     "back.err10": [
@@ -171,6 +176,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 59,
         "section": "B. 互相矛盾／需判斷（三方辯論）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 35,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err14｜errors[38].public.physical_reason.text"
       }
     ],
     "back.err15": [
@@ -229,6 +239,21 @@
         "file": "plans/內容審查_2026-10-01/卷宗_自由式.md",
         "line": 305,
         "section": "題 18"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 20,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err2｜errors[26].public.evidence[1].text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 167,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.10｜points[53].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 168,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.10｜points[53].public.mechanism.text"
       }
     ],
     "back.err3": [
@@ -333,6 +358,21 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 59,
         "section": "B. 互相矛盾／需判斷（三方辯論）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 25,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err4｜errors[28].public.correct_concept"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 162,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.7｜points[50].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 163,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.7｜points[50].public.mechanism.text"
       }
     ],
     "back.err5": [
@@ -375,6 +415,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 35,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 30,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err5｜errors[29].public.physical_reason.text"
       }
     ],
     "back.err6": [
@@ -459,6 +504,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 85,
         "section": "批次紀錄"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 36,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err14｜errors[38].public.physical_reason.text"
       }
     ],
     "back.err8": [
@@ -495,6 +545,16 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 483,
         "section": "未歸併為獨立問題的候選"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 162,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.7｜points[50].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 163,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.7｜points[50].public.mechanism.text"
       }
     ],
     "back.tech.10": [
@@ -527,6 +587,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 36,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 166,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.10｜points[53].public.mechanism.text"
       }
     ],
     "back.tech.11": [
@@ -857,6 +922,11 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 484,
         "section": "未歸併為獨立問題的候選"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 156,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.2｜points[45].public.evidence[1].text"
       }
     ],
     "back.tech.20": [
@@ -1007,6 +1077,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 86,
         "section": "批次紀錄"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 171,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.24｜points[67].public.mechanism.text"
       }
     ],
     "back.tech.25": [
@@ -1163,6 +1238,16 @@
         "section": "C7｜`movement.demand.back.down-kick.hip-extension-with-knee-sequence`"
       },
       {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 31,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err5｜errors[29].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 32,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err5｜errors[29].public.physical_reason.text"
+      },
+      {
         "file": "plans/骨關節動作肌群訓練伸展圖譜_plancheck.md",
         "line": 240,
         "section": "W1 — 先修現有 13 卡與 dryland（不等新圖譜）"
@@ -1237,6 +1322,16 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 86,
         "section": "批次紀錄"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 26,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err4｜errors[28].public.correct_concept"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 27,
+        "section": "canonical/instructional/teaching-errors.yaml｜back.err4｜errors[28].public.correct_concept"
       }
     ],
     "back.tech.7": [
@@ -1274,6 +1369,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 59,
         "section": "B. 互相矛盾／需判斷（三方辯論）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 161,
+        "section": "canonical/instructional/technical-analysis.yaml｜back.tech.7｜points[50].public.mechanism.text"
       }
     ],
     "back.tech.8": [
@@ -1366,6 +1466,13 @@
         "section": "A. 明顯錯誤（直接修）"
       }
     ],
+    "breast.L4.undulation": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 436,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
     "breast.err1": [
       {
         "file": "plans/E組_問題候選盤點.md",
@@ -1423,6 +1530,11 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 33,
         "section": "題 31"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 45,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err10｜errors[51].public.correct_concept"
       }
     ],
     "breast.err11": [
@@ -1546,6 +1658,11 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 45,
         "section": "題 32"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 50,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err14｜errors[55].public.correct_concept"
       }
     ],
     "breast.err15": [
@@ -1754,6 +1871,16 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 69,
         "section": "題 34"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 177,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.3｜points[73].public.practical_implication"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 178,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.3｜points[73].public.practical_implication"
       }
     ],
     "breast.err7": [
@@ -1766,6 +1893,11 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 362,
         "section": "定案"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 40,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err7｜errors[48].public.evidence[1].text"
       }
     ],
     "breast.err8": [
@@ -1909,6 +2041,16 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 38,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 51,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err14｜errors[55].public.correct_concept"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 52,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err14｜errors[55].public.correct_concept"
       }
     ],
     "breast.tech.11": [
@@ -2102,6 +2244,16 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 146,
         "section": "題 22"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 191,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.14｜points[84].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 196,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.14｜points[84].public.practical_implication"
       }
     ],
     "breast.tech.15": [
@@ -2226,6 +2378,16 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 372,
         "section": "定案"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 202,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.18｜points[88].public.practical_implication"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 203,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.18｜points[88].public.practical_implication"
       }
     ],
     "breast.tech.17": [
@@ -2285,6 +2447,11 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 22,
         "section": "題 30"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 201,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.18｜points[88].public.practical_implication"
       }
     ],
     "breast.tech.19": [
@@ -2390,6 +2557,11 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 80,
         "section": "題 35"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 206,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.22｜points[92].public.evidence[0].text"
       }
     ],
     "breast.tech.23": [
@@ -2661,6 +2833,11 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 70,
         "section": "題 34"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 176,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.3｜points[73].public.practical_implication"
       }
     ],
     "breast.tech.30": [
@@ -2752,6 +2929,16 @@
         "file": "plans/內容審查_2026-10-01/立場_蛙式_Sonnet.md",
         "line": 35,
         "section": "題 31"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 46,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err10｜errors[51].public.correct_concept"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 47,
+        "section": "canonical/instructional/teaching-errors.yaml｜breast.err10｜errors[51].public.correct_concept"
       }
     ],
     "breast.tech.36": [
@@ -2890,6 +3077,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 36,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 181,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.4｜points[74].public.mechanism.text"
       }
     ],
     "breast.tech.5": [
@@ -2939,6 +3131,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 33,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 186,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.6｜points[76].public.mechanism.text"
       }
     ],
     "breast.tech.7": [
@@ -3100,6 +3297,41 @@
         "section": "題 20"
       }
     ],
+    "fly.L2.kick": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 438,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
+    "fly.L3.two-kick-timing": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 438,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
+    "fly.L3.undulation-integration": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 434,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
+    "fly.L4.outsweep": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 441,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
+    "fly.L5.two-kick-differentiation": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 435,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
     "fly.err1": [
       {
         "file": "plans/E組_問題候選盤點.md",
@@ -3145,6 +3377,16 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 90,
         "section": "批次紀錄"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 55,
+        "section": "canonical/instructional/teaching-errors.yaml｜fly.err1｜errors[60].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 212,
+        "section": "canonical/instructional/technical-analysis.yaml｜fly.tech.15｜points[116].public.summary"
       }
     ],
     "fly.err10": [
@@ -3247,6 +3489,16 @@
         "file": "plans/內容審查_2026-10-01/立場_蝶式_Sonnet.md",
         "line": 9,
         "section": "題 37"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 60,
+        "section": "canonical/instructional/teaching-errors.yaml｜fly.err15｜errors[74].public.correct_concept"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 212,
+        "section": "canonical/instructional/technical-analysis.yaml｜fly.tech.15｜points[116].public.summary"
       }
     ],
     "fly.err16": [
@@ -3736,6 +3988,16 @@
         "file": "plans/內容審查_2026-10-01/立場_蝶式_Sonnet.md",
         "line": 46,
         "section": "題 40"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 61,
+        "section": "canonical/instructional/teaching-errors.yaml｜fly.err15｜errors[74].public.correct_concept"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 211,
+        "section": "canonical/instructional/technical-analysis.yaml｜fly.tech.15｜points[116].public.summary"
       }
     ],
     "fly.tech.16": [
@@ -3965,6 +4227,11 @@
         "file": "plans/內容審查_2026-10-01/立場_蝶式_Sonnet.md",
         "line": 20,
         "section": "題 38"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 216,
+        "section": "canonical/instructional/technical-analysis.yaml｜fly.tech.21｜points[122].public.mechanism.text"
       }
     ],
     "fly.tech.22": [
@@ -4620,6 +4887,13 @@
         "section": "題 22"
       }
     ],
+    "free.L2.kick": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 433,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      }
+    ],
     "free.L3.evf": [
       {
         "file": "plans/三層重構與全庫檢查_2026-10-14.md",
@@ -4728,6 +5002,23 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 46,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 98,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.8｜points[7].public.mechanism.text"
+      }
+    ],
+    "free.L5.serratus": [
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 437,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14.md",
+        "line": 440,
+        "section": "2.7 W022：l-indicators 只寫來源名的 7 筆證據（Claude，2026-10-14 晚）"
       }
     ],
     "free.L5.sr-sl": [
@@ -4804,6 +5095,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 86,
         "section": "題 18"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 5,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err10｜errors[9].public.physical_reason.text"
       }
     ],
     "free.err11": [
@@ -4898,6 +5194,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 51,
         "section": "題 15"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 10,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err12｜errors[11].public.evidence[0].text"
       }
     ],
     "free.err13": [
@@ -5039,6 +5340,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 62,
         "section": "題 16"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 15,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err15｜errors[14].public.physical_reason.text"
       }
     ],
     "free.err16": [
@@ -5195,6 +5501,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 28,
         "section": "題 13"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 148,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.35｜points[34].public.mechanism.text"
       }
     ],
     "free.err23": [
@@ -5234,6 +5545,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 87,
         "section": "題 18"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 6,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err10｜errors[9].public.physical_reason.text"
       }
     ],
     "free.err25": [
@@ -5419,6 +5735,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 41,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 117,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.10｜points[11].public.evidence[0].text"
       }
     ],
     "free.tech.11": [
@@ -5624,6 +5945,21 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 10,
         "section": "題 11"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 103,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.8｜points[7].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 109,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.8｜points[7].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 122,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.15｜points[16].public.mechanism.text"
       }
     ],
     "free.tech.16": [
@@ -5982,6 +6318,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 76,
         "section": "題 17"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 112,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.28｜points[9].public.mechanism.text"
       }
     ],
     "free.tech.29": [
@@ -6096,6 +6437,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 38,
         "section": "題 14"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 148,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.35｜points[34].public.mechanism.text"
       }
     ],
     "free.tech.30": [
@@ -6251,6 +6597,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 39,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 128,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.34｜points[33].public.mechanism.text"
       }
     ],
     "free.tech.35": [
@@ -6318,6 +6669,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 26,
         "section": "題 13"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 143,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.35｜points[34].public.mechanism.text"
       }
     ],
     "free.tech.36": [
@@ -6548,6 +6904,26 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 48,
         "section": "題 15"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 11,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err12｜errors[11].public.evidence[0].text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 12,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err12｜errors[11].public.evidence[0].text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 16,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err15｜errors[14].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 17,
+        "section": "canonical/instructional/teaching-errors.yaml｜free.err15｜errors[14].public.physical_reason.text"
       }
     ],
     "free.tech.40": [
@@ -6693,6 +7069,11 @@
         "file": "plans/內容審查_2026-10-01/立場_自由式_Sonnet.md",
         "line": 88,
         "section": "題 18"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 92,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.7｜points[6].public.mechanism.text"
       }
     ],
     "free.tech.8": [
@@ -6850,6 +7231,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 46,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 97,
+        "section": "canonical/instructional/technical-analysis.yaml｜free.tech.8｜points[7].public.mechanism.text"
       }
     ],
     "free.tech.9": [
@@ -10504,6 +10890,30 @@
         "section": "D2 掌心朝向的三源分解 — **本輪最重要的一筆，請完整讀完再寫**"
       }
     ],
+    "periodization.dryland.youth": [
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 280,
+        "section": "canonical/periodization/dryland.yaml｜periodization.dryland.youth｜youth_safety.age_zh"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 295,
+        "section": "canonical/periodization/dryland.yaml｜periodization.dryland.youth｜youth_safety.maturation_zh"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 316,
+        "section": "canonical/periodization/dryland.yaml｜periodization.dryland.youth｜youth_safety.swim_specific_zh"
+      }
+    ],
+    "periodization.set_design.generator": [
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 343,
+        "section": "canonical/periodization/set-design.yaml｜periodization.set_design.generator｜generator.refusal_scope_zh"
+      }
+    ],
     "periodization.structure.annual.bicycle": [
       {
         "file": "plans/periodization_integration_plancheck.md",
@@ -10544,6 +10954,16 @@
         "file": "plans/periodization_rework_design.md",
         "line": 159,
         "section": "新增節點（NEW，加進既有檔的新 top-level key）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 401,
+        "section": "canonical/periodization/zones.yaml｜periodization.zones.school_polarized｜school_polarized.key_numbers_zh"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 426,
+        "section": "canonical/periodization/zones.yaml｜periodization.zones.school_polarized｜school_polarized.swim_caveat_zh"
       }
     ],
     "periodization.zones.swim": [
@@ -10551,6 +10971,18 @@
         "file": "plans/periodization_rework_design.md",
         "line": 17,
         "section": "0. 問題診斷（為什麼要重做）"
+      }
+    ],
+    "periodization.zones.swim_tid": [
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 356,
+        "section": "canonical/periodization/zones.yaml｜periodization.zones.swim_tid｜swim_tid.not_polarized_zh"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 378,
+        "section": "canonical/periodization/zones.yaml｜periodization.zones.swim_tid｜swim_tid.sprinter_note_zh"
       }
     ],
     "prob.back.deep-pull": [
@@ -11399,6 +11831,11 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 430,
         "section": "定案"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 80,
+        "section": "canonical/instructional/teaching-errors.yaml｜starts-turns.err8｜errors[97].public.evidence[1].text"
       }
     ],
     "starts-turns.err9": [
@@ -11416,6 +11853,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 40,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 85,
+        "section": "canonical/instructional/teaching-errors.yaml｜starts-turns.err9｜errors[98].public.physical_reason.text"
       }
     ],
     "starts-turns.tech.1": [
@@ -11453,6 +11895,11 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 8,
         "section": "題 42"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 248,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.1｜points[176].public.evidence[1].text"
       }
     ],
     "starts-turns.tech.10": [
@@ -11922,6 +12369,11 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 85,
         "section": "題 48"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 253,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.3｜points[178].public.mechanism.text"
       }
     ],
     "starts-turns.tech.30": [
@@ -12025,6 +12477,11 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 32,
         "section": "題 44"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 258,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.33｜points[212].public.mechanism.text"
       }
     ],
     "starts-turns.tech.34": [
@@ -12099,6 +12556,11 @@
         "section": "題 34x"
       },
       {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 263,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.34｜points[213].public.mechanism.text"
+      },
+      {
         "file": "plans/內容審查_2026-10-14.md",
         "line": 424,
         "section": "2.4 problems（Claude）"
@@ -12126,6 +12588,11 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 576,
         "section": "未歸併為獨立問題的候選"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 268,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.36｜points[215].public.mechanism.text"
       }
     ],
     "starts-turns.tech.37": [
@@ -12167,6 +12634,11 @@
         "file": "plans/內容審查_2026-10-01/卷宗_水下出發轉身.md",
         "line": 407,
         "section": "題 50"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 273,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.39｜points[218].public.evidence[0].text"
       }
     ],
     "starts-turns.tech.4": [
@@ -12469,6 +12941,16 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 87,
         "section": "題 48"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 254,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.3｜points[178].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 255,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.3｜points[178].public.mechanism.text"
       }
     ],
     "starts-turns.tech.6": [
@@ -12648,6 +13130,16 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 422,
         "section": "定案"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 70,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err11｜errors[87].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 75,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err11｜errors[87].public.evidence[0].text"
       }
     ],
     "udk.err12": [
@@ -12743,6 +13235,11 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 109,
         "section": "題 34x"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 264,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.34｜points[213].public.mechanism.text"
       }
     ],
     "udk.err5": [
@@ -12831,6 +13328,11 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 21,
         "section": "題 43"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 65,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err8｜errors[84].public.physical_reason.text"
       }
     ],
     "udk.err9": [
@@ -13196,6 +13698,16 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 109,
         "section": "題 34x"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 66,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err8｜errors[84].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 67,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err8｜errors[84].public.physical_reason.text"
       }
     ],
     "udk.tech.18": [
@@ -13233,6 +13745,16 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 8,
         "section": "題 42"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 249,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.1｜points[176].public.evidence[1].text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 250,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.1｜points[176].public.evidence[1].text"
       }
     ],
     "udk.tech.19": [
@@ -13338,6 +13860,21 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 422,
         "section": "定案"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 71,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err11｜errors[87].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 72,
+        "section": "canonical/instructional/teaching-errors.yaml｜udk.err11｜errors[87].public.physical_reason.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 226,
+        "section": "canonical/instructional/technical-analysis.yaml｜udk.tech.22｜points[158].public.evidence[0].text"
       }
     ],
     "udk.tech.23": [
@@ -13530,6 +14067,16 @@
         "file": "plans/E組_問題索引層設計與派工.md",
         "line": 269,
         "section": "4. 不做的事"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 192,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.14｜points[84].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 193,
+        "section": "canonical/instructional/technical-analysis.yaml｜breast.tech.14｜points[84].public.mechanism.text"
       }
     ],
     "udk.tech.29": [
@@ -13633,6 +14180,11 @@
         "section": "D2 起跳 — **本輪最重要的一筆，請完整讀完再寫**"
       },
       {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 231,
+        "section": "canonical/instructional/technical-analysis.yaml｜udk.tech.30｜points[167].public.mechanism.text"
+      },
+      {
         "file": "plans/骨關節動作肌群訓練伸展圖譜_plancheck.md",
         "line": 237,
         "section": "W1 — 先修現有 13 卡與 dryland（不等新圖譜）"
@@ -13688,6 +14240,16 @@
         "file": "plans/內容審查_2026-10-01/立場_水下出發轉身_Sonnet.md",
         "line": 111,
         "section": "題 34x"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 264,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.34｜points[213].public.mechanism.text"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 265,
+        "section": "canonical/instructional/technical-analysis.yaml｜starts-turns.tech.34｜points[213].public.mechanism.text"
       }
     ],
     "udk.tech.5": [
@@ -13705,6 +14267,11 @@
         "file": "plans/內容審查_2026-10-01.md",
         "line": 42,
         "section": "A. 明顯錯誤（直接修）"
+      },
+      {
+        "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
+        "line": 221,
+        "section": "canonical/instructional/technical-analysis.yaml｜udk.tech.5｜points[141].public.mechanism.text"
       }
     ],
     "udk.tech.6": [

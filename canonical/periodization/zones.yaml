@@ -252,6 +252,12 @@ swim_energy_by_distance:
 # ── 訓練強度分布 TID（外部文獻，🟢）──
 swim_tid:
   id: periodization.zones.swim_tid
+  maintenance_note: |-
+    swim_tid.not_polarized_zh：⚠️ 2026-09-06 更正：本欄原寫「González-Ravé 2021 的 162 筆 TID 中金字塔 89、極化 65、
+    閾值 8」，查證後確認該文全文為付費牆、摘要只寫「最終納入 9 篇」，而 162／89／65／8
+    這組數字在 PubMed、Europe PMC 全文檢索與全網精確搜尋中都查不到任何出處，已整組撤除。
+    swim_tid.sprinter_note_zh：⚠️ 2026-09-06 更正：本欄原寫「衝刺項目選手仍約 87–90% 訓練量落在 Z1（Barbosa et al.
+    2019）」，該文以作者、年份、主題交叉檢索 PubMed 均查無，數字亦無其他出處，已撤除。
   cert: 🟢
   source: "González-Ravé et al. 2021 (IJSPP 16(7):913–926, PMID 33952709, 系統回顧最終納入 9 篇); Hellard et al. 2019 (Front Physiol 10:363, PMC6470949, 127 名菁英泳者、289 個賽季); Papadimitriou et al. 2026 (Eur J Appl Physiol 126(2):619–628, PMID 41269307); Papadimitriou et al. 2026 (Sports 14(1):23, PMID 41590965, n=1)"
   source_ids: [src.gonzalez-rave-2021-tid-review, src.hellard-2019, src.papadimitriou-2026-sprint-tid, src.papadimitriou-2026-sprinter-case]
@@ -268,9 +274,6 @@ swim_tid:
     原文也給了機制解釋——游泳在 <2 mmol 的速度與划頻遠低於實際比賽，長時間停在那一區
     等於練了不像比賽的動作；2–4 mmol 才是能同時兼顧量與動作特異性的區間。
     所以「80/20 極化」不能當游泳鐵律，這不是配方偏好問題，是水中運動的技術特異性使然。
-    ⚠️ 2026-09-06 更正：本欄原寫「González-Ravé 2021 的 162 筆 TID 中金字塔 89、極化 65、
-    閾值 8」，查證後確認該文全文為付費牆、摘要只寫「最終納入 9 篇」，而 162／89／65／8
-    這組數字在 PubMed、Europe PMC 全文檢索與全網精確搜尋中都查不到任何出處，已整組撤除。
   distance_split_zh: "🟢 TID 型態依主項距離分流（González-Ravé 2021 核心結論）：短距離（50–100m，sprint）偏『極化 + 閾值』；中距離（200–400m）偏『閾值 + 金字塔』；長距離（400m+，distance）偏『金字塔』。"
   distance_split_caveat_zh: "🔵 證據等級限制：依距離分流為『觀察歸納』而非『實驗驗證』——SR 9 篇入選研究中僅 3 篇為 1b 介入研究、6 篇為 2b 觀察研究。型態描述可信（🟢），但『某距離就該用某型態』的處方性推論仍缺 RCT 支撐。"
   sprinter_note_zh: |-
@@ -283,8 +286,6 @@ swim_tid:
     另一篇 Papadimitriou 2026 的建議型綜述則直接主張：50 公尺的有氧貢獻只約 20%
     （100 公尺約 40–50%），許多教練卻仍沿用含大量有氧量的極化式 TID，短距離專項者
     應更倚重 HIIT 與超速訓練。
-    ⚠️ 2026-09-06 更正：本欄原寫「衝刺項目選手仍約 87–90% 訓練量落在 Z1（Barbosa et al.
-    2019）」，該文以作者、年份、主題交叉檢索 PubMed 均查無，數字亦無其他出處，已撤除。
   plain_zh: |-
     TID＝整個週期裡輕鬆／閾值／吃力三種強度各占多少。主要有三種分布：極化型（大量輕鬆
     ＋少量超吃力、中間幾乎不練）、金字塔型（由下往上遞減）、閾值型（中間那塊偏多）。
@@ -319,6 +320,11 @@ swim_application:
 # 與 Bompa 六分區對話的平行框架：Bompa 問『每區強度是什麼』，Seiler 問『每區各占多少比例』。
 school_polarized:
   id: periodization.zones.school_polarized
+  maintenance_note: |-
+    school_polarized.key_numbers_zh：本庫原寫「11 名菁英越野滑雪青少年」，2026-09-06 更正。
+    school_polarized.swim_caveat_zh：⚠️ 2026-09-06 更正：本欄原引「162 筆中金字塔 89、極化 65、閾值 8」與「衝刺選手約
+    87–90% 量在 Z1（Barbosa 2019）」，兩組數字查證後皆無出處，已撤除並改掛可核對的
+    Hellard 2019 全文數據。
   cert: 🟢
   source: "Seiler & Kjerland 2006 (PMID 16430681, Scand J Med Sci Sports 16(1):49–56); Seiler 2010 (PMID 20861519, IJSPP 5(3):276–291); Stöggl & Sperlich 2014 (PMID 24550842, PMC3912323, Front Physiol 5:33); González-Ravé et al. 2021 (PMID 33952709, IJSPP 16(7):913–926); Hellard et al. 2019 (PMID 31031631, PMC6470949, Front Physiol 10:363)"
   source_ids: [src.seiler-kjerland-2006, src.seiler-2010, src.stoggl-sperlich-2014, src.gonzalez-rave-2021-tid-review, src.hellard-2019]
@@ -334,7 +340,7 @@ school_polarized:
     這是「避開中間區」說法最原始的實測。
     ⚠️ 受試者不是菁英：原文寫的是 well-trained junior、nationally competitive junior
     skiers（全國賽層級青少年），標題裡的 elite endurance athletes 指的是拿來對照的
-    文獻族群。本庫原寫「11 名菁英越野滑雪青少年」，2026-09-06 更正。
+    文獻族群。
     🟢 Seiler 2010 綜述：每週訓練 10–13 次的全國／國際級耐力選手，約 80% 的**課次**
     在低強度（2 mM），約 20% 由高強度區段（如約 90% VO2max 的間歇）主導。
     該綜述還有一句常被略過的話：對已經訓練有素的選手，加重高強度間歇的訓練強化研究
@@ -350,9 +356,6 @@ school_polarized:
     運動在該區通常只有 2–16%。作者給的解釋是動作特異性：游泳在 <2 mmol 的速度與划頻
     離比賽太遠。型態上，González-Ravé 2021 的摘要指出短距離偏極化與閾值、中距離偏閾值
     與金字塔、長距離主要為金字塔。目前無單一型態可宣稱「所有泳者最佳」。
-    ⚠️ 2026-09-06 更正：本欄原引「162 筆中金字塔 89、極化 65、閾值 8」與「衝刺選手約
-    87–90% 量在 Z1（Barbosa 2019）」，兩組數字查證後皆無出處，已撤除並改掛可核對的
-    Hellard 2019 全文數據。
   author_note_zh: |-
     🔵 作者取用：值得吸收的是「大部分量該是輕鬆的」這個方向性原則——Hellard 2019 的
     86–90% 量在 ≤4 mmol 確實呼應它。但「慎用中間閾值區」這半句在游泳要打折：同一份

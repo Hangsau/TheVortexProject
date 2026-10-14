@@ -1180,16 +1180,14 @@ sources:
       doi: "10.1080/026404198366461"
       url: "https://doi.org/10.1080/026404198366461"
     retrieved_on: "2026-10-14"
-    notes: "2026-10-14 重建：作者摘要經 BISp SURF 收錄頁（PU199810305001）確認。45 名國際級泳者分出最波動與最平兩風格；最平男子組重心水平速度最大最小差達平均速度 76%，最波動女子組 53%（兩數字是不同性別組，不可當同性別對照）。作者順序各資料庫不一（Stijnen／Daly 互換）。仍疑與 src.colman-1998-b 同篇，-b 使用處未核對前不合併。id 字面保留（穩定鍵）。"
+    notes: "2026-10-14 重建：作者摘要經 BISp SURF 收錄頁（PU199810305001）確認。45 名國際級泳者分出最波動與最平兩風格；最平男子組重心水平速度最大最小差達平均速度 76%，最波動女子組 53%（兩數字是不同性別組，不可當同性別對照）。作者順序各資料庫不一（Stijnen／Daly 互換）。src.colman-1998-b 已確認同篇並改掛本 id（2026-10-14）。id 字面保留（穩定鍵）。"
 
   - id: src.colman-1998-b
-    display: "Colman et al. 1998"
+    display: "【重複登錄，已解除】與 src.colman-1998-a 為同一篇文獻"
     type: other
-    verification_status: unverified
-    authors: ["Colman"]
-    et_al: true
-    year: 1998
-    notes: "疑似與 src.colman-1998-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 重複登錄稽核：src.colman-1998-a 已依原文重建書目，本 id 引用的是同一篇（technical-analysis 與 l-indicators 引用的數字與描述和 -a 相同）。同一篇掛兩個 id 會在來源反向索引裡看起來像兩份獨立支撐；引用已全數改掛 src.colman-1998-a，本 id 保留為墓碑、不得再使用。"
 
   - id: src.competitor-swim-udk-drills-swimswam-udk-sets
     display: "【只有站名，非文獻，已撤下】Competitor Swim UDK drills／SwimSwam UDK sets"
@@ -2175,16 +2173,14 @@ sources:
     identifier:
       url: "https://bms.sport-iat.de/bms/Record/4037066"
     retrieved_on: "2026-10-14"
-    notes: "2026-10-14 重建：書目與作者摘要經 BMS 文獻庫（IAT Leipzig）收錄頁確認；全文未取得，只可引摘要內容。摘要：11 名菁英蝶式泳者重心加速度有五個推進峰——踢（1.9 m/s²）、外划（1.4）、內划（4.2）、踢＋上划（2.3）、乘浪；髖部曲線不能代替重心。編者與出版社取自 BMS VI 論文集通行書目，收錄頁註明書目可能不完全準確。仍疑與 src.mason-1992-b 同篇，-b 的使用處未逐一核對前不合併。id 字面保留（穩定鍵）。"
+    notes: "2026-10-14 重建：書目與作者摘要經 BMS 文獻庫（IAT Leipzig）收錄頁確認；全文未取得，只可引摘要內容。摘要：11 名菁英蝶式泳者重心加速度有五個推進峰——踢（1.9 m/s²）、外划（1.4）、內划（4.2）、踢＋上划（2.3）、乘浪；髖部曲線不能代替重心。編者與出版社取自 BMS VI 論文集通行書目，收錄頁註明書目可能不完全準確。src.mason-1992-b 已確認同篇並改掛本 id（2026-10-14）。id 字面保留（穩定鍵）。"
 
   - id: src.mason-1992-b
-    display: "Mason et al. 1992"
+    display: "【重複登錄，已解除】與 src.mason-1992-a 為同一篇文獻"
     type: other
-    verification_status: unverified
-    authors: ["Mason"]
-    et_al: true
-    year: 1992
-    notes: "疑似與 src.mason-1992-a 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。 原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 重複登錄稽核：src.mason-1992-a 已依原文重建書目，本 id 引用的是同一篇（technical-analysis 與 l-indicators 引用的數字與描述和 -a 相同）。同一篇掛兩個 id 會在來源反向索引裡看起來像兩份獨立支撐；引用已全數改掛 src.mason-1992-a，本 id 保留為墓碑、不得再使用。"
 
   - id: src.matt-donovan-usms
     display: "Matt Donovan, USMS"
@@ -2626,12 +2622,12 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.peyrebrune-2007
-    display: "Peyrebrune & Turner 2007"
+    display: "【查無此篇，已撤下】Peyrebrune & Turner 2007"
     type: other
-    verification_status: unverified
+    verification_status: retracted
     authors: ["Peyrebrune", "Turner"]
     year: 2007
-    notes: "2026-10-14 查證未果：Europe PMC、BMS／SPONET 文獻庫與網搜都找不到 Peyrebrune 與 Turner 合著的 2007 年文獻。最接近的是 Osborough & Peyrebrune（2008）〈Butterfly technique – what happens when swimmers get tired?〉Swimming Times 8 月號（MMU e-space 93360），談疲勞時內划／上划手速下降，與本庫引用的「外划方向偏移」說法也不完全一致，不改掛。l-indicators 已撤下；technical-analysis 的引用待同樣處理。"
+    notes: "2026-10-14 查證未果：Europe PMC、BMS／SPONET 文獻庫與網搜都找不到 Peyrebrune 與 Turner 合著的 2007 年文獻。最接近的是 Osborough & Peyrebrune（2008）〈Butterfly technique – what happens when swimmers get tired?〉Swimming Times 8 月號（MMU e-space 93360），談疲勞時內划／上划手速下降，與本庫引用的「外划方向偏移」說法也不完全一致，不改掛。l-indicators 與 technical-analysis 的引用已全部撤下（2026-10-14），本筆目前零引用。"
 
   - id: src.pink
     display: "Pink et al. (1991) EMG；Science of Swimming Faster (Riewald & Rodeo 2015)"

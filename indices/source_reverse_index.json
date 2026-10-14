@@ -1487,25 +1487,19 @@
     },
     {
       "id": "src.colman-1998-a",
-      "display": "Colman 1998",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 1,
+      "display": "Colman, V., Persyn, U., Daly, D., & Stijnen, V. (1998). A comparison of the intra-cyclic velocity variation in breaststroke swimmers with flat and undulating styles. Journal of Sports Sciences, 16(7), 653–665.",
+      "verification_status": "verified",
+      "identifier": {
+        "doi": "10.1080/026404198366461",
+        "url": "https://doi.org/10.1080/026404198366461"
+      },
+      "usage_count": 5,
       "usages": [
         {
           "id": "breast.L4.undulation",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[43].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.colman-1998-b",
-      "display": "Colman et al. 1998",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 4,
-      "usages": [
+        },
         {
           "id": "breast.tech.17",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -1527,6 +1521,14 @@
           "path": "points[89].public.mechanism"
         }
       ]
+    },
+    {
+      "id": "src.colman-1998-b",
+      "display": "【重複登錄，已解除】與 src.colman-1998-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.competitor-swim-udk-drills-swimswam-udk-sets",
@@ -4519,7 +4521,7 @@
         {
           "id": "fly.tech.12",
           "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[113].public.evidence[1]"
+          "path": "points[113].public.evidence[0]"
         }
       ]
     },
@@ -5317,29 +5319,22 @@
     },
     {
       "id": "src.mason-1992-a",
-      "display": "Mason 1992",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "fly.L5.two-kick-differentiation",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[34].public.evidence[0]"
-        }
-      ]
-    },
-    {
-      "id": "src.mason-1992-b",
-      "display": "Mason et al. 1992",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 3,
+      "display": "Mason, B. R., Tong, Z., & Richards, R. J. (1992). Propulsion in the butterfly stroke. In D. MacLaren, T. Reilly & A. Lees (Eds.), Biomechanics and Medicine in Swimming: Swimming Science VI (pp. 81–86). London: E & FN Spon.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://bms.sport-iat.de/bms/Record/4037066"
+      },
+      "usage_count": 4,
       "usages": [
         {
           "id": "fly.L4.second-kick",
           "file": "canonical/technica/l-indicators.yaml",
           "path": "indicators[32].public.evidence[0]"
+        },
+        {
+          "id": "fly.L5.two-kick-differentiation",
+          "file": "canonical/technica/l-indicators.yaml",
+          "path": "indicators[34].public.evidence[0]"
         },
         {
           "id": "fly.tech.11",
@@ -5352,6 +5347,14 @@
           "path": "points[112].public.mechanism"
         }
       ]
+    },
+    {
+      "id": "src.mason-1992-b",
+      "display": "【重複登錄，已解除】與 src.mason-1992-a 為同一篇文獻",
+      "verification_status": "retracted",
+      "identifier": {},
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.masters-1992-knowledge-knerves",
@@ -7901,22 +7904,11 @@
     },
     {
       "id": "src.peyrebrune-2007",
-      "display": "Peyrebrune & Turner 2007",
-      "verification_status": "unverified",
+      "display": "【查無此篇，已撤下】Peyrebrune & Turner 2007",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 2,
-      "usages": [
-        {
-          "id": "fly.L4.outsweep",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[33].public.evidence[0]"
-        },
-        {
-          "id": "fly.tech.12",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[113].public.evidence[0]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.piatrikova-2018-3min-all-out-cs",
@@ -8082,16 +8074,16 @@
     },
     {
       "id": "src.pmc-2018",
-      "display": "PMC 2018",
-      "verification_status": "unverified",
-      "identifier": {},
-      "usage_count": 2,
+      "display": "Strzała, M., Stanula, A., Krężałek, P., Ostrowski, A., Kaca, M., & Głąb, G. (2017). Butterfly Sprint Swimming Technique, Analysis of Somatic and Spatial-Temporal Coordination Variables. Journal of Human Kinetics, 60, 51–62.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmid": "29339985",
+        "pmcid": "PMC5765785",
+        "doi": "10.1515/hukin-2017-0089",
+        "url": "https://doi.org/10.1515/hukin-2017-0089"
+      },
+      "usage_count": 1,
       "usages": [
-        {
-          "id": "fly.L2.kick",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[28].public.evidence[0]"
-        },
         {
           "id": "fly.L3.two-kick-timing",
           "file": "canonical/technica/l-indicators.yaml",
@@ -12221,13 +12213,8 @@
       "display": "StatPearls 2023",
       "verification_status": "unverified",
       "identifier": {},
-      "usage_count": 4,
+      "usage_count": 3,
       "usages": [
-        {
-          "id": "free.L5.serratus",
-          "file": "canonical/technica/l-indicators.yaml",
-          "path": "indicators[16].public.evidence[1]"
-        },
         {
           "id": "free.tech.10",
           "file": "canonical/instructional/technical-analysis.yaml",

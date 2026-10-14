@@ -360,6 +360,9 @@ errors:
 
   # ── 水下划手 ──
   - id: free.err10
+    maintenance_note: |-
+      errors[9].public.physical_reason.text：（2026-10-02 更正：原寫「每次方向改變都是推進力損失，直線才最有效率」與「S 形是轉體造成的視覺錯覺」。
+      前者不成立——斜著掃水正是靠橫向移動產生推進分量；後者與 free.err24 的另一種歷史解釋互相矛盾，兩者都追不到出處。）
     stroke: free
     category: pull
     title: S 形划水路徑是高效划水的目標
@@ -371,8 +374,6 @@ errors:
         text: >-
           手部軌跡畫成什麼形狀，取決於拿什麼當參考（相對身體、相對水、相對池底），三種畫出來的形狀不同；
           真正決定推進的是手掌與前臂朝哪裡施力，不是路徑形狀。把「畫 S 形」當成目標，等於把注意力放在一個外部描述上。
-          （2026-10-02 更正：原寫「每次方向改變都是推進力損失，直線才最有效率」與「S 形是轉體造成的視覺錯覺」。
-          前者不成立——斜著掃水正是靠橫向移動產生推進分量；後者與 free.err24 的另一種歷史解釋互相矛盾，兩者都追不到出處。）
       evidence:
         - certainty: 🟡
           text: >-
@@ -432,6 +433,8 @@ errors:
       type: B
 
   - id: free.err12
+    maintenance_note: |-
+      errors[11].public.evidence[0].text：（2026-10-02 更正：原寫「Hip-driven 風格（長距離）自然發展兩拍踢」，與 free.tech.4 相反。）
     stroke: free
     category: kick
     title: 六拍踢是正確標準，兩拍是偷懶或技術不好
@@ -455,7 +458,6 @@ errors:
             精英長距離自由式常見兩拍或四拍踢，不是六拍；常見的解釋是六拍在長距離的腿部能耗太高。
             踢腿拍數與划手風格（hip-driven／shoulder-driven）是兩個分開的維度——Race Club 體系的
             hip-driven 反而倚重強力踢腿（見 free.tech.4），不能由風格推出拍數。
-            （2026-10-02 更正：原寫「Hip-driven 風格（長距離）自然發展兩拍踢」，與 free.tech.4 相反。）
       cross_ref: 技術分析 §肆（踢水機制）
       cross_ref_ids: [free.tech.11, free.tech.12]
       correct_concept: >-
@@ -530,6 +532,8 @@ errors:
 
   # ── 身體旋轉 ──
   - id: free.err15
+    maintenance_note: |-
+      errors[14].public.physical_reason.text：（2026-10-02 更正：原寫「推水末段菱形肌收縮啟動滾轉、髖部是被動跟隨者」，該因果鏈沒有量測支持。）
     stroke: free
     category: rotation
     title: 主動轉髖是所有情境下自由式旋轉的正確指令
@@ -543,7 +547,6 @@ errors:
           划頻越高，每次滾轉可用的時間越短；短距離（高划頻）刻意加大髖旋轉，容易讓滾轉時機與划手推力錯開、
           多花力氣。低划頻的 hip-driven 風格則把推水末段的髖部後段旋轉當成風格的一部分（見 free.tech.4）——
           所以「轉髖」對不對要看划頻，不是一條通則。
-          （2026-10-02 更正：原寫「推水末段菱形肌收縮啟動滾轉、髖部是被動跟隨者」，該因果鏈沒有量測支持。）
       evidence:
         - certainty: 🟡
           text: >-
@@ -965,6 +968,11 @@ errors:
 
   # ── 水下划手 ──
   - id: back.err2
+    maintenance_note: |-
+      errors[26].public.evidence[1].text：（2026-09-06 修正：原本這一行寫「近期研究（Gonjo 2020 等）確認路徑形狀的
+      個體差異顯著」並掛 🟢，但那篇研究不存在——Gonjo 等人 2020 沒有量手部軌跡、
+      也沒有做個體差異分析。掛掉的引用移除後，論證由上一行 Toussaint／Maglischo 承擔，
+      這一行降為推導。）
     stroke: back
     category: pull
     title: 划手要刻意走 S 形路徑，升力更多
@@ -996,10 +1004,7 @@ errors:
           text: >-
             「前臂面向推進方向」比「路徑是否筆直」更重要，這一句本身是推力方向的幾何推導：
             推進力來自前臂與手掌把水往後推，方向由掌面朝向決定，路徑形狀只是這個朝向在空間中
-            走過的痕跡。（2026-09-06 修正：原本這一行寫「近期研究（Gonjo 2020 等）確認路徑形狀的
-            個體差異顯著」並掛 🟢，但那篇研究不存在——Gonjo 等人 2020 沒有量手部軌跡、
-            也沒有做個體差異分析。掛掉的引用移除後，論證由上一行 Toussaint／Maglischo 承擔，
-            這一行降為推導。）
+            走過的痕跡。
       correct_concept: >-
         「手掌是否面向推進方向」比「路徑是否走 S 形或直線」更重要。刻意 S 形是已過時的誤解；
         輕微 S 形（關節角度限制的自然結果）不需強行消除；被動 S 形（入水慣性造成）則應強化
@@ -1058,6 +1063,8 @@ errors:
 
   # ── 身體旋轉 ──
   - id: back.err4
+    maintenance_note: |-
+      errors[28].public.correct_concept：（2026-10-02 更正：原寫「肩部主導強調『入水後肩膀壓低』」，與 back.tech.6、back.err1 的感知目標相反。）
     stroke: back
     category: rotation
     title: 滾轉要靠髖部（或肩部）主導，選定一邊才對
@@ -1090,7 +1097,6 @@ errors:
         滾轉的教學入口依選手條件彈性選擇，不強制單一模式。
         可用的教學路徑：從踢水訓練切入，讓腿打水節律帶動身體旋轉；或從回臂切入，
         以「回臂側肩膀上抬、划水側順勢下沉」為感知焦點（見 back.tech.6）——不要用「把肩膀壓低」當口令。
-        （2026-10-02 更正：原寫「肩部主導強調『入水後肩膀壓低』」，與 back.tech.6、back.err1 的感知目標相反。）
       perception_impact: >-
         「用髖帶動」指令常觸發腰部扭動代償，旋轉感知與推進感知脫節；
         身體晃動而手掌未能固定水中錨點，感知系統失去旋轉與推進力連動的訊號。
@@ -1099,6 +1105,8 @@ errors:
 
   # ── 踢腿 ──
   - id: back.err5
+    maintenance_note: |-
+      errors[29].public.physical_reason.text：（2026-10-02 更正：原寫「自由式靠下踢（膕繩肌屈膝）……方向完全相反」，自由式下踢是伸膝，不是屈膝。）
     stroke: back
     category: kick
     title: 踢水要用力向下踢——自由式思維的直接干擾
@@ -1113,7 +1121,6 @@ errors:
           仰式推進力主要來自上踢（up-kick）——腳背向後向上推水，水的反作用力向前（Maglischo 2003）。
           自由式靠下踢、仰式靠上踢：在池畔看方向相反，但以身體為基準是同一件事——兩者都是朝身體前側（腹側）踢、
           靠伸膝完成末端鞭打（見 back.tech.30）。教練要翻轉的是「池畔看到的方向」，不是動作本身。
-          （2026-10-02 更正：原寫「自由式靠下踢（膕繩肌屈膝）……方向完全相反」，自由式下踢是伸膝，不是屈膝。）
           三種常見踢水錯誤：腳趾朝上（推進面消失）、膝蓋出水（阻力增加）、大腿主導（失去膝關節末端鞭打效應）。
           上踢佔推進多少比例，舊文獻給過數字，但量測方法有限，而且不同出處的數字對不上，本庫不引用；
           定性結論（上踢是主力）有效。
@@ -1458,6 +1465,9 @@ errors:
       type: C
 
   - id: back.err14
+    maintenance_note: |-
+      errors[38].public.physical_reason.text：（2026-10-02 修正：原寫「仰式不需要也不該建立節律」，與 back.err7「仰式仍需固定節律」直接衝突。
+      三方審查結論：兩條反對的是兩個極端——完全不管呼吸 vs 計數式強制換氣——可以並存。）
     stroke: back
     category: head
     title: 仰式也要套自由式呼吸節律——每三划換氣、強迫節律
@@ -1474,8 +1484,6 @@ errors:
           會讓選手在「該換氣的節律點」感到憋氣、在「不該換氣的節律點」感到不知道要不要呼吸。
           結果是核心張力上升、整體放鬆度下降，反而拖累技術。
           與自由式不同——自由式臉在水中，換氣時機有結構性限制；仰式沒有這個限制，所以不必規定吸氣次數。
-          （2026-10-02 修正：原寫「仰式不需要也不該建立節律」，與 back.err7「仰式仍需固定節律」直接衝突。
-          三方審查結論：兩條反對的是兩個極端——完全不管呼吸 vs 計數式強制換氣——可以並存。）
       cross_ref: 頭部基礎位置、仰式臉在水面上，想呼吸就呼吸、不用管節律
       cross_ref_ids: [back.tech.21, back.err7]
       correct_concept: >-
@@ -1820,6 +1828,9 @@ errors:
 
   # ── 換氣教學誤區 ──
   - id: breast.err7
+    maintenance_note: |-
+      errors[48].public.evidence[1].text：；本庫先前把他的立場記反了
+      （寫成「頭部隨脊柱移動而非獨立仰起」），2026-09-06 更正。
     stroke: breast
     category: head
     title: "換氣時抬頭正前看、眼睛看向對岸"
@@ -1846,8 +1857,7 @@ errors:
             生物力學者 Rod Havriluk 明確把「蛙式換氣時不該改變頸部角度」列為技術誤區：
             有效的換氣動作需要頸部在完整活動範圍內伸展，而伸展的判準是下巴維持在水面高度，
             不是把整個頭抬離水面。他引 Jon Urbanchek 的說法形容錯誤版本像是「頸部和肩膀打了石膏」。
-            使用邊界：這是專欄形式的生物力學論述，不是對照實驗；本庫先前把他的立場記反了
-            （寫成「頭部隨脊柱移動而非獨立仰起」），2026-09-06 更正。
+            使用邊界：這是專欄形式的生物力學論述，不是對照實驗。
           source: "Havriluk, R. (2017). Technique Misconceptions: Breaststroke and Butterfly Breathing Revisited. Swimming World."
           source_ids: [src.havriluk-2017-breathing-misconceptions-revisited]
       cross_ref: 內划（Insweep）、波動的雙重功能
@@ -1941,6 +1951,8 @@ errors:
 
   # ── 手腳時機教學誤區 ──
   - id: breast.err10
+    maintenance_note: |-
+      errors[51].public.correct_concept：（2026-10-02 修正原文「推進階段必須交替、不能重疊」的絕對說法，與 breast.tech.35／tech.8 衝突。）
     stroke: breast
     category: timing
     title: "手腳可以同時動——同時划同時踢沒有問題"
@@ -1974,7 +1986,6 @@ errors:
       correct_concept: >-
         蛙式的核心原則是「划手時腳保持流線、踢腳時手保持流線」——手腳的推進峰值不能同時發生。
         初學階段先建立清楚的分段節奏；推進尾段與另一肢準備動作的銜接重疊，是進階的時序策略（見 breast.tech.35）。
-        （2026-10-02 修正原文「推進階段必須交替、不能重疊」的絕對說法，與 breast.tech.35／tech.8 衝突。）
       perception_impact: >-
         手腳同時動時，每個推進的感知都被另一方向的阻力干擾，學員永遠無法感受到「單一推進完整的
         速度感」——L3 以上的推進感知建立的前提條件缺失。
@@ -2109,6 +2120,9 @@ errors:
       type: C
 
   - id: breast.err14
+    maintenance_note: |-
+      errors[55].public.correct_concept：（2026-10-02 修正原文「速度應該是整個週期最慢」，與 breast.tech.10／tech.31「縮短收腿時間」的表面衝突：
+      兩邊說的是「不加快腿速」與「路徑縮短」，可以同時成立。）
     stroke: breast
     category: kick
     title: 收腿要快、像彈簧反彈——增加阻力反而拖慢
@@ -2141,8 +2155,6 @@ errors:
       correct_concept: >-
         收腿動作目標是「最小阻力路徑回到踢腿準備位」：不主動加速腿，但路徑要走最短（腳跟往外側臀部靠），
         讓整段收腿時間仍然短（見 breast.tech.10）。收腿速度是否應是週期中最慢，目前沒有量測可裁決。
-        （2026-10-02 修正原文「速度應該是整個週期最慢」，與 breast.tech.10／tech.31「縮短收腿時間」的表面衝突：
-        兩邊說的是「不加快腿速」與「路徑縮短」，可以同時成立。）
         感知目標是「腿放鬆讓水把腿帶回來」，
         不是「主動快速收」。
       perception_impact: >-
@@ -2340,6 +2352,9 @@ errors:
   # ── 划手動作 ──
 
   - id: fly.err1
+    maintenance_note: |-
+      errors[60].public.physical_reason.text：（2026-10-02 修正：原寫「高速影像顯示菁英路徑更接近直線後推、鑰匙孔是視覺副產品」——
+      沒有可查的影像研究出處，且與本庫自己的外划—內划—上划三相結構矛盾。）
     stroke: fly
     category: pull
     title: "水下划手應走鑰匙孔（Keyhole）或S形整條路徑"
@@ -2353,8 +2368,6 @@ errors:
           蝶式水下划手由外划、內划、上划三相組成，手的軌跡本來就帶橫向分量，畫出來的形狀還取決於
           拿身體或水當參考。問題不在軌跡有沒有彎，而在把「畫出鑰匙孔形狀」當成目標：刻意追形狀會拉長外划、
           增加橫向動作，注意力也離開了對水的壓力。三相自然形成的弧線是正常現象，不是技術目標。
-          （2026-10-02 修正：原寫「高速影像顯示菁英路徑更接近直線後推、鑰匙孔是視覺副產品」——
-          沒有可查的影像研究出處，且與本庫自己的外划—內划—上划三相結構矛盾。）
       evidence:
         - certainty: 🟠
           text: >-
@@ -2830,6 +2843,9 @@ errors:
 
   # ── 補強：入水類誤區（entry 類別原本只 1 條）──
   - id: fly.err15
+    maintenance_note: |-
+      errors[74].public.correct_concept：（2026-10-02 修正：原寫「手掌平面與水面平行接觸，像把手放下接觸桌面」，與 fly.tech.15 的拇指側切入衝突；
+      三方審查一致認為兩者的共同核心是手腕中性、手掌扁平。）
     stroke: fly
     category: entry
     title: 入水手指先入、手腕折下——破壞高肘設定造成 EVF 早期崩潰
@@ -2859,8 +2875,6 @@ errors:
       cross_ref_ids: [fly.tech.14, fly.tech.21]
       correct_concept: >-
         入水手腕保持中性（直），手掌成扁平面、拇指側略領先切入——不是用手指朝下戳水。
-        （2026-10-02 修正：原寫「手掌平面與水面平行接觸，像把手放下接觸桌面」，與 fly.tech.15 的拇指側切入衝突；
-        三方審查一致認為兩者的共同核心是手腕中性、手掌扁平。）
         這樣入水後手腕、前臂、肘可直接接續做 EVF 高肘設定。
       perception_impact: >-
         手腕折下的口令把感知焦點放在「手指有沒有先入」的入水形式，
@@ -3251,6 +3265,10 @@ errors:
       type: B
 
   - id: udk.err8
+    maintenance_note: |-
+      errors[84].public.physical_reason.text：（2026-10-02 刪除原句「彎膝準備的減速量不管何時發生都差不多」：阻力隨速度平方增加，高速時彎膝的減速損失其實更大，
+      這正是 udk.tech.17「推牆速度高時先滑到交叉速度」的道理。）
+      errors[84].public.physical_reason.text：，2026-09-04 更正原文「研究也確認」的定論語氣
     stroke: udk
     category: turn
     title: 轉身後必須先滑行，等速度降下來再開始踢腿
@@ -3267,11 +3285,11 @@ errors:
           第三句不是教練觀測而是文獻，其自證由下方 🟢 evidence 承擔（Takeda 等 2026）。
         text: >-
           選手在流線型滑行時速度下降得非常快，等太久只是在從更慢的速度開始加速。
-          （2026-10-02 刪除原句「彎膝準備的減速量不管何時發生都差不多」：阻力隨速度平方增加，高速時彎膝的減速損失其實更大，
-          這正是 udk.tech.17「推牆速度高時先滑到交叉速度」的道理。）近年一份運動生物力學的力學模型也指向同一方向：
+          阻力隨速度平方增加，高速時彎膝的減速損失其實更大；
+          推牆速度高時先滑到交叉速度（見 udk.tech.17）。近年一份運動生物力學的力學模型也指向同一方向：
           多數受試菁英泳者的最優轉換速度高於其等速游泳速度，支持盡早起踢的邏輯
           （該研究樣本為 10 名菁英女性、在水槽 tethered 條件下量測淨力，作者自述為 conceptual model，
-          不宜讀成賽場實證，2026-09-04 更正原文「研究也確認」的定論語氣）。
+          不宜讀成賽場實證）。
       evidence:
         - certainty: 🟠
           text: >-
@@ -3401,6 +3419,10 @@ errors:
       type: C
 
   - id: udk.err11
+    maintenance_note: |-
+      errors[87].public.physical_reason.text：2026-09-06 更正：本條原本從幾何差異一路寫到「仰式速度曲線更平穩、整體效率反而更高」，
+      那是把一個方向性的力學條件當成結論在用（詳見 udk.tech.22）。
+      errors[87].public.evidence[0].text：2026-09-06 更正：本條原本引的就是這份研究，卻寫成「仰臥速度曲線更平穩、效率更高」。
     stroke: udk
     category: concept
     title: 仰式水下踢法與俯式相同，橫躺過來踢就好
@@ -3416,8 +3438,7 @@ errors:
           仰式下踢往背側、與浮力反向，維持深度較不費力。
           **這個幾何差異成立，但它推不出「所以仰式效率較高」**——
           效率是推進力、阻力與代謝成本的合成，要靠實測。
-          2026-09-06 更正：本條原本從幾何差異一路寫到「仰式速度曲線更平穩、整體效率反而更高」，
-          那是把一個方向性的力學條件當成結論在用（詳見 udk.tech.22）。
+          （詳見 udk.tech.22。）
           誤區本身仍然成立——兩種體位的條件確實不同，口令不能整組平移——
           但「不同」的內容是浮力關係與感知重點，不是誰比較快。
       evidence:
@@ -3427,7 +3448,6 @@ errors:
             水平速度（p=0.774）與踢頻（p=0.730）兩種體位都沒有差異，關節活動度也不受體位影響（p=0.36），
             結論明文反駁「仰臥海豚腳較有效」的說法。這是 n=6 的會議摘要，
             沒測到差異不等於兩者相等——它能推翻的是「已有證據支持仰式較優」。
-            2026-09-06 更正：本條原本引的就是這份研究，卻寫成「仰臥速度曲線更平穩、效率更高」。
           source: "Scharborough et al. (2017), International Journal of Exercise Science: Conference Proceedings 2(9), Article 81"
           source_ids: [src.scharborough-2017-dolphin-kick-prone-supine]
       cross_ref: 仰／俯海豚腳的效率差異查無證據
@@ -3805,6 +3825,9 @@ errors:
       type: C
 
   - id: starts-turns.err8
+    maintenance_note: |-
+      errors[97].public.evidence[1].text：本庫先前把這段歸給 SwimSwam 的 Jozsef Nagy，
+      那是錯的歸屬，2026-09-06 更正。
     stroke: starts-turns
     category: depth
     title: 蛙式轉身觸牆後要刻意往下沉，讓腳找到牆
@@ -3829,8 +3852,7 @@ errors:
           text: >-
             目標是把腿踢進牆，絕不是把自己拉進牆——拉進去會讓髖部下沉，就像放了錨一樣。
             使用邊界：這句出自 1998 年美國 masters 泳協的技術文章，屬教練處方而非量測；
-            「放錨」是原文的比喻。本庫先前把這段歸給 SwimSwam 的 Jozsef Nagy，
-            那是錯的歸屬，2026-09-06 更正。
+            「放錨」是原文的比喻。
           source: "McCauley, W. (1998). The Complete New Breaststroke Turn. U.S. Masters Swimming."
           source_ids: [src.mccauley-1998-usms-complete-new-breaststroke-turn]
       cross_ref: 技術分析 §貳 2.3/2.4 接觸與推蹬：觸牆深度
@@ -3847,6 +3869,8 @@ errors:
 
   # ── 觀念框架 ──
   - id: starts-turns.err9
+    maintenance_note: |-
+      errors[98].public.physical_reason.text：（2026-10-02 更正：原寫成「出去速度＝力量（42%）× 方向（r=0.76）× 流線」，把解釋變異量與相關係數相乘，不是有意義的式子。）
     stroke: starts-turns
     category: concept
     title: 推牆力道越大，出去速度就越快
@@ -3862,7 +3886,6 @@ errors:
           推蹬方向的影響尤其強（出水速度與推蹬力向量對齊重心方向的相關係數 r = 0.76）；
           流線型是力量轉換的前提條件：推蹬時沒有流線型姿勢，不管推多用力速度都出不去。
           更精確的說法是三件事都要到位：推蹬力道（解釋約四成變異）、推蹬方向（與出水速度強相關）、流線型（前提條件）。
-          （2026-10-02 更正：原寫成「出去速度＝力量（42%）× 方向（r=0.76）× 流線」，把解釋變異量與相關係數相乘，不是有意義的式子。）
       evidence:
         - certainty: 🟢
           text: 推蹬力道解釋轉身成績約 42% 的變異。

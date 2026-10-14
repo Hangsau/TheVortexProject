@@ -470,7 +470,7 @@ indicators:
       indicator: 加速後第二踢消失；疲勞後手出水無法「飛過」水面；髖部下沉明顯
       framework_state: 壓力下感知失守
       evidence:
-        - {certainty: 🟡, text: 五峰值分析, source: Mason et al. 1992, source_ids: [src.mason-1992-b]}
+        - {certainty: 🟡, text: 五峰值分析, source: Mason et al. 1992, source_ids: [src.mason-1992-a]}
 
   - id: fly.L4.outsweep
     stroke: fly
