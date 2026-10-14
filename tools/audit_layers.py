@@ -177,7 +177,8 @@ def audit(site: Path, since: str) -> str:
         hits = +hits
         if hits:
             diag_hits.append((rel, hits))
-        keys = sorted(set(MACHINE_KEY.findall(text)))
+        # 審查與裁決紀錄是工作紀錄：來源鍵與欄位名就是被審查的對象，照原樣保留
+        keys = [] if rel.startswith("research/rulings") else sorted(set(MACHINE_KEY.findall(text)))
         if keys:
             machine_hits.append((rel, keys))
         for url in HREF.findall(raw):
