@@ -17,6 +17,7 @@ mechanism:
 epidemiology:
   prevalence: "SCI 泳者髖屈攣縮普遍存在（方向性描述，非量化）。**原本寫的「嚴重攣縮（≥ 60°）報告比例 30–50%」已於 2026-08-17 撤除——該數字唯一的引用查無此文獻，屬無來源數字，不得再出現於任何層。**"
   certainty: 🟠
+  observation_basis: "復健臨床對長期輪椅使用者的普遍觀察；原引的量化綜述已查無此文獻而撤除，沒有游泳族群的盛行率數字，不外推到非輪椅使用者"
   evidence_grade: Expert
   caveat: >-
     **2026-08-17 來源健檢結果**：本條原引「Akkurt et al. 2017, J Phys Ther Sci，SCI 髖屈攣縮綜述」，

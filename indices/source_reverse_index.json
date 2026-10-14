@@ -556,7 +556,7 @@
       "identifier": {
         "doi": "10.1037/0096-3445.130.4.701"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.arousal.explicit_monitoring",
@@ -567,6 +567,11 @@
           "id": "psych.flow.reinvestment",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[4].public"
+        },
+        {
+          "id": "psych.flow.reinvestment",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[4].public.hardware_boundary"
         }
       ]
     },
@@ -1688,12 +1693,17 @@
       "identifier": {
         "doi": "10.1038/nrn894"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.interaction.anterior_insula_gain",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[0].public"
+        },
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public.hardware_boundary"
         },
         {
           "id": "psych.interaction.water_immersion_interoception",
@@ -1742,7 +1752,7 @@
       "identifier": {
         "isbn": "9780060920432"
       },
-      "usage_count": 4,
+      "usage_count": 6,
       "usages": [
         {
           "id": "psych.flow.action_awareness_merging",
@@ -1760,9 +1770,19 @@
           "path": "themes[7].concepts[7].public"
         },
         {
+          "id": "psych.flow.flow_across_levels",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[7].public.phenomenon"
+        },
+        {
           "id": "psych.flow.water_as_feedback",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[8].public"
+        },
+        {
+          "id": "psych.flow.water_as_feedback",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[8].public.phenomenon"
         }
       ]
     },
@@ -2037,12 +2057,22 @@
         "pmid": "15522630",
         "doi": "10.1016/j.concog.2004.07.002"
       },
-      "usage_count": 1,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "psych.flow.action_awareness_merging",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[0].public.hardware_boundary"
+        },
         {
           "id": "psych.flow.hypofrontality",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[6].public"
+        },
+        {
+          "id": "psych.flow.hypofrontality",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[6].public.hardware_boundary"
         }
       ]
     },
@@ -2163,7 +2193,7 @@
         "pmid": "13658305",
         "doi": "10.1037/h0047707"
       },
-      "usage_count": 2,
+      "usage_count": 4,
       "usages": [
         {
           "id": "psych.interaction.attentional_narrowing",
@@ -2171,9 +2201,19 @@
           "path": "themes[1].concepts[3].public"
         },
         {
+          "id": "psych.interaction.attentional_narrowing",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[3].public.hardware_boundary"
+        },
+        {
           "id": "psych.interaction.breathing_cognitive_load",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[6].public"
+        },
+        {
+          "id": "psych.interaction.breathing_cognitive_load",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[6].public.hardware_boundary"
         }
       ]
     },
@@ -2270,12 +2310,17 @@
       "identifier": {
         "doi": "10.1007/s11031-008-9102-4"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.flow.challenge_skill_balance",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[1].public"
+        },
+        {
+          "id": "psych.flow.challenge_skill_balance",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[1].public.hardware_boundary"
         },
         {
           "id": "psych.flow.flow_across_levels",
@@ -2428,8 +2473,13 @@
         "pmid": "15716371",
         "doi": "10.1152/jn.00717.2004"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "psych.flow.action_awareness_merging",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[0].public.hardware_boundary"
+        },
         {
           "id": "psych.flow.hypofrontality",
           "file": "canonical/psychology/psychology.yaml",
@@ -2991,12 +3041,17 @@
       "identifier": {
         "doi": "10.1016/j.psychsport.2019.101634"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.attention.water_sense_third_category",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[4].public"
+        },
+        {
+          "id": "psych.attention.water_sense_third_category",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[4].public.phenomenon"
         }
       ]
     },
@@ -3009,12 +3064,17 @@
         "pmcid": "PMC10244639",
         "doi": "10.3389/fspor.2023.1176635"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.attention.water_sense_third_category",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[4].public"
+        },
+        {
+          "id": "psych.attention.water_sense_third_category",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[4].public.phenomenon"
         }
       ]
     },
@@ -3485,12 +3545,17 @@
       "identifier": {
         "doi": "10.1080/10413200490437886"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.self_talk.interfering_thoughts_bandwidth",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[5].concepts[3].public"
+        },
+        {
+          "id": "psych.self_talk.interfering_thoughts_bandwidth",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[3].public.phenomenon"
         },
         {
           "id": "psych.self_talk.ist_mst_matching",
@@ -3637,12 +3702,17 @@
       "identifier": {
         "doi": "10.1111/j.1469-8986.1994.tb01039.x"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.arousal.muscle_tension_loop",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[6].concepts[5].public"
+        },
+        {
+          "id": "psych.arousal.muscle_tension_loop",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[6].concepts[5].public.phenomenon"
         }
       ]
     },
@@ -3771,12 +3841,17 @@
         "pmid": "38242101",
         "doi": "10.1123/jsep.2023-0104"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.motivation.climate_biology",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[6].public"
+        },
+        {
+          "id": "psych.motivation.climate_biology",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[6].public.phenomenon"
         }
       ]
     },
@@ -3787,12 +3862,17 @@
       "identifier": {
         "doi": "10.3389/fpsyg.2025.1667429"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.motivation.climate_biology",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[6].public"
+        },
+        {
+          "id": "psych.motivation.climate_biology",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[6].public.phenomenon"
         }
       ]
     },
@@ -4056,7 +4136,7 @@
       "identifier": {
         "doi": "10.1080/10413209508406962"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.flow.action_awareness_merging",
@@ -4067,6 +4147,11 @@
           "id": "psych.flow.water_as_feedback",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[8].public"
+        },
+        {
+          "id": "psych.flow.water_as_feedback",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[8].public.phenomenon"
         }
       ]
     },
@@ -4562,12 +4647,17 @@
       "identifier": {
         "doi": "10.1016/j.neulet.2017.02.024"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.interaction.stress_hypertonia",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[1].public"
+        },
+        {
+          "id": "psych.interaction.stress_hypertonia",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[1].public.hardware_boundary"
         }
       ]
     },
@@ -4662,12 +4752,17 @@
       "identifier": {
         "doi": "10.1080/02640410152006081"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.flow.de_reinvestment",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[5].public"
+        },
+        {
+          "id": "psych.flow.de_reinvestment",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[5].public.phenomenon"
         }
       ]
     },
@@ -5265,7 +5360,7 @@
       "identifier": {
         "doi": "10.1111/j.2044-8295.1992.tb02446.x"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.arousal.reinvestment",
@@ -5276,6 +5371,11 @@
           "id": "psych.flow.reinvestment",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[4].public"
+        },
+        {
+          "id": "psych.flow.reinvestment",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[4].public.hardware_boundary"
         }
       ]
     },
@@ -5294,7 +5394,7 @@
       "identifier": {
         "doi": "10.1080/17509840802287218"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
         {
           "id": "psych.arousal.implicit_learning",
@@ -5315,6 +5415,11 @@
           "id": "psych.flow.reinvestment",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[7].concepts[4].public"
+        },
+        {
+          "id": "psych.flow.reinvestment",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[7].concepts[4].public.hardware_boundary"
         }
       ]
     },
@@ -5617,12 +5722,17 @@
         "pmid": "39480294",
         "doi": "10.1037/bul0000451"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.attention.cah",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[1].public"
+        },
+        {
+          "id": "psych.attention.cah",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[4].concepts[1].public.hardware_boundary"
         },
         {
           "id": "psych.attention.water_sense_third_category",
@@ -7199,12 +7309,17 @@
         "pmid": "9140893",
         "doi": "10.1097/00005768-199705000-00001"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.interaction.rpe_psychobiological",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[2].public"
+        },
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public.hardware_boundary"
         }
       ]
     },
@@ -7659,12 +7774,17 @@
         "pmc": "PMC4152223",
         "doi": "10.1371/journal.pone.0105054"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.interaction.vagal_tone_fear_extinction",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[4].public"
+        },
+        {
+          "id": "psych.interaction.vagal_tone_fear_extinction",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[4].public.hardware_boundary"
         }
       ]
     },
@@ -7695,12 +7815,17 @@
         "pmc": "PMC2886901",
         "doi": "10.1007/s00429-010-0258-9"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.interaction.anterior_insula_gain",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[0].public"
+        },
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public.hardware_boundary"
         },
         {
           "id": "psych.interaction.water_immersion_interoception",
@@ -7734,12 +7859,17 @@
       "identifier": {
         "doi": "10.1023/A:1014805132406"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "psych.motivation.amotivation_trap",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[4].public"
+        },
+        {
+          "id": "psych.motivation.amotivation_trap",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[4].public.phenomenon"
         },
         {
           "id": "psych.motivation.continuum",
@@ -11371,12 +11501,17 @@
       "identifier": {
         "doi": "10.1080/1750984X.2021.1944271"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.self_talk.pre_performance_routine",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[5].concepts[6].public"
+        },
+        {
+          "id": "psych.self_talk.pre_performance_routine",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[5].concepts[6].public.hardware_boundary"
         }
       ]
     },
@@ -12431,12 +12566,17 @@
       "identifier": {
         "doi": "10.1038/s41398-024-02933-9"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.interaction.anterior_insula_gain",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[0].public"
+        },
+        {
+          "id": "psych.interaction.anterior_insula_gain",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[0].public.hardware_boundary"
         }
       ]
     },
@@ -14355,12 +14495,17 @@
         "pmc": "PMC11723612",
         "doi": "10.1371/journal.pone.0316723"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.interaction.stress_hypertonia",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[1].public"
+        },
+        {
+          "id": "psych.interaction.stress_hypertonia",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[1].public.hardware_boundary"
         }
       ]
     },
@@ -14449,12 +14594,17 @@
         "pmid": "19224911",
         "doi": "10.1136/bjsm.2008.050799"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.interaction.rpe_psychobiological",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[2].public"
+        },
+        {
+          "id": "psych.interaction.rpe_psychobiological",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[1].concepts[2].public.hardware_boundary"
         }
       ]
     },
@@ -14916,12 +15066,17 @@
       "identifier": {
         "doi": "10.1016/S0065-2601(08)60019-2"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "psych.motivation.hmiem_bottomup",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[2].concepts[7].public"
+        },
+        {
+          "id": "psych.motivation.hmiem_bottomup",
+          "file": "canonical/psychology/psychology.yaml",
+          "path": "themes[2].concepts[7].public.phenomenon"
         }
       ]
     },

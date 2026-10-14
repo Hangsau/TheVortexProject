@@ -456,6 +456,10 @@ themes:
           均為陸上實驗室或非游泳情境。外推至水中游泳教學屬跨領域推導：游泳情境下浮力卸除重力對內臟的
           壓迫，提供了額外的位移感知，可能放大前島增益效應，但游泳場景專屬的前島量測目前仍為研究空白。
           內感訓練可改變前島迴路已有初步支持（Sugawara 等人 2024）。
+        source_ids:
+        - src.paulus-stein-2010-interoception-anxiety
+        - src.craig-2002-interoception
+        - src.sugawara-2024-interoceptive-training
       l_levels: [L0, L1]
       l_note: >-
         前島增益升高時，學習者感知頻寬被威脅性自我監控佔據，外部水流訊號被壓制。
@@ -529,6 +533,9 @@ themes:
           水中浮力已改變肌張力基線，焦慮性肌張力升高在水中的量值與感知影響可能與陸上不同。
           Ruffini 末梢飽和阻斷水感的具體路徑為推導（🔵），游泳場景中尚無直接量測。
           初學者 EMG 早啟動的焦慮成因（解釋 #1）有文獻支持但仍為最強假說，非定論。
+        source_ids:
+        - src.langlet-2017-anxiety-forearm-emg
+        - src.trapero-asenjo-2025-relaxation-imagery
       l_levels: [L0, L1, L2]
       l_note: >-
         張力閘門在 L0–L2 的影響最直接：當身體緊繃時，感知系統無法接收到細緻的
@@ -606,6 +613,9 @@ themes:
           Noakes 的中央調節者理論（1997；Tucker et al. 2009）與 Marcora
           在 RPE 是最關鍵測量指標這一點上達成共識，兩者均支持「游泳中的停止訊號是腦層決策而非肌肉失敗」
           的推導方向，但游泳技術崩潰的 RPE 分解實驗目前為研究空白。
+        source_ids:
+        - src.noakes-1997-central-governor
+        - src.tucker-2009-anticipatory-regulation
       l_levels: [L0, L1, L2]
       l_note: >-
         對防衛型初學者，在水中「感覺做不到」的 RPE 包含三個可區分的成分：
@@ -681,12 +691,14 @@ themes:
           這就是為什麼有些人在簡單漂浮時還能說出感覺，一開始划水就「什麼都感覺不到了」：
           不是感覺消失，是注意力被收窄，把水感擠到框框外面去了。
       hardware_boundary:
-        certainty: 🔵
+        certainty: 🟡
         text: >-
           Easterbrook (1959) 為認知心理學實驗室研究，非水中情境。游泳的感官環境
           （護目鏡、水下噪音、溫度）可能額外壓縮外周感知頻寬，使窄化效應在水中比陸上更強，
           但此「強化版」尚無直接量測（見研究空白 🔴-08）。
           Yerkes-Dodson 倒 U 型曲線（中度喚醒最佳）在水中的精確「最佳喚醒點」未量測。
+        source_ids:
+        - src.easterbrook-1959-cue-utilization
       l_levels: [L0, L1, L2]
       l_note: >-
         L0–L1 的首要任務是將喚醒降至中度範圍，才能讓水感的外周訊號頻寬開啟。
@@ -750,6 +762,8 @@ themes:
           「高 HRV 的游泳初學者脫敏速度更快」屬推導（見 dossier §六 🔴-04：此假說未驗證）。
           游泳場景中 HRV 作為脫敏速率預測指標的直接研究目前為研究空白。
           Porges 多元迷走神經理論的游泳教學應用同為框架推導，操作化量測待研究。
+        source_ids:
+        - src.pappens-2014-hrv-fear-extinction
       l_levels: [L0, L1]
       l_note: >-
         如果靜息 HRV 確實預測游泳脫敏速率，則初診時的 HRV 評估可作為
@@ -880,6 +894,8 @@ themes:
           目前尚無第一手數據（研究空白 🔴-09）。
           不焦慮的泳者（低喚醒）此機制仍成立，但幅度應小於高焦慮狀態。
           對自動化程度高的競技泳者，此成本在正常速度下接近零，只在衝刺/缺氧段才浮現。
+        source_ids:
+        - src.easterbrook-1959-cue-utilization
       l_levels: [L1, L2, L3]
       l_note: >-
         換氣閃斷在 L1–L2 最影響感知建立的連貫性：L1 需要在漂浮中感知浮力回饋，
@@ -1000,7 +1016,7 @@ themes:
   bridge_zh: >-
     動機讓人願意一次次回到水裡。但練習不一定只能在水裡——
     下一章講一件聽起來有點神奇、其實有神經科學根據的事：
-    在腦中「想像」游泳的感覺，對身體來說幾乎等於真的練了一次。
+    在腦中「想像」游泳的感覺，會活化一部分和真正練習相同的神經通路——效果不等於下水練，但能補上練習。
   premise:
     layer: public
     certainty: 🟢
@@ -1008,9 +1024,9 @@ themes:
       能不能持續感覺水，底層取決於動機氣候——教練把焦點放在「精熟自己」還是「贏過別人」，
       會在源頭決定學習者願不願意冒險去探索新的感覺。這是感知能生長的土壤，貫穿初學到競技。
     evidence_from:
-      - psych.motivation.bpn_triad
-      - psych.motivation.mastery_vs_performance_climate
-      - psych.motivation.autonomy_support
+    - psych.motivation.bpn_triad
+    - psych.motivation.mastery_vs_performance_climate
+    - psych.motivation.autonomy_support
 
   concepts:
 
@@ -1191,7 +1207,7 @@ themes:
         plain_text: >-
           一個練習環境會散發出兩種「氣候」。一種是精熟氣候：重點是你有沒有比上週進步、
           有沒有學到東西、大家互相幫忙。另一種是表現氣候：重點是排名、贏過誰、誰比較有天分。
-          研究發現，教練營造的精熟氣候，直接決定了青少年泳者會留下還是退出。
+          研究發現，教練營造的精熟氣候，和青少年泳者會不會留下來密切相關。
           這兩種氣候對「感覺水」的影響很關鍵：精熟氣候把做錯當成一個訊息（喔，原來這樣不對），
           所以人願意停在「還不確定」的感覺裡，等身體慢慢調整；
           表現氣候把做錯當成「我能力不夠」，所以人傾向一直重複有把握的舊感覺，不敢去試新的。
@@ -1247,6 +1263,8 @@ themes:
           但方向很清楚：動機不是技術教學之外的加分題，它是能不能開始感知的前置條件。
           這裡有個容易踩的坑：無動機的人在最初幾級還是能把動作「做完」，看起來學得還行，
           其實裡面什麼都沒感覺到，很容易被誤判成「學得不錯」。
+        source_ids:
+        - src.pelletier-2001-swimmer-persistence
       hardware_boundary:
         certainty: 🔵
         text: >-
@@ -1342,6 +1360,9 @@ themes:
           所以是「方向上的提示」而不是游泳的定論。
           但它至少告訴我們：一個老是比排名、施壓的環境，
           傷的可能不只是心情，還包括人實際的學習和恢復。
+        source_ids:
+        - src.hogue-2024-ego-climate-inflammation
+        - src.hogue-2025-caring-climate-freethrow
       hardware_boundary:
         certainty: 🔵
         text: >-
@@ -1386,6 +1407,8 @@ themes:
           這對成人初學和怕水很久的人特別重要——他們那層「我不是這塊料」通常已經很硬，
           光用嘴巴鼓勵沒什麼用，要給的是一次他自己能驗證的、真實的感知成功。
           （這條路徑邏輯上一致，但要修多久、要幾次成功才夠，游泳裡還沒量化研究。）
+        source_ids:
+        - src.vallerand-1997-hmiem
       hardware_boundary:
         certainty: 🔵
         text: >-
@@ -1436,12 +1459,9 @@ themes:
           參與在 ~11 歲前後達峰後遞減，機制=享受↓、功能性承諾↓、運動貶值↑，
           退出存活分析（Difernand 等人 2025，法國註冊泳者 n=160,861）
           顯示女孩 13.16 歲、男孩 17.50 歲為退出峰值；表現最差的後 10% 群體退出率，
-          女性由 13 歲的 78.1% 升到 17 歲的 91.7%，男性同期為 69.3% 升到 83.4%
-          （2026-09-04 更正原文「78–91%」——那是女性數值，原文未標性別）。
+          女性由 13 歲的 78.1% 升到 17 歲的 91.7%，男性同期為 69.3% 升到 83.4%。
           游泳退出的系統回顧（Monteiro 等人 2017，僅完整回顧 6 篇、檢索止於 2015）
-          列出的退出主因是與教練衝突、有其他事要做、勝任感未見進步、來自父母或教練的壓力、缺乏樂趣、感到無聊
-          （2026-09-04 更正原文「自主支持的訓練情境比訓練量更能預測續留」——
-          該回顧沒有做這個比較，是歸因錯誤，見錯誤 32）。
+          列出的退出主因是與教練衝突、有其他事要做、勝任感未見進步、來自父母或教練的壓力、缺乏樂趣、感到無聊。
           成人初學：目標導向（健康、克服恐懼、社交、陪小孩）＋自我參照勝任感脆弱；
           「學不夠快」的挫敗＋社會評價威脅是主要崩潰點；與恐懼主題（cluster 03）的成人恐懼簽名高度耦合。
           鐵人三項：游泳是手段而非目的，動機是「不要在游泳段崩掉」的工具性投入；
@@ -1859,9 +1879,9 @@ themes:
       把注意力放在「手要怎麼動」（內部焦點）反而會打斷自動化、壓低表現；
       放在「水被推開」（外部焦點）才讓動作流暢——感覺水的第三類焦點，是進階水感的注意力地基。
     evidence_from:
-      - psych.attention.ef_if_definition
-      - psych.attention.cah
-      - psych.attention.water_sense_third_category
+    - psych.attention.ef_if_definition
+    - psych.attention.cah
+    - psych.attention.water_sense_third_category
 
   concepts:
 
@@ -1950,6 +1970,8 @@ themes:
           此外，McKay 等人（2024）的穩健貝葉斯元分析修正發表偏誤後，
           外部焦點優越性的平均效果量接近零，且各研究異質性極高——
           「EF 永遠優於 IF」的強版命題需要放棄；效果因人、因任務、因情境而異。
+        source_ids:
+        - src.mckay-2024-reporting-bias-external-focus
       l_levels: [L3, L4, L5, L6]
       l_note: >-
         自動化干擾效應在已建立一定自動化基礎的泳者（L3 以上）最相關；
@@ -1974,9 +1996,7 @@ themes:
       - Freudenheim et al. 2010（游泳直接證據）
       - Stoate & Wulf 2011（精英游泳者）
       - McKay et al. 2024（貝葉斯元分析，反向證據）
-      source_ids: [src.wulf-mcnevin-shea-2001-automaticity, src.kal-2013-external-focus-automatization,
-        src.freudenheim-2010-external-focus-swimming, src.stoate-wulf-2011-swimmers-focus,
-        src.mckay-2024-reporting-bias-external-focus]
+      source_ids: [src.wulf-mcnevin-shea-2001-automaticity, src.kal-2013-external-focus-automatization, src.freudenheim-2010-external-focus-swimming, src.stoate-wulf-2011-swimmers-focus, src.mckay-2024-reporting-bias-external-focus]
     diagnostic:
       abc_link: A
       reading_signals:
@@ -2108,7 +2128,7 @@ themes:
     status: complete
     public:
       phenomenon:
-        certainty: 🔵
+        certainty: 🟢
         text: >-
           Wulf 的 EF/IF 二元框架在游泳「感覺水」的情境下面臨分類困難。
           支持「感覺水 = EF」：水是身體外的環境，感覺水的阻力與回饋是外部焦點
@@ -2134,6 +2154,9 @@ themes:
           內外焦點談的是「一句指令怎麼影響當下這趟的表現」，
           水感談的是「長期把感知練得更靈敏」。
           （這個第三類定位目前還是推論，把「感覺水」當成獨立策略來測的實驗還沒人做。）
+        source_ids:
+        - src.gottwald-2020-internal-focus-congruent
+        - src.gottwald-2023-two-sides-focus
       hardware_boundary:
         certainty: 🟢
         text: >-
@@ -2174,8 +2197,7 @@ themes:
       - Gottwald, Davies & Owen 2023（生態動力學對 EF/IF 二元框架的批評）
       - Heath 2022（水質感知作為具身知識的民族誌）
       - McKay et al. 2024（貝葉斯元分析）
-      source_ids: [src.gottwald-2020-internal-focus-congruent, src.gottwald-2023-two-sides-focus,
-        src.heath-2022-quality-of-water, src.mckay-2024-reporting-bias-external-focus]
+      source_ids: [src.gottwald-2020-internal-focus-congruent, src.gottwald-2023-two-sides-focus, src.heath-2022-quality-of-water, src.mckay-2024-reporting-bias-external-focus]
     diagnostic:
       reading_signals:
       - 泳者說「我不知道我在感覺什麼，好像沒有水感」= 感知耦合尚未建立，非 IF/EF 問題
@@ -2244,9 +2266,7 @@ themes:
       - Couture, Jerome & Tihanyi 1999（游泳直接研究，休閒泳者）
       - Grgic & Mikulic 2021（肌耐力情境元分析）
       - Vitali et al. 2019（耐力表現中 EF/IF 無差異）
-      source_ids: [src.morgan-pollock-1977-elite-distance-runner, src.masters-ogles-1998-associative-dissociative,
-        src.couture-1999-swimming-cognitive-strategies, src.grgic-mikulic-2021-focus-muscular-endurance,
-        src.vitali-2019-action-monitoring-endurance]
+      source_ids: [src.morgan-pollock-1977-elite-distance-runner, src.masters-ogles-1998-associative-dissociative, src.couture-1999-swimming-cognitive-strategies, src.grgic-mikulic-2021-focus-muscular-endurance, src.vitali-2019-action-monitoring-endurance]
     diagnostic:
       reading_signals:
       - 泳者說「游到後段就什麼都不想了，只是在撐」= 無意識分離策略啟動，疲痛超過警戒線
@@ -2484,6 +2504,8 @@ themes:
           （不過「念頭擠掉水感訊號」這一步是從工作記憶理論推過來的，游泳裡還沒直接量過，算推論。）
           實務上：對已經分心的人喊「專心」沒用——他不知道要專心在哪；
           給一個具體的感知錨點（「這趟只放在掌心的水壓」），念頭才會被擠走。
+        source_ids:
+        - src.hatzigeorgiadis-2004-swimming-pool
       hardware_boundary:
         certainty: 🔵
         text: >-
@@ -2649,6 +2671,8 @@ themes:
           「PPR 作為感知校準儀式」是 Vortex 框架與 PPR 研究的整合推導，
           非已被直接驗證的游泳實證；PPR 對情緒狀態的效果（Richard 2021）是現有游泳直接證據，
           對客觀速度指標的效果仍有限，使用時需誠實說明研究發現的範圍。
+        source_ids:
+        - src.rupprecht-2021-ppr-meta
       misconception_refs:
       - cue: 比賽前反覆告訴自己「要放鬆、要放鬆」
         why: >-
@@ -2997,8 +3021,7 @@ themes:
       - Masters 1992（British Journal of Psychology）
       - Masters, Polman & Hammond 1993（Personality and Individual Differences）
       - Masters & Maxwell 2008（International Review of Sport and Exercise Psychology）
-      source_ids: [src.masters-1992-knowledge-knerves, src.masters-polman-hammond-1993-reinvestment-scale,
-        src.masters-maxwell-2008-reinvestment-theory]
+      source_ids: [src.masters-1992-knowledge-knerves, src.masters-polman-hammond-1993-reinvestment-scale, src.masters-maxwell-2008-reinvestment-theory]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3088,6 +3111,8 @@ themes:
           （整條鏈是框架推論，游泳裡還沒被完整量過；只有單個環節有證據，比如焦慮確實會讓肌電升高。）
           實務上：別只喊「放鬆你的手臂」——緊張是全身、不自主的，盯著某部位放鬆反而更緊；
           從感覺切入（「讓手滑過去」）或先降低被評價的壓力，比較有用。
+        source_ids:
+        - src.hazlett-1994-muscle-tension-gad
       hardware_boundary:
         certainty: 🔵
         text: >-
@@ -3233,8 +3258,7 @@ themes:
       - Poolton & Zachry 2007（International Journal of Sports Science & Coaching）
       - Wulf & Prinz 2001（Psychonomic Bulletin & Review）
       - Tang et al. 2023（Frontiers in Psychology）
-      source_ids: [src.masters-maxwell-2008-reinvestment-theory, src.poolton-zachry-2007-implicit-coaching,
-        src.wulf-prinz-2001-directing-attention, src.tang-2023-mindfulness-choking]
+      source_ids: [src.masters-maxwell-2008-reinvestment-theory, src.poolton-zachry-2007-implicit-coaching, src.wulf-prinz-2001-directing-attention, src.tang-2023-mindfulness-choking]
     diagnostic:
       abc_link: C
       reading_signals:
@@ -3297,6 +3321,9 @@ themes:
           這是跨領域外推（Dietrich, 2004 的暫時性前額葉低激活假說；Floyer-Lea & Matthews, 2005 的
           fMRI 研究），游泳情境的直接量測仍是研究空白。「不知道怎麼做到」是意識無法觸及自動化程序的
           現象學側面，不是技術失憶——動作品質在此狀態往往達到個人最佳。
+        source_ids:
+        - src.dietrich-2004-hypofrontality
+        - src.floyer-lea-matthews-2005-brain-networks
       l_levels: [L5, L6]
       l_note: >-
         L5 泳者有時進入局部自動化的短暫融合（「這段手感覺對了」），
@@ -3355,6 +3382,8 @@ themes:
           Engeser & Rheinberg（2008）以划船運動員為主要樣本，效應量偏小（混合結果）；
           游泳情境無直接量化研究（研究空白 🔴）。外推至游泳情境合理，但「挑戰-技能匹配
           保證觸發心流」的因果鏈尚未在游泳中建立——匹配是必要條件而非充分條件。
+        source_ids:
+        - src.engeser-rheinberg-2008-challenge-skill
       l_levels: [L0, L1, L2, L3, L4, L5, L6]
       l_note: >-
         每個 L 級都有當層的挑戰-技能匹配點，不是只有精英才能到達這個匹配帶。
@@ -3491,6 +3520,10 @@ themes:
           Beilock & Carr（2001）研究是高爾夫推球，Masters（1992）、Masters & Maxwell（2008）
           研究樣本非游泳專屬；再投資機制外推至游泳合理（壓力下顯性監控增加是跨運動現象），
           但游泳專屬的再投資-心流直接量測仍是研究空白（🔴）。
+        source_ids:
+        - src.beilock-carr-2001-fragility
+        - src.masters-1992-knowledge-knerves
+        - src.masters-maxwell-2008-reinvestment-theory
       misconception_refs:
       - cue: 比賽時要更專注在每個動作細節，確認你在做對的事
         why: >-
@@ -3543,6 +3576,8 @@ themes:
           （這個機制是合理的推論，但游泳裡「用比喻教→降再投資→接近心流」還缺直接實證。）
           重要邊界：這招只能用在已有足夠自動化的 L4 以上泳者；對初學者說「別想、讓身體自己來」，
           只會讓他在水裡失去方向，造成的是焦慮不是心流。
+        source_ids:
+        - src.liao-masters-2001-analogy-learning
       l_levels: [L5, L6]
       l_note: >-
         L1–L3：顯性學習必要，再投資在此階段是學習工具，不是問題；
@@ -3607,6 +3642,8 @@ themes:
           Floyer-Lea & Matthews（2005）和 Seidler et al.（2005）的 fMRI/PET 研究是動作自動化的
           神經相關物，不是心流的直接量測——兩者的連結是推導（🔵）。
           游泳運動員心流狀態的神經影像研究目前幾乎不存在（研究空白 🔴）。
+        source_ids:
+        - src.dietrich-2004-hypofrontality
       l_levels: [L5, L6]
       l_note: >-
         前額葉退位需要動作已達到足夠的自動化程度（L4+），
@@ -3636,7 +3673,7 @@ themes:
     status: complete
     public:
       phenomenon:
-        certainty: 🔵
+        certainty: 🟡
         text: >-
           挑戰-技能平衡模型（Csikszentmihalyi, 1990）的核心是「匹配是相對於當前技能水平的」，
           因此心流的觸發條件在每一個技能層級都可以達到，只是心流的內容隨 L 級遷移。
@@ -3653,6 +3690,8 @@ themes:
           那種「我浮起來了！」的全神貫注，就是初學端的心流雛形；
           L3–L4 是「這一段手感覺對了」的局部融合；L5–L6 才是「水在幫我、不知道怎麼做到」。
           把心流只留給精英，是對這個模型的誤讀——早期的心流其實是把人一次次帶回水裡的內在動力。
+        source_ids:
+        - src.csikszentmihalyi-1990-flow
       l_levels: [L0, L1, L2, L3, L4, L5, L6]
       l_note: >-
         各 L 級的心流「內容」不同：L0–L2 是控制感初獲的吸收；L3–L4 是局部自動化融合；
@@ -3682,7 +3721,7 @@ themes:
     status: complete
     public:
       phenomenon:
-        certainty: 🔵
+        certainty: 🟡
         text: >-
           心流的前提條件之一是「即時回饋」（unambiguous feedback，Csikszentmihalyi, 1990 第三維度）：
           行動者隨時知道自己做得好不好。游泳的獨特性在於，這個回饋通道是**物理環境自然提供的**——
@@ -3697,6 +3736,9 @@ themes:
           這代表一件事：技術上「把水感練出來」和心理上「準備好心流的前提」，
           在游泳裡其實是同一件事的兩面——你越能感覺水，這條即時回饋的訊號就越清楚。
           （不過「哪些感覺通道在承載這個回饋」還缺直接研究，這段是跨領域推論。）
+        source_ids:
+        - src.csikszentmihalyi-1990-flow
+        - src.jackson-1995-flow-elite-athletes
       hardware_boundary:
         certainty: 🔵
         text: >-

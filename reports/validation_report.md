@@ -436,9 +436,9 @@
 
 ## W011 — `certainty` orange（教練觀測）但缺 `observation_basis`（未交代觀察基礎與外推邊界）→ S6 範圍
 
-**WARN，共 1 筆**
+**WARN，共 0 筆**
 
-  file=canonical\health\injuries.yaml id='sci-hip-flexor-contracture' at=injuries[16].epidemiology certainty=orange 但缺 observation_basis（未交代觀察基礎與外推邊界）
+（無）
 
 ---
 
