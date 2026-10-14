@@ -47,7 +47,7 @@ management:
     - "避免蝶式；仰式可能助胸椎伸展(理論性)"
   return_to_train: "主動期減少蝶式訓練量"
   return_to_compete: "術後患者有案例報告仍可游泳"
-  prognosis: "Cobb <60° 骨骼成熟後通常無長期後遺症；>60° 者成年慢性背痛風險增加"
+  prognosis: "Cobb <60° 骨骼成熟後多數無嚴重功能障礙，但成年後仍可能有背痛；>60° 者成年慢性背痛風險增加"
 
 population_notes:
   age:
@@ -58,7 +58,7 @@ population_notes:
     male: "男:女 ≥2:1"
     female: ~
   ability:
-    para: "脊損患者坐姿加重前傾，但 Scheuermann 診斷不適用成年後脊損者"
+    para: "脊損患者坐姿加重前傾，成年後才脊損者的駝背通常是其他成因，不以 Scheuermann 診斷；青少年期已確診者另行追蹤"
   lifecycle: ~
 
 links:

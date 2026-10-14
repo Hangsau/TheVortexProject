@@ -33,18 +33,18 @@ risk_factors:
   - { text: "蝴蝶踢偏全身性波浪(vs 膝為主)", grade: Expert }
 
 prevention:
-  - { text: "核心強化(抗伸展方向)", grade: B }
+  - { text: "核心強化(抗伸展方向；與屈曲導向訓練孰優缺高品質比較)", grade: C }
   - { text: "髂腰肌拉伸", grade: B }
   - { text: "技術:較小波動、膝為主蝴蝶踢", grade: Expert }
   - { text: "減少腳踢板", grade: Expert }
-  - { text: "分散筆畫避免長時間單一蝶/蛙", grade: Expert }
+  - { text: "分散泳式，避免長時間只練蝶/蛙", grade: Expert }
 
 management:
   red_flags:
     - "下肢放射痛/神經症狀 → 就醫(排除椎間盤突出)"
     - "伸展位劇痛 → 就醫(排除椎弓解離)"
     - "夜間痛 → 就醫(排除腫瘤/感染)"
-  acute: "訓練調整(停蝶/蛙/腳踢板)、關節鬆動、軟組織治療、NSAIDs"
+  acute: "訓練調整(停蝶/蛙/腳踢板)、關節鬆動、軟組織治療；止痛消炎藥需經醫師建議"
   pain_rules: "輕度訓練後痠痛 24 小時消退 → 續但分散蝶式；過伸即痛 → 停蝶/蛙評估；有下肢症狀 → 立即評估(red flag)"
   rehab: "核心抗伸展穩定(plank/dead bug/bird-dog)+髂腰肌拉伸+腰椎中立位動作控制；關節突關節痛者關節鬆動+短期貼紮"
   functional_progression_criteria:
@@ -54,7 +54,7 @@ management:
   swim_modifications_in_rehab:
     - "自由式/背泳替代(旋轉為主非過伸)"
     - "水中核心練習、漸引窄幅蝴蝶踢"
-  return_to_train: "輕症 4–8 週；與椎弓解離共存按椎弓解離條目(更長)"
+  return_to_train: "輕症通常數週內可漸進回水(依症狀，無專屬研究時程)；與椎弓解離共存按椎弓解離條目(更長)"
   return_to_compete: "核心與蝴蝶踢無症狀達標後回賽"
   prognosis: "多數保守反應良好；無構造病變者佳；高量蝶式者需長期核心維持"
 
