@@ -16118,17 +16118,11 @@
     },
     {
       "id": "src.yourswimlog-com-4-5-tethered-60s-rest-2-3",
-      "display": "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "UDK3",
-          "file": "Drills/drills_udk.yaml",
-          "path": "drills[2]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yourswimlog-com-race-tempo-underwater-swimsw",
@@ -16140,17 +16134,11 @@
     },
     {
       "id": "src.yourswimlog-com-tempo-trainer-cone-15m",
-      "display": "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）",
-      "verification_status": "unverified",
+      "display": "【只有站名，非文獻，已撤下】yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）",
+      "verification_status": "retracted",
       "identifier": {},
-      "usage_count": 1,
-      "usages": [
-        {
-          "id": "UDK4",
-          "file": "Drills/drills_udk.yaml",
-          "path": "drills[3]"
-        }
-      ]
+      "usage_count": 0,
+      "usages": []
     },
     {
       "id": "src.yourswimlog-com-vertical-kicking-u-s-masters",

@@ -6558,10 +6558,11 @@ sources:
 
 
   - id: src.yourswimlog-com-4-5-tethered-60s-rest-2-3
-    display: "yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
+    display: "【只有站名，非文獻，已撤下】yourswimlog.com（4×5 tethered, ~60s rest, 2–3×/週）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 審查 2.4：顯示字串是網站名加本庫自己寫的處方摘要，指不到文章；網搜 yourswimlog 站內只找到〈Race Tempo Dolphin Kicking〉一篇，內容是垂直打水的節拍組（16–20 趟、1 分鐘間隔），與本筆描述不符。唯一引用 Drills/drills_udk.yaml 已撤下 source_ids，散文署名改為「通行的…練習形式；本庫未取得可定位的單篇出處」。留墓碑擋重新登錄。"
 
   - id: src.yourswimlog-com-race-tempo-underwater-swimsw
     display: "【只有站名，非文獻，已撤下】yourswimlog.com（race-tempo underwater）／SwimSwam UDK sets"
@@ -6571,10 +6572,11 @@ sources:
     notes: "兩個網站的主題描述，指不到文章。唯一引用是 Drills/drills_udk.yaml 的比賽節奏水下打水，該練習的動作內容不依賴這兩站的任何特定主張。2026-09-06 撤下 source_ids，散文署名保留在 drill 的 source 欄位。留墓碑擋重新登錄。"
 
   - id: src.yourswimlog-com-tempo-trainer-cone-15m
-    display: "yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
+    display: "【只有站名，非文獻，已撤下】yourswimlog.com（tempo trainer + cone 15m 找最佳頻率）"
     type: other
-    verification_status: unverified
-    notes: "顯示字串未給出單一明確年份，year 留空。 無識別碼且缺作者或年份，字串不足以唯一定位來源，S3c 須回原文脈絡重建。"
+    verification_status: retracted
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 審查 2.4：顯示字串是網站名加本庫自己寫的處方摘要，指不到文章；網搜 yourswimlog 站內只找到〈Race Tempo Dolphin Kicking〉一篇，內容是垂直打水的節拍組（16–20 趟、1 分鐘間隔），與本筆描述不符。唯一引用 Drills/drills_udk.yaml 已撤下 source_ids，散文署名改為「通行的…練習形式；本庫未取得可定位的單篇出處」。留墓碑擋重新登錄。"
 
   - id: src.yourswimlog-com-vertical-kicking-u-s-masters
     display: "【只有站名，非文獻，已撤下】yourswimlog.com（vertical kicking）／USMS Underwater Kick guide"
