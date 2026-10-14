@@ -1169,12 +1169,18 @@ sources:
     notes: "非文獻：display 就是觀察行為本身，沒有觀察者、族群或外推邊界，等於沒有依據。2026-09-05 撤下，原本的 4 處引用改寫成 observation_basis（自由式兩拍／六拍踢、換氣搭旋轉節律、入水後延伸，以及蛙式髖旋轉角）。留墓碑擋重新登錄——見 validate.py E014。"
 
   - id: src.colman-1998-a
-    display: "Colman 1998"
-    type: other
-    verification_status: unverified
-    authors: ["Colman"]
+    display: "Colman, V., Persyn, U., Daly, D., & Stijnen, V. (1998). A comparison of the intra-cyclic velocity variation in breaststroke swimmers with flat and undulating styles. Journal of Sports Sciences, 16(7), 653–665."
+    title: "A comparison of the intra-cyclic velocity variation in breaststroke swimmers with flat and undulating styles"
+    type: journal-article
+    verification_status: verified
+    authors: ["V. Colman", "U. Persyn", "D. Daly", "V. Stijnen"]
     year: 1998
-    notes: "疑似與 src.colman-1998-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Journal of Sports Sciences"
+    identifier:
+      doi: "10.1080/026404198366461"
+      url: "https://doi.org/10.1080/026404198366461"
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 重建：作者摘要經 BISp SURF 收錄頁（PU199810305001）確認。45 名國際級泳者分出最波動與最平兩風格；最平男子組重心水平速度最大最小差達平均速度 76%，最波動女子組 53%（兩數字是不同性別組，不可當同性別對照）。作者順序各資料庫不一（Stijnen／Daly 互換）。仍疑與 src.colman-1998-b 同篇，-b 使用處未核對前不合併。id 字面保留（穩定鍵）。"
 
   - id: src.colman-1998-b
     display: "Colman et al. 1998"
@@ -2159,12 +2165,17 @@ sources:
     notes: "原字串以 et al. 略記。S3c 確認原掛 PMID 20733242 為無關論文，已改為 PMID 20147761／DOI 10.1123/jab.26.1.87。"
 
   - id: src.mason-1992-a
-    display: "Mason 1992"
-    type: other
-    verification_status: unverified
-    authors: ["Mason"]
+    display: "Mason, B. R., Tong, Z., & Richards, R. J. (1992). Propulsion in the butterfly stroke. In D. MacLaren, T. Reilly & A. Lees (Eds.), Biomechanics and Medicine in Swimming: Swimming Science VI (pp. 81–86). London: E & FN Spon."
+    title: "Propulsion in the butterfly stroke"
+    type: book-chapter
+    verification_status: verified
+    authors: ["B. R. Mason", "Z. Tong", "R. J. Richards"]
     year: 1992
-    notes: "疑似與 src.mason-1992-b 為同一文獻，待 S3c 查證後合併；S3a 階段刻意不合併。"
+    container: "Biomechanics and Medicine in Swimming: Swimming Science VI"
+    identifier:
+      url: "https://bms.sport-iat.de/bms/Record/4037066"
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 重建：書目與作者摘要經 BMS 文獻庫（IAT Leipzig）收錄頁確認；全文未取得，只可引摘要內容。摘要：11 名菁英蝶式泳者重心加速度有五個推進峰——踢（1.9 m/s²）、外划（1.4）、內划（4.2）、踢＋上划（2.3）、乘浪；髖部曲線不能代替重心。編者與出版社取自 BMS VI 論文集通行書目，收錄頁註明書目可能不完全準確。仍疑與 src.mason-1992-b 同篇，-b 的使用處未逐一核對前不合併。id 字面保留（穩定鍵）。"
 
   - id: src.mason-1992-b
     display: "Mason et al. 1992"
@@ -2620,6 +2631,7 @@ sources:
     verification_status: unverified
     authors: ["Peyrebrune", "Turner"]
     year: 2007
+    notes: "2026-10-14 查證未果：Europe PMC、BMS／SPONET 文獻庫與網搜都找不到 Peyrebrune 與 Turner 合著的 2007 年文獻。最接近的是 Osborough & Peyrebrune（2008）〈Butterfly technique – what happens when swimmers get tired?〉Swimming Times 8 月號（MMU e-space 93360），談疲勞時內划／上划手速下降，與本庫引用的「外划方向偏移」說法也不完全一致，不改掛。l-indicators 已撤下；technical-analysis 的引用待同樣處理。"
 
   - id: src.pink
     display: "Pink et al. (1991) EMG；Science of Swimming Faster (Riewald & Rodeo 2015)"
@@ -2657,11 +2669,20 @@ sources:
     notes: "原字串以 et al. 略記，其餘作者未列名，authors 不完整。"
 
   - id: src.pmc-2018
-    display: "PMC 2018"
-    type: other
-    verification_status: unverified
-    year: 2018
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    display: "Strzała, M., Stanula, A., Krężałek, P., Ostrowski, A., Kaca, M., & Głąb, G. (2017). Butterfly Sprint Swimming Technique, Analysis of Somatic and Spatial-Temporal Coordination Variables. Journal of Human Kinetics, 60, 51–62."
+    title: "Butterfly Sprint Swimming Technique, Analysis of Somatic and Spatial-Temporal Coordination Variables"
+    type: journal-article
+    verification_status: verified
+    authors: ["Marek Strzała", "Arkadiusz Stanula", "Piotr Krężałek", "Andrzej Ostrowski", "Marcin Kaca", "Grzegorz Głąb"]
+    year: 2017
+    container: "Journal of Human Kinetics"
+    identifier:
+      pmid: "29339985"
+      pmcid: "PMC5765785"
+      doi: "10.1515/hukin-2017-0089"
+      url: "https://doi.org/10.1515/hukin-2017-0089"
+    retrieved_on: "2026-10-14"
+    notes: "2026-10-14 重建：原字串只有「PMC 2018」，唯一可辨識的線索是 l-indicators 的「兩踢相關 r=-0.45」。Europe PMC 全文確認 r = −0.45 是 temporal entry-kick index（第一踢與手入水的時間比）與 50 m 蝶式衝刺速度的相關；受試 34 名男性競技泳者。卷期為 2017 年 12 月（「2018」是 PMC 收錄年的誤記）。**使用邊界**：量的是完整蝶式的手腳時序，不涉浮板踢水或腳背感知。id 字面保留（穩定鍵）。"
 
   - id: src.pmc10339925
     display: "Kliniec, K., Tota, M., Zalesińska, A., Łyko, M., & Jankowska-Konsur, A. (2023). Skin Cancer Risk, Sun-Protection Knowledge and Behavior in Athletes-A Narrative Review. Cancers."
@@ -5422,7 +5443,7 @@ sources:
     type: other
     verification_status: unverified
     year: 2023
-    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。"
+    notes: "無識別碼且缺作者或年份，字串不足以唯一定位文獻，S3c 須回原文脈絡重建。2026-10-14：從引用處的內容（游泳肩發生率、前鋸肌）判斷最可能是 Davis 等 2023〈Swimmer's Shoulder〉（已另登錄為 src.statpearls-swimmer-s-shoulder-ncbi-bookshelf），但 NCBI Bookshelf 擋自動擷取、PubMed 只有章節簡介，無法確認章內對前鋸肌的說法，所以不合併、不改掛。l-indicators 已撤下此引用。"
 
   - id: src.statpearls-swimmer-s-shoulder-ncbi-bookshelf
     display: "Davis DD. Swimmer's Shoulder. In: StatPearls. Treasure Island (FL): StatPearls Publishing. NCBI Bookshelf NBK470589（最後更新 2023-11-22）。"
