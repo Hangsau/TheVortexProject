@@ -28,7 +28,7 @@ epidemiology:
 
 risk_factors:
   - { text: "蛙泳踢腿幅度過大", grade: B }
-  - { text: "訓練量急增(急/慢性負荷比 >150%)", grade: B }
+  - { text: "訓練量急增(急/慢性負荷比 >150%；閾值來自其他運動)", grade: C }
   - { text: "熱身不足(<900 m)", grade: B }
   - { text: "髖內旋 ROM 不足(<40°)", grade: B }
   - { text: "核心/臀肌薄弱", grade: Expert }
@@ -37,7 +37,7 @@ risk_factors:
 
 prevention:
   - { text: "技術:縮小踢腿幅度、窄鞭踢", grade: B }
-  - { text: "Copenhagen 內收肌離心訓練(顯著提升肌力；唯一的預防試驗做在男性足球員身上——賽季腹股溝問題盛行率 13.5% vs 對照 21.3%、風險低 41%，泳者無同級證據)", grade: B }
+  - { text: "Copenhagen 內收肌離心訓練(顯著提升肌力；唯一的預防試驗做在男性足球員身上——賽季腹股溝問題盛行率 13.5% vs 對照 21.3%、風險低 41%(勝算比 0.59)，泳者無同級證據)", grade: B }
   - { text: "充足熱身 ≥900 m", grade: B }
   - { text: "負荷漸進管理", grade: B }
 

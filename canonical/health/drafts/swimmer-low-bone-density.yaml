@@ -24,7 +24,7 @@ epidemiology:
 
 risk_factors:
   - { text: "純游泳專項、缺乏重力負荷交叉訓練", grade: A }
-  - { text: "低能量可及性合併", grade: A }
+  - { text: "低能量可及性(與 RED-S 合併出現)", grade: A }
   - { text: "月經失調/低雌激素", grade: A }
   - { text: "早期專項化", grade: B }
   - { text: "鈣/維生素 D 攝取不足", grade: B }
@@ -48,7 +48,7 @@ management:
     - "月經恢復"
     - "DXA 追蹤穩定/改善"
   swim_modifications_in_rehab: ~
-  return_to_train: "持續游泳並加入陸上負重，不需停水"
+  return_to_train: "一般持續游泳並加入陸上負重，不需停水；已有低創傷骨折或 DXA 明顯偏低者依醫師指示"
   return_to_compete: ~
   prognosis: "能量改善+月經恢復後 BMD 可增，但恢復慢(1–2 年)，能否達年齡期望值不確定"
 
@@ -61,7 +61,7 @@ population_notes:
     female: "研究較多，與 LEA/月經失調交互"
     male: "男性游泳員低 BMD 亦有記錄，研究遠少於女性"
   ability:
-    para: "輪椅運動員非重力負荷疊加更嚴重，低 BMD 高盛行率"
+    para: "輪椅使用者等日常少負重的族群，非重力負荷疊加更嚴重，低 BMD 高盛行率"
   lifecycle: ~
 
 links:

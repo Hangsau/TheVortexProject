@@ -9,7 +9,7 @@ subtypes: [Cam 型, Pincer 型, 混合型]
 
 structures: [股骨頭頸交界, 髖臼緣, 髖盂唇, 髖關節軟骨]
 mechanism:
-  summary: 股骨頭(Cam)或髖臼(Pincer)骨性異常致髖屈曲/內旋時骨性接觸夾擊盂唇與軟骨。蛙泳踢腿需大幅外旋屈曲後內收內旋的組合反覆動作為主要誘發；蝴蝶踢反覆髖屈伸亦可。水上運動員在骨骼發育期反覆對股骨頭施加旋轉應力，可能促進 Cam 形態發育。
+  summary: 股骨頭(Cam)或髖臼(Pincer)骨性異常致髖屈曲/內旋時骨性接觸夾擊盂唇與軟骨。蛙泳踢腿需大幅外旋屈曲後內收內旋的組合反覆動作為主要誘發；蝴蝶踢反覆髖屈伸亦可。水上運動員在骨骼發育期反覆對股骨頭施加旋轉應力，有人推測可能促進 Cam 形態發育(alpha angle 與踩水時數無統計相關，未證實)。
   trigger_phase: 蛙泳踢腿加速相、蝴蝶踢下踢
   who: 青少年期大量水上運動者、蛙泳專項、既有骨性異常者
 
@@ -26,7 +26,7 @@ epidemiology:
 risk_factors:
   - { text: "青少年期大量水上運動(骨骺敏感)", grade: B }
   - { text: "先天/發育性股骨或髖臼異常", grade: B }
-  - { text: "蛙泳踢腿幅度/技術", grade: B }
+  - { text: "蛙泳踢腿幅度/技術(蛙泳無獨立研究)", grade: C }
   - { text: "髖 ROM 不足(內旋 <40°)", grade: B }
   - { text: "家族性 FAI 形態", grade: B }
 
@@ -53,7 +53,7 @@ management:
     - "術後 3–4 月開始水中走路"
     - "蛙泳通常術後 ≥4 月恢復"
   return_to_train: "保守首選；多數骨性異常可保守管理"
-  return_to_compete: "整體術後 RTS 90.3%；游泳者 100% 平均 3.4 月(各項目最佳之一)"
+  return_to_compete: "整體術後 RTS 90.3%；游泳者小樣本 100% 回場、平均 3.4 月(各項目最佳之一)"
   prognosis: "手術結果優良，游泳者為各項目最佳之一；盂唇撕裂+持續症狀手術效益清楚"
 
 population_notes:
@@ -71,7 +71,7 @@ population_notes:
 links:
   mechanism_link: ~
   mechanism_link_ids: []
-  technical_link: "breast.tech.15 髖關節內旋（對應風險因子「髖 ROM 不足(內旋 <40°)」的硬體邊界）、breast.tech.36 蛙式翻腳「腳尖朝外」是四關節合成——外旋屈曲後內收內旋的組合即夾擊誘發動作"
+  technical_link: "breast.tech.15 髖關節內旋（對應風險因子「髖 ROM 不足(內旋 <40°)」的硬體邊界）、breast.tech.36 蛙式翻腳「腳尖朝外」是四關節合成——外旋屈曲後內收內旋的組合接近夾擊位置(是否誘發 FAI 未證實)"
   technical_link_ids: [breast.tech.15, breast.tech.36]
   perception_link: ~
   perception_link_ids: []
