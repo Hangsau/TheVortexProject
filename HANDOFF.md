@@ -4,6 +4,17 @@
 
 ---
 
+## 當前狀態（2026-10-14 午，三層重構 Phase 3 大半＋Phase 2 開跑）
+
+- 使用者授權自主跑完整個計畫（不用等、codex 無流量）。checkpoint 在 `plans/三層重構與全庫檢查_2026-10-14.md` §7，接續指令在 `plans/三層重構_接續指令.md`，已排 shotclock 11:40。
+- 已完成：
+  - W3.1 泳式動作遷入 `canonical/instructional/moves.yaml`。
+  - W3.2 散文撤到研究庫 `/vortex/research/drafts/`，剝除診斷語，Bridge 退役。
+  - W3.3 課表改連知識點。
+  - W3.4 decision_trail 索引。
+  - 稽核閘門：呈現層漂移 0、診斷語 0、外連 0。
+- Phase 2：MiniMax 初讀背景跑中；2.1 已驗證 6 份 health draft，並全批修正 49 條自編引用標籤。
+
 ## 當前狀態（2026-10-14，三層重構 Phase 1 完成）
 
 - 使用者核准 `plans/三層重構與全庫檢查_2026-10-14.md`：網站分成資料庫／呈現／應用三層，並審完全庫內容。checkpoint 在該檔 §7。
