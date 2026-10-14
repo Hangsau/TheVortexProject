@@ -2870,3 +2870,11 @@ class TestW028DiagnosticTextInPublic(unittest.TestCase):
     def test_ordinary_wording_not_flagged(self):
         data = {"x": {"public": {"text": "讓泳者說得出哪一段最有壓力；疼痛三型先分開"}}}
         self.assertEqual(self.run_check(data), [])
+
+    def test_whole_public_file_flagged_without_public_key(self):
+        from collections import defaultdict
+        warnings = defaultdict(list)
+        validate_mod.check_diagnostic_text_in_public(
+            "canonical/instructional/moves.yaml",
+            {"strokes": [{"moves": [{"id": "free.move.1", "lnote": "A 型核心"}]}]}, warnings)
+        self.assertEqual(len(warnings["W028"]), 1)

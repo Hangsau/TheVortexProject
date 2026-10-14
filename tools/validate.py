@@ -1719,6 +1719,9 @@ def check_diagnostic_text_in_public(rel: str, data: object, warnings: dict):
     E010 擋的是診斷型**鍵名**；這裡擋的是診斷語**內容**被寫進 public 的普通
     欄位。兩者洩漏路徑不同、修法相同（移到 diagnostic 或改寫成不依賴分型的描述）。
     """
+    # 這些檔沒有 public／diagnostic 分層，整份由 sync 搬上公開站
+    whole_public = Path(rel).name == "moves.yaml" or Path(rel).parent.name in ("breathing", "periodization")
+
     def walk(node, path, in_public):
         if isinstance(node, dict):
             for k, v in node.items():
@@ -1735,7 +1738,7 @@ def check_diagnostic_text_in_public(rel: str, data: object, warnings: dict):
                     )
                     break
 
-    walk(data, "", False)
+    walk(data, "", whole_public)
 
 
 def check_public_layer_leak(rel: str, data: object, errors: dict):

@@ -32,6 +32,8 @@ DEFAULT_SINCE = "27ffd10^"  # parent of the 2026-10-01 content review
 
 # Prose directories that my-site mounts as article pages (sync_vortex.py).
 PROSE_DIRS = ("Instructional", "Technica", "Bridge")
+# 仍在呈現／應用層的散文（其餘 Instructional／Technica 是研究庫的凍結底稿，Bridge 已退役）
+PRESENTATION_PROSE = {"游泳器材使用指南"}
 STROKE_DATA = ("free", "back", "breast", "fly", "udk", "starts-turns")
 
 # first URL segment under /vortex/ → (source kind, source, target layer, issue)
@@ -52,17 +54,19 @@ SEGMENT_RULES = {
     "problems": ("canonical", "instructional/problems.yaml", "應用", ""),
     "workout-studio": ("工具", "next/layouts/_partials/vortex/workout-redirect.html", "應用", "P4"),
     "workout": ("工具", "next/assets/js/workout*.js", "應用", "P4"),
-    "moves": ("my-site 手管", "my-site data/vortex/<stroke>.yaml", "呈現", "P3"),
+    "moves": ("canonical", "instructional/moves.yaml", "呈現", ""),
     "water-sense": ("my-site 手寫", "my-site next/content/vortex/water-sense.md", "呈現", "P3"),
+    "research": ("散文（研究底稿）", "Instructional／Technica/*.md → research/drafts", "資料庫", ""),
     "instructional": ("散文", "Instructional/*.md", "資料庫", "P1"),
     "technica": ("散文", "Technica/*.md", "資料庫", "P1"),
     "bridge": ("散文", "Bridge/*.md", "資料庫", "P1"),
 }
 for _s in STROKE_DATA:
-    SEGMENT_RULES[_s] = ("my-site 手管", f"my-site data/vortex/{_s}.yaml", "呈現", "P3")
+    SEGMENT_RULES[_s] = ("canonical", "instructional/moves.yaml（泳式樞紐）", "呈現", "")
 # Article pages whose target layer differs from their directory's default.
 PAGE_OVERRIDES = {
     "instructional/equipment-guide": ("散文", "Instructional/游泳器材使用指南.md", "應用", ""),
+    "instructional": ("my-site 版型", "content/vortex/instructional/_index.md", "應用", ""),
 }
 
 DIAG_PATTERNS = {
@@ -134,11 +138,12 @@ def removed_canonical_clauses(since: str) -> dict[str, str]:
 
 
 def prose_files():
+    """(path, is_presentation)：研究底稿已在研究庫標凍結，漂移分開計。"""
     for d in PROSE_DIRS:
-        yield from sorted((ROOT / d).glob("*.md"))
-    for s in STROKE_DATA:
-        yield MYSITE / "data" / "vortex" / f"{s}.yaml"
-    yield MYSITE / "next" / "content" / "vortex" / "water-sense.md"
+        for p in sorted((ROOT / d).glob("*.md")):
+            yield p, p.stem in PRESENTATION_PROSE
+    yield ROOT / "canonical" / "instructional" / "moves.yaml", True
+    yield MYSITE / "next" / "content" / "vortex" / "water-sense.md", True
 
 
 def label(p: Path) -> str:
@@ -182,16 +187,20 @@ def audit(site: Path, since: str) -> str:
 
     removed = removed_canonical_clauses(since)
     drift: list[tuple[str, str, str]] = []
+    frozen_drift = 0
     cert_no_year: list[tuple[str, int, str]] = []
-    for p in prose_files():
+    for p, presentation in prose_files():
         if not p.exists():
             continue
         body = p.read_text(encoding="utf-8")
         for c, src in removed.items():
             if c in body:
-                drift.append((label(p), c, src))
+                if presentation:
+                    drift.append((label(p), c, src))
+                else:
+                    frozen_drift += 1
         for n, line in enumerate(body.splitlines(), 1):
-            if ("🟢" in line or "🟡" in line) and not YEAR.search(line):
+            if presentation and ("🟢" in line or "🟡" in line) and not YEAR.search(line):
                 cert_no_year.append((label(p), n, line.strip()[:80]))
 
     out: list[str] = []
@@ -204,11 +213,12 @@ def audit(site: Path, since: str) -> str:
     w(f"| 無歸屬頁 | {len(unmatched)} |")
     w(f"| P1 散文頁 | {len(issues['P1'])} |")
     w(f"| P3 my-site 手管／手寫頁 | {len(issues['P3'])} |")
-    w(f"| P1 散文漂移候選（已從 canonical 移除的句段仍在散文／手管資料） | {len(drift)} |")
+    w(f"| P1 漂移候選：呈現／應用層（閘門，須為 0） | {len(drift)} |")
+    w(f"| 漂移：研究庫凍結底稿（已加凍結說明，僅供參考） | {frozen_drift} |")
     w(f"| P2 公開頁含診斷語的頁 | {len(diag_hits)}（共 {sum(sum(c.values()) for _, c in diag_hits)} 處） |")
     w(f"| 機器鍵外洩頁 | {len(machine_hits)} |")
     w(f"| 外站連結 | {len(external)} |")
-    w(f"| 🟢／🟡 但同行無年份（散文／手管） | {len(cert_no_year)} |\n")
+    w(f"| 🟢／🟡 但同行無年份（呈現層散文／手管） | {len(cert_no_year)} |\n")
 
     w("## W1.1 頁面 → 層\n")
     w("| 目標層 | 頁數 |\n|---|---|")
