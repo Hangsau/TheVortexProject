@@ -11,10 +11,10 @@ structures: [心臟(心肌/傳導系統/冠狀動脈), 自主神經系統]
 mechanism:
   summary: 運動中或運動後 1 小時內突發心跳驟停(多為心室顫動)。病理基礎多元：肥厚性心肌病(HCM)使心肌增厚影響傳導；心肌炎使發炎心肌電不穩；長 QT 等離子通道病變於運動觸發惡性心律不整；冠狀動脈異常運動時受壓缺血；commotio cordis 為胸前鈍擊在 T 波升段觸發 VF。游泳特有：面浸冷水強烈副交感(潛水反射)與運動交感激活形成自主神經衝突，在潛在易感者可致命。
   trigger_phase: 游泳中突然意識喪失/沉水；鐵人三項游泳段(冷水+面浸+起跳緊張過度換氣多重壓力疊加)為最高風險情境
-  who: 家族猝死史者、未診斷 HCM/LQTS/WPW、心肌炎後過早復訓者、男性(約女性 6 倍)、Masters(冠心病加入)
+  who: 家族猝死史者、未診斷 HCM/LQTS/WPW、心肌炎後過早復訓者、男性(依下列發生率約女性 5 倍)、Masters(冠心病加入)
 
 epidemiology:
-  prevalence: "競技運動員(≤35 歲)SCA/SCD 男性約 1.46、女性約 0.30 /10 萬運動員年；≤35 歲青年運動員猝死中 HCM 約佔 36%"
+  prevalence: "競技運動員(≤35 歲)SCA/SCD 男性約 1.46、女性約 0.30 /10 萬運動員年；≤35 歲青年運動員猝死中 HCM 約佔 36%(美國資料；義大利系列以致心律不整右心室心肌病較常見)"
   certainty: 🟢
   evidence_grade: B
   caveat: >-
@@ -35,7 +35,7 @@ risk_factors:
   - { text: "心肌炎(尤近期病毒性後過早復訓)", grade: B }
   - { text: "長 QT 症候群(冷水浸入為特定觸發)", grade: B }
   - { text: "Wolff-Parkinson-White(WPW)", grade: B }
-  - { text: "男性(約 6 倍風險)", grade: A }
+  - { text: "男性(約 5 倍風險)", grade: A }
   - { text: "commotio cordis(胸前鈍擊 T 波敏感期)", grade: B }
   - { text: "冷水+面浸+屏氣(自主神經衝突)", grade: B }
   - { text: "家族 SCD 史(一等親 <50 歲猝死)", grade: Expert }
@@ -43,7 +43,7 @@ risk_factors:
 
 prevention:
   - { text: "運動前篩查(病史+理學檢查±ECG)", grade: A }
-  - { text: "ECG 篩查(ESC 推薦；義大利自然實驗 89% 減 SCD，美 ACC 立場有爭議)", grade: A }
+  - { text: "ECG 篩查(ESC 推薦；義大利自然實驗 89% 減 SCD，美 ACC/AHA 不建議常規篩查)", grade: B }
   - { text: "心肌炎後充分休息(≥6 個月，LVEF 恢復+無誘發心律不整後方回訓)", grade: Expert }
   - { text: "賽場/泳池 AED 即時可取得 + 人員 CPR/AED 培訓", grade: A }
   - { text: "不在感冒/發燒期訓練", grade: Expert }
@@ -54,7 +54,7 @@ management:
     - "游泳中意識喪失/突然沉水 → 立即救援+CPR"
     - "運動中突發心悸/胸痛/暈厥任一 → 立即停止就醫"
     - "不明原因劇烈呼吸困難(排除溺水) → 排查心因"
-  acute: "安全地點立即 CPR(有目擊且具技能可先水中救援呼吸再上岸)→上岸 5 次救援呼吸+按壓(30:2)→盡快 AED(SCD 多為 VF，除顫最有效)→持續 CPR 直至 AED/救援到場；懷疑心肌炎者入院延伸心臟評估，不可未評估復訓"
+  acute: "安全地點立即 CPR：陸上心因性驟停採先按壓(30:2)並盡快 AED(SCD 多為 VF，除顫最有效)；若是在水中失去意識、可能合併溺水缺氧，則依溺水流程先給 2 次人工呼吸→持續 CPR 直至 AED/救援到場；懷疑心肌炎者入院延伸心臟評估，不可未評估復訓"
   pain_rules: ~
   rehab: ~
   functional_progression_criteria:
@@ -68,11 +68,11 @@ management:
 
 population_notes:
   age:
-    youth: "HCM/LQTS/commotio cordis 為主，需強制運動前篩查"
+    youth: "HCM/LQTS 為主，可透過運動前篩查找出；commotio cordis 是胸前鈍擊造成的突發事件，篩查查不出，靠現場 AED 與即時 CPR"
     adult_beginner: "未診斷冠心病/HCM 風險，篩查應覆蓋成人"
     masters: "冠心病為首要新增因子；ECG+超音波評估更重要"
   sex:
-    male: "整體約 6 倍風險"
+    male: "整體約 5 倍風險(1.46 vs 0.30／10 萬運動員年)"
     female: "整體風險低，但先天冠狀動脈異常在女性 SCD 佔比更高"
   ability: ~
   lifecycle:
