@@ -14,7 +14,7 @@ mechanism:
 
 epidemiology:
   prevalence: >-
-    MDI 佔所有肩不穩定 <10%；游泳者 MDI 盛行率被認為高於其他運動，但**無精確數字**。
+    MDI 在肩不穩定中屬少數；游泳者 MDI 盛行率被認為高於其他運動，但**無精確數字**。
     對照 Trikha 等 2022（NCAA D1 泳者）：肩部佔肌肉骨骼傷害 **23.3%（126/540）**，
     為第一大部位——但該研究**未區分 MDI 與其他肩病理**，不能當 MDI 盛行率。
   certainty: 🟠
@@ -33,9 +33,9 @@ risk_factors:
   - { text: "廣泛韌帶鬆弛", grade: B }
   - { text: "結締組織疾患(Ehlers-Danlos/Marfan)", grade: B }
   - { text: "反覆過頭微創傷", grade: B }
-  - { text: "女性(雌激素/鬆弛素影響，結論不一)", grade: B }
+  - { text: "女性(雌激素/鬆弛素影響，結論不一)", grade: C }
   - { text: "年輕(第二、三十歲高峰)", grade: B }
-  - { text: "喙肱距增加(每 mm 風險 +20%)", grade: B }
+  - { text: "喙肱距增加", grade: C }
 
 prevention:
   - { text: "肩胛穩定肌+旋轉肌袖強化(青少年主動預防)", grade: Expert }

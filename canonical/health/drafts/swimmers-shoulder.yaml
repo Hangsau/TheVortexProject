@@ -12,17 +12,17 @@ mechanism:
   stroke_phase: >-
     自由式抓水—早期推水（肱骨高度外展+內旋，通過喙肩弓下方）；恢復期高肘崩潰。
     **蝶式不可沿用同一句**：本描述的來源(StatPearls NBK470589)全篇只處理自由式，無蝶式內容。
-    蝶式唯一的一手肌電/電影分析(Pink 1993)描述入水時肱骨為**外展、伸展、外旋**，
+    蝶式早期的一手肌電/電影分析(Pink 1993)描述入水時肱骨為**外展、外旋**，
     與「入水即內旋夾擠位置」相反；蝶式的易傷機制在該研究中是**前鋸肌與肩胛下肌全程高激活→易疲勞**，
     屬肌肉耐力層而非姿勢夾擠層。蝶式肩位置的具體描述以 Pink 1993 為準，不由自由式外推。
 
 epidemiology:
   prevalence: "菁英泳者肩痛 40–91%"
-  certainty: 🟡
+  certainty: 🟢
   evidence_grade: B
   caveat: 盛行率不可橫向比較——定義差異極大（現症vs生涯、自陳vs影像、青少年/collegiate/Olympic/masters 族群不同）
   sources:
-    - "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454（DOI 待 WebFetch 驗證）"
+    - "McKenzie 2023 系統綜述, Scand J Med Sci Sports, DOI:10.1111/sms.14454"
     - "StatPearls Swimmer's Shoulder, NCBI Bookshelf NBK470589"
   source_ids: [src.mckenzie-2023-a, src.statpearls-swimmer-s-shoulder-ncbi-bookshelf]
 
@@ -60,7 +60,7 @@ management:
 population_notes:
   age:
     youth: "早發肌腱病（早開始競技 + 長泳齡，棘上/肩胛下肌）"
-    adult_beginner: "既有肩部退化 + 技術未熟，負荷集中易夾擠"
+    adult_beginner: "技術未熟使負荷集中易夾擠；中高齡初學者另可能有既有肩部退化"
     masters: "二頭肌長頭腱病/鈣化偏多；超音波 LHB tendinosis 可達 48.8%"
   sex: ~
   ability:
