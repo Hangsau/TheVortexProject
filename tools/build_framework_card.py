@@ -45,7 +45,7 @@ def render_level(rec: dict) -> list[str]:
     for ind in pub.get("indicators") or []:
         lines.append(f"- 指標（{ind.get('type', '')}）：{flat(ind.get('text'))}")
     # 各泳式 diagnostic 的結構不一致（list／dict／字串都有），一律通用展開
-    for key in ("type_diagnosis", "type_states"):
+    for key in ("type_diagnosis", "type_states", "sinking_triage"):
         val = diag.get(key)
         items = val.items() if isinstance(val, dict) else enumerate(val or [])
         for k, v in items:

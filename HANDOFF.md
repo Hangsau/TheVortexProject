@@ -14,7 +14,7 @@
 
 ## 下一步建議（學習者原話）
 
-1. **等使用者審 `report.md` 第五節的三個決定**（沉／喘區辨問題要不要進 diagnostic、情境性恐懼放哪、是否新增前庭與環境兩個非感知分類）。成果只進 `diagnostic`，絕不進 public（E010）。
+1. ✅ 使用者已審（2026-10-15）：恐懼接心理層 `psych.fear.*`、翻滾暈與冷水撤出、器材依賴與仰式鼻子進水屬吻合。已落地：`free.L1.diagnostic.sinking_triage`（沉的四步分流）＋ `breathing.framework.overview` 加「先排除一般體能」。見 report.md 第六節。之後分類的 fear_panic 改指向 `psych.fear.*`。
 2. PTT 已抓完；04:10 shotclock（gq3h）會跑 PTT 第 1 輪＋Reddit 第 2 輪。手動版：`python -I tools/map_learner_speech.py extract --round 1 --source ptt`，再 `map`、`merge`。
 3. Reddit 第 2 輪（`--round 2 --source reddit`）當驗證輪：新說法類型 ≤ 1 個就停。
 4. merge 依原文去重（跨板重貼目前會算兩次）。

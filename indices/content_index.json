@@ -9763,6 +9763,9 @@
       "path": "levels[1]",
       "title": "漂浮與阻力感受",
       "tags": {
+        "certainty": [
+          "🟠"
+        ],
         "stroke": [
           "free"
         ]
@@ -9770,7 +9773,12 @@
       "source_ids": [],
       "outgoing_ids": [
         "common.pre.resistance",
-        "free.pre.resistance"
+        "free.pre.resistance",
+        "free.tech.18",
+        "free.tech.23",
+        "prob.free.head-lift-breath",
+        "psych.arousal.muscle_tension_loop",
+        "psych.fear.freeze_reflex"
       ]
     },
     {
