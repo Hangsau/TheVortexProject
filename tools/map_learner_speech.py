@@ -292,8 +292,12 @@ def card_section(stroke: str) -> str:
 def cmd_map(limit: int | None) -> None:
     out_dir = WORK / "map"
     out_dir.mkdir(parents=True, exist_ok=True)
-    units = [u for u in extracted_units() if u["quote_verified"]]
+    # 只送還沒分類過的句子：批次邊界依全部句子切，新增句子會讓舊檔名對不上而整批重做
+    done = {rec.get("unit_id") for f in out_dir.glob("*.json")
+            for rec in json.loads(f.read_text(encoding="utf-8")) if isinstance(rec, dict)}
+    units = [u for u in extracted_units() if u["quote_verified"] and u["unit_id"] not in done]
     units = units[:limit] if limit else units
+    print(f"{len(units)} units to map（已分類 {len(done)}）", flush=True)
     by_stroke: dict[str, list[dict]] = {}
     for u in units:
         by_stroke.setdefault(u.get("stroke") if u.get("stroke") in STROKES else "free", []).append(u)
