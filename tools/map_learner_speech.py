@@ -17,9 +17,12 @@ from __future__ import annotations
 
 import argparse
 import json
+import os
+import shutil
 import re
 import subprocess
 import sys
+import tempfile
 import time
 from pathlib import Path
 
@@ -108,7 +111,25 @@ MAP_PROMPT = """\
 """
 
 
+ENGINE = os.environ.get("VORTEX_ENGINE", "m3")  # m3｜codex（MiniMax 額度不夠時改走 codex 訂閱）
+CODEX_PREFIX = "只輸出最後答案，不要執行任何指令、不要讀寫任何檔案、不要輸出計畫。\n\n"
+
+
+def call_codex(prompt: str) -> str:
+    with tempfile.TemporaryDirectory() as tmp:
+        out = Path(tmp) / "last.txt"
+        result = subprocess.run([shutil.which("codex") or "codex", "exec", "--skip-git-repo-check", "--sandbox", "danger-full-access",
+                                 "-C", tmp, "-o", str(out), "-"], input=(CODEX_PREFIX + prompt).encode("utf-8"),
+                                capture_output=True, timeout=CALL_TIMEOUT)
+        text = out.read_text(encoding="utf-8").strip() if out.exists() else ""
+    if result.returncode != 0 or not text:
+        raise RuntimeError(f"codex exit {result.returncode}: {result.stderr.decode('utf-8', 'replace')[-400:]}")
+    return text
+
+
 def call_m3(prompt: str) -> str:
+    if ENGINE == "codex":
+        return call_codex(prompt)
     result = subprocess.run(["bash", M3, "-p"], input=prompt.encode("utf-8"),
                             capture_output=True, timeout=CALL_TIMEOUT)
     text = result.stdout.decode("utf-8", errors="replace").strip()
@@ -209,6 +230,8 @@ QUOTA_STOP_PERCENT = 90
 
 
 def quota_guard() -> None:
+    if ENGINE == "codex":
+        return
     used = minimax_5h_used()
     if used is not None and used >= QUOTA_STOP_PERCENT:
         raise SystemExit(f"MiniMax 5H 已用 {used:.0f}%（≥{QUOTA_STOP_PERCENT}%），停下；重跑同指令會從這裡續")
@@ -274,11 +297,14 @@ def cmd_map(limit: int | None) -> None:
     by_stroke: dict[str, list[dict]] = {}
     for u in units:
         by_stroke.setdefault(u.get("stroke") if u.get("stroke") in STROKES else "free", []).append(u)
+    shard, n_shards = map(int, os.environ.get("VORTEX_SHARD", "0/1").split("/"))  # 平行跑：0/3、1/3、2/3
+    k = -1
     for stroke, group in by_stroke.items():
         for i in range(0, len(group), MAP_BATCH):
             batch = group[i:i + MAP_BATCH]
             out = out_dir / f"{stroke}__{batch[0]['unit_id'].replace('#', '_')}__{len(batch)}.json"
-            if out.exists():
+            k += 1
+            if out.exists() or k % n_shards != shard:
                 continue
             quota_guard()
             text = "\n".join(f"- unit_id: {u['unit_id']}｜泳式：{u.get('stroke')}｜kind：{u.get('kind', '')}"
