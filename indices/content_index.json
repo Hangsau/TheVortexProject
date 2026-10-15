@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1165,
+  "record_count": 1174,
   "records": [
     {
       "id": "Bk1",
@@ -18463,6 +18463,179 @@
         "src.mujika-padilla-2003-tapering-strategies"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "periodization.triathlon.levels",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "levels",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.bernhardt-12-week-sprint-swim-plan",
+        "src.mackinnon-2024-how-much-swimming-triathlete",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.planner",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "planner",
+      "title": "鐵人三項泳段排課",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "free"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "open-water.tech.14",
+        "open-water.tech.16",
+        "open-water.tech.17",
+        "open-water.tech.18",
+        "open-water.tech.19",
+        "periodization.set_design.weekly_assembly",
+        "periodization.taper.swim"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.race_distances",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "race_distances",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.race_month",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "race_month",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.race_pace",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "race_pace",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.newsome-2025-swim-smooth-pace"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.session_volume",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "session_volume",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.mackinnon-2024-how-much-swimming-triathlete"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.slots",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "slots",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.heggy-2021-triathlon-swim-intensity-usms",
+        "src.laughlin-2016-short-reps-vs-steady-swims",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.taper",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "taper",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [
+        "src.petrie-2025-periodize-triathlon-training"
+      ],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
+    },
+    {
+      "id": "periodization.triathlon.week",
+      "domain": "periodization",
+      "file": "canonical/periodization/triathlon.yaml",
+      "path": "week",
+      "title": "",
+      "tags": {
+        "certainty": [
+          "🔵"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "periodization.triathlon.planner"
+      ]
     },
     {
       "id": "periodization.zones.endurance_phases",

@@ -612,12 +612,17 @@
       "identifier": {
         "url": "https://www.active.com/swimming/articles/12-week-swim-workout-plan-for-sprint-triathlons"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water.tech.18",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[250].public.evidence[2]"
+        },
+        {
+          "id": "periodization.triathlon.levels",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "levels.items[0]"
         }
       ]
     },
@@ -3947,7 +3952,7 @@
       "identifier": {
         "url": "https://220triathlon.com/wp-content/uploads/sites/4/2018/07/open-water-swim-training-plan--d2aad99.pdf"
       },
-      "usage_count": 5,
+      "usage_count": 10,
       "usages": [
         {
           "id": "open-water.tech.16",
@@ -3973,6 +3978,31 @@
           "id": "open-water.tech.21",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[253].public.evidence[2]"
+        },
+        {
+          "id": "periodization.triathlon.race_distances",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "race_distances"
+        },
+        {
+          "id": "periodization.triathlon.race_month",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "race_month"
+        },
+        {
+          "id": "periodization.triathlon.slots",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "slots.items[0]"
+        },
+        {
+          "id": "periodization.triathlon.slots",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "slots.items[1]"
+        },
+        {
+          "id": "periodization.triathlon.slots",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "slots.items[2]"
         }
       ]
     },
@@ -4020,7 +4050,7 @@
       "identifier": {
         "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-hard-should-i-work-the-triathlon-swim"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
         {
           "id": "open-water.tech.14",
@@ -4041,6 +4071,11 @@
           "id": "open-water.tech.22",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[254].public.evidence[0]"
+        },
+        {
+          "id": "periodization.triathlon.slots",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "slots.items[0]"
         }
       ]
     },
@@ -5012,7 +5047,7 @@
       "identifier": {
         "url": "https://www.goodreads.com/author_blog_posts/13466741-should-triathletes-train-with-short-reps-or-longer-steady-aerobic-swim"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
         {
           "id": "open-water.tech.17",
@@ -5023,6 +5058,11 @@
           "id": "open-water.tech.21",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[253].public.evidence[2]"
+        },
+        {
+          "id": "periodization.triathlon.slots",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "slots.items[3]"
         }
       ]
     },
@@ -5391,7 +5431,7 @@
       "identifier": {
         "url": "https://triathlonmagazine.ca/?p=77692"
       },
-      "usage_count": 2,
+      "usage_count": 5,
       "usages": [
         {
           "id": "open-water.tech.17",
@@ -5402,6 +5442,21 @@
           "id": "open-water.tech.18",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[250].public.evidence[0]"
+        },
+        {
+          "id": "periodization.triathlon.levels",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "levels.items[1]"
+        },
+        {
+          "id": "periodization.triathlon.levels",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "levels.items[2]"
+        },
+        {
+          "id": "periodization.triathlon.session_volume",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "session_volume"
         }
       ]
     },
@@ -7489,12 +7544,17 @@
       "identifier": {
         "url": "https://blog.swimsmooth.com/p/get-your-pace-right"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water.tech.16",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[248].public.evidence[2]"
+        },
+        {
+          "id": "periodization.triathlon.race_pace",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "race_pace"
         }
       ]
     },
@@ -8324,12 +8384,17 @@
       "identifier": {
         "url": "https://triathlonmagazine.ca/training/periodize-your-triathlon-training-for-peak-race-day-performance/"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
         {
           "id": "open-water.tech.19",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[251].public.evidence[0]"
+        },
+        {
+          "id": "periodization.triathlon.taper",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "taper"
         }
       ]
     },
@@ -12644,7 +12709,7 @@
       "identifier": {
         "url": "https://www.usms.org/en/fitness-and-training/articles-and-videos/articles/how-to-develop-your-swim-training-plan-for-different-triathlon-distances"
       },
-      "usage_count": 4,
+      "usage_count": 7,
       "usages": [
         {
           "id": "open-water.tech.14",
@@ -12665,6 +12730,21 @@
           "id": "open-water.tech.21",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[253].public.evidence[0]"
+        },
+        {
+          "id": "periodization.triathlon.levels",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "levels.items[1]"
+        },
+        {
+          "id": "periodization.triathlon.race_distances",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "race_distances"
+        },
+        {
+          "id": "periodization.triathlon.slots",
+          "file": "canonical/periodization/triathlon.yaml",
+          "path": "slots.items[4]"
         }
       ]
     },
