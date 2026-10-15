@@ -315,7 +315,7 @@ LINKS_IDS_KEYS = {k + "_ids" for k in LINKS_FREE_TEXT_KEYS}
 # 用於從散文值中保守抽取候選 ID 的 regex
 # 匹配命名空間格式（如 free.tech.10、back.err2、starts-turns.err10）
 # 或 Drill 編號（如 FrBr3、Fr1、Bk22）
-# 注意：命名空間段允許 - 與 _（真實 ID 有 starts-turns.tech.44、
+# 注意：命名空間段允許 - 與 _（真實 ID 有 starts-turns.tech.44、open-water.tech.1、
 # psych.self_talk.trainable_skill 這類形態），最後一段不限定為純數字，
 # 否則 back.err2 / starts-turns.err10 這類會漏抽。
 import re as _re
@@ -2459,8 +2459,8 @@ def check_problem_contract(rel: str, data: object, targets: dict, errors: dict):
         fail("problems", "must be a list, including when empty")
         return
     link_patterns = {
-        "technical_analysis": r"(?:free|back|breast|fly|udk|starts-turns|common)\.tech\.[0-9]+",
-        "drills": r"(?:Fr|Bk|Br|Fl|Sc|ST|UDK)[A-Za-z0-9]+",
+        "technical_analysis": r"(?:free|back|breast|fly|udk|starts-turns|open-water|common)\.tech\.[0-9]+",
+        "drills": r"(?:Fr|Bk|Br|Fl|Sc|ST|UDK|OW)[A-Za-z0-9]+",
         "interventions": r"movement\.intervention\.[a-z0-9.-]+",
         "water_interventions": r"movement\.intervention\.[a-z0-9.-]+",
     }
@@ -2508,7 +2508,7 @@ def check_problem_contract(rel: str, data: object, targets: dict, errors: dict):
                     if record and (record.get("publication_status") != "published" or record.get("action_status") == "do-not-prescribe"):
                         fail(where, f"intervention is not available for public action: {target}")
         refs = entry.get("cross_ref_ids")
-        if not isinstance(refs, list) or any(not isinstance(v, str) or not re.fullmatch(r"(?:free|back|breast|fly|udk|starts-turns|common)\.err[0-9]+", v) for v in refs):
+        if not isinstance(refs, list) or any(not isinstance(v, str) or not re.fullmatch(r"(?:free|back|breast|fly|udk|starts-turns|open-water|common)\.err[0-9]+", v) for v in refs):
             fail(where, "cross_ref_ids must list teaching-error IDs")
         if not isinstance(entry.get("cross_ref"), str):
             fail(where, "cross_ref must be display text")

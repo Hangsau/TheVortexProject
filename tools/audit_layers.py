@@ -34,7 +34,7 @@ DEFAULT_SINCE = "27ffd10^"  # parent of the 2026-10-01 content review
 PROSE_DIRS = ("Instructional", "Technica", "Bridge")
 # 仍在呈現／應用層的散文（其餘 Instructional／Technica 是研究庫的凍結底稿，Bridge 已退役）
 PRESENTATION_PROSE = {"游泳器材使用指南", "水感是什麼"}
-STROKE_DATA = ("free", "back", "breast", "fly", "udk", "starts-turns")
+STROKE_DATA = ("free", "back", "breast", "fly", "udk", "starts-turns", "open-water")
 
 # first URL segment under /vortex/ → (source kind, source, target layer, issue)
 SEGMENT_RULES = {

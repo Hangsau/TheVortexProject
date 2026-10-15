@@ -16,6 +16,7 @@
 | `drills_sculling.yaml` | 12 | Sc1–Sc10 + ScFist/ScUW1（gap fills） |
 | `drills_starts-turns.yaml` | 9 | ST1–ST5 + STSpat1（gap fills）+ STEL1–STEL3（Race Club 仰式出發） |
 | `drills_udk.yaml` | 7 | UDK1–UDK5 + UDKEC1/UDKLow1（gap fills） |
+| `drills_open-water.yaml` | 15 | OW1–OW15（開放水域與鐵人：定向、群游、裝備、冷水與恐慌自救） |
 
 ## YAML Schema
 

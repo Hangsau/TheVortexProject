@@ -205,7 +205,7 @@ planner:
       inputs: {population: triathlon, goal: endurance, event: later, readiness: normal, trend: transfer, sessions: 2, minutes: 40}
       takeaway: 檢查轉移並合看跑騎負荷，只改一個可能限制泳段的環節；下週再安排可比較的觀察。
   links:
-    related: [periodization.decisions.monitoring, periodization.taper.swim, periodization.dryland.needs_analysis]
+    related: [periodization.decisions.monitoring, periodization.taper.swim, periodization.dryland.needs_analysis, open-water.tech.14, open-water.tech.15]
 
 monitoring:
   id: periodization.decisions.monitoring

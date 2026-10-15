@@ -19,6 +19,7 @@ FILES = [
     "drills_sculling.yaml",
     "drills_starts-turns.yaml",
     "drills_udk.yaml",
+    "drills_open-water.yaml",
 ]
 
 AXES_SCALAR = [

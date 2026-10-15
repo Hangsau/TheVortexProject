@@ -262,7 +262,8 @@ def extract_drills(path: Path):
 # ── 渲染：各檔型一個 renderer ──
 
 STROKE_ZH = {"free": "自由式", "back": "仰式", "breast": "蛙式", "fly": "蝶式",
-             "starts-turns": "起跳轉身", "udk": "水下蝶腳"}
+             "starts-turns": "起跳轉身", "udk": "水下蝶腳",
+             "open-water": "開放水域與鐵人"}
 PILLAR_ZH = {"physical": "體能", "technical": "技術戰術", "mental": "心理", "life": "生活技能"}
 STAGE_ZH = {"l2t": "L2T 學習訓練", "t2t": "T2T 訓練為訓練", "t2c": "T2C 訓練為競賽", "t2w": "T2W 訓練為勝利"}
 
@@ -324,7 +325,7 @@ def main():
     lines.append("")
     lines.append(f"**泳式分布**：{', '.join(f'{STROKE_ZH.get(k,k)} {v}' for k,v in sorted(by_stroke.items()))}")
     lines.append("")
-    for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", ""]:
+    for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", "open-water", ""]:
         rows = [r for r in ta if r["stroke"] == stroke]
         if not rows:
             continue
@@ -343,7 +344,7 @@ def main():
     lines.append("")
     lines.append(f"**泳式分布**：{', '.join(f'{STROKE_ZH.get(k,k)} {v}' for k,v in sorted(by_stroke_te.items()))}")
     lines.append("")
-    for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", ""]:
+    for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", "open-water", ""]:
         rows = [r for r in te if r["stroke"] == stroke]
         if not rows:
             continue
@@ -530,7 +531,7 @@ def main():
         lines.append("")
         lines.append("**相位名綁 `phase_model`，跨分期系統不可互換也不可換算**（BK-26）。")
         lines.append("")
-        for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", ""]:
+        for stroke in ["free", "back", "breast", "fly", "starts-turns", "udk", "open-water", ""]:
             rows = [r for r in dems if r["stroke"] == stroke]
             if not rows:
                 continue
@@ -553,7 +554,7 @@ def main():
     lines.append("## 練習 `Drills/`")
     lines.append("")
     total_drills = 0
-    for stroke in ["freestyle", "backstroke", "breaststroke", "butterfly", "sculling", "starts-turns", "udk"]:
+    for stroke in ["freestyle", "backstroke", "breaststroke", "butterfly", "sculling", "starts-turns", "udk", "open-water"]:
         path = ROOT / f"Drills/drills_{stroke}.yaml"
         if not path.exists():
             continue
@@ -568,7 +569,7 @@ def main():
                                          ("category", "類別"), ("l_target", "L 目標"),
                                          ("difficulty_tier", "難度"), ("strokes", "適用泳式")]))
         lines.append("")
-    summary_rows.append(("Drills (7 files)", total_drills, "176 drill 含 9 軸 fingerprint"))
+    summary_rows.append(("Drills (8 files)", total_drills, "176 drill 含 9 軸 fingerprint"))
 
     # === 把摘要插回最前面 ===
     summary_lines = ["| 章節 | 條目數 | 備註 |", "|---|---|---|"]

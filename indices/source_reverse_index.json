@@ -11301,8 +11301,58 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 17,
+      "usage_count": 40,
       "usages": [
+        {
+          "id": "OW1",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[0]"
+        },
+        {
+          "id": "OW11",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[10]"
+        },
+        {
+          "id": "OW12",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[11]"
+        },
+        {
+          "id": "OW15",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[14]"
+        },
+        {
+          "id": "OW3",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[2]"
+        },
+        {
+          "id": "OW4",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[3]"
+        },
+        {
+          "id": "OW5",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[4]"
+        },
+        {
+          "id": "OW6",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[5]"
+        },
+        {
+          "id": "OW8",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[7]"
+        },
+        {
+          "id": "OW9",
+          "file": "Drills/drills_open-water.yaml",
+          "path": "drills[8]"
+        },
         {
           "id": "fly.tech.1",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -11387,6 +11437,71 @@
           "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[4]"
+        },
+        {
+          "id": "open-water.tech.1",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[233].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.10",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[242].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.11",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[243].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.12",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[244].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.13",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[245].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.14",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[246].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.2",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[234].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.3",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[235].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.4",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[236].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.5",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[237].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.6",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[238].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.7",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[239].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.9",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[241].public.evidence[0]"
         }
       ]
     },

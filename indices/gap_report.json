@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 127
+    "unlinked_records": 124
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -328,11 +328,6 @@
       "path": "themes[0]"
     },
     {
-      "id": "psych.fear.co2_breath_panic",
-      "file": "canonical/psychology/psychology.yaml",
-      "path": "themes[0].concepts[3]"
-    },
-    {
       "id": "psych.fear.control_loss",
       "file": "canonical/psychology/psychology.yaml",
       "path": "themes[0].concepts[0]"
@@ -343,11 +338,6 @@
       "path": "themes[0].concepts[4]"
     },
     {
-      "id": "psych.fear.freeze_reflex",
-      "file": "canonical/psychology/psychology.yaml",
-      "path": "themes[0].concepts[2]"
-    },
-    {
       "id": "psych.fear.perception_masking",
       "file": "canonical/psychology/psychology.yaml",
       "path": "themes[0].concepts[1]"
@@ -356,11 +346,6 @@
       "id": "psych.fear.population_faces",
       "file": "canonical/psychology/psychology.yaml",
       "path": "themes[0].concepts[6]"
-    },
-    {
-      "id": "psych.fear.safety_precondition",
-      "file": "canonical/psychology/psychology.yaml",
-      "path": "themes[0].concepts[5]"
     },
     {
       "id": "psych.flow",
@@ -674,10 +659,10 @@
     }
   ],
   "problem_coverage": {
-    "total": 78,
+    "total": 84,
     "counts": {
       "mechanism_drill_land": 1,
-      "mechanism_drill_no_land": 48,
+      "mechanism_drill_no_land": 54,
       "mechanism_no_drill": 26,
       "no_mechanism": 3
     },
@@ -717,6 +702,12 @@
         "prob.free.fatigue-short-strokes",
         "prob.free.head-lift-breath",
         "prob.free.locked-knee-kick",
+        "prob.open-water.exit-dizzy",
+        "prob.open-water.legs-sink-after-sighting",
+        "prob.open-water.panic-breathless",
+        "prob.open-water.start-blowup",
+        "prob.open-water.veer-off-course",
+        "prob.open-water.wetsuit-shoulder-fatigue",
         "prob.starts-turns.back-turn-distance",
         "prob.starts-turns.breathless-after-turn",
         "prob.starts-turns.flip-nose-water",
@@ -822,6 +813,12 @@
         "prob.free.head-lift-breath",
         "prob.free.locked-knee-kick",
         "prob.free.stiff-recovery",
+        "prob.open-water.exit-dizzy",
+        "prob.open-water.legs-sink-after-sighting",
+        "prob.open-water.panic-breathless",
+        "prob.open-water.start-blowup",
+        "prob.open-water.veer-off-course",
+        "prob.open-water.wetsuit-shoulder-fatigue",
         "prob.starts-turns.back-turn-distance",
         "prob.starts-turns.breathless-after-turn",
         "prob.starts-turns.deep-turn",
@@ -904,6 +901,12 @@
         "with_mechanism": 14,
         "with_drill": 10,
         "with_land": 3
+      },
+      "open-water": {
+        "total": 6,
+        "with_mechanism": 6,
+        "with_drill": 6,
+        "with_land": 0
       },
       "starts-turns": {
         "total": 17,

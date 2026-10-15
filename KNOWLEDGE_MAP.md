@@ -14,10 +14,10 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 233 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59}；確定性：{'🔵': 121, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
+| `technical-analysis` | 248 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 15}；確定性：{'🔵': 136, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 78 | 現象 → 機制 → 陸上介入 → 水中練習 |
-| `moves` | 58 | 泳式頁技術組件（動作） |
+| `problems` | 84 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `moves` | 66 | 泳式頁技術組件（動作） |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -36,15 +36,15 @@
 | `health/injuries (built)` | 0 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
-| `Drills (7 files)` | 199 | 176 drill 含 9 軸 fingerprint |
+| `Drills (8 files)` | 214 | 176 drill 含 9 軸 fingerprint |
 
 ---
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**233 條目**）
+### `technical-analysis.yaml` — 技術分析（**248 條目**）
 
-**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 起跳轉身 59, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 15, 起跳轉身 59, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -309,6 +309,26 @@
 | udk.tech.29 | streamline |  | 🔵 |
 | udk.tech.30 | joint |  | 🔵 |
 
+#### 開放水域與鐵人 (15)
+
+| ID | 範疇 | 標題 | 確定性 |
+|---|---|---|---|
+| open-water.tech.1 | concept |  | 🔵 |
+| open-water.tech.2 | head |  | 🔵 |
+| open-water.tech.3 | concept |  | 🔵 |
+| open-water.tech.4 | concept |  | 🔵 |
+| open-water.tech.5 | tempo |  | 🔵 |
+| open-water.tech.6 | concept |  | 🔵 |
+| open-water.tech.7 | hardware |  | 🔵 |
+| open-water.tech.8 | hardware |  | 🔵 |
+| open-water.tech.9 | stroke-cycle |  | 🔵 |
+| open-water.tech.10 | kick |  | 🔵 |
+| open-water.tech.11 | depth |  | 🔵 |
+| open-water.tech.12 | errors |  | 🔵 |
+| open-water.tech.13 | concept |  | 🔵 |
+| open-water.tech.14 | tempo |  | 🔵 |
+| open-water.tech.15 | fatigue |  | 🔵 |
+
 ### `teaching-errors.yaml` — 教學誤區（**104 條目**）
 
 **泳式分布**：仰式 17, 蛙式 18, 蝶式 17, 自由式 25, 起跳轉身 14, 水下蝶腳 13
@@ -529,6 +549,12 @@
 | prob.starts-turns.open-turn-wall-stall | starts-turns | turn | 開放式轉身在牆上停很久 |
 | prob.starts-turns.back-turn-distance | starts-turns | turn | 仰式轉身常常撞牆，或離牆太遠才翻 |
 | prob.starts-turns.relay-early-leave | starts-turns | start | 接力交接常常提早離台，被判犯規 |
+| prob.open-water.panic-breathless | open-water | open_water | 一到開放水域就喘不過氣、想停 |
+| prob.open-water.veer-off-course | open-water | open_water | 游不直，抬頭才發現偏了 |
+| prob.open-water.legs-sink-after-sighting | open-water | open_water | 每次抬頭看完，腳就沉下去 |
+| prob.open-water.wetsuit-shoulder-fatigue | open-water | open_water | 穿防寒衣游，肩膀很快就痠 |
+| prob.open-water.start-blowup | open-water | open_water | 出發一開始就衝太快，後面爆掉 |
+| prob.open-water.exit-dizzy | open-water | open_water | 上岸站起來頭暈腿軟 |
 
 ### `moves.yaml` — 泳式動作
 
@@ -592,6 +618,14 @@
 | starts-turns.move.12 | starts-turns | 自由式破水 | 最後一踢與第一划同步，頭不抬 |
 | starts-turns.move.13 | starts-turns | 仰式破水 | 最後一下上踢發動第一划，仰式踢不放鬆 |
 | starts-turns.move.14 | starts-turns | 蝶式破水 | 第一划在水下發動，頭在第一划時破水 |
+| open-water.move.1 | open-water | 定向抬頭 | 只讓眼睛剛出水，看完臉回水 |
+| open-water.move.2 | open-water | 游直線 | 左右對稱，偏多少自己要知道 |
+| open-water.move.3 | open-water | 跟游 | 跟在腳後或髖側，用別人帶動的水流 |
+| open-water.move.4 | open-water | 集體出發 | 開頭強度遠高於巡航，之後降回去 |
+| open-water.move.5 | open-water | 繞浮標 | 內線短但擠，外線長但順 |
+| open-water.move.6 | open-water | 防寒衣游 | 身體位置被托起，肩部多了布料的阻力 |
+| open-water.move.7 | open-water | 海豚跳 | 淺水雙手前撲入水、蹬底再起 |
+| open-water.move.8 | open-water | 出水上岸 | 手碰底才站，先站穩再走 |
 
 ---
 
@@ -1353,3 +1387,25 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | UDK8 | 穿蛙鞋與不穿蛙鞋對照 | kick | L3 L4 | intermediate | underwater_dolphin_kick |
 | UDK9 | 固定距離踢數梯（同距離比較用幾踢） | kick | L4 L5 | advanced | underwater_dolphin_kick |
 | UDK10 | 抓池邊海豚踢（只練上踢） | kick | L2 L3 | foundation | underwater_dolphin_kick |
+
+### `drills_open-water.yaml` — open-water (**15 drills**)
+
+**難度分布**：{'intermediate': 8, 'foundation': 4, 'advanced': 3}
+
+| ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
+|---|---|---|---|---|---|
+| OW1 | 鱷魚眼抬頭 | open_water_skill | L3 | intermediate | open_water |
+| OW2 | 抬頭看與換氣分開做 vs 合併做 | open_water_skill | L3 L4 | intermediate | open_water |
+| OW3 | 閉眼直線測試 | open_water_skill | L3 L4 | intermediate | open_water |
+| OW4 | 雙邊換氣 3／5 划 | open_water_skill | L2 L3 | foundation | open_water |
+| OW5 | 擁擠游：三人並排同一水道 | open_water_skill | L4 | intermediate | open_water |
+| OW6 | 跟腳游（兩人一組，前後交換） | open_water_skill | L3 L4 | intermediate | open_water |
+| OW7 | 髖側跟游 | open_water_skill | L4 | advanced | open_water |
+| OW8 | 不蹬牆轉身 | open_water_skill | L3 L4 | intermediate | open_water |
+| OW9 | 快出發回穩組 | open_water_skill | L4 L5 | advanced | open_water |
+| OW10 | 仰臥滾轉繞標 | open_water_skill | L4 | advanced | open_water |
+| OW11 | 海豚跳（淺水） | open_water_skill | L3 | intermediate | open_water |
+| OW12 | 出水上岸轉換 | open_water_skill | L3 | foundation | open_water |
+| OW13 | 防寒衣泳池適應 | open_water_skill | L3 | intermediate | open_water |
+| OW14 | 冷水入水程序 | open_water_skill | L1 L2 | foundation | open_water |
+| OW15 | 恐慌自救練習 | open_water_skill | L1 L2 | foundation | open_water |

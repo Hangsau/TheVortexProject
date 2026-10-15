@@ -60,6 +60,8 @@ fields:
       - {key: posture, scope: [instructional], count: 2}
       - {key: _meta-reference, scope: [health], count: 1}
       - {key: coupling, scope: [instructional], count: 1}
+      - {key: open_water_skill, scope: [drills], count: 15}
+      - {key: open_water, scope: [instructional], count: 5}
 
   stroke:
     controlled: true
@@ -77,6 +79,8 @@ fields:
         count: 60
       - key: udk
         count: 42
+      - key: open-water
+        count: 15
       - key: common
         count: 6
 

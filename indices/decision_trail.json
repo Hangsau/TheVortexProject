@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 560,
+  "record_count": 566,
   "trails": {
     "back.L4.roll-stability": [
       {
@@ -10895,6 +10895,27 @@
         "section": "D2 掌心朝向的三源分解 — **本輪最重要的一筆，請完整讀完再寫**"
       }
     ],
+    "open-water.tech.1": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
+        "line": 32,
+        "section": "2a. `canonical/instructional/technical-analysis.yaml`：stroke `open-water`，ID `open-water.tech.1` 起，約 14–16 點"
+      }
+    ],
+    "open-water.tech.14": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
+        "line": 86,
+        "section": "2f. 週期化"
+      }
+    ],
+    "open-water.tech.15": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
+        "line": 86,
+        "section": "2f. 週期化"
+      }
+    ],
     "periodization.dryland.youth": [
       {
         "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
@@ -11357,6 +11378,13 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 426,
         "section": "定案"
+      }
+    ],
+    "prob.starts-turns.flip-nose-water": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/A_完成紀錄.md",
+        "line": 34,
+        "section": "新增 ID"
       }
     ],
     "prob.starts-turns.late-streamline": [
@@ -11868,6 +11896,13 @@
         "file": "plans/內容審查_2026-10-14/codex紀錄/2.8_軌跡清理.md",
         "line": 85,
         "section": "canonical/instructional/teaching-errors.yaml｜starts-turns.err9｜errors[98].public.physical_reason.text"
+      }
+    ],
+    "starts-turns.move.8": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/A_完成紀錄.md",
+        "line": 28,
+        "section": "新增 ID"
       }
     ],
     "starts-turns.tech.1": [
@@ -12919,6 +12954,13 @@
         "file": "plans/骨關節動作肌群訓練伸展圖譜_plancheck.md",
         "line": 239,
         "section": "W1 — 先修現有 13 卡與 dryland（不等新圖譜）"
+      }
+    ],
+    "starts-turns.tech.49": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/A_完成紀錄.md",
+        "line": 12,
+        "section": "新增 ID"
       }
     ],
     "starts-turns.tech.5": [

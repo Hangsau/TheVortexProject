@@ -36,7 +36,7 @@ BATCHES: dict[str, list[Path]] = {
            + sorted((ROOT / "canonical/breathing").glob("*.yaml")),
     "2.2": [ROOT / "canonical/psychology/psychology.yaml"],
     "2.3": [MYSITE / "data/vortex" / f"{s}.yaml"
-            for s in ("free", "back", "breast", "fly", "udk", "starts-turns")],
+            for s in ("free", "back", "breast", "fly", "udk", "starts-turns", "open-water")],
     "2.4": [ROOT / "canonical/instructional/problems.yaml"]
            + sorted((ROOT / "Drills").glob("drills_*.yaml")),
     "2.5": sorted((ROOT / "canonical/movement").glob("*.yaml")),
