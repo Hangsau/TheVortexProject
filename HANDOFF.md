@@ -3818,3 +3818,5 @@ canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
 
 *最後更新：2026-06-16（Phase 2 完成：心理層 8 主題 62 概念全接入 Vortex 網站——三帶「心理地圖」著陸頁〔沿 L0→L6／初學→競技脊椎，8 主題全 complete〕+ 首頁入口。canonical/psychology/ 8 theme/62 concept〔fear 手寫 pilot + 7 主題 7 並行 Sonnet agent 寫、ruamel merge〕，每條過三關校正、public/diagnostic 0 洩漏，各 agent 沒過清單已記。my-site CI success）*
 *下次更新時機：my-site 週期化知識整合（B）動工後*
+
+> **2026-10-15 18:5x 學習者原話第 2 輪 map 已完成（未分析）**：units.jsonl 732 句（第1輪275＋PTT第1輪＋Reddit第2輪）；前 36 批 M3、之後 14 批 codex（切換時間見 `_raw/_work/codex_switch_time.txt`）、最後 3 批 M3。剩：①抽驗 PTT 中文句＋器材譯名 ②對照 G1–G7 判飽和（新類型≤1 停）③寫進 report.md ④merge 去重跨板重貼。codex 5H 撞牆、20:39 重置；MiniMax 7D 82%。

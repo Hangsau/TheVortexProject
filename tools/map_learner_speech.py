@@ -148,7 +148,7 @@ def parse_json_array(text: str) -> list:
             i += 1
             continue
         if isinstance(val, list):
-            items += val
+            items += [v for v in val if isinstance(v, dict)]  # 丟掉混進來的裸字串（如 ["fear_panic"]）
             found = True
         elif isinstance(val, dict):
             items.append(val)
