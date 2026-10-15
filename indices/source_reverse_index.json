@@ -11301,7 +11301,7 @@
       "identifier": {
         "isbn": "9780736095716"
       },
-      "usage_count": 40,
+      "usage_count": 39,
       "usages": [
         {
           "id": "OW1",
@@ -11462,11 +11462,6 @@
           "id": "open-water.tech.13",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[245].public.evidence[0]"
-        },
-        {
-          "id": "open-water.tech.14",
-          "file": "canonical/instructional/technical-analysis.yaml",
-          "path": "points[246].public.evidence[0]"
         },
         {
           "id": "open-water.tech.2",

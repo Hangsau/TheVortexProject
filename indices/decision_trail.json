@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 566,
+  "record_count": 568,
   "trails": {
     "back.L4.roll-stability": [
       {
@@ -10895,7 +10895,24 @@
         "section": "D2 掌心朝向的三源分解 — **本輪最重要的一筆，請完整讀完再寫**"
       }
     ],
+    "open-water.move.1": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
+        "line": 52,
+        "section": "新增 ID"
+      }
+    ],
     "open-water.tech.1": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
+        "line": 25,
+        "section": "結構登錄"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
+        "line": 32,
+        "section": "新增 ID"
+      },
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
         "line": 32,
@@ -10904,12 +10921,22 @@
     ],
     "open-water.tech.14": [
       {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
+        "line": 58,
+        "section": "新增 ID"
+      },
+      {
         "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
         "line": 86,
         "section": "2f. 週期化"
       }
     ],
     "open-water.tech.15": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
+        "line": 58,
+        "section": "新增 ID"
+      },
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
         "line": 86,
@@ -11364,6 +11391,13 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 385,
         "section": "定案"
+      }
+    ],
+    "prob.open-water.panic-breathless": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
+        "line": 56,
+        "section": "新增 ID"
       }
     ],
     "prob.starts-turns.deep-turn": [

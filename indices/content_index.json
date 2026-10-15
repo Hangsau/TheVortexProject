@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1154,
+  "record_count": 1158,
   "records": [
     {
       "id": "Bk1",
@@ -3090,7 +3090,7 @@
       "domain": "drills",
       "file": "Drills/drills_open-water.yaml",
       "path": "drills[3]",
-      "title": "雙邊換氣 3／5 划",
+      "title": "雙邊換氣",
       "tags": {
         "category": [
           "open_water_skill"
@@ -16889,27 +16889,23 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[246]",
-      "title": "鐵人泳段的組課——目標是以最低代價完成、出水還有餘力騎跑",
+      "title": "鐵人泳段和池游比賽的需求差異——單一一次、連續、無牆、集體出發，之後還要騎跑",
       "tags": {
         "category": [
           "tempo"
         ],
         "certainty": [
-          "🔵",
-          "🟢"
+          "🔵"
         ],
         "stroke": [
           "open-water"
         ]
       },
-      "source_ids": [
-        "src.riewald-rodeo-2015"
-      ],
+      "source_ids": [],
       "outgoing_ids": [
-        "OW9",
-        "open-water.tech.5",
-        "periodization.set_design.css_evidence",
-        "periodization.set_design.variables"
+        "open-water.tech.1",
+        "open-water.tech.16",
+        "open-water.tech.5"
       ]
     },
     {
@@ -16933,6 +16929,106 @@
       "outgoing_ids": [
         "open-water.tech.14",
         "periodization.decisions.planner"
+      ]
+    },
+    {
+      "id": "open-water.tech.16",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[248]",
+      "title": "泳訓可以轉移，要調整的是比例——閾值與有氧加重，速耐降到少量，純速保留小劑量",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "OW9",
+        "open-water.tech.14",
+        "periodization.set_design.css_evidence",
+        "periodization.set_design.variables"
+      ]
+    },
+    {
+      "id": "open-water.tech.17",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[249]",
+      "title": "長距離連續游的定位——練配速、建立比賽距離的信心、把開放水域技能放進去練，但它不是恢復課",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "OW1",
+        "OW8",
+        "open-water.tech.1",
+        "open-water.tech.16",
+        "open-water.tech.2"
+      ]
+    },
+    {
+      "id": "open-water.tech.18",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[250]",
+      "title": "時間預算——鐵人每週泳課有限，每一堂都要有清楚的主目的",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "open-water.tech.15",
+        "open-water.tech.16"
+      ]
+    },
+    {
+      "id": "open-water.tech.19",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[251]",
+      "title": "鐵人泳段的週期結構——基礎期偏技術與有氧，建構期加閾值，賽前加入比賽配速與實地練習，最後減量",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "OW13",
+        "OW14",
+        "cold-water-shock",
+        "open-water.tech.8",
+        "periodization.taper.swim"
       ]
     },
     {
@@ -17242,6 +17338,10 @@
       "outgoing_ids": [
         "open-water.tech.14",
         "open-water.tech.15",
+        "open-water.tech.16",
+        "open-water.tech.17",
+        "open-water.tech.18",
+        "open-water.tech.19",
         "periodization.decisions.monitoring",
         "periodization.dryland.needs_analysis",
         "periodization.structure.perception_periodization_bridge",

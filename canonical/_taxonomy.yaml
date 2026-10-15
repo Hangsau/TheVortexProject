@@ -80,7 +80,7 @@ fields:
       - key: udk
         count: 42
       - key: open-water
-        count: 15
+        count: 19
       - key: common
         count: 6
 

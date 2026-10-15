@@ -29,7 +29,7 @@
 
 ## 新增 ID
 
-技術點（stroke: open-water，technical-analysis.yaml）：open-water.tech.1 至 tech.15（共 15）
+技術點（stroke: open-water，technical-analysis.yaml）：open-water.tech.1 至 tech.19（共 19；tech.14 在追加要求後改寫，tech.16 至 19 為追加）
 
 | ID | 主題 | 確定性與依據 |
 |---|---|---|
@@ -46,7 +46,11 @@
 | tech.11 | 出水上岸 | 🔵；evidence 🟢 僅限書的上岸組與心率變化，頭暈機制為推導 |
 | tech.12 | 恐慌與過度換氣 | 🔵；evidence 🟢 書的處置清單；cross_ref 健康、心理、呼吸條目 |
 | tech.13 | 泳池裡怎麼練開放水域 | 🔵；evidence 🟢 書第 24 章 |
-| tech.14 | 鐵人泳段組課 | 🔵；evidence 🟢 書；cross_ref set_design.css_evidence 並寫明沒有開放水域 CSS 效度研究 |
+| tech.14 | 鐵人泳段和池游比賽的需求差異（改寫） | 🔵 推導，無 evidence |
+| tech.16 | 泳訓轉移與比例調整（含菁英允許跟游短距離賽的族群差異；cross_ref CSS 條目並寫明無開放水域 CSS 效度研究） | 🔵 推導 |
+| tech.17 | 長距離連續游的定位（含總量不等於連續游距離、非恢復課） | 🔵 推導 |
+| tech.18 | 時間預算：每堂一個主目的 | 🔵 推導 |
+| tech.19 | 週期結構（基礎、建構、賽前、減量，只寫結構） | 🔵 推導 |
 | tech.15 | 和騎跑一起排 | 🔵（無外部來源） |
 
 動作（moves.yaml）：open-water.move.1 至 move.8（定向抬頭、游直線、跟游、集體出發、繞浮標、防寒衣游、海豚跳、出水上岸）。全部省略 cue_bad／cue_why／cue_good。
@@ -75,3 +79,10 @@ Drill（Drills/drills_open-water.yaml）：OW1 至 OW15（共 15）。有書中�
 - `tools/test_vortex_links.py` 與 `research/content-presentation-2026-09-05/inventory.py` 若寫死泳式清單也要同步（未細查）。
 - moves 的 `drills` 連結用 drill ID（OW1…）；problems 的 drills 連結正則在 canonical 側已加 `OW`。
 - 跑 `sync_vortex.py` 後確認新技能頁、技術分析、練習清單、問題索引都出現，並推 my-site。本次沒有動 my-site。
+
+## 追加要求處理（無依據數字、鐵人訓練架構）
+
+- 數字稽核：移除自訂處方。OW4 改名「雙邊換氣」（原 3／5 划），步驟改為固定間隔、從容易的開始；OW11 水深改為條件式（水深足夠入水不碰底、由有經驗的人確認）；OW12 的「站穩一兩秒」改為站穩確認不暈再走；OW15 等無數字處方。剩餘數字只有書中原文的：1.3 倍距離緩衝、十公里每二十五公尺抬頭約四百次、約四百公尺配速出發。tech.14 的「50 到 1500 公尺」是池游比賽項目距離的事實描述。
+- 鐵人訓練架構：tech.14（改寫）、tech.16 至 tech.19，共 5 點，category 皆 tempo（划頻划距與訓練哲學），全部 🔵 且不引數字；tech.15（跟騎跑一起排）保留。decisions.yaml planner 的 related 擴為 tech.14 至 tech.19。
+- 使用者的問題回答位置：鐵人泳訓與一般泳訓差異見 tech.14；專練還是轉移見 tech.16；偶爾排 1500／2000／3400 長距離課見 tech.17（價值、非恢復課、總量不等於連續游）。
+- 重跑結果：validate 0 ERROR / 147 WARN（W002 共 20，其中新增 5），unittest 255 全過，地圖與索引已重生。

@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 248 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 15}；確定性：{'🔵': 136, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
+| `technical-analysis` | 252 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 19}；確定性：{'🔵': 140, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
 | `problems` | 84 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `moves` | 66 | 泳式頁技術組件（動作） |
@@ -42,9 +42,9 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**248 條目**）
+### `technical-analysis.yaml` — 技術分析（**252 條目**）
 
-**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 15, 起跳轉身 59, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 19, 起跳轉身 59, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -309,7 +309,7 @@
 | udk.tech.29 | streamline |  | 🔵 |
 | udk.tech.30 | joint |  | 🔵 |
 
-#### 開放水域與鐵人 (15)
+#### 開放水域與鐵人 (19)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -328,6 +328,10 @@
 | open-water.tech.13 | concept |  | 🔵 |
 | open-water.tech.14 | tempo |  | 🔵 |
 | open-water.tech.15 | fatigue |  | 🔵 |
+| open-water.tech.16 | tempo |  | 🔵 |
+| open-water.tech.17 | tempo |  | 🔵 |
+| open-water.tech.18 | tempo |  | 🔵 |
+| open-water.tech.19 | tempo |  | 🔵 |
 
 ### `teaching-errors.yaml` — 教學誤區（**104 條目**）
 
@@ -1397,7 +1401,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | OW1 | 鱷魚眼抬頭 | open_water_skill | L3 | intermediate | open_water |
 | OW2 | 抬頭看與換氣分開做 vs 合併做 | open_water_skill | L3 L4 | intermediate | open_water |
 | OW3 | 閉眼直線測試 | open_water_skill | L3 L4 | intermediate | open_water |
-| OW4 | 雙邊換氣 3／5 划 | open_water_skill | L2 L3 | foundation | open_water |
+| OW4 | 雙邊換氣 | open_water_skill | L2 L3 | foundation | open_water |
 | OW5 | 擁擠游：三人並排同一水道 | open_water_skill | L4 | intermediate | open_water |
 | OW6 | 跟腳游（兩人一組，前後交換） | open_water_skill | L3 L4 | intermediate | open_water |
 | OW7 | 髖側跟游 | open_water_skill | L4 | advanced | open_water |
