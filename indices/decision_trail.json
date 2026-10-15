@@ -10898,7 +10898,7 @@
     "open-water.move.1": [
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
-        "line": 52,
+        "line": 56,
         "section": "新增 ID"
       }
     ],
@@ -10922,19 +10922,29 @@
     "open-water.tech.14": [
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
-        "line": 58,
+        "line": 62,
         "section": "新增 ID"
       },
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
         "line": 86,
         "section": "2f. 週期化"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_E_訓練架構依查證改寫.md",
+        "line": 1,
+        "section": "派工規格 E：依外部查證改寫鐵人訓練架構（open-water.tech.14–19）"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_E_訓練架構依查證改寫.md",
+        "line": 7,
+        "section": "輸入"
       }
     ],
     "open-water.tech.15": [
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
-        "line": 58,
+        "line": 62,
         "section": "新增 ID"
       },
       {
@@ -11396,7 +11406,7 @@
     "prob.open-water.panic-breathless": [
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
-        "line": 56,
+        "line": 60,
         "section": "新增 ID"
       }
     ],

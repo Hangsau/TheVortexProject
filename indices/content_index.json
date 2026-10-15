@@ -10453,6 +10453,9 @@
       "path": "levels[2]",
       "title": "推進感萌芽",
       "tags": {
+        "certainty": [
+          "🟠"
+        ],
         "l_level": [
           "L2"
         ],
@@ -10464,7 +10467,8 @@
       "outgoing_ids": [
         "common.L2.propulsion",
         "free.L2.hand-pressure",
-        "free.L2.kick"
+        "free.L2.kick",
+        "free.move.6"
       ]
     },
     {

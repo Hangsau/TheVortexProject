@@ -16,8 +16,8 @@
 ## 下一步建議（學習者原話）
 
 1. ✅ 第 1 輪對接已落地（`free.L1.diagnostic.sinking_triage`、呼吸章先排除一般體能），見 report 第六節。
-2. **等使用者判斷 report 第七節三題**：N1 寫成判讀訊號？N2 補進 free.L3 A 的 typical_speech？N3 等 PTT 第 2 輪？
-3. **PTT 第 2 輪**：`VORTEX_ENGINE=codex python -I tools/map_learner_speech.py extract --round 2 --source ptt`，再 `map`、`merge`。codex 單路跑、別平行；MiniMax 7D 已用 82%（10/19 08:00 重置）。跑完看 N2–N4 是否繼續長，新類型 ≤1 就停。
+2. ✅ 使用者已判斷第七節三題：N1＋N2 落地為 `free.L2.diagnostic.unfelt_error_signals`（N2 層級依口令指向部位，不固定 L3 A）；N3 不是缺口（L 級按側別判），等 PTT 第 2 輪一起看。
+3. **PTT 第 2 輪**（已排 2026-10-15 20:45 對話內背景自動跑，codex 單路）：`VORTEX_ENGINE=codex python -I tools/map_learner_speech.py extract --round 2 --source ptt`，再 `map`、`merge`。codex 單路跑、別平行；MiniMax 7D 已用 82%（10/19 08:00 重置）。跑完看 N2–N4 是否繼續長，新類型 ≤1 就停。
 
 ## 當前狀態（2026-10-14 晚，三層重構＋全庫內容檢查：全計畫完成）
 
