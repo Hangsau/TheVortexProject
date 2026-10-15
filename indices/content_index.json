@@ -16899,13 +16899,18 @@
           "tempo"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "open-water"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.heggy-2021-triathlon-swim-intensity-usms",
+        "src.landers-2008-swim-positioning-triathlon",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms"
+      ],
       "outgoing_ids": [
         "open-water.tech.1",
         "open-water.tech.16",
@@ -16929,7 +16934,9 @@
           "open-water"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.bernhardt-workout-placement-recovery"
+      ],
       "outgoing_ids": [
         "open-water.tech.14",
         "periodization.decisions.planner"
@@ -16940,19 +16947,27 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[248]",
-      "title": "泳訓可以轉移，要調整的是比例——閾值與有氧加重，速耐降到少量，純速保留小劑量",
+      "title": "泳訓可以轉移，要調整的是比例——比例的具體數字目前沒有出處",
       "tags": {
         "category": [
           "tempo"
         ],
         "certainty": [
-          "🔵"
+          "🔵",
+          "🟢"
         ],
         "stroke": [
           "open-water"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.heggy-2021-triathlon-swim-intensity-usms",
+        "src.landers-2008-swim-positioning-triathlon",
+        "src.newsome-2025-swim-smooth-pace",
+        "src.selles-perez-2019-polarized-pyramidal-half-ironman",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms"
+      ],
       "outgoing_ids": [
         "OW9",
         "open-water.tech.14",
@@ -16965,7 +16980,7 @@
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
       "path": "points[249]",
-      "title": "長距離連續游的定位——練配速、建立比賽距離的信心、把開放水域技能放進去練，但它不是恢復課",
+      "title": "長距離連續游的定位——實務與論壇意見分歧，價值與代價要一起看",
       "tags": {
         "category": [
           "tempo"
@@ -16977,7 +16992,14 @@
           "open-water"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.laughlin-2016-short-reps-vs-steady-swims",
+        "src.mackinnon-2024-how-much-swimming-triathlete",
+        "src.slowtwitch-how-much-swim-training-ironman",
+        "src.slowtwitch-longest-prerace-swim-half-ironman",
+        "src.slowtwitch-longest-straight-swim-set"
+      ],
       "outgoing_ids": [
         "OW1",
         "OW8",
@@ -17003,7 +17025,13 @@
           "open-water"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.bernhardt-12-week-sprint-swim-plan",
+        "src.filliol-2015-on-training-and-performance",
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.mackinnon-2024-how-much-swimming-triathlete",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms"
+      ],
       "outgoing_ids": [
         "open-water.tech.15",
         "open-water.tech.16"
@@ -17026,7 +17054,12 @@
           "open-water"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.petrie-2025-periodize-triathlon-training",
+        "src.slowtwitch-taper-for-open-water-race",
+        "src.triathlon-magazine-canada-2012-open-water-tips"
+      ],
       "outgoing_ids": [
         "OW13",
         "OW14",

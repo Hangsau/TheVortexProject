@@ -11159,3 +11159,217 @@ sources:
       url: "https://pubmed.ncbi.nlm.nih.gov/12519869/"
     retrieved_on: "2026-10-14"
     notes: "2026-10-14 登錄（RED-S 30 kcal 閾值出處）。29 名月經規律、久坐、體組成正常的年輕女性，5 天操控能量可用性 45 對 10／20／30 kcal/kg LBM/日：30 時 LH 脈衝不受影響，低於 30 時頻率下降。**使用邊界**：短期實驗、久坐族群，不是運動員長期盛行率，也不是單一診斷切點。"
+
+  # ── 鐵人泳訓查證（2026-10-15）：Research/鐵人泳訓 全文已讀來源 ─────────────────
+
+  - id: src.landers-2008-swim-positioning-triathlon
+    display: "Landers et al. (2008). Swim Positioning and its Influence on Triathlon Outcome. Int J Exerc Sci 1(3):96-105."
+    title: "Swim Positioning and its Influence on Triathlon Outcome"
+    type: journal-article
+    verification_status: verified
+    authors: ["Landers et al."]
+    year: 2008
+    container: "Int J Exerc Sci"
+    identifier:
+      pmcid: "PMC4739296"
+      url: "https://pmc.ncbi.nlm.nih.gov/articles/PMC4739296"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀 PMC 全文。證據類型：觀察性研究。族群：1999 ITU World Cup 奧運距離（draft-legal）20 場，男 605、女 479 人，菁英。結果：男子 90%、女子 70% 的賽事中，冠軍在第一群出水；泳段名次與最終名次相關 r=0.49（男）／0.39（女），跑步 0.86／0.85。**使用邊界**：只代表允許跟游的菁英短距離賽，不能外推到分齡或長距離；研究沒有報告這些選手的訓練組成。"
+
+  - id: src.selles-perez-2019-polarized-pyramidal-half-ironman
+    display: "Selles-Perez, Fernandez-Saez & Cejuela (2019). Polarized and Pyramidal Training Intensity Distribution: Relationship with a Half-Ironman Distance Triathlon Competition. J Sports Sci Med 18:708-715."
+    title: "Polarized and Pyramidal Training Intensity Distribution: Relationship with a Half-Ironman Distance Triathlon Competition"
+    type: journal-article
+    verification_status: verified
+    authors: ["Selles-Perez", "Fernandez-Saez", "Cejuela"]
+    year: 2019
+    container: "J Sports Sci Med"
+    identifier:
+      url: "https://www.jssm.org/jssm-18-708.xml"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文。證據類型：兩組比較的訓練研究。族群：13 名休閒男鐵人，半超距離（1.9 km／90 km／21.1 km），20 週。兩組強度分布為全項目合計（兩極化 84.5%／4.2%／11.3%，金字塔 77.9%／18.8%／3.3%），比賽成績只差 2 秒。**使用邊界**：不是泳段專屬分布，不能用來決定泳訓的強度比例。"
+
+  - id: src.heggy-2021-triathlon-swim-intensity-usms
+    display: "Heggy (2021). How Hard Should I Work the Triathlon Swim? USMS."
+    title: "How Hard Should I Work the Triathlon Swim?"
+    type: web_article
+    verification_status: verified
+    authors: ["Heggy"]
+    year: 2021
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-hard-should-i-work-the-triathlon-swim"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文。證據類型：實務文件（教練文章），非研究。族群：一般分齡鐵人。內容：技術（拖曳、抬頭定向、直線、跟游）比體能重要；做可持續配速的組；長組內加 25 到 100 碼或公尺全力衝刺再回到比賽配速。**使用邊界**：教練個人建議，沒有量測數據。"
+
+  - id: src.newsome-2025-swim-smooth-pace
+    display: "Newsome (2025). Learn How to Swim Pace Like a PRO. Swim Smooth."
+    title: "Learn How to Swim Pace Like a PRO"
+    type: web_article
+    verification_status: verified
+    authors: ["Newsome"]
+    year: 2025
+    publisher: "Swim Smooth"
+    identifier:
+      url: "https://blog.swimsmooth.com/p/get-your-pace-right"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文。證據類型：實務文件（教練機構部落格）。內容：以 400 m 與 200 m 計時求臨界游速（CSS），建議每 4 至 6 週重測；換算表只給游泳賽距離，文中明言沒有鐵人專屬換算；開放水域有 GPS 無法涵蓋的變項。**使用邊界**：教練機構的方法說明，不是效度研究。"
+
+  - id: src.mackinnon-2024-how-much-swimming-triathlete
+    display: "Mackinnon (2024). How much swimming does a triathlete need to do? Triathlon Magazine Canada."
+    title: "How much swimming does a triathlete need to do?"
+    type: web_article
+    verification_status: verified
+    authors: ["Mackinnon"]
+    year: 2024
+    publisher: "Triathlon Magazine Canada"
+    identifier:
+      url: "https://triathlonmagazine.ca/?p=77692"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文。證據類型：實務文件（教練文章），非研究。族群：分齡、初學者、draft-legal 與菁英的教練經驗。內容：每週兩堂大致維持現有泳力、三堂可進步、四堂以上對需改進者、draft-legal 賽與菁英最理想；多數學員單堂 45 至 60 分鐘；一週三次 45 分鐘不間斷直游收益不大。**使用邊界**：沒有強度區數字，沒有依賽距分的計畫，為單一教練經驗。"
+
+  - id: src.bernhardt-12-week-sprint-swim-plan
+    display: "Bernhardt (Gale). 12-Week Swim Plan for Sprint Triathlons. Active.com."
+    title: "12-Week Swim Plan for Sprint Triathlons"
+    type: web_article
+    verification_status: verified
+    authors: ["Gale Bernhardt"]
+    publisher: "Active.com"
+    identifier:
+      url: "https://www.active.com/swimming/articles/12-week-swim-workout-plan-for-sprint-triathlons"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 部分讀取（頁面內容只到第 9 週）。證據類型：實務文件（單一教練的初學課程計畫），非研究。族群：初學到入門、短距離賽。內容：每週 2 堂、間隔至少 24 小時，第 1 至 6 週兩堂都在 1 至 2 區（奇數堂較快），第 7 至 12 週奇數堂 1 至 3 區、偶數堂 1 至 2 區；主課由 10×50 碼逐步到 500 碼不停。頁面沒有開放水域、防寒衣與減量內容。**使用邊界**：單一計畫。"
+
+  - id: src.slowtwitch-taper-for-open-water-race
+    display: "Slowtwitch forum thread: Taper for Open Water Race?"
+    title: "Taper for Open Water Race?"
+    type: web_article
+    verification_status: verified
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/taper-for-open-water-race/543125"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（原發文加 4 則回覆）。**這是論壇討論串**（分類法沒有 forum-thread，選最接近的 web_article），證據類型：社群個人經驗，不是研究也不是教練文件。4 則回覆都主張短而輕度的減量，只有 1 則給遞減比例（約 5 天前開始、每天減約 20%），沒有人談鐵人專屬。**使用邊界**：個人說法。"
+
+  - id: src.hayes-2018-open-water-8-weeks-220-triathlon
+    display: "Hayes (2018). Master the Open Water in Just 8 Weeks. 220 Triathlon, July 2018, pp. 92-95."
+    title: "Master the Open Water in Just 8 Weeks"
+    type: web_article
+    verification_status: verified
+    authors: ["Dermott Hayes"]
+    year: 2018
+    publisher: "220 Triathlon"
+    identifier:
+      url: "https://220triathlon.com/wp-content/uploads/sites/4/2018/07/open-water-swim-training-plan--d2aad99.pdf"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀 PDF 全文（兩頁；週表版面抽出後欄位順序錯亂，只採用能獨立成句的組與說明）。證據類型：實務文件（單一教練的雜誌課程計畫），非研究。族群：初次鐵人，標準距離（1.5 km 泳段）。內容：每週 2 至 4 堂泳課、池內與開放水域混合；池內組含比賽配速（RP）組與抬頭定向、雙側換氣組；最後一個月每週 2 次開放水域；最長開放水域 2.5 km 對 1.5 km 賽距；sprint 距離量減約 30%，70.3 增約 30%。**使用邊界**：單一計畫；沒有減量描述，沒有防寒衣的具體次數。"
+
+  - id: src.slaughter-2019-swim-plan-triathlon-distances-usms
+    display: "Slaughter (2019). How to Develop Your Swim Training Plan for Different Triathlon Distances. USMS."
+    title: "How to Develop Your Swim Training Plan for Different Triathlon Distances"
+    type: web_article
+    verification_status: verified
+    authors: ["Erica Slaughter"]
+    year: 2019
+    publisher: "U.S. Masters Swimming"
+    identifier:
+      url: "https://www.usms.org/en/fitness-and-training/articles-and-videos/articles/how-to-develop-your-swim-training-plan-for-different-triathlon-distances"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述）。證據類型：實務文件（教練文章），非研究。族群：分齡鐵人，依賽距分。內容：無論賽距每週至少游三次；短距離賽偏速度與耐力並重，奧運與半超距離有氧與無氧並重（半超偏耐力），超級鐵人距離以有氧為主且每週至少一次 10×100；各距離附範例組，但沒有百分比。**使用邊界**：單一教練的建議，無開放水域、減量、單堂最長與賽距關係的內容。"
+
+  - id: src.laughlin-2016-short-reps-vs-steady-swims
+    display: "Laughlin (2016). Should Triathletes Train with Short Reps or Longer Steady Aerobic Swims? Total Immersion blog."
+    title: "Should Triathletes Train with Short Reps or Longer Steady Aerobic Swims?"
+    type: web_article
+    verification_status: verified
+    authors: ["Terry Laughlin"]
+    year: 2016
+    publisher: "Total Immersion blog（Goodreads 轉載）"
+    identifier:
+      url: "https://www.goodreads.com/author_blog_posts/13466741-should-triathletes-train-with-short-reps-or-longer-steady-aerobic-swim"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（短文，轉載版）。證據類型：實務文件（教練個人觀點），無研究引用。內容：主張以 200 m 以下的池內重複為主、穩定長游只用 10／20／40 分鐘（對應 sprint／奧運／長距離）；估計 10×100 比連續 20 分鐘快 5 至 10%，為作者估計而非實測。**使用邊界**：單一教練的立場，與其他教練、論壇意見並不一致。"
+
+  - id: src.slowtwitch-how-much-swim-training-ironman
+    display: "Slowtwitch forum thread: How Much Swim Training for an Ironman (page 1)"
+    title: "How Much Swim Training for an Ironman"
+    type: web_article
+    verification_status: verified
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/how-much-swim-training-for-an-ironman/849439"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 只讀第 1 頁（至少 2 頁）。**這是論壇討論串**（分類法沒有 forum-thread，選最接近的 web_article），證據類型：社群個人經驗。發文者主張對鐵人而言超過 200 m 的重複只有壞處；有人指出泳量增加有效但有轉折點。**使用邊界**：個人說法，非研究也非教練文件。"
+
+  - id: src.slowtwitch-longest-prerace-swim-half-ironman
+    display: "Slowtwitch forum thread: Longest pre-race swim for half ironman (2008)"
+    title: "Longest pre-race swim for half ironman"
+    type: web_article
+    verification_status: verified
+    year: 2008
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/longest-pre-race-swim-for-half-ironman/408936"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述）。**這是論壇討論串**（分類法沒有 forum-thread，選最接近的 web_article），證據類型：社群個人經驗。約 5 人主張練到賽距等級的連續游，約 3 人反對長連續、偏好間歇，約 3 人折衷（例如 500 加 30 秒休息的連續組）。單位 yd／m 混用。**使用邊界**：個人說法。"
+
+  - id: src.slowtwitch-longest-straight-swim-set
+    display: "Slowtwitch forum thread: What is the longest straight swim set you do? (page 1)"
+    title: "What is the longest straight swim set you do?"
+    type: web_article
+    verification_status: verified
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/what-is-the-longest-straight-swim-set-you-do/287705"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 只讀第 1 頁（20 則、16 人）。**這是論壇討論串**（分類法沒有 forum-thread，選最接近的 web_article），證據類型：社群個人經驗。有人偶爾連續游 4,000 至 5,000 因為這能增加面對短一點比賽的信心；有人表示 1.5 km 賽事訓練很少超過 800 m；意見分歧、無共識。**使用邊界**：個人說法。"
+
+  - id: src.petrie-2025-periodize-triathlon-training
+    display: "Petrie (2025). Periodize your triathlon training for peak race day performance. Triathlon Magazine Canada."
+    title: "Periodize your triathlon training for peak race day performance"
+    type: web_article
+    verification_status: verified
+    authors: ["Petrie"]
+    year: 2025
+    publisher: "Triathlon Magazine Canada"
+    identifier:
+      url: "https://triathlonmagazine.ca/training/periodize-your-triathlon-training-for-peak-race-day-performance/"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述）。證據類型：實務文件（教練文章），非研究。內容：基礎期數週至數月，建構期最長，高峰期約從賽前 4 週起，減量為最後兩週（未給降幅）。**使用邊界**：整體鐵人週期化，沒有泳段專屬內容。"
+
+  - id: src.filliol-2015-on-training-and-performance
+    display: "Filliol (2015). On Training and Performance. joelfilliol.com."
+    title: "On Training and Performance"
+    type: web_article
+    verification_status: verified
+    authors: ["Joel Filliol"]
+    year: 2015
+    publisher: "joelfilliol.com"
+    identifier:
+      url: "https://joelfilliol.com/blog/2015/1/3/on-training-and-performance"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（短文，經工具轉述）。證據類型：實務文件（教練個人網誌），非研究。族群：作者指導的一名菁英選手，另對沒有游泳背景的鐵人提建議。內容：該選手每週約 5 堂、每堂約 4 至 5 km，混合耐力、力量與配速；對沒有泳齡的鐵人，優先頻率、量與重複。**使用邊界**：單一選手個案，沒有組表與強度百分比。"
+
+  - id: src.bernhardt-workout-placement-recovery
+    display: "Bernhardt (Gale). Workout Placement Can Improve Recovery. Active.com."
+    title: "Workout Placement Can Improve Recovery"
+    type: web_article
+    verification_status: verified
+    authors: ["Gale Bernhardt"]
+    publisher: "Active.com"
+    identifier:
+      url: "https://www.active.com/triathlon/articles/workout-placement-can-improve-recovery"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀文章本身；所轉述的原研究（Lum, Landers & Peeling）未讀原文。證據類型：實務文件對一項研究的二手轉述。內容：9 名受訓鐵人，兩次高強度間歇跑，各於 10 小時後做恢復游或被動恢復，24 小時後跑到力竭，游泳組 830 秒對被動組 728 秒；作者自己註記樣本僅 9 人，益處可能來自水溫、水壓或單純的輕度活動。**使用邊界**：小樣本二手轉述，不足以成為通則。"
+
+  - id: src.triathlon-magazine-canada-2012-open-water-tips
+    display: "Triathlon Magazine Canada (2012). Open Water Swimming Tips."
+    title: "Open Water Swimming Tips"
+    type: web_article
+    verification_status: verified
+    year: 2012
+    publisher: "Triathlon Magazine Canada"
+    identifier:
+      url: "https://triathlonmagazine.ca/training/triathlon-training-open-water-swimmingopen-water-swim-training/"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述）。證據類型：實務文件（雜誌編輯文章），非研究。內容：定向大約每 10 至 20 m 抬頭一次、雙側換氣、跟游；開放水域練習頻率沒有具體時程。文中另有防寒衣可使成績進步最多 20% 的說法，二手且無來源，本庫不採用。**使用邊界**：一般性提示。"

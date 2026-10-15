@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 863,
+  "source_count": 880,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -604,6 +604,38 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.bernhardt-12-week-sprint-swim-plan",
+      "display": "Bernhardt (Gale). 12-Week Swim Plan for Sprint Triathlons. Active.com.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.active.com/swimming/articles/12-week-swim-workout-plan-for-sprint-triathlons"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[250].public.evidence[2]"
+        }
+      ]
+    },
+    {
+      "id": "src.bernhardt-workout-placement-recovery",
+      "display": "Bernhardt (Gale). Workout Placement Can Improve Recovery. Active.com.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.active.com/triathlon/articles/workout-placement-can-improve-recovery"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.15",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[247].public.evidence[0]"
+        }
+      ]
     },
     {
       "id": "src.blades-2024-whm",
@@ -2426,6 +2458,22 @@
       ]
     },
     {
+      "id": "src.filliol-2015-on-training-and-performance",
+      "display": "Filliol (2015). On Training and Performance. joelfilliol.com.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://joelfilliol.com/blog/2015/1/3/on-training-and-performance"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[250].public.evidence[3]"
+        }
+      ]
+    },
+    {
       "id": "src.fina-sw64-usas-usms",
       "display": "【複合來源鍵，已拆解】已拆為 src.world-aquatics-2023-swimming-technical-rules 等 2 筆",
       "verification_status": "retracted",
@@ -3791,6 +3839,37 @@
       ]
     },
     {
+      "id": "src.hayes-2018-open-water-8-weeks-220-triathlon",
+      "display": "Hayes (2018). Master the Open Water in Just 8 Weeks. 220 Triathlon, July 2018, pp. 92-95.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://220triathlon.com/wp-content/uploads/sites/4/2018/07/open-water-swim-training-plan--d2aad99.pdf"
+      },
+      "usage_count": 4,
+      "usages": [
+        {
+          "id": "open-water.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[248].public.evidence[1]"
+        },
+        {
+          "id": "open-water.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[249].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[250].public.evidence[1]"
+        },
+        {
+          "id": "open-water.tech.19",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[251].public.evidence[1]"
+        }
+      ]
+    },
+    {
       "id": "src.hazlett-1994-muscle-tension-gad",
       "display": "Hazlett, R. L., McLeod, D. R., & Hoehn-Saric, R. (1994). Muscle tension in generalized anxiety disorder: Elevated muscle tonus or agitated movement?",
       "verification_status": "verified",
@@ -3824,6 +3903,27 @@
           "id": "psych.attention.water_sense_third_category",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[4].concepts[4].public"
+        }
+      ]
+    },
+    {
+      "id": "src.heggy-2021-triathlon-swim-intensity-usms",
+      "display": "Heggy (2021). How Hard Should I Work the Triathlon Swim? USMS.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/fitness-and-training/articles-and-videos/articles/how-hard-should-i-work-the-triathlon-swim"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "open-water.tech.14",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[246].public.evidence[1]"
+        },
+        {
+          "id": "open-water.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[248].public.evidence[1]"
         }
       ]
     },
@@ -4720,6 +4820,28 @@
       ]
     },
     {
+      "id": "src.landers-2008-swim-positioning-triathlon",
+      "display": "Landers et al. (2008). Swim Positioning and its Influence on Triathlon Outcome. Int J Exerc Sci 1(3):96-105.",
+      "verification_status": "verified",
+      "identifier": {
+        "pmcid": "PMC4739296",
+        "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC4739296"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "open-water.tech.14",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[246].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[248].public.evidence[4]"
+        }
+      ]
+    },
+    {
       "id": "src.lange-smith-2023-pst-review",
       "display": "Lange-Smith, S., Cabot, J., Coffee, P., Gunnell, K., & Tod, D. (2023). The efficacy of psychological skills training for enhancing performance in sport: A review of reviews.",
       "verification_status": "verified",
@@ -4753,6 +4875,22 @@
           "id": "psych.interaction.stress_hypertonia",
           "file": "canonical/psychology/psychology.yaml",
           "path": "themes[1].concepts[1].public.hardware_boundary"
+        }
+      ]
+    },
+    {
+      "id": "src.laughlin-2016-short-reps-vs-steady-swims",
+      "display": "Laughlin (2016). Should Triathletes Train with Short Reps or Longer Steady Aerobic Swims? Total Immersion blog.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.goodreads.com/author_blog_posts/13466741-should-triathletes-train-with-short-reps-or-longer-steady-aerobic-swim"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[249].public.evidence[1]"
         }
       ]
     },
@@ -5111,6 +5249,27 @@
           "id": "udk.tech.17",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[153].public.evidence[2]"
+        }
+      ]
+    },
+    {
+      "id": "src.mackinnon-2024-how-much-swimming-triathlete",
+      "display": "Mackinnon (2024). How much swimming does a triathlete need to do? Triathlon Magazine Canada.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://triathlonmagazine.ca/?p=77692"
+      },
+      "usage_count": 2,
+      "usages": [
+        {
+          "id": "open-water.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[249].public.evidence[1]"
+        },
+        {
+          "id": "open-water.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[250].public.evidence[0]"
         }
       ]
     },
@@ -7171,6 +7330,22 @@
       ]
     },
     {
+      "id": "src.newsome-2025-swim-smooth-pace",
+      "display": "Newsome (2025). Learn How to Swim Pace Like a PRO. Swim Smooth.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://blog.swimsmooth.com/p/get-your-pace-right"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[248].public.evidence[2]"
+        }
+      ]
+    },
+    {
       "id": "src.nicholls-1984-achievement-motivation",
       "display": "Nicholls, J. G. (1984). Achievement motivation: Conceptions of ability, subjective experience, task choice, and performance.",
       "verification_status": "verified",
@@ -7986,6 +8161,22 @@
           "id": "starts-turns.tech.46",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[221].public.mechanism"
+        }
+      ]
+    },
+    {
+      "id": "src.petrie-2025-periodize-triathlon-training",
+      "display": "Petrie (2025). Periodize your triathlon training for peak race day performance. Triathlon Magazine Canada.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://triathlonmagazine.ca/training/periodize-your-triathlon-training-for-peak-race-day-performance/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.19",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[251].public.evidence[0]"
         }
       ]
     },
@@ -12146,6 +12337,22 @@
       ]
     },
     {
+      "id": "src.selles-perez-2019-polarized-pyramidal-half-ironman",
+      "display": "Selles-Perez, Fernandez-Saez & Cejuela (2019). Polarized and Pyramidal Training Intensity Distribution: Relationship with a Half-Ironman Distance Triathlon Competition. J Sports Sci Med 18:708-715.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.jssm.org/jssm-18-708.xml"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[248].public.evidence[3]"
+        }
+      ]
+    },
+    {
       "id": "src.selye",
       "display": "【複合來源鍵，已拆解】已拆為 src.selye-1974-stress-without-distress 等 4 筆",
       "verification_status": "retracted",
@@ -12273,6 +12480,32 @@
       "usages": []
     },
     {
+      "id": "src.slaughter-2019-swim-plan-triathlon-distances-usms",
+      "display": "Slaughter (2019). How to Develop Your Swim Training Plan for Different Triathlon Distances. USMS.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://www.usms.org/en/fitness-and-training/articles-and-videos/articles/how-to-develop-your-swim-training-plan-for-different-triathlon-distances"
+      },
+      "usage_count": 3,
+      "usages": [
+        {
+          "id": "open-water.tech.14",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[246].public.evidence[2]"
+        },
+        {
+          "id": "open-water.tech.16",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[248].public.evidence[0]"
+        },
+        {
+          "id": "open-water.tech.18",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[250].public.evidence[1]"
+        }
+      ]
+    },
+    {
       "id": "src.slawson-2013-osb11-start-categorisation",
       "display": "Slawson, S. E., Conway, P. P., Cossor, J., Chakravorti, N., & West, A. A. (2013). The categorisation of swimming start performance with reference to force generation on the main block and footrest components of the Omega OSB11 start blocks. Journal of Sports Sciences, 31(5), 468-478.",
       "verification_status": "verified",
@@ -12291,6 +12524,70 @@
           "id": "starts-turns.tech.39",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[218].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.slowtwitch-how-much-swim-training-ironman",
+      "display": "Slowtwitch forum thread: How Much Swim Training for an Ironman (page 1)",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://forum.slowtwitch.com/t/how-much-swim-training-for-an-ironman/849439"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[249].public.evidence[4]"
+        }
+      ]
+    },
+    {
+      "id": "src.slowtwitch-longest-prerace-swim-half-ironman",
+      "display": "Slowtwitch forum thread: Longest pre-race swim for half ironman (2008)",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://forum.slowtwitch.com/t/longest-pre-race-swim-for-half-ironman/408936"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[249].public.evidence[2]"
+        }
+      ]
+    },
+    {
+      "id": "src.slowtwitch-longest-straight-swim-set",
+      "display": "Slowtwitch forum thread: What is the longest straight swim set you do? (page 1)",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://forum.slowtwitch.com/t/what-is-the-longest-straight-swim-set-you-do/287705"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.17",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[249].public.evidence[3]"
+        }
+      ]
+    },
+    {
+      "id": "src.slowtwitch-taper-for-open-water-race",
+      "display": "Slowtwitch forum thread: Taper for Open Water Race?",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://forum.slowtwitch.com/t/taper-for-open-water-race/543125"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.19",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[251].public.evidence[2]"
         }
       ]
     },
@@ -14706,6 +15003,22 @@
           "id": "free.err5",
           "file": "canonical/instructional/teaching-errors.yaml",
           "path": "errors[4].public.evidence[0]"
+        }
+      ]
+    },
+    {
+      "id": "src.triathlon-magazine-canada-2012-open-water-tips",
+      "display": "Triathlon Magazine Canada (2012). Open Water Swimming Tips.",
+      "verification_status": "verified",
+      "identifier": {
+        "url": "https://triathlonmagazine.ca/training/triathlon-training-open-water-swimmingopen-water-swim-training/"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "open-water.tech.19",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[251].public.evidence[3]"
         }
       ]
     },
