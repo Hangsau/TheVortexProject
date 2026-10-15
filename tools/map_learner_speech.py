@@ -326,11 +326,16 @@ def cmd_merge() -> None:
     for f in sorted((WORK / "map").glob("*.json")):
         for rec in json.loads(f.read_text(encoding="utf-8")):
             mapped[rec.get("unit_id")] = rec
-    rows, dropped = [], 0
+    rows, dropped, seen = [], 0, set()
     for u in extracted_units():
         m = mapped.get(u["unit_id"])
-        if not m:
+        if not m or u.get("quote_orig") in seen:  # 跨板重貼的同一句只留第一次
             continue
+        seen.add(u.get("quote_orig"))
+        # codex 有時把 non_perception 寫成 {"key": "fitness", "why": …}；統一成字串鍵
+        m["non_perception"] = [x if isinstance(x, str) else next(
+            (x[k] for k in ("key", "kind", "category", "type") if isinstance(x.get(k), str)),
+            next((k for k, v in x.items() if v is True), "other")) for x in m.get("non_perception") or []]
         u.update({k: v for k, v in m.items() if k != "unit_id"}, certainty="🔴", reviewed=False)
         for key in ("level_candidates", "type_candidates"):
             u[key], n = check_evidence(u.get(key), card_norm)

@@ -4,20 +4,20 @@
 
 ---
 
-## 當前狀態（2026-10-15 凌晨，學習者原話研究：第 1 輪完成）
+## 當前狀態（2026-10-15 晚，學習者原話研究：第 2 輪完成）
 
 研究底稿在 `Research/學習者原話/`（不公開、不進 canonical）。規格見該目錄 `README.md`。
-- 蒐集：Reddit 3,577 篇（完成）；PTT swim 板 8,469 篇（完成，全板）。原文只在 `_raw/`（gitignored）。
-- 工具：`tools/collect_learner_speech.py`（蒐集）、`tools/build_framework_card.py`（速查卡）、`tools/map_learner_speech.py`（extract／map／merge，MiniMax 經 `claude-m3-lite -p`，飽和抽樣 `--round N --source`，額度守門 ≥90% 停、可續跑）。
-- 第 1 輪：Reddit 200 篇 → `units.jsonl` 275 句（含試點 PTT 9 句）。報告 `report.md`：吻合 7 類、缺口 G1–G7（最大是「下沉」約 32 句、「喘」約 28 句，框架都沒有區辨問題）、衝突 K1–K3。
-- 修正：M3 多段 JSON 解析（9a6a6f4）；抽句規則固定器材譯名（pull buoy＝夾腿浮條，kickboard＝浮板），第 1 輪有幾句因此錯配 Q2，報告第四節已列。
+- 蒐集：Reddit 3,577 篇、PTT swim 板 8,469 篇（全板），都完成。原文只在 `_raw/`（gitignored）。
+- 工具：`tools/collect_learner_speech.py`（蒐集）、`tools/build_framework_card.py`（速查卡）、`tools/map_learner_speech.py`（extract／map／merge；`--round N --source`；引擎 `VORTEX_ENGINE=m3|codex`，分片平行 `VORTEX_SHARD=k/n`；merge 依原文去重並統一 non_perception 鍵）。
+- `units.jsonl` 730 句：第 1 輪 Reddit 275＋PTT 第 1 輪 215＋Reddit 第 2 輪 243（去重後）。第 2 輪分類混用 MiniMax／codex，對照批首選級 10/15 一致。
+- `report.md` 第七節：器材譯名修正已生效；「沉」「喘」三批都穩定約 1 成；PTT 幾乎不談恐懼；新類型 N1 看影片才發現、N2 比喻接不上、N3 左右不對稱、N4 吞氣腸胃。**Reddit 判定飽和停止；PTT 未飽和。**
+- 教訓：codex 額度讀數是舊快照，3 路平行一小時內撞 5H 牆（2026-10-15 18:2x）。
 
 ## 下一步建議（學習者原話）
 
-1. ✅ 使用者已審（2026-10-15）：恐懼接心理層 `psych.fear.*`、翻滾暈與冷水撤出、器材依賴與仰式鼻子進水屬吻合。已落地：`free.L1.diagnostic.sinking_triage`（沉的四步分流）＋ `breathing.framework.overview` 加「先排除一般體能」。見 report.md 第六節。之後分類的 fear_panic 改指向 `psych.fear.*`。
-2. PTT 已抓完；04:10 shotclock（gq3h）會跑 PTT 第 1 輪＋Reddit 第 2 輪。手動版：`python -I tools/map_learner_speech.py extract --round 1 --source ptt`，再 `map`、`merge`。
-3. Reddit 第 2 輪（`--round 2 --source reddit`）當驗證輪：新說法類型 ≤ 1 個就停。
-4. merge 依原文去重（跨板重貼目前會算兩次）。
+1. ✅ 第 1 輪對接已落地（`free.L1.diagnostic.sinking_triage`、呼吸章先排除一般體能），見 report 第六節。
+2. **等使用者判斷 report 第七節三題**：N1 寫成判讀訊號？N2 補進 free.L3 A 的 typical_speech？N3 等 PTT 第 2 輪？
+3. **PTT 第 2 輪**：`VORTEX_ENGINE=codex python -I tools/map_learner_speech.py extract --round 2 --source ptt`，再 `map`、`merge`。codex 單路跑、別平行；MiniMax 7D 已用 82%（10/19 08:00 重置）。跑完看 N2–N4 是否繼續長，新類型 ≤1 就停。
 
 ## 當前狀態（2026-10-14 晚，三層重構＋全庫內容檢查：全計畫完成）
 
@@ -3818,5 +3818,3 @@ canonical/development/ 兩檔已落地（見當前狀態）。剩餘：
 
 *最後更新：2026-06-16（Phase 2 完成：心理層 8 主題 62 概念全接入 Vortex 網站——三帶「心理地圖」著陸頁〔沿 L0→L6／初學→競技脊椎，8 主題全 complete〕+ 首頁入口。canonical/psychology/ 8 theme/62 concept〔fear 手寫 pilot + 7 主題 7 並行 Sonnet agent 寫、ruamel merge〕，每條過三關校正、public/diagnostic 0 洩漏，各 agent 沒過清單已記。my-site CI success）*
 *下次更新時機：my-site 週期化知識整合（B）動工後*
-
-> **2026-10-15 18:5x 學習者原話第 2 輪 map 已完成（未分析）**：units.jsonl 732 句（第1輪275＋PTT第1輪＋Reddit第2輪）；前 36 批 M3、之後 14 批 codex（切換時間見 `_raw/_work/codex_switch_time.txt`）、最後 3 批 M3。剩：①抽驗 PTT 中文句＋器材譯名 ②對照 G1–G7 判飽和（新類型≤1 停）③寫進 report.md ④merge 去重跨板重貼。codex 5H 撞牆、20:39 重置；MiniMax 7D 82%。
