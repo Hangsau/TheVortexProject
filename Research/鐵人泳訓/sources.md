@@ -184,3 +184,186 @@
 - 全文已讀: 是（WebFetch 轉述）
 - 相關：H2、H5、P2、P5
 - 貼文轉載的「Top 20」游泳規則（歸屬 Filliol 由發文者宣稱，未獨立證實）：「For short course these should be at least 2km, for IM 4km, or more.」「50x50 works wonders.」「Include quality in every swim」。討論：kajet「for 99% of us, it's just a recipe for quitting the sport.」；Thebigturtle：10–12k yd、3 次/週即可得 20k、5 次/週的大部分收益；lightheir（50 歲分齡）：12k→20k/週「only a 3-4 second per 100 gain」。
+
+# ===== 以下為 spec F（迷思蒐集）新增來源，S27 起 =====
+
+## S27 [實務文件] McLarty (Sara) 2013-06-03 Four swimming myths busted (Triathlete.com)
+- URL https://www.triathlete.com/training/four-swimming-myths-busted/?scope=anon
+- 全文已讀: 是（WebFetch 轉述；四條）
+- 相關：M-kick、M-bilateral
+- 文章列四個說法並逐條反駁：「Triathletes do not need to learn how to kick.」→「Swimming efficiently requires the entire body to work together.」；「Bilateral breathing means inhaling during every third stroke.」→「Many swimmers need to breathe more often, especially when swimming hard.」；另有「控制入水以免水花」→「Slowing the arm before entering the water merely impairs streamline and increases drag.」；「游泳不流汗不用補水」。說法本身未標歸屬（文章未說誰在教）。
+
+## S28 [實務文件] Caldas (Hannah) 2021-11-22 更新 I'm a Triathlete, I Don't Kick When I Swim (Breaking Muscle)
+- URL https://breakingmuscle.com/im-a-triathlete-i-dont-kick-when-i-swim/
+- 全文已讀: 是（WebFetch 轉述）
+- 相關：M-kick
+- 引及「the common claim from triathletes and open water swimmers that they don't need to kick」；主張：「Your legs are right there behind you when you swim, perhaps you won't get much propulsion from them」但踢腿減阻、維持身體位置；「it is crucial to learn to kick smart」；「Don't feel pressured to use a 2-beat kick.」無研究引用（轉述）。
+
+## S29 [社群討論] Slowtwitch「Swimming overrated」(2005-11-11 起)
+- URL https://forum.slowtwitch.com/t/swimming-overrated/327516
+- 全文已讀: 部分（第 1 頁，OP＋19 則；後有第 2 頁未讀）
+- 相關：M-ROI
+- OP therascal：「I think that working on swimming is the wrong strategy.」「The distances are just much longer on the run and bike.」slick：「The swim is just too short compared to the other two events.」sphere 打算泳練減為每週兩次；反方 Blacky：「Having a good swim can gain heaps of time on the bike these days」（draft 賽）；TripleThreat 認為游泳體能會遷移；desert_dude：「the real benefit to spending more time in the pool is not just a faster swim split.」；gigs：慢者游泳進步空間較大。約 4 人傾向少練游泳／少投資，約 8 人主張技術或游泳體能有價值，其餘「看個人」。皆自述。
+
+## S30 [實務文件] Burgan (Erik) 2008-01-29 Kicking（Slowtwitch 文章）
+- URL https://slowtwitch.com/swimming/kicking/
+- 全文已讀: 是（WebFetch 轉述）
+- 相關：M-kick
+- 「kicking for the triathlete is not a significant means of propulsion.」「Kicking is important, but only as a means of aiding one's balance and one's body position in the water.」「Leg strength, though, has very little to do with how well you kick.」「why even use a kickboard? It places you in an awkward position in the water.」
+
+## S31 [社群討論] Slowtwitch「Just to shake things up on the board, here's a SWIM-related question」(2005-02-16~18)
+- URL https://forum.slowtwitch.com/t/just-to-shake-things-up-on-the-board-heres-a-swim-related-question/302394
+- 全文已讀: 是（WebFetch 轉述；約 19 則、18 人）
+- 相關：M-kick、M-wetsuit
+- 「少踢／不踢」派：Reddy「i think some coaches over rate kicking while swimming for triathletes.」、HalfSpeed「As long as your feet aren't sinking, you're probably kicking enough.」、TJ56（穿防寒衣「why bother kicking」）、hasbeenswimmer（防寒衣使腿位置高、不適合踢）、Ashburn「I take care to never kick when in a wetsuit in a race.」（賽時不踢、練習用浮條，自稱泳段前 5%）。約 5 人。
+- 「要踢（輕踢／兩拍）」派：desert_dude「Your kick helps stabilize your body.」、Sparticus「You need to kick for body balance - even if you get no forward propultion from your kick.」、AndyPants「even a 2 or 3 beat kick will keep you in a better body position.」、Jason_D「If you do an IM without kicking at all, then you will most likely have some tight legs.」、DougStern「One of the functions of your kick is to balance your arm stroke.」。約 8 人。多數折衷：長賽少踢、保留輕踢維持平衡。
+
+## S32 [實務文件] Wood (John) Triathlon swimming: do you need to put in the legwork? (Sports Performance Bulletin)
+- URL https://sportsperformancebulletin.com/training/techniques/triathlon-swimming-do-you-need-to-put-in-the-legwork
+- 全文已讀: 是（WebFetch 轉述；日期未取得）
+- 相關：M-kick
+- 「the days of just telling triathletes to kick as little as possible should be numbered!」「Freestyle leg kick is propulsive overall」「having the legs kick at least a little is more beneficial than not kicking.」「Kicking can actually benefit your bike and run.」引 Eur J Appl Physiol 2016;116(5):1075-1085：受訓游泳者腿＋手比無踢腿快 10–15%、總代謝輸出未增（作者轉述，我未讀該論文原文，只當線索，不計入研究全文；WebSearch 顯示該卷頁對應的標題為 Morris 等「Velocity, aerobic power and metabolic cost of whole body and arms only front crawl swimming at various stroke rates」，其摘要內容我未取得，故 10–15% 數字無法核實）。個案 Tom Cooling 1:50→1:35–1:40/100 m（教練軼事）。
+
+## S33 [實務文件] Kaplan (Greg) 2019-06-26 更新 Debunking Common Triathlon Myths (Active.com)
+- URL https://www.active.com/triathlon/articles/debunking-common-triathlon-myths
+- 全文已讀: 是（WebFetch 轉述）
+- 相關：M-wetsuit(規則面)
+- 游泳相關僅三條（有風險／皆開放水域／暖水不可穿防寒衣），皆非本規格訓練迷思。防寒衣規則：USAT 賽 78°F 以下一般允許，78°F 以上可穿但不具年齡組獎資格，「If the water temps are above 84 degrees, wetsuits are prohibited」。另「You need to train all three disciplines equally」判為迷思（作者主張針對弱項）。
+
+## S34 [實務文件] Burgess (Dave) 2017-05-30 So, You Want to Swim Faster? You May Be Doing It All Wrong (USA Triathlon Multisport Lab blog)
+- URL https://archive.teamusa.com/usa-triathlon/news/blogs/multisport-lab/2017/may/30/you-want-to-swim-faster.html
+- 全文已讀: 是（WebFetch 轉述）；作者為 USAT Level II、USMS、ASCA Level 3 教練；文末聲明為個人觀點
+- 相關：M-rate
+- 引述一個流傳說法：「reducing the stroke rate in their swim is the telltale benchmark of swimming improvement」；「A low stroke rate is usually indicative of a long glide phase in the front-quadrant of the stroke.」「Taking fewer strokes per length is great. But if you're going slower in the process, that's counterproductive.」（即反對單看低划頻）。無研究引用。
+
+## S35 [實務文件] Casey (Heather) 2016-10-13（2026-04-09 更新）Is Bilateral Breathing Essential for Triathletes? (TrainingPeaks)
+- URL https://www.trainingpeaks.com/blog/is-bilateral-breathing-essential-for-triathletes/
+- 全文已讀: 是（WebFetch 轉述）；作者 USAT L2、Ironman 認證教練
+- 相關：M-bilateral
+- 「Bilateral breathing is a skill all triathletes should learn and train with」；「The biggest drawback to bi lateral breathing is that you will be taking in less oxygen」；「Breathing every second stroke will provide the most oxygen for performance」；「Stroke pattern is very individual, and what is faster for one athlete may not be faster for the next」；建議練雙側以矯正技術/平衡，賽中可換成較快的非雙側。
+
+## S36 [社群討論] Slowtwitch「Should You Bilateral Breathe?」(2024-10-03 起)
+- URL https://forum.slowtwitch.com/t/should-you-bilateral-breathe/1281345
+- 全文已讀: 部分（第 1 頁，OP＋19 則；有第 2 頁未讀）
+- 相關：M-bilateral
+- OP SnappingT（Tim，自稱教練，S18 亦為其）質疑雙側換氣教條：「there's always one side that is more comfortable for athletes to breathe to」。atkid（非正式實測）：右側呼吸幾乎同快，「Breathing bilaterally at same effort was 4-5 seconds slower」（約 1:25 vs 1:29，自述「numbers may be off」）。monty：「the new paradigm of air is king trumps that old pattern of breathing every 3rd stroke.」支持雙側/視為有用技能：xsalmon「I am a firm believer in not having a dominant side.」、BCtriguy1「Swimming is a collection of skills.」（開放水域與定向有用）、edbikebabe。回覆者約 3 人傾向保留、3 人質疑常規雙側，餘中立。
+
+## S37 [實務文件] Sutton (Brett) 2014-12-08（2023-01-23 更新）The pull-buoy debate (trisutto.com)
+- URL https://www.trisutto.com/post/the-pull-buoy-debate
+- 全文已讀: 是（WebFetch 轉述）；作者自述教練五十年；無認證列出
+- 相關：M-buoy
+- 「Pull-buoys also mimic wetsuit swimming, which is an entirely different body position than normal non-wetsuit position.」「This will get your butt up to the level one has when racing with a wetsuit.」作者個人觀點，無研究引用。
+
+## S38 [社群討論] Slowtwitch「What's the big deal with pull buoys?」(2007-06-25)
+- URL https://forum.slowtwitch.com/t/whats-the-big-deal-with-pull-buoys/383842
+- 全文已讀: 是（OP＋6 則；WebFetch 轉述）
+- 相關：M-buoy
+- KL：「it simulates my flotation with a wetsuit quite well」；douglaswebster：「a great way to simulate the wetsuit feel」（用 buoy 達 70% 課量）；brentl：高拉浮條量是數個非泳者達世界盃水準的原因（自述）；logella：「restricts my ability to properly rotate my body during the swim.」；tribritre：過量浮條會損踢腿與節奏。約 3 人支持以浮條模擬防寒衣，2 人提保留。
+
+## S39 [社群討論] Slowtwitch「Buoyancy shorts all the time?」(2021-02-22)
+- URL https://forum.slowtwitch.com/t/buoyancy-shorts-all-the-time/803573
+- 全文已讀: 部分（第 1 頁，OP＋19 則；有第 2 頁未讀）
+- 相關：M-buoy
+- OP tedtri 問強泳者是否所有訓練都穿浮力短褲（防寒衣賽）：「specificity is key, and having buoyancy that simulates a wetsuit」；lightheir：「the sim shorts DO more closely simulate the actual body position of race swimming in a wetsuit」但可能成為拐杖；反對：Former_User「learning to swim properly without aids all the time is hugely beneficial」、anon62099856「in the end your whole form goes down the drain」、Engner66「If you are worried about wetsuit, then train with the wetsuit」；bluesmachine 自述長期穿後停用成績退步。約 5 人支持有限使用或模擬，約 6 人反對全程使用。皆自述。
+
+## S40 [線索，全文未讀] Delextrat et al. 2003 Med Sci Sports Exerc 35:1612-1619 drafting 研究的二手摘要（coachsci.sdsu.edu）
+- URL https://coachsci.sdsu.edu/csa/vol101/delextra.htm
+- 全文已讀: 否（頁面為訓練原則專欄的摘要，非論文或摘要原文）→ 只當線索，不作研究證據
+- 摘要：8 名男鐵人，750 m 單游 vs 跟游，後接 15 分鐘 75% VO2max 騎乘；跟游後騎乘效率「+4.8%」。
+
+## S41 [社群討論] Slowtwitch「Learning to swim . . . is it too late? What's the best way?」(2018-07-05 起)
+- URL https://forum.slowtwitch.com/t/learning-to-swim-is-it-too-late-whats-the-best-way/764019
+- 全文已讀: 部分（第 1 頁，OP＋約 16 則；有第 2 頁未讀）
+- 相關：M-adult
+- OP 58 歲問「Is 58 too late to expect to learn to swim competently?」回覆者 14 人以上皆表示可學：justinhorne 約 3.5 個月到奧運距離開放水域；blueapplepaste 無教練 6.5 個月完成 Ironman 泳段；AutomaticJack 之妻 47 歲學游、兩次 Ironman 完賽、「slow but comfortable」；lightheir：「it comes quickly for some, but not so quickly for most.」；justinhorne：「Swimming is so technique-based」，資深泳者會游過初學者。無人主張「改不了」。
+
+## S42 [實務文件] Triathlete.com 2022-06-30 Why Adult-Onset Swimmers Shouldn't Use a Traditional Swim Coach
+- URL https://www.triathlete.com/training/getting-started/why-adult-onset-swimmers-should-not-use-a-traditional-swim-coach/?scope=anon
+- 全文已讀: 是（WebFetch 轉述；無署名）
+- 相關：M-adult
+- 受訪 Melon Dash（Miracle Swimming School）、Taren Gesell（Triathlon Swimming Foundations 作者）。「Safety comes before stroke development.」；Gesell「You need to be able to breathe, not panic, and not sink.」主張成人需先建基礎（身體位置、換氣）再做划水 drill，masters 教練擅長修技術但常不擅長教成人基礎。無研究引用。立場是「可學，但方法要對」，非「改不了」。
+
+## S43 [社群討論] Slowtwitch「What is your 'Shake-out' Routine」(2013-10-22)
+- URL https://forum.slowtwitch.com/t/what-is-your-shake-out-routine/643165
+- 全文已讀: 是（WebFetch 轉述；約 12 則）
+- 相關：M-dayBefore
+- 只有 Timbikerun（賽前一天 20 分鐘游，含短配速段，最好在比賽水域：「feeling sharp and loose」）與 jaretj（賽前兩天游 30 分鐘）描述游泳；motoguy128「Too much of a PITA to go for a swim at most venues」；無人明確主張前一天完全不下水（CobraKai_Triguy「Then go to bed.」為玩笑）。
+
+## S44 [實務文件] Manzi (Tom) 2013-09-09 更新 Things to Keep in Mind the Day Before Your Triathlon (Active.com)
+- URL https://www.active.com/articles/things-to-keep-in-mind-the-day-before-your-triathlon
+- 全文已讀: 是（WebFetch 轉述）；作者自述 USAT Elite 級認證教練
+- 相關：M-dayBefore
+- 「A successful strategy is to take off two days before the race to rest.」並「finish the last workout the day before the race」；「try to get into the water at the same time your swim wave will go off on race day.」（若場地允許，最後一練在前一天下水）。
+
+## S45 [實務文件] FORM 2023-12-20 Triathlon Swim Training: Pro Tips from Olympian Aaron Royle to Prepare You for Race Day
+- URL https://www.formswim.com/blogs/all/triathlon-swim-training-race-day-prep
+- 全文已讀: 是（WebFetch 轉述；廠商部落格，FORM 為泳鏡產品商）
+- 相關：M-dayBefore
+- 「The optimal pre-race triathlon swimming workout will be short and aligned with your overall race strategy.」「your goal is simply to get comfortable with how you'll begin your race.」頁面無踢腿／防寒衣內容。
+
+## S46 [實務文件] Sutton (Brett) 2015-10-18（2021-06-22 更新）The 7 myths of swimming for triathlon (trisutto.com)
+- URL https://trisutto.com/post/the-7-swim-myths-of-swimming-for-triathlon
+- 全文已讀: 是（WebFetch 轉述）；作者為教練，個人觀點，無研究引用
+- 相關：M-kick、M-bilateral、M-buoy、M-ow
+- 作者自列「迷思」：六拍踢非快游基礎（「For the distance swimmer the kick is about balance, and only balance.」）；屈肘非必要（「it is not a fundamental for swimming fast. Not now. Not ever.」）；拇指入水傷肩是謬誤；「Pull Buoy Hurts Your Swim」→「swimming with a modified pull-buoy will enhance every age-group athlete in some capacity with their swim.」；雙側換氣「There is no need to bilateral breathe.」；不翻滾轉身；巡航配速表對弱泳者不準（「drop off remarkably after about 200m」）。這些是作者所稱的「別人在教的說法」，但未指名教誰。
+
+## S47 [社群討論] Slowtwitch「List of conflicting Swim advice you have heard or seen :)」(2023-12-18~19)
+- URL https://forum.slowtwitch.com/t/list-of-conflicting-swim-advice-you-have-heard-or-seen/827979
+- 全文已讀: 部分（第 1 頁；有第 2 頁未讀）
+- 相關：M-longrep、M-onlyfree、M-kick、M-ROI、M-ow、M-rate、M-bilateral、M-buoy
+- 本串直接蒐集「聽過的衝突建議」（發文者自述，非教練身分查證）。MrTri123 配對清單：「Never do sets longer than 200 yards」vs「Definitely so long repeats and swims 400 to up to race distance」；「Any good swimmer can do all 4 strokes」vs「You only have to do freestyle」；「Spend most of your limited ltime running and biking」vs「If you don't put significant time into swimming it will slow down your bike and run」；「Pool swimming is the same as swimming in a triathlon」vs「There is a significant difference between open water/triathlon swimming」；「Distance per stroke is most important」vs「Open water has chop you need to practice a faster swim stroke」；「Pull buoys/ paddles builds strength」vs「…teaches bad form」（MI_Mumps）；cherry_bomb：「Swimming is only 10-20% of a triathlon」vs「You can't be a good triathlete if you aren't a good swimmer」；kem：「Bilateral breathing is important」vs「Bilateral breathing doesn't matter」；latkin：防寒衣「Size down…tight = hydrodynamic」vs「Size up…to reduce shoulder fatigue」；lightheir 轉述 Sutton「You can swim as much as you want with buoy/paddles/simshorts, it only helps」vs「Ditch all toys as they're just crutches」。每個說法多僅 1 人提到，流傳度只能說「被多人認出」，無法量化。
+
+## S48 [社群討論] Slowtwitch「Wetsuit Floating Legs and no kick」(2003-07-09~10)
+- URL https://forum.slowtwitch.com/t/wetsuit-floating-legs-and-no-kick/279631
+- 全文已讀: 是（OP＋10 則；WebFetch 轉述）
+- 相關：M-kick、M-wetsuit
+- Kenney（43 歲回泳，IMCDA 泳段 67–68 分）：「was told not to kick to save my legs」（被誰告知未說）；mtntri1：「I kick very little, just sorta drag em behind me.」；smeegle：大力踢使髖屈肌疲勞影響跑步，「you will be better off in the long run not kicking at all」（若屈膝踢）；Swim_Fast：距離游中腿「primarily used for balance」，強踢留給衝刺；Chubby_Hubby：練習要練踢，賽時 2 拍輕踢。約 4 人少踢／不踢，3 人保留輕踢。
+
+## S49 [實務文件] Duncan (Claire) 2017-01-10 Should triathletes train different swim strokes? (Triathlon Magazine Canada)
+- URL https://triathlonmagazine.ca/?p=13215
+- 全文已讀: 是（WebFetch 轉述；無作者資歷）
+- 相關：M-onlyfree
+- 「there are several advantages to learning the other three swim strokes.」「Training just one stroke can lead to repetitive motion injuries.」「Have a coach correct your technique to avoid injury.」新手每週「just one workout per week」加新泳式。無研究引用。
+
+## S50 [實務文件] Bullock (Dan) 2018-09-12（2026-04-28 更新）9 Reasons Why Pool Speed May Not Translate to Open Water (TrainingPeaks)
+- URL https://www.trainingpeaks.com/coach-blog/9-reasons-why-pool-speed-may-not-translate-to-openwater/
+- 全文已讀: 是（WebFetch 轉述）；作者 Speedo/Vasa 教練顧問、Swim For Tri 創辦人
+- 相關：M-ow、M-kick、M-drafting
+- 「Pool sessions don't simulate OW conditions well.」「I teach the concept of trying to be an adaptable swimmer.」踢腿：「too much will leave your athlete fatigued for the bike」（過多）且過少則手臂負荷過大。跟游：「it's hard to judge pace from someone's feet」，作者偏好坐在別人髖側找較乾淨水域。
+
+## S51 [線索，全文未讀] López-Belmonte et al. 2024 Swimming Performance in Elite Triathletes: Comparison Between Open Water and Pool Conditions (Scand J Med Sci Sports 34:e14702, DOI 10.1111/sms.14702)
+- URL https://digibug.ugr.es/handle/10481/97469（HTTP 403 取不到頁面；以下為 WebSearch 摘要）
+- 全文已讀: 否 → 只當線索
+- 14 名菁英鐵人（10 男 4 女）兩次 1500 m（OW vs 25 m 池）：OW 較短划幅、較高划頻；心率／乳酸／終點攝氧無差；OW 最快者在池也最快（r=0.958）。作者建議監控特定 OW 訓練以適應技術。
+
+## S52 [研究] Chatard & Wilson 2003 Drafting Distance in Swimming (Med Sci Sports Exerc 35(7):1176-1181)
+- URL https://rtk.schwimmen.sport-iat.de/fileadmin/user_upload/DSV-Schwimmen/Chatard___Wilson__2003_._Drafting_distance_in_Swimming.pdf（PDF 本機以 pymupdf 抽文字，6 頁全文）
+- 全文已讀: 是
+- 族群：11 名游泳者（非鐵人賽事），4 分鐘 95% 最佳 1500 m 配速；後排 0/50/100/150 cm；另 6 人側向跟游被動拖曳
+- 相關：M-drafting
+- 「Oxygen uptake was reduced by 11%, HR by 6%, blood lactate by 38%, RPE by 20%, and stroke rate by 6%, whereas stroke length was increased by 6%, at the optimal drafting distance of 0 or 50 cm.」被動拖曳阻力於 0、50 cm 降 21%、20%；側向 50、100 cm（自領游者手部起算）降 6%、7%。「Even up to 150 cm from the leader, swimmers can still benefit from a 10% reduction in metabolic cost.」領游者被指示不踢腿。文中引 Bassett 等：耗氧降 8±12%、乳酸 33±17%、RPE 21±10%。
+
+## S53 [研究] Brisswalter & Hausswirth 2008 Consequences of Drafting on Human Locomotion: Benefits on Sports Performance (brief review; Int J Sports Physiol Perform 3)
+- URL https://rtk.schwimmen.sport-iat.de/fileadmin/user_upload/DSV-Schwimmen/Brisswalter___Hausswirth__2008_._Consequences_of_drafting_on_human_locomotion._Benefits_on_sports_performance.pdf（PDF 本機抽文字，13 頁全文）
+- 全文已讀: 是（綜述；游泳段落細讀，其餘跑／自行車未細讀）
+- 相關：M-drafting、M-kick
+- 轉述 Delextrat 等：跟游後騎乘「a significantly higher cycling efficiency (+4.8%)」、踏頻 5.6%（原論文未讀，此為綜述轉述）。「Chatard and Millet showed that swimming behind a leader increased swimming velocity by 3.2% (ie, 20-m benefits over 400 m)」，增益與泳者能力和皮脂厚度有關（較快、較瘦者增益較大）；Chollet：400 m 跟游速度 1.34→1.39 m/s。引 Millet 等：鐵人可用兩拍或六拍踢「to reduce the propulsive phase of the lower limbs」。綜述自述：跟游降低下肢推進期是騎乘效率提升的可能解釋，作者用「Presumably」（推測）。
+
+## S54 [研究] Gay, López-Contreras, Fernandes, Arellano 2019 Is Swimmers Performance Influenced by Wetsuit Use? (Int J Sports Physiol Perform, accepted manuscript, DOI 10.1123/ijspp.2018-0891)
+- URL https://digibug.ugr.es/bitstream/10481/62629/1/Gay-et-al.-2019-IJSPP.pdf（PDF 本機抽文字，17 頁全文，作者接受稿）
+- 全文已讀: 是
+- 族群：33 名游泳者（26.46±11.72 歲），400 m 最大自由式，泳池與水槽；非鐵人賽
+- 相關：M-wetsuit
+- 「Swimming pool 400m performance was 0.07m·s-1 faster when using the wetsuit than swimsuit, evidencing a reduction of ~6% in time」；SL、SI 提高，SR 相近；「The 6% velocity improvement was the result of an increase of 4% in SL.」結論：「The swimmers improved 6% the velocity with the wetsuit due to the suit itself because they do not change their swim technique as the results show.」身體位置未測（「it was not measured in the present study」）。引言：先前研究認為增益來自浮力與降阻，且對「inefficient swimmers with low buoyancy」能耗降低較多（引他人，未在本文驗證）。建議訓練期可穿防寒衣練以適應。
+
+## S55 [實務文件] ctyeh.com（匿名）2026-05-22 鐵人三項游泳配速與能量分配文章
+- URL https://ctyeh.com/articles/4356
+- 全文已讀: 是（WebFetch 轉述；繁中）；作者匿名、文中無任何引用來源，數字（如「最大心率 75–80%」）不採信，僅作「中文圈有這種說法」的流傳證據
+- 相關：M-easy
+- 「鐵人三項游泳段不應是「全力衝刺」，而是「有效率的巡航」。」「以最省力方式游完，保留體能給後兩段」。文章未談踢腿。
+
+## 補充：中文社群蒐集嘗試（供下游勿重試）
+- WebSearch 對 PTT、Mobile01、痞客邦、Facebook 公開文章：三次搜尋均未回傳任何 PTT／Mobile01／痞客邦鐵人游泳迷思串；結果幾乎全是 ctyeh.com（單一匿名部落格，無出處、數字偏誇張）與醫療／新聞稿。→ 中文社群端「未找到」，不是「不存在」。
+- Reddit r/triathlon、r/Swimming：WebSearch 未回傳任何 reddit 串（可能被搜尋工具排除），故本次無 Reddit 證據。
+- Peeling et al. 2005（S19）：PMC PDF 路徑回 HTML；VU 研究庫 vuir.vu.edu.au/8100 明示「Full text ... is not available」→ 仍只有摘要。
+- Delextrat 等 2003 原文、López-Belmonte 2024 原文、220 Triathlon 文章（7 open water swim myths busted、tri247 triathlon-swimming-myths 均 HTTP 403）、Swim Smooth 部落格（404）、SwimSwam（付費 402）：取不到。
