@@ -11,13 +11,12 @@
 - 新技能 `open-water`：tech.1–19、move.1–8、OW1–OW15、6 個問題；taxonomy、validate、工具清單已登錄。my-site 第 7 頁 `/cortex/vortex/open-water/` 已上線（my-site `9a47700`）。
 - 鐵人訓練架構 tech.14–19 已依外部查證改寫：`Research/鐵人泳訓/{sources,verdicts}.md`（26 筆全文來源；🟢 只給研究，實務／論壇用 🔵 並標類型）。
 - **證據規則（使用者 2026-10-15 定）**：只引讀到全文的來源；沒有依據不准自訂數字上限或處方（UDK7 曾被自訂 25 m 上限，已撤）。
-- 教學誤區 open-water.err 目前 0 條（等迷思研究）。規則全文（World Triathlon／World Aquatics 開放水域）WebFetch 取不到，防寒衣門檻、跟游距離只寫「依賽事規則」。
+- 鐵人迷思：`Research/鐵人泳訓/myths.md` 17 條判定；已寫入教學誤區 open-water.err1–2（不用學踢腿、一定要雙邊換氣）、常見說法判定 tech.20–24，跟游（tech.4）與防寒衣（tech.7）補研究證據。引句以 `tools/check_research_quotes.py` 比對原文（WebFetch 是模型轉述，不能當原文），結果在 `Research/鐵人泳訓/quote_check.md`。規則全文（World Triathlon／World Aquatics 開放水域）WebFetch 取不到，防寒衣門檻、跟游距離只寫「依賽事規則」。
 
 ## 下一步建議（鐵人）
 
-1. **迷思研究 spec_F 進行中**（Sonnet agent，輸出 `Research/鐵人泳訓/myths.md`）。回來後：符合收錄標準的寫進 `teaching-errors.yaml` 的 open-water.errN，其餘寫成問題或技術點；推上線。
-2. **課表工具出鐵人課表**：可用參數見 `Research/鐵人泳訓/verdicts.md` 末段「對出課表的影響」（每週堂數、單堂時間、主課組型範本有出處；強度分布、乳酸比例、開放水域配速換算、鐵人減量是缺口，課表須標無出處）。實作在 my-site workout 工具，先寫規劃。
-3. 取得 Cejuela & Selles-Perez 2023、Casado 2021 全文（需使用者手動下載）可補強度分布缺口；規則 PDF 同理。
+1. **課表工具出鐵人課表**：可用參數見 `Research/鐵人泳訓/verdicts.md` 末段「對出課表的影響」（每週堂數、單堂時間、主課組型範本有出處；強度分布、乳酸比例、開放水域配速換算、鐵人減量是缺口，課表須標無出處）。實作在 my-site workout 工具，先寫規劃。
+2. 取得 Cejuela & Selles-Perez 2023、Casado 2021 全文（需使用者手動下載）可補強度分布缺口；規則 PDF 同理。
 
 ## 當前狀態（2026-10-15 晚，學習者原話研究：第 2 輪完成）
 
