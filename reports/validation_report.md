@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-10-15
-> 驗證條目數：888，Drills ID 數：179
+> 驗證條目數：911，Drills ID 數：199
 
 ---
 
@@ -231,7 +231,7 @@
 
 ## W002 — 區塊**有**來源顯示字串（`source`/`sources`）但缺 `source_ids`（機器鍵沒跟上顯示層）；S3a-2 起不看 `certainty`
 
-**WARN，共 10 筆**
+**WARN，共 15 筆**
 
 > **契約說明（S3a／S3a-2）**：`source`（單數字串）與 `sources`（複數清單）都是顯示層自由文字，下游 my-site 直接渲染，**不可改寫、改名或改成陣列**；可解析的來源鍵放同區塊的 `source_ids`，指向 `canonical/_sources.yaml` 的 `src.<slug>`。W002 自 S3a-2 起**與 `certainty` 解耦**：一個區塊只要帶了來源顯示字串，不論有沒有標確定性，那個來源都該進註冊表、都該有`source_ids` 指過去。掃描範圍也含 `Drills/*.yaml`。W009 仍綁 `certainty`——它問的是「標了 🟢/🟡 卻拿不出任何來源」，語意本來就以確定性標記為前提。兩者差別在**有沒有來源顯示資訊**：W002 已經有字串，只差把它登錄成來源條目再補機器鍵（純遷移）；W009 連顯示字串都沒有，得回頭找出主張的依據（S3b，不能靠遷移解決）。兩者不可互相代替，也不可用佔位來源填掉 W009。
 
@@ -241,10 +241,15 @@
   file=Drills\drills_freestyle.yaml id='FrEC1' at=drills[28] 有 source 顯示字串但無 source_ids（無 certainty）
   file=Drills\drills_sculling.yaml id='ScFist' at=drills[10] 有 source 顯示字串但無 source_ids（無 certainty）
   file=Drills\drills_sculling.yaml id='ScUW1' at=drills[11] 有 source 顯示字串但無 source_ids（無 certainty）
+  file=Drills\drills_starts-turns.yaml id='ST6' at=drills[9] 有 source 顯示字串但無 source_ids（無 certainty）
+  file=Drills\drills_starts-turns.yaml id='ST9' at=drills[12] 有 source 顯示字串但無 source_ids（無 certainty）
+  file=Drills\drills_starts-turns.yaml id='ST16' at=drills[19] 有 source 顯示字串但無 source_ids（無 certainty）
+  file=Drills\drills_starts-turns.yaml id='ST17' at=drills[20] 有 source 顯示字串但無 source_ids（無 certainty）
   file=Drills\drills_udk.yaml id='UDK2' at=drills[1] 有 source 顯示字串但無 source_ids（無 certainty）
   file=Drills\drills_udk.yaml id='UDK3' at=drills[2] 有 source 顯示字串但無 source_ids（無 certainty）
   file=Drills\drills_udk.yaml id='UDK4' at=drills[3] 有 source 顯示字串但無 source_ids（無 certainty）
   file=Drills\drills_udk.yaml id='UDK5' at=drills[4] 有 source 顯示字串但無 source_ids（無 certainty）
+  file=Drills\drills_udk.yaml id='UDK8' at=drills[9] 有 source 顯示字串但無 source_ids（無 certainty）
 
 ---
 

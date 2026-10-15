@@ -11535,6 +11535,11 @@
         "file": "plans/recovery_integration_plancheck.md",
         "line": 102,
         "section": "W1.1 結果（2026-08-12 已查證，取代原 W1 第 1 項）"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
+        "line": 17,
+        "section": "0. 硬規則"
       }
     ],
     "psych.flow": [
@@ -11939,6 +11944,11 @@
         "file": "plans/W10_起跳段覆蓋派工規格.md",
         "line": 461,
         "section": "D4 入水 — **內容最厚，兩欄不一致最多**"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_A_起跳轉身水下.md",
+        "line": 35,
+        "section": "1a. `canonical/instructional/technical-analysis.yaml`：新增技術點（stroke: starts-turns，ID 從現有最大號往後接）"
       }
     ],
     "starts-turns.tech.12": [
@@ -12235,6 +12245,11 @@
         "file": "plans/E組_問題候選盤點.md",
         "line": 429,
         "section": "定案"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_A_起跳轉身水下.md",
+        "line": 27,
+        "section": "1a. `canonical/instructional/technical-analysis.yaml`：新增技術點（stroke: starts-turns，ID 從現有最大號往後接）"
       }
     ],
     "starts-turns.tech.24": [

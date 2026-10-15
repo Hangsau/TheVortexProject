@@ -136,10 +136,10 @@ class TestGeneratedViews(unittest.TestCase):
         import yaml
         entries = yaml.safe_load((ROOT / "canonical/instructional/problems.yaml").read_text(encoding="utf-8"))["problems"]
         coverage = self.views["gap_report.json"]["problem_coverage"]
-        self.assertEqual(coverage["total"], 73)
-        self.assertEqual(sum(coverage["counts"].values()), 73)
+        self.assertEqual(coverage["total"], 78)
+        self.assertEqual(sum(coverage["counts"].values()), 78)
         covered = [i for ids in coverage["buckets"].values() for i in ids]
-        self.assertEqual(len(set(covered)), 73)
+        self.assertEqual(len(set(covered)), 78)
         self.assertEqual(set(covered), {entry["id"] for entry in entries})
         for gap, ids in coverage["missing"].items():
             self.assertEqual(set(ids), {entry["id"] for entry in entries if gap in entry["coverage_gap"]})

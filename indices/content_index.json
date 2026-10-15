@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1067,
+  "record_count": 1110,
   "records": [
     {
       "id": "Bk1",
@@ -2940,6 +2940,202 @@
       "outgoing_ids": []
     },
     {
+      "id": "ST10",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[13]",
+      "title": "蹬牆側躺、轉俯臥、接第一划",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST11",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[14]",
+      "title": "轉身 25（中池起動、全速進牆、全速出）",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST12",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[15]",
+      "title": "疲勞轉身（主課最後幾趟只計轉身品質）",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L4",
+          "L5"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST13",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[16]",
+      "title": "仰式旗下計划、翻俯臥一划、翻滾仰躺蹬出",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST14",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[17]",
+      "title": "終點觸牆：最後 5 公尺全速、不抬頭、伸長觸牆",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST15",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[18]",
+      "title": "接力交接：兩人一組觀察前一棒最後一划",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST16",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[19]",
+      "title": "出發進程：坐姿入水、跪姿、單腳前後站",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L2"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST17",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[20]",
+      "title": "入水穿洞（漂浮呼拉圈或想像點）",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L2",
+          "L3"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST18",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[21]",
+      "title": "破水三步：蹬牆、N 下海豚踢、第一划不換氣、接 6 划",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "l_level": [
+          "L4",
+          "L5"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST19",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[22]",
+      "title": "蛙式 pullout 計距",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "ST2",
       "domain": "drills",
       "file": "Drills/drills_starts-turns.yaml",
@@ -2956,6 +3152,26 @@
       },
       "source_ids": [
         "src.u-s-masters-swimming-faster-flip-turns-wall"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST20",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[23]",
+      "title": "仰式破水：仰臥海豚踢、轉換踢、第一划",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "l_level": [
+          "L4",
+          "L5"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
       ],
       "outgoing_ids": []
     },
@@ -3017,6 +3233,76 @@
       "source_ids": [
         "src.bay-2017-usms-flip-turn-fundamentals"
       ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST6",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[9]",
+      "title": "站立前滾翻（淺水，鼻子吐氣）",
+      "tags": {
+        "category": [
+          "turn"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST7",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[10]",
+      "title": "開放式轉身分解：觸牆—肘拉—越頂手入水—側蹬",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L2",
+          "L3"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST8",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[11]",
+      "title": "離牆水平旋轉練習（一耳貼水面）",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L2"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "ST9",
+      "domain": "drills",
+      "file": "Drills/drills_starts-turns.yaml",
+      "path": "drills[12]",
+      "title": "開放式轉身左右手輪流",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "l_level": [
+          "L3"
+        ]
+      },
+      "source_ids": [],
       "outgoing_ids": []
     },
     {
@@ -3350,6 +3636,26 @@
       "outgoing_ids": []
     },
     {
+      "id": "UDK10",
+      "domain": "drills",
+      "file": "Drills/drills_udk.yaml",
+      "path": "drills[11]",
+      "title": "抓池邊海豚踢（只練上踢）",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "l_level": [
+          "L2",
+          "L3"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "UDK2",
       "domain": "drills",
       "file": "Drills/drills_udk.yaml",
@@ -3419,6 +3725,84 @@
         ]
       },
       "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "UDK6",
+      "domain": "drills",
+      "file": "Drills/drills_udk.yaml",
+      "path": "drills[7]",
+      "title": "側身海豚踢（教練從正面看手擺與腳離線）",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "UDK7",
+      "domain": "drills",
+      "file": "Drills/drills_udk.yaml",
+      "path": "drills[8]",
+      "title": "仰臥流線海豚踢（穿蛙鞋，下踢壓水）",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "l_level": [
+          "L4",
+          "L5"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "UDK8",
+      "domain": "drills",
+      "file": "Drills/drills_udk.yaml",
+      "path": "drills[9]",
+      "title": "穿蛙鞋與不穿蛙鞋對照",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "UDK9",
+      "domain": "drills",
+      "file": "Drills/drills_udk.yaml",
+      "path": "drills[10]",
+      "title": "固定距離踢數梯（同距離比較用幾踢）",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "l_level": [
+          "L4",
+          "L5"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
       "outgoing_ids": []
     },
     {
@@ -18280,6 +18664,52 @@
       ]
     },
     {
+      "id": "prob.starts-turns.back-turn-distance",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[76]",
+      "title": "仰式轉身常常撞牆，或離牆太遠才翻",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST13",
+        "ST4",
+        "starts-turns.tech.23",
+        "starts-turns.tech.51"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.breathless-after-turn",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[74]",
+      "title": "轉身完出來很喘，第一划就想換氣",
+      "tags": {
+        "category": [
+          "breakout"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST12",
+        "ST18",
+        "UDK9",
+        "starts-turns.tech.44",
+        "starts-turns.tech.56",
+        "starts-turns.tech.58"
+      ]
+    },
+    {
       "id": "prob.starts-turns.deep-turn",
       "domain": "instructional",
       "file": "canonical/instructional/problems.yaml",
@@ -18317,6 +18747,28 @@
       "outgoing_ids": [
         "starts-turns.err5",
         "starts-turns.tech.19"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.flip-nose-water",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[73]",
+      "title": "翻滾轉身時鼻子一直進水，不敢翻",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST1",
+        "ST6",
+        "starts-turns.tech.50",
+        "starts-turns.tech.57"
       ]
     },
     {
@@ -18385,6 +18837,28 @@
       ]
     },
     {
+      "id": "prob.starts-turns.open-turn-wall-stall",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[75]",
+      "title": "開放式轉身在牆上停很久",
+      "tags": {
+        "category": [
+          "turn"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST7",
+        "ST8",
+        "ST9",
+        "starts-turns.tech.49"
+      ]
+    },
+    {
       "id": "prob.starts-turns.pullout-wait",
       "domain": "instructional",
       "file": "canonical/instructional/problems.yaml",
@@ -18401,6 +18875,26 @@
       "source_ids": [],
       "outgoing_ids": [
         "starts-turns.err13"
+      ]
+    },
+    {
+      "id": "prob.starts-turns.relay-early-leave",
+      "domain": "instructional",
+      "file": "canonical/instructional/problems.yaml",
+      "path": "problems[77]",
+      "title": "接力交接常常提早離台，被判犯規",
+      "tags": {
+        "category": [
+          "start"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST15",
+        "starts-turns.tech.53"
       ]
     },
     {
@@ -20911,6 +21405,66 @@
       "outgoing_ids": []
     },
     {
+      "id": "starts-turns.move.10",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[9]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST14"
+      ]
+    },
+    {
+      "id": "starts-turns.move.11",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[10]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST15"
+      ]
+    },
+    {
+      "id": "starts-turns.move.12",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[11]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST18"
+      ]
+    },
+    {
+      "id": "starts-turns.move.13",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[12]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST20"
+      ]
+    },
+    {
+      "id": "starts-turns.move.14",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[13]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST18"
+      ]
+    },
+    {
       "id": "starts-turns.move.2",
       "domain": "instructional",
       "file": "canonical/instructional/moves.yaml",
@@ -20969,6 +21523,33 @@
       "tags": {},
       "source_ids": [],
       "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.move.8",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[7]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST7",
+        "ST8",
+        "ST9"
+      ]
+    },
+    {
+      "id": "starts-turns.move.9",
+      "domain": "instructional",
+      "file": "canonical/instructional/moves.yaml",
+      "path": "strokes[5].moves[8]",
+      "title": "",
+      "tags": {},
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST13",
+        "ST4"
+      ]
     },
     {
       "id": "starts-turns.tech.1",
@@ -21950,6 +22531,35 @@
       ]
     },
     {
+      "id": "starts-turns.tech.49",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[222]",
+      "title": "開放式轉身（蛙式、蝶式）的完整序列——時間輸在牆上的停留與抬太高的頭",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST7",
+        "ST8",
+        "ST9",
+        "starts-turns.tech.50",
+        "starts-turns.tech.55"
+      ]
+    },
+    {
       "id": "starts-turns.tech.5",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
@@ -21971,6 +22581,278 @@
         "src.yeadon-et-al-mdpi-2024"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "starts-turns.tech.50",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[223]",
+      "title": "開放式轉身比翻滾轉身合適的情境——初學、不吐氣、有負擔的肩頸足踝",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST6",
+        "flip-turn-wall-push",
+        "starts-turns.tech.57"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.51",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[224]",
+      "title": "仰式翻滾轉身的規則與流程——俯臥後只能接連續的手划，離牆時必須回到仰臥",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST13",
+        "ST4",
+        "starts-turns.tech.23",
+        "starts-turns.tech.24",
+        "starts-turns.tech.54"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.52",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[225]",
+      "title": "終點觸牆——最後一划不滑行、不抬頭，距離不對就補半划或踢腿",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "certainty": [
+          "🔵",
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST14",
+        "starts-turns.tech.19"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.53",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[226]",
+      "title": "接力交接——下一棒不能早離台，訓練的重點是判讀前一棒最後一划",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "certainty": [
+          "🔵",
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST15",
+        "starts-turns.tech.59"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.54",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[227]",
+      "title": "仰式破水——水下海豚踢、轉換踢、第一划在頭破水前就開始",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020",
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST20",
+        "UDK7",
+        "starts-turns.tech.51"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.55",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[228]",
+      "title": "蛙式破水——pullout 的蛙踢把身體送上水面，頭須在第二次手划最寬處前出水",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST19",
+        "starts-turns.tech.26",
+        "starts-turns.tech.27",
+        "starts-turns.tech.35"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.56",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[229]",
+      "title": "蝶式破水——第一划在水下發動、頭在第一划時破水；第一划要不要換氣是取捨",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🔵",
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.world-aquatics-2023-swimming-technical-rules"
+      ],
+      "outgoing_ids": [
+        "ST18",
+        "starts-turns.tech.44",
+        "udk.tech.17"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.57",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[230]",
+      "title": "翻滾轉身的教學進程——從站立前滾翻到疲勞下的翻滾，前提是鼻子能吐氣",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🔵",
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": [
+        "ST1",
+        "ST10",
+        "ST11",
+        "ST12",
+        "ST2",
+        "ST5",
+        "ST6",
+        "starts-turns.tech.50",
+        "starts-turns.tech.51"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.58",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[231]",
+      "title": "轉身的訓練設計——每一趟都有轉身，轉身品質是每一趟的要求",
+      "tags": {
+        "category": [
+          "tempo"
+        ],
+        "certainty": [
+          "🔵",
+          "🟢"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [
+        "src.hall-murphy-2020"
+      ],
+      "outgoing_ids": [
+        "ST11",
+        "ST12",
+        "periodization.set_design.variables"
+      ]
+    },
+    {
+      "id": "starts-turns.tech.59",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[232]",
+      "title": "出發教學進程——從水中蹬牆到出發台，每一階檢查是不是從同一個洞入水",
+      "tags": {
+        "category": [
+          "stroke-cycle"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "starts-turns"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "ST16",
+        "ST17",
+        "diving-cervical-injury",
+        "starts-turns.tech.11"
+      ]
     },
     {
       "id": "starts-turns.tech.6",

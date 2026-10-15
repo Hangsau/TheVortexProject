@@ -206,3 +206,155 @@ drills:
     cognitive_load: low
     tactile_anchor: equipment_feedback
     difficulty_tier: intermediate
+
+  # === 起跳／轉身／破水補強 (2026-10-15) ===
+
+  - id: UDK6
+    name_en: "Side-Lying Dolphin Kick, Observed From the Front"
+    name_zh: "側身海豚踢（教練從正面看手擺與腳離線）"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "側身水下做海豚踢，教練站在池端從正面往前看，用兩個容易看見的現象判斷打水：手臂左右擺多大，腳離開身體線多遠。"
+    how_to:
+      - "游者側躺、雙臂鎖成流線，朝教練的方向水下打水；每趟距離短，一口正常吸氣就出發，不過度換氣，有人看著"
+      - "教練在池端先只看手：雙手左右擺動的幅度反映髖部彎得多大，書上建議手大約左右擺 6 到 8 英寸（約 15 到 20 公分）"
+      - "再只看腳：腳離開身體線的距離代表膝蓋彎得多大，腳離得越遠，減速越多；同時注意每一個踢水循環的速度是否夠快"
+      - "每趟只請游者改一個地方（例如手擺小一點），再看下一趟有沒有改變，不一次修兩處"
+    perception_goal: "打水是從髖、膝一起收緊的小動作，手臂不大幅擺動，腳不離開身體線太遠。"
+    success_signal: "手左右擺動幅度小而穩定、腳貼著身體線上下、節奏夠快。"
+    failure_signal: "手左右大幅擺動、膝蓋彎很大、腳遠離身體線、踢一下停一下。"
+    deficiency_fixes: []
+    source: "Hall, G. W., & Murphy, D. (2020). Fundamentals of Fast Swimming. 第 22 章 Fundamentals of Dolphin Kick（沒有測速儀器時，用側身打水從池端觀察手擺與腳離線）"
+    source_ids: [src.hall-murphy-2020]
+    body_position: side
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [kick_amplitude, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: partner_feedback
+    difficulty_tier: intermediate
+
+  - id: UDK7
+    name_en: "Streamline Dolphin Kick on the Back With Fins"
+    name_zh: "仰臥流線海豚踢（穿蛙鞋，下踢壓水）"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: [fins]
+    l_target: [L4, L5]
+    abc_type: B
+    purpose_zh: "穿蛙鞋仰臥打水，專心感覺鞋底往下壓水的那一下；仰臥時下踢是相對弱的一邊，也是仰式水下段最值得練的一邊。"
+    how_to:
+      - "穿蛙鞋、仰臥、雙臂流線，蹬牆後水下打水；每趟最多 25 公尺，休息 10 到 15 秒，不要為了做完而勉強憋氣，有人在池邊看著"
+      - "正常吸一口氣，不過度換氣；用鼻夾或上唇輕壓鼻孔防止水進鼻子"
+      - "專心感覺鞋底往下壓水，下踢和上踢都要用力，而不是只靠上踢"
+      - "做不到全程就縮短距離，在中途浮上來即可"
+    perception_goal: "鞋底在每一次往下的踢水都壓到水，感覺像踩在水上。"
+    success_signal: "仰臥打水速度穩定、下踢與上踢都有力、鼻子沒有進水。"
+    failure_signal: "只剩上踢有力、膝蓋彎很大、鼻子進水而中途嗆到。"
+    deficiency_fixes: []
+    source: "Hall, G. W., & Murphy, D. (2020). Fundamentals of Fast Swimming. 第 22 章（改善上踢的訓練組：仰臥穿蛙鞋水下打水，專心用鞋底壓水）；25 公尺上限與休息時間為本庫的安全上限，非原書處方"
+    source_ids: [src.hall-murphy-2020]
+    body_position: supine
+    constraints: [no_breath, tension_held]
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, kick_amplitude]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: medium
+    tactile_anchor: foot_pressure
+    difficulty_tier: advanced
+
+  - id: UDK8
+    name_en: "With and Without Fins Contrast"
+    name_zh: "穿蛙鞋與不穿蛙鞋對照"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: [fins]
+    l_target: [L3, L4]
+    abc_type: B
+    purpose_zh: "同一段距離先穿蛙鞋打、再脫掉蛙鞋打，比較兩種情況下波動的大小和節奏，檢查蛙鞋有沒有讓你偷偷把動作做大。"
+    how_to:
+      - "同一個距離（例如蹬牆後打到旗標，不超過自己舒服的水下距離），先穿蛙鞋打一趟"
+      - "休息後脫掉蛙鞋，以同樣的力道與同樣的距離再打一趟，同伴記錄兩趟的踢數與時間"
+      - "比較：脫鞋後踢數有沒有大增、波動有沒有變大或變亂；腳背的感覺在兩種情況下有沒有一致"
+      - "不為了追時間而把水下距離拉長；覺得需要換氣就提早浮出"
+    perception_goal: "有鞋沒鞋，打水的核心動作是同一個；蛙鞋只是放大，不是替代。"
+    success_signal: "脫鞋後節奏與波動形式大致維持，踢數合理增加。"
+    failure_signal: "脫鞋後動作塌掉、波動變小或變亂、膝蓋代償。"
+    deficiency_fixes: []
+    source: "通行的蛙鞋對照練習形式；本庫未取得可定位的單篇出處"
+    source_ids: []
+    body_position: underwater
+    constraints: [no_breath]
+    movement_pattern: continuous
+    skill_focus: [kick_origin, wave_undulation]
+    stroke_phase: non_stroke
+    drill_function: corrective
+    cognitive_load: medium
+    tactile_anchor: equipment_feedback
+    difficulty_tier: intermediate
+
+  - id: UDK9
+    name_en: "Fixed Distance Kick-Count Ladder"
+    name_zh: "固定距離踢數梯（同距離比較用幾踢）"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L4, L5]
+    abc_type: B
+    purpose_zh: "同一段水下距離，用不同的踢數打完，找出自己「踢數少、速度快、還不吃力」的組合；踢得多不一定比較好。"
+    how_to:
+      - "選一段固定距離（例如 10 公尺），蹬牆後以特定踢數打完，之後浮出，由同伴計時"
+      - "依序換不同踢數（例如 6、8、10 下），每次踢數固定，每一次之間完全休息"
+      - "比較哪種踢數最快、感覺最輕；也看踢數太少時是否變成大力踩水"
+      - "整個過程只用自己能舒服完成的距離，有人看著，覺得需要換氣就提早浮出"
+    perception_goal: "每一踢都壓到水，踢數不是越多越好，而是每一踢都有效。"
+    success_signal: "找到一個踢數，時間比別的更快，且結束後不會非常喘。"
+    failure_signal: "為了湊踢數而踢得又小又快、或為了減踢數而大力踩水。"
+    deficiency_fixes: []
+    source: "Hall, G. W., & Murphy, D. (2020). Fundamentals of Fast Swimming. 第 25 章（每個人適合的踢數需要個別測試，踢得更多不一定更好）"
+    source_ids: [src.hall-murphy-2020]
+    body_position: underwater
+    constraints: [no_breath]
+    movement_pattern: progressive
+    skill_focus: [rhythm_tempo, kick_amplitude]
+    stroke_phase: non_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: partner_feedback
+    difficulty_tier: advanced
+
+  - id: UDK10
+    name_en: "Wall-Holding Up-Kick Focus"
+    name_zh: "抓池邊海豚踢（只練上踢）"
+    strokes: [underwater_dolphin_kick]
+    category: kick
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: B
+    purpose_zh: "雙手抓住池邊，身體水平，專心把腿往上拉起來的那一下；把上踢單獨拉出來練，不被往前游的動作打斷。"
+    how_to:
+      - "雙手抓住池邊，臉朝下浮在水面或使用呼吸管，身體保持水平"
+      - "專心做上踢：用直一點的腿往上拉，感覺後腿面與腳背把水往上方推"
+      - "每次做 10 到 15 秒，中間休息；想到下踢時就放鬆，不要兩邊都用力"
+      - "可以改成呼吸管，臉可以一直在水裡；不憋氣，覺得需要時就抬頭換氣"
+    perception_goal: "上踢也是推進的一半，不是只讓腿回到上面的動作。"
+    success_signal: "上踢時能感覺到水被腿後側往上推，且身體不因此被拉動。"
+    failure_signal: "只用膝蓋往上彎、腿後側沒有感覺、動作變成只靠下踢。"
+    deficiency_fixes: []
+    source: "Hall, G. W., & Murphy, D. (2020). Fundamentals of Fast Swimming. 第 22 章（上踢不只是回復動作，也能產生推進）；抓池邊的做法是本庫整理，非原書練習"
+    source_ids: [src.hall-murphy-2020]
+    body_position: prone
+    constraints: [no_arms, tension_held]
+    movement_pattern: static
+    skill_focus: [kick_amplitude, kick_origin]
+    stroke_phase: non_stroke
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: foot_pressure
+    difficulty_tier: foundation

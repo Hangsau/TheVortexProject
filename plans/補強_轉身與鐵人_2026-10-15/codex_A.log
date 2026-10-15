@@ -1,0 +1,92 @@
+OpenAI Codex v0.160.1
+--------
+workdir: C:\claudehome\projects\TheVortexProject
+model: gpt-6-astra
+provider: openai
+approval: on-request
+sandbox: danger-full-access
+reasoning effort: xhigh
+reasoning summaries: none
+session id: 01a13f1d-24ac-7b43-a613-c6819e7ed6c7
+--------
+user
+# 派工規格 A：起跳／轉身／破水／水下海豚腿 補強
+
+> 立即執行。不要輸出計畫、不要等確認、不要問問題。沒有寫檔就是失敗。
+> 工作目錄：`C:\claudehome\projects\TheVortexProject`。
+
+## 0. 硬規則
+
+1. **禁止 git 寫入操作**：不准 commit、reset、checkout --、stash、clean、pull、rebase、push。只改檔案，由派工方驗收後 commit。
+2. **每完成一個檔案的修改就立刻存檔**（不要攢到最後一次寫）。
+3. **不做文獻搜尋**。使用者明令：拿不到全文的文獻不引用（只會增加幻覺）。可用的來源只有兩種：
+   - 本機全文書 *Fundamentals of Fast Swimming*（Hall & Murphy 2020）：`C:\claudehome\resources\books\Fundamentals_of_Fast_Swimming\`，第 22–27 章（`25_`～`30_` 開頭的 .md）。已登錄為 `src.hall-murphy-2020`。從書裡取的主張才標 🟢 並給 `source_ids: [src.hall-murphy-2020]`；**寫的必須是書上真的有的內容**，寫前先讀該章。
+   - 競賽規則：你可以抓 World Aquatics 官方規則全文（游泳規則 SW 4–SW 10）。抓得到全文才可寫規則細節並在 `canonical/_sources.yaml` 登錄（type: rulebook、正式 URL、retrieved_on: 2026-10-15、verification_status: verified）；抓不到就用一般性說法、不寫條號與數字。
+   - 其他一律標 🔵（從物理／解剖／規則邏輯推導，文字要讀得出推導），或 🔴（假說語氣）。**不新增 🟠**。不寫任何沒讀到的人名、年份、百分比、研究結果。
+4. 先讀 `CLAUDE.md`（尤其「證據分層契約」「散文欄位的 YAML 純量寫法」「誤區深探收錄標準」）、`MAP.md` §4 踩雷點、`Drills/TAG_SCHEMA.md`、`Drills/DRILL_INDEX.md`。照既有條目格式寫，不改 schema、不改既有條目內容（除非下面明確要求）。
+5. **public／diagnostic 分層**：讀者看得到的內容放 `public`；判讀語（「泳者說 X 代表…」這類）不准進 public。機器鍵（`src.*`、條目 ID）不准出現在散文欄位。
+6. **安全立場**：涉及水下段、憋氣、跳水出發，照 `canonical/breathing/safety.yaml` 的條件式立場（危險的是「過度換氣＋憋到極限＋無人盯」組合；出發轉身水下段是正常訓練）。跳水出發一律附「水深不足不做跳水出發」並 `cross_ref` 到 `canonical/health/drafts/diving-cervical-injury.yaml` 的條目 ID。
+7. 內容一律繁體中文、台灣用語（蛙鞋、浮板、夾腿浮條、划手板）。寫給教練、選手、家長、成人初學都讀得懂的語言，不預設單一族群。
+
+## 1. 要補的內容
+
+### 1a. `canonical/instructional/technical-analysis.yaml`：新增技術點（stroke: starts-turns，ID 從現有最大號往後接）
+
+每點都要有 `title`、`public.summary`、`public.mechanism{certainty,text}`、`public.practical_implication`；category 用既有 categories 裡的值。主題（每題 1 點，內容要具體到教練能直接拿去教）：
+
+1. 開放式轉身（蛙式、蝶式雙手觸牆轉身）完整序列：雙手同時觸牆 → 一側手肘往後拉離牆、雙膝收到胸下、身體側轉 → 另一手越過頭頂入水 → 側身蹬牆 → 蹬出途中轉回俯臥。速度與時間的主要損失在「觸牆到離牆」的停留，以及頭抬得過高。讀 Hall & Murphy 第 26 章（Open Spin Turns）。
+2. 開放式轉身在哪些情境比翻滾轉身合適：初學、尚未建立鼻子吐氣、成人或鐵人、肩頸或足踝受傷暫代（health 已有「翻滾暫改開放式轉身」）。🔵。
+3. 仰式翻滾轉身的規則與流程：轉成俯臥後只能接一個連續手划來啟動翻滾，離開仰臥後的動作都必須屬於連續轉身動作；蹬出時要回到仰臥。計步判距已有 starts-turns.tech.23，`cross_ref` 過去，不重寫。（規則細節以抓到的全文為準）
+4. 終點觸牆：最後一划的時機調整（不滑行進牆、不抬頭看牆、距離不對時補半划或踢腿）；自由式與仰式單手伸長觸牆、身體側向延伸；蛙蝶雙手同時觸牆；仰式終點靠旗下計划。🔵＋讀第 23–25 章有關內容。
+5. 接力交接：下一棒在前一棒進牆時就啟動身體動作；規則上腳離台不得早於前一棒觸牆（電子判定，抓到全文才寫容許值）；交接的風險是提早犯規，訓練重點在判讀前一棒最後一划。🔵。
+6. 仰式破水：水下海豚腿 → 轉換踢 → 第一划在頭破水前就開始；水下距離有規則上限；鼻子持續少量吐氣防止進水。
+7. 蛙式破水：pullout 的蛙踢把身體送上水面，頭須在第二次划手最寬點前出水（以規則全文為準）；與既有 pullout 技術點 `cross_ref`。
+8. 蝶式破水：水下海豚腿 → 第一划在水下發動 → 頭在第一划時破水；第一划是否換氣的取捨（🔵 推導：換氣會抬頭破壞流線）。
+9. 翻滾轉身的教學進程（從不會到會）：站立水中前滾翻 → 中池翻滾（ST1）→ 牆邊翻滾仰躺蹬出（ST2）→ 蹬出後側身轉俯臥（ST5）→ 加入接近與計划 → 疲勞下翻滾。前提：鼻子吐氣；鼻子進水是最常見的放棄原因。🔵。
+10. 轉身的訓練設計：每一趟都有轉身，所以轉身品質是每一趟的要求；「轉身 25」（中池起動、全速進牆、轉身、全速出 5–10 公尺）；主課最後幾趟在疲勞下要求轉身品質；短池轉身多，短池週練轉身比例應較高（`cross_ref` set-design 的 pool_constraint）。水下段遵守安全條件。🔵。
+11. 出發教學進程（從水中到出發台）：水中蹬牆流線 → 坐姿池邊入水 → 跪姿 → 單腳前後站 → 出發台。每一階的檢核點是「從同一個洞入水」（`cross_ref` starts-turns.tech.11）。水深條件見安全規則。🔵。
+
+### 1b. `canonical/instructional/moves.yaml`：stroke `starts-turns` 新增動作（n 從 8 往後接）
+
+欄位照既有（id、n、name、one、physical、boundary、cue_bad、cue_why、cue_good、lnote）。新增：開放式轉身、仰式翻滾轉身、終點觸牆、接力交接、自由式破水、仰式破水、蝶式破水（蛙式破水併入既有「蛙式 Pullout」的 physical 末尾補一句即可）。`cue_bad` 只能寫教練真的會講的錯誤口令；想不到就三個 cue 欄位都省略，不要編。
+
+### 1c. `Drills/drills_starts-turns.yaml`：新增約 15 個 drill（ID 用 ST6 起往後接，或照既有前綴慣例）
+
+完整 9 軸 fingerprint、`purpose_zh`、`how_to`、`perception_goal`、`success_signal`、`failure_signal`。無書面出處的寫 `source: "通行的…練習形式；本庫未取得可定位的單篇出處"`、`source_ids: []`（照既有無出處 drill 的寫法）。建議清單（可依書增減，總數 13–17）：
+
+- 站立前滾翻（淺水，鼻子吐氣）
+- 開放式轉身分解：觸牆—肘拉—越頂手入水—側蹬（牆邊慢動作）
+- 開放式轉身左右手輪流（兩側都要會）
+- 蹬牆側躺 → 轉俯臥 → 第一划
+- 轉身 25（中池起動、全速進牆、全速出 5–10 公尺）
+- 疲勞轉身：主課最後幾趟只計轉身品質
+- 仰式旗下計划 → 翻俯臥一划 → 翻滾仰躺蹬出
+- 終點觸牆：最後 5 公尺全速、不抬頭、伸長觸牆
+- 接力交接（兩人一組，觀察前一棒最後一划起動）
+- 出發進程：坐姿入水 → 跪姿 → 單腳前後站（分三個 drill 或一個進程 drill 皆可）
+- 入水穿洞（漂浮呼拉圈或想像點）
+- 破水三步：蹬牆 → N 下海豚踢 → 第一划不換氣 → 接 6 划
+- 蛙式 pullout 計距（固定一次 pullout 能到哪裡）
+- 仰式破水：仰臥海豚踢 → 轉換踢 → 第一划
+
+### 1d. `Drills/drills_udk.yaml`：新增 5–7 個（讀第 22 章 Fundamentals of Dolphin Kick 後挑書上有的練法優先）
+
+方向參考：側身海豚腿、仰臥流線海豚腿、穿蛙鞋／不穿對照、固定踢數梯（同距離比較用幾踢）、牆邊或抓池邊海豚腿只練上踢。水下憋氣類 drill 要寫明距離上限與有人看著。
+
+### 1e. `canonical/instructional/problems.yaml`：新增 3–5 個 starts-turns 問題
+
+以讀者會怎麼描述為標題（例如「翻滾轉身鼻子一直進水」「轉身完出來很喘、第一划就想換氣」「開放式轉身在牆上停很久」「仰式轉身常常撞牆或離牆太遠」）。`links` 指向本次新增的技術點與 drill。schema 照既有條目，`coverage_gap` 如實填。
+
+### 1f. 連結
+
+新技術點、動作、drill、問題之間要用既有的連結欄位互相指（`cross_ref`／`links`／drill 的中文名）。被指的 ID 必須存在。
+
+## 2. 完成前必做
+
+1. `python tools/validate.py` → **0 ERROR**；新增內容不得增加 W009（🟢 無來源）、W011、W028、W029。
+2. `python tools/build_knowledge_map.py` 與 `python tools/build_indices.py`。
+3. `python -m unittest discover tests` 全過。
+4. 在 `plans/補強_轉身與鐵人_2026-10-15/A_完成紀錄.md` 寫：新增 ID 清單、每條的確定性與依據（書的哪一章）、抓規則全文成功與否（URL）、validate 前後 WARN 數、沒做或刻意省略的項目與理由。
+
+ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:39 PM.
+ERROR: You’ve hit your usage limit. Upgrade to Pro (https://chatgpt.com/explore/pro), visit https://chatgpt.com/codex/settings/usage to purchase more credits or try again at 8:39 PM.

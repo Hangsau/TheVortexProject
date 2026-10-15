@@ -14,10 +14,10 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 222 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 48}；確定性：{'🔵': 114, '🟢': 70, '🟠': 24, '🟡': 11, '🔴': 3} |
+| `technical-analysis` | 233 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59}；確定性：{'🔵': 121, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
 | `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
-| `problems` | 73 | 現象 → 機制 → 陸上介入 → 水中練習 |
-| `moves` | 51 | 泳式頁技術組件（動作） |
+| `problems` | 78 | 現象 → 機制 → 陸上介入 → 水中練習 |
+| `moves` | 58 | 泳式頁技術組件（動作） |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
@@ -36,15 +36,15 @@
 | `health/injuries (built)` | 0 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
-| `Drills (7 files)` | 179 | 176 drill 含 9 軸 fingerprint |
+| `Drills (7 files)` | 199 | 176 drill 含 9 軸 fingerprint |
 
 ---
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**222 條目**）
+### `technical-analysis.yaml` — 技術分析（**233 條目**）
 
-**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 起跳轉身 48, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 起跳轉身 59, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -210,7 +210,7 @@
 | fly.tech.37 | joint |  | 🔵 |
 | fly.tech.38 | errors |  | 🟡 |
 
-#### 起跳轉身 (48)
+#### 起跳轉身 (59)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -262,6 +262,17 @@
 | starts-turns.tech.40 | hardware |  | 🟢 |
 | starts-turns.tech.45 | comparison |  | 🔵 |
 | starts-turns.tech.46 | stroke-cycle |  | 🟢 |
+| starts-turns.tech.49 | stroke-cycle |  | 🟢 |
+| starts-turns.tech.50 | stroke-cycle |  | 🔵 |
+| starts-turns.tech.51 | stroke-cycle |  | 🟢 |
+| starts-turns.tech.52 | timing |  | 🔵 |
+| starts-turns.tech.53 | timing |  | 🔵 |
+| starts-turns.tech.54 | stroke-cycle |  | 🟢 |
+| starts-turns.tech.55 | stroke-cycle |  | 🟢 |
+| starts-turns.tech.56 | stroke-cycle |  | 🔵 |
+| starts-turns.tech.57 | stroke-cycle |  | 🔵 |
+| starts-turns.tech.58 | tempo |  | 🔵 |
+| starts-turns.tech.59 | stroke-cycle |  | 🔵 |
 
 #### 水下蝶腳 (30)
 
@@ -513,6 +524,11 @@
 | prob.starts-turns.turn-timing | starts-turns | turn | 翻滾過早碰不到牆，或太晚擠在牆邊 |
 | prob.starts-turns.slow-breakout | starts-turns | breakout | 出水銜接時停頓或抬頭，第一划明顯掉速 |
 | prob.starts-turns.pullout-wait | starts-turns | timing | 蛙式水下滑到幾乎靜止，才開始大划手 |
+| prob.starts-turns.flip-nose-water | starts-turns | turn | 翻滾轉身時鼻子一直進水，不敢翻 |
+| prob.starts-turns.breathless-after-turn | starts-turns | breakout | 轉身完出來很喘，第一划就想換氣 |
+| prob.starts-turns.open-turn-wall-stall | starts-turns | turn | 開放式轉身在牆上停很久 |
+| prob.starts-turns.back-turn-distance | starts-turns | turn | 仰式轉身常常撞牆，或離牆太遠才翻 |
+| prob.starts-turns.relay-early-leave | starts-turns | start | 接力交接常常提早離台，被判犯規 |
 
 ### `moves.yaml` — 泳式動作
 
@@ -569,6 +585,13 @@
 | starts-turns.move.5 | starts-turns | IM 轉身：背→蛙 | 觸碰觸發旋轉，三種轉法擇一 |
 | starts-turns.move.6 | starts-turns | IM 轉身：蝶→背 | 觸牆即縮腿，折疊最短路徑 |
 | starts-turns.move.7 | starts-turns | 蛙式 Pullout | 水下單次手划＋一次蛙踢 |
+| starts-turns.move.8 | starts-turns | 開放式轉身 | 頭低貼水面，縮小半徑掉頭 |
+| starts-turns.move.9 | starts-turns | 仰式翻滾轉身 | 過旗計步、翻成俯臥、一個連續手划、翻滾、仰臥蹬出 |
+| starts-turns.move.10 | starts-turns | 終點觸牆 | 最後一划不滑行、不抬頭，伸長觸牆 |
+| starts-turns.move.11 | starts-turns | 接力交接 | 腳不早於前一棒觸牆離台，預測而不是等待 |
+| starts-turns.move.12 | starts-turns | 自由式破水 | 最後一踢與第一划同步，頭不抬 |
+| starts-turns.move.13 | starts-turns | 仰式破水 | 最後一下上踢發動第一划，仰式踢不放鬆 |
+| starts-turns.move.14 | starts-turns | 蝶式破水 | 第一划在水下發動，頭在第一划時破水 |
 
 ---
 
@@ -1281,9 +1304,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | ScFist | 握拳划水 | sculling | L3 L4 | advanced | freestyle breaststroke butterfly |
 | ScUW1 | 水下寬 Y 懸停 | sculling | L4 | advanced | freestyle breaststroke butterfly |
 
-### `drills_starts-turns.yaml` — starts-turns (**9 drills**)
+### `drills_starts-turns.yaml` — starts-turns (**24 drills**)
 
-**難度分布**：{'foundation': 1, 'intermediate': 2, 'advanced': 2, 'elite': 4}
+**難度分布**：{'foundation': 4, 'intermediate': 8, 'advanced': 8, 'elite': 4}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1296,10 +1319,25 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | STEL1 | 仰式階梯式出發 | turn | L5 | elite | starts_turns |
 | STEL2 | 仰式出發腿驅動跳 | turn | L5 L6 | elite | starts_turns |
 | STEL3 | 仰式出發踢沙灘球 | turn | L5 L6 | elite | starts_turns |
+| ST6 | 站立前滾翻（淺水，鼻子吐氣） | turn | L0 L1 | foundation | starts_turns |
+| ST7 | 開放式轉身分解：觸牆—肘拉—越頂手入水—側蹬 | turn | L2 L3 | intermediate | starts_turns |
+| ST8 | 離牆水平旋轉練習（一耳貼水面） | turn | L1 L2 | foundation | starts_turns |
+| ST9 | 開放式轉身左右手輪流 | turn | L3 | intermediate | starts_turns |
+| ST10 | 蹬牆側躺、轉俯臥、接第一划 | turn | L3 L4 | intermediate | starts_turns |
+| ST11 | 轉身 25（中池起動、全速進牆、全速出） | turn | L3 L4 | advanced | starts_turns |
+| ST12 | 疲勞轉身（主課最後幾趟只計轉身品質） | turn | L4 L5 | advanced | starts_turns |
+| ST13 | 仰式旗下計划、翻俯臥一划、翻滾仰躺蹬出 | turn | L3 L4 | advanced | starts_turns |
+| ST14 | 終點觸牆：最後 5 公尺全速、不抬頭、伸長觸牆 | turn | L3 L4 | intermediate | starts_turns |
+| ST15 | 接力交接：兩人一組觀察前一棒最後一划 | turn | L4 | advanced | starts_turns |
+| ST16 | 出發進程：坐姿入水、跪姿、單腳前後站 | turn | L1 L2 | foundation | starts_turns |
+| ST17 | 入水穿洞（漂浮呼拉圈或想像點） | turn | L2 L3 | intermediate | starts_turns |
+| ST18 | 破水三步：蹬牆、N 下海豚踢、第一划不換氣、接 6 划 | timing | L4 L5 | advanced | starts_turns |
+| ST19 | 蛙式 pullout 計距 | turn | L3 L4 | intermediate | starts_turns |
+| ST20 | 仰式破水：仰臥海豚踢、轉換踢、第一划 | timing | L4 L5 | advanced | starts_turns |
 
-### `drills_udk.yaml` — udk (**7 drills**)
+### `drills_udk.yaml` — udk (**12 drills**)
 
-**難度分布**：{'intermediate': 2, 'advanced': 2, 'elite': 3}
+**難度分布**：{'intermediate': 4, 'advanced': 4, 'elite': 3, 'foundation': 1}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1310,3 +1348,8 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | UDK5 | 比賽配速水下打水 | kick | L5 L6 | elite | underwater_dolphin_kick |
 | UDKEC1 | 閉眼垂直蝶腿 | kick | L4 | advanced | underwater_dolphin_kick |
 | UDKLow1 | 水面呼吸管蝶腿 | kick | L3 | intermediate | underwater_dolphin_kick |
+| UDK6 | 側身海豚踢（教練從正面看手擺與腳離線） | kick | L3 L4 | intermediate | underwater_dolphin_kick |
+| UDK7 | 仰臥流線海豚踢（穿蛙鞋，下踢壓水） | kick | L4 L5 | advanced | underwater_dolphin_kick |
+| UDK8 | 穿蛙鞋與不穿蛙鞋對照 | kick | L3 L4 | intermediate | underwater_dolphin_kick |
+| UDK9 | 固定距離踢數梯（同距離比較用幾踢） | kick | L4 L5 | advanced | underwater_dolphin_kick |
+| UDK10 | 抓池邊海豚踢（只練上踢） | kick | L2 L3 | foundation | underwater_dolphin_kick |

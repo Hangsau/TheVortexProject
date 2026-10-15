@@ -674,10 +674,10 @@
     }
   ],
   "problem_coverage": {
-    "total": 73,
+    "total": 78,
     "counts": {
       "mechanism_drill_land": 1,
-      "mechanism_drill_no_land": 43,
+      "mechanism_drill_no_land": 48,
       "mechanism_no_drill": 26,
       "no_mechanism": 3
     },
@@ -717,9 +717,14 @@
         "prob.free.fatigue-short-strokes",
         "prob.free.head-lift-breath",
         "prob.free.locked-knee-kick",
+        "prob.starts-turns.back-turn-distance",
+        "prob.starts-turns.breathless-after-turn",
+        "prob.starts-turns.flip-nose-water",
         "prob.starts-turns.late-streamline",
         "prob.starts-turns.low-back-start",
         "prob.starts-turns.misaligned-push",
+        "prob.starts-turns.open-turn-wall-stall",
+        "prob.starts-turns.relay-early-leave",
         "prob.starts-turns.slow-breakout",
         "prob.starts-turns.step-mismatch",
         "prob.starts-turns.turn-timing",
@@ -817,12 +822,17 @@
         "prob.free.head-lift-breath",
         "prob.free.locked-knee-kick",
         "prob.free.stiff-recovery",
+        "prob.starts-turns.back-turn-distance",
+        "prob.starts-turns.breathless-after-turn",
         "prob.starts-turns.deep-turn",
         "prob.starts-turns.early-arm-tuck",
+        "prob.starts-turns.flip-nose-water",
         "prob.starts-turns.late-streamline",
         "prob.starts-turns.low-back-start",
         "prob.starts-turns.misaligned-push",
+        "prob.starts-turns.open-turn-wall-stall",
         "prob.starts-turns.pullout-wait",
+        "prob.starts-turns.relay-early-leave",
         "prob.starts-turns.slow-breakout",
         "prob.starts-turns.split-entry",
         "prob.starts-turns.steep-entry",
@@ -896,9 +906,9 @@
         "with_land": 3
       },
       "starts-turns": {
-        "total": 12,
-        "with_mechanism": 11,
-        "with_drill": 6,
+        "total": 17,
+        "with_mechanism": 16,
+        "with_drill": 11,
         "with_land": 1
       },
       "udk": {

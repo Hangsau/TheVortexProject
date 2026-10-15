@@ -3189,8 +3189,73 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 29,
+      "usage_count": 50,
       "usages": [
+        {
+          "id": "ST10",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[13]"
+        },
+        {
+          "id": "ST11",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[14]"
+        },
+        {
+          "id": "ST12",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[15]"
+        },
+        {
+          "id": "ST13",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[16]"
+        },
+        {
+          "id": "ST14",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[17]"
+        },
+        {
+          "id": "ST18",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[21]"
+        },
+        {
+          "id": "ST20",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[23]"
+        },
+        {
+          "id": "ST7",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[10]"
+        },
+        {
+          "id": "ST8",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[11]"
+        },
+        {
+          "id": "UDK10",
+          "file": "Drills/drills_udk.yaml",
+          "path": "drills[11]"
+        },
+        {
+          "id": "UDK6",
+          "file": "Drills/drills_udk.yaml",
+          "path": "drills[7]"
+        },
+        {
+          "id": "UDK7",
+          "file": "Drills/drills_udk.yaml",
+          "path": "drills[8]"
+        },
+        {
+          "id": "UDK9",
+          "file": "Drills/drills_udk.yaml",
+          "path": "drills[10]"
+        },
         {
           "id": "breast.tech.16",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -3335,6 +3400,46 @@
           "id": "movement.intervention.breaststroke-breathing.arm-driven-torso-lift",
           "file": "canonical/movement/interventions.yaml",
           "path": "interventions[4]"
+        },
+        {
+          "id": "starts-turns.tech.49",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[222].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.49",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[222].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.51",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[224].public.evidence[1]"
+        },
+        {
+          "id": "starts-turns.tech.51",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[224].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.52",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[225].public.evidence[1]"
+        },
+        {
+          "id": "starts-turns.tech.54",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[227].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.57",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[230].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.58",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[231].public.evidence[0]"
         }
       ]
     },
@@ -15855,8 +15960,28 @@
       "identifier": {
         "url": "https://resources.fina.org/fina/document/2023/01/04/65961a45-bde5-4217-b666-ca1f5dc2d1f0/1_Swimming-Technical-Rules.04.01.2023.pdf"
       },
-      "usage_count": 4,
+      "usage_count": 17,
       "usages": [
+        {
+          "id": "ST13",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[16]"
+        },
+        {
+          "id": "ST14",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[17]"
+        },
+        {
+          "id": "ST15",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[18]"
+        },
+        {
+          "id": "ST19",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[22]"
+        },
         {
           "id": "breast.tech.6",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -15876,6 +16001,51 @@
           "id": "starts-turns.tech.29",
           "file": "canonical/instructional/technical-analysis.yaml",
           "path": "points[208].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.49",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[222].public.evidence[1]"
+        },
+        {
+          "id": "starts-turns.tech.51",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[224].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.51",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[224].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.52",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[225].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.53",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[226].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.54",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[227].public.evidence[0]"
+        },
+        {
+          "id": "starts-turns.tech.54",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[227].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.55",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[228].public.mechanism"
+        },
+        {
+          "id": "starts-turns.tech.56",
+          "file": "canonical/instructional/technical-analysis.yaml",
+          "path": "points[229].public.evidence[0]"
         }
       ]
     },
