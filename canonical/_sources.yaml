@@ -11373,3 +11373,192 @@ sources:
       url: "https://triathlonmagazine.ca/training/triathlon-training-open-water-swimmingopen-water-swim-training/"
     retrieved_on: "2026-10-15"
     notes: "2026-10-15 讀全文（經工具轉述）。證據類型：實務文件（雜誌編輯文章），非研究。內容：定向大約每 10 至 20 m 抬頭一次、雙側換氣、跟游；開放水域練習頻率沒有具體時程。文中另有防寒衣可使成績進步最多 20% 的說法，二手且無來源，本庫不採用。**使用邊界**：一般性提示。"
+
+  # ── 鐵人迷思判定（2026-10-15, spec G）：Research/鐵人泳訓/myths.md 引用的來源 ──────
+
+  - id: src.chatard-wilson-2003-drafting-distance
+    display: "Chatard & Wilson (2003). Drafting distance in swimming. Med Sci Sports Exerc 35(7):1176-1181."
+    title: "Drafting distance in swimming"
+    type: journal-article
+    verification_status: verified
+    authors: ["Chatard", "Wilson"]
+    year: 2003
+    container: "Med Sci Sports Exerc"
+    identifier:
+      url: "https://rtk.schwimmen.sport-iat.de/fileadmin/user_upload/DSV-Schwimmen/Chatard___Wilson__2003_._Drafting_distance_in_Swimming.pdf"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（6 頁 PDF）。證據類型：實驗研究。族群：11 名游泳者（非鐵人賽事），以 95% 最佳 1500 m 配速游 4 分鐘，後排 0／50／100／150 cm；另 6 人測側向跟游的被動拖曳。結果：最佳跟游距離（0 或 50 cm）攝氧降 11%、心率降 6%、血乳酸降 38%、自覺費力降 20%；被動拖曳降 21%／20%；側向 50、100 cm 降 6%、7%；150 cm 仍有約 10% 的代謝成本降低。**使用邊界**：領游者被指示不踢腿；泳池與水槽實驗，不是開放水域鐵人賽事。"
+
+  - id: src.brisswalter-hausswirth-2008-drafting-review
+    display: "Brisswalter & Hausswirth (2008). Consequences of drafting on human locomotion: benefits on sports performance. Int J Sports Physiol Perform 3."
+    title: "Consequences of drafting on human locomotion: benefits on sports performance"
+    type: journal-article
+    verification_status: verified
+    authors: ["Brisswalter", "Hausswirth"]
+    year: 2008
+    container: "Int J Sports Physiol Perform"
+    identifier:
+      url: "https://rtk.schwimmen.sport-iat.de/fileadmin/user_upload/DSV-Schwimmen/Brisswalter___Hausswirth__2008_._Consequences_of_drafting_on_human_locomotion._Benefits_on_sports_performance.pdf"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（13 頁 PDF，游泳段落細讀，跑步與自行車段未細讀）。證據類型：簡短綜述（brief review，非系統性回顧）。轉述 Chatard 與 Millet：跟在領游者後面游速提高 3.2%（400 m 約省 20 m），增益隨能力與皮脂厚度而異；轉述 Delextrat 等：跟游後騎乘效率 +4.8%（**原論文本庫未讀**）；引 Millet 等：鐵人可用兩拍或六拍踢以降低下肢的推進期。作者對機制用 Presumably（推測）。**使用邊界**：二手轉述居多，騎乘效率數字不可當作本庫自己驗證過的值。"
+
+  - id: src.gay-2019-wetsuit-swimmers-performance
+    display: "Gay, López-Contreras, Fernandes & Arellano (2019). Is swimmers' performance influenced by wetsuit use? Int J Sports Physiol Perform."
+    title: "Is Swimmers Performance Influenced by Wetsuit Use?"
+    type: journal-article
+    verification_status: verified
+    authors: ["Gay", "López-Contreras", "Fernandes", "Arellano"]
+    year: 2019
+    container: "Int J Sports Physiol Perform"
+    identifier:
+      doi: "10.1123/ijspp.2018-0891"
+      url: "https://digibug.ugr.es/bitstream/10481/62629/1/Gay-et-al.-2019-IJSPP.pdf"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀作者接受稿全文（17 頁）。證據類型：受試者內比較的實驗研究。族群：33 名游泳者（26.46±11.72 歲），泳池與水槽 400 m 最大自由式。結果：穿防寒衣比泳衣快 0.07 m/s，時間約減少 6%；划距增加約 4%，划頻相近。身體位置未測。**使用邊界**：不是鐵人賽事，不是開放水域；引言說低浮力、低效率泳者受益較多，是引他人研究，本文未驗證。"
+
+  - id: src.mclarty-2013-four-swimming-myths
+    display: "McLarty (2013). Four swimming myths busted. Triathlete.com."
+    title: "Four swimming myths busted"
+    type: web_article
+    verification_status: verified
+    authors: ["Sara McLarty"]
+    year: 2013
+    publisher: "Triathlete.com"
+    identifier:
+      url: "https://www.triathlete.com/training/four-swimming-myths-busted/?scope=anon"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對）。證據類型：實務文件（雜誌文章），非研究。列出四個說法並逐條反駁，其中兩條是「鐵人不需要學踢腿」與「雙側換氣就是每三划換氣一次」；未指名誰這樣教。**使用邊界**：沒有研究引用。"
+
+  - id: src.burgan-2008-kicking-slowtwitch
+    display: "Burgan (2008). Kicking. Slowtwitch."
+    title: "Kicking"
+    type: web_article
+    verification_status: verified
+    authors: ["Erik Burgan"]
+    year: 2008
+    publisher: "Slowtwitch"
+    identifier:
+      url: "https://slowtwitch.com/swimming/kicking/"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對）。證據類型：實務文件（教練文章），非研究。內容：鐵人踢腿不是主要推進來源，但用來維持平衡與身體位置很重要。**使用邊界**：個人觀點，沒有量測。"
+
+  - id: src.casey-2016-bilateral-breathing-trainingpeaks
+    display: "Casey (2016). Is Bilateral Breathing Essential for Triathletes? TrainingPeaks."
+    title: "Is Bilateral Breathing Essential for Triathletes?"
+    type: web_article
+    verification_status: verified
+    authors: ["Heather Casey"]
+    year: 2016
+    publisher: "TrainingPeaks"
+    identifier:
+      url: "https://www.trainingpeaks.com/blog/is-bilateral-breathing-essential-for-triathletes/"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對）。證據類型：實務文件（USAT 二級、Ironman 認證教練的部落格），非研究。內容：雙側換氣是鐵人都該學並練的技能，但缺點是吸氣量較少；高強度時單側每兩划給最多的氧；划水型態因人而異。**使用邊界**：個人教練觀點，沒有量測。"
+
+  - id: src.sutton-2015-seven-swim-myths-triathlon
+    display: "Sutton (2015). The 7 myths of swimming for triathlon. trisutto.com."
+    title: "The 7 myths of swimming for triathlon"
+    type: web_article
+    verification_status: verified
+    authors: ["Brett Sutton"]
+    year: 2015
+    publisher: "trisutto.com"
+    identifier:
+      url: "https://trisutto.com/post/the-7-swim-myths-of-swimming-for-triathlon"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對）。證據類型：實務文件（教練個人網站），非研究。作者自列迷思，內容含距離游的踢腿只是平衡、雙側換氣不是必要。**使用邊界**：作者個人觀點，沒有研究引用。"
+
+  - id: src.slowtwitch-wetsuit-floating-legs-and-no-kick
+    display: "Slowtwitch forum thread: Wetsuit Floating Legs and no kick (2003)."
+    title: "Wetsuit Floating Legs and no kick"
+    type: web_article
+    verification_status: verified
+    year: 2003
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/wetsuit-floating-legs-and-no-kick/279631"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（原發文加 10 則回覆，經工具轉述）。**這是論壇討論串**，證據類型：社群個人經驗，不是研究也不是教練文件。發文者自述曾被告知不要踢腿以保留腿力（沒說是誰告知），約 4 人少踢或不踢，3 人保留輕踢。**使用邊界**：自述，無法查證身分與成績。"
+
+  - id: src.slowtwitch-should-you-bilateral-breathe
+    display: "Slowtwitch forum thread: Should You Bilateral Breathe? (2024)."
+    title: "Should You Bilateral Breathe?"
+    type: web_article
+    verification_status: verified
+    year: 2024
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/should-you-bilateral-breathe/1281345"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀第 1 頁（發文加 19 則，第 2 頁未讀）。**這是論壇討論串**，證據類型：社群個人經驗，不是研究。有人非正式自測雙側換氣在相同強度下慢 4 到 5 秒（自述數字可能不準）；有人把雙側換氣視為有用技能。**使用邊界**：自述，沒有對照。"
+
+  - id: src.slowtwitch-swimming-overrated
+    display: "Slowtwitch forum thread: Swimming overrated (2005)."
+    title: "Swimming overrated"
+    type: web_article
+    verification_status: verified
+    year: 2005
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/swimming-overrated/327516"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀第 1 頁（發文加 19 則，第 2 頁未讀）。**這是論壇討論串**，證據類型：社群個人經驗，不是研究。約 4 人傾向少練游泳，約 8 人主張技術或游泳體能有價值，其餘看個人。**使用邊界**：自述，且是 2005 年的討論。"
+
+  - id: src.slowtwitch-myth-of-triathlon-swimming
+    display: "Slowtwitch forum thread: The myth of triathlon swimming: swimming is swimming."
+    title: "The myth of triathlon swimming: swimming is swimming"
+    type: web_article
+    verification_status: verified
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/the-myth-of-triathlon-swimming-swimming-is-swimming/767165"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀第 1 頁（發文加 19 則，後有分頁未讀）。**這是論壇討論串**，證據類型：社群個人經驗，不是研究。約 5 至 6 人主張鐵人游得不夠，約 5 人主張時間花在別處或每週 2 到 4 小時已足夠。**使用邊界**：自述，身分無法查證。"
+
+  - id: src.slowtwitch-learning-to-swim-too-late
+    display: "Slowtwitch forum thread: Learning to swim . . . is it too late? What's the best way? (2018)."
+    title: "Learning to swim . . . is it too late? What's the best way?"
+    type: web_article
+    verification_status: verified
+    year: 2018
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/learning-to-swim-is-it-too-late-whats-the-best-way/764019"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀第 1 頁（發文加約 16 則，第 2 頁未讀）。**這是論壇討論串**，證據類型：社群個人經驗，不是研究。14 人以上自述成年後學會游，沒有人主張學不會；有人說進步對多數人不快。**使用邊界**：自述、沒有追蹤資料，且倖存者偏差明顯。"
+
+  - id: src.triathlete-2022-adult-onset-swimmers
+    display: "Triathlete.com (2022). Why Adult-Onset Swimmers Shouldn't Use a Traditional Swim Coach."
+    title: "Why Adult-Onset Swimmers Shouldn't Use a Traditional Swim Coach"
+    type: web_article
+    verification_status: verified
+    year: 2022
+    publisher: "Triathlete.com"
+    identifier:
+      url: "https://www.triathlete.com/training/getting-started/why-adult-onset-swimmers-should-not-use-a-traditional-swim-coach/?scope=anon"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對；無署名）。證據類型：實務文件（雜誌訪談），非研究。受訪教練主張成人先建立安全與基礎（身體位置、換氣）再做划水 drill；立場是可學但方法要對。**使用邊界**：沒有研究引用。"
+
+  - id: src.slowtwitch-shake-out-routine
+    display: "Slowtwitch forum thread: What is your Shake-out Routine (2013)."
+    title: "What is your 'Shake-out' Routine"
+    type: web_article
+    verification_status: verified
+    year: 2013
+    publisher: "Slowtwitch forum"
+    identifier:
+      url: "https://forum.slowtwitch.com/t/what-is-your-shake-out-routine/643165"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（約 12 則，經工具轉述）。**這是論壇討論串**，證據類型：社群個人經驗，不是研究。只有兩人描述賽前游泳：一人賽前一天游 20 分鐘，一人賽前兩天游 30 分鐘；沒有人明確主張前一天完全不下水。**使用邊界**：自述，樣本極小。"
+
+  - id: src.form-2023-triathlon-swim-race-day-prep
+    display: "FORM (2023). Triathlon Swim Training: Pro Tips from Olympian Aaron Royle to Prepare You for Race Day."
+    title: "Triathlon Swim Training: Pro Tips from Olympian Aaron Royle to Prepare You for Race Day"
+    type: web_article
+    verification_status: verified
+    year: 2023
+    publisher: "FORM"
+    identifier:
+      url: "https://www.formswim.com/blogs/all/triathlon-swim-training-race-day-prep"
+    retrieved_on: "2026-10-15"
+    notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對）。證據類型：實務文件（泳鏡產品商的部落格），非研究，有商業立場。內容：賽前最佳的游泳課要短，且與比賽策略一致，目的是熟悉比賽開頭的感覺。**使用邊界**：廠商文章，沒有數據。"

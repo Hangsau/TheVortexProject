@@ -14,8 +14,8 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 252 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 19}；確定性：{'🔵': 140, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
-| `teaching-errors` | 104 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14} |
+| `technical-analysis` | 257 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 24}；確定性：{'🔵': 145, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
+| `teaching-errors` | 106 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14, 'open-water': 2} |
 | `problems` | 84 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `moves` | 66 | 泳式頁技術組件（動作） |
 | `l-indicators` | 47 | L0–L6 各泳式感知指標 |
@@ -42,9 +42,9 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**252 條目**）
+### `technical-analysis.yaml` — 技術分析（**257 條目**）
 
-**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 19, 起跳轉身 59, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 24, 起跳轉身 59, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -309,7 +309,7 @@
 | udk.tech.29 | streamline |  | 🔵 |
 | udk.tech.30 | joint |  | 🔵 |
 
-#### 開放水域與鐵人 (19)
+#### 開放水域與鐵人 (24)
 
 | ID | 範疇 | 標題 | 確定性 |
 |---|---|---|---|
@@ -332,10 +332,15 @@
 | open-water.tech.17 | tempo |  | 🔵 |
 | open-water.tech.18 | tempo |  | 🔵 |
 | open-water.tech.19 | tempo |  | 🔵 |
+| open-water.tech.20 | concept |  | 🔵 |
+| open-water.tech.21 | concept |  | 🔵 |
+| open-water.tech.22 | concept |  | 🔵 |
+| open-water.tech.23 | concept |  | 🔵 |
+| open-water.tech.24 | concept |  | 🔵 |
 
-### `teaching-errors.yaml` — 教學誤區（**104 條目**）
+### `teaching-errors.yaml` — 教學誤區（**106 條目**）
 
-**泳式分布**：仰式 17, 蛙式 18, 蝶式 17, 自由式 25, 起跳轉身 14, 水下蝶腳 13
+**泳式分布**：仰式 17, 蛙式 18, 蝶式 17, 自由式 25, 開放水域與鐵人 2, 起跳轉身 14, 水下蝶腳 13
 
 #### 自由式 (25)
 
@@ -470,6 +475,13 @@
 | udk.err11 | concept |  |
 | udk.err12 | concept |  |
 | udk.err13 | streamline |  |
+
+#### 開放水域與鐵人 (2)
+
+| ID | 範疇 | 標題/摘要 |
+|---|---|---|
+| open-water.err1 | kick |  |
+| open-water.err2 | head |  |
 
 ### `problems.yaml` — 問題索引
 

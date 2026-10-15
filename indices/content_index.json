@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1158,
+  "record_count": 1165,
   "records": [
     {
       "id": "Bk1",
@@ -16641,6 +16641,64 @@
       "outgoing_ids": []
     },
     {
+      "id": "open-water.err1",
+      "domain": "instructional",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[104]",
+      "title": "鐵人不用學踢腿，腿留給騎跑",
+      "tags": {
+        "category": [
+          "kick"
+        ],
+        "certainty": [
+          "🔵",
+          "🟡"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.brisswalter-hausswirth-2008-drafting-review",
+        "src.burgan-2008-kicking-slowtwitch",
+        "src.mclarty-2013-four-swimming-myths",
+        "src.slowtwitch-wetsuit-floating-legs-and-no-kick",
+        "src.sutton-2015-seven-swim-myths-triathlon"
+      ],
+      "outgoing_ids": [
+        "open-water.tech.10",
+        "open-water.tech.7"
+      ]
+    },
+    {
+      "id": "open-water.err2",
+      "domain": "instructional",
+      "file": "canonical/instructional/teaching-errors.yaml",
+      "path": "errors[105]",
+      "title": "一定要雙邊換氣，而且固定每三划換氣一次",
+      "tags": {
+        "category": [
+          "head"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.casey-2016-bilateral-breathing-trainingpeaks",
+        "src.mclarty-2013-four-swimming-myths",
+        "src.slowtwitch-should-you-bilateral-breathe",
+        "src.sutton-2015-seven-swim-myths-triathlon"
+      ],
+      "outgoing_ids": [
+        "free.tech.30",
+        "open-water.tech.2"
+      ]
+    },
+    {
       "id": "open-water.move.1",
       "domain": "instructional",
       "file": "canonical/instructional/moves.yaml",
@@ -16900,7 +16958,7 @@
         ],
         "certainty": [
           "🔵",
-          "🟢"
+          "🟡"
         ],
         "stroke": [
           "open-water"
@@ -16954,6 +17012,7 @@
         ],
         "certainty": [
           "🔵",
+          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -17097,6 +17156,148 @@
       ]
     },
     {
+      "id": "open-water.tech.20",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[252]",
+      "title": "『游泳只占比賽一小部分，練游泳不划算』——判定（部分正確，依族群）",
+      "tags": {
+        "category": [
+          "concept"
+        ],
+        "certainty": [
+          "🔵",
+          "🟡"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.landers-2008-swim-positioning-triathlon",
+        "src.slowtwitch-myth-of-triathlon-swimming",
+        "src.slowtwitch-swimming-overrated"
+      ],
+      "outgoing_ids": [
+        "open-water.tech.14",
+        "open-water.tech.16",
+        "open-water.tech.18"
+      ]
+    },
+    {
+      "id": "open-water.tech.21",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[253]",
+      "title": "『鐵人是長距離所以不用練速度』與『一定要連續游到比賽距離（或間歇就夠）』——判定（證據不足）",
+      "tags": {
+        "category": [
+          "concept"
+        ],
+        "certainty": [
+          "🔵",
+          "🟢"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.hayes-2018-open-water-8-weeks-220-triathlon",
+        "src.heggy-2021-triathlon-swim-intensity-usms",
+        "src.laughlin-2016-short-reps-vs-steady-swims",
+        "src.selles-perez-2019-polarized-pyramidal-half-ironman",
+        "src.slaughter-2019-swim-plan-triathlon-distances-usms",
+        "src.slowtwitch-myth-of-triathlon-swimming"
+      ],
+      "outgoing_ids": [
+        "open-water.tech.14",
+        "open-water.tech.16",
+        "open-water.tech.17"
+      ]
+    },
+    {
+      "id": "open-water.tech.22",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[254]",
+      "title": "『游泳段要保留體力，慢慢游就好』——判定（部分正確，依族群）",
+      "tags": {
+        "category": [
+          "concept"
+        ],
+        "certainty": [
+          "🔵",
+          "🟡"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.heggy-2021-triathlon-swim-intensity-usms",
+        "src.landers-2008-swim-positioning-triathlon"
+      ],
+      "outgoing_ids": [
+        "open-water.tech.14",
+        "open-water.tech.16",
+        "open-water.tech.5"
+      ]
+    },
+    {
+      "id": "open-water.tech.23",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[255]",
+      "title": "『成人學游泳太晚，技術改不了，只能靠體能』——判定（迷思，但證據只有自述）",
+      "tags": {
+        "category": [
+          "concept"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.slowtwitch-learning-to-swim-too-late",
+        "src.triathlete-2022-adult-onset-swimmers"
+      ],
+      "outgoing_ids": [
+        "open-water.tech.1",
+        "open-water.tech.18"
+      ]
+    },
+    {
+      "id": "open-water.tech.24",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[256]",
+      "title": "『比賽前一天要休息，不要下水』——判定（證據不足，找不到主張者）",
+      "tags": {
+        "category": [
+          "concept"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "open-water"
+        ]
+      },
+      "source_ids": [
+        "src.form-2023-triathlon-swim-race-day-prep",
+        "src.slowtwitch-shake-out-routine",
+        "src.slowtwitch-taper-for-open-water-race"
+      ],
+      "outgoing_ids": [
+        "open-water.tech.19",
+        "periodization.taper.swim"
+      ]
+    },
+    {
       "id": "open-water.tech.3",
       "domain": "instructional",
       "file": "canonical/instructional/technical-analysis.yaml",
@@ -17136,6 +17337,7 @@
         ],
         "certainty": [
           "🔵",
+          "🟡",
           "🟢"
         ],
         "stroke": [
@@ -17143,6 +17345,8 @@
         ]
       },
       "source_ids": [
+        "src.brisswalter-hausswirth-2008-drafting-review",
+        "src.chatard-wilson-2003-drafting-distance",
         "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": [
@@ -17225,6 +17429,7 @@
         ]
       },
       "source_ids": [
+        "src.gay-2019-wetsuit-swimmers-performance",
         "src.riewald-rodeo-2015"
       ],
       "outgoing_ids": [

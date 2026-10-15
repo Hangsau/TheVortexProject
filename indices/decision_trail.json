@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 568,
+  "record_count": 577,
   "trails": {
     "back.L4.roll-stability": [
       {
@@ -10895,6 +10895,25 @@
         "section": "D2 掌心朝向的三源分解 — **本輪最重要的一筆，請完整讀完再寫**"
       }
     ],
+    "open-water.err1": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 7,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_G_迷思寫入條目.md",
+        "line": 11,
+        "section": "要寫"
+      }
+    ],
+    "open-water.err2": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 8,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      }
+    ],
     "open-water.move.1": [
       {
         "file": "plans/補強_轉身與鐵人_2026-10-15/B_完成紀錄.md",
@@ -10956,6 +10975,65 @@
         "file": "plans/補強_轉身與鐵人_2026-10-15/spec_B_開放水域與鐵人.md",
         "line": 86,
         "section": "2f. 週期化"
+      }
+    ],
+    "open-water.tech.20": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 9,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      }
+    ],
+    "open-water.tech.21": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 10,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      }
+    ],
+    "open-water.tech.22": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 11,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      }
+    ],
+    "open-water.tech.23": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 12,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      }
+    ],
+    "open-water.tech.24": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 13,
+        "section": "新增條目與引用來源（來源編號對照 Research/鐵人泳訓/sources.md）"
+      }
+    ],
+    "open-water.tech.4": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 16,
+        "section": "修改既有條目"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_G_迷思寫入條目.md",
+        "line": 21,
+        "section": "要寫"
+      }
+    ],
+    "open-water.tech.7": [
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/G_完成紀錄.md",
+        "line": 17,
+        "section": "修改既有條目"
+      },
+      {
+        "file": "plans/補強_轉身與鐵人_2026-10-15/spec_G_迷思寫入條目.md",
+        "line": 22,
+        "section": "要寫"
       }
     ],
     "periodization.dryland.youth": [
