@@ -18,20 +18,19 @@
 1. ✅ **課表工具鐵人模式已上線**（my-site ③ 排一週「對象：鐵人三項」）：規則在 `canonical/periodization/triathlon.yaml`，改規則改這裡。缺口（強度分布、乳酸比例、開放水域配速換算、鐵人減量、每週總量）工具不給預設，等補到全文來源再加。
 2. 取得 Cejuela & Selles-Perez 2023、Casado 2021 全文（需使用者手動下載）可補強度分布缺口；規則 PDF 同理。
 
-## 當前狀態（2026-10-15 晚，學習者原話研究：第 2 輪完成）
+## 當前狀態（2026-10-16，學習者原話研究：蒐集與分類完成，已飽和）
 
 研究底稿在 `Research/學習者原話/`（不公開、不進 canonical）。規格見該目錄 `README.md`。
-- 蒐集：Reddit 3,577 篇、PTT swim 板 8,469 篇（全板），都完成。原文只在 `_raw/`（gitignored）。
-- 工具：`tools/collect_learner_speech.py`（蒐集）、`tools/build_framework_card.py`（速查卡）、`tools/map_learner_speech.py`（extract／map／merge；`--round N --source`；引擎 `VORTEX_ENGINE=m3|codex`，分片平行 `VORTEX_SHARD=k/n`；merge 依原文去重並統一 non_perception 鍵）。
-- `units.jsonl` 730 句：第 1 輪 Reddit 275＋PTT 第 1 輪 215＋Reddit 第 2 輪 243（去重後）。第 2 輪分類混用 MiniMax／codex，對照批首選級 10/15 一致。
-- `report.md` 第七節：器材譯名修正已生效；「沉」「喘」三批都穩定約 1 成；PTT 幾乎不談恐懼；新類型 N1 看影片才發現、N2 比喻接不上、N3 左右不對稱、N4 吞氣腸胃。**Reddit 判定飽和停止；PTT 未飽和。**
-- 教訓：codex 額度讀數是舊快照，3 路平行一小時內撞 5H 牆（2026-10-15 18:2x）。
+- 蒐集：Reddit 3,577 篇、PTT swim 板 8,469 篇（全板）。原文只在 `_raw/`（gitignored）。
+- 工具：`tools/collect_learner_speech.py`、`tools/build_framework_card.py`、`tools/map_learner_speech.py`（extract／map／merge；`--round N --source`；`VORTEX_ENGINE=m3|codex`、`VORTEX_SHARD=k/n`；map 只送未分類句子；merge 依原文去重並統一 non_perception 鍵）。
+- `units.jsonl` 1,075 句：Reddit 兩輪＋PTT 兩輪。**Reddit 與 PTT 都判定飽和，停止蒐集**（report 第七、八節）。
+- 已落地 canonical（只在 diagnostic，不上網站）：`free.L1.diagnostic.sinking_triage`（沉的四步分流）、`free.L2.diagnostic.unfelt_error_signals`（看影片才發現／口令接不上；問句是外加狀態＋開放題）；公開層：呼吸章先排除一般體能。
+- 使用者判斷：恐懼接 `psych.fear.*`；翻滾暈、冷水撤出；器材依賴、仰式鼻子進水屬吻合；左右不對稱不是缺口（L 級按側別判）。
 
 ## 下一步建議（學習者原話）
 
-1. ✅ 第 1 輪對接已落地（`free.L1.diagnostic.sinking_triage`、呼吸章先排除一般體能），見 report 第六節。
-2. ✅ 使用者已判斷第七節三題：N1＋N2 落地為 `free.L2.diagnostic.unfelt_error_signals`（N2 層級依口令指向部位，不固定 L3 A）；N3 不是缺口（L 級按側別判），等 PTT 第 2 輪一起看。
-3. **PTT 第 2 輪**（已排 2026-10-15 20:45 對話內背景自動跑，codex 單路）：`VORTEX_ENGINE=codex python -I tools/map_learner_speech.py extract --round 2 --source ptt`，再 `map`、`merge`。codex 單路跑、別平行；MiniMax 7D 已用 82%（10/19 08:00 重置）。跑完看 N2–N4 是否繼續長，新類型 ≤1 就停。
+1. 研究線可以收：無待辦。若要再用這批語料，方向是把 `units.jsonl` 當 typical_speech 的補充來源（需人工逐句審，全部仍是 🔴）。
+2. 若再跑大量分類：改直接呼叫模型 API，不經 `codex exec`（代理程式開銷大、撞額度 4 次）。
 
 ## 當前狀態（2026-10-14 晚，三層重構＋全庫內容檢查：全計畫完成）
 
