@@ -11562,3 +11562,18 @@ sources:
       url: "https://www.formswim.com/blogs/all/triathlon-swim-training-race-day-prep"
     retrieved_on: "2026-10-15"
     notes: "2026-10-15 讀全文（經工具轉述，引句已與原頁面比對）。證據類型：實務文件（泳鏡產品商的部落格），非研究，有商業立場。內容：賽前最佳的游泳課要短，且與比賽策略一致，目的是熟悉比賽開頭的感覺。**使用邊界**：廠商文章，沒有數據。"
+  - id: src.girold-2007-dryland-vs-resisted-assisted-sprint
+    display: "Girold S, Maurin D, Dugué B, Chatard JC, Millet G. (2007). Effects of dry-land vs. resisted- and assisted-sprint exercises on swimming sprint performances. J Strength Cond Res 21(2):599-605."
+    title: "Effects of dry-land vs. resisted- and assisted-sprint exercises on swimming sprint performances"
+    type: journal-article
+    verification_status: unverified
+    authors: ["Girold S", "Maurin D", "Dugué B", "Chatard JC", "Millet G"]
+    year: 2007
+    container: "Journal of Strength and Conditioning Research"
+    identifier:
+      url: "https://lida.sport-iat.de/ta/Record/4014177"
+    retrieved_on: "2026-10-20"
+    notes: >-
+      2026-10-20 只讀到資料庫摘要與二手評論，未取得全文。摘要：21 名泳者分三組 12 週（陸上重訓／水中彈力管阻力＋助力衝刺／對照），
+      訓練組每週 2 次；兩個訓練組 50 m 都進步、彼此無顯著差異。二手評論數字：重訓 2.8%、阻力 2.3%、對照 0.9%（未對原文核）。
+      限制：小樣本、只測 50 m、中等程度泳者。swim-coach 技術段「阻力／助力每週 2 次」只取每週次數當排課起點，不當處方。

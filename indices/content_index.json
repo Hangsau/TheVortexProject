@@ -17932,8 +17932,11 @@
         ]
       },
       "source_ids": [
+        "src.bosquet-2007-tapering-meta-analysis",
+        "src.girold-2007-dryland-vs-resisted-assisted-sprint",
         "src.hellard-2013-optimal-overload-taper",
-        "src.hellard-2019"
+        "src.hellard-2019",
+        "src.wen-2016-flip-turn-drills"
       ],
       "outgoing_ids": [
         "periodization.set_design.weekly_assembly",

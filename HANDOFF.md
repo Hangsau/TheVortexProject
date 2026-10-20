@@ -4,7 +4,12 @@
 
 ---
 
-## 當前狀態（2026-10-20，蹼泳研究筆記）
+## 當前狀態（2026-10-20，一堂課的組成與技術段劑量）
+
+- `canonical/periodization/set-design.yaml` 的 `phase_allocation` 加三個欄位：`session_composition_zh`（高強度量固定、剩下的量依時期分閾值／輕鬆，專項準備品質課補閾值）、`session_volume_zh`（減量降 41–60%、專項低於平常八成提醒）、`technique_dose_zh`（水下 2–4、轉身 3、阻力 2 次／週）。新登錄來源 `src.girold-2007-dryland-vs-resisted-assisted-sprint`（unverified，只讀到摘要）。swim-coach 排課「今天的方針」照這些規則；my-site 課表工具同步改了專項準備品質課。
+- 待辦：my-site 的 `test_workout_draw/goals/group.cjs` 原本就失敗（純速休息期望值還是 180，10/18 已改成 360），與這次無關，需要更新測試期望值。
+
+## 前一項（2026-10-20，蹼泳研究筆記）
 
 - 新增 `Research/週期化/蹼泳訓練_能力休息與分配.md`（研究層，不改 canonical）：蹼泳各項目能力、組內被動／組間主動休息、屏氣 50 重複組、三個缺口的推論（全部標 🔵 推論或來源等級）。my-site 研究筆記白名單加 `finswimming-training`，網站研究庫可讀。
 - 起因：swim-coach 新收蹼泳選手（使用者 2026-10-20）；swim-coach 端的蹼泳成績、配速已做，課表待教練用過推論再定。

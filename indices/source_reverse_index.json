@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 895,
+  "source_count": 896,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -935,8 +935,13 @@
         "pmid": "17762369",
         "doi": "10.1249/mss.0b013e31806010e0"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
+        {
+          "id": "periodization.set_design.phase_allocation",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "phase_allocation"
+        },
         {
           "id": "periodization.taper.swim",
           "file": "canonical/periodization/taper.yaml",
@@ -2781,6 +2786,22 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.girold-2007-dryland-vs-resisted-assisted-sprint",
+      "display": "Girold S, Maurin D, Dugué B, Chatard JC, Millet G. (2007). Effects of dry-land vs. resisted- and assisted-sprint exercises on swimming sprint performances. J Strength Cond Res 21(2):599-605.",
+      "verification_status": "unverified",
+      "identifier": {
+        "url": "https://lida.sport-iat.de/ta/Record/4014177"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.set_design.phase_allocation",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "phase_allocation"
+        }
+      ]
     },
     {
       "id": "src.goff-2023",
@@ -16574,7 +16595,7 @@
         "pmcid": "PMC5260528",
         "doi": "10.1515/hukin-2016-0004"
       },
-      "usage_count": 4,
+      "usage_count": 5,
       "usages": [
         {
           "id": "movement.demand.starts-turns.flip.tuck-composition-and-rotation-is-not-a-joint-action",
@@ -16585,6 +16606,11 @@
           "id": "movement.demand.starts-turns.turn-approach.cervical-non-extension-and-coverage-boundary",
           "file": "canonical/movement/stroke-demands.yaml",
           "path": "demands[45]"
+        },
+        {
+          "id": "periodization.set_design.phase_allocation",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "phase_allocation"
         },
         {
           "id": "starts-turns.tech.20",
