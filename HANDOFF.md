@@ -4,6 +4,16 @@
 
 ---
 
+## 當前狀態（2026-10-20，蹼泳研究筆記）
+
+- 新增 `Research/週期化/蹼泳訓練_能力休息與分配.md`（研究層，不改 canonical）：蹼泳各項目能力、組內被動／組間主動休息、屏氣 50 重複組、三個缺口的推論（全部標 🔵 推論或來源等級）。my-site 研究筆記白名單加 `finswimming-training`，網站研究庫可讀。
+- 起因：swim-coach 新收蹼泳選手（使用者 2026-10-20）；swim-coach 端的蹼泳成績、配速已做，課表待教練用過推論再定。
+
+## 下一步建議（蹼泳）
+
+- 教練實際用推論練過後，把確認可行的部分寫進 canonical（可能是 `periodization/set-design.yaml` 加蹼泳的組型註記，或新開 `periodization/finswimming.yaml`，並同步 my-site 版型）。
+- 屏氣安全原則若要公開成正式內容，接 `canonical/breathing/safety.yaml`（已有呼吸安全置頂章）。
+
 ## 當前狀態（2026-10-18，組課生成器：每趟時間窗）
 
 - `canonical/periodization/set-design.yaml` 的 `generator.set_types` 加 `duration_s`（每趟秒數，逐字轉自 `intents.duration_zh`）：組型以每趟時間定義，距離是依泳者速度算出來的結果。慢的泳者純速自動改短距離、50 m 對慢的人可以是閾值組。
