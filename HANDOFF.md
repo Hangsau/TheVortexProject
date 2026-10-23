@@ -4,6 +4,10 @@
 
 ---
 
+## 下一步建議（2026-10-23，研究筆記整理）
+
+- 規劃書 `plans/研究筆記整理規劃_2026-10-23.md` 已交付，等使用者說開始。Phase 1：建 `Research/_notes.yaml` 登錄表（分組、排序、一句話結論、狀態）→ my-site `sync_vortex.py` 改讀它、取代寫死的 `NOTE_SLUGS` → 清單頁依主題分組。Phase 2 先用 Claude Design 畫布出清單頁版面。
+
 ## 當前狀態（2026-10-23，第二輪比賽資料研究筆記 5 篇）
 
 - 新增（研究層）：`Research/競賽成績分析/` 的 `相對年齡效應.md`、`比賽頻率與進步.md`、`隊伍效應與轉隊.md`、`預賽保留與晉級.md`、`比賽經驗與配速.md`，每篇含研究方法、結果、應用推薦、限制。完整報告與程式在 swim-results `research/{relative_age,race_frequency,team_transfer,heat_saving,experience_pacing}/`。my-site slug：relative-age、race-frequency、team-transfer、heat-saving、experience-pacing。開放問題 `FUTURE_RESEARCH.md` 0.12。
