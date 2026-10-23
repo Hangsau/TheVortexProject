@@ -30,6 +30,7 @@
 | 改 L0–L6 水感框架 | `canonical/technica/{l-indicators,water-sense-levels}.yaml`；「什麼是水感」頁的真相源是 `Technica/水感是什麼.md`（原樣同步） |
 | 改 ADM（運動員發展矩陣） | `canonical/development/{matrix,technical-standards}.yaml` |
 | 改週期化 | `canonical/periodization/{_index,structure,taper,zones,set-design,dryland,decisions}.yaml` |
+| 加／改研究筆記（含上不上網站、主題、排序、卡片結論） | 寫 `Research/<主題>/*.md` → 登錄 `Research/_notes.yaml` → `python tools/check_notes.py`（Research/、Observations/ 每個 .md 都必須登錄或列 non_public） |
 | 加練習 drill | `Drills/drills_<泳式>.yaml`（schema 見 `Drills/DRILL_INDEX.md`，9 軸 fingerprint 見 `Drills/TAG_SCHEMA.md`） |
 | 找 drill 分布／空白格 | `python tools/tag_coverage_report.py` |
 | 改動作—肌群—訓練—活動度圖譜 | `canonical/movement/{actions,muscle-groups,stroke-demands,interventions}.yaml`；相位先登錄 `_taxonomy.yaml#movement_phase_registry`（雷 §4.7） |
@@ -73,7 +74,7 @@
 - `Instructional/*.md`（13 檔）：四式＋起跳轉身＋水下蝶腳的技術分析與誤區深探長文 → 網站研究庫「研究底稿」（凍結、剝除診斷語與外連）。例外：`游泳器材使用指南.md` 是應用層文章。
 - `Technica/*.md`（7 檔）：L 框架長文 → 研究底稿；`水感是什麼.md` 是「什麼是水感」頁的真相源。
 - `Bridge/*.md`（6 檔）：**已退役**，網站不再掛載，保留在 repo 供查。
-- `Research/{感知科學,物理現象,週期化,心理}/`：研究筆記，網站研究庫公開 26 篇（標「研究中」）；整本書萃取、內部稽核、`_incoming-hestia-*` 不公開（分類見規劃書 W3.5）。
+- `Research/{競賽成績分析,感知科學,心理,物理現象,週期化,鐵人泳訓}/`：研究筆記。**`Research/_notes.yaml` 是研究筆記的唯一真相來源**：哪些公開、主題、閱讀順序、一句話結論、狀態、「研究結論一覽」的 findings、刻意不公開的檔案（`non_public`）都登錄在這裡；my-site 依它同步，不再自己寫名單。網站公開 42 篇。`Research/_archive/` 放未查證初稿與過期匯入。
 - `Observations/*.md`（3 檔）：教練觀察案例。
 
 ### plans/（審查與規劃紀錄）
@@ -89,6 +90,7 @@
 | `build_injuries.py` | health drafts → injuries.yaml |
 | `audit_layers.py` | 網站分層稽核（三層重構 Phase 1 閘門） |
 | `review_firstpass.py` | MiniMax 初讀（經 `claude-m3-lite`），斷點續跑 |
+| `check_notes.py` | 研究筆記登錄表完整性（未登錄檔案、slug、主題、摘要不可是內部頁首、graduated_to／open_questions 可解析）；測試 `tests/test_check_notes.py` |
 | `textfold.py` | 接掉 `>-` 折行在中文句中留下的空白（地圖與索引用） |
 | `tag_coverage_report.py` | drill 9 軸覆蓋 |
 | `audit_sources.py`、`verify_source_identifiers.py`、`search_source_bibliography.py`、`apply_verified_sources.py` | 來源查驗流水線 |

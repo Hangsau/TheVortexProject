@@ -4,9 +4,18 @@
 
 ---
 
-## 下一步建議（2026-10-23，研究筆記整理）
+## 當前狀態（2026-10-23，研究筆記整理 Phase 1 完成）
 
-- 規劃書 `plans/研究筆記整理規劃_2026-10-23.md` 已交付，等使用者說開始。Phase 1：建 `Research/_notes.yaml` 登錄表（分組、排序、一句話結論、狀態）→ my-site `sync_vortex.py` 改讀它、取代寫死的 `NOTE_SLUGS` → 清單頁依主題分組。Phase 2 先用 Claude Design 畫布出清單頁版面。
+- **`Research/_notes.yaml` 是研究筆記的唯一真相來源**：46 篇登錄（42 公開；鐵人 verdicts／myths 與 2 篇教學觀察先 `public: false`），3 大類 7 主題、閱讀順序、一句話結論、2–4 條 findings（證據等級＋怎麼用）、狀態；`non_public` 列刻意不公開的檔案。驗證：`python tools/check_notes.py`（測試 `tests/test_check_notes.py`）。
+- 教學競技 2 份（Talos 未查證初稿）與 `_incoming-hestia-2026-06-20` 移到 `Research/_archive/`。
+- my-site 端（同日 commit）：`sync_research_notes()` 改讀登錄表，`NOTE_SLUGS` 已刪；研究筆記清單依主題分組編號；新增「研究結論一覽」`/vortex/research/conclusions/`（102 條結論一頁看完）。
+- 規劃書與完成紀錄：`plans/研究筆記整理規劃_2026-10-23.md`。
+
+## 下一步建議（研究筆記整理）
+
+1. **Phase 2**：先用 Claude Design 畫布出研究筆記清單／結論一覽的 2–3 版給使用者挑；寫四篇主題總覽（比賽數據、感知與學習、水中物理、訓練安排）；鐵人 verdicts／myths 把 S 代號改成讀者可讀的引用後改 `public: true`；教學觀察 2 篇同理；FUTURE_RESEARCH 重寫成開放問題頁。
+2. **Phase 3**：逐篇填 `graduated_to`、心理與感知自標「非定稿」者逐篇定稿；`彈性蓄能`、`自然頻率` 內的數字來源先複核（登錄表 maintenance_note 已標）。
+3. 新寫研究筆記一律先登錄 `_notes.yaml`（CLAUDE.md 收尾規則 4b）。
 
 ## 當前狀態（2026-10-23，第二輪比賽資料研究筆記 5 篇）
 
