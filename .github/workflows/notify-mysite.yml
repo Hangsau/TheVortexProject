@@ -17,6 +17,9 @@ on:
       - 'canonical/**'
       - 'Drills/**'
       - 'Instructional/**'
+      - 'Technica/**'
+      - 'Research/**'
+      - 'Observations/**'
       - '.github/workflows/notify-mysite.yml'
 
 permissions:
