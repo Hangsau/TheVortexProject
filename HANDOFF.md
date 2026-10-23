@@ -4,6 +4,10 @@
 
 ---
 
+## 當前狀態（2026-10-23，比賽分段研究筆記：每個研究單獨一篇）
+
+- 新增（研究層，不改 canonical）：`Research/競賽成績分析/` 的 `鄰道效應.md`、`混合式棒間取捨.md`、`出發反應與前段配速.md`、`台灣孩子_當天負荷與收尾能力.md`、`水道位置與分組強度.md`、`掉速延伸_特質或當天與決賽超車.md`，每篇含研究方法、結果、結論、應用推薦、限制（使用者要求單篇完整）。合併篇〈比賽情境與配速：五個問題〉已刪；〈掉速成因〉的延伸段改為指引。完整報告與程式在 swim-results `research/`。my-site slug：neighbor-effect、im-legs、rt-opening、tw-kids、lane-heat、fade-followup。開放問題 `FUTURE_RESEARCH.md` 0.11。
+
 ## 當前狀態（2026-10-23，100 m 勝負點研究筆記）
 
 - 新增 `Research/競賽成績分析/100公尺勝負點_前後50與反應時間.md`（研究層，不改 canonical）；數字 🔵、原因 🔴。完整報告在 swim-results `research/hundred_decider/`（預先寫計畫、驗證半）。my-site 白名單加 `hundred-decider`。
