@@ -2459,7 +2459,7 @@ def check_problem_contract(rel: str, data: object, targets: dict, errors: dict):
         fail("problems", "must be a list, including when empty")
         return
     link_patterns = {
-        "technical_analysis": r"(?:free|back|breast|fly|udk|starts-turns|open-water|common)\.tech\.[0-9]+",
+        "technical_analysis": r"(?:free|back|breast|fly|udk|starts-turns|open-water|race|common)\.tech\.[0-9]+",
         "drills": r"(?:Fr|Bk|Br|Fl|Sc|ST|UDK|OW)[A-Za-z0-9]+",
         "interventions": r"movement\.intervention\.[a-z0-9.-]+",
         "water_interventions": r"movement\.intervention\.[a-z0-9.-]+",
@@ -2508,7 +2508,7 @@ def check_problem_contract(rel: str, data: object, targets: dict, errors: dict):
                     if record and (record.get("publication_status") != "published" or record.get("action_status") == "do-not-prescribe"):
                         fail(where, f"intervention is not available for public action: {target}")
         refs = entry.get("cross_ref_ids")
-        if not isinstance(refs, list) or any(not isinstance(v, str) or not re.fullmatch(r"(?:free|back|breast|fly|udk|starts-turns|open-water|common)\.err[0-9]+", v) for v in refs):
+        if not isinstance(refs, list) or any(not isinstance(v, str) or not re.fullmatch(r"(?:free|back|breast|fly|udk|starts-turns|open-water|race|common)\.err[0-9]+", v) for v in refs):
             fail(where, "cross_ref_ids must list teaching-error IDs")
         if not isinstance(entry.get("cross_ref"), str):
             fail(where, "cross_ref must be display text")

@@ -4,6 +4,13 @@
 
 ---
 
+## 當前狀態（2026-10-23，比賽分析寫進 canonical：第 8 技能「比賽與配速」）
+
+- `technical-analysis.yaml` 新增 `race.tech.1–15`（stroke `race`，分類 race_swim／race_day／race_development），各對應一篇比賽分析筆記；數據結論 🔵、evidence 寫資料範圍、方法（預先計畫、分兩半）與限制，原因 🔴 在 mechanism。〈泳式之間的關係〉未分兩半，不收。
+- `_taxonomy.yaml`：stroke 加 `race`、三個 category；🔵 判準補「渦流計畫自己用公開資料做的分析」。`moves.yaml` 加 race premise 區塊（`moves: []`）。validate、knowledge map 等工具清單同步。
+- 登錄表 15 篇比賽筆記 status: graduated、graduated_to: race.tech.N。
+- 下游：my-site 第 8 技能頁 `/vortex/race/` 已上；**swim-coach 的 `vendor/vortex` 下次更新 pin 時，確認 build_knowledge_index 能處理 stroke `race`**。
+
 ## 當前狀態（2026-10-23，研究筆記整理 Phase 1–4 全部完成）
 
 - **研究筆記的真相源是 `Research/_notes.yaml`**：50 篇登錄、48 篇公開（2026-10-23 加 `stroke-links`〈四式之間的牽動〉，race-swim 第 7 篇；同日依 v2 改成日本＋台灣＋世界泳聯三來源，「蛙式段占差距 34%」降級為只在日本穩定，〈泳式之間的關係〉⑥ 加註，報告與程式在 swim-results `research/stroke_links/`；比賽分析總覽改為 16 篇＋第五節「蛙式自成一格」；開放問題 1.6 補一句）（含 5 篇主題總覽 `role: overview`）；網站研究庫有「研究筆記」（分組＋總覽）、「研究結論一覽」（全部結論一頁）、「開放問題」（`FUTURE_RESEARCH.md`，6 章 26 題，題號穩定）。

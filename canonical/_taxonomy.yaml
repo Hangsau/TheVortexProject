@@ -62,6 +62,9 @@ fields:
       - {key: coupling, scope: [instructional], count: 1}
       - {key: open_water_skill, scope: [drills], count: 15}
       - {key: open_water, scope: [instructional], count: 5}
+      - {key: race_swim, scope: [instructional], count: 7}
+      - {key: race_day, scope: [instructional], count: 4}
+      - {key: race_development, scope: [instructional], count: 4}
 
   stroke:
     controlled: true
@@ -81,6 +84,8 @@ fields:
         count: 42
       - key: open-water
         count: 19
+      - key: race
+        count: 15
       - key: common
         count: 6
 
@@ -128,6 +133,10 @@ fields:
           2026-10-14 補（心理層審查）：文字中**明示為推導／外推**的跨文獻作者綜合
           也屬此層——前提文獻掛在同區塊 source_ids。直接陳述某篇研究發現的句子
           不屬此層，依年代標 🟢／🟡。
+          2026-10-23 補（比賽與配速）：**渦流計畫自己用公開資料做的分析**也屬此層——
+          前提是分析前寫好計畫、選手分兩半（一半找錯、另一半只跑一次），並在同一區塊
+          寫明資料範圍、樣本、方法與限制。它是自己的量測，不冒充已發表的研究；對原因的
+          解釋另標 🔴。
         requires_source: false
       # \U0001F7E0 LARGE ORANGE CIRCLE — 教練觀測
       - key: "\U0001F7E0"

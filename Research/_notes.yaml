@@ -78,8 +78,9 @@ notes:
     theme: race-swim
     order: 1
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 同一個人每場差最多的是最後一段；狀態變好或變差，主要反映在後半段。
+    graduated_to: [race.tech.1]
     open_questions: [fq.1.1]
     findings:
       - text_zh: 同一人同一季，最後一段每場的起伏約 1.0–1.3 個百分點，是中間段的 1.6–2 倍。
@@ -98,8 +99,9 @@ notes:
     theme: race-swim
     order: 2
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 100 公尺同組的差距約六成在後 50；實力相近時，前 50 領先的人比較常贏。
+    graduated_to: [race.tech.2]
     findings:
       - text_zh: 同一組比賽裡，選手之間的差距約六成來自後 50。程度越高掉速越少，台灣孩子在自由式、蝶式的後 50 差距特別大。
         certainty: 🔵
@@ -117,8 +119,9 @@ notes:
     theme: race-swim
     order: 3
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 前段比平常快，代價落在最後一段；短池比長池掉得多。最後 50 的加速從進最後一面牆之前就開始。
+    graduated_to: [race.tech.3]
     open_questions: [fq.1.2]
     findings:
       - text_zh: 前段比自己平常快 1%，最後 50 相對第三個 50 多掉約 0.55 個百分點。
@@ -139,8 +142,9 @@ notes:
     theme: race-swim
     order: 4
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 「會掉的選手」要看一季好幾場才準；決賽前段多衝，最後一段痛一點但總成績更好。
+    graduated_to: [race.tech.4]
     open_questions: [fq.1.2]
     findings:
       - text_zh: 有些人確實比較會掉，但要用一季 3 場以上的中位數判斷，單場看不準。
@@ -159,8 +163,9 @@ notes:
     theme: race-swim
     order: 5
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 出發反應快不會讓前段衝過頭（仰式例外）；反應快的那天，往往整體狀態也好。
+    graduated_to: [race.tech.5]
     findings:
       - text_zh: 自由式、蛙式、蝶式反應快的那趟，前 50 和最後一段都沒有變化，總成績快的幅度是省下反應時間的 2–4 倍。
         certainty: 🔵
@@ -175,8 +180,9 @@ notes:
     theme: race-swim
     order: 6
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 個人混合式前面快的那天，四個泳式段都快；相對沒跟上的是最後的自由式段，不是蛙式段。
+    graduated_to: [race.tech.6]
     findings:
       - text_zh: 沒有看到「前面衝、後面垮」：前兩段快的那天，四段都快，總成績更好。
         certainty: 🔵
@@ -191,8 +197,9 @@ notes:
     theme: race-swim
     order: 7
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 日本、台灣、世界級賽事都一樣：蛙式是自成一格的泳式，混合式選手的蛙式項目看他混合式的蛙式段就知道。
+    graduated_to: [race.tech.7]
     open_questions: [fq.1.6]
     findings:
       - text_zh: 日本、台灣、世界泳聯三個來源都一樣：200 蛙幾乎只跟混合式的蛙式段有關，蛙式段也預測不了蝶、仰、自三個單項。
@@ -212,8 +219,9 @@ notes:
     theme: race-day
     order: 1
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 旁邊的人快會把你拉快；最後一段會多掉一點，但總成績平均是賺的。
+    graduated_to: [race.tech.8]
     open_questions: [fq.1.3]
     findings:
       - text_zh: 兩側選手快時自己也會變快，自由式、蝶式和決賽最明顯；最後一段多掉一點，但前段多賺的大於後段多付的。
@@ -226,8 +234,9 @@ notes:
     theme: race-day
     order: 2
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 長池邊道比較慢、後段掉比較多；預賽獨自領先時沒人帶，比較慢；決賽碰到強組會被帶快。
+    graduated_to: [race.tech.9]
     open_questions: [fq.1.3]
     findings:
       - text_zh: 長池邊道比較慢、最後一段也掉比較多；短池看不出來。
@@ -245,8 +254,9 @@ notes:
     theme: race-day
     order: 3
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 預賽要收，平常成績至少要比晉級門檻快 2–3%；資料看不到「預賽收著游、決賽比較好」。
+    graduated_to: [race.tech.10]
     open_questions: [fq.1.5]
     findings:
       - text_zh: 平常成績只比晉級門檻快 0–0.5% 時落選率 50%，快 2–3% 降到 7%，快 3% 以上 3%；200–400 m 需要更大的邊際。
@@ -262,8 +272,9 @@ notes:
     theme: race-day
     order: 4
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 同一天每多游一項，每趟平均慢約 0.2%；台灣孩子的 200 常中段保留太多，100 則是後 50 撐不住。
+    graduated_to: [race.tech.11]
     open_questions: [fq.1.4]
     findings:
       - text_zh: 同一天每多游一項，每趟平均慢 0.18%（12 歲以下 0.28%），慢在整趟，不是最後一段崩。多天比賽的第幾天看不出影響。
@@ -280,8 +291,9 @@ notes:
     theme: development
     order: 1
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 分齡組裡年紀最小的孩子吃虧很大，12 歲最明顯、男生拖到 16 歲；但年紀最小還擠進全國賽的孩子，長大反而比較好。
+    graduated_to: [race.tech.12]
     open_questions: [fq.1.5]
     findings:
       - text_zh: 日本全國少年賽 11–12 歲組，組裡最年輕那群只有應有人數的 2–4 成；同場排名平均落後 38 個百分位，15–16 歲縮到 4 個。
@@ -303,8 +315,9 @@ notes:
     theme: development
     order: 2
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 「比賽多、進步少」是計算方式造成的假象；用公平的量法，比賽多寡跟進步沒有關係。
+    graduated_to: [race.tech.13]
     findings:
       - text_zh: 用季最佳量進步時，比賽多的人隔年進步看起來較少；改用每季隨機抽 2 場的平均，這個關係就消失。
         certainty: 🔵
@@ -319,8 +332,9 @@ notes:
     theme: development
     order: 3
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 比賽比得多，配速不會自己變穩；要穩得在練習中刻意練。
+    graduated_to: [race.tech.14]
     findings:
       - text_zh: 同年齡同程度的人，全國賽經驗加倍，最後一段掉速、各段起伏、每場差異都沒有變小，各年齡都一樣。
         certainty: 🔵
@@ -332,8 +346,9 @@ notes:
     theme: development
     order: 4
     kind: analysis
-    status: researching
+    status: graduated
     summary_zh: 在哪一隊大約解釋一成多的進步差異；轉隊當年常伴隨進步，但到新隊第一整年就回到一般水準。
+    graduated_to: [race.tech.15]
     open_questions: [fq.1.5]
     findings:
       - text_zh: 扣掉年齡與程度後，進步差異約 12% 可以用隊伍解釋；隊伍今年進步多、明年還多的相關只有 0.22。

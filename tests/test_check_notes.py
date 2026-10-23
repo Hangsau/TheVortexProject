@@ -52,6 +52,7 @@ class TestCheckNotes(unittest.TestCase):
     def test_graduated_needs_existing_unit(self):
         reg = deepcopy(self.registry)
         note = self._first_note(reg)
+        note.pop("graduated_to", None)
         note["status"] = "graduated"
         self.assertTrue(any("graduated_to 空白" in e for e in self._check(reg)))
         note["graduated_to"] = ["tech.no-such-unit"]

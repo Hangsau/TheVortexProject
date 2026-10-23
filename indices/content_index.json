@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1174,
+  "record_count": 1189,
   "records": [
     {
       "id": "Bk1",
@@ -22194,6 +22194,360 @@
         "src.hatzigeorgiadis-2011-selftalk-meta"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "race.tech.1",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[257]",
+      "title": "同一個人每場比賽差最多的是最後一段；狀態變好或變差，也先反映在後半段",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.2",
+        "race.tech.3"
+      ]
+    },
+    {
+      "id": "race.tech.10",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[266]",
+      "title": "預賽要收，平常成績至少要比晉級門檻快 2–3%；看不到「預賽收著游，決賽比較好」",
+      "tags": {
+        "category": [
+          "race_day"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.4"
+      ]
+    },
+    {
+      "id": "race.tech.11",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[267]",
+      "title": "同一天每多游一項，每趟慢約 0.2%；台灣孩子的 200 常中段保留太多",
+      "tags": {
+        "category": [
+          "race_day"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.2"
+      ]
+    },
+    {
+      "id": "race.tech.12",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[268]",
+      "title": "分齡組裡年紀最小的孩子吃虧很大；但年紀最小還擠進全國賽的孩子，長大反而比較好",
+      "tags": {
+        "category": [
+          "race_development"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.13",
+        "race.tech.15"
+      ]
+    },
+    {
+      "id": "race.tech.13",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[269]",
+      "title": "「比賽多、進步少」是量法造成的假象；用公平的量法，比賽多寡跟進步沒有關係",
+      "tags": {
+        "category": [
+          "race_development"
+        ],
+        "certainty": [
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.12",
+        "race.tech.14"
+      ]
+    },
+    {
+      "id": "race.tech.14",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[270]",
+      "title": "比賽比得多，配速不會自己變穩；要穩得在練習中刻意練",
+      "tags": {
+        "category": [
+          "race_development"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.13",
+        "race.tech.8"
+      ]
+    },
+    {
+      "id": "race.tech.15",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[271]",
+      "title": "在哪一隊大約解釋一成多的進步差異；轉隊當年常伴隨進步，到新隊第一整年就回到一般水準",
+      "tags": {
+        "category": [
+          "race_development"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.12",
+        "race.tech.13"
+      ]
+    },
+    {
+      "id": "race.tech.2",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[258]",
+      "title": "100 公尺同組的差距約六成在後 50；實力相近時，前 50 領先的人比較常贏",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.1",
+        "race.tech.5"
+      ]
+    },
+    {
+      "id": "race.tech.3",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[259]",
+      "title": "前段比平常快，代價落在最後一段；短池比長池掉得多",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.4",
+        "race.tech.8"
+      ]
+    },
+    {
+      "id": "race.tech.4",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[260]",
+      "title": "「會掉的選手」要看一季好幾場才準；決賽前段多衝，最後一段痛一點但總成績更好",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.3",
+        "race.tech.8"
+      ]
+    },
+    {
+      "id": "race.tech.5",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[261]",
+      "title": "出發反應快不會讓前段衝過頭（仰式例外）；反應快的那天，往往整體狀態好",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.2"
+      ]
+    },
+    {
+      "id": "race.tech.6",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[262]",
+      "title": "個人混合式前面快的那天，四個泳式段都快；相對沒跟上的是最後的自由式段",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.1",
+        "race.tech.7"
+      ]
+    },
+    {
+      "id": "race.tech.7",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[263]",
+      "title": "蛙式自成一格：混合式選手的蛙式項目，看他混合式的蛙式段就知道",
+      "tags": {
+        "category": [
+          "race_swim"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.6"
+      ]
+    },
+    {
+      "id": "race.tech.8",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[264]",
+      "title": "旁邊的人快會把你拉快；最後一段多掉一點，但總成績平均是賺的",
+      "tags": {
+        "category": [
+          "race_day"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.3",
+        "race.tech.9"
+      ]
+    },
+    {
+      "id": "race.tech.9",
+      "domain": "instructional",
+      "file": "canonical/instructional/technical-analysis.yaml",
+      "path": "points[265]",
+      "title": "長池邊道比較慢、後段掉比較多；組裡沒人帶時比較慢；決賽碰到強組會被帶快",
+      "tags": {
+        "category": [
+          "race_day"
+        ],
+        "certainty": [
+          "🔴",
+          "🔵"
+        ],
+        "stroke": [
+          "race"
+        ]
+      },
+      "source_ids": [],
+      "outgoing_ids": [
+        "race.tech.8"
+      ]
     },
     {
       "id": "recreational-water-cryptosporidium",

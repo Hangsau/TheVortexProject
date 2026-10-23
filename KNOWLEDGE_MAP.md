@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-10-20 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-10-23 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -14,7 +14,7 @@
 
 | 章節 | 條目數 | 備註 |
 |---|---|---|
-| `technical-analysis` | 257 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 24}；確定性：{'🔵': 145, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 3} |
+| `technical-analysis` | 272 | 泳式分布：{'free': 41, 'back': 30, 'breast': 35, 'fly': 38, 'udk': 30, 'starts-turns': 59, 'open-water': 24, 'race': 15}；確定性：{'🔵': 146, '🟢': 74, '🟠': 24, '🟡': 11, '🔴': 17} |
 | `teaching-errors` | 106 | 泳式分布：{'free': 25, 'back': 17, 'breast': 18, 'fly': 17, 'udk': 13, 'starts-turns': 14, 'open-water': 2} |
 | `problems` | 84 | 現象 → 機制 → 陸上介入 → 水中練習 |
 | `moves` | 66 | 泳式頁技術組件（動作） |
@@ -42,9 +42,9 @@
 
 ## 教學層 `canonical/instructional/`
 
-### `technical-analysis.yaml` — 技術分析（**257 條目**）
+### `technical-analysis.yaml` — 技術分析（**272 條目**）
 
-**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 24, 起跳轉身 59, 水下蝶腳 30
+**泳式分布**：仰式 30, 蛙式 35, 蝶式 38, 自由式 41, 開放水域與鐵人 24, 比賽與配速 15, 起跳轉身 59, 水下蝶腳 30
 
 #### 自由式 (41)
 
@@ -337,6 +337,26 @@
 | open-water.tech.22 | concept |  | 🔵 |
 | open-water.tech.23 | concept |  | 🔵 |
 | open-water.tech.24 | concept |  | 🔵 |
+
+#### 比賽與配速 (15)
+
+| ID | 範疇 | 標題 | 確定性 |
+|---|---|---|---|
+| race.tech.1 | race_swim |  | 🔴 |
+| race.tech.2 | race_swim |  | 🔴 |
+| race.tech.3 | race_swim |  | 🔴 |
+| race.tech.4 | race_swim |  | 🔴 |
+| race.tech.5 | race_swim |  | 🔴 |
+| race.tech.6 | race_swim |  | 🔴 |
+| race.tech.7 | race_swim |  | 🔴 |
+| race.tech.8 | race_day |  | 🔴 |
+| race.tech.9 | race_day |  | 🔴 |
+| race.tech.10 | race_day |  | 🔴 |
+| race.tech.11 | race_day |  | 🔴 |
+| race.tech.12 | race_development |  | 🔴 |
+| race.tech.13 | race_development |  | 🔵 |
+| race.tech.14 | race_development |  | 🔴 |
+| race.tech.15 | race_development |  | 🔴 |
 
 ### `teaching-errors.yaml` — 教學誤區（**106 條目**）
 

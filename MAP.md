@@ -33,6 +33,8 @@
 | 加／改研究筆記（含上不上網站、主題、排序、卡片結論） | 寫 `Research/<主題>/*.md` → 登錄 `Research/_notes.yaml` → `python tools/check_notes.py`（Research/、Observations/ 每個 .md 都必須登錄或列 non_public） |
 | 改開放問題（網站「開放問題」頁） | `FUTURE_RESEARCH.md`；題號 `{#q-章-題}` 是穩定錨點，筆記在 `_notes.yaml` 的 `open_questions` 用 `fq.章.題` 指過來，不重編號 |
 | 查研究筆記的引用是不是真的 | `python tools/check_note_citations.py [--slug …]`（DOI→Crossref、PMID→Europe PMC）→ `reports/note_citations.md` |
+| 加技能（stroke key，例：`race` 比賽與配速） | `_taxonomy.yaml` stroke 值、`tools/validate.py` 兩處 ID 正則、`build_knowledge_map.py`／`audit_layers.py`／`review_firstpass.py` 清單、`moves.yaml` 加該技能的 premise 區塊（沒有動作就 `moves: []`）；下游 my-site 見其 MAP |
+| 改「比賽與配速」知識點 | `technical-analysis.yaml` 的 `race.tech.*`（category `race_swim`／`race_day`／`race_development`）；數據 🔵＋evidence 寫資料、方法、限制，原因 🔴 放 mechanism；真相源研究筆記在 `Research/競賽成績分析/`，登錄表 `graduated_to` 互連 |
 | 加練習 drill | `Drills/drills_<泳式>.yaml`（schema 見 `Drills/DRILL_INDEX.md`，9 軸 fingerprint 見 `Drills/TAG_SCHEMA.md`） |
 | 找 drill 分布／空白格 | `python tools/tag_coverage_report.py` |
 | 改動作—肌群—訓練—活動度圖譜 | `canonical/movement/{actions,muscle-groups,stroke-demands,interventions}.yaml`；相位先登錄 `_taxonomy.yaml#movement_phase_registry`（雷 §4.7） |
