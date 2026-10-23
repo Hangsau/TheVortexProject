@@ -10,6 +10,7 @@
 - 教學競技 2 份（Talos 未查證初稿）與 `_incoming-hestia-2026-06-20` 移到 `Research/_archive/`。
 - my-site 端（同日 commit）：`sync_research_notes()` 改讀登錄表，`NOTE_SLUGS` 已刪；研究筆記清單依主題分組編號；新增「研究結論一覽」`/vortex/research/conclusions/`（102 條結論一頁看完）。
 - 規劃書與完成紀錄：`plans/研究筆記整理規劃_2026-10-23.md`。
+- `notify-mysite.yml` 原本只監聽 canonical／Drills／Instructional，Research／Technica／Observations 改了不會自動同步（之前的研究筆記都是手動 sync）；已加入觸發路徑。線上已驗證：研究筆記 7 主題 42 篇、研究結論一覽 102 條。
 
 ## 下一步建議（研究筆記整理）
 
