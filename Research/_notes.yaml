@@ -185,6 +185,26 @@ notes:
         certainty: 🔵
         apply_zh: 賽後先看蛙式段跟自己平常比；練「前三段快之後自由式還踢得起來」的轉換組。
 
+  - id: note.stroke-links
+    path: 競賽成績分析/四式牽動_混合式選手游蛙式.md
+    slug: stroke-links
+    theme: race-swim
+    order: 7
+    kind: analysis
+    status: researching
+    summary_zh: 蛙式在四式裡最自成一格；混合式的差距約三分之一在蛙式段，蛙式段強的混合式選手游 200 蛙排名更前面。
+    open_questions: [fq.1.6]
+    findings:
+      - text_zh: 混合式四個泳式段各自最能預測同泳式的單項；蛙式最獨立，只有蝶式段跟 200 蛙有一點關係，而且只有單向。
+        certainty: 🔵
+        apply_zh: 不要用其他泳式推估蛙式，蛙式要另外評估。
+      - text_zh: 蛙式段比自己其他三段每強 1%，200 蛙的排名比自己混合式多好約 0.4%；混合式蛙式段約為自己 200 蛙平均每 50 的 1.03–1.045 倍。
+        certainty: 🔵
+        apply_zh: 蛙式段是強項的混合式選手可以加報 200 蛙；用 200 蛙平均每 50 × 1.03–1.045 估混合式蛙式段的目標。
+      - text_zh: 200 蛙一年進步 1%，混合式蛙式段快 0.53%、自由式段 0.48%，蝶仰段只有約 0.2；其他泳式的進步則分散到四段。
+        certainty: 🔵
+        apply_zh: 混合式選手弱項是蛙式時，補蛙式回報最大。
+
   # ── 比賽當天的環境 ───────────────────────────────
   - id: note.neighbor-effect
     path: 競賽成績分析/鄰道效應.md
