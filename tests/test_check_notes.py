@@ -20,8 +20,11 @@ class TestCheckNotes(unittest.TestCase):
     def _check(self, registry):
         return check_notes.check(registry, self.content_ids, self.question_ids)
 
+    def _regular(self, registry):
+        return [n for n in registry["notes"] if n.get("role") != "overview"]
+
     def _first_note(self, registry):
-        return registry["notes"][0]
+        return self._regular(registry)[0]
 
     def test_real_registry_passes(self):
         self.assertEqual([], self._check(self.registry))
@@ -39,8 +42,9 @@ class TestCheckNotes(unittest.TestCase):
 
     def test_undeclared_theme_and_duplicate_slug(self):
         reg = deepcopy(self.registry)
-        reg["notes"][0]["theme"] = "no-such-theme"
-        reg["notes"][1]["slug"] = reg["notes"][2]["slug"]
+        notes = self._regular(reg)
+        notes[0]["theme"] = "no-such-theme"
+        notes[1]["slug"] = notes[2]["slug"]
         errors = self._check(reg)
         self.assertTrue(any("未在 groups 宣告" in e for e in errors))
         self.assertTrue(any("slug 重複" in e for e in errors))
@@ -61,6 +65,24 @@ class TestCheckNotes(unittest.TestCase):
         errors = self._check(reg)
         self.assertTrue(any("certainty" in e for e in errors))
         self.assertTrue(any("fq.99.9" in e for e in errors))
+
+    def test_overview_rules(self):
+        reg = deepcopy(self.registry)
+        overviews = [n for n in reg["notes"] if n.get("role") == "overview"]
+        self.assertTrue(overviews)
+        # 總覽可以掛在大類上，也不需要 findings
+        self.assertTrue(any(o["theme"] in {g["key"] for g in reg["groups"]} for o in overviews))
+        self.assertTrue(any(not o.get("findings") for o in overviews))
+        # 同一主題兩篇總覽要擋
+        extra = deepcopy(overviews[0])
+        extra["id"], extra["slug"] = "note.dup-overview", "dup-overview"
+        reg["notes"].append(extra)
+        self.assertTrue(any("已經有一篇總覽" in e for e in self._check(reg)))
+
+    def test_unknown_role_rejected(self):
+        reg = deepcopy(self.registry)
+        self._first_note(reg)["role"] = "summary"
+        self.assertTrue(any("role" in e for e in self._check(reg)))
 
 
 if __name__ == "__main__":

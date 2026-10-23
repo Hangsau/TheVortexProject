@@ -4,19 +4,19 @@
 
 ---
 
-## 當前狀態（2026-10-23，研究筆記整理 Phase 1 完成）
+## 當前狀態（2026-10-23，研究筆記整理 Phase 1–4 全部完成）
 
-- **`Research/_notes.yaml` 是研究筆記的唯一真相來源**：46 篇登錄（42 公開；鐵人 verdicts／myths 與 2 篇教學觀察先 `public: false`），3 大類 7 主題、閱讀順序、一句話結論、2–4 條 findings（證據等級＋怎麼用）、狀態；`non_public` 列刻意不公開的檔案。驗證：`python tools/check_notes.py`（測試 `tests/test_check_notes.py`）。
-- 教學競技 2 份（Talos 未查證初稿）與 `_incoming-hestia-2026-06-20` 移到 `Research/_archive/`。
-- my-site 端（同日 commit）：`sync_research_notes()` 改讀登錄表，`NOTE_SLUGS` 已刪；研究筆記清單依主題分組編號；新增「研究結論一覽」`/vortex/research/conclusions/`（102 條結論一頁看完）。
-- 規劃書與完成紀錄：`plans/研究筆記整理規劃_2026-10-23.md`。
-- `notify-mysite.yml` 原本只監聽 canonical／Drills／Instructional，Research／Technica／Observations 改了不會自動同步（之前的研究筆記都是手動 sync）；已加入觸發路徑。線上已驗證：研究筆記 7 主題 42 篇、研究結論一覽 102 條。
+- **研究筆記的真相源是 `Research/_notes.yaml`**：49 篇登錄、47 篇公開（含 5 篇主題總覽 `role: overview`）；網站研究庫有「研究筆記」（分組＋總覽）、「研究結論一覽」（全部結論一頁）、「開放問題」（`FUTURE_RESEARCH.md`，6 章 26 題，題號穩定）。
+- 驗證工具：`tools/check_notes.py`（登錄完整性）、`tools/check_note_citations.py`（DOI／PMID 查回書目）。新筆記流程寫在 `RESEARCH_PLAN.md` 與 CLAUDE.md 收尾規則 4／4b。
+- **引用核對結果**：彈性蓄能（引用全假）、自然頻率（數字無來源）已下架待重寫；心理層 8 處指錯論文的 DOI／PMID 已依 canonical 註冊表改正；渦流回收兩筆對不上的改列假說。
+- `notify-mysite.yml` 已加入 Research／Technica／Observations 觸發路徑（之前研究筆記都靠手動 sync）。
+- 完整紀錄：`plans/研究筆記整理規劃_2026-10-23.md` §6。
 
-## 下一步建議（研究筆記整理）
+## 下一步建議（研究筆記）
 
-1. **Phase 2**：先用 Claude Design 畫布出研究筆記清單／結論一覽的 2–3 版給使用者挑；寫四篇主題總覽（比賽數據、感知與學習、水中物理、訓練安排）；鐵人 verdicts／myths 把 S 代號改成讀者可讀的引用後改 `public: true`；教學觀察 2 篇同理；FUTURE_RESEARCH 重寫成開放問題頁。
-2. **Phase 3**：逐篇填 `graduated_to`、心理與感知自標「非定稿」者逐篇定稿；`彈性蓄能`、`自然頻率` 內的數字來源先複核（登錄表 maintenance_note 已標）。
-3. 新寫研究筆記一律先登錄 `_notes.yaml`（CLAUDE.md 收尾規則 4b）。
+1. 彈性蓄能、自然頻率：只用書目核對過、讀得到原文的來源重寫（開放問題 4.2／4.3），重寫後改回 `public: true` 並跑 `check_note_citations.py --slug`。
+2. `reports/note_citations.md` 的 89 筆「可疑」多為啟發式誤報（那一行只寫中文描述），已人工看過一輪；新加筆記時只看新增的。
+3. 比賽分析的原因題（開放問題 1.x）要靠 hangsau-swim 練習分段資料；累積後回頭驗證，通過再談寫進 canonical。
 
 ## 當前狀態（2026-10-23，第二輪比賽資料研究筆記 5 篇）
 

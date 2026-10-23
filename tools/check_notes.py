@@ -31,6 +31,7 @@ FUTURE_RESEARCH = ROOT / "FUTURE_RESEARCH.md"
 KINDS = {"analysis", "literature", "observation"}
 STATUSES = {"researching", "graduated", "retracted"}
 CERTAINTIES = {"🔵", "🟢", "🟡", "🟠", "🔴"}
+ROLES = {None, "overview"}
 BANNED_SUMMARY_PREFIXES = ("建立日期", "整合日期", "dossier", "Dossier", "定位", "主題：", "狀態")
 SLUG_RE = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
@@ -55,6 +56,7 @@ def check(registry: dict, content_ids: set[str], question_ids: set[str]) -> list
 
     themes: set[str] = set()
     group_keys: set[str] = set()
+    overview_of: set[str] = set()
     for g in registry.get("groups") or []:
         if g.get("key") in group_keys:
             errors.append(f"group 重複：{g.get('key')}")
@@ -88,14 +90,25 @@ def check(registry: dict, content_ids: set[str], question_ids: set[str]) -> list
             errors.append(f"{nid}：檔案不存在 {n.get('path')}")
         covered.add(path)
 
-        if n.get("theme") not in themes:
-            errors.append(f"{nid}：theme「{n.get('theme')}」未在 groups 宣告")
-        key = (n.get("theme"), n.get("order"))
-        if not isinstance(n.get("order"), int):
-            errors.append(f"{nid}：order 必須是整數")
-        elif key in seen_order:
-            errors.append(f"{nid}：同主題 order 重複 {key}")
-        seen_order.add(key)
+        role = n.get("role")
+        if role not in ROLES:
+            errors.append(f"{nid}：role「{role}」不合法")
+        if role == "overview":
+            # 總覽掛在主題或大類上，每個只能有一篇；不編號、不必有 findings
+            if n.get("theme") not in themes | group_keys:
+                errors.append(f"{nid}：總覽的 theme「{n.get('theme')}」不是已宣告的主題或大類")
+            if n.get("theme") in overview_of:
+                errors.append(f"{nid}：「{n.get('theme')}」已經有一篇總覽")
+            overview_of.add(n.get("theme"))
+        else:
+            if n.get("theme") not in themes:
+                errors.append(f"{nid}：theme「{n.get('theme')}」未在 groups 宣告")
+            key = (n.get("theme"), n.get("order"))
+            if not isinstance(n.get("order"), int):
+                errors.append(f"{nid}：order 必須是整數")
+            elif key in seen_order:
+                errors.append(f"{nid}：同主題 order 重複 {key}")
+            seen_order.add(key)
 
         if n.get("kind") not in KINDS:
             errors.append(f"{nid}：kind「{n.get('kind')}」不合法")
@@ -111,7 +124,7 @@ def check(registry: dict, content_ids: set[str], question_ids: set[str]) -> list
             errors.append(f"{nid}：summary_zh 是內部頁首不是結論「{summary[:12]}…」")
 
         findings = n.get("findings") or []
-        if not findings:
+        if not findings and role != "overview":
             errors.append(f"{nid}：沒有 findings")
         for i, f in enumerate(findings, 1):
             if not (f.get("text_zh") or "").strip():

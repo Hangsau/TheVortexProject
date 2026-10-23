@@ -113,8 +113,8 @@ Observations/    → 觀察層：教學案例
 1. **凡動到 canonical/ 或 Drills/ 的內容**：先跑 `python tools/build_knowledge_map.py` **與 `python tools/build_indices.py`**，重生 `KNOWLEDGE_MAP.md` 與 `indices/*.json`，再 commit。兩者都是 committed 產物、都不能落後於實際內容——地圖是人讀入口，`indices/` 是機器索引（內容／tag 反向／來源反向／缺口報告）。**`indices/` 先前只寫在 S5 完成紀錄裡沒進本流程，結果整整 24 個動到 canonical 的 commit 沒重生（record_count 停在 839，實際 930）**
 2. 更新 `HANDOFF.md` 的「當前狀態」與「下一步建議」兩個區塊
 3. 更新 `_INDEX.md` 的對應文件狀態（如有變動）
-4. 若 Research/ 層有新文件完成：同步 `RESEARCH_PLAN.md`（Layer 完成標記）+ `FUTURE_RESEARCH.md`（原題目畢業標記）
-4b. **動到 `Research/` 或 `Observations/` 的檔案**：同步 `Research/_notes.yaml`（新筆記登錄主題、順序、一句話結論、findings、狀態；不公開的列 `non_public` 附理由），再跑 `python tools/check_notes.py`。登錄表是網站研究筆記與「研究結論一覽」的唯一來源，沒登錄就不會上站
+4. 若 Research/ 層有新文件完成：同步 `FUTURE_RESEARCH.md`（網站「開放問題」頁；新題目照 `### <章>.<題> 標題 {#q-章-題}` 加在對應章節，題號不重編；有答案的移到「已回答」）與 `RESEARCH_PLAN.md` 的主題現況表
+4b. **動到 `Research/` 或 `Observations/` 的檔案**：同步 `Research/_notes.yaml`（新筆記登錄主題、順序、一句話結論、findings、狀態；不公開的列 `non_public` 附理由），再跑 `python tools/check_notes.py`；筆記有 DOI／PMID 就跑 `python tools/check_note_citations.py --slug <slug>`，「查不到」必須清零、「可疑」逐筆人工看。登錄表是網站研究筆記與「研究結論一覽」的唯一來源，沒登錄就不會上站。同一主題滿 3 篇才開新主題，並寫總覽（`role: overview`）
 5. `git add` + `git commit` + `git push` 到 GitHub。**本 repo 的線上分支是 `master`，不是 `main`**——Claude Code 的 session context 會自稱「Main branch: main」，那是預設值不是實況；用 `git push origin HEAD:main` 會憑空建出一條沒人看的分支，且 `notify-mysite` 只監聽 `master`，等於推了卻不同步
 6. **此 repo 雖無 Hugo build CI，但 push 後 notify-mysite workflow 會通知 my-site 自動同步**——確認 `.github/workflows/notify-mysite.yml` 觸發後才算完整流程
 

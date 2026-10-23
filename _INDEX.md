@@ -213,7 +213,7 @@ L0–L6 水感發展框架、三型診斷（A/B/C）、技術指標對應
 ---
 
 ## 規劃文件
-- `RESEARCH_PLAN.md` — 四層研究架構完整說明
+- `RESEARCH_PLAN.md` — 各研究主題的現況與方向、筆記畢業進 canonical 的門檻（2026-10-23 改寫；舊四層架構在 `Research/_archive/RESEARCH_PLAN_2026-04.md`）
 - `FUTURE_RESEARCH.md` — 前沿假設庫（渦流、頻率、感受器等）
 - `plans/骨關節動作肌群訓練伸展圖譜_plancheck.md` — **Step 17–21 全數完成、動作圖譜已上線（2026-09-02，`feat/movement-atlas` 併回 master `f6dfd60`）** · 13 條命名校正語意修訂 + `canonical/movement/` 動作／肌群／泳姿需求／條件式訓練與活動度圖譜（37 筆，全 `published`）+ my-site rollout gates。兩個掛帳決策已裁決（W013 升級成 E012 ERROR；W003 對 movement 是檢查器視野缺口非內容缺口，已修，528→468），Step 22 仰式覆蓋已補齊（仰式 **7/7**）；2026-09-03 的 W6–W9 撰寫輪把 (A) 組 13 個相位全數清空，demand **34/59**（(B) 組續推至 44/59、(C) 組續推至 **52/59**，見 HANDOFF）
 - `plans/W4_圖譜填充派工規格.md` — Step 17／18 四區填充的自足派工規格：受控欄位、相位登錄表對照、負面詞清單與逐欄驗收條款
