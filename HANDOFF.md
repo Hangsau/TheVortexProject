@@ -6,7 +6,7 @@
 
 ## 當前狀態（2026-10-23，研究筆記整理 Phase 1–4 全部完成）
 
-- **研究筆記的真相源是 `Research/_notes.yaml`**：50 篇登錄、48 篇公開（2026-10-23 加 `stroke-links`〈四式之間的牽動〉，race-swim 第 7 篇，報告與程式在 swim-results `research/stroke_links/`；比賽分析總覽改為 16 篇＋第五節「蛙式自成一格」；開放問題 1.6 補一句）（含 5 篇主題總覽 `role: overview`）；網站研究庫有「研究筆記」（分組＋總覽）、「研究結論一覽」（全部結論一頁）、「開放問題」（`FUTURE_RESEARCH.md`，6 章 26 題，題號穩定）。
+- **研究筆記的真相源是 `Research/_notes.yaml`**：50 篇登錄、48 篇公開（2026-10-23 加 `stroke-links`〈四式之間的牽動〉，race-swim 第 7 篇；同日依 v2 改成日本＋台灣＋世界泳聯三來源，「蛙式段占差距 34%」降級為只在日本穩定，〈泳式之間的關係〉⑥ 加註，報告與程式在 swim-results `research/stroke_links/`；比賽分析總覽改為 16 篇＋第五節「蛙式自成一格」；開放問題 1.6 補一句）（含 5 篇主題總覽 `role: overview`）；網站研究庫有「研究筆記」（分組＋總覽）、「研究結論一覽」（全部結論一頁）、「開放問題」（`FUTURE_RESEARCH.md`，6 章 26 題，題號穩定）。
 - 驗證工具：`tools/check_notes.py`（登錄完整性）、`tools/check_note_citations.py`（DOI／PMID 查回書目）。新筆記流程寫在 `RESEARCH_PLAN.md` 與 CLAUDE.md 收尾規則 4／4b。
 - **引用核對結果**：彈性蓄能（引用全假）、自然頻率（數字無來源）已下架待重寫；心理層 8 處指錯論文的 DOI／PMID 已依 canonical 註冊表改正；渦流回收兩筆對不上的改列假說。
 - `notify-mysite.yml` 已加入 Research／Technica／Observations 觸發路徑（之前研究筆記都靠手動 sync）。
