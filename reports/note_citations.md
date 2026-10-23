@@ -12,9 +12,9 @@
   支持文獻（🟢）：自我涉入氣候與擔憂／焦慮的關聯，其強度取決於**知覺勝任感**——高勝任 + ego 氣候可能仍正向，**低勝任 + ego 氣候則負向效應最強**（Masters 泳者 Frontiers 2025，DOI 10.3389/fpsyg.2025.1574429 / PMC12098359；動機氣候-焦慮統合分析 DOI 10.3390/ejihpe14040064 / PMC11
 - **可疑** `psychology-overview`:92 DOI 10.3390/ejihpe14040064 → A Systematic Review with a Meta-Analysis of the Motivational Climate and Hedonic Well-Being Constructs: The Importance of the Athlete Level | Lochbaum  
   支持文獻（🟢）：自我涉入氣候與擔憂／焦慮的關聯，其強度取決於**知覺勝任感**——高勝任 + ego 氣候可能仍正向，**低勝任 + ego 氣候則負向效應最強**（Masters 泳者 Frontiers 2025，DOI 10.3389/fpsyg.2025.1574429 / PMC12098359；動機氣候-焦慮統合分析 DOI 10.3390/ejihpe14040064 / PMC11
-- **可疑** `psychology-overview`:92 PMC11048888 → A Systematic Review with a Meta-Analysis of the Motivational Climate and Hedonic Well-Being Constructs: The Importance of the Athlete Level. | Lochbaum  
-  支持文獻（🟢）：自我涉入氣候與擔憂／焦慮的關聯，其強度取決於**知覺勝任感**——高勝任 + ego 氣候可能仍正向，**低勝任 + ego 氣候則負向效應最強**（Masters 泳者 Frontiers 2025，DOI 10.3389/fpsyg.2025.1574429 / PMC12098359；動機氣候-焦慮統合分析 DOI 10.3390/ejihpe14040064 / PMC11
 - **可疑** `psychology-overview`:92 PMC12098359 → The influence of ego-involving climates on perceived competence and commitment for U.S. Masters swimmers. | Wineinger  
+  支持文獻（🟢）：自我涉入氣候與擔憂／焦慮的關聯，其強度取決於**知覺勝任感**——高勝任 + ego 氣候可能仍正向，**低勝任 + ego 氣候則負向效應最強**（Masters 泳者 Frontiers 2025，DOI 10.3389/fpsyg.2025.1574429 / PMC12098359；動機氣候-焦慮統合分析 DOI 10.3390/ejihpe14040064 / PMC11
+- **可疑** `psychology-overview`:92 PMC11048888 → A Systematic Review with a Meta-Analysis of the Motivational Climate and Hedonic Well-Being Constructs: The Importance of the Athlete Level. | Lochbaum  
   支持文獻（🟢）：自我涉入氣候與擔憂／焦慮的關聯，其強度取決於**知覺勝任感**——高勝任 + ego 氣候可能仍正向，**低勝任 + ego 氣候則負向效應最強**（Masters 泳者 Frontiers 2025，DOI 10.3389/fpsyg.2025.1574429 / PMC12098359；動機氣候-焦慮統合分析 DOI 10.3390/ejihpe14040064 / PMC11
 - **可疑** `psychology-overview`:162 PMID 34868421 → Training vs. Competition in Sport: State Anxiety and Response of Stress Hormones in Young Swimmers. | Carrasco  
   | [02](02_喚醒焦慮與壓力崩潰.md) | 喚醒焦慮與壓力崩潰 | 再投資理論（Masters 1992）、IZOF、Beilock | EMG 悖論機制鏈；游泳賽前 ACTH 4 倍升高（PMID 34868421） |

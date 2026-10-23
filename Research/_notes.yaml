@@ -675,7 +675,7 @@ notes:
     order: 0
     kind: literature
     status: researching
-    summary_zh: 推進主要靠往後推水的阻力、自己產生的渦流可以被再利用；兩篇引用查證失敗的筆記已下架待重寫。
+    summary_zh: 推進主要靠往後推水的阻力、自己產生的渦流可以被再利用；彈性蓄能與划頻節律兩篇只用全文來源重寫，游泳中的直接量測仍是空白。
     open_questions: [fq.4.1, fq.4.2, fq.4.3]
 
   - id: note.propulsion-history
@@ -717,15 +717,17 @@ notes:
     order: 3
     kind: literature
     status: researching
-    summary_zh: 四式各有一個肌肉先被拉長再彈回的時機；水阻會吸收大部分彈性，游泳中的實測多半是研究空白。
-    public: false
+    summary_zh: 肌肉先被快速拉長再縮短會更有力；游泳裡有說法的只有出發與轉身的蹬牆，划手踢腿中有沒有可利用的彈性蓄能，目前沒有量測。
     open_questions: [fq.4.3]
     findings:
-      - text_zh: 四式各有一個伸展後縮短的時機（例如自由式划手末端到入水），可以作為「彈出」的感知目標。
+      - text_zh: 伸展縮短循環要「拉長快、轉換短」，停頓太久存下的能量會以熱散掉。
+        certainty: 🟡
+      - text_zh: 轉身時中等力度觸牆、從半流線型姿勢快速蹬出，能用上腿部存的彈性能量；觸牆後再蹲深或往牆裡沉會散掉。
+        certainty: 🟡
+        apply_zh: 練轉身時要求觸牆後立刻蹬，不往下蹲、不往牆裡沉。
+      - text_zh: 水中動作速度低，能利用的彈性能量很可能比陸上跳躍小；划手與踢腿中的實際貢獻沒有量測。
         certainty: 🔵
-      - text_zh: 自由式肩帶在游泳中的彈性蓄能，目前沒有實測研究。
-        certainty: 🔴
-    maintenance_note: 2026-10-23 書目核對：引用的 7 筆 DOI／PMID 全部查不到或對到無關論文，公式數字前後矛盾（k=200 N/mm、ΔL=1 cm 已得 10 J，文寫 2–5 J）。下架待重寫，只用書目核對過的來源；題目見 FUTURE_RESEARCH 4.3。
+    maintenance_note: 2026-10-23 舊稿（引用 7 筆全假、數字矛盾）下架後，只用 NSCA 第 18 章、Neumann 第 3 章、Riewald & Rodeo 2015 第 6 章全文重寫。
 
   - id: note.natural-frequency
     path: 物理現象/自然頻率.md
@@ -734,15 +736,17 @@ notes:
     order: 4
     kind: literature
     status: researching
-    summary_zh: 划頻接近肢體的自然頻率時，可能比較省力、感覺「水在幫我」；目前主要是物理推導。
-    public: false
+    summary_zh: 手腳像耦合的振盪器，一划配幾踢會隨速度切換；但「每個人有一個最省力的自然頻率划頻」沒有泳者的直接量測。
     open_questions: [fq.4.2]
     findings:
-      - text_zh: 肢體可視為有阻尼的彈簧質量系統，划頻與自然頻率匹配是省力的候選解釋。
+      - text_zh: 距離配速時入水期較長、划頻較低、比較經濟；衝刺用划頻與推進力換掉經濟性。
+        certainty: 🟡
+        apply_zh: 不給固定的理想划頻，划頻跟距離、速度一起變。
+      - text_zh: 菁英自由式選手加速時，手腳頻率比從 1:1 轉到 1:3，1:2 很少出現；在流水槽中耦合變鬆、不對稱變大。
+        certainty: 🟢
+      - text_zh: 划手踢腿是主動驅動、阻力隨速度平方增加，肢體的固有頻率不能直接等同最佳划頻。
         certainty: 🔵
-      - text_zh: 泳者自然頻率與划頻的直接測量是研究空白。
-        certainty: 🔴
-    maintenance_note: 2026-10-23 書目核對：核心數字（臂腿自然頻率 0.8–1.5 Hz）無來源；Morris 2016 的實際題目與筆記聲稱內容不符，其餘為機器魚等無關文獻。下架待重寫；題目見 FUTURE_RESEARCH 4.2。
+    maintenance_note: 2026-10-23 舊稿（核心數字無來源、引用對不上）下架後，只用 Riewald & Rodeo 2015 第 2 章、Guignard 等 2019 全文（本機 swimming-kinetic-chain）重寫；標題改為「划頻、節律與手腳協調」。
 
   # ── 訓練安排 ─────────────────────────────────────
   - id: note.training-overview
