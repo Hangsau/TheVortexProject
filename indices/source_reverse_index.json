@@ -913,8 +913,13 @@
         "doi": "10.52082/jssm.2022.233",
         "url": "https://pmc.ncbi.nlm.nih.gov/articles/PMC9157519/"
       },
-      "usage_count": 2,
+      "usage_count": 3,
       "usages": [
+        {
+          "id": "ST27",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[30]"
+        },
         {
           "id": "starts-turns.tech.28",
           "file": "canonical/instructional/technical-analysis.yaml",
@@ -3365,7 +3370,7 @@
       "identifier": {
         "isbn": "9781735441412"
       },
-      "usage_count": 50,
+      "usage_count": 59,
       "usages": [
         {
           "id": "ST10",
@@ -3401,6 +3406,51 @@
           "id": "ST20",
           "file": "Drills/drills_starts-turns.yaml",
           "path": "drills[23]"
+        },
+        {
+          "id": "ST21",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[24]"
+        },
+        {
+          "id": "ST22",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[25]"
+        },
+        {
+          "id": "ST23",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[26]"
+        },
+        {
+          "id": "ST24",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[27]"
+        },
+        {
+          "id": "ST25",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[28]"
+        },
+        {
+          "id": "ST26",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[29]"
+        },
+        {
+          "id": "ST28",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[31]"
+        },
+        {
+          "id": "ST29",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[32]"
+        },
+        {
+          "id": "ST30",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[33]"
         },
         {
           "id": "ST7",
@@ -15626,8 +15676,13 @@
       "identifier": {
         "url": "https://www.usaswimming.org/docs/default-source/officialsdocuments/officials-training-resources/interpretations-and-recommendations/medley-rules-change-eff092117.pdf"
       },
-      "usage_count": 3,
+      "usage_count": 4,
       "usages": [
+        {
+          "id": "ST24",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[27]"
+        },
         {
           "id": "movement.demand.starts-turns.wall-rotation.body-orientation-is-not-shoulder-joint-rotation",
           "file": "canonical/movement/stroke-demands.yaml",
@@ -16795,7 +16850,7 @@
       "identifier": {
         "url": "https://resources.fina.org/fina/document/2023/01/04/65961a45-bde5-4217-b666-ca1f5dc2d1f0/1_Swimming-Technical-Rules.04.01.2023.pdf"
       },
-      "usage_count": 17,
+      "usage_count": 24,
       "usages": [
         {
           "id": "ST13",
@@ -16816,6 +16871,41 @@
           "id": "ST19",
           "file": "Drills/drills_starts-turns.yaml",
           "path": "drills[22]"
+        },
+        {
+          "id": "ST23",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[26]"
+        },
+        {
+          "id": "ST24",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[27]"
+        },
+        {
+          "id": "ST25",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[28]"
+        },
+        {
+          "id": "ST26",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[29]"
+        },
+        {
+          "id": "ST27",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[30]"
+        },
+        {
+          "id": "ST28",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[31]"
+        },
+        {
+          "id": "ST30",
+          "file": "Drills/drills_starts-turns.yaml",
+          "path": "drills[33]"
         },
         {
           "id": "breast.tech.6",

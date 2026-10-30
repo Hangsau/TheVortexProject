@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-10-23 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-10-30 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -36,7 +36,7 @@
 | `health/injuries (built)` | 0 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
-| `Drills (8 files)` | 214 | 176 drill 含 9 軸 fingerprint |
+| `Drills (8 files)` | 224 | 176 drill 含 9 軸 fingerprint |
 
 ---
 
@@ -1374,9 +1374,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | ScFist | 握拳划水 | sculling | L3 L4 | advanced | freestyle breaststroke butterfly |
 | ScUW1 | 水下寬 Y 懸停 | sculling | L4 | advanced | freestyle breaststroke butterfly |
 
-### `drills_starts-turns.yaml` — starts-turns (**24 drills**)
+### `drills_starts-turns.yaml` — starts-turns (**34 drills**)
 
-**難度分布**：{'foundation': 4, 'intermediate': 8, 'advanced': 8, 'elite': 4}
+**難度分布**：{'foundation': 4, 'intermediate': 13, 'advanced': 13, 'elite': 4}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1404,6 +1404,16 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | ST18 | 破水三步：蹬牆、N 下海豚踢、第一划不換氣、接 6 划 | timing | L4 L5 | advanced | starts_turns |
 | ST19 | 蛙式 pullout 計距 | turn | L3 L4 | intermediate | starts_turns |
 | ST20 | 仰式破水：仰臥海豚踢、轉換踢、第一划 | timing | L4 L5 | advanced | starts_turns |
+| ST21 | 仰轉蛙 crossover 第 1–2 步：池中往固定一側翻，再進牆翻轉接蛙式 pullout | turn | L2 L3 | intermediate | starts_turns |
+| ST22 | 仰轉蛙 crossover 第 3 步：俯臥單手扶牆，頭往下翻、蹬出接 pullout | turn | L2 L3 | intermediate | starts_turns |
+| ST23 | 仰轉蛙 crossover 第 4 步：側躺踢腿進牆、水下先看到牆再觸牆 | turn | L3 L4 | advanced | starts_turns |
+| ST24 | 仰轉蛙 crossover 完整轉身 | turn | L4 L5 | advanced | starts_turns |
+| ST25 | 仰轉蛙開放式轉身：仰臥觸牆、腳從水下收、側蹬轉俯臥 | turn | L2 L3 | intermediate | starts_turns |
+| ST26 | 仰轉蛙背翻：仰臥觸牆後向後翻滾 | turn | L3 L4 | advanced | starts_turns |
+| ST27 | 蝶轉仰：雙手同時觸牆、不停頓收腿、仰臥蹬出 | turn | L2 L3 | intermediate | starts_turns |
+| ST28 | 蛙轉自：雙手同時觸牆的開放式轉身，蹬牆轉回俯臥接自由式 | turn | L2 L3 | intermediate | starts_turns |
+| ST29 | 混合式自由式段的翻滾轉身：進牆先側轉、蹬離時回到俯臥 | turn | L3 L4 | advanced | starts_turns |
+| ST30 | 混合式銜接 25：前一式進牆、轉身、下一式破水 | turn | L3 L4 | advanced | starts_turns |
 
 ### `drills_udk.yaml` — udk (**12 drills**)
 

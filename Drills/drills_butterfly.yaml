@@ -849,6 +849,7 @@ drills:
     name_zh: "破水動作"
     strokes: [butterfly, starts_turns]
     category: timing
+    turn_type: [breakout]
     equipment: []
     l_target: [L4, L5]
     abc_type: null
