@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1199,
+  "record_count": 1200,
   "records": [
     {
       "id": "Bk1",
@@ -18503,6 +18503,55 @@
         "src.van-hooren-2020-sensitive-periods"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "periodization.structure.youth_high_intensity",
+      "domain": "periodization",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "youth_high_intensity",
+      "title": "兒童與青春期泳者的高強度、高乳酸訓練",
+      "tags": {
+        "certainty": [
+          "🟢"
+        ]
+      },
+      "source_ids": [
+        "src.avlonitou-1996-maximal-lactate-after-competition",
+        "src.barry-2021-swimming-training-load-pain-injury-illness",
+        "src.beneke-2005-lactate-kinetics-children-adolescents-adults",
+        "src.bergeron-2015-ioc-youth-athletic-development",
+        "src.beyer-2020-somatic-maturity-sprint-interval-training",
+        "src.birat-2018-prepubertal-metabolic-fatigue-profiles",
+        "src.brenner-2016-aap-sports-specialization-intensive-training",
+        "src.brenner-2024-aap-overuse-overtraining-burnout",
+        "src.dipla-2009-fatigue-resistance-childhood-adulthood",
+        "src.duche-1993-prepubertal-swimmers-performance-anthropometry",
+        "src.engel-2014-hormonal-metabolic-response-boys-hiit",
+        "src.engel-2015-lactate-kinetics-boys-sprints",
+        "src.engel-2018-hiit-young-athletes-meta-analysis",
+        "src.falgairette-1993-bioenergetics-prepubertal-swimmers",
+        "src.hebestreit-1993-recovery-power-boys-men",
+        "src.kaczor-2005-anaerobic-aerobic-enzymes-children-adults",
+        "src.lloyd-2016-nsca-long-term-athletic-development",
+        "src.lopez-hernandez-2025-competitive-fatigue-youth-swimmers",
+        "src.malina-2015-biological-maturation-youth-athletes",
+        "src.matzka-2025-hiit-young-athletes-meta-analysis",
+        "src.mountjoy-2008-ioc-training-elite-child-athlete",
+        "src.pmid-21259156",
+        "src.ratel-2002-age-recovery-repeated-cycling-sprints",
+        "src.runacres-2019-endurance-vs-hiit-youth",
+        "src.rushall-1998-prepubertal-swimmers-basic-training-principles",
+        "src.rushall-greyson-2010-commentary-summary",
+        "src.rushall-icar-1990-91-age-group-growth-development",
+        "src.sperlich-2010-hiit-9-11-year-old-swimmers",
+        "src.tonson-2010-muscle-energetics-maturation-31p-mrs",
+        "src.van-hooren-2020-sensitive-periods"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.energy_targets",
+        "periodization.set_design.monitoring_exit",
+        "periodization.structure.swim_youth_ltad"
+      ]
     },
     {
       "id": "periodization.taper.definition",

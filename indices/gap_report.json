@@ -3,7 +3,7 @@
   "summary": {
     "high_certainty_without_source": 0,
     "unused_taxonomy_values": 7,
-    "unlinked_records": 124
+    "unlinked_records": 123
   },
   "high_certainty_without_source": [],
   "unused_taxonomy_values": [
@@ -196,11 +196,6 @@
       "id": "periodization.structure.annual.tricycle",
       "file": "canonical/periodization/structure.yaml",
       "path": "annual_plan_types[2]"
-    },
-    {
-      "id": "periodization.structure.swim_youth_ltad",
-      "file": "canonical/periodization/structure.yaml",
-      "path": "swim_youth_ltad"
     },
     {
       "id": "periodization.taper.definition",

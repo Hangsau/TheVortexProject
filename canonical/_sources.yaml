@@ -11577,3 +11577,418 @@ sources:
       2026-10-20 只讀到資料庫摘要與二手評論，未取得全文。摘要：21 名泳者分三組 12 週（陸上重訓／水中彈力管阻力＋助力衝刺／對照），
       訓練組每週 2 次；兩個訓練組 50 m 都進步、彼此無顯著差異。二手評論數字：重訓 2.8%、阻力 2.3%、對照 0.9%（未對原文核）。
       限制：小樣本、只測 50 m、中等程度泳者。swim-coach 技術段「阻力／助力每週 2 次」只取每週次數當排課起點，不當處方。
+
+  - id: src.sperlich-2010-hiit-9-11-year-old-swimmers
+    display: "Sperlich B et al. (2010). High-intensity interval training improves VO(2peak), maximal lactate accumulation, time trial and competition performance in 9-11-year-old swimmers. European journal of applied physiology 110(5):1029-36."
+    title: "High-intensity interval training improves VO(2peak), maximal lactate accumulation, time trial and competition performance in 9-11-year-old swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Sperlich B", "Zinner C", "Heilemann I", "Kjendlie PL", "Holmberg HC", "Mester J"]
+    year: 2010
+    container: "European journal of applied physiology"
+    identifier:
+      pmid: "20683609"
+      doi: "10.1007/s00421-010-1586-4"
+      pmcid: "PMC2974202"
+      url: "https://pubmed.ncbi.nlm.nih.gov/20683609/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（PubMed 摘要加 PMC 全文）。交叉設計介入研究，每種訓練 5 週；26 名競技泳者（男女各 13），每週訓練超過 4 次。**年齡在摘要與內文不一致**：摘要寫 11.5±1.4 歲、內文受試者段落寫 10.5±1.4 歲，後來兩篇統合分析都採 10.5 歲。高強度組主課每趟為個人最佳時間的 92%，課中平均血乳酸 7.0±1.5 mmol/L（高量組 2.0±0.8）；比賽成績高強度後進步 14.8%、高量後無顯著變化；兩組出席率都是 96%，作者寫明沒有泳者或家長回報過度訓練或倦怠症狀，並說更長的高強度訓練期可能引發這些症狀。限制：只有 5 週、最大攝氧量用腳踏車測、沒有不訓練的對照組、92% 個人最佳不是全力。每趟確切休息秒數在圖裡，文字擷取不到。"
+
+  - id: src.engel-2015-lactate-kinetics-boys-sprints
+    display: "Engel FA et al. (2015). The kinetics of blood lactate in boys during and following a single and repeated all-out sprints of cycling are different than in men. Applied physiology, nutrition, and metabolism = Physiologie appliquee, nutrition et metabolisme 40(6):623-31."
+    title: "The kinetics of blood lactate in boys during and following a single and repeated all-out sprints of cycling are different than in men"
+    type: journal-article
+    verification_status: verified
+    authors: ["Engel FA", "Sperlich B", "Stockinger C", "Härtel S", "Bös K", "Holmberg HC"]
+    year: 2015
+    container: "Applied physiology, nutrition, and metabolism = Physiologie appliquee, nutrition et metabolisme"
+    identifier:
+      pmid: "25942632"
+      doi: "10.1139/apnm-2014-0370"
+      url: "https://pubmed.ncbi.nlm.nih.gov/25942632/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要（主 session 已對原文核對。）。21 名受過訓練的男孩（11.4±0.8 歲）對 19 名男性（29.4±5.0 歲），腳踏車；4 趟 30 秒全力衝刺（休 2 分）後血乳酸最高值男孩 12.2±3.6、男性 16.1±3.3 mmol/L；單趟 30 秒為 8.7±1.8 對 11.5±2.1。第 1 趟到第 4 趟的表現下滑男孩 9.2%、男性 19.2%。**用途**：兒童高乳酸組的生理量級與掉速較少的依據。限制：男孩、腳踏車、非泳者。"
+
+  - id: src.engel-2014-hormonal-metabolic-response-boys-hiit
+    display: "Engel F et al. (2014). Hormonal, metabolic, and cardiorespiratory responses of young and adult athletes to a single session of high-intensity cycle exercise. Pediatric exercise science 26(4):485-94."
+    title: "Hormonal, metabolic, and cardiorespiratory responses of young and adult athletes to a single session of high-intensity cycle exercise"
+    type: journal-article
+    verification_status: verified
+    authors: ["Engel F", "Härtel S", "Wagner MO", "Strahler J", "Bös K", "Sperlich B"]
+    year: 2014
+    container: "Pediatric exercise science"
+    identifier:
+      pmid: "25050695"
+      doi: "10.1123/pes.2013-0152"
+      url: "https://pubmed.ncbi.nlm.nih.gov/25050695/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要（主 session 已對原文核對。）。23 名受過訓練的男孩（11.5±0.8 歲）對 25 名男性，連續 4 次 30 秒全力腳踏車；男孩唾液皮質醇上升 173%，幅度與成人相當，血乳酸最高值男孩 12.6±3.5、成人 16.3±3.1 mmol/L。作者稱這是首次顯示受訓男孩對高強度間歇有明顯的皮質醇上升，並解讀為 11 歲男孩對這類訓練有很高的心肺、代謝與荷爾蒙反應。**使用邊界**：說的是單次課的生理壓力大，研究沒有說有害。"
+
+  - id: src.bergeron-2015-ioc-youth-athletic-development
+    display: "Bergeron MF et al. (2015). International Olympic Committee consensus statement on youth athletic development. British journal of sports medicine 49(13):843-51."
+    title: "International Olympic Committee consensus statement on youth athletic development"
+    type: guideline
+    verification_status: verified
+    authors: ["Bergeron MF", "Mountjoy M", "Armstrong N", "Chia M", "Côté J", "Emery CA", "Faigenbaum A", "Hall G Jr", "Kriemler S", "Léglise M", "Malina RM", "Pensgaard AM", "Sanchez A", "Soligard T", "Sundgot-Borgen J", "van Mechelen W", "Weissensteiner JR", "Engebretsen L"]
+    year: 2015
+    container: "British journal of sports medicine"
+    identifier:
+      pmid: "26084524"
+      doi: "10.1136/bjsports-2015-094962"
+      url: "https://pubmed.ncbi.nlm.nih.gov/26084524/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（BJSM 頁面）。國際奧會共識聲明，18 位作者，性質是專家共識（整理既有研究）。要點：沒有足夠證據顯示扣除起始體能後，有氧或無氧訓練的反應與性別、年齡或成熟度有關；高強度訓練影響生長速度的長期疑慮不被橫斷與縱貫研究支持；警告對象是超過安全負荷門檻的訓練與比賽、恢復不足；估算身高成長高峰的驗證研究顯示有數項侷限。全文沒有任何一句說兒童應避免無氧或高強度訓練。**使用邊界**：共識聲明不是介入研究；它自己說兒童糖解酵素的資料稀少。"
+
+  - id: src.mountjoy-2008-ioc-training-elite-child-athlete
+    display: "Mountjoy M et al. (2008). IOC consensus statement: \"training the elite child athlete\". British journal of sports medicine 42(3):163-4."
+    title: "IOC consensus statement: \"training the elite child athlete\""
+    type: guideline
+    verification_status: verified
+    authors: ["Mountjoy M", "Armstrong N", "Bizzini L", "Blimkie C", "Evans J", "Gerrard D", "Hangen J", "Knoll K", "Micheli L", "Sangenis P", "Van Mechelen W"]
+    year: 2008
+    container: "British journal of sports medicine"
+    identifier:
+      pmid: "18048429"
+      doi: "10.1136/bjsm.2007.044016"
+      url: "https://pubmed.ncbi.nlm.nih.gov/18048429/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（國際奧會官方 PDF，3 頁；期刊頁只顯示節錄；官方 PDF 為 https://stillmed.olympic.org/Documents/Reports/EN/en_report_1016.pdf）。2005 年的共識聲明，期刊版 2008 年刊出。把無氧訓練列為適當，處方為強度在 90% 最大心率以上、每趟 30 秒以內，理由是兒童從高強度運動恢復較快；同時要求教練、家長與行政人員限制菁英兒童運動員的總訓練與比賽壓力，並把過度訓練歸因於訓練量過大、心理壓力、週期化不佳或恢復不足。**使用邊界**：專家共識；沒有說超過 30 秒有害，只是沒有涵蓋。"
+
+  - id: src.hebestreit-1993-recovery-power-boys-men
+    display: "Hebestreit H et al. (1993). Recovery of muscle power after high-intensity short-term exercise: comparing boys and men. Journal of applied physiology (Bethesda, Md. : 1985) 74(6):2875-80."
+    title: "Recovery of muscle power after high-intensity short-term exercise: comparing boys and men"
+    type: journal-article
+    verification_status: verified
+    authors: ["Hebestreit H", "Mimura K", "Bar-Or O"]
+    year: 1993
+    container: "Journal of applied physiology (Bethesda, Md. : 1985)"
+    identifier:
+      pmid: "8365990"
+      doi: "10.1152/jappl.1993.74.6.2875"
+      url: "https://pubmed.ncbi.nlm.nih.gov/8365990/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。8 名青春期前男孩（9–12 歲）對 8 名男性（19–23 歲），非泳者；兩次 30 秒全力腳踏車，間隔 1、2 或 10 分鐘。第二次的平均功率回到第一次的比例：男孩 89.9%、96.4%、103.5%，男性 71.2%、77.1%、94.0%。"
+
+  - id: src.ratel-2002-age-recovery-repeated-cycling-sprints
+    display: "Ratel S et al. (2002). Effects of age and recovery duration on peak power output during repeated cycling sprints. International journal of sports medicine 23(6):397-402."
+    title: "Effects of age and recovery duration on peak power output during repeated cycling sprints"
+    type: journal-article
+    verification_status: verified
+    authors: ["Ratel S", "Bedu M", "Hennegrave A", "Doré E", "Duché P"]
+    year: 2002
+    container: "International journal of sports medicine"
+    identifier:
+      pmid: "12215957"
+      doi: "10.1055/s-2002-33737"
+      url: "https://pubmed.ncbi.nlm.nih.gov/12215957/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。11 名青春期前男孩（9.6±0.7 歲）、9 名青春期男孩（15.0±0.7 歲）、10 名男性；10 趟 10 秒衝刺，休 30 秒、1 分或 5 分。青春期前男孩只休 30 秒就維持住功率，青春期男孩與男性需要 5 分鐘。"
+
+  - id: src.dipla-2009-fatigue-resistance-childhood-adulthood
+    display: "Dipla K et al. (2009). Fatigue resistance during high-intensity intermittent exercise from childhood to adulthood in males and females. European journal of applied physiology 106(5):645-53."
+    title: "Fatigue resistance during high-intensity intermittent exercise from childhood to adulthood in males and females"
+    type: journal-article
+    verification_status: verified
+    authors: ["Dipla K", "Tsirini T", "Zafeiridis A", "Manou V", "Dalamitros A", "Kellis E", "Kellis S"]
+    year: 2009
+    container: "European journal of applied physiology"
+    identifier:
+      pmid: "19404672"
+      doi: "10.1007/s00421-009-1058-x"
+      url: "https://pubmed.ncbi.nlm.nih.gov/19404672/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。男女各 30 人，分童年（約 11 歲）、青春期中（約 14–15 歲）與成人三組；男性的抗疲勞能力從童年到成年逐步下降，女性在青春期中（14–15 歲）就達到成人的樣子。橫斷面。"
+
+  - id: src.beneke-2005-lactate-kinetics-children-adolescents-adults
+    display: "Beneke R et al. (2005). Modeling the blood lactate kinetics at maximal short-term exercise conditions in children, adolescents, and adults. Journal of applied physiology (Bethesda, Md. : 1985) 99(2):499-504."
+    title: "Modeling the blood lactate kinetics at maximal short-term exercise conditions in children, adolescents, and adults"
+    type: journal-article
+    verification_status: verified
+    authors: ["Beneke R", "Hütler M", "Jung M", "Leithäuser RM"]
+    year: 2005
+    container: "Journal of applied physiology (Bethesda, Md. : 1985)"
+    identifier:
+      pmid: "16020438"
+      doi: "10.1152/japplphysiol.00062.2005"
+      url: "https://pubmed.ncbi.nlm.nih.gov/16020438/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。15 名男孩（12.0±0.6 歲）、12 名青少年（16.3±0.7 歲）、12 名成人，30 秒全力腳踏車；血乳酸最高值 10.2±1.3、12.7±1.0、13.7±1.4 mmol/L。作者的結論是年齡差異不太像反映肌肉乳酸或乳酸進入血液的差異，而部分是血中清除較快。**用途**：「兒童糖解能力低」爭議中修正舊說的一方。"
+
+  - id: src.kaczor-2005-anaerobic-aerobic-enzymes-children-adults
+    display: "Kaczor JJ et al. (2005). Anaerobic and aerobic enzyme activities in human skeletal muscle from children and adults. Pediatric research 57(3):331-5."
+    title: "Anaerobic and aerobic enzyme activities in human skeletal muscle from children and adults"
+    type: journal-article
+    verification_status: verified
+    authors: ["Kaczor JJ", "Ziolkowski W", "Popinigis J", "Tarnopolsky MA"]
+    year: 2005
+    container: "Pediatric research"
+    identifier:
+      pmid: "15611348"
+      doi: "10.1203/01.PDR.0000150799.77094.DE"
+      url: "https://pubmed.ncbi.nlm.nih.gov/15611348/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。20 名兒童（3–11 歲）對 12 名成人（29–54 歲），皆男性、少活動，肌肉切片取自腹內斜肌（手術中取樣）；乳酸脫氫酶活性成人 118.2±20.1、兒童 27.8±10.1。作者說這可能部分解釋兒童的無氧與乳酸生成能力較低，但機制不明。**用途**：爭議中支持舊說的一方。限制：不是運動員、不是游泳用到的肌肉、年齡下限 3 歲。"
+
+  - id: src.tonson-2010-muscle-energetics-maturation-31p-mrs
+    display: "Tonson A et al. (2010). Muscle energetics changes throughout maturation: a quantitative 31P-MRS analysis. Journal of applied physiology (Bethesda, Md. : 1985) 109(6):1769-78."
+    title: "Muscle energetics changes throughout maturation: a quantitative 31P-MRS analysis"
+    type: journal-article
+    verification_status: verified
+    authors: ["Tonson A", "Ratel S", "Le Fur Y", "Vilmen C", "Cozzone PJ", "Bendahan D"]
+    year: 2010
+    container: "Journal of applied physiology (Bethesda, Md. : 1985)"
+    identifier:
+      pmid: "20847131"
+      doi: "10.1152/japplphysiol.01423.2009"
+      pmcid: "PMC3006410"
+      url: "https://pubmed.ncbi.nlm.nih.gov/20847131/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。7 名青春期前男孩（11.7±0.6 歲）對 10 名男性，前臂屈指運動 3 分鐘；無氧糖解活性不受成熟影響，磷酸肌酸恢復的速率常數男孩 1.3±0.5、男性 0.7±0.4 每分鐘。**用途**：爭議中修正舊說的一方。限制：小肌群、低負荷（最大肌力的 15%）、樣本小。"
+
+  - id: src.beyer-2020-somatic-maturity-sprint-interval-training
+    display: "Beyer KS et al. (2020). Effect of somatic maturity on the aerobic and anaerobic adaptations to sprint interval training. Physiological reports 8(9):e14426."
+    title: "Effect of somatic maturity on the aerobic and anaerobic adaptations to sprint interval training"
+    type: journal-article
+    verification_status: verified
+    authors: ["Beyer KS", "Stout JR", "Redd MJ", "Baker KM", "Church DD", "Bergstrom HC", "Hoffman JR", "Fukuda DH"]
+    year: 2020
+    container: "Physiological reports"
+    identifier:
+      pmid: "32378353"
+      doi: "10.14814/phy2.14426"
+      pmcid: "PMC7202988"
+      url: "https://pubmed.ncbi.nlm.nih.gov/32378353/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（PMC）。27 名男性青少年運動員（非泳者），依距離身高成長高峰的年數分三組：前（7 人）、中（10 人）、後（10 人）；4 週共 8 次，每次 4–7 趟 20 秒全力腳踏車。成長高峰後組有氧與無氧表現都進步，高峰中組只有無氧進步，高峰前組都沒有變化。限制：前組只有 7 人、只有 8 次訓練、無對照組。**使用邊界**：說的是效果，沒有報告傷害。"
+
+  - id: src.engel-2018-hiit-young-athletes-meta-analysis
+    display: "Engel FA et al. (2018). High-Intensity Interval Training Performed by Young Athletes: A Systematic Review and Meta-Analysis. Frontiers in physiology 9:1012."
+    title: "High-Intensity Interval Training Performed by Young Athletes: A Systematic Review and Meta-Analysis"
+    type: review
+    verification_status: verified
+    authors: ["Engel FA", "Ackermann A", "Chtourou H", "Sperlich B"]
+    year: 2018
+    container: "Frontiers in physiology"
+    identifier:
+      pmid: "30100881"
+      doi: "10.3389/fphys.2018.01012"
+      pmcid: "PMC6072873"
+      url: "https://pubmed.ncbi.nlm.nih.gov/30100881/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（PMC）。系統性回顧與統合分析，納入 24 篇、577 名運動員（9–18 歲，平均 15.5±2.2 歲）；游泳只有 2 篇，其一是 Sperlich 2010。作者結論高強度間歇可改善有氧與無氧表現，但相對其他訓練沒有明確優勢；也說單次高強度課對年輕運動員造成明顯的心肺、代謝與荷爾蒙擾動，這方面研究數量與範圍都很有限，建議高強度期間監測恢復與壓力。全文沒有彙整各研究的受傷或不良事件。限制：13 歲以下資料很少，沒有不訓練的對照組。"
+
+  - id: src.matzka-2025-hiit-young-athletes-meta-analysis
+    display: "Matzka M et al. (2025). Meta-analysis of high-intensity interval training and alternative modalities for enhancing aerobic and anaerobic endurance in young athletes. Physiological reports 13(19):e70598."
+    title: "Meta-analysis of high-intensity interval training and alternative modalities for enhancing aerobic and anaerobic endurance in young athletes"
+    type: review
+    verification_status: verified
+    authors: ["Matzka M", "Lenk M", "Meixner B", "Sperlich B"]
+    year: 2025
+    container: "Physiological reports"
+    identifier:
+      pmid: "41047659"
+      doi: "10.14814/phy2.70598"
+      pmcid: "PMC12497894"
+      url: "https://pubmed.ncbi.nlm.nih.gov/41047659/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（PMC）。統合分析，納入 28 篇、707 人（女性 10.7%），平均 15.7±1.4 歲，範圍 10.5–18.1 歲，最年輕的受試者是 Sperlich 2010。結果指標是有氧與耐力類，沒有直接量乳酸耐受。作者自陳限制之一是納入研究缺少生物成熟度資訊。"
+
+  - id: src.duche-1993-prepubertal-swimmers-performance-anthropometry
+    display: "Duché P et al. (1993). Analysis of performance of prepubertal swimmers assessed from anthropometric and bio-energetic characteristics. European journal of applied physiology and occupational physiology 66(5):467-71."
+    title: "Analysis of performance of prepubertal swimmers assessed from anthropometric and bio-energetic characteristics"
+    type: journal-article
+    verification_status: verified
+    authors: ["Duché P", "Falgairette G", "Bedu M", "Lac G", "Robert A", "Coudert J"]
+    year: 1993
+    container: "European journal of applied physiology and occupational physiology"
+    identifier:
+      pmid: "8330618"
+      doi: "10.1007/BF00599623"
+      url: "https://pubmed.ncbi.nlm.nih.gov/8330618/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。25 名男童泳者（11.3±1 歲）；30 秒無氧功率相關指標解釋了 50 公尺成績約 46% 的變異，100、200、400 公尺成績則與最大攝氧量相關指標和身高較有關。"
+
+  - id: src.avlonitou-1996-maximal-lactate-after-competition
+    display: "Avlonitou E (1996). Maximal lactate values following competitive performance varying according to age, sex and swimming style. The Journal of sports medicine and physical fitness 36(1):24-30."
+    title: "Maximal lactate values following competitive performance varying according to age, sex and swimming style"
+    type: journal-article
+    verification_status: verified
+    authors: ["Avlonitou E"]
+    year: 1996
+    container: "The Journal of sports medicine and physical fitness"
+    identifier:
+      pmid: "8699834"
+      url: "https://pubmed.ncbi.nlm.nih.gov/8699834/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。337 名希臘分齡錦標賽前三名泳者，**最小年齡組為 14–15 歲**；賽後第 3 與第 6 分鐘採血。最高乳酸隨年齡與成績提高。各年齡組數值在全文表格，未讀。**用途**：支撐「12 歲以下泳者賽後血乳酸查無實測」。"
+
+  - id: src.lopez-hernandez-2025-competitive-fatigue-youth-swimmers
+    display: "Alejandro López-Hernández et al. (2025). The Impact of Competitive Fatigue on Physiological Variables in National Level Youth Swimmers. Journal of Functional Morphology and Kinesiology 10(3)."
+    title: "The Impact of Competitive Fatigue on Physiological Variables in National Level Youth Swimmers"
+    type: journal-article
+    verification_status: verified
+    authors: ["Alejandro López-Hernández", "Anthony P. Turner", "Hui Kwan Nicholas Lam", "Juan Angel Simón-Piqueras", "Violeta Muñoz de la Cruz", "José María González Ravé"]
+    year: 2025
+    container: "Journal of Functional Morphology and Kinesiology"
+    identifier:
+      pmid: "40700192"
+      doi: "10.3390/jfmk10030256"
+      pmcid: "PMC12286072"
+      url: "https://pubmed.ncbi.nlm.nih.gov/40700192/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（PMC）。42 名西班牙全國賽泳者（14±0.5 歲）預賽前後採指尖血；賽後乳酸高於賽前，混合模型估計約 4.5 mmol/L。各距離各自的絕對數值在圖裡，文字擷取不到。限制：13–14 歲，不是青春期前。"
+
+  - id: src.runacres-2019-endurance-vs-hiit-youth
+    display: "Runacres A et al. (2019). The effect of constant-intensity endurance training and high-intensity interval training on aerobic and anaerobic parameters in youth. Journal of sports sciences 37(21):2492-2498."
+    title: "The effect of constant-intensity endurance training and high-intensity interval training on aerobic and anaerobic parameters in youth"
+    type: journal-article
+    verification_status: verified
+    authors: ["Runacres A", "Mackintosh KA", "McNarry MA"]
+    year: 2019
+    container: "Journal of sports sciences"
+    identifier:
+      pmid: "31319760"
+      doi: "10.1080/02640414.2019.1644890"
+      url: "https://pubmed.ncbi.nlm.nih.gov/31319760/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。主 session 已對原文核對。37 名男孩，分足球（當作高強度間歇組）、長跑與對照，觀察 3 個月；作者結論高強度間歇對有氧或無氧指標並不優於持續強度的耐力訓練，青春期前與青春期後受試者的可訓練性相近。限制：分組依原本的運動項目、不是隨機分派。"
+
+  - id: src.falgairette-1993-bioenergetics-prepubertal-swimmers
+    display: "Falgairette G et al. (1993). Bioenergetic characteristics in prepubertal swimmers. Comparison with active and non-active boys. International journal of sports medicine 14(8):444-8."
+    title: "Bioenergetic characteristics in prepubertal swimmers. Comparison with active and non-active boys"
+    type: journal-article
+    verification_status: verified
+    authors: ["Falgairette G", "Duche P", "Bedu M", "Fellmann N", "Coudert J"]
+    year: 1993
+    container: "International journal of sports medicine"
+    identifier:
+      pmid: "8300270"
+      doi: "10.1055/s-2007-1021208"
+      url: "https://pubmed.ncbi.nlm.nih.gov/8300270/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。53 名 11 歲青春期前男孩，其中泳者 26 人（每週 8±3 小時），腳踏車測驗；作者的結論是青春期前沒有有氧或無氧的專項化，規律運動也沒有造成生物能量特徵的大改變。限制：1993 年、橫斷面、非游泳測驗。"
+
+  - id: src.birat-2018-prepubertal-metabolic-fatigue-profiles
+    display: "Birat A et al. (2018). Metabolic and Fatigue Profiles Are Comparable Between Prepubertal Children and Well-Trained Adult Endurance Athletes. Frontiers in physiology 9:387."
+    title: "Metabolic and Fatigue Profiles Are Comparable Between Prepubertal Children and Well-Trained Adult Endurance Athletes"
+    type: journal-article
+    verification_status: verified
+    authors: ["Birat A", "Bourdier P", "Piponnier E", "Blazevich AJ", "Maciejewski H", "Duché P", "Ratel S"]
+    year: 2018
+    container: "Frontiers in physiology"
+    identifier:
+      pmid: "29740332"
+      doi: "10.3389/fphys.2018.00387"
+      pmcid: "PMC5928424"
+      url: "https://pubmed.ncbi.nlm.nih.gov/29740332/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 取得 PMC 全文，引用的數字出自摘要。12 名青春期前男孩（10.5±1.1 歲）、12 名未受訓男性、13 名耐力運動員；兒童高強度運動後的恢復動力學比未受訓男性快，代謝上與受過訓練的耐力運動員相近。橫斷面。另有回顧與正式反駁對這個詮釋有爭議，反駁內容未讀，本庫不引用。"
+
+  - id: src.barry-2021-swimming-training-load-pain-injury-illness
+    display: "Barry L et al. (2021). The relationship between training load and pain, injury and illness in competitive swimming: A systematic review. Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine 48:154-168."
+    title: "The relationship between training load and pain, injury and illness in competitive swimming: A systematic review"
+    type: review
+    verification_status: verified
+    authors: ["Barry L", "Lyons M", "McCreesh K", "Powell C", "Comyns T"]
+    year: 2021
+    container: "Physical therapy in sport : official journal of the Association of Chartered Physiotherapists in Sports Medicine"
+    identifier:
+      pmid: "33486408"
+      doi: "10.1016/j.ptsp.2021.01.002"
+      url: "https://pubmed.ncbi.nlm.nih.gov/33486408/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。系統性回顧，15 篇，整體品質被評為差；受試為各級競技泳者，不是專指兒童。作者結論：訓練負荷與疼痛沒有關聯的證據，與傷害或生病可能有些證據，並建議高強度課與速度元素需謹慎安排。作者自己說關係不明。"
+
+  - id: src.brenner-2024-aap-overuse-overtraining-burnout
+    display: "Brenner JS et al. (2024). Overuse Injuries, Overtraining, and Burnout in Young Athletes. Pediatrics 153(2)."
+    title: "Overuse Injuries, Overtraining, and Burnout in Young Athletes"
+    type: guideline
+    verification_status: verified
+    authors: ["Brenner JS", "Watson A", "COUNCIL ON SPORTS MEDICINE AND FITNESS"]
+    year: 2024
+    container: "Pediatrics"
+    identifier:
+      pmid: "38247370"
+      doi: "10.1542/peds.2023-065129"
+      url: "https://pubmed.ncbi.nlm.nih.gov/38247370/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。美國兒科學會臨床報告。摘要談的是訓練負荷與恢復失衡的後果，沒有提到強度種類或無氧訓練；全文是否有針對高強度訓練的句子**未讀、無法確認**。"
+
+  - id: src.brenner-2016-aap-sports-specialization-intensive-training
+    display: "Brenner JS et al. (2016). Sports Specialization and Intensive Training in Young Athletes. Pediatrics 138(3)."
+    title: "Sports Specialization and Intensive Training in Young Athletes"
+    type: guideline
+    verification_status: verified
+    authors: ["Brenner JS", "COUNCIL ON SPORTS MEDICINE AND FITNESS"]
+    year: 2016
+    container: "Pediatrics"
+    identifier:
+      pmid: "27573090"
+      doi: "10.1542/peds.2016-2148"
+      url: "https://pubmed.ncbi.nlm.nih.gov/27573090/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。美國兒科學會臨床報告。摘要裡的「intensive」指訓練投入的程度（量與頻率），沒有談無氧或乳酸訓練；全文未讀。"
+
+  - id: src.lloyd-2016-nsca-long-term-athletic-development
+    display: "Lloyd RS et al. (2016). National Strength and Conditioning Association Position Statement on Long-Term Athletic Development. Journal of strength and conditioning research 30(6):1491-509."
+    title: "National Strength and Conditioning Association Position Statement on Long-Term Athletic Development"
+    type: guideline
+    verification_status: verified
+    authors: ["Lloyd RS", "Cronin JB", "Faigenbaum AD", "Haff GG", "Howard R", "Kraemer WJ", "Micheli LJ", "Myer GD", "Oliver JL"]
+    year: 2016
+    container: "Journal of strength and conditioning research"
+    identifier:
+      pmid: "26933920"
+      doi: "10.1519/JSC.0000000000001387"
+      url: "https://pubmed.ncbi.nlm.nih.gov/26933920/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。美國肌力與體能協會立場聲明。摘要沒有提到無氧或糖解型訓練，也沒有提到強度或無氧訓練的年齡限制；全文未讀，不能據此說它「沒有反對」，只能說摘要沒有。"
+
+  - id: src.malina-2015-biological-maturation-youth-athletes
+    display: "Malina RM et al. (2015). Biological maturation of youth athletes: assessment and implications. British journal of sports medicine 49(13):852-9."
+    title: "Biological maturation of youth athletes: assessment and implications"
+    type: review
+    verification_status: verified
+    authors: ["Malina RM", "Rogol AD", "Cumming SP", "Coelho e Silva MJ", "Figueiredo AJ"]
+    year: 2015
+    container: "British journal of sports medicine"
+    identifier:
+      pmid: "26084525"
+      doi: "10.1136/bjsports-2015-094623"
+      url: "https://pubmed.ncbi.nlm.nih.gov/26084525/"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 只讀到 PubMed 摘要。回顧。摘要說兩種近年的非侵入性人體測量法（狀態：已達預測成年身高的百分比；時機：預測成熟位移或身高成長高峰年齡）有被描述與評估，並寫明後者需要在運動員身上進一步驗證。"
+
+  - id: src.rushall-icar-1990-91-age-group-growth-development
+    display: "Swimming Science Bulletin（Brent Rushall 編，聖地牙哥州立大學）：Growth and developmental changes of the age-group swimmer（摘自美國游泳協會 ICAR 1990-91 報告）"
+    title: "Swimming Science Bulletin（Brent Rushall 編，聖地牙哥州立大學）：Growth and developmental changes of the age-group swimmer（摘自美國游泳協會 ICAR 1990-91 報告）"
+    type: web_article
+    verification_status: verified
+    publisher: "Swimming Science Bulletin 摘要頁"
+    identifier:
+      url: "https://coachsci.sdsu.edu/swim/bullets/icar9091/icar24.htm"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（短篇二手整理頁）。證據類型：單一來源的**意見**，沒有附對照研究。內容含「12 歲之後訓練類別才可個別化，之前唯一值得刺激的能量系統是有氧系統」一句，理由是晚熟孩子的無氧能力很小，以及早熟者靠力量贏球會犧牲技術。**使用邊界**：只能引為「有人這樣主張」，不得當作研究結論。"
+
+  - id: src.rushall-greyson-2010-commentary-summary
+    display: "Rushall 對 Greyson 等人（2010）評論的批評性摘要：Swimming lore and misinformation is still very prevalent in high levels of the sport"
+    title: "Rushall 對 Greyson 等人（2010）評論的批評性摘要：Swimming lore and misinformation is still very prevalent in high levels of the sport"
+    type: web_article
+    verification_status: verified
+    publisher: "Coaching Science Abstracts（聖地牙哥州立大學）"
+    identifier:
+      url: "https://coachsci.sdsu.edu/swim/training/greyson.htm"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀到的是 Rushall 寫的批評性摘要頁，其中逐段引用 Greyson I、Kelly S、Peyrebrune M、Furniss B（2010）Int J Sports Sci Coaching 5(3):403-406 的原文；**沒有讀到 Greyson 等人的原文本身，屬二手轉述**。頁面轉引的意見：此階段無氧型訓練過多會降低日後成為成功成年泳者的潛力，理由是橫膈與胸廓在此階段生長最快。沒有附研究。**使用邊界**：意見；二手轉述；頁面作者本身對該評論持批評立場。"
+
+  - id: src.rushall-1998-prepubertal-swimmers-basic-training-principles
+    display: "Rushall BS（1998）Basic training principles for pre-pubertal swimmers, Swimming Science Bulletin No. 23"
+    title: "Rushall BS（1998）Basic training principles for pre-pubertal swimmers, Swimming Science Bulletin No. 23"
+    type: web_article
+    verification_status: verified
+    publisher: "Swimming Science Bulletin 第 23 號"
+    identifier:
+      url: "https://coachsci.sdsu.edu/swim/bullets/greece23.htm"
+    retrieved_on: "2026-11-16"
+    notes: "2026-11-16 讀全文（公開講座稿；多年訓練階段的內容轉述自 Vorontsov，屬**二手轉述**）。證據類型：專家意見加教練經驗，不是對照研究。內容含：成功教練的最適總量中有氧約 70–75%、混合有氧無氧約 25–30%、無氧糖解與非乳酸約 2–3%；另有「此階段大量的高速間歇訓練常伴隨免疫力下降與較常生病」一句；同文另一處又寫兒童對有氧與無氧刺激的反應不分化。**使用邊界**：說的是「大量」，並沒有主張歸零；不是研究。"
+

@@ -4,6 +4,13 @@
 
 ---
 
+## 當前狀態（2026-11-16，兒童與青春期泳者的高強度、高乳酸訓練證據節點）
+
+- 新節點 `periodization.structure.youth_high_intensity`（`canonical/periodization/structure.yaml`，接在 `swim_youth_ltad` 之後）。結論：查不到任何研究或正式聲明說青春期前兒童不該做高強度無氧訓練，也無傷害記錄；**這是「查無反證」不是「已證安全」**（唯一的泳者介入研究 Sperlich 2010 只有 5 週，多數研究沒有系統記錄不良事件）。含國際奧會 2005／2015 怎麼說、Sperlich 2010（年齡在摘要 11.5 與內文 10.5 不一致）、恢復與乳酸、「兒童糖解能力低」爭議（無定論）、反方（Beyer 2020 是效果不是傷害；教練與協會人員的意見標明是意見與二手轉述）、看成熟度、六條 🔴 缺口、🔵 對排課的含意（不給任何劑量數字）。
+- `canonical/periodization/set-design.yaml`：`generator.degradations` 拆成 beginner（維持不輸出乳酸耐受）與 child（有比賽成績的兒童競技泳者，照常輸出乳酸耐受、threshold 僅間歇型、目標標估計並附無專門研究的註記）；三處 `observation_basis`（`energy_targets`、`variables`、`monitoring_exit`）的「不外推到兒童」改為「兒童競技泳者身上沒有直接研究，可排、屬教練判斷」；四個節點加／補 `maintenance_note` 記修訂原因。`set_types` 與 `rest_by_age` 沒動。
+- `canonical/_sources.yaml` 新增 28 筆（25 筆文獻、3 筆 coachsci 教練科學刊物網頁，後者 notes 標明是意見與二手轉述）；書目一律用 PubMed／Crossref 查回比對，逐筆 notes 寫明讀到全文或只讀到摘要。沒讀到內容的（Eriksson 1973、Ratel & Martin 2012、DiFiori 2014、Bar-Or 1996）未登錄；Ratel & Martin 只在節點缺口段提一句未取得。
+- 下游待辦：**swim-coach 的課表生成器若依 `generator.degradations` 的 child 條目擋掉乳酸耐受組，下次更新 vendor/vortex pin 時要跟著改**（本次沒碰 swim-coach）。
+
 ## 當前狀態（2026-10-23，比賽分析寫進 canonical：第 8 技能「比賽與配速」）
 
 - `technical-analysis.yaml` 新增 `race.tech.1–15`（stroke `race`，分類 race_swim／race_day／race_development），各對應一篇比賽分析筆記；數據結論 🔵、evidence 寫資料範圍、方法（預先計畫、分兩半）與限制，原因 🔴 在 mechanism。〈泳式之間的關係〉未分兩半，不收。

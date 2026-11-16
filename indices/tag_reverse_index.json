@@ -1802,6 +1802,7 @@
         "periodization.structure.schools_overview",
         "periodization.structure.swim_annual",
         "periodization.structure.swim_youth_ltad",
+        "periodization.structure.youth_high_intensity",
         "periodization.taper.definition",
         "periodization.taper.duration",
         "periodization.taper.swim",

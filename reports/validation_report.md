@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
-> 生成日期：2026-10-30
-> 驗證條目數：975，Drills ID 數：224
+> 生成日期：2026-11-16
+> 驗證條目數：976，Drills ID 數：224
 
 ---
 
@@ -260,7 +260,7 @@
 
 ## W003 — 孤兒條目：無 links 指入、自身也無指出
 
-**WARN，共 124 筆**
+**WARN，共 123 筆**
 
   file=canonical\development\matrix.yaml id='dev.physical.l2t'
   file=canonical\development\matrix.yaml id='dev.physical.t2t'
@@ -309,7 +309,6 @@
   file=canonical\periodization\dryland.yaml id='periodization.dryland.caveats'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.tricycle'
   file=canonical\periodization\structure.yaml id='periodization.structure.annual.multipeak'
-  file=canonical\periodization\structure.yaml id='periodization.structure.swim_youth_ltad'
   file=canonical\periodization\taper.yaml id='periodization.taper.definition'
   file=canonical\periodization\taper.yaml id='periodization.taper.volume'
   file=canonical\periodization\taper.yaml id='periodization.taper.duration'
