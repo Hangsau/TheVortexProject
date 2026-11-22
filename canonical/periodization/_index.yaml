@@ -30,6 +30,7 @@ structure:
   - {id: periodization.structure.schools_overview, file: structure.yaml, name_zh: 週期化多派概覽, gist_zh: "週期化不是定論而是幾派辯論：傳統/板塊/極化/Olbrecht/反向；含 Q1–Q11 導讀＋作者立場", stages: [l2t, t2t, t2c, t2w]}
   - {id: periodization.structure.school_block, file: structure.yaml, name_zh: 板塊週期化（Issurin）, gist_zh: "菁英序列集中而非並行；殘留效應決定換塊（速度~5d/有氧~30d）；8–12 週一階段", stages: [t2c, t2w]}
   - {id: periodization.structure.perception_periodization_bridge, file: structure.yaml, name_zh: 感知—週期化橋接, gist_zh: "特定手部任務的疲勞學習研究與 PoST 概念框架；跨到游泳及水感知仍需驗證", stages: [l2t, t2t, t2c, t2w]}
+  - {id: periodization.structure.technique_change_phases, file: structure.yaml, name_zh: 技術改變的三個階段, gist_zh: "動作定型、改不動時：先打亂、再引導、最後在比賽條件下穩定；一位大學教練的經驗，無對照資料", stages: [t2t, t2c, t2w]}
   - {id: periodization.structure.annual.monocycle, file: structure.yaml, name_zh: 單週期, gist_zh: "一年衝一個高峰；適合新手/青少年/單一目標賽季", stages: [l2t, t2t]}
   - {id: periodization.structure.annual.bicycle, file: structure.yaml, name_zh: 雙週期, gist_zh: "一年衝兩個高峰；競技泳者原型，對應 ADM 一年兩巔峰", stages: [t2c, t2w]}
   - {id: periodization.structure.annual.tricycle, file: structure.yaml, name_zh: 三週期, gist_zh: "一年衝三個高峰；高水準多目標賽季", stages: [t2w]}
