@@ -307,6 +307,17 @@ sources:
     retrieved_on: "2026-07-29"
     notes: "依 Atlas 本地完整書檔與 ISBN 核對。書中的 Race Club／Velocity Meter 個案須以原測試情境解讀。"
 
+  - id: src.sheaff-2023-cla-swim-coaching
+    display: "Sheaff, A Constraints-Led Approach to Swim Coaching, 2023"
+    title: "A Constraints-Led Approach to Swim Coaching"
+    type: book
+    verification_status: verified
+    authors: ["Andrew Sheaff"]
+    year: 2023
+    identifier: {isbn: "9781003154945"}
+    retrieved_on: "2026-11-23"
+    notes: "依完整書檔核對；ISBN 為電子版，平裝 978-0-367-72478-8，Routledge（Routledge Studies in Constraints-Based Methodologies in Sport）。作者為美國大學泳隊助理教練，內容是教練經驗與組課設計，書中沒有前後量測或對照實驗；引用時以 🟠 搭配 observation_basis。書中第 14 章引 Gonjo et al. 2021 為「仰式滾轉幅度隨速度縮小」，與本庫依同篇全文的判讀相反（見仰式 L5「滾轉幅度不隨速度縮小」），該句不採用。"
+
   - id: src.haff-triplett-2016
     display: "Haff & Triplett (eds.), NSCA Essentials of Strength Training and Conditioning, 4th ed., 2016"
     title: "NSCA's Essentials of Strength Training and Conditioning"
