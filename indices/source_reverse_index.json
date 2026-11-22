@@ -13211,7 +13211,7 @@
       "identifier": {
         "isbn": "9781003154945"
       },
-      "usage_count": 12,
+      "usage_count": 13,
       "usages": [
         {
           "id": "BkCL1",
@@ -13262,6 +13262,11 @@
           "id": "ScFist",
           "file": "Drills/drills_sculling.yaml",
           "path": "drills[10]"
+        },
+        {
+          "id": "periodization.dryland.transfer",
+          "file": "canonical/periodization/dryland.yaml",
+          "path": "transfer_evidence"
         },
         {
           "id": "periodization.set_design.technique_under_fatigue",

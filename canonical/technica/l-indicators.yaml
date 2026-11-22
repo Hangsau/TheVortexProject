@@ -162,6 +162,7 @@ indicators:
         - {certainty: 🟠, text: Race Club PDM（推進方向動作）, source: Race Club, source_ids: [src.race-club], observation_basis: "量測（PDM，APLab Italy）由 The Race Club 發表在該機構自家教材與網站，未經同儕審查、未報告樣本數與重複量測。外推邊界：數字只當量級參考，不當處方門檻；確定性比照 udk.tech.9 對 theraceclub.com 的判定標 🟠（2026-10-02 由 🟢 調整）。"}
     diagnostic:
       type: A
+      training_note: "🟠 要看手部有沒有進步，可以夾腿浮板拿掉踢腿、同時限制划數並計時，先排除用腿代償的可能（與 B 型腳感缺失的判斷互為鏡像）。觀察基礎：觀察者＝Sheaff 2023 書作者本人的教練經驗；族群＝大學競技泳者；外推邊界＝書中無前後量測，只當排除腿代償的起手做法，不當通過門檻。"
 
   - id: free.L3.kick-rhythm
     stroke: free
