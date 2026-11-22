@@ -4,6 +4,28 @@
 
 ---
 
+## 當前狀態（2026-11-23，Sheaff《A Constraints-Led Approach to Swim Coaching》收錄）
+
+- 來源 `src.sheaff-2023-cla-swim-coaching`（書，ISBN 9781003154945）。書的內容全部 🟠＋observation_basis（作者本人的大學泳隊教練經驗，無前後量測；不外推初學、兒童學習階段、恐水、自由潛水）。整理稿、圖片轉錄、對照表與複檢在 `C:\claudehome\resources\notes\sheaff-cla\`（本機、不進 repo，避免版權問題）；計畫書 `VORTEX_IMPLEMENTATION_PLAN.md`。
+- 新增／修改：
+  - `periodization.structure.technique_change_phases`：技術改變三階段（打亂／引導／穩定）＋變化量四個時間尺度（使用者 2026-11-23 決定放 canonical）。
+  - `set-design.yaml`：`variables.cannot_hit_target_zh`（做不到時往哪調）；新節點 `periodization.set_design.technique_under_fatigue`（疲勞下守住已會的技術，只用在已會的技術）；`monitoring_exit` 新增 `technique_hold` 退出規則（走樣先調、連兩次拉不回才停，門檻依個人基準、不給通用數字），乳酸耐受組「崩了就停」註明只適用該組。
+  - Drills：FrCL1–4、ScCL1、BkCL1、FlCL1；Fr14／Fr16／Fr20／ScFist 補變體。`DRILL_INDEX.md` 既有過期數字更正（總 231）。
+  - `TAG_SCHEMA.md`：簡化 vs 分解、離比賽多遠、限制疊太多三個判斷（不加標註軸）。
+  - `Observations/指令層次設計.md`：節奏型提示語、提問型指令、同目標因人而異的指令。
+  - 小補強：dryland transfer、`感知學習.md` §六、`free.L3.evf` diagnostic、`prob.free.deep-pull`。
+  - `back.L5.roll-invariant`：讀 Gonjo 2021 全文確認仰式滾轉幅度維持，書第 14 章的寫法不採用（maintenance_note）。
+- my-site：週期化頁加兩個新段落（`next/layouts/_partials/vortex/periodization.html`），版面是逐節點寫死的——**canonical 新增週期化節點時，my-site 版面要同步加段落，否則不會上站**。
+
+## 下一步建議（Sheaff 收錄後續）
+
+1. **蝶式第二踢起點不一致**：`fly.move.7` 寫「手過肚臍時踢」，Chollet 等 2006（Int J Sports Med 27:322，非開放取用）摘要寫第二踢下踢起點對齊「手到肩膀正下方」、終點對齊「手離水」。讀到全文後統一 `fly.move.7` 的 cue_good／cue_bad，並修 `fly.tech.10` 把順序寫成「出水→第二踢」的問題。`Observations/指令層次設計.md` 已先依摘要寫、註明待統一。
+2. **待讀原文才收**：Foster 1998（訓練單調度，MSSE，非開放取用）、Seifert 自由式手臂協調型態（多篇，非開放取用）、Seifert 2007（蝶式入水停頓，D2）、Jagomägi 2005（蛙腿踝 supination 的意思，#61）。
+3. **既有問題（與本書無關，未修）**：
+   - my-site 週期化頁沒有 `youth_high_intensity` 段落，但目次有連結 → `check.py P4` 失敗（11-16 起）。
+   - 週期化頁「退出規則」表格的「情境」欄讀 `name_zh`，資料欄位是 `applies_zh` → 該欄全空。
+   - 內部前後矛盾 4 處：`free.move.4` cue_why 留著已被 `free.tech.15` 更正的「髖被動跟隨」；`fly.move.9` 留著已被 `fly.tech.21` 更正的動量轉換句；`free.move.2`「前臂推進遠差於手掌」vs `free.tech.9`「手掌和前臂同時面向後方」；`breast.tech.11` 🟢 的來源待查。使用者尚未決定要不要修。
+
 ## 當前狀態（2026-11-16，兒童與青春期泳者的高強度、高乳酸訓練證據節點）
 
 - 新節點 `periodization.structure.youth_high_intensity`（`canonical/periodization/structure.yaml`，接在 `swim_youth_ltad` 之後）。結論：查不到任何研究或正式聲明說青春期前兒童不該做高強度無氧訓練，也無傷害記錄；**這是「查無反證」不是「已證安全」**（唯一的泳者介入研究 Sperlich 2010 只有 5 週，多數研究沒有系統記錄不良事件）。含國際奧會 2005／2015 怎麼說、Sperlich 2010（年齡在摘要 11.5 與內文 10.5 不一致）、恢復與乳酸、「兒童糖解能力低」爭議（無定論）、反方（Beyer 2020 是效果不是傷害；教練與協會人員的意見標明是意見與二手轉述）、看成熟度、六條 🔴 缺口、🔵 對排課的含意（不給任何劑量數字）。
