@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1201,
+  "record_count": 1202,
   "records": [
     {
       "id": "Bk1",
@@ -18151,6 +18151,26 @@
         "periodization.structure.detraining",
         "periodization.structure.swim_annual",
         "periodization.taper.swim"
+      ]
+    },
+    {
+      "id": "periodization.set_design.technique_under_fatigue",
+      "domain": "periodization",
+      "file": "canonical/periodization/set-design.yaml",
+      "path": "technique_under_fatigue",
+      "title": "疲勞下守住已會的技術",
+      "tags": {
+        "certainty": [
+          "🟠"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": [
+        "periodization.set_design.monitoring_exit",
+        "periodization.structure.perception_periodization_bridge",
+        "periodization.structure.technique_change_phases"
       ]
     },
     {

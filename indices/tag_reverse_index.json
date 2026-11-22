@@ -1473,6 +1473,7 @@
         "periodization.dryland.methods",
         "periodization.set_design.energy_targets",
         "periodization.set_design.generator",
+        "periodization.set_design.technique_under_fatigue",
         "periodization.structure.technique_change_phases",
         "periodization.zones.energy_systems_primer",
         "protocol.free.evf",

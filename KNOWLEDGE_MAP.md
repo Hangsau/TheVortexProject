@@ -27,7 +27,7 @@
 | `periodization/zones` | 12 | 各節點 |
 | `periodization/dryland` | 9 | 各節點 |
 | `periodization/decisions` | 4 | 各節點 |
-| `periodization/set-design` | 11 | 各節點 |
+| `periodization/set-design` | 12 | 各節點 |
 | `breathing/safety` | 2 | 各節點 |
 | `breathing/framework` | 3 | 各節點 |
 | `breathing/physiology` | 5 | 各節點 |
@@ -889,7 +889,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.decisions.set_response | 🟢 | 新研究：同一乳酸數字可能掩蓋不同組課反應 |
 | periodization.decisions.hrv_response | 🟢 | 新研究：HRV 改變不等於游泳表現變差 |
 
-### `set-design.yaml` （**11 節點**）
+### `set-design.yaml` （**12 節點**）
 
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
@@ -898,6 +898,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.set_design.css_evidence | 🟢 | 臨界游速的證據鏈與外推邊界 |
 | periodization.set_design.energy_targets | 🟡 | 能量系統與組課意圖對照 |
 | periodization.set_design.variables | 🔵 | 四個變項的決定順序 |
+| periodization.set_design.technique_under_fatigue | 🟠 | 疲勞下守住已會的技術 |
 | periodization.set_design.usrpt | 🟢 | 超短距賽速訓練的原始參數與證據地位 |
 | periodization.set_design.weekly_assembly | 🔵 | 週組裝與間隔規則 |
 | periodization.set_design.phase_allocation | 🟡 | 階段配置與減量銜接 |

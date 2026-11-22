@@ -13211,8 +13211,13 @@
       "identifier": {
         "isbn": "9781003154945"
       },
-      "usage_count": 1,
+      "usage_count": 2,
       "usages": [
+        {
+          "id": "periodization.set_design.technique_under_fatigue",
+          "file": "canonical/periodization/set-design.yaml",
+          "path": "technique_under_fatigue"
+        },
         {
           "id": "periodization.structure.technique_change_phases",
           "file": "canonical/periodization/structure.yaml",
