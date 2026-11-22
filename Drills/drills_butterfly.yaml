@@ -1025,3 +1025,35 @@ drills:
     cognitive_load: medium
     tactile_anchor: core_tension_internal
     difficulty_tier: advanced
+
+  # === Sheaff 限制導向教學書收錄（W3, 2026-11-23）===
+
+  - id: FlCL1
+    name_en: "Head-Up Butterfly"
+    name_zh: "抬頭蝶式"
+    strokes: [butterfly]
+    category: timing
+    equipment: []
+    l_target: [L4]
+    abc_type: C
+    purpose_zh: "頭抬出水面游蝶式，髖會被壓低，泳者必須在正確的時間踢得更有力，才能把髖帶上來、把手臂移出水面，逼出對的踢腿時機。這是把整個蝶式節奏保留下來的簡化型練習。頸、肩活動度或腰背不適者，先確認不是活動度受限再當感知問題處理"
+    how_to:
+      - "先游 25 公尺正常蝶式，記住手入水、踢腿和髖上來的節奏"
+      - "頭抬出水游蝶式，視線看前方，保持整個蝶式節奏，不要變成只靠手拉"
+      - "手要移得出水，只能靠踢腿把髖帶起來，感覺踢腿「頂」髖的時機"
+      - "回到正常蝶式游一趟，比較髖上來的時間點；可與單手蝶式交替，一輪比一輪快"
+    perception_goal: "抬頭後髖被壓低，要靠時機對的有力踢腿把髖帶上來；感覺到踢腿與手出水之間的連續一條線"
+    success_signal: "手能順利移出水；踢腿時髖明顯上來；回到正常蝶式後髖的上浮時機更接近手入水之前"
+    failure_signal: "用背部硬撐把上身抬高（腰背代償）；手出水靠肩膀硬拉而踢腿沒參與；越游髖越沉"
+    deficiency_fixes: []
+    source: "Sheaff, A Constraints-Led Approach to Swim Coaching (2023)"
+    source_ids: [src.sheaff-2023-cla-swim-coaching]
+    body_position: prone
+    constraints: []
+    movement_pattern: continuous
+    skill_focus: [wave_undulation, kick_origin]
+    stroke_phase: whole_stroke
+    drill_function: progression
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced

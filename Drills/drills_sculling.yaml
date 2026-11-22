@@ -304,17 +304,19 @@ drills:
     equipment: [pull_buoy]
     l_target: [L3, L4]
     abc_type: A
-    purpose_zh: "握拳做寬 Y 划水，把前臂感知逼到最大；開拳後感覺手掌的「額外推進」是前臂之上的附加層"
+    purpose_zh: "握拳做寬 Y 划水，把前臂感知逼到最大；開拳後感覺手掌的「額外推進」是前臂之上的附加層；換手型的變體屬 L3 以上、需已有基本手部感知（小划手板放大訊號是 L1–L2 的做法，兩者不要混用）"
     how_to:
       - "夾 pull buoy、不踢水，雙手握拳做 Sc1 寬 Y 划水"
       - "全程靠前臂壓力推進；25 公尺後改為張開手繼續划"
       - "對照前臂感知 vs 加上手掌後的感知差異"
       - "做 4 趟，前 2 趟全程握拳、後 2 趟前 12.5 公尺握拳、後 12.5 開手"
+      - "可輪流換手型：握網球、OK 手勢、只伸一根手指、每趟換一種"
     perception_goal: "握拳時前臂感覺最強；開手後手掌變成「點綴」而非主力"
     success_signal: "握拳能前進；開手後推進量明顯多但感覺基線在前臂"
     failure_signal: "握拳完全無法前進（代表整個系統依賴手掌）"
     deficiency_fixes: []
     source: "通行的握拳撥水練習形式；本庫未取得可定位的單篇出處"
+    source_ids: [src.sheaff-2023-cla-swim-coaching]
     body_position: prone
     constraints: [closed_fist, no_kick, tension_held]
     movement_pattern: static
@@ -353,3 +355,35 @@ drills:
     cognitive_load: high
     tactile_anchor: hand_pressure
     difficulty_tier: advanced
+
+  # === Sheaff 限制導向教學書收錄（W3, 2026-11-23）===
+
+  - id: ScCL1
+    name_en: "Large Slow Standing Scull"
+    name_zh: "站水大幅搖櫓"
+    strokes: [freestyle, backstroke, breaststroke, butterfly]
+    category: sculling
+    equipment: []
+    l_target: [L2, L3]
+    abc_type: A
+    purpose_zh: "站在及胸深的水裡，手臂大幅度、慢慢地往外推再往內收，換方向時壓力不掉，學習「包水、導水」：感覺手掌與整條前臂都有壓力。對泳者可以說這比較像帶方向變化的拉，而不是小幅度快速搖櫓。低門檻，適合還沒建立手部水壓感的人。若某個方向的手臂做不到，先確認不是肩或腕的活動度受限"
+    how_to:
+      - "站在及胸深的水中，雙手在水面下，掌心外翻先往外慢慢推出"
+      - "轉折處手掌翻向、改為往內掃回身體中線，動作圓滑、不是急停急轉"
+      - "全程把注意力放在整條前臂與手掌上的壓力，換方向那一刻壓力不要掉"
+      - "熟悉後慢慢改變身體位置（前傾、半漂浮），再加入緩慢的移動"
+    perception_goal: "手和整條前臂像包著一團有重量的水；換方向時水壓是連續過渡的，不是先鬆掉再重新抓"
+    success_signal: "能說出手掌與前臂壓力哪個位置最強、換方向時有沒有掉；動作大而慢仍維持壓力"
+    failure_signal: "換方向時壓力突然消失（手在「空」的水裡）；只有手掌有感覺、前臂沒感覺；動作越做越小越快（用速度補償）"
+    deficiency_fixes: []
+    source: "Sheaff, A Constraints-Led Approach to Swim Coaching (2023)"
+    source_ids: [src.sheaff-2023-cla-swim-coaching]
+    body_position: standing
+    constraints: []
+    movement_pattern: static
+    skill_focus: [forearm_pressure, pressure_mapping]
+    stroke_phase: catch
+    drill_function: skill_isolation
+    cognitive_load: low
+    tactile_anchor: hand_pressure
+    difficulty_tier: foundation

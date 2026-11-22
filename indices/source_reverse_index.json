@@ -13211,8 +13211,58 @@
       "identifier": {
         "isbn": "9781003154945"
       },
-      "usage_count": 2,
+      "usage_count": 12,
       "usages": [
+        {
+          "id": "BkCL1",
+          "file": "Drills/drills_backstroke.yaml",
+          "path": "drills[32]"
+        },
+        {
+          "id": "FlCL1",
+          "file": "Drills/drills_butterfly.yaml",
+          "path": "drills[35]"
+        },
+        {
+          "id": "Fr14",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[13]"
+        },
+        {
+          "id": "Fr16",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[15]"
+        },
+        {
+          "id": "FrCL1",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[44]"
+        },
+        {
+          "id": "FrCL2",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[45]"
+        },
+        {
+          "id": "FrCL3",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[46]"
+        },
+        {
+          "id": "FrCL4",
+          "file": "Drills/drills_freestyle.yaml",
+          "path": "drills[47]"
+        },
+        {
+          "id": "ScCL1",
+          "file": "Drills/drills_sculling.yaml",
+          "path": "drills[12]"
+        },
+        {
+          "id": "ScFist",
+          "file": "Drills/drills_sculling.yaml",
+          "path": "drills[10]"
+        },
         {
           "id": "periodization.set_design.technique_under_fatigue",
           "file": "canonical/periodization/set-design.yaml",

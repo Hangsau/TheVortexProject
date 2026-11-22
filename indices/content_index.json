@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1202,
+  "record_count": 1209,
   "records": [
     {
       "id": "Bk1",
@@ -503,6 +503,25 @@
       },
       "source_ids": [
         "src.theres-a-drill-for-that"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "BkCL1",
+      "domain": "drills",
+      "file": "Drills/drills_backstroke.yaml",
+      "path": "drills[32]",
+      "title": "仰式推離對位",
+      "tags": {
+        "category": [
+          "balance"
+        ],
+        "l_level": [
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
       ],
       "outgoing_ids": []
     },
@@ -2034,6 +2053,25 @@
       "outgoing_ids": []
     },
     {
+      "id": "FlCL1",
+      "domain": "drills",
+      "file": "Drills/drills_butterfly.yaml",
+      "path": "drills[35]",
+      "title": "抬頭蝶式",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "l_level": [
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "FlEC1",
       "domain": "drills",
       "file": "Drills/drills_butterfly.yaml",
@@ -2201,6 +2239,7 @@
         ]
       },
       "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching",
         "src.theres-a-drill-for-that"
       ],
       "outgoing_ids": []
@@ -2241,6 +2280,7 @@
         ]
       },
       "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching",
         "src.theres-a-drill-for-that"
       ],
       "outgoing_ids": []
@@ -2610,6 +2650,85 @@
         ]
       },
       "source_ids": [],
+      "outgoing_ids": []
+    },
+    {
+      "id": "FrCL1",
+      "domain": "drills",
+      "file": "Drills/drills_freestyle.yaml",
+      "path": "drills[44]",
+      "title": "變速不預告",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "l_level": [
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "FrCL2",
+      "domain": "drills",
+      "file": "Drills/drills_freestyle.yaml",
+      "path": "drills[45]",
+      "title": "節拍器划頻鎖定",
+      "tags": {
+        "category": [
+          "timing"
+        ],
+        "l_level": [
+          "L4",
+          "L5"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "FrCL3",
+      "domain": "drills",
+      "file": "Drills/drills_freestyle.yaml",
+      "path": "drills[46]",
+      "title": "頭頂放物換氣",
+      "tags": {
+        "category": [
+          "breathing"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": []
+    },
+    {
+      "id": "FrCL4",
+      "domain": "drills",
+      "file": "Drills/drills_freestyle.yaml",
+      "path": "drills[47]",
+      "title": "電梯自由式",
+      "tags": {
+        "category": [
+          "balance"
+        ],
+        "l_level": [
+          "L3",
+          "L4"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
       "outgoing_ids": []
     },
     {
@@ -4070,6 +4189,26 @@
       "outgoing_ids": []
     },
     {
+      "id": "ScCL1",
+      "domain": "drills",
+      "file": "Drills/drills_sculling.yaml",
+      "path": "drills[12]",
+      "title": "站水大幅搖櫓",
+      "tags": {
+        "category": [
+          "sculling"
+        ],
+        "l_level": [
+          "L2",
+          "L3"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": []
+    },
+    {
       "id": "ScFist",
       "domain": "drills",
       "file": "Drills/drills_sculling.yaml",
@@ -4084,7 +4223,9 @@
           "L4"
         ]
       },
-      "source_ids": [],
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
       "outgoing_ids": []
     },
     {

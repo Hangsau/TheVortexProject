@@ -946,3 +946,35 @@ drills:
     cognitive_load: medium
     tactile_anchor: equipment_feedback
     difficulty_tier: elite
+
+  # === Sheaff 限制導向教學書收錄（W3, 2026-11-23）===
+
+  - id: BkCL1
+    name_en: "Pushed Off Alignment Backstroke"
+    name_zh: "仰式推離對位"
+    strokes: [backstroke]
+    category: balance
+    equipment: [pull_buoy]
+    l_target: [L4]
+    abc_type: C
+    purpose_zh: "建立良好仰式姿勢不難，難的是高速與疲勞下維持。這個練習刻意加一個輕的限制把身體推離理想對位（腳踝夾夾腿浮板，或頭上只戴一條帶子限制頭的位置），讓泳者自己找出不被推偏的方法，再拿掉限制正常游。不需要藥球、阻力繩、配重帶；若頸、髖或肩的活動度限制導致某個姿勢做不到，先確認這點再當感知問題處理"
+    how_to:
+      - "先正常游 25 公尺仰式，記住身體水平、髖的高度和頭的位置"
+      - "腳踝夾住夾腿浮板（或換成只限制頭位置的版本）游 25 公尺，限制會把髖或腿往下拉、把身體推離對位"
+      - "不要被動修，先留意身體往哪裡偏，再試著用核心、頭位置或踢水去把身體帶回水平"
+      - "拿掉夾腿浮板，馬上游中高速仰式 25–50 公尺，維持剛剛找到的位置"
+    perception_goal: "身體被推偏的當下，能感覺到是髖往下、肋骨鬆開還是頭抬起；找到把身體帶回水平的內部張力"
+    success_signal: "戴上限制後仍能把髖維持在水面附近；拿掉後速度升高髖仍不下沉"
+    failure_signal: "用背部硬撐把腰拱起來（腰椎過度伸展代償）；靠大力打腿硬頂住、動作變形；限制拿掉後立刻掉回原位"
+    deficiency_fixes: []
+    source: "Sheaff, A Constraints-Led Approach to Swim Coaching (2023)"
+    source_ids: [src.sheaff-2023-cla-swim-coaching]
+    body_position: supine
+    constraints: [tension_held]
+    movement_pattern: continuous
+    skill_focus: [streamline_line, core_tension]
+    stroke_phase: whole_stroke
+    drill_function: corrective
+    cognitive_load: high
+    tactile_anchor: core_tension_internal
+    difficulty_tier: advanced

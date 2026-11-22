@@ -3,19 +3,19 @@
 > Sources: *There's a Drill for That!* (Cokie Lepinski, 2011) + *Fundamentals of Fast Swimming* (The Race Club / Gary Hall Sr) + Vortex 整理（呼吸、UDK、starts-turns、gap fills）
 > Perception layer mapping: Vortex L0–L6 framework (Hangsau 2026)  
 > 9-axis tag fingerprint v1.0 (2026-06-27): 見 `TAG_SCHEMA.md`  
-> Total: **179 drills** (Fr44 + Bk32 + Br40 + Fl35 + Sc12 + ST9 + UDK7)；其中 **22 elite**
+> Total: **231 drills** (Fr48 + Bk33 + Br40 + Fl36 + Sc13 + ST34 + UDK12 + OW15)；其中 **22 elite**
 
 ## Files
 
 | File | Count | Content |
 |------|-------|---------|
-| `drills_freestyle.yaml` | 44 | Fr1–Fr24 + FrBr1–FrBr4（呼吸）+ FrEC1/FrPad1/FrSt1/FrP1/FrP2/FrSide1/FrSide2/FrLow1（gap fills）+ FrEL1–FrEL8（Race Club elite） |
-| `drills_backstroke.yaml` | 32 | Bk1–Bk26 + BkEC1/BkPad1/BkSt1/BkP1/BkLow1（gap fills）+ BkEL1（Race Club elite） |
+| `drills_freestyle.yaml` | 48 | Fr1–Fr24 + FrBr1–FrBr4（呼吸）+ FrEC1/FrPad1/FrSt1/FrP1/FrP2/FrSide1/FrSide2/FrLow1（gap fills）+ FrEL1–FrEL8（Race Club elite）+ FrCL1–FrCL4（Sheaff 限制導向：變速不預告、節拍器划頻鎖定、頭頂放物換氣、電梯自由式） |
+| `drills_backstroke.yaml` | 33 | Bk1–Bk26 + BkEC1/BkPad1/BkSt1/BkP1/BkLow1（gap fills）+ BkEL1（Race Club elite）+ BkCL1（Sheaff 仰式推離對位） |
 | `drills_breaststroke.yaml` | 40 | Br1–Br36 + BrEC1/BrPad1/BrSt1/BrLow1（gap fills） |
-| `drills_butterfly.yaml` | 35 | Fl1–Fl32 + FlEC1/FlPad1/FlSt1（gap fills） |
-| `drills_sculling.yaml` | 12 | Sc1–Sc10 + ScFist/ScUW1（gap fills） |
-| `drills_starts-turns.yaml` | 9 | ST1–ST5 + STSpat1（gap fills）+ STEL1–STEL3（Race Club 仰式出發） |
-| `drills_udk.yaml` | 7 | UDK1–UDK5 + UDKEC1/UDKLow1（gap fills） |
+| `drills_butterfly.yaml` | 36 | Fl1–Fl32 + FlEC1/FlPad1/FlSt1（gap fills）+ FlCL1（Sheaff 抬頭蝶式） |
+| `drills_sculling.yaml` | 13 | Sc1–Sc10 + ScFist/ScUW1（gap fills）+ ScCL1（Sheaff 站水大幅搖櫓） |
+| `drills_starts-turns.yaml` | 34 | ST1–ST30 + STSpat1（gap fills）+ STEL1–STEL3（Race Club 仰式出發） |
+| `drills_udk.yaml` | 12 | UDK1–UDK10 + UDKEC1/UDKLow1（gap fills） |
 | `drills_open-water.yaml` | 15 | OW1–OW15（開放水域與鐵人：定向、群游、裝備、冷水與恐慌自救） |
 
 ## YAML Schema
@@ -74,27 +74,27 @@
 ## 快速查找
 
 ### 按泳式
-- 自由式：Fr1–Fr24
-- 仰式：Bk1–Bk26
+- 自由式：Fr1–Fr24, FrCL1–FrCL4
+- 仰式：Bk1–Bk26, BkCL1
 - 蛙式：Br1–Br36（含 Sc 划水鑽）
-- 蝶式：Fl1–Fl32（含 Sc 划水鑽）
+- 蝶式：Fl1–Fl32, FlCL1（含 Sc 划水鑽）
 - 水下蝶腳：Fl2, Fl4–Fl11 + 所有 underwater_dolphin_kick 標記
 - 出發與轉身：Fl30
 
 ### 按 L 級（精選）
 - **L0**：Fr1（呼吸）
 - **L1**：Fr2, Fr3, Fr4, Bk1–Bk5（平衡流線）
-- **L2**：Fr5–Fr8, Bk6–Bk7, Br1–Br9, Fl1–Fl3（推進萌芽）
-- **L3**：Fr9–Fr19, Bk8–Bk14, Br10–Br23, Fl12–Fl18, Sc1–Sc10
-- **L4**：Fr20–Fr24, Bk15–Bk26, Br24–Br32, Fl19–Fl29
+- **L2**：Fr5–Fr8, Bk6–Bk7, Br1–Br9, Fl1–Fl3, ScCL1（推進萌芽）
+- **L3**：Fr9–Fr19, Bk8–Bk14, Br10–Br23, Fl12–Fl18, Sc1–Sc10, ScCL1, FrCL3, FrCL4
+- **L4**：Fr20–Fr24, Bk15–Bk26, Br24–Br32, Fl19–Fl29, FrCL1, FrCL2, BkCL1, FlCL1
 - **L5**：Br31–Br32, Fl28, Bk23
 
 ### 按類別
-- **呼吸**：Fr1, FrBr1–FrBr4, Br12（蛙式換氣相關）
+- **呼吸**：Fr1, FrBr1–FrBr4, FrCL3, Br12（蛙式換氣相關）
 - **踢水**：Fr2–Fr9, Bk1–Bk7, Br1–Br11, Fl1–Fl12
 - **捕水/EVF**：Fr10–Fr16, Bk8–Bk16, Br12–Br20, Fl12–Fl17
-- **划水感知**：Sc1–Sc10, ScFist, ScUW1（所有泳式適用）
-- **時序整合**：Fr20, Fr23–Fr24, Br17, Br30–Br31, Fl26–Fl27
+- **划水感知**：Sc1–Sc10, ScFist, ScUW1, ScCL1（所有泳式適用）
+- **時序整合**：Fr20, Fr23–Fr24, FrCL1, FrCL2, FlCL1, Br17, Br30–Br31, Fl26–Fl27
 
 ### 按 9 軸 fingerprint（v1.0 新增檢索）
 - **熱身專用**（drill_function=warmup）：Fr1, FrBr1, FrSt1, FrLow1, BkSt1, BkLow1, BrSt1, BrLow1, FlSt1, UDKLow1

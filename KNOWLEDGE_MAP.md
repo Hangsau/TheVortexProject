@@ -36,7 +36,7 @@
 | `health/injuries (built)` | 0 | 從 drafts/ build 出 |
 | `psychology` | 8 | 8 themes / 共 62 concepts |
 | `movement` | 128 | actions 33 / muscle-groups 22 / demands 66 / interventions 7；相位覆蓋 59/59 |
-| `Drills (8 files)` | 224 | 176 drill 含 9 軸 fingerprint |
+| `Drills (8 files)` | 231 | 176 drill 含 9 軸 fingerprint |
 
 ---
 
@@ -1179,9 +1179,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 ## 練習 `Drills/`
 
-### `drills_freestyle.yaml` — freestyle (**44 drills**)
+### `drills_freestyle.yaml` — freestyle (**48 drills**)
 
-**難度分布**：{'foundation': 9, 'intermediate': 13, 'advanced': 14, 'elite': 8}
+**難度分布**：{'foundation': 9, 'intermediate': 15, 'advanced': 16, 'elite': 8}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1229,10 +1229,14 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | FrEL6 | 波頂入水 vs 波底入水 | arm | L5 L6 | elite | freestyle |
 | FrEL7 | 比賽配速短反覆（呼吸管+蛙鞋） | timing | L5 L6 | elite | freestyle |
 | FrEL8 | 三秒暫停趕上 | timing | L5 | elite | freestyle |
+| FrCL1 | 變速不預告 | timing | L4 | advanced | freestyle |
+| FrCL2 | 節拍器划頻鎖定 | timing | L4 L5 | advanced | freestyle |
+| FrCL3 | 頭頂放物換氣 | breathing | L3 L4 | intermediate | freestyle |
+| FrCL4 | 電梯自由式 | balance | L3 L4 | intermediate | freestyle |
 
-### `drills_backstroke.yaml` — backstroke (**32 drills**)
+### `drills_backstroke.yaml` — backstroke (**33 drills**)
 
-**難度分布**：{'foundation': 7, 'intermediate': 12, 'advanced': 11, 'elite': 2}
+**難度分布**：{'foundation': 7, 'intermediate': 12, 'advanced': 12, 'elite': 2}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1268,6 +1272,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | BkP1 | 同伴並肩配速仰式 | timing | L4 L5 | advanced | backstroke |
 | BkLow1 | 六踢換邊 | timing | L2 L3 | intermediate | backstroke |
 | BkEL1 | 仰式 6K1S（蛙鞋） | timing | L5 | elite | backstroke |
+| BkCL1 | 仰式推離對位 | balance | L4 | advanced | backstroke |
 
 ### `drills_breaststroke.yaml` — breaststroke (**40 drills**)
 
@@ -1316,9 +1321,9 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | Br35 | 網球夾下巴蛙式 | breathing | L2 L3 | intermediate | breaststroke |
 | Br36 | 水中步行蛙式划手 | breathing | L0 L2 | foundation | breaststroke |
 
-### `drills_butterfly.yaml` — butterfly (**35 drills**)
+### `drills_butterfly.yaml` — butterfly (**36 drills**)
 
-**難度分布**：{'foundation': 3, 'intermediate': 7, 'advanced': 23, 'elite': 2}
+**難度分布**：{'foundation': 3, 'intermediate': 7, 'advanced': 24, 'elite': 2}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1357,10 +1362,11 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | FlPad1 | 手掌板水下恢復臂 | arm | L4 L5 | advanced | butterfly |
 | FlSt1 | 站姿胸壓+髖前後 | kick | L1 L2 | foundation | butterfly |
 | Fl32 | 憋氣對照換氣蝶式 | breathing | L3 L4 | advanced | butterfly |
+| FlCL1 | 抬頭蝶式 | timing | L4 | advanced | butterfly |
 
-### `drills_sculling.yaml` — sculling (**12 drills**)
+### `drills_sculling.yaml` — sculling (**13 drills**)
 
-**難度分布**：{'intermediate': 4, 'advanced': 8}
+**難度分布**：{'intermediate': 4, 'advanced': 8, 'foundation': 1}
 
 | ID | 中文名 | 類別 | L 目標 | 難度 | 適用泳式 |
 |---|---|---|---|---|---|
@@ -1376,6 +1382,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | Sc10 | 頭後方划水 | sculling | L3 L4 | advanced | backstroke |
 | ScFist | 握拳划水 | sculling | L3 L4 | advanced | freestyle breaststroke butterfly |
 | ScUW1 | 水下寬 Y 懸停 | sculling | L4 | advanced | freestyle breaststroke butterfly |
+| ScCL1 | 站水大幅搖櫓 | sculling | L2 L3 | foundation | freestyle backstroke breaststroke butterfly |
 
 ### `drills_starts-turns.yaml` — starts-turns (**34 drills**)
 
