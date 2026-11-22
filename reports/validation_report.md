@@ -1,7 +1,7 @@
 # Vortex Canonical 驗證報告
 
 > 生成日期：2026-11-23
-> 驗證條目數：976，Drills ID 數：224
+> 驗證條目數：977，Drills ID 數：224
 
 ---
 
@@ -424,12 +424,11 @@
 
 ## W008 — 孤兒來源：`_sources.yaml` 有登錄但沒有任何條目引用——兩條通道都算：各檔通用的 `source_ids`，與 movement 的 `measurement_conditions[].source_id`（`verification_status: retracted` 的墓碑除外）
 
-**WARN，共 4 筆**
+**WARN，共 3 筆**
 
   source_id='src.gonjo-2016' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.gonjo-2018' 已登錄於 _sources.yaml 但無任何條目引用
   source_id='src.lee-2008' 已登錄於 _sources.yaml 但無任何條目引用
-  source_id='src.sheaff-2023-cla-swim-coaching' 已登錄於 _sources.yaml 但無任何條目引用
 
 ---
 

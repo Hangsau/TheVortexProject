@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "source_count": 924,
+  "source_count": 925,
   "sources": [
     {
       "id": "src.2024-2025",
@@ -13203,6 +13203,22 @@
       "identifier": {},
       "usage_count": 0,
       "usages": []
+    },
+    {
+      "id": "src.sheaff-2023-cla-swim-coaching",
+      "display": "Sheaff, A Constraints-Led Approach to Swim Coaching, 2023",
+      "verification_status": "verified",
+      "identifier": {
+        "isbn": "9781003154945"
+      },
+      "usage_count": 1,
+      "usages": [
+        {
+          "id": "periodization.structure.technique_change_phases",
+          "file": "canonical/periodization/structure.yaml",
+          "path": "technique_change_phases"
+        }
+      ]
     },
     {
       "id": "src.sica-2025-swimmingworld-tennis-ball-breaststroke",

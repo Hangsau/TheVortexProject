@@ -1,6 +1,6 @@
 # Vortex 知識地圖 KNOWLEDGE MAP
 
-> 自動生成於 2026-11-16 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
+> 自動生成於 2026-11-23 by `tools/build_knowledge_map.py`。重跑：`python tools/build_knowledge_map.py`
 > 確定性圖例：🔵 推導 / 🟢 近期文獻 / 🟡 舊文獻 / 🟠 教練觀測 / 🔴 待查
 
 這份地圖是查內容、找缺口、看哪些條目該更新的單一入口。
@@ -22,7 +22,7 @@
 | `water-sense-levels` | 26 | 26 個感知級別 |
 | `development/matrix` | 16 | ADM 4 支柱 × 4 階段 = 16 格 |
 | `development/technical-standards` | 22 | 技術基準 |
-| `periodization/structure` | 14 | 各節點 |
+| `periodization/structure` | 15 | 各節點 |
 | `periodization/taper` | 10 | 各節點 |
 | `periodization/zones` | 12 | 各節點 |
 | `periodization/dryland` | 9 | 各節點 |
@@ -809,7 +809,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 
 ## 週期化 `canonical/periodization/`
 
-### `structure.yaml` （**14 節點**）
+### `structure.yaml` （**15 節點**）
 
 | ID | 確定性 | premise/摘要 |
 |---|---|---|
@@ -828,6 +828,7 @@ L4 訊號是「能感知滑行期但無法消除」；L5 是「在標準訓練 |
 | periodization.structure.schools_overview | 🔵 | 週期化不是一套被證明的定論，而是幾套互相辯論的框架。它們問的問題不同、適用的對象不同——把任何一派當『標準答案』都是誤讀。 |
 | periodization.structure.school_block | 🟡 | 板塊週期化（Issurin）跟 Bompa 最大的不同：Bompa 主張準備期可以同時把很多能力一起練；Issurin 說高水準選手做不到——很多訓練刺激會互相打架（大量有氧會干擾 |
 | periodization.structure.perception_periodization_bridge | 🔵 | 可以先區分「學會任務、穩定重複、在速度下維持」來安排練習。這是本站待驗的操作模型；手部力量控制研究不代表所有泳姿或水感知都同樣受疲勞影響，練得輕也不保證不累。 |
+| periodization.structure.technique_change_phases | 🟠 | 技術改變的三個階段：打亂、引導、穩定 |
 
 ### `taper.yaml` （**10 節點**）
 

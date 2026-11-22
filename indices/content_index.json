@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "record_count": 1200,
+  "record_count": 1201,
   "records": [
     {
       "id": "Bk1",
@@ -18416,6 +18416,7 @@
       ],
       "outgoing_ids": [
         "periodization.structure.school_block",
+        "periodization.structure.technique_change_phases",
         "periodization.taper.frequency"
       ]
     },
@@ -18503,6 +18504,24 @@
         "src.van-hooren-2020-sensitive-periods"
       ],
       "outgoing_ids": []
+    },
+    {
+      "id": "periodization.structure.technique_change_phases",
+      "domain": "periodization",
+      "file": "canonical/periodization/structure.yaml",
+      "path": "technique_change_phases",
+      "title": "技術改變的三個階段：打亂、引導、穩定",
+      "tags": {
+        "certainty": [
+          "🟠"
+        ]
+      },
+      "source_ids": [
+        "src.sheaff-2023-cla-swim-coaching"
+      ],
+      "outgoing_ids": [
+        "periodization.structure.perception_periodization_bridge"
+      ]
     },
     {
       "id": "periodization.structure.youth_high_intensity",
