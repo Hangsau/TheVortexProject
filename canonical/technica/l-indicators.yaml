@@ -371,6 +371,7 @@ indicators:
     stroke: back
     level: L5
     aspect: 旋轉不隨速縮
+    maintenance_note: "2026-11-23 讀 Gonjo et al. 2021 全文（Sci Rep 11:824，PMC7804020）確認：四種強度下仰式的全身、肩、髖滾轉幅度維持，自由式三者都縮小；另有「浮力力矩造成的全身滾轉」在兩式都隨強度縮小。Sheaff 2023 第 14 章把這篇寫成「仰式滾轉幅度隨速度縮小」，與主要結論不符，可能指的是浮力力矩那一項但書未說明；本條不採用書的寫法。"
     public:
       indicator: 速度增加時旋轉幅度維持（≠ 自由式）
       framework_state: 感知自動化過渡
